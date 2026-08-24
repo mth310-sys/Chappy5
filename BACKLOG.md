@@ -12,8 +12,8 @@ Priority: P0 highest, then P1, P2, P3.
 - Depends on: C5-004
 - Goal: Test the prototype against the validation questions in `prototype/PRODUCT_BRIEF.md` without adding scope first.
 - Evidence: First human playtest is recorded in `prototype/VALIDATION.md` as V-001. Player reported that the rules were not understood.
-- Current result: LEGIBILITY FAIL on prior build. V-002 revised build now requires technical verification and a new human playtest.
-- Next: Verify V-002, then obtain new human evidence before expanding scope.
+- Current result: LEGIBILITY FAIL on prior build. V-002 revised build passed independent static/logic inspection as V-003, with runtime/CI still unconfirmed.
+- Next: Obtain new human evidence through the stable public play URL before expanding scope. Do not treat technical verification as proof of comprehension or fun.
 
 ### C5-008 — Revise first-play legibility
 - Priority: P0
@@ -24,8 +24,9 @@ Priority: P0 highest, then P1, P2, P3.
 - Constraints: Keep the core H1 experiment small; do not add meta progression, economy, narrative, monetization, or speculative content. Prefer progressive disclosure and visible cause/effect over more prose.
 - Acceptance: Revised build satisfies the bounded targets in `prototype/VALIDATION.md` and is ready for a second human playtest.
 - Implementation: V-002 committed in `prototype/index.html` at `107d7ece6f54a4756bc35ea8d0e8bbb310ed3073`. Added persistent one-sentence goal, explicit SOURCE/COLLECTOR flow, highlighted first placement, progressive part unlock, Japanese cause/effect labels, and reason-specific result feedback while retaining H1 core scope.
-- Prototype Worker check: updated main source re-fetched successfully; expected revised structure is present. No CI/status result was observable, so independent technical verification remains UNCONFIRMED.
-- Handoff: Verification Worker should independently verify V-002. Human legibility remains unresolved until a new playtest. R-HF-002 content/hook disappointment also remains unresolved even if legibility improves.
+- Independent verification: V-003 in `prototype/VALIDATION.md` confirms the expected structure and interaction wiring by static/logic inspection. Initial guided placement routes around the first blocker; staged tool unlocking, reason-specific feedback, scoring, retry/reset paths are wired. No blocking source defect was identified.
+- Remaining caveat: GitHub combined-status lookup exposed no CI status for the implementation commit, and no real mobile-browser runtime was executed by Verification Worker. CI/runtime therefore remain UNKNOWN, not PASS.
+- Handoff: V-002 is technically suitable for a second human playtest subject to the runtime caveat. Human legibility remains unresolved until that playtest. R-HF-002 content/hook disappointment also remains unresolved even if legibility improves.
 
 ### C5-004 — Build first playable proof
 - Priority: P1
@@ -34,8 +35,8 @@ Priority: P0 highest, then P1, P2, P3.
 - Depends on: C5-003
 - Goal: Implement the smallest technically verifiable playable slice.
 - Output: `prototype/index.html` and `prototype/PRODUCT_BRIEF.md`.
-- Current state: Playable source exists and V-002 bounded legibility revision is implemented. Structural/syntax CI has been defined; CI result has not yet been observed through the available GitHub integration, so full verification remains open.
-- Next: Preserve technical scope while Verification Worker checks V-002.
+- Current state: Playable source exists and V-002 bounded legibility revision is implemented. V-003 independent static/logic verification found no blocking source defect. CI and real mobile runtime remain unconfirmed.
+- Next: Preserve technical scope while human validation proceeds; reproduce any concrete runtime defect separately if observed.
 
 ### C5-005 — Establish lightweight automated verification
 - Priority: P1
@@ -43,7 +44,7 @@ Priority: P0 highest, then P1, P2, P3.
 - Owner: Director
 - Depends on: C5-004
 - Goal: Add repeatable checks appropriate to the selected stack.
-- Current state: `scripts/verify_prototype.mjs` and `.github/workflows/verify.yml` created. Workflow result not yet confirmed through the available integration.
+- Current state: `scripts/verify_prototype.mjs` and `.github/workflows/verify.yml` created. Static inspection confirms the workflow invokes the verifier on main push/PR, but no successful workflow/status result has been observed through the available integration.
 - Done when: At least one successful verification run is observed and recorded.
 
 ## Queue
