@@ -1,11 +1,11 @@
 # Chappy5 Worker Protocol
 
 ## Current roster
-- Game Studio Director — ACTIVE — studio-wide coordination, prioritization, integration, escalation. Scheduled hourly.
-- Worker 1 — ACTIVE — Product / Player Research Worker. Scheduled every 4 hours, starting at 00:25 Asia/Tokyo.
-- Worker 2 — ACTIVE — Prototype Worker. Scheduled every 4 hours, starting at 00:35 Asia/Tokyo.
-- Worker 3 — ACTIVE — Verification Worker. Scheduled every 4 hours, starting at 00:45 Asia/Tokyo.
-- Worker 4 — ACTIVE — Business / Operations Worker. Scheduled every 4 hours, starting at 00:55 Asia/Tokyo.
+- Game Studio Director — ACTIVE — studio-wide coordination, prioritization, integration, escalation. Scheduled hourly at :00 Asia/Tokyo.
+- Worker 1 — ACTIVE — Product / Player Research Worker. Scheduled hourly at :10 Asia/Tokyo.
+- Worker 2 — ACTIVE — Prototype Worker. Scheduled hourly at :25 Asia/Tokyo.
+- Worker 3 — ACTIVE — Verification Worker. Scheduled hourly at :40 Asia/Tokyo.
+- Worker 4 — ACTIVE — Business / Operations Worker. Scheduled hourly at :55 Asia/Tokyo.
 
 ## Activation policy
 Workers are activated only when parallel execution creates more value than coordination cost.
@@ -16,7 +16,7 @@ Good worker tasks are:
 - unlikely to conflict with another active owner;
 - useful even if another task fails.
 
-The current four-worker activation is justified because product research, bounded prototype implementation, independent verification, and business/operations validation are now separable workstreams. A worker must still refrain from making changes when no safe, non-conflicting task exists.
+The current four-worker activation is justified because product research, bounded prototype implementation, independent verification, and business/operations validation are separable workstreams. A worker must still refrain from destructive or low-value changes when no safe non-conflicting task exists.
 
 ## Role assignments
 
@@ -24,18 +24,18 @@ The current four-worker activation is justified because product research, bounde
 Turns a defined discovery question into structured hypotheses, evidence, risks, and proposed tests. It must not present hypotheses as confirmed facts.
 
 ### Prototype Worker
-Implements bounded playable slices after the Director has selected a product hypothesis and technical boundary. It should avoid speculative scope expansion and destructive refactors.
+Implements bounded playable slices after the Director has selected a product hypothesis and technical boundary. Current highest-priority implementation target is C5-008, the confirmed first-play legibility failure, once claimed. It should avoid speculative scope expansion and destructive refactors.
 
 ### Verification Worker
-Creates tests/checks, reproduces defects, validates acceptance criteria, and records failures without masking them. It should remain independent from implementation where practical.
+Creates tests/checks, reproduces defects, validates acceptance criteria, and records failures without masking them. Current priority is to verify technical integrity after C5-008 changes and preserve the human legibility failure as unresolved until a new human playtest provides evidence.
 
 ### Business / Operations Worker
-Works on distribution, monetization, launch experiments, metrics, documentation, or studio tooling when those streams become concrete. It must separate market hypotheses from confirmed evidence.
+Works on distribution, monetization, launch experiments, metrics, documentation, or studio tooling when those streams become concrete. It must separate market hypotheses from confirmed evidence and should not push commercialization ahead of core interaction validation.
 
 ## Scheduling design
-The Director executes every hour. Workers are staggered by 10-minute offsets and each executes every 4 hours. This reduces simultaneous write pressure while giving the Director frequent opportunities to integrate worker results and resolve conflicts.
+The Director and all four workers execute hourly, staggered through each hour at :00, :10, :25, :40, and :55. This creates a pipeline: Director integration/prioritization → research/design evidence → implementation → independent verification → operations/business work. Each executor should continue to additional safe non-conflicting work within the same run when useful rather than artificially stopping after one small task.
 
-Scheduling is an execution opportunity, not a requirement to manufacture work. If no safe, useful, non-conflicting task exists, an executor should inspect state and leave the repository unchanged rather than create low-value churn.
+Scheduling is an execution opportunity, not permission to manufacture work. Quality, verification, ownership boundaries, and README prohibitions take precedence over raw activity. If no safe useful task exists, record a blocker or leave the repository unchanged rather than create churn.
 
 The Director may change cadence, deactivate a worker, or reassign roles when repository evidence shows a better operating model, provided README.md and human instructions remain satisfied.
 
