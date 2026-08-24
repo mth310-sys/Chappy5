@@ -11,22 +11,9 @@ Priority: P0 highest, then P1, P2, P3.
 - Owner: Director
 - Depends on: C5-004
 - Goal: Test the prototype against the validation questions in `prototype/PRODUCT_BRIEF.md` without adding scope first.
-- Evidence: First human playtest is recorded in `prototype/VALIDATION.md` as V-001. Player reported that the rules were not understood. R-HF-002 in `research/POST_PLAYTEST_SYNTHESIS.md` additionally records that the content itself was judged disappointing.
-- Current result: LEGIBILITY FAIL + CONTENT/HOOK FAIL on prior build. V-002 revised build passed independent static/logic inspection as V-003, with runtime/CI still unconfirmed.
-- Next: Obtain new human evidence through the stable public play entry point before expanding H1 scope. Test comprehension and core payoff separately. Do not treat technical verification as proof of comprehension or fun.
-
-### C5-008 — Revise first-play legibility
-- Priority: P0
-- Status: ACTIVE
-- Owner: Prototype Worker
-- Depends on: V-001 in `prototype/VALIDATION.md`
-- Goal: Make goal, source→collector flow, part cause/effect, success/failure, and retry loop understandable through play rather than a long help paragraph.
-- Constraints: Keep the core H1 experiment small; do not add meta progression, economy, narrative, monetization, or speculative content. Prefer progressive disclosure and visible cause/effect over more prose.
-- Acceptance: Revised build satisfies the bounded targets in `prototype/VALIDATION.md` and is ready for a second human playtest.
-- Implementation: V-002 committed in `prototype/index.html` at `107d7ece6f54a4756bc35ea8d0e8bbb310ed3073`. Added persistent one-sentence goal, explicit SOURCE/COLLECTOR flow, highlighted first placement, progressive part unlock, Japanese cause/effect labels, and reason-specific result feedback while retaining H1 core scope.
-- Independent verification: V-003 in `prototype/VALIDATION.md` confirms the expected structure and interaction wiring by static/logic inspection. Initial guided placement routes around the first blocker; staged tool unlocking, reason-specific feedback, scoring, retry/reset paths are wired. No blocking source defect was identified.
-- Remaining caveat: GitHub combined-status lookup exposed no CI status for the implementation commit, and no real mobile-browser runtime was executed by Verification Worker. CI/runtime therefore remain UNKNOWN, not PASS.
-- Handoff: V-002 is technically suitable for a second human playtest subject to the runtime caveat. Human legibility remains unresolved until that playtest. R-HF-002 content/hook disappointment also remains unresolved even if legibility improves.
+- Evidence: First human playtest is recorded in `prototype/VALIDATION.md` as V-001. Player reported that the rules were not understood. R-HF-002 in `research/POST_PLAYTEST_SYNTHESIS.md` additionally records that the content itself was judged disappointing. R-HF-004/R-HF-005 in `research/H1_GATE_B_FAILURE.md` now record that comprehension improved while enjoyment failed strongly.
+- Current result: Gate A comprehension PASS for the current human tester after V-002; Gate B core payoff STRONG FAIL. Formal H1 lead-product disposition remains Director-owned.
+- Next: Integrate the post-legibility human evidence and decide H1 lead status. Do not expand H1 scope merely because comprehension improved.
 
 ### C5-004 — Build first playable proof
 - Priority: P1
@@ -35,8 +22,8 @@ Priority: P0 highest, then P1, P2, P3.
 - Depends on: C5-003
 - Goal: Implement the smallest technically verifiable playable slice.
 - Output: `prototype/index.html` and `prototype/PRODUCT_BRIEF.md`.
-- Current state: Playable source exists and V-002 bounded legibility revision is implemented. V-003 independent static/logic verification found no blocking source defect. CI and real mobile runtime remain unconfirmed.
-- Next: Preserve technical scope while human validation proceeds; reproduce any concrete runtime defect separately if observed.
+- Current state: H1 playable source exists and V-002 bounded legibility revision is implemented. V-003 independent static/logic verification found no blocking source defect. Human evidence now shows comprehension improved but core payoff failed strongly. CI and real mobile runtime remain unconfirmed.
+- Next: Preserve H1 as evidence; avoid further H1 feature expansion pending Director disposition. H2 is being prepared separately under C5-009.
 
 ### C5-005 — Establish lightweight automated verification
 - Priority: P1
@@ -47,19 +34,29 @@ Priority: P0 highest, then P1, P2, P3.
 - Current state: `scripts/verify_prototype.mjs` and `.github/workflows/verify.yml` created. Static inspection confirms the workflow invokes the verifier on main push/PR, but no successful workflow/status result has been observed through the available integration.
 - Done when: At least one successful verification run is observed and recorded.
 
-## Queue
-
 ### C5-009 — Prepare bounded H2 alternative prototype
 - Priority: P1
-- Status: TODO
-- Owner: Unclaimed
+- Status: ACTIVE
+- Owner: Prototype Worker
 - Depends on: `research/H2_TIMING_RISK_TEST_BRIEF.md`
 - Goal: Prepare a smallest-test timing/risk microgame so H1 is not optimized by sunk cost after confirmed content disappointment.
 - Constraints: Keep H2 isolated from the current H1 source until Director explicitly authorizes switching the stable public entry point. One primary action, result within seconds, instant retry, no meta/economy/monetization scope.
 - Validation: Must be independently technically checked before it can replace or be exposed through the stable human play entry point.
 - Distribution guardrail: Human direction requires one stable public play URL. Do not require the human to repeatedly discover/add new URLs; exact canonical URL remains UNKNOWN in repository evidence.
+- Claim note: Prototype Worker claimed C5-009 after confirming no conflicting owner and after R-HF-004/R-HF-005 showed the bounded H1 legibility experiment had achieved Gate A but failed Gate B strongly.
+
+## Queue
 
 ## Done
+
+### C5-008 — Revise first-play legibility
+- Priority: P0
+- Status: DONE
+- Owner: Prototype Worker
+- Depends on: V-001 in `prototype/VALIDATION.md`
+- Goal: Make goal, source→collector flow, part cause/effect, success/failure, and retry loop understandable through play rather than a long help paragraph.
+- Result: V-002 implemented in `prototype/index.html` at `107d7ece6f54a4756bc35ea8d0e8bbb310ed3073`; V-003 independently confirmed static/logic integrity with runtime/CI caveats. Human evidence R-HF-004 then confirmed the revised experience became understandable for the current tester.
+- Product caveat: R-HF-004/R-HF-005 simultaneously show Gate B STRONG FAIL; C5-008 solved the bounded comprehension objective but did not validate H1 as enjoyable.
 
 ### C5-001 — Bootstrap repository-native studio operating system
 - Priority: P0
