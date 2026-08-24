@@ -5,6 +5,25 @@ Priority: P0 highest, then P1, P2, P3.
 
 ## Active
 
+### C5-007 — Conduct first interaction validation
+- Priority: P0
+- Status: ACTIVE
+- Owner: Director
+- Depends on: C5-004
+- Goal: Test the prototype against the validation questions in `prototype/PRODUCT_BRIEF.md` without adding scope first.
+- Evidence: First human playtest is recorded in `prototype/VALIDATION.md` as V-001. Player reported that the rules were not understood.
+- Current result: LEGIBILITY FAIL. Other validation questions remain UNKNOWN.
+- Next: Revise only the legibility/onboarding layer, then obtain a new human playtest before expanding scope.
+
+### C5-008 — Revise first-play legibility
+- Priority: P0
+- Status: TODO
+- Owner: Unclaimed
+- Depends on: V-001 in `prototype/VALIDATION.md`
+- Goal: Make goal, source→collector flow, part cause/effect, success/failure, and retry loop understandable through play rather than a long help paragraph.
+- Constraints: Keep the core H1 experiment small; do not add meta progression, economy, narrative, monetization, or speculative content. Prefer progressive disclosure and visible cause/effect over more prose.
+- Acceptance: Revised build satisfies the bounded targets in `prototype/VALIDATION.md` and is ready for a second human playtest.
+
 ### C5-004 — Build first playable proof
 - Priority: P1
 - Status: ACTIVE
@@ -13,7 +32,7 @@ Priority: P0 highest, then P1, P2, P3.
 - Goal: Implement the smallest technically verifiable playable slice.
 - Output: `prototype/index.html` and `prototype/PRODUCT_BRIEF.md`.
 - Current state: Playable source exists. Structural/syntax CI has been defined; CI result has not yet been observed through the available GitHub integration, so full verification remains open.
-- Next: Observe verification result when available, then perform interaction validation against the product brief.
+- Next: Preserve technical scope while C5-008 addresses the confirmed legibility failure.
 
 ### C5-005 — Establish lightweight automated verification
 - Priority: P1
@@ -27,19 +46,12 @@ Priority: P0 highest, then P1, P2, P3.
 ## Queue
 
 ### C5-006 — Define business validation plan
-- Priority: P1
+- Priority: P2
 - Status: TODO
 - Owner: Unclaimed
 - Depends on: C5-003
 - Goal: Define what evidence would justify continuing, changing, or stopping the product direction.
-
-### C5-007 — Conduct first interaction validation
-- Priority: P1
-- Status: TODO
-- Owner: Unclaimed
-- Depends on: C5-004
-- Goal: Test the prototype against the validation questions in `prototype/PRODUCT_BRIEF.md` without adding scope first.
-- Output: `prototype/VALIDATION.md` with observed evidence, failures, and next decision.
+- Note: Lower priority until the core interaction survives legibility validation.
 
 ## Done
 
