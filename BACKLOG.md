@@ -17,12 +17,13 @@ Priority: P0 highest, then P1, P2, P3.
 
 ### C5-008 — Revise first-play legibility
 - Priority: P0
-- Status: TODO
-- Owner: Unclaimed
+- Status: ACTIVE
+- Owner: Prototype Worker
 - Depends on: V-001 in `prototype/VALIDATION.md`
 - Goal: Make goal, source→collector flow, part cause/effect, success/failure, and retry loop understandable through play rather than a long help paragraph.
 - Constraints: Keep the core H1 experiment small; do not add meta progression, economy, narrative, monetization, or speculative content. Prefer progressive disclosure and visible cause/effect over more prose.
 - Acceptance: Revised build satisfies the bounded targets in `prototype/VALIDATION.md` and is ready for a second human playtest.
+- Current work: Prototype Worker claimed C5-008 on 2026-08-25 for a bounded onboarding/legibility revision only; no H1 scope expansion.
 
 ### C5-004 — Build first playable proof
 - Priority: P1
