@@ -41,9 +41,13 @@ Priority: P0 highest, then P1, P2, P3.
 - Depends on: `research/H2_TIMING_RISK_TEST_BRIEF.md`
 - Goal: Prepare a smallest-test timing/risk microgame so H1 is not optimized by sunk cost after confirmed content disappointment.
 - Constraints: Keep H2 isolated from the current H1 source until Director explicitly authorizes switching the stable public entry point. One primary action, result within seconds, instant retry, no meta/economy/monetization scope.
+- Implementation: `prototype_h2/index.html` added in commit `8a746446936948cb28ada36d606fcefc5cf000a4`. It implements one deterministic visible BUST boundary, one STOP action, BANKED/BUST results, immediate retry, and session BEST. Existing H1 `prototype/index.html` was not modified.
+- Prototype record: `prototype_h2/VALIDATION.md` added in commit `8f912b844f42377bcfa555ed73882e59a3366206`; source-level checks and all runtime/product unknowns are recorded there.
+- Current state: IMPLEMENTATION COMPLETE; INDEPENDENT VERIFICATION REQUIRED. Prototype Worker should not expand H2 before that check.
 - Validation: Must be independently technically checked before it can replace or be exposed through the stable human play entry point.
 - Distribution guardrail: Human direction requires one stable public play URL. Do not require the human to repeatedly discover/add new URLs; exact canonical URL remains UNKNOWN in repository evidence.
 - Claim note: Prototype Worker claimed C5-009 after confirming no conflicting owner and after R-HF-004/R-HF-005 showed the bounded H1 legibility experiment had achieved Gate A but failed Gate B strongly.
+- Next: Verification Worker independently checks mechanics/fairness/isolation. Director alone decides whether/when H2 may replace content behind the stable public entry point.
 
 ## Queue
 
