@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+  <meta name="theme-color" content="#0e1118" />
+  <title>EMBERLORE</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app" id="app">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">ONE BRAIN / FIRST PLAYABLE</div>
+        <h1>EMBERLORE</h1>
+      </div>
+      <button id="archiveBtn" class="ghost small">ARCHIVE</button>
+    </header>
+
+    <section id="homeView" class="view active">
+      <div class="hero-card">
+        <div class="sigil">✦</div>
+        <p class="kicker">5–8 MIN EXPEDITION</p>
+        <h2>敵の次の一手を読み、遺物で戦い方を変える。</h2>
+        <p class="muted">短い探索の中でビルドを完成させ、最奥の守護者を倒せ。</p>
+      </div>
+
+      <section class="panel">
+        <div class="section-head">
+          <h3>STARTING CHARM</h3>
+          <span id="echoesLabel" class="currency">0 ECHOES</span>
+        </div>
+        <div id="charmList" class="charm-list"></div>
+      </section>
+
+      <button id="startBtn" class="primary big">BEGIN EXPEDITION</button>
+      <p class="fineprint">進行・発見・アンロックはこの端末のブラウザに保存されます。</p>
+    </section>
+
+    <section id="gameView" class="view">
+      <div class="runline">
+        <span id="stageLabel">ROOM 1 / 4</span>
+        <span id="buildLabel">0 RELICS</span>
+      </div>
+
+      <section class="combat-card">
+        <div class="enemy-head">
+          <div>
+            <p class="eyebrow">ENEMY</p>
+            <h2 id="enemyName">Ash Hound</h2>
+          </div>
+          <div class="intent" id="intentBox">
+            <span class="intent-label">NEXT</span>
+            <strong id="intentText">ATTACK 6</strong>
+          </div>
+        </div>
+
+        <div class="enemy-visual" id="enemyVisual">
+          <div class="enemy-core" id="enemyCore">◆</div>
+        </div>
+
+        <div class="bar-wrap">
+          <div class="bar-label"><span>ENEMY HP</span><strong id="enemyHpText">24 / 24</strong></div>
+          <div class="bar"><div id="enemyHpBar" class="fill enemy"></div></div>
+        </div>
+      </section>
+
+      <section class="player-panel">
+        <div class="stats-row">
+          <div><span>HP</span><strong id="playerHp">30</strong></div>
+          <div><span>SHIELD</span><strong id="playerShield">0</strong></div>
+          <div><span>FOCUS</span><strong id="playerFocus">0</strong></div>
+          <div><span>BURN</span><strong id="enemyBurn">0</strong></div>
+        </div>
+
+        <div id="actionGrid" class="action-grid">
+          <button class="action strike" data-action="strike">
+            <span class="action-icon">⚔</span><strong>STRIKE</strong><small id="strikeHint">7 damage</small>
+          </button>
+          <button class="action guard" data-action="guard">
+            <span class="action-icon">◇</span><strong>GUARD</strong><small id="guardHint">6 shield</small>
+          </button>
+          <button class="action focus" data-action="focus">
+            <span class="action-icon">✦</span><strong>FOCUS</strong><small>+2 focus</small>
+          </button>
+        </div>
+
+        <div id="combatLog" class="combat-log">敵の意図を見て行動を選べ。</div>
+      </section>
+    </section>
+
+    <section id="rewardView" class="view">
+      <div class="reward-head">
+        <p class="eyebrow">RELIC DRAFT</p>
+        <h2>ひとつだけ持っていく。</h2>
+        <p class="muted">今のビルドを伸ばすか、別の勝ち筋を作るか。</p>
+      </div>
+      <div id="relicChoices" class="relic-grid"></div>
+    </section>
+
+    <section id="routeView" class="view">
+      <div class="reward-head">
+        <p class="eyebrow">ROUTE DECISION</p>
+        <h2>次の危険を選べ。</h2>
+      </div>
+      <div id="routeChoices" class="route-grid"></div>
+    </section>
+
+    <section id="resultView" class="view">
+      <div id="resultCard" class="result-card"></div>
+      <button id="homeBtn" class="primary big">RETURN TO CAMP</button>
+    </section>
+
+    <section id="archiveView" class="view">
+      <div class="section-head sticky">
+        <div><p class="eyebrow">PERSISTENT COLLECTION</p><h2>ARCHIVE</h2></div>
+        <button id="archiveClose" class="ghost small">CLOSE</button>
+      </div>
+      <div id="archiveContent"></div>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
