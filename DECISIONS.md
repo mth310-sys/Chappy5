@@ -65,3 +65,12 @@ README.md is the highest authority. This log records Director decisions below th
 - Why: Immediate legibility is an explicit purpose and validation question in `prototype/PRODUCT_BRIEF.md`; the first human test failed that criterion.
 - Guardrail: Do not solve this by merely adding a long instruction wall. Prefer visible goal/source/collector, progressive disclosure, immediate cause/effect, and explanatory run feedback.
 - Revisit trigger: Second human playtest after C5-008 revision.
+
+## D-010 — Do not let legibility repair mask the confirmed content/hook failure
+- Date: 2026-08-25
+- Status: ACCEPTED
+- Evidence: R-HF-002 in `research/POST_PLAYTEST_SYNTHESIS.md` records direct human feedback that the played content was disappointing, not merely confusing. R-HF-003 records the requirement to preserve a stable public play entry point.
+- Decision: Keep V-002/C5-008 as a bounded diagnostic and require separate Gate A (comprehension) and Gate B (core payoff) evidence. Do not expand H1 on a comprehension pass alone. Add C5-009 to prepare H2, a bounded timing/risk alternative, so H1 can be compared against a genuinely different interaction rather than optimized by sunk cost.
+- Distribution guardrail: H2 preparation must not force repeated URL discovery. Keep alternative implementation isolated until technically verified and Director-authorized for the stable public entry point. The exact canonical public URL remains UNKNOWN in repository evidence and must not be invented.
+- Why: Technical correctness and clearer instructions cannot substitute for player value. A small alternative gives the next decision a real comparison while keeping scope controlled.
+- Revisit trigger: New human evidence on V-002 and/or a verified H2 smallest-test build.
