@@ -11,7 +11,7 @@
   <main class="app" id="app">
     <header class="topbar">
       <div>
-        <div class="eyebrow">ONE BRAIN / FIRST PLAYABLE</div>
+        <div class="eyebrow">ONE BRAIN / EMBERLORE</div>
         <h1>EMBERLORE</h1>
       </div>
       <button id="archiveBtn" class="ghost small">ARCHIVE</button>
@@ -20,33 +20,41 @@
     <section id="homeView" class="view active">
       <div class="hero-card">
         <div class="sigil">✦</div>
-        <p class="kicker">5–8 MIN EXPEDITION</p>
-        <h2>敵の次の一手を読み、遺物で戦い方を変える。</h2>
-        <p class="muted">短い探索の中でビルドを完成させ、最奥の守護者を倒せ。</p>
+        <p class="kicker">THE ASH REMEMBERS</p>
+        <h2 id="homeHeadline">目覚めるたび、世界は同じ灰から始まる。</h2>
+        <p id="homeStory" class="muted">あなたは記憶を失った「火守」。崩壊した記憶庫へ潜り、失われた世界の真相を持ち帰れ。</p>
+        <div class="objective-card">
+          <span class="objective-label">CURRENT THREAD</span>
+          <strong id="objectiveTitle">最初の記憶を回収する</strong>
+          <small id="objectiveText">遠征で未知の存在と接触し、Archiveへ記録を持ち帰れ。</small>
+        </div>
       </div>
 
       <section class="panel">
         <div class="section-head">
-          <h3>STARTING CHARM</h3>
+          <h3>EMBER VOW</h3>
           <span id="echoesLabel" class="currency">0 ECHOES</span>
         </div>
+        <p class="panel-note">Echoesは失われた時間の残響。遠征で持ち帰り、次の火守の在り方を解放する。</p>
         <div id="charmList" class="charm-list"></div>
       </section>
 
-      <button id="startBtn" class="primary big">BEGIN EXPEDITION</button>
-      <p class="fineprint">進行・発見・アンロックはこの端末のブラウザに保存されます。</p>
+      <button id="startBtn" class="primary big">ENTER THE ASH</button>
+      <p class="fineprint">記憶・発見・アンロックはこの端末のブラウザに保存されます。</p>
     </section>
 
     <section id="gameView" class="view">
       <div class="runline">
-        <span id="stageLabel">ROOM 1 / 4</span>
+        <span id="stageLabel">DEPTH 1 / 4</span>
         <span id="buildLabel">0 RELICS</span>
       </div>
+
+      <div id="signalStrip" class="signal-strip">SIGNAL / 灰の奥から、あなたを知る声がする。</div>
 
       <section class="combat-card">
         <div class="enemy-head">
           <div>
-            <p class="eyebrow">ENEMY</p>
+            <p class="eyebrow">ENTITY</p>
             <h2 id="enemyName">Ash Hound</h2>
           </div>
           <div class="intent" id="intentBox">
@@ -60,7 +68,7 @@
         </div>
 
         <div class="bar-wrap">
-          <div class="bar-label"><span>ENEMY HP</span><strong id="enemyHpText">24 / 24</strong></div>
+          <div class="bar-label"><span>ENTITY HP</span><strong id="enemyHpText">24 / 24</strong></div>
           <div class="bar"><div id="enemyHpBar" class="fill enemy"></div></div>
         </div>
       </section>
@@ -91,29 +99,30 @@
 
     <section id="rewardView" class="view">
       <div class="reward-head">
-        <p class="eyebrow">RELIC DRAFT</p>
-        <h2>ひとつだけ持っていく。</h2>
-        <p class="muted">今のビルドを伸ばすか、別の勝ち筋を作るか。</p>
+        <p class="eyebrow">RELIC RECOVERY</p>
+        <h2>残骸は、過去の戦い方を覚えている。</h2>
+        <p class="muted">ひとつだけ接続する。今のビルドを伸ばすか、別の勝ち筋を作るか。</p>
       </div>
       <div id="relicChoices" class="relic-grid"></div>
     </section>
 
     <section id="routeView" class="view">
       <div class="reward-head">
-        <p class="eyebrow">ROUTE DECISION</p>
-        <h2>次の危険を選べ。</h2>
+        <p class="eyebrow">FRACTURED ROUTE</p>
+        <h2>どの記憶を追う？</h2>
+        <p class="muted">安全な道は生存を、危険な道は真相とEchoesを近づける。</p>
       </div>
       <div id="routeChoices" class="route-grid"></div>
     </section>
 
     <section id="resultView" class="view">
       <div id="resultCard" class="result-card"></div>
-      <button id="homeBtn" class="primary big">RETURN TO CAMP</button>
+      <button id="homeBtn" class="primary big">RETURN TO EMBER</button>
     </section>
 
     <section id="archiveView" class="view">
       <div class="section-head sticky">
-        <div><p class="eyebrow">PERSISTENT COLLECTION</p><h2>ARCHIVE</h2></div>
+        <div><p class="eyebrow">THE WORLD YOU HAVE RECOVERED</p><h2>ARCHIVE</h2></div>
         <button id="archiveClose" class="ghost small">CLOSE</button>
       </div>
       <div id="archiveContent"></div>
