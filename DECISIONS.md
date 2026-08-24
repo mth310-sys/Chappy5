@@ -11,10 +11,10 @@ README.md is the highest authority. This log records Director decisions below th
 
 ## D-002 — Start lean; do not activate all four workers immediately
 - Date: 2026-08-25
-- Status: ACCEPTED
+- Status: SUPERSEDED BY D-007
 - Decision: Begin with the Director as coordinator and keep worker slots unactivated until independent, non-conflicting workstreams exist.
-- Why: The repository currently contains no product direction or production code. Premature parallelism would create coordination overhead and conflicting assumptions.
-- Revisit trigger: Activate workers when there are at least two clearly separable tasks with explicit outputs and ownership boundaries.
+- Why: The repository initially contained no product direction or production code. Premature parallelism would have created coordination overhead and conflicting assumptions.
+- Revisit trigger reached: Product research, prototype implementation, verification, and business validation are now separable workstreams.
 
 ## D-003 — Evidence-first product selection
 - Date: 2026-08-25
@@ -41,3 +41,11 @@ README.md is the highest authority. This log records Director decisions below th
 - Decision: Build the first proof with plain HTML, CSS, and JavaScript and no external runtime dependencies.
 - Why: The prototype needs to test interaction, not tooling. A dependency-free web build minimizes setup, distribution friction, and avoidable technical surface area.
 - Revisit trigger: Adopt a framework/engine only when the validated interaction requires capabilities that materially outweigh added complexity.
+
+## D-007 — Activate scheduled Director and four-worker operating loop
+- Date: 2026-08-25
+- Status: ACCEPTED
+- Decision: Run the Game Studio Director every hour. Activate four specialized workers—Product / Player Research, Prototype, Verification, and Business / Operations—every 4 hours, staggered by 10-minute offsets.
+- Why: The first product hypothesis, prototype, verification need, and business-validation queue now create multiple bounded workstreams. Scheduling turns the repository-native operating system into a continuing execution system rather than a passive handoff structure.
+- Conflict control: Scheduling creates execution opportunities only. Workers must verify ownership, avoid overlapping destructive changes, and may leave the repository unchanged when no safe independent task exists. The hourly Director integrates results and resolves contention.
+- Revisit trigger: Change cadence, roles, or active worker count if repeated idle runs, write conflicts, validation bottlenecks, or a changed product phase show a better structure.
