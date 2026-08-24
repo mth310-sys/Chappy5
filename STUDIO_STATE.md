@@ -7,24 +7,26 @@ Authority: README.md is the highest-level instruction.
 Build and continuously operate a new game business using this repository as the durable brain, memory, work ledger, and handoff point.
 
 ## Current phase
-PHASE 0 — Studio bootstrap
+PHASE 1 — First product validation
 
 ## Current objective
-Create a repository-native operating system that allows any authorized executor to recover the current state, choose valid work, execute safely, and record outcomes without relying on chat memory.
+Validate whether the first one-screen chain-reaction automation interaction is technically sound, immediately legible, and worth replaying before expanding scope.
 
 ## Operating status
 - Director: ACTIVE
 - Workers: NOT YET ACTIVATED
-- Product direction: DISCOVERY
-- Production code: NOT STARTED
-- External repository use: PROHIBITED
+- Product direction: H1 SELECTED FOR VALIDATION
+- Prototype: `prototype/index.html` IMPLEMENTED
+- Automated verification: DEFINED, RESULT NOT YET OBSERVED
+- Final commercial direction: UNCONFIRMED
+- External GitHub repository use: PROHIBITED
 
 ## Immediate priorities
-1. Establish operating rules and source-of-truth hierarchy.
-2. Establish durable backlog, decision log, and worker protocol.
-3. Select the first game/business hypothesis using evidence gathered within permitted boundaries.
-4. Build the smallest testable product slice.
-5. Validate, record results, and iterate.
+1. Confirm prototype verification result.
+2. Test the actual interaction against `prototype/PRODUCT_BRIEF.md`.
+3. Record failures and player-legibility evidence in `prototype/VALIDATION.md`.
+4. Decide continue / revise / reject H1 before adding meta systems or content.
+5. Define a lightweight business validation plan only after the core interaction survives the first design test.
 
 ## Source-of-truth order
 1. README.md — immutable top-level mandate and prohibitions.
@@ -48,3 +50,6 @@ Then inspect files directly related to the claimed task before changing anything
 
 ## Completion rule
 A task is only DONE when its tangible output exists in this repository, required verification has been performed, and BACKLOG.md / STUDIO_STATE.md are updated as needed. Unknowns must remain explicitly unknown.
+
+## Current handoff
+Studio bootstrap is complete. Product discovery selected H1 for validation and D-006 selected a dependency-free web stack. The first playable source, product brief, verification script, and GitHub Actions workflow are committed. Do not claim the prototype verified until a successful run or equivalent direct verification is observed. Do not expand scope before interaction validation.
