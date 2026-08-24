@@ -7,27 +7,31 @@ Authority: README.md is the highest-level instruction.
 Build and continuously operate a new game business using this repository as the durable brain, memory, work ledger, and handoff point.
 
 ## Current phase
-PHASE 1 — First product validation
+PHASE 1 — First product validation / legibility revision
 
 ## Current objective
-Validate whether the first one-screen chain-reaction automation interaction is technically sound, immediately legible, and worth replaying before expanding scope.
+Repair the confirmed first-play comprehension failure in Prototype 01, then obtain new human evidence before expanding scope or committing commercially to H1.
 
 ## Operating status
-- Director: ACTIVE — scheduled every hour.
-- Workers: 4 ACTIVE — specialized roles scheduled every 4 hours with staggered start offsets; see WORKERS.md.
-- Product direction: H1 SELECTED FOR VALIDATION
+- Director: ACTIVE — hourly at :00 Asia/Tokyo.
+- Workers: 4 ACTIVE — hourly staggered pipeline; see WORKERS.md and D-008.
+- Product direction: H1 SELECTED FOR VALIDATION, NOT YET VALIDATED
 - Prototype: `prototype/index.html` IMPLEMENTED
-- Automated verification: DEFINED, RESULT NOT YET OBSERVED
+- Human interaction validation: V-001 LEGIBILITY FAIL
+- Automated verification: DEFINED, SUCCESS RESULT NOT YET OBSERVED
 - Final commercial direction: UNCONFIRMED
 - External GitHub repository use: PROHIBITED
 
 ## Immediate priorities
-1. Confirm prototype verification result.
-2. Test the actual interaction against `prototype/PRODUCT_BRIEF.md`.
-3. Record failures and player-legibility evidence in `prototype/VALIDATION.md`.
-4. Decide continue / revise / reject H1 before adding meta systems or content.
-5. Define a lightweight business validation plan only after the core interaction survives the first design test.
-6. Observe the scheduled operating loop for idle churn or write conflicts and adjust cadence if evidence justifies it.
+1. C5-008: revise first-play legibility without expanding product scope.
+2. Preserve/extend technical verification around the revision.
+3. Obtain a second human playtest and record whether goal and cause/effect are now understood.
+4. Decide continue / revise again / reject H1 from evidence.
+5. Keep business validation secondary until the core interaction survives legibility validation.
+6. Observe the hourly worker pipeline for idle churn or write conflicts and adjust if evidence justifies it.
+
+## Confirmed evidence
+- V-001: The human owner played the current prototype and reported that the rules were not understood. This is a confirmed failure of the prototype's intended immediate-legibility criterion. Exact root causes remain partly UNKNOWN until narrower evidence is collected.
 
 ## Source-of-truth order
 1. README.md — immutable top-level mandate and prohibitions.
@@ -53,4 +57,4 @@ Then inspect files directly related to the claimed task before changing anything
 A task is only DONE when its tangible output exists in this repository, required verification has been performed, and BACKLOG.md / STUDIO_STATE.md are updated as needed. Unknowns must remain explicitly unknown.
 
 ## Current handoff
-Studio bootstrap is complete and the scheduled execution layer is now active. Product discovery selected H1 for validation and D-006 selected a dependency-free web stack. The first playable source, product brief, verification script, and GitHub Actions workflow are committed. D-007 activates the hourly Director loop and four staggered specialized workers. Do not claim the prototype verified until a successful run or equivalent direct verification is observed. Do not expand scope before interaction validation. Scheduled execution is not permission to create low-value churn; executors should make no changes when no safe useful work exists.
+The operating layer is active as an hourly staggered five-stage pipeline under D-008. The first human playtest produced V-001, a P0 legibility failure, and D-009 makes C5-008 the highest-priority product work. Prototype Worker may claim C5-008 and make a bounded onboarding/legibility revision. Verification Worker should independently verify technical integrity afterward but must not mark human legibility resolved without a new human playtest. Research should focus on concrete comprehension hypotheses/tests rather than broad concept expansion. Operations should avoid pushing commercialization ahead of core interaction validation. README.md must never be changed.
