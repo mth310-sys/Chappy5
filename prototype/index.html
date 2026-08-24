@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Chain Lab — Prototype 01</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0b1020;
+      --panel: #141b31;
+      --panel-2: #1b2542;
+      --line: #314064;
+      --text: #f5f7ff;
+      --muted: #9eabc9;
+      --accent: #62e6ff;
+      --good: #8ef0a8;
+      --warn: #ffcf66;
+      --danger: #ff7c8d;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 50% 0%, #1a2a55 0, transparent 38%),
+        var(--bg);
+      color: var(--text);
+      font-family: ui-rounded, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      padding: max(14px, env(safe-area-inset-top)) 14px max(18px, env(safe-area-inset-bottom));
+    }
+
+    .app {
+      width: min(100%, 760px);
+      display: grid;
+      gap: 12px;
+    }
+
+    .topbar,
+    .toolbar,
+    .status,
+    .help {
+      background: color-mix(in srgb, var(--panel) 92%, transparent);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, .22);
+    }
+
+    .topbar {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 16px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(22px, 5vw, 34px);
+      line-height: 1;
+      letter-spacing: -.03em;
+    }
+
+    .kicker {
+      margin: 0 0 6px;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .scorebox {
+      text-align: right;
+      min-width: 92px;
+    }
+
+    .scorebox strong {
+      display: block;
+      font-size: 26px;
+      line-height: 1;
+    }
+
+    .scorebox span,
+    .muted {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .board-shell {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: linear-gradient(180deg, #111a31, #0d1426);
+      padding: 14px;
+      box-shadow: inset 0 0 50px rgba(98, 230, 255, .03), 0 18px 50px rgba(0, 0, 0, .28);
+    }
+
+    .flow-labels {
+      display: flex;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      margin: 0 2px 8px;
+      text-transform: uppercase;
+    }
+
+    .board {
+      --cols: 7;
+      --rows: 5;
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(var(--cols), 1fr);
+      gap: 5px;
+      touch-action: manipulation;
+    }
+
+    .cell {
+      aspect-ratio: 1;
+      min-width: 0;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: rgba(255,255,255,.025);
+      color: var(--text);
+      display: grid;
+      place-items: center;
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+      font: inherit;
+    }
+
+    .cell:not(.blocked):not(:disabled) { cursor: pointer; }
+    .cell:not(.blocked):not(:disabled):active { transform: scale(.96); }
+
+    .cell::after {
+      content: "";
+      position: absolute;
+      inset: 7px;
+      border-radius: 7px;
+      border: 1px dashed rgba(158, 171, 201, .12);
+      pointer-events: none;
+    }
+
+    .cell.blocked {
+      background:
+        repeating-linear-gradient(135deg, rgba(255,124,141,.15) 0 6px, rgba(255,124,141,.04) 6px 12px);
+      border-color: rgba(255,124,141,.48);
+    }
+
+    .part {
+      width: 74%;
+      aspect-ratio: 1;
+      border-radius: 9px;
+      display: grid;
+      place-items: center;
+      position: relative;
+      z-index: 2;
+      font-size: clamp(15px, 4vw, 26px);
+      font-weight: 900;
+      box-shadow: 0 4px 12px rgba(0,0,0,.25);
+    }
+
+    .part.diverter { background: #2b4f8f; }
+    .part.booster { background: #6f4aa8; }
+    .part.splitter { background: #166d6d; }
+
+    .token {
+      position: absolute;
+      width: calc((100% - 30px) / 7 * .46);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--warn);
+      color: #17120a;
+      font-size: clamp(9px, 2.6vw, 13px);
+      font-weight: 1000;
+      box-shadow: 0 0 0 4px rgba(255,207,102,.12), 0 0 22px rgba(255,207,102,.48);
+      z-index: 5;
+      pointer-events: none;
+      transition: transform 250ms cubic-bezier(.2,.8,.2,1), opacity 180ms ease;
+    }
+
+    .toolbar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      padding: 10px;
+    }
+
+    button.tool,
+    button.action {
+      appearance: none;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--panel-2);
+      color: var(--text);
+      font: inherit;
+      font-weight: 850;
+      min-height: 48px;
+      padding: 10px 8px;
+      touch-action: manipulation;
+    }
+
+    button.tool[aria-pressed="true"] {
+      outline: 2px solid var(--accent);
+      border-color: transparent;
+      box-shadow: 0 0 20px rgba(98,230,255,.12);
+    }
+
+    button:disabled { opacity: .45; }
+    button:not(:disabled) { cursor: pointer; }
+    button:not(:disabled):active { transform: translateY(1px); }
+
+    .actions {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 8px;
+    }
+
+    button.run {
+      background: linear-gradient(180deg, #1b8061, #146247);
+      border-color: #289d79;
+    }
+
+    button.reset { background: #2a334c; }
+
+    .status {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      overflow: hidden;
+    }
+
+    .metric {
+      padding: 10px 12px;
+      text-align: center;
+      background: rgba(255,255,255,.015);
+    }
+
+    .metric strong { display: block; font-size: 18px; }
+    .metric span { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .06em; }
+
+    .help {
+      padding: 12px 14px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .help strong { color: var(--text); }
+
+    @media (max-width: 430px) {
+      .app { gap: 9px; }
+      .board-shell { padding: 10px; }
+      .board { gap: 3px; }
+      .cell { border-radius: 8px; }
+      .topbar { padding: 12px; }
+      .toolbar { gap: 6px; padding: 8px; }
+      button.tool, button.action { min-height: 44px; font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <section class="topbar" aria-label="Prototype header">
+      <div>
+        <p class="kicker">Prototype 01</p>
+        <h1>Chain Lab</h1>
+      </div>
+      <div class="scorebox">
+        <strong id="score">0</strong>
+        <span>COLLECTED VALUE</span>
+      </div>
+    </section>
+
+    <section class="board-shell" aria-label="Machine board">
+      <div class="flow-labels"><span>Source →</span><span>→ Collector</span></div>
+      <div id="board" class="board" role="grid" aria-label="7 by 5 machine grid"></div>
+    </section>
+
+    <section class="toolbar" aria-label="Parts">
+      <button class="tool" data-tool="diverter" aria-pressed="true">↗ Diverter</button>
+      <button class="tool" data-tool="booster" aria-pressed="false">＋ Booster</button>
+      <button class="tool" data-tool="splitter" aria-pressed="false">⑂ Splitter</button>
+    </section>
+
+    <section class="actions">
+      <button id="runButton" class="action run">RUN MACHINE</button>
+      <button id="resetButton" class="action reset">RESET BOARD</button>
+    </section>
+
+    <section class="status" aria-label="Run metrics">
+      <div class="metric"><strong id="placed">0 / 6</strong><span>Parts</span></div>
+      <div class="metric"><strong id="delivered">0</strong><span>Orbs</span></div>
+      <div class="metric"><strong id="missed">0</strong><span>Missed</span></div>
+    </section>
+
+    <section class="help">
+      <strong>Goal:</strong> route four energy orbs past the red blockers and maximize collected value. A Booster adds value, a Splitter creates another route, and tapping an existing Diverter flips its direction.
+    </section>
+  </main>
+
+  <script>
+    (() => {
+      'use strict';
+
+      const COLS = 7;
+      const ROWS = 5;
+      const MAX_PARTS = 6;
+      const EMIT_COUNT = 4;
+      const SOURCE_ROW = 2;
+      const STEP_MS = 520;
+      const BLOCKS = new Set(['2,2', '4,1', '5,3']);
+
+      const boardEl = document.getElementById('board');
+      const runButton = document.getElementById('runButton');
+      const resetButton = document.getElementById('resetButton');
+      const scoreEl = document.getElementById('score');
+      const placedEl = document.getElementById('placed');
+      const deliveredEl = document.getElementById('delivered');
+      const missedEl = document.getElementById('missed');
+      const toolButtons = [...document.querySelectorAll('.tool')];
+
+      let selectedTool = 'diverter';
+      let parts = new Map();
+      let tokens = [];
+      let tokenId = 0;
+      let timer = null;
+      let tick = 0;
+      let score = 0;
+      let delivered = 0;
+      let missed = 0;
+      let running = false;
+
+      function key(col, row) {
+        return `${col},${row}`;
+      }
+
+      function partLabel(part) {
+        if (part.type === 'diverter') return part.dir < 0 ? '↗' : '↘';
+        if (part.type === 'booster') return '+2';
+        return '⑂';
+      }
+
+      function buildBoard() {
+        boardEl.innerHTML = '';
+        for (let row = 0; row < ROWS; row += 1) {
+          for (let col = 0; col < COLS; col += 1) {
+            const cell = document.createElement('button');
+            cell.className = 'cell';
+            cell.type = 'button';
+            cell.dataset.col = String(col);
+            cell.dataset.row = String(row);
+            cell.setAttribute('role', 'gridcell');
+            cell.setAttribute('aria-label', `Column ${col + 1}, row ${row + 1}`);
+            if (BLOCKS.has(key(col, row))) {
+              cell.classList.add('blocked');
+              cell.disabled = true;
+              cell.setAttribute('aria-label', `Blocked cell at column ${col + 1}, row ${row + 1}`);
+            } else {
+              cell.addEventListener('click', onCellClick);
+            }
+            boardEl.appendChild(cell);
+          }
+        }
+        renderParts();
+      }
+
+      function onCellClick(event) {
+        if (running) return;
+        const cell = event.currentTarget;
+        const col = Number(cell.dataset.col);
+        const row = Number(cell.dataset.row);
+        const cellKey = key(col, row);
+        const existing = parts.get(cellKey);
+
+        if (existing?.type === 'diverter') {
+          existing.dir *= -1;
+          parts.set(cellKey, existing);
+          renderParts();
+          return;
+        }
+
+        if (!existing && parts.size >= MAX_PARTS) return;
+
+        const nextPart = selectedTool === 'diverter'
+          ? { type: 'diverter', dir: -1 }
+          : { type: selectedTool };
+
+        parts.set(cellKey, nextPart);
+        renderParts();
+      }
+
+      function renderParts() {
+        document.querySelectorAll('.cell').forEach((cell) => {
+          const cellKey = key(Number(cell.dataset.col), Number(cell.dataset.row));
+          const part = parts.get(cellKey);
+          const old = cell.querySelector('.part');
+          if (old) old.remove();
+          if (!part) return;
+
+          const partEl = document.createElement('span');
+          partEl.className = `part ${part.type}`;
+          partEl.textContent = partLabel(part);
+          partEl.setAttribute('aria-hidden', 'true');
+          cell.appendChild(partEl);
+          cell.setAttribute('aria-label', `${part.type} at column ${Number(cell.dataset.col) + 1}, row ${Number(cell.dataset.row) + 1}`);
+        });
+        placedEl.textContent = `${parts.size} / ${MAX_PARTS}`;
+      }
+
+      function setSelectedTool(tool) {
+        selectedTool = tool;
+        toolButtons.forEach((button) => {
+          button.setAttribute('aria-pressed', String(button.dataset.tool === tool));
+        });
+      }
+
+      function cellCenter(col, row) {
+        const firstCell = boardEl.querySelector('.cell');
+        if (!firstCell) return { x: 0, y: 0 };
+        const boardRect = boardEl.getBoundingClientRect();
+        const target = boardEl.querySelector(`.cell[data-col="${col}"][data-row="${row}"]`);
+
+        if (col < 0) {
+          const sourceCell = boardEl.querySelector(`.cell[data-col="0"][data-row="${row}"]`);
+          const rect = sourceCell.getBoundingClientRect();
+          return { x: -rect.width * 0.52, y: rect.top - boardRect.top + rect.height / 2 };
+        }
+
+        if (col >= COLS) {
+          const goalCell = boardEl.querySelector(`.cell[data-col="${COLS - 1}"][data-row="${row}"]`);
+          const rect = goalCell.getBoundingClientRect();
+          return { x: boardRect.width + rect.width * 0.52, y: rect.top - boardRect.top + rect.height / 2 };
+        }
+
+        const rect = target.getBoundingClientRect();
+        return { x: rect.left - boardRect.left + rect.width / 2, y: rect.top - boardRect.top + rect.height / 2 };
+      }
+
+      function createToken(row, value = 1, col = -1) {
+        const el = document.createElement('div');
+        el.className = 'token';
+        el.dataset.id = String(++tokenId);
+        boardEl.appendChild(el);
+        const token = { id: tokenId, col, row, value, alive: true, el };
+        tokens.push(token);
+        placeToken(token, false);
+        return token;
+      }
+
+      function placeToken(token, animate = true) {
+        const point = cellCenter(token.col, token.row);
+        const size = token.el.getBoundingClientRect().width;
+        if (!animate) token.el.style.transition = 'none';
+        token.el.style.transform = `translate(${point.x - size / 2}px, ${point.y - size / 2}px)`;
+        token.el.textContent = String(token.value);
+        if (!animate) {
+          token.el.getBoundingClientRect();
+          token.el.style.transition = '';
+        }
+      }
+
+      function removeToken(token, kind) {
+        token.alive = false;
+        token.el.style.opacity = '0';
+        if (kind === 'miss') missed += 1;
+        if (kind === 'deliver') {
+          delivered += 1;
+          score += token.value;
+        }
+        window.setTimeout(() => token.el.remove(), 190);
+      }
+
+      function applyPart(token) {
+        const part = parts.get(key(token.col, token.row));
+        if (!part) return [];
+
+        if (part.type === 'booster') {
+          token.value += 2;
+          return [];
+        }
+
+        if (part.type === 'diverter') {
+          token.row += part.dir;
+          return [];
+        }
+
+        if (part.type === 'splitter') {
+          const preferred = token.row + 1 < ROWS ? token.row + 1 : token.row - 1;
+          if (preferred >= 0 && preferred < ROWS && !BLOCKS.has(key(token.col, preferred))) {
+            return [{ row: preferred, value: token.value, col: token.col }];
+          }
+        }
+
+        return [];
+      }
+
+      function updateMetrics() {
+        scoreEl.textContent = String(score);
+        deliveredEl.textContent = String(delivered);
+        missedEl.textContent = String(missed);
+      }
+
+      function advanceToken(token, spawned) {
+        if (!token.alive) return;
+        token.col += 1;
+
+        if (token.col >= COLS) {
+          placeToken(token);
+          window.setTimeout(() => removeToken(token, 'deliver'), 260);
+          return;
+        }
+
+        if (BLOCKS.has(key(token.col, token.row))) {
+          placeToken(token);
+          window.setTimeout(() => removeToken(token, 'miss'), 220);
+          return;
+        }
+
+        const clones = applyPart(token);
+
+        if (token.row < 0 || token.row >= ROWS || BLOCKS.has(key(token.col, token.row))) {
+          placeToken({ ...token, row: Math.max(0, Math.min(ROWS - 1, token.row)) });
+          window.setTimeout(() => removeToken(token, 'miss'), 220);
+          return;
+        }
+
+        placeToken(token);
+        clones.forEach((clone) => spawned.push(clone));
+      }
+
+      function step() {
+        const spawned = [];
+
+        if (tick < EMIT_COUNT) createToken(SOURCE_ROW);
+        tick += 1;
+
+        const activeBeforeStep = tokens.filter((token) => token.alive && token.col >= -1);
+        activeBeforeStep.forEach((token) => advanceToken(token, spawned));
+        spawned.forEach((clone) => createToken(clone.row, clone.value, clone.col));
+
+        updateMetrics();
+
+        const emissionFinished = tick >= EMIT_COUNT;
+        const activeRemain = tokens.some((token) => token.alive && token.col < COLS);
+        if (emissionFinished && !activeRemain) finishRun();
+      }
+
+      function startRun() {
+        if (running) return;
+        clearTokens();
+        score = 0;
+        delivered = 0;
+        missed = 0;
+        tick = 0;
+        running = true;
+        updateMetrics();
+        setInteractionEnabled(false);
+        runButton.textContent = 'RUNNING…';
+        step();
+        timer = window.setInterval(step, STEP_MS);
+      }
+
+      function finishRun() {
+        if (timer) window.clearInterval(timer);
+        timer = null;
+        running = false;
+        setInteractionEnabled(true);
+        runButton.textContent = 'RUN AGAIN';
+        updateMetrics();
+      }
+
+      function clearTokens() {
+        tokens.forEach((token) => token.el.remove());
+        tokens = [];
+      }
+
+      function resetBoard() {
+        if (timer) window.clearInterval(timer);
+        timer = null;
+        running = false;
+        clearTokens();
+        parts = new Map();
+        score = 0;
+        delivered = 0;
+        missed = 0;
+        tick = 0;
+        renderParts();
+        updateMetrics();
+        setInteractionEnabled(true);
+        runButton.textContent = 'RUN MACHINE';
+      }
+
+      function setInteractionEnabled(enabled) {
+        toolButtons.forEach((button) => { button.disabled = !enabled; });
+        resetButton.disabled = !enabled;
+        runButton.disabled = !enabled;
+        document.querySelectorAll('.cell:not(.blocked)').forEach((cell) => { cell.disabled = !enabled; });
+      }
+
+      toolButtons.forEach((button) => {
+        button.addEventListener('click', () => setSelectedTool(button.dataset.tool));
+      });
+      runButton.addEventListener('click', startRun);
+      resetButton.addEventListener('click', resetBoard);
+      window.addEventListener('resize', () => tokens.filter((token) => token.alive).forEach((token) => placeToken(token, false)));
+
+      buildBoard();
+      updateMetrics();
+    })();
+  </script>
+</body>
+</html>
