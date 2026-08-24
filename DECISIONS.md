@@ -27,3 +27,17 @@ README.md is the highest authority. This log records Director decisions below th
 - Status: ACCEPTED
 - Decision: Use versioned Markdown state/backlog/decision/worker files as the initial operating layer. Add Issues/PR/automation only when they solve an observed coordination or quality problem.
 - Why: Current team size and repository size do not justify process overhead yet.
+
+## D-005 — First validation hypothesis: one-screen chain-reaction automation sandbox
+- Date: 2026-08-25
+- Status: ACCEPTED FOR VALIDATION
+- Decision: Use H1 from PRODUCT_DISCOVERY.md as the first prototype target.
+- Why: It can expose its hook quickly, supports a small browser-first build, avoids a large content burden, and can create visible outcomes suitable for later sharing.
+- Important: This is not a final commercial commitment. Failure of the prototype should cause revision or rejection rather than sunk-cost expansion.
+
+## D-006 — First prototype stack: dependency-free web
+- Date: 2026-08-25
+- Status: ACCEPTED
+- Decision: Build the first proof with plain HTML, CSS, and JavaScript and no external runtime dependencies.
+- Why: The prototype needs to test interaction, not tooling. A dependency-free web build minimizes setup, distribution friction, and avoidable technical surface area.
+- Revisit trigger: Adopt a framework/engine only when the validated interaction requires capabilities that materially outweigh added complexity.
