@@ -12,8 +12,8 @@ Priority: P0 highest, then P1, P2, P3.
 - Depends on: C5-004
 - Goal: Test the prototype against the validation questions in `prototype/PRODUCT_BRIEF.md` without adding scope first.
 - Evidence: First human playtest is recorded in `prototype/VALIDATION.md` as V-001. Player reported that the rules were not understood.
-- Current result: LEGIBILITY FAIL. Other validation questions remain UNKNOWN.
-- Next: Revise only the legibility/onboarding layer, then obtain a new human playtest before expanding scope.
+- Current result: LEGIBILITY FAIL on prior build. V-002 revised build now requires technical verification and a new human playtest.
+- Next: Verify V-002, then obtain new human evidence before expanding scope.
 
 ### C5-008 — Revise first-play legibility
 - Priority: P0
@@ -23,7 +23,9 @@ Priority: P0 highest, then P1, P2, P3.
 - Goal: Make goal, source→collector flow, part cause/effect, success/failure, and retry loop understandable through play rather than a long help paragraph.
 - Constraints: Keep the core H1 experiment small; do not add meta progression, economy, narrative, monetization, or speculative content. Prefer progressive disclosure and visible cause/effect over more prose.
 - Acceptance: Revised build satisfies the bounded targets in `prototype/VALIDATION.md` and is ready for a second human playtest.
-- Current work: Prototype Worker claimed C5-008 on 2026-08-25 for a bounded onboarding/legibility revision only; no H1 scope expansion.
+- Implementation: V-002 committed in `prototype/index.html` at `107d7ece6f54a4756bc35ea8d0e8bbb310ed3073`. Added persistent one-sentence goal, explicit SOURCE/COLLECTOR flow, highlighted first placement, progressive part unlock, Japanese cause/effect labels, and reason-specific result feedback while retaining H1 core scope.
+- Prototype Worker check: updated main source re-fetched successfully; expected revised structure is present. No CI/status result was observable, so independent technical verification remains UNCONFIRMED.
+- Handoff: Verification Worker should independently verify V-002. Human legibility remains unresolved until a new playtest. R-HF-002 content/hook disappointment also remains unresolved even if legibility improves.
 
 ### C5-004 — Build first playable proof
 - Priority: P1
@@ -32,8 +34,8 @@ Priority: P0 highest, then P1, P2, P3.
 - Depends on: C5-003
 - Goal: Implement the smallest technically verifiable playable slice.
 - Output: `prototype/index.html` and `prototype/PRODUCT_BRIEF.md`.
-- Current state: Playable source exists. Structural/syntax CI has been defined; CI result has not yet been observed through the available GitHub integration, so full verification remains open.
-- Next: Preserve technical scope while C5-008 addresses the confirmed legibility failure.
+- Current state: Playable source exists and V-002 bounded legibility revision is implemented. Structural/syntax CI has been defined; CI result has not yet been observed through the available GitHub integration, so full verification remains open.
+- Next: Preserve technical scope while Verification Worker checks V-002.
 
 ### C5-005 — Establish lightweight automated verification
 - Priority: P1
