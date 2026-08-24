@@ -1,7 +1,7 @@
 # One Brain State
 
 Updated: 2026-08-25 JST
-Status: FIRST_PLAYABLE_HUMAN_FEEDBACK_RECEIVED / CORE_PROMISE_UNPROVEN
+Status: NARRATIVE_LOOP_REVISION_IMPLEMENTED / HUMAN_RETEST_REQUIRED
 
 ## Authority
 - README.md is the top-level instruction and must never be modified.
@@ -11,71 +11,93 @@ Status: FIRST_PLAYABLE_HUMAN_FEEDBACK_RECEIVED / CORE_PROMISE_UNPROVEN
 ## Current product
 Working title: **EMBERLORE**
 Direction: roguelite × growth × collection × short sessions.
-Selected core: telegraphed turn combat + three tactical actions + relic drafting + persistent collection/unlocks.
+Selected core remains under test: telegraphed turn combat + three tactical actions + relic drafting + persistent collection/unlocks.
 
-Why this was selected and what alternatives were rejected are recorded in `GAME_PLAN.md`.
+The first human test established that mechanics/controls were understandable but the product lacked a meaningful backbone and did not yet inspire confidence in long-term replay. This is treated as a product-level failure signal, not a cosmetic writing request.
+
+## Product spine after revision
+EMBERLORE is now framed as repeated expeditions into a ruined memory vault. The player is a repeatedly reconstructed **Firekeeper** who has forgotten why the cycle exists. Echoes are damaged fragments of time/memory that survive failed runs. Relics and hostile entities act as evidence about the night of collapse. The deepest guardian recognizes the Firekeeper as a previous authority.
+
+Long-term pull is explicitly designed around three connected motives:
+1. Mastery — better tactical decisions and build construction.
+2. Collection/growth — relics, Echoes, vows, entities, Archive completion.
+3. Discovery — uncover what happened, what EMBER PROTOCOL is, and whether the Firekeeper helped cause the collapse.
 
 ## Current playable files
-- `index.html` — fixed entry shell for the playable.
-- `styles.css` — mobile-first UI.
-- `game.js` — current gameplay and persistence.
-- `GAME_PLAN.md` — product thesis and human validation criteria.
+- `index.html` — mobile-first playable shell with current mystery/objective presentation.
+- `styles.css` — combat plus story/progression/archive presentation.
+- `game.js` — combat, persistence, relics, Echoes, memory progression, Archive logic.
+- `GAME_PLAN.md` — current product thesis, world spine, retention ladder, validation criteria.
 
-## Implemented in first slice
-- 4-room run including a boss.
-- Visible enemy next intent.
+## Implemented gameplay
+Existing systems retained:
+- 4-depth run including a boss.
+- visible enemy next intent.
 - STRIKE / GUARD / FOCUS decisions.
 - shield, focus, burn, healing interactions.
-- 8 relics with several build synergies.
+- 8 relics with build synergies.
 - 3-choice relic drafting after wins.
-- one risk/reward route decision.
+- safe/risk route decision.
 - localStorage persistence.
-- Archive of discovered relics/enemies.
 - Echo currency.
-- 3 starting charms, with 2 unlockable using Echoes.
-- win/loss result and run history counters.
+- 3 starting vows/charms, with 2 unlockable.
+
+New integrated discovery systems:
+- 10 persistent Memory Thread fragments.
+- memory unlocks tied to actual play conditions: first entity contacts, dangerous route selection, relic collection thresholds, boss contact, first clear.
+- dynamic home-screen CURRENT THREAD objective changes as evidence is recovered.
+- entity-specific signals that reveal world information on contact.
+- every relic now contains testimony/lore in the Archive, so collection contributes to the mystery rather than only stats.
+- corrupted/dangerous route explicitly trades safety for information and Echo reward.
+- result screen highlights newly recovered memory.
+- Archive now shows active mystery, Memory Thread completion, locked unknown fragments, relic testimony, and entity records.
+- the first-clear hook reveals `EMBER PROTOCOL / AUTHOR: YOU`, linking the protagonist directly to the collapse mystery without fully resolving it.
+- old localStorage saves are normalized so missing `memories` and array fields do not immediately break the revised build.
 
 ## Human feedback — 2026-08-25
-First direct human playtest signal:
+Direct first-playtest signal before this revision:
 - Game mechanics, controls, and immediate purpose were understood.
 - Major weakness: almost no backbone/story/world context, making the experience harder to emotionally interpret or care about.
 - Human explicitly questioned whether the current form can sustain long-term play.
 
-Interpretation:
+Interpretation remains:
 - Goal clarity: preliminary PASS.
 - Basic control/causality: preliminary PASS.
-- Narrative/world motivation: FAIL / missing.
-- Long-term replay confidence: FAIL / unproven.
-- Tactical interest, build desire, and experiment desire still require stronger evidence; do not mark PASS merely because the mechanics were understood.
+- Narrative/world motivation: previous build FAIL / missing.
+- Long-term replay confidence: previous build FAIL / unproven.
+- Tactical interest, build desire, experiment desire: still UNPROVEN.
 
-This feedback is product-level evidence. Do not answer it by adding exposition alone. The next design must connect story/world progression to play, collection, discovery, and repeated runs so narrative context itself becomes part of the replay loop.
+The new build is a hypothesis-level response to that feedback. It must not be marked successful until humans replay it.
 
 ## Verification status
-- GitHub write integrity: VERIFIED — files are present on latest main after writes.
-- Source-level logic review: PARTIAL.
-- JavaScript parser/runtime execution: UNVERIFIED in initial Turn.
-- iPhone Safari layout/input: human was able to play and understand mechanics; detailed compatibility remains UNVERIFIED.
-- GitHub Pages publication: human reached the playable, but repository-side publication configuration is not independently recorded yet.
-- Human fun/replay evaluation: STARTED; current long-term replay signal is negative/uncertain.
+- Latest-main file presence after revision: VERIFIED. `index.html`, `styles.css`, `game.js`, `GAME_PLAN.md`, `STATE.md`, and untouched `README.md` are present.
+- README integrity: VERIFIED by latest-main directory state; README SHA remained unchanged during this Turn.
+- Source write integrity: VERIFIED by GitHub responses and latest-main directory listing.
+- JavaScript parser/runtime execution after revision: UNVERIFIED from current environment.
+- Detailed iPhone Safari compatibility after revision: UNVERIFIED.
+- Human gameplay of revised memory system: NOT YET TESTED.
+- Public deployment propagation of this exact revision: NOT independently observed in this Turn.
 
 ## Highest priority next actions
 1. Re-read README.md and latest main before changing anything.
-2. Treat the first human feedback as a meaningful warning, not a request for cosmetic lore.
-3. Redesign EMBERLORE's product spine around an integrated mystery/progression structure: repeated expeditions must reveal why the world resets, what Echoes/relics are, who/what the player is, and what larger objective is being advanced.
-4. Make persistent Archive discoveries carry story fragments, relationships, locations, or world-state revelations rather than being a checklist only.
-5. Expand run structure only where it creates meaningful discovery, build variation, strategic mastery, or narrative progress.
-6. Define a credible medium/long-term retention ladder before bulk content production (first hour, first week, collection completion, mastery goals).
-7. Re-test whether the revised game creates voluntary replay desire. If not, reconsider the selected core rather than accumulating content.
+2. Human-play the revised build before adding large amounts of content.
+3. Specifically test whether discovery now creates voluntary desire for another expedition; do not accept mere understanding as success.
+4. Ask whether the player cared about the next Memory Thread, noticed that dangerous exploration reveals information, and felt Archive collection had meaning.
+5. If story interest improves but combat remains repetitive, deepen tactical enemy patterns/build identities rather than adding more prose.
+6. If replay/discovery desire remains weak, reconsider the selected core instead of manufacturing a large story/content backlog.
+7. Only if revised core shows promise, design a first additional depth/region where world revelation and new mechanics arrive together.
 
-## Human test questions
+## Revised human test questions
 Record answers without softening negative feedback:
-- Did you know what to do?
-- Did you understand why HP/shield/burn changed?
-- Did enemy intent change your decisions?
+- Did you still know what to do without reading lots of explanation?
+- Did enemy intent make your combat decisions change?
 - Did relic choices create a build you cared about?
-- After the run, did you want to play again voluntarily?
-- Did you want to try a different charm/relic combination?
-- Did you care what the next expedition would reveal about the world or protagonist?
+- Did you understand why the Firekeeper keeps returning?
+- Did any enemy/relic/memory discovery make you curious about the collapse?
+- Did the dangerous route feel like a meaningful choice between survival and discovery?
+- Did you open Archive because you wanted to know more, rather than because you were instructed to?
+- After finishing or dying, did you voluntarily want another expedition?
+- What specifically did you want from the next run: stronger build, missing collection, next story answer, or nothing?
 
 ## Concurrency note
-No Scheduled Task fleet was created in the initial Turn. If one is created later, follow README One Brain timing: five equivalent Turns around :00/:12/:24/:36/:48, each starting by re-reading README and latest main and avoiding destructive conflict.
+No Scheduled Task fleet has been created. If one is created later, follow README One Brain timing: five equivalent Turns around :00/:12/:24/:36/:48, each starting by re-reading README and latest main and avoiding destructive conflict.
