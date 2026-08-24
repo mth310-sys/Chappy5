@@ -14,7 +14,7 @@ README.md is the highest authority. This log records Director decisions below th
 - Status: SUPERSEDED BY D-007
 - Decision: Begin with the Director as coordinator and keep worker slots unactivated until independent, non-conflicting workstreams exist.
 - Why: The repository initially contained no product direction or production code. Premature parallelism would have created coordination overhead and conflicting assumptions.
-- Revisit trigger reached: Product research, prototype implementation, verification, and business validation are now separable workstreams.
+- Revisit trigger reached: Product research, prototype implementation, verification, and business validation became separable workstreams.
 
 ## D-003 — Evidence-first product selection
 - Date: 2026-08-25
@@ -44,8 +44,24 @@ README.md is the highest authority. This log records Director decisions below th
 
 ## D-007 — Activate scheduled Director and four-worker operating loop
 - Date: 2026-08-25
+- Status: SUPERSEDED IN CADENCE BY D-008; ROLE MODEL RETAINED
+- Decision: Run the Game Studio Director every hour and activate four specialized workers—Product / Player Research, Prototype, Verification, and Business / Operations—initially every 4 hours with staggered offsets.
+- Why: Multiple bounded workstreams existed and required a continuing execution system.
+
+## D-008 — Maximize safe throughput with an hourly staggered five-stage pipeline
+- Date: 2026-08-25
 - Status: ACCEPTED
-- Decision: Run the Game Studio Director every hour. Activate four specialized workers—Product / Player Research, Prototype, Verification, and Business / Operations—every 4 hours, staggered by 10-minute offsets.
-- Why: The first product hypothesis, prototype, verification need, and business-validation queue now create multiple bounded workstreams. Scheduling turns the repository-native operating system into a continuing execution system rather than a passive handoff structure.
-- Conflict control: Scheduling creates execution opportunities only. Workers must verify ownership, avoid overlapping destructive changes, and may leave the repository unchanged when no safe independent task exists. The hourly Director integrates results and resolves contention.
-- Revisit trigger: Change cadence, roles, or active worker count if repeated idle runs, write conflicts, validation bottlenecks, or a changed product phase show a better structure.
+- Human direction: Worker cadence was judged too slow; use each Scheduled Task execution and available scheduling capacity more fully while maintaining safety and quality.
+- Decision: Keep Director hourly and increase all four specialized workers to hourly. Stagger at Director :00, Research :10, Prototype :25, Verification :40, Operations :55 Asia/Tokyo. Each executor should continue to additional safe non-conflicting work within a run when capacity remains.
+- Why: The product-validation phase has separable work and benefits from shorter evidence→implementation→verification feedback loops. Staggering reduces simultaneous write pressure while using the maximum supported recurring frequency.
+- Guardrail: More execution opportunities must not become low-value churn. README prohibitions, ownership, evidence discipline, and verification remain mandatory.
+- Revisit trigger: Repeated idle runs, conflicts, or a changed product phase.
+
+## D-009 — Treat first-play rule confusion as a P0 product failure
+- Date: 2026-08-25
+- Status: ACCEPTED
+- Evidence: V-001 in `prototype/VALIDATION.md` records direct human playtest feedback that the rules were not understood.
+- Decision: Prioritize first-play legibility above business expansion or additional content. Revise the existing H1 prototype in a bounded way before deciding whether to retain or reject H1.
+- Why: Immediate legibility is an explicit purpose and validation question in `prototype/PRODUCT_BRIEF.md`; the first human test failed that criterion.
+- Guardrail: Do not solve this by merely adding a long instruction wall. Prefer visible goal/source/collector, progressive disclosure, immediate cause/effect, and explanatory run feedback.
+- Revisit trigger: Second human playtest after C5-008 revision.
