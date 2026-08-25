@@ -1,59 +1,68 @@
 # Chappy5 Studio Dashboard
 
-Updated: 2026-08-25 19:31 JST
-Target: ECHO DRIFT first playable
+Updated: 2026-08-25 20:24 JST
+Target: ECHO DRIFT core decision loop
 
 | 領域 | Status | Severity | Confidence | Verification | 最新の重要Finding |
 |---|---|---:|---|---|---|
-| Game Systems | WARNING | 3 | MEDIUM | SIMULATED | Initial pure-route simulation found severe calm-route dominance. Route values were rebalanced; simulated expected returns/survival are now much closer while preserving distinct route identities. Mixed-policy/dynamic-choice dominance is still untested. |
-| Player Experience | UNKNOWN | 4 | LOW | SIMULATED | One-thumb portrait interaction is designed, but clarity, tension, reward feel, and replay desire are not HUMAN_VERIFIED. |
-| Progression & Content | WARNING | 4 | HIGH | OBSERVED | Persistent bank/runs/discovery exist, but banked salvage currently has no strategic use. Long-term progression records play rather than changing future play. |
-| Technical & Quality | WARNING | 3 | MEDIUM | OBSERVED | localStorage persistence and responsive CSS exist. Collapsed runs now increment the persistent run count. Real iPhone/Safari runtime, reload behavior and deterministic browser regression remain unverified. |
+| Game Systems | WARNING | 4 | HIGH | SIMULATED | Fixed-stop probes found shallow expected-value optima (notably deep around depth 3), risking a learned extraction threshold instead of contextual push-your-luck decisions. |
+| Player Experience | WARNING | 3 | MEDIUM | SIMULATED | Portrait/large-button structure is promising, but the play sensation may still read as cards changing numbers. Real tension, reward feel and replay desire remain unverified. |
+| Progression & Content | WARNING | 4 | HIGH | OBSERVED | Persistent bank/runs/discovery record play but do not yet alter future strategy. Do not solve by content quantity or flat permanent power. |
+| Technical & Quality | WARNING | 3 | HIGH | OBSERVED | Active-run persistence and save validation now exist. Real iPhone/Safari behavior and deterministic browser regression remain unverified. |
 
 ## Executive priority
 
-**Prove and strengthen the core decision loop before content expansion.**
+**Make continue-vs-extract depend on the current visible opportunity, not mainly on a memorized depth threshold.**
 
-Current playable loop:
+This remains higher priority than adding long-term progression or more content because the flagship premise fails if the core decision becomes routine.
+
+## Executive integration — 20:24 JST
+
+### Evidence integrated
+
+Systems simulation found best fixed extraction points substantially outperforming forced continuation for simple pure-route policies. That is not proof of player behavior or fun, but it is strong enough to treat static stop-depth convergence as the highest current structural risk.
+
+Player Experience separately found that outcomes risk feeling arbitrary when important risk information is hidden and that the strong radar presentation is not yet fully connected to game sensation. Progression found no meaningful cross-run strategic growth yet. Technical found save/reload weaknesses and already repaired active-run persistence and validation.
+
+### Game change this cycle: visible, depth-scaled anomaly temptation
+
+The existing anomaly mechanic was previously hidden until after choosing a route. Executive changed it into a **visible opportunity before the continue/extract decision**:
+
+- anomaly routes are marked with `⚠`;
+- their extra haul and extra threat are shown before selection;
+- anomaly haul bonus now grows with next depth: `2 + floor(nextDepth / 2)`;
+- anomaly still adds +7 threat and can produce a discovery.
+
+Reason: this uses an existing mechanic rather than adding a new subsystem, and creates a state-dependent reason to risk "one more step". A player at the same depth can now rationally choose differently depending on whether a valuable anomaly is currently offered. The deeper scaling makes late opportunities more tempting without simply reducing danger.
+
+Verification: implementation is `OBSERVED`; its balance and effect on decision quality are `UNVERIFIED` until the next Systems simulation and later human play.
+
+### What was deliberately not done
+
+- No flat permanent stat upgrades were added.
+- No new enemies/items/relic lists were added.
+- No broad rebalance of all route values was performed before measuring this smaller change.
+- No large refactor was performed.
+
+## Current playable loop
+
 1. Start a dive.
-2. Choose among three signal routes.
-3. Trade Energy, haul, resonance and collapse risk.
-4. Decide whether to extract or continue.
+2. Inspect three visible route offers, including any anomaly opportunity.
+3. Choose a route or extract the current haul.
+4. Trade Energy, haul, resonance and collapse risk.
 5. Bank salvage/discoveries across runs.
 
-## Change this Executive cycle
+## Next evidence needed
 
-### Dominant-route risk reduced
-The previous numerical setup made always choosing `calm` substantially stronger in a simple Monte Carlo probe. This threatened the entire 3-choice premise.
+Game Systems should re-simulate policies that can react to visible anomalies, current threat, energy, resonance chain and rolled cost/gain. Key question: **does the optimal action now vary meaningfully by state, or does a shallow fixed extraction rule still dominate?**
 
-Initial pure-policy simulation (approx. 20k runs each):
-- calm: expected bank ~8.4 / forced-extraction survival ~44.6%
-- deep: ~2.6 / ~11.4%
-- resonance: ~3.4 / ~15.7%
-
-After tuning route cost/gain/risk (approx. 30k runs each):
-- calm: ~6.0 / ~32.5%
-- deep: ~8.0 / ~28.7%
-- resonance: ~6.8 / ~29.8%
-
-Verification: `SIMULATED`, not a fun score and not proof of final balance. The next Systems pass should test mixed/dynamic policies and the value of voluntary extraction.
-
-### Run-history integrity fixed
-On collapse, `meta.runs` previously did not increment, so the displayed persistent run count represented successful/forced extractions rather than actual attempts. Collapse now records the attempt. Verification: `OBSERVED` from code change; browser runtime still pending.
-
-## Known gap blocking flagship quality
-
-The permanent layer currently records progress but does not yet create a meaningful future decision. Do not solve this by merely adding more relic names. A future progression change should alter run strategy, starting conditions or available decisions. It remains secondary to proving the core loop.
-
-## Direction consistency
-
-Parallel startup work produced two closely related names/variants (`ECHO DRIFT` and `AFTERGLOW ROUTE`). Executive resolved this without dual development: **ECHO DRIFT is the current implemented product hypothesis and authoritative playable direction.** Useful mechanics from the unimplemented variant may only be reconsidered after evidence shows a need.
+If fixed-depth extraction remains strongly superior, Executive should reshape value-at-depth again before adding progression.
 
 ## Human verification status
 
-No HUMAN_VERIFIED findings yet.
+No HUMAN_VERIFIED findings yet. Do not claim the game is fun.
 
-When AI-detectable structural/technical issues are reduced, human play should answer only:
-- Were the three route options meaningfully different or was one usually obvious?
-- Did continue-vs-extract create real tension?
-- After the run ended, did you want to immediately start another?
+When AI-detectable structural issues are reduced, human play should answer only:
+- Did you genuinely hesitate between extracting and taking the visible next opportunity?
+- Did route choices feel meaningfully different rather than numerically obvious?
+- After a run ended, did you want to immediately start another?
