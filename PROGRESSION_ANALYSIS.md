@@ -1,6 +1,6 @@
 # Progression & Content Analysis
 
-Updated: 2026-08-25 23:26 JST
+Updated: 2026-08-25 23:40 JST
 Director: Progression & Content Analysis Director
 Target: current `main` ECHO DRIFT playable after depth-sensitive anomaly tuning
 
@@ -70,6 +70,17 @@ A six-item prototype is enough to test curiosity only if the player can later re
 
 This resolves the previous measurement request: the core mechanics do not change with completion, but player motivation can materially distort the first several runs.
 
+## Finding P-007 — Discovery is a completion timer, not yet a collection strategy
+
+- Status: FAIL
+- Severity(1-5): 3
+- Confidence: HIGH
+- Verification Type: OBSERVED
+- Evidence: `discoverMaybe()` chooses uniformly from the remaining unseen relic names after an anomaly route is selected. Route tone, signal A/B/C, depth, resonance chain, threat, and player history do not influence *which* discovery appears. Because duplicates are also prevented, the player cannot target a desired discovery, choose between collection branches, infer where a missing discovery lives, or change play to pursue a specific entry. The only collection decision is whether to take a visible anomaly; after six such successes the list is complete automatically.
+- Recommended Action: Do not solve this by adding more relic names or random rarity. If discovery becomes a long-term pillar, attach future discovery identity to an existing meaningful choice/state (for example signal family, depth band, route behavior, or mutually exclusive protocol) so the player can intentionally pursue something. If discoveries remain lore-only, treat the six as authored world beats rather than presenting them as a deep collection system.
+
+This distinction matters because a persistent archive alone would improve remembrance but **would not create collection gameplay**. Long-term collection needs pursuit agency, not just a longer checklist.
+
 ## Progression summary
 
 | Metric | Status | Confidence | Verification | Current evidence |
@@ -80,6 +91,7 @@ This resolves the previous measurement request: the core mechanics do not change
 | meaningful_build_diversity | FAIL | HIGH | OBSERVED | No persistent strategic choice/loadout/protocol exists. |
 | discovery_exposure | WARNING | HIGH | OBSERVED + SIMULATED | A visible anomaly is offered on about 44.9% of 3-route decisions under the independent 18% rolls. |
 | content_exhaustion_risk | FAIL | HIGH | OBSERVED + SIMULATED | Exactly six chosen anomalies complete all six discoveries. |
+| collection_agency | FAIL | HIGH | OBSERVED | Discovery identity is random from unseen entries; no current state or deliberate route behavior can target a specific missing discovery. |
 | world_discovery_payoff | FAIL | HIGH | OBSERVED | Only a persistent count is visible; collected names/meaning have no durable archive presentation. |
 | early_collector_distortion | WARNING | HIGH | OBSERVED + SIMULATED | Collector behavior can raise anomaly selection to ≈50.1% and collapse to ≈59.7%, then that motive vanishes after six discoveries. |
 | replay_depth | WARNING | MEDIUM | SIMULATED | Single-run decision variety improved materially, but there is still no second-timescale strategy and human feel remains unverified. |
@@ -93,9 +105,10 @@ Do **not** make a major progression change yet. Current Systems evidence shows t
 3. Discovery completion does not alter mechanical optimal play, but collector motivation can distort early risk-taking and then vanish abruptly.
 4. A knowledge-on-contact interpretation is coherent with current persistence, but Executive should explicitly approve semantics before archive/UI/content work.
 5. `banked` should not receive a shop or linear-stat sink until a persistent choice can demonstrably create different play rather than stronger play.
+6. If discovery is intended to become long-term collection, require **pursuit agency** before adding quantity: the player should eventually be able to infer and deliberately pursue a missing discovery through existing game state or strategic choices.
 
 Queued later design question, still blocked until the core candidate is human-tested:
 
 **What single mutually exclusive persistent protocol can bias calm/deep/resonance priorities enough to make the next dive play differently without becoming a linear power grind?**
 
-No gameplay change was made in this correction pass. The important work was restoring one numeric source of truth and integrating the now-completed collector-behavior measurement.
+No gameplay change was made in this pass. The new progression evidence is that the six discoveries are not merely short-lived; they currently behave as a six-event completion timer with no targetable collection strategy.
