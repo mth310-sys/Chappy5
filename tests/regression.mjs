@@ -18,7 +18,7 @@ class ThrowingStorage{
 }
 
 function makeElement(){
-  return {textContent:'',innerHTML:'',disabled:false,addEventListener(){}};
+  return {textContent:'',innerHTML:'',disabled:false,children:[],addEventListener(){},replaceChildren(...nodes){this.children=nodes;}};
 }
 
 function boot(storage,newRandom=()=>0.99){
@@ -35,7 +35,8 @@ function boot(storage,newRandom=()=>0.99){
     Set,
     document:{
       querySelector:s=>elements[s.replace(/^#/,'')]??makeElement(),
-      querySelectorAll:()=>[]
+      querySelectorAll:()=>[],
+      createElement:()=>makeElement()
     }
   });
   vm.runInContext(source,context,{filename:'game.js'});
@@ -148,6 +149,23 @@ const RUN_KEY='chappy5.echoDrift.run.v1';
   assert.equal(read(context,'run.alive'),true);
   assert.equal(read(context,'storageHealthy'),false);
   assert.match(elements.statusText.textContent,/保存領域を利用できないため進行は保持されません/);
+}
+
+// 10) Restored log strings are rendered as inert text, never interpreted as HTML.
+{
+  const crafted='<img src=x onerror=alert(1)>';
+  const routes=[
+    {tone:'calm',cost:1,gain:2,signal:'A',anomaly:false},
+    {tone:'deep',cost:2,gain:4,signal:'B',anomaly:false},
+    {tone:'res',cost:1,gain:3,signal:'C',anomaly:false}
+  ];
+  const storage=new MemoryStorage({
+    [RUN_KEY]:JSON.stringify({energy:7,depth:2,haul:5,threat:20,chain:null,chainLen:0,alive:true,log:[crafted],routes})
+  });
+  const {elements}=boot(storage);
+  assert.equal(elements.log.children.length,1);
+  assert.equal(elements.log.children[0].textContent,crafted);
+  assert.equal(elements.log.innerHTML,'');
 }
 
 console.log('ECHO DRIFT regression tests: PASS');
