@@ -23,7 +23,7 @@ Target: latest `main` ECHO DRIFT core loop as of 2026-08-26.
 - `severity`: 2
 - `confidence`: MEDIUM-HIGH
 - `verification`: SIMULATED
-- `finding`: A new state-conditioned probe supports the intended route identities. Deep dominates early/low-threat states, calm becomes rational as threat and depth rise, and resonance becomes the leading choice when a chain is already active. The improved aggregate split is therefore not just random mixing hiding another universal route.
+- `finding`: A state-conditioned probe supports the intended route identities. Deep dominates early/low-threat states, calm becomes rational as threat and depth rise, and resonance becomes the leading choice when a chain is already active. The improved aggregate split is therefore not just random mixing hiding another universal route.
 - `evidence`: A separate 200k-run visible-state one-step value probe, using current `game.js` rules and comparing expected immediate secured value against extraction, recorded selected-route shares by pre-choice state. At threat 0-24: calm 11.0%, deep 59.7%, resonance 29.2% (572,149 selections). At threat 25-49: calm 51.1%, deep 17.3%, resonance 31.6% (33,528). By pre-choice depth: depth0 calm/deep/res = 6.2/71.9/21.8%; depth1 = 8.9/61.4/29.7%; depth2 = 18.0/47.5/34.5%; depth3 = 28.6/33.7/37.7%; depth4 = 44.1/19.5/36.3%. With no active chain, resonance was 23.7%; with an active chain it became 49.3%, ahead of deep 35.3% and calm 15.4%. Only 377 selections reached depth5 in this probe, so depth5 percentages are not treated as strong evidence.
 - `impact`: Each route now has an identifiable strategic job: deep is the early cash accelerator, calm is a recovery/late-depth stabilizer, and resonance gains strategic weight when prior choices create a chain opportunity. This is the first state-level evidence that the three-route design is functioning as intended rather than merely achieving a healthier global percentage split.
 - `recommended_action`: Do not flatten usage toward 33/33/33 and do not buff calm/resonance globally. Preserve the conditional identities. Human testing should verify that players can perceive these jobs without needing to solve the math explicitly.
@@ -52,7 +52,7 @@ Target: latest `main` ECHO DRIFT core loop as of 2026-08-26.
 - `confidence`: MEDIUM-HIGH
 - `verification`: SIMULATED
 - `finding`: The current adaptive policy collapses in slightly more than half of runs. State-conditioned analysis no longer reveals a universal route exploit that would justify another immediate balance patch, so whether this failure frequency is motivating push-your-luck or frustrating loss is increasingly a human-experience question.
-- `evidence`: Prior 100k-run adaptive probe collapse ≈53.3%; independent 200k repeat ≈53.2%, voluntary extraction ≈40.9%, forced extraction ≈5.8%. Endings clustered depth1 ≈11.2%, depth2 ≈21.1%, depth3 ≈41.2%, depth4 ≈24.1%, depth5 ≈2.4%. The new state-conditioned probe shows conditional route jobs rather than a single route dominating all states.
+- `evidence`: Prior 100k-run adaptive probe collapse ≈53.3%; independent 200k repeat ≈53.2%, voluntary extraction ≈40.9%, forced extraction ≈5.8%. Endings clustered depth1 ≈11.2%, depth2 ≈21.1%, depth3 ≈41.2%, depth4 ≈24.1%, depth5 ≈2.4%. The state-conditioned probe shows conditional route jobs rather than a single route dominating all states.
 - `impact`: Further global collapse reduction before human play could erase the tension that currently creates meaningful extraction decisions. Conversely, human players may still judge the loss rate too punitive.
 - `recommended_action`: Systems recommends freezing global risk/reward for the first focused human-play candidate. Ask whether collapse feels earned and whether a failed run creates immediate replay desire. Change collapse only from HUMAN_VERIFIED evidence or a newly demonstrated structural exploit.
 - `human_verification_needed`: YES.
@@ -78,18 +78,34 @@ Target: latest `main` ECHO DRIFT core loop as of 2026-08-26.
 - `status`: WATCH
 - `severity`: 3
 - `confidence`: HIGH
-- `verification`: OBSERVED
+- `verification`: OBSERVED + SIMULATED
 - `finding`: Route cards display their rolled cost, but `chooseRoute()` actually charges `Math.min(run.energy, r.cost)`. When remaining Energy is below the displayed route cost, every route becomes affordable for only the remaining Energy while retaining its full gain, anomaly reward and resonance reward. Because Energy reaching zero then forces extraction, the final low-energy choice has a different economy from earlier choices.
-- `evidence`: Current `game.js` computes `const cost=Math.min(run.energy,r.cost); run.energy-=cost;` and later calls `extract(true)` when `run.energy<=0`. A route showing `EN-3` therefore costs only 1 when Energy is 1, yet still grants its complete rolled gain and bonuses before the collapse check and forced extraction. The UI continues to display the original `EN-3`, not the effective `EN-1` charge.
-- `impact`: This creates two risks. First, displayed cost is not the cost actually paid at low Energy. Second, expensive routes lose their energy disadvantage on the terminal turn, which can make high-gain deep/anomaly choices disproportionately attractive exactly when the player knows successful survival will immediately bank the haul. This may partially undermine route identity near forced extraction even though aggregate state-conditioned balance is healthy.
-- `recommended_action`: Do not change `HUMAN_CANDIDATE_01` during its freeze. Executive should mark this as a post-candidate rules decision: either (A) routes whose rolled cost exceeds remaining Energy are unavailable, or (B) partial-energy payment is intentional and the UI/economy should explicitly communicate and balance that terminal rule. Before choosing, run a focused simulation comparing terminal-turn route shares and expected bank under current partial-payment versus full-cost eligibility.
-- `human_verification_needed`: NO for the mismatch/mechanical compression; YES only for which terminal rule feels better after Executive selects candidates.
+- `evidence`: Current `game.js` computes `const cost=Math.min(run.energy,r.cost); run.energy-=cost;` and later calls `extract(true)` when `run.energy<=0`. Executive's focused 100k comparison subsequently measured a partial-payment route selection in ≈3.03% of runs. Current partial-payment rules produced mean bank ≈10.92/run and collapse ≈53.49%; disallowing unaffordable routes produced ≈10.88/run and ≈52.41% collapse. Among partial-payment selections, deep/resonance/calm were ≈46.6/40.4/13.0%.
+- `impact`: The rule/UI mismatch is real, but focused simulation indicates small aggregate economic impact in the current candidate. It remains a localized terminal-rule clarity issue rather than evidence for reopening global balance before human play.
+- `recommended_action`: Preserve `HUMAN_CANDIDATE_01`. After human evaluation, explicitly choose between full-cost eligibility and intentional partial-payment, then make UI and economy agree with that rule.
+- `human_verification_needed`: YES only for whether the current behavior is noticed/confusing; NO for the mechanical mismatch.
+- `last_updated`: 2026-08-26
+
+## Finding GS-007 — non-resonance signal labels are mechanically inert while chain survival is hidden RNG
+
+- `director`: Game Systems Analysis Director
+- `status`: WATCH
+- `severity`: 3
+- `confidence`: HIGH
+- `verification`: OBSERVED
+- `finding`: Every route card displays an A/B/C signal, but signal identity is only consulted when the chosen route is `resonance`. Choosing calm or deep never compares its displayed signal with the active chain. Instead, any non-resonance choice independently has a hidden 50% chance to erase the chain and a 50% chance to preserve it, regardless of whether its displayed signal matches the chain.
+- `evidence`: `generateRoutes()` assigns `signal: pick(['A','B','C'])` to all three route types and `render()` displays `${r.name} · ${r.signal}` for every card. In `chooseRoute()`, only the `r.tone==='res'` branch reads `r.signal`; calm/deep enter `else if(Math.random()<.5){run.chain=null;run.chainLen=0}`. Thus, with an active A chain, choosing calm A and calm B are mechanically identical for chain persistence, and the player receives no pre-choice indication of the 50% chain-loss roll.
+- `impact`: This weakens agency in the system that currently gives resonance its strategic identity. A player may reasonably infer that matching signal letters matter across routes, while actual chain preservation on calm/deep is unrelated to the shown letter and decided by hidden RNG. It also means a valuable chain can survive or disappear after an otherwise identical visible decision, making future resonance value partly depend on an opaque coin flip rather than a legible tradeoff.
+- `recommended_action`: Do not alter the frozen human candidate solely for this finding. Executive should treat it as a post-candidate rule decision. Preferred candidates to compare are: (A) make non-resonance signal identity meaningfully govern chain preservation/breakage, creating a visible cross-route signal decision; or (B) remove inert signal labels from non-resonance routes and explicitly communicate a deterministic chain-break rule. Avoid merely documenting the hidden 50% roll unless human evidence shows the opacity itself is desirable.
+- `human_verification_needed`: YES for whether players infer cross-route signal meaning or notice unexplained chain loss; NO for the mechanical fact.
 - `last_updated`: 2026-08-26
 
 ## Current systems conclusion
 
 The state-level robustness check remains healthy enough that Systems does **not** recommend disturbing the frozen global risk/reward candidate before focused human play. Deep is strongest early, calm becomes important at threat >=25 and deeper states, and an active resonance chain materially changes resonance choice value.
 
-A new structural issue is now recorded separately: when Energy is lower than a route's displayed cost, the implementation charges only remaining Energy but awards full route value and then forces extraction. This is an OBSERVED terminal-economy compression, not evidence that the global balance should be retuned immediately. Preserve the human candidate, then quantify this terminal rule as a focused post-candidate decision.
+The terminal partial-payment issue is now quantitatively bounded: it occurs in a small minority of simulated runs and has little aggregate effect, so it should remain a post-candidate explicit rule decision rather than invalidate the current human test.
+
+A new structural clarity/agency issue is more conceptually important for the resonance system: A/B/C is shown on every route, yet only resonance reads the signal, while calm/deep preserve or erase the active chain via hidden 50% RNG. This does not justify moving the frozen candidate, but it should be observed during human play and resolved before resonance is expanded into long-term progression.
 
 The main experiential systems question remains whether the simulated collapse rate around 53% feels like fair, self-authored greed or wasted time. Discovery also remains mechanically disconnected and should not be expanded by adding names alone.
