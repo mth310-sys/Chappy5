@@ -1,19 +1,19 @@
 # Player Experience Analysis
 
-Updated: 2026-08-26 00:13 JST
-Target: latest `main` ECHO DRIFT
+Updated: 2026-08-26 01:09 JST
+Target: latest `main` ECHO DRIFT / HUMAN_CANDIDATE_01
 Director: Player Experience Analysis Director
 
 This document records predicted player experience from code/UI inspection and current Director evidence. It does **not** claim human play. Unless explicitly backed by a human report, subjective experience findings remain `SIMULATED`.
 
-## Finding PX-01 — Immediate route consequence is directly readable
+## Finding PX-01 — Immediate route consequence is mostly directly readable
 
-- Status: PASS
-- Severity(1-5): 1
+- Status: PASS_WITH_EDGE_CASE_WARNING
+- Severity(1-5): 3
 - Confidence: HIGH
 - Verification Type: OBSERVED
-- Evidence: Every route displays `選択後脅威 N%`, calculated by the same `projectedThreat()` used for the subsequent collapse roll. The extraction action exposes the exact currently bankable amount through `回収して帰還 +N` using the same `projectedBank()` formula as extraction.
-- Recommended Action: Preserve direct risk and safe-payoff values. Do not reintroduce mental arithmetic through tutorial prose.
+- Evidence: Every route displays `選択後脅威 N%`, calculated by the same `projectedThreat()` used for the subsequent collapse roll. Extraction exposes the exact currently bankable amount through `回収して帰還 +N` using the same `projectedBank()` formula. However, the route card displays the rolled nominal `EN-N` cost while `chooseRoute()` actually charges `Math.min(run.energy, r.cost)`. At 1 EN, a displayed `EN-3` route therefore consumes only 1 EN while still granting its full gain/bonuses and then forces extraction if the player survives.
+- Recommended Action: Preserve the frozen human candidate, but explicitly observe whether this low-energy edge case is noticed or feels like a lucky final push versus a misleading cost label. After the candidate, Executive/Systems should compare disabling unaffordable routes against formalizing partial-payment behavior. If partial payment remains, the displayed cost should reflect what will actually be charged.
 
 ## Finding PX-02 — The three route identities are now likely to be experienced, not merely described
 
@@ -69,20 +69,29 @@ This document records predicted player experience from code/UI inspection and cu
 - Evidence: Immediate play is increasingly self-explanatory and route variety is now state-conditioned, but persistent `累計回収`, `潜航回数`, and `発見記録` still do not change a future run. The current replay proposition is therefore primarily `try the risk/reward loop again`, not yet growth, mastery unlock, collection strategy or world progression.
 - Recommended Action: Do not manufacture purpose with lore/onboarding copy. After the core feel is human-checked, Progression/Executive should make at least one persistent result alter a future decision before claiming long-term replay motivation.
 
-## Finding PX-08 — Focused human feel testing is now higher value than another PX-only prediction
+## Finding PX-08 — Focused human feel testing remains higher value than another PX-only prediction
 
 - Status: READY_FOR_HUMAN_CANDIDATE
 - Severity(1-5): 2
 - Confidence: HIGH
 - Verification Type: OBSERVED
-- Evidence: The earlier AI-detectable deep dominance materially improved, exact risk/payoff display is internally consistent, and Systems' state-conditioned robustness check now supports distinct situational jobs rather than a hidden universal route. The remaining central Player Experience uncertainties are subjective: whether >50% collapse feels earned, whether continue-versus-extract creates genuine hesitation, and whether a run ending creates immediate replay desire. Further PX speculation cannot convert those into HUMAN_VERIFIED evidence.
-- Recommended Action: Executive should consider the current core risk/reward build suitable to freeze as the first focused human candidate. Limit the human test to three feel questions plus one usability observation: (1) did continue-versus-extract create genuine hesitation more than once, (2) after collapse did failure feel earned enough to want another attempt, (3) after a successful or failed run did the player immediately want another run? Separately observe whether iPhone scrolling/thumb reach interfered with comparing choices. Record all answers, including negative results, as `HUMAN_VERIFIED`.
+- Evidence: The earlier AI-detectable deep dominance materially improved, exact risk/payoff display is internally consistent except for the newly documented low-energy cost edge case, and Systems' state-conditioned robustness check supports distinct situational jobs rather than a hidden universal route. The remaining central Player Experience uncertainties are subjective: whether >50% collapse feels earned, whether continue-versus-extract creates genuine hesitation, and whether a run ending creates immediate replay desire. Further PX speculation cannot convert those into HUMAN_VERIFIED evidence.
+- Recommended Action: Keep HUMAN_CANDIDATE_01 frozen. Limit the human test to three feel questions plus usability observations. Do not let the EN partial-payment edge case expand the test into a questionnaire; simply note it if encountered.
+
+## Finding PX-09 — Final-energy partial payment can weaken perceived rule trust
+
+- Status: WATCH
+- Severity(1-5): 3
+- Confidence: MEDIUM-HIGH
+- Verification Type: OBSERVED + SIMULATED
+- Evidence: At low Energy the interface can promise a cost the game does not actually charge. Because the current design has deliberately improved transparency by showing exact collapse risk and exact extraction value, this inconsistency is more salient than it would be in a deliberately opaque game. A player who notices `EN-3` being accepted at 1 EN may read it as a welcome last-chance rule, but there is no UI language explaining that rule. Conversely, if they assume displayed costs are requirements, they may avoid a route that is actually selectable. The mechanic therefore creates both a hidden advantage and a comprehension ambiguity.
+- Recommended Action: Do not alter the frozen candidate before human feel testing. Treat this as a post-candidate rule-clarity decision, not a cosmetic copy fix. Systems should first measure the economic effect; then Executive should choose the intended rule. Player Experience should ensure the eventual UI communicates that rule directly.
 
 ## New Player Experience conclusion
 
-The latest Systems state-conditioned evidence changes the recommendation from `READY-SOON` to **`READY_FOR_HUMAN_CANDIDATE`**. AI-detectable route-role problems are no longer the main blocker. Player Experience does not recommend another balance patch or cosmetic feedback pass before the first focused human feel test unless another Director demonstrates a concrete regression.
+`HUMAN_CANDIDATE_01` remains suitable for focused human testing. The newly identified low-Energy partial-payment behavior is a real rule-transparency issue, but it is localized to the final-energy state and does not justify moving the frozen target before the core feel test. It should be observed if encountered and resolved immediately after the candidate according to the intended Systems rule.
 
-This is **not** a claim that ECHO DRIFT is fun. There is still no `HUMAN_VERIFIED` Player Experience evidence. It is a claim that the most valuable unanswered core-loop questions now require a human rather than another simulated player.
+This is **not** a claim that ECHO DRIFT is fun. There is still no `HUMAN_VERIFIED` Player Experience evidence.
 
 ### Focused human verification package
 
@@ -90,6 +99,6 @@ This is **not** a claim that ECHO DRIFT is fun. There is still no `HUMAN_VERIFIE
 2. **Failure ownership:** After a collapse, did it feel like a risk you knowingly pushed too far, enough that you wanted another attempt?
 3. **Immediate replay desire:** At the end of a successful or failed run, did you want to start the next run immediately?
 
-Usability observation, not a fourth fun question: on the actual iPhone, note whether scrolling, cramped route text or thumb reach interferes with comparing Threat/Haul, the three routes and extraction.
+Usability observations, not extra fun questions: on the actual iPhone, note whether scrolling, cramped route text or thumb reach interferes with comparing Threat/Haul, the three routes and extraction. If a route advertises a larger EN cost than the remaining Energy, note whether its continued selectability is understood or surprising.
 
-If these fail, preserve the negative HUMAN_VERIFIED result and diagnose before expanding progression. If they pass, the next major Player Experience concern becomes the weak long-term replay purpose and the emotionally clinical action feedback.
+If the core feel questions fail, preserve the negative HUMAN_VERIFIED result and diagnose before expanding progression. If they pass, the next major Player Experience concerns become weak long-term replay purpose, emotionally clinical action feedback, and the low-Energy cost rule.
