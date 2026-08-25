@@ -1,67 +1,71 @@
 # Progression & Content Analysis
 
-Updated: 2026-08-25 19:38 JST
+Updated: 2026-08-25 20:33 JST
 Director: Progression & Content Analysis Director
-Target: current `main` ECHO DRIFT first playable
+Target: current `main` ECHO DRIFT playable after anomaly pre-reveal change
 
 ## Finding P-001 — Permanent layer records play but does not change future play
 
-- director: Progression & Content Analysis Director
-- status: FAIL
-- severity: 4
-- confidence: HIGH
-- verification: OBSERVED
-- finding: `meta.banked`, `meta.runs`, and `meta.found` persist between runs, but none of them changes the rules, starting state, route offers, extraction decision, or available strategy of a later run. The permanent layer is currently a record/archive rather than progression.
-- evidence: `game.js` loads and displays `banked/runs/found`; `startRun()` always starts with the same Energy/threat state and `routeTemplates` is unchanged by meta state. No spend/unlock/equip path consumes banked salvage.
-- impact: Repetition can improve player knowledge of the same loop, but the current build has no mechanical mid-term growth or strategic unlock reason to return. This directly conflicts with the flagship requirement for growth/collection/discovery to support long-term play.
-- recommended_action: Executive should eventually add one compact progression mechanism that creates a new pre-run or in-run decision rather than a passive stat increase. Do not solve this by adding more relic names or raw numerical upgrades. Candidate shape for Executive evaluation: recovered discoveries unlock mutually exclusive expedition protocols/loadouts that alter how the three route types are valued.
-- human_verification_needed: NO for the structural absence; YES later for whether the chosen progression creates replay desire.
-- last_updated: 2026-08-25 19:38 JST
+- Status: FAIL
+- Severity(1-5): 4
+- Confidence: HIGH
+- Verification Type: OBSERVED
+- Evidence: `meta.banked`, `meta.runs`, and `meta.found` persist, but `startRun()` still always starts Energy 10 / threat 6 and route generation does not read persistent progression. No spend, unlock, equip, protocol, or other path changes a later run from banked salvage or discoveries.
+- Recommended Action: After the core push-your-luck decision is proven, Executive should evaluate one compact persistent choice that changes how a later dive is played rather than granting linear power. Do not add raw stat upgrades or content quantity merely to create progression.
 
-## Finding P-002 — Discovery collection is finite and currently shallow
+The recent anomaly pre-reveal improves the **within-run** decision layer, but does not change this finding. The flagship requirement still lacks a meaningful second timescale.
 
-- director: Progression & Content Analysis Director
-- status: WARNING
-- severity: 3
-- confidence: HIGH
-- verification: OBSERVED
-- finding: There are six named discoveries. An anomaly immediately adds one random locked discovery to persistent `meta.found`; discovery does not currently reveal mechanics, alter decisions, or require successful extraction.
-- evidence: `relics` contains six entries. `generateRoutes()` independently marks offered routes anomalous at 18%; choosing an anomaly calls `discoverMaybe()`, which immediately writes the found relic to localStorage before the run outcome is known. The only use of `meta.found` is the discovery counter and exclusion of already-found names.
-- impact: Discovery presently behaves as a short finite checklist. Because discoveries survive even a later collapse, the collection layer is largely detached from the central push-your-luck extraction tension. Adding more names would only delay exhaustion without deepening play.
-- recommended_action: Do not expand the relic list yet. Executive should decide whether discoveries are intended to be (a) knowledge/archive rewards that safely persist on contact, or (b) recovered artifacts that must be extracted. Either is valid, but the choice should deliberately reinforce the core loop. If they remain safe-on-contact, each important discovery should eventually reveal useful world knowledge or unlock a meaningful option rather than merely incrementing a counter.
-- human_verification_needed: NO for current behavior; later YES for perceived discovery value.
-- last_updated: 2026-08-25 19:38 JST
+## Finding P-002 — Pre-revealed anomalies make the six-discovery checklist easier to deliberately consume
 
-## Finding P-003 — Within-run progression exists, but run-to-run strategic state resets completely
+- Status: WARNING
+- Severity(1-5): 4
+- Confidence: HIGH
+- Verification Type: OBSERVED + SIMULATED
+- Evidence: Every generated route independently has an 18% anomaly chance. With three visible offers, the probability that at least one anomaly is available on a decision is `1 - 0.82^3 ≈ 44.9%`; expected anomaly offers are `3 × 0.18 = 0.54` per decision. The current UI marks anomaly routes before choice (`⚠`, bonus salvage, threat +7), so a collection-motivated player can now intentionally prioritize them. `discoverMaybe()` still permanently records one of only six relics immediately on choosing an anomaly, before collapse/extraction outcome.
+- Recommended Action: Do not expand the relic list. Executive should explicitly decide the semantic role of discoveries before progression implementation: safe-on-contact **knowledge** can persist through collapse, while recoverable **artifacts** should probably connect to successful extraction. The current behavior is internally closer to knowledge, despite presentation as recovered discoveries.
 
-- director: Progression & Content Analysis Director
-- status: WARNING
-- severity: 3
-- confidence: HIGH
-- verification: OBSERVED
-- finding: A run does escalate: depth raises threat, extraction bonus grows with depth, haul accumulates, Energy depletes, and resonance chains can grow. This gives short-term progression. However, every new run resets all strategic variables and offers the same three route identities with no meta-driven variation.
-- evidence: `chooseRoute()` increases depth and threat and can extend resonance; `extract()` scales bank by depth. `startRun()` resets Energy 10, depth 0, haul 0, threat 6, chain null and does not read persistent progression.
-- impact: The first playable has a valid short-session arc, but repeated runs currently depend almost entirely on procedural rolls and player self-improvement. Without a meaningful second timescale, replay depth is likely to flatten after the core route/extraction puzzle is learned.
-- recommended_action: Preserve the current run arc while the core loop is being proven. After Systems/Player Experience evidence supports the core, prioritize a small second-timescale decision layer before producing regions, enemies, story fragments, or larger content inventories.
-- human_verification_needed: YES — after the core is structurally stable, verify whether ending a run creates desire for another before adding progression as compensation for a weak core.
-- last_updated: 2026-08-25 19:38 JST
+Impact: The pre-reveal change is valuable for the core because anomalies become informed risk/reward decisions, but it also increases content-exhaustion pressure. A player who wants collection can seek visible anomalies rather than encountering discoveries incidentally. Six names therefore should not be treated as long-lived content.
+
+## Finding P-003 — Discovery currently competes with extraction tension instead of completing it
+
+- Status: WARNING
+- Severity(1-5): 3
+- Confidence: HIGH
+- Verification Type: OBSERVED
+- Evidence: Choosing an anomaly can call `discoverMaybe()` and immediately `saveMeta()`. A collapse later in the same `chooseRoute()` call sets haul to zero but does not remove the newly found discovery. Thus the salvage layer says “return safely to keep what you found,” while the discovery layer says “contact is enough; extraction is irrelevant.”
+- Recommended Action: Do not change this mechanically from the Progression Director alone. Queue a deliberate Executive choice. If discoveries are knowledge/signals, presentation should make that distinction clear and future unlocks can logically occur on contact. If discoveries are physical relics, acquisition should be staged in-run and banked on extraction. Either model can work; ambiguity is the problem.
+
+## Finding P-004 — Within-run progression has gained situational variation; run-to-run strategic state still resets
+
+- Status: WARNING
+- Severity(1-5): 3
+- Confidence: HIGH
+- Verification Type: OBSERVED
+- Evidence: Depth raises threat and extraction bonus; Energy falls; haul grows; resonance can chain; and visible anomalies now create depth-sensitive high-value opportunities because `anomalyBonusAt(nextDepth)` increases with depth. However, every new run resets strategic variables and offers the same route identities independent of persistent state.
+- Recommended Action: Preserve the improved run arc while Systems validates whether fixed-depth extraction has actually been weakened. Only after that evidence should a second-timescale mechanic be integrated.
+
+This is a meaningful improvement from the previous pass: anomaly pre-reveal makes two runs at the same depth less strategically identical because the player can react to a visible exceptional opportunity. It improves replay variation **inside** the existing loop without adding content volume.
 
 ## Progression summary
 
 | Metric | Status | Confidence | Verification | Current evidence |
 |---|---|---|---|---|
-| short_term_progression | PASS | HIGH | OBSERVED | Depth/threat/haul/energy/resonance/extraction bonus change within a run. |
-| mid_term_progression | FAIL | HIGH | OBSERVED | Persistent bank and discoveries do not alter later decisions. |
-| long_term_goal_strength | WARNING | HIGH | OBSERVED | Six-discovery checklist exists, but no mechanical/world payoff yet. |
-| meaningful_build_diversity | FAIL | HIGH | OBSERVED | No loadout, protocol, equipment, or persistent build choice exists. |
-| discovery_rate | UNKNOWN | MEDIUM | SIMULATED | 18% anomaly offers can expose discoveries, but actual acquisition pace depends on player route choice and run length. |
-| content_exhaustion_risk | WARNING | HIGH | OBSERVED | Only six discoveries and no post-collection layer; quantity expansion is not recommended yet. |
-| replay_depth | WARNING | MEDIUM | SIMULATED | Core has repeatable risk decisions, but no second-timescale strategic variation is present. |
+| short_term_progression | PASS | HIGH | OBSERVED | Depth/threat/haul/energy/resonance/extraction bonus change; visible anomalies add situational opportunity. |
+| mid_term_progression | FAIL | HIGH | OBSERVED | Persistent bank and discoveries still do not alter later decisions. |
+| long_term_goal_strength | WARNING | HIGH | OBSERVED | Six-discovery checklist exists but has no mechanical/world payoff. |
+| meaningful_build_diversity | FAIL | HIGH | OBSERVED | No persistent strategic choice/loadout/protocol exists. |
+| discovery_exposure | WARNING | HIGH | OBSERVED + SIMULATED | A visible anomaly is offered on about 44.9% of 3-route decisions under the current independent 18% roll. |
+| content_exhaustion_risk | FAIL | HIGH | OBSERVED + SIMULATED | Only six discoveries; visible anomalies can now be deliberately pursued and are saved on contact. |
+| replay_depth | WARNING | MEDIUM | SIMULATED | Situational anomaly offers improve within-run variation, but there is still no second-timescale strategy. |
 
 ## Executive handoff
 
-Do **not** make a major progression change from this Director pass. The current Executive priority to prove the core decision loop remains compatible with this analysis. The highest-value progression design question to queue is:
+Do **not** make a major progression change from this Director pass. The current Executive priority—prove that continuation/extraction is a genuinely situational decision—remains correct.
+
+New progression-relevant consequence of the anomaly change: **the core got richer, but the six-item collection layer became easier to intentionally exhaust.** Do not answer that by adding more relic names.
+
+The queued design question remains:
 
 **What single persistent choice can make a later dive play differently without turning banked salvage into a linear power grind?**
 
-A promising hypothesis is mutually exclusive expedition protocols/loadouts unlocked by meaningful discoveries, but this is a recommendation for Executive evaluation, not an approved direction.
+A promising hypothesis remains mutually exclusive expedition protocols/loadouts unlocked by meaningful discoveries. Before approving that direction, Executive should first decide whether a “discovery” is knowledge retained on contact or cargo that must survive extraction, because that semantic choice determines how progression should connect to the core loop.
