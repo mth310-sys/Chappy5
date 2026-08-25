@@ -1,14 +1,14 @@
 # Progression & Content Analysis
 
-Updated: 2026-08-26 04:39 JST
+Updated: 2026-08-26 05:35 JST
 Director: Progression & Content Analysis Director
-Target: current `main` ECHO DRIFT `HUMAN_CANDIDATE_01` (gameplay frozen for focused human test)
+Target: current `main` ECHO DRIFT `HUMAN_CANDIDATE_01` (gameplay frozen for focused human test; strategic clearance re-opened by Executive)
 
 ## Existing findings P-001 through P-011
 
 The prior findings remain active and unchanged in substance. Their current conclusions are preserved below in compact form so this file remains the single Progression handoff rather than spawning additional analysis files.
 
-- **P-001 — FAIL / Severity 4 / HIGH / OBSERVED:** permanent bank/runs/discoveries record play but do not change later play. Keep persistent gameplay blocked until the frozen core passes human testing.
+- **P-001 — FAIL / Severity 4 / HIGH / OBSERVED:** permanent bank/runs/discoveries record play but do not change later play. Keep persistent gameplay blocked until the frozen core passes human testing and current strategic clearance is resolved.
 - **P-002 — FAIL / Severity 4 / HIGH / OBSERVED + SIMULATED:** six anomaly selections complete all six discoveries because duplicates are prevented. Do not extend runway by adding names.
 - **P-003 — WARNING / Severity 3 / HIGH / OBSERVED:** discoveries persist on contact even if the same route subsequently collapses. Executive must eventually classify them as retained knowledge versus extractable cargo.
 - **P-004 — WARNING / Severity 3 / HIGH / OBSERVED + SIMULATED:** within-run progression is meaningfully state-dependent; run-to-run strategic state still resets. Production anomaly bonuses at depths 1–6 are **2 / 3 / 5 / 8 / 10 / 13**.
@@ -33,14 +33,28 @@ The prior findings remain active and unchanged in substance. Their current concl
 
 P-005 is a presentation problem: discovered identities cannot be revisited. P-007 is an agency problem: the player cannot target a missing identity. P-012 is a **sequence/meaning problem**: even if an archive and targeting were added, a uniformly random permutation of disconnected labels still would not create a world arc. For a flagship game whose long-term appeal may include “続きが気になる”, discovery needs either causal pursuit or authored revelation—not simply persistence and quantity.
 
+## Finding P-013 — Persistent specialization is unsafe while future-aware route value is unresolved
+
+- Status: BLOCKED_DESIGN_GATE
+- Severity(1-5): 4
+- Confidence: HIGH
+- Verification Type: OBSERVED + SIMULATED + DESIGN ANALYSIS
+- Evidence: Executive Finding EX-011 re-opened strategic clearance after Systems GS-010 showed that the previous one-step adaptive benchmark underprices resonance chain carryover. Under current production rules, the one-step adaptive policy measured about **10.95 bank/run with 53.48% collapse**, while a simple continue-with-resonance policy measured about **12.13 bank/run with 46.52% collapse**; Executive independently reproduced the same fixed-policy ordering and found a short-horizon rollout improved toward the resonance result. This does not prove fixed resonance is globally optimal, but it invalidates using the current calm/deep/resonance balance as a settled foundation for persistent specialization. P-009/P-010 previously identified a small mutually exclusive protocol vocabulary as the preferred shape of future progression. If such protocols are built now around the three route identities, a resonance-favoring protocol can amplify an already superior long-horizon policy, while calm/deep protocols can become knowingly inferior trap unlocks. Conversely, deliberately weakening resonance through progression would make meta choice responsible for repairing an unresolved core balance problem.
+- Recommended Action: **Do not implement or tune route-specializing protocols, permanent route affinities, route-specific unlocks, or discovery rewards that privilege calm/deep/resonance until Systems completes the future-aware equal-footing strategy comparison requested by EX-011.** Human feel testing may continue, but positive short-session replay feedback is insufficient clearance for persistent build design. If future-aware adaptation materially outperforms fixed resonance while using multiple route states, P-009 can reopen with the existing finite/protocol direction. If resonance remains materially superior, resolve the core chain reward/persistence or cross-route signal causality first; progression must not be used to hide or institutionalize the imbalance.
+
+### Why this changes the Progression plan
+
+Before GS-010/EX-011, the main progression risk was adding linear power or content volume on top of an otherwise healthier three-route core. The new evidence creates a stricter prerequisite: **the strategic vocabulary itself may not yet be balanced over repeated play**. Horizontal progression is only genuinely horizontal if its persistent options are viable alternatives. A finite set of mutually exclusive protocols remains a promising form, but its content cannot safely be specified from route identity until future-aware strategy clearance is restored.
+
 ## Progression summary
 
 | Metric | Status | Confidence | Verification | Current evidence |
 |---|---|---|---|---|
-| short_term_progression | PASS | HIGH | OBSERVED + SIMULATED | Depth/threat/haul/energy plus calm recovery, resonance chaining and depth-scaled anomalies create changing state; Systems found situational route jobs. |
+| short_term_progression | PASS_WITH_STRATEGIC_WATCH | MEDIUM-HIGH | OBSERVED + SIMULATED | Depth/threat/haul/energy create changing state, but GS-010/EX-011 show long-horizon resonance value is not yet correctly priced by the prior adaptive benchmark. |
 | mid_term_progression | FAIL | HIGH | OBSERVED | Persistent bank/runs/discoveries do not alter later decisions. |
 | long_term_goal_strength | FAIL | HIGH | OBSERVED | Banked salvage has no marginal consequence; six discoveries have no durable payoff. |
 | meaningful_build_diversity | FAIL | HIGH | OBSERVED | No persistent strategic choice/loadout/protocol exists. |
+| persistent_specialization_clearance | BLOCKED | HIGH | OBSERVED + SIMULATED + DESIGN ANALYSIS | EX-011 requires future-aware strategy comparison before route-specializing progression can be considered safe. |
 | discovery_exposure | WARNING | HIGH | OBSERVED + SIMULATED | A visible anomaly is offered on about 44.9% of 3-route decisions under independent 18% rolls. |
 | content_exhaustion_risk | FAIL | HIGH | OBSERVED + SIMULATED | Exactly six chosen anomalies complete all six discoveries. |
 | collection_agency | FAIL | HIGH | OBSERVED | Discovery identity is random from unseen entries; no deliberate targeting exists. |
@@ -50,23 +64,24 @@ P-005 is a presentation problem: discovered identities cannot be revisited. P-00
 | reward_marginal_value | FAIL | HIGH | OBSERVED | Additional banked salvage changes only the displayed cumulative total; one-time tiny unlocks alone would merely delay the same dead end. |
 | progression_runway_design | DESIGN_RISK | HIGH | OBSERVED + DESIGN ANALYSIS | A finite protocol set needs repeatable commitment value, not endless content tiers, if banked salvage is to retain meaning. |
 | reward_semantics | DESIGN_RISK | HIGH | OBSERVED + DESIGN ANALYSIS | `banked` is currently a lifetime cumulative record; future spend/commit semantics would conflict unless explicitly separated or redefined. |
-| replay_depth | WARNING | MEDIUM | SIMULATED | Single-run decision variety is structurally healthier, but there is no second-timescale strategy and human feel remains unverified. |
+| replay_depth | WARNING | MEDIUM | SIMULATED | Short-session feel may still be strong, but durable strategic diversity is re-opened and human feel remains unverified. |
 
 ## Executive handoff
 
-`HUMAN_CANDIDATE_01` remains frozen by Executive. **Do not change its gameplay from Progression.**
+`HUMAN_CANDIDATE_01` remains unchanged. **Do not change its gameplay from Progression.**
 
-1. Preserve the frozen single-run economy and human-test package.
-2. Persistent progression remains the next major product problem only if the core passes `HUMAN_VERIFIED` feel testing.
-3. Do not turn `banked` into a linear stat shop; require P-009 before any persistent protocol/loadout implementation.
-4. Avoid an unlock-only dead end; if a tiny protocol set is adopted, test repeatable mutually exclusive commitment before adding tiers/items.
-5. Resolve P-011 before salvage spending/staking: preserve lifetime recovery separately or deliberately redefine the current cumulative semantics with migration.
-6. If discovery becomes a long-term collection pillar, require pursuit agency before adding quantity.
-7. If discovery is expected to create “続きが気になる”, resolve P-012 before writing lore volume: choose causal pursuit or a tiny authored revelation chain rather than a random permutation of disconnected labels.
-8. Discovery semantics still need an Executive decision: knowledge retained on contact versus cargo requiring extraction.
+1. Respect EX-011: future-aware core strategy clearance now precedes any route-specializing persistent progression.
+2. Human testing can still verify short-session hesitation, collapse feel and immediate replay desire, but must not be treated as proof of durable route/build diversity.
+3. Persistent progression remains a major product problem only after the core is both human-feel viable and strategically understood well enough not to encode a false choice.
+4. Do not turn `banked` into a linear stat shop; require P-009 and P-013 before any persistent protocol/loadout implementation.
+5. Avoid an unlock-only dead end; if a tiny protocol set is later adopted, test repeatable mutually exclusive commitment before adding tiers/items.
+6. Resolve P-011 before salvage spending/staking: preserve lifetime recovery separately or deliberately redefine the current cumulative semantics with migration.
+7. If discovery becomes a long-term collection pillar, require pursuit agency before adding quantity.
+8. If discovery is expected to create “続きが気になる”, resolve P-012 before writing lore volume: choose causal pursuit or a tiny authored revelation chain rather than a random permutation of disconnected labels.
+9. Discovery semantics still need an Executive decision: knowledge retained on contact versus cargo requiring extraction.
 
-Queued post-pass design question:
+Queued post-clearance design question:
 
-**Can the same small set of existing signals, depths, route roles and anomalies support both a repeatable protocol intention and a discoverable world mystery, so that progression changes how the player investigates the signal sea rather than adding a separate upgrade game?**
+**After future-aware Systems analysis establishes which route states are genuinely viable, can the same small set of signals, depths, route roles and anomalies support repeatable mutually exclusive intentions without turning one dominant route into the obvious permanent build?**
 
-No gameplay change was made in this pass. The frozen human candidate remains intact.
+No gameplay change was made in this pass. The current human candidate remains comparable while strategic clearance is investigated.
