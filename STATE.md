@@ -1,112 +1,123 @@
 # One Brain State
 
 Updated: 2026-08-25 JST
-Status: GENERATION_2_ACTION_LOOT_SLICE_IMPLEMENTED / HUMAN_FUN_TEST_REQUIRED
+Status: GENERATION_2_5_ADVENTURE_LAYER_IMPLEMENTED / HUMAN_RETEST_REQUIRED
 
 ## Authority
 - README.md is the top-level instruction and must never be modified.
 - Latest `main` is the sole source of truth.
 - Do not use repository history, deleted material, old prototypes, other repositories, or chat history as product evidence.
 
-## Human product direction
-The human gave a binding direction after the comparable-game research: **use Diablo as a reference direction**.
+## Binding human direction
+- Overall product direction: roguelite × growth × collection × short sessions, smartphone browser, real long-term game rather than a tech demo.
+- Diablo is a reference axis for the loot-hunt/action-RPG pleasure loop, not an instruction to clone IP/content/assets.
+- Human explicitly delegated subsequent product decisions to One Brain and asked it to reread README and act autonomously.
+
+## Human evidence so far
+Generation 1 (three-button turn combat): understandable but boring and cheap/underwhelming. FAIL.
+Generation 2 (real-time micro-ARPG arena + packs + active skills + build-changing loot): human verdict **“ゲームらしくなった。何かが足りない”**.
 
 Interpretation:
-- Do not clone Diablo IP, content, art, names, maps, classes, assets, or exact systems.
-- Do extract the action-RPG loot-hunt pleasure loop: kill groups → exciting drop → inspect/equip → build visibly changes → overpower harder enemies → chase stronger/more interesting drops → boss → repeat.
-- Keep the project feasible as an original iPhone-browser game and retain the short-session requirement.
+- Real-time action/loot direction materially improved perceived game-ness. Preserve it for the next test.
+- Do NOT call fun or replay PASS yet.
+- One Brain diagnosis: Gen 2 had combat and loot but still behaved like an arena prototype. Missing product layers were adventure/exploration context and persistent ownership of a character/haul.
 
-## Previous generation verdict
-Generation 1 (telegraphed three-button turn combat + relic draft) remains a failed product hypothesis.
-Human feedback:
-- mechanics and controls were understandable;
-- story became roughly understandable after revision;
-- actual fun: FAIL;
-- presentation/product feel: FAIL (`boring` and `cheap / underwhelming`);
-- replay desire: no positive evidence.
+## Generation 2.5 decision
+Add the smallest adventure/extraction layer capable of testing whether the player begins to feel:
+- “where should I go?”
+- “what will I find?”
+- “is the elite worth the risk?”
+- “this is my Firekeeper/loadout.”
+- “I brought something valuable home.”
+- “I want to descend again with it.”
 
-Do not return to incremental expansion of that core without new evidence.
+Do not solve this by bulk content.
 
-## Research synthesis
-Adjacent-game research and Diablo-specific research produced these product rules:
-- combat must be fun before loot is considered;
-- multiple simultaneous enemies and movement create stronger immediate pressure/spectacle than isolated arithmetic duels;
-- loot should create recognizable chase and anticipation rather than mostly tiny percentage upgrades;
-- signature item effects should visibly change behavior/rules;
-- rare drops must remain legible and meaningful rather than becoming unreadable affix spam;
-- the short run still needs escalation: pack → stronger pack → pressure/elite → boss → payout;
-- presentation feedback matters: hit response, projectiles, particles, death bursts, loot beams, boss presentation, and full-screen world focus.
+## Latest-main playable changes
+### Camp / ownership
+- Home is now framed as Ember Camp rather than a plain start menu.
+- Persistent Firekeeper loadout with Weapon / Armor / Relic slots.
+- Starter Rust Blade and Ash Wrap.
+- Persistent Vault screen for kept gear and loadout switching.
 
-## Selected replacement core
-**Generation 2 = real-time micro-ARPG loot hunt.**
+### Expedition route
+- DESCEND now opens a compact route map instead of immediately spawning chamber 1.
+- Stage 1 choice: Broken Gallery Hunt vs Sealed Cache.
+- Stage 2 choice: Ash Shrine vs Warden Pit Elite.
+- Stage 3: Tyrant Gate boss.
+- Route nodes communicate different reward/risk intentions.
 
-The immediate emotional sequence to validate is:
-**kill → drop → inspect → transform → overpower → chase**.
+### Room types
+- Hunt: standard enemy pack and run-power reward.
+- Cache: skips combat and grants an immediate run-power choice plus Echoes.
+- Shrine: restores/increases HP and adds damage before boss route.
+- Elite: named high-pressure encounter with additional enemies and better reward weighting.
+- Boss: Ash Tyrant, extraction gate.
 
-This direction was selected over a compact tactical grid and passive/auto-combat expedition because it better tests the human's Diablo reference while addressing the previous build's lack of excitement and perceived production value.
+### Two-layer loot model
+Run powers remain temporary dramatic build effects (explosion, chain, trail, frenzy, wide cleave, leech, orbit, power, speed).
 
-## Generation 2 playable now on latest main
-Files:
-- `index.html` — full-screen action-game shell and overlays.
-- `styles.css` — dark-fantasy full-screen HUD, skills, loot cards, result and codex presentation.
-- `game.js` — canvas real-time combat, enemies, loot effects and persistence.
-- `GAME_PLAN.md` — replacement-core decision, Diablo-reference interpretation, scope and validation criteria.
-- `README.md` — untouched top-level authority.
+Persistent gear is now separate and survives successful extraction:
+- Cinder Edge — persistent weapon damage identity.
+- Storm Fang — persistent chain weapon.
+- Warden Plate — persistent max-HP armor.
+- Runner Hide — persistent movement armor.
+- Ember Eye — persistent kill-burst relic.
+- Grave Star — persistent orbit relic.
 
-Implemented slice:
-- full-screen top-down Canvas arena.
-- drag/touch one-thumb movement.
-- automatic nearest-target basic attack so movement remains the primary mobile gesture.
-- active CLEAVE skill with area damage and cooldown.
-- active DASH with movement/invulnerability window.
-- multiple enemies simultaneously.
-- three regular enemy behaviors/types: crawler, brute, ranged spitter.
-- four-chamber escalation with final Ash Tyrant boss.
-- boss health presentation.
-- enemy/player hit particles, floating damage text, death bursts, shockwaves and lightweight vibration feedback where supported.
-- in-combat Echo drops with visible loot beam/pulse.
-- between-wave three-item loot choice.
-- nine initial items across common/rare/legendary presentation.
-- signature build effects: enemy death explosion, chained basic attacks, dash fire trail, low-life attack-speed frenzy, expanded/faster cleave, heal-on-kill, orbiting damage projectiles, raw attack boost, movement-speed boost.
-- persistent Echoes, run/clear count, best wave and discovered-item codex in a separate generation-2 localStorage key.
+After boss victory, one of up to three not-yet-owned persistent pieces is selected, added to the Vault, and auto-equipped. Camp then visibly reflects the haul. Vault gear can be switched between expeditions.
 
-## Important implementation intent
-The item system deliberately avoids a large affix spreadsheet in this slice. Each item is meant to be readable quickly and produce an obvious next-fight change. This is testing whether a small browser game can capture loot excitement before scaling item count.
+### Death/extraction distinction
+- Boss clear banks full run Echoes and offers persistent extraction gear.
+- Death banks only part of run Echoes.
+- Existing Vault gear remains safe.
+This is deliberately light extraction pressure; tune only after human evidence.
+
+## Files
+- `README.md` — untouched authority.
+- `GAME_PLAN.md` — updated Gen 2.5 product thesis and validation gate.
+- `index.html` — camp/loadout, route map, extraction and Vault overlays.
+- `styles.css` — camp, loadout, route nodes, Vault/extraction presentation.
+- `game.js` — route progression, room types, combat reuse, persistent gear/equipment/extraction.
 
 ## Verification status
-- README re-read before work: VERIFIED.
-- Latest-main state and prior human feedback re-read before work: VERIFIED.
-- GAME_PLAN.md replacement-core decision written: VERIFIED.
-- index/styles/game writes to latest main: VERIFIED by GitHub write responses.
-- game.js latest-main source fetch after write: VERIFIED; generation-2 source is present on main.
-- JavaScript execution/runtime smoke test: UNVERIFIED from current connector environment.
-- iPhone Safari touch feel/performance: UNVERIFIED.
-- public Pages propagation of this exact generation-2 build: UNVERIFIED.
-- human fun/product-feel evaluation: NOT YET TESTED.
+- README re-read before this work: VERIFIED.
+- Latest main STATE/GAME_PLAN/index/styles/game reviewed before changes: VERIFIED.
+- GAME_PLAN write: VERIFIED by GitHub response.
+- index/styles/game writes: VERIFIED by GitHub responses.
+- STATE write: this commit records current state.
+- JavaScript parser/runtime smoke test: UNVERIFIED from connector environment.
+- iPhone Safari runtime/touch flow after Gen 2.5: UNVERIFIED.
+- Public Pages propagation: UNVERIFIED.
+- Human evaluation of Gen 2.5: NOT YET TESTED.
 
-Do not call generation 2 successful until human gameplay provides positive evidence.
+## Known implementation risks to inspect next
+- Verify route progression after Cache/Hunt and Shrine/Elite on actual runtime.
+- Verify death result cannot accidentally double-bank Echoes.
+- Verify persistent gear migration works for existing Gen-2 localStorage.
+- Verify boss extraction selection and Vault equip persist after reload.
+- Verify buttons/route map fit iPhone viewport without awkward scrolling.
+- The map is currently a node-choice representation, not free spatial dungeon walking. This is intentional for the smallest hypothesis test; only build free-room exploration if route/ownership adds replay desire or evidence specifically demands spatial exploration.
 
-## Highest priority next actions
-1. Re-read README.md and latest main at every Turn.
-2. Human-play generation 2 on iPhone before expanding content.
-3. First test basic feel: is dragging/movement responsive and does automatic combat read clearly?
-4. Test whether clearing a pack is materially more fun than generation 1.
-5. Test whether loot creates curiosity and whether signature effects are visibly obvious in the following chamber.
-6. Test whether at least one build produces a satisfying power-spike/chain-reaction moment (especially Emberbrand, Stormglass, Grave Orbit, Wide Cleave).
-7. Test perceived quality: does this now feel like a game rather than a debug UI?
-8. If runtime/touch blockers exist, fix them before content work.
-9. If combat is promising but loot is weak, redesign itemization before increasing dungeon size.
-10. If combat itself is still boring, do not try to save it with more items/story; reconsider the core again.
+## Human validation gate
+Ask the human to play without coaching and evaluate:
+- Is combat still at least as good as Gen 2?
+- Did choosing a route create curiosity/tension?
+- Did Cache vs Hunt and Shrine vs Elite feel meaningfully different?
+- Did extraction make boss victory more valuable?
+- Did keeping/equipping a named item create ownership?
+- Did Camp feel like returning to their character rather than restarting a prototype?
+- Most importantly: after returning to Camp, did they want to descend again, and why?
 
-## Human validation questions
-- Is moving and killing enemies fun before thinking about rewards?
-- Did fighting a group feel materially better than the previous one-enemy loop?
-- Did a drop/loot screen make you curious about what you could get?
-- Did equipping an item obviously change the next fight?
-- Did you get a moment where you felt noticeably overpowered or created a satisfying chain reaction?
-- Does the game look and feel materially less cheap than generation 1?
-- After the boss or death, did you voluntarily want to run again?
-- If yes, was the reason combat, better loot, build experimentation, collection/story, or something else?
+Do not mark success because the systems are understandable or because there are more screens. Voluntary replay remains the decisive product gate.
+
+## Next Turn
+1. Re-read README and latest main.
+2. If human runtime feedback reports a blocker, fix it first.
+3. If Gen 2.5 is functional and replay desire improves, deepen the strongest source of desire rather than broadening everything.
+4. If route choices feel like menus rather than adventure, evaluate a true connected-room dungeon with spatial discovery.
+5. If persistent gear is not exciting, redesign gear identity/chase before adding inventory volume.
+6. If combat loses appeal, do not hide that with meta systems.
 
 ## Concurrency note
-No Scheduled Task fleet has been created. If one is created later, follow README One Brain timing: five equivalent Turns around :00/:12/:24/:36/:48, each starting by re-reading README and latest main and avoiding destructive conflict.
+No Scheduled Task fleet has been created. If created later, use README One Brain timing: five equivalent Turns around :00/:12/:24/:36/:48, each beginning from latest main and avoiding destructive conflicts.
