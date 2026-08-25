@@ -168,4 +168,21 @@ const RUN_KEY='chappy5.echoDrift.run.v1';
   assert.equal(elements.log.innerHTML,'');
 }
 
+// 11) Clearing an active dive returns every interactive surface to a usable idle state.
+{
+  const storage=new MemoryStorage();
+  const {context,elements}=boot(storage);
+  run(context,"run={energy:3,depth:4,haul:17,threat:48,chain:'C',chainLen:3,alive:true,log:['stale'],routes:[{...routeTemplates[0],cost:1,gain:2,signal:'A',anomaly:false},{...routeTemplates[1],cost:2,gain:4,signal:'B',anomaly:false},{...routeTemplates[2],cost:1,gain:3,signal:'C',anomaly:false}]};render();run=null;render();");
+  assert.equal(elements.startRun.disabled,false);
+  assert.equal(elements.startRun.textContent,'潜航開始');
+  assert.equal(elements.extract.disabled,true);
+  assert.equal(elements.energy.textContent,10);
+  assert.equal(elements.depth.textContent,0);
+  assert.equal(elements.haul.textContent,0);
+  assert.equal(elements.resonance.textContent,'—');
+  assert.equal(elements.threatLabel.textContent,'CALM');
+  assert.equal(elements.threat.textContent,'0%');
+  assert.equal(elements.log.children.length,0);
+}
+
 console.log('ECHO DRIFT regression tests: PASS');
