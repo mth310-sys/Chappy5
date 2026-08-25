@@ -1,6 +1,6 @@
 # Player Experience Analysis
 
-Updated: 2026-08-26 01:09 JST
+Updated: 2026-08-26 02:12 JST
 Target: latest `main` ECHO DRIFT / HUMAN_CANDIDATE_01
 Director: Player Experience Analysis Director
 
@@ -75,8 +75,8 @@ This document records predicted player experience from code/UI inspection and cu
 - Severity(1-5): 2
 - Confidence: HIGH
 - Verification Type: OBSERVED
-- Evidence: The earlier AI-detectable deep dominance materially improved, exact risk/payoff display is internally consistent except for the newly documented low-energy cost edge case, and Systems' state-conditioned robustness check supports distinct situational jobs rather than a hidden universal route. The remaining central Player Experience uncertainties are subjective: whether >50% collapse feels earned, whether continue-versus-extract creates genuine hesitation, and whether a run ending creates immediate replay desire. Further PX speculation cannot convert those into HUMAN_VERIFIED evidence.
-- Recommended Action: Keep HUMAN_CANDIDATE_01 frozen. Limit the human test to three feel questions plus usability observations. Do not let the EN partial-payment edge case expand the test into a questionnaire; simply note it if encountered.
+- Evidence: The earlier AI-detectable deep dominance materially improved, exact risk/payoff display is internally consistent except for the documented low-energy cost edge case, and Systems' state-conditioned robustness check supports distinct situational jobs rather than a hidden universal route. The remaining central Player Experience uncertainties are subjective: whether >50% collapse feels earned, whether continue-versus-extract creates genuine hesitation, and whether a run ending creates immediate replay desire. Further PX speculation cannot convert those into HUMAN_VERIFIED evidence.
+- Recommended Action: Keep HUMAN_CANDIDATE_01 frozen. Limit the human test to three feel questions plus usability observations. Do not let secondary rule edge cases expand the test into a questionnaire; simply note them if encountered.
 
 ## Finding PX-09 — Final-energy partial payment can weaken perceived rule trust
 
@@ -85,11 +85,20 @@ This document records predicted player experience from code/UI inspection and cu
 - Confidence: MEDIUM-HIGH
 - Verification Type: OBSERVED + SIMULATED
 - Evidence: At low Energy the interface can promise a cost the game does not actually charge. Because the current design has deliberately improved transparency by showing exact collapse risk and exact extraction value, this inconsistency is more salient than it would be in a deliberately opaque game. A player who notices `EN-3` being accepted at 1 EN may read it as a welcome last-chance rule, but there is no UI language explaining that rule. Conversely, if they assume displayed costs are requirements, they may avoid a route that is actually selectable. The mechanic therefore creates both a hidden advantage and a comprehension ambiguity.
-- Recommended Action: Do not alter the frozen candidate before human feel testing. Treat this as a post-candidate rule-clarity decision, not a cosmetic copy fix. Systems should first measure the economic effect; then Executive should choose the intended rule. Player Experience should ensure the eventual UI communicates that rule directly.
+- Recommended Action: Do not alter the frozen candidate before human feel testing. Treat this as a post-candidate rule-clarity decision, not a cosmetic copy fix. Systems has bounded its aggregate economic effect as small; Executive should choose the intended rule after the candidate and Player Experience should ensure the eventual UI communicates it directly.
+
+## Finding PX-10 — Signal letters currently teach a rule that the game does not consistently honor
+
+- Status: WATCH
+- Severity(1-5): 3
+- Confidence: HIGH
+- Verification Type: OBSERVED + SIMULATED
+- Evidence: Every route title visibly includes an A/B/C signal. The HUD also exposes the active resonance as `A×N`, `B×N`, or `C×N`, and the resonance route explicitly rewards matching the active signal. This presentation naturally teaches that signal identity is a meaningful property of routes. However, current code ignores the displayed signal when calm or deep is chosen: those routes preserve or erase the active chain through a hidden 50% random roll. Thus, with an active `A×2`, choosing `静かな反響 · A` can erase the chain while `静かな反響 · B` can preserve it. The player receives no visible causal explanation for either outcome.
+- Recommended Action: Preserve HUMAN_CANDIDATE_01, but treat unexplained chain loss as a focused usability observation rather than a fourth fun question. If the player expects same-letter calm/deep to preserve resonance or expresses confusion when resonance disappears, record that as HUMAN_VERIFIED evidence. After the candidate, prefer making the visible signal causally meaningful across route types or removing mechanically inert signal labels from non-resonance routes; do not solve the mismatch by merely adding explanatory prose for an opaque coin flip.
 
 ## New Player Experience conclusion
 
-`HUMAN_CANDIDATE_01` remains suitable for focused human testing. The newly identified low-Energy partial-payment behavior is a real rule-transparency issue, but it is localized to the final-energy state and does not justify moving the frozen target before the core feel test. It should be observed if encountered and resolved immediately after the candidate according to the intended Systems rule.
+`HUMAN_CANDIDATE_01` remains suitable for focused human testing. The newly confirmed resonance-signal mismatch is more conceptually important than the low-Energy edge case because it touches a visible rule the interface actively teaches, but it still does not justify moving the frozen target before the first feel test. The candidate should remain stable so the core push-your-luck experience can be judged without confounding changes.
 
 This is **not** a claim that ECHO DRIFT is fun. There is still no `HUMAN_VERIFIED` Player Experience evidence.
 
@@ -99,6 +108,6 @@ This is **not** a claim that ECHO DRIFT is fun. There is still no `HUMAN_VERIFIE
 2. **Failure ownership:** After a collapse, did it feel like a risk you knowingly pushed too far, enough that you wanted another attempt?
 3. **Immediate replay desire:** At the end of a successful or failed run, did you want to start the next run immediately?
 
-Usability observations, not extra fun questions: on the actual iPhone, note whether scrolling, cramped route text or thumb reach interferes with comparing Threat/Haul, the three routes and extraction. If a route advertises a larger EN cost than the remaining Energy, note whether its continued selectability is understood or surprising.
+Usability observations, not extra fun questions: on the actual iPhone, note whether scrolling, cramped route text or thumb reach interferes with comparing Threat/Haul, the three routes and extraction. If a route advertises a larger EN cost than the remaining Energy, note whether its continued selectability is understood or surprising. If resonance is active, note whether the player expects same-letter calm/deep routes to preserve it or notices unexplained chain disappearance.
 
-If the core feel questions fail, preserve the negative HUMAN_VERIFIED result and diagnose before expanding progression. If they pass, the next major Player Experience concerns become weak long-term replay purpose, emotionally clinical action feedback, and the low-Energy cost rule.
+If the core feel questions fail, preserve the negative HUMAN_VERIFIED result and diagnose before expanding progression. If they pass, the next major Player Experience concerns become weak long-term replay purpose, emotionally clinical action feedback, the signal/chain causal mismatch, and the low-Energy cost rule.
