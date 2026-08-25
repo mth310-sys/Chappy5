@@ -112,4 +112,25 @@ const RUN_KEY='chappy5.echoDrift.run.v1';
   );
 }
 
+// 7) Repeated extraction calls cannot double-bank or double-count a completed run.
+{
+  const storage=new MemoryStorage();
+  const {context}=boot(storage);
+  run(context,"run={energy:5,depth:5,haul:10,threat:20,chain:null,chainLen:0,alive:true,log:[],routes:[]};persistRun();extract(false);extract(false);");
+  assert.equal(read(context,'meta.banked'),12);
+  assert.equal(read(context,'meta.runs'),1);
+  assert.equal(storage.getItem(RUN_KEY),null);
+}
+
+// 8) A route interaction after collapse cannot count or mutate the finished run again.
+{
+  const storage=new MemoryStorage();
+  const {context}=boot(storage,()=>0);
+  run(context,"run={energy:10,depth:0,haul:9,threat:92,chain:null,chainLen:0,alive:true,log:[],routes:[{...routeTemplates[1],cost:2,gain:4,signal:'A',anomaly:false},{...routeTemplates[0],cost:1,gain:1,signal:'B',anomaly:false},{...routeTemplates[2],cost:1,gain:2,signal:'C',anomaly:false}]};persistRun();chooseRoute(0);chooseRoute(0);");
+  assert.equal(read(context,'meta.runs'),1);
+  assert.equal(read(context,'run.haul'),0);
+  assert.equal(read(context,'run.alive'),false);
+  assert.equal(storage.getItem(RUN_KEY),null);
+}
+
 console.log('ECHO DRIFT regression tests: PASS');
