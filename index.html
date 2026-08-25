@@ -2,133 +2,80 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
-  <meta name="theme-color" content="#0e1118" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no" />
+  <meta name="theme-color" content="#090b10" />
   <title>EMBERLORE</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="app" id="app">
-    <header class="topbar">
-      <div>
-        <div class="eyebrow">ONE BRAIN / EMBERLORE</div>
+  <main id="app">
+    <canvas id="gameCanvas"></canvas>
+
+    <section id="hud" class="hud hidden">
+      <div class="topHud">
+        <div class="brandMini">EMBERLORE <span>GEN 2</span></div>
+        <div id="waveLabel" class="waveLabel">CHAMBER 1</div>
+      </div>
+      <div class="bossWrap hidden" id="bossWrap">
+        <div class="bossName" id="bossName">ASH TYRANT</div>
+        <div class="bossBar"><div id="bossFill"></div></div>
+      </div>
+      <div class="playerBarRow">
+        <div class="hpWrap"><span>HP</span><div class="hpBar"><div id="hpFill"></div></div><strong id="hpText">100</strong></div>
+        <div class="xpPill">LV <b id="levelText">1</b></div>
+      </div>
+      <div class="skillDock">
+        <button id="cleaveBtn" class="skillBtn"><span>✦</span><b>CLEAVE</b><small id="cleaveCd">READY</small></button>
+        <button id="dashBtn" class="skillBtn"><span>➤</span><b>DASH</b><small id="dashCd">READY</small></button>
+      </div>
+      <div class="moveHint" id="moveHint">画面をドラッグして移動</div>
+    </section>
+
+    <section id="homeView" class="overlay active">
+      <div class="homeGlow"></div>
+      <div class="homeContent">
+        <p class="eyebrow">THE VAULT CALLS AGAIN</p>
         <h1>EMBERLORE</h1>
-      </div>
-      <button id="archiveBtn" class="ghost small">ARCHIVE</button>
-    </header>
-
-    <section id="homeView" class="view active">
-      <div class="hero-card">
-        <div class="sigil">✦</div>
-        <p class="kicker">THE ASH REMEMBERS</p>
-        <h2 id="homeHeadline">目覚めるたび、世界は同じ灰から始まる。</h2>
-        <p id="homeStory" class="muted">あなたは記憶を失った「火守」。崩壊した記憶庫へ潜り、失われた世界の真相を持ち帰れ。</p>
-        <div class="objective-card">
-          <span class="objective-label">CURRENT THREAD</span>
-          <strong id="objectiveTitle">最初の記憶を回収する</strong>
-          <small id="objectiveText">遠征で未知の存在と接触し、Archiveへ記録を持ち帰れ。</small>
+        <p class="lead">敵を狩り、戦利品を奪い、ビルドを変えながら最奥へ。</p>
+        <div class="metaStats">
+          <div><span>ECHOES</span><strong id="echoesText">0</strong></div>
+          <div><span>CLEARS</span><strong id="clearsText">0</strong></div>
+          <div><span>ITEMS</span><strong id="itemsText">0</strong></div>
         </div>
+        <button id="startBtn" class="primary">DESCEND</button>
+        <button id="codexBtn" class="secondary">LOOT CODEX</button>
+        <p class="fine">1 thumb movement · auto attack · 2 active skills</p>
       </div>
-
-      <section class="panel">
-        <div class="section-head">
-          <h3>EMBER VOW</h3>
-          <span id="echoesLabel" class="currency">0 ECHOES</span>
-        </div>
-        <p class="panel-note">Echoesは失われた時間の残響。遠征で持ち帰り、次の火守の在り方を解放する。</p>
-        <div id="charmList" class="charm-list"></div>
-      </section>
-
-      <button id="startBtn" class="primary big">ENTER THE ASH</button>
-      <p class="fineprint">記憶・発見・アンロックはこの端末のブラウザに保存されます。</p>
     </section>
 
-    <section id="gameView" class="view">
-      <div class="runline">
-        <span id="stageLabel">DEPTH 1 / 4</span>
-        <span id="buildLabel">0 RELICS</span>
+    <section id="lootView" class="overlay">
+      <div class="lootPanel">
+        <p class="eyebrow">LOOT FOUND</p>
+        <h2 id="lootTitle">Choose your power</h2>
+        <p id="lootSubtitle" class="muted">次の戦闘で効果がすぐ見える装備を1つ選ぶ。</p>
+        <div id="lootChoices" class="lootChoices"></div>
       </div>
-
-      <div id="signalStrip" class="signal-strip">SIGNAL / 灰の奥から、あなたを知る声がする。</div>
-
-      <section class="combat-card">
-        <div class="enemy-head">
-          <div>
-            <p class="eyebrow">ENTITY</p>
-            <h2 id="enemyName">Ash Hound</h2>
-          </div>
-          <div class="intent" id="intentBox">
-            <span class="intent-label">NEXT</span>
-            <strong id="intentText">ATTACK 6</strong>
-          </div>
-        </div>
-
-        <div class="enemy-visual" id="enemyVisual">
-          <div class="enemy-core" id="enemyCore">◆</div>
-        </div>
-
-        <div class="bar-wrap">
-          <div class="bar-label"><span>ENTITY HP</span><strong id="enemyHpText">24 / 24</strong></div>
-          <div class="bar"><div id="enemyHpBar" class="fill enemy"></div></div>
-        </div>
-      </section>
-
-      <section class="player-panel">
-        <div class="stats-row">
-          <div><span>HP</span><strong id="playerHp">30</strong></div>
-          <div><span>SHIELD</span><strong id="playerShield">0</strong></div>
-          <div><span>FOCUS</span><strong id="playerFocus">0</strong></div>
-          <div><span>BURN</span><strong id="enemyBurn">0</strong></div>
-        </div>
-
-        <div id="actionGrid" class="action-grid">
-          <button class="action strike" data-action="strike">
-            <span class="action-icon">⚔</span><strong>STRIKE</strong><small id="strikeHint">7 damage</small>
-          </button>
-          <button class="action guard" data-action="guard">
-            <span class="action-icon">◇</span><strong>GUARD</strong><small id="guardHint">6 shield</small>
-          </button>
-          <button class="action focus" data-action="focus">
-            <span class="action-icon">✦</span><strong>FOCUS</strong><small>+2 focus</small>
-          </button>
-        </div>
-
-        <div id="combatLog" class="combat-log">敵の意図を見て行動を選べ。</div>
-      </section>
     </section>
 
-    <section id="rewardView" class="view">
-      <div class="reward-head">
-        <p class="eyebrow">RELIC RECOVERY</p>
-        <h2>残骸は、過去の戦い方を覚えている。</h2>
-        <p class="muted">ひとつだけ接続する。今のビルドを伸ばすか、別の勝ち筋を作るか。</p>
+    <section id="resultView" class="overlay">
+      <div class="resultPanel">
+        <p class="eyebrow" id="resultEyebrow">EXPEDITION ENDED</p>
+        <div class="resultSigil" id="resultSigil">✦</div>
+        <h2 id="resultTitle">The ash remembers.</h2>
+        <p id="resultText" class="muted"></p>
+        <div id="resultStats" class="metaStats"></div>
+        <button id="againBtn" class="primary">RUN AGAIN</button>
+        <button id="campBtn" class="secondary">RETURN TO CAMP</button>
       </div>
-      <div id="relicChoices" class="relic-grid"></div>
     </section>
 
-    <section id="routeView" class="view">
-      <div class="reward-head">
-        <p class="eyebrow">FRACTURED ROUTE</p>
-        <h2>どの記憶を追う？</h2>
-        <p class="muted">安全な道は生存を、危険な道は真相とEchoesを近づける。</p>
+    <section id="codexView" class="overlay">
+      <div class="codexPanel">
+        <div class="panelHead"><div><p class="eyebrow">PERSISTENT DISCOVERY</p><h2>LOOT CODEX</h2></div><button id="closeCodex" class="iconBtn">×</button></div>
+        <div id="codexContent" class="codexGrid"></div>
       </div>
-      <div id="routeChoices" class="route-grid"></div>
-    </section>
-
-    <section id="resultView" class="view">
-      <div id="resultCard" class="result-card"></div>
-      <button id="homeBtn" class="primary big">RETURN TO EMBER</button>
-    </section>
-
-    <section id="archiveView" class="view">
-      <div class="section-head sticky">
-        <div><p class="eyebrow">THE WORLD YOU HAVE RECOVERED</p><h2>ARCHIVE</h2></div>
-        <button id="archiveClose" class="ghost small">CLOSE</button>
-      </div>
-      <div id="archiveContent"></div>
     </section>
   </main>
-
   <script src="game.js"></script>
 </body>
 </html>
