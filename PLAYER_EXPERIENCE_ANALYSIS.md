@@ -1,6 +1,6 @@
 # Player Experience Analysis
 
-Updated: 2026-08-26 02:12 JST
+Updated: 2026-08-26 03:12 JST
 Target: latest `main` ECHO DRIFT / HUMAN_CANDIDATE_01
 Director: Player Experience Analysis Director
 
@@ -96,9 +96,18 @@ This document records predicted player experience from code/UI inspection and cu
 - Evidence: Every route title visibly includes an A/B/C signal. The HUD also exposes the active resonance as `A×N`, `B×N`, or `C×N`, and the resonance route explicitly rewards matching the active signal. This presentation naturally teaches that signal identity is a meaningful property of routes. However, current code ignores the displayed signal when calm or deep is chosen: those routes preserve or erase the active chain through a hidden 50% random roll. Thus, with an active `A×2`, choosing `静かな反響 · A` can erase the chain while `静かな反響 · B` can preserve it. The player receives no visible causal explanation for either outcome.
 - Recommended Action: Preserve HUMAN_CANDIDATE_01, but treat unexplained chain loss as a focused usability observation rather than a fourth fun question. If the player expects same-letter calm/deep to preserve resonance or expresses confusion when resonance disappears, record that as HUMAN_VERIFIED evidence. After the candidate, prefer making the visible signal causally meaningful across route types or removing mechanically inert signal labels from non-resonance routes; do not solve the mismatch by merely adding explanatory prose for an opaque coin flip.
 
+## Finding PX-11 — Record reset understates its effect during a live dive
+
+- Status: WATCH
+- Severity(1-5): 3
+- Confidence: HIGH
+- Verification Type: OBSERVED + SIMULATED
+- Evidence: `記録初期化` is permanently visible in the top bar, including during an active dive. Its confirmation text says `累計回収・潜航回数・発見記録を初期化しますか？`, which describes only persistent archive values. On confirmation, however, the handler removes both `SAVE_KEY` and `RUN_KEY`, sets `run=null`, and renders the idle screen. Therefore an active dive and its current haul are also discarded even though the confirmation does not say so. The button is visually de-emphasized, and browser `confirm()` prevents a one-tap loss, so this is not an accidental-touch emergency; the problem is that the destructive scope communicated by the confirmation is incomplete.
+- Recommended Action: Preserve the frozen candidate. Treat this as a post-candidate rule-trust fix unless human testing actually encounters it. After the candidate, either disable/hide record reset while a dive is active, or change the confirmation to explicitly state that the current dive will also be abandoned. Do not add this as a fourth feel question; if used during testing, note whether the consequence was expected.
+
 ## New Player Experience conclusion
 
-`HUMAN_CANDIDATE_01` remains suitable for focused human testing. The newly confirmed resonance-signal mismatch is more conceptually important than the low-Energy edge case because it touches a visible rule the interface actively teaches, but it still does not justify moving the frozen target before the first feel test. The candidate should remain stable so the core push-your-luck experience can be judged without confounding changes.
+`HUMAN_CANDIDATE_01` remains suitable for focused human testing. The reset-scope mismatch is a real rule-trust issue but is isolated behind a confirmation dialog and does not justify moving the frozen target. The resonance-signal mismatch remains the more conceptually important visible-rule problem because it can affect ordinary route decisions rather than an optional destructive maintenance action.
 
 This is **not** a claim that ECHO DRIFT is fun. There is still no `HUMAN_VERIFIED` Player Experience evidence.
 
@@ -108,6 +117,6 @@ This is **not** a claim that ECHO DRIFT is fun. There is still no `HUMAN_VERIFIE
 2. **Failure ownership:** After a collapse, did it feel like a risk you knowingly pushed too far, enough that you wanted another attempt?
 3. **Immediate replay desire:** At the end of a successful or failed run, did you want to start the next run immediately?
 
-Usability observations, not extra fun questions: on the actual iPhone, note whether scrolling, cramped route text or thumb reach interferes with comparing Threat/Haul, the three routes and extraction. If a route advertises a larger EN cost than the remaining Energy, note whether its continued selectability is understood or surprising. If resonance is active, note whether the player expects same-letter calm/deep routes to preserve it or notices unexplained chain disappearance.
+Usability observations, not extra fun questions: on the actual iPhone, note whether scrolling, cramped route text or thumb reach interferes with comparing Threat/Haul, the three routes and extraction. If a route advertises a larger EN cost than the remaining Energy, note whether its continued selectability is understood or surprising. If resonance is active, note whether the player expects same-letter calm/deep routes to preserve it or notices unexplained chain disappearance. If `記録初期化` is used during a live dive, note whether abandoning the active dive was expected from the confirmation wording.
 
-If the core feel questions fail, preserve the negative HUMAN_VERIFIED result and diagnose before expanding progression. If they pass, the next major Player Experience concerns become weak long-term replay purpose, emotionally clinical action feedback, the signal/chain causal mismatch, and the low-Energy cost rule.
+If the core feel questions fail, preserve the negative HUMAN_VERIFIED result and diagnose before expanding progression. If they pass, the next major Player Experience concerns become weak long-term replay purpose, emotionally clinical action feedback, the signal/chain causal mismatch, the low-Energy cost rule, and destructive reset clarity.
