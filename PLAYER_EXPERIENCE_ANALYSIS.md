@@ -1,90 +1,74 @@
 # Player Experience Analysis
 
-Updated: 2026-08-25 20:14 JST
-Target: latest `main` after `65f6ac8`
+Updated: 2026-08-25 21:15 JST
+Target: latest `main` ECHO DRIFT
 Director: Player Experience Analysis Director
 
 This document records predicted player experience from code/UI inspection. It does **not** claim human play. Unless explicitly backed by a human report, subjective experience findings remain `SIMULATED`.
 
-## Finding PX-01 — Core choice is readable, but consequence prediction is still partially opaque
+## Finding PX-01 — Visible anomalies improve agency, but the consequence of a tap is still hard to predict
 
-- director: Player Experience Analysis Director
-- status: WARNING
-- severity: 4
-- confidence: HIGH
-- verification: OBSERVED + SIMULATED
-- finding: The screen exposes current Threat, Energy, Haul and Resonance and each route exposes Energy cost, base gain and route identity. However the previous bare `-3% / +3% / 0%` route label looked like an absolute collapse probability even though it is only one modifier inside the next threat calculation. This could make a collapse feel arbitrary or dishonest rather than tense.
-- evidence: `game.js` applies anomaly +7, route `risk`, then `depth * 1.4` before rolling collapse against resulting `run.threat`. The route card previously rendered only `${risk}%`. Commit `65f6ac8` changes this to `脅威補正 ±N`, without changing mechanics.
-- impact: Continue-vs-extract depends on trusting the risk information. Misreading a modifier as the actual chance would damage perceived fairness at the exact point where the game wants tension.
-- recommended_action: Keep the clarified modifier label. Executive/Systems should decide later whether the game should expose a projected next-step threat, intentionally preserve some uncertainty, or redesign threat communication. Do not solve this with a long tutorial paragraph.
-- human_verification_needed: YES — later ask whether collapse felt like a consequence of a risk the player knowingly accepted, rather than an unexplained punishment.
-- last_updated: 2026-08-25 / `65f6ac8`
+- Status: WARNING
+- Severity(1-5): 4
+- Confidence: HIGH
+- Verification Type: OBSERVED + SIMULATED
+- Evidence: Route cards now reveal anomaly state before selection, including its salvage bonus and `脅威+7`, and the route-specific number is correctly labeled `脅威補正`. However `chooseRoute()` then also adds the new depth × 1.4 to threat before rolling collapse. The player sees current Threat plus several modifiers but not the actual post-choice collapse chance.
+- Recommended Action: Executive should explicitly decide whether exact next-step danger is intended knowledge. If risk comparison is supposed to be strategic, prefer showing one projected post-choice threat value rather than asking the player to mentally combine current threat, route modifier, anomaly modifier and depth escalation. If uncertainty is intentional, keep it and later HUMAN_VERIFY whether collapse feels suspenseful rather than arbitrary. Do not add tutorial prose.
 
-## Finding PX-02 — One-thumb interaction geometry is promising, but real iPhone comfort is unverified
+## Finding PX-02 — The three route identities are described clearly, but experienced behavior may contradict their promise
 
-- director: Player Experience Analysis Director
-- status: WARNING
-- severity: 3
-- confidence: MEDIUM
-- verification: SIMULATED
-- finding: The active decisions are three full-width route buttons followed by two large action buttons in a portrait layout, which should be compatible with thumb-driven play. The layout also uses `viewport-fit=cover`, safe-area insets, `100dvh`, and a reduced radar at heights below 700px. Real reachability and Safari viewport behavior are still unknown.
-- evidence: `index.html` places route choices and extract/start controls in a single vertical flow. `style.css` caps the app at 430px, uses full-width route cards, 15px action padding, safe-area insets and `touch-action: manipulation`.
-- impact: If the primary loop is comfortable one-handed, short repeat sessions fit the product goal. If the large radar and HUD force repeated vertical movement on actual iPhone Safari, the same loop can feel slower and more cumbersome than its mechanics warrant.
-- recommended_action: Do not redesign from static inspection alone. Preserve the current compact portrait structure until an actual iPhone pass can verify whether route choices and `回収して帰還` remain comfortably visible/reachable during normal play.
-- human_verification_needed: YES — later verify thumb reach, accidental taps, need to scroll, and whether `回収して帰還` is visible at the moment the player wants it.
-- last_updated: 2026-08-25 / latest main
+- Status: WARNING
+- Severity(1-5): 4
+- Confidence: HIGH
+- Verification Type: OBSERVED + SIMULATED
+- Evidence: The cards promise `静かな反響 = 低消費・低回収 / 崩壊を抑える`, `深層パルス = 高消費・高回収`, and `共鳴追跡 = 同系統を繋ぐと回収倍率が伸びる`. Systems analysis shows calm ceases to reduce absolute threat from depth 3 onward and an adaptive economic policy selects deep about 85.1% of steps while chain-advancing resonance is about 1.6% of all steps.
+- Recommended Action: Treat this as a player-expectation problem as well as balance. Do not rewrite the labels to excuse weak identities. Executive/Systems should make the actual play fulfill the existing readable promises: calm should become meaningfully attractive in danger if it is the safety route, and resonance should create a noticeable reason to preserve a chain.
 
-## Finding PX-03 — Visual hierarchy sells atmosphere before it sells the decision
+## Finding PX-03 — The core interaction is thumb-friendly in shape, but vertical attention travel may slow repeated decisions
 
-- director: Player Experience Analysis Director
-- status: WARNING
-- severity: 3
-- confidence: MEDIUM
-- verification: SIMULATED
-- finding: A 205px animated radar is the dominant visual object while the actual gameplay is textual route comparison. This gives ECHO DRIFT an immediate identity, but the radar currently communicates only current threat and does not visibly react to route identity, resonance, haul gain, discovery, success, or collapse.
-- evidence: `style.css` dedicates a 205x205 circular animated region to `.radar`; `index.html` places it above mission choices. `game.js` updates its center label/percentage but feedback for gain, anomaly, discovery and collapse is primarily text/log state.
-- impact: The game may be understood but feel administratively flat: tap a card, numbers change, repeat. That threatens predicted reward feel and the sense that the player is "diving" rather than operating a compact calculator. Conversely, removing the radar would sacrifice one of the few strong pieces of visual identity.
-- recommended_action: Executive should treat the radar as a candidate feedback surface, not merely decoration. If the core loop survives structural testing, a small high-value next step would be state-reactive feedback (route pulse, collapse shock, successful extraction response) rather than adding more explanatory text or content.
-- human_verification_needed: YES — later ask whether route taps and successful extraction feel satisfying, not merely understandable.
-- last_updated: 2026-08-25 / latest main
+- Status: WARNING
+- Severity(1-5): 3
+- Confidence: MEDIUM
+- Verification Type: SIMULATED
+- Evidence: Portrait layout, full-width route buttons, `viewport-fit=cover`, safe-area padding, `100dvh`, and large action buttons are appropriate for iPhone. But each decision asks the eye to relate HUD values at the top, a 205px radar in the middle, route math below it, then the extraction action below the routes. The radar shrinks to 150px only below 700px viewport height.
+- Recommended Action: Do not redesign from static inspection. Preserve the current layout until real iPhone verification, but when a human-test build is frozen explicitly verify whether the player can compare a route and the extraction option without repeated scrolling or losing the current Threat/Haul context.
 
-## Finding PX-04 — First-run comprehension is adequate for action, weak for purpose
+## Finding PX-04 — Radar creates identity but still does not deliver the reward event
 
-- director: Player Experience Analysis Director
-- status: WARNING
-- severity: 3
-- confidence: MEDIUM
-- verification: SIMULATED
-- finding: The initial screen clearly offers `潜航開始`, and once started explicitly tells the player to choose one of three echoes. The immediate controls are learnable without a tutorial. But the first screen does not communicate what `累計回収`, `発見記録`, or the larger purpose of diving will eventually mean, and currently banked salvage has no gameplay use.
-- evidence: Initial status is `信号海へ潜る準備ができた。`; persistent archive counters are visible from the start. Progression analysis independently observes that persistent salvage records play but does not yet alter future play.
-- impact: A player can probably start quickly, but after understanding the loop may ask "what am I building toward?". This is a replay-motivation risk rather than an onboarding-text problem.
-- recommended_action: Do not add lore/tutorial copy as a substitute. The Progression/Executive layer should eventually make at least one persistent result alter a future decision; Player Experience should then reassess whether the purpose becomes legible through play.
-- human_verification_needed: YES — only after the progression layer gains actual meaning, verify whether the player understands why another run matters.
-- last_updated: 2026-08-25 / latest main
+- Status: WARNING
+- Severity(1-5): 3
+- Confidence: MEDIUM
+- Verification Type: SIMULATED
+- Evidence: The animated radar is the dominant visual element and now gives the visible anomaly mechanic a strong thematic place conceptually, yet code only changes its center threat label/percentage. Route selection, resonance continuation, anomaly contact, discovery, successful extraction and collapse are communicated mainly through changing numbers and log text.
+- Recommended Action: Once Executive settles the current risk/reward structure, use the existing radar as the first feedback surface rather than adding another UI system: a short state reaction for a chosen signal, anomaly, extraction success or collapse could make the same decisions feel like events. This remains a candidate, not a claim that animation will make the game fun.
 
-## Finding PX-05 — Current human test should remain deferred until AI-detectable decision issues settle
+## Finding PX-05 — First-run action is understandable; replay purpose remains mechanically weak
 
-- director: Player Experience Analysis Director
-- status: PASS
-- severity: 2
-- confidence: HIGH
-- verification: OBSERVED
-- finding: There is already a playable core, but Systems has identified a possible fixed-depth extraction optimum and Progression has identified a non-functional persistent layer. Asking for broad fun feedback now risks spending scarce human judgment on issues the AI can still investigate structurally.
-- evidence: `GAME_SYSTEMS_ANALYSIS.md` reports fixed-depth policy risk; `PROGRESSION_ANALYSIS.md` reports persistent values do not change future strategy; README requires AI-detectable issues to be reduced before focused human testing.
-- impact: Deferring the human test briefly should produce a cleaner question: whether the improved decision loop actually creates tension, satisfaction and immediate replay desire.
-- recommended_action: Continue AI-side analysis/targeted improvement. When Executive freezes a candidate human-test build, keep the test to three questions: (1) did continue-vs-extract create genuine hesitation, (2) did route taps/extraction feel satisfying, (3) after a run ended did you want to start another immediately?
-- human_verification_needed: NO — this finding concerns test timing; the later hypotheses themselves require human verification.
-- last_updated: 2026-08-25 / latest main
+- Status: WARNING
+- Severity(1-5): 3
+- Confidence: HIGH
+- Verification Type: OBSERVED + SIMULATED
+- Evidence: `潜航開始`, the three route cards and `回収して帰還` provide a learnable immediate loop without a tutorial. Persistent `累計回収`, `潜航回数`, and `発見記録` are visible, but banked salvage currently has no gameplay use and discoveries do not alter the next run.
+- Recommended Action: Do not explain purpose with lore or onboarding copy before purpose exists mechanically. Progression/Executive should eventually make at least one persistent result change a future decision, then Player Experience should reassess whether the reason for another run becomes legible through play.
+
+## Finding PX-06 — Human test should still wait for the current structural contradiction to be reduced
+
+- Status: PASS
+- Severity(1-5): 2
+- Confidence: HIGH
+- Verification Type: OBSERVED
+- Evidence: Systems has fresh evidence that visible-state optimization still converges on shallow extraction and deep dominance. These are AI-detectable structural issues, while README requires focused human judgment after such issues are reduced.
+- Recommended Action: Do not spend the first human playtest on known balance contradictions. When Executive freezes a candidate build, limit the human check to: (1) did continue-vs-extract create genuine hesitation at more than one point, (2) did choosing a route and successfully extracting feel satisfying rather than merely readable, (3) after a run ended did the player want to start another immediately? Also record thumb reach/scroll friction as an iPhone usability observation rather than adding a broad fourth subjective question.
 
 ## Current Player Experience summary
 
-- clarity: WARNING — immediate action is understandable; risk consequence communication was partially misleading and has received a small wording fix.
-- control_friction: UNKNOWN/WARNING — static layout is thumb-oriented, real iPhone behavior unverified.
-- information_load: PASS/WARNING — only a few core values are shown, but English/Japanese labels and route math still require actual first-time observation.
-- tempo: WARNING — mechanically short actions; dominant decorative radar and text-first feedback may make perceived tempo flatter than intended.
-- feedback_quality: WARNING — current state is readable, but action/reward feedback is mostly numerical/textual.
-- predicted_reward_feel: WARNING / SIMULATED — banking salvage is clear but has limited sensory payoff and no strategic persistent use yet.
-- predicted_replay_motivation: WARNING / SIMULATED — short runs support replay, but long-term purpose is not yet mechanically established.
-- predicted_dropoff_risk: WARNING / SIMULATED — likely after the player understands the loop but before a meaningful persistent reason to continue appears.
+- clarity: WARNING — anomaly visibility is a meaningful improvement; exact consequence prediction remains cognitively expensive.
+- control_friction: UNKNOWN/WARNING — geometry is promising, real iPhone/Safari behavior remains unverified.
+- information_load: WARNING — only a few state values exist, but they are spatially separated and route consequence requires mental composition.
+- tempo: WARNING — actions are mechanically short; reward/event feedback remains predominantly numerical.
+- feedback_quality: WARNING — strong atmospheric surface, weak action-specific sensory response.
+- predicted_reward_feel: WARNING / SIMULATED — banking is legible but not yet strongly expressed or strategically persistent.
+- predicted_replay_motivation: WARNING / SIMULATED — short runs support repetition, but current shallow/deep dominance and weak meta-purpose threaten sustained curiosity.
+- predicted_dropoff_risk: WARNING / SIMULATED — likely after the player decodes a dominant early-return rhythm or realizes permanent counters do not yet change play.
 
 No `HUMAN_VERIFIED` Player Experience finding exists yet.
