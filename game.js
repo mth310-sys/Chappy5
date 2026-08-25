@@ -38,8 +38,8 @@ function calmRecoveryFor(r){return r.tone==='calm'&&run.threat>=25?-8:0}
 function projectedThreat(r,nextDepth=run.depth+1){return clamp(run.threat+r.risk+nextDepth*1.4+(r.anomaly?7:0)+calmRecoveryFor(r),0,92)}
 function projectedBank(){if(!run)return 0;const bonus=1+Math.min(.6,run.depth*.04);return Math.floor(run.haul*bonus)}
 
-function chooseRoute(i){
- if(!run?.alive)return;const r=run.routes[i];if(!r)return;const cost=Math.min(run.energy,r.cost);run.energy-=cost;run.depth++;
+function chooseRoute(i,expectedRoute=null){
+ if(!run?.alive)return;const r=run.routes[i];if(!r||expectedRoute&&r!==expectedRoute)return;const cost=Math.min(run.energy,r.cost);run.energy-=cost;run.depth++;
  let gain=r.gain;
  if(r.tone==='res'){
    if(run.chain===r.signal){run.chainLen++;gain+=1+run.chainLen*2}else{run.chain=r.signal;run.chainLen=1}
@@ -70,7 +70,7 @@ function render(){
  const baseStatus=run.alive?'3つの反響から進路を選ぶ。表示脅威は選択直後の崩壊率。':'今回の潜航は終了。記録を見て次の潜航へ。';$('#statusText').textContent=storageHealthy?baseStatus:`${baseStatus} 保存領域を利用できないため進行は保持されません。`;
  const nextDepth=run.depth+1;
  $('#routes').innerHTML=run.alive?run.routes.map((r,i)=>{const anomaly=r.anomaly?` / 異常+${anomalyBonusAt(nextDepth)}`:'';const chain=r.tone==='res'&&run.chain===r.signal?` / 共鳴継続+${1+(run.chainLen+1)*2}`:'';const calm=r.tone==='calm'&&run.threat>=25?' / 鎮静-8':'';return `<button class="route" data-i="${i}"><span class="name">${r.name} · ${r.signal}${r.anomaly?' ⚠':''}</span><span class="hint">${r.hint} / EN-${r.cost} / 基礎+${r.gain}${anomaly}${chain}${calm}</span><span class="risk">選択後脅威 ${Math.round(projectedThreat(r,nextDepth))}%</span></button>`}).join(''):'';
- renderLog();document.querySelectorAll('.route').forEach(b=>b.addEventListener('click',()=>chooseRoute(Number(b.dataset.i))));
+ renderLog();document.querySelectorAll('.route').forEach((b,i)=>{const offeredRoute=run.routes[i];b.addEventListener('click',()=>chooseRoute(i,offeredRoute))});
 }
 
 $('#startRun').addEventListener('click',startRun);$('#extract').addEventListener('click',()=>extract(false));$('#resetSave').addEventListener('click',()=>{if(confirm('累計回収・潜航回数・発見記録を初期化しますか？')){storageRemove(SAVE_KEY);storageRemove(RUN_KEY);meta=loadMeta();run=null;render()}});render();
