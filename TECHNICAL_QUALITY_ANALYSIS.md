@@ -1,8 +1,8 @@
 # Technical & Quality Analysis
 
-Updated: 2026-08-26 01:46 JST
+Updated: 2026-08-26 02:48 JST
 Director: Technical & Quality Analysis Director
-Target: current `main` ECHO DRIFT `HUMAN_CANDIDATE_01` freeze plus non-gameplay regression additions
+Target: current `main` ECHO DRIFT `HUMAN_CANDIDATE_01` freeze plus non-gameplay quality fixes/regression additions
 
 ## Finding TQ-001 — Active dive reload persistence
 
@@ -30,7 +30,7 @@ The later anomaly-offer and route-role changes remain compatible with this persi
 - Severity: 3
 - Confidence: HIGH
 - Verification Type: OBSERVED
-- Evidence: all localStorage reads/writes/removes are wrapped by `storageGet/storageSet/storageRemove`; failures set `storageHealthy=false` and gameplay displays a persistence warning rather than throwing through the interaction path. Commit `372282fc1499b420726aab5023c6df840bd82d40` adds a deterministic test using a storage implementation that throws on every get/set/remove. It asserts boot remains alive, the warning is visible and `startRun()` remains playable without persistence. GitHub Actions run `32867972721` completed with conclusion `success`, so the fallback is now executable CI evidence rather than static inspection only.
+- Evidence: all localStorage reads/writes/removes are wrapped by `storageGet/storageSet/storageRemove`; failures set `storageHealthy=false` and gameplay displays a persistence warning rather than throwing through the interaction path. Commit `372282fc1499b420726aab5023c6df840bd82d40` adds a deterministic test using a storage implementation that throws on every get/set/remove. It asserts boot remains alive, the warning is visible and `startRun()` remains playable without persistence. GitHub Actions run `32867972721` completed with conclusion `success`.
 - Recommended Action: Keep the regression. Real Safari private/restricted-storage behavior still requires device verification.
 
 ## Finding TQ-004 — Run counter semantics
@@ -48,7 +48,7 @@ The later anomaly-offer and route-role changes remain compatible with this persi
 - Severity: 3
 - Confidence: HIGH
 - Verification Type: UNKNOWN / UNVERIFIED
-- Evidence: current HTML/CSS are intentionally mobile-first (`viewport-fit=cover`, safe-area insets, touch handling, portrait-width cap, dynamic viewport height), and Executive has now frozen `HUMAN_CANDIDATE_01`, but current main still contains no HUMAN_VERIFIED real-device record for touch, safe areas, reload restoration, background/foreground restoration or persistence.
+- Evidence: current HTML/CSS are intentionally mobile-first (`viewport-fit=cover`, safe-area insets, touch handling, portrait-width cap, dynamic viewport height), and Executive froze `HUMAN_CANDIDATE_01`, but current main still contains no HUMAN_VERIFIED real-device record for touch, safe areas, reload restoration, background/foreground restoration or persistence.
 - Recommended Action: The freeze removes the main reason to postpone this. Run the short real-device matrix on the frozen candidate: fresh launch, all route taps, voluntary extraction, live-run reload, background/foreground, reset, portrait viewport/safe-area check.
 
 ## Finding TQ-006 — Deterministic state regression is continuously verified
@@ -57,7 +57,7 @@ The later anomaly-offer and route-role changes remain compatible with this persi
 - Severity: 3
 - Confidence: HIGH
 - Verification Type: OBSERVED
-- Evidence: `tests/regression.mjs` uses Node built-ins only (`node:vm`, in-memory localStorage and a minimal DOM stub) and covers malformed meta normalization; live-dive restore including anomaly offers; successful extraction banking/counting/clearing the run key; collapse counting/haul loss/clearing the run key; displayed/applied calm threat equivalence; the production anomaly reward curve; repeated extraction idempotency; post-collapse interaction idempotency; and blocked-storage fallback. GitHub Actions run `32861991890` confirmed terminal-idempotency, and run `32867972721` confirmed the blocked-storage extension.
+- Evidence: `tests/regression.mjs` uses Node built-ins only (`node:vm`, in-memory localStorage and a minimal DOM stub) and covers malformed meta normalization; live-dive restore including anomaly offers; successful extraction banking/counting/clearing the run key; collapse counting/haul loss/clearing the run key; displayed/applied calm threat equivalence; the production anomaly reward curve; repeated extraction idempotency; post-collapse interaction idempotency; blocked-storage fallback; and restored-log inert text rendering. GitHub Actions runs `32861991890`, `32867972721`, and `32879993287` confirmed these later extensions.
 - Recommended Action: Keep this CI intentionally small and invariant-focused. Do not broaden it into UI snapshot maintenance unless a concrete regression risk appears.
 
 ## Finding TQ-007 — Save schema is versioned by key only, not payload
@@ -93,7 +93,7 @@ The later anomaly-offer and route-role changes remain compatible with this persi
 - Severity: 3
 - Confidence: HIGH
 - Verification Type: OBSERVED
-- Evidence: `extract()` and collapse both set `run.alive=false`, and the terminal-idempotency regression is now CI-confirmed. However, terminal settlement updates `meta` and the live-run key in separate localStorage operations. A page/process interruption between those writes could theoretically leave `meta` settled while an older live `RUN_KEY` remains, allowing stale-state recovery on reload; reversing write order would instead risk losing a legitimate settlement. There is currently no transaction journal/run settlement ID that can make this atomic across interruption boundaries.
+- Evidence: `extract()` and collapse both set `run.alive=false`, and the terminal-idempotency regression is CI-confirmed. However, terminal settlement updates `meta` and the live-run key in separate localStorage operations. A page/process interruption between those writes could theoretically leave `meta` settled while an older live `RUN_KEY` remains, allowing stale-state recovery on reload; reversing write order would instead risk losing a legitimate settlement. There is currently no transaction journal/run settlement ID that can make this atomic across interruption boundaries.
 - Recommended Action: Do not add a transaction framework during the frozen core-loop human test. Before valuable long-term progression or monetizable/rare rewards depend on settlement correctness, introduce a minimal idempotent settlement record (for example a run ID + last-settled ID or a pending terminal journal) and regression-test interruption recovery.
 
 This is distinct from ordinary double-tap protection: same-session repeated calls are already CI-protected. The risk is interruption between separate persistence writes.
@@ -104,45 +104,46 @@ This is distinct from ordinary double-tap protection: same-session repeated call
 - Severity: 3
 - Confidence: HIGH
 - Verification Type: OBSERVED + UNKNOWN / UNVERIFIED
-- Evidence: Executive froze `HUMAN_CANDIDATE_01` without further gameplay rebalance. Production JS has not changed since the previously successful regression-protected balance version; subsequent changes are analysis documentation and non-gameplay tests. The main remaining target-platform unknowns are therefore now isolated to actual Safari/device behavior rather than known unstable gameplay code.
-- Recommended Action: Do not change the frozen candidate merely to increase test coverage. Perform the real-device lifecycle matrix and record results as HUMAN_VERIFIED. If a device failure is found, fix only the concrete defect and then re-freeze the candidate.
+- Evidence: Executive froze `HUMAN_CANDIDATE_01` without further gameplay rebalance. The quality change in this pass changes only how persisted log strings are rendered, not game rules, balance, route choices, save semantics or ordinary log copy. The main remaining target-platform unknowns therefore remain actual Safari/device behavior rather than unstable gameplay code.
+- Recommended Action: Perform the real-device lifecycle matrix and record results as HUMAN_VERIFIED. If a device failure is found, fix only the concrete defect and then re-freeze the candidate.
 
-## Finding TQ-012 — Restored log strings cross an HTML trust boundary
+## Finding TQ-012 — Restored log strings are now rendered as inert text
 
-- Status: WARNING
+- Status: PASS
 - Severity: 2
 - Confidence: HIGH
 - Verification Type: OBSERVED
-- Evidence: `loadRun()` accepts persisted `log` entries when they are strings, but `render()` later writes those strings through `$('#log').innerHTML=run.log.map(x=>`<li>${x}</li>`).join('')`. Ordinary gameplay only creates fixed internal log text, so this is not reachable through normal route choices. However, client-side storage is not a trustworthy serialization boundary: it can be modified outside the normal game path, and a crafted restored log entry would be interpreted as markup rather than inert text.
-- Recommended Action: Preserve `HUMAN_CANDIDATE_01` for the current human feel test because valid gameplay behavior is unaffected. In the next safe technical change window, render persisted log entries with text nodes / `textContent` (preferred) or a single centralized HTML-escape helper, and add one deterministic regression using a crafted persisted log such as `<img ...>` to prove it remains literal text.
+- Evidence: previous main accepted persisted `log` strings and inserted them through `innerHTML`, allowing modified localStorage content to be interpreted as markup. Commit `a07a633afe0cfaaffe5d9c4f23f026324cbc0daa` replaces only log rendering with `document.createElement('li')` + `textContent` and `replaceChildren()`. Normal gameplay log text and ordering are unchanged. Commit `d569c95d89e285c9bdd3624b31a4af5490988808` extends the deterministic harness with a crafted restored value `<img src=x onerror=alert(1)>` and verifies it remains the literal text content of one list item while no HTML is inserted. GitHub Actions run `32879993287`, job `regression`, completed `success`, including `Run deterministic state regression`.
+- Recommended Action: Keep the crafted-save regression. Do not add a generic sanitizer or broader DOM abstraction unless another concrete HTML-producing boundary appears.
 
-This is a defense-in-depth/data-boundary defect rather than a current gameplay blocker. It should not be promoted to a severe remote-security claim without evidence of an attacker-controlled write path; the concrete issue is simply that persisted strings are treated as trusted HTML after reload.
+The fix is deliberately narrow: it closes the known persisted-log trust boundary without changing route HTML generation, gameplay values or the frozen human-feel target.
 
 ## Current technical summary
 
 | Metric | Status | Confidence | Verification | Current evidence |
 |---|---|---|---|---|
-| critical bugs | PASS/WARNING | HIGH | OBSERVED | No fatal ordinary interaction path found; abrupt-interruption settlement and persisted-log HTML trust-boundary risks are documented. |
+| critical bugs | PASS/WARNING | HIGH | OBSERVED | No fatal ordinary interaction path found; abrupt-interruption settlement remains the principal documented prototype integrity risk. |
 | state integrity | PASS | HIGH | OBSERVED | Live, collapse and extract transitions plus same-session terminal idempotency are CI-protected. |
-| save integrity | PASS/WARNING | HIGH | OBSERVED | Loaders sanitize core state, blocked-storage fallback is CI-protected, and storage exceptions are contained; terminal settlement is not crash-atomic and restored log strings are not escaped. |
+| save integrity | PASS/WARNING | HIGH | OBSERVED | Loaders sanitize core state, blocked-storage fallback is CI-protected, storage exceptions are contained, and restored logs no longer cross an HTML trust boundary; terminal settlement is still not crash-atomic. |
 | save migration | WARNING | HIGH | OBSERVED | v1 keys exist but payload migration is still implicit. |
-| regression risk | PASS | HIGH | OBSERVED | Current deterministic suite, terminal idempotency and blocked-storage fallback are all CI-confirmed. |
+| regression risk | PASS | HIGH | OBSERVED | Current deterministic suite, terminal idempotency, blocked-storage fallback and crafted restored-log rendering are CI-confirmed. |
 | threat formula integrity | PASS | HIGH | OBSERVED | Display/applied threat equivalence is regression-protected. |
 | balance-source integrity | PASS | HIGH | OBSERVED | Production anomaly curve is executable/tested and Director prose has been corrected. |
 | performance | UNKNOWN | MEDIUM | UNVERIFIED | Production code/assets remain small, but no runtime measurement is recorded. |
 | mobile layout | WARNING | MEDIUM | UNVERIFIED | iPhone-oriented CSS exists; no real-device verification record. |
-| iPhone runtime | READY FOR CHECK | HIGH | OBSERVED + UNVERIFIED | Candidate is frozen; device verification should now proceed. |
+| iPhone runtime | READY FOR CHECK | HIGH | OBSERVED + UNVERIFIED | Candidate remains gameplay-frozen; device verification should proceed. |
 | Safari lifecycle | READY FOR CHECK | HIGH | OBSERVED + UNVERIFIED | Reload/background/storage behavior is the next high-value quality gate. |
 
 ## Executive handoff
 
-No gameplay balance or UI change was justified because `HUMAN_CANDIDATE_01` is explicitly frozen for human evaluation. This pass therefore preserved the candidate and focused only on quality evidence around it.
+This pass preserved the gameplay/balance/UI decision target of `HUMAN_CANDIDATE_01` and fixed one narrow defense-in-depth defect that does not alter ordinary gameplay: persisted log strings are no longer interpreted as HTML after reload.
 
-Two previously added quality gates remain confirmed PASS in CI:
+Quality evidence now includes:
 
-1. GitHub Actions run `32861991890` for `b8ece2714a912c018c799e2aa66eaaee8372eadd` confirms repeated extraction cannot double-bank/count and post-collapse interaction cannot mutate/count the finished run again.
-2. GitHub Actions run `32867972721` for `372282fc1499b420726aab5023c6df840bd82d40` confirms the blocked-localStorage fallback: storage calls may throw, but the game still boots, surfaces a non-persistence warning and allows a new run without crashing.
+1. GitHub Actions run `32861991890` confirms repeated extraction cannot double-bank/count and post-collapse interaction cannot mutate/count the finished run again.
+2. GitHub Actions run `32867972721` confirms blocked-localStorage fallback keeps the session playable while surfacing a persistence warning.
+3. GitHub Actions run `32879993287` confirms the crafted restored-log value is rendered as inert text and the full deterministic regression suite still passes after the change.
 
-This pass adds one non-blocking but concrete trust-boundary warning: restored `run.log` strings are inserted through `innerHTML`. Do not disturb the frozen gameplay candidate for this alone; fix it with text rendering plus a crafted-save regression in the next safe technical change window.
+No new gameplay or balance repair is justified from Technical in this pass. The highest-value next Technical action remains the real iPhone/Safari matrix on the frozen candidate: fresh launch, route taps, voluntary extraction, reload mid-dive, background/foreground, reset, safe-area/portrait layout, and persistence behavior.
 
-The highest-value next Technical action remains the real iPhone/Safari matrix on the frozen candidate: fresh launch, route taps, voluntary extraction, reload mid-dive, background/foreground, reset, safe-area/portrait layout, and persistence behavior. The known crash-consistency issue should remain a documented prototype risk until persistent rewards become valuable enough to justify a minimal settlement journal.
+The known crash-consistency issue should remain a documented prototype risk until persistent rewards become valuable enough to justify a minimal settlement journal. Save schema migration should likewise wait until the next approved persistent progression field rather than being refactored pre-emptively.
