@@ -13,8 +13,8 @@
 
     <section id="hud" class="hud hidden">
       <div class="topHud">
-        <div class="brandMini">EMBERLORE <span>GEN 2</span></div>
-        <div id="waveLabel" class="waveLabel">CHAMBER 1</div>
+        <div class="brandMini">EMBERLORE <span>G2.5</span></div>
+        <div id="waveLabel" class="waveLabel">HUNT</div>
       </div>
       <div class="bossWrap hidden" id="bossWrap">
         <div class="bossName" id="bossName">ASH TYRANT</div>
@@ -33,18 +33,35 @@
 
     <section id="homeView" class="overlay active">
       <div class="homeGlow"></div>
-      <div class="homeContent">
-        <p class="eyebrow">THE VAULT CALLS AGAIN</p>
+      <div class="homeContent campContent">
+        <p class="eyebrow">THE EMBER CAMP</p>
         <h1>EMBERLORE</h1>
-        <p class="lead">敵を狩り、戦利品を奪い、ビルドを変えながら最奥へ。</p>
+        <p class="lead">戦利品を持ち帰り、火守を育て、次の深度へ。</p>
         <div class="metaStats">
           <div><span>ECHOES</span><strong id="echoesText">0</strong></div>
           <div><span>CLEARS</span><strong id="clearsText">0</strong></div>
           <div><span>ITEMS</span><strong id="itemsText">0</strong></div>
         </div>
-        <button id="startBtn" class="primary">DESCEND</button>
-        <button id="codexBtn" class="secondary">LOOT CODEX</button>
-        <p class="fine">1 thumb movement · auto attack · 2 active skills</p>
+        <div class="loadoutCard">
+          <div class="loadoutHead"><span>FIREKEEPER LOADOUT</span><small>次の遠征へ持ち込む装備</small></div>
+          <div class="loadoutSlots">
+            <button class="gearSlot" id="weaponSlot" data-slot="weapon"><small>WEAPON</small><b>Rust Blade</b><span>Basic damage +10%</span></button>
+            <button class="gearSlot" id="armorSlot" data-slot="armor"><small>ARMOR</small><b>Ash Wrap</b><span>Max HP +10</span></button>
+            <button class="gearSlot" id="relicSlot" data-slot="relic"><small>RELIC</small><b>Empty</b><span>No relic equipped</span></button>
+          </div>
+        </div>
+        <button id="startBtn" class="primary">CHOOSE DESCENT</button>
+        <button id="vaultBtn" class="secondary">OPEN VAULT</button>
+        <button id="codexBtn" class="secondary subtle">LOOT CODEX</button>
+      </div>
+    </section>
+
+    <section id="routeView" class="overlay">
+      <div class="routePanel">
+        <div class="panelHead"><div><p class="eyebrow">DESCENT MAP</p><h2>THE SUNKEN VAULT</h2></div><button id="closeRoute" class="iconBtn">×</button></div>
+        <p class="muted routeIntro">道は毎回少し違う。危険な部屋ほど、良い戦利品を残す。</p>
+        <div id="routeMap" class="routeMap"></div>
+        <div id="routeHint" class="routeHint">進む部屋を選べ。</div>
       </div>
     </section>
 
@@ -52,8 +69,25 @@
       <div class="lootPanel">
         <p class="eyebrow">LOOT FOUND</p>
         <h2 id="lootTitle">Choose your power</h2>
-        <p id="lootSubtitle" class="muted">次の戦闘で効果がすぐ見える装備を1つ選ぶ。</p>
+        <p id="lootSubtitle" class="muted">次の戦闘で効果がすぐ見える力を1つ選ぶ。</p>
         <div id="lootChoices" class="lootChoices"></div>
+      </div>
+    </section>
+
+    <section id="extractView" class="overlay">
+      <div class="lootPanel extractPanel">
+        <p class="eyebrow">EXTRACTION REWARD</p>
+        <h2>One piece survives the ash.</h2>
+        <p class="muted">今回の遠征から1つだけVaultへ持ち帰る。</p>
+        <div id="extractChoices" class="lootChoices"></div>
+      </div>
+    </section>
+
+    <section id="vaultView" class="overlay">
+      <div class="codexPanel">
+        <div class="panelHead"><div><p class="eyebrow">PERSISTENT ARMORY</p><h2>THE VAULT</h2></div><button id="closeVault" class="iconBtn">×</button></div>
+        <p class="muted">持ち帰った装備は失われない。タップして装備を変更。</p>
+        <div id="vaultContent" class="vaultGrid"></div>
       </div>
     </section>
 
@@ -64,7 +98,7 @@
         <h2 id="resultTitle">The ash remembers.</h2>
         <p id="resultText" class="muted"></p>
         <div id="resultStats" class="metaStats"></div>
-        <button id="againBtn" class="primary">RUN AGAIN</button>
+        <button id="againBtn" class="primary">NEW EXPEDITION</button>
         <button id="campBtn" class="secondary">RETURN TO CAMP</button>
       </div>
     </section>
