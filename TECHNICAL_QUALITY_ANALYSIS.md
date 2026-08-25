@@ -1,6 +1,6 @@
 # Technical & Quality Analysis
 
-Updated: 2026-08-26 00:49 JST
+Updated: 2026-08-26 01:46 JST
 Director: Technical & Quality Analysis Director
 Target: current `main` ECHO DRIFT `HUMAN_CANDIDATE_01` freeze plus non-gameplay regression additions
 
@@ -107,13 +107,24 @@ This is distinct from ordinary double-tap protection: same-session repeated call
 - Evidence: Executive froze `HUMAN_CANDIDATE_01` without further gameplay rebalance. Production JS has not changed since the previously successful regression-protected balance version; subsequent changes are analysis documentation and non-gameplay tests. The main remaining target-platform unknowns are therefore now isolated to actual Safari/device behavior rather than known unstable gameplay code.
 - Recommended Action: Do not change the frozen candidate merely to increase test coverage. Perform the real-device lifecycle matrix and record results as HUMAN_VERIFIED. If a device failure is found, fix only the concrete defect and then re-freeze the candidate.
 
+## Finding TQ-012 — Restored log strings cross an HTML trust boundary
+
+- Status: WARNING
+- Severity: 2
+- Confidence: HIGH
+- Verification Type: OBSERVED
+- Evidence: `loadRun()` accepts persisted `log` entries when they are strings, but `render()` later writes those strings through `$('#log').innerHTML=run.log.map(x=>`<li>${x}</li>`).join('')`. Ordinary gameplay only creates fixed internal log text, so this is not reachable through normal route choices. However, client-side storage is not a trustworthy serialization boundary: it can be modified outside the normal game path, and a crafted restored log entry would be interpreted as markup rather than inert text.
+- Recommended Action: Preserve `HUMAN_CANDIDATE_01` for the current human feel test because valid gameplay behavior is unaffected. In the next safe technical change window, render persisted log entries with text nodes / `textContent` (preferred) or a single centralized HTML-escape helper, and add one deterministic regression using a crafted persisted log such as `<img ...>` to prove it remains literal text.
+
+This is a defense-in-depth/data-boundary defect rather than a current gameplay blocker. It should not be promoted to a severe remote-security claim without evidence of an attacker-controlled write path; the concrete issue is simply that persisted strings are treated as trusted HTML after reload.
+
 ## Current technical summary
 
 | Metric | Status | Confidence | Verification | Current evidence |
 |---|---|---|---|---|
-| critical bugs | PASS/WARNING | HIGH | OBSERVED | No fatal ordinary interaction path found; one abrupt-interruption settlement risk is documented. |
+| critical bugs | PASS/WARNING | HIGH | OBSERVED | No fatal ordinary interaction path found; abrupt-interruption settlement and persisted-log HTML trust-boundary risks are documented. |
 | state integrity | PASS | HIGH | OBSERVED | Live, collapse and extract transitions plus same-session terminal idempotency are CI-protected. |
-| save integrity | PASS/WARNING | HIGH | OBSERVED | Loaders sanitize state, blocked-storage fallback is CI-protected, and storage exceptions are contained; terminal settlement is not crash-atomic. |
+| save integrity | PASS/WARNING | HIGH | OBSERVED | Loaders sanitize core state, blocked-storage fallback is CI-protected, and storage exceptions are contained; terminal settlement is not crash-atomic and restored log strings are not escaped. |
 | save migration | WARNING | HIGH | OBSERVED | v1 keys exist but payload migration is still implicit. |
 | regression risk | PASS | HIGH | OBSERVED | Current deterministic suite, terminal idempotency and blocked-storage fallback are all CI-confirmed. |
 | threat formula integrity | PASS | HIGH | OBSERVED | Display/applied threat equivalence is regression-protected. |
@@ -127,9 +138,11 @@ This is distinct from ordinary double-tap protection: same-session repeated call
 
 No gameplay balance or UI change was justified because `HUMAN_CANDIDATE_01` is explicitly frozen for human evaluation. This pass therefore preserved the candidate and focused only on quality evidence around it.
 
-Two concrete quality gates are now confirmed PASS in CI:
+Two previously added quality gates remain confirmed PASS in CI:
 
 1. GitHub Actions run `32861991890` for `b8ece2714a912c018c799e2aa66eaaee8372eadd` confirms repeated extraction cannot double-bank/count and post-collapse interaction cannot mutate/count the finished run again.
 2. GitHub Actions run `32867972721` for `372282fc1499b420726aab5023c6df840bd82d40` confirms the blocked-localStorage fallback: storage calls may throw, but the game still boots, surfaces a non-persistence warning and allows a new run without crashing.
 
-The highest-value next Technical action is no longer another static audit. Because the candidate is frozen, the real iPhone/Safari matrix should now be performed and recorded as HUMAN_VERIFIED: fresh launch, route taps, voluntary extraction, reload mid-dive, background/foreground, reset, safe-area/portrait layout, and persistence behavior. The known crash-consistency issue should remain a documented prototype risk until persistent rewards become valuable enough to justify a minimal settlement journal.
+This pass adds one non-blocking but concrete trust-boundary warning: restored `run.log` strings are inserted through `innerHTML`. Do not disturb the frozen gameplay candidate for this alone; fix it with text rendering plus a crafted-save regression in the next safe technical change window.
+
+The highest-value next Technical action remains the real iPhone/Safari matrix on the frozen candidate: fresh launch, route taps, voluntary extraction, reload mid-dive, background/foreground, reset, safe-area/portrait layout, and persistence behavior. The known crash-consistency issue should remain a documented prototype risk until persistent rewards become valuable enough to justify a minimal settlement journal.
