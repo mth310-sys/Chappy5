@@ -1,6 +1,6 @@
 # Progression & Content Analysis
 
-Updated: 2026-08-26 01:36 JST
+Updated: 2026-08-26 02:38 JST
 Director: Progression & Content Analysis Director
 Target: current `main` ECHO DRIFT `HUMAN_CANDIDATE_01` (gameplay frozen for focused human test)
 
@@ -120,6 +120,24 @@ A three-option permanent loadout can create build diversity, but by itself it do
 
 This is a design constraint, not a recommendation to add a consumable currency sink immediately. A recurring fee that feels like tax would be worse than no sink. Executive should prototype the decision first and attach salvage economics only if the choice itself survives simulation and human evaluation.
 
+## Finding P-011 — `banked` currently conflates a lifetime achievement metric with a future spendable resource candidate
+
+- Status: DESIGN_RISK
+- Severity(1-5): 3
+- Confidence: HIGH
+- Verification Type: OBSERVED + DESIGN ANALYSIS
+- Evidence: Production `extract()` only ever increments `meta.banked`, and the persistent UI explicitly labels the same value **「累計回収」**. That establishes `banked` as a lifetime total/achievement record: more successful extraction can only make it rise. P-008/P-010 identify this same value as the obvious candidate for future protocol funding. If future progression simply subtracts purchases, activation costs, stakes, or contracts from `meta.banked`, the UI and save semantics stop meaning “cumulative salvage”: spending would make the lifetime achievement number fall. If instead `banked` is never decremented, it cannot provide repeatable opportunity cost and becomes only an unlock threshold, recreating P-010.
+- Recommended Action: **Do not mutate the frozen candidate and do not add a second currency now.** If the core passes human verification and Executive approves salvage-funded progression, first choose explicit semantics: preserve an immutable/lifetime `totalRecovered` record and introduce a separate spendable/committed balance only if the progression prototype proves it needs one; or deliberately redefine the existing field/UI away from “累計回収” with a migration plan. The first prototype should prove the decision before economy schema is expanded.
+
+### Why this matters
+
+This is not a request to create currency complexity. It is a guard against accidentally making one number serve two incompatible player meanings:
+
+- **achievement/history** — “how much have I successfully brought home over my entire career?”
+- **resource/opportunity cost** — “how much can I sacrifice or commit right now?”
+
+Those can be the same inflow without being the same stored quantity. Separating them prematurely would be unnecessary; failing to decide before spending mechanics are added would create confusing progression semantics and save migration debt exactly when the long-term layer starts becoming valuable.
+
 ## Progression summary
 
 | Metric | Status | Confidence | Verification | Current evidence |
@@ -135,6 +153,7 @@ This is a design constraint, not a recommendation to add a consumable currency s
 | early_collector_distortion | WARNING | HIGH | OBSERVED + SIMULATED | Collector behavior can raise anomaly selection to ≈50.1% and collapse to ≈59.7%, then that motive vanishes after completion. |
 | reward_marginal_value | FAIL | HIGH | OBSERVED | Additional banked salvage changes only the displayed cumulative total; one-time tiny unlocks alone would merely delay the same dead end. |
 | progression_runway_design | DESIGN_RISK | HIGH | OBSERVED + DESIGN ANALYSIS | A finite protocol set needs repeatable commitment value, not endless content tiers, if banked salvage is to retain meaning. |
+| reward_semantics | DESIGN_RISK | HIGH | OBSERVED + DESIGN ANALYSIS | `banked` is currently a lifetime cumulative record; future spend/commit semantics would conflict unless explicitly separated or redefined. |
 | replay_depth | WARNING | MEDIUM | SIMULATED | Single-run decision variety is structurally healthier, but there is no second-timescale strategy and human feel remains unverified. |
 
 ## Executive handoff
@@ -147,8 +166,9 @@ This is a design constraint, not a recommendation to add a consumable currency s
 4. Do not turn `banked` into a linear stat shop. Its first useful role should create opportunity cost and a different next-run intention.
 5. Require the P-009 acceptance gate before implementing the first persistent protocol/loadout experiment.
 6. Avoid an unlock-only dead end: if a tiny protocol set is adopted, test a repeatable mutually exclusive commitment before solving runway with more tiers/items.
-7. If discovery becomes long-term collection, require pursuit agency before adding quantity.
-8. Discovery semantics still need an Executive decision: knowledge retained on contact versus cargo requiring extraction.
+7. Before any salvage spending/staking implementation, resolve P-011: preserve lifetime recovery separately from spendable/committed value, or deliberately redefine the current `banked` semantics with migration. Do not add currency fields until the decision prototype proves they are needed.
+8. If discovery becomes long-term collection, require pursuit agency before adding quantity.
+9. Discovery semantics still need an Executive decision: knowledge retained on contact versus cargo requiring extraction.
 
 Queued post-pass design question:
 
