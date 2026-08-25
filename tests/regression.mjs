@@ -11,6 +11,12 @@ class MemoryStorage{
   removeItem(k){this.map.delete(k);}
 }
 
+class ThrowingStorage{
+  getItem(){throw new Error('storage blocked');}
+  setItem(){throw new Error('storage blocked');}
+  removeItem(){throw new Error('storage blocked');}
+}
+
 function makeElement(){
   return {textContent:'',innerHTML:'',disabled:false,addEventListener(){}};
 }
@@ -131,6 +137,17 @@ const RUN_KEY='chappy5.echoDrift.run.v1';
   assert.equal(read(context,'run.haul'),0);
   assert.equal(read(context,'run.alive'),false);
   assert.equal(storage.getItem(RUN_KEY),null);
+}
+
+// 9) A browser that blocks localStorage must stay playable and surface the persistence warning.
+{
+  const {context,elements}=boot(new ThrowingStorage());
+  assert.equal(read(context,'storageHealthy'),false);
+  assert.match(elements.statusText.textContent,/保存領域を利用できません/);
+  assert.doesNotThrow(()=>run(context,'startRun();'));
+  assert.equal(read(context,'run.alive'),true);
+  assert.equal(read(context,'storageHealthy'),false);
+  assert.match(elements.statusText.textContent,/保存領域を利用できないため進行は保持されません/);
 }
 
 console.log('ECHO DRIFT regression tests: PASS');
