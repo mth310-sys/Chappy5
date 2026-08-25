@@ -60,7 +60,11 @@ function renderLog(){const list=$('#log');const items=run.log.map(text=>{const l
 
 function render(){
  $('#banked').textContent=meta.banked;$('#runs').textContent=meta.runs;$('#discoveries').textContent=`${meta.found.length} / ${relics.length}`;
- if(!run){$('#routes').innerHTML='';$('#extract').textContent='回収して帰還';$('#statusText').textContent=storageHealthy?'信号海へ潜る準備ができた。':'保存領域を利用できません。このセッションの進行は保持されません。';return}
+ if(!run){
+   $('#routes').innerHTML='';$('#energy').textContent=10;$('#depth').textContent=0;$('#haul').textContent=0;$('#resonance').textContent='—';$('#threatLabel').textContent='CALM';$('#threat').textContent='0%';
+   $('#extract').disabled=true;$('#extract').textContent='回収して帰還';$('#startRun').disabled=false;$('#startRun').textContent='潜航開始';$('#log').replaceChildren();
+   $('#statusText').textContent=storageHealthy?'信号海へ潜る準備ができた。':'保存領域を利用できません。このセッションの進行は保持されません。';return
+ }
  $('#energy').textContent=run.energy;$('#depth').textContent=run.depth;$('#haul').textContent=run.haul;$('#resonance').textContent=run.chain?`${run.chain}×${run.chainLen}`:'—';$('#threat').textContent=`${Math.round(run.threat)}%`;
  $('#threatLabel').textContent=run.threat<25?'CALM':run.threat<50?'UNSTABLE':run.threat<75?'DANGER':'CRITICAL';$('#extract').disabled=!run.alive||run.haul===0;$('#extract').textContent=run.alive&&run.haul>0?`回収して帰還 +${projectedBank()}`:'回収して帰還';$('#startRun').textContent=run.alive?'潜航中':'もう一度潜る';$('#startRun').disabled=run.alive;
  const baseStatus=run.alive?'3つの反響から進路を選ぶ。表示脅威は選択直後の崩壊率。':'今回の潜航は終了。記録を見て次の潜航へ。';$('#statusText').textContent=storageHealthy?baseStatus:`${baseStatus} 保存領域を利用できないため進行は保持されません。`;
