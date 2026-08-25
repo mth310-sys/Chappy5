@@ -1,6 +1,6 @@
 # Progression & Content Analysis
 
-Updated: 2026-08-26 00:36 JST
+Updated: 2026-08-26 01:36 JST
 Director: Progression & Content Analysis Director
 Target: current `main` ECHO DRIFT `HUMAN_CANDIDATE_01` (gameplay frozen for focused human test)
 
@@ -99,6 +99,27 @@ This is distinct from P-001: P-001 says persistent state does not affect future 
 
 This gate is analysis only. It does not authorize a progression implementation or change the frozen human-test candidate.
 
+## Finding P-010 — One-time unlocks would only postpone the banked-salvage dead end
+
+- Status: DESIGN_RISK
+- Severity(1-5): 3
+- Confidence: HIGH
+- Verification Type: OBSERVED + DESIGN ANALYSIS
+- Evidence: `meta.banked` is the only repeatable successful-extraction reward, while the intended first progression experiment is deliberately constrained to a tiny option set. If banked salvage is used only to permanently unlock two or three protocols, the currency acquires meaning only until those few unlocks are purchased; immediately afterward additional salvage again becomes a display-only score, recreating P-008. Solving that by continually adding more protocol tiers/items would convert the progression layer into the exact content-volume treadmill prohibited by the README and P-009.
+- Recommended Action: If banked salvage remains the primary repeatable reward after the human core passes, distinguish **access** from **commitment**. A tiny set of protocols may be unlocked once, but the long-lived loop should obtain value from a recurring mutually exclusive run commitment, stake, contract, or other repeatable choice using those same few protocols—not from endless unlock inventory. The recurring choice must still satisfy P-009 and must not be implemented before human verification.
+
+### Why this matters
+
+A three-option permanent loadout can create build diversity, but by itself it does not create a durable economy. Conversely, an infinite upgrade tree gives the economy runway by manufacturing content and power creep. The smallest promising structure is therefore:
+
+1. **small finite vocabulary** — very few protocol identities;
+2. **repeatable commitment** — every later run still asks which protocol/intention to take;
+3. **opportunity cost** — only one commitment applies at a time and changing/activating it has a real tradeoff;
+4. **existing-state reuse** — protocols should alter how the player values calm/deep/resonance/anomaly/signal/extraction states, not create a second game;
+5. **no guaranteed upward power staircase** — long-term value comes from changing plans and pursuit, not merely making the same plan safer.
+
+This is a design constraint, not a recommendation to add a consumable currency sink immediately. A recurring fee that feels like tax would be worse than no sink. Executive should prototype the decision first and attach salvage economics only if the choice itself survives simulation and human evaluation.
+
 ## Progression summary
 
 | Metric | Status | Confidence | Verification | Current evidence |
@@ -112,23 +133,25 @@ This gate is analysis only. It does not authorize a progression implementation o
 | collection_agency | FAIL | HIGH | OBSERVED | Discovery identity is random from unseen entries; no deliberate targeting exists. |
 | world_discovery_payoff | FAIL | HIGH | OBSERVED | Only a persistent count is visible; identities/meaning have no durable presentation. |
 | early_collector_distortion | WARNING | HIGH | OBSERVED + SIMULATED | Collector behavior can raise anomaly selection to ≈50.1% and collapse to ≈59.7%, then that motive vanishes after completion. |
-| reward_marginal_value | FAIL | HIGH | OBSERVED | Additional banked salvage changes only the displayed cumulative total. |
+| reward_marginal_value | FAIL | HIGH | OBSERVED | Additional banked salvage changes only the displayed cumulative total; one-time tiny unlocks alone would merely delay the same dead end. |
+| progression_runway_design | DESIGN_RISK | HIGH | OBSERVED + DESIGN ANALYSIS | A finite protocol set needs repeatable commitment value, not endless content tiers, if banked salvage is to retain meaning. |
 | replay_depth | WARNING | MEDIUM | SIMULATED | Single-run decision variety is structurally healthier, but there is no second-timescale strategy and human feel remains unverified. |
 
 ## Executive handoff
 
-`HUMAN_CANDIDATE_01` is now frozen by Executive. **Do not change its gameplay from Progression.** The useful work while waiting is to make the post-pass progression decision safer, not to pre-build it.
+`HUMAN_CANDIDATE_01` is frozen by Executive. **Do not change its gameplay from Progression.** The useful work while waiting is to make the post-pass progression decision safer, not to pre-build it.
 
 1. Preserve the frozen single-run economy and human-test package.
 2. Treat production anomaly rewards as **2 / 3 / 5 / 8 / 10 / 13** at depths 1–6.
 3. Persistent progression remains the next major product problem **only if the core passes HUMAN_VERIFIED feel testing**.
 4. Do not turn `banked` into a linear stat shop. Its first useful role should create opportunity cost and a different next-run intention.
 5. Require the P-009 acceptance gate before implementing the first persistent protocol/loadout experiment.
-6. If discovery becomes long-term collection, require pursuit agency before adding quantity.
-7. Discovery semantics still need an Executive decision: knowledge retained on contact versus cargo requiring extraction.
+6. Avoid an unlock-only dead end: if a tiny protocol set is adopted, test a repeatable mutually exclusive commitment before solving runway with more tiers/items.
+7. If discovery becomes long-term collection, require pursuit agency before adding quantity.
+8. Discovery semantics still need an Executive decision: knowledge retained on contact versus cargo requiring extraction.
 
 Queued post-pass design question:
 
-**What smallest mutually exclusive protocol choice can reuse the existing calm/deep/resonance/anomaly/signal hooks so that two players—or the same player on two runs—enter the next dive with genuinely different intentions, without becoming a linear power grind?**
+**What smallest repeatable protocol commitment can reuse the existing calm/deep/resonance/anomaly/signal hooks so that two players—or the same player on two runs—enter the next dive with genuinely different intentions, while a tiny finite option set remains valuable without becoming a linear power grind or endless unlock tree?**
 
 No gameplay change was made in this pass. The frozen human candidate remains intact.
