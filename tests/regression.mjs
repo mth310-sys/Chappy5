@@ -196,4 +196,21 @@ const RUN_KEY='chappy5.echoDrift.run.v1';
   assert.equal(read(context,'run.depth'),1);
 }
 
+// 13) A restored offer must preserve the production invariant of exactly one route per tone.
+{
+  const malformedRoutes=[
+    {tone:'res',cost:1,gain:2,signal:'A',anomaly:false},
+    {tone:'res',cost:2,gain:3,signal:'B',anomaly:false},
+    {tone:'res',cost:3,gain:4,signal:'C',anomaly:false}
+  ];
+  const storage=new MemoryStorage({
+    [RUN_KEY]:JSON.stringify({energy:7,depth:2,haul:5,threat:20,chain:'A',chainLen:2,alive:true,log:[],routes:malformedRoutes})
+  });
+  const {context,elements}=boot(storage);
+  assert.equal(read(context,'run'),null);
+  assert.equal(elements.startRun.disabled,false);
+  assert.equal(elements.startRun.textContent,'潜航開始');
+  assert.equal(elements.routes.innerHTML,'');
+}
+
 console.log('ECHO DRIFT regression tests: PASS');
