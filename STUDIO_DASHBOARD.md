@@ -1,102 +1,90 @@
 # Chappy5 Studio Dashboard
 
-Updated: 2026-08-26 04:22 JST
-Target: ECHO DRIFT — `HUMAN_CANDIDATE_01` frozen for focused human play
+Updated: 2026-08-26 05:26 JST
+Target: ECHO DRIFT — `HUMAN_CANDIDATE_01` preserved as a focused human-feel candidate; strategic clearance re-opened
 
 | 領域 | Status | Severity | Confidence | Verification | 最新の重要Finding |
 |---|---|---:|---|---|---|
-| Game Systems | READY_FOR_HUMAN_CANDIDATE / RULE_WATCH | 3 | HIGH | OBSERVED + SIMULATED | State-conditioned route jobs remain healthy. New structural finding: depth pressure is cumulative/triangular because `nextDepth*1.4` is added to already accumulated Threat each turn, helping explain why endings cluster around depth 2–4. This is an explicit post-human tuning parameter, not a reason to move the frozen candidate. |
-| Player Experience | READY_FOR_HUMAN_CANDIDATE | 4 | MEDIUM-HIGH | OBSERVED + SIMULATED | Main unknown remains whether ≈53% collapse feels self-authored/replayable. Ordinary-play rule trust still has the A/B/C signal mismatch. iPhone readability is additionally brittle in theory because decision text reaches 11px / labels 9px while pinch zoom is disabled; actual discomfort remains device-unverified. |
-| Progression & Content | FAIL / BLOCKED_FOR_CORE_TEST | 4 | HIGH | OBSERVED + DESIGN ANALYSIS | Persistent bank/runs/discoveries still do not change future strategy. Six discoveries are a short completion timer with no pursuit agency. `banked` is a lifetime `累計回収` metric, so future spendable progression must not silently make the lifetime total decrease. |
-| Technical & Quality | PASS_WITH_DEVICE_WATCH | 3 | HIGH | OBSERVED + UNVERIFIED | Core regression protection exists. Active-dive record reset no longer leaves the UI stuck/stale and its regression is CI-confirmed. Real iPhone/Safari remains unverified; terminal settlement is still not crash-atomic. |
+| Game Systems | INVESTIGATE_BEFORE_STRATEGIC_CLEARANCE | 4 | MEDIUM-HIGH | OBSERVED + SIMULATED | `GS-010`: the prior one-step adaptive benchmark underprices resonance chain carryover. Fixed resonance produced ≈12.13 bank/run and ≈46.5% collapse versus ≈10.95 and ≈53.5% for the previous adaptive benchmark. State-dependent route jobs still exist, but durable strategy is not yet cleared. |
+| Player Experience | HUMAN_FEEL_CANDIDATE / STRATEGY_INFERENCE_LIMITED | 4 | MEDIUM-HIGH | OBSERVED + SIMULATED | `PX-013`: a positive short human test can verify tension, failure ownership and replay desire, but cannot prove long-run route diversity while GS-010 remains open. iPhone readability and A/B/C rule trust remain watches. |
+| Progression & Content | FAIL / BLOCKED_FOR_CORE_CLEARANCE | 4 | HIGH | OBSERVED + DESIGN ANALYSIS | Persistent bank/runs/discoveries still do not change future strategy. Six discoveries are short, random, non-pursuable and cannot yet carry a durable world-revelation arc. Do not build progression on an uncleared strategic core. |
+| Technical & Quality | PASS_WITH_DEVICE_WATCH | 3 | HIGH | OBSERVED + UNVERIFIED | Core regression protection remains strong. Stale route taps now have an offer-identity guard but `TQ-014` is still pending explicit CI confirmation. Real iPhone/Safari remains unverified; terminal settlement is not crash-atomic. |
 
 ## Executive priority
 
-**Keep `HUMAN_CANDIDATE_01` frozen and obtain focused HUMAN_VERIFIED evidence before changing global balance or adding progression.**
+**Preserve `HUMAN_CANDIDATE_01`, but make the next AI priority a future-aware strategy comparison before declaring the core strategically cleared or adding progression.**
 
-The latest specialist evidence does not overturn this priority. Systems has now identified the cumulative depth-pressure curve as a structural reason for short runs, but whether that shortness creates tense replayable sessions or premature endings is exactly what the human candidate should answer. Player Experience has identified a real accessibility/readability risk, but actual iPhone readability remains unverified and changing typography/zoom now would move the evaluation target.
+The candidate is still useful for focused human feel. However, `GS-010` is Severity 4 and AI-resolvable: the previous benchmark can rank a simple resonance-heavy policy below an apparently adaptive policy even though fixed resonance earns materially more and collapses less. Executive independently reproduced the fixed-policy ordering under the same production rules: calm ≈10.79 bank/run, deep ≈8.94, resonance ≈12.13, one-step adaptive ≈10.95. A short-horizon rollout probe improved beyond the one-step benchmark and approached the resonance-fixed result, reinforcing that future chain value must be priced before strategy is cleared. These are `SIMULATED`, not proof of a global optimum.
 
-This is not a declaration that ECHO DRIFT is fun. No HUMAN_VERIFIED fun evidence exists yet.
+Full Executive finding: `EXECUTIVE_FINDING_EX011.md`.
 
-## Frozen candidate
+## Frozen candidate policy
 
-- Candidate: `HUMAN_CANDIDATE_01`.
-- Keep production gameplay rules unchanged until the first focused human test unless a concrete severe exploit/regression appears.
-- Do not change global threat growth, route base gains, anomaly frequency/reward, calm recovery, resonance reward, extraction multiplier, route generation, signal-chain rules, or low-Energy payment before that test.
-- Safe work while waiting: tests, CI verification, non-gameplay technical fixes, focused simulations, and progression design analysis that does not alter the candidate.
-- Do not add radar polish before this test; emotional flatness is useful evidence.
+- Keep production gameplay rules unchanged while this strategic comparison is performed.
+- Do not change global threat growth, route base gains, anomaly frequency/reward, calm recovery, resonance reward, extraction multiplier, route generation, signal-chain rules, or low-Energy payment from the present evidence alone.
+- Safe work: reproducible strategy probes, CI/test verification, non-gameplay defect fixes, iPhone/device verification, and progression design analysis that does not alter the candidate.
+- Do not add progression, content volume or radar polish before strategic clearance plus human-feel evidence.
 
 ## Human verification package
 
-Record answers as `HUMAN_VERIFIED`, including negative results.
+`HUMAN_CANDIDATE_01` may still be played for these three questions only. Record answers as `HUMAN_VERIFIED`, including negative results.
 
 1. **Decision tension** — During several runs, did continue versus `回収して帰還 +N` make you genuinely hesitate more than once?
 2. **Failure ownership** — After a collapse, did it feel like a risk you knowingly pushed too far, enough that you wanted another attempt, or did it feel like the game erased your time?
 3. **Immediate replay desire** — After either a successful return or a collapse, did you want to start the next run immediately?
 
-Device/usability observations are not extra fun questions. On the actual iPhone, note scrolling, cramped route text, whether 11px decision hints / 9px labels require squinting or repeated rereading, thumb reach, safe-area behavior, reload restoration, background/foreground recovery, and whether disabled pinch zoom is felt as a limitation. Also note low-Energy cost surprise, same-letter resonance expectations, reset-scope expectations if used, and obvious top/middle/bottom positional bias.
+A positive short test must **not** be interpreted as evidence that calm/deep/resonance remain strategically diverse over repeated play. That claim stays open until the future-aware Systems comparison is complete.
 
-## Why the candidate remains frozen
+Device observations remain separate from the three feel questions: actual iPhone scrolling, 11px decision hints / 9px labels, disabled pinch zoom, thumb reach, safe-area, reload restoration, background/foreground recovery, rapid taps, persistence, low-Energy surprise, same-letter resonance expectations, reset scope and positional bias.
 
-Current Systems evidence on exact production rules remains approximately:
+## Current strategy evidence
 
-- aggregate route share 58.7% deep / 29.0% resonance / 12.3% calm;
-- mean ending depth 2.85;
-- collapse 53.2–53.3%, voluntary extraction 40.9%, forced extraction 5.8%;
-- Threat 0–24: deep 59.7%; Threat 25–49: calm 51.1%;
-- no active chain: resonance 23.7%; active chain: resonance 49.3%.
+### Previously healthy evidence — still valid but no longer sufficient
 
-These results do not prove enjoyment, but they remove the strongest prior structural reason for more AI-only global tuning.
+- aggregate route share under the one-step adaptive probe: ≈58.7% deep / 29.0% resonance / 12.3% calm;
+- mean ending depth ≈2.85;
+- collapse ≈53.2–53.5%;
+- low Threat favors deep; higher Threat makes calm valuable;
+- an active chain materially increases resonance value.
 
-### Newly explicit depth-pressure parameter — OBSERVED + CALCULATED
+These facts show that route identities exist. They do **not** prove the absence of a superior resonance-heavy long-run policy.
 
-`projectedThreat()` adds `nextDepth * 1.4` to already accumulated Threat on every step. Depth pressure therefore grows by a triangular sum rather than a one-time linear modifier. Repeated anomaly-free resonance from the starting state reaches about 7.4 / 10.2 / 14.4 / 20.0 / 27.0 / 35.4 / 45.2 / 56.4% Threat at depths 1–8; repeated deep reaches about 10.4 / 16.2 / 23.4 / 32.0 / 42.0 / 53.4 / 66.2 / 80.4%. If human feedback says runs end before strategy develops, compare this curve against a deliberately linear/capped alternative before adding deeper rewards or content. If short runs feel tense and replayable, preserve the curve intentionally.
+### Re-opened strategic issue — GS-010 / EX-011
 
-### Existing bounded rule issues
+- one-step adaptive: ≈10.95 permanent bank/run, ≈53.48% collapse;
+- fixed resonance: ≈12.13 permanent bank/run, ≈46.52% collapse;
+- Executive independent 100k fixed-policy comparison reproduced: calm ≈10.79, deep ≈8.94, resonance ≈12.13, one-step adaptive ≈10.95 bank/run;
+- a short-horizon future-state rollout improved beyond one-step adaptation and approached the resonance-fixed result, suggesting the benchmark must explicitly value chain carryover.
 
-- Low-Energy partial payment occurs in a small minority of simulated runs and has small aggregate economic impact; resolve the intended rule after human evaluation.
-- A/B/C is visible on every route, but calm/deep ignore signal identity and preserve/erase an active chain through hidden 50% RNG. This remains the most important ordinary-play rule-coherence issue after the candidate.
-- Route ordering uses `sort(() => Math.random()-.5)`, a non-uniform/engine-dependent shuffle idiom; fix narrowly after the candidate if positional behavior matters.
-
-## Deliberately blocked until HUMAN_VERIFIED core evidence
-
-- No global balance patch without a demonstrated exploit/regression.
-- No meta shop, linear permanent stat upgrades, larger relic list, new route/system/currency, archive/lore volume, radar-feedback polish, or broad refactor.
-- No low-Energy or resonance-signal rule change solely to make the model cleaner before the candidate.
-- No progression economy field split until a post-pass decision prototype proves it is needed.
+Required next Systems comparison: fixed calm / fixed deep / fixed resonance / current one-step adaptive / reproducible short-horizon rollout or approximate DP, on the same production rules and extraction objective, across multiple deterministic seeds. Track bank/run, collapse, voluntary/forced extraction, ending depth, route share and chain-state behavior.
 
 ## Important unresolved issues
 
-1. **Human feel:** ≈53% collapse may be satisfying push-your-luck or unacceptable loss. `SIMULATED`.
-2. **Long-term play:** persistent values do not change future decisions. `OBSERVED FAIL`.
-3. **Discovery:** six anomaly contacts complete the prototype collection and discovery identity cannot be deliberately pursued. `OBSERVED FAIL`.
-4. **iPhone/Safari:** real-device lifecycle/layout/readability remains `UNVERIFIED`; small decision text plus disabled pinch zoom is a concrete accessibility watch.
-5. **Signal causality:** A/B/C is mechanically meaningful only to resonance; calm/deep chain survival is hidden RNG. `OBSERVED`.
-6. **Depth pressure:** cumulative triangular escalation materially compresses deep play; whether that is good session pacing is human-dependent. `OBSERVED + CALCULATED`.
-7. **Low-Energy clarity:** displayed route cost can exceed Energy actually charged. `OBSERVED`, small aggregate effect.
-8. **Persistence hardening:** terminal settlement is not crash-atomic; acceptable prototype risk, not production-safe for valuable long-term rewards.
-9. **Route ordering:** non-uniform/engine-dependent shuffle can confound positional observations. `OBSERVED`, low severity.
-10. **Reset scope:** confirmation still understates that reset abandons a live dive, although the post-reset stuck/stale UI bug is fixed and regression-confirmed. `OBSERVED`.
-11. **Progression semantics:** `banked` currently means lifetime cumulative recovery; future spending must not silently overload that meaning. `OBSERVED + DESIGN ANALYSIS`.
+1. **Strategic durability:** fixed resonance may outperform the prior adaptive benchmark because chain future value was underpriced. `Severity 4 / SIMULATED`.
+2. **Human feel:** current collapse profile may be satisfying push-your-luck or unacceptable loss. `SIMULATED`, requires `HUMAN_VERIFIED`.
+3. **Long-term play:** persistent values do not change future decisions. `OBSERVED FAIL`.
+4. **Discovery:** six anomaly contacts complete a random, non-pursuable prototype collection with no durable world arc. `OBSERVED FAIL / DESIGN_RISK`.
+5. **Signal causality:** A/B/C is visible on every route, but calm/deep ignore signal identity and chain survival uses hidden 50% RNG. `OBSERVED`.
+6. **Depth pressure:** cumulative triangular escalation compresses deep play; whether that pacing feels good is human-dependent. `OBSERVED + CALCULATED`.
+7. **Low-Energy clarity:** displayed route cost can exceed Energy actually charged. `OBSERVED`, small aggregate effect in prior simulation.
+8. **iPhone/Safari:** real-device lifecycle/layout/readability remains `UNVERIFIED`.
+9. **Persistence hardening:** terminal settlement is not crash-atomic; acceptable prototype risk, not production-safe for valuable persistent rewards.
+10. **Route ordering:** `sort(() => Math.random()-.5)` is non-uniform/engine-dependent. `OBSERVED`, low severity.
+11. **Reset scope:** confirmation understates that reset abandons a live dive; stale post-reset UI bug itself is fixed and CI-confirmed.
+12. **Stale route taps:** offer-identity guard is implemented; explicit CI promotion remains pending in `TQ-014`.
+13. **Progression semantics:** `banked` currently means lifetime cumulative recovery; future spending must not silently overload that meaning.
 
-## Resolved / improved since previous dashboard
+## Deliberately blocked
 
-- Active-dive record reset now returns cleanly to an idle playable UI; regression is CI-confirmed.
-- Persisted restored-log strings render as inert text; crafted-save regression is CI-confirmed.
+- No progression implementation while strategic clearance is open.
+- No conventional stat shop, larger relic list, lore volume, new route/system/currency or broad refactor.
+- No global balance patch solely because fixed resonance looks strong until a stronger future-aware comparison confirms the structural diagnosis.
+- No claim that a positive short human session validates durable strategic variety.
 
 ## Executive decision
 
-No gameplay implementation is justified in this cycle. The newest Systems finding gives a precise lever to test **after** human evidence if run length feels too compressed; the newest PX finding adds an iPhone accessibility observation but does not justify moving the candidate before device play. The highest-value work remains preserving the evaluation target and obtaining human evidence.
+The game remains a valid human-feel candidate, but the studio's **AI-side priority has changed**. Before progression or a strategic-clearance claim, Systems must resolve whether resonance-heavy play is actually a dominant repeated-play policy or whether a future-aware adaptive policy can outperform it through meaningful state-dependent route changes.
 
-After HUMAN_VERIFIED feedback arrives:
-
-- if decision tension/failure ownership/replay desire fail, diagnose the core before progression;
-- if runs feel prematurely short, test the depth-pressure curve before compensating with extra rewards/content;
-- if the core passes, resolve visible signal causality and the low-Energy rule explicitly;
-- then prototype one compact mutually exclusive persistent choice that changes future-dive decisions rather than simply making the player stronger;
-- preserve lifetime `累計回収` separately from any spendable/committed quantity if progression actually needs spending;
-- if choices are clear but emotionally flat, test small reactions on the existing radar;
-- before valuable persistent rewards, add save migration and crash-idempotent settlement hardening;
-- after the candidate, restore zoom / modestly enlarge decision text if iPhone observation confirms readability friction, fix route shuffle narrowly, and make reset scope explicit or disable reset during a live dive.
+If fixed resonance remains materially superior after fair future-state valuation, revisit resonance chain reward/persistence and/or cross-route signal causality before progression. If future-aware adaptation overtakes fixed resonance while using multiple route roles, restore strategic clearance and combine that result with the focused human test.
 
 No `HUMAN_VERIFIED` fun claim exists yet.
