@@ -1,0 +1,22 @@
+# Game Systems Finding GS-011 — resonance has a structural long-run efficiency advantage
+
+Updated: 2026-08-26
+Director: Game Systems Analysis Director
+Target: latest `main` ECHO DRIFT / `HUMAN_CANDIDATE_01`
+
+- Status: STRATEGIC_PRESSURE_CONFIRMED
+- Severity(1-5): 4
+- Confidence: HIGH
+- Verification Type: OBSERVED + CALCULATED + SIMULATED
+- Evidence: Current production rules give resonance base gain `2-4` (mean 3), Energy cost `1-3` (mean 2), and route risk modifier 0. Once a resonance chain is established, each further resonance choice matches the current signal with probability 1/3. Under repeated resonance, the pre-choice chain-length distribution is geometric with mean 1.5. A match at chain length `k` grants `1 + (k+1)*2 = 2k+3` extra haul. Therefore the unconditional expected chain bonus per subsequent resonance choice is `(1/3) * E[2k+3] = (1/3) * (2*1.5+3) = 2`, making expected resonance gain after chain establishment about 5 haul per choice before anomaly. That is about 2.5 expected haul per Energy. Deep has mean base gain 4.5, mean Energy cost 2.5 (about 1.8 haul/EN) and adds +3 route risk each time. Calm has mean base gain 2, mean cost 1.5 and a defensive role rather than comparable raw efficiency. The anomaly system applies equally across route identities, so it does not erase this relative resonance advantage. Additionally, non-resonance choices have a hidden 50% chance to destroy the active chain, creating an opportunity cost for deviating from resonance once the chain is established.
+- Simulation Evidence: An independent same-rule deterministic Monte Carlo repeat used four seeds (101/202/303/404), 50,000 runs per policy per seed, with the same one-step extraction rule used by GS-010. Mean results across the four seeds were: fixed calm ≈10.82 bank/run, 39.49% collapse, ending depth ≈4.16; fixed deep ≈8.94 bank/run, 49.47% collapse, depth ≈2.65; fixed resonance ≈12.11 bank/run, 46.58% collapse, depth ≈3.19; current one-step adaptive ≈11.00 bank/run, 53.20% collapse, depth ≈2.85. Fixed resonance exceeded the one-step adaptive benchmark on every tested seed. These values are `SIMULATED`, not HUMAN_VERIFIED.
+- Finding: GS-010's resonance-heavy result is not only a weakness of one Monte Carlo policy. The production reward/cost/risk equations themselves create a durable pressure toward staying on resonance after a chain is established: resonance's expected post-chain raw efficiency exceeds deep while carrying less route risk, and switching away can erase the accumulated future value through hidden chain-loss RNG.
+- Impact: The earlier state-role evidence remains true locally—deep can be attractive early and calm can be rational at high threat—but repeated-play strategy may still collapse toward “build resonance, then avoid leaving it unless forced by extraction/risk”. If so, route diversity seen in one-step analysis overstates durable strategic diversity. Building route-specialized progression now could amplify this imbalance into a false long-term choice architecture.
+- Recommended Action: Keep `HUMAN_CANDIDATE_01` unchanged for short-session feel comparability, but do not restore strategic clearance yet. Executive should treat resonance reward/persistence as the first balance lever if a future-aware policy comparison confirms resonance-heavy dominance. Prefer a narrow change that reduces compounding or makes cross-route signal causality legible over global buffs/nerfs. Before modifying gameplay, compare at least one reproducible future-aware policy or bounded dynamic approximation against fixed resonance under equal stopping assumptions.
+- Human Verification Needed: NO for the structural efficiency calculation and simulated policy gap. YES later for whether players discover, understand, or enjoy resonance-heavy play.
+
+## Systems interpretation
+
+This finding strengthens GS-010 from “benchmark may undervalue future chain state” to “the current equations themselves explain why resonance future value can dominate”. It still does **not** prove that fixed resonance is the globally optimal policy, because an exact future-aware adaptive stopping/route policy has not yet been solved. It does establish that strategic clearance cannot be restored solely from aggregate route shares or one-step state-role analysis.
+
+No production gameplay values were changed in this pass.
