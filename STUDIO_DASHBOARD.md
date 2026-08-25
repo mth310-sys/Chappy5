@@ -1,105 +1,80 @@
 # Chappy5 Studio Dashboard
 
-Updated: 2026-08-25 23:28 JST
-Target: ECHO DRIFT core decision loop
+Updated: 2026-08-26 00:23 JST
+Target: ECHO DRIFT — first focused human-play candidate
 
 | 領域 | Status | Severity | Confidence | Verification | 最新の重要Finding |
 |---|---|---:|---|---|---|
-| Game Systems | WATCH | 3 | HIGH | OBSERVED + SIMULATED | Current exact rules materially reduced deep dominance: ≈58.7% deep / 29.0% resonance / 12.3% calm, mean ending depth ≈2.85. Main remaining systems risk is ≈53.3% simulated collapse and whether route diversity survives state-conditioned analysis. |
-| Player Experience | WARNING | 4 | MEDIUM-HIGH | OBSERVED + SIMULATED | Immediate risk and extraction payoff are readable and route identities are more likely to be felt; the major subjective unknown is whether >50% collapse feels earned/replayable rather than punishing. |
-| Progression & Content | FAIL | 4 | HIGH | OBSERVED + SIMULATED | Persistent bank/runs/discoveries still do not alter future strategy. Six discoveries complete after six chosen anomalies; collector behavior can raise anomaly choice ≈37.4%→50.1% and collapse ≈53.3%→59.7%, then that motive disappears. |
-| Technical & Quality | UNKNOWN/WARNING | 3 | HIGH | OBSERVED + UNVERIFIED | Core save/state regression and threat/anomaly invariants pass CI. Production anomaly bonuses are 2/3/5/8/10/13 at depths 1–6. Real iPhone/Safari lifecycle/layout remains unverified. |
+| Game Systems | READY_FOR_HUMAN_CANDIDATE | 3 | HIGH | OBSERVED + SIMULATED | State-conditioned 200k probe confirms situational route jobs: deep leads early/low-threat, calm leads at Threat 25–49, resonance leads with an active chain. Global collapse remains ≈53.2–53.3% and is now primarily a human-feel question. |
+| Player Experience | READY_FOR_HUMAN_CANDIDATE | 4 | MEDIUM-HIGH | OBSERVED + SIMULATED | Exact next-step danger and exact extraction payoff are readable. Main unknown is whether >50% collapse feels self-authored/replayable rather than like erased time. |
+| Progression & Content | FAIL / BLOCKED_FOR_CORE_TEST | 4 | HIGH | OBSERVED + SIMULATED | Persistent bank/runs/discoveries still do not change future strategy. Six discoveries are a short completion timer with no pursuit agency. Do not expand progression until core feel is human-checked. |
+| Technical & Quality | PASS_WITH_DEVICE_WATCH | 3 | HIGH | OBSERVED + UNVERIFIED | Core save/state/threat/anomaly regression protection exists. Real iPhone/Safari touch, safe-area, reload/background lifecycle and storage remain unverified. |
 
 ## Executive priority
 
-**Preserve the materially improved current economy and verify that its route diversity is robust across visible game states before freezing the first human-test candidate.**
+**Freeze the current risk/reward gameplay as Human Candidate 01 and obtain focused HUMAN_VERIFIED evidence before changing global balance or adding progression.**
 
-This is now higher value than another immediate balance patch. Meta progression, content expansion, radar polish and broad refactoring remain blocked until either the state-conditioned check exposes a concrete core exploit or the current build is frozen for human feel verification.
+The previous Executive gate has been satisfied. Game Systems' state-conditioned probe found no near-universal route inside the major visible states: deep is strongest early, calm becomes rational at higher threat/depth, and active resonance materially changes resonance value. Player Experience independently concludes that another AI-only prediction pass is lower value than actual human play.
 
-## Executive integration — 23:28 JST
+This is not a declaration that ECHO DRIFT is fun. It is a declaration that the next highest-value evidence for the core loop is human evidence.
 
-### What changed since the previous Executive integration
+## Frozen candidate
 
-The previous Executive pass deliberately reduced Deep base gain to `3–6` and made the existing visible anomaly opportunity scale more strongly with depth. Game Systems has now re-tested the **actual current `game.js`** rather than the previous candidate approximation.
+- Candidate: `HUMAN_CANDIDATE_01`
+- Baseline: current `main` at the time of this Executive integration, after Systems commit `b3bbf0611f36f21370a0e70245f7d2de876e3ee8` and Player Experience commit `52c1516575a01b137740edca7ac6651a6f7fd0e0`.
+- Gameplay freeze: do not change global threat growth, route base gains, anomaly frequency/reward, calm recovery, resonance-chain reward, extraction multiplier, or route generation unless a concrete regression/exploit is demonstrated.
+- Safe work while waiting: tests, CI verification, non-gameplay technical inspection, progression design analysis that does not alter the candidate, and preparation for later implementation.
+- Do not add radar polish before this test; emotional flatness is itself useful evidence.
 
-The result is a material improvement rather than a marginal one:
+## Human verification package
 
-- deep route share ≈ **58.7%**, down from ≈83.0%;
-- resonance ≈ **29.0%**;
-- calm ≈ **12.3%**;
-- chain-matching resonance ≈ **7.2%** of all selections, up from ≈3.7%;
-- mean ending depth ≈ **2.85**, up from ≈2.62.
+Record answers as `HUMAN_VERIFIED`, including negative results.
 
-This does not prove the game is fun. It does show that the three route identities are beginning to function as real strategic jobs instead of one dominant payout route plus two decorative alternatives.
+1. **Decision tension** — During several runs, did `continue` versus `回収して帰還 +N` make you genuinely hesitate more than once?
+2. **Failure ownership** — After a collapse, did it feel like a risk you knowingly pushed too far, enough that you wanted another attempt, or did it feel like the game erased your time?
+3. **Immediate replay desire** — After either a successful return or a collapse, did you want to start the next run immediately?
 
-### The main risk has changed
+Device observation, not a fourth fun question: on the actual iPhone, note whether scrolling, cramped route text, thumb reach, safe-area behavior, reload restoration, or background/foreground recovery interferes with play.
 
-The largest AI-detectable problem is no longer deep dominance. The new systems risk is that the healthier choice distribution is accompanied by **≈53.3% collapse** in the tested adaptive policy. A separate 200k repeat reproduced ≈53.2% collapse, ≈40.9% voluntary extraction and ≈5.8% forced extraction.
+## Why the candidate is frozen now
 
-Exact danger is visible before selection, so this is not a hidden-probability fairness bug. Whether this loss profile feels like satisfying push-your-luck tension or like repeated time erasure is increasingly a **human feel question**, not something Executive should settle by blindly lowering the probability.
+Systems evidence on current exact rules:
 
-### Discovery layer integration
+- aggregate route share ≈ 58.7% deep / 29.0% resonance / 12.3% calm;
+- mean ending depth ≈ 2.85;
+- collapse ≈53.2–53.3%, voluntary extraction ≈40.9%, forced extraction ≈5.8%;
+- Threat 0–24: deep ≈59.7%; Threat 25–49: calm ≈51.1%;
+- no active chain: resonance ≈23.7%; active chain: resonance ≈49.3%;
+- by depth, deep falls while calm rises, with resonance becoming competitive in middle states.
 
-Systems also resolved the queued Progression concern. `meta.found` does not mechanically affect route value, so optimal mechanical play is identical before and after discovery completion. But a collector-motivated policy materially changes behavior: anomaly choice rises to ≈50.1%, bank falls to ≈9.93/run and collapse rises to ≈59.7%. After six discoveries that extra motive disappears because discovery has no further mechanical/world consequence.
+These results do not prove enjoyment, but they remove the strongest prior structural reason to keep tuning before human play.
 
-This confirms that the existing collection layer is not yet long-term progression. It can temporarily bend early play, then abruptly stop mattering. Do **not** solve this by adding more relic names.
+## Deliberately blocked until HUMAN_VERIFIED core evidence
 
-### Numeric source-of-truth correction
-
-Technical & Quality caught one Director-record drift: production `anomalyBonusAt(depth)` is
-
-`2 + floor(depth/2) + max(0, depth-2) * 2`
-
-and therefore yields **2 / 3 / 5 / 8 / 10 / 13** at depths 1–6. A Progression document had previously recorded values one point too high from depth 3 onward. That document has now been corrected in commit `8275daf1075ed792a350f0e43b59f295197fa79b`.
-
-Future balance decisions must use `game.js` or executable probes as numeric source of truth rather than copied prose.
-
-## Executive decision this cycle
-
-### No new gameplay balance patch
-
-Do **not** immediately tune Deep, Calm, Resonance, anomaly frequency, threat growth or extraction multiplier again. The last patch achieved the intended structural effect strongly enough that another balance change now would destroy the chance to understand whether the improvement is robust.
-
-### Human-test gate is near, but not frozen yet
-
-One remaining AI-side check has high value before freezing the candidate:
-
-**Does each route become rational in identifiable visible states — especially threat band, depth and active resonance-chain state — rather than the global percentages merely averaging over another hidden fixed rule?**
-
-The next Systems pass should answer this using current exact main without changing the game unless it discovers a concrete exploit or dominant state rule.
-
-If that state-conditioned check is healthy, Executive should freeze the current gameplay candidate and move to HUMAN_VERIFIED testing instead of continuing balance simulation indefinitely.
-
-## Human-test candidate criteria
-
-The first frozen candidate is ready when:
-
-1. no route is a near-universal choice inside the major visible state bands;
-2. calm demonstrably has a high-threat recovery role;
-3. live-chain resonance demonstrably changes choice value;
-4. later anomaly offers sometimes justify continued risk without being universally mandatory;
-5. save/state CI remains green.
-
-At that point, subjective evaluation should be limited to:
-
-- Did **continue vs extract** create genuine hesitation more than once?
-- After collapse, did failure feel **earned enough to want another attempt**, or like the game erased your time?
-- After a successful or failed run, did you **immediately want another run**?
-- Separately observe whether iPhone scrolling/thumb reach/runtime friction interfered with the decision.
-
-Record those results only as `HUMAN_VERIFIED`; negative results are primary evidence, not something to explain away with simulation.
-
-## What remains deliberately blocked
-
+- No global balance patch without a demonstrated exploit/regression.
 - No meta shop or linear permanent stat upgrades.
 - No larger relic list.
 - No new route/system/currency.
-- No archive/lore volume until discovery semantics are approved.
-- No radar-feedback polish until the gameplay candidate is frozen.
+- No archive/lore volume merely to simulate depth.
+- No radar-feedback polish before the first feel test.
 - No broad refactor.
 
-## Human verification status
+## Important unresolved issues
 
-No `HUMAN_VERIFIED` finding exists yet. Do not claim ECHO DRIFT is fun, satisfying, replayable or flagship-ready.
+1. **Human feel:** ≈53% collapse may be satisfying push-your-luck or unacceptable loss. `SIMULATED`, not known.
+2. **Long-term play:** persistent values do not yet change future decisions. `OBSERVED FAIL`.
+3. **Discovery:** six anomaly contacts complete the prototype collection; discovery identity cannot be deliberately pursued. `OBSERVED FAIL`.
+4. **iPhone/Safari:** real-device lifecycle/layout remains `UNVERIFIED`.
+5. **Persistence hardening:** terminal settlement uses separate localStorage writes and is not crash-atomic; acceptable prototype risk, not production-safe for valuable long-term rewards.
 
-The current evidence supports a narrower statement: **the game is structurally healthier than the previous cycle, and it is approaching the point where human play will be more valuable than further broad AI prediction.**
+## Executive decision
+
+No gameplay implementation is justified in this cycle because changing the candidate would destroy the value of the now-ready human test. The productive Executive action is therefore to freeze the improved game rather than manufacture another feature.
+
+After HUMAN_VERIFIED feedback arrives:
+
+- if decision tension/failure ownership/replay desire fail, diagnose the core before progression;
+- if the core passes, the next major product problem is meaningful run-to-run progression, preferably one compact mutually exclusive persistent choice that changes how a future dive is played rather than simply making the player stronger;
+- if choices are clear but emotionally flat, test small reactions on the existing radar rather than adding another UI system.
+
+No `HUMAN_VERIFIED` fun claim exists yet.
