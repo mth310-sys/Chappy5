@@ -1,7 +1,7 @@
 # One Brain State
 
 Updated: 2026-08-25 JST
-Status: NARRATIVE_LOOP_REVISION_IMPLEMENTED / HUMAN_RETEST_REQUIRED
+Status: CORE_FUN_FAIL / RESEARCH_GATE_ACTIVE
 
 ## Authority
 - README.md is the top-level instruction and must never be modified.
@@ -11,93 +11,54 @@ Status: NARRATIVE_LOOP_REVISION_IMPLEMENTED / HUMAN_RETEST_REQUIRED
 ## Current product
 Working title: **EMBERLORE**
 Direction: roguelite × growth × collection × short sessions.
-Selected core remains under test: telegraphed turn combat + three tactical actions + relic drafting + persistent collection/unlocks.
+Current selected core: telegraphed turn combat + three tactical actions + relic drafting + persistent collection/unlocks.
 
-The first human test established that mechanics/controls were understandable but the product lacked a meaningful backbone and did not yet inspire confidence in long-term replay. This is treated as a product-level failure signal, not a cosmetic writing request.
+## Human feedback — second playtest, 2026-08-25
+Direct human verdict after the narrative-loop revision:
+- Story is now roughly understandable.
+- The game is still **boring**.
+- The presentation/product feels **cheap / underwhelming**.
+- Human explicitly ordered One Brain to stop iterating blindly and research comparable games first.
 
-## Product spine after revision
-EMBERLORE is now framed as repeated expeditions into a ruined memory vault. The player is a repeatedly reconstructed **Firekeeper** who has forgotten why the cycle exists. Echoes are damaged fragments of time/memory that survive failed runs. Relics and hostile entities act as evidence about the night of collapse. The deepest guardian recognizes the Firekeeper as a previous authority.
+Interpretation under README rules:
+- Narrative clarity improved from the previous build, but this does NOT rescue the product.
+- Actual fun: FAIL.
+- Presentation / perceived production value: FAIL.
+- Replay desire: FAIL / no positive evidence.
+- Current core is no longer entitled to incremental content expansion.
+- Do not respond by adding more Memory Threads, relic counts, enemies, prose, or cosmetic polish to the same shallow interaction model.
 
-Long-term pull is explicitly designed around three connected motives:
-1. Mastery — better tactical decisions and build construction.
-2. Collection/growth — relics, Echoes, vows, entities, Archive completion.
-3. Discovery — uncover what happened, what EMBER PROTOCOL is, and whether the Firekeeper helped cause the collapse.
+## Research gate
+Before substantial playable changes, compare successful adjacent games and extract mechanisms rather than copying themes/assets/content. Research targets should include at minimum:
+- Slay the Spire — combinatorial decision space, map pressure, card/relic interactions, content breadth.
+- Balatro — dramatic rule-breaking synergies, escalating score feedback, build identity, unlock/challenge ladder.
+- Shogun Showdown — compact turn-based readability where positioning/timing/combo ordering make every action meaningful.
+- Into the Breach — telegraphed enemy intent transformed into a spatial puzzle with multiple simultaneous objectives.
+- Hades — repeated-run narrative/persistent progression and high production feedback, while also studying criticism that repetition can still overwhelm story.
 
-## Current playable files
-- `index.html` — mobile-first playable shell with current mystery/objective presentation.
-- `styles.css` — combat plus story/progression/archive presentation.
-- `game.js` — combat, persistence, relics, Echoes, memory progression, Archive logic.
-- `GAME_PLAN.md` — current product thesis, world spine, retention ladder, validation criteria.
+The purpose is to determine why EMBERLORE feels boring and cheap relative to proven designs, then choose whether to redesign the core heavily or discard it.
 
-## Implemented gameplay
-Existing systems retained:
-- 4-depth run including a boss.
-- visible enemy next intent.
-- STRIKE / GUARD / FOCUS decisions.
-- shield, focus, burn, healing interactions.
-- 8 relics with build synergies.
-- 3-choice relic drafting after wins.
-- safe/risk route decision.
-- localStorage persistence.
-- Echo currency.
-- 3 starting vows/charms, with 2 unlockable.
+## Current diagnosis to test against research
+Likely causes, not yet final conclusions:
+1. Three fixed buttons create too little decision-space growth across a run.
+2. One enemy at a time makes telegraphing mostly a trivial arithmetic response rather than a puzzle.
+3. Relics mainly modify numbers; they rarely transform rules or create spectacular emergent combos.
+4. Route choice is too small to create strategic planning or anticipation.
+5. Four encounters provide almost no escalation arc, surprise, biome identity, event texture, economy, or recovery decisions.
+6. Persistent progression is mostly counters/unlocks rather than opening genuinely new ways to play.
+7. Visual presentation is abstract symbols/cards with weak animation, impact, character identity, environmental change, sound, and spectacle; it reads as prototype UI rather than a game world.
+8. Story progression was layered onto a weak play loop; narrative cannot compensate for insufficient moment-to-moment fun.
 
-New integrated discovery systems:
-- 10 persistent Memory Thread fragments.
-- memory unlocks tied to actual play conditions: first entity contacts, dangerous route selection, relic collection thresholds, boss contact, first clear.
-- dynamic home-screen CURRENT THREAD objective changes as evidence is recovered.
-- entity-specific signals that reveal world information on contact.
-- every relic now contains testimony/lore in the Archive, so collection contributes to the mystery rather than only stats.
-- corrupted/dangerous route explicitly trades safety for information and Echo reward.
-- result screen highlights newly recovered memory.
-- Archive now shows active mystery, Memory Thread completion, locked unknown fragments, relic testimony, and entity records.
-- the first-clear hook reveals `EMBER PROTOCOL / AUTHOR: YOU`, linking the protagonist directly to the collapse mystery without fully resolving it.
-- old localStorage saves are normalized so missing `memories` and array fields do not immediately break the revised build.
+## Product hold
+Keep the current public build as evidence of the failed hypothesis. Do not call it successful or production-ready. Avoid large gameplay edits until research findings are synthesized into a replacement design decision.
 
-## Human feedback — 2026-08-25
-Direct first-playtest signal before this revision:
-- Game mechanics, controls, and immediate purpose were understood.
-- Major weakness: almost no backbone/story/world context, making the experience harder to emotionally interpret or care about.
-- Human explicitly questioned whether the current form can sustain long-term play.
-
-Interpretation remains:
-- Goal clarity: preliminary PASS.
-- Basic control/causality: preliminary PASS.
-- Narrative/world motivation: previous build FAIL / missing.
-- Long-term replay confidence: previous build FAIL / unproven.
-- Tactical interest, build desire, experiment desire: still UNPROVEN.
-
-The new build is a hypothesis-level response to that feedback. It must not be marked successful until humans replay it.
-
-## Verification status
-- Latest-main file presence after revision: VERIFIED. `index.html`, `styles.css`, `game.js`, `GAME_PLAN.md`, `STATE.md`, and untouched `README.md` are present.
-- README integrity: VERIFIED by latest-main directory state; README SHA remained unchanged during this Turn.
-- Source write integrity: VERIFIED by GitHub responses and latest-main directory listing.
-- JavaScript parser/runtime execution after revision: UNVERIFIED from current environment.
-- Detailed iPhone Safari compatibility after revision: UNVERIFIED.
-- Human gameplay of revised memory system: NOT YET TESTED.
-- Public deployment propagation of this exact revision: NOT independently observed in this Turn.
-
-## Highest priority next actions
-1. Re-read README.md and latest main before changing anything.
-2. Human-play the revised build before adding large amounts of content.
-3. Specifically test whether discovery now creates voluntary desire for another expedition; do not accept mere understanding as success.
-4. Ask whether the player cared about the next Memory Thread, noticed that dangerous exploration reveals information, and felt Archive collection had meaning.
-5. If story interest improves but combat remains repetitive, deepen tactical enemy patterns/build identities rather than adding more prose.
-6. If replay/discovery desire remains weak, reconsider the selected core instead of manufacturing a large story/content backlog.
-7. Only if revised core shows promise, design a first additional depth/region where world revelation and new mechanics arrive together.
-
-## Revised human test questions
-Record answers without softening negative feedback:
-- Did you still know what to do without reading lots of explanation?
-- Did enemy intent make your combat decisions change?
-- Did relic choices create a build you cared about?
-- Did you understand why the Firekeeper keeps returning?
-- Did any enemy/relic/memory discovery make you curious about the collapse?
-- Did the dangerous route feel like a meaningful choice between survival and discovery?
-- Did you open Archive because you wanted to know more, rather than because you were instructed to?
-- After finishing or dying, did you voluntarily want another expedition?
-- What specifically did you want from the next run: stronger build, missing collection, next story answer, or nothing?
+## Next actions
+1. Complete comparable-game research using current reliable external sources and community experience where useful.
+2. Produce a mechanism-level comparison: moment-to-moment decisions, run-level decisions, build transformation, escalation, meta progression, audiovisual feedback, content/variation, and reasons to replay.
+3. Identify the minimum redesign that could create a genuinely stronger 5–10 minute browser experience.
+4. Compare at least two replacement-core directions instead of assuming the current three-button combat survives.
+5. Record the selected redesign in GAME_PLAN.md before implementation.
+6. Only then build a new vertical slice and ask the human to judge fun and production feel again.
 
 ## Concurrency note
 No Scheduled Task fleet has been created. If one is created later, follow README One Brain timing: five equivalent Turns around :00/:12/:24/:36/:48, each starting by re-reading README and latest main and avoiding destructive conflict.
