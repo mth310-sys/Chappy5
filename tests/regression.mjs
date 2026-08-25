@@ -185,4 +185,15 @@ const RUN_KEY='chappy5.echoDrift.run.v1';
   assert.equal(elements.log.children.length,0);
 }
 
+// 12) A stale button from the previous offer cannot resolve the same index in the new offer.
+{
+  const storage=new MemoryStorage();
+  const {context}=boot(storage,()=>0.99);
+  run(context,"run={energy:10,depth:0,haul:0,threat:6,chain:null,chainLen:0,alive:true,log:[],routes:[{...routeTemplates[0],cost:1,gain:1,signal:'A',anomaly:false},{...routeTemplates[1],cost:2,gain:3,signal:'B',anomaly:false},{...routeTemplates[2],cost:1,gain:2,signal:'C',anomaly:false}]};globalThis.staleOffer=run.routes[0];chooseRoute(0,staleOffer);");
+  assert.equal(read(context,'run.depth'),1);
+  assert.equal(read(context,'run.alive'),true);
+  run(context,'chooseRoute(0,staleOffer);');
+  assert.equal(read(context,'run.depth'),1);
+}
+
 console.log('ECHO DRIFT regression tests: PASS');
