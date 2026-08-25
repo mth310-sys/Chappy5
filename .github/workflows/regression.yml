@@ -29,3 +29,5 @@ jobs:
           node-version: '22'
       - name: Run deterministic state regression
         run: node tests/regression.mjs
+      - name: Run deterministic strategy benchmark
+        run: node tests/strategy-benchmark.mjs
