@@ -134,7 +134,7 @@ function render(){
  $('#extract').disabled=!run.alive||run.haul===0;$('#startRun').textContent=run.alive?'潜航中':'もう一度潜る';$('#startRun').disabled=run.alive;
  const baseStatus=run.alive?'3つの反響から進路を選ぶ。深く潜るほど帰還価値と崩壊率が上がる。':'今回の潜航は終了。記録を見て次の潜航へ。';
  $('#statusText').textContent=storageHealthy?baseStatus:`${baseStatus} 保存領域を利用できないため進行は保持されません。`;
- $('#routes').innerHTML=run.alive?run.routes.map((r,i)=>`<button class="route" data-i="${i}"><span class="name">${r.name} · ${r.signal}</span><span class="hint">${r.hint} / EN-${r.cost} / 基礎+${r.gain}</span><span class="risk">${r.risk>=0?'+':''}${r.risk}%</span></button>`).join(''):'';
+ $('#routes').innerHTML=run.alive?run.routes.map((r,i)=>`<button class="route" data-i="${i}"><span class="name">${r.name} · ${r.signal}</span><span class="hint">${r.hint} / EN-${r.cost} / 基礎+${r.gain}</span><span class="risk">脅威補正 ${r.risk>=0?'+':''}${r.risk}</span></button>`).join(''):'';
  $('#log').innerHTML=run.log.map(x=>`<li>${x}</li>`).join('');
  document.querySelectorAll('.route').forEach(b=>b.addEventListener('click',()=>chooseRoute(Number(b.dataset.i))));
 }
