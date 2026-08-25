@@ -100,12 +100,28 @@ Target: latest `main` ECHO DRIFT core loop as of 2026-08-26.
 - `human_verification_needed`: YES for whether players infer cross-route signal meaning or notice unexplained chain loss; NO for the mechanical fact.
 - `last_updated`: 2026-08-26
 
+## Finding GS-008 — route position randomization uses an engine-dependent biased shuffle idiom
+
+- `director`: Game Systems Analysis Director
+- `status`: WATCH
+- `severity`: 2
+- `confidence`: HIGH
+- `verification`: OBSERVED
+- `finding`: Every decision correctly contains exactly one calm, one deep and one resonance route, but their vertical order is generated with `array.sort(() => Math.random() - .5)`. A random comparator does not define a valid transitive ordering and is not a uniform shuffle; the resulting permutation distribution can depend on the JavaScript engine's sort implementation.
+- `evidence`: `generateRoutes()` begins with `const shuffled=[...routeTemplates].sort(()=>Math.random()-.5)`. This preserves the three route identities but makes positional exposure an implementation artifact rather than an explicitly uniform random choice. The candidate's main target is iPhone/Safari, while development/CI may execute a different JS engine.
+- `impact`: If human players exhibit top/middle/bottom tap bias, route usage and therefore apparent balance can be influenced by engine-specific ordering frequency. Existing route-value simulations generally reason about route identity, not screen-position bias, so this is a potential measurement confound rather than evidence that current economy is broken.
+- `recommended_action`: Do not move the frozen candidate for this alone. During human/device testing, record whether route position appears to influence choice. After the candidate, replace the comparator shuffle with a small Fisher-Yates shuffle and add a distribution sanity test if positional bias becomes relevant; this is a narrow implementation correction, not a balance redesign.
+- `human_verification_needed`: NO for the non-uniform/engine-dependent algorithmic fact; YES only for whether position materially affects real choice behavior.
+- `last_updated`: 2026-08-26
+
 ## Current systems conclusion
 
 The state-level robustness check remains healthy enough that Systems does **not** recommend disturbing the frozen global risk/reward candidate before focused human play. Deep is strongest early, calm becomes important at threat >=25 and deeper states, and an active resonance chain materially changes resonance choice value.
 
-The terminal partial-payment issue is now quantitatively bounded: it occurs in a small minority of simulated runs and has little aggregate effect, so it should remain a post-candidate explicit rule decision rather than invalidate the current human test.
+The terminal partial-payment issue is quantitatively bounded: it occurs in a small minority of simulated runs and has little aggregate effect, so it should remain a post-candidate explicit rule decision rather than invalidate the current human test.
 
-A new structural clarity/agency issue is more conceptually important for the resonance system: A/B/C is shown on every route, yet only resonance reads the signal, while calm/deep preserve or erase the active chain via hidden 50% RNG. This does not justify moving the frozen candidate, but it should be observed during human play and resolved before resonance is expanded into long-term progression.
+The resonance-signal mismatch remains the most conceptually important post-candidate rule-coherence issue: A/B/C is shown on every route, yet only resonance reads the signal, while calm/deep preserve or erase the active chain via hidden 50% RNG.
+
+A smaller new measurement risk is route ordering: each screen still contains all three route identities, but `sort(() => Math.random()-.5)` makes their vertical positions non-uniform and engine-dependent. This should be corrected after the frozen candidate if positional behavior matters, without reopening the economy.
 
 The main experiential systems question remains whether the simulated collapse rate around 53% feels like fair, self-authored greed or wasted time. Discovery also remains mechanically disconnected and should not be expanded by adding names alone.
