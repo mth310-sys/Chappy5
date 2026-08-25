@@ -14,7 +14,7 @@ function finiteInt(value,fallback,min=0,max=Number.MAX_SAFE_INTEGER){const n=Num
 
 const routeTemplates=[
  {name:'静かな反響',tone:'calm',cost:[1,2],gain:[1,3],risk:-3,hint:'低消費・低回収 / 高脅威時は鎮静'},
- {name:'深層パルス',tone:'deep',cost:[2,3],gain:[4,7],risk:3,hint:'高消費・高回収 / 短く深く潜る'},
+ {name:'深層パルス',tone:'deep',cost:[2,3],gain:[3,6],risk:3,hint:'高消費・高回収 / 短期の回収向け'},
  {name:'共鳴追跡',tone:'res',cost:[1,3],gain:[2,4],risk:0,hint:'同系統を繋ぐほど回収が加速'}
 ];
 
@@ -33,7 +33,7 @@ function persistRun(){if(run?.alive)return storageSet(RUN_KEY,JSON.stringify(run
 let meta=loadMeta();let run=loadRun();
 function startRun(){run={energy:10,depth:0,haul:0,threat:6,chain:null,chainLen:0,alive:true,log:[]};log('潜航開始。信号海へ接続した。');generateRoutes();persistRun();render()}
 function generateRoutes(){if(!run?.alive)return;const shuffled=[...routeTemplates].sort(()=>Math.random()-.5);run.routes=shuffled.map(t=>({...t,cost:rand(...t.cost),gain:rand(...t.gain),signal:pick(['A','B','C']),anomaly:Math.random()<0.18}))}
-function anomalyBonusAt(nextDepth){return 2+Math.floor(nextDepth/2)}
+function anomalyBonusAt(nextDepth){return 2+Math.floor(nextDepth/2)+Math.max(0,nextDepth-2)*2}
 function calmRecoveryFor(r){return r.tone==='calm'&&run.threat>=25?-8:0}
 function projectedThreat(r,nextDepth=run.depth+1){return clamp(run.threat+r.risk+nextDepth*1.4+(r.anomaly?7:0)+calmRecoveryFor(r),0,92)}
 function projectedBank(){if(!run)return 0;const bonus=1+Math.min(.6,run.depth*.04);return Math.floor(run.haul*bonus)}
