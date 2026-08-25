@@ -1,105 +1,96 @@
 # Game Plan — Project EMBERLORE
 
 ## Product thesis
-EMBERLORE is being redesigned as a **mobile-browser action roguelite with a condensed loot-hunt loop**. Runs should fit roughly 5–10 minutes, but each run must contain several reasons to continue: kill density and impact, meaningful loot drops, build-defining equipment, escalating enemy pressure, boss payoff, persistent collection, and world discovery.
+EMBERLORE is an original **mobile-browser action roguelite / micro-ARPG** built around short expeditions with long-term ownership. The target is not a tiny arena survival demo. A session should create an adventure arc: prepare in a persistent refuge, descend into a compact dungeon, explore uncertain rooms, kill packs, find equipment, make route decisions, defeat an elite/boss, extract persistent gains, improve the Firekeeper, then choose where to descend next.
 
-The previous telegraphed three-button turn-combat slice is a documented failed hypothesis. Human tests found it understandable but boring and visually underwhelming. Do not continue expanding that interaction model.
+The emotional engine remains inspired by the useful mechanism behind Diablo-style loot hunting, without copying Diablo IP/content/assets/systems:
+**enter danger → explore → kill → drop → inspect → transform build → push deeper → boss/extract → keep meaningful gains → prepare → chase again**.
 
-## Human direction — binding product input
-The human explicitly requested that **Diablo be used as a reference direction**. This does not mean cloning Diablo content, art, names, classes, maps, or assets. It means studying and extracting the product loop that makes an action-RPG loot hunt compelling:
+## Human evidence
+Generation 1 (three-button telegraphed turn combat) was understandable but boring and cheap-feeling. It is a failed hypothesis.
 
-**enter danger → kill a group → see drops → inspect a potentially exciting upgrade → equip/build around it → become visibly stronger → seek harder enemies and better drops → defeat a boss → return with persistent gains → go again**
+Generation 2 replaced it with real-time movement, packs, active skills, loot and build-changing effects. Human feedback after playing Gen 2: **“ゲームらしくなった。何かが足りない”** (it feels more like a game; something is missing).
 
-Diablo is one reference axis, not a requirement to reproduce a large 3D ARPG. The target remains an original, feasible iPhone-browser game.
+Interpretation:
+- The move to real-time action materially improved product feel. Preserve this direction unless stronger evidence contradicts it.
+- Do NOT mark fun/replay as PASS yet.
+- The missing layer is most plausibly ownership + adventure context: the current build is still a sequence of spawned combat chambers with loot cards, not a place the player explores or a character they build across expeditions.
+- The next test should therefore add an adventure/extraction layer rather than simply multiplying enemy/item counts.
 
-## External mechanism research synthesis
-Comparable-game research established several principles to preserve:
-- Loot must create anticipation and recognizable chase, not only tiny percentage upgrades.
-- Item effects should often alter behavior/rules, not only increase raw numbers.
-- Combat needs enough mechanical depth that loot improves an already-fun activity rather than compensating for a weak core.
-- Power gain should be strongly visible in speed, area, chain reactions, crowd control, survivability, or skill behavior.
-- Rare drops should feel rare and legible; flooding the player with unreadable modifiers damages excitement.
-- Short sessions still need an escalation arc: trash packs → pressure → elite/event → boss → payout.
+## Current selected direction — Generation 2.5 Adventure Layer
+### Pillar 1: moment-to-moment action
+- one-thumb drag movement.
+- automatic basic attack to reduce mobile input burden.
+- active combat skills for timing/positioning.
+- enemy packs, elites and bosses.
+- strong hit/death/loot feedback.
 
-## Replacement-core comparison
-### A. Compact tactical grid
-Strengths: readable on mobile, strong decision density, easier deterministic balance.
-Weaknesses: weaker match for the newly requested Diablo reference, lower immediate kill/loot spectacle, and risks retaining the cerebral feel that already failed emotionally.
+### Pillar 2: compact dungeon exploration
+Replace the pure chamber sequence with a small room graph per expedition. A run should contain uncertainty and choice.
+Room/node types for the next slice:
+- Hunt — normal pack and loot opportunity.
+- Elite — dangerous named enemy, guaranteed higher-quality reward.
+- Cache — treasure with less combat but a route/opportunity cost.
+- Shrine — choose a temporary blessing/cost.
+- Boss — final gate.
 
-### B. Real-time micro-ARPG loot hunt — SELECTED
-Strengths: directly tests whether movement, crowd-clearing, drops, equipment and build transformation can create immediate fun and replay desire. Stronger audiovisual potential. Natural fit for short dungeon runs.
-Risks: touch control feel, performance, enemy readability, and scope can become expensive. Therefore the first slice must stay intentionally compact.
+The player sees only nearby/available destinations, chooses a route, and builds a small mental map. The purpose is not procedural complexity for its own sake; it is to create “what is over there?” and “do I risk the elite?” moments.
 
-### C. Passive/auto-combat loot expedition
-Strengths: easy phone controls and content scaling.
-Weaknesses: weak player authorship; risks becoming a numbers screen and reproducing the previous lack of moment-to-moment excitement.
+### Pillar 3: persistent Firekeeper ownership
+A run must no longer evaporate completely at the result screen.
+Introduce a small persistent loadout:
+- Weapon slot.
+- Armor slot.
+- Relic slot.
 
-## Second-generation vertical slice
-The first replacement playable should test the new pleasure loop, not content volume.
+During a run, temporary powers can be abundant. At successful extraction/boss clear, one meaningful piece can be kept in the persistent Vault. At camp the player chooses the starting loadout for the next expedition. Death still banks some Echoes/discovery but should not make extraction meaningless.
 
-### Combat
-- real-time top-down arena/dungeon chamber.
-- touch/drag movement designed for one thumb.
-- basic attack automatically targets nearby enemies so mobile input can focus on positioning.
-- two active skills with cooldowns: one area-clear skill and one mobility/impact skill.
-- multiple enemies at once, not isolated duels.
-- visible hit reactions, damage numbers, particles, screen response and death bursts.
-- at least three regular enemy behaviors plus one boss.
+This is intentionally small. Do not build an inventory-management spreadsheet before proving that keeping/equipping a named item creates attachment and replay desire.
 
-### Loot
-- enemies can drop visible loot orbs/beams during combat.
-- drops have clear rarity hierarchy.
-- only a few equipment slots in the first slice so decisions stay readable.
-- items combine a small base-power increase with a **signature affix** that changes play.
-- examples of desired signature effects: explosions on kill, chain hits, burning trails, low-life frenzy, dash shockwave, orbiting projectiles.
-- between combat waves, player chooses/equips a new drop and sees the build change immediately.
+### Pillar 4: camp as decision space
+Camp is not just a title menu. It should show:
+- the Firekeeper / current power identity.
+- equipped persistent weapon/armor/relic.
+- Echoes and best depth.
+- next available descent/region target.
+- a compact Vault of kept equipment.
+- one or two meaningful upgrade/side-grade choices, not dozens of passive +1 nodes.
 
-### Run arc
-1. Enter the ruined vault chamber.
-2. Clear an enemy pack.
-3. Collect a loot drop and make one equipment decision.
-4. Clear a harder pack with the new effect visibly active.
-5. Face an elite/high-pressure wave.
-6. Obtain another meaningful item.
-7. Fight a boss.
-8. Bank Echoes/discoveries and return.
+The desired feeling is “this is my character and my haul,” not “start prototype again.”
 
-### Persistent layer
-Keep only enough persistence to create another reason to play:
-- runs / clears / best depth.
-- discovered item codex.
-- Echoes.
-- a very small number of side-grade starting blessings unlocked with Echoes.
-- world/memory discovery may remain, but it must not interrupt combat or carry the product on its own.
+### Pillar 5: world progression
+Keep the Firekeeper / ash / vault mystery, but attach it to places and accomplishments. A new depth/biome should be a gameplay destination, not a paragraph unlock. The first slice can use one ruined-vault biome with named rooms; future regions only unlock after the adventure loop proves replay value.
 
-## Presentation target
-The previous build was described as cheap/underwhelming. The replacement slice must feel more like a game than a debug UI even without external art assets.
+## Loot philosophy
+Two layers:
+1. **Run powers** — dramatic effects that can stack quickly and make the current expedition explode in power (chain, death explosion, orbit, fire trail, wide cleave, etc.).
+2. **Persistent gear** — fewer, named pieces with clear identity that influence the next run from the start.
 
-Minimum presentation goals:
-- full-screen combat arena as the visual center.
-- player character silhouette/shape with facing and motion.
-- enemy bodies rather than abstract menu symbols.
-- animated projectiles/melee arcs.
-- particles and impact flashes.
-- loot beams/pulses and rarity treatment.
-- boss health presentation.
-- dark-fantasy environment treatment using procedural/CSS/canvas visuals.
-- compact HUD; menus should not dominate the experience.
+Avoid unreadable affix spam. A rare item should be exciting because the player can immediately imagine what it enables.
 
-No claim of production quality is allowed until the human says the perceived quality improved.
+## Next playable test
+Build the smallest coherent adventure rather than a content dump:
+1. Camp shows Firekeeper and 3 persistent equipment slots.
+2. DESCEND opens a compact route map.
+3. Player chooses between two first destinations (e.g. Hunt vs Cache).
+4. Combat room uses the proven Gen-2 real-time controls.
+5. Route reconverges through a Shrine/Elite decision.
+6. Boss gate ends the expedition.
+7. Successful clear lets player keep one named persistent gear drop.
+8. Return to camp visibly equips/stores that haul.
+9. Next run begins with that gear's effect active or clearly represented.
 
-## Validation criteria for generation 2
-After human play, separately judge:
-1. Is moving and killing enemies fun before considering loot?
-2. Does an enemy pack create more excitement than the old one-enemy turn loop?
-3. Does a drop produce curiosity before opening/equipping it?
-4. Does equipping an item visibly change the next fight?
-5. Is there at least one moment where the build produces a satisfying chain reaction or power spike?
-6. Does the game look/feel materially less cheap than generation 1?
-7. After the boss or death, does the player voluntarily want another run?
-8. What is the primary reason to replay: combat, better loot, stronger build, collection/story, or none?
+## Validation criteria
+Do not ask only whether it works. Human evaluation after this slice must distinguish:
+- Is combat still at least as good as Gen 2?
+- Did choosing where to go create curiosity or tension?
+- Did any treasure/cache/elite destination feel worth seeking?
+- Did keeping an item after the run create ownership?
+- Did camp feel like returning to *your* character rather than a menu?
+- Did the player have a concrete reason to start another expedition?
+- What did they want next: better gear, a harder route, a new place, build experiment, story answer, or nothing?
 
-If combat itself remains boring, do not attempt to save the design by multiplying loot/content. If loot is boring but combat is promising, redesign itemization before expanding the dungeon.
+A positive “game-like” impression is progress, not success. Replay desire remains the decisive gate.
 
 ## Scope discipline
-Do not attempt a full Diablo-sized ARPG. The immediate goal is to prove a small original browser game can deliver the essential emotional sequence: **kill → drop → inspect → transform → overpower → chase**.
+Do not build a Diablo-sized ARPG. Do not solve missing depth by adding hundreds of items or rooms. Prove a compact loop where combat, exploration, loot and persistent ownership reinforce each other. Expand content only after that loop creates voluntary replay desire.
