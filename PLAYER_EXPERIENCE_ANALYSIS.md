@@ -1,48 +1,122 @@
 # Player Experience Analysis
 
-Updated: 2026-08-26 04:22 JST
+Updated: 2026-08-26 03:12 JST
 Target: latest `main` ECHO DRIFT / HUMAN_CANDIDATE_01
 Director: Player Experience Analysis Director
 
 This document records predicted player experience from code/UI inspection and current Director evidence. It does **not** claim human play. Unless explicitly backed by a human report, subjective experience findings remain `SIMULATED`.
 
-## Current consolidated findings
+## Finding PX-01 — Immediate route consequence is mostly directly readable
 
-The existing PX-01 through PX-11 findings remain in force from the previous main revision. Their current Executive-relevant conclusions are:
+- Status: PASS_WITH_EDGE_CASE_WARNING
+- Severity(1-5): 3
+- Confidence: HIGH
+- Verification Type: OBSERVED
+- Evidence: Every route displays `選択後脅威 N%`, calculated by the same `projectedThreat()` used for the subsequent collapse roll. Extraction exposes the exact currently bankable amount through `回収して帰還 +N` using the same `projectedBank()` formula. However, the route card displays the rolled nominal `EN-N` cost while `chooseRoute()` actually charges `Math.min(run.energy, r.cost)`. At 1 EN, a displayed `EN-3` route therefore consumes only 1 EN while still granting its full gain/bonuses and then forces extraction if the player survives.
+- Recommended Action: Preserve the frozen human candidate, but explicitly observe whether this low-energy edge case is noticed or feels like a lucky final push versus a misleading cost label. After the candidate, Executive/Systems should compare disabling unaffordable routes against formalizing partial-payment behavior. If partial payment remains, the displayed cost should reflect what will actually be charged.
 
-- Immediate post-choice threat and extraction payoff are directly readable; the low-Energy partial-payment edge case remains a bounded rule/UI mismatch.
-- State-conditioned Systems evidence supports distinct route jobs rather than a universal route: deep early, calm at higher threat/depth, resonance when a chain is active.
-- The largest subjective unknown remains whether the simulated ≈53% collapse rate feels like self-authored greed or wasted time.
-- The interaction may still feel clinical because most feedback is numerical/textual; do not add radar polish before the first human feel test.
-- iPhone layout, thumb reach, scrolling, lifecycle and actual readability remain unverified on-device.
-- Discovery can create a short early motivation spike but is not meaningful long-term progression.
-- Persistent bank/runs/discoveries still do not alter future strategy.
-- The candidate is ready for focused human evidence; further PX-only prediction has lower value.
-- Final-energy partial payment can weaken rule trust if noticed.
-- A/B/C signals teach cross-route meaning that calm/deep do not mechanically honor; hidden 50% chain survival remains the most important ordinary-play rule-coherence issue after the candidate.
-- `記録初期化` understates that it also abandons a live dive; Technical has since fixed the broken idle UI state after such a reset, but the confirmation wording/scope mismatch remains.
+## Finding PX-02 — The three route identities are now likely to be experienced, not merely described
 
-## Finding PX-12 — Small decision text plus disabled pinch zoom can make iPhone readability unnecessarily brittle
+- Status: PASS_WITH_HUMAN_WATCH
+- Severity(1-5): 2
+- Confidence: HIGH
+- Verification Type: OBSERVED + SIMULATED
+- Evidence: Systems' latest state-conditioned 200k probe shows route roles changing with visible state rather than merely producing a healthier aggregate split. At Threat 0-24, deep leads at ≈59.7%; at Threat 25-49, calm becomes the leading route at ≈51.1%. With no active chain resonance is ≈23.7%, while with an active chain resonance rises to ≈49.3% and becomes the leading choice. By depth, deep falls from ≈71.9% at depth0 to ≈19.5% at depth4 while calm rises from ≈6.2% to ≈44.1%. This supports the intended experienced jobs: early cash acceleration, danger recovery, and chain continuation.
+- Recommended Action: Do not chase equal 33/33/33 usage and do not rebalance before focused human play without a newly demonstrated exploit. Human verification should ask whether players can feel why a route became attractive without solving the formulas explicitly.
+
+## Finding PX-03 — Failure frequency is now the highest subjective-risk question
+
+- Status: WAITING_FOR_HUMAN_CANDIDATE
+- Severity(1-5): 4
+- Confidence: MEDIUM-HIGH
+- Verification Type: SIMULATED
+- Evidence: Systems reproduced collapse at ≈53.3% over 100k runs and ≈53.2% over a separate 200k run, with voluntary extraction ≈40.9% and forced extraction ≈5.8%. Exact danger is visible before a choice, and the latest state-conditioned probe found no universal route exploit that justifies another immediate global balance patch. Losing the entire current haul in slightly more than half of simulated runs may still feel either like self-authored greed or like wasted time; code and simulation cannot decide which.
+- Recommended Action: Freeze global risk/reward for the first focused human candidate unless Executive has contrary evidence. After collapse, record whether the player feels `I pushed too far` and wants another attempt or `the game erased my time` and disengages. If negative, inspect feedback/pacing/loss framing before assuming probability alone is the cause.
+
+## Finding PX-04 — The decision is numerically clear but may feel clinical
+
+- Status: WARNING
+- Severity(1-5): 3
+- Confidence: MEDIUM
+- Verification Type: OBSERVED + SIMULATED
+- Evidence: Route cards expose EN cost, base gain, anomaly bonus, resonance continuation bonus, calm recovery and exact post-choice collapse percentage. This is strong decision transparency, but the dominant moment-to-moment interaction remains reading numbers and tapping a card. The central radar continuously sweeps but its gameplay response is mainly threat text/percentage; route resolution, resonance success, anomaly contact, discovery, extraction and collapse are otherwise expressed mainly through text/log changes.
+- Recommended Action: Do **not** add feedback animation immediately before the first human candidate; doing so would move the target just as Systems has declared the risk/reward structure healthy enough to freeze. First learn whether the present interaction already creates tension. If human feedback says choices are clear but emotionally flat, the highest-leverage next PX experiment is a small reaction on the existing radar for route resolution/anomaly/resonance/extraction/collapse rather than another UI system.
+
+## Finding PX-05 — iPhone decision visibility remains unverified and information density has increased
+
+- Status: WARNING
+- Severity(1-5): 3
+- Confidence: MEDIUM
+- Verification Type: OBSERVED + SIMULATED
+- Evidence: Portrait layout, `viewport-fit=cover`, safe-area padding, `100dvh`, full-width route buttons and large actions are appropriate for iPhone. Each route can contain role text plus EN, base gain, anomaly bonus, resonance bonus or calm recovery, while `選択後脅威` occupies a second grid column. HUD values sit above a 205px radar and extraction sits below all three routes. A `max-height:700px` rule shrinks the radar to 150px, but static code cannot prove that Threat/Haul, all choices and extraction payoff remain comfortably comparable on an actual iPhone viewport.
+- Recommended Action: At the frozen human-test build, observe whether the player repeatedly scrolls between HUD/routes/extraction to make one decision, whether any route line becomes cramped, and whether thumb reach interferes. Do not redesign from static inspection alone.
+
+## Finding PX-06 — Collection can create a misleading early-game motivation spike
+
+- Status: WARNING
+- Severity(1-5): 3
+- Confidence: HIGH
+- Verification Type: OBSERVED + SIMULATED
+- Evidence: Discoveries do not affect gameplay calculations, but an anomaly immediately grants one of the six unseen discoveries and the discovery survives collapse. Systems' collector-policy probe raised anomaly choice from ≈37.4% to ≈50.1%, reduced mean bank from ≈10.99 to ≈9.93 and increased collapse from ≈53.3% to ≈59.7%. Once all six are found, this extra motive disappears because `meta.found` has no mechanical use.
+- Recommended Action: Do not add more relic names to prolong the spike. Executive/Progression should decide whether discoveries are knowledge/lore or strategic progression. Player Experience should later verify whether finding one feels meaningful enough to justify extra risk and whether completion causes a noticeable motivation drop.
+
+## Finding PX-07 — Replay purpose beyond the push-your-luck loop remains mechanically weak
+
+- Status: WARNING
+- Severity(1-5): 4
+- Confidence: HIGH
+- Verification Type: OBSERVED + SIMULATED
+- Evidence: Immediate play is increasingly self-explanatory and route variety is now state-conditioned, but persistent `累計回収`, `潜航回数`, and `発見記録` still do not change a future run. The current replay proposition is therefore primarily `try the risk/reward loop again`, not yet growth, mastery unlock, collection strategy or world progression.
+- Recommended Action: Do not manufacture purpose with lore/onboarding copy. After the core feel is human-checked, Progression/Executive should make at least one persistent result alter a future decision before claiming long-term replay motivation.
+
+## Finding PX-08 — Focused human feel testing remains higher value than another PX-only prediction
+
+- Status: READY_FOR_HUMAN_CANDIDATE
+- Severity(1-5): 2
+- Confidence: HIGH
+- Verification Type: OBSERVED
+- Evidence: The earlier AI-detectable deep dominance materially improved, exact risk/payoff display is internally consistent except for the documented low-energy cost edge case, and Systems' state-conditioned robustness check supports distinct situational jobs rather than a hidden universal route. The remaining central Player Experience uncertainties are subjective: whether >50% collapse feels earned, whether continue-versus-extract creates genuine hesitation, and whether a run ending creates immediate replay desire. Further PX speculation cannot convert those into HUMAN_VERIFIED evidence.
+- Recommended Action: Keep HUMAN_CANDIDATE_01 frozen. Limit the human test to three feel questions plus usability observations. Do not let secondary rule edge cases expand the test into a questionnaire; simply note them if encountered.
+
+## Finding PX-09 — Final-energy partial payment can weaken perceived rule trust
+
+- Status: WATCH
+- Severity(1-5): 3
+- Confidence: MEDIUM-HIGH
+- Verification Type: OBSERVED + SIMULATED
+- Evidence: At low Energy the interface can promise a cost the game does not actually charge. Because the current design has deliberately improved transparency by showing exact collapse risk and exact extraction value, this inconsistency is more salient than it would be in a deliberately opaque game. A player who notices `EN-3` being accepted at 1 EN may read it as a welcome last-chance rule, but there is no UI language explaining that rule. Conversely, if they assume displayed costs are requirements, they may avoid a route that is actually selectable. The mechanic therefore creates both a hidden advantage and a comprehension ambiguity.
+- Recommended Action: Do not alter the frozen candidate before human feel testing. Treat this as a post-candidate rule-clarity decision, not a cosmetic copy fix. Systems has bounded its aggregate economic effect as small; Executive should choose the intended rule after the candidate and Player Experience should ensure the eventual UI communicates it directly.
+
+## Finding PX-10 — Signal letters currently teach a rule that the game does not consistently honor
 
 - Status: WATCH
 - Severity(1-5): 3
 - Confidence: HIGH
 - Verification Type: OBSERVED + SIMULATED
-- Evidence: `index.html` sets the viewport to `user-scalable=no`, preventing normal pinch zoom. Decision-relevant route hint text is `11px`, HUD/archive labels are `9px`, the eyebrow is `10px`, and the reset control is `11px`. Route hints can contain role text, EN cost, base gain, anomaly bonus, resonance bonus or calm recovery, while exact post-choice threat is shown beside them. Static inspection cannot establish whether those sizes are comfortable on the target iPhone, but disabling user zoom removes a standard recovery mechanism if they are not.
-- Recommended Action: Preserve `HUMAN_CANDIDATE_01`; do not move the frozen feel-test target for this alone. During actual iPhone verification, observe whether route hints or archive/HUD labels require squinting or repeated rereading. After the candidate, unless a concrete gameplay reason requires otherwise, prefer restoring user zoom and then test modestly larger decision text before redesigning layout.
+- Evidence: Every route title visibly includes an A/B/C signal. The HUD also exposes the active resonance as `A×N`, `B×N`, or `C×N`, and the resonance route explicitly rewards matching the active signal. This presentation naturally teaches that signal identity is a meaningful property of routes. However, current code ignores the displayed signal when calm or deep is chosen: those routes preserve or erase the active chain through a hidden 50% random roll. Thus, with an active `A×2`, choosing `静かな反響 · A` can erase the chain while `静かな反響 · B` can preserve it. The player receives no visible causal explanation for either outcome.
+- Recommended Action: Preserve HUMAN_CANDIDATE_01, but treat unexplained chain loss as a focused usability observation rather than a fourth fun question. If the player expects same-letter calm/deep to preserve resonance or expresses confusion when resonance disappears, record that as HUMAN_VERIFIED evidence. After the candidate, prefer making the visible signal causally meaningful across route types or removing mechanically inert signal labels from non-resonance routes; do not solve the mismatch by merely adding explanatory prose for an opaque coin flip.
 
-## Current Player Experience conclusion
+## Finding PX-11 — Record reset understates its effect during a live dive
 
-`HUMAN_CANDIDATE_01` remains suitable for focused human testing. No new PX evidence justifies reopening global balance or changing the frozen gameplay target.
+- Status: WATCH
+- Severity(1-5): 3
+- Confidence: HIGH
+- Verification Type: OBSERVED + SIMULATED
+- Evidence: `記録初期化` is permanently visible in the top bar, including during an active dive. Its confirmation text says `累計回収・潜航回数・発見記録を初期化しますか？`, which describes only persistent archive values. On confirmation, however, the handler removes both `SAVE_KEY` and `RUN_KEY`, sets `run=null`, and renders the idle screen. Therefore an active dive and its current haul are also discarded even though the confirmation does not say so. The button is visually de-emphasized, and browser `confirm()` prevents a one-tap loss, so this is not an accidental-touch emergency; the problem is that the destructive scope communicated by the confirmation is incomplete.
+- Recommended Action: Preserve the frozen candidate. Treat this as a post-candidate rule-trust fix unless human testing actually encounters it. After the candidate, either disable/hide record reset while a dive is active, or change the confirmation to explicitly state that the current dive will also be abandoned. Do not add this as a fourth feel question; if used during testing, note whether the consequence was expected.
+
+## New Player Experience conclusion
+
+`HUMAN_CANDIDATE_01` remains suitable for focused human testing. The reset-scope mismatch is a real rule-trust issue but is isolated behind a confirmation dialog and does not justify moving the frozen target. The resonance-signal mismatch remains the more conceptually important visible-rule problem because it can affect ordinary route decisions rather than an optional destructive maintenance action.
 
 This is **not** a claim that ECHO DRIFT is fun. There is still no `HUMAN_VERIFIED` Player Experience evidence.
 
 ### Focused human verification package
 
-1. **Decision tension:** During several runs, did `continue` versus `回収して帰還 +N` make you genuinely hesitate more than once?
-2. **Failure ownership:** After a collapse, did it feel like a risk you knowingly pushed too far, enough that you wanted another attempt, or did it feel like the game erased your time?
-3. **Immediate replay desire:** After either a successful return or a collapse, did you want to start the next run immediately?
+1. **Decision tension:** Did `continue` versus `extract +N` make you genuinely hesitate more than once?
+2. **Failure ownership:** After a collapse, did it feel like a risk you knowingly pushed too far, enough that you wanted another attempt?
+3. **Immediate replay desire:** At the end of a successful or failed run, did you want to start the next run immediately?
 
-Device/usability observations are not extra fun questions. On the actual iPhone, note whether scrolling, cramped route text, small decision text, thumb reach, safe-area behavior, reload restoration, background/foreground recovery, or disabled pinch zoom interferes with play. If remaining Energy is lower than a displayed route cost, note whether continued selectability is understood or surprising. If resonance is active, note whether the player expects a same-letter calm/deep route to preserve the chain or notices unexplained chain disappearance. If `記録初期化` is used during a live dive, note whether abandoning the active dive was expected from the confirmation wording.
+Usability observations, not extra fun questions: on the actual iPhone, note whether scrolling, cramped route text or thumb reach interferes with comparing Threat/Haul, the three routes and extraction. If a route advertises a larger EN cost than the remaining Energy, note whether its continued selectability is understood or surprising. If resonance is active, note whether the player expects same-letter calm/deep routes to preserve it or notices unexplained chain disappearance. If `記録初期化` is used during a live dive, note whether abandoning the active dive was expected from the confirmation wording.
 
-If the core feel questions fail, preserve the negative `HUMAN_VERIFIED` result and diagnose before expanding progression. If they pass, the next major PX concerns are weak long-term replay purpose, emotionally clinical feedback, signal/chain causality, the low-Energy rule, destructive reset clarity, and actual iPhone readability/accessibility.
+If the core feel questions fail, preserve the negative HUMAN_VERIFIED result and diagnose before expanding progression. If they pass, the next major Player Experience concerns become weak long-term replay purpose, emotionally clinical action feedback, the signal/chain causal mismatch, the low-Energy cost rule, and destructive reset clarity.
