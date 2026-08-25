@@ -1,32 +1,32 @@
 # Chappy5 Studio Dashboard
 
-Updated: 2026-08-26 07:25 JST
-Target: ECHO DRIFT — `HUMAN_CANDIDATE_01` preserved; first narrow balance candidate supported but not production-cleared
+Updated: 2026-08-26 08:21 JST
+Target: ECHO DRIFT — `HUMAN_CANDIDATE_01` preserved; reduced-compounding candidate not cleared by reproducible benchmark
 
 | 領域 | Status | Severity | Confidence | Verification | 最新の重要Finding |
 |---|---|---:|---|---|---|
-| Game Systems | CANDIDATE_SUPPORTED / STRATEGIC_CLEARANCE_BLOCKED | 4 | MEDIUM-HIGH | OBSERVED + CALCULATED + SIMULATED | `GS-012`: reducing resonance continuation growth from `1 + chainLen*2` to `1 + chainLen` independently removes the obvious fixed-resonance advantage in a bounded seeded probe and restores room for mixed future-aware play. |
-| Player Experience | CANDIDATE_PX_GATE | 3 | MEDIUM-HIGH | OBSERVED + SIMULATED | `PX-015`: the same lever that improves strategic balance also weakens the most visible resonance acceleration signal; any promoted balance candidate must preserve felt chain reward. |
-| Progression & Content | FAIL / BLOCKED_FOR_CORE_CLEARANCE | 4 | HIGH | OBSERVED + DESIGN ANALYSIS | Latest progression direction: do not hard-wire permanent progression to route names while route values remain under tuning; prefer future progression around state/approach choices after core clearance. |
-| Technical & Quality | PASS_WITH_DEVICE_WATCH | 3 | HIGH | OBSERVED | `TQ-015` restored-route three-tone invariant is fixed and CI-verified PASS; real iPhone/Safari lifecycle and crash-atomic terminal settlement remain unverified. |
+| Game Systems | STRATEGIC_CLEARANCE_BLOCKED / BENCHMARK_CONTRADICTION | 4 | HIGH for benchmark / MEDIUM for gameplay conclusion | OBSERVED + SIMULATED | Repository-side CI benchmark contradicts earlier exploratory support: under slope `*1`, fixed calm beats the encoded mixed policy across all four seeds. Route balance is now entangled with extraction timing. |
+| Player Experience | WAITING_FOR_MECHANICAL_CLEARANCE | 3 | MEDIUM-HIGH | OBSERVED + SIMULATED | `PX-015` remains a later gate only: if reduced compounding ever clears mechanically, verify that resonance still feels accelerating rather than flat. |
+| Progression & Content | FAIL / BLOCKED_FOR_CORE_CLEARANCE | 4 | HIGH | OBSERVED + DESIGN ANALYSIS | Do not hard-wire permanent progression to route names while route values and extraction strategy remain unresolved. |
+| Technical & Quality | PASS_WITH_DEVICE_WATCH | 3 | HIGH | OBSERVED | `TQ-015` is CI-verified PASS; strategy benchmark also runs successfully in CI. Real iPhone/Safari lifecycle and crash-atomic settlement remain unverified. |
 
 ## Executive priority
 
-**Make the strategy comparison reproducible in-repository before changing production.**
+**Make extraction timing a first-class part of the deterministic strategy benchmark before making any production balance change.**
 
-The studio now has a credible first intervention, not merely a diagnosis. `GS-012` independently supports the same narrow candidate previously identified by Executive: slow resonance continuation growth from `1 + chainLen*2` to `1 + chainLen`, while leaving base gain, Threat, Energy, anomaly and other route values untouched.
+The previous priority—making route comparison reproducible—has now been achieved technically. `tests/strategy-benchmark.mjs` runs in CI and `ECHO DRIFT Regression` run `32909018863` completed successfully. The result is not the hoped-for candidate clearance; it is a useful contradiction.
 
-Current acceptance criterion is deliberately not 33/33/33 route usage. The candidate should pass only if, under identical production mechanics, deterministic seeds and stopping rules, **no simple fixed route clearly dominates a competent mixed future-aware policy while calm/deep/resonance retain state-dependent jobs**.
+Under the reproducible shared stopping rule, candidate slope `*1` removes much of resonance's advantage but leaves fixed calm clearly ahead of the encoded future-aware policy. This fails EX-013's acceptance criterion. However, the benchmark hard-codes extraction at `Threat >= 55` and compares only route-selection logic. Since ECHO DRIFT's actual core loop includes `continue` versus `return`, calm's survival value is structurally favored by that fixed extraction rule. Therefore the result rejects candidate clearance, but does not yet establish that slope `*1` is intrinsically wrong for the game.
 
-Full latest Executive finding: `EXECUTIVE_FINDING_EX013.md`.
+Full latest Executive finding: `EXECUTIVE_FINDING_EX014.md`.
 
 ## Frozen candidate policy
 
-- Keep `HUMAN_CANDIDATE_01` unchanged for short-session human-feel comparison.
-- Do not interpret a positive short session as strategic clearance.
-- Do not add progression, route-specialized unlocks, content volume, lore volume, conventional stat shops or unrelated polish.
-- Do not merge the reduced-compounding candidate into production until the comparison is reproducible in-repository across multiple deterministic seeds with equalized stopping rules/run counts.
-- Safe work: deterministic strategy harnessing, CI/test verification, non-gameplay defect fixes, real-device verification, and progression design analysis that does not alter the candidate.
+- Keep `HUMAN_CANDIDATE_01` unchanged.
+- Do not merge `1 + chainLen` into production.
+- Do not treat prior exploratory `GS-012` numbers as authorization; they remain hypothesis-generating evidence.
+- Do not add progression, route-specialized unlocks, content/lore volume, conventional stat shops, or unrelated polish.
+- Safe work: joint route+extraction strategy harnessing, CI/test verification, non-gameplay defect fixes, real-device verification, and progression design analysis that does not alter the playable.
 
 ## Human verification package
 
@@ -38,62 +38,67 @@ Full latest Executive finding: `EXECUTIVE_FINDING_EX013.md`.
 
 A positive result verifies only short-session feel. It does not verify long-run calm/deep/resonance diversity.
 
-If the reduced-compounding candidate is later promoted to a controlled playable, add only one targeted comparison question: **共鳴が続いた時、回収が加速している感じは残っていたか？**
+Do not add the reduced-compounding reward-feel question until a mechanically cleared controlled playable exists.
 
-Device observations stay separate: actual iPhone scrolling, decision-hint readability, thumb reach, safe-area, reload restoration, background/foreground recovery, rapid taps, persistence, low-Energy surprise, same-letter resonance expectations, reset scope and positional bias.
+Device observations remain separate: actual iPhone scrolling, decision-hint readability, thumb reach, safe-area, reload restoration, background/foreground recovery, rapid taps, persistence, low-Energy surprise, same-letter resonance expectations, reset scope and positional bias.
 
 ## Current strategy evidence
 
 ### Production remains strategically blocked
 
-- established resonance has about 5 expected haul/choice before anomaly and roughly 2.5 haul/EN;
-- deep averages about 4.5 haul/choice and roughly 1.8 haul/EN while carrying +3 route risk;
-- leaving an active resonance chain can erase future value through hidden 50% RNG;
-- repeated seeded probes have shown fixed resonance around 11.8–12.1 bank/run against older one-step adaptive around 10.9–11.2;
-- therefore current production `*2` compounding is not strategically cleared.
+- Established resonance still has strong chain value and hidden future cost when leaving the chain.
+- Prior seeded probes repeatedly showed resonance pressure, so production `*2` remains uncleared.
+- This remains `OBSERVED + CALCULATED + SIMULATED`, not human verification.
 
-### First controlled candidate — simulation only
+### Reproducible benchmark — higher-quality contradictory evidence
 
-`GS-012` independently compared the narrow slope change under its seeded harness:
+CI run `32909018863` executed the deterministic benchmark successfully with 10,000 runs per seed for seeds 101/202/303/404.
 
-- production slope `*2`: fixed resonance ≈11.89, bounded future-aware ≈12.04, future-aware route mix ≈20.1% calm / 31.2% deep / 48.6% resonance;
-- candidate slope `*1`: fixed resonance ≈10.40, one-step adaptive ≈10.69, bounded future-aware ≈11.03, route mix ≈23.7% calm / 37.3% deep / 39.0% resonance.
+Production slope `*2`:
+- fixed calm: 9.0483 / 9.2974 / 9.0737 / 8.8596 bank/run;
+- fixed resonance: 9.6304 / 9.2581 / 9.1413 / 9.5020;
+- future-aware: 8.6220 / 8.6226 / 8.6079 / 8.7133.
 
-These numbers are `SIMULATED` and exploratory because nested rollout run counts were lower. The directional result independently agrees with Executive's earlier probe, which is why the candidate is now supported but not cleared.
+Candidate slope `*1`:
+- fixed calm: 9.0483 / 9.2974 / 9.0737 / 8.8596;
+- fixed resonance: 8.4825 / 8.1810 / 8.0989 / 8.3997;
+- future-aware: 7.5294 / 7.3549 / 7.7251 / 7.3747.
 
-## Quality closures since EX-012
+Therefore slope `*1` is **not cleared** by the current reproducible benchmark. But the encoded mixed policy also has collapse rates around 80% and cannot choose its own extraction timing, while fixed calm benefits from the same hard `Threat >= 55` stopping rule. This makes extraction policy the next methodological blocker.
 
-- `TQ-015`: malformed persisted offers with duplicate route tones are rejected on restore.
-- Regression commit `803394fe8b54f2f9d5ecb4d20ff1fc5b335e9e84` is verified by `ECHO DRIFT Regression` run `32903050802`, `completed / success`.
-- This is `OBSERVED` CI evidence, not physical iPhone verification.
+## Quality closures
+
+- `TQ-015`: malformed persisted offers with duplicate route tones are rejected on restore and CI-verified.
+- Strategy benchmark execution is now also CI-verified in run `32909018863`.
+- These are `OBSERVED` CI facts, not physical iPhone verification.
 
 ## Important unresolved issues
 
-1. **Strategic durability:** production resonance compounding still creates long-run dominance pressure. `Severity 4 / OBSERVED + CALCULATED + SIMULATED`.
-2. **Strategy reproducibility:** future-aware comparison is not yet encoded as a repository-side equal-rule harness. This is the current highest AI-side blocker to authorizing the narrow balance change.
-3. **Hidden exit cost:** calm/deep can destroy an active chain through invisible 50% RNG. `Severity 4 / OBSERVED + SIMULATED`.
-4. **Human feel:** current collapse profile may be satisfying push-your-luck or unacceptable loss. Requires `HUMAN_VERIFIED`.
-5. **Reward feel under candidate:** slower compounding may improve strategy but flatten resonance excitement. Requires human comparison only after a candidate playable exists.
+1. **Joint strategy validity:** route selection and extraction timing are currently separated in the benchmark even though both are core decisions. `Severity 4`.
+2. **Strategic durability:** production resonance compounding still creates dominance pressure in prior analyses. `Severity 4`.
+3. **Candidate contradiction:** reduced compounding passes earlier exploratory probes but fails the repository-side benchmark; no production change is authorized.
+4. **Hidden exit cost:** calm/deep can destroy an active chain through invisible 50% RNG. `Severity 4 / OBSERVED + SIMULATED`.
+5. **Human feel:** collapse may be satisfying push-your-luck or unacceptable loss. Requires `HUMAN_VERIFIED`.
 6. **Long-term play:** persistent values still do not change future decisions. `OBSERVED FAIL`.
-7. **Discovery:** six anomaly contacts complete a random, non-pursuable prototype collection with no durable world arc. `OBSERVED FAIL / DESIGN_RISK`.
-8. **Depth pressure:** cumulative triangular escalation compresses deep play; whether that pacing feels good is human-dependent. `OBSERVED + CALCULATED`.
-9. **Low-Energy clarity:** displayed route cost can exceed Energy actually charged. `OBSERVED`, small aggregate effect in prior simulation.
+7. **Discovery:** current anomaly collection has no durable world arc. `OBSERVED FAIL / DESIGN_RISK`.
+8. **Depth pressure:** cumulative escalation compresses deep play; human pacing quality is unverified.
+9. **Low-Energy clarity:** displayed route cost can exceed Energy actually charged. `OBSERVED`.
 10. **iPhone/Safari:** real-device lifecycle/layout/readability remains `UNVERIFIED`.
-11. **Persistence hardening:** terminal settlement is not crash-atomic; acceptable prototype risk, not production-safe for valuable persistent rewards.
-12. **Route ordering:** `sort(() => Math.random()-.5)` is non-uniform/engine-dependent. `OBSERVED`, low severity.
-13. **Progression semantics:** `banked` currently means lifetime cumulative recovery; future spending must not silently overload that meaning.
+11. **Persistence hardening:** terminal settlement is not crash-atomic.
+12. **Route ordering:** `sort(() => Math.random()-.5)` remains non-uniform/engine-dependent, low severity.
+13. **Progression semantics:** `banked` remains lifetime cumulative recovery and must not silently become a spendable balance.
 
 ## Deliberately blocked
 
 - No progression implementation while strategic clearance is open.
-- No route-affinity progression that could amplify a temporary route balance state.
+- No route-affinity progression.
 - No conventional stat shop, larger relic list, lore volume, new route/system/currency or broad refactor.
-- No global balance patch solely from average route share.
-- No production merge of `1 + chainLen` until deterministic strategy comparison is reproducible.
+- No global balance patch from route-share averages alone.
+- No production merge of `1 + chainLen`.
 - No claim that a positive short human session validates durable strategic variety.
 
 ## Executive decision
 
-The next cycle should not add content or perform another broad rebalance. The studio has narrowed the balance intervention enough. The next highest-value work is **engineering the deterministic strategy comparison itself**, then using it to accept or reject the reduced-compounding candidate. If that candidate clears mechanically, Executive can promote a new controlled playable and PX can test whether resonance still feels rewarding. If it fails, the next lever remains cross-route signal causality / chain persistence rather than global buffs.
+The deterministic harness has already produced value by disproving premature confidence in the first candidate. The next cycle should **not** rebalance the game. It should make `continue` versus `return` part of the same strategy evaluation as route selection, then rerun fixed calm/deep/resonance and competent mixed policies under identical seeds and run counts. Track bank/run, collapse rate, mean depth and extraction depth. Only then should Executive accept or reject the reduced-compounding lever or move to the next narrow lever such as cross-route signal causality / chain persistence.
 
 No `HUMAN_VERIFIED` fun claim exists yet.
