@@ -82,6 +82,8 @@ function generateRoutes(){
  }));
 }
 
+function anomalyBonusAt(nextDepth){return 2+Math.floor(nextDepth/2)}
+
 function chooseRoute(i){
  if(!run?.alive)return;
  const r=run.routes[i];if(!r)return;
@@ -92,10 +94,10 @@ function chooseRoute(i){
  if(r.tone==='res'){
    if(run.chain===r.signal){run.chainLen++;gain+=run.chainLen}else{run.chain=r.signal;run.chainLen=1}
  }else if(Math.random()<.5){run.chain=null;run.chainLen=0}
- if(r.anomaly){gain+=2;run.threat+=7;discoverMaybe()}
+ if(r.anomaly){gain+=anomalyBonusAt(run.depth);run.threat+=7;discoverMaybe()}
  run.haul+=gain;
  run.threat=clamp(run.threat+r.risk+run.depth*1.4,0,92);
- log(`${r.name}：-${cost} EN / +${gain} 回収${r.anomaly?' / 異常信号':''}`);
+ log(`${r.name}：-${cost} EN / +${gain} 回収${r.anomaly?' / 異常反響':''}`);
  const collapse=Math.random()*100<run.threat;
  if(collapse){
    run.alive=false;run.haul=0;meta.runs++;saveMeta();log('信号崩壊。今回の回収物を喪失した。');persistRun();
@@ -132,9 +134,13 @@ function render(){
  $('#resonance').textContent=run.chain?`${run.chain}×${run.chainLen}`:'—';$('#threat').textContent=`${Math.round(run.threat)}%`;
  $('#threatLabel').textContent=run.threat<25?'CALM':run.threat<50?'UNSTABLE':run.threat<75?'DANGER':'CRITICAL';
  $('#extract').disabled=!run.alive||run.haul===0;$('#startRun').textContent=run.alive?'潜航中':'もう一度潜る';$('#startRun').disabled=run.alive;
- const baseStatus=run.alive?'3つの反響から進路を選ぶ。深く潜るほど帰還価値と崩壊率が上がる。':'今回の潜航は終了。記録を見て次の潜航へ。';
+ const baseStatus=run.alive?'3つの反響から進路を選ぶ。異常反響は深いほど価値が増すが、脅威も跳ね上がる。':'今回の潜航は終了。記録を見て次の潜航へ。';
  $('#statusText').textContent=storageHealthy?baseStatus:`${baseStatus} 保存領域を利用できないため進行は保持されません。`;
- $('#routes').innerHTML=run.alive?run.routes.map((r,i)=>`<button class="route" data-i="${i}"><span class="name">${r.name} · ${r.signal}</span><span class="hint">${r.hint} / EN-${r.cost} / 基礎+${r.gain}</span><span class="risk">脅威補正 ${r.risk>=0?'+':''}${r.risk}</span></button>`).join(''):'';
+ const nextDepth=run.depth+1;
+ $('#routes').innerHTML=run.alive?run.routes.map((r,i)=>{
+   const anomaly=r.anomaly?` / 異常+${anomalyBonusAt(nextDepth)}・脅威+7`:'';
+   return `<button class="route" data-i="${i}"><span class="name">${r.name} · ${r.signal}${r.anomaly?' ⚠':''}</span><span class="hint">${r.hint} / EN-${r.cost} / 基礎+${r.gain}${anomaly}</span><span class="risk">脅威補正 ${r.risk>=0?'+':''}${r.risk}</span></button>`;
+ }).join(''):'';
  $('#log').innerHTML=run.log.map(x=>`<li>${x}</li>`).join('');
  document.querySelectorAll('.route').forEach(b=>b.addEventListener('click',()=>chooseRoute(Number(b.dataset.i))));
 }
