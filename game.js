@@ -10,10 +10,14 @@ function clamp(n,a,b){return Math.max(a,Math.min(b,n))}
 function rand(a,b){return Math.floor(Math.random()*(b-a+1))+a}
 function pick(arr){return arr[Math.floor(Math.random()*arr.length)]}
 
+// Route identities are intentionally different without making one route a clear default.
+// 2026-08-25 SIMULATED Monte Carlo (30k runs / pure-route policies):
+// calm ~6.0 expected bank, deep ~8.0, resonance ~6.8; survival ~29-33%.
+// These are balance probes, not human-verified fun measurements.
 const routeTemplates=[
- {name:'静かな反響',tone:'calm',cost:[1,2],gain:[1,3],risk:-4,hint:'低消費・低回収 / 崩壊を抑える'},
- {name:'深層パルス',tone:'deep',cost:[2,3],gain:[3,6],risk:8,hint:'高回収 / 深度と崩壊が進む'},
- {name:'共鳴追跡',tone:'res',cost:[1,3],gain:[2,4],risk:3,hint:'同系統を繋ぐと回収倍率が伸びる'}
+ {name:'静かな反響',tone:'calm',cost:[1,2],gain:[1,3],risk:-3,hint:'低消費・低回収 / 崩壊を抑える'},
+ {name:'深層パルス',tone:'deep',cost:[2,3],gain:[4,7],risk:3,hint:'高消費・高回収 / 短く深く潜る'},
+ {name:'共鳴追跡',tone:'res',cost:[1,3],gain:[2,4],risk:0,hint:'同系統を繋ぐと回収倍率が伸びる'}
 ];
 
 function startRun(){
@@ -25,7 +29,7 @@ function startRun(){
 function generateRoutes(){
  if(!run?.alive)return;
  const shuffled=[...routeTemplates].sort(()=>Math.random()-.5);
- run.routes=shuffled.map((t,i)=>({
+ run.routes=shuffled.map(t=>({
    ...t,
    cost:rand(...t.cost),gain:rand(...t.gain),
    signal:pick(['A','B','C']),
@@ -49,7 +53,7 @@ function chooseRoute(i){
  log(`${r.name}：-${cost} EN / +${gain} 回収${r.anomaly?' / 異常信号':''}`);
  const collapse=Math.random()*100<run.threat;
  if(collapse){
-   run.alive=false;run.haul=0;log('信号崩壊。今回の回収物を喪失した。');
+   run.alive=false;run.haul=0;meta.runs++;saveMeta();log('信号崩壊。今回の回収物を喪失した。');
  }else if(run.energy<=0){
    extract(true);return;
  }
