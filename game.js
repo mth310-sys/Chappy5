@@ -36,6 +36,7 @@ function generateRoutes(){if(!run?.alive)return;const shuffled=[...routeTemplate
 function anomalyBonusAt(nextDepth){return 2+Math.floor(nextDepth/2)}
 function calmRecoveryFor(r){return r.tone==='calm'&&run.threat>=25?-8:0}
 function projectedThreat(r,nextDepth=run.depth+1){return clamp(run.threat+r.risk+nextDepth*1.4+(r.anomaly?7:0)+calmRecoveryFor(r),0,92)}
+function projectedBank(){if(!run)return 0;const bonus=1+Math.min(.6,run.depth*.04);return Math.floor(run.haul*bonus)}
 
 function chooseRoute(i){
  if(!run?.alive)return;const r=run.routes[i];if(!r)return;const cost=Math.min(run.energy,r.cost);run.energy-=cost;run.depth++;
@@ -53,14 +54,14 @@ function chooseRoute(i){
 }
 
 function discoverMaybe(){const locked=relics.filter(x=>!meta.found.includes(x));if(!locked.length)return;const found=pick(locked);meta.found.push(found);saveMeta();log(`発見記録：${found}`)}
-function extract(forced=false){if(!run?.alive)return;const bonus=1+Math.min(.6,run.depth*.04);const bank=Math.floor(run.haul*bonus);meta.banked+=bank;meta.runs++;saveMeta();log(`${forced?'緊急浮上':'自主帰還'}：${bank} を恒久回収。`);run.alive=false;run.haul=0;persistRun();render()}
+function extract(forced=false){if(!run?.alive)return;const bank=projectedBank();meta.banked+=bank;meta.runs++;saveMeta();log(`${forced?'緊急浮上':'自主帰還'}：${bank} を恒久回収。`);run.alive=false;run.haul=0;persistRun();render()}
 function log(t){if(!run)return;run.log.unshift(t);run.log=run.log.slice(0,12)}
 
 function render(){
  $('#banked').textContent=meta.banked;$('#runs').textContent=meta.runs;$('#discoveries').textContent=`${meta.found.length} / ${relics.length}`;
- if(!run){$('#routes').innerHTML='';$('#statusText').textContent=storageHealthy?'信号海へ潜る準備ができた。':'保存領域を利用できません。このセッションの進行は保持されません。';return}
+ if(!run){$('#routes').innerHTML='';$('#extract').textContent='回収して帰還';$('#statusText').textContent=storageHealthy?'信号海へ潜る準備ができた。':'保存領域を利用できません。このセッションの進行は保持されません。';return}
  $('#energy').textContent=run.energy;$('#depth').textContent=run.depth;$('#haul').textContent=run.haul;$('#resonance').textContent=run.chain?`${run.chain}×${run.chainLen}`:'—';$('#threat').textContent=`${Math.round(run.threat)}%`;
- $('#threatLabel').textContent=run.threat<25?'CALM':run.threat<50?'UNSTABLE':run.threat<75?'DANGER':'CRITICAL';$('#extract').disabled=!run.alive||run.haul===0;$('#startRun').textContent=run.alive?'潜航中':'もう一度潜る';$('#startRun').disabled=run.alive;
+ $('#threatLabel').textContent=run.threat<25?'CALM':run.threat<50?'UNSTABLE':run.threat<75?'DANGER':'CRITICAL';$('#extract').disabled=!run.alive||run.haul===0;$('#extract').textContent=run.alive&&run.haul>0?`回収して帰還 +${projectedBank()}`:'回収して帰還';$('#startRun').textContent=run.alive?'潜航中':'もう一度潜る';$('#startRun').disabled=run.alive;
  const baseStatus=run.alive?'3つの反響から進路を選ぶ。表示脅威は選択直後の崩壊率。':'今回の潜航は終了。記録を見て次の潜航へ。';$('#statusText').textContent=storageHealthy?baseStatus:`${baseStatus} 保存領域を利用できないため進行は保持されません。`;
  const nextDepth=run.depth+1;
  $('#routes').innerHTML=run.alive?run.routes.map((r,i)=>{const anomaly=r.anomaly?` / 異常+${anomalyBonusAt(nextDepth)}`:'';const chain=r.tone==='res'&&run.chain===r.signal?` / 共鳴継続+${1+(run.chainLen+1)*2}`:'';const calm=r.tone==='calm'&&run.threat>=25?' / 鎮静-8':'';return `<button class="route" data-i="${i}"><span class="name">${r.name} · ${r.signal}${r.anomaly?' ⚠':''}</span><span class="hint">${r.hint} / EN-${r.cost} / 基礎+${r.gain}${anomaly}${chain}${calm}</span><span class="risk">選択後脅威 ${Math.round(projectedThreat(r,nextDepth))}%</span></button>`}).join(''):'';
