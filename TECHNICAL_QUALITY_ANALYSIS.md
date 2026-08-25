@@ -1,6 +1,6 @@
 # Technical & Quality Analysis
 
-Updated: 2026-08-26 02:48 JST
+Updated: 2026-08-26 03:53 JST
 Director: Technical & Quality Analysis Director
 Target: current `main` ECHO DRIFT `HUMAN_CANDIDATE_01` freeze plus non-gameplay quality fixes/regression additions
 
@@ -57,7 +57,7 @@ The later anomaly-offer and route-role changes remain compatible with this persi
 - Severity: 3
 - Confidence: HIGH
 - Verification Type: OBSERVED
-- Evidence: `tests/regression.mjs` uses Node built-ins only (`node:vm`, in-memory localStorage and a minimal DOM stub) and covers malformed meta normalization; live-dive restore including anomaly offers; successful extraction banking/counting/clearing the run key; collapse counting/haul loss/clearing the run key; displayed/applied calm threat equivalence; the production anomaly reward curve; repeated extraction idempotency; post-collapse interaction idempotency; blocked-storage fallback; and restored-log inert text rendering. GitHub Actions runs `32861991890`, `32867972721`, and `32879993287` confirmed these later extensions.
+- Evidence: `tests/regression.mjs` uses Node built-ins only (`node:vm`, in-memory localStorage and a minimal DOM stub) and covers malformed meta normalization; live-dive restore including anomaly offers; successful extraction banking/counting/clearing the run key; collapse counting/haul loss/clearing the run key; displayed/applied calm threat equivalence; the production anomaly reward curve; repeated extraction idempotency; post-collapse interaction idempotency; blocked-storage fallback; restored-log inert text rendering; and idle-UI recovery after an active run is cleared. GitHub Actions runs `32861991890`, `32867972721`, `32879993287`, and `32886288373` confirmed these later extensions.
 - Recommended Action: Keep this CI intentionally small and invariant-focused. Do not broaden it into UI snapshot maintenance unless a concrete regression risk appears.
 
 ## Finding TQ-007 — Save schema is versioned by key only, not payload
@@ -104,7 +104,7 @@ This is distinct from ordinary double-tap protection: same-session repeated call
 - Severity: 3
 - Confidence: HIGH
 - Verification Type: OBSERVED + UNKNOWN / UNVERIFIED
-- Evidence: Executive froze `HUMAN_CANDIDATE_01` without further gameplay rebalance. The quality change in this pass changes only how persisted log strings are rendered, not game rules, balance, route choices, save semantics or ordinary log copy. The main remaining target-platform unknowns therefore remain actual Safari/device behavior rather than unstable gameplay code.
+- Evidence: Executive froze `HUMAN_CANDIDATE_01` without further gameplay rebalance. The quality changes in these passes do not alter game rules, balance, route values or save semantics. The main remaining target-platform unknowns therefore remain actual Safari/device behavior rather than unstable gameplay code.
 - Recommended Action: Perform the real-device lifecycle matrix and record results as HUMAN_VERIFIED. If a device failure is found, fix only the concrete defect and then re-freeze the candidate.
 
 ## Finding TQ-012 — Restored log strings are now rendered as inert text
@@ -118,15 +118,26 @@ This is distinct from ordinary double-tap protection: same-session repeated call
 
 The fix is deliberately narrow: it closes the known persisted-log trust boundary without changing route HTML generation, gameplay values or the frozen human-feel target.
 
+## Finding TQ-013 — Clearing an active run previously left the UI in a stale, partly disabled state
+
+- Status: PASS
+- Severity: 3
+- Confidence: HIGH
+- Verification Type: OBSERVED
+- Evidence: before commit `06422c9f8002d1cff99859142573dd6f29703d87`, `render()` returned early when `run===null` after updating only archive/status/route text. If `run` became null while a live dive had previously been rendered (the reset path does exactly this), `#startRun` retained `disabled=true` and text `潜航中`; `#extract` could retain its prior enabled state; ENERGY/DEPTH/HAUL/RESONANCE/THREAT and the visible log retained stale values from the deleted run. The result was a cleared save with no live run but a UI that could prevent starting a new dive until reload and continued to display deleted-run state. The fix explicitly restores every idle control/HUD/log field in the `!run` branch without altering any route rule or balance value. Commit `4ed725529de2c516edbd6eec4816cac6e80f9dee` adds a deterministic regression that renders a live run, clears `run`, renders again, and asserts start is enabled, extract is disabled, HUD/threat return to idle defaults and stale logs are cleared. GitHub Actions run `32886288373` completed `success`.
+- Recommended Action: Keep the idle-state regression. Player Experience's separate wording issue remains: the reset confirmation still does not explicitly say that the current dive is discarded. That is a rule-communication decision, not this technical state bug.
+
+This repair is appropriate during the human-candidate freeze because it fixes a broken post-reset interaction path without changing normal core-loop behavior, balance or the three human-feel questions.
+
 ## Current technical summary
 
 | Metric | Status | Confidence | Verification | Current evidence |
 |---|---|---|---|---|
-| critical bugs | PASS/WARNING | HIGH | OBSERVED | No fatal ordinary interaction path found; abrupt-interruption settlement remains the principal documented prototype integrity risk. |
-| state integrity | PASS | HIGH | OBSERVED | Live, collapse and extract transitions plus same-session terminal idempotency are CI-protected. |
-| save integrity | PASS/WARNING | HIGH | OBSERVED | Loaders sanitize core state, blocked-storage fallback is CI-protected, storage exceptions are contained, and restored logs no longer cross an HTML trust boundary; terminal settlement is still not crash-atomic. |
+| critical bugs | PASS/WARNING | HIGH | OBSERVED | No fatal ordinary interaction path remains in the audited paths; active-run reset no longer strands the UI, while abrupt-interruption settlement remains the principal documented prototype integrity risk. |
+| state integrity | PASS | HIGH | OBSERVED | Live, collapse, extract, same-session terminal idempotency and reset-to-idle rendering are CI-protected. |
+| save integrity | PASS/WARNING | HIGH | OBSERVED | Loaders sanitize core state, blocked-storage fallback is CI-protected, storage exceptions are contained, restored logs are inert text, and reset now clears stale rendered state; terminal settlement is still not crash-atomic. |
 | save migration | WARNING | HIGH | OBSERVED | v1 keys exist but payload migration is still implicit. |
-| regression risk | PASS | HIGH | OBSERVED | Current deterministic suite, terminal idempotency, blocked-storage fallback and crafted restored-log rendering are CI-confirmed. |
+| regression risk | PASS | HIGH | OBSERVED | Current deterministic suite includes terminal idempotency, blocked-storage fallback, crafted restored-log rendering and active-run reset recovery, all CI-confirmed. |
 | threat formula integrity | PASS | HIGH | OBSERVED | Display/applied threat equivalence is regression-protected. |
 | balance-source integrity | PASS | HIGH | OBSERVED | Production anomaly curve is executable/tested and Director prose has been corrected. |
 | performance | UNKNOWN | MEDIUM | UNVERIFIED | Production code/assets remain small, but no runtime measurement is recorded. |
@@ -136,14 +147,15 @@ The fix is deliberately narrow: it closes the known persisted-log trust boundary
 
 ## Executive handoff
 
-This pass preserved the gameplay/balance/UI decision target of `HUMAN_CANDIDATE_01` and fixed one narrow defense-in-depth defect that does not alter ordinary gameplay: persisted log strings are no longer interpreted as HTML after reload.
+This pass preserved the gameplay/balance decision target of `HUMAN_CANDIDATE_01` and found a concrete non-balance defect in the reset transition. Resetting during a live dive deleted the run data but left controls and HUD in their previous live-run state; most importantly, the start button could remain disabled until page reload. That defect is now repaired and regression-protected.
 
 Quality evidence now includes:
 
 1. GitHub Actions run `32861991890` confirms repeated extraction cannot double-bank/count and post-collapse interaction cannot mutate/count the finished run again.
 2. GitHub Actions run `32867972721` confirms blocked-localStorage fallback keeps the session playable while surfacing a persistence warning.
-3. GitHub Actions run `32879993287` confirms the crafted restored-log value is rendered as inert text and the full deterministic regression suite still passes after the change.
+3. GitHub Actions run `32879993287` confirms crafted restored-log values remain inert text.
+4. GitHub Actions run `32886288373` confirms clearing a live run restores a usable idle UI: start enabled, extract disabled, HUD/threat reset and stale log removed.
 
-No new gameplay or balance repair is justified from Technical in this pass. The highest-value next Technical action remains the real iPhone/Safari matrix on the frozen candidate: fresh launch, route taps, voluntary extraction, reload mid-dive, background/foreground, reset, safe-area/portrait layout, and persistence behavior.
+No gameplay/balance repair is justified from Technical in this pass. The highest-value next Technical action remains the real iPhone/Safari matrix on the frozen candidate: fresh launch, route taps, voluntary extraction, reload mid-dive, background/foreground, reset, safe-area/portrait layout, and persistence behavior.
 
 The known crash-consistency issue should remain a documented prototype risk until persistent rewards become valuable enough to justify a minimal settlement journal. Save schema migration should likewise wait until the next approved persistent progression field rather than being refactored pre-emptively.
