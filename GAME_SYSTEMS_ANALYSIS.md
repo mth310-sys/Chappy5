@@ -72,8 +72,24 @@ Target: latest `main` ECHO DRIFT core loop as of 2026-08-26.
 - `human_verification_needed`: NO for the mechanical disconnect; YES later for collection motivation.
 - `last_updated`: 2026-08-26
 
+## Finding GS-006 — low-energy turns compress route costs and can distort the terminal decision
+
+- `director`: Game Systems Analysis Director
+- `status`: WATCH
+- `severity`: 3
+- `confidence`: HIGH
+- `verification`: OBSERVED
+- `finding`: Route cards display their rolled cost, but `chooseRoute()` actually charges `Math.min(run.energy, r.cost)`. When remaining Energy is below the displayed route cost, every route becomes affordable for only the remaining Energy while retaining its full gain, anomaly reward and resonance reward. Because Energy reaching zero then forces extraction, the final low-energy choice has a different economy from earlier choices.
+- `evidence`: Current `game.js` computes `const cost=Math.min(run.energy,r.cost); run.energy-=cost;` and later calls `extract(true)` when `run.energy<=0`. A route showing `EN-3` therefore costs only 1 when Energy is 1, yet still grants its complete rolled gain and bonuses before the collapse check and forced extraction. The UI continues to display the original `EN-3`, not the effective `EN-1` charge.
+- `impact`: This creates two risks. First, displayed cost is not the cost actually paid at low Energy. Second, expensive routes lose their energy disadvantage on the terminal turn, which can make high-gain deep/anomaly choices disproportionately attractive exactly when the player knows successful survival will immediately bank the haul. This may partially undermine route identity near forced extraction even though aggregate state-conditioned balance is healthy.
+- `recommended_action`: Do not change `HUMAN_CANDIDATE_01` during its freeze. Executive should mark this as a post-candidate rules decision: either (A) routes whose rolled cost exceeds remaining Energy are unavailable, or (B) partial-energy payment is intentional and the UI/economy should explicitly communicate and balance that terminal rule. Before choosing, run a focused simulation comparing terminal-turn route shares and expected bank under current partial-payment versus full-cost eligibility.
+- `human_verification_needed`: NO for the mismatch/mechanical compression; YES only for which terminal rule feels better after Executive selects candidates.
+- `last_updated`: 2026-08-26
+
 ## Current systems conclusion
 
-The state-level robustness check is healthy enough that Systems does **not** recommend another core balance patch before focused human play. The current design now shows conditional route identities: deep is strongest early, calm becomes important at threat >=25 and deeper states, and an active resonance chain materially changes resonance choice value. This reduces concern that the improved aggregate 58.7/29.0/12.3 split merely hid a new fixed solution.
+The state-level robustness check remains healthy enough that Systems does **not** recommend disturbing the frozen global risk/reward candidate before focused human play. Deep is strongest early, calm becomes important at threat >=25 and deeper states, and an active resonance chain materially changes resonance choice value.
 
-The main unresolved systems question is now experiential rather than computational: **does a simulated collapse rate around 53% feel like fair, self-authored greed or like wasted time?** Preserve the current risk/reward candidate long enough for HUMAN_VERIFIED evidence. Separately, discovery remains mechanically disconnected and should not be expanded by adding names alone.
+A new structural issue is now recorded separately: when Energy is lower than a route's displayed cost, the implementation charges only remaining Energy but awards full route value and then forces extraction. This is an OBSERVED terminal-economy compression, not evidence that the global balance should be retuned immediately. Preserve the human candidate, then quantify this terminal rule as a focused post-candidate decision.
+
+The main experiential systems question remains whether the simulated collapse rate around 53% feels like fair, self-authored greed or wasted time. Discovery also remains mechanically disconnected and should not be expanded by adding names alone.
