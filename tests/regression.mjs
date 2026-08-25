@@ -89,4 +89,27 @@ const RUN_KEY='chappy5.echoDrift.run.v1';
   assert.equal(storage.getItem(RUN_KEY),null);
 }
 
+// 5) High-threat calm uses the same projected threat before and after route resolution.
+{
+  const storage=new MemoryStorage();
+  const {context}=boot(storage,()=>0.99);
+  run(context,"run={energy:10,depth:2,haul:0,threat:30,chain:null,chainLen:0,alive:true,log:[],routes:[{...routeTemplates[0],cost:1,gain:1,signal:'A',anomaly:false},{...routeTemplates[1],cost:2,gain:3,signal:'B',anomaly:false},{...routeTemplates[2],cost:1,gain:2,signal:'C',anomaly:false}]};");
+  const projected=read(context,'projectedThreat(run.routes[0],run.depth+1)');
+  assert.equal(projected,23.2);
+  run(context,'chooseRoute(0);');
+  assert.equal(read(context,'run.depth'),3);
+  assert.equal(read(context,'run.threat'),projected);
+  assert.equal(read(context,'run.alive'),true);
+}
+
+// 6) Depth-sensitive anomaly reward follows the production curve exactly.
+{
+  const storage=new MemoryStorage();
+  const {context}=boot(storage);
+  assert.deepEqual(
+    Array.from(read(context,'[1,2,3,4,5,6].map(anomalyBonusAt)')),
+    [2,3,5,8,10,13]
+  );
+}
+
 console.log('ECHO DRIFT regression tests: PASS');
