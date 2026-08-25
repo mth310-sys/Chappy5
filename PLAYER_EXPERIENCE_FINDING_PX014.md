@@ -1,0 +1,19 @@
+# Player Experience Finding PX-014 — resonance exit cost is strategically important but visually hidden
+
+Updated: 2026-08-26 06:12 JST
+Target: latest `main` ECHO DRIFT / HUMAN_CANDIDATE_01
+Director: Player Experience Analysis Director
+
+- Status: WATCH_STRATEGIC_TRANSPARENCY
+- Severity(1-5): 4
+- Confidence: HIGH
+- Verification Type: OBSERVED + SIMULATED
+- Evidence: Current UI deliberately exposes immediate decision consequences: each route shows exact `選択後脅威`, its rolled EN cost and gain, visible anomaly bonus, visible calm recovery, and an immediate resonance continuation bonus when a resonance route matches the active signal. However, when an active resonance chain exists and the player chooses calm or deep, `chooseRoute()` ignores the displayed A/B/C signal and performs an undisclosed `Math.random()<.5` check that can erase the entire chain. The route card does not communicate this 50% chain-loss risk or the future option value being surrendered. GS-011 establishes that the future value of an active chain is not trivial: after establishment, repeated resonance has expected gain about 5 haul/choice before anomaly (about 2.5 haul/EN), while deep is about 4.5 haul/choice (about 1.8 haul/EN) plus +3 route risk, and four-seed Monte Carlo showed fixed resonance ≈12.11 bank/run versus one-step adaptive ≈11.00. Therefore the hidden chain-loss roll is part of a materially valuable strategic state, not cosmetic flavor.
+- Player Experience Impact: The game currently feels unusually transparent about immediate risk/reward, which raises the player's expectation that visible numbers are sufficient for an informed choice. During an active chain, calm/deep can look attractive from the displayed post-choice threat and immediate haul, while carrying a hidden opportunity cost that may be larger than the visible short-term difference. If the chain then disappears, the player may attribute the loss to arbitrary rules or fail to understand why resonance-heavy play performs better over repeated runs. This can undermine perceived agency in two directions: a novice may unknowingly discard valuable state, while an optimizing player may learn that leaving resonance is dangerous without the interface ever teaching the causal rule. Either outcome weakens the intended fantasy of reading the signal sea rather than reverse-engineering hidden RNG.
+- Recommended Action: Do not alter `HUMAN_CANDIDATE_01` during the current comparison window. Treat PX-014 as a strategic-transparency requirement for the next gameplay revision if Systems confirms resonance-heavy dominance. Prefer eliminating the hidden coin flip by making visible signal identity causally determine chain preservation/breakage across route types, or otherwise expose the actual chain-loss consequence before selection. Do not solve this primarily with explanatory prose. If Executive chooses to preserve probabilistic chain loss, the route UI should make the probability and affected chain state legible at decision time. Any change should be coordinated with GS-011 because reducing hidden exit cost also changes resonance's long-run balance.
+
+## Human verification boundary
+
+No extra first-session fun question is added. The existing three questions remain sufficient for short-session feel. If an active chain disappears after a calm/deep choice during human play, note whether the player understood why; that observation can become `HUMAN_VERIFIED` usability evidence, but absence of confusion in a short session must not be treated as proof that the hidden opportunity cost is strategically legible.
+
+PX-014 does not claim that the player will dislike the mechanic. It identifies an observed mismatch between the game's otherwise explicit decision information and a hidden transition that GS-011 shows has meaningful future value.
