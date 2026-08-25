@@ -1,68 +1,67 @@
 # Chappy5 Studio Dashboard
 
-Updated: 2026-08-25 20:24 JST
+Updated: 2026-08-25 21:26 JST
 Target: ECHO DRIFT core decision loop
 
 | 領域 | Status | Severity | Confidence | Verification | 最新の重要Finding |
 |---|---|---:|---|---|---|
-| Game Systems | WARNING | 4 | HIGH | SIMULATED | Fixed-stop probes found shallow expected-value optima (notably deep around depth 3), risking a learned extraction threshold instead of contextual push-your-luck decisions. |
-| Player Experience | WARNING | 3 | MEDIUM | SIMULATED | Portrait/large-button structure is promising, but the play sensation may still read as cards changing numbers. Real tension, reward feel and replay desire remain unverified. |
-| Progression & Content | WARNING | 4 | HIGH | OBSERVED | Persistent bank/runs/discovery record play but do not yet alter future strategy. Do not solve by content quantity or flat permanent power. |
-| Technical & Quality | WARNING | 3 | HIGH | OBSERVED | Active-run persistence and save validation now exist. Real iPhone/Safari behavior and deterministic browser regression remain unverified. |
+| Game Systems | WARNING | 4 | HIGH | SIMULATED | Adaptive visible-state play still selected deep ≈85.1%, ended around depth 2.60, and chain-advancing resonance was only ≈1.6% of steps. |
+| Player Experience | WARNING | 4 | HIGH | OBSERVED + SIMULATED | Route promises and effective play diverged; exact post-choice danger also required mental composition. |
+| Progression & Content | FAIL | 4 | HIGH | OBSERVED | Persistent bank/runs/discoveries still do not alter future strategy; discovery semantics remain unresolved. |
+| Technical & Quality | WARNING | 3 | HIGH | OBSERVED + UNVERIFIED | Save/reload integrity is materially improved and a regression harness exists, but execution and real iPhone/Safari remain unverified. |
 
 ## Executive priority
 
-**Make continue-vs-extract depend on the current visible opportunity, not mainly on a memorized depth threshold.**
+**Make the three routes have state-dependent jobs so continue-vs-extract and route choice do not collapse into shallow deep-route farming.**
 
-This remains higher priority than adding long-term progression or more content because the flagship premise fails if the core decision becomes routine.
+This remains higher priority than long-term progression, content expansion, radar polish, or broad refactoring.
 
-## Executive integration — 20:24 JST
+## Executive integration — 21:26 JST
 
 ### Evidence integrated
 
-Systems simulation found best fixed extraction points substantially outperforming forced continuation for simple pure-route policies. That is not proof of player behavior or fun, but it is strong enough to treat static stop-depth convergence as the highest current structural risk.
+Game Systems produced the strongest current evidence: a 200k-run visible-state adaptive probe still chose deep ≈85.1%, ended at mean depth ≈2.60, and advanced a live resonance chain on only ≈1.6% of all steps. It also proved that calm ceases to reduce absolute threat from depth 3 onward under the previous formula.
 
-Player Experience separately found that outcomes risk feeling arbitrary when important risk information is hidden and that the strong radar presentation is not yet fully connected to game sensation. Progression found no meaningful cross-run strategic growth yet. Technical found save/reload weaknesses and already repaired active-run persistence and validation.
+Player Experience independently identified the same issue as a promise mismatch: the UI says calm is the safety route and resonance rewards continuation, while effective play largely ignored both. It also found that the player had to mentally combine several modifiers to know the actual next collapse probability.
 
-### Game change this cycle: visible, depth-scaled anomaly temptation
+Progression's missing second timescale remains serious, but adding meta progression before the core route economy is credible would amplify a weak loop. Technical work is sufficiently stable for another small gameplay iteration; real-device verification remains pending.
 
-The existing anomaly mechanic was previously hidden until after choosing a route. Executive changed it into a **visible opportunity before the continue/extract decision**:
+### Game change this cycle: conditional route identities
 
-- anomaly routes are marked with `⚠`;
-- their extra haul and extra threat are shown before selection;
-- anomaly haul bonus now grows with next depth: `2 + floor(nextDepth / 2)`;
-- anomaly still adds +7 threat and can produce a discovery.
+Executive made one focused balance intervention in `game.js` rather than adding a new subsystem:
 
-Reason: this uses an existing mechanic rather than adding a new subsystem, and creates a state-dependent reason to risk "one more step". A player at the same depth can now rationally choose differently depending on whether a valuable anomaly is currently offered. The deeper scaling makes late opportunities more tempting without simply reducing danger.
+- **Calm** now receives an additional `-8` threat recovery when current threat is at least 25. This makes it a genuine danger-management option in states where extraction previously became the only rational safety action.
+- **Resonance** now gives a materially larger bonus when the offered signal matches the live chain: after advancing the chain, bonus haul is `1 + chainLen × 2`. This creates conditional value from preserving a chain instead of applying a flat resonance buff.
+- **Deep** is unchanged. It remains the burst-reward route and therefore provides the comparison baseline.
+- Every route now displays **projected post-choice threat directly**. This removes arithmetic burden without adding tutorial prose and makes the risk comparison strategically usable.
 
-Verification: implementation is `OBSERVED`; its balance and effect on decision quality are `UNVERIFIED` until the next Systems simulation and later human play.
+Implementation is `OBSERVED`. Balance improvement and fun are `UNVERIFIED` until Systems re-simulates the exact new rules and later human play verifies the sensation.
+
+### Why this intervention
+
+The change directly targets GS-002 and GS-004 while preserving the existing three-route structure. It does not manufacture more content, add a fourth mechanic, or hide deep dominance behind explanatory text. State-dependent value is preferable to global multipliers because the desired outcome is not a new universal best route; it is different best actions in different states.
 
 ### What was deliberately not done
 
-- No flat permanent stat upgrades were added.
-- No new enemies/items/relic lists were added.
-- No broad rebalance of all route values was performed before measuring this smaller change.
-- No large refactor was performed.
-
-## Current playable loop
-
-1. Start a dive.
-2. Inspect three visible route offers, including any anomaly opportunity.
-3. Choose a route or extract the current haul.
-4. Trade Energy, haul, resonance and collapse risk.
-5. Bank salvage/discoveries across runs.
+- No long-term progression system yet.
+- No new relics, enemies, stages, currencies, or lore volume.
+- No flat nerf to deep merely to force equal route percentages.
+- No radar animation/polish before the decision structure is validated.
+- No large refactor.
 
 ## Next evidence needed
 
-Game Systems should re-simulate policies that can react to visible anomalies, current threat, energy, resonance chain and rolled cost/gain. Key question: **does the optimal action now vary meaningfully by state, or does a shallow fixed extraction rule still dominate?**
+Game Systems should re-run the adaptive and fixed-stop probes against commit `f16b730b609b69adb334e9d5228f3f6d650291ec` and answer:
 
-If fixed-depth extraction remains strongly superior, Executive should reshape value-at-depth again before adding progression.
+1. Does deep remain overwhelmingly dominant?
+2. Does calm become meaningfully selected specifically in high-threat states without becoming mandatory?
+3. Does live-chain resonance occur often enough to influence decisions?
+4. Does mean ending depth/state diversity increase without simply creating a universal deep strategy?
+
+If the answer is still no, tune the same conditional identities before adding another system.
 
 ## Human verification status
 
-No HUMAN_VERIFIED findings yet. Do not claim the game is fun.
+No HUMAN_VERIFIED finding exists yet. Do not claim the game is fun.
 
-When AI-detectable structural issues are reduced, human play should answer only:
-- Did you genuinely hesitate between extracting and taking the visible next opportunity?
-- Did route choices feel meaningfully different rather than numerically obvious?
-- After a run ended, did you want to immediately start another?
+Human play remains deferred until AI-detectable route dominance is reduced. When a build is frozen, ask only whether continue-vs-extract caused repeated hesitation, whether route/extraction actions felt satisfying, and whether another run was immediately desirable; separately record iPhone thumb/scroll/runtime friction.
