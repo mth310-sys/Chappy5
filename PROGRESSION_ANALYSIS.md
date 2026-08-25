@@ -1,142 +1,37 @@
 # Progression & Content Analysis
 
-Updated: 2026-08-26 02:38 JST
+Updated: 2026-08-26 04:39 JST
 Director: Progression & Content Analysis Director
 Target: current `main` ECHO DRIFT `HUMAN_CANDIDATE_01` (gameplay frozen for focused human test)
 
-## Finding P-001 — Permanent layer records play but does not change future play
+## Existing findings P-001 through P-011
 
-- Status: FAIL
-- Severity(1-5): 4
-- Confidence: HIGH
-- Verification Type: OBSERVED
-- Evidence: `meta.banked`, `meta.runs`, and `meta.found` persist, but `startRun()` always starts Energy 10 / threat 6 and route generation does not read persistent progression. No spend, unlock, equip, protocol, or other path changes a later run from banked salvage or discoveries.
-- Recommended Action: Keep meta progression blocked while `HUMAN_CANDIDATE_01` is frozen. If the core passes human feel testing, evaluate one compact mutually exclusive persistent choice that biases later decisions rather than granting linear power.
+The prior findings remain active and unchanged in substance. Their current conclusions are preserved below in compact form so this file remains the single Progression handoff rather than spawning additional analysis files.
 
-The latest Systems evidence makes the single-run layer healthy enough to freeze, but does not change the second-timescale failure. `banked` remains a saved score with no future decision consequence.
+- **P-001 — FAIL / Severity 4 / HIGH / OBSERVED:** permanent bank/runs/discoveries record play but do not change later play. Keep persistent gameplay blocked until the frozen core passes human testing.
+- **P-002 — FAIL / Severity 4 / HIGH / OBSERVED + SIMULATED:** six anomaly selections complete all six discoveries because duplicates are prevented. Do not extend runway by adding names.
+- **P-003 — WARNING / Severity 3 / HIGH / OBSERVED:** discoveries persist on contact even if the same route subsequently collapses. Executive must eventually classify them as retained knowledge versus extractable cargo.
+- **P-004 — WARNING / Severity 3 / HIGH / OBSERVED + SIMULATED:** within-run progression is meaningfully state-dependent; run-to-run strategic state still resets. Production anomaly bonuses at depths 1–6 are **2 / 3 / 5 / 8 / 10 / 13**.
+- **P-005 — FAIL / Severity 3 / HIGH / OBSERVED:** discovered identities are not persistently inspectable; UI exposes only a count.
+- **P-006 — WARNING / Severity 3 / HIGH / OBSERVED + SIMULATED:** collector behavior can raise anomaly selection from about 37.4% to 50.1% and collapse from about 53.3% to 59.7%, then that motive disappears after completion.
+- **P-007 — FAIL / Severity 3 / HIGH / OBSERVED:** discovery identity is uniformly random from unseen entries and cannot be deliberately pursued through route, signal, depth, resonance, threat, or history.
+- **P-008 — FAIL / Severity 3 / HIGH / OBSERVED:** additional banked salvage has no marginal meaning after extraction. Do not add a conventional stat shop merely to create a sink.
+- **P-009 — DESIGN_GATE / Severity 4 / HIGH / OBSERVED + DESIGN ANALYSIS:** any post-human-test progression prototype must change decisions rather than only power, have opportunity cost, reuse existing hooks, preserve the verified core, create a next-run intention, and be testable with minimal content.
+- **P-010 — DESIGN_RISK / Severity 3 / HIGH / OBSERVED + DESIGN ANALYSIS:** a few one-time unlocks only postpone the salvage dead end. Prefer a small finite vocabulary plus repeatable mutually exclusive commitment over endless tiers/items.
+- **P-011 — DESIGN_RISK / Severity 3 / HIGH / OBSERVED + DESIGN ANALYSIS:** `banked` is currently presented as lifetime 「累計回収」, so future spending/staking cannot safely subtract from it without changing its meaning. Separate lifetime achievement from spendable/committed value only if a proven progression prototype actually needs that distinction.
 
-## Finding P-002 — The six-discovery layer can be exhausted after exactly six anomaly choices
-
-- Status: FAIL
-- Severity(1-5): 4
-- Confidence: HIGH
-- Verification Type: OBSERVED + SIMULATED
-- Evidence: Every generated route independently has an 18% anomaly chance. With three visible offers, the probability that at least one anomaly is available on a decision is `1 - 0.82^3 ≈ 44.9%`. `discoverMaybe()` selects only from relics not yet in `meta.found`, so there are no duplicates before completion. Every anomaly route chosen while relics remain grants one new permanent discovery. Completion therefore requires exactly six anomaly selections. If a player prioritizes anomaly whenever one appears, six anomaly-available decision screens occur after about `6 / 0.4486 ≈ 13.4` decisions on average; collapse does not undo discovery because it is saved before the collapse check.
-- Recommended Action: Do not expand the relic list to disguise the short runway. Treat the current six as prototype markers and resolve discovery's function before creating content volume.
-
-## Finding P-003 — Discovery still bypasses extraction tension
-
-- Status: WARNING
-- Severity(1-5): 3
-- Confidence: HIGH
-- Verification Type: OBSERVED
-- Evidence: An anomaly choice can call `discoverMaybe()` and immediately `saveMeta()`. A collapse later in the same `chooseRoute()` call zeroes haul but does not remove the discovery. Salvage says “return safely to keep value”; discovery says “contact alone permanently keeps value.”
-- Recommended Action: Executive should explicitly classify discoveries as either knowledge/signals retained on contact or physical cargo requiring extraction. Do not change the mechanic while the human candidate is frozen.
-
-A knowledge-on-contact interpretation is coherent with the signal/anomaly framing, but remains a design recommendation rather than approved semantics.
-
-## Finding P-004 — Within-run progression is now meaningfully state-dependent; run-to-run strategic state still resets
-
-- Status: WARNING
-- Severity(1-5): 3
-- Confidence: HIGH
-- Verification Type: OBSERVED + SIMULATED
-- Evidence: Depth changes threat, extraction multiplier and anomaly payout through production `anomalyBonusAt(depth) = 2 + floor(depth/2) + max(0, depth-2)*2`, yielding **2 / 3 / 5 / 8 / 10 / 13** at depths 1–6. Calm recovery and resonance chains are state-dependent. Systems' latest state-conditioned probe also found route roles vary by state rather than merely by aggregate share. Every new run still resets all strategic variables and ignores persistent state.
-- Recommended Action: Preserve the current single-run arc through the human test. If it passes, reuse these existing state-dependent hooks for horizontal progression rather than adding a parallel subsystem.
-
-## Finding P-005 — Collected discoveries are not persistently inspectable as discoveries
-
-- Status: FAIL
-- Severity(1-5): 3
-- Confidence: HIGH
-- Verification Type: OBSERVED
-- Evidence: `meta.found` stores discovery names, but the persistent UI renders only `found.length / relics.length`. Names appear only in the transient run log and there is no archive view showing what was discovered or why it matters.
-- Recommended Action: Do not add lore volume during the candidate freeze. Once discovery semantics are resolved, expose the few existing discoveries in a compact persistent archive and attach consequence/meaning before expanding quantity.
-
-## Finding P-006 — Discovery progress can distort early anomaly choices, then disappear abruptly
-
-- Status: WARNING
-- Severity(1-5): 3
-- Confidence: HIGH
-- Verification Type: OBSERVED + SIMULATED
-- Evidence: Mechanical optimal play is identical before and after discovery completion because `meta.found` is not read by gameplay calculations. However, Systems measured a collector policy that prioritizes visible anomalies: anomaly selections rise from ≈37.4% to ≈50.1%, mean bank falls from ≈10.99 to ≈9.93 per run, and collapse rises from ≈53.3% to ≈59.7%. Once all six discoveries are collected, that extra motive disappears.
-- Recommended Action: Do not nerf anomalies merely because collectors take more risk. First decide whether discoveries are knowledge/lore or strategic progression. If they remain knowledge-on-contact, make that meaning legible and give completion a durable world/collection payoff. If they become progression, connect them to future decisions rather than adding more names.
-
-## Finding P-007 — Discovery is a completion timer, not yet a collection strategy
-
-- Status: FAIL
-- Severity(1-5): 3
-- Confidence: HIGH
-- Verification Type: OBSERVED
-- Evidence: `discoverMaybe()` chooses uniformly from remaining unseen relic names after an anomaly route is selected. Route tone, signal A/B/C, depth, resonance chain, threat, and player history do not influence *which* discovery appears. With duplicates prevented, the player cannot target a desired discovery, infer where a missing discovery lives, or change play to pursue a specific entry.
-- Recommended Action: Do not solve this by adding more relic names or random rarity. If discovery becomes a long-term pillar, attach discovery identity to an existing meaningful choice/state so a player can deliberately pursue something. If discoveries remain lore-only, treat the six as authored world beats rather than presenting them as a deep collection system.
-
-## Finding P-008 — Banked salvage has no marginal meaning after extraction
-
-- Status: FAIL
-- Severity(1-5): 3
-- Confidence: HIGH
-- Verification Type: OBSERVED
-- Evidence: `meta.banked` only increases on successful extraction and is rendered as a cumulative number. No threshold, choice, unlock, branch, or world response reads it. Therefore banking 10 versus 1000 changes the displayed total but not what the player can attempt, pursue, understand, or choose next.
-- Recommended Action: Do **not** add a conventional shop merely to give currency a sink. If the core passes human verification, test whether banked salvage can fund a **choice with opportunity cost**—for example selecting one of a few mutually exclusive dive protocols for the next expedition—so spending changes play instead of just increasing stats.
-
-This is distinct from P-001: P-001 says persistent state does not affect future runs; P-008 identifies why the main reward itself currently cannot sustain a long-term goal. A larger number is not progression unless its marginal units eventually unlock a meaningful decision.
-
-## Finding P-009 — Post-test progression needs an acceptance gate before implementation
-
-- Status: DESIGN_GATE
-- Severity(1-5): 4
-- Confidence: HIGH
-- Verification Type: OBSERVED + DESIGN ANALYSIS
-- Evidence: The current core now has three state-dependent route jobs, while persistent progression is absent. Adding linear Energy, lower Threat, higher gain, or permanent extraction multipliers would directly change the frozen risk/reward curve and can erase the newly established situational balance. Adding a separate currency/system would instead create parallel complexity without evidence it improves replay depth.
-- Recommended Action: If and only if `HUMAN_CANDIDATE_01` passes the core human test, require the first progression prototype to satisfy all of these before Executive approves implementation:
-  1. **Changes decisions, not only power** — at least two persistent options should make different calm/deep/resonance situations attractive.
-  2. **Has opportunity cost** — choosing one option excludes or delays another; there is no obvious “buy everything” path in the prototype.
-  3. **Uses existing hooks** — prefer threat recovery, anomaly pursuit, resonance-chain behavior, signal information, or extraction style over a parallel combat/stat system.
-  4. **Does not invalidate Human Candidate 01** — avoid global permanent +Energy/+gain/-Threat that makes the verified risk/reward test obsolete.
-  5. **Creates a next-run intention** — after returning, the player can state a concrete reason the next dive will be approached differently.
-  6. **Is testable with minimal content** — prove the choice with a tiny option set before adding relics, tiers, currencies, enemies, or lore volume.
-
-This gate is analysis only. It does not authorize a progression implementation or change the frozen human-test candidate.
-
-## Finding P-010 — One-time unlocks would only postpone the banked-salvage dead end
+## Finding P-012 — Random discovery order cannot currently carry an authored world-revelation arc
 
 - Status: DESIGN_RISK
 - Severity(1-5): 3
 - Confidence: HIGH
 - Verification Type: OBSERVED + DESIGN ANALYSIS
-- Evidence: `meta.banked` is the only repeatable successful-extraction reward, while the intended first progression experiment is deliberately constrained to a tiny option set. If banked salvage is used only to permanently unlock two or three protocols, the currency acquires meaning only until those few unlocks are purchased; immediately afterward additional salvage again becomes a display-only score, recreating P-008. Solving that by continually adding more protocol tiers/items would convert the progression layer into the exact content-volume treadmill prohibited by the README and P-009.
-- Recommended Action: If banked salvage remains the primary repeatable reward after the human core passes, distinguish **access** from **commitment**. A tiny set of protocols may be unlocked once, but the long-lived loop should obtain value from a recurring mutually exclusive run commitment, stake, contract, or other repeatable choice using those same few protocols—not from endless unlock inventory. The recurring choice must still satisfy P-009 and must not be implemented before human verification.
+- Evidence: Production defines six evocative discovery identities (`GLASS TIDE`, `RED STATIC`, `NULL CHOIR`, `PALE ORBIT`, `IRON BLOOM`, `LAST SIGNAL`), but `discoverMaybe()` chooses uniformly from the remaining unseen names. Depth, signal A/B/C, route tone, resonance state, threat, prior discovery sequence, and run outcome do not influence which identity is revealed. Because duplicates are prevented, every player receives a random permutation of the same six names. There is no description, relationship, prerequisite, escalation, or follow-up attached to an identity, and persistent UI currently shows only the count. Therefore the discovery layer cannot presently deliver a designed sequence such as clue → implication → revelation; even a future archive that only exposes the six names would preserve random ordering without narrative causality.
+- Recommended Action: Do **not** add lore paragraphs, more relic names, or a story screen during the frozen human candidate. If the core passes and discovery is chosen as a long-term world pillar, first choose one of two small structures: (A) **pursuit-driven world knowledge**, where existing depth/signal/route states determine which clue family can be found and players can intentionally investigate it; or (B) **authored revelation chain**, where a very small prerequisite graph makes later discoveries depend on earlier evidence. Either approach should reuse existing gameplay decisions and prove that a discovery changes the player's next intention before content volume is expanded. If discovery remains merely a collectible score, do not pretend it supplies narrative progression.
 
-### Why this matters
+### Why this is distinct from P-005/P-007
 
-A three-option permanent loadout can create build diversity, but by itself it does not create a durable economy. Conversely, an infinite upgrade tree gives the economy runway by manufacturing content and power creep. The smallest promising structure is therefore:
-
-1. **small finite vocabulary** — very few protocol identities;
-2. **repeatable commitment** — every later run still asks which protocol/intention to take;
-3. **opportunity cost** — only one commitment applies at a time and changing/activating it has a real tradeoff;
-4. **existing-state reuse** — protocols should alter how the player values calm/deep/resonance/anomaly/signal/extraction states, not create a second game;
-5. **no guaranteed upward power staircase** — long-term value comes from changing plans and pursuit, not merely making the same plan safer.
-
-This is a design constraint, not a recommendation to add a consumable currency sink immediately. A recurring fee that feels like tax would be worse than no sink. Executive should prototype the decision first and attach salvage economics only if the choice itself survives simulation and human evaluation.
-
-## Finding P-011 — `banked` currently conflates a lifetime achievement metric with a future spendable resource candidate
-
-- Status: DESIGN_RISK
-- Severity(1-5): 3
-- Confidence: HIGH
-- Verification Type: OBSERVED + DESIGN ANALYSIS
-- Evidence: Production `extract()` only ever increments `meta.banked`, and the persistent UI explicitly labels the same value **「累計回収」**. That establishes `banked` as a lifetime total/achievement record: more successful extraction can only make it rise. P-008/P-010 identify this same value as the obvious candidate for future protocol funding. If future progression simply subtracts purchases, activation costs, stakes, or contracts from `meta.banked`, the UI and save semantics stop meaning “cumulative salvage”: spending would make the lifetime achievement number fall. If instead `banked` is never decremented, it cannot provide repeatable opportunity cost and becomes only an unlock threshold, recreating P-010.
-- Recommended Action: **Do not mutate the frozen candidate and do not add a second currency now.** If the core passes human verification and Executive approves salvage-funded progression, first choose explicit semantics: preserve an immutable/lifetime `totalRecovered` record and introduce a separate spendable/committed balance only if the progression prototype proves it needs one; or deliberately redefine the existing field/UI away from “累計回収” with a migration plan. The first prototype should prove the decision before economy schema is expanded.
-
-### Why this matters
-
-This is not a request to create currency complexity. It is a guard against accidentally making one number serve two incompatible player meanings:
-
-- **achievement/history** — “how much have I successfully brought home over my entire career?”
-- **resource/opportunity cost** — “how much can I sacrifice or commit right now?”
-
-Those can be the same inflow without being the same stored quantity. Separating them prematurely would be unnecessary; failing to decide before spending mechanics are added would create confusing progression semantics and save migration debt exactly when the long-term layer starts becoming valuable.
+P-005 is a presentation problem: discovered identities cannot be revisited. P-007 is an agency problem: the player cannot target a missing identity. P-012 is a **sequence/meaning problem**: even if an archive and targeting were added, a uniformly random permutation of disconnected labels still would not create a world arc. For a flagship game whose long-term appeal may include “続きが気になる”, discovery needs either causal pursuit or authored revelation—not simply persistence and quantity.
 
 ## Progression summary
 
@@ -150,6 +45,7 @@ Those can be the same inflow without being the same stored quantity. Separating 
 | content_exhaustion_risk | FAIL | HIGH | OBSERVED + SIMULATED | Exactly six chosen anomalies complete all six discoveries. |
 | collection_agency | FAIL | HIGH | OBSERVED | Discovery identity is random from unseen entries; no deliberate targeting exists. |
 | world_discovery_payoff | FAIL | HIGH | OBSERVED | Only a persistent count is visible; identities/meaning have no durable presentation. |
+| narrative_revelation_structure | DESIGN_RISK | HIGH | OBSERVED + DESIGN ANALYSIS | Six discovery identities arrive as a random permutation with no prerequisites, causality, or escalation. |
 | early_collector_distortion | WARNING | HIGH | OBSERVED + SIMULATED | Collector behavior can raise anomaly selection to ≈50.1% and collapse to ≈59.7%, then that motive vanishes after completion. |
 | reward_marginal_value | FAIL | HIGH | OBSERVED | Additional banked salvage changes only the displayed cumulative total; one-time tiny unlocks alone would merely delay the same dead end. |
 | progression_runway_design | DESIGN_RISK | HIGH | OBSERVED + DESIGN ANALYSIS | A finite protocol set needs repeatable commitment value, not endless content tiers, if banked salvage is to retain meaning. |
@@ -158,20 +54,19 @@ Those can be the same inflow without being the same stored quantity. Separating 
 
 ## Executive handoff
 
-`HUMAN_CANDIDATE_01` is frozen by Executive. **Do not change its gameplay from Progression.** The useful work while waiting is to make the post-pass progression decision safer, not to pre-build it.
+`HUMAN_CANDIDATE_01` remains frozen by Executive. **Do not change its gameplay from Progression.**
 
 1. Preserve the frozen single-run economy and human-test package.
-2. Treat production anomaly rewards as **2 / 3 / 5 / 8 / 10 / 13** at depths 1–6.
-3. Persistent progression remains the next major product problem **only if the core passes HUMAN_VERIFIED feel testing**.
-4. Do not turn `banked` into a linear stat shop. Its first useful role should create opportunity cost and a different next-run intention.
-5. Require the P-009 acceptance gate before implementing the first persistent protocol/loadout experiment.
-6. Avoid an unlock-only dead end: if a tiny protocol set is adopted, test a repeatable mutually exclusive commitment before solving runway with more tiers/items.
-7. Before any salvage spending/staking implementation, resolve P-011: preserve lifetime recovery separately from spendable/committed value, or deliberately redefine the current `banked` semantics with migration. Do not add currency fields until the decision prototype proves they are needed.
-8. If discovery becomes long-term collection, require pursuit agency before adding quantity.
-9. Discovery semantics still need an Executive decision: knowledge retained on contact versus cargo requiring extraction.
+2. Persistent progression remains the next major product problem only if the core passes `HUMAN_VERIFIED` feel testing.
+3. Do not turn `banked` into a linear stat shop; require P-009 before any persistent protocol/loadout implementation.
+4. Avoid an unlock-only dead end; if a tiny protocol set is adopted, test repeatable mutually exclusive commitment before adding tiers/items.
+5. Resolve P-011 before salvage spending/staking: preserve lifetime recovery separately or deliberately redefine the current cumulative semantics with migration.
+6. If discovery becomes a long-term collection pillar, require pursuit agency before adding quantity.
+7. If discovery is expected to create “続きが気になる”, resolve P-012 before writing lore volume: choose causal pursuit or a tiny authored revelation chain rather than a random permutation of disconnected labels.
+8. Discovery semantics still need an Executive decision: knowledge retained on contact versus cargo requiring extraction.
 
 Queued post-pass design question:
 
-**What smallest repeatable protocol commitment can reuse the existing calm/deep/resonance/anomaly/signal hooks so that two players—or the same player on two runs—enter the next dive with genuinely different intentions, while a tiny finite option set remains valuable without becoming a linear power grind or endless unlock tree?**
+**Can the same small set of existing signals, depths, route roles and anomalies support both a repeatable protocol intention and a discoverable world mystery, so that progression changes how the player investigates the signal sea rather than adding a separate upgrade game?**
 
 No gameplay change was made in this pass. The frozen human candidate remains intact.
