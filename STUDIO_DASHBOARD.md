@@ -1,77 +1,105 @@
 # Chappy5 Studio Dashboard
 
-Updated: 2026-08-25 22:30 JST
+Updated: 2026-08-25 23:28 JST
 Target: ECHO DRIFT core decision loop
 
 | 領域 | Status | Severity | Confidence | Verification | 最新の重要Finding |
 |---|---|---:|---|---|---|
-| Game Systems | WARNING | 4 | HIGH | SIMULATED | Latest 100k adaptive probe still selected deep ≈83.0% and ended around depth 2.62; calm/resonance identities improved but shallow extraction remains the bottleneck. |
-| Player Experience | WARNING | 4 | HIGH | OBSERVED + SIMULATED | Immediate route danger and extraction payoff are now readable, but the predicted lived experience is still mostly shallow deep-route play. |
-| Progression & Content | FAIL | 4 | HIGH | OBSERVED + SIMULATED | Persistent bank/runs/discoveries still do not alter future strategy; six discoveries can complete after exactly six anomaly choices and discovery semantics remain unresolved. |
-| Technical & Quality | UNKNOWN/WARNING | 3 | HIGH | OBSERVED + UNVERIFIED | Deterministic save/state regression now passes in GitHub Actions; real iPhone/Safari lifecycle and layout remain unverified. |
+| Game Systems | WATCH | 3 | HIGH | OBSERVED + SIMULATED | Current exact rules materially reduced deep dominance: ≈58.7% deep / 29.0% resonance / 12.3% calm, mean ending depth ≈2.85. Main remaining systems risk is ≈53.3% simulated collapse and whether route diversity survives state-conditioned analysis. |
+| Player Experience | WARNING | 4 | MEDIUM-HIGH | OBSERVED + SIMULATED | Immediate risk and extraction payoff are readable and route identities are more likely to be felt; the major subjective unknown is whether >50% collapse feels earned/replayable rather than punishing. |
+| Progression & Content | FAIL | 4 | HIGH | OBSERVED + SIMULATED | Persistent bank/runs/discoveries still do not alter future strategy. Six discoveries complete after six chosen anomalies; collector behavior can raise anomaly choice ≈37.4%→50.1% and collapse ≈53.3%→59.7%, then that motive disappears. |
+| Technical & Quality | UNKNOWN/WARNING | 3 | HIGH | OBSERVED + UNVERIFIED | Core save/state regression and threat/anomaly invariants pass CI. Production anomaly bonuses are 2/3/5/8/10/13 at depths 1–6. Real iPhone/Safari lifecycle/layout remains unverified. |
 
 ## Executive priority
 
-**Break the shallow deep-route economy by making later visible opportunities sometimes worth reaching, without creating a universal “always dive deeper” rule.**
+**Preserve the materially improved current economy and verify that its route diversity is robust across visible game states before freezing the first human-test candidate.**
 
-This remains higher priority than meta progression, content expansion, radar polish, or broad refactoring.
+This is now higher value than another immediate balance patch. Meta progression, content expansion, radar polish and broad refactoring remain blocked until either the state-conditioned check exposes a concrete core exploit or the current build is frozen for human feel verification.
 
-## Executive integration — 22:30 JST
+## Executive integration — 23:28 JST
 
-### Evidence integrated
+### What changed since the previous Executive integration
 
-Game Systems re-tested the previous conditional route tuning and found it directionally useful but insufficient: mean ending depth remained ≈2.62, deep still represented ≈83.0% of adaptive selections, resonance ≈13.7%, calm ≈3.3%, and chain-matching resonance ≈3.7% of all steps. The strongest conclusion is that the game rarely reaches the states where calm recovery and multi-step resonance can matter.
+The previous Executive pass deliberately reduced Deep base gain to `3–6` and made the existing visible anomaly opportunity scale more strongly with depth. Game Systems has now re-tested the **actual current `game.js`** rather than the previous candidate approximation.
 
-Player Experience independently reached the same product-level conclusion: information clarity has improved substantially, including direct projected threat and direct extraction payoff, but a typical optimized run is still predicted to feel like shallow deep-route farming. It also recommends delaying human subjective testing until this AI-detectable convergence is reduced.
+The result is a material improvement rather than a marginal one:
 
-Progression remains Severity 4 because permanent results do not change later play. However, adding meta progression now would risk formalizing the same dominant shallow strategy. Technical quality is sufficiently stable for a narrow balance iteration: deterministic save/state regression is CI-verified, with real iPhone/Safari still reserved for a frozen human-test build.
+- deep route share ≈ **58.7%**, down from ≈83.0%;
+- resonance ≈ **29.0%**;
+- calm ≈ **12.3%**;
+- chain-matching resonance ≈ **7.2%** of all selections, up from ≈3.7%;
+- mean ending depth ≈ **2.85**, up from ≈2.62.
 
-### Candidate analysis this cycle
+This does not prove the game is fun. It does show that the three route identities are beginning to function as real strategic jobs instead of one dominant payout route plus two decorative alternatives.
 
-Executive tested several small reward-shape candidates against a local Monte Carlo reproduction of current `game.js`. The current-rule reproduction matched the Director evidence closely (deep ≈83%, mean ending depth ≈2.6), so it was used only as a comparative SIMULATED probe, not as HUMAN evidence.
+### The main risk has changed
 
-Pure extraction-multiplier increases raised risk-taking/collapse without sufficiently changing route diversity and risked replacing shallow farming with a universal depth target. A more useful candidate changed two existing values rather than adding a subsystem:
+The largest AI-detectable problem is no longer deep dominance. The new systems risk is that the healthier choice distribution is accompanied by **≈53.3% collapse** in the tested adaptive policy. A separate 200k repeat reproduced ≈53.2% collapse, ≈40.9% voluntary extraction and ≈5.8% forced extraction.
 
-1. reduce Deep's base gain range from `4–7` to `3–6`, preserving it as the strongest immediate burst route but lowering its unconditional lead;
-2. make the already-existing visible anomaly reward grow more meaningfully with depth: `2 + floor(depth/2) + max(0, depth-2) × 2`.
+Exact danger is visible before selection, so this is not a hidden-probability fairness bug. Whether this loss profile feels like satisfying push-your-luck tension or like repeated time erasure is increasingly a **human feel question**, not something Executive should settle by blindly lowering the probability.
 
-In the comparative adaptive probe, this candidate produced approximately deep 59%, resonance 29%, calm 12%, mean ending depth ≈2.85, versus the reproduced current baseline of deep ≈83%, resonance ≈14%, calm ≈3%, depth ≈2.62. Average permanent bank remained in roughly the same range rather than exploding upward. Collapse increased, so this is not considered proven balance; it is a deliberate candidate to create more state diversity for the next Systems pass.
+### Discovery layer integration
 
-Verification for those balance effects is `SIMULATED`; the code change itself is `OBSERVED`.
+Systems also resolved the queued Progression concern. `meta.found` does not mechanically affect route value, so optimal mechanical play is identical before and after discovery completion. But a collector-motivated policy materially changes behavior: anomaly choice rises to ≈50.1%, bank falls to ≈9.93/run and collapse rises to ≈59.7%. After six discoveries that extra motive disappears because discovery has no further mechanical/world consequence.
 
-### Game change this cycle: depth-sensitive opportunity, not a new mechanic
+This confirms that the existing collection layer is not yet long-term progression. It can temporarily bend early play, then abruptly stop mattering. Do **not** solve this by adding more relic names.
 
-Commit `4e8afc11b1a4cb0afa42d7c031532473493acd9e` updates `game.js`:
+### Numeric source-of-truth correction
 
-- **Deep** base gain: `4–7` → `3–6`.
-- **Anomaly reward** now scales more strongly after depth 2 while retaining the same visible ⚠ opportunity and +7 threat cost.
-- Calm recovery, resonance-chain reward, exact projected threat, extraction multiplier, energy model, anomaly frequency, and persistence are otherwise unchanged.
+Technical & Quality caught one Director-record drift: production `anomalyBonusAt(depth)` is
 
-The intent is not equal route percentages. It is that early safe/burst choices, live resonance chains, high-threat calm recovery, and occasional deeper anomalies can each become rational under different visible states.
+`2 + floor(depth/2) + max(0, depth-2) * 2`
 
-### What was deliberately not done
+and therefore yields **2 / 3 / 5 / 8 / 10 / 13** at depths 1–6. A Progression document had previously recorded values one point too high from depth 3 onward. That document has now been corrected in commit `8275daf1075ed792a350f0e43b59f295197fa79b`.
 
-- No fourth route or new currency/system.
-- No global depth bonus or hard milestone that says “always reach depth N.”
-- No progression/loadout yet.
-- No extra relic/content quantity.
-- No radar polish yet.
+Future balance decisions must use `game.js` or executable probes as numeric source of truth rather than copied prose.
+
+## Executive decision this cycle
+
+### No new gameplay balance patch
+
+Do **not** immediately tune Deep, Calm, Resonance, anomaly frequency, threat growth or extraction multiplier again. The last patch achieved the intended structural effect strongly enough that another balance change now would destroy the chance to understand whether the improvement is robust.
+
+### Human-test gate is near, but not frozen yet
+
+One remaining AI-side check has high value before freezing the candidate:
+
+**Does each route become rational in identifiable visible states — especially threat band, depth and active resonance-chain state — rather than the global percentages merely averaging over another hidden fixed rule?**
+
+The next Systems pass should answer this using current exact main without changing the game unless it discovers a concrete exploit or dominant state rule.
+
+If that state-conditioned check is healthy, Executive should freeze the current gameplay candidate and move to HUMAN_VERIFIED testing instead of continuing balance simulation indefinitely.
+
+## Human-test candidate criteria
+
+The first frozen candidate is ready when:
+
+1. no route is a near-universal choice inside the major visible state bands;
+2. calm demonstrably has a high-threat recovery role;
+3. live-chain resonance demonstrably changes choice value;
+4. later anomaly offers sometimes justify continued risk without being universally mandatory;
+5. save/state CI remains green.
+
+At that point, subjective evaluation should be limited to:
+
+- Did **continue vs extract** create genuine hesitation more than once?
+- After collapse, did failure feel **earned enough to want another attempt**, or like the game erased your time?
+- After a successful or failed run, did you **immediately want another run**?
+- Separately observe whether iPhone scrolling/thumb reach/runtime friction interfered with the decision.
+
+Record those results only as `HUMAN_VERIFIED`; negative results are primary evidence, not something to explain away with simulation.
+
+## What remains deliberately blocked
+
+- No meta shop or linear permanent stat upgrades.
+- No larger relic list.
+- No new route/system/currency.
+- No archive/lore volume until discovery semantics are approved.
+- No radar-feedback polish until the gameplay candidate is frozen.
 - No broad refactor.
-
-## Next evidence needed
-
-Game Systems should re-run current exact rules and answer:
-
-1. Does deep dominance materially fall without resonance becoming a new universal default?
-2. Does mean ending depth/state diversity improve enough that high-threat calm and live-chain resonance are actually encountered?
-3. Do anomalies create occasional reasons to continue at later depths, or do they simply become mandatory whenever visible?
-4. Has collapse rate become too punitive relative to the gain in decision variety?
-5. Do fixed-stop policies still reveal a simple best extraction depth?
-
-If the new economy is materially healthier, Executive can then consider freezing a first human-test candidate. If not, continue tuning the same existing decision variables rather than adding meta progression.
 
 ## Human verification status
 
-No HUMAN_VERIFIED finding exists yet. Do not claim the game is fun.
+No `HUMAN_VERIFIED` finding exists yet. Do not claim ECHO DRIFT is fun, satisfying, replayable or flagship-ready.
 
-Human play remains deferred while route/stop convergence is still being AI-tested. When a candidate is frozen, ask only whether continue-vs-extract caused repeated hesitation, whether route/extraction actions felt satisfying rather than merely readable, and whether another run was immediately desirable; separately record iPhone thumb/scroll/runtime friction.
+The current evidence supports a narrower statement: **the game is structurally healthier than the previous cycle, and it is approaching the point where human play will be more valuable than further broad AI prediction.**
