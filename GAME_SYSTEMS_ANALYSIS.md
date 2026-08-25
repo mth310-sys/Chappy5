@@ -114,6 +114,20 @@ Target: latest `main` ECHO DRIFT core loop as of 2026-08-26.
 - `human_verification_needed`: NO for the non-uniform/engine-dependent algorithmic fact; YES only for whether position materially affects real choice behavior.
 - `last_updated`: 2026-08-26
 
+## Finding GS-009 — depth pressure is cumulative, producing triangular rather than linear escalation
+
+- `director`: Game Systems Analysis Director
+- `status`: WATCH
+- `severity`: 3
+- `confidence`: HIGH
+- `verification`: OBSERVED + CALCULATED
+- `finding`: `projectedThreat()` adds `nextDepth * 1.4` to the already accumulated threat on every step. Therefore the depth contribution is cumulative: after depth `d`, depth alone has added `1.4 * (1 + 2 + … + d)`, not simply `1.4 * d`. This is a triangular/quadratic escalation curve and is a structural reason runs compress around depth 2-4.
+- `evidence`: Current code is `run.threat + r.risk + nextDepth*1.4 + ...`. Holding anomaly absent and ignoring hidden chain RNG, repeated resonance from the starting threat 6 produces threat ≈7.4, 10.2, 14.4, 20.0, 27.0, 35.4, 45.2, 56.4% at depths 1-8. Repeated deep produces ≈10.4, 16.2, 23.4, 32.0, 42.0, 53.4, 66.2, 80.4%. These values follow cumulative depth pressure plus route risk, not a one-time depth modifier.
+- `impact`: This is not automatically a bug—the current candidate and prior simulations already include this exact curve—but it materially shapes the product: deeper play becomes rapidly self-limiting, so late-depth calm recovery and long resonance chains are inherently rare. Future attempts to lengthen runs by only changing route rewards may fight against this underlying pressure curve and create distorted incentives instead of genuinely broader depth play.
+- `recommended_action`: Do not change the frozen human candidate. Treat cumulative depth pressure as an explicit design parameter in post-candidate tuning. If HUMAN_VERIFIED feedback says runs end before strategy develops, compare the current triangular curve against a deliberately linear or capped depth-pressure curve before adding more rewards or content. If current run length feels tense and replayable, preserve it as intentional rather than accidentally re-tuning around it.
+- `human_verification_needed`: YES for whether the resulting run length feels compressed; NO for the mathematical structure.
+- `last_updated`: 2026-08-26
+
 ## Current systems conclusion
 
 The state-level robustness check remains healthy enough that Systems does **not** recommend disturbing the frozen global risk/reward candidate before focused human play. Deep is strongest early, calm becomes important at threat >=25 and deeper states, and an active resonance chain materially changes resonance choice value.
@@ -122,6 +136,8 @@ The terminal partial-payment issue is quantitatively bounded: it occurs in a sma
 
 The resonance-signal mismatch remains the most conceptually important post-candidate rule-coherence issue: A/B/C is shown on every route, yet only resonance reads the signal, while calm/deep preserve or erase the active chain via hidden 50% RNG.
 
-A smaller new measurement risk is route ordering: each screen still contains all three route identities, but `sort(() => Math.random()-.5)` makes their vertical positions non-uniform and engine-dependent. This should be corrected after the frozen candidate if positional behavior matters, without reopening the economy.
+A smaller measurement risk is route ordering: each screen still contains all three route identities, but `sort(() => Math.random()-.5)` makes their vertical positions non-uniform and engine-dependent. This should be corrected after the frozen candidate if positional behavior matters, without reopening the economy.
+
+A newly explicit structural constraint is the cumulative depth-pressure curve. The current `nextDepth * 1.4` term is added to already accumulated threat each turn, so deeper risk accelerates triangularly. This likely contributes materially to the observed depth-2-to-4 concentration. It should remain frozen for the current human candidate, but post-candidate attempts to lengthen runs should test the pressure curve itself before compensating with more rewards.
 
 The main experiential systems question remains whether the simulated collapse rate around 53% feels like fair, self-authored greed or wasted time. Discovery also remains mechanically disconnected and should not be expanded by adding names alone.
