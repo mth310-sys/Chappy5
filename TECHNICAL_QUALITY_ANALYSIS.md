@@ -1,8 +1,8 @@
 # Technical & Quality Analysis
 
-Updated: 2026-08-25 21:52 JST
+Updated: 2026-08-25 22:52 JST
 Director: Technical & Quality Analysis Director
-Target: current `main` ECHO DRIFT playable after route-identity balance intervention
+Target: current `main` ECHO DRIFT playable after depth-opportunity tuning
 
 ## Finding TQ-001 — Active dive reload persistence
 
@@ -10,7 +10,7 @@ Target: current `main` ECHO DRIFT playable after route-identity balance interven
 - Severity: 4
 - Confidence: HIGH
 - Verification Type: OBSERVED
-- Evidence: `game.js` uses versioned `RUN_KEY`, validates `loadRun()`, persists after route generation/state transitions, and clears the live-run key on extraction/collapse/reset. The deterministic regression harness restores a live dive with its offered routes intact and is now CI-verified.
+- Evidence: `game.js` uses versioned `RUN_KEY`, validates `loadRun()`, persists after route generation/state transitions, and clears the live-run key on extraction/collapse/reset. The deterministic regression harness restores a live dive with its offered routes intact and is CI-verified.
 - Recommended Action: Keep this path protected by regression CI; real iPhone/Safari reload remains HUMAN verification work.
 
 The later anomaly-offer and route-role changes remain compatible with this persistence model: restored routes normalize their template identity, scalar cost/gain, signal and `anomaly` flag rather than trusting arbitrary saved route data.
@@ -21,7 +21,7 @@ The later anomaly-offer and route-role changes remain compatible with this persi
 - Severity: 4
 - Confidence: HIGH
 - Verification Type: OBSERVED
-- Evidence: `loadMeta()` rebuilds state from validated fields, clamps numeric counters, filters discoveries to known relic IDs and removes duplicates. The malformed-meta regression case now runs successfully in CI.
+- Evidence: `loadMeta()` rebuilds state from validated fields, clamps numeric counters, filters discoveries to known relic IDs and removes duplicates. The malformed-meta regression case runs successfully in CI.
 - Recommended Action: Before persistent progression expands materially, add an explicit payload schema version/migration path instead of extending the implicit v1 shape indefinitely.
 
 ## Finding TQ-003 — Storage exception containment
@@ -51,16 +51,16 @@ The later anomaly-offer and route-role changes remain compatible with this persi
 - Evidence: current HTML/CSS are intentionally mobile-first (`viewport-fit=cover`, safe-area insets, touch handling, portrait-width cap, dynamic viewport height), but current main contains no HUMAN_VERIFIED real-device record for touch, safe areas, reload restoration, background/foreground restoration or persistence.
 - Recommended Action: When Executive freezes a human-testable playable, run a short real-device matrix: fresh launch, all route taps, voluntary extraction, live-run reload, background/foreground, reset, portrait viewport/safe-area check.
 
-## Finding TQ-006 — Deterministic state regression is now continuously verified
+## Finding TQ-006 — Deterministic state regression is continuously verified
 
 - Status: PASS
 - Severity: 3
 - Confidence: HIGH
 - Verification Type: OBSERVED
-- Evidence: `tests/regression.mjs` uses Node built-ins only (`node:vm`, in-memory localStorage and a minimal DOM stub) and covers malformed meta normalization; live-dive restore including anomaly offers; successful extraction banking/counting/clearing the run key; collapse counting/haul loss/clearing the run key. Commit `669ad78747eb939262ab46ce3c8b98784a62cb45` adds `.github/workflows/regression.yml`. GitHub Actions run `32849788745` completed successfully; job `regression` and step `Run deterministic state regression` both concluded `success` on Node 22.
-- Recommended Action: Keep this CI intentionally small. Extend cases only when a real state/persistence rule changes. Add browser-level coverage later for actual Safari/DOM behavior rather than pretending this VM harness is a browser test.
+- Evidence: `tests/regression.mjs` uses Node built-ins only (`node:vm`, in-memory localStorage and a minimal DOM stub) and covers malformed meta normalization; live-dive restore including anomaly offers; successful extraction banking/counting/clearing the run key; collapse counting/haul loss/clearing the run key. `.github/workflows/regression.yml` executes it automatically on relevant changes.
+- Recommended Action: Keep this CI intentionally small. Extend cases only when a real state/persistence/game-rule invariant changes. Add browser-level coverage later for actual Safari/DOM behavior rather than treating this VM harness as a browser test.
 
-This closes the previous execution-verification gap: the regression artifact is no longer merely present; it has an externally recorded successful run tied to main. It still does **not** verify layout, Safari lifecycle, touch behavior or real localStorage implementation details.
+The latest targeted regression extension is commit `a49d8510315d66a20fda2b40b775691f21a88afb`. GitHub Actions run `32855815035` (`ECHO DRIFT Regression`) completed with conclusion `success`.
 
 ## Finding TQ-007 — Save schema is versioned by key only, not payload
 
@@ -71,25 +71,39 @@ This closes the previous execution-verification gap: the regression artifact is 
 - Evidence: production currently uses `chappy5.echoDrift.v1` and `chappy5.echoDrift.run.v1`, but saved JSON has no explicit `schemaVersion` and there is no migration function. Current validation is sufficient for the small present payload, but future long-term progression will make implicit compatibility increasingly fragile.
 - Recommended Action: Do not refactor now. When the next real persistent progression field is approved, add a small explicit schema version/migration at that change boundary and extend regression cases with one legacy payload.
 
-## Finding TQ-008 — Current balance intervention preserves displayed/actual threat calculation path
+## Finding TQ-008 — Displayed and applied threat share one formula and are now regression-protected
 
 - Status: PASS
 - Severity: 3
 - Confidence: HIGH
 - Verification Type: OBSERVED
-- Evidence: both route rendering and collapse resolution use the same `projectedThreat()` function. Calm recovery is state-dependent (`run.threat >= 25`), anomaly risk and depth pressure are included in that function, and `chooseRoute()` assigns the returned value to `run.threat` immediately before the collapse roll. No separate hidden collapse formula was introduced by the route-role change.
-- Recommended Action: If threat rules are changed again, add one deterministic regression case around a high-threat calm route so UI/gameplay formula drift cannot reappear unnoticed.
+- Evidence: route rendering and collapse resolution both use `projectedThreat()`. A new deterministic regression case starts at threat 30 / depth 2, verifies calm projects to 23.2% at depth 3, resolves that route, and asserts the resulting runtime `run.threat` equals the pre-choice projection. CI run `32855815035` passed this case.
+- Recommended Action: Keep this single invariant test when future balance changes alter calm, anomaly risk or depth pressure; do not duplicate the formula elsewhere.
+
+This closes the previous gap where formula sharing was visible in code but not directly protected by CI.
+
+## Finding TQ-009 — Depth-sensitive anomaly curve needed an executable source of truth
+
+- Status: WARNING → PASS
+- Severity: 3
+- Confidence: HIGH
+- Verification Type: OBSERVED
+- Evidence: current production function is `2 + floor(depth/2) + max(0, depth-2) * 2`, which yields exact bonuses `[2, 3, 5, 8, 10, 13]` for depths 1–6. A recent Progression analysis described this curve as `2, 3, 6, 9, 11, 14`, so Director prose had drifted from implementation by +1 from depth 3 onward. The new regression case asserts the production sequence directly, and CI run `32855815035` passed.
+- Recommended Action: Executive/Systems should use `game.js` or executable probes as the numeric source of truth for subsequent balance simulation. Analysis documents should be corrected when next touched; do not change gameplay merely to match stale prose.
+
+This is not a gameplay bug: the implementation is internally consistent. It is a decision-quality risk because balance conclusions can be wrong if a Director simulates a documented curve that is not the curve players actually receive.
 
 ## Current technical summary
 
 | Metric | Status | Confidence | Verification | Current evidence |
 |---|---|---|---|---|
-| critical bugs | PASS/WARNING | HIGH | OBSERVED | No fatal path found in current static/state inspection; core regression now CI-pass. |
+| critical bugs | PASS/WARNING | HIGH | OBSERVED | No fatal path found in current static/state inspection; core regression remains CI-pass. |
 | state integrity | PASS | HIGH | OBSERVED | Live, collapse and extract transitions are exercised successfully in CI. |
 | save integrity | PASS | HIGH | OBSERVED | Meta/run loaders sanitize state; storage exceptions are contained. |
 | save migration | WARNING | HIGH | OBSERVED | v1 keys exist but payload migration is still implicit. |
-| regression risk | PASS | HIGH | OBSERVED | Minimal deterministic harness runs automatically on relevant main/PR changes and has a recorded successful run. |
-| threat formula integrity | PASS | HIGH | OBSERVED | Display and collapse resolution share `projectedThreat()`. |
+| regression risk | PASS | HIGH | OBSERVED | State transitions plus threat/anomaly rule invariants now run automatically and pass. |
+| threat formula integrity | PASS | HIGH | OBSERVED | Display/applied threat equivalence is now explicitly regression-tested. |
+| balance-source integrity | PASS/WARNING | HIGH | OBSERVED | Production anomaly curve is executable/tested; one stale analysis description was identified for correction. |
 | performance | UNKNOWN | MEDIUM | UNVERIFIED | Production code/assets remain small, but no runtime measurement is recorded. |
 | mobile layout | WARNING | MEDIUM | UNVERIFIED | iPhone-oriented CSS exists; no real-device verification record. |
 | iPhone runtime | UNKNOWN | HIGH | UNVERIFIED | Real device not verified. |
@@ -97,6 +111,8 @@ This closes the previous execution-verification gap: the regression artifact is 
 
 ## Executive handoff
 
-This pass justified one narrow infrastructure change because the game is being edited repeatedly during the 24-hour cycle: the existing zero-dependency regression harness is now executed by a minimal GitHub Actions workflow instead of remaining unverified. The first run passed, so there is now durable evidence that the current main preserves the four most important save/state transitions covered by the harness.
+No production gameplay refactor was justified this pass. The useful technical work was narrower: protect two balance-sensitive invariants that changed during the Director cycle and detect one concrete mismatch between analysis prose and actual code.
 
-No production gameplay refactor was justified. The next technical priority remains the real target environment: once Executive freezes a meaningful Playable, perform the short iPhone/Safari lifecycle matrix. Before that point, only extend automated coverage when a concrete state rule changes; do not grow a test framework for its own sake.
+The current production anomaly bonus is **2 / 3 / 5 / 8 / 10 / 13 at depths 1–6**. Future Systems/Executive simulations should derive this from `game.js` or an executable probe rather than copy the stale 2 / 3 / 6 / 9 / 11 / 14 description.
+
+The target-platform priority is unchanged: once Executive freezes a meaningful Playable, perform the short real iPhone/Safari lifecycle matrix. Until then, extend automated coverage only for concrete state or rule invariants that are actually being changed; do not grow a testing framework for its own sake.
