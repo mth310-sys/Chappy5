@@ -1,8 +1,8 @@
 # Technical & Quality Analysis
 
-Updated: 2026-08-25 23:48 JST
+Updated: 2026-08-26 00:48 JST
 Director: Technical & Quality Analysis Director
-Target: current `main` ECHO DRIFT playable after route rebalance and progression-analysis updates
+Target: current `main` ECHO DRIFT `HUMAN_CANDIDATE_01` freeze plus non-gameplay regression additions
 
 ## Finding TQ-001 — Active dive reload persistence
 
@@ -26,12 +26,12 @@ The later anomaly-offer and route-role changes remain compatible with this persi
 
 ## Finding TQ-003 — Storage exception containment
 
-- Status: PASS
+- Status: PASS / CURRENT TEST EXTENSION UNVERIFIED
 - Severity: 3
 - Confidence: HIGH
-- Verification Type: OBSERVED
-- Evidence: all localStorage reads/writes/removes are wrapped by `storageGet/storageSet/storageRemove`; failures set `storageHealthy=false` and gameplay displays a persistence warning rather than throwing through the interaction path.
-- Recommended Action: Verify actual Safari private/restricted-storage behavior on device; static code inspection and VM tests cannot certify it.
+- Verification Type: OBSERVED + UNKNOWN / UNVERIFIED
+- Evidence: all localStorage reads/writes/removes are wrapped by `storageGet/storageSet/storageRemove`; failures set `storageHealthy=false` and gameplay displays a persistence warning rather than throwing through the interaction path. Commit `372282fc1499b420726aab5023c6df840bd82d40` adds a deterministic test using a storage implementation that throws on every get/set/remove. It asserts boot remains alive, the warning is visible and `startRun()` remains playable without persistence. The commit is on main, but an Actions result was not yet observable during this pass.
+- Recommended Action: Verify CI for the new blocked-storage regression on the next Technical pass. Real Safari private/restricted-storage behavior still requires device verification.
 
 ## Finding TQ-004 — Run counter semantics
 
@@ -48,17 +48,17 @@ The later anomaly-offer and route-role changes remain compatible with this persi
 - Severity: 3
 - Confidence: HIGH
 - Verification Type: UNKNOWN / UNVERIFIED
-- Evidence: current HTML/CSS are intentionally mobile-first (`viewport-fit=cover`, safe-area insets, touch handling, portrait-width cap, dynamic viewport height), but current main contains no HUMAN_VERIFIED real-device record for touch, safe areas, reload restoration, background/foreground restoration or persistence.
-- Recommended Action: When Executive freezes a human-testable playable, run a short real-device matrix: fresh launch, all route taps, voluntary extraction, live-run reload, background/foreground, reset, portrait viewport/safe-area check.
+- Evidence: current HTML/CSS are intentionally mobile-first (`viewport-fit=cover`, safe-area insets, touch handling, portrait-width cap, dynamic viewport height), and Executive has now frozen `HUMAN_CANDIDATE_01`, but current main still contains no HUMAN_VERIFIED real-device record for touch, safe areas, reload restoration, background/foreground restoration or persistence.
+- Recommended Action: The freeze removes the main reason to postpone this. Run the short real-device matrix on the frozen candidate: fresh launch, all route taps, voluntary extraction, live-run reload, background/foreground, reset, portrait viewport/safe-area check.
 
 ## Finding TQ-006 — Deterministic state regression is continuously verified
 
-- Status: PASS / CURRENT EXTENSION UNVERIFIED
+- Status: PASS
 - Severity: 3
 - Confidence: HIGH
-- Verification Type: OBSERVED + UNKNOWN / UNVERIFIED
-- Evidence: `tests/regression.mjs` uses Node built-ins only (`node:vm`, in-memory localStorage and a minimal DOM stub) and covers malformed meta normalization; live-dive restore including anomaly offers; successful extraction banking/counting/clearing the run key; collapse counting/haul loss/clearing the run key; displayed/applied calm threat equivalence; and the production anomaly reward curve. Prior GitHub Actions runs have passed these cases. Commit `b8ece2714a912c018c799e2aa66eaaee8372eadd` adds terminal-idempotency cases for repeated extraction and interaction after collapse. The new commit exists on main, but an execution result for that exact extension was not observable during this Director pass, so it is not claimed as PASS yet.
-- Recommended Action: On the next Technical pass, verify the workflow result for `b8ece2714a912c018c799e2aa66eaaee8372eadd` or a later main containing it. Keep this CI intentionally small.
+- Verification Type: OBSERVED
+- Evidence: `tests/regression.mjs` uses Node built-ins only (`node:vm`, in-memory localStorage and a minimal DOM stub) and covers malformed meta normalization; live-dive restore including anomaly offers; successful extraction banking/counting/clearing the run key; collapse counting/haul loss/clearing the run key; displayed/applied calm threat equivalence; the production anomaly reward curve; repeated extraction idempotency; and post-collapse interaction idempotency. GitHub Actions run `32861991890` for commit `b8ece2714a912c018c799e2aa66eaaee8372eadd` completed with conclusion `success`, so the previously unverified terminal-idempotency extension is now promoted to PASS.
+- Recommended Action: Keep this CI intentionally small and invariant-focused. Do not broaden it into UI snapshot maintenance unless a concrete regression risk appears.
 
 ## Finding TQ-007 — Save schema is versioned by key only, not payload
 
@@ -93,33 +93,43 @@ The later anomaly-offer and route-role changes remain compatible with this persi
 - Severity: 3
 - Confidence: HIGH
 - Verification Type: OBSERVED
-- Evidence: `extract()` and collapse both set `run.alive=false`, so repeated calls in the same JS session are guarded and cannot normally double-count. The new regression extension explicitly protects repeated extraction and post-collapse interaction. However, terminal settlement updates `meta` and the live-run key in separate localStorage operations. A page/process interruption between those writes could theoretically leave `meta` settled while an older live `RUN_KEY` remains, allowing stale-state recovery on reload; reversing write order would instead risk losing a legitimate settlement. There is currently no transaction journal/run settlement ID that can make this atomic across interruption boundaries.
-- Recommended Action: Do not add a transaction framework during the core-loop experiment. Before valuable long-term progression or monetizable/rare rewards depend on settlement correctness, introduce a minimal idempotent settlement record (for example a run ID + last-settled ID or a pending terminal journal) and regression-test interruption recovery. Until then, treat abrupt-interruption settlement as a known prototype risk, not a confirmed production-safe path.
+- Evidence: `extract()` and collapse both set `run.alive=false`, and the terminal-idempotency regression is now CI-confirmed. However, terminal settlement updates `meta` and the live-run key in separate localStorage operations. A page/process interruption between those writes could theoretically leave `meta` settled while an older live `RUN_KEY` remains, allowing stale-state recovery on reload; reversing write order would instead risk losing a legitimate settlement. There is currently no transaction journal/run settlement ID that can make this atomic across interruption boundaries.
+- Recommended Action: Do not add a transaction framework during the frozen core-loop human test. Before valuable long-term progression or monetizable/rare rewards depend on settlement correctness, introduce a minimal idempotent settlement record (for example a run ID + last-settled ID or a pending terminal journal) and regression-test interruption recovery.
 
-This is distinct from ordinary double-tap protection: same-session repeated calls are already guarded. The risk is interruption between separate persistence writes.
+This is distinct from ordinary double-tap protection: same-session repeated calls are already CI-protected. The risk is interruption between separate persistence writes.
+
+## Finding TQ-011 — Human-candidate freeze is technically stable enough for device lifecycle verification
+
+- Status: READY_FOR_HUMAN_DEVICE_CHECK
+- Severity: 3
+- Confidence: HIGH
+- Verification Type: OBSERVED + UNKNOWN / UNVERIFIED
+- Evidence: Executive froze `HUMAN_CANDIDATE_01` without further gameplay rebalance. Production JS has not changed since the previously successful regression-protected balance version; subsequent changes are analysis documentation and non-gameplay tests. The main remaining target-platform unknowns are therefore now isolated to actual Safari/device behavior rather than known unstable gameplay code.
+- Recommended Action: Do not change the frozen candidate merely to increase test coverage. Perform the real-device lifecycle matrix and record results as HUMAN_VERIFIED. If a device failure is found, fix only the concrete defect and then re-freeze the candidate.
 
 ## Current technical summary
 
 | Metric | Status | Confidence | Verification | Current evidence |
 |---|---|---|---|---|
-| critical bugs | PASS/WARNING | HIGH | OBSERVED | No fatal ordinary interaction path found; one crash-consistency prototype risk is documented. |
-| state integrity | PASS | HIGH | OBSERVED | Live, collapse and extract transitions are covered by deterministic tests; terminal idempotency tests are now present. |
-| save integrity | PASS/WARNING | HIGH | OBSERVED | Loaders sanitize state and storage exceptions are contained; terminal settlement is not transactional across abrupt interruption. |
+| critical bugs | PASS/WARNING | HIGH | OBSERVED | No fatal ordinary interaction path found; one abrupt-interruption settlement risk is documented. |
+| state integrity | PASS | HIGH | OBSERVED | Live, collapse and extract transitions plus same-session terminal idempotency are CI-protected. |
+| save integrity | PASS/WARNING | HIGH | OBSERVED | Loaders sanitize state and storage exceptions are contained; terminal settlement is not crash-atomic. |
 | save migration | WARNING | HIGH | OBSERVED | v1 keys exist but payload migration is still implicit. |
-| regression risk | PASS / CURRENT EXTENSION UNVERIFIED | HIGH | OBSERVED + UNVERIFIED | Existing CI has passed; new terminal-idempotency cases are committed but exact run result was not observable this pass. |
+| regression risk | PASS + one new extension pending | HIGH | OBSERVED + UNVERIFIED | Terminal-idempotency CI is confirmed successful; blocked-storage fallback test is newly committed and awaiting observable CI. |
 | threat formula integrity | PASS | HIGH | OBSERVED | Display/applied threat equivalence is regression-protected. |
 | balance-source integrity | PASS | HIGH | OBSERVED | Production anomaly curve is executable/tested and Director prose has been corrected. |
 | performance | UNKNOWN | MEDIUM | UNVERIFIED | Production code/assets remain small, but no runtime measurement is recorded. |
 | mobile layout | WARNING | MEDIUM | UNVERIFIED | iPhone-oriented CSS exists; no real-device verification record. |
-| iPhone runtime | UNKNOWN | HIGH | UNVERIFIED | Real device not verified. |
-| Safari lifecycle | UNKNOWN | HIGH | UNVERIFIED | Reload/background/storage behavior not device-verified. |
+| iPhone runtime | READY FOR CHECK | HIGH | OBSERVED + UNVERIFIED | Candidate is frozen; device verification should now proceed. |
+| Safari lifecycle | READY FOR CHECK | HIGH | OBSERVED + UNVERIFIED | Reload/background/storage behavior is the next high-value quality gate. |
 
 ## Executive handoff
 
-No gameplay rebalance or large refactor was justified this pass because current main after the previous Technical audit changed only analysis/state documentation, not production game rules.
+No gameplay balance or UI change was justified because `HUMAN_CANDIDATE_01` is explicitly frozen for human evaluation. This pass therefore preserved the candidate and focused only on quality evidence around it.
 
-The concrete quality improvement is commit `b8ece2714a912c018c799e2aa66eaaee8372eadd`, which adds regression protection against same-session double settlement: repeated extraction must not bank/count twice, and interaction after collapse must not mutate/count the finished run again. The exact CI result for that new extension was not observable during this pass, so it remains explicitly UNVERIFIED until a later check.
+Two concrete updates were made:
 
-A new medium-severity prototype risk is now recorded: extraction/collapse settlement and live-run deletion are separate localStorage writes and therefore are not crash-atomic. This does not justify a transaction system during the current core-loop experiment, but it becomes important before long-term progression gains substantial value. When persistence expands, prefer a small idempotent settlement protocol rather than trying to solve the problem by merely reordering the two writes.
+1. The previously unverified terminal-idempotency extension is now confirmed PASS. GitHub Actions run `32861991890` for `b8ece2714a912c018c799e2aa66eaaee8372eadd` completed successfully, so repeated extraction and post-collapse interaction are no longer merely test code present on main; they are executed CI evidence.
+2. Commit `372282fc1499b420726aab5023c6df840bd82d40` adds a blocked-localStorage regression. This directly exercises the fallback path that current production code claims to support: storage calls throw, the game stays playable, and the player receives a clear non-persistence warning. Its exact Actions result was not yet observable during this pass, so the new extension remains UNVERIFIED rather than being prematurely declared PASS.
 
-The target-platform priority remains unchanged: once Executive freezes a meaningful Playable, perform the short real iPhone/Safari lifecycle matrix. Until then, extend automated coverage only for concrete state or rule invariants that are actually changing.
+The highest-value next Technical action is no longer another static audit. Because the candidate is frozen, the real iPhone/Safari matrix should now be performed and recorded as HUMAN_VERIFIED: fresh launch, route taps, voluntary extraction, reload mid-dive, background/foreground, reset, safe-area/portrait layout, and persistence behavior. The known crash-consistency issue should remain a documented prototype risk until persistent rewards become valuable enough to justify a minimal settlement journal.
