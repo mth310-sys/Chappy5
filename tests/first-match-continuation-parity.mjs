@@ -37,4 +37,11 @@ for(const [re,label] of [
  [/mode==='pairCashout'&&n\.chainLen===2/,'candidate isolated to first matched pair completion'],
  [/n\.chain=null;n\.chainLen=0/,'candidate closes chain after preserving +5 beat']
 ])need(structural,re,label);
+const cohortMatch=structural.match(/const BASE_SEEDS=\[([^\]]+)\], HELDOUT_SEEDS=\[([^\]]+)\], RUNS=(\d+);/);
+if(!cohortMatch)throw new Error('first-match parity mismatch: structural base/held-out cohort declaration');
+const parseSeeds=s=>s.split(',').map(v=>Number(v.trim()));
+const baseSeeds=parseSeeds(cohortMatch[1]),heldoutSeeds=parseSeeds(cohortMatch[2]);
+if(!baseSeeds.length||!heldoutSeeds.length)throw new Error('first-match parity mismatch: robustness cohorts must be non-empty');
+if(baseSeeds.length!==heldoutSeeds.length)throw new Error('first-match parity mismatch: robustness cohorts must remain equally sized');
+if(baseSeeds.some(seed=>heldoutSeeds.includes(seed)))throw new Error('first-match parity mismatch: held-out seeds overlap base cohort');
 console.log('first-match continuation and structural benchmark parity match declared production rules');
