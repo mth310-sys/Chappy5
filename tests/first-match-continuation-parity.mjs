@@ -22,6 +22,8 @@ for(const [re,label] of [
  [/1\+Math\.min\(\.6,depth\*\.04\)/,'probe extraction multiplier'],
  [/const resBonus=n=>n<2\?0:1\+n\*2/,'probe production resonance reward'],
  [/else if\(n\.chain&&breakU<\.5\)/,'probe production chain break'],
- [/mode==='noFirstMatchBonus'&&i===0&&s\.chainLen===1&&r\.tone==='res'&&s\.chain===r\.signal/,'diagnostic isolated to first matching continuation']
+ [/if\(i!==0\|\|s\.chainLen!==1\|\|r\.tone!=='res'\|\|s\.chain!==r\.signal\)return null/,'diagnostic isolated to first matching continuation'],
+ [/mode==='firstMatchBonus3'\)return 3/,'single coarse +3 candidate'],
+ [/mode==='noFirstMatchBonus'\)return 0/,'zero-bonus diagnostic bound']
 ])need(probe,re,label);
 console.log('first-match continuation probe parity matches declared production rules');
