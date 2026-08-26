@@ -31,6 +31,8 @@ jobs:
         run: node tests/regression.mjs
       - name: Guard strategy model parity
         run: node tests/strategy-parity.mjs
+      - name: Guard first-match continuation probe parity
+        run: node tests/first-match-continuation-parity.mjs
       - name: Run deterministic strategy benchmark
         run: node tests/strategy-benchmark.mjs
       - name: Run high-chain structural probe
