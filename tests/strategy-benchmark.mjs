@@ -1,5 +1,5 @@
 // Deterministic, non-production balance harness for ECHO DRIFT.
-// Mirrors game.js rules but allows resonanceSlope=2 (production) or 1 (candidate).
+// Mirrors game.js rules and sweeps resonanceSlope candidates around production (=2).
 // Route choice and voluntary-extraction policy are benchmarked jointly so a shared
 // extraction threshold cannot silently determine the apparent best route strategy.
 // Verification produced by this file is SIMULATED, never HUMAN_VERIFIED.
@@ -9,6 +9,7 @@ const RUNS=10000;
 const tones=['calm','deep','res'];
 const policies=['fixed:calm','fixed:deep','fixed:res','one-step','future-aware'];
 const extractionPolicies=[25,35,45,55,65,75,Infinity,'state-ev'];
+const resonanceSlopes=[2,1.75,1.5,1.25,1];
 const templates={
  calm:{cost:[1,2],gain:[1,3],risk:-3},
  deep:{cost:[2,3],gain:[3,6],risk:3},
@@ -34,7 +35,7 @@ function shouldExtract(s,chosenRoute,slope,extractPolicy){if(s.haul<=0)return fa
 function play(seed,slope,policy,extractPolicy){const R=rng(seed);let total=0,collapsed=0,voluntary=0,forced=0,totalEndDepth=0,totalExtractDepth=0,totalVoluntaryThreat=0,mix={calm:0,deep:0,res:0};for(let k=0;k<RUNS;k++){let s={energy:10,depth:0,haul:0,threat:6,chain:null,chainLen:0,alive:true};while(s.alive){const rs=routes(R);const i=choose(policy,s,rs,slope);const chosen=rs[i];if(shouldExtract(s,chosen,slope,extractPolicy)){total+=projectedBank(s);voluntary++;totalEndDepth+=s.depth;totalExtractDepth+=s.depth;totalVoluntaryThreat+=s.threat;s.alive=false;break}mix[chosen.tone]++;s=step(s,chosen,R,slope);if(!s.alive){totalEndDepth+=s.depth;if(s.bank!=null){total+=s.bank;forced++;totalExtractDepth+=s.depth}else collapsed++;break}}}const choices=mix.calm+mix.deep+mix.res;const extracts=voluntary+forced;return{bankPerRun:total/RUNS,collapsePct:collapsed/RUNS*100,voluntaryPct:voluntary/RUNS*100,forcedPct:forced/RUNS*100,meanEndDepth:totalEndDepth/RUNS,meanExtractDepth:extracts?totalExtractDepth/extracts:0,meanVoluntaryThreat:voluntary?totalVoluntaryThreat/voluntary:0,mix:Object.fromEntries(tones.map(t=>[t,mix[t]/choices*100]))}}
 function aggregate(slope,policy,extractPolicy){const rows=SEEDS.map(seed=>play(seed,slope,policy,extractPolicy));const avg=k=>rows.reduce((a,r)=>a+r[k],0)/rows.length;return{extraction:extractPolicy==='state-ev'?'state-ev':Number.isFinite(extractPolicy)?extractPolicy:'never',bankPerRun:avg('bankPerRun'),collapsePct:avg('collapsePct'),voluntaryPct:avg('voluntaryPct'),forcedPct:avg('forcedPct'),meanEndDepth:avg('meanEndDepth'),meanExtractDepth:avg('meanExtractDepth'),meanVoluntaryThreat:avg('meanVoluntaryThreat'),mix:Object.fromEntries(tones.map(t=>[t,rows.reduce((a,r)=>a+r.mix[t],0)/rows.length]))}}
 
-for(const slope of [2,1]){
+for(const slope of resonanceSlopes){
  console.log(`\nresonanceSlope=${slope}${slope===2?' production':' candidate'}`);
  for(const policy of policies){
   const rows=extractionPolicies.map(t=>aggregate(slope,policy,t));
