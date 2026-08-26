@@ -39,3 +39,5 @@ jobs:
         run: node tests/active-chain-switch-probe.mjs
       - name: Run active-chain common-RNG branch probe
         run: node tests/active-chain-branch-probe.mjs
+      - name: Compare hidden and signal-causal chain exit rules
+        run: node tests/chain-exit-rule-probe.mjs
