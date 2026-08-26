@@ -1,6 +1,6 @@
 // Deterministic, non-production balance harness for ECHO DRIFT.
 // Mirrors game.js rules but allows resonanceSlope=2 (production) or 1 (candidate).
-// Route choice and voluntary-extraction policy are benchmarked separately so a shared
+// Route choice and voluntary-extraction policy are benchmarked jointly so a shared
 // extraction threshold cannot silently determine the apparent best route strategy.
 // Verification produced by this file is SIMULATED, never HUMAN_VERIFIED.
 
@@ -8,7 +8,7 @@ const SEEDS=[101,202,303,404];
 const RUNS=10000;
 const tones=['calm','deep','res'];
 const policies=['fixed:calm','fixed:deep','fixed:res','one-step','future-aware'];
-const extractionThresholds=[25,35,45,55,65,75,Infinity];
+const extractionPolicies=[25,35,45,55,65,75,Infinity,'state-ev'];
 const templates={
  calm:{cost:[1,2],gain:[1,3],risk:-3},
  deep:{cost:[2,3],gain:[3,6],risk:3},
@@ -22,20 +22,24 @@ function anomalyBonus(d){return 2+Math.floor(d/2)+Math.max(0,d-2)*2}
 function clamp(n,a,b){return Math.max(a,Math.min(b,n))}
 function threatAfter(s,r){const calm=r.tone==='calm'&&s.threat>=25?-8:0;return clamp(s.threat+r.risk+(s.depth+1)*1.4+(r.anomaly?7:0)+calm,0,92)}
 function immediateGain(s,r,slope){let g=r.gain;if(r.tone==='res'&&s.chain===r.signal)g+=1+(s.chainLen+1)*slope;if(r.anomaly)g+=anomalyBonus(s.depth+1);return g}
-function step(s,r,R,slope){const n={...s};n.energy-=Math.min(n.energy,r.cost);n.depth++;let g=r.gain;if(r.tone==='res'){if(n.chain===r.signal){n.chainLen++;g+=1+n.chainLen*slope}else{n.chain=r.signal;n.chainLen=1}}else if(R()<.5){n.chain=null;n.chainLen=0}if(r.anomaly)g+=anomalyBonus(n.depth);n.haul+=g;n.threat=threatAfter(s,r);if(R()*100<n.threat)return{...n,alive:false,haul:0};if(n.energy<=0)return{...n,alive:false,bank:Math.floor(n.haul*(1+Math.min(.6,n.depth*.04))),forced:true};return n}
-function projectedBank(s){return Math.floor(s.haul*(1+Math.min(.6,s.depth*.04)))}
+function bankFor(haul,depth){return Math.floor(haul*(1+Math.min(.6,depth*.04)))}
+function projectedBank(s){return bankFor(s.haul,s.depth)}
+function oneMoreStepBankEV(s,r,slope){const nextThreat=threatAfter(s,r);const survival=1-nextThreat/100;const nextHaul=s.haul+immediateGain(s,r,slope);return survival*bankFor(nextHaul,s.depth+1)}
+function shouldExtractStateEV(s,rs,slope){if(s.haul<=0)return false;const current=projectedBank(s);const bestContinue=Math.max(...rs.map(r=>oneMoreStepBankEV(s,r,slope)));return current>=bestContinue}
+function step(s,r,R,slope){const n={...s};n.energy-=Math.min(n.energy,r.cost);n.depth++;let g=r.gain;if(r.tone==='res'){if(n.chain===r.signal){n.chainLen++;g+=1+n.chainLen*slope}else{n.chain=r.signal;n.chainLen=1}}else if(R()<.5){n.chain=null;n.chainLen=0}if(r.anomaly)g+=anomalyBonus(n.depth);n.haul+=g;n.threat=threatAfter(s,r);if(R()*100<n.threat)return{...n,alive:false,haul:0};if(n.energy<=0)return{...n,alive:false,bank:bankFor(n.haul,n.depth),forced:true};return n}
 function oneStepChoice(s,rs,slope){let best=0,bv=-Infinity;for(let i=0;i<rs.length;i++){const r=rs[i],v=immediateGain(s,r,slope)-r.cost*0.65-threatAfter(s,r)*0.055;if(v>bv){bv=v;best=i}}return best}
 function futureChoice(s,rs,slope){let best=0,bv=-Infinity;for(let i=0;i<rs.length;i++){const r=rs[i],t=threatAfter(s,r),now=immediateGain(s,r,slope)-r.cost*.55-t*.05;let future=0;for(const t2 of tones){const q=templates[t2];const avg={tone:t2,cost:(q.cost[0]+q.cost[1])/2,gain:(q.gain[0]+q.gain[1])/2,risk:q.risk,signal:r.signal,anomaly:false};future=Math.max(future,immediateGain({...s,depth:s.depth+1,chain:r.tone==='res'?r.signal:s.chain,chainLen:r.tone==='res'?(s.chain===r.signal?s.chainLen+1:1):s.chainLen},avg,slope)-avg.cost*.55)}const v=now+future*.45;if(v>bv){bv=v;best=i}}return best}
 function choose(policy,s,rs,slope){if(policy.startsWith('fixed:'))return rs.findIndex(r=>r.tone===policy.slice(6));if(policy==='one-step')return oneStepChoice(s,rs,slope);return futureChoice(s,rs,slope)}
-function play(seed,slope,policy,extractThreat){const R=rng(seed);let total=0,collapsed=0,voluntary=0,forced=0,totalEndDepth=0,totalExtractDepth=0,mix={calm:0,deep:0,res:0};for(let k=0;k<RUNS;k++){let s={energy:10,depth:0,haul:0,threat:6,chain:null,chainLen:0,alive:true};while(s.alive){const rs=routes(R);const i=choose(policy,s,rs,slope);mix[rs[i].tone]++;s=step(s,rs[i],R,slope);if(!s.alive){totalEndDepth+=s.depth;if(s.bank!=null){total+=s.bank;forced++;totalExtractDepth+=s.depth}else collapsed++;break}if(s.haul>0&&s.threat>=extractThreat){total+=projectedBank(s);voluntary++;totalEndDepth+=s.depth;totalExtractDepth+=s.depth;s.alive=false;break}}}const choices=mix.calm+mix.deep+mix.res;const extracts=voluntary+forced;return{bankPerRun:total/RUNS,collapsePct:collapsed/RUNS*100,voluntaryPct:voluntary/RUNS*100,forcedPct:forced/RUNS*100,meanEndDepth:totalEndDepth/RUNS,meanExtractDepth:extracts?totalExtractDepth/extracts:0,mix:Object.fromEntries(tones.map(t=>[t,mix[t]/choices*100]))}}
-function aggregate(slope,policy,extractThreat){const rows=SEEDS.map(seed=>play(seed,slope,policy,extractThreat));const avg=k=>rows.reduce((a,r)=>a+r[k],0)/rows.length;return{threshold:Number.isFinite(extractThreat)?extractThreat:'never',bankPerRun:avg('bankPerRun'),collapsePct:avg('collapsePct'),voluntaryPct:avg('voluntaryPct'),forcedPct:avg('forcedPct'),meanEndDepth:avg('meanEndDepth'),meanExtractDepth:avg('meanExtractDepth'),mix:Object.fromEntries(tones.map(t=>[t,rows.reduce((a,r)=>a+r.mix[t],0)/rows.length]))}}
+function shouldExtract(s,rs,slope,extractPolicy){if(s.haul<=0)return false;if(extractPolicy==='state-ev')return shouldExtractStateEV(s,rs,slope);return s.threat>=extractPolicy}
+function play(seed,slope,policy,extractPolicy){const R=rng(seed);let total=0,collapsed=0,voluntary=0,forced=0,totalEndDepth=0,totalExtractDepth=0,totalVoluntaryThreat=0,mix={calm:0,deep:0,res:0};for(let k=0;k<RUNS;k++){let s={energy:10,depth:0,haul:0,threat:6,chain:null,chainLen:0,alive:true};while(s.alive){const rs=routes(R);if(shouldExtract(s,rs,slope,extractPolicy)){total+=projectedBank(s);voluntary++;totalEndDepth+=s.depth;totalExtractDepth+=s.depth;totalVoluntaryThreat+=s.threat;s.alive=false;break}const i=choose(policy,s,rs,slope);mix[rs[i].tone]++;s=step(s,rs[i],R,slope);if(!s.alive){totalEndDepth+=s.depth;if(s.bank!=null){total+=s.bank;forced++;totalExtractDepth+=s.depth}else collapsed++;break}}}const choices=mix.calm+mix.deep+mix.res;const extracts=voluntary+forced;return{bankPerRun:total/RUNS,collapsePct:collapsed/RUNS*100,voluntaryPct:voluntary/RUNS*100,forcedPct:forced/RUNS*100,meanEndDepth:totalEndDepth/RUNS,meanExtractDepth:extracts?totalExtractDepth/extracts:0,meanVoluntaryThreat:voluntary?totalVoluntaryThreat/voluntary:0,mix:Object.fromEntries(tones.map(t=>[t,mix[t]/choices*100]))}}
+function aggregate(slope,policy,extractPolicy){const rows=SEEDS.map(seed=>play(seed,slope,policy,extractPolicy));const avg=k=>rows.reduce((a,r)=>a+r[k],0)/rows.length;return{extraction:extractPolicy==='state-ev'?'state-ev':Number.isFinite(extractPolicy)?extractPolicy:'never',bankPerRun:avg('bankPerRun'),collapsePct:avg('collapsePct'),voluntaryPct:avg('voluntaryPct'),forcedPct:avg('forcedPct'),meanEndDepth:avg('meanEndDepth'),meanExtractDepth:avg('meanExtractDepth'),meanVoluntaryThreat:avg('meanVoluntaryThreat'),mix:Object.fromEntries(tones.map(t=>[t,rows.reduce((a,r)=>a+r.mix[t],0)/rows.length]))}}
 
 for(const slope of [2,1]){
  console.log(`\nresonanceSlope=${slope}${slope===2?' production':' candidate'}`);
  for(const policy of policies){
-  const rows=extractionThresholds.map(t=>aggregate(slope,policy,t));
+  const rows=extractionPolicies.map(t=>aggregate(slope,policy,t));
   const best=rows.reduce((a,b)=>b.bankPerRun>a.bankPerRun?b:a);
-  console.log(`\n${policy} bestThreshold=${best.threshold}`,best);
+  console.log(`\n${policy} bestExtraction=${best.extraction}`,best);
   for(const row of rows)console.log(' extraction',row);
  }
 }
