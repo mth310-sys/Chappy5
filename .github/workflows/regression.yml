@@ -42,4 +42,4 @@ jobs:
       - name: Compare hidden and signal-causal chain exit rules
         run: node tests/chain-exit-rule-probe.mjs
       - name: Isolate guaranteed resonance mismatch renewal
-        run: node tests/resonance-renewal-probe.mjs
+        run: node tests/resonance-renewal-report.mjs
