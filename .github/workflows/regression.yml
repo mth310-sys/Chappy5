@@ -35,3 +35,5 @@ jobs:
         run: node tests/strategy-benchmark.mjs
       - name: Run high-chain structural probe
         run: node tests/high-chain-probe.mjs
+      - name: Run active-chain switching probe
+        run: node tests/active-chain-switch-probe.mjs
