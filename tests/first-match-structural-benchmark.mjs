@@ -2,7 +2,7 @@
 // SIMULATED only. production mirrors current resonance behavior. pairCashout keeps the
 // first matching +5 reward beat, then closes that matched chain instead of automatically
 // carrying chainLen=2 into later decisions. No reward coefficient is swept.
-const SEEDS=[101,202,303,404], RUNS=10000;
+const BASE_SEEDS=[101,202,303,404], HELDOUT_SEEDS=[505,606,707,808], RUNS=10000;
 const tones=['calm','deep','res'];
 const policies=['fixed:calm','fixed:deep','fixed:res','one-step','future-aware'];
 const modes=['production','pairCashout'];
@@ -22,6 +22,6 @@ function shouldExtract(s,r){return s.haul>0&&bank(s.haul,s.depth)>=oneEV(s,r)}
 function step(s,r,R,mode){const n={...s};n.energy-=Math.min(n.energy,r.cost);n.depth++;let g=r.gain;if(r.tone==='res'){if(n.chain===r.signal){n.chainLen++;g+=resBonus(n.chainLen);if(mode==='pairCashout'&&n.chainLen===2){n.chain=null;n.chainLen=0}}else{n.chain=r.signal;n.chainLen=1}}else if(n.chain&&R()<.5){n.chain=null;n.chainLen=0}if(r.anomaly)g+=anomalyBonus(n.depth);n.haul+=g;n.threat=threatAfter(s,r);if(R()<n.threat/100)return{...n,alive:false,collapsed:true,haul:0};if(n.energy<=0)return{...n,alive:false,collapsed:false};return{...n,alive:true,collapsed:false}}
 function play(seed,policy,mode){let total=0,collapsed=0,voluntary=0,forced=0,totalDepth=0,mix={calm:0,deep:0,res:0};for(let k=0;k<RUNS;k++){const R=rng(mixSeed(seed,k));let s={energy:10,depth:0,haul:0,threat:6,chain:null,chainLen:0,alive:true,collapsed:false};while(s.alive){const rs=routes(R),r=choose(policy,s,rs,mode);if(shouldExtract(s,r)){total+=bank(s.haul,s.depth);voluntary++;totalDepth+=s.depth;break}mix[r.tone]++;s=step(s,r,R,mode);if(!s.alive){totalDepth+=s.depth;if(s.collapsed)collapsed++;else{total+=bank(s.haul,s.depth);forced++}}}}const choices=mix.calm+mix.deep+mix.res;return{bankPerRun:total/RUNS,collapsePct:collapsed/RUNS*100,voluntaryPct:voluntary/RUNS*100,forcedPct:forced/RUNS*100,meanEndDepth:totalDepth/RUNS,mix:Object.fromEntries(tones.map(t=>[t,mix[t]/choices*100]))}}
 function mixSeed(seed,k){return mix(seed,k,777)}
-function aggregate(policy,mode){const rows=SEEDS.map(seed=>play(seed,policy,mode)),avg=k=>rows.reduce((a,r)=>a+r[k],0)/rows.length;return{mode,policy,bankPerRun:avg('bankPerRun'),collapsePct:avg('collapsePct'),voluntaryPct:avg('voluntaryPct'),forcedPct:avg('forcedPct'),meanEndDepth:avg('meanEndDepth'),mix:Object.fromEntries(tones.map(t=>[t,rows.reduce((a,r)=>a+r.mix[t],0)/rows.length])),seeds:rows.map((r,i)=>({seed:SEEDS[i],bankPerRun:r.bankPerRun,collapsePct:r.collapsePct}))}}
-const out={};for(const mode of modes){out[mode]={};for(const p of policies)out[mode][p]=aggregate(p,mode)}
-console.log(JSON.stringify(out,null,2));
+function aggregate(policy,mode,seeds){const rows=seeds.map(seed=>play(seed,policy,mode)),avg=k=>rows.reduce((a,r)=>a+r[k],0)/rows.length;return{mode,policy,bankPerRun:avg('bankPerRun'),collapsePct:avg('collapsePct'),voluntaryPct:avg('voluntaryPct'),forcedPct:avg('forcedPct'),meanEndDepth:avg('meanEndDepth'),mix:Object.fromEntries(tones.map(t=>[t,rows.reduce((a,r)=>a+r.mix[t],0)/rows.length])),seeds:rows.map((r,i)=>({seed:seeds[i],bankPerRun:r.bankPerRun,collapsePct:r.collapsePct}))}}
+function cohort(seeds){const out={};for(const mode of modes){out[mode]={};for(const p of policies)out[mode][p]=aggregate(p,mode,seeds)}return out}
+console.log(JSON.stringify({base:cohort(BASE_SEEDS),heldout:cohort(HELDOUT_SEEDS)},null,2));
