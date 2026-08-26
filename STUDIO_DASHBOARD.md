@@ -1,55 +1,61 @@
 # Chappy5 Studio Dashboard
 
-Updated: 2026-08-26 14:27 JST
-Target: ECHO DRIFT — `HUMAN_CANDIDATE_01` preserved; production frozen while active-chain chain-exit structure is isolated
+Updated: 2026-08-26 15:30 JST
+Target: ECHO DRIFT — `HUMAN_CANDIDATE_01` preserved; production frozen while active-chain loss/renewal value is isolated
 
 | 領域 | Status | Severity | Confidence | Verification | 最新の重要Finding |
 |---|---|---:|---|---|---|
-| Game Systems | STRATEGY_CLEARANCE_BLOCKED / ACTIVE_CHAIN_SWITCH_COST_CONFIRMED | 4 | HIGH for measurement / MEDIUM-HIGH for design interpretation | OBSERVED + CALCULATED + SIMULATED | `GS-016`: active-chain states often make calm/deep locally attractive, but future chain renewal value flips a meaningful share back toward resonance. Executive short-horizon common-RNG branching now independently confirms the pressure persists over 2–3 decisions. |
-| Player Experience | ACTIVE_CHAIN_SACRIFICE_NOT_LEGIBLE | 4 | HIGH for hidden-rule observation / MEDIUM-HIGH for predicted player effect | OBSERVED + SIMULATED | `PX-014`: the strategically material chain sacrifice remains hidden behind the production 50% calm/deep break roll. Do not confuse this with human-verified confusion yet. |
-| Progression & Content | FAIL / BLOCKED_BY_CHAIN_STRUCTURE_CLEARANCE | 4 | HIGH | OBSERVED + SIMULATED + DESIGN ANALYSIS | `P-018`: persistent chain insurance, break-rate reduction, signal auto-match, resonance multiplier and similar upgrades remain blocked while chain renewal is the active core issue. |
-| Technical & Quality | PASS_WITH_DEVICE_WATCH / CONTROLLED_PLAYABLE_BOUNDARY_RISK | 3 | HIGH | OBSERVED | `TQ-019`: production route shuffle uses engine-dependent `sort(()=>Math.random()-.5)` while analysis uses Fisher-Yates. Fix at the next Controlled Playable boundary; real iPhone/Safari lifecycle and crash-atomic settlement remain unverified. |
+| Game Systems | STRATEGY_CLEARANCE_BLOCKED / ACTIVE_CHAIN_SWITCH_COST_CONFIRMED | 4 | HIGH for measurement / MEDIUM-HIGH for design interpretation | OBSERVED + CALCULATED + SIMULATED | `GS-016`: active-chain renewal/insurance produces a real 2–3 decision switching penalty. The simple visible-signal exit candidate did not reduce it. |
+| Player Experience | ACTIVE_CHAIN_SACRIFICE_NOT_LEGIBLE / SIGNAL_RULE_NOT_CLEARED | 4 | HIGH for hidden-rule observation / MEDIUM-HIGH for predicted player effect | OBSERVED + SIMULATED | `PX-014`: the sacrifice is still not predictable before tapping, but same-signal preserve / mismatch break worsened the strategic A/B and is not promoted. |
+| Progression & Content | FAIL / BLOCKED_BY_CHAIN_STRUCTURE_CLEARANCE | 4 | HIGH | OBSERVED + SIMULATED + DESIGN ANALYSIS | `P-018/P-019`: persistent chain insurance and resonance-affinity upgrades remain blocked; future builds must remain viable over multi-step trajectories. |
+| Technical & Quality | PASS_WITH_DEVICE_WATCH / PROBE_PARITY_HARDENING | 3 | HIGH | OBSERVED | Active-chain and chain-exit decision probes are now covered by narrow production-parity guards. `TQ-019` production route shuffle and real iPhone/Safari lifecycle remain unresolved. |
 
 ## Executive priority
 
-**Directly measure whether replacing the hidden 50% calm/deep chain-break rule with visible signal causality reduces the confirmed 2–3 decision switching penalty under the same common-RNG branch probe.**
+**Measure how much of the 2–3 decision resonance stickiness is caused by losing chain state at all, using a no-loss preserve-chain diagnostic under the same common-RNG conditions.**
 
-Full latest Executive finding: `EXECUTIVE_FINDING_EX019.md`.
+Full latest Executive finding: `EXECUTIVE_FINDING_EX020.md`.
 
 ## What changed this cycle
 
-Executive added `tests/active-chain-branch-probe.mjs` and integrated it into regression CI. It branches the same active-chain state into `resonance` versus locally best `calm/deep`, then follows the same contextual policy and state-conditioned extraction rule for 2 or 3 decisions. Step-indexed future route/anomaly/break/collapse tapes are shared across branches to avoid cross-branch RNG-stream drift.
+The previous priority is complete. The CI-integrated direct A/B comparison of production hidden-50 exit versus visible signal causality passed and produced a negative result for the candidate.
 
-GitHub Actions `ECHO DRIFT Regression` run `32933903792` completed **success**. State regression, parity guard, deterministic strategy benchmark, high-chain probe, active-chain switching probe and the new common-RNG branch probe all passed.
+Across **104,736 active-chain states**, signal causality changed the branch result versus hidden-50 by:
 
-Across **104,736** active-chain states, calm/deep was locally better by one-step secured-bank EV in **52.52%** of states. Despite that local attractiveness:
+| Horizon | switch-win delta | resonance-win delta | mean `switch - resonance` bank delta |
+|---|---:|---:|---:|
+| 2 decisions | **-0.2425 pt** | **+0.1423 pt** | **-0.09143** |
+| 3 decisions | **-0.2406 pt** | **+0.1967 pt** | **-0.10800** |
 
-| Horizon | switch wins | resonance wins | ties | mean switch - resonance bank |
-|---|---:|---:|---:|---:|
-| 2 decisions | 28.84% | **37.06%** | 34.10% | **-0.9701** |
-| 3 decisions | 26.17% | **35.56%** | 38.28% | **-1.2477** |
+Therefore same-signal preservation / mismatch break is **not cleared** as the next production structure. It improves explainability but slightly worsens the strategic switching problem. These are `SIMULATED` results, not `HUMAN_VERIFIED`.
 
-All values are `SIMULATED`, never `HUMAN_VERIFIED`.
+Executive added an extreme non-production `preserveChain` control to `tests/chain-exit-rule-probe.mjs`: calm/deep never destroys an active chain, while the same random draw is still consumed to preserve common-RNG parity. This is a causal diagnostic, not a candidate rule.
 
-This strengthens GS-016: resonance renewal/insurance pressure survives a direct short-horizon branch comparison and is not merely an artifact of adding a hand-written next-chain option term. It still does not prove globally optimal fixed-resonance play or human behavior.
+The chain-exit probe is also now included in the narrow production-parity guard. Current commits:
 
-A display-only accounting issue in chainLen sample counts was corrected in commit `b602e8f3ff286a8df26f24d43317e5a5ee9f3bec`; aggregate horizon win rates and deltas above are unchanged. The follow-up CI run must remain green before treating chainLen breakdowns as final evidence.
+- `fa9394a09bb6c9c28db6b9d7e04d49c8a646a5d5` — no-loss control
+- `10cb6a4486dc1c195421e091464d599fc2a36d59` — chain-exit parity guard
+- `1c74f4e2701b7471b7f7206b31f687ef72827431` — `EX-020`
+
+Regression run `32938098546` was still in progress at the latest check. State regression and strategy parity had already passed. No preserve-control numerical result is accepted until the full run completes.
 
 ## Frozen production policy
 
 - Keep production `game.js` unchanged.
 - Keep `HUMAN_CANDIDATE_01` unchanged.
-- Do not promote visible-signal chain exit yet.
+- Do not promote the same-signal/mismatch chain-exit rule.
 - Do not resume reward slope/cap/taper micro-tuning.
-- Do not add persistent chain insurance or resonance-affinity progression.
+- Do not add persistent chain insurance, break-rate reduction, signal auto-match or resonance-affinity progression.
 - Do not hide risk/payout information to manufacture tension.
-- Do not spend human-test time on un-cleared reward-tail candidates.
+- Do not spend human-test time on simulation branches that have not cleared the strategic gate.
 
 ## Decision gate
 
-The next non-production comparison should use the **same sampled active-chain states and same common-RNG future tapes** but replace production's hidden random 50% calm/deep chain break with the already-studied visible-signal rule: preserve chain on matching signal, break it on mismatch while still consuming the same random value for comparison parity.
+Use the no-loss preserve-chain control only to answer one causal question:
 
-If this materially shrinks the negative `switch - resonance` branch delta and creates more meaningful switch-win states without simply moving dominance to calm, the structural candidate advances. If not, hidden 50% exit is not sufficient as the main explanation and the studio should isolate another structural source rather than tune coefficients.
+**If calm/deep can never erase an existing chain, does the negative short-horizon `switch - resonance` gap materially shrink?**
+
+If yes, chain-loss/insurance is a major source and the next design should make sacrifice explicit and compensated. If no, stop focusing on chain-break semantics and isolate resonance's guaranteed chain renewal/restart value instead.
 
 ## Human verification package
 
@@ -66,16 +72,17 @@ No human-fun claim is authorized yet.
 ## Important unresolved issues
 
 1. **Strategic validity:** fixed resonance remains the best tested production-rule strategy. `Severity 4`.
-2. **Active-chain switching cost:** direct short-horizon branching confirms a material renewal/insurance penalty. `Severity 4`.
-3. **Hidden exit cost:** calm/deep can erase an active chain through invisible 50% RNG. `Severity 4`.
-4. **Long-term play:** persistent progression still does not meaningfully change future decisions. `OBSERVED FAIL`.
-5. **Human feel:** tension, collapse ownership, replay desire and chain-sacrifice legibility require `HUMAN_VERIFIED`.
-6. **iPhone/Safari:** real-device lifecycle/layout/readability/touch behavior remains `UNVERIFIED`.
-7. **Route shuffle parity:** production permutation remains non-uniform/engine-dependent until Controlled Playable boundary hardening.
-8. **Persistence hardening:** terminal settlement is not crash-atomic.
-9. **Low-Energy clarity:** displayed route cost can exceed Energy actually charged. `OBSERVED`.
-10. **Progression semantics:** `banked` remains lifetime cumulative recovery and must not silently become a spendable balance.
+2. **Active-chain switching cost:** direct short-horizon branching confirms material renewal/insurance pressure. `Severity 4`.
+3. **Hidden exit legibility:** calm/deep can erase an active chain through invisible 50% RNG. `Severity 4`.
+4. **Signal-causal candidate:** directly tested and **not cleared**; do not promote on clarity alone.
+5. **Long-term play:** persistent progression still does not meaningfully change future decisions. `OBSERVED FAIL`.
+6. **Human feel:** tension, collapse ownership, replay desire and chain-sacrifice legibility require `HUMAN_VERIFIED`.
+7. **iPhone/Safari:** real-device lifecycle/layout/readability/touch behavior remains `UNVERIFIED`.
+8. **Route shuffle parity:** production permutation remains non-uniform/engine-dependent until Controlled Playable hardening.
+9. **Persistence hardening:** terminal settlement is not crash-atomic.
+10. **Low-Energy clarity:** displayed route cost can exceed Energy actually charged. `OBSERVED`.
+11. **Progression semantics:** `banked` remains lifetime cumulative recovery and must not silently become a spendable balance.
 
 ## Executive decision
 
-`EX-019`: active-chain renewal pressure is now confirmed by both GS-016 decomposition and a direct common-RNG 2–3 decision branch probe. Production remains frozen. The single next gate is a causal branch comparison of production hidden-50 exit versus visible-signal chain exit; no further reward micro-tuning or progression work is authorized before that result.
+`EX-020`: reject the simple A/B/C signal-causal exit branch as a balance fix. Preserve its broader legibility lesson only. Production remains frozen. The single next gate is the already-added no-loss diagnostic to determine whether chain-loss itself is the major source of resonance stickiness before another design candidate is invented.
