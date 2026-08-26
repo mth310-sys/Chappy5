@@ -1,32 +1,25 @@
-# EX-020 — Visible-signal exit fails the balance gate; chain-loss value becomes the next causal target
+# EX-020 — Chain-loss risk is a real contributor, but guaranteed resonance renewal remains the larger unresolved structure
 
 - **Director:** Executive Game Director
-- **Status:** STRATEGY_CLEARANCE_BLOCKED / SIGNAL_CAUSAL_EXIT_NOT_CLEARED
+- **Status:** STRATEGY_CLEARANCE_BLOCKED / CHAIN_LOSS_CONTRIBUTOR_CONFIRMED / RENEWAL_VALUE_REMAINS
 - **Severity (1-5):** 4
-- **Confidence:** HIGH for direct A/B measurement / MEDIUM-HIGH for next structural interpretation
-- **Verification Type:** OBSERVED + SIMULATED
+- **Confidence:** HIGH for direct causal measurements / MEDIUM-HIGH for structural interpretation
+- **Verification Type:** OBSERVED + CALCULATED + SIMULATED
 - **Last updated:** 2026-08-26
 
 ## Executive Integration
 
-The prior Executive priority was to directly compare production's hidden 50% calm/deep chain-break against the proposed visible-signal rule under the same active-chain common-RNG branch conditions.
+The previous Executive gate directly compared production's hidden 50% calm/deep chain-break against the proposed visible-signal rule. That candidate failed: it made the chain sacrifice easier to explain but slightly worsened calm/deep switching outcomes.
 
-That comparison is now complete. The signal-causal rule is easier to explain, but it does **not** improve the strategic switching problem. The direct A/B probe instead shows a small worsening in calm/deep switching outcomes.
+Executive then added an extreme **preserve-chain diagnostic** in which calm/deep never destroys an already-active chain. This is not a production proposal. It exists only to isolate how much of the confirmed resonance stickiness is caused by the risk of losing chain state at all.
 
-Player Experience has therefore correctly downgraded the proposal from a structural candidate to a rejected current branch while retaining the broader Severity-4 legibility problem: whatever chain-exit structure is eventually used, the player should be able to predict the sacrifice before tapping.
+The full deterministic CI run `32938098546` is now **completed / success**. State regression, strategy parity, deterministic benchmark, high-chain probe, active-chain switching probe, common-RNG branch probe and chain-exit A/B probe all passed.
 
 No new `HUMAN_VERIFIED` evidence exists. `HUMAN_CANDIDATE_01` remains frozen.
 
-## Direct A/B evidence
+## Evidence A — signal-causal exit remains rejected
 
-The CI-integrated `tests/chain-exit-rule-probe.mjs` compares the same active-chain states and same future exogenous random tapes under:
-
-1. production hidden 50% calm/deep chain break;
-2. signal-causal exit: matching signal preserves the chain, mismatching signal breaks it.
-
-The completed CI run `32936420954` passed regression, parity and the decision probes.
-
-Across **104,736 active-chain states**, signal causality changed the branch comparison versus production by:
+Across **104,736 active-chain states**, replacing production hidden-50 exit with same-signal preserve / mismatch break changed the branch result by:
 
 ### 2-decision horizon
 
@@ -40,80 +33,100 @@ Across **104,736 active-chain states**, signal causality changed the branch comp
 - resonance-win rate: **+0.1967 percentage points**
 - mean `switch - resonance` secured bank: **-0.10800**
 
+Therefore the simple visible-signal proposal is **not cleared**. Clarity alone is not sufficient if the strategic switching problem worsens.
+
+## Evidence B — preserve-chain causal control
+
+The diagnostic keeps the same sampled states, route economy, Threat, Energy, anomaly, extraction, collapse and resonance reward rules. The production hidden-break RNG draw is still consumed, but calm/deep never erases the current chain.
+
+Versus production hidden-50:
+
+### 2-decision horizon
+
+- switch-win rate: **+0.8870 percentage points**
+- resonance-win rate: **-0.5423 percentage points**
+- mean `switch - resonance` secured bank: **+0.27907**
+
+The production branch gap was **-0.97010**, so the no-loss control narrows it to approximately **-0.69102**.
+
+### 3-decision horizon
+
+- switch-win rate: **+0.5776 percentage points**
+- resonance-win rate: **-0.5280 percentage points**
+- mean `switch - resonance` secured bank: **+0.29074**
+
+The production branch gap was **-1.24772**, so the no-loss control narrows it to approximately **-0.95698**.
+
 All values are `SIMULATED`, never `HUMAN_VERIFIED`.
 
 ## Interpretation
 
-The visible-signal proposal fails the current strategic gate.
+The causal split is now much clearer.
 
-The narrow supported conclusion is:
+**Chain-loss risk is a real and measurable contributor to resonance stickiness, but it is not the dominant explanation by itself.**
 
-**replacing the hidden 50% break with simple same-signal preservation / mismatch break does not reduce active-chain resonance stickiness and should not be promoted as the next production rule.**
+Removing chain loss entirely recovers roughly **29%** of the 2-decision mean switching penalty and roughly **23%** of the 3-decision penalty, while the switch branch still remains materially behind resonance. Therefore simply increasing calm/deep chain survival, making the 50% roll visible, or fine-tuning the break percentage is unlikely to solve the core strategic problem on its own.
 
-This is an important rejection because the proposal had two attractive properties — legibility and reuse of existing A/B/C information — but the direct causal test shows that clarity alone is not enough if the strategic structure worsens.
+The remaining structural pressure is consistent with GS-016 / EX-019: resonance uniquely guarantees that an active chain state is preserved or immediately **renewed/restarted** even when the offered signal does not match the current chain. Calm/deep cannot create that replacement option.
 
-The likely reason is straightforward: with three independent signals, signal-match preservation occurs only about one-third of the time, below the production 50% survival rate. More importantly, resonance still uniquely guarantees immediate renewal of some chain state.
+This does not yet prove that guaranteed renewal is the entire remaining gap. It does justify moving the next causal test away from break-rate tuning and toward the renewal/restart property itself.
 
-## New non-production diagnostic
+## Repo work this cycle
 
-Executive extended `tests/chain-exit-rule-probe.mjs` with an extreme **preserve-chain control**:
-
-- calm/deep never destroys an already-active chain;
-- the same break RNG draw is still consumed for common-RNG comparison parity;
-- all rewards, Threat, Energy, anomalies, extraction and resonance rules remain unchanged.
-
-This mode is **diagnostic only**, not a production candidate. Its purpose is to isolate how much of the short-horizon switching penalty is caused by the possibility of losing chain state at all.
-
-Commit:
+Executive added the no-loss control:
 
 - `fa9394a09bb6c9c28db6b9d7e04d49c8a646a5d5` — Add no-loss control to chain-exit causal probe
 
-Because this probe is now decision-driving, Executive also extended the narrow parity guard so its production mode cannot silently drift from `game.js`:
+Executive also placed the decision-driving chain-exit probe under production parity protection:
 
 - `10cb6a4486dc1c195421e091464d599fc2a36d59` — Guard chain-exit causal probe against production drift
 
-At the time of this finding, the corresponding regression run `32938098546` is still in progress. State regression and strategy parity have already passed; no preserve-control outcome is treated as evidence until the full run completes.
+CI:
+
+- `ECHO DRIFT Regression` run `32938098546` — **completed / success**
+
+Production `game.js` was not changed.
 
 ## Cross-Director Decision
 
 ### Game Systems
-GS-016 remains the central structural finding: active-chain renewal/insurance creates meaningful switching pressure over multiple decisions. The simple signal-causal branch is rejected. Do not return to reward coefficient sweeps.
+`GS-016` is strengthened and refined. Active-chain renewal/insurance pressure is real; chain-loss risk explains a meaningful minority of it. Do not return to reward slope, high-chain cap, or break-percentage sweeps. The next Systems question is the value of **guaranteed resonance renewal/restart** when a resonance offer mismatches the active signal.
 
 ### Player Experience
-PX-014 remains Severity 4 as a legibility problem, but the specific A/B/C same-signal rule is not promoted. The eventual rule must be predictable before selection without sacrificing strategic viability.
+`PX-014` remains Severity 4. The simple A/B/C causal rule is rejected, but the broader requirement remains: the final adopted structure must make chain preservation/sacrifice predictable before tapping. Do not hide a structural balance problem with copy alone.
 
 ### Progression & Content
-P-018 / P-019 remain blocked. Do not add persistent chain insurance, break-rate reduction, auto-match or resonance multipliers while core chain-loss/renewal economics remain unresolved. Future build diversity must survive as multi-step trajectories, not merely different first-step choices.
+`P-018/P-019` remain blocked. Persistent chain insurance, break-rate reduction, auto-match, resonance multiplier and route-affinity upgrades would currently amplify or reopen the unresolved core structure. Future build diversity must remain viable across multi-step trajectories, including extraction timing.
 
 ### Technical & Quality
-TQ-020's parity principle is extended to the new chain-exit diagnostic. TQ-019 production shuffle parity remains a next-Controlled-Playable hardening item, not the current systems gate. Real iPhone/Safari lifecycle, touch and crash-atomic settlement remain unverified.
+The new chain-exit diagnostic is now covered by the narrow production parity guard and passed CI. `TQ-019` production route shuffle remains a Controlled-Playable hardening issue. Real iPhone/Safari touch, safe-area, background/reload and actual localStorage lifecycle remain `UNVERIFIED`; terminal settlement is still not crash-atomic.
 
 ### Human feedback
-No new human-play evidence exists. Do not claim that the current chain rule, signal rule or preserve control is fun, intuitive or replayable.
+No new human-play evidence exists. Do not claim the current baseline or any diagnostic branch is fun, understandable, tense or replayable.
 
 ## Current Priority — ONE GOAL
 
-**Use the preserve-chain diagnostic to measure how much of resonance stickiness is caused by chain-loss risk itself, before designing another production candidate.**
+**Isolate the value of resonance's guaranteed chain renewal/restart on active-signal mismatch, while keeping the existing chain state and all external randomness comparable.**
 
-This is a causal decomposition, not a proposed game rule.
+The next probe should be diagnostic only. It should remove the ability of a mismatching resonance choice to replace the active chain with a fresh signal, without simultaneously changing reward slopes, Threat, route costs, extraction, or calm/deep chain-loss semantics.
 
 ## Decision rule
 
-1. If removing chain loss materially shrinks the 2–3 decision `switch - resonance` penalty and increases switch-win states, chain insurance/loss is confirmed as a major source and the next design should make chain sacrifice explicit and compensated rather than merely random.
-2. If even full preservation barely changes the penalty, stop focusing on non-resonance chain break and isolate resonance's guaranteed renewal/restart value or another structural source.
-3. Do not micro-tune percentages or reward slopes to chase small simulator differences.
-4. Do not change `game.js`, progression or `HUMAN_CANDIDATE_01` until this diagnostic completes.
+1. If disabling resonance restart on mismatch materially closes the remaining short-horizon switch gap, guaranteed renewal is confirmed as the main remaining structural source. Executive can then design one narrow, legible tradeoff around **renew versus sacrifice**, rather than tuning probabilities.
+2. If the gap barely changes, stop focusing on chain lifecycle and isolate another structural source.
+3. Do not fine-sweep break percentages, reward slopes, caps or signal probabilities.
+4. Do not change `game.js`, persistent progression or the frozen human candidate before the renewal diagnostic is complete.
 
 ## Production Decision
 
 - `game.js`: unchanged.
 - `HUMAN_CANDIDATE_01`: unchanged.
-- production hidden 50% exit: retained as frozen baseline.
+- hidden 50% calm/deep exit: retained only as frozen production baseline.
 - same-signal/mismatch signal-causal exit: **not cleared**.
-- preserve-chain mode: **diagnostic only**.
+- preserve-chain mode: **diagnostic only; result complete**.
 - persistent progression: blocked.
 - human-fun claim: `UNVERIFIED`.
 
 ## Recommended Action
 
-Wait only for the already-running deterministic CI result, then compare preserve-chain versus hidden-50 at 2 and 3 decisions. Use that result to decide whether the next structural design should target chain-loss compensation or resonance's guaranteed renewal property.
+Build one common-RNG active-chain renewal diagnostic that leaves an existing chain unchanged when a resonance offer mismatches it instead of automatically replacing it with the new signal. Compare that control against production at 2 and 3 decisions. Only after that causal split should Executive invent or promote another gameplay rule.
