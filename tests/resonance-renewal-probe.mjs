@@ -2,6 +2,7 @@
 // SIMULATED only. Compare production resonance mismatch semantics (replace active chain
 // with the offered new signal at chainLen=1) against a diagnostic no-renew mode that
 // leaves the existing chain and chainLen unchanged on resonance mismatch.
+// Initial chain creation from a null chain remains identical to production in both modes.
 // Rewards, Threat, costs, extraction, route generation, non-resonance 50% chain-break,
 // collapse rolls and common exogenous random tapes are otherwise unchanged.
 const SEEDS=[101,202,303,404], RUNS=10000, H=[2,3], tones=['calm','deep','res'];
@@ -19,6 +20,7 @@ const extract=(s,r)=>s.haul>0&&bank(s.haul,s.depth)>=oneEV(s,r);
 function policy(s,rs){let best=rs[0],v=-Infinity;for(const r of rs){let x=oneEV(s,r);if(s.chain&&r.tone==='res')x+=resBonus((s.chain===r.signal?s.chainLen+1:1)+1)/3;else if(s.chain)x+=resBonus(s.chainLen+1)/6;if(x>v){v=x;best=r}}return best}
 function step(s,r,breakU,collapseU,mode){const n={...s};n.energy-=Math.min(n.energy,r.cost);n.depth++;let g=r.gain;if(r.tone==='res'){
   if(n.chain===r.signal){n.chainLen++;g+=resBonus(n.chainLen)}
+  else if(!n.chain){n.chain=r.signal;n.chainLen=1}
   else if(mode==='production'){n.chain=r.signal;n.chainLen=1}
   else if(mode==='noRenew'){/* diagnostic: keep old active chain unchanged on mismatch */}
   else throw new Error(`unknown mode ${mode}`);
