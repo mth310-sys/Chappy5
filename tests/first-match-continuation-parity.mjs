@@ -1,9 +1,10 @@
-// Narrow parity guard for first-match-continuation-probe.mjs.
-// The probe intentionally varies only the first matching continuation reward on the forced
-// resonance branch; its production path must otherwise mirror decision-driving game rules.
+// Narrow parity guard for first-match continuation diagnostics and structural benchmark.
+// Production paths must mirror current decision-driving rules; candidate branches may vary only
+// the declared first-match reward/state boundary.
 import fs from 'node:fs';
 const game=fs.readFileSync(new URL('../game.js',import.meta.url),'utf8');
 const probe=fs.readFileSync(new URL('./first-match-continuation-probe.mjs',import.meta.url),'utf8');
+const structural=fs.readFileSync(new URL('./first-match-structural-benchmark.mjs',import.meta.url),'utf8');
 const need=(src,re,label)=>{if(!re.test(src))throw new Error(`first-match parity mismatch: ${label}`)};
 for(const [re,label] of [
  [/tone:'calm',cost:\[1,2\],gain:\[1,3\],risk:-3/,'production calm template'],
@@ -22,10 +23,18 @@ for(const [re,label] of [
  [/1\+Math\.min\(\.6,depth\*\.04\)/,'probe extraction multiplier'],
  [/const resBonus=n=>n<2\?0:1\+n\*2/,'probe production resonance reward'],
  [/else if\(n\.chain&&breakU<\.5\)/,'probe production chain break'],
- [/if\(i!==0\|\|s\.chainLen!==1\|\|r\.tone!=='res'\|\|s\.chain!==r\.signal\)return null/,'diagnostic isolated to first matching continuation'],
  [/mode==='firstMatchBonus3'\)return 3/,'single coarse +3 candidate'],
  [/mode==='noFirstMatchBonus'\|\|mode==='noFirstMatchBonusNormalized'\)return 0/,'zero-bonus diagnostic bound'],
- [/mode==='noFirstMatchBonusNormalized'&&i===0&&s\.chainLen===1&&r\.tone==='res'&&s\.chain===r\.signal/,'maturity normalization limited to first matching continuation'],
- [/if\(normalize&&s\.chain===r\.signal&&s\.chainLen===2\)s\.chainLen=1/,'diagnostic carries signal but normalizes maturity only']
+ [/mode==='noFirstMatchBonusNormalized'&&i===0&&s\.chainLen===1&&r\.tone==='res'&&s\.chain===r\.signal/,'maturity normalization limited to first matching continuation']
 ])need(probe,re,label);
-console.log('first-match continuation probe parity matches declared production rules');
+for(const [re,label] of [
+ [/const modes=\['production','pairCashout'\]/,'single structural candidate only'],
+ [/anomaly:R\(\)<\.18/,'structural anomaly probability'],
+ [/const resBonus=n=>n<2\?0:1\+n\*2/,'structural production reward'],
+ [/Math\.min\(n\.energy,r\.cost\)/,'structural partial energy payment'],
+ [/1\+Math\.min\(\.6,depth\*\.04\)/,'structural extraction multiplier'],
+ [/else if\(n\.chain&&R\(\)<\.5\)/,'structural production chain-break path'],
+ [/mode==='pairCashout'&&n\.chainLen===2/,'candidate isolated to first matched pair completion'],
+ [/n\.chain=null;n\.chainLen=0/,'candidate closes chain after preserving +5 beat']
+])need(structural,re,label);
+console.log('first-match continuation and structural benchmark parity match declared production rules');
