@@ -1,82 +1,98 @@
-# GS-018 — First matching continuation bonus is a primary causal driver of resonance stickiness
+# GS-018 — First matching continuation reward is a primary causal driver, but +3 remains too sticky
 
-- **Status:** `STRATEGY_CLEARANCE_BLOCKED / FIRST_MATCH_BONUS_CAUSAL_DRIVER_CONFIRMED`
+- **Status:** `STRATEGY_CLEARANCE_BLOCKED / FIRST_MATCH_REWARD_CAUSAL_BUT_PLUS3_INSUFFICIENT`
 - **Severity:** 4
 - **Confidence:** HIGH for measured causal direction / MEDIUM-HIGH for design interpretation
 - **Verification Type:** `OBSERVED + SIMULATED` (`HUMAN_VERIFIED`: no)
 
 ## Evidence
 
-A new deterministic non-production probe, `tests/first-match-continuation-probe.mjs`, isolates the exact boundary identified by EX-021:
+`tests/first-match-continuation-probe.mjs` isolates the exact boundary identified by EX-021:
 
 - active chain exists,
 - `chainLen === 1`,
 - the offered resonance signal matches the active chain,
-- compare forced resonance continuation against the best calm/deep switch over 2- and 3-decision common-RNG horizons.
+- forced resonance continuation is compared with the best calm/deep switch over 2- and 3-decision common-RNG horizons.
 
-The diagnostic changes **one thing only on the first forced resonance step**:
+The probe samples **26,470** production-equivalent matching `chainLen=1` states, the same subset previously exposed by the resonance-maturity analysis.
 
-1. `production` — the first matching continuation increments chainLen from 1 to 2 and receives the normal `+5` continuation bonus.
-2. `noFirstMatchBonus` — the same continuation still increments chainLen from 1 to 2 and preserves the chain, but that first `+5` reward is suppressed. All later resonance rewards and all other production rules remain unchanged.
+A dedicated parity guard checks the probe's production path against current `game.js`. GitHub Actions run `32945940623` completed successfully with state regression, strategy parity, first-match parity, and all existing decision probes passing.
 
-A dedicated parity guard verifies the probe's production path against current `game.js`. GitHub Actions run `32945639682` completed successfully with state regression, strategy parity, first-match parity, all existing strategy probes, and the new first-match probe passing.
-
-The probe sampled **26,470** production-equivalent chainLen=1 matching states, exactly matching the previously measured EX-021 maturity subset.
-
-### Production baseline for chainLen=1 matching states
+### Production baseline
 
 | Horizon | Switch wins | Resonance wins | Mean `switch - resonance` bank |
 |---|---:|---:|---:|
 | 2 decisions | 8.90% | 59.36% | **-3.67102** |
 | 3 decisions | 11.93% | 51.34% | **-3.89082** |
 
-### Effect of suppressing only the first `+5`
+### Zero-bonus causal bound
+
+The first diagnostic suppresses only the immediate `+5` reward on the first matching continuation. ChainLen still advances from 1 to 2, the chain signal remains intact, and all later production rewards/mechanics are unchanged.
 
 | Horizon | Switch-win delta | Resonance-win delta | Mean-bank delta | Derived diagnostic mean |
 |---|---:|---:|---:|---:|
 | 2 decisions | **+27.3291 pt** | **-33.6947 pt** | **+3.79490** | **+0.12388** |
 | 3 decisions | **+17.6011 pt** | **-23.7061 pt** | **+3.41054** | **-0.48028** |
 
-Derived diagnostic win rates are approximately:
+Derived zero-bonus win rates are approximately:
 
 - 2 decisions: switch **36.23%**, resonance **25.66%**.
 - 3 decisions: switch **29.53%**, resonance **27.64%**.
 
-So removing only the first matching continuation reward more than closes the 2-decision mean gap and reduces the 3-decision mean disadvantage by about **87.7%**. The remaining 3-decision resonance advantage is small relative to production and is consistent with residual chain-state/future continuation value rather than the full production lock-in.
+Removing only the first immediate reward therefore more than closes the 2-decision mean gap and reduces the 3-decision disadvantage by about **87.7%**. This confirms that the first matching reward is a major causal source of the production lock-in.
 
-A simple reward-scale calculation explains why this boundary is structurally large. Before anomaly effects:
+### One coarse +3 candidate
+
+To avoid another dense coefficient sweep, only one non-zero candidate was tested: reduce the first matching continuation reward from `+5` to `+3`, with all later continuation rewards and all other production mechanics unchanged.
+
+Relative to production, `+3` produced:
+
+| Horizon | Switch-win delta | Resonance-win delta | Mean-bank delta |
+|---|---:|---:|---:|
+| 2 decisions | **+5.3230 pt** | **-10.2456 pt** | **+1.53411** |
+| 3 decisions | **+3.5172 pt** | **-7.5179 pt** | **+1.38334** |
+
+Derived `+3` candidate results:
+
+| Horizon | Switch wins | Resonance wins | Mean `switch - resonance` bank |
+|---|---:|---:|---:|
+| 2 decisions | **14.22%** | **49.11%** | **-2.13691** |
+| 3 decisions | **15.45%** | **43.82%** | **-2.50748** |
+
+So `+3` meaningfully weakens the lock-in but still leaves a large resonance advantage over both horizons. It is **not** a strategy-clear candidate.
+
+A simple reward-scale check explains why this boundary is structurally large. Before anomaly effects:
 
 - resonance base gain averages about **3**,
-- the first matching continuation adds **+5**,
-- therefore that matching resonance step averages about **8** immediate haul before anomaly,
-- fixed deep averages about **4.5** base haul before anomaly.
+- production first matching continuation adds **+5**, so it averages about **8** immediate haul,
+- the coarse `+3` candidate still averages about **6** immediate haul,
+- fixed deep averages about **4.5** base haul.
 
-The first matching resonance step therefore receives a very large immediate premium before any future chain option value is counted.
+The first matching step therefore remains strongly front-loaded even after the coarse reduction.
 
 ## Interpretation
 
-This materially strengthens EX-021. The dominant pressure does **not** require a mature chain, and previous diagnostics already showed mismatch renewal is not the primary cause. The first transition from `chainLen=1` to a matching continuation is itself enough to turn a normally contestable three-route decision into a strongly resonance-favored short trajectory.
+The first transition from `chainLen=1` to a matching continuation is now confirmed as a **primary causal boundary**, not merely a correlated symptom. This also explains why high-chain caps/tapers failed: they preserved the first `+5` entirely.
 
-The result also explains why high-chain caps/tapers did not solve the global fixed-resonance problem: they left this first `+5` untouched.
+However, the `+3` result shows that solving the game by repeatedly shaving this coefficient is not justified. The first reward explains a large portion of the lock-in, but even after a meaningful reduction there is substantial residual value from the resulting chain state and future continuation opportunities.
 
-This does **not** prove that the production bonus should be removed entirely. The `+0` diagnostic is deliberately extreme and may overcorrect the 2-decision boundary or reduce the reward feeling of the first successful match. It proves that the **magnitude of the first matching continuation reward is a real primary tuning boundary**.
+The zero-bonus diagnostic is an intentional causal bound, not a production proposal. It may overcorrect the first 2-decision comparison and could damage the reward feeling of a successful match. Likewise, `+3` should not be promoted merely because it is better than `+5`.
 
 ## Recommended Action
 
-Do not change production yet and do not resume global resonance-slope micro-tuning.
+**Stop first-match reward coefficient tuning here. Do not test +2/+1 or resume fine-grained slope searches.** That would risk fitting production to simulator crossover points rather than improving the game.
 
-Next Systems step should test **one coarse, narrow first-match candidate**, not a dense parameter sweep. Recommended diagnostic candidate: reduce only the first matching continuation bonus from **+5 to +3**, while leaving chain creation, later continuation rewards, Threat, EN, anomalies, extraction, chain-break semantics, route generation, and RNG unchanged.
+Next Systems work should isolate the residual **post-first-match chain maturity / future-option value** with one narrow common-RNG diagnostic. Recommended comparison under the same zero immediate first-match reward:
 
-Why +3 is a useful single candidate rather than a micro-sweep:
+1. normal result: matching continuation advances the chain state from `chainLen=1` to `chainLen=2`;
+2. diagnostic result: the same first match preserves the signal but normalizes the carried state back to `chainLen=1` after the step.
 
-- it preserves a clear first-match reward event,
-- matched resonance would still average about 6 immediate haul before anomaly versus deep's 4.5,
-- it moves meaningfully away from the confirmed +5 lock-in boundary without deleting the mechanic,
-- it avoids fitting production to tiny simulator rank differences.
+All immediate haul, Threat, EN, anomaly, extraction, collapse, route generation and external RNG should remain identical. This directly measures how much of the remaining 3-decision `-0.48028` comes from carrying the more mature chain state into future decisions.
 
-Evaluate that one candidate first with the same 26,470-state common-RNG branch probe. Only if it materially restores switch viability should it be promoted into the full deterministic strategy benchmark and held-out seed robustness check. Executive should decide whether any successful candidate becomes a Controlled Playable.
+- If that residual largely collapses, Executive should treat **first-match reward + resulting maturity-state value** as a combined structural boundary rather than searching for a magic numeric bonus.
+- If the residual remains, stop reward-side investigation and decompose extraction/policy state value instead.
 
-If +3 still leaves a large 2-3 step lock-in, stop reward micro-tuning and investigate the residual chain-state/extraction value. If +3 overcorrects toward trivial switching, the result still bounds the viable design region without requiring a dense search.
+Any eventual production candidate or Controlled Playable remains an Executive decision.
 
 ## Safety / scope
 
@@ -84,5 +100,5 @@ If +3 still leaves a large 2-3 step lock-in, stop reward micro-tuning and invest
 - `HUMAN_CANDIDATE_01`: unchanged.
 - No UI/save-format changes.
 - No human-fun claim.
-- Result is `SIMULATED`, not `HUMAN_VERIFIED`.
-- New probe has a dedicated production-parity guard and CI-success evidence.
+- All results are `SIMULATED`, not `HUMAN_VERIFIED`.
+- The probe has a dedicated production-parity guard and CI-success evidence.
