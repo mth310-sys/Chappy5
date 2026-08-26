@@ -36,7 +36,7 @@ const benchmarkChecks=[
  [/s\.threat\+r\.risk\+\(s\.depth\+1\)\*1\.4\+\(r\.anomaly\?7:0\)\+calm,0,92/,'benchmark threat formula/cap'],
  [/Math\.min\(n\.energy,r\.cost\)/,'benchmark partial energy payment'],
  [/1\+Math\.min\(\.6,depth\*\.04\)/,'benchmark extraction multiplier'],
- [/for\(const slope of \[2,1\]\)/,'benchmark includes production slope 2'],
+ [/const resonanceSlopes=\[[^\]]*\b2\b[^\]]*\]/,'benchmark includes production slope 2'],
  [/else if\(R\(\)<\.5\)/,'benchmark non-resonance chain break'],
 ];
 
