@@ -1,0 +1,27 @@
+// Deterministic non-production A/B probe for active-chain exit rules.
+// SIMULATED only. Compare production hidden 50% non-resonance chain break against
+// visible-signal causality: matching calm/deep signal preserves chain, mismatch breaks it.
+// The hidden-break random draw is consumed in both modes to preserve common RNG.
+const SEEDS=[101,202,303,404], RUNS=10000, H=[2,3], tones=['calm','deep','res'];
+const tpl={calm:{cost:[1,2],gain:[1,3],risk:-3},deep:{cost:[2,3],gain:[3,6],risk:3},res:{cost:[1,3],gain:[2,4],risk:0}};
+function rng(seed){let x=seed>>>0;return()=>{x=(Math.imul(1664525,x)+1013904223)>>>0;return x/4294967296}}
+function mix(a,b,c=0){let x=(a^Math.imul(b+1,0x9e3779b9)^Math.imul(c+1,0x85ebca6b))>>>0;x^=x>>>16;x=Math.imul(x,0x7feb352d);x^=x>>>15;x=Math.imul(x,0x846ca68b);x^=x>>>16;return x>>>0}
+const ri=(R,a,b)=>Math.floor(R()*(b-a+1))+a, pick=(R,a)=>a[Math.floor(R()*a.length)], clamp=(n,a,b)=>Math.max(a,Math.min(b,n));
+function routes(R){const o=[...tones];for(let i=2;i>0;i--){const j=ri(R,0,i);[o[i],o[j]]=[o[j],o[i]]}return o.map(t=>{const q=tpl[t];return{tone:t,cost:ri(R,...q.cost),gain:ri(R,...q.gain),risk:q.risk,signal:pick(R,['A','B','C']),anomaly:R()<.18}})}
+const anomalyBonus=d=>2+Math.floor(d/2)+Math.max(0,d-2)*2;
+function threatAfter(s,r){return clamp(s.threat+r.risk+(s.depth+1)*1.4+(r.anomaly?7:0)+(r.tone==='calm'&&s.threat>=25?-8:0),0,92)}
+const resBonus=n=>n<2?0:1+n*2, bank=(haul,depth)=>Math.floor(haul*(1+Math.min(.6,depth*.04)));
+function immediate(s,r){let g=r.gain;if(r.tone==='res'&&s.chain===r.signal)g+=resBonus(s.chainLen+1);if(r.anomaly)g+=anomalyBonus(s.depth+1);return g}
+const oneEV=(s,r)=>(1-threatAfter(s,r)/100)*bank(s.haul+immediate(s,r),s.depth+1);
+const extract=(s,r)=>s.haul>0&&bank(s.haul,s.depth)>=oneEV(s,r);
+function policy(s,rs){let best=rs[0],v=-Infinity;for(const r of rs){let x=oneEV(s,r);if(s.chain&&r.tone==='res')x+=resBonus((s.chain===r.signal?s.chainLen+1:1)+1)/3;else if(s.chain)x+=resBonus(s.chainLen+1)/6;if(x>v){v=x;best=r}}return best}
+function step(s,r,breakU,collapseU,mode){const n={...s};n.energy-=Math.min(n.energy,r.cost);n.depth++;let g=r.gain;if(r.tone==='res'){if(n.chain===r.signal){n.chainLen++;g+=resBonus(n.chainLen)}else{n.chain=r.signal;n.chainLen=1}}else if(n.chain){const old=n.chain;const shouldBreak=mode==='hidden50'?breakU<.5:r.signal!==old;if(shouldBreak){n.chain=null;n.chainLen=0}}if(r.anomaly)g+=anomalyBonus(n.depth);n.haul+=g;n.threat=threatAfter(s,r);if(collapseU<n.threat/100)return{...n,alive:false,collapsed:true,haul:0};if(n.energy<=0)return{...n,alive:false,collapsed:false};return{...n,alive:true,collapsed:false}}
+function tape(base,h){const a=[];for(let i=0;i<h;i++){const rr=rng(mix(base,i,11)),or=rng(mix(base,i,29));a.push({rs:routes(rr),breakU:or(),collapseU:or()})}return a}
+function branch(start,first,t,h,mode){let s={...start,alive:true,collapsed:false};for(let i=0;i<h;i++){const e=t[i],r=i?policy(s,e.rs):first;if(i&&extract(s,r))return bank(s.haul,s.depth);s=step(s,r,e.breakU,e.collapseU,mode);if(!s.alive)return s.collapsed?0:bank(s.haul,s.depth)}return bank(s.haul,s.depth)}
+function stats(){return{samples:0,localSwitch:0,h:{2:{sw:0,res:0,tie:0,d:0},3:{sw:0,res:0,tie:0,d:0}},match:{samples:0,h:{2:{sw:0,res:0},3:{sw:0,res:0}}},mismatch:{samples:0,h:{2:{sw:0,res:0},3:{sw:0,res:0}}}}}
+function sample(seed,mode){const o=stats();for(let k=0;k<RUNS;k++){const R=rng(mix(seed,k));let s={energy:10,depth:0,haul:0,threat:6,chain:null,chainLen:0,alive:true,collapsed:false},visit=0;while(s.alive){const rs=routes(R),res=rs.find(x=>x.tone==='res');if(s.chain){o.samples++;visit++;const non=rs.filter(x=>x.tone!=='res').sort((a,b)=>oneEV(s,b)-oneEV(s,a))[0];if(oneEV(s,non)>oneEV(s,res))o.localSwitch++;const cat=res.signal===s.chain?'match':'mismatch';o[cat].samples++;for(const h of H){const t=tape(mix(seed,k,visit*17+h),h),rv=branch(s,res,t,h,mode),nv=branch(s,non,t,h,mode),d=nv-rv;if(d>0){o.h[h].sw++;o[cat].h[h].sw++}else if(d<0){o.h[h].res++;o[cat].h[h].res++}else o.h[h].tie++;o.h[h].d+=d}}if(extract(s,res))break;s=step(s,res,R(),R(),mode)}}return o}
+function merge(rows){const o=stats();for(const r of rows){o.samples+=r.samples;o.localSwitch+=r.localSwitch;for(const h of H){for(const k of ['sw','res','tie','d'])o.h[h][k]+=r.h[h][k]}for(const c of ['match','mismatch']){o[c].samples+=r[c].samples;for(const h of H){o[c].h[h].sw+=r[c].h[h].sw;o[c].h[h].res+=r[c].h[h].res}}}return o}
+const pct=(a,b)=>b?100*a/b:0;
+function report(mode){const s=merge(SEEDS.map(x=>sample(x,mode)));return{mode,samples:s.samples,oneStepSwitchPct:pct(s.localSwitch,s.samples),horizon:Object.fromEntries(H.map(h=>[h,{switchWinsPct:pct(s.h[h].sw,s.samples),resonanceWinsPct:pct(s.h[h].res,s.samples),tiePct:pct(s.h[h].tie,s.samples),meanSwitchMinusResBank:s.h[h].d/s.samples}])),bySignal:Object.fromEntries(['match','mismatch'].map(c=>[c,Object.fromEntries(H.map(h=>[h,{samples:s[c].samples,switchWinsPct:pct(s[c].h[h].sw,s[c].samples),resonanceWinsPct:pct(s[c].h[h].res,s[c].samples)}]))]))};}
+const hidden=report('hidden50'), signal=report('signalCausal');
+console.log({hidden50:hidden,signalCausal:signal,delta:Object.fromEntries(H.map(h=>[h,{switchWinsPct:signal.horizon[h].switchWinsPct-hidden.horizon[h].switchWinsPct,resonanceWinsPct:signal.horizon[h].resonanceWinsPct-hidden.horizon[h].resonanceWinsPct,meanSwitchMinusResBank:signal.horizon[h].meanSwitchMinusResBank-hidden.horizon[h].meanSwitchMinusResBank}]))});
