@@ -10,6 +10,7 @@ const bench=fs.readFileSync(new URL('./strategy-benchmark.mjs',import.meta.url),
 const switchProbe=fs.readFileSync(new URL('./active-chain-switch-probe.mjs',import.meta.url),'utf8');
 const branchProbe=fs.readFileSync(new URL('./active-chain-branch-probe.mjs',import.meta.url),'utf8');
 const highChainProbe=fs.readFileSync(new URL('./high-chain-probe.mjs',import.meta.url),'utf8');
+const chainExitProbe=fs.readFileSync(new URL('./chain-exit-rule-probe.mjs',import.meta.url),'utf8');
 
 function requireMatch(source,re,label){
  if(!re.test(source))throw new Error(`strategy parity mismatch: ${label}`);
@@ -58,6 +59,21 @@ const sharedProbeChecks=[
  [/return chainLen<2\?0:1\+chainLen\*2/,'production resonance reward'],
 ];
 
+const chainExitChecks=[
+ [/calm:\{cost:\[1,2\],gain:\[1,3\],risk:-3\}/,'calm template'],
+ [/deep:\{cost:\[2,3\],gain:\[3,6\],risk:3\}/,'deep template'],
+ [/res:\{cost:\[1,3\],gain:\[2,4\],risk:0\}/,'resonance template'],
+ [/anomaly:R\(\)<\.18/,'anomaly probability 0.18'],
+ [/const anomalyBonus=d=>2\+Math\.floor\(d\/2\)\+Math\.max\(0,d-2\)\*2/,'anomaly reward curve'],
+ [/r\.tone==='calm'&&s\.threat>=25\?-8:0/,'calm recovery threshold/effect'],
+ [/s\.threat\+r\.risk\+\(s\.depth\+1\)\*1\.4\+\(r\.anomaly\?7:0\)\+\(r\.tone==='calm'&&s\.threat>=25\?-8:0\),0,92/,'threat formula/cap'],
+ [/Math\.min\(n\.energy,r\.cost\)/,'partial energy payment'],
+ [/1\+Math\.min\(\.6,depth\*\.04\)/,'extraction multiplier'],
+ [/const resBonus=n=>n<2\?0:1\+n\*2/,'production resonance reward'],
+ [/mode==='hidden50'\)shouldBreak=breakU<\.5/,'production hidden chain-break path'],
+ [/mode==='preserve'\)shouldBreak=false/,'diagnostic no-loss candidate isolated from production path'],
+];
+
 for(const [re,label] of productionChecks)requireMatch(game,re,label);
 for(const [re,label] of benchmarkChecks)requireMatch(bench,re,label);
 for(const [name,source] of [['active-chain-switch',switchProbe],['active-chain-branch',branchProbe]]){
@@ -68,5 +84,9 @@ for(const [name,source] of [['active-chain-switch',switchProbe],['active-chain-b
 // production mode must still retain the same core economy and explicit production slope.
 for(const [re,label] of sharedProbeChecks.slice(0,9))requireMatch(highChainProbe,re,`high-chain ${label}`);
 requireMatch(highChainProbe,/if\(mode==='production'\)return 1\+chainLen\*2/, 'high-chain production resonance reward');
+
+// chain-exit-rule-probe intentionally varies only non-resonance chain exit semantics.
+// Its production mode must preserve the same economy/reward/break path as game.js.
+for(const [re,label] of chainExitChecks)requireMatch(chainExitProbe,re,`chain-exit ${label}`);
 
 console.log('strategy parity declarations match current production and decision-driving probes');
