@@ -1,12 +1,15 @@
-// Narrow CI guard for the duplicated production model used by strategy-benchmark.mjs.
+// Narrow CI guard for duplicated production rules used by non-production strategy probes.
 // This intentionally avoids refactoring the frozen browser playable. If a benchmark-critical
-// production rule changes, CI must fail until the benchmark and this parity declaration are
-// reviewed together. Passing this test proves declared rule parity, not gameplay correctness.
+// production rule changes, CI must fail until every decision-driving probe and this parity
+// declaration are reviewed together. Passing this test proves declared rule parity, not gameplay correctness.
 
 import fs from 'node:fs';
 
 const game=fs.readFileSync(new URL('../game.js',import.meta.url),'utf8');
 const bench=fs.readFileSync(new URL('./strategy-benchmark.mjs',import.meta.url),'utf8');
+const switchProbe=fs.readFileSync(new URL('./active-chain-switch-probe.mjs',import.meta.url),'utf8');
+const branchProbe=fs.readFileSync(new URL('./active-chain-branch-probe.mjs',import.meta.url),'utf8');
+const highChainProbe=fs.readFileSync(new URL('./high-chain-probe.mjs',import.meta.url),'utf8');
 
 function requireMatch(source,re,label){
  if(!re.test(source))throw new Error(`strategy parity mismatch: ${label}`);
@@ -42,7 +45,28 @@ const benchmarkChecks=[
  [/exitMode==='signal'/,'benchmark structural candidate isolated from production path'],
 ];
 
+const sharedProbeChecks=[
+ [/calm:\{cost:\[1,2\],gain:\[1,3\],risk:-3\}/,'calm template'],
+ [/deep:\{cost:\[2,3\],gain:\[3,6\],risk:3\}/,'deep template'],
+ [/res:\{cost:\[1,3\],gain:\[2,4\],risk:0\}/,'resonance template'],
+ [/anomaly:R\(\)<\.18/,'anomaly probability 0.18'],
+ [/return 2\+Math\.floor\(d\/2\)\+Math\.max\(0,d-2\)\*2/,'anomaly reward curve'],
+ [/s\.threat>=25\?-8:0/,'calm recovery threshold/effect'],
+ [/s\.threat\+r\.risk\+\(s\.depth\+1\)\*1\.4\+\(r\.anomaly\?7:0\)\+calm,0,92/,'threat formula/cap'],
+ [/Math\.min\(n\.energy,r\.cost\)/,'partial energy payment'],
+ [/1\+Math\.min\(\.6,depth\*\.04\)/,'extraction multiplier'],
+ [/return chainLen<2\?0:1\+chainLen\*2/,'production resonance reward'],
+];
+
 for(const [re,label] of productionChecks)requireMatch(game,re,label);
 for(const [re,label] of benchmarkChecks)requireMatch(bench,re,label);
+for(const [name,source] of [['active-chain-switch',switchProbe],['active-chain-branch',branchProbe]]){
+ for(const [re,label] of sharedProbeChecks)requireMatch(source,re,`${name} ${label}`);
+}
 
-console.log('strategy parity declarations match current production and benchmark rules');
+// high-chain-probe intentionally contains non-production reward/exit candidates, but its
+// production mode must still retain the same core economy and explicit production slope.
+for(const [re,label] of sharedProbeChecks.slice(0,9))requireMatch(highChainProbe,re,`high-chain ${label}`);
+requireMatch(highChainProbe,/if\(mode==='production'\)return 1\+chainLen\*2/, 'high-chain production resonance reward');
+
+console.log('strategy parity declarations match current production and decision-driving probes');
