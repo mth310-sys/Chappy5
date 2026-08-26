@@ -1,18 +1,14 @@
-# TECHNICAL_FINDING_TQ020 — Active-chain decision probes were outside production parity guard
+# TECHNICAL_FINDING_TQ020 — Decision-driving probes are covered by production parity guards
 
-- Status: FIXED_PENDING_CI
+- Status: PASS
 - Severity: 4
 - Confidence: HIGH
 - Verification Type: OBSERVED
-- Evidence: `tests/strategy-parity.mjs` guarded duplicated production rules in `tests/strategy-benchmark.mjs`, but the newer decision-driving `tests/active-chain-switch-probe.mjs` and `tests/active-chain-branch-probe.mjs` independently duplicate the same route templates, anomaly probability/reward, Threat formula, calm recovery, partial EN payment, extraction multiplier and production resonance reward. `tests/high-chain-probe.mjs` also duplicates the core economy while intentionally varying chain-exit/reward candidate branches. These probes now feed GS-016 / EX-019 strategic conclusions. Before commit `44c4f50842e8b9b4a26f6126cff54c711e1eaffa`, a future production-rule change could therefore leave these probes stale while CI still passed, silently invalidating Executive evidence.
-- Recommended Action: Keep all decision-driving duplicated production models inside the narrow parity declaration. If production rules change, CI should force explicit review of `strategy-benchmark`, active-chain probes and the production-mode core of high-chain probe before their SIMULATED outputs are reused.
-
-## Fix
-
-Commit `44c4f50842e8b9b4a26f6126cff54c711e1eaffa` extends `tests/strategy-parity.mjs` to read the active-chain switch probe, active-chain branch probe and high-chain probe. It verifies their shared production-critical templates, anomaly model, Threat/calming model, partial-energy payment, extraction multiplier and resonance reward declaration. The high-chain probe remains allowed to contain intentional non-production candidate branches; only its shared core and explicit `mode==='production'` reward path are guarded.
-
-This is deliberately not a refactor of production `game.js`. It is a narrow test-integrity fix because these duplicated models currently support balance decisions.
+- Evidence: The current Executive/Systems decisions rely on several non-production deterministic probes that duplicate production economy/state rules instead of importing them directly from `game.js`: `tests/strategy-benchmark.mjs`, `tests/high-chain-probe.mjs`, `tests/active-chain-switch-probe.mjs`, `tests/active-chain-branch-probe.mjs`, and `tests/chain-exit-rule-probe.mjs`. That duplication is intentional while `HUMAN_CANDIDATE_01` remains frozen, but without a parity guard a production-rule change could leave a decision-driving probe stale while CI still passed. `tests/strategy-parity.mjs` now guards the production-critical common rules used by these probes: route cost/gain/risk templates, anomaly probability/reward curve, calm recovery, Threat formula/cap, partial EN payment, extraction multiplier, production resonance reward, and production non-resonance chain-break behavior where applicable. The active-chain/high-chain coverage was added in commit `44c4f50842e8b9b4a26f6126cff54c711e1eaffa`; the later chain-exit probe was added to the same guard in `10cb6a4486dc1c195421e091464d599fc2a36d59`. GitHub Actions `regression` for commit `10cb6a4486dc1c195421e091464d599fc2a36d59` completed successfully in run `32938098546`, so the parity declaration and all decision-driving probes executed successfully together.
+- Recommended Action: Keep the parity guard narrow and decision-oriented. When a new non-production probe begins influencing Executive/Systems decisions, add only its production-common invariants to `strategy-parity.mjs`. Do not refactor the frozen playable into a shared simulation engine unless a concrete maintenance failure justifies it. Keep TQ-019 separate until the next Controlled Playable boundary because production route permutation still uses engine-dependent `Array.sort(()=>Math.random()-.5)` while deterministic probes use Fisher-Yates semantics.
 
 ## Verification boundary
 
-CI completion for the parity-extension commit is not yet confirmed in this finding. Until the corresponding `ECHO DRIFT Regression` run completes successfully, treat this as `FIXED_PENDING_CI`, not PASS. Production gameplay, save format, UI and `HUMAN_CANDIDATE_01` are unchanged.
+This PASS does not prove that the probes reproduce every browser/runtime property of production, and it does not turn `SIMULATED` output into `HUMAN_VERIFIED` evidence. It establishes the narrower Technical guarantee that the declared duplicated numerical/state rules currently used for Executive balance decisions cannot drift silently without CI surfacing the mismatch.
+
+Real iPhone/Safari lifecycle, touch, safe-area, reload/background restoration, and actual localStorage behavior remain `UNKNOWN / UNVERIFIED` until device-tested. Production gameplay, save format, UI, and `HUMAN_CANDIDATE_01` are unchanged by this finding.
