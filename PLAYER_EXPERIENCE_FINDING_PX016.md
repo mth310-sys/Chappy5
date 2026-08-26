@@ -1,0 +1,17 @@
+# Player Experience Finding PX-016 — UNSTABLE boundary may become a player-facing cash-out trigger
+
+Updated: 2026-08-26 09:12 JST
+Target: latest `main` ECHO DRIFT / preserved `HUMAN_CANDIDATE_01`
+Director: Player Experience Analysis Director
+
+- Status: PX_RISK / WAITING_FOR_SYSTEMS_STATE_CONDITIONED_EXTRACTION
+- Severity(1-5): 4
+- Confidence: HIGH for UI/system alignment; MEDIUM for predicted human behavior
+- Verification Type: OBSERVED + SIMULATED
+- Evidence: Production `game.js` changes the threat label from `CALM` to `UNSTABLE` at exactly Threat 25, continuously shows the current Threat percentage, shows each offered route's exact `選択後脅威`, and exposes the exact voluntary-return payout on the `回収して帰還 +N` button. GS-013's deterministic joint route/extraction benchmark independently found Threat 25 to be the best tested global extraction threshold for every route policy under both production resonance slope 2 and candidate slope 1. For production future-aware play, simulated bank/run falls from 11.4975 at threshold 25 to 10.4053 at 35 and 8.6414 at 55, while collapse rises from 55.07% to 70.54% and 77.99%. Production fixed resonance shows the same direction. The UI therefore places a strong semantic warning (`UNSTABLE`) at the same numeric boundary currently favored by the tested extraction policies.
+- Player Experience Impact: If the state-conditioned benchmark confirms that extraction remains concentrated near 25, the issue will not be hidden optimization alone. The interface may actively teach a simple heuristic: `CALMなら進む / UNSTABLEになったら帰る`. Because the return button simultaneously displays a guaranteed-looking bank amount while every route displays its immediate collapse percentage, the moment Threat crosses 25 can become a visually and semantically obvious stop signal. That would weaken the intended push-your-luck tension: later `DANGER` and `CRITICAL` bands could become states that informed players rarely choose to experience, reducing suspense, perceived agency, and the emotional contrast between a brave successful push and a painful collapse. This is a predicted PX risk, not evidence that a human already behaves this way.
+- Recommended Action: Do not rename threat bands, hide risk numbers, or weaken return clarity yet; those would mask a systems problem before it is understood. Keep `HUMAN_CANDIDATE_01` frozen. First let Systems run the planned state-conditioned extraction benchmark. If rational state-conditioned play still clusters near the 25 boundary, Executive should tune the push-your-luck economics/risk curve before using copy or information removal to manufacture uncertainty. If the system becomes strategically healthy, then verify the resulting playable with one focused observation rather than adding a questionnaire item: **after first entering UNSTABLE, does the player treat that label as an automatic return command, or do visible state/opportunity differences produce genuine hesitation?** Preserve exact risk/payout information unless human evidence shows it harms comprehension or tension after the underlying incentives are healthy.
+
+## Interpretation boundary
+
+GS-013 is `SIMULATED`, not `HUMAN_VERIFIED`. PX-016 does not claim that Threat 25 is the human-optimal extraction point or that the `UNSTABLE` label causes early return. The observed fact is the alignment between the current semantic UI boundary and the strongest tested extraction threshold. The player-behavior consequence remains a hypothesis until the state-conditioned benchmark and later human playtest evaluate it.
