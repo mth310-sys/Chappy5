@@ -33,3 +33,5 @@ jobs:
         run: node tests/strategy-parity.mjs
       - name: Run deterministic strategy benchmark
         run: node tests/strategy-benchmark.mjs
+      - name: Run high-chain structural probe
+        run: node tests/high-chain-probe.mjs
