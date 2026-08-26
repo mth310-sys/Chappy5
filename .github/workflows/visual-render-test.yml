@@ -15,8 +15,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Install Playwright Chromium
-        run: npx --yes playwright@1.52.0 install --with-deps chromium
+      - name: Install Playwright WebKit
+        run: npx --yes playwright@1.52.0 install --with-deps webkit
       - name: Start local server
         run: |
           python3 -m http.server 4173 > /tmp/visual-server.log 2>&1 &
