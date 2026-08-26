@@ -37,7 +37,8 @@ const benchmarkChecks=[
  [/Math\.min\(n\.energy,r\.cost\)/,'benchmark partial energy payment'],
  [/1\+Math\.min\(\.6,depth\*\.04\)/,'benchmark extraction multiplier'],
  [/const resonanceSlopes=\[[^\]]*\b2\b[^\]]*\]/,'benchmark includes production slope 2'],
- [/else if\(R\(\)<\.5\)/,'benchmark non-resonance chain break'],
+ [/return R\(\)<\.5/,'benchmark production non-resonance chain break path'],
+ [/exitMode==='signal'/,'benchmark structural candidate isolated from production path'],
 ];
 
 for(const [re,label] of productionChecks)requireMatch(game,re,label);
