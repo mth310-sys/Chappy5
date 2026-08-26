@@ -43,3 +43,5 @@ jobs:
         run: node tests/chain-exit-rule-probe.mjs
       - name: Isolate guaranteed resonance mismatch renewal
         run: node tests/resonance-renewal-report.mjs
+      - name: Isolate first matching continuation bonus
+        run: node tests/first-match-continuation-probe.mjs
