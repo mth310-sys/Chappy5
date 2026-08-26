@@ -47,3 +47,5 @@ jobs:
         run: node tests/resonance-renewal-report.mjs
       - name: Isolate first matching continuation bonus
         run: node tests/first-match-continuation-probe.mjs
+      - name: Benchmark structural first-match reward-state separation
+        run: node tests/first-match-structural-benchmark.mjs
