@@ -1,6 +1,6 @@
-# TQ-016 — Strategy benchmark can silently drift from production rules
+# TQ-016 — Strategy benchmark production parity guard
 
-- Status: WARNING
+- Status: PASS
 - Severity: 3
 - Confidence: HIGH
 - Verification Type: OBSERVED
@@ -9,39 +9,29 @@
 
 ## Evidence
 
-`tests/strategy-benchmark.mjs` states that it mirrors `game.js`, but it currently re-implements production rules and values independently rather than consuming a shared executable model or checking parity against production.
+The previously documented model-drift risk is now actively guarded.
 
-Duplicated items include:
+`tests/strategy-parity.mjs` compares the benchmark-critical production declarations in `game.js` with the separately encoded deterministic strategy model. The guard covers the concrete duplicated rules that motivated this finding:
 
-- route cost/gain/risk templates for `calm`, `deep`, and `res`;
-- anomaly probability (`0.18`);
-- anomaly reward curve;
+- calm / deep / resonance cost, gain and risk templates;
+- anomaly probability (`0.18`) and reward curve;
 - calm recovery threshold/effect;
-- threat cap and depth-pressure formula;
-- partial-energy payment behavior;
+- threat formula and cap;
+- partial-energy payment;
 - extraction multiplier;
-- resonance-chain reward slope for the production case;
-- hidden 50% non-resonance chain break.
+- production resonance slope;
+- non-resonance 50% chain break.
 
-The current benchmark matches the inspected production values at this commit, so this finding does **not** invalidate the already reproduced EX-014 result by itself. The quality risk is forward-looking but concrete: a later gameplay edit can change `game.js` while the benchmark remains unchanged, and CI can still complete successfully because it currently verifies that the benchmark executes, not that its production model remains equivalent to `game.js`.
+The implementation deliberately avoids refactoring the frozen browser playable. Instead, a production-side or benchmark-side rule edit that no longer satisfies the declared parity boundary causes CI to fail until both sides are reviewed together.
 
-This matters because Executive is using the deterministic benchmark as evidence for balance decisions. A green workflow would therefore be insufficient evidence of production parity after future rule changes unless parity is explicitly re-established.
+`.github/workflows/regression.yml` now runs the parity guard alongside deterministic state regression and the strategy benchmark. GitHub Actions `ECHO DRIFT Regression` run `32915174169` for commit `117f51d876114e594b7929e963e8a162def61b8b` completed with conclusion `success` after the parity guard was integrated.
 
-Current relevant files:
-
-- `game.js` — production route generation, threat, chain, reward, energy and extraction rules.
-- `tests/strategy-benchmark.mjs` — separately encoded deterministic model used for simulated strategy comparison.
-- `.github/workflows/regression.yml` — executes both state regression and strategy benchmark but does not currently enforce cross-model parity.
+This PASS means the original silent-drift failure mode is closed for the rules explicitly covered by the guard. It does **not** mean the simulation is HUMAN_VERIFIED, nor does it prove that the benchmark policy is strategically correct; it only establishes an executable production/benchmark parity boundary for the declared rules.
 
 ## Recommended Action
 
-Do not refactor the frozen playable merely to improve architecture. At the next already-planned benchmark change (the Executive-requested route-choice + extraction-decision integration), add a narrow parity boundary before relying on new simulated conclusions.
+Keep the parity guard narrow and mandatory whenever benchmark-critical production rules change.
 
-Preferred implementation order:
+If a future balance change adds a new rule that materially affects route resolution, extraction, collapse, reward or chain state, extend this guard at that change boundary rather than performing a broad gameplay refactor.
 
-1. Extract only the small pure gameplay-model constants/functions needed by both production and simulation **if this can be done without destabilizing browser loading**, or
-2. if shared extraction would disturb the frozen candidate, add explicit parity assertions that fail CI when benchmark-critical production constants/formulas change without a corresponding benchmark update.
-
-At minimum, the parity guard should cover route templates, anomaly curve/probability, threat calculation, energy payment, extraction multiplier, chain break, and production resonance reward. It should not become a broad snapshot test or trigger a cosmetic refactor.
-
-Until such a guard exists, any future benchmark result after a production rule edit should be classified `SIMULATED + PARITY_RECHECK_REQUIRED`, not treated as automatically production-equivalent merely because CI is green.
+Do not treat CI parity as human validation. Strategy conclusions remain `SIMULATED`; real iPhone/Safari lifecycle and feel remain separate verification gates.
