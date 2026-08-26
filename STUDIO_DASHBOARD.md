@@ -1,70 +1,70 @@
 # Chappy5 Studio Dashboard
 
-Updated: 2026-08-26 15:34 JST
-Target: ECHO DRIFT — `HUMAN_CANDIDATE_01` preserved; production frozen while guaranteed resonance renewal is isolated
+Updated: 2026-08-26 16:35 JST
+Target: ECHO DRIFT — `HUMAN_CANDIDATE_01` preserved; production frozen while first matching continuation is isolated
 
 | 領域 | Status | Severity | Confidence | Verification | 最新の重要Finding |
 |---|---|---:|---|---|---|
-| Game Systems | STRATEGY_CLEARANCE_BLOCKED / ACTIVE_CHAIN_RENEWAL_PRESSURE | 4 | HIGH for measurement / MEDIUM-HIGH for design interpretation | OBSERVED + CALCULATED + SIMULATED | `GS-016`: active-chain renewal/insurance produces a real 2–3 decision switching penalty. Full calm/deep chain preservation recovers only part of it, so guaranteed resonance renewal remains unresolved. |
-| Player Experience | ACTIVE_CHAIN_SACRIFICE_NOT_LEGIBLE / SIGNAL_RULE_NOT_CLEARED | 4 | HIGH for hidden-rule observation / MEDIUM-HIGH for predicted player effect | OBSERVED + SIMULATED | `PX-014`: the sacrifice is still not predictable before tapping; same-signal preserve / mismatch break was directly tested and is not promoted. |
-| Progression & Content | FAIL / BLOCKED_BY_CHAIN_STRUCTURE_CLEARANCE | 4 | HIGH | OBSERVED + SIMULATED + DESIGN ANALYSIS | `P-018/P-019`: persistent chain insurance and resonance-affinity upgrades remain blocked; future builds must remain viable over multi-step trajectories and extraction timing. |
-| Technical & Quality | PASS_WITH_DEVICE_WATCH / PROBE_PARITY_HARDENED | 3 | HIGH | OBSERVED | Active-chain and chain-exit decision probes are under narrow production-parity guards and passed CI. `TQ-019` production shuffle plus real iPhone/Safari lifecycle remain unresolved. |
+| Game Systems | STRATEGY_CLEARANCE_BLOCKED / FIRST_MATCH_CONTINUATION_BOUNDARY | 4 | HIGH for measurement / MEDIUM-HIGH for design interpretation | OBSERVED + SIMULATED | `GS-017` + `EX-021`: mismatch renewal is not primary. Matching resonance already strongly dominates at `chainLen=1`; mature chains amplify the gap further. |
+| Player Experience | MATCH_CONTINUATION_IS_PRIMARY_PX_BOUNDARY | 4 | HIGH for structural observation / MEDIUM-HIGH for predicted player effect | OBSERVED + SIMULATED | `PX-014`: mismatch states already contain viable switches. The remaining practical-choice risk is matching continuation, now confirmed to be severe even before a mature chain exists. |
+| Progression & Content | FAIL / BLOCKED_BY_MATCH_CONTINUATION_CLEARANCE | 4 | HIGH | OBSERVED + SIMULATED + DESIGN ANALYSIS | `P-020`: chain survival/insurance is not a valid long-term reward loop. First-match bonuses, signal affinity and resonance reinforcement must also remain blocked until the core clears. |
+| Technical & Quality | PASS_WITH_DEVICE_WATCH / PROBE_PARITY_HARDENED | 3 | HIGH | OBSERVED | Decision-driving probes remain under production parity guards. Reporting-only maturity metrics passed CI. `TQ-019`, terminal crash atomicity and real iPhone/Safari lifecycle remain unresolved. |
 
 ## Executive priority
 
-**Isolate the value of resonance's guaranteed chain renewal/restart when the offered resonance signal mismatches an active chain.**
+**Isolate the causal value of the first matching resonance continuation reward at `chainLen=1`.**
 
-Full latest Executive finding: `EXECUTIVE_FINDING_EX020.md`.
+Full latest Executive finding: `EXECUTIVE_FINDING_EX021.md`.
 
 ## What changed this cycle
 
-The hidden-50 versus visible-signal A/B branch is closed: same-signal preservation / mismatch break made switching slightly worse and is **not cleared**.
+The mismatch-renewal hypothesis is now demoted. The corrected production-sampled probe shows **69,669 mismatch states** already favor calm/deep switching on average:
 
-Executive then added a diagnostic-only `preserveChain` control where calm/deep never destroys an active chain, while keeping the same random draw consumption and all other economy/risk rules fixed.
+- 2 decisions: switch **38.45%** vs resonance **26.07%**, mean `switch - resonance = +0.58843`
+- 3 decisions: switch **33.15%** vs resonance **27.02%**, mean `+0.26474`
 
-`ECHO DRIFT Regression` run `32938098546` is now **completed / success**. Regression, strategy parity and all decision-driving probes passed.
+Executive then exposed the already-added chain-maturity split in CI without changing probe semantics. `ECHO DRIFT Regression` run `32943253035` completed **success**; state regression, parity and every decision probe passed.
 
-Across **104,736 active-chain states**, full calm/deep chain preservation changed the production branch comparison by:
+The decisive split is the **35,067 signal-match states**:
 
-| Horizon | switch-win delta | resonance-win delta | mean `switch - resonance` bank delta |
-|---|---:|---:|---:|
-| 2 decisions | **+0.8870 pt** | **-0.5423 pt** | **+0.27907** |
-| 3 decisions | **+0.5776 pt** | **-0.5280 pt** | **+0.29074** |
+| Matching state | Samples | Horizon | Switch wins | Resonance wins | Mean `switch - resonance` bank |
+|---|---:|---:|---:|---:|---:|
+| `chainLen=1` | 26,470 | 2 | 8.90% | 59.36% | **-3.67102** |
+| `chainLen=1` | 26,470 | 3 | 11.93% | 51.34% | **-3.89082** |
+| `chainLen>=2` | 8,597 | 2 | 12.29% | 57.43% | **-5.28405** |
+| `chainLen>=2` | 8,597 | 3 | 13.42% | 56.10% | **-5.36641** |
 
-Production mean gaps were about **-0.97010 / -1.24772**, so the no-loss diagnostic narrows them only to about **-0.69102 / -0.95698**.
+`chainLen=1` accounts for **75.49% of matching states** and is already heavily biased toward resonance continuation. Mature-chain compounding therefore **amplifies** the problem but is not its root cause. This is consistent with earlier cap/taper probes: limiting high-chain growth narrowed fixed-resonance dominance but never cleared it.
 
-This is the key causal split: **chain-loss risk is a meaningful contributor, but it is not enough to explain resonance stickiness.** It accounts for roughly 29% of the two-decision mean penalty and 23% of the three-decision penalty under this diagnostic. The remaining pressure is consistent with resonance uniquely guaranteeing preservation or immediate renewal/restart of a chain state.
-
-All of these are `SIMULATED`, not `HUMAN_VERIFIED`.
+All of these results are `SIMULATED`, not `HUMAN_VERIFIED`.
 
 ## Repo work this cycle
 
-- `fa9394a09bb6c9c28db6b9d7e04d49c8a646a5d5` — add no-loss chain-exit causal control
-- `10cb6a4486dc1c195421e091464d599fc2a36d59` — put the chain-exit probe under production parity guard
-- `e91f77b51b497fc89df73ce199b87dea19cc3a1d` — update `EX-020` with completed causal split
+- `3e1a2294724edc16b6bbf17a1a647c28586e42df` — add reporting-only wrapper for nested resonance maturity metrics
+- `10668cba2f25de466e474a50e4018141230d6f64` — run expanded maturity report in CI
+- `a3fc2a08ab8057da8cfd667bd8fc6b12ded9011f` — record `EX-021`
 
 Production `game.js`, UI, save format and `HUMAN_CANDIDATE_01` are unchanged.
 
 ## Frozen production policy
 
 - Keep production `game.js` unchanged.
-- Keep `HUMAN_CANDIDATE_01` unchanged.
-- Do not promote the same-signal/mismatch chain-exit rule.
-- Treat preserve-chain as a diagnostic only, not a gameplay candidate.
-- Do not resume reward slope/cap/taper or break-percentage micro-tuning.
-- Do not add persistent chain insurance, break-rate reduction, signal auto-match or resonance-affinity progression.
+- Keep `HUMAN_CANDIDATE_01` unchanged; do not create Candidate 02 yet.
+- Do not return to resonance slope, high-chain cap/taper, mismatch-renewal percentage or same-signal/mismatch micro-tuning.
+- Do not add persistent chain insurance, break-rate reduction, signal auto-match, signal affinity, first-match power growth or resonance multipliers.
 - Do not hide risk/payout information to manufacture tension.
-- Do not spend human-test time on simulation branches that have not cleared the strategic gate.
+- Do not spend human-test time on a simulation branch before strategic clearance.
 
 ## Decision gate
 
-The next causal question is now narrower:
+The next causal question is narrower than the prior renewal gate:
 
-**How much of the remaining resonance advantage comes from the fact that a mismatching resonance offer automatically replaces the active chain with a new signal, guaranteeing that some chain state continues to exist?**
+**How much of the `chainLen=1` match penalty comes from the first matching continuation reward itself?**
 
-The next diagnostic should leave the existing chain unchanged on resonance mismatch rather than automatically restarting it, while keeping rewards, Threat, costs, extraction and external randomness comparable.
+The next non-production common-RNG diagnostic should sample only active-chain `chainLen=1` states with a matching resonance offer and neutralize **only the first matching continuation bonus**. Chain state retention, base route reward, Energy, Threat, anomaly behavior, extraction and external randomness must remain production-identical.
 
-If that materially closes the remaining gap, Executive can design around a visible **renew versus sacrifice** tradeoff. If it barely changes the gap, stop focusing on chain lifecycle and isolate another source.
+- If this materially closes the roughly **-3.67 / -3.89** secured-bank gap, the first continuation reward is the primary balance lever.
+- If a large gap remains, stop reward tuning and isolate accumulated-state retention plus extraction/risk interaction instead.
 
 ## Human verification package
 
@@ -74,16 +74,16 @@ If that materially closes the remaining gap, Executive can design around a visib
 2. **Failure ownership** — after collapse, did it feel like a knowingly pushed risk or like erased time?
 3. **Immediate replay desire** — after success or collapse, did the next run feel immediately desirable?
 
-If a chain structure later reaches Controlled Playable, add only two focused observations: can the player predict chain preservation/sacrifice before tapping, and does switching feel like a deliberate trade rather than hidden punishment?
+If a chain structure later reaches Controlled Playable, observe only whether chain preservation/sacrifice is predictable before tapping and whether a matching continuation still leaves a meaningful alternative.
 
 No human-fun claim is authorized yet.
 
 ## Important unresolved issues
 
 1. **Strategic validity:** fixed resonance remains the best tested production-rule strategy. `Severity 4`.
-2. **Guaranteed renewal/restart:** chain-loss removal only partially closes the active-chain switching gap. `Severity 4`.
-3. **Hidden exit legibility:** calm/deep can erase an active chain through invisible 50% RNG. `Severity 4`.
-4. **Signal-causal candidate:** directly tested and **not cleared**; do not promote on clarity alone.
+2. **First matching continuation:** already strongly suppresses switching at `chainLen=1`; this is the current primary causal boundary. `Severity 4`.
+3. **Mature chain:** worsens the match penalty further but is now treated as an amplifier, not the root cause.
+4. **Hidden exit legibility:** calm/deep can erase an active chain through invisible 50% RNG. `Severity 4`, but not the dominant strategic source.
 5. **Long-term play:** persistent progression still does not meaningfully change future decisions. `OBSERVED FAIL`.
 6. **Human feel:** tension, collapse ownership, replay desire and chain-sacrifice legibility require `HUMAN_VERIFIED`.
 7. **iPhone/Safari:** real-device lifecycle/layout/readability/touch behavior remains `UNVERIFIED`.
@@ -94,4 +94,4 @@ No human-fun claim is authorized yet.
 
 ## Executive decision
 
-`EX-020`: chain-loss risk is confirmed as a meaningful but minority contributor to resonance stickiness. The simple A/B/C signal-causal branch remains rejected. Production stays frozen. The single next gate is a diagnostic isolation of resonance's guaranteed mismatch renewal/restart value.
+`EX-021`: mismatch renewal is not the primary source of resonance stickiness. The dominant boundary is matching continuation, and it is already severe at the first continuation (`chainLen=1`). Production stays frozen. The single next gate is a common-RNG isolation of the first matching continuation reward before any gameplay candidate or human-test promotion.
