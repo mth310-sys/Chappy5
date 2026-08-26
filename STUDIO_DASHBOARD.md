@@ -1,98 +1,62 @@
 # Chappy5 Studio Dashboard
 
-Updated: 2026-08-26 12:24 JST
-Target: ECHO DRIFT — `HUMAN_CANDIDATE_01` preserved; high-chain cap is the leading structural simulation candidate
+Updated: 2026-08-26 13:25 JST
+Target: ECHO DRIFT — `HUMAN_CANDIDATE_01` preserved; production frozen while strategy evaluator adequacy is checked
 
 | 領域 | Status | Severity | Confidence | Verification | 最新の重要Finding |
 |---|---|---:|---|---|---|
-| Game Systems | CANDIDATE_NARROWED / HIGH_CHAIN_CAP_LEADS | 4 | HIGH for measured benchmark / MEDIUM-HIGH for design inference | OBSERVED + SIMULATED | `GS-015` correctly isolated the rare high-chain tail. Executive probe now shows `+5,+5,+5...` cap is materially stronger than the `+5,+6,+7...` taper while preserving the first resonance continuation. |
-| Player Experience | REWARD_FEEL_GATE_PENDING | 3 | HIGH for current rule/copy facts / MEDIUM for predicted feel | OBSERVED + SIMULATED | Latest PX gate supports preserving the first `+5`; a cap would require explanatory copy alignment and later human confirmation that the first continuation still feels rewarding and later repeats do not feel misleading. |
-| Progression & Content | FAIL / BLOCKED_FOR_CORE_CLEARANCE | 4 | HIGH | OBSERVED + SIMULATED + DESIGN ANALYSIS | Persistent progression remains blocked. Visible A/B/C causality and extraction horizon remain supported future progression vocabulary only after strategic clearance. |
-| Technical & Quality | PASS_WITH_DEVICE_WATCH / PARITY_GUARDED | 3 | HIGH | OBSERVED | State regression, strategy parity, benchmark and the new high-chain probe pass in CI. Real iPhone/Safari lifecycle, crash-atomic terminal settlement and other device behavior remain unverified. |
+| Game Systems | STRATEGY_CLEARANCE_BLOCKED / HIGH_CHAIN_CANDIDATE_NOT_CLEARED | 4 | HIGH for corrected benchmark / MEDIUM-HIGH for design inference | OBSERVED + CALCULATED + SIMULATED | `GS-015`: after per-Run RNG isolation, fixed resonance remains ahead even under visible-signal exit + high-chain cap. Mature-chain compounding is only part of the dominance. |
+| Player Experience | CURRENT_HIGH_CHAIN_BRANCH_CLOSED | 2 | HIGH for candidate status / MEDIUM for predicted feel | OBSERVED + SIMULATED | `PX-015`: do not spend human test time on cap/taper reward feel until a Systems-cleared candidate exists. Hidden chain-exit legibility remains a separate PX concern. |
+| Progression & Content | FAIL / BLOCKED_FOR_CORE_CLEARANCE | 4 | HIGH | OBSERVED + SIMULATED + DESIGN ANALYSIS | Persistent progression remains blocked. Future differentiation should alter signal/chain/extraction decisions rather than reopen resonance multipliers or high-chain ceilings. |
+| Technical & Quality | PASS_WITH_DEVICE_WATCH / RNG_AND_PARITY_GUARDED | 3 | HIGH | OBSERVED | `TQ-018` is now CI-verified PASS. State regression, strategy parity and per-Run RNG isolation are protected. Real iPhone/Safari lifecycle and crash-atomic terminal settlement remain unverified. |
 
 ## Executive priority
 
-**Validate the visible-signal causal exit + high-chain `+5` cap on held-out deterministic seeds / per-seed stability before modifying production.**
+**Determine whether fixed-resonance dominance survives an objective-aligned contextual route policy under the corrected per-Run RNG benchmark.**
 
-Full latest Executive finding: `EXECUTIVE_FINDING_EX017.md`.
+Full latest Executive finding: `EXECUTIVE_FINDING_EX018.md`.
 
 ## What changed this cycle
 
-The previous priority was to test two high-chain-only diminishing-return branches on top of the visible-signal chain-exit candidate while preserving the first resonance continuation reward.
+The previous dashboard still treated EX-017's visible-signal + high-chain `+5` cap as the leading robustness candidate. That conclusion is superseded.
 
-Executive added `tests/high-chain-probe.mjs` and wired it into CI. Production `game.js` and `HUMAN_CANDIDATE_01` were not changed.
+TQ-018 isolated each simulated Run to its own deterministic `(base seed, run index)` RNG start. GitHub Actions `ECHO DRIFT Regression` run `32927965054` completed successfully after that correction.
 
-GitHub Actions `ECHO DRIFT Regression` run `32926203552` completed successfully on head `5c159b48f0b101c0669a61ef8767dcdf78accbd9`: deterministic state regression PASS, strategy parity PASS, deterministic strategy benchmark PASS, high-chain structural probe PASS.
+Corrected high-chain results are:
 
-All values below are `SIMULATED`, never `HUMAN_VERIFIED`.
+| Mode | fixed resonance | chain-aware | future-aware | best contextual - fixed resonance |
+|---|---:|---:|---:|---:|
+| production high-chain + visible-signal exit | **12.095225** | 11.856475 | 11.812975 | **-0.238750** |
+| taper after first `+5` | **11.905175** | 11.733650 | 11.693250 | **-0.171525** |
+| cap after first `+5` | **11.732800** | 11.635775 | 11.594800 | **-0.097025** |
 
-## High-chain structural evidence
+All values are `SIMULATED`, never `HUMAN_VERIFIED`.
 
-Visible-signal causal chain exit, state-conditioned extraction, seeds 101/202/303/404, 10,000 Runs per seed.
+The cap still consistently narrows fixed-resonance dominance, so mature-chain compounding is a real contributor. It does not clear the strategy problem, and further reward-tail micro-tuning is stopped.
 
-### Current high-chain growth: `+5,+7,+9...`
-- fixed calm: **10.753175 bank/Run**
-- fixed deep: **8.954900**
-- fixed resonance: **12.106575**
-- one-step: **11.005725**
-- future-aware: **12.003300**
-- chain-aware: **12.029350**
-- best contextual vs best fixed: **-0.077225**
+## New non-production diagnostic
 
-### Gentle taper: `+5,+6,+7...`
-- fixed calm: **10.753175**
-- fixed deep: **8.954900**
-- fixed resonance: **11.885825**
-- one-step: **10.964800**
-- future-aware: **11.889375**
-- chain-aware: **11.829450**
-- best contextual vs best fixed: **+0.003550**
+Executive added `bank-ev` to `tests/high-chain-probe.mjs` in commit `03b8744ea5e928424ce57e099f82deedef6c0c47`.
 
-The taper is a simulator-level near-tie and is **not** supported for production.
+Unlike the existing hand-weighted route heuristics, `bank-ev` chooses among the three offered routes using the exact one-step expected secured-bank objective already used by extraction evaluation. It is not an optimal-policy claim; it tests whether poor heuristic alignment is helping fixed resonance appear structurally dominant.
 
-### High-chain cap: `+5,+5,+5...`
-- fixed calm: **10.753175**
-- fixed deep: **8.954900**
-- fixed resonance: **11.727750**
-- one-step: **10.934250**
-- future-aware: **11.809450**
-- chain-aware: **11.716750**
-- best contextual vs best fixed: **+0.081700 (~+0.70%)**
+`ECHO DRIFT Regression` run `32930271501` is currently in progress. Do not promote its numerical output before successful completion.
 
-Future-aware route mix under the cap remains contextual rather than fixed: calm **9.35%**, deep **34.04%**, resonance **56.61%**.
-
-The cap is the first high-chain branch in this sequence to produce a materially larger contextual lead while leaving the first `+5` intact. It is the leading candidate, not yet production clearance.
-
-## Why production remains frozen
-
-1. The measured `+0.0817 bank/Run` advantage is aggregate across the current four benchmark seeds; held-out/per-seed stability is not yet recorded.
-2. Future-aware is an approximate policy, not proof of human or mathematically optimal play.
-3. The cap changes the meaning of current “the longer it connects, the faster recovery accelerates” messaging after the first continuation; PX requires copy alignment if promoted.
-4. Future-aware accepts a higher collapse rate under the cap (~**51.50%**) than fixed resonance (~**46.18%**). That can be a valid risk/reward trade, but it needs human evaluation rather than automatic approval.
-5. No `HUMAN_VERIFIED` fun evidence exists yet.
-
-## Frozen candidate policy
+## Frozen production policy
 
 - Keep production `game.js` unchanged.
 - Keep `HUMAN_CANDIDATE_01` unchanged.
-- Keep production hidden 50% exit and current high-chain growth only because the playable is frozen, not because they are endorsed.
-- Do not promote the gentle taper.
-- Do not resume global slope micro-tuning or fine numerical searches around tiny rank crossings.
-- Do not implement progression, route-affinity unlocks, content/lore volume, conventional stat shops, unrelated polish or broad refactors.
+- Do not promote visible-signal chain exit yet.
+- Do not promote high-chain cap or taper.
+- Do not resume global slope tuning, cap sweeps, or tiny numerical searches around rank crossings.
+- Do not implement persistent progression, route-affinity unlocks, flat stat shops, unrelated content volume, or broad refactors.
 - Do not hide risk/payout information to manufacture tension.
 
-## Next mechanical gate
+## Decision gate
 
-Run the **same cap candidate** on a held-out deterministic seed set and record per-seed contextual-vs-fixed deltas.
+If objective-aligned `bank-ev` remains materially below fixed resonance after CI, the next structural probe should isolate **active-chain switching opportunity cost** rather than reward magnitudes.
 
-Advance toward a controlled playable only if:
-1. contextual strategy superiority is not caused by one favorable seed and does not collapse on held-out seeds;
-2. fixed calm/deep/resonance do not simply exchange places as the dominant optimum;
-3. first resonance continuation remains `+5`;
-4. visible A/B/C remains causal and readable;
-5. state regression, parity guard and all benchmark/probe CI remain PASS.
-
-If this fails, stop resonance-reward tuning and move to another structural lever rather than searching more cap values.
+If `bank-ev` materially closes or reverses the gap, do not touch production balance. Improve the contextual evaluator first so future structural candidates are not judged against weak heuristic policies.
 
 ## Human verification package
 
@@ -102,21 +66,20 @@ If this fails, stop resonance-reward tuning and move to another structural lever
 2. **Failure ownership** — after collapse, did it feel like a knowingly pushed risk or like erased time?
 3. **Immediate replay desire** — after success or collapse, did the next run feel immediately desirable?
 
-Only after the cap branch clears robustness and becomes a controlled playable, additionally observe without expanding the questionnaire: can the player predict chain preservation from A/B/C; does a same-signal calm/deep offer create a real tradeoff; does the first `+5` still feel like a meaningful acceleration; do rare later repeats feel unexpectedly flat?
-
-No human-fun claim is authorized yet.
+No human-fun claim is authorized yet. Do not add cap/taper-specific questions while that branch lacks Systems clearance.
 
 ## Important unresolved issues
 
-1. **Strategic robustness:** high-chain cap leads the current aggregate benchmark, but held-out/per-seed stability is pending. `Severity 4`.
-2. **Hidden exit cost in production:** calm/deep can erase an active chain through invisible 50% RNG. `Severity 4 / OBSERVED + SIMULATED`.
-3. **Long-term play:** persistent values still do not meaningfully change future decisions. `OBSERVED FAIL`.
-4. **Human feel:** short-session tension, collapse ownership and replay desire still require `HUMAN_VERIFIED`.
-5. **iPhone/Safari:** real-device lifecycle/layout/readability/touch behavior remains `UNVERIFIED`.
-6. **Persistence hardening:** terminal settlement is not crash-atomic.
-7. **Low-Energy clarity:** displayed route cost can exceed Energy actually charged. `OBSERVED`.
-8. **Progression semantics:** `banked` remains lifetime cumulative recovery and must not silently become a spendable balance.
+1. **Strategic validity:** fixed resonance remains the best tested fixed/contextual result after corrected RNG. `Severity 4`.
+2. **Evaluator adequacy:** contextual policies are still heuristic; objective-aligned `bank-ev` is pending CI. `Severity 4` Executive gate.
+3. **Hidden exit cost in production:** calm/deep can erase an active chain through invisible 50% RNG. `Severity 4 / OBSERVED + SIMULATED`.
+4. **Long-term play:** persistent values still do not meaningfully change future decisions. `OBSERVED FAIL`.
+5. **Human feel:** tension, collapse ownership and replay desire require `HUMAN_VERIFIED`.
+6. **iPhone/Safari:** real-device lifecycle/layout/readability/touch behavior remains `UNVERIFIED`.
+7. **Persistence hardening:** terminal settlement is not crash-atomic.
+8. **Low-Energy clarity:** displayed route cost can exceed Energy actually charged. `OBSERVED`.
+9. **Progression semantics:** `banked` remains lifetime cumulative recovery and must not silently become a spendable balance.
 
 ## Executive decision
 
-`EX-017`: the gentle high-chain taper is rejected as too close to simulation noise. The visible-signal + `+5` high-chain cap is now the leading structural candidate because it preserves early resonance identity and produces the strongest tested contextual lead without moving the optimum to calm. Production remains frozen until held-out/per-seed robustness is demonstrated. If that gate passes, the next legitimate step is a new controlled playable with only the visible-signal chain-exit rule and high-chain cap, plus truthful copy alignment, followed by small human verification.
+`EX-018`: EX-017's pre-TQ-018 contextual advantage is withdrawn. Production remains frozen. The studio will test whether an objective-aligned contextual evaluator changes the dominance conclusion before inventing another rule. This protects the game from both simulator overfitting and premature structural changes.
