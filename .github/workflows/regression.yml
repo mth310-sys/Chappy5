@@ -37,3 +37,5 @@ jobs:
         run: node tests/high-chain-probe.mjs
       - name: Run active-chain switching probe
         run: node tests/active-chain-switch-probe.mjs
+      - name: Run active-chain common-RNG branch probe
+        run: node tests/active-chain-branch-probe.mjs
