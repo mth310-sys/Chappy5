@@ -1,7 +1,8 @@
 // Deterministic non-production probe for high-chain resonance diminishing returns.
 // This file does NOT alter production. All output is SIMULATED, never HUMAN_VERIFIED.
-// It intentionally uses the visible-signal chain-exit candidate from EX-016 and
-// preserves common RNG consumption across reward modes.
+// It intentionally uses the visible-signal chain-exit candidate from EX-016.
+// Each simulated run receives its own deterministic seed so policy-dependent early
+// extraction cannot shift the RNG starting position of every later run.
 
 const SEEDS=[101,202,303,404];
 const RUNS=10000;
@@ -14,6 +15,7 @@ const templates={
  res:{cost:[1,3],gain:[2,4],risk:0},
 };
 function rng(seed){let x=seed>>>0;return()=>{x=(Math.imul(1664525,x)+1013904223)>>>0;return x/4294967296}}
+function runSeed(seed,runIndex){return (seed^Math.imul(runIndex+1,0x9e3779b9))>>>0}
 function ri(R,a,b){return Math.floor(R()*(b-a+1))+a}
 function pick(R,a){return a[Math.floor(R()*a.length)]}
 function routes(R){const order=[...tones];for(let i=order.length-1;i>0;i--){const j=ri(R,0,i);[order[i],order[j]]=[order[j],order[i]]}return order.map(t=>{const q=templates[t];return{tone:t,cost:ri(R,...q.cost),gain:ri(R,...q.gain),risk:q.risk,signal:pick(R,['A','B','C']),anomaly:R()<.18}})}
@@ -38,7 +40,7 @@ function oneStepChoice(s,rs,mode){let best=0,bv=-Infinity;for(let i=0;i<rs.lengt
 function futureChoice(s,rs,mode){let best=0,bv=-Infinity;for(let i=0;i<rs.length;i++){const r=rs[i],t=threatAfter(s,r),now=immediateGain(s,r,mode)-r.cost*.55-t*.05;let future=0;for(const t2 of tones){const q=templates[t2];const avg={tone:t2,cost:(q.cost[0]+q.cost[1])/2,gain:(q.gain[0]+q.gain[1])/2,risk:q.risk,signal:r.signal,anomaly:false};const next={...s,depth:s.depth+1,chain:r.tone==='res'?r.signal:(s.chain===r.signal?s.chain:null),chainLen:r.tone==='res'?(s.chain===r.signal?s.chainLen+1:1):(s.chain===r.signal?s.chainLen:0)};future=Math.max(future,immediateGain(next,avg,mode)-avg.cost*.55)}const v=now+future*.45;if(v>bv){bv=v;best=i}}return best}
 function chainAwareChoice(s,rs,mode){let best=0,bv=-Infinity;for(let i=0;i<rs.length;i++){const r=rs[i];const base=immediateGain(s,r,mode)-r.cost*.65-threatAfter(s,r)*.055;let postLen=0,preserve=0;if(r.tone==='res'){postLen=s.chain===r.signal?s.chainLen+1:1;preserve=1}else if(s.chain&&s.chain===r.signal){postLen=s.chainLen;preserve=1}const nextResContinuation=postLen>0?preserve*(1/3)*resonanceBonus(postLen+1,mode):0;const v=base+nextResContinuation;if(v>bv){bv=v;best=i}}return best}
 function choose(policy,s,rs,mode){if(policy.startsWith('fixed:'))return rs.findIndex(r=>r.tone===policy.slice(6));if(policy==='one-step')return oneStepChoice(s,rs,mode);if(policy==='chain-aware')return chainAwareChoice(s,rs,mode);return futureChoice(s,rs,mode)}
-function play(seed,mode,policy){const R=rng(seed);let total=0,collapsed=0,voluntary=0,forced=0,mix={calm:0,deep:0,res:0};for(let k=0;k<RUNS;k++){let s={energy:10,depth:0,haul:0,threat:6,chain:null,chainLen:0,alive:true};while(s.alive){const rs=routes(R);const i=choose(policy,s,rs,mode),chosen=rs[i];if(shouldExtract(s,chosen,mode)){total+=projectedBank(s);voluntary++;s.alive=false;break}mix[chosen.tone]++;s=step(s,chosen,R,mode);if(!s.alive){if(s.bank!=null){total+=s.bank;forced++}else collapsed++;break}}}const choices=mix.calm+mix.deep+mix.res;return{bankPerRun:total/RUNS,collapsePct:collapsed/RUNS*100,voluntaryPct:voluntary/RUNS*100,forcedPct:forced/RUNS*100,mix:Object.fromEntries(tones.map(t=>[t,mix[t]/choices*100]))}}
+function play(seed,mode,policy){let total=0,collapsed=0,voluntary=0,forced=0,mix={calm:0,deep:0,res:0};for(let k=0;k<RUNS;k++){const R=rng(runSeed(seed,k));let s={energy:10,depth:0,haul:0,threat:6,chain:null,chainLen:0,alive:true};while(s.alive){const rs=routes(R);const i=choose(policy,s,rs,mode),chosen=rs[i];if(shouldExtract(s,chosen,mode)){total+=projectedBank(s);voluntary++;s.alive=false;break}mix[chosen.tone]++;s=step(s,chosen,R,mode);if(!s.alive){if(s.bank!=null){total+=s.bank;forced++}else collapsed++;break}}}const choices=mix.calm+mix.deep+mix.res;return{bankPerRun:total/RUNS,collapsePct:collapsed/RUNS*100,voluntaryPct:voluntary/RUNS*100,forcedPct:forced/RUNS*100,mix:Object.fromEntries(tones.map(t=>[t,mix[t]/choices*100]))}}
 function aggregate(mode,policy){const rows=SEEDS.map(seed=>play(seed,mode,policy));const avg=k=>rows.reduce((a,r)=>a+r[k],0)/rows.length;return{bankPerRun:avg('bankPerRun'),collapsePct:avg('collapsePct'),voluntaryPct:avg('voluntaryPct'),forcedPct:avg('forcedPct'),mix:Object.fromEntries(tones.map(t=>[t,rows.reduce((a,r)=>a+r.mix[t],0)/rows.length]))}}
 
 for(const mode of modes){
