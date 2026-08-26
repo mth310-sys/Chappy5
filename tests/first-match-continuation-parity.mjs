@@ -24,6 +24,8 @@ for(const [re,label] of [
  [/else if\(n\.chain&&breakU<\.5\)/,'probe production chain break'],
  [/if\(i!==0\|\|s\.chainLen!==1\|\|r\.tone!=='res'\|\|s\.chain!==r\.signal\)return null/,'diagnostic isolated to first matching continuation'],
  [/mode==='firstMatchBonus3'\)return 3/,'single coarse +3 candidate'],
- [/mode==='noFirstMatchBonus'\)return 0/,'zero-bonus diagnostic bound']
+ [/mode==='noFirstMatchBonus'\|\|mode==='noFirstMatchBonusNormalized'\)return 0/,'zero-bonus diagnostic bound'],
+ [/mode==='noFirstMatchBonusNormalized'&&i===0&&s\.chainLen===1&&r\.tone==='res'&&s\.chain===r\.signal/,'maturity normalization limited to first matching continuation'],
+ [/if\(normalize&&s\.chain===r\.signal&&s\.chainLen===2\)s\.chainLen=1/,'diagnostic carries signal but normalizes maturity only']
 ])need(probe,re,label);
 console.log('first-match continuation probe parity matches declared production rules');
