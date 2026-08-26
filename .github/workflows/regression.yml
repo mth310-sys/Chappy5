@@ -29,5 +29,7 @@ jobs:
           node-version: '22'
       - name: Run deterministic state regression
         run: node tests/regression.mjs
+      - name: Guard strategy model parity
+        run: node tests/strategy-parity.mjs
       - name: Run deterministic strategy benchmark
         run: node tests/strategy-benchmark.mjs
