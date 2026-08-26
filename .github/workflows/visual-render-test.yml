@@ -1,0 +1,31 @@
+name: Visual Render Test
+
+on:
+  push:
+    paths:
+      - 'visual_test/**'
+      - '.github/workflows/visual-render-test.yml'
+  workflow_dispatch:
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install Playwright Chromium
+        run: npx --yes playwright@1.52.0 install --with-deps chromium
+      - name: Start local server
+        run: |
+          python3 -m http.server 4173 > /tmp/visual-server.log 2>&1 &
+          sleep 2
+      - name: Capture iPhone 12 screenshot
+        run: npx --yes playwright@1.52.0 screenshot --device="iPhone 12" --full-page http://127.0.0.1:4173/visual_test/ visual-test-iphone12.png
+      - name: Upload screenshot
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-test-iphone12
+          path: visual-test-iphone12.png
+          retention-days: 7
