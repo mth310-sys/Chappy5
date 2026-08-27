@@ -11,6 +11,7 @@
 - `docs/PACHISLOT_PRODUCTION_WORKFLOW.md`
 - `docs/REALITY_PRESENTATION_STANDARD.md`
 - `docs/REAL_PACHISLOT_RESEARCH.md`
+- `docs/research/CASE_STUDY_01_SMASLOT_HOKUTO.md`
 - `docs/research/MACHINE_REALITY_SYNTHESIS_RUN2.md`
 - `docs/research/GAME_REEL_REALITY_BASELINE.md`
 - `docs/research/VISUAL_MECHANISM_REALITY_BASELINE.md`
@@ -20,6 +21,8 @@
 
 ## Human feedback — 2026-08-28
 人間から「案を出す前にリアルなパチスロについて各担当で学習すること。オリジナリティの前にリアリティが不足している。どういった台があるか掘り下げ、学習内容を各担当で記録すること」と明示指示。
+
+さらに「各担当それぞれの視点から攻略サイトやYouTubeなどから実機1台を深掘りして学ぶこと」と追加指示。共通ケーススタディ対象をサミー「スマスロ北斗の拳」（2023）に固定し、5 Directorが同じ台を別専門視点から研究する。
 
 この指示を最優先する。
 
@@ -33,69 +36,39 @@
 - Reality Baseline成立後に全廃・再構成してよい。
 
 ## 現在の共通目標
-**企画再開前に、実機の「普通の遊技時間」が何によって成立しているかを定量・時間軸まで含めて理解する。**
+**企画再開前に、実機1台の中で通常遊技・リール・状態・報酬・筐体・音・長時間体験がどう統合されているかを説明できるようにする。**
 
-第1研究巡で5 Directorすべてが専門Reality Baselineを作成した。重要な誤認は修正できたが、Reality Baselineはまだ `RESEARCH_ACTIVE`。Machine Director第2研究Runで5本を統合し、企画再開前の致命的不足を3テーマへ絞った。
+第1研究巡で5 Directorすべてが専門Reality Baselineを作成し、Machine Director第2研究RunでReality Gapを抽出した。現在は抽象的な横断研究だけでは不足と判断し、同一実機ケーススタディ `CASE_STUDY_01_SMASLOT_HOKUTO.md` を5 Directorで進行中。
 
-詳細：`docs/research/MACHINE_REALITY_SYNTHESIS_RUN2.md`
+### Case Study 01 progress
+- Machine Director: `PENDING`
+- Game & Reel Director: `DEEP_DIVE_RUN_1_COMPLETE`
+- Visual & Mechanism Director: `PENDING`
+- Sound & Experience Director: `PENDING`
+- Playtest & QA Director: `PENDING`
+
+Game & Reel第1深掘りでは、スマスロ北斗の通常時が「強レア役を待つだけ」ではなく、`モード推測 → 成立役認識 → 押し方による情報選択 → 第3停止までの役判別 → 状態更新 → 以後の前兆観測` の連続で成立していることを記録した。特に中段チェリーは単独の強役ではなく、出る前のモード推測・停止瞬間・不発後の状態上昇・最大32Gの当否観測を接続する中心ノードとして評価した。
+
+また、中押し/順押しで取得できる情報が異なること、内部成立役と停止形が同義ではないこと、モード移行が第3停止離し時点で行われること、BB中には同じレア役がVストック/継続書き換え等へ役割を変えることを確認。詳細と出典はケーススタディ正本へ保存済み。
 
 ---
 
-# 第2研究巡 — 企画再開前の3大Reality Gap
+# 第2研究巡から維持する3大Reality Gap
 
 ## GAP A — `NORMAL-PLAY ECONOMY`
 **100G〜500Gの通常遊技を、方式ごとに実際には何が支えているのか。**
 
-必要研究：
-- リーチ目/ノーマル
-- 技術介入
-- ART/AT/ST
-- CZ主体
-- モード/ゲーム数主体
-- 現行スマスロ
-
-各方式で、普通の100Gに何が起きるかを具体化する。
-- 毎G何を見るか
-- レバーONで何が変わり得るか
-- レア役/前兆/ナビ/リーチ目機会の頻度と役割
-- 100Gを何が分節するか
-- 500Gハマリの中身
-- 真の空白Gと意味のある待ちの違い
-
-### Exit
-「期待感」「演出」「ポイント」「出目が楽しい」のような抽象語なしで、方式別の通常100G成立原理を説明できる。
+Case Study 01ではスマスロ北斗について、設定1のレア役合算約1/32.1、AT初当たり約1/383.4という頻度だけでなく、弱役によるモード編集・中段チェリーによる直撃/状態上昇・前兆観測の時間まで含めて通常100Gを分解する。
 
 ## GAP B — `REWARD LADDER & FAILURE TRUTH`
 **普通の当たり・失敗・上位状態が、実機ではどう価値分担しているか。**
 
-必要研究：
-- 初当たり単体の価値
-- 普通のBONUS/ATだけで成立する報酬感
-- 上位状態が追加する価値
-- CZ/ST/AT失敗後に本当に何が残るか
-- 引戻し/モード/周期/保持/完全リセットの実態
-- 終了時にプレイヤーが何を理解して次BET/ヤメ判断するか
-
-### Exit
-`REWARD LADDER` と `UPPER-STATE FUNNEL`、`TRUE FAILURE` と `FAKE ALMOST` を実機例で区別できる。
+Case Study 01では通常BBが66/79/84/89%の継続ループを持ち、上位の無想転生は94%へ拡張する。上位が通常BBを前座化していないかはPlaytest & QAが長尺実戦から確認する。
 
 ## GAP C — `PHYSICAL / SENSORY BASELINE OVER TIME`
 **通常時の90%以上で、実機を打つ人間が何を見て・触って・聞いているか。**
 
-必要研究：
-- 着席目線とリール/LCD/操作卓位置
-- リール窓の通常時視覚占有
-- レバー/MAX BET/STOPの反復負荷
-- 通常光量と強状態光量
-- 機械音と演出音の区別
-- スピーカー位置
-- 役物REST POSITIONと実作動頻度
-- メダル機→スマスロで消えた物理フィードバック
-- それを何が代替したか
-- 3時間の視覚/聴覚/触覚疲労
-
-### Exit
-強演出を一切使わず、実機としての `ORDINARY MACHINE STATE` を説明できる。
+Visual/Sound Directorの同一実機深掘り待ち。
 
 ---
 
@@ -113,6 +86,7 @@
 - 配列はVisualではなくGame System。
 - 1確/2確/第3停止否定/普通のハズレが混在してリズムになる。
 - 技術介入と押し順ナビではSTOPの責務そのものが変わる。
+- Case Study 01追加：3STOPの価値は停止瞬間だけでは完結せず、前ゲームからの内部状態と停止後の前兆/状態推測まで時間軸で接続される。
 
 ## Visual & Mechanism
 - 正面画像だけでは実機感にならない。奥行き・回転体・遮蔽・素材・操作卓が必要。
@@ -137,39 +111,25 @@
 
 ---
 
-# Machine Director 第2研究Runで追加確認した事実
-
-- 2026年3月の公式 `スマスロ サンダーV` はノーマルBTとして、当たりやすさ・リーチ目コレクション・スベリコマ数表示を商品価値にしている。
-- 2026年2月の公式 `スマスロ ハナビ` もスマスロ化後に従来ゲーム性を維持し、リーチ目/入り目等の打ち込み要素を前面に出す。
-- 現行スマスロの開発者インタビューにも、高価値状態であえて通常時のフラッシュを抑え、リール結果そのものを驚きにする例がある。
-
-### Interpretation
-スマスロはゲーム方式ではなくプラットフォーム/規格側の変化であり、現代性を理由にリール主体の体験を捨てる必要はない。また「強状態ほど全部派手にする」ことも実機Realityではない。
-
----
-
 # 現在のReality判定
 
 `REALITY_BASELINE_SUFFICIENT = FALSE`
 
 理由：
-1. 通常100G〜500Gのcadenceが方式別にまだ粗い。
-2. 普通の報酬/失敗/上位報酬の価値分担が横断比較不足。
-3. 通常時の物理・感覚状態を時間軸で定量化できていない。
+1. Case Study 01はGame & Reelしか完了していない。
+2. 同じ1台についてVisual/Mechanism、Sound、Playtestの実証が未統合。
+3. Game & Reelも全停止制御テーブル等の非公開領域は未解決であり、推測していない。
+4. 1台だけでは方式一般化できないため、Case Study 01統合後に真逆の方式の実機研究が必要。
 
 したがって企画選定へ戻らない。
 
 ---
 
-# 次Director — Game & Reelへの最優先Handoff
+# 次Director — Visual & MechanismへのHandoff
 
-**GAP A — `NORMAL-PLAY ECONOMY` を最優先で掘る。**
+Case Study 01の同じスマスロ北斗を対象に、正面画像の印象ではなく、リール窓の実奥行き、LCDと物理リールの視線配分、操作卓、レバー/STOP、通常静止状態、光源と反射、BB/継続/無想転生時に何が物理的に変わるかを動画と実機写真から記録する。
 
-既存3案には触れない。方式ごとに2〜3台以上の具体的実機を比較し、可能な限り数値・役確率・状態移行・ゾーン/周期/CZ機会・リーチ目/技術介入機会・ナビ負荷など、普通の100Gの実体を記録する。
-
-研究結果は `SOURCED FACT / INTERPRETATION / REUSABLE PRINCIPLE / UNRESOLVED` を分離する。
-
-GAP Bに関する実機証拠が同時に得られた場合は記録してよいが、オリジナル案へ変換しない。
+Game & Reel側で確認した `中押しで第3停止まで候補が残る` 体験が、実際のリール窓サイズ/視認性/液晶演出の干渉下でも成立するかをVisual側から確認する。
 
 ## Human Gate
 `HUMAN_GATE_1_NOT_READY` を維持。
