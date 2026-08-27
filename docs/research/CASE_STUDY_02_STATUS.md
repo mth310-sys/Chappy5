@@ -10,8 +10,9 @@
 
 Case Study 01 current cycle is complete and remains contrast evidence only.
 
-Case Study 02 specialist Run 1 and Machine integration are complete on latest main. Visual & Mechanism, Sound & Experience and Playtest & QA have now each completed an additional non-design Run 2 reality deep dive:
-- Machine Director: `RUN_1_INTEGRATED`
+Case Study 02 specialist Run 1 and Machine integration Run 1 are complete. Visual & Mechanism, Sound & Experience and Playtest & QA each then completed an additional non-design Run 2 reality deep dive, and Machine Director has now integrated those deltas in Machine Integration Run 2.
+
+- Machine Director: `RUN_2_INTEGRATED`
 - Game & Reel Director: `DEEP_DIVE_RUN_1_COMPLETE`
 - Visual & Mechanism Director: `DEEP_DIVE_RUN_2_COMPLETE`
 - Sound & Experience Director: `DEEP_DIVE_RUN_2_COMPLETE`
@@ -27,7 +28,37 @@ Read:
 - `docs/research/CASE_STUDY_02_SHIN_HANABI_PLAYTEST_QA_RUN1.md`
 - `docs/research/CASE_STUDY_02_SHIN_HANABI_PLAYTEST_QA_RUN2.md`
 - `docs/research/CASE_STUDY_02_SHIN_HANABI_MACHINE_INTEGRATION.md`
+- `docs/research/CASE_STUDY_02_SHIN_HANABI_MACHINE_INTEGRATION_RUN2.md`
 - all governing and reality-baseline documents.
+
+## Machine Integration Run 2 delta
+
+Run 2 does not change the core repeated-play model:
+
+`AIM → CLASSIFY → RESOLVE → DISCOVER → EXECUTE → EXTEND / TRANSITION → RETURN WITH MORE KNOWLEDGE`
+
+It adds the long-session human-cost axis:
+
+`DEPTH = LEARNABLE MEANING - UNSUSTAINABLE ATTENTION DEBT`
+
+The specialist Run 2 findings converge on three simultaneous budgets:
+
+- `VISUAL BUDGET = PRESENCE OUTSIDE / PRECISION INSIDE`
+- `AUDIO BUDGET = ROUTINE CONFIRMATION + RESERVED HEADROOM FOR MEANINGFUL DEVIATION`
+- `ATTENTION BUDGET = CURIOSITY + NECESSARY DUTY - AVOIDABLE OBLIGATION`
+
+New integrated principles:
+
+- `QUIET SPACE IS NOT EMPTY SPACE WHEN THE PLAYER IS READING THE MACHINE.`
+- `TWO-RESOLUTION MACHINE TEST`: aisle identity and seated game readability are separate requirements.
+- `ESCALATE RESPONSIBILITY / CONTEXT BEFORE ESCALATING VOLUME / DENSITY / DUTY`.
+- `SKILL SYSTEMS MUST BE TESTED AT SELF-SELECTED HUMAN PACE`.
+- `ATTENTION != ENJOYMENT; CONTINUATION != BASE-GAME QUALITY`.
+- `WHEN THE PLAYER ALREADY KNOWS, DO NOT FORCE THE MACHINE TO KEEP EXPLAINING`.
+- `PHYSICAL COMPLEXITY CAN CREATE PRESENCE WITHOUT CREATING PER-GAME COGNITIVE COMPLEXITY`.
+- Cross-case meta-principle: `THE MACHINE MUST MANAGE WHAT THE PLAYER CAN IGNORE`.
+
+This strengthens, rather than replaces, the earlier principles `CURRENT STOP CAN BE THE CONTENT`, `QUESTION DENSITY PER ORDINARY GAME`, `CHANGE RESPONSIBILITY BEFORE ADDING CONTROLS`, `BASELINE STABILITY CREATES DEVIATION VALUE`, `DRY-SPELL WITHOUT PAYOFF TEST`, and `POST-REWARD BASELINE RECOVERY TEST`.
 
 ## Visual & Mechanism Run 2 delta
 
@@ -101,6 +132,8 @@ Machine integration concludes that the important contrast with 北斗 is not mer
 - `ATTENTION != ENJOYMENT`
 - `OPTIMAL PLAYER PACE IS NOT MAXIMUM MACHINE PACE`
 - `ATTENTION NEEDS RECOVERY WINDOWS`
+- `DEPTH = LEARNABLE MEANING - UNSUSTAINABLE ATTENTION DEBT`
+- `THE MACHINE MUST MANAGE WHAT THE PLAYER CAN IGNORE`
 
 ## Cross-case principles surviving 北斗 and 新ハナビ
 
@@ -114,6 +147,8 @@ Machine integration concludes that the important contrast with 北斗 is not mer
 8. The return loop after reward is part of product quality.
 9. Long-play concentration must be separated from long-play enjoyment.
 10. Skill depth needs recovery space and a sustainable self-selected pace.
+11. Physical/sensory complexity should not force constant cognitive complexity.
+12. Mastery includes learning what deserves attention and what can safely be ignored.
 
 Do not infer a single studio formula from these two machines. Case Study 02 proves that long-form depth can arise without a CZ→AT→upper-state ladder, but it does not prove reel mastery is mandatory for Chappy5.
 
@@ -138,7 +173,7 @@ Two deliberately different machines materially broaden the baseline but are not 
 
 ## Gate
 
-`CASE_STUDY_02_CURRENT_CYCLE_COMPLETE — VISUAL_RUN_2_ADDED — SOUND_RUN_2_ADDED — PLAYTEST_QA_RUN_2_ADDED — NOT_REALITY_BASELINE_COMPLETE`
+`CASE_STUDY_02_CURRENT_CYCLE_COMPLETE — MACHINE_RUN_2_INTEGRATED — NOT_REALITY_BASELINE_COMPLETE`
 
 `SIGNAL//3 / FORGE//HEART / VAULT://3 = PROVISIONAL_FROZEN`
 `HUMAN_GATE_1_NOT_READY`
