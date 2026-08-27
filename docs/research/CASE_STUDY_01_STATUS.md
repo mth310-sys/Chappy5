@@ -9,7 +9,7 @@
 - Machine Director: `DEEP_DIVE_RUN_1_COMPLETE / INTEGRATED`
 - Game & Reel Director: `DEEP_DIVE_RUN_2_COMPLETE`
 - Visual & Mechanism Director: `DEEP_DIVE_RUN_2_COMPLETE`
-- Sound & Experience Director: `DEEP_DIVE_RUN_1_COMPLETE`
+- Sound & Experience Director: `DEEP_DIVE_RUN_2_COMPLETE`
 - Playtest & QA Director: `DEEP_DIVE_RUN_1_COMPLETE`
 
 ## Machine Director integration
@@ -63,6 +63,23 @@ Run 2 added physical/presentation findings:
 - ホールの視覚ノイズ下でも、リール窓・STOP・サブ液晶・メインLCD中央という `FIXED ATTENTION ANCHORS` が動かないことが可読性を支える。
 - 北斗固有の正式寸法/重量、リール径、窓深度、STOP荷重、レバー復元力、LED内部構造、スピーカー位置、PUSH振動方式、実輝度は引き続き `UNRESOLVED`。
 
+## Sound & Experience latest
+Read:
+- `docs/research/CASE_STUDY_01_HOKUTO_SOUND_EXPERIENCE.md`
+- `docs/research/CASE_STUDY_01_HOKUTO_SOUND_EXPERIENCE_RUN2.md`
+
+Run 2 added concrete audio-system findings:
+- `REST AUDIO`: 強Cueより先に、BET→LEVER→REEL→STOP→RESULTの通常タイミングを身体へ覚えさせる。違和感は安定した基準からの偏差として成立する。
+- 強さは音量だけではなく `ADD / DELAY / OMIT / RELOCATE / CONTRADICT / SUSTAIN` の軸で作れる。
+- ラオウステージのギター音等では、Audioが答えを告知せず後続の役/演出候補を作り、リールとVisualが一致/矛盾を返す。`AUDIO AS QUESTION`。
+- STOP演出やねじり音のような同期は毎G使わず `INPUT-AUDIO CONTRACT / SYNC SCARCITY` として希少化する。
+- BB入口は告知1発ではなく `NOTICE → CONFIRM → PARTICIPATE → START` の `ENTRY STAIRS`。確定後にも狙え/停止形で参加余地が残る。
+- BGM変化は継続確定という状態情報を長く保持する `BGM AS STATE MEMORY` として働く。通常モードでは5セット目以降の継続時の一部から発生し、序盤から毎セット最大化しない。
+- 同じBGM変化でも通常モードではLEVER、初代モードではBETへ発火位置が変わる。復活もMAX BET/LEVER条件に法則があり、`どの入力に反応したか` 自体がゲーム情報になる。
+- 初代カスタムは演出頻度・可視Vストック・一部チャンスアップ・BGM変化種類等を減らしても内部ゲームが成立するため、`PRESENTATION SUBTRACTION TEST` の実例になる。
+- `MEMORABLE = SCARCITY × MEANING × SYNCHRONY × REWARD`。高頻度・高音量・低意味・回避不能のCueは疲労リスクが高い。
+- 北斗固有スピーカー仕様、実dB/周波数/定位、基礎BET/STOP/払出音の波形、PUSH振動、無想転生長連時のAudio event countは未確認のまま `UNRESOLVED`。
+
 ## Playtest & QA latest
 Read: `docs/research/CASE_STUDY_01_HOKUTO_PLAYTEST_QA.md`
 
@@ -80,7 +97,7 @@ Core findings:
 ## Case Study 01 verdict
 `CASE_STUDY_01_INTEGRATED — NOT REALITY_BASELINE_COMPLETE`
 
-北斗1台について5 Directorの専門深掘りとMachine統合は完了した。Game & Reel Run 2では停止形・押し方トレードオフ・BB中のリール責務まで、Visual & Mechanism Run 2では奥行き・REST・消灯・情報面分業・身体座標まで具体化したが、AT/モード/継続型の一例だけでパチスロ全体を理解したとは判定しない。
+北斗1台について5 Directorの専門深掘りとMachine統合は完了した。Game & Reel / Visual & Mechanism / Sound & ExperienceはRun 2まで具体化したが、AT/モード/継続型の一例だけでパチスロ全体を理解したとは判定しない。
 
 既存 `SIGNAL//3 / FORGE//HEART / VAULT://3` は引き続き `PROVISIONAL_FROZEN`。
 
