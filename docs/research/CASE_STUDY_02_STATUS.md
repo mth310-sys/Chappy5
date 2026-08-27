@@ -10,10 +10,10 @@
 
 Case Study 01 current cycle is complete and remains contrast evidence only.
 
-Case Study 02 specialist Run 1 and Machine integration Run 1 are complete. Visual & Mechanism, Sound & Experience and Playtest & QA each then completed an additional non-design Run 2 reality deep dive, and Machine Director has now integrated those deltas in Machine Integration Run 2.
+Case Study 02 is still the shared real-machine study object. Machine Director has integrated Run 2 findings from Visual, Sound and Playtest; Game & Reel has now completed its own non-design Run 2 reality deep dive.
 
 - Machine Director: `RUN_2_INTEGRATED`
-- Game & Reel Director: `DEEP_DIVE_RUN_1_COMPLETE`
+- Game & Reel Director: `DEEP_DIVE_RUN_2_COMPLETE`
 - Visual & Mechanism Director: `DEEP_DIVE_RUN_2_COMPLETE`
 - Sound & Experience Director: `DEEP_DIVE_RUN_2_COMPLETE`
 - Playtest & QA Director: `DEEP_DIVE_RUN_2_COMPLETE`
@@ -21,6 +21,7 @@ Case Study 02 specialist Run 1 and Machine integration Run 1 are complete. Visua
 Read:
 - `docs/research/CASE_STUDY_02_SHIN_HANABI.md`
 - `docs/research/CASE_STUDY_02_SHIN_HANABI_GAME_REEL_RUN1.md`
+- `docs/research/CASE_STUDY_02_SHIN_HANABI_GAME_REEL_RUN2.md`
 - `docs/research/CASE_STUDY_02_SHIN_HANABI_VISUAL_MECHANISM_RUN1.md`
 - `docs/research/CASE_STUDY_02_SHIN_HANABI_VISUAL_MECHANISM_RUN2.md`
 - `docs/research/CASE_STUDY_02_SHIN_HANABI_SOUND_EXPERIENCE_RUN1.md`
@@ -31,90 +32,174 @@ Read:
 - `docs/research/CASE_STUDY_02_SHIN_HANABI_MACHINE_INTEGRATION_RUN2.md`
 - all governing and reality-baseline documents.
 
-## Machine Integration Run 2 delta
-
-Run 2 does not change the core repeated-play model:
+## Integrated repeated-play model
 
 `AIM → CLASSIFY → RESOLVE → DISCOVER → EXECUTE → EXTEND / TRANSITION → RETURN WITH MORE KNOWLEDGE`
 
-It adds the long-session human-cost axis:
+Machine Integration Run 2 adds the long-session human-cost axis:
 
 `DEPTH = LEARNABLE MEANING - UNSUSTAINABLE ATTENTION DEBT`
 
-The specialist Run 2 findings converge on three simultaneous budgets:
+The shared specialist budgets remain:
 
 - `VISUAL BUDGET = PRESENCE OUTSIDE / PRECISION INSIDE`
 - `AUDIO BUDGET = ROUTINE CONFIRMATION + RESERVED HEADROOM FOR MEANINGFUL DEVIATION`
 - `ATTENTION BUDGET = CURIOSITY + NECESSARY DUTY - AVOIDABLE OBLIGATION`
 
-New integrated principles:
+## Game & Reel Run 2 delta
 
-- `QUIET SPACE IS NOT EMPTY SPACE WHEN THE PLAYER IS READING THE MACHINE.`
-- `TWO-RESOLUTION MACHINE TEST`: aisle identity and seated game readability are separate requirements.
-- `ESCALATE RESPONSIBILITY / CONTEXT BEFORE ESCALATING VOLUME / DENSITY / DUTY`.
-- `SKILL SYSTEMS MUST BE TESTED AT SELF-SELECTED HUMAN PACE`.
-- `ATTENTION != ENJOYMENT; CONTINUATION != BASE-GAME QUALITY`.
-- `WHEN THE PLAYER ALREADY KNOWS, DO NOT FORCE THE MACHINE TO KEEP EXPLAINING`.
-- `PHYSICAL COMPLEXITY CAN CREATE PRESENCE WITHOUT CREATING PER-GAME COGNITIVE COMPLEXITY`.
-- Cross-case meta-principle: `THE MACHINE MUST MANAGE WHAT THE PLAYER CAN IGNORE`.
+Run 2 closes the main Game/Reel evidence gap left after Run 1 without inventing undisclosed control.
 
-This strengthens, rather than replaces, the earlier principles `CURRENT STOP CAN BE THE CONTENT`, `QUESTION DENSITY PER ORDINARY GAME`, `CHANGE RESPONSIBILITY BEFORE ADDING CONTROLS`, `BASELINE STABILITY CREATES DEVIATION VALUE`, `DRY-SPELL WITHOUT PAYOFF TEST`, and `POST-REWARD BASELINE RECOVERY TEST`.
+### Published control evidence boundary
 
-## Visual & Mechanism Run 2 delta
+Major analysis now provides separate first-stop control material for LEFT / MIDDLE / RIGHT first stops, each separated by bonus-not-established, Don BIG established, red-7 BIG established and REG established conditions. Individual published examples show that a fixed press location can produce different slip counts depending on underlying role/state.
 
-Additional oblique real-machine evidence strengthens the cabinet model without promoting seller measurements to official specification:
+This supports:
 
-- `FRONT THEATRE / BACK BOX SEPARATION`: most identity sculpture/light is concentrated on the player-facing shell while the rear structural box remains comparatively plain.
-- `DEPTH SHOULD CLARIFY INFORMATION`: the recessed physical reel plane is visibly separated from front cover/bezel, lamps, panels and controls.
-- `HAND PLANE != GAZE PLANE`: projecting deck / forward STOP fascia permit stable hand operation while gaze remains on the reel work surface.
-- `SPEAKER OPENINGS ARE PART OF SILHOUETTE`: bilateral upper grille cavities contribute physical identity even at rest; seller evidence of multiple speakers / a reported woofer is retained only as field evidence, not OEM topology.
-- `PERIPHERAL ENERGY, CENTRAL PRECISION`: large side luminous surfaces can frame the cabinet while rule-bearing reel light remains central and discriminable.
-- `TWO-RESOLUTION CABINET TEST`: aisle/coarse identity and seated/fine game readability are separate visual requirements.
-- `ESCALATE RESPONSIBILITY BEFORE ESCALATING VOLUME`: state intensity can change timing, luminance and responsibility of existing planes before adding more physical occupied space.
-- `STATIC GEOMETRY CAN HAVE DYNAMIC OPTICS`: material reflection, parallax, transmission, reel motion and lamp behavior can create machine presence without a giant actuator.
-- `NOT EVERY LAMP NEEDS TO BE A WORD`: identity/presence lighting and rule-bearing lighting should not be conflated.
+`same press position + different internal truth → different reel response → player inference`
 
-Exact cabinet/reel/control dimensions, speaker topology, material chemistry, lamp electronics and long-duration glare/peripheral-light fatigue remain unresolved.
+It does **not** establish manufacturer source code, complete second/third-stop tables, proprietary priority logic or permission to infer missing cells.
 
-## Sound & Experience Run 2 delta
+New Game/Reel principles:
 
-Run 2 extends the audio baseline toward repeated-play endurance rather than adding new audio concepts:
+- `GOOD REEL DEPTH EXISTS BETWEEN STOPS, NOT ONLY AFTER STOP 3.`
+- `IF SLIP CARRIES INFORMATION, THE PLAYER MUST BE ABLE TO TRUST WHERE THEY AIMED.`
+- `STOP ORDER = QUERY ORDER.`
+- `ALTERNATE STOP ORDERS SHOULD REORDER INFORMATION, NOT JUST REORDER ANIMATION.`
+- `VISIBLE FORM IS A PROJECTION OF INTERNAL TRUTH, NOT NECESSARILY A LABEL FOR IT.`
 
-- `EXPOSURE WEIGHT > EVENT PRESTIGE`: ordinary BET/lever/reel/STOP/result audio deserves stricter fatigue review than rare premium cues because it dominates real exposure.
-- `DEVIATION SPENDS BASELINE TRUST`: start-sound delay and omission only remain meaningful while ordinary timing is stable and trusted.
-- `INFORMATION COMPLETION SHOULD ALLOW PRESENTATION COMPLETION`: when reels already resolved the answer, repeated audiovisual tails should not hold the player unnecessarily.
-- `A LOOP CAN BE BOTH MUSIC AND MEASUREMENT BASELINE`: 花火チャレンジ / 花火GAME BGM both sustains state and creates a continuity baseline whose stop can indicate bonus.
-- `ESCALATE CONTEXT BEFORE ESCALATING INTENSITY`: reward phases can change listening context and responsibilities without a constant loudness/density climb.
-- `FEEDBACK GRANULARITY SHOULD MATCH AGENCY GRANULARITY`: technical-intervention feedback should separate input acknowledgement, execution judgement, economic result and mastery acknowledgement.
-- `ACOUSTIC HEADROOM IS GAMEPLAY SPACE`: sparse presentation leaves attention capacity for reel motion, STOP timing and small rule-bearing deviations.
-- `ATTENTION CLAIM MUST EARN ITS REPETITION RATE`: high-frequency cues require proportionate semantic value or they become fatigue.
-- `NOT EVERY SOUND NEEDS TO BE A MESSAGE`: body-rhythm confirmation, state atmosphere, rule-bearing cue and reward release are distinct responsibilities.
+### Small-role / setting / attention economy
 
-Several-thousand-game field datasets establish realistic high repetition exposure, but online capture cannot establish exact SPL, EQ, transient sharpness, speaker routing, vibration, delay milliseconds or controlled three-hour auditory fatigue. Those remain unresolved.
+Published role families distinguish wind bell A/B, ice A/B, cherry A1/A2/B and normal replay. Visible tendencies can depend on stop location and valid-line geometry. Ordinary small roles therefore carry several values simultaneously:
 
-## Playtest & QA Run 2 delta
+`PAYOUT + REEL INFORMATION + SESSION INFORMATION`
 
-Run 2 tests whether reel-centered depth survives several-thousand-game exposure without turning skill into attention debt:
+The basic 暖簾 routine also demonstrates layered access:
 
-- `LONG SESSION = ORDINARY LOOP UNDER MAGNIFICATION`: 5,000–7,800G-class field sessions make ordinary aiming/STOP/follow-up quality more important than rare peak events.
-- `NOVICE OBLIGATION STACK TEST`: onboarding must measure simultaneous remembered duties, not merely whether each rule was explained once.
-- `ATTENTION != ENJOYMENT`: reel focus driven by curiosity must be separated from focus driven by loss avoidance or setting/economic sampling.
-- `MOTIVE SPLIT TEST`: classify attention as intrinsic discovery, loss avoidance, economic sampling or presentation-prompted.
-- `DROUGHT MOTIVE AUDIT`: sample early/middle/late slices of a 500G no-bonus stretch and detect whether current-stop curiosity survives or play collapses into relief seeking.
-- `A PLAYER CAN CONTINUE A GOOD STRATEGY THROUGH A BAD EXPERIENCE`: rational expected return is not proof of good moment-to-moment base play.
-- `OPTIMAL PLAYER PACE IS NOT MAXIMUM MACHINE PACE`: field evidence of repeated REG misses and deliberate slowing shows skill pressure can change natural session cadence.
-- `REGRET ATTRIBUTION MAP`: distinguish RNG loss, knowledge loss and physical execution loss; agency increases ownership of failure as well as pride.
-- `ATTENTION NEEDS RECOVERY WINDOWS`: RT procedures include lower-load games between responsibility windows; skill play need not demand peak precision every game.
-- `SAFE PLAY ACCESS != MEANING ACCESS`: a novice can avoid major mistakes yet still miss why an ordinary stop was interesting.
-- `LONG-SESSION QA SHOULD MEASURE DRIFT, NOT ONLY FINAL FATIGUE`: later approved human tests should compare pace, misses, cue recognition and motive across hour buckets.
+`avoid obvious loss → recognize role → classify subtype → relate presentation → relate bonus/setting evidence`
 
-Controlled first-five-minute success rates, uninterrupted 500G motive coding, skill-tier miss rates and three-hour eye/hand/audio performance drift remain unresolved.
+New principles:
 
-## Integrated repeated-play model
+- `FREQUENT EVENTS CAN CARRY PAYOUT VALUE + REEL INFORMATION + SESSION INFORMATION.`
+- `DO NOT REQUIRE MAXIMUM INTERPRETATION TO ACHIEVE MINIMUM SAFE PLAY.`
+- `REEL RESPONSIBILITY SHOULD OPEN AND CLOSE WITH INFORMATION NEED.`
 
-`AIM → CLASSIFY → RESOLVE → DISCOVER → EXECUTE → EXTEND / TRANSITION → RETURN WITH MORE KNOWLEDGE`
+Ice handling is a concrete attention-window example: a normal opening can be low burden until the partial stop leaves ice alive, at which point the player spends extra visual/aiming attention on the middle reel. This directly supports the Machine principle `THE MACHINE MUST MANAGE WHAT THE PLAYER CAN IGNORE`.
 
-Machine integration concludes that the important contrast with 北斗 is not merely A-type versus AT. 北斗 concentrates much value in future-state expectation; 新ハナビ can concentrate value in current-stop discovery. Both still depend on action → partial evidence → player interpretation → resolution → consequence.
+### Reach-eye / bonus-detection continuity
+
+Run 2 treats reach eyes as proof-like resolution rather than a collectible picture count. Abstract reusable families remain:
+
+- role survives then final stop denies it;
+- aimed position versus slip makes an ordinary miss inconsistent;
+- presentation promises a role and reels contradict it;
+- two reels over-constrain the third.
+
+New principle:
+
+`A STRONG REEL REVEAL FEELS PROVEN, NOT MERELY ANNOUNCED.`
+
+Bonus discovery and bonus entry are separated:
+
+`DISCOVERY != ENTRY`
+
+After the player knows a bonus exists, the reels can change question from `is it a bonus?` to `which bonus can I enter?` before reward begins.
+
+### BIG / REG responsibility contour
+
+BIG uses a front-loaded technical adjustment before dropping to a lower-duty collection routine while still exposing setting-relevant outcomes.
+
+`A REWARD PHASE CAN FRONT-LOAD EXECUTION DUTY, THEN RETURN ATTENTION TO OBSERVATION.`
+
+REG explicitly offers beginner / intermediate / advanced technical routes with different economic outcomes. This confirms:
+
+`WHEN SKILL HAS ECONOMIC CONSEQUENCE, DISTINGUISH CHOSEN DIFFICULTY FROM FORCED DIFFICULTY.`
+
+Setting uncertainty and execution uncertainty are separate axes:
+
+- `SETTING UNCERTAINTY`: infer the machine through accumulated bonus / role / RT samples.
+- `EXECUTION UNCERTAINTY`: infer how much value the player can personally realize through procedure, precision and pace.
+
+### RT responsibility inversion
+
+In 花火チャレンジ, JAC-IN is first something to avoid to preserve the phase, then becomes the desired door into 花火GAME as remaining time changes. Same reels and same STOP hardware; state changes the value of an existing event.
+
+`STATE CAN CHANGE THE VALUE OF AN EXISTING REEL EVENT WITHOUT CHANGING THE INPUT DEVICE.`
+
+花火GAME lowers direct precision duty while preserving bonus discovery and setting sampling through RT replay / miss behavior.
+
+`LOWER DUTY PHASES CAN PRESERVE INFORMATION VALUE WHILE RETURNING HUMAN ATTENTION CAPACITY.`
+
+### 100G / 500G / 3-hour interpretation
+
+Normal 100G:
+- stable aiming route;
+- partial-stop candidate classification;
+- conditional attention windows;
+- slip / stop relation;
+- role completion, denial, contradiction or proof;
+- quick return to baseline when no proof occurs.
+
+500G without bonus:
+- small-role collection and classification remain;
+- optional aiming-route changes remain;
+- setting samples accumulate;
+- presentation / reel contradictions remain;
+- but continuation cannot be used as proof that the dry spell itself is enjoyable.
+
+`REEL DEPTH MUST SURVIVE PAYOFF REMOVAL, NOT JUST EXPLAIN CONTINUATION.`
+
+Three-hour model:
+
+`AIMING PRECISION × RULE RECOGNITION × SELF-SELECTED PACE × CURIOSITY PER ORDINARY STOP`
+
+Mastery should make routine landmarks and ignore-decisions cheaper while making deeper questions optional:
+
+`MASTERY SHOULD COMPRESS ROUTINE COST WHILE EXPANDING OPTIONAL QUESTIONS.`
+
+## Visual & Mechanism Run 2 retained
+
+- `FRONT THEATRE / BACK BOX SEPARATION`
+- `DEPTH SHOULD CLARIFY INFORMATION`
+- `HAND PLANE != GAZE PLANE`
+- `SPEAKER OPENINGS ARE PART OF SILHOUETTE`
+- `PERIPHERAL ENERGY, CENTRAL PRECISION`
+- `TWO-RESOLUTION CABINET TEST`
+- `STATIC GEOMETRY CAN HAVE DYNAMIC OPTICS`
+- `NOT EVERY LAMP NEEDS TO BE A WORD`
+- physical complexity can create presence without forcing per-game cognitive complexity.
+
+Exact cabinet/reel/control dimensions, speaker topology, material chemistry and lamp electronics remain unresolved.
+
+## Sound & Experience Run 2 retained
+
+- `EXPOSURE WEIGHT > EVENT PRESTIGE`
+- `DEVIATION SPENDS BASELINE TRUST`
+- `INFORMATION COMPLETION SHOULD ALLOW PRESENTATION COMPLETION`
+- `A LOOP CAN BE BOTH MUSIC AND MEASUREMENT BASELINE`
+- `ESCALATE CONTEXT BEFORE ESCALATING INTENSITY`
+- `FEEDBACK GRANULARITY SHOULD MATCH AGENCY GRANULARITY`
+- `ACOUSTIC HEADROOM IS GAMEPLAY SPACE`
+- `ATTENTION CLAIM MUST EARN ITS REPETITION RATE`
+- `NOT EVERY SOUND NEEDS TO BE A MESSAGE`
+
+Exact SPL/EQ/transients, speaker routing, vibration and controlled three-hour auditory fatigue remain unresolved.
+
+## Playtest & QA Run 2 retained
+
+- `LONG SESSION = ORDINARY LOOP UNDER MAGNIFICATION`
+- `NOVICE OBLIGATION STACK TEST`
+- `ATTENTION != ENJOYMENT`
+- `MOTIVE SPLIT TEST`
+- `DROUGHT MOTIVE AUDIT`
+- `A PLAYER CAN CONTINUE A GOOD STRATEGY THROUGH A BAD EXPERIENCE`
+- `OPTIMAL PLAYER PACE IS NOT MAXIMUM MACHINE PACE`
+- `REGRET ATTRIBUTION MAP`
+- `ATTENTION NEEDS RECOVERY WINDOWS`
+- `SAFE PLAY ACCESS != MEANING ACCESS`
+- `LONG-SESSION QA SHOULD MEASURE DRIFT, NOT ONLY FINAL FATIGUE`
+
+Controlled novice success rates, uninterrupted 500G motive coding, skill-tier miss rates and three-hour human performance drift remain unresolved.
 
 ## Integrated reusable principles
 
@@ -134,6 +219,10 @@ Machine integration concludes that the important contrast with 北斗 is not mer
 - `ATTENTION NEEDS RECOVERY WINDOWS`
 - `DEPTH = LEARNABLE MEANING - UNSUSTAINABLE ATTENTION DEBT`
 - `THE MACHINE MUST MANAGE WHAT THE PLAYER CAN IGNORE`
+- `STOP ORDER = QUERY ORDER`
+- `A STRONG REEL REVEAL FEELS PROVEN, NOT MERELY ANNOUNCED`
+- `SETTING UNCERTAINTY != EXECUTION UNCERTAINTY`
+- `MASTERY SHOULD COMPRESS ROUTINE COST WHILE EXPANDING OPTIONAL QUESTIONS`
 
 ## Cross-case principles surviving 北斗 and 新ハナビ
 
@@ -154,26 +243,24 @@ Do not infer a single studio formula from these two machines. Case Study 02 prov
 
 ## Unresolved retained
 
-- manufacturer-undisclosed stop-control/slip/role-priority tables;
+- manufacturer-undisclosed complete stop-control / slip / role-priority logic;
+- complete second-/third-stop tables for every role, press location, stop order and bonus state;
 - exact cabinet/reel/control/speaker/vibration physical specifications;
-- exact BET/lever/reel/STOP/payout/replay sound identities and clean direct capture;
-- measured SPL/EQ/transient hierarchy, speaker routing and low-frequency transfer;
-- controlled novice delay-recognition and obligation-stack data;
-- measured skill-tier miss rates and pace/accuracy tradeoff;
+- exact baseline operation sounds and measured acoustic hierarchy;
+- measured novice/expert aiming misses and pace/accuracy tradeoff;
 - uninterrupted 500G drought motive coding;
 - controlled three-hour eye/hand/audio fatigue and performance drift;
-- controlled glare / peripheral-light distraction under hall-like darkness;
 - separation of nostalgia/brand literacy from generally reusable design principles.
 
 ## Reality-baseline decision
 
-Two deliberately different machines materially broaden the baseline but are not enough to declare pachislot reality understood. Other lineages remain unstudied as independent cases, including A+ART, game-count management, CZ-breakthrough, pseudo-bonus, Okinawa/complete-notification, and modern high-purity smart-slot structures.
+Two deliberately different machines materially broaden the baseline but are not enough to declare pachislot reality understood. Other lineages remain unstudied as independent cases, including A+ART, game-count management, CZ-breakthrough, pseudo-bonus, Okinawa/complete-notification and modern high-purity smart-slot structures.
 
 `REALITY_BASELINE_COMPLETE = FALSE`
 
 ## Gate
 
-`CASE_STUDY_02_CURRENT_CYCLE_COMPLETE — MACHINE_RUN_2_INTEGRATED — NOT_REALITY_BASELINE_COMPLETE`
+`CASE_STUDY_02_ALL_SPECIALIST_RUN2_COMPLETE — MACHINE_REINTEGRATION_PENDING — NOT_REALITY_BASELINE_COMPLETE`
 
 `SIGNAL//3 / FORGE//HEART / VAULT://3 = PROVISIONAL_FROZEN`
 `HUMAN_GATE_1_NOT_READY`
