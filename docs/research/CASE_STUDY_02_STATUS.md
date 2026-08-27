@@ -10,10 +10,10 @@
 
 Case Study 01 current cycle is complete and remains contrast evidence only.
 
-Case Study 02 specialist Run 1 and Machine integration are complete on latest main:
+Case Study 02 specialist Run 1 and Machine integration are complete on latest main. Visual & Mechanism has now completed an additional non-design Run 2 reality deep dive:
 - Machine Director: `RUN_1_INTEGRATED`
 - Game & Reel Director: `DEEP_DIVE_RUN_1_COMPLETE`
-- Visual & Mechanism Director: `DEEP_DIVE_RUN_1_COMPLETE`
+- Visual & Mechanism Director: `DEEP_DIVE_RUN_2_COMPLETE`
 - Sound & Experience Director: `DEEP_DIVE_RUN_1_COMPLETE`
 - Playtest & QA Director: `DEEP_DIVE_RUN_1_COMPLETE`
 
@@ -21,10 +21,27 @@ Read:
 - `docs/research/CASE_STUDY_02_SHIN_HANABI.md`
 - `docs/research/CASE_STUDY_02_SHIN_HANABI_GAME_REEL_RUN1.md`
 - `docs/research/CASE_STUDY_02_SHIN_HANABI_VISUAL_MECHANISM_RUN1.md`
+- `docs/research/CASE_STUDY_02_SHIN_HANABI_VISUAL_MECHANISM_RUN2.md`
 - `docs/research/CASE_STUDY_02_SHIN_HANABI_SOUND_EXPERIENCE_RUN1.md`
 - `docs/research/CASE_STUDY_02_SHIN_HANABI_PLAYTEST_QA_RUN1.md`
 - `docs/research/CASE_STUDY_02_SHIN_HANABI_MACHINE_INTEGRATION.md`
 - all governing and reality-baseline documents.
+
+## Visual & Mechanism Run 2 delta
+
+Additional oblique real-machine evidence strengthens the cabinet model without promoting seller measurements to official specification:
+
+- `FRONT THEATRE / BACK BOX SEPARATION`: most identity sculpture/light is concentrated on the player-facing shell while the rear structural box remains comparatively plain.
+- `DEPTH SHOULD CLARIFY INFORMATION`: the recessed physical reel plane is visibly separated from front cover/bezel, lamps, panels and controls.
+- `HAND PLANE != GAZE PLANE`: projecting deck / forward STOP fascia permit stable hand operation while gaze remains on the reel work surface.
+- `SPEAKER OPENINGS ARE PART OF SILHOUETTE`: bilateral upper grille cavities contribute physical identity even at rest; seller evidence of multiple speakers / a reported woofer is retained only as field evidence, not OEM topology.
+- `PERIPHERAL ENERGY, CENTRAL PRECISION`: large side luminous surfaces can frame the cabinet while rule-bearing reel light remains central and discriminable.
+- `TWO-RESOLUTION CABINET TEST`: aisle/coarse identity and seated/fine game readability are separate visual requirements.
+- `ESCALATE RESPONSIBILITY BEFORE ESCALATING VOLUME`: state intensity can change timing, luminance and responsibility of existing planes before adding more physical occupied space.
+- `STATIC GEOMETRY CAN HAVE DYNAMIC OPTICS`: material reflection, parallax, transmission, reel motion and lamp behavior can create machine presence without a giant actuator.
+- `NOT EVERY LAMP NEEDS TO BE A WORD`: identity/presence lighting and rule-bearing lighting should not be conflated.
+
+Exact cabinet/reel/control dimensions, speaker topology, material chemistry, lamp electronics and long-duration glare/peripheral-light fatigue remain unresolved.
 
 ## Integrated repeated-play model
 
@@ -66,6 +83,7 @@ Do not infer a single studio formula from these two machines. Case Study 02 prov
 - controlled novice delay-recognition data;
 - measured skill-tier miss rates;
 - controlled three-hour eye/hand/audio fatigue;
+- controlled glare / peripheral-light distraction under hall-like darkness;
 - separation of nostalgia/brand literacy from generally reusable design principles.
 
 ## Reality-baseline decision
@@ -76,7 +94,7 @@ Two deliberately different machines materially broaden the baseline but are not 
 
 ## Gate
 
-`CASE_STUDY_02_CURRENT_CYCLE_COMPLETE — NOT REALITY_BASELINE_COMPLETE`
+`CASE_STUDY_02_CURRENT_CYCLE_COMPLETE — VISUAL_RUN_2_ADDED — NOT_REALITY_BASELINE_COMPLETE`
 
 `SIGNAL//3 / FORGE//HEART / VAULT://3 = PROVISIONAL_FROZEN`
 `HUMAN_GATE_1_NOT_READY`
