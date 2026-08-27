@@ -10,11 +10,11 @@
 
 Case Study 01 current cycle is complete and remains contrast evidence only.
 
-Case Study 02 specialist Run 1 and Machine integration are complete on latest main. Visual & Mechanism has now completed an additional non-design Run 2 reality deep dive:
+Case Study 02 specialist Run 1 and Machine integration are complete on latest main. Visual & Mechanism and Sound & Experience have now each completed an additional non-design Run 2 reality deep dive:
 - Machine Director: `RUN_1_INTEGRATED`
 - Game & Reel Director: `DEEP_DIVE_RUN_1_COMPLETE`
 - Visual & Mechanism Director: `DEEP_DIVE_RUN_2_COMPLETE`
-- Sound & Experience Director: `DEEP_DIVE_RUN_1_COMPLETE`
+- Sound & Experience Director: `DEEP_DIVE_RUN_2_COMPLETE`
 - Playtest & QA Director: `DEEP_DIVE_RUN_1_COMPLETE`
 
 Read:
@@ -23,6 +23,7 @@ Read:
 - `docs/research/CASE_STUDY_02_SHIN_HANABI_VISUAL_MECHANISM_RUN1.md`
 - `docs/research/CASE_STUDY_02_SHIN_HANABI_VISUAL_MECHANISM_RUN2.md`
 - `docs/research/CASE_STUDY_02_SHIN_HANABI_SOUND_EXPERIENCE_RUN1.md`
+- `docs/research/CASE_STUDY_02_SHIN_HANABI_SOUND_EXPERIENCE_RUN2.md`
 - `docs/research/CASE_STUDY_02_SHIN_HANABI_PLAYTEST_QA_RUN1.md`
 - `docs/research/CASE_STUDY_02_SHIN_HANABI_MACHINE_INTEGRATION.md`
 - all governing and reality-baseline documents.
@@ -42,6 +43,22 @@ Additional oblique real-machine evidence strengthens the cabinet model without p
 - `NOT EVERY LAMP NEEDS TO BE A WORD`: identity/presence lighting and rule-bearing lighting should not be conflated.
 
 Exact cabinet/reel/control dimensions, speaker topology, material chemistry, lamp electronics and long-duration glare/peripheral-light fatigue remain unresolved.
+
+## Sound & Experience Run 2 delta
+
+Run 2 extends the audio baseline toward repeated-play endurance rather than adding new audio concepts:
+
+- `EXPOSURE WEIGHT > EVENT PRESTIGE`: ordinary BET/lever/reel/STOP/result audio deserves stricter fatigue review than rare premium cues because it dominates real exposure.
+- `DEVIATION SPENDS BASELINE TRUST`: start-sound delay and omission only remain meaningful while ordinary timing is stable and trusted.
+- `INFORMATION COMPLETION SHOULD ALLOW PRESENTATION COMPLETION`: when reels already resolved the answer, repeated audiovisual tails should not hold the player unnecessarily.
+- `A LOOP CAN BE BOTH MUSIC AND MEASUREMENT BASELINE`: 花火チャレンジ / 花火GAME BGM both sustains state and creates a continuity baseline whose stop can indicate bonus.
+- `ESCALATE CONTEXT BEFORE ESCALATING INTENSITY`: reward phases can change listening context and responsibilities without a constant loudness/density climb.
+- `FEEDBACK GRANULARITY SHOULD MATCH AGENCY GRANULARITY`: technical-intervention feedback should separate input acknowledgement, execution judgement, economic result and mastery acknowledgement.
+- `ACOUSTIC HEADROOM IS GAMEPLAY SPACE`: sparse presentation leaves attention capacity for reel motion, STOP timing and small rule-bearing deviations.
+- `ATTENTION CLAIM MUST EARN ITS REPETITION RATE`: high-frequency cues require proportionate semantic value or they become fatigue.
+- `NOT EVERY SOUND NEEDS TO BE A MESSAGE`: body-rhythm confirmation, state atmosphere, rule-bearing cue and reward release are distinct responsibilities.
+
+Several-thousand-game field datasets establish realistic high repetition exposure, but online capture cannot establish exact SPL, EQ, transient sharpness, speaker routing, vibration, delay milliseconds or controlled three-hour auditory fatigue. Those remain unresolved.
 
 ## Integrated repeated-play model
 
@@ -80,6 +97,8 @@ Do not infer a single studio formula from these two machines. Case Study 02 prov
 
 - manufacturer-undisclosed stop-control/slip/role-priority tables;
 - exact cabinet/reel/control/speaker/vibration physical specifications;
+- exact BET/lever/reel/STOP/payout/replay sound identities and clean direct capture;
+- measured SPL/EQ/transient hierarchy, speaker routing and low-frequency transfer;
 - controlled novice delay-recognition data;
 - measured skill-tier miss rates;
 - controlled three-hour eye/hand/audio fatigue;
@@ -94,7 +113,7 @@ Two deliberately different machines materially broaden the baseline but are not 
 
 ## Gate
 
-`CASE_STUDY_02_CURRENT_CYCLE_COMPLETE — VISUAL_RUN_2_ADDED — NOT_REALITY_BASELINE_COMPLETE`
+`CASE_STUDY_02_CURRENT_CYCLE_COMPLETE — VISUAL_RUN_2_ADDED — SOUND_RUN_2_ADDED — NOT_REALITY_BASELINE_COMPLETE`
 
 `SIGNAL//3 / FORGE//HEART / VAULT://3 = PROVISIONAL_FROZEN`
 `HUMAN_GATE_1_NOT_READY`
