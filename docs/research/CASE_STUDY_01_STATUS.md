@@ -8,7 +8,7 @@
 ## Director progress
 - Machine Director: `DEEP_DIVE_RUN_1_COMPLETE / INTEGRATED`
 - Game & Reel Director: `DEEP_DIVE_RUN_2_COMPLETE`
-- Visual & Mechanism Director: `DEEP_DIVE_RUN_1_COMPLETE`
+- Visual & Mechanism Director: `DEEP_DIVE_RUN_2_COMPLETE`
 - Sound & Experience Director: `DEEP_DIVE_RUN_1_COMPLETE`
 - Playtest & QA Director: `DEEP_DIVE_RUN_1_COMPLETE`
 
@@ -43,6 +43,26 @@ Run 2 added concrete reel-system findings:
 - 抽選タイミング、状態更新タイミング、結果提示タイミングを別仕様として扱う必要がある。通常モード更新は第3停止離し、BB小役パートの宿命バトル抽選はレバーONと公開されている。
 - 公開されていない停止制御テーブル/滑りテーブル/優先制御は推測せず `UNRESOLVED` を維持。
 
+## Visual & Mechanism latest
+Read:
+- `docs/research/CASE_STUDY_01_HOKUTO_VISUAL_MECHANISM.md`
+- `docs/research/CASE_STUDY_01_HOKUTO_VISUAL_MECHANISM_RUN2.md`
+
+Run 2 added physical/presentation findings:
+- 型式一致の中古実機販売情報では外形はおおよそ `H810 × W475 × D400mm`。メーカー公式寸法ではないため正式値とはしないが、正面UIではなく奥行き約40cm級の物体として考える必要がある。
+- 斜め実機写真から、rear body / outer shell / LCD / reel-window front / reel cylinder / operation deck / STOP touch plane に明確な前後差がある。実機感は正面drop-shadowではなく `DEPTH LADDER` から生まれる。
+- 正面だけでなく斜め45度付近でも外周シェルと発光部が輪郭を作る。島設備へ収まる `ROOM SILHOUETTE` と、プレイヤーへ見える `FACE SILHOUETTE` を分けて考える。
+- 情報面は `MAIN LCD / PHYSICAL REELS / LEFT SUB DISPLAY / LAMPS-BUTTONS` に物理分業され、情報の寿命・頻度ごとに「家」がある。
+- `REST VISUAL` はOFF状態ではない。通常LCD、明るいリール、赤3STOP、サブ液晶、外周常設光が基準状態を作り、そこからの偏差として強演出が読める。
+- 全リール消灯、虹色入賞LED、ライト回転等から、強さは「光を足す」だけでなく `add / subtract / color / motion / timing` で作られる。
+- STOP同期は毎G使うのではなく `SYNC SCARCITY` として希少性を持たせる。通常反応が薄いから特定GのSTOP同期が意味になる。
+- 初代モードは演出頻度・煽り・可視Vストック等を減らしても遊技骨格が残る。`PRESENTATION CAN BE SUBTRACTED` をReality試験に使う。
+- 毎Gのレバー/STOPと、希少なPUSH+振動は身体入力を分離している。`INPUT RARITY MUST MATCH FEEDBACK RARITY`。
+- 上位でも基本操作の身体座標は保持される。`BODY GRAMMAR STABILITY` を保ち、価値・光・音側を増幅する。
+- 発光は `identity light / operation light / event light` へ責務分離する。全部の光を当落示唆に使わない。
+- ホールの視覚ノイズ下でも、リール窓・STOP・サブ液晶・メインLCD中央という `FIXED ATTENTION ANCHORS` が動かないことが可読性を支える。
+- 北斗固有の正式寸法/重量、リール径、窓深度、STOP荷重、レバー復元力、LED内部構造、スピーカー位置、PUSH振動方式、実輝度は引き続き `UNRESOLVED`。
+
 ## Playtest & QA latest
 Read: `docs/research/CASE_STUDY_01_HOKUTO_PLAYTEST_QA.md`
 
@@ -60,18 +80,19 @@ Core findings:
 ## Case Study 01 verdict
 `CASE_STUDY_01_INTEGRATED — NOT REALITY_BASELINE_COMPLETE`
 
-北斗1台について5 Directorの専門深掘りとMachine統合は完了した。Game & Reel Run 2では停止形・押し方トレードオフ・BB中のリール責務まで具体化したが、AT/モード/継続型の一例だけでパチスロ全体を理解したとは判定しない。
+北斗1台について5 Directorの専門深掘りとMachine統合は完了した。Game & Reel Run 2では停止形・押し方トレードオフ・BB中のリール責務まで、Visual & Mechanism Run 2では奥行き・REST・消灯・情報面分業・身体座標まで具体化したが、AT/モード/継続型の一例だけでパチスロ全体を理解したとは判定しない。
 
 既存 `SIGNAL//3 / FORGE//HEART / VAULT://3` は引き続き `PROVISIONAL_FROZEN`。
 
 ## Remaining unresolved
 - 設定1ノーカット3時間で通常/前兆/BB/上位の実時間割合・演出密度を定量化。
 - 無想転生20セット以上のノーカット視聴でVisual/Audio疲労を確認。
-- 初代カスタムON/OFFの同一100G比較。
+- 初代カスタムON/OFFの同一100G比較（Visual event count / Audio event count）。
 - 実機/アプリで30分中押し反復時の目・手の疲労。
 - BB単発/低連反復後の再挑戦意欲。
 - 実ホール騒音下のCue識別。
 - 北斗固有スピーカー/音圧/周波数/PUSH振動の実測。
+- 北斗固有のメーカー公式外形寸法/重量、リール径、リール窓深度、操作卓角度/突出量、STOP径/荷重/ストローク、LED/導光構造。
 - 全20コマ配列と代表押下点からの実際のフォロー範囲定量化。
 - 未公開の全停止制御/滑り/優先制御は一次資料なしで確定しない。
 - ベルナビ時と自由停止時のSTOP認知負荷差。
