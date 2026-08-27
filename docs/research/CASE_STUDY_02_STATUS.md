@@ -10,12 +10,12 @@
 
 Case Study 01 current cycle is complete and remains contrast evidence only.
 
-Case Study 02 is still the shared real-machine study object. Machine Director has integrated Run 2 findings; all specialists completed Run 2, and Visual & Mechanism has now added a non-design Run 3 reality pass focused on attention routing, REST visual hierarchy, reel-work-surface protection and state/instruction reallocation using the same physical cabinet.
+Case Study 02 is still the shared real-machine study object. Machine Director has integrated Run 2 findings; all specialists completed Run 2, Visual & Mechanism added Run 3, and Sound & Experience has now added a non-design Run 3 pass focused on attention routing, timing deviation, presentation release, technical-intervention feedback hierarchy, and RT BGM as an interruptible state surface.
 
 - Machine Director: `RUN_2_INTEGRATED`
 - Game & Reel Director: `DEEP_DIVE_RUN_2_COMPLETE`
 - Visual & Mechanism Director: `DEEP_DIVE_RUN_3_COMPLETE`
-- Sound & Experience Director: `DEEP_DIVE_RUN_2_COMPLETE`
+- Sound & Experience Director: `DEEP_DIVE_RUN_3_COMPLETE`
 - Playtest & QA Director: `DEEP_DIVE_RUN_2_COMPLETE`
 
 Read:
@@ -27,6 +27,7 @@ Read:
 - `docs/research/CASE_STUDY_02_SHIN_HANABI_VISUAL_MECHANISM_RUN3.md`
 - `docs/research/CASE_STUDY_02_SHIN_HANABI_SOUND_EXPERIENCE_RUN1.md`
 - `docs/research/CASE_STUDY_02_SHIN_HANABI_SOUND_EXPERIENCE_RUN2.md`
+- `docs/research/CASE_STUDY_02_SHIN_HANABI_SOUND_EXPERIENCE_RUN3.md`
 - `docs/research/CASE_STUDY_02_SHIN_HANABI_PLAYTEST_QA_RUN1.md`
 - `docs/research/CASE_STUDY_02_SHIN_HANABI_PLAYTEST_QA_RUN2.md`
 - `docs/research/CASE_STUDY_02_SHIN_HANABI_MACHINE_INTEGRATION.md`
@@ -172,6 +173,70 @@ Run 3 does not infer exact material chemistry, lamp topology, side-lamp state ta
 
 Exact SPL/EQ/transients, speaker routing, vibration and controlled three-hour auditory fatigue remain unresolved.
 
+## Sound & Experience Run 3 delta
+
+Run 3 studies **audio attention routing inside the same stable reel-centered interaction** rather than adding new sound concepts.
+
+### Baseline timing as attention contract
+
+Published analysis documents `リール始動音遅れ` as a cherry/bonus possibility. Its meaning depends on a trusted ordinary START/reel timing baseline.
+
+New principles:
+
+- `TIMING DIFFERENCE CAN CLAIM ATTENTION WITHOUT LEVEL ESCALATION.`
+- `ROUTINE AUDIO SHOULD BECOME MOTOR MEMORY; RULE-BEARING AUDIO SHOULD INTERRUPT THAT MEMORY PRECISELY.`
+
+### Presentation release after information resolves
+
+Published normal flash can be cancelled. This reinforces that repeated audiovisual tails need not continue after the player's informational task has completed.
+
+- `PLAYER KNOWLEDGE CAN BE A VALID END CONDITION FOR PRESENTATION.`
+- `TAIL LENGTH IS PART OF INPUT LATENCY EXPERIENCE, EVEN WHEN THE INPUT HAS ALREADY BEEN ACCEPTED.`
+
+### Technical-intervention feedback hierarchy
+
+REG documentation states that successful aiming produces a sound; visual success feedback is also provided, while official soundtrack material separately includes an RB all-high-skill-completion jingle.
+
+This supports separating:
+
+`STOP accepted → execution judged → local success acknowledged → accumulated mastery acknowledged`
+
+New principles:
+
+- `LOCAL SKILL FEEDBACK AND SESSION MASTERY FEEDBACK SHOULD OCCUPY DIFFERENT SEMANTIC LEVELS.`
+- `AGENCY FEEDBACK SHOULD BE IMMEDIATE; MASTERY FEEDBACK MAY BE SPARSE.`
+- `DO NOT USE REWARD AUDIO TO HIDE EXECUTION INFORMATION.`
+
+### RT BGM as state surface
+
+Both 花火チャレンジ and 花火GAME document `BGM停止でボーナス`. Continuity itself is therefore part of the rule surface, and interruption can carry information.
+
+- `STATE AUDIO CAN BE A TEMPORARY ATTENTION SURFACE.`
+- `WHEN CONTINUITY CARRIES MEANING, INTERRUPTION IS AN EVENT.`
+- `STATE CHANGE CAN REALLOCATE EXISTING AUDIO BEFORE ADDING NEW AUDIO.`
+
+### Cross-modal attention release
+
+Sound now directly matches Visual Run 3 and Game/Reel Run 2:
+
+- `AUDIO PRIORITY SHOULD EXPIRE WHEN THE PLAYER'S RESPONSIBILITY EXPIRES.`
+- `STABLE BASELINE AUDIO CAN SUPPORT VARIABLE LISTENING CONTRACTS.`
+- `PROTECT THE PRIMARY PRECISION TASK FROM AUDIO MASKING.`
+
+Integrated Run 3 principle:
+
+`PRESENTATION DEPTH CAN COME FROM CHANGING WHICH EXISTING SIGNAL MATTERS, NOT FROM CONTINUALLY ADDING SIGNALS.`
+
+Audio identity can remain strong while ordinary games remain comparatively low-duty:
+
+`AUDIO IDENTITY DENSITY != PER-GAME ATTENTION DENSITY`
+
+Long-session attention model adds duration/release:
+
+`ATTENTION DEBT ≈ REPETITION × CLAIM STRENGTH × CLAIM DURATION × SEMANTIC REDUNDANCY`
+
+Exact SPL/EQ/transients, delay milliseconds, speaker routing, low-frequency transfer, flash-cancel audio behavior, BGM transition timing and controlled three-hour fatigue remain unresolved.
+
 ## Playtest & QA Run 2 retained
 
 - `LONG SESSION = ORDINARY LOOP UNDER MAGNIFICATION`
@@ -213,6 +278,10 @@ Controlled novice success rates, uninterrupted 500G motive coding, skill-tier mi
 - `PROTECT THE PRIMARY PRECISION ZONE FROM BRANDING NOISE`
 - `TEMPORARY TASK PRIORITY SHOULD EXPIRE CLEANLY`
 - `STABLE HARDWARE CAN SUPPORT VARIABLE ATTENTION CONTRACTS`
+- `PRIMARY GAMEPLAY INFORMATION SHOULD NOT HAVE TO FIGHT ITS OWN SOUNDTRACK`
+- `PLAYER KNOWLEDGE CAN BE A VALID END CONDITION FOR PRESENTATION`
+- `AUDIO PRIORITY SHOULD EXPIRE WHEN THE PLAYER'S RESPONSIBILITY EXPIRES`
+- `PRESENTATION DEPTH CAN COME FROM CHANGING WHICH EXISTING SIGNAL MATTERS, NOT FROM CONTINUALLY ADDING SIGNALS`
 
 ## Cross-case principles surviving 北斗 and 新ハナビ
 
@@ -229,6 +298,7 @@ Controlled novice success rates, uninterrupted 500G motive coding, skill-tier mi
 11. Physical/sensory complexity should not force constant cognitive complexity.
 12. Mastery includes learning what deserves attention and what can safely be ignored.
 13. A stable cabinet can change state meaning by reallocating attention among existing surfaces rather than constantly adding visual anatomy.
+14. A stable audio baseline can change state meaning by reallocating attention among timing, continuity and interruption rather than continuously adding louder cues.
 
 Do not infer a single studio formula from these two machines. Case Study 02 proves that long-form depth can arise without a CZ→AT→upper-state ladder, but it does not prove reel mastery or restrained presentation is mandatory for Chappy5.
 
@@ -240,6 +310,8 @@ Do not infer a single studio formula from these two machines. Case Study 02 prov
 - exact material chemistry / coating / optical diffusion construction;
 - exact side-lamp and STOP-lamp state semantics / electronics;
 - exact baseline operation sounds and measured acoustic hierarchy;
+- exact start-delay milliseconds and BGM transition/stop latency;
+- exact flash-cancel audio behavior and REG failure-feedback hierarchy;
 - measured novice/expert aiming misses and pace/accuracy tradeoff;
 - uninterrupted 500G drought motive coding;
 - controlled three-hour eye/hand/audio fatigue and performance drift;
@@ -254,7 +326,7 @@ Two deliberately different machines materially broaden the baseline but are not 
 
 ## Gate
 
-`CASE_STUDY_02_VISUAL_RUN3_COMPLETE — SOUND_EXPERIENCE_NEXT_PASS_AVAILABLE — NOT_REALITY_BASELINE_COMPLETE`
+`CASE_STUDY_02_SOUND_RUN3_COMPLETE — PLAYTEST_QA_NEXT_PASS_AVAILABLE — NOT_REALITY_BASELINE_COMPLETE`
 
 `SIGNAL//3 / FORGE//HEART / VAULT://3 = PROVISIONAL_FROZEN`
 `HUMAN_GATE_1_NOT_READY`
