@@ -24,6 +24,7 @@ Case Study 01 remains useful evidence but is not the active shared study object.
 Read first:
 - `docs/research/CASE_STUDY_02_SHIN_HANABI.md`
 - `docs/research/CASE_STUDY_02_SHIN_HANABI_GAME_REEL_RUN1.md`
+- `docs/research/CASE_STUDY_02_SHIN_HANABI_VISUAL_MECHANISM_RUN1.md`
 - all governing/reality-baseline documents
 - `docs/research/CASE_STUDY_01_HOKUTO_MACHINE_INTEGRATION.md` only for explicit contrast, not as a template to force onto 新ハナビ.
 
@@ -31,7 +32,7 @@ Read first:
 
 - Machine Director: `CASE_STUDY_02_OPEN / OPENING_BASELINE_COMPLETE`
 - Game & Reel Director: `DEEP_DIVE_RUN_1_COMPLETE`
-- Visual & Mechanism Director: `PENDING_DEEP_DIVE`
+- Visual & Mechanism Director: `DEEP_DIVE_RUN_1_COMPLETE`
 - Sound & Experience Director: `PENDING_DEEP_DIVE`
 - Playtest & QA Director: `PENDING_DEEP_DIVE`
 
@@ -59,8 +60,37 @@ Important cautions:
 - full-strategy payout is execution-dependent and must not be treated as beginner-neutral;
 - exact 2021 bonus-detection procedure must be kept separate from 2026 スマスロ ハナビ references.
 
-Next Visual & Mechanism question:
-**what physical hierarchy lets the player repeatedly read aim → slip → stop → relation for hours?**
+## Visual & Mechanism Run 1 handoff
+
+The physical hierarchy now supports the Game & Reel model as follows:
+
+- the physical reel window is the central working surface rather than a secondary element below a giant LCD;
+- manufacturer identifies `たまやチャレンジ` as a mini-LCD, and its physical role is subordinate/peripheral to reel reading;
+- front and oblique views show a stable depth ladder from cabinet body/shell through reel-window plane to projecting operation deck and STOP plane;
+- strong cabinet identity is carried by static silhouette, red/silver material blocks, upper/lower panels and light surfaces while the central reel workspace remains comparatively regular;
+- blackout/flash syntax can communicate by subtraction and post-stop temporal change inside the same gaze area where stopped symbols are read;
+- BIG/REG/RT reframe the same lever/reel/STOP body grammar instead of visually replacing the base machine;
+- hall-distance identity and seated precise reel readability are separate visual problems and should be evaluated separately;
+- no major moving役物 was established as the product core in this run; physical presence comes from reel cylinders, depth, materials, controls, light and stable machine mass.
+
+Reusable Visual principles added:
+- `REEL WINDOW IS A WORKBENCH, NOT WINDOW DRESSING`
+- `QUIET WORKSPACE + STRONG STATIC IDENTITY`
+- `HALL READABILITY != GAME READABILITY`
+- `SUBTRACTION IS A LIGHT EVENT`
+- `EVENT LIGHT SHOULD OCCUPY EXISTING GAZE`
+- `STATE CHANGE CAN REFRAME THE SAME HARDWARE`
+- `MATERIAL SEPARATION SUPPORTS DEPTH BEFORE ANIMATION`
+- `DO NOT ANIMATE THE CABINET JUST TO PROVE IT IS A MACHINE`
+
+Important cautions/unresolved:
+- exact external dimensions/mass, reel diameter, bezel depth, mini-LCD dimensions, deck angle, switch forces and LED implementation remain unresolved;
+- resale/oblique photos are observation references, not specification authority;
+- visible chrome/glass/translucent appearance does not prove material chemistry;
+- physical vibration was not documented in the opened sources and must not be assumed absent or present.
+
+Next Sound & Experience question:
+**does 新ハナビ preserve a stable low-fatigue BET → lever → reel → STOP1/2/3 baseline and use sparse audible deviations in the same perceptual workspace, just as Visual uses blackout/flash without covering the reels?**
 
 ## Shared questions
 
