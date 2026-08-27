@@ -10,11 +10,11 @@
 
 Case Study 01 current cycle is complete and remains contrast evidence only.
 
-Case Study 02 is still the shared real-machine study object. Machine Director has integrated Run 2 findings from Visual, Sound and Playtest; Game & Reel has now completed its own non-design Run 2 reality deep dive.
+Case Study 02 is still the shared real-machine study object. Machine Director has integrated Run 2 findings; all specialists completed Run 2, and Visual & Mechanism has now added a non-design Run 3 reality pass focused on attention routing, REST visual hierarchy, reel-work-surface protection and state/instruction reallocation using the same physical cabinet.
 
 - Machine Director: `RUN_2_INTEGRATED`
 - Game & Reel Director: `DEEP_DIVE_RUN_2_COMPLETE`
-- Visual & Mechanism Director: `DEEP_DIVE_RUN_2_COMPLETE`
+- Visual & Mechanism Director: `DEEP_DIVE_RUN_3_COMPLETE`
 - Sound & Experience Director: `DEEP_DIVE_RUN_2_COMPLETE`
 - Playtest & QA Director: `DEEP_DIVE_RUN_2_COMPLETE`
 
@@ -24,6 +24,7 @@ Read:
 - `docs/research/CASE_STUDY_02_SHIN_HANABI_GAME_REEL_RUN2.md`
 - `docs/research/CASE_STUDY_02_SHIN_HANABI_VISUAL_MECHANISM_RUN1.md`
 - `docs/research/CASE_STUDY_02_SHIN_HANABI_VISUAL_MECHANISM_RUN2.md`
+- `docs/research/CASE_STUDY_02_SHIN_HANABI_VISUAL_MECHANISM_RUN3.md`
 - `docs/research/CASE_STUDY_02_SHIN_HANABI_SOUND_EXPERIENCE_RUN1.md`
 - `docs/research/CASE_STUDY_02_SHIN_HANABI_SOUND_EXPERIENCE_RUN2.md`
 - `docs/research/CASE_STUDY_02_SHIN_HANABI_PLAYTEST_QA_RUN1.md`
@@ -52,7 +53,7 @@ Run 2 closes the main Game/Reel evidence gap left after Run 1 without inventing 
 
 ### Published control evidence boundary
 
-Major analysis now provides separate first-stop control material for LEFT / MIDDLE / RIGHT first stops, each separated by bonus-not-established, Don BIG established, red-7 BIG established and REG established conditions. Individual published examples show that a fixed press location can produce different slip counts depending on underlying role/state.
+Major analysis provides separate first-stop control material for LEFT / MIDDLE / RIGHT first stops, separated by bonus-not-established, Don BIG established, red-7 BIG established and REG established conditions. Individual published examples show that a fixed press location can produce different slip counts depending on underlying role/state.
 
 This supports:
 
@@ -60,102 +61,23 @@ This supports:
 
 It does **not** establish manufacturer source code, complete second/third-stop tables, proprietary priority logic or permission to infer missing cells.
 
-New Game/Reel principles:
+Retained Game/Reel principles:
 
 - `GOOD REEL DEPTH EXISTS BETWEEN STOPS, NOT ONLY AFTER STOP 3.`
 - `IF SLIP CARRIES INFORMATION, THE PLAYER MUST BE ABLE TO TRUST WHERE THEY AIMED.`
 - `STOP ORDER = QUERY ORDER.`
 - `ALTERNATE STOP ORDERS SHOULD REORDER INFORMATION, NOT JUST REORDER ANIMATION.`
 - `VISIBLE FORM IS A PROJECTION OF INTERNAL TRUTH, NOT NECESSARILY A LABEL FOR IT.`
-
-### Small-role / setting / attention economy
-
-Published role families distinguish wind bell A/B, ice A/B, cherry A1/A2/B and normal replay. Visible tendencies can depend on stop location and valid-line geometry. Ordinary small roles therefore carry several values simultaneously:
-
-`PAYOUT + REEL INFORMATION + SESSION INFORMATION`
-
-The basic 暖簾 routine also demonstrates layered access:
-
-`avoid obvious loss → recognize role → classify subtype → relate presentation → relate bonus/setting evidence`
-
-New principles:
-
 - `FREQUENT EVENTS CAN CARRY PAYOUT VALUE + REEL INFORMATION + SESSION INFORMATION.`
 - `DO NOT REQUIRE MAXIMUM INTERPRETATION TO ACHIEVE MINIMUM SAFE PLAY.`
 - `REEL RESPONSIBILITY SHOULD OPEN AND CLOSE WITH INFORMATION NEED.`
-
-Ice handling is a concrete attention-window example: a normal opening can be low burden until the partial stop leaves ice alive, at which point the player spends extra visual/aiming attention on the middle reel. This directly supports the Machine principle `THE MACHINE MUST MANAGE WHAT THE PLAYER CAN IGNORE`.
-
-### Reach-eye / bonus-detection continuity
-
-Run 2 treats reach eyes as proof-like resolution rather than a collectible picture count. Abstract reusable families remain:
-
-- role survives then final stop denies it;
-- aimed position versus slip makes an ordinary miss inconsistent;
-- presentation promises a role and reels contradict it;
-- two reels over-constrain the third.
-
-New principle:
-
-`A STRONG REEL REVEAL FEELS PROVEN, NOT MERELY ANNOUNCED.`
-
-Bonus discovery and bonus entry are separated:
-
-`DISCOVERY != ENTRY`
-
-After the player knows a bonus exists, the reels can change question from `is it a bonus?` to `which bonus can I enter?` before reward begins.
-
-### BIG / REG responsibility contour
-
-BIG uses a front-loaded technical adjustment before dropping to a lower-duty collection routine while still exposing setting-relevant outcomes.
-
-`A REWARD PHASE CAN FRONT-LOAD EXECUTION DUTY, THEN RETURN ATTENTION TO OBSERVATION.`
-
-REG explicitly offers beginner / intermediate / advanced technical routes with different economic outcomes. This confirms:
-
-`WHEN SKILL HAS ECONOMIC CONSEQUENCE, DISTINGUISH CHOSEN DIFFICULTY FROM FORCED DIFFICULTY.`
-
-Setting uncertainty and execution uncertainty are separate axes:
-
-- `SETTING UNCERTAINTY`: infer the machine through accumulated bonus / role / RT samples.
-- `EXECUTION UNCERTAINTY`: infer how much value the player can personally realize through procedure, precision and pace.
-
-### RT responsibility inversion
-
-In 花火チャレンジ, JAC-IN is first something to avoid to preserve the phase, then becomes the desired door into 花火GAME as remaining time changes. Same reels and same STOP hardware; state changes the value of an existing event.
-
-`STATE CAN CHANGE THE VALUE OF AN EXISTING REEL EVENT WITHOUT CHANGING THE INPUT DEVICE.`
-
-花火GAME lowers direct precision duty while preserving bonus discovery and setting sampling through RT replay / miss behavior.
-
-`LOWER DUTY PHASES CAN PRESERVE INFORMATION VALUE WHILE RETURNING HUMAN ATTENTION CAPACITY.`
-
-### 100G / 500G / 3-hour interpretation
-
-Normal 100G:
-- stable aiming route;
-- partial-stop candidate classification;
-- conditional attention windows;
-- slip / stop relation;
-- role completion, denial, contradiction or proof;
-- quick return to baseline when no proof occurs.
-
-500G without bonus:
-- small-role collection and classification remain;
-- optional aiming-route changes remain;
-- setting samples accumulate;
-- presentation / reel contradictions remain;
-- but continuation cannot be used as proof that the dry spell itself is enjoyable.
-
-`REEL DEPTH MUST SURVIVE PAYOFF REMOVAL, NOT JUST EXPLAIN CONTINUATION.`
-
-Three-hour model:
-
-`AIMING PRECISION × RULE RECOGNITION × SELF-SELECTED PACE × CURIOSITY PER ORDINARY STOP`
-
-Mastery should make routine landmarks and ignore-decisions cheaper while making deeper questions optional:
-
-`MASTERY SHOULD COMPRESS ROUTINE COST WHILE EXPANDING OPTIONAL QUESTIONS.`
+- `A STRONG REEL REVEAL FEELS PROVEN, NOT MERELY ANNOUNCED.`
+- `DISCOVERY != ENTRY.`
+- `WHEN SKILL HAS ECONOMIC CONSEQUENCE, DISTINGUISH CHOSEN DIFFICULTY FROM FORCED DIFFICULTY.`
+- `STATE CAN CHANGE THE VALUE OF AN EXISTING REEL EVENT WITHOUT CHANGING THE INPUT DEVICE.`
+- `LOWER DUTY PHASES CAN PRESERVE INFORMATION VALUE WHILE RETURNING HUMAN ATTENTION CAPACITY.`
+- `REEL DEPTH MUST SURVIVE PAYOFF REMOVAL, NOT JUST EXPLAIN CONTINUATION.`
+- `MASTERY SHOULD COMPRESS ROUTINE COST WHILE EXPANDING OPTIONAL QUESTIONS.`
 
 ## Visual & Mechanism Run 2 retained
 
@@ -170,6 +92,71 @@ Mastery should make routine landmarks and ignore-decisions cheaper while making 
 - physical complexity can create presence without forcing per-game cognitive complexity.
 
 Exact cabinet/reel/control dimensions, speaker topology, material chemistry and lamp electronics remain unresolved.
+
+## Visual & Mechanism Run 3 delta
+
+Run 3 narrows the study to **attention routing inside a stable physical cabinet** rather than adding more cabinet-shape description.
+
+### REST visual hierarchy
+
+Front/oblique real-machine photography supports a stable hierarchy made from large static masses, bright recessed reels, a smaller information band, a projecting operation deck, a fixed STOP row and a broad lower identity panel. The machine does not need a large moving mechanism to remain recognizable at aisle distance.
+
+New principle:
+
+`REST VISUAL SHOULD BE STRUCTURED ENOUGH TO IDENTIFY THE MACHINE, QUIET ENOUGH TO LET DEVIATION REGISTER.`
+
+The restraint is attentional/temporal rather than necessarily low-contrast:
+
+`STATIC IDENTITY CONTRAST != PER-GAME ATTENTION CLAIM.`
+
+### Reel work-surface protection
+
+The recessed three-reel rectangle remains the central precision surface. Manufacturer/analysis material explicitly makes reel arrangement and blackout rules part of play, while decoration terminates around rather than through the reel aperture.
+
+New principles:
+
+- `PROTECT THE PRIMARY PRECISION ZONE FROM BRANDING NOISE.`
+- `CHANGE THE CONDITION OF THE WORK SURFACE BEFORE COVERING THE WORK SURFACE.`
+
+Blackout can change the condition of the already-read reel field and carry role information without needing a new opaque overlay.
+
+### Secondary display hierarchy
+
+The manufacturer explicitly describes `たまやチャレンジ` as a mini-LCD feature. Its physical size/position remains secondary to the reels.
+
+`SECONDARY DISPLAY SHOULD ADD INTERPRETATION WITHOUT DEMOTING THE PRIMARY PHYSICAL GAME.`
+
+This is a hierarchy principle only; the protected percentage presentation is not reusable.
+
+### Temporary task priority / RT instructions
+
+Published RT procedure uses visual/order instructions and panel cues while retaining the same lever and three STOP buttons. The machine can temporarily route attention to a task cue and then return to ordinary reel reading.
+
+- `TEMPORARY TASK PRIORITY SHOULD EXPIRE CLEANLY.`
+- `STABLE HARDWARE CAN SUPPORT VARIABLE ATTENTION CONTRACTS.`
+
+This directly matches Game & Reel's `REEL RESPONSIBILITY SHOULD OPEN AND CLOSE WITH INFORMATION NEED`.
+
+### Operation deck and identity allocation
+
+Oblique photography shows a projecting operation deck and simple repeated horizontal STOP row. Motor predictability may reduce the need for constant visual prompting, though tactile certainty itself remains unverified without physical testing.
+
+- `MOTOR CERTAINTY CAN REDUCE VISUAL PROMPTING.`
+- `BRAND AREA CAN BE LARGE WITHOUT OCCUPYING THE DECISION AREA.`
+
+The broad lower panel carries substantial aisle identity while remaining below the central reel decision area.
+
+### Hall presence without giant movement
+
+Integrated Run 3 principle:
+
+`HALL PRESENCE CAN COME FROM STATIC MASSING + MATERIAL CONTRAST + LIGHT TOPOLOGY; GAME PRESENCE CAN COME FROM PRECISE CHANGE INSIDE A STABLE BODY.`
+
+State escalation can first reallocate existing surfaces rather than expand cabinet anatomy:
+
+`STATE ESCALATION CAN REALLOCATE EXISTING SURFACES BEFORE ADDING NEW SURFACES.`
+
+Run 3 does not infer exact material chemistry, lamp topology, side-lamp state tables, STOP lamp semantics, speaker routing, control force/travel, glare performance or hidden mechanisms.
 
 ## Sound & Experience Run 2 retained
 
@@ -223,6 +210,9 @@ Controlled novice success rates, uninterrupted 500G motive coding, skill-tier mi
 - `A STRONG REEL REVEAL FEELS PROVEN, NOT MERELY ANNOUNCED`
 - `SETTING UNCERTAINTY != EXECUTION UNCERTAINTY`
 - `MASTERY SHOULD COMPRESS ROUTINE COST WHILE EXPANDING OPTIONAL QUESTIONS`
+- `PROTECT THE PRIMARY PRECISION ZONE FROM BRANDING NOISE`
+- `TEMPORARY TASK PRIORITY SHOULD EXPIRE CLEANLY`
+- `STABLE HARDWARE CAN SUPPORT VARIABLE ATTENTION CONTRACTS`
 
 ## Cross-case principles surviving 北斗 and 新ハナビ
 
@@ -238,18 +228,22 @@ Controlled novice success rates, uninterrupted 500G motive coding, skill-tier mi
 10. Skill depth needs recovery space and a sustainable self-selected pace.
 11. Physical/sensory complexity should not force constant cognitive complexity.
 12. Mastery includes learning what deserves attention and what can safely be ignored.
+13. A stable cabinet can change state meaning by reallocating attention among existing surfaces rather than constantly adding visual anatomy.
 
-Do not infer a single studio formula from these two machines. Case Study 02 proves that long-form depth can arise without a CZ→AT→upper-state ladder, but it does not prove reel mastery is mandatory for Chappy5.
+Do not infer a single studio formula from these two machines. Case Study 02 proves that long-form depth can arise without a CZ→AT→upper-state ladder, but it does not prove reel mastery or restrained presentation is mandatory for Chappy5.
 
 ## Unresolved retained
 
 - manufacturer-undisclosed complete stop-control / slip / role-priority logic;
 - complete second-/third-stop tables for every role, press location, stop order and bonus state;
 - exact cabinet/reel/control/speaker/vibration physical specifications;
+- exact material chemistry / coating / optical diffusion construction;
+- exact side-lamp and STOP-lamp state semantics / electronics;
 - exact baseline operation sounds and measured acoustic hierarchy;
 - measured novice/expert aiming misses and pace/accuracy tradeoff;
 - uninterrupted 500G drought motive coding;
 - controlled three-hour eye/hand/audio fatigue and performance drift;
+- dark-hall glare / reflection / peripheral-light distraction around the reel window;
 - separation of nostalgia/brand literacy from generally reusable design principles.
 
 ## Reality-baseline decision
@@ -260,7 +254,7 @@ Two deliberately different machines materially broaden the baseline but are not 
 
 ## Gate
 
-`CASE_STUDY_02_ALL_SPECIALIST_RUN2_COMPLETE — MACHINE_REINTEGRATION_PENDING — NOT_REALITY_BASELINE_COMPLETE`
+`CASE_STUDY_02_VISUAL_RUN3_COMPLETE — SOUND_EXPERIENCE_NEXT_PASS_AVAILABLE — NOT_REALITY_BASELINE_COMPLETE`
 
 `SIGNAL//3 / FORGE//HEART / VAULT://3 = PROVISIONAL_FROZEN`
 `HUMAN_GATE_1_NOT_READY`
