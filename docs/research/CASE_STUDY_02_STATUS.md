@@ -25,6 +25,7 @@ Read first:
 - `docs/research/CASE_STUDY_02_SHIN_HANABI.md`
 - `docs/research/CASE_STUDY_02_SHIN_HANABI_GAME_REEL_RUN1.md`
 - `docs/research/CASE_STUDY_02_SHIN_HANABI_VISUAL_MECHANISM_RUN1.md`
+- `docs/research/CASE_STUDY_02_SHIN_HANABI_SOUND_EXPERIENCE_RUN1.md`
 - all governing/reality-baseline documents
 - `docs/research/CASE_STUDY_01_HOKUTO_MACHINE_INTEGRATION.md` only for explicit contrast, not as a template to force onto 新ハナビ.
 
@@ -33,7 +34,7 @@ Read first:
 - Machine Director: `CASE_STUDY_02_OPEN / OPENING_BASELINE_COMPLETE`
 - Game & Reel Director: `DEEP_DIVE_RUN_1_COMPLETE`
 - Visual & Mechanism Director: `DEEP_DIVE_RUN_1_COMPLETE`
-- Sound & Experience Director: `PENDING_DEEP_DIVE`
+- Sound & Experience Director: `DEEP_DIVE_RUN_1_COMPLETE`
 - Playtest & QA Director: `PENDING_DEEP_DIVE`
 
 ## Game & Reel Run 1 handoff
@@ -89,8 +90,43 @@ Important cautions/unresolved:
 - visible chrome/glass/translucent appearance does not prove material chemistry;
 - physical vibration was not documented in the opened sources and must not be assumed absent or present.
 
-Next Sound & Experience question:
-**does 新ハナビ preserve a stable low-fatigue BET → lever → reel → STOP1/2/3 baseline and use sparse audible deviations in the same perceptual workspace, just as Visual uses blackout/flash without covering the reels?**
+## Sound & Experience Run 1 handoff
+
+The Sound model now reinforces the same reel-centered product rather than creating a separate narration layer.
+
+Grounded findings:
+- normal presentation is publicly organized around a small set of rule-linked deviations: reel-start-sound delay, blackout, flash, and `たまやチャレンジ`;
+- the named `遅れ` only works because a stable expected reel-start timing exists first: `REST AUDIO` includes timing, not only sound identity;
+- both `花火チャレンジ` and `花火GAME` use BGM stopping as bonus information, demonstrating that subtraction can be a truthful high-value event;
+- Universal's official soundtrack provides distinct state/reward music for BB variants, REG, 花火チャレンジ and 花火GAME, so entry/sustain/transition are separate audio responsibilities;
+- official soundtrack also identifies a dedicated REG all-high-skill jingle, showing that technical mastery receives distinct acknowledgement;
+- flash can be cancelled, supporting a low-friction principle where experienced players need not always consume a full post-result presentation tail;
+- no speaker layout, real SPL/EQ, vibration specification or clean direct capture of baseline operation sounds was established; these remain unresolved.
+
+Reusable Sound principles added:
+- `AUDIO DENSITY MUST MATCH THE PRIMARY WORK SURFACE`
+- `REST AUDIO = SOUND IDENTITY + EXPECTED TIMING`
+- `SUBTRACT TO SIGNAL`
+- `STATE AUDIO CAN BECOME A SENSOR`
+- `AUDIO AS QUESTION, REEL AS ANSWER`
+- `POST-RESULT PRESENTATION SHOULD NOT HOLD THE PLAYER HOSTAGE`
+- `REWARD AUDIO NEEDS PHASE GRAMMAR, NOT ONLY PEAK GRAMMAR`
+- `SKILL FEEDBACK MUST REINFORCE AGENCY WITHOUT AMPLIFYING SHAME`
+- `AUDIO SHOULD REFRAME AN INPUT BEFORE INVENTING A NEW INPUT`
+- `SPARSE PRESENTATION MAGNIFIES BASELINE QUALITY`
+- `MEMORABLE AUDIO DOES NOT REQUIRE HIGH EVENT COUNT`
+
+Important caution:
+Edited long-form videos are useful for event relation/player behavior but cannot establish exact cue frequency or 3-hour fatigue. Do not infer speaker/subwoofer/vibration hardware from online-video bass.
+
+Next Playtest & QA questions:
+1. Can a beginner actually notice `遅れ` early, or is reel knowledge required first?
+2. Across 100G, what does the player listen for voluntarily versus ignore?
+3. Across a 500G bonus drought, does sparse presentation remain calming or does baseline repetition become exposed fatigue?
+4. Does flash cancellation reduce expert friction?
+5. Does REG execution feedback feel like agency or punishment at different skill levels?
+6. Does BGM stop become a learned truthful sensor during RT?
+7. After RT, does returning to REST AUDIO feel like returning to the core game rather than losing access to the real game?
 
 ## Shared questions
 
