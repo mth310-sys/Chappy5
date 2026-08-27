@@ -1,0 +1,52 @@
+# Case Study 02 — Playtest & QA Run 3 Handoff
+
+> Target: エレコ / ユニバーサル系「新ハナビ」（2021）
+> Stage: `Stage 1 — Reality Baseline Study`
+> Human Gate: `HUMAN_GATE_1_NOT_READY`
+> Production: `DENIED_UNTIL_HUMAN_MACHINE_APPROVED`
+
+This file is a linked status delta to `CASE_STUDY_02_STATUS.md` and must be read with the shared Case Study 02 status/research set.
+
+## Current delta
+
+- Machine Director: `RUN_2_INTEGRATED`
+- Game & Reel Director: `DEEP_DIVE_RUN_2_COMPLETE`
+- Visual & Mechanism Director: `DEEP_DIVE_RUN_3_COMPLETE`
+- Sound & Experience Director: `DEEP_DIVE_RUN_3_COMPLETE`
+- Playtest & QA Director: `DEEP_DIVE_RUN_3_COMPLETE`
+
+New research:
+- `docs/research/CASE_STUDY_02_SHIN_HANABI_PLAYTEST_QA_RUN3.md`
+
+## Run 3 QA focus
+
+The pass studies attention switching and recovery inside sparse, reel-centered play rather than adding new game concepts.
+
+Key additions:
+- `SKILLFUL PLAY REQUIRES ATTENTION SWITCHING, NOT PERMANENT MAXIMUM ATTENTION.`
+- `MASTERY INCLUDES KNOWING WHEN NOTHING SPECIAL IS REQUIRED.`
+- `SPARSE PRESENTATION ONLY SAVES ATTENTION IF ORDINARY STATE IS TRUSTWORTHY.`
+- `A SKILL SYSTEM IS JUDGED BY HOW PLAY RECOVERS AFTER FAILURE, NOT ONLY BY HOW SUCCESS IS REWARDED.`
+- `MASTERY SHOULD IMPROVE ATTENTION SELECTIVITY, NOT REQUIRE ATTENTION SATURATION.`
+- `RETURN QUALITY IS MEASURED BY HOW QUICKLY THE BASE GAME RECLAIMS VOLUNTARY ATTENTION.`
+- `LONG-SESSION FATIGUE IS MULTI-CHANNEL.`
+- `SPARSITY IS AN AMPLIFIER OF UNDERLYING GAME QUALITY, NOT A SUBSTITUTE FOR IT.`
+
+New/updated QA instruments:
+- `ATTENTION SWITCH LATENCY TEST`
+- `FALSE ALARM BURDEN TEST`
+- `RETROSPECTIVE DISCOVERY CHECK`
+- `DELAYED DROUGHT VERDICT`
+- `POST-MISS RECOVERY WINDOW`
+- `ATTENTION SELECTIVITY RATIO`
+- refined `POST-REWARD BASELINE RECOVERY TEST`
+
+## Gate
+
+`CASE_STUDY_02_PLAYTEST_QA_RUN3_COMPLETE — MACHINE_REINTEGRATION_AVAILABLE — NOT_REALITY_BASELINE_COMPLETE`
+
+`REALITY_BASELINE_COMPLETE = FALSE`
+`SIGNAL//3 / FORGE//HEART / VAULT://3 = PROVISIONAL_FROZEN`
+`HUMAN_GATE_1_NOT_READY`
+
+No original-concept refinement, browser play, code, prototype, visual/audio asset, cabinet/mechanism implementation or reel implementation was performed.
