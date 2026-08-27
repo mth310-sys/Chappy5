@@ -23,16 +23,44 @@ Case Study 01 remains useful evidence but is not the active shared study object.
 
 Read first:
 - `docs/research/CASE_STUDY_02_SHIN_HANABI.md`
+- `docs/research/CASE_STUDY_02_SHIN_HANABI_GAME_REEL_RUN1.md`
 - all governing/reality-baseline documents
 - `docs/research/CASE_STUDY_01_HOKUTO_MACHINE_INTEGRATION.md` only for explicit contrast, not as a template to force onto 新ハナビ.
 
 ## Director progress
 
 - Machine Director: `CASE_STUDY_02_OPEN / OPENING_BASELINE_COMPLETE`
-- Game & Reel Director: `PENDING_DEEP_DIVE`
+- Game & Reel Director: `DEEP_DIVE_RUN_1_COMPLETE`
 - Visual & Mechanism Director: `PENDING_DEEP_DIVE`
 - Sound & Experience Director: `PENDING_DEEP_DIVE`
 - Playtest & QA Director: `PENDING_DEEP_DIVE`
+
+## Game & Reel Run 1 handoff
+
+The current repeated-play model is:
+
+`AIM → CLASSIFY → RESOLVE → DISCOVER → EXECUTE → EXTEND / TRANSITION → RETURN WITH MORE KNOWLEDGE`
+
+Key grounded findings:
+- published reel reference: 3BET = 5 valid lines, 1BET = 2 valid lines;
+- multiple practical first-stop lenses exist (BAR/暖簾, single Don, red 7), and each creates different visible candidate sets;
+- first STOP can function as a candidate classifier rather than a scripted dramatic beat;
+- frequent wind-bell / replay / cherry / ice handling means a bonus drought is not automatically an event drought;
+- slip is potentially temporal information because the player compares aimed position with stopped position before all three reels resolve;
+- approx. 3,500 reach eyes should be understood as a rule network / combinatorial result, not as 3,500 isolated art assets;
+- reward can begin at bonus discovery before explicit notification or medal payout;
+- BIG → 花火チャレンジ → 花火GAME changes STOP responsibility while preserving the same physical reel grammar;
+- REG offers beginner / intermediate / advanced execution routes, making skill a ladder while still creating a real economic gap;
+- setting inference is distributed into ordinary bonus/small-role/RT observations rather than requiring a separate state layer.
+
+Important cautions:
+- exact stop-control / slip / role-priority tables remain `UNRESOLVED` unless manufacturer-documented;
+- community specialist control findings remain FIELD / INFERRED;
+- full-strategy payout is execution-dependent and must not be treated as beginner-neutral;
+- exact 2021 bonus-detection procedure must be kept separate from 2026 スマスロ ハナビ references.
+
+Next Visual & Mechanism question:
+**what physical hierarchy lets the player repeatedly read aim → slip → stop → relation for hours?**
 
 ## Shared questions
 
