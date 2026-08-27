@@ -10,12 +10,12 @@
 
 Case Study 01 current cycle is complete and remains contrast evidence only.
 
-Case Study 02 specialist Run 1 and Machine integration are complete on latest main. Visual & Mechanism and Sound & Experience have now each completed an additional non-design Run 2 reality deep dive:
+Case Study 02 specialist Run 1 and Machine integration are complete on latest main. Visual & Mechanism, Sound & Experience and Playtest & QA have now each completed an additional non-design Run 2 reality deep dive:
 - Machine Director: `RUN_1_INTEGRATED`
 - Game & Reel Director: `DEEP_DIVE_RUN_1_COMPLETE`
 - Visual & Mechanism Director: `DEEP_DIVE_RUN_2_COMPLETE`
 - Sound & Experience Director: `DEEP_DIVE_RUN_2_COMPLETE`
-- Playtest & QA Director: `DEEP_DIVE_RUN_1_COMPLETE`
+- Playtest & QA Director: `DEEP_DIVE_RUN_2_COMPLETE`
 
 Read:
 - `docs/research/CASE_STUDY_02_SHIN_HANABI.md`
@@ -25,6 +25,7 @@ Read:
 - `docs/research/CASE_STUDY_02_SHIN_HANABI_SOUND_EXPERIENCE_RUN1.md`
 - `docs/research/CASE_STUDY_02_SHIN_HANABI_SOUND_EXPERIENCE_RUN2.md`
 - `docs/research/CASE_STUDY_02_SHIN_HANABI_PLAYTEST_QA_RUN1.md`
+- `docs/research/CASE_STUDY_02_SHIN_HANABI_PLAYTEST_QA_RUN2.md`
 - `docs/research/CASE_STUDY_02_SHIN_HANABI_MACHINE_INTEGRATION.md`
 - all governing and reality-baseline documents.
 
@@ -60,6 +61,24 @@ Run 2 extends the audio baseline toward repeated-play endurance rather than addi
 
 Several-thousand-game field datasets establish realistic high repetition exposure, but online capture cannot establish exact SPL, EQ, transient sharpness, speaker routing, vibration, delay milliseconds or controlled three-hour auditory fatigue. Those remain unresolved.
 
+## Playtest & QA Run 2 delta
+
+Run 2 tests whether reel-centered depth survives several-thousand-game exposure without turning skill into attention debt:
+
+- `LONG SESSION = ORDINARY LOOP UNDER MAGNIFICATION`: 5,000–7,800G-class field sessions make ordinary aiming/STOP/follow-up quality more important than rare peak events.
+- `NOVICE OBLIGATION STACK TEST`: onboarding must measure simultaneous remembered duties, not merely whether each rule was explained once.
+- `ATTENTION != ENJOYMENT`: reel focus driven by curiosity must be separated from focus driven by loss avoidance or setting/economic sampling.
+- `MOTIVE SPLIT TEST`: classify attention as intrinsic discovery, loss avoidance, economic sampling or presentation-prompted.
+- `DROUGHT MOTIVE AUDIT`: sample early/middle/late slices of a 500G no-bonus stretch and detect whether current-stop curiosity survives or play collapses into relief seeking.
+- `A PLAYER CAN CONTINUE A GOOD STRATEGY THROUGH A BAD EXPERIENCE`: rational expected return is not proof of good moment-to-moment base play.
+- `OPTIMAL PLAYER PACE IS NOT MAXIMUM MACHINE PACE`: field evidence of repeated REG misses and deliberate slowing shows skill pressure can change natural session cadence.
+- `REGRET ATTRIBUTION MAP`: distinguish RNG loss, knowledge loss and physical execution loss; agency increases ownership of failure as well as pride.
+- `ATTENTION NEEDS RECOVERY WINDOWS`: RT procedures include lower-load games between responsibility windows; skill play need not demand peak precision every game.
+- `SAFE PLAY ACCESS != MEANING ACCESS`: a novice can avoid major mistakes yet still miss why an ordinary stop was interesting.
+- `LONG-SESSION QA SHOULD MEASURE DRIFT, NOT ONLY FINAL FATIGUE`: later approved human tests should compare pace, misses, cue recognition and motive across hour buckets.
+
+Controlled first-five-minute success rates, uninterrupted 500G motive coding, skill-tier miss rates and three-hour eye/hand/audio performance drift remain unresolved.
+
 ## Integrated repeated-play model
 
 `AIM → CLASSIFY → RESOLVE → DISCOVER → EXECUTE → EXTEND / TRANSITION → RETURN WITH MORE KNOWLEDGE`
@@ -79,6 +98,9 @@ Machine integration concludes that the important contrast with 北斗 is not mer
 - `DRY-SPELL WITHOUT PAYOFF TEST`
 - `POST-REWARD BASELINE RECOVERY TEST`
 - `RELIEF AFTER DROUGHT != QUALITY OF THE DROUGHT`
+- `ATTENTION != ENJOYMENT`
+- `OPTIMAL PLAYER PACE IS NOT MAXIMUM MACHINE PACE`
+- `ATTENTION NEEDS RECOVERY WINDOWS`
 
 ## Cross-case principles surviving 北斗 and 新ハナビ
 
@@ -90,6 +112,8 @@ Machine integration concludes that the important contrast with 北斗 is not mer
 6. Relief after drought cannot validate drought quality.
 7. Presentation should serve the primary information/work surface.
 8. The return loop after reward is part of product quality.
+9. Long-play concentration must be separated from long-play enjoyment.
+10. Skill depth needs recovery space and a sustainable self-selected pace.
 
 Do not infer a single studio formula from these two machines. Case Study 02 proves that long-form depth can arise without a CZ→AT→upper-state ladder, but it does not prove reel mastery is mandatory for Chappy5.
 
@@ -99,9 +123,10 @@ Do not infer a single studio formula from these two machines. Case Study 02 prov
 - exact cabinet/reel/control/speaker/vibration physical specifications;
 - exact BET/lever/reel/STOP/payout/replay sound identities and clean direct capture;
 - measured SPL/EQ/transient hierarchy, speaker routing and low-frequency transfer;
-- controlled novice delay-recognition data;
-- measured skill-tier miss rates;
-- controlled three-hour eye/hand/audio fatigue;
+- controlled novice delay-recognition and obligation-stack data;
+- measured skill-tier miss rates and pace/accuracy tradeoff;
+- uninterrupted 500G drought motive coding;
+- controlled three-hour eye/hand/audio fatigue and performance drift;
 - controlled glare / peripheral-light distraction under hall-like darkness;
 - separation of nostalgia/brand literacy from generally reusable design principles.
 
@@ -113,7 +138,7 @@ Two deliberately different machines materially broaden the baseline but are not 
 
 ## Gate
 
-`CASE_STUDY_02_CURRENT_CYCLE_COMPLETE — VISUAL_RUN_2_ADDED — SOUND_RUN_2_ADDED — NOT_REALITY_BASELINE_COMPLETE`
+`CASE_STUDY_02_CURRENT_CYCLE_COMPLETE — VISUAL_RUN_2_ADDED — SOUND_RUN_2_ADDED — PLAYTEST_QA_RUN_2_ADDED — NOT_REALITY_BASELINE_COMPLETE`
 
 `SIGNAL//3 / FORGE//HEART / VAULT://3 = PROVISIONAL_FROZEN`
 `HUMAN_GATE_1_NOT_READY`
