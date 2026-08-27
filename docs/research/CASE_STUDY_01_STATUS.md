@@ -10,7 +10,7 @@
 - Game & Reel Director: `DEEP_DIVE_RUN_2_COMPLETE`
 - Visual & Mechanism Director: `DEEP_DIVE_RUN_2_COMPLETE`
 - Sound & Experience Director: `DEEP_DIVE_RUN_2_COMPLETE`
-- Playtest & QA Director: `DEEP_DIVE_RUN_1_COMPLETE`
+- Playtest & QA Director: `DEEP_DIVE_RUN_2_COMPLETE`
 
 ## Machine Director integration
 Read: `docs/research/CASE_STUDY_01_HOKUTO_MACHINE_INTEGRATION.md`
@@ -35,13 +35,13 @@ Read:
 
 Run 2 added concrete reel-system findings:
 - 第1停止は「三段階演出の第一幕」ではなく、停止位置により次の狙い方を変える `classifier` として機能する。
-- 中押し/順押しは単なる好みではなく、スイカA/B・中段チェリーA/B・チャンス目・北斗カウンター・リーチ目/JAC等、取得できる情報を交換する観測手段になっている。
-- `INTERNAL ROLE != OBSERVED STOP FORM`。同じ内部役でも押し順/押下位置により見える停止形が変わり、チャンス目とベルこぼしの類似形等も存在する。
-- リーチ目は専用の別ゲームではなく、普段のチェリー/スイカ判別木からの小役ハズレ・矛盾として混ざるため、通常時に学んだ規則そのものが確定発見へ使われる。
-- BB確定画面の赤7狙いにも停止ライン/フェイク/次G昇格/継続率示唆という実情報があり、当選後もリール観察価値を残す。
-- 同じレア役の責務は通常→BB小役パート→バトルパート→上位で変化し、状態が同じ図柄の現在価値を書き換える。
-- 抽選タイミング、状態更新タイミング、結果提示タイミングを別仕様として扱う必要がある。通常モード更新は第3停止離し、BB小役パートの宿命バトル抽選はレバーONと公開されている。
-- 公開されていない停止制御テーブル/滑りテーブル/優先制御は推測せず `UNRESOLVED` を維持。
+- 中押し/順押しは単なる好みではなく、取得できる情報を交換する観測手段になっている。
+- `INTERNAL ROLE != OBSERVED STOP FORM`。同じ内部役でも押し順/押下位置により見える停止形が変わる。
+- リーチ目は普段の役判別規則からの小役ハズレ・矛盾として混ざり、通常時に学んだ規則が確定発見へ使われる。
+- BB確定後も停止ライン/フェイク/次G昇格/継続率示唆等でリール観察価値が残る。
+- 同じレア役の責務は通常→BB小役パート→バトルパート→上位で変化する。
+- 抽選タイミング、状態更新タイミング、結果提示タイミングを別仕様として扱う。
+- 公開されていない停止制御/滑り/優先制御は `UNRESOLVED`。
 
 ## Visual & Mechanism latest
 Read:
@@ -49,19 +49,16 @@ Read:
 - `docs/research/CASE_STUDY_01_HOKUTO_VISUAL_MECHANISM_RUN2.md`
 
 Run 2 added physical/presentation findings:
-- 型式一致の中古実機販売情報では外形はおおよそ `H810 × W475 × D400mm`。メーカー公式寸法ではないため正式値とはしないが、正面UIではなく奥行き約40cm級の物体として考える必要がある。
-- 斜め実機写真から、rear body / outer shell / LCD / reel-window front / reel cylinder / operation deck / STOP touch plane に明確な前後差がある。実機感は正面drop-shadowではなく `DEPTH LADDER` から生まれる。
-- 正面だけでなく斜め45度付近でも外周シェルと発光部が輪郭を作る。島設備へ収まる `ROOM SILHOUETTE` と、プレイヤーへ見える `FACE SILHOUETTE` を分けて考える。
-- 情報面は `MAIN LCD / PHYSICAL REELS / LEFT SUB DISPLAY / LAMPS-BUTTONS` に物理分業され、情報の寿命・頻度ごとに「家」がある。
-- `REST VISUAL` はOFF状態ではない。通常LCD、明るいリール、赤3STOP、サブ液晶、外周常設光が基準状態を作り、そこからの偏差として強演出が読める。
-- 全リール消灯、虹色入賞LED、ライト回転等から、強さは「光を足す」だけでなく `add / subtract / color / motion / timing` で作られる。
-- STOP同期は毎G使うのではなく `SYNC SCARCITY` として希少性を持たせる。通常反応が薄いから特定GのSTOP同期が意味になる。
-- 初代モードは演出頻度・煽り・可視Vストック等を減らしても遊技骨格が残る。`PRESENTATION CAN BE SUBTRACTED` をReality試験に使う。
-- 毎Gのレバー/STOPと、希少なPUSH+振動は身体入力を分離している。`INPUT RARITY MUST MATCH FEEDBACK RARITY`。
-- 上位でも基本操作の身体座標は保持される。`BODY GRAMMAR STABILITY` を保ち、価値・光・音側を増幅する。
-- 発光は `identity light / operation light / event light` へ責務分離する。全部の光を当落示唆に使わない。
-- ホールの視覚ノイズ下でも、リール窓・STOP・サブ液晶・メインLCD中央という `FIXED ATTENTION ANCHORS` が動かないことが可読性を支える。
-- 北斗固有の正式寸法/重量、リール径、窓深度、STOP荷重、レバー復元力、LED内部構造、スピーカー位置、PUSH振動方式、実輝度は引き続き `UNRESOLVED`。
+- 実機は正面UIではなく約40cm級奥行きを持つ物体として考える必要がある。
+- rear body / outer shell / LCD / reel-window / reel cylinder / operation deck / STOP touch plane に前後差がある `DEPTH LADDER`。
+- `ROOM SILHOUETTE` と `FACE SILHOUETTE` を分ける。
+- 情報面は `MAIN LCD / PHYSICAL REELS / LEFT SUB DISPLAY / LAMPS-BUTTONS` に物理分業される。
+- `REST VISUAL` はOFFではなく、通常LCD、リール、STOP、サブ液晶、常設光の定常セット。
+- 強さは `add / subtract / color / motion / timing` で作る。
+- `SYNC SCARCITY`、`PRESENTATION CAN BE SUBTRACTED`、`INPUT RARITY MUST MATCH FEEDBACK RARITY`、`BODY GRAMMAR STABILITY` を確認。
+- 発光は `identity light / operation light / event light` へ責務分離。
+- `FIXED ATTENTION ANCHORS` がホール内可読性を支える。
+- 北斗固有の正式寸法/重量/リール径/窓深度/STOP荷重/LED構造等は `UNRESOLVED`。
 
 ## Sound & Experience latest
 Read:
@@ -69,58 +66,61 @@ Read:
 - `docs/research/CASE_STUDY_01_HOKUTO_SOUND_EXPERIENCE_RUN2.md`
 
 Run 2 added concrete audio-system findings:
-- `REST AUDIO`: 強Cueより先に、BET→LEVER→REEL→STOP→RESULTの通常タイミングを身体へ覚えさせる。違和感は安定した基準からの偏差として成立する。
-- 強さは音量だけではなく `ADD / DELAY / OMIT / RELOCATE / CONTRADICT / SUSTAIN` の軸で作れる。
-- ラオウステージのギター音等では、Audioが答えを告知せず後続の役/演出候補を作り、リールとVisualが一致/矛盾を返す。`AUDIO AS QUESTION`。
-- STOP演出やねじり音のような同期は毎G使わず `INPUT-AUDIO CONTRACT / SYNC SCARCITY` として希少化する。
-- BB入口は告知1発ではなく `NOTICE → CONFIRM → PARTICIPATE → START` の `ENTRY STAIRS`。確定後にも狙え/停止形で参加余地が残る。
-- BGM変化は継続確定という状態情報を長く保持する `BGM AS STATE MEMORY` として働く。通常モードでは5セット目以降の継続時の一部から発生し、序盤から毎セット最大化しない。
-- 同じBGM変化でも通常モードではLEVER、初代モードではBETへ発火位置が変わる。復活もMAX BET/LEVER条件に法則があり、`どの入力に反応したか` 自体がゲーム情報になる。
-- 初代カスタムは演出頻度・可視Vストック・一部チャンスアップ・BGM変化種類等を減らしても内部ゲームが成立するため、`PRESENTATION SUBTRACTION TEST` の実例になる。
-- `MEMORABLE = SCARCITY × MEANING × SYNCHRONY × REWARD`。高頻度・高音量・低意味・回避不能のCueは疲労リスクが高い。
-- 北斗固有スピーカー仕様、実dB/周波数/定位、基礎BET/STOP/払出音の波形、PUSH振動、無想転生長連時のAudio event countは未確認のまま `UNRESOLVED`。
+- `REST AUDIO`: BET→LEVER→REEL→STOP→RESULTの通常タイミングを身体へ覚えさせる。
+- 強さは音量以外に `ADD / DELAY / OMIT / RELOCATE / CONTRADICT / SUSTAIN` がある。
+- `AUDIO AS QUESTION`、`INPUT-AUDIO CONTRACT / SYNC SCARCITY` を確認。
+- BB入口は `NOTICE → CONFIRM → PARTICIPATE → START` の `ENTRY STAIRS`。
+- BGM変化は `BGM AS STATE MEMORY` として継続確定等の真実を保持できる。
+- どの入力に反応して鳴るか自体がゲーム情報になる。
+- `PRESENTATION SUBTRACTION TEST` の実例がある。
+- `MEMORABLE = SCARCITY × MEANING × SYNCHRONY × REWARD`。
+- 北斗固有スピーカー仕様/実dB/波形/PUSH振動等は `UNRESOLVED`。
 
 ## Playtest & QA latest
-Read: `docs/research/CASE_STUDY_01_HOKUTO_PLAYTEST_QA.md`
+Read:
+- `docs/research/CASE_STUDY_01_HOKUTO_PLAYTEST_QA.md`
+- `docs/research/CASE_STUDY_01_HOKUTO_PLAYTEST_QA_RUN2.md`
 
-Core findings:
-- `ATTENTION COMPRESSION`: 熟練者が何を見るかだけでなく、何を見なくてよいかを学習できる。
-- `MULTI-SCALE EXPECTATION`: 1G / 数十G / 数百Gの期待を重ねる。
-- `FAILURE RESIDUE + TRUE LOSS`: 本物の残留価値と完全な失敗を混在させる。
-- `RELIEF != REWARD`: 深いハマリ後の安堵と当たり自体の快感を分離評価する。
-- `ENTRY IMPACT != SUSTAIN QUALITY`: BB入口と長時間反復品質を別評価する。
-- `UPPER ABSENCE TEST`: 上位へ3時間入らなくても普通のBBをまた引きたいかを問う。
-- `POST-END CONTRACT`: 終了後に追わせるなら本当の理由が必要。
-- `RETURN ACCEPTANCE`: 長連・上位後でも通常100Gへ戻ることを受け入れられるか。
-- `HIGHLIGHT RATIO TRAP`: 見せ場の強さを台全体の強さと誤認しない。
+Run 2 strengthened long-play findings:
+- 高設定示唆台でも1200G級ハマリや低連は起こり得る。`GOOD STATE DOES NOT CANCEL BAD MINUTES`。
+- 強契機後の観測窓が終わったら通常速度へ戻してよい `ATTENTION RELEASE` が必要。
+- 初代モードのように演出密度を落としても骨格が残る。将来候補へ `HALF-PRESENTATION TEST` を適用する。
+- 編集実戦は見せ場因果、長尺ノーカットは時間割合/反復/疲労を見る証拠。`HIGHLIGHT EVIDENCE != DURATION EVIDENCE`。
+- 上位非到達3時間は例外ではなく主試験。`UPPER ABSENCE IS A PRIMARY TEST`。
+- 平均連や上位を封印した低報酬反復で普通の当たり価値を測る `LOW-ROLL REWARD TEST`。
+- 多数短期試行と同一台長時間を分離する `BREADTH SAMPLE / DEPTH SAMPLE`。
+- 既存の `ATTENTION COMPRESSION / MULTI-SCALE EXPECTATION / FAILURE RESIDUE + TRUE LOSS / RELIEF != REWARD / ENTRY IMPACT != SUSTAIN QUALITY / POST-END CONTRACT / RETURN ACCEPTANCE` を維持。
 
 ## Case Study 01 verdict
-`CASE_STUDY_01_INTEGRATED — NOT REALITY_BASELINE_COMPLETE`
+`CASE_STUDY_01_CURRENT_CYCLE_COMPLETE — NOT REALITY_BASELINE_COMPLETE`
 
-北斗1台について5 Directorの専門深掘りとMachine統合は完了した。Game & Reel / Visual & Mechanism / Sound & ExperienceはRun 2まで具体化したが、AT/モード/継続型の一例だけでパチスロ全体を理解したとは判定しない。
+北斗について固定5 Director全員が現在の専門深掘り巡を完了した。AT/モード/継続/上位型という一系統の理解としては具体化したが、パチスロ全体のReality Baseline完成とは判定しない。
 
 既存 `SIGNAL//3 / FORGE//HEART / VAULT://3` は引き続き `PROVISIONAL_FROZEN`。
 
 ## Remaining unresolved
 - 設定1ノーカット3時間で通常/前兆/BB/上位の実時間割合・演出密度を定量化。
-- 無想転生20セット以上のノーカット視聴でVisual/Audio疲労を確認。
-- 初代カスタムON/OFFの同一100G比較（Visual event count / Audio event count）。
-- 実機/アプリで30分中押し反復時の目・手の疲労。
-- BB単発/低連反復後の再挑戦意欲。
+- 8時間級長尺配信の全Visual/Audio event count。
+- 初代カスタムON/OFFの同一100G比較。
+- 実機/アプリ30分中押し反復時の目・手の疲労。
+- BB単発/低連反復後の人間の再挑戦意欲。
 - 実ホール騒音下のCue識別。
 - 北斗固有スピーカー/音圧/周波数/PUSH振動の実測。
-- 北斗固有のメーカー公式外形寸法/重量、リール径、リール窓深度、操作卓角度/突出量、STOP径/荷重/ストローク、LED/導光構造。
+- 北斗固有メーカー公式外形寸法/重量、リール径、窓深度、操作卓角度、STOP径/荷重/ストローク、LED/導光構造。
 - 全20コマ配列と代表押下点からの実際のフォロー範囲定量化。
 - 未公開の全停止制御/滑り/優先制御は一次資料なしで確定しない。
 - ベルナビ時と自由停止時のSTOP認知負荷差。
 
-## Next research direction
-次は北斗と設計思想が逆方向の、ノーマル／リーチ目／技術介入系をCase Study 02として同じ5 Directorで深掘りする価値が高い。
+## Next research direction — Human Directive
+人間から「この巡が終わったら次は違う台、違う系統を学ぶこと」と明示指示。
 
-選定条件：
+次のMachine Directorは、この `CASE_STUDY_01_CURRENT_CYCLE_COMPLETE` を確認したらCase Study 02を正式に開く。候補は既にHuman Directiveに沿って **ユニバーサル系『新ハナビ』（2021）** とし、北斗と逆方向のノーマル / リーチ目 / 技術介入系として5 Director共通対象にする。
+
+Case Study 02で優先する差分:
 - 通常時そのものが商品。
-- リール配列/停止/スベリ/目押しが中心価値。
-- 大型AT/上位に依存しない。
-- 攻略解析、配列、打ち方、長尺実戦、可能なら開発資料が豊富。
+- リール配列/停止/スベリ/リーチ目/目押しが中心価値。
+- BIG/REGとRT/技術介入が長時間体験を作る。
+- CZ→AT→上位という梯子へ依存しない。
+- 初心者と熟練者で同じ3STOPの見え方がどう変わるかを追う。
 
-Human Gateは `HUMAN_GATE_1_NOT_READY` を維持。企画再開・本制作へは進まない。
+Human Gateは `HUMAN_GATE_1_NOT_READY` を維持。Machine DirectorがCase Study 02を正式開設するまでは企画再開・本制作へ進まない。
