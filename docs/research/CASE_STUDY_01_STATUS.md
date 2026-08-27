@@ -7,7 +7,7 @@
 
 ## Director progress
 - Machine Director: `DEEP_DIVE_RUN_1_COMPLETE / INTEGRATED`
-- Game & Reel Director: `DEEP_DIVE_RUN_1_COMPLETE`
+- Game & Reel Director: `DEEP_DIVE_RUN_2_COMPLETE`
 - Visual & Mechanism Director: `DEEP_DIVE_RUN_1_COMPLETE`
 - Sound & Experience Director: `DEEP_DIVE_RUN_1_COMPLETE`
 - Playtest & QA Director: `DEEP_DIVE_RUN_1_COMPLETE`
@@ -28,6 +28,21 @@ Core findings:
 - 終了後に追わせるなら本物の内部状態・1G連・前兆等の理由が必要。偽の匂わせは不可。
 - Visual/Reel/Audio/Mechanismは別々の見せ場ではなく、同一Game Eventへ因果的に反応する。
 
+## Game & Reel latest
+Read:
+- `docs/research/CASE_STUDY_01_SMASLOT_HOKUTO.md`
+- `docs/research/CASE_STUDY_01_HOKUTO_GAME_REEL_RUN2.md`
+
+Run 2 added concrete reel-system findings:
+- 第1停止は「三段階演出の第一幕」ではなく、停止位置により次の狙い方を変える `classifier` として機能する。
+- 中押し/順押しは単なる好みではなく、スイカA/B・中段チェリーA/B・チャンス目・北斗カウンター・リーチ目/JAC等、取得できる情報を交換する観測手段になっている。
+- `INTERNAL ROLE != OBSERVED STOP FORM`。同じ内部役でも押し順/押下位置により見える停止形が変わり、チャンス目とベルこぼしの類似形等も存在する。
+- リーチ目は専用の別ゲームではなく、普段のチェリー/スイカ判別木からの小役ハズレ・矛盾として混ざるため、通常時に学んだ規則そのものが確定発見へ使われる。
+- BB確定画面の赤7狙いにも停止ライン/フェイク/次G昇格/継続率示唆という実情報があり、当選後もリール観察価値を残す。
+- 同じレア役の責務は通常→BB小役パート→バトルパート→上位で変化し、状態が同じ図柄の現在価値を書き換える。
+- 抽選タイミング、状態更新タイミング、結果提示タイミングを別仕様として扱う必要がある。通常モード更新は第3停止離し、BB小役パートの宿命バトル抽選はレバーONと公開されている。
+- 公開されていない停止制御テーブル/滑りテーブル/優先制御は推測せず `UNRESOLVED` を維持。
+
 ## Playtest & QA latest
 Read: `docs/research/CASE_STUDY_01_HOKUTO_PLAYTEST_QA.md`
 
@@ -45,7 +60,7 @@ Core findings:
 ## Case Study 01 verdict
 `CASE_STUDY_01_INTEGRATED — NOT REALITY_BASELINE_COMPLETE`
 
-北斗1台について5 Directorの専門深掘りとMachine統合は完了した。ただしAT/モード/継続型の一例だけでパチスロ全体を理解したとは判定しない。
+北斗1台について5 Directorの専門深掘りとMachine統合は完了した。Game & Reel Run 2では停止形・押し方トレードオフ・BB中のリール責務まで具体化したが、AT/モード/継続型の一例だけでパチスロ全体を理解したとは判定しない。
 
 既存 `SIGNAL//3 / FORGE//HEART / VAULT://3` は引き続き `PROVISIONAL_FROZEN`。
 
@@ -57,6 +72,9 @@ Core findings:
 - BB単発/低連反復後の再挑戦意欲。
 - 実ホール騒音下のCue識別。
 - 北斗固有スピーカー/音圧/周波数/PUSH振動の実測。
+- 全20コマ配列と代表押下点からの実際のフォロー範囲定量化。
+- 未公開の全停止制御/滑り/優先制御は一次資料なしで確定しない。
+- ベルナビ時と自由停止時のSTOP認知負荷差。
 
 ## Next research direction
 次は北斗と設計思想が逆方向の、ノーマル／リーチ目／技術介入系をCase Study 02として同じ5 Directorで深掘りする価値が高い。
