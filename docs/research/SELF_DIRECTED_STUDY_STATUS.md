@@ -134,6 +134,25 @@ Main principles:
 
 Next worthwhile Sound & Experience question: how repeated mechanical/information sounds can remain instantly source-identifiable while still belonging to one coherent machine body and staying comfortable across hundreds of repetitions.
 
+### Sound & Experience Director Run 2
+`docs/research/SELF_STUDY_SOUND_EXPERIENCE_RUN2_SOURCE_IDENTITY_COHERENCE_AND_REPETITION.md`
+
+Question: how can repeated machine sounds remain instantly source-identifiable while still belonging to one coherent machine body and staying comfortable across hundreds of repetitions?
+
+Key change: replace “make every event maximally different” with **controlled differentiation inside a stable machine family**. Auditory-stream evidence shows that large frequency/timbre/envelope differences can encourage perceptual segregation; too little difference harms identification and masking. Routine sounds should usually confirm a learned baseline rather than repeatedly demand orienting, and habituation must not be mistaken for comfort.
+
+Main principles:
+- `DIFFERENTIATE EVENTS WITHOUT DIVORCING THEM FROM THE MACHINE FAMILY.`
+- `MAXIMUM TIMBRAL DISTANCE IS NOT MAXIMUM CLARITY.`
+- `ROUTINE AUDIO SHOULD CONFIRM PREDICTION MORE OFTEN THAN IT DEMANDS ORIENTING.`
+- `HABITUATION IS NOT A COMFORT PASS.`
+- `ATTENTION AUTHORITY IS AN AUDIO RESOURCE.`
+- `EVENT IDENTITY CAN LIVE IN WHEN AND WHY, NOT ONLY IN WHAT TIMBRE.`
+- `TEST SOUNDS IN COMPETITION, NOT ONLY IN SOLO.`
+- `RARE DEVIATIONS MUST REMAIN LEGIBLE AFTER THE BASELINE HAS HABITUATED.`
+
+Next worthwhile Sound & Experience question: how silence, omission, attenuation and timing deviation operate inside a learned machine-sound baseline—when they create useful prediction error versus merely feeling like missing/broken feedback.
+
 ### Playtest & QA Run 1
 `docs/research/SELF_STUDY_PLAYTEST_QA_RUN1_HUMAN_EVIDENCE_FOR_REPEATED_TOUCH_PLAY.md`
 
@@ -162,14 +181,15 @@ Highest-value next QA question: how to estimate attention efficiency with a prac
 `MACHINE_SELF_STUDY = COMPLETE_RUN2`
 `GAME_REEL_SELF_STUDY = COMPLETE_RUN2`
 `VISUAL_MECHANISM_SELF_STUDY = COMPLETE_RUN2`
-`SOUND_EXPERIENCE_SELF_STUDY = COMPLETE_RUN1`
+`SOUND_EXPERIENCE_SELF_STUDY = COMPLETE_RUN2`
 `PLAYTEST_QA_SELF_STUDY = COMPLETE_RUN2`
 `ALL_FIVE_DIRECTORS_SELF_STUDY_RUN1 = COMPLETE`
 `MACHINE_DEEPENING_RUN2 = COMPLETE`
 `GAME_REEL_DEEPENING_RUN2 = COMPLETE`
 `VISUAL_MECHANISM_DEEPENING_RUN2 = COMPLETE`
+`SOUND_EXPERIENCE_DEEPENING_RUN2 = COMPLETE`
 `PLAYTEST_QA_DEEPENING_RUN2 = COMPLETE`
-`NEXT_FIXED_DIRECTOR = SOUND_EXPERIENCE`
+`NEXT_FIXED_DIRECTOR = PLAYTEST_QA`
 
 ## Global gates
 `CURRENT_SHARED_OBJECT = SELF_DIRECTED_STUDY`
