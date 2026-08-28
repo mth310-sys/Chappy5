@@ -2,6 +2,8 @@
  * Prototype-only. No third-party samples/assets.
  * Imported by the integrated shell when the next safe HTML integration point is available.
  */
+import './game-reel-run6.js';
+
 export const TOKI_AUDIO_TIMELINE = Object.freeze({
   bet: { mechHz: 145, confirmHz: 290, confirmDelayMs: 20 },
   lever: { mechHz: 72, spinBedHz: 54, spinBedGain: 0.0045 },
