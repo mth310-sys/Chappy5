@@ -42,6 +42,9 @@ async function controlSnapshot(frame) {
     };
     return {
       scrollY: window.scrollY,
+      domNodes: document.querySelectorAll('*').length,
+      activeAnimations: document.getAnimations ? document.getAnimations().filter(a => a.playState === 'running').length : null,
+      machineClass: document.querySelector('.machine')?.className || '',
       bet: snap(document.querySelector('#bet')),
       lever: snap(document.querySelector('#lever')),
       stops: [...document.querySelectorAll('.stop')].map(snap),
@@ -51,11 +54,30 @@ async function controlSnapshot(frame) {
   });
 }
 
+async function topAudioState(page) {
+  return page.locator('body').evaluate(body => body.dataset.audioTech || 'not-started');
+}
+
+function writeCheckpoint(name, payload) {
+  const safe = name.replace(/[^a-z0-9_-]/gi, '_');
+  fs.writeFileSync(path.join(evidenceDir, `dual-${safe}-checkpoint.json`), JSON.stringify(payload, null, 2));
+}
+
+async function checkpoint(page, frame, name, round, phase, extra = {}) {
+  const state = await controlSnapshot(frame);
+  const audioTech = await topAudioState(page).catch(() => 'page-unavailable');
+  const payload = { name, round, phase, audioTech, state, ...extra };
+  writeCheckpoint(name, payload);
+  return payload;
+}
+
 async function saveFailureEvidence(page, frame, label, error, history) {
   const safe = label.replace(/[^a-z0-9_-]/gi, '_');
   let current = null;
+  let audioTech = 'page-unavailable';
   try { current = await controlSnapshot(frame); } catch (_) {}
-  fs.writeFileSync(path.join(evidenceDir, `dual-${safe}-failure.json`), JSON.stringify({ label, error:String(error?.stack||error), viewport:page.viewportSize(), current, history }, null, 2));
+  try { audioTech = await topAudioState(page); } catch (_) {}
+  fs.writeFileSync(path.join(evidenceDir, `dual-${safe}-failure.json`), JSON.stringify({ label, error:String(error?.stack||error), viewport:page.viewportSize(), audioTech, current, history }, null, 2));
   await page.screenshot({ path:path.join(evidenceDir, `dual-${safe}-failure.png`), fullPage:true }).catch(()=>{});
 }
 
@@ -74,16 +96,23 @@ async function fingerTap(page, locator, label) {
   await page.touchscreen.tap(b.x + b.width/2, b.y + b.height/2);
 }
 
-async function playRound(page, frame, preferredOrder) {
+async function playRound(page, frame, preferredOrder, hooks = {}) {
   const bet = frame.locator('#bet');
   const lever = frame.locator('#lever');
   const stops = frame.locator('.stop');
-  if (await bet.isEnabled()) await fingerTap(page, bet, 'BET');
+  if (await bet.isEnabled()) {
+    if (hooks.before) await hooks.before('bet');
+    await fingerTap(page, bet, 'BET');
+    if (hooks.after) await hooks.after('bet');
+  }
+  if (hooks.before) await hooks.before('lever');
   await fingerTap(page, lever, 'LEVER');
+  if (hooks.after) await hooks.after('lever');
 
   // Wrong/early touch: disabled BET during spin must not corrupt state.
   await page.touchscreen.tap(69, 498).catch(()=>{});
 
+  let stopSeq = 0;
   for (const preferred of preferredOrder) {
     let target = stops.nth(preferred);
     if (!(await target.isEnabled())) {
@@ -91,7 +120,10 @@ async function playRound(page, frame, preferredOrder) {
       for (let i=0;i<await stops.count();i+=1) if (await stops.nth(i).isEnabled()) { target=stops.nth(i); found=true; break; }
       expect(found, 'at least one STOP must be enabled while resolving').toBeTruthy();
     }
+    stopSeq += 1;
+    if (hooks.before) await hooks.before(`stop${stopSeq}`);
     await fingerTap(page, target, `STOP ${preferred+1}`);
+    if (hooks.after) await hooks.after(`stop${stopSeq}`);
     await page.waitForTimeout(28);
   }
 
@@ -106,17 +138,41 @@ function orderFor(round) {
 for (const c of cases) {
   test(`${c.name}: iPhone ${c.rounds}G touch, repeat, misuse, reload smoke`, async ({ page }) => {
     test.setTimeout(90000);
-    const errors=[]; const history=[];
+    const errors=[]; const history=[]; const crashEvents=[];
     page.on('pageerror', e=>errors.push(String(e)));
+    page.on('crash', () => {
+      crashEvents.push({ at: Date.now(), reason: 'page-crash-event' });
+      writeCheckpoint(c.name, { name:c.name, phase:'page-crash-event', crashEvents });
+    });
+    page.on('close', () => {
+      if (!crashEvents.length) writeCheckpoint(c.name, { name:c.name, phase:'page-close-event' });
+    });
+
     await page.goto(`http://127.0.0.1:4173${c.path}`, { waitUntil:'networkidle' });
     let frame=await inner(page);
     await assertTouchLayout(page, frame, c.name);
+    const baseline = await checkpoint(page, frame, c.name, 0, 'loaded');
+    const baselineNodes = baseline.state.domNodes;
 
     for (let round=0;round<c.rounds;round+=1) {
-      if (round % 10 === 0) history.push({ round, phase:'before', state:await controlSnapshot(frame) });
-      try { await playRound(page, frame, orderFor(round)); }
+      if (round % 5 === 0) history.push(await checkpoint(page, frame, c.name, round, 'before-round'));
+      try {
+        await playRound(page, frame, orderFor(round), {
+          before: phase => checkpoint(page, frame, c.name, round, `before-${phase}`),
+          after: phase => checkpoint(page, frame, c.name, round, `after-${phase}`),
+        });
+      }
       catch (error) { await saveFailureEvidence(page, frame, `${c.name}-round-${round+1}`, error, history); throw error; }
-      if (round % 10 === 9) history.push({ round, phase:'after', state:await controlSnapshot(frame) });
+      if (round === 0) {
+        const audioTech = await topAudioState(page);
+        expect(audioTech, `${c.name} technical audio state after first real gesture`).not.toBe('resume-failed');
+        expect(audioTech, `${c.name} technical audio state after first real gesture`).not.toBe('not-started');
+      }
+      if (round % 5 === 4) {
+        const snap = await checkpoint(page, frame, c.name, round, 'after-round');
+        history.push(snap);
+        expect(snap.state.domNodes, `${c.name} DOM node growth after repeated play`).toBeLessThanOrEqual(baselineNodes + 12);
+      }
     }
 
     // Rapid stray STOP touches while idle must be harmless.
@@ -126,6 +182,7 @@ for (const c of cases) {
       if (box) await page.touchscreen.tap(box.x+box.width/2, box.y+box.height/2);
     }
     expect(errors, `${c.name} page errors after stress taps`).toEqual([]);
+    expect(crashEvents, `${c.name} page crash events`).toEqual([]);
 
     await page.reload({ waitUntil:'networkidle' });
     frame=await inner(page);
@@ -133,5 +190,6 @@ for (const c of cases) {
     try { await playRound(page, frame, [1,0,2]); }
     catch (error) { await saveFailureEvidence(page, frame, `${c.name}-reload`, error, history); throw error; }
     expect(errors, `${c.name} page errors after reload`).toEqual([]);
+    expect(crashEvents, `${c.name} page crash events after reload`).toEqual([]);
   });
 }
