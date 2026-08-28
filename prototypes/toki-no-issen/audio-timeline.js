@@ -1,26 +1,47 @@
-/* Sound & Experience Run 5 — original Web Audio timing profile.
+/* Sound & Experience Run 6 — original Web Audio timing profile.
  * Prototype-only. No third-party samples/assets.
- * Imported by the integrated shell when the next safe HTML integration point is available.
+ * Keep the whole sword exchange on one causal timeline and avoid adding layers
+ * merely because Visual Run 6 exposes more cadence tokens.
  */
 import './game-reel-run6.js';
 
 export const TOKI_AUDIO_TIMELINE = Object.freeze({
   bet: { mechHz: 145, confirmHz: 290, confirmDelayMs: 20 },
-  lever: { mechHz: 72, spinBedHz: 54, spinBedGain: 0.0045 },
+  lever: {
+    mechHz: 72,
+    spinBedHz: 54,
+    spinBedGain: 0.0042,
+    attackMs: 38,
+    releaseMs: 48
+  },
   stop: {
     mechDelayMs: 0,
-    slashDelayMs: 12,
-    thirdBladeTailDelayMs: 38,
-    resultDelayMs: 90,
-    resultReleaseMs: 130
+    slashDelayMs: 10,
+    thirdBladeTailDelayMs: 34,
+    // Keep resolve close enough to feel caused by STOP3 on touch hardware.
+    resultDelayMs: 74,
+    resultReleaseMs: 112
   },
+  // Timbral identity is expressed by pitch/decay, not extra simultaneous voices.
+  cuts: Object.freeze([
+    { bladeHz: 330, bladeMs: 42, gain: 0.018 },
+    { bladeHz: 410, bladeMs: 45, gain: 0.019 },
+    { bladeHz: 520, bladeMs: 48, gain: 0.020 }
+  ]),
   silence: {
-    // Meaningful silence: after the third slash, leave room before resolve.
-    thirdStopToResolveMs: 52,
-    // Technical mute is never represented by this value; use body.dataset.audioTech.
+    // Semantic silence after STOP3. Technical mute is tracked separately.
+    thirdStopToResolveMs: 40,
     technicalMuteDataset: 'audioTech'
   }
 });
+
+export function tokiCutProfile(stopNo, reelIndex = 0) {
+  const base = TOKI_AUDIO_TIMELINE.cuts[Math.max(0, Math.min(2, stopNo - 1))];
+  return Object.freeze({
+    ...base,
+    bladeHz: base.bladeHz + Math.max(0, Math.min(2, reelIndex)) * 12
+  });
+}
 
 export function createTokiSpinBed(ctx, destination) {
   if (!ctx || !destination) return null;
@@ -35,12 +56,12 @@ export function createTokiSpinBed(ctx, destination) {
     start(at = ctx.currentTime) {
       gain.gain.cancelScheduledValues(at);
       gain.gain.setValueAtTime(Math.max(0.0001, gain.gain.value), at);
-      gain.gain.linearRampToValueAtTime(TOKI_AUDIO_TIMELINE.lever.spinBedGain, at + 0.045);
+      gain.gain.linearRampToValueAtTime(TOKI_AUDIO_TIMELINE.lever.spinBedGain, at + TOKI_AUDIO_TIMELINE.lever.attackMs / 1000);
     },
     stop(at = ctx.currentTime) {
       gain.gain.cancelScheduledValues(at);
       gain.gain.setValueAtTime(Math.max(0.0001, gain.gain.value), at);
-      gain.gain.exponentialRampToValueAtTime(0.0001, at + 0.055);
+      gain.gain.exponentialRampToValueAtTime(0.0001, at + TOKI_AUDIO_TIMELINE.lever.releaseMs / 1000);
     },
     dispose() {
       try { osc.stop(); } catch (_) {}
