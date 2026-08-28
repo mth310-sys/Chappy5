@@ -19,8 +19,11 @@
 - Case Study 04 App Game & Reel Run 1: complete.
 - Case Study 04 App Visual & Mechanism Run 1: complete.
 - Case Study 04 App Sound & Experience Run 1: complete.
-- Real↔App translation phase: NOT OPEN until the app specialist cycle is integrated.
+- Case Study 04 App Playtest & QA Run 1: complete.
+- Case Study 04 App Phase B Run 1: four specialist passes complete; Machine integration is NEXT.
+- Real↔App translation phase: NOT OPEN until Machine integrates the app specialist cycle.
 - Standing HUMAN DIRECTIVE: remain in study; do not return to original concepts.
+- Standing HUMAN DIRECTIVE after this app cycle: retain the five-Director technology-gap audit and compare accumulated study findings against Chappy5/遊創舎 capabilities before production readiness is considered.
 
 Read first:
 - `README.md`
@@ -34,9 +37,10 @@ Read first:
 - `docs/research/CASE_STUDY_04_OKIDOKI_GOLD_APP_GAME_REEL_RUN1.md`
 - `docs/research/CASE_STUDY_04_OKIDOKI_GOLD_APP_VISUAL_MECHANISM_RUN1.md`
 - `docs/research/CASE_STUDY_04_OKIDOKI_GOLD_APP_SOUND_EXPERIENCE_RUN1.md`
+- `docs/research/CASE_STUDY_04_OKIDOKI_GOLD_APP_PLAYTEST_QA_RUN1.md`
 - this file
 
-## Machine integration verdict
+## Machine integration verdict — real machine Phase A
 
 The real-machine cycle supports the shared hypothesis with qualifications:
 
@@ -58,7 +62,7 @@ The official iPhone simulator is a separate evidence object. App behavior must n
 Public app anchor:
 - App Store title: `沖ドキ！ＧＯＬＤ`;
 - seller/developer: Universal Entertainment Corporation;
-- publisher describes it as a simulator of the real machine;
+- publisher describes it as a simulator/reproduction of the real machine;
 - listed simulator functions include save, wait cut, setting change, auto play and forced roles;
 - the publisher explicitly warns that values displayed in the app are simulation values and may differ from the real machine.
 
@@ -111,19 +115,49 @@ Key handoff findings:
 - designed silence on mobile must remain distinguishable from device-level absence/muting;
 - no direct app listening/execution was available in this Sound run, so latency, speaker/headphone mix, low-frequency response and wait-cut/auto sound-retention behavior remain explicitly unresolved.
 
-### Playtest & QA — NEXT
+### Playtest & QA — COMPLETE
 
-Reconstruct first five minutes, manual 100G, automated 100G, dry 500G where practical/evidenced, BONUS, 32G manual versus accelerated, chain/end, and extended phone use. Separate convenience from preserved game experience.
+Run 1 recorded in `CASE_STUDY_04_OKIDOKI_GOLD_APP_PLAYTEST_QA_RUN1.md`.
 
-Sound handoff requirements:
-- compare manual, wait-cut and auto as different action/listening contracts rather than one speed continuum;
-- separate logical horizon, wall-clock exposure, human action exposure and listening exposure;
-- test/observe notification dominance without crediting mere loudness;
-- separate audio fatigue from vigilance fatigue, touch/screen fatigue and automation boredom;
-- where direct-device evidence is unavailable, preserve `UNRESOLVED` instead of inventing latency/mix/haptic behavior.
+Key handoff findings:
+- phone translation adds a second learning curve: players learn both the machine and its transport interface;
+- preserving three input events does not automatically preserve physical three-STOP rhythm;
+- manual, wait-cut and auto are three different experience contracts, not one speed continuum;
+- a dry interval must be measured by logical games, wall-clock exposure, action exposure and vigilance exposure separately;
+- skippability/convenience must not be credited as intrinsic engagement or fidelity;
+- the same 32G can be `played`, `accelerated-played` or `observed` and these require separate QA;
+- ports must preserve closure/end-state orientation as well as notification/reward peaks;
+- mobile fatigue includes hand/posture/screen/audio/vigilance/automation dimensions and cannot be inferred from low cabinet effort;
+- experience reproduction and simulation/analysis utility are separate product promises;
+- direct app execution was unavailable, so touch latency, exact hitboxes, finger occlusion, haptics, actual wait-cut cadence, actual auto behavior, device heat/battery/frame pacing and three-hour physical fatigue remain UNRESOLVED.
 
-### Machine Director
-Integrate only after all four app specialist passes complete. Do not open Real↔App translation early. After the current app cycle, retain the Human-requested five-Director technology-gap audit: compare accumulated study findings against Chappy5/遊創舎 capabilities and identify what remains to learn before production readiness.
+### Playtest technology-gap candidates retained for later audit
+
+Do not resolve yet. Candidate gaps to compare against current Chappy5/遊創舎 capability after Machine integration:
+- real-iPhone touch-latency measurement;
+- reachable-hitbox and finger-occlusion mapping;
+- manual-vs-auto action-ownership instrumentation;
+- game-count/wall-time/action/vigilance exposure logging;
+- long-session mobile fatigue protocol;
+- phone-speaker/headphone A/B QA;
+- interruption/resume and audio-context recovery QA;
+- thermal/frame-pacing/battery checks;
+- beginner-vs-expert observation rubric;
+- intrinsic-loop satisfaction versus relief-debt scoring;
+- simulator-wrapper dominance testing;
+- Human-in-the-loop real-device evidence capture beyond Browser Test.
+
+### Machine Director — NEXT
+
+Integrate Phase B only now that all four app specialist passes are complete.
+
+Primary integration question:
+
+**DID THE PHONE PORT PRESERVE THE PLAYER'S REPEATED ACTION/ATTENTION CONTRACT, OR DID IT MOSTLY PRESERVE OUTCOMES WHILE USING CONVENIENCE FEATURES TO BYPASS THE COST OF THE ORIGINAL LOOP?**
+
+Do not open Real↔App translation before this integration.
+
+After integrating this cycle, retain the Human-requested five-Director technology-gap audit: compare accumulated study findings against current Chappy5/遊創舎 capabilities, distinguish knowledge gaps from technology/measurement/platform gaps, and identify what still must be learned before production readiness. Do not treat that audit itself as Human approval.
 
 ## Evidence discipline
 
@@ -141,7 +175,7 @@ Do not copy protected lamp art, cabinet styling, sounds, music, branded symbols,
 ## Gate
 
 `CURRENT_SHARED_OBJECT = CASE_STUDY_04`
-`CURRENT_PHASE = PHASE_B_OFFICIAL_APP_STUDY_RUN1`
+`CURRENT_PHASE = PHASE_B_OFFICIAL_APP_STUDY_RUN1_MACHINE_INTEGRATION_NEXT`
 `CASE_STUDY_01_CURRENT_CYCLE_COMPLETE = TRUE`
 `CASE_STUDY_02_CURRENT_CYCLE_COMPLETE = TRUE`
 `CASE_STUDY_03_CURRENT_REAL_MACHINE_CYCLE_COMPLETE = TRUE`
@@ -152,9 +186,11 @@ Do not copy protected lamp art, cabinet styling, sounds, music, branded symbols,
 `CASE_STUDY_04_APP_GAME_REEL_RUN1_COMPLETE = TRUE`
 `CASE_STUDY_04_APP_VISUAL_MECHANISM_RUN1_COMPLETE = TRUE`
 `CASE_STUDY_04_APP_SOUND_EXPERIENCE_RUN1_COMPLETE = TRUE`
-`CASE_STUDY_04_APP_PLAYTEST_QA_RUN1_COMPLETE = FALSE`
+`CASE_STUDY_04_APP_PLAYTEST_QA_RUN1_COMPLETE = TRUE`
+`CASE_STUDY_04_APP_PHASE_B_RUN1_FOUR_SPECIALIST_DIRECTORS_COMPLETE = TRUE`
+`CASE_STUDY_04_APP_PHASE_B_RUN1_MACHINE_INTEGRATED = FALSE`
 `CASE_STUDY_04_REAL_APP_TRANSLATION = NOT_OPEN`
-`NEXT_FIXED_DIRECTOR = PLAYTEST_&_QA`
+`NEXT_FIXED_DIRECTOR = MACHINE`
 `HUMAN_GATE_1_NOT_READY`
 `REALITY_BASELINE_COMPLETE = FALSE`
 `SIGNAL/FORGE/VAULT = PROVISIONAL_FROZEN`
