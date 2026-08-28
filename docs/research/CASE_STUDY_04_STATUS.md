@@ -15,6 +15,7 @@
 - Case Study 03 SLOT魔法少女まどか☆マギカ2: current real-machine Run 3 complete and Machine-integrated.
 - Case Study 04 沖ドキ！GOLD: formally opened and is now the shared object for all five fixed Directors.
 - Case Study 04 Game & Reel Phase A Run 1: complete.
+- Case Study 04 Visual & Mechanism Phase A Run 1: complete.
 - Standing HUMAN DIRECTIVE: `REMAIN IN REAL-MACHINE STUDY; DO NOT RETURN TO ORIGINAL CONCEPTS.`
 - Standing HUMAN DIRECTIVE: after each completed machine cycle, move to a deliberately different lineage with an official/properly licensed smartphone app version and study `REAL MACHINE → APP → TRANSLATION`.
 
@@ -27,6 +28,7 @@ Read first:
 - `docs/research/CASE_STUDY_03_MADOKA_MAGICA_2_MACHINE_INTEGRATION_RUN3.md`
 - `docs/research/CASE_STUDY_04_OKIDOKI_GOLD.md`
 - `docs/research/CASE_STUDY_04_OKIDOKI_GOLD_GAME_REEL_RUN1.md`
+- `docs/research/CASE_STUDY_04_OKIDOKI_GOLD_VISUAL_MECHANISM_RUN1.md`
 - this file
 
 ## Why this lineage now
@@ -69,6 +71,36 @@ Reusable principle carried forward:
 
 **STATE VALUE CAN BE EXPRESSED AS A CHANGE IN RESOLUTION HORIZON, WHILE THE PHYSICAL STOP LOOP REMAINS STABLE.**
 
+## Visual & Mechanism Run 1 — COMPLETE
+
+Detailed research:
+- `docs/research/CASE_STUDY_04_OKIDOKI_GOLD_VISUAL_MECHANISM_RUN1.md`
+
+Handoff findings:
+- the seated visual HOME is stable: paired direct-notification lamps, physical reel cavity and three STOP buttons remain in fixed coordinates while ordinary / BONUS / post-BONUS time horizons change;
+- front and long-form real-machine observation show a conventional 30φ physical-reel hierarchy rather than a screen-first or giant-moving-mechanism hierarchy;
+- hall identity and seated identity work at different scales: broad gold upper/surround fields and side illumination create distance identity, while the lamp pair / reel window / STOP row dominate seated play;
+- published strategy material documents 30 notification-lamp patterns. Their vocabulary varies left/right order, segmentation, cadence, flow, color and selective panel blackout, so the fixed lamp mechanism encodes state through temporal/spatial modulation rather than brightness alone;
+- normal REST is not a dark cabinet. Identity illumination remains present while contrast is reserved at the primary truth signal, allowing direct notification to dominate without erasing reel readability;
+- one documented higher-state pattern combines lamp flashing with panel blackout, demonstrating that subtraction of competing light can increase salience;
+- gold-colored decorative surfaces frame rather than occupy the precision-reading reel field; exact material/plating/resin processes remain interpretation/unresolved;
+- the visual transition into a 32G continuation horizon can be strong even when the physical body map does not change: `MOTOR HOME = STABLE / INFORMATION HORIZON = COMPRESSED / VIGILANCE = ELEVATED`;
+- no authoritative source was found in this pass proving the exact GOLD cabinet platform/model. ZEEG ARCHER dimensions and speaker specifications remain general hardware reference only, not assigned to GOLD as confirmed facts.
+
+Reusable principles carried forward:
+
+**HALL IDENTITY AND SEATED TASK IDENTITY CAN BE CONCENTRATED IN DIFFERENT SCALES OF THE SAME CABINET.**
+
+**WHEN THE INFORMATION HORIZON CHANGES, THE PLAYER DOES NOT ALSO NEED A NEW PHYSICAL HOME.**
+
+**A FIXED PHYSICAL SIGNAL CAN HAVE DEEP STATE VOCABULARY IF POSITION IS STABLE AND TEMPORAL MODULATION IS LEGIBLE.**
+
+**REST VISUAL SHOULD RESERVE CONTRAST FOR THE TRUTH SIGNAL WITHOUT ERASING MACHINE IDENTITY.**
+
+**SIGNAL ESCALATION NEEDS ORTHOGONAL DIMENSIONS BEFORE IT NEEDS MORE LUMINANCE.**
+
+**VISUAL EMPHASIS CAN BE CREATED BY SUBTRACTING COMPETING LIGHT, NOT ONLY BY ADDING OUTPUT.**
+
 ## Phase A Run 1 shared objectives
 
 ### Game & Reel — COMPLETE
@@ -78,18 +110,21 @@ Reusable principle carried forward:
 - sourced mode/32G architecture separated from unresolved proprietary transition/control tables;
 - 100G / 500G / first BONUS / 32G / chain end / 3-hour player-duty model recorded.
 
-### Visual & Mechanism — NEXT
-- 30φ cabinet silhouette, reel-window depth/readability and operation deck;
-- hibiscus lamp as physical light source and hall-distance identity;
-- gold surface/material/translucency only where documented; photo inference must be labeled;
-- REST VISUAL and what deliberately stays visually quiet;
-- BONUS/32G transition and return to normal;
-- test visually whether the stable physical HOME identified by Game & Reel remains readable while the information horizon compresses from ordinary play to 32G.
+### Visual & Mechanism — COMPLETE
+- 30φ silhouette, central physical reel-window hierarchy and operation deck studied from real-machine front/long-form material;
+- paired notification lamp studied as a fixed physical truth signal and hall/seated landmark;
+- REST VISUAL separated from reward-signalling contrast;
+- documented lamp vocabulary studied as spatial/temporal modulation rather than copied protected pattern art;
+- BONUS/32G horizon change evaluated against a stable physical HOME;
+- material, optical depth, speaker placement and exact cabinet-platform claims kept unresolved where authoritative machine-specific evidence is missing.
 
-### Sound & Experience
+### Sound & Experience — NEXT
 - baseline operation/reel/STOP/payout routine;
-- direct-notification timing and its relationship to a trusted quiet baseline;
+- direct-notification timing and its relationship to the trusted visual/audio HOME;
+- determine whether the acoustic hierarchy mirrors the visual hierarchy: ordinary cues should leave enough unused attention range for a direct notification event;
 - BONUS entry/sustain/end and 32G post-BONUS audio duty;
+- test whether post-BONUS 32G can raise vigilance without requiring continuous acoustic foreground;
+- investigate whether subtraction/silence/timing deviation performs an audio role analogous to documented visual panel blackout where sourced;
 - long dry-section fatigue and repeated cue burden;
 - no reproduction of signature sounds/music.
 
@@ -99,7 +134,8 @@ Reusable principle carried forward:
 - notification → BONUS → 32G continuation expectation → chain/end → return;
 - experienced mode inference versus beginner safe play;
 - reward satisfaction vs relief;
-- vigilance/fatigue over 3 hours.
+- vigilance/fatigue over 3 hours;
+- verify whether the stable visual/motor HOME remains low-cost or whether waiting for the next lamp becomes hyper-vigilance.
 
 ### Machine Director
 After all four specialist Directors finish Run 1, integrate whether simplicity creates a trustworthy low-cost HOME or merely defers all value into the next lamp flash / 32G chain.
@@ -127,12 +163,12 @@ Never copy protected lamp art, cabinet styling, sounds, music, branded symbols, 
 `CASE_STUDY_04_FORMALLY_OPEN = TRUE`
 `CASE_STUDY_04_REAL_MACHINE_RUN1_OPEN = TRUE`
 `CASE_STUDY_04_GAME_REEL_PHASE_A_RUN1_COMPLETE = TRUE`
-`CASE_STUDY_04_VISUAL_MECHANISM_PHASE_A_RUN1_COMPLETE = FALSE`
+`CASE_STUDY_04_VISUAL_MECHANISM_PHASE_A_RUN1_COMPLETE = TRUE`
 `CASE_STUDY_04_SOUND_EXPERIENCE_PHASE_A_RUN1_COMPLETE = FALSE`
 `CASE_STUDY_04_PLAYTEST_QA_PHASE_A_RUN1_COMPLETE = FALSE`
 `CASE_STUDY_04_APP_STUDY = NOT_OPEN`
 `CASE_STUDY_04_REAL_APP_TRANSLATION = NOT_OPEN`
-`NEXT_FIXED_DIRECTOR = VISUAL_&_MECHANISM`
+`NEXT_FIXED_DIRECTOR = SOUND_&_EXPERIENCE`
 `HUMAN_GATE_1_NOT_READY`
 `REALITY_BASELINE_COMPLETE = FALSE`
 `SIGNAL/FORGE/VAULT = PROVISIONAL_FROZEN`
