@@ -16,9 +16,10 @@
 - Case Study 03 Phase A real-machine Run 1: complete and Machine-integrated.
 - Case Study 03 Phase B smartphone-app Run 1: complete and Machine-integrated, retained only as a source of questions.
 - Case Study 03 Phase A real-machine Run 2: all specialist Directors complete and Machine-integrated.
-- Case Study 03 Phase A real-machine Run 3: formally open; Game & Reel, Visual & Mechanism, and Sound & Experience are complete.
+- Case Study 03 Phase A real-machine Run 3: all four specialist Directors complete; Machine integration is NEXT.
 - Standing HUMAN DIRECTIVE: `REMAIN IN REAL-MACHINE STUDY; DO NOT RETURN TO ORIGINAL CONCEPTS.`
-- Therefore `PHASE C — REAL↔APP TRANSLATION` remains NOT OPEN.
+- Standing HUMAN DIRECTIVE after this Madoka cycle: move to a deliberately different lineage with an official/properly licensed smartphone app version, then again study real machine → app translation without treating the app as proof of real-machine rules.
+- Therefore `PHASE C — REAL↔APP TRANSLATION` for Case Study 03 remains NOT OPEN unless Machine Director formally changes the shared phase.
 
 ## Run 2 Machine integration
 
@@ -45,110 +46,116 @@ Machine verdict: available evidence supports a coherent HOME-and-return architec
 
 `MEASURE / TRIANGULATE THE HOME-RETURN FAILURE BOUNDARY.`
 
-Run 3 must be narrower than prior passes and attack unresolved evidence rather than repeat general machine description.
+Run 3 is narrower than prior passes and attacks unresolved evidence rather than repeating general machine description.
 
 ### Game & Reel Director — COMPLETE
 
 Read:
 `docs/research/CASE_STUDY_03_MADOKA_MAGICA_2_GAME_REEL_RUN3.md`
 
-New Run 3 measurement frame:
+Key Run 3 findings:
 - normal HOME is a repeated left-BAR reference routine whose precision duty increases only on the suika branch;
 - published rare-role probabilities imply a derived rare-role-class exposure density of about **1 per 33.7G at setting 1** and **1 per 30.5G at setting 6**; this is an arithmetic exposure model, not a presentation-interruption statistic;
 - the clearest extra precision-follow branch, suika, is about **1/99.9**;
 - role identity can close on the current reel result while consequences remain open on different clocks;
-- documented direct-ART announcement when won uses a 4–6G foreground, while CZ announcement when won can use an 8–24G foreground;
+- documented direct-ART announcement when won uses a 4–6G foreground, while CZ announcement when won can use a longer foreground;
 - mandatory immediate play duty and optional expert/statistical inference must be budgeted separately.
 
-Provisional Game & Reel verdict:
+Provisional verdict:
 
 `THE REAL-MACHINE RULES PLAUSIBLY PROTECT HOME AT THE MOTOR LEVEL, WHILE THE MAIN LONG-SESSION FAILURE RISK SHIFTS INTO CONSEQUENCE TRACKING AND OPTIONAL STATISTICAL MAINTENANCE.`
-
-Run 3 metrics handed forward:
-- `PHYSICAL BRANCH DENSITY`
-- `PRECISION-DUTY DENSITY`
-- `ROLE CLASSIFICATION LATENCY`
-- `CONSEQUENCE-OPEN DURATION`
-- `QUESTION OVERLAP`
-- `MANDATORY DUTY` vs `OPTIONAL INFERENCE DUTY`
-- `HOME RE-ACQUISITION LATENCY`
-
-No undisclosed stop-control table was inferred.
 
 ### Visual & Mechanism Director — COMPLETE
 
 Read:
 `docs/research/CASE_STUDY_03_MADOKA_MAGICA_2_VISUAL_MECHANISM_RUN3.md`
 
-Run 3 visual findings:
+Key Run 3 findings:
 - fixed physical hierarchy remains `upper LCD → recessed reel aperture → three STOP buttons → lower panel`;
 - delayed screen consequences and new reel evidence occupy different stable physical planes;
-- distinguish `CONTEXT PRESENT` from `ATTENTION CLAIM ACTIVE` and from `ATTENTION RELEASE`;
-- a multi-game state such as CZ does not automatically equal continuous maximum visual demand merely because its graphics remain present;
+- distinguish `CONTEXT PRESENT` from `ATTENTION CLAIM ACTIVE` and `ATTENTION RELEASE`;
 - `QUESTION PERSISTENCE SHOULD NOT REQUIRE MOTOR-MAP RECONSTRUCTION`;
-- when a new reel event arrives while an old consequence remains open, visual quality depends on preserving evidence order rather than stacking foreground motion;
-- `REST CAN EXIST INSIDE AN OPEN QUESTION`: a persistent expectation marker may remain while primary gaze returns to the reel/operation HOME;
-- documented CZ frame-effect hierarchy demonstrates that persistent state information can have a stable peripheral address, but machine-specific color/order/art is not reusable;
-- material/depth/speaker construction not authoritatively documented remains interpretation/unresolved.
+- `REST CAN EXIST INSIDE AN OPEN QUESTION`;
+- persistent expectation information can remain at a stable address while primary gaze returns to the reel/operation HOME.
 
-Run 3 visual metrics handed forward:
-- `HOME RE-ACQUISITION PATH`
-- `CONTEXT PRESENT vs ATTENTION CLAIM ACTIVE`
-- `ATTENTION RELEASE INTERVAL`
-- `QUESTION OVERLAP VISUAL LOAD`
-- `OLD-CONTEXT ADDRESS / NEW-EVIDENCE ADDRESS`
-- `PERSISTENT-MARKER COST`
-- `VISUAL RE-ANCHOR LATENCY`
-
-Provisional Visual verdict:
+Provisional verdict:
 
 `THE CABINET ARCHITECTURE PLAUSIBLY PROTECTS PHYSICAL HOME EVEN WHILE CONSEQUENCES REMAIN VISUALLY OPEN, BECAUSE PERSISTENT SCREEN CONTEXT AND NEW REEL EVIDENCE OCCUPY DIFFERENT STABLE PHYSICAL PLANES.`
-
-Exact timestamped state-by-state attention duty cycle remains unresolved; available video evidence in this pass was insufficient for a defensible numerical measurement.
 
 ### Sound & Experience Director — COMPLETE
 
 Read:
 `docs/research/CASE_STUDY_03_MADOKA_MAGICA_2_SOUND_EXPERIENCE_RUN3.md`
 
-Run 3 sound findings:
-- audio must support two clocks at once: `CURRENT MOTOR CLOCK` and `PERSISTENT CONSEQUENCE CLOCK`;
-- distinguish cue functions as `OPEN / PROLONG / NARROW / CLOSE / RE-ANCHOR` rather than ranking every cue by strength;
+Key Run 3 findings:
+- audio must support `CURRENT MOTOR CLOCK` and `PERSISTENT CONSEQUENCE CLOCK` at once;
+- cue functions are better separated as `OPEN / PROLONG / NARROW / CLOSE / RE-ANCHOR`;
 - `PERSISTENT CONTEXT SHOULD NOT REQUIRE PERSISTENT ACOUSTIC FOREGROUND`;
-- distinguish `AUDIO CONTEXT PRESENT` from `AUDIO ATTENTION CLAIM ACTIVE`;
 - `STATE PRESENCE MAY BE CONTINUOUS; LISTENING DUTY SHOULD BE INTERMITTENT`;
-- when old consequence context overlaps a new physical reel event, new action-relevant evidence should temporarily outrank stale unresolved context rather than stacking equal foreground claims;
-- BIG remains a foreground interruption-and-return test: audible re-anchor is complete only when state identity and action duty are both restored;
-- music can carry state memory continuously while information duty occurs only at entry/change;
 - `AN OPEN QUESTION DOES NOT REQUIRE AN OPEN ATTENTION CLAIM`;
-- compressed hall footage can support attention topology but not exact cabinet acoustics, SPL, frequency response or speaker hardware.
+- new action-relevant evidence should outrank stale unresolved context rather than stacking equal foreground claims.
 
-Run 3 sound metrics handed forward:
-- `AUDIO CONTEXT PRESENT`
-- `AUDIO ATTENTION CLAIM ACTIVE`
-- `ATTENTION RELEASE INTERVAL`
+Provisional verdict:
+
+`THE MACHINE PLAUSIBLY PROTECTS AUDIO HOME BY LETTING PERSISTENT STATES CARRY CONTEXT WHILE DISCRETE CUES CLAIM ATTENTION AT ACTION OR RESOLUTION BOUNDARIES; THE MAIN FAILURE RISK IS ACCUMULATION OF PROLONGING CUES AND UNRESOLVED LISTENING DUTY WHEN QUESTIONS OVERLAP.`
+
+### Playtest & QA Director — COMPLETE
+
+Read:
+`docs/research/CASE_STUDY_03_MADOKA_MAGICA_2_PLAYTEST_QA_RUN3.md`
+
+Run 3 compared dry/low-reward and reward-rich play under the same frame instead of assuming reward abundance equals quality.
+
+Evidence anchors include:
+- setting-1 BIG about 1/297.9 and ART first hit about 1/424.4;
+- ART `マギカ☆ラッシュ` 50G+α, about 1.5 coins/G;
+- 3,506G practical setting-read report tracking weak cherry, CZ, direct ART, BIG and post-BIG information;
+- a separate long-session report where a CZ-related setting check was forgotten until around 3,000G, supporting the possibility that motor familiarity and cognitive bookkeeping load move in opposite directions.
+
+New QA frame:
+- `OPEN-QUESTION COUNT`
+- `QUESTION CLOSURE RATE`
+- `DUTY RELEASE LATENCY`
+- `HOME RECOGNITION LATENCY`
+- `RE-ANCHOR LATENCY`
+- `CONCURRENT CLAIM COUNT`
 - `QUESTION-PROLONG CUE COUNT`
 - `QUESTION-CLOSE CUE COUNT`
 - `AUDIBLE RE-ANCHOR LATENCY`
-- `CONCURRENT AUDIO CLAIM COUNT`
-- `NEW-EVIDENCE PRIORITY`
-- `ROUTINE-RETURN CLARITY`
-- `OPTIONAL LISTENING DUTY` vs `MANDATORY ACTION AUDIO`
+- `OPTIONAL INFERENCE BURDEN`
 
-Provisional Sound verdict:
+Key conclusions:
+- `ONBOARDING MUST TEACH THE CHEAP HOME LOOP BEFORE IT TEACHES EVERY EXCEPTION`;
+- `A DRY 100G BLOCK CAN REMAIN HEALTHY WHEN THE MOTOR LOOP IS CHEAP AND QUESTIONS CLOSE OFTEN ENOUGH TO PREVENT BACKLOG`;
+- `AUTOMATED MOTOR SKILL CAN HIDE GROWING COGNITIVE LOAD`;
+- `SUSPENSE NEEDS QUESTION CLOSURE; OTHERWISE IT BECOMES ADMINISTRATIVE UNCERTAINTY`;
+- `STATE PRESENCE DOES NOT JUSTIFY CONTINUOUS VIGILANCE`;
+- `A DEEP MACHINE SHOULD TEACH THE PLAYER WHEN NOT TO LISTEN OR WATCH SO HARD`;
+- `PARALLEL REWARD SYSTEMS FAIL IF EVERY LOCAL REWARD IS FELT ONLY AS A MISSED GATE TO THE PERSISTENT STATE`;
+- `REWARD DENSITY MUST INCREASE CLOSURE AS WELL AS OPENINGS`;
+- `RELIEF AFTER DROUGHT IS NOT EVIDENCE THAT THE DROUGHT WAS GOOD`;
+- `MASTERY SHOULD IMPROVE ATTENTION SELECTIVITY, NOT REQUIRE ATTENTION SATURATION`;
+- `OPTIONAL DEPTH IS HEALTHY ONLY WHEN IGNORING IT DOES NOT BREAK SAFE PLAY`.
 
-`THE MACHINE PLAUSIBLY PROTECTS AUDIO HOME BY LETTING PERSISTENT STATES CARRY CONTEXT WHILE DISCRETE CUES CLAIM ATTENTION AT ACTION OR RESOLUTION BOUNDARIES; THE MAIN FAILURE RISK IS NOT LACK OF SOUND BUT ACCUMULATION OF PROLONGING CUES AND UNRESOLVED LISTENING DUTY WHEN QUESTIONS OVERLAP.`
+Provisional QA verdict:
 
-Exact cue density per 100G, machine-specific baseline SE map, speaker topology, SPL/frequency behavior and fully timestamped transition audit remain unresolved.
+`THE HOME-RETURN ARCHITECTURE IS PLAUSIBLY ROBUST AT THE MOTOR LEVEL, BUT ITS LONG-SESSION FAILURE BOUNDARY IS GOVERNED BY QUESTION BACKLOG, VIGILANCE DUTY AND OPTIONAL STATISTICAL MAINTENANCE MORE THAN BY THE THREE-STOP ROUTINE ITSELF.`
 
-### Playtest & QA Director — NEXT
-- reconstruct at least one dry/low-reward sequence and one reward-rich sequence under the same evaluation frame;
-- separate `REWARD SATISFACTION` from `RELIEF`;
-- track `OPEN-QUESTION COUNT`, `RE-ANCHOR LATENCY`, `QUESTION OVERLAP` and optional statistical-maintenance burden;
-- compare beginner-required duty with expert-chosen observation load;
-- add audio measures from Sound Run 3: `QUESTION-PROLONG CUE COUNT`, `QUESTION-CLOSE CUE COUNT`, `AUDIBLE RE-ANCHOR LATENCY`, `CONCURRENT AUDIO CLAIM COUNT`;
-- test whether `QUESTION OPEN + AUDIO REST` actually reduces vigilance burden during dry play;
-- compare reward-rich play for meaningful closure versus simultaneous visual/audio claim stacking.
+And:
+
+`DEPTH REMAINS HEALTHY WHEN QUESTIONS OPEN, RESOLVE AND RELEASE ATTENTION; DEPTH TURNS INTO FATIGUE WHEN THE PLAYER MUST CARRY TOO MANY UNRESOLVED OBLIGATIONS INTO THE NEXT ORDINARY SPIN.`
+
+## Machine Director — NEXT
+
+Machine Director should integrate Run 3 rather than reopen broad description.
+
+Integration question:
+
+**Can the machine keep `OPEN-QUESTION COUNT`, attention claims and optional inference below a tolerable backlog across both dry and reward-rich play, while reliably returning the player to a low-cost HOME routine?**
+
+After closing this Madoka cycle, preserve the human direction to select a deliberately different lineage whose official/properly licensed smartphone app can later be studied against the real machine.
+
+Do not return to original concepts.
 
 ## Evidence labels
 
@@ -174,7 +181,9 @@ App behavior may generate questions but cannot prove unresolved real-machine pro
 `CASE_STUDY_03_GAME_REEL_PHASE_A_RUN3_COMPLETE = TRUE`
 `CASE_STUDY_03_VISUAL_MECHANISM_PHASE_A_RUN3_COMPLETE = TRUE`
 `CASE_STUDY_03_SOUND_EXPERIENCE_PHASE_A_RUN3_COMPLETE = TRUE`
-`NEXT_FIXED_DIRECTOR = PLAYTEST_&_QA`
+`CASE_STUDY_03_PLAYTEST_QA_PHASE_A_RUN3_COMPLETE = TRUE`
+`CASE_STUDY_03_PHASE_A_RUN3_FOUR_SPECIALIST_DIRECTORS_COMPLETE = TRUE`
+`NEXT_FIXED_DIRECTOR = MACHINE`
 `PHASE_C_REAL_APP_TRANSLATION = NOT_OPEN`
 `HUMAN_GATE_1_NOT_READY`
 `REALITY_BASELINE_COMPLETE = FALSE`
