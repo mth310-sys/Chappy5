@@ -14,6 +14,7 @@
 - Case Study 02 新ハナビ: current cycle complete.
 - Case Study 03 SLOT魔法少女まどか☆マギカ2: current real-machine Run 3 complete and Machine-integrated.
 - Case Study 04 沖ドキ！GOLD: formally opened and is now the shared object for all five fixed Directors.
+- Case Study 04 Game & Reel Phase A Run 1: complete.
 - Standing HUMAN DIRECTIVE: `REMAIN IN REAL-MACHINE STUDY; DO NOT RETURN TO ORIGINAL CONCEPTS.`
 - Standing HUMAN DIRECTIVE: after each completed machine cycle, move to a deliberately different lineage with an official/properly licensed smartphone app version and study `REAL MACHINE → APP → TRANSLATION`.
 
@@ -25,6 +26,7 @@ Read first:
 - all reality baselines
 - `docs/research/CASE_STUDY_03_MADOKA_MAGICA_2_MACHINE_INTEGRATION_RUN3.md`
 - `docs/research/CASE_STUDY_04_OKIDOKI_GOLD.md`
+- `docs/research/CASE_STUDY_04_OKIDOKI_GOLD_GAME_REEL_RUN1.md`
 - this file
 
 ## Why this lineage now
@@ -49,22 +51,40 @@ Sources:
 
 App Study is NOT open yet. Each Director must first complete the real-machine pass. App behavior cannot be used to prove real-machine rules.
 
+## Game & Reel Run 1 — COMPLETE
+
+Detailed research:
+- `docs/research/CASE_STUDY_04_OKIDOKI_GOLD_GAME_REEL_RUN1.md`
+
+Handoff findings:
+- normal HOME is a low-cost physical loop: BAR reference on left reel, classify first stop, raise precision mainly when watermelon follow is required;
+- representative stop forms carry role-classification value, but no complete proprietary stop-control/slip table is inferred;
+- during BONUS, when navigation is absent, documented middle-first play can become an earlier role-information route, so three STOP responsibility changes by state even though hardware stays fixed;
+- BIG is documented as 70G/about 210 coins and REG as 30G/about 90 coins, both pseudo-BONUS at about 3.0 coins/G;
+- the strongest state architecture is temporal rather than a visible CZ→AT ladder: normal A/B up to 999G, pullback/chance up to 200G, and guarantee/heaven/doki/super-doki/gold-doki up to 32G where documented;
+- BONUS closes the local reward question while opening the short post-BONUS 32G continuation question;
+- likely long-session burden shifts away from continuous precision and toward notification vigilance, optional role/mode inference, and continue/quit decisions. Playtest & QA must verify this rather than treat it as settled fact.
+
+Reusable principle carried forward:
+
+**STATE VALUE CAN BE EXPRESSED AS A CHANGE IN RESOLUTION HORIZON, WHILE THE PHYSICAL STOP LOOP REMAINS STABLE.**
+
 ## Phase A Run 1 shared objectives
 
-### Game & Reel — NEXT
-- real reel array, lines, symbol/role responsibilities and aiming duty;
-- three-STOP meaning in a direct-notification machine;
-- pseudo-BONUS flow;
-- mode and 32G continuation architecture only where sourced;
-- 100G / 500G / first BONUS / 32G / chain end / 3-hour loop;
-- do not infer undisclosed mode-transition rates or stop-control tables.
+### Game & Reel — COMPLETE
+- real reel/role responsibility and aiming duty studied without copying the protected full reel table;
+- three-STOP meaning in a direct-notification machine studied;
+- pseudo-BONUS and BONUS-state stop-order responsibilities studied;
+- sourced mode/32G architecture separated from unresolved proprietary transition/control tables;
+- 100G / 500G / first BONUS / 32G / chain end / 3-hour player-duty model recorded.
 
-### Visual & Mechanism
+### Visual & Mechanism — NEXT
 - 30φ cabinet silhouette, reel-window depth/readability and operation deck;
 - hibiscus lamp as physical light source and hall-distance identity;
 - gold surface/material/translucency only where documented; photo inference must be labeled;
 - REST VISUAL and what deliberately stays visually quiet;
-- BONUS/32G transition and return to normal.
+- BONUS/32G transition and return to normal;
+- test visually whether the stable physical HOME identified by Game & Reel remains readable while the information horizon compresses from ordinary play to 32G.
 
 ### Sound & Experience
 - baseline operation/reel/STOP/payout routine;
@@ -94,7 +114,7 @@ Keep distinct:
 - `REUSABLE PRINCIPLE`
 - `UNRESOLVED / CONTRADICTION`
 
-Never copy protected lamp art, cabinet styling, sounds, music, branded symbols or undisclosed proprietary control.
+Never copy protected lamp art, cabinet styling, sounds, music, branded symbols, full proprietary reel art/order, or undisclosed proprietary control.
 
 ## Gate
 
@@ -106,13 +126,13 @@ Never copy protected lamp art, cabinet styling, sounds, music, branded symbols o
 `CASE_STUDY_03_PHASE_A_RUN3_MACHINE_INTEGRATED = TRUE`
 `CASE_STUDY_04_FORMALLY_OPEN = TRUE`
 `CASE_STUDY_04_REAL_MACHINE_RUN1_OPEN = TRUE`
-`CASE_STUDY_04_GAME_REEL_PHASE_A_RUN1_COMPLETE = FALSE`
+`CASE_STUDY_04_GAME_REEL_PHASE_A_RUN1_COMPLETE = TRUE`
 `CASE_STUDY_04_VISUAL_MECHANISM_PHASE_A_RUN1_COMPLETE = FALSE`
 `CASE_STUDY_04_SOUND_EXPERIENCE_PHASE_A_RUN1_COMPLETE = FALSE`
 `CASE_STUDY_04_PLAYTEST_QA_PHASE_A_RUN1_COMPLETE = FALSE`
 `CASE_STUDY_04_APP_STUDY = NOT_OPEN`
 `CASE_STUDY_04_REAL_APP_TRANSLATION = NOT_OPEN`
-`NEXT_FIXED_DIRECTOR = GAME_&_REEL`
+`NEXT_FIXED_DIRECTOR = VISUAL_&_MECHANISM`
 `HUMAN_GATE_1_NOT_READY`
 `REALITY_BASELINE_COMPLETE = FALSE`
 `SIGNAL/FORGE/VAULT = PROVISIONAL_FROZEN`
