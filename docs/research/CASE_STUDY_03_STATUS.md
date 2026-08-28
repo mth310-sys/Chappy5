@@ -10,69 +10,20 @@
 
 ## Formal transition
 
-- Case Study 01 スマスロ北斗の拳: current cycle complete through all five fixed Directors.
-- Case Study 02 新ハナビ: current cycle complete and closed as active shared object after Machine Run 5 integration.
+- Case Study 01 スマスロ北斗の拳: current five-Director cycle complete.
+- Case Study 02 新ハナビ: current cycle complete and closed as active shared object.
 - Case Study 03 remains the current shared object.
-- Case Study 03 Phase A real-machine first five-Director cycle: complete.
-- Machine Director has formally opened `PHASE B — SMARTPHONE APP STUDY`.
+- Phase A real-machine first five-Director cycle: complete and Machine-integrated.
+- Machine Director formally opened `PHASE B — SMARTPHONE APP STUDY`.
+- Game & Reel Director Phase B Run 1: complete.
 
-Mandatory order remains:
+Mandatory order:
 
 `PHASE A REAL MACHINE → PHASE B SMARTPHONE APP → PHASE C REAL↔APP TRANSLATION`
 
-Phase B may compare against Phase A but must never retroactively use app behavior as proof of unresolved real-machine properties.
+Never use app behavior as retroactive proof of unresolved real-machine properties.
 
-## Read first
-
-- `README.md`
-- `docs/PACHISLOT_PRODUCTION_WORKFLOW.md`
-- `docs/REALITY_PRESENTATION_STANDARD.md`
-- `docs/MACHINE_01_PLANNING.md`
-- all Reality Baseline files
-- all Case Study 03 Phase A research/status files
-- `docs/research/CASE_STUDY_03_MADOKA_MAGICA_2_MACHINE_INTEGRATION_PHASE_A_RUN1.md`
-- this file
-
-## Phase A integrated result
-
-The first real-machine cycle established enough machine-level baseline to begin app translation research without confusing the app for the cabinet.
-
-Retained machine model:
-
-1. real BIG is a short independent reward while ART is a persistent future-game resource;
-2. the physical lever/MAX BET/3 STOP body map stays stable while state changes responsibility;
-3. STOP3 can close visible role identity while presentation keeps consequence open;
-4. the same role vocabulary is repriced across normal/CZ/BONUS/ART/extension/end-preparation contexts;
-5. `ART HOME → BIG FOREGROUND → BIG RESOLUTION → ART RE-ANCHOR` is a key parallel-reward transition;
-6. long-session fatigue depends strongly on consequence closure, re-anchor cost and concurrent open questions, not only presentation intensity.
-
-Phase A unresolved items remain valid future evidence targets. Opening Phase B does not mark them solved.
-
-## Phase B licensed target
-
-Primary app target:
-
-`[777Real]SLOT魔法少女まどかマギカ2`
-
-Verified public app facts retained by Machine integration:
-
-- distributed by Sammy Networks;
-- released 2026-02-19;
-- iPhone listing exists;
-- iOS 12.0+ listed;
-- current public App Store listing observed during Machine integration: version 1.0.1 dated 2026-03-24;
-- App Store package listing: 142.5 MB;
-- 777Real service UI/economy is not the original machine and must be separated analytically.
-
-Secondary comparison control, only when useful:
-
-`[グリパチ]SLOT魔法少女まどかマギカ2`
-
-Keep observations from the two apps separate. The グリパチ store description documents its own app-layer data-counter/menu behavior and 50-spin session boundary; those facts must not be attributed to 777Real.
-
-## Phase B evidence labels
-
-Every app research file must distinguish:
+## Evidence labels
 
 - `APP-SOURCED FACT`
 - `DIRECT APP OBSERVATION`
@@ -80,7 +31,31 @@ Every app research file must distinguish:
 - `TRANSLATION INTERPRETATION`
 - `UNRESOLVED`
 
-User reviews are QA leads, not authoritative probability/control evidence.
+User reviews are QA leads only.
+
+## Phase A retained machine model
+
+1. real BIG is a short independent reward while ART is a persistent future-game resource;
+2. physical lever/MAX BET/3 STOP body map stays stable while state changes responsibility;
+3. STOP3 can close visible role identity while presentation keeps consequence open;
+4. the same role vocabulary is repriced across normal/CZ/BONUS/ART/extension/end-preparation;
+5. `ART HOME → BIG FOREGROUND → BIG RESOLUTION → ART RE-ANCHOR` is a key transition;
+6. long-session fatigue depends on consequence closure, re-anchor cost and concurrent open questions.
+
+## Phase B primary app
+
+`[777Real]SLOT魔法少女まどかマギカ2`
+
+Verified public app facts retained from Machine integration:
+
+- Sammy Networks distribution;
+- release 2026-02-19;
+- iPhone listing, iOS 12.0+;
+- App Store version observed during Machine integration: 1.0.1 dated 2026-03-24;
+- App Store package listing: 142.5 MB;
+- 777Real service UI/economy is not the original machine.
+
+Secondary comparison control only when useful: `[グリパチ]SLOT魔法少女まどかマギカ2`; never mix app-specific facts.
 
 ## Shared Phase B comparison axes
 
@@ -95,48 +70,76 @@ User reviews are QA leads, not authoritative probability/control evidence.
 9. `SKILL/ATTENTION COST → TOUCH/ASSISTED ATTENTION COST`
 10. `REAL-MACHINE FRICTION → APP-SPECIFIC FRICTION`
 
-## Current fixed-Director progress
+## Phase B Game & Reel Run 1
+
+Research:
+- `docs/research/CASE_STUDY_03_MADOKA_MAGICA_2_GAME_REEL_PHASE_B_RUN1.md`
+- `docs/research/CASE_STUDY_03_STATUS_GAME_REEL_PHASE_B_RUN1.md`
+
+Official 777Real documentation establishes that manual pachislot play can use cabinet/reel taps, while auto performs BET and reel stopping and automatically follows order navigation.
+
+Retained distinctions:
+
+- `INPUT FIDELITY` vs `RULE FIDELITY`;
+- `REEL IMAGE FIDELITY` vs `REEL TASK FIDELITY`;
+- machine-state STOP responsibility vs assist-mode player responsibility;
+- simulated wait length vs human-experienced duty/fatigue;
+- original A+ART reward economy vs 777Real service economy.
+
+Retained principles:
+
+`DIGITAL TRANSLATION CAN PRESERVE THE GAME EVENT WHILE REDUCING OR REMOVING THE ORIGINAL MOTOR CONTRACT.`
+
+`IN AN APP, PLAYER RESPONSIBILITY IS A FUNCTION OF BOTH MACHINE STATE AND ASSIST MODE.`
+
+`A REEL IS NOT FUNCTIONALLY PRESERVED JUST BECAUSE ITS ART IS VISIBLE.`
+
+`REEL TRANSLATION QUALITY = READABILITY × TIMING TRUST × TARGET CLARITY × CONSEQUENCE OF AIMING.`
+
+`SIMULATED WAIT LENGTH ≠ HUMAN EXPERIENCED WAIT COST.`
+
+Unresolved for this exact app build: practical iPhone reel size/readability, touch-to-stop latency, exact STOP hit-target mapping, manual BONUS aiming feel, exact machine-specific high-speed-auto availability, and any probability/control allegation from reviews.
+
+## Fixed-Director progress
 
 ### Phase A — real machine
-
-- Machine Director: `INTEGRATED / COMPLETE_FOR_FIRST_CYCLE`
-- Game & Reel Director: `RUN1_COMPLETE`
-- Visual & Mechanism Director: `RUN1_COMPLETE`
-- Sound & Experience Director: `RUN1_COMPLETE`
-- Playtest & QA Director: `RUN1_COMPLETE`
-
-`CASE_STUDY_03_PHASE_A_FIRST_FIVE_DIRECTOR_CYCLE_COMPLETE = TRUE`
+- Machine: `INTEGRATED / COMPLETE_FOR_FIRST_CYCLE`
+- Game & Reel: `RUN1_COMPLETE`
+- Visual & Mechanism: `RUN1_COMPLETE`
+- Sound & Experience: `RUN1_COMPLETE`
+- Playtest & QA: `RUN1_COMPLETE`
 
 ### Phase B — smartphone app
+- Machine: `PHASE_B_OPENED / BRIEF_COMPLETE`
+- Game & Reel: `RUN1_COMPLETE`
+- Visual & Mechanism: `PENDING_PHASE_B_RUN1`
+- Sound & Experience: `PENDING_PHASE_B_RUN1`
+- Playtest & QA: `PENDING_PHASE_B_RUN1`
 
-- Machine Director: `PHASE_B_OPENED / BRIEF_COMPLETE`
-- Game & Reel Director: `PENDING_PHASE_B_RUN1`
-- Visual & Mechanism Director: `PENDING_PHASE_B_RUN1`
-- Sound & Experience Director: `PENDING_PHASE_B_RUN1`
-- Playtest & QA Director: `PENDING_PHASE_B_RUN1`
+## Immediate next handoff — Visual & Mechanism Director
 
-## Immediate next handoff — Game & Reel Director
-
-Study the 777Real smartphone implementation of the same Case Study 03 machine against the already-established Phase A reel/game baseline.
+Study the same 777Real app against Phase A cabinet/visual baseline and Phase B Game & Reel results.
 
 Priorities:
 
-- touch START/STOP/reel interaction and screen hit-target/body-map translation;
-- reel scale/readability and whether aiming remains meaningful;
-- stop timing, navigation and state continuity as directly observable;
-- autoplay/speed/convenience assistance where documented and its effect on player responsibility;
-- BONUS/CZ/ART/extension loop continuity in app form;
-- service-layer controls versus simulated-machine controls;
-- do not infer undisclosed simulation/control tables;
-- keep グリパチ evidence separate if used as comparison;
-- no code/prototype/assets.
+- cabinet silhouette compression into phone screen;
+- LCD/reel/control hierarchy and practical reel pixel size;
+- touch-target visibility and overlay competition;
+- portrait/landscape behavior if sourced/observed;
+- translation/loss of physical reel-window depth, panel separation, lamps and cabinet presence;
+- visual re-anchor entering/leaving BONUS/CZ/ART while service UI remains present;
+- separate machine-rendered UI from 777Real service UI;
+- evaluate `reel image fidelity` separately from `reel task fidelity`;
+- label inferred depth/material/touch observations as interpretation;
+- no assets/code/prototypes.
 
 ## Gate
 
 `CURRENT_SHARED_OBJECT = CASE_STUDY_03`
 `CURRENT_PHASE = PHASE_B_SMARTPHONE_APP_STUDY`
-`NEXT_FIXED_DIRECTOR = GAME_&_REEL`
+`NEXT_FIXED_DIRECTOR = VISUAL_&_MECHANISM`
 `CASE_STUDY_03_PHASE_A_FIRST_FIVE_DIRECTOR_CYCLE_COMPLETE = TRUE`
+`CASE_STUDY_03_GAME_REEL_PHASE_B_RUN1_COMPLETE = TRUE`
 `HUMAN_GATE_1_NOT_READY`
 `REALITY_BASELINE_COMPLETE = FALSE`
 `SIGNAL/FORGE/VAULT = PROVISIONAL_FROZEN`
