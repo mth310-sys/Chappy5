@@ -3,8 +3,8 @@ const fs = require('fs');
 const path = require('path');
 
 const cases = [
-  { name: 'toki', path: '/prototypes/toki-no-issen/play.html' },
-  { name: 'nocturne', path: '/prototypes/nocturne-aquarium/play.html' },
+  { name: 'toki', path: '/prototypes/toki-no-issen/play.html', rounds: 30 },
+  { name: 'nocturne', path: '/prototypes/nocturne-aquarium/play.html', rounds: 50 },
 ];
 
 const evidenceDir = path.join(__dirname, 'evidence');
@@ -19,7 +19,6 @@ async function inner(page) {
 async function assertTouchLayout(page, frame, label) {
   const viewport = page.viewportSize();
   expect(viewport && viewport.width).toBeTruthy();
-
   for (const selector of ['#bet', '#lever', '.stop']) {
     const items = frame.locator(selector);
     const count = await items.count();
@@ -36,24 +35,16 @@ async function assertTouchLayout(page, frame, label) {
 
 async function controlSnapshot(frame) {
   return frame.locator('body').evaluate(() => {
-    const one = selector => {
-      const el = document.querySelector(selector);
+    const snap = el => {
       if (!el) return null;
       const r = el.getBoundingClientRect();
-      return {
-        disabled: !!el.disabled,
-        x: Math.round(r.x * 10) / 10,
-        y: Math.round(r.y * 10) / 10,
-        width: Math.round(r.width * 10) / 10,
-        height: Math.round(r.height * 10) / 10,
-        text: (el.textContent || '').trim(),
-      };
+      return { disabled: !!el.disabled, x:+r.x.toFixed(1), y:+r.y.toFixed(1), width:+r.width.toFixed(1), height:+r.height.toFixed(1), text:(el.textContent||'').trim() };
     };
     return {
       scrollY: window.scrollY,
-      bet: one('#bet'),
-      lever: one('#lever'),
-      stops: [...document.querySelectorAll('.stop')].map((_, i) => one(`.stop:nth-of-type(${i + 2})`)),
+      bet: snap(document.querySelector('#bet')),
+      lever: snap(document.querySelector('#lever')),
+      stops: [...document.querySelectorAll('.stop')].map(snap),
       message: document.querySelector('#msg')?.textContent || '',
       log: document.querySelector('#log')?.textContent || '',
     };
@@ -64,93 +55,83 @@ async function saveFailureEvidence(page, frame, label, error, history) {
   const safe = label.replace(/[^a-z0-9_-]/gi, '_');
   let current = null;
   try { current = await controlSnapshot(frame); } catch (_) {}
-  const report = {
-    label,
-    error: String(error && (error.stack || error.message || error)),
-    viewport: page.viewportSize(),
-    current,
-    history,
-  };
-  fs.writeFileSync(path.join(evidenceDir, `dual-${safe}-failure.json`), JSON.stringify(report, null, 2));
-  await page.screenshot({ path: path.join(evidenceDir, `dual-${safe}-failure.png`), fullPage: true }).catch(() => {});
+  fs.writeFileSync(path.join(evidenceDir, `dual-${safe}-failure.json`), JSON.stringify({ label, error:String(error?.stack||error), viewport:page.viewportSize(), current, history }, null, 2));
+  await page.screenshot({ path:path.join(evidenceDir, `dual-${safe}-failure.png`), fullPage:true }).catch(()=>{});
 }
 
-async function playRound(frame, preferredOrder) {
+// Playwright locator.tap() waits for visual stability. These prototypes deliberately animate
+// cabinet/reel presentation around STOP events, so that check can false-fail despite a stationary
+// physical control deck. For iPhone QA we instead verify geometry ourselves and issue an actual
+// touchscreen coordinate tap at the button center, matching a finger more closely.
+async function fingerTap(page, locator, label) {
+  await expect(locator, `${label} enabled`).toBeEnabled({ timeout: 1800 });
+  const a = await locator.boundingBox();
+  await page.waitForTimeout(34);
+  const b = await locator.boundingBox();
+  expect(a && b, `${label} geometry exists`).toBeTruthy();
+  const drift = Math.max(Math.abs(a.x-b.x), Math.abs(a.y-b.y), Math.abs(a.width-b.width), Math.abs(a.height-b.height));
+  expect(drift, `${label} control geometry drift`).toBeLessThanOrEqual(0.75);
+  await page.touchscreen.tap(b.x + b.width/2, b.y + b.height/2);
+}
+
+async function playRound(page, frame, preferredOrder) {
   const bet = frame.locator('#bet');
   const lever = frame.locator('#lever');
   const stops = frame.locator('.stop');
+  if (await bet.isEnabled()) await fingerTap(page, bet, 'BET');
+  await fingerTap(page, lever, 'LEVER');
 
-  if (await bet.isEnabled()) await bet.tap();
-  await expect(lever).toBeEnabled({ timeout: 1500 });
-  await lever.tap();
+  // Wrong/early touch: disabled BET during spin must not corrupt state.
+  await page.touchscreen.tap(69, 498).catch(()=>{});
 
   for (const preferred of preferredOrder) {
     let target = stops.nth(preferred);
     if (!(await target.isEnabled())) {
       let found = false;
-      for (let i = 0; i < await stops.count(); i += 1) {
-        if (await stops.nth(i).isEnabled()) {
-          target = stops.nth(i);
-          found = true;
-          break;
-        }
-      }
+      for (let i=0;i<await stops.count();i+=1) if (await stops.nth(i).isEnabled()) { target=stops.nth(i); found=true; break; }
       expect(found, 'at least one STOP must be enabled while resolving').toBeTruthy();
     }
-    await target.tap();
-    await pageWait(frame, 55);
+    await fingerTap(page, target, `STOP ${preferred+1}`);
+    await page.waitForTimeout(28);
   }
 
-  await expect.poll(async () => (await bet.isEnabled()) || (await lever.isEnabled()), {
-    timeout: 1800,
-    message: 'machine must return to a playable post-resolution state',
-  }).toBeTruthy();
+  await expect.poll(async()=> (await bet.isEnabled()) || (await lever.isEnabled()), { timeout:1800, message:'machine must return to playable post-resolution state' }).toBeTruthy();
 }
 
-async function pageWait(frame, ms) {
-  await frame.locator('body').evaluate((_, delay) => new Promise(resolve => setTimeout(resolve, delay)), ms);
+function orderFor(round) {
+  const orders=[[0,1,2],[1,2,0],[2,0,1],[0,2,1],[1,0,2],[2,1,0]];
+  return orders[round % orders.length];
 }
 
 for (const c of cases) {
-  test(`${c.name}: iPhone repeated-play, touch, reload smoke`, async ({ page }) => {
-    const errors = [];
-    const history = [];
-    page.on('pageerror', error => errors.push(String(error)));
-
-    await page.goto(`http://127.0.0.1:4173${c.path}`, { waitUntil: 'networkidle' });
-    let frame = await inner(page);
+  test(`${c.name}: iPhone ${c.rounds}G touch, repeat, misuse, reload smoke`, async ({ page }) => {
+    test.setTimeout(90000);
+    const errors=[]; const history=[];
+    page.on('pageerror', e=>errors.push(String(e)));
+    await page.goto(`http://127.0.0.1:4173${c.path}`, { waitUntil:'networkidle' });
+    let frame=await inner(page);
     await assertTouchLayout(page, frame, c.name);
 
-    const orders = [
-      [0, 1, 2], [1, 2, 0], [2, 0, 1], [0, 2, 1],
-      [1, 0, 2], [2, 1, 0], [0, 1, 2], [2, 0, 1],
-    ];
-    for (let round = 0; round < orders.length; round += 1) {
-      history.push({ round, phase: 'before', state: await controlSnapshot(frame) });
-      try {
-        await playRound(frame, orders[round]);
-      } catch (error) {
-        await saveFailureEvidence(page, frame, `${c.name}-round-${round + 1}`, error, history);
-        throw error;
-      }
-      history.push({ round, phase: 'after', state: await controlSnapshot(frame) });
+    for (let round=0;round<c.rounds;round+=1) {
+      if (round % 10 === 0) history.push({ round, phase:'before', state:await controlSnapshot(frame) });
+      try { await playRound(page, frame, orderFor(round)); }
+      catch (error) { await saveFailureEvidence(page, frame, `${c.name}-round-${round+1}`, error, history); throw error; }
+      if (round % 10 === 9) history.push({ round, phase:'after', state:await controlSnapshot(frame) });
     }
 
-    const stops = frame.locator('.stop');
-    for (let i = 0; i < 3; i += 1) {
-      await stops.nth(i).tap({ force: true }).catch(() => {});
+    // Rapid stray STOP touches while idle must be harmless.
+    const stops=frame.locator('.stop');
+    for (let i=0;i<6;i+=1) {
+      const box=await stops.nth(i%3).boundingBox();
+      if (box) await page.touchscreen.tap(box.x+box.width/2, box.y+box.height/2);
     }
     expect(errors, `${c.name} page errors after stress taps`).toEqual([]);
 
-    await page.reload({ waitUntil: 'networkidle' });
-    frame = await inner(page);
+    await page.reload({ waitUntil:'networkidle' });
+    frame=await inner(page);
     await assertTouchLayout(page, frame, `${c.name}-reload`);
-    try {
-      await playRound(frame, [1, 0, 2]);
-    } catch (error) {
-      await saveFailureEvidence(page, frame, `${c.name}-reload`, error, history);
-      throw error;
-    }
+    try { await playRound(page, frame, [1,0,2]); }
+    catch (error) { await saveFailureEvidence(page, frame, `${c.name}-reload`, error, history); throw error; }
     expect(errors, `${c.name} page errors after reload`).toEqual([]);
   });
 }
