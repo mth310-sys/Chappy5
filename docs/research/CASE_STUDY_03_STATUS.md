@@ -14,121 +14,137 @@
 - Case Study 02 新ハナビ: current cycle complete and closed as active shared object after Machine Run 5 integration.
 - Case Study 03 is the current shared object for all five fixed Directors.
 
-Read first:
+Mandatory study order:
+
+`PHASE A REAL MACHINE → PHASE B SMARTPHONE APP → PHASE C REAL↔APP TRANSLATION`
+
+The app is not evidence for real-machine properties during Phase A.
+
+## Read first
+
 - `README.md`
 - `docs/PACHISLOT_PRODUCTION_WORKFLOW.md`
 - `docs/REALITY_PRESENTATION_STANDARD.md`
 - `docs/MACHINE_01_PLANNING.md`
 - all Reality Baseline files
-- `docs/research/CASE_STUDY_02_SHIN_HANABI_MACHINE_INTEGRATION_RUN5.md`
-- `docs/research/CASE_STUDY_02_STATUS_MACHINE_RUN5.md`
 - `docs/research/CASE_STUDY_03_MADOKA_MAGICA_2.md`
 - `docs/research/CASE_STUDY_03_MADOKA_MAGICA_2_GAME_REEL_RUN1.md`
 - `docs/research/CASE_STUDY_03_STATUS_GAME_REEL_RUN1.md`
 - `docs/research/CASE_STUDY_03_MADOKA_MAGICA_2_VISUAL_MECHANISM_RUN1.md`
 - `docs/research/CASE_STUDY_03_STATUS_VISUAL_MECHANISM_RUN1.md`
+- `docs/research/CASE_STUDY_03_MADOKA_MAGICA_2_SOUND_EXPERIENCE_RUN1.md`
+- `docs/research/CASE_STUDY_03_STATUS_SOUND_EXPERIENCE_RUN1.md`
 - this file
 
-## Why this target
+## Why this case
 
-The prior Machine research explicitly identified A+ART as an under-covered lineage. This case studies how real BONUS and a persistent ART state coexist with CZ/rare-role entry, game-count extension and screen-heavy presentation while the same physical reels/STOP inputs remain present.
-
-This is deliberately different from:
+Case Study 03 deliberately covers a third architecture:
 - Case 01: modern AT / mode / continuation / upper-state progression;
-- Case 02: normal / reach-eye / technical-intervention / restrained presentation.
+- Case 02: normal / reach-eye / technical-intervention / restrained presentation;
+- Case 03: real BONUS + persistent ART + CZ + game-count extension.
+
+The central question remains:
+
+`How do independently valuable BONUS and a persistent ART state coexist without one making the other feel like transport?`
 
 ## Smartphone-app requirement
 
-Human directive requires this machine to have a properly licensed smartphone app.
-
-Confirmed before opening: Sammy Networks began distributing the properly licensed `SLOT魔法少女まどか☆マギカ2` app in `777Real` on 2026-02-19, with App Store distribution available.
-
-Study order remains mandatory:
-
-`REAL MACHINE STUDY → SMARTPHONE APP STUDY → REAL↔APP TRANSLATION STUDY`
-
-Do not skip the physical-machine baseline and do not treat the app as the source of truth for real-machine properties.
+The Human directive requires a properly licensed smartphone app. This case satisfies that requirement; the licensed smartphone version is reserved for Phase B after the five fixed Directors establish the real-machine baseline.
 
 ## Current fixed-Director progress
 
 - Machine Director: `CASE_STUDY_03_OPENED / PHASE_A_BRIEF_COMPLETE`
 - Game & Reel Director: `PHASE_A_RUN1_COMPLETE`
 - Visual & Mechanism Director: `PHASE_A_RUN1_COMPLETE`
-- Sound & Experience Director: `PENDING_PHASE_A`
+- Sound & Experience Director: `PHASE_A_RUN1_COMPLETE`
 - Playtest & QA Director: `PENDING_PHASE_A`
 
-## Game & Reel Run 1 — integrated handoff facts
+## Game & Reel Run 1 — retained handoff
 
-The first Game & Reel Phase A pass established the following without inventing undisclosed control:
-
-- the published valid line is one right-upward line;
-- normal small-role play uses a BAR landmark with intermittent cherry/watermelon precision branches rather than permanent high-duty aiming;
+Established without inventing undisclosed stop control:
+- published valid line: one right-upward line;
+- normal small-role play uses a BAR landmark with intermittent cherry/watermelon precision branches;
 - ART navigation changes STOP responsibility to order compliance while preserving the physical body map;
-- visible rare-role identification and full internal event resolution are separate: simultaneous BONUS, hidden-state movement, CZ/direct ART and later reward state can remain unresolved after the reels stop;
+- visible rare-role identity and full internal consequence are separate;
 - the same role vocabulary is repriced across normal / hidden state / CZ / BONUS / ART / extension / ART-end preparation;
-- real BIG is an independent immediate reward while ART is a persistent future-game resource; BONUS during ART can add to the current ART value contract;
-- setting inference is multi-channel, including weak-role frequency, selected BONUS combinations and direct ART behavior;
-- long-session motor responsibility is expected to become routine while contextual interpretation remains, but actual 3-hour fatigue still requires Playtest evidence.
+- real BIG is an independent immediate reward while ART is a persistent future-game resource;
+- setting inference is multi-channel rather than one-number observation.
 
-Primary research:
-- `docs/research/CASE_STUDY_03_MADOKA_MAGICA_2_GAME_REEL_RUN1.md`
-
-Key Game & Reel abstractions:
+Key abstractions:
 - `THE SAME REEL EVENT CAN BECOME A DIFFERENT GAME RESOURCE IN DIFFERENT STATES.`
 - `ROLE IDENTITY MAY BE STABLE WHILE ROLE VALUE IS STATE-RELATIVE.`
 - `STOP RESPONSIBILITY CAN SHIFT WITHOUT MOVING THE PLAYER'S BODY MAP.`
 - `A+ART REELS CONNECT PARALLEL REWARD ECONOMIES: IMMEDIATE BONUS VALUE AND PERSISTENT ART VALUE.`
-- `REEL DEPTH DOES NOT HAVE TO MEAN REACH-EYE DENSITY. IT CAN ALSO COME FROM STATE-RELATIVE CONSEQUENCE.`
 
-## Visual & Mechanism Run 1 — integrated handoff facts
-
-The first Visual & Mechanism Phase A pass studied the real 2016 cabinet from front-machine photographs and archived machine/state material, keeping inferred construction separate from visible observation.
+## Visual & Mechanism Run 1 — retained handoff
 
 Established:
-- the cabinet is `screen-first / body-map-stable`: the landscape LCD dominates visual area, but the physical reel cavity and lever/MAX BET/3 STOP coordinates remain distinct and fixed;
-- the reels occupy less cabinet area than the LCD yet remain a dedicated action surface through a separate bezel/recess and direct left/middle/right STOP mapping;
-- large screen area has a justified information duty because STOP3 can resolve visible role identity while hidden-state/CZ/BONUS/ART consequence remains open;
-- normal/CZ/BONUS/ART/extension can change contextual presentation without relocating the player's learned motor coordinates;
-- BIG can temporarily make the LCD a direct choice surface through the published touch selection at bonus start while the physical reel controls remain the base input system;
-- static silhouette and luminous top/side/lower regions carry hall-distance identity without requiring a giant continuously moving mechanism;
-- REST visual is a stable composition of cabinet form, light, LCD, physical reels and deck rather than “everything off”;
-- apparent translucent/reflective/recessed construction is recorded as interpretation only; exact dimensions, materials, speaker map and lamp-device map remain unresolved.
+- `screen-first / body-map-stable` cabinet organization;
+- physical reel cavity and lever/MAX BET/3 STOP coordinates remain distinct despite large LCD dominance;
+- STOP3 can resolve visible role identity while LCD/presentation keeps hidden consequence open;
+- BIG can temporarily turn the LCD into a direct choice surface without replacing the physical base controls;
+- static silhouette/luminous regions carry hall-distance identity without requiring a giant continuously moving mechanism;
+- inferred materials/depth remain interpretation only; exact dimensions, speaker map and lamp-device map remain unresolved.
 
-Primary research:
-- `docs/research/CASE_STUDY_03_MADOKA_MAGICA_2_VISUAL_MECHANISM_RUN1.md`
-
-Key Visual & Mechanism abstractions:
+Key abstractions:
 - `SCREEN-FIRST DOES NOT HAVE TO MEAN REEL-IRRELEVANT.`
 - `STATE COMPLEXITY CAN LIVE ABOVE A STABLE PHYSICAL BODY MAP.`
 - `STOP3 CAN CLOSE ROLE IDENTITY WHILE PRESENTATION KEEPS OUTCOME OPEN.`
 - `NAVIGATION SHOULD ANNOTATE THE BODY MAP, NOT REPLACE IT.`
 - `REST VISUAL IS AN ACTIVE BASELINE, NOT AN ABSENCE OF PRESENTATION.`
 - `STATIC FORM CAN CARRY IDENTITY SO DYNAMIC CHANGE CAN BE RESERVED FOR GAME MEANING.`
-- `DISTANCE PRESENCE AND SEATED INFORMATION SHOULD BE DESIGNED AS DIFFERENT SCALES.`
-- `VISUAL HIERARCHY SHOULD FOLLOW INFORMATION OWNERSHIP, NOT PIXEL AREA.`
 
-## Immediate next handoff — Sound & Experience
+## Sound & Experience Run 1 — integrated handoff
 
-Study the **real machine first** and connect audio evidence to the established A+ART visual/reel architecture:
+Primary research:
+- `docs/research/CASE_STUDY_03_MADOKA_MAGICA_2_SOUND_EXPERIENCE_RUN1.md`
 
-- baseline BET / lever / reel / STOP / result / payout/replay sound contract during NORMAL REST;
-- how ordinary LCD stage changes alter or preserve audio density;
-- how rare-role STOP3 is acoustically connected to still-unresolved hidden-state/CZ/BONUS consequence;
-- CZ precursor / entry / sustain / failure audio versus normal repetition burden;
-- real BIG entry and the touch-choice moment as a temporary foreground reward layer;
-- BONUS-inside-ART: whether audio reads as interruption, addition and return to persistent ART context;
-- ART navigation cue relation to STOP timing and physical reel readability;
-- extension-state audio intensity versus sustainable ART routine;
-- speaker/low-frequency behavior only where documented or directly observable; Visual Run 1 did not verify the upper grille-like regions as speaker locations;
-- preserve the real-machine-first rule; smartphone app audio is Phase B only.
+Established:
+- A+ART audio is better understood as **parallel reward clocks** than as one permanent escalation ladder;
+- BIG is a short foreground reward, while ART is a persistent sound context that may need to sustain hundreds of games;
+- BIG notification type and BGM are selectable; the three notification modes change when certainty is delivered, not only aesthetic preference;
+- a field report describes the complete-notification event as physically startling, so `memorable / rewarding / comfortable` must be evaluated separately;
+- STOP3 may resolve the visible role while audio/presentation continues the unresolved consequence question;
+- CZ and extension states should be evaluated as temporary attention/intensity envelopes with a release edge;
+- ART navigation gives audio a motor-instruction responsibility that must outrank decorative BGM at the moment of action without requiring permanent maximum loudness;
+- BIG during ART should be evaluated as `ART HOME → BIG FOREGROUND → BIG RESOLUTION → ART RE-ANCHOR`;
+- exact speaker topology, SPL, driver specification and cabinet low-frequency behavior remain unresolved and must not be inferred from videos.
+
+Key abstractions:
+- `SHORT REWARD MAY TAKE THE FOREGROUND WITHOUT ERASING THE PERSISTENT AUDIO CONTEXT IT INTERRUPTS.`
+- `AUDIO CUSTOMIZATION CAN CHANGE WHEN THE PLAYER RECEIVES CERTAINTY, NOT JUST WHAT THE MACHINE SOUNDS LIKE.`
+- `MEMORABILITY MUST BE EVALUATED SEPARATELY FROM STARTLE COST.`
+- `A RARE PEAK BORROWS ITS POWER FROM THE HEADROOM LEFT BY ROUTINE AUDIO.`
+- `STOP3 MAY CLOSE THE MOTOR QUESTION WHILE AUDIO KEEPS THE CONSEQUENCE QUESTION OPEN.`
+- `TEMPORARY HIGH-DUTY AUDIO NEEDS A CLEAR RELEASE EDGE.`
+- `PERSISTENT BGM MAY OWN MOOD; INTERMITTENT CUES MUST OWN ACTION TIMING.`
+- `INTENSITY IS A TEMPORARY RESOURCE; SPECIAL STATES SHOULD RETURN IT WHEN THEIR LOCAL QUESTION ENDS.`
+- `A PARALLEL REWARD SHOULD HAVE AN AUDIBLE RETURN ADDRESS.`
+
+## Immediate next handoff — Playtest & QA
+
+Reconstruct real repeated play, not highlight clips. Priorities:
+
+1. first 5 minutes: beginner aiming, screen attention and what must be ignored;
+2. normal 100G and 500G dry stretches: routine fatigue versus genuine intrinsic engagement;
+3. rare-role recognition → unresolved consequence → closure latency;
+4. CZ entry/failure → how quickly attention returns to NORMAL REST;
+5. BIG-only satisfaction when ART does not follow;
+6. three BIG notification modes as different certainty schedules;
+7. complete-notification reward value versus startle/fatigue cost;
+8. ART without major extension: whether the base state is itself sustainable;
+9. long ART: navigation cue, BGM, voice and visual concurrency fatigue;
+10. `BIG during ART → ART resume` re-anchor quality;
+11. extension-zone excitement versus return-to-ART recovery;
+12. 3-hour fatigue and whether the player is still enjoying play or merely waiting for relief/rare reward;
+13. no smartphone-app testing yet.
 
 ## Cross-director unresolved items
 
 ### Game & Reel
-- authoritative public stop-control/slip detail where available, with no inference across missing tables;
-- time-coded long-form stop-by-stop real-play observation;
+- authoritative public stop-control/slip detail where available;
+- time-coded stop-by-stop real-play observation;
 - practical BONUS detection/alignment latency;
-- exact reel-spacing analysis without reproducing protected reel art;
 - experienced-player gaze/STOP behavior across 100G / 500G / 3h;
 - contradiction audit among older strategy sources.
 
@@ -136,17 +152,25 @@ Study the **real machine first** and connect audio evidence to the established A
 - authoritative cabinet dimensions and reel-window depth;
 - exact speaker locations / driver specification and lamp-device map;
 - exact material/diffuser construction;
-- time-coded 100G ordinary-play visual-density audit;
-- time-coded ART navigation readability audit;
-- BONUS-inside-ART / ART-end visual return across multiple full sessions;
-- oblique protrusion/depth measurements;
+- time-coded 100G visual-density audit;
+- BIG-inside-ART / ART-end visual return across multiple sessions;
 - documented vibration/tactile mechanisms.
+
+### Sound & Experience
+- exact BET / lever / reel / STOP / result / payout / replay sound map;
+- time-coded 100G acoustic event-density audit;
+- exact normal-stage-change / precursor audio behavior;
+- time-coded CZ failure release;
+- exact ART navigation cue masking against BGM;
+- time-coded BIG-inside-ART return transition;
+- speaker count/location, low-frequency system and any dedicated vibration mechanism;
+- no SPL inference from edited/AGC video recordings.
 
 ## Gate
 
 `CURRENT_SHARED_OBJECT = CASE_STUDY_03`
 `CURRENT_PHASE = PHASE_A_REAL_MACHINE_STUDY`
-`NEXT_FIXED_DIRECTOR = SOUND_&_EXPERIENCE`
+`NEXT_FIXED_DIRECTOR = PLAYTEST_&_QA`
 `HUMAN_GATE_1_NOT_READY`
 `REALITY_BASELINE_COMPLETE = FALSE`
 `SIGNAL/FORGE/VAULT = PROVISIONAL_FROZEN`
