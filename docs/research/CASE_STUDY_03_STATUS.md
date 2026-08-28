@@ -16,6 +16,7 @@
 - Phase A real-machine first five-Director cycle: complete and Machine-integrated.
 - Machine Director formally opened `PHASE B — SMARTPHONE APP STUDY`.
 - Game & Reel Director Phase B Run 1: complete.
+- Visual & Mechanism Director Phase B Run 1: complete.
 
 Mandatory order:
 
@@ -26,7 +27,7 @@ Never use app behavior as retroactive proof of unresolved real-machine propertie
 ## Evidence labels
 
 - `APP-SOURCED FACT`
-- `DIRECT APP OBSERVATION`
+- `DIRECT APP OBSERVATION` / `PUBLIC SCREENSHOT OBSERVATION`
 - `REAL-MACHINE BASELINE`
 - `TRANSLATION INTERPRETATION`
 - `UNRESOLVED`
@@ -44,7 +45,7 @@ User reviews are QA leads only.
 
 ## Phase B primary app
 
-`[777Real]SLOT魔法少女まどかマギカ2`
+`[777Real]SLOT魔法少女まどか☆マギカ2`
 
 Verified public app facts retained from Machine integration:
 
@@ -55,7 +56,7 @@ Verified public app facts retained from Machine integration:
 - App Store package listing: 142.5 MB;
 - 777Real service UI/economy is not the original machine.
 
-Secondary comparison control only when useful: `[グリパチ]SLOT魔法少女まどかマギカ2`; never mix app-specific facts.
+Secondary comparison control only when useful: `[グリパチ]SLOT魔法少女まどか☆マギカ2`; never mix app-specific facts.
 
 ## Shared Phase B comparison axes
 
@@ -79,7 +80,6 @@ Research:
 Official 777Real documentation establishes that manual pachislot play can use cabinet/reel taps, while auto performs BET and reel stopping and automatically follows order navigation.
 
 Retained distinctions:
-
 - `INPUT FIDELITY` vs `RULE FIDELITY`;
 - `REEL IMAGE FIDELITY` vs `REEL TASK FIDELITY`;
 - machine-state STOP responsibility vs assist-mode player responsibility;
@@ -98,7 +98,45 @@ Retained principles:
 
 `SIMULATED WAIT LENGTH ≠ HUMAN EXPERIENCED WAIT COST.`
 
-Unresolved for this exact app build: practical iPhone reel size/readability, touch-to-stop latency, exact STOP hit-target mapping, manual BONUS aiming feel, exact machine-specific high-speed-auto availability, and any probability/control allegation from reviews.
+## Phase B Visual & Mechanism Run 1
+
+Research:
+- `docs/research/CASE_STUDY_03_MADOKA_MAGICA_2_VISUAL_MECHANISM_PHASE_B_RUN1.md`
+- `docs/research/CASE_STUDY_03_STATUS_VISUAL_MECHANISM_PHASE_B_RUN1.md`
+
+Retained translation model:
+
+### Real cabinet
+`PHYSICAL SILHOUETTE + MATERIAL/DEPTH SEPARATION + DEDICATED REEL WORK SURFACE + TACTILE BODY MAP + ONE MACHINE VISUAL AUTHORITY`
+
+### Smartphone app
+`FLAT MACHINE CONTEXT + PIXEL ALLOCATION + TOUCH BODY MAP + ASSIST/AUTO RESPONSIBILITY + MACHINE UI + SERVICE UI`
+
+Retained distinctions:
+- `STRUCTURAL IMAGE FIDELITY ≠ PHYSICAL PRESENCE FIDELITY`;
+- `REEL IMAGE FIDELITY ≠ REEL TASK FIDELITY`;
+- `VISUAL BUTTON MAP ≠ TOUCH HIT MAP`;
+- `HALL PRESENCE ≠ PERSONAL-SCREEN PRESENCE`.
+
+Retained principles:
+
+`DIGITAL CABINET FIDELITY SHOULD BE JUDGED BY PRESERVED RELATIONSHIPS, NOT BY HOW MUCH OF THE ORIGINAL SHELL IS DRAWN.`
+
+`FLATTENING CAN PRESERVE STRUCTURE WHILE DESTROYING MATERIAL PRESENCE.`
+
+`PIXEL SHARE IS A GAMEPLAY RESOURCE WHEN THE PLAYER MUST READ OR AIM.`
+
+`TOUCH TARGET FIDELITY AND VISUAL BUTTON FIDELITY ARE SEPARATE AXES.`
+
+`WHEN ALL SURFACES BECOME ONE SCREEN, ATTENTION HIERARCHY MUST REPLACE MATERIAL HIERARCHY.`
+
+`A WRAPPER UI SHOULD NOT BECOME A SECOND MACHINE COMPETING FOR THE SAME ATTENTION MOMENT.`
+
+`A FAITHFUL TRANSITION IS INCOMPLETE IF THE PLAYER RETURNS TO THE RIGHT STATE BUT NOT TO THE RIGHT VISUAL ORIENTATION.`
+
+`SCREEN IMMERSION IS NOT CABINET PRESENCE.`
+
+Visual/mechanism unresolved for this exact installed app build: portrait/landscape behavior, practical current-iPhone viewport/reel pixel dimensions, exact STOP hit-target geometry, zoom support, service-overlay persistence, cabinet lamp/depth rendering, motion scaling/frame pacing and haptic substitution.
 
 ## Fixed-Director progress
 
@@ -112,34 +150,32 @@ Unresolved for this exact app build: practical iPhone reel size/readability, tou
 ### Phase B — smartphone app
 - Machine: `PHASE_B_OPENED / BRIEF_COMPLETE`
 - Game & Reel: `RUN1_COMPLETE`
-- Visual & Mechanism: `PENDING_PHASE_B_RUN1`
+- Visual & Mechanism: `RUN1_COMPLETE`
 - Sound & Experience: `PENDING_PHASE_B_RUN1`
 - Playtest & QA: `PENDING_PHASE_B_RUN1`
 
-## Immediate next handoff — Visual & Mechanism Director
+## Immediate next handoff — Sound & Experience Director
 
-Study the same 777Real app against Phase A cabinet/visual baseline and Phase B Game & Reel results.
+Study the same 777Real app against Phase A acoustic/experience baseline, Phase B Game & Reel findings and Phase B Visual translation findings.
 
 Priorities:
-
-- cabinet silhouette compression into phone screen;
-- LCD/reel/control hierarchy and practical reel pixel size;
-- touch-target visibility and overlay competition;
-- portrait/landscape behavior if sourced/observed;
-- translation/loss of physical reel-window depth, panel separation, lamps and cabinet presence;
-- visual re-anchor entering/leaving BONUS/CZ/ART while service UI remains present;
-- separate machine-rendered UI from 777Real service UI;
-- evaluate `reel image fidelity` separately from `reel task fidelity`;
-- label inferred depth/material/touch observations as interpretation;
-- no assets/code/prototypes.
+- translation of BET/START/reel/STOP/settling/payout and state audio through phone playback;
+- whether action-critical cues remain hierarchically clear when cabinet acoustics and low-frequency presence disappear;
+- machine audio versus 777Real service audio authority;
+- touch/manual/auto influence on causal STOP feedback;
+- BONUS foreground and ART audible re-anchor;
+- haptic/vibration substitution only where documented;
+- do not infer exact speaker response, SPL, latency or low-frequency behavior without measurement;
+- no audio assets/code/prototypes.
 
 ## Gate
 
 `CURRENT_SHARED_OBJECT = CASE_STUDY_03`
 `CURRENT_PHASE = PHASE_B_SMARTPHONE_APP_STUDY`
-`NEXT_FIXED_DIRECTOR = VISUAL_&_MECHANISM`
+`NEXT_FIXED_DIRECTOR = SOUND_&_EXPERIENCE`
 `CASE_STUDY_03_PHASE_A_FIRST_FIVE_DIRECTOR_CYCLE_COMPLETE = TRUE`
 `CASE_STUDY_03_GAME_REEL_PHASE_B_RUN1_COMPLETE = TRUE`
+`CASE_STUDY_03_VISUAL_MECHANISM_PHASE_B_RUN1_COMPLETE = TRUE`
 `HUMAN_GATE_1_NOT_READY`
 `REALITY_BASELINE_COMPLETE = FALSE`
 `SIGNAL/FORGE/VAULT = PROVISIONAL_FROZEN`
