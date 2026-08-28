@@ -61,13 +61,29 @@ Highest-value unresolved capability areas:
 
 Commercial proprietary stop-control tables remain a `KNOWLEDGE GAP`, but Game & Reel explicitly does **not** recommend reverse-engineering them as a production prerequisite. The correct target is the ability to author and prove Chappy5's own original control law.
 
+## Visual & Mechanism Director Run 1 summary
+Detailed audit: `docs/research/TECHNOLOGY_GAP_AUDIT_VISUAL_MECHANISM_RUN1.md`
+
+Visual & Mechanism concludes that broad cabinet literacy is already sufficient for the current decision. The team understands visual hierarchy, REST quiet, action geography, depth/material layering, reel physicality and lamp authority. It does **not** recommend another broad real-machine cabinet survey as the default next learning step.
+
+Highest-value unresolved capability areas:
+- `TECHNOLOGY GAP` — coherent cabinet depth/material rendering pipeline proven on target iPhone;
+- `TECHNOLOGY GAP` — physical-reel visual renderer driven by deterministic stop/slip/event law;
+- `TECHNOLOGY GAP` — source/lens/spill LED model with authored REST headroom rather than generic glow;
+- `TECHNOLOGY GAP` — mechanism motion contract with measurable acceleration/impact/settling/return anchored to game events;
+- `MEASUREMENT GAP` — Visual Reality acceptance harness covering pixel budget, action geography, emissive contrast, depth substitution, REST hierarchy and motion continuity;
+- `PLATFORM GAP` — translating separate real materials/lamps/display surfaces onto one emissive phone screen without flattening hierarchy;
+- `PLATFORM GAP` — finger occlusion/touch-control ownership and Safari viewport behavior on actual iPhone.
+
+Exact proprietary material recipes and exhaustive commercial cabinet construction remain knowledge gaps but are **not** production prerequisites. The recommended next learning is real→iPhone translation and measurement, not wider machine tourism.
+
 ## Gate
 `CURRENT_SHARED_OBJECT = TECHNOLOGY_GAP_AUDIT`
 `TECHNOLOGY_GAP_AUDIT = OPEN`
 `MACHINE_AUDIT_FRAMEWORK = COMPLETE`
 `GAME_REEL_AUDIT = COMPLETE_RUN1`
-`VISUAL_MECHANISM_AUDIT = NEXT`
-`SOUND_EXPERIENCE_AUDIT = PENDING`
+`VISUAL_MECHANISM_AUDIT = COMPLETE_RUN1`
+`SOUND_EXPERIENCE_AUDIT = NEXT`
 `PLAYTEST_QA_AUDIT = PENDING`
 `FINAL_MACHINE_AUDIT_INTEGRATION = PENDING`
 `HUMAN_GATE_1_NOT_READY`
