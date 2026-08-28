@@ -17,6 +17,7 @@
 - Machine Director formally opened `PHASE B — SMARTPHONE APP STUDY`.
 - Game & Reel Director Phase B Run 1: complete.
 - Visual & Mechanism Director Phase B Run 1: complete.
+- Sound & Experience Director Phase B Run 1: complete.
 
 Mandatory order:
 
@@ -28,6 +29,7 @@ Never use app behavior as retroactive proof of unresolved real-machine propertie
 
 - `APP-SOURCED FACT`
 - `DIRECT APP OBSERVATION` / `PUBLIC SCREENSHOT OBSERVATION`
+- `PLATFORM FACT`
 - `REAL-MACHINE BASELINE`
 - `TRANSLATION INTERPRETATION`
 - `UNRESOLVED`
@@ -47,13 +49,14 @@ User reviews are QA leads only.
 
 `[777Real]SLOT魔法少女まどか☆マギカ2`
 
-Verified public app facts retained from Machine integration:
+Verified public app/service facts retained from prior runs:
 
 - Sammy Networks distribution;
 - release 2026-02-19;
-- iPhone listing, iOS 12.0+;
 - App Store version observed during Machine integration: 1.0.1 dated 2026-03-24;
-- App Store package listing: 142.5 MB;
+- App Store package listing observed during Machine integration: 142.5 MB;
+- App Store compatibility previously observed as iOS 12.0+ is a listing/downloadability fact, not the current 777Real service support floor;
+- current 777Real official service page states iOS 15.0+ and iPhone X+ as supported environment and explicitly distinguishes that from App Store compatibility/download conditions;
 - 777Real service UI/economy is not the original machine.
 
 Secondary comparison control only when useful: `[グリパチ]SLOT魔法少女まどか☆マギカ2`; never mix app-specific facts.
@@ -64,10 +67,10 @@ Secondary comparison control only when useful: `[グリパチ]SLOT魔法少女�
 2. `CABINET DEPTH → FLAT SCREEN HIERARCHY`
 3. `PHYSICAL REEL READABILITY → PIXEL/SCALE READABILITY`
 4. `HALL PRESENCE → PERSONAL-SCREEN PRESENCE`
-5. `CABINET AUDIO/TACIT FEEDBACK → PHONE AUDIO/HAPTIC OR ABSENCE`
+5. `CABINET AUDIO/TACTILE FEEDBACK → PHONE AUDIO/HAPTIC OR ABSENCE`
 6. `MANUAL REPETITION → DIGITAL ASSISTANCE/AUTO`
 7. `MACHINE CREDIT/PLAY LOOP → SERVICE ECONOMY/SESSION LOOP`
-8. `STATE RE-ANCHOR → APP/UI RE-ANCHOR`
+8. `STATE RE-ANCHOR → APP/UI/AUDIO RE-ANCHOR`
 9. `SKILL/ATTENTION COST → TOUCH/ASSISTED ATTENTION COST`
 10. `REAL-MACHINE FRICTION → APP-SPECIFIC FRICTION`
 
@@ -138,6 +141,52 @@ Retained principles:
 
 Visual/mechanism unresolved for this exact installed app build: portrait/landscape behavior, practical current-iPhone viewport/reel pixel dimensions, exact STOP hit-target geometry, zoom support, service-overlay persistence, cabinet lamp/depth rendering, motion scaling/frame pacing and haptic substitution.
 
+## Phase B Sound & Experience Run 1
+
+Research:
+- `docs/research/CASE_STUDY_03_MADOKA_MAGICA_2_SOUND_EXPERIENCE_PHASE_B_RUN1.md`
+- `docs/research/CASE_STUDY_03_STATUS_SOUND_EXPERIENCE_PHASE_B_RUN1.md`
+
+Official 777Real documentation establishes several service/platform variables that can change experienced audio without changing the machine's internal event graph:
+
+- iOS device silent/mute/volume state affects playback;
+- some titles require a paid `Custom Pack` to unlock songs/BGM/effects/voice-related sound; exact Madoka Magica 2 title-specific gating remains unresolved;
+- supported titles may expose `ウェイトカット`, changing lever→reel-start timing; exact title availability remains unresolved;
+- supported titles may expose `PUSHボタンバイブ`; exact title mapping remains unresolved;
+- auto and `おまかせオート` can delegate or remove direct human exposure to repeated machine actions.
+
+Retained distinctions:
+- `AUDIO ASSET FIDELITY` vs `ACOUSTIC EXPERIENCE FIDELITY`;
+- player-caused STOP confirmation vs auto-generated STOP notification;
+- event-order fidelity vs timing fidelity;
+- haptic emphasis vs cabinet low-frequency/body transmission;
+- machine audio authority vs 777Real wrapper/service audio authority;
+- simulated audio duration vs human-heard exposure.
+
+Retained principles:
+
+`AUDIO ASSET FIDELITY ≠ ACOUSTIC EXPERIENCE FIDELITY.`
+
+`WHEN AUDIO AVAILABILITY DEPENDS ON A SERVICE ENTITLEMENT, AUDIO FIDELITY BECOMES A PRODUCT-STATE VARIABLE, NOT ONLY A MACHINE-STATE VARIABLE.`
+
+`MISSING AUDIO MUST BE CLASSIFIED AS MACHINE SILENCE, USER SETTING, DEVICE STATE, OR SERVICE GATING BEFORE IT IS INTERPRETED AS DESIGN.`
+
+`THE SAME STOP SOUND CAN CHANGE MEANING FROM ACTION CONFIRMATION TO EVENT NOTIFICATION WHEN INPUT IS DELEGATED.`
+
+`TIMING FIDELITY IS PART OF AUDIO FIDELITY.`
+
+`SIMULATED AUDIO DURATION ≠ HUMAN-HEARD AUDIO DURATION.`
+
+`HAPTIC EVENT FIDELITY ≠ CABINET LOW-FREQUENCY FIDELITY.`
+
+`SERVICE FEEDBACK AND MACHINE FEEDBACK REQUIRE SEPARATE SEMANTIC OWNERSHIP.`
+
+`AUDIBLE RE-ANCHOR = STATE RECOGNITION + RESTORED ACTION DUTY + RESTORED ATTENTION HIERARCHY.`
+
+`DIGITAL TRANSLATION MAY INCREASE INFORMATION CLARITY WHILE DECREASING PHYSICAL PRESENCE.`
+
+Sound unresolved for this exact installed app build: title-specific Custom Pack contents, sound menu/level controls, tap→STOP sound latency, auto STOP timing, ordinary input haptics, PUSH vibration mapping, phone-speaker vs earphone mix, clipping/limiting, exact low-frequency loss, BIG notification-mode audio, ART navigation intelligibility, ART→BIG→ART audible re-anchor latency and 100G/500G/3-hour manual-vs-auto fatigue.
+
 ## Fixed-Director progress
 
 ### Phase A — real machine
@@ -151,31 +200,37 @@ Visual/mechanism unresolved for this exact installed app build: portrait/landsca
 - Machine: `PHASE_B_OPENED / BRIEF_COMPLETE`
 - Game & Reel: `RUN1_COMPLETE`
 - Visual & Mechanism: `RUN1_COMPLETE`
-- Sound & Experience: `PENDING_PHASE_B_RUN1`
+- Sound & Experience: `RUN1_COMPLETE`
 - Playtest & QA: `PENDING_PHASE_B_RUN1`
 
-## Immediate next handoff — Sound & Experience Director
+## Immediate next handoff — Playtest & QA Director
 
-Study the same 777Real app against Phase A acoustic/experience baseline, Phase B Game & Reel findings and Phase B Visual translation findings.
+Reconstruct/test the **app experience**, not merely whether assets exist. Keep app/service facts distinct from Phase A machine facts.
 
 Priorities:
-- translation of BET/START/reel/STOP/settling/payout and state audio through phone playback;
-- whether action-critical cues remain hierarchically clear when cabinet acoustics and low-frequency presence disappear;
-- machine audio versus 777Real service audio authority;
-- touch/manual/auto influence on causal STOP feedback;
-- BONUS foreground and ART audible re-anchor;
-- haptic/vibration substitution only where documented;
-- do not infer exact speaker response, SPL, latency or low-frequency behavior without measurement;
-- no audio assets/code/prototypes.
+- first 5 minutes: touch→visual/audio causality and discoverability;
+- manual 100G: reel readability, touch duty, routine audio cost and consequence closure;
+- manual/auto 500G dry stretch: separate simulated wait from human-experienced wait/exposure;
+- compare manual versus auto responsibility and whether action cues change meaning;
+- if `ウェイトカット` is available for this exact title, compare timing/causality with it OFF and ON;
+- verify title-specific Custom Pack audio completeness before judging missing sound or fidelity;
+- compare phone speaker and earphones where possible without treating either as cabinet acoustic proof;
+- check action-critical ART navigation against BGM and presentation density;
+- test BIG as a self-contained short reward and BIG-during-ART return/re-anchor;
+- measure `VISUAL RE-ANCHOR LATENCY` and `AUDIBLE RE-ANCHOR LATENCY` together;
+- identify 777Real wrapper UI/audio interruptions separately from machine presentation;
+- treat App Store reviews as test leads only;
+- no implementation, browser prototype, audio asset or original concept work.
 
 ## Gate
 
 `CURRENT_SHARED_OBJECT = CASE_STUDY_03`
 `CURRENT_PHASE = PHASE_B_SMARTPHONE_APP_STUDY`
-`NEXT_FIXED_DIRECTOR = SOUND_&_EXPERIENCE`
+`NEXT_FIXED_DIRECTOR = PLAYTEST_&_QA`
 `CASE_STUDY_03_PHASE_A_FIRST_FIVE_DIRECTOR_CYCLE_COMPLETE = TRUE`
 `CASE_STUDY_03_GAME_REEL_PHASE_B_RUN1_COMPLETE = TRUE`
 `CASE_STUDY_03_VISUAL_MECHANISM_PHASE_B_RUN1_COMPLETE = TRUE`
+`CASE_STUDY_03_SOUND_EXPERIENCE_PHASE_B_RUN1_COMPLETE = TRUE`
 `HUMAN_GATE_1_NOT_READY`
 `REALITY_BASELINE_COMPLETE = FALSE`
 `SIGNAL/FORGE/VAULT = PROVISIONAL_FROZEN`
