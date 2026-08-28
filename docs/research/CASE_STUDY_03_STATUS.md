@@ -20,7 +20,9 @@
 - Machine Director formally returned the shared object to `PHASE A — REAL MACHINE STUDY / RUN 2`.
 - Game & Reel Director Run 2 is complete.
 - Visual & Mechanism Director Run 2 is complete.
-- Sound & Experience Director Run 2 is now complete.
+- Sound & Experience Director Run 2 is complete.
+- Playtest & QA Director Run 2 is complete.
+- The Run 2 five-Director specialist pass is now complete; next fixed Director is Machine for integration and next real-machine-study decision.
 
 The completed app cycle is retained only as a source of questions about what the real-machine baseline still lacks. App behavior must never be used as retroactive proof of unresolved real-machine properties.
 
@@ -91,6 +93,34 @@ Run 2 established/strengthened:
 Sound fatigue model retained for QA:
 `AUDIO FATIGUE LOAD = REPETITION COST + CONCURRENT CLAIMS + UNCERTAINTY DURATION + STARTLE COST + RE-ANCHOR COST`
 
+## Playtest & QA Run 2 additions
+
+Research file:
+`docs/research/CASE_STUDY_03_MADOKA_MAGICA_2_PLAYTEST_QA_RUN2.md`
+
+Handoff:
+`docs/research/CASE_STUDY_03_STATUS_PLAYTEST_QA_RUN2.md`
+
+Run 2 reconstructed first five minutes, normal 100G, a ~500G dry segment, BIG without ART, base ART without exceptional extension, BIG during ART, return to normal and ~3-hour fatigue.
+
+Key additions:
+- `HOME ROUTINE TRUST`: repeated play needs a low-cost routine the player can safely return to;
+- mastery should reduce routine motor duty and reallocate attention to state/role meaning rather than require permanent maximum vigilance;
+- `OPEN-QUESTION COUNT`: suspense degrades into administrative uncertainty when too many practical questions remain live concurrently;
+- `RELIEF DEPENDENCE`: reward satisfaction and relief from an aversive dry stretch must be scored separately;
+- BIG without ART is a local-completion test for whether A+ART is emotionally parallel rather than only an ART gateway;
+- `BASE-STATE INDEPENDENCE`: base ART must retain value before exceptional extension states are counted;
+- `RE-ANCHOR LATENCY`: BIG→ART return is complete only when the player's action model/orientation returns, not merely the internal state;
+- normal return is positive REST, not the absence of content;
+- beginner load combines motor, role-classification and state-meaning uncertainty, while skilled play shifts load toward multi-channel statistical/state interpretation;
+- automated motor skill can hide growing cognitive/statistical load;
+- `TOTAL ATTENTION FATIGUE = ROUTINE DUTY + CONCURRENT CLAIMS + UNCERTAINTY DURATION + ORIENTATION SWITCHING + RE-ANCHOR COST` is retained as a QA classification model, not a physical equation.
+
+Central Machine integration question:
+`DOES THE MACHINE SUCCESSFULLY RETURN THE PLAYER TO A LOW-COST, TRUSTED HOME ROUTINE AFTER EACH TEMPORARY ROLE/STATE/REWARD QUESTION, OR DOES PARALLEL DEPTH ACCUMULATE AS UNRESOLVED ATTENTION DEBT?`
+
+Playtest unresolved items retained: controlled novice/expert error and gaze measurement, timestamped long-form per-100G/500G cue-density measurement, measured BIG→ART re-anchor latency, controlled three-hour modality-specific fatigue, repeated-BIG notification fatigue and low-setting dry-loop intrinsic-satisfaction evidence independent of setting-analysis motivation.
+
 ## Phase B retained distinctions — not real-machine facts
 
 - `INPUT FIDELITY ≠ RULE FIDELITY`
@@ -114,12 +144,12 @@ Prefer official/manual/manufacturer material, major strategy sources, reel/role 
 
 ## Run 2 remaining shared research target
 
-### Playtest & QA — NEXT
-Reconstruct first 5 minutes, normal 100G, 500G dry spell, BIG without ART, base ART without exceptional extension, BIG during ART, return to normal and ~3-hour fatigue. Separate intrinsic loop quality from relief at finally hitting a reward. Use Sound Run 2 to distinguish routine repetition cost, concurrent attention claims, uncertainty duration, startle cost and re-anchor cost; do not treat edited highlight clips as proof of long-session comfort.
+### Machine Director — NEXT
+Integrate the complete Run 2 five-Director pass. Remain in real-machine study under the standing human directive. Decide whether unresolved evidence requires another real-machine pass or whether another deliberately different real-machine Case Study should be opened. Do not return to original concepts and do not open implementation.
 
 ## Machine integration record
 
-See:
+See prior integration:
 `docs/research/CASE_STUDY_03_MADOKA_MAGICA_2_MACHINE_INTEGRATION_PHASE_B_RUN1.md`
 
 ## Gate
@@ -129,7 +159,9 @@ See:
 `CASE_STUDY_03_GAME_REEL_PHASE_A_RUN2_COMPLETE = TRUE`
 `CASE_STUDY_03_VISUAL_MECHANISM_PHASE_A_RUN2_COMPLETE = TRUE`
 `CASE_STUDY_03_SOUND_EXPERIENCE_PHASE_A_RUN2_COMPLETE = TRUE`
-`NEXT_FIXED_DIRECTOR = PLAYTEST_&_QA`
+`CASE_STUDY_03_PLAYTEST_QA_PHASE_A_RUN2_COMPLETE = TRUE`
+`CASE_STUDY_03_PHASE_A_RUN2_FIVE_DIRECTOR_SPECIALIST_PASS_COMPLETE = TRUE`
+`NEXT_FIXED_DIRECTOR = MACHINE`
 `CASE_STUDY_03_PHASE_A_FIRST_FIVE_DIRECTOR_CYCLE_COMPLETE = TRUE`
 `CASE_STUDY_03_PHASE_B_FIRST_FIVE_DIRECTOR_CYCLE_COMPLETE = TRUE`
 `PHASE_C_REAL_APP_TRANSLATION = NOT_OPEN`
