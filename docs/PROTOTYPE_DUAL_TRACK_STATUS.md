@@ -106,3 +106,27 @@ Next Sound focus: preserve the quiet aquarium baseline. First STOP should sound 
 - Headless Chromium screenshot capture in the available container timed out, so rendered appearance is still `VISUAL_UNVERIFIED` until browser/QA inspection.
 - `REALITY_UNVERIFIED` and `PLAYTEST_UNVERIFIED` remain in effect pending the downstream browser pass.
 - SIGNAL / FORGE / VAULT were not changed.
+
+## Machine Director integration — Run 1
+
+Latest WebKit evidence was re-read instead of relying on the previous QA summary. The post-touch-height workflow at `8483040` still failed both repeated-play cases, but the new blocker is **interaction geometry stability**, not the old 42px target size:
+
+- 刻ノ一閃 timed out while WebKit waited for `#bet` to become stable before a repeated-round tap.
+- ノクターン timed out while WebKit waited for the third STOP to become stable before a tap.
+- Generic iPhone interaction smoke still passed, so the failure is localized to repeated pachislot control interaction rather than page boot.
+
+Machine decision: the physical control deck must remain geometrically stationary under the finger. Tactile response should come from light/shadow/brightness rather than translating the button itself. This is both an iPhone reliability fix and a better approximation of a cabinet button whose housing does not move around the screen.
+
+Applied integrated-build corrections:
+
+- 刻ノ一閃 `play.html`: fixed operation-deck geometry, removed active-state translation, retained press feedback through brightness and inset shadow.
+- ノクターン `play.html`: same fixed-geometry input rule while preserving its separate aquarium styling.
+- 46px minimum MAX BET target remains enforced in both integrated builds.
+
+A fresh WebKit repeated-play run is in progress from the corrected main. Do **not** claim automated interaction PASS until it completes. Human feel, rendered attraction, hardware audio and long-play fatigue remain `HUMAN_UNVERIFIED` / `REALITY_UNVERIFIED` regardless of CI.
+
+### Next Game & Reel handoff
+
+If the fresh WebKit run passes, do not spend the next pass adding systems. Improve the temporal game rhythm while keeping control geometry fixed: make STOP1 / STOP2 / STOP3 information gain and the return-to-next-BET cadence readable in repeated play. If it fails, treat the exact next WebKit interaction defect as the blocker before any content expansion.
+
+SIGNAL / FORGE / VAULT remain untouched.
