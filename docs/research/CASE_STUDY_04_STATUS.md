@@ -14,7 +14,8 @@
 - Case Study 04 official iPhone App Phase B Run 1: all four specialist passes complete and Machine-integrated.
 - App Machine integration: `docs/research/CASE_STUDY_04_OKIDOKI_GOLD_APP_MACHINE_INTEGRATION_RUN1.md`.
 - Standing HUMAN DIRECTIVE: remain in study; do not return to original concepts.
-- Human-requested five-Director technology-gap audit is now OPEN at `docs/research/TECHNOLOGY_GAP_AUDIT_STATUS.md`.
+- The five-Director Technology Gap Audit has completed all four specialist answers and is waiting for final Machine integration.
+- Self-directed learning is open per Director under `docs/research/SELF_DIRECTED_STUDY_STATUS.md`.
 
 ## App integration verdict
 The phone port must not be judged on outcome reproduction alone. The four specialist studies jointly separate:
@@ -25,12 +26,19 @@ Manual, wait-cut and auto are different experience contracts. Information geogra
 
 Direct real-device evidence is still required for touch latency, hitboxes, finger occlusion, aiming readability, haptics, actual wait-cut/auto cadence, speaker/headphone behavior, interruption recovery, heat/battery/frame pacing and long-session ergonomics.
 
-## Next shared object
-The next shared object is not another original concept and not a return to SIGNAL/FORGE/VAULT. It is the five-Director technology-gap audit requested by Human.
+## Current shared object
+The current shared object is not another Case Study and not a return to SIGNAL/FORGE/VAULT. It is the final Machine integration of the five-Director Technology Gap Audit.
 
-Each Director must compare accumulated study findings against actual Chappy5/遊創舎 capabilities and classify items as `LEARNED`, `KNOWLEDGE GAP`, `TECHNOLOGY GAP`, `MEASUREMENT GAP`, or `PLATFORM GAP`, with acquisition evidence criteria.
+Completed specialist audit files:
+- `docs/research/TECHNOLOGY_GAP_AUDIT_GAME_REEL_RUN1.md`
+- `docs/research/TECHNOLOGY_GAP_AUDIT_VISUAL_MECHANISM_RUN1.md`
+- `docs/research/TECHNOLOGY_GAP_AUDIT_SOUND_EXPERIENCE_RUN1.md`
+- `docs/research/TECHNOLOGY_GAP_AUDIT_PLAYTEST_QA_RUN1.md`
 
-Next fixed Director: `GAME_REEL`.
+Playtest & QA has also completed its first self-directed study:
+- `docs/research/SELF_STUDY_PLAYTEST_QA_RUN1_HUMAN_EVIDENCE_FOR_REPEATED_TOUCH_PLAY.md`
+
+Next fixed Director: `MACHINE`.
 
 ## Gate
 `CURRENT_SHARED_OBJECT = TECHNOLOGY_GAP_AUDIT`
@@ -39,8 +47,9 @@ Next fixed Director: `GAME_REEL`.
 `CASE_STUDY_04_APP_PHASE_B_RUN1_FOUR_SPECIALIST_DIRECTORS_COMPLETE = TRUE`
 `CASE_STUDY_04_APP_PHASE_B_RUN1_MACHINE_INTEGRATED = TRUE`
 `CASE_STUDY_04_APP_PHASE_B_RUN1_COMPLETE = TRUE`
-`TECHNOLOGY_GAP_AUDIT = OPEN`
-`NEXT_FIXED_DIRECTOR = GAME_REEL`
+`TECHNOLOGY_GAP_AUDIT = FOUR_SPECIALISTS_COMPLETE_PENDING_MACHINE_INTEGRATION`
+`PLAYTEST_QA_SELF_STUDY = COMPLETE_RUN1`
+`NEXT_FIXED_DIRECTOR = MACHINE`
 `HUMAN_GATE_1_NOT_READY`
 `REALITY_BASELINE_COMPLETE = FALSE`
 `SIGNAL/FORGE/VAULT = PROVISIONAL_FROZEN`
