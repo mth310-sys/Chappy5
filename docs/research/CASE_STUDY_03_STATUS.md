@@ -16,7 +16,7 @@
 - Case Study 03 Phase A real-machine Run 1: complete and Machine-integrated.
 - Case Study 03 Phase B smartphone-app Run 1: complete and Machine-integrated, retained only as a source of questions.
 - Case Study 03 Phase A real-machine Run 2: all specialist Directors complete and Machine-integrated.
-- Case Study 03 Phase A real-machine Run 3: formally open; Game & Reel Run 3 now complete.
+- Case Study 03 Phase A real-machine Run 3: formally open; Game & Reel and Visual & Mechanism are complete.
 - Standing HUMAN DIRECTIVE: `REMAIN IN REAL-MACHINE STUDY; DO NOT RETURN TO ORIGINAL CONCEPTS.`
 - Therefore `PHASE C — REAL↔APP TRANSLATION` remains NOT OPEN.
 
@@ -75,17 +75,44 @@ Run 3 metrics handed forward:
 
 No undisclosed stop-control table was inferred.
 
-### Visual & Mechanism Director — NEXT
-- timestamp long-form real-machine footage for gaze-demand/state-density samples where feasible;
-- specifically test reel/operation-anchor re-acquisition after rare-role STOP3 while delayed consequence presentation remains live;
-- during documented 4–6G direct-ART / 8–24G CZ consequence windows, distinguish continuous attention claims from attention-release intervals;
-- examine what happens visually when a new physical role event arrives before the previous consequence question has fully closed;
-- keep documented hardware separate from inferred depth/material observations.
+### Visual & Mechanism Director — COMPLETE
 
-### Sound & Experience Director
-- sample repeated long-form footage for cue density and REST/silence intervals rather than memorable cues only;
+Read:
+`docs/research/CASE_STUDY_03_MADOKA_MAGICA_2_VISUAL_MECHANISM_RUN3.md`
+
+Run 3 visual findings:
+- fixed physical hierarchy remains `upper LCD → recessed reel aperture → three STOP buttons → lower panel`;
+- delayed screen consequences and new reel evidence occupy different stable physical planes;
+- distinguish `CONTEXT PRESENT` from `ATTENTION CLAIM ACTIVE` and from `ATTENTION RELEASE`;
+- a multi-game state such as CZ does not automatically equal continuous maximum visual demand merely because its graphics remain present;
+- `QUESTION PERSISTENCE SHOULD NOT REQUIRE MOTOR-MAP RECONSTRUCTION`;
+- when a new reel event arrives while an old consequence remains open, visual quality depends on preserving evidence order rather than stacking foreground motion;
+- `REST CAN EXIST INSIDE AN OPEN QUESTION`: a persistent expectation marker may remain while primary gaze returns to the reel/operation HOME;
+- documented CZ frame-effect hierarchy demonstrates that persistent state information can have a stable peripheral address, but machine-specific color/order/art is not reusable;
+- material/depth/speaker construction not authoritatively documented remains interpretation/unresolved.
+
+Run 3 visual metrics handed forward:
+- `HOME RE-ACQUISITION PATH`
+- `CONTEXT PRESENT vs ATTENTION CLAIM ACTIVE`
+- `ATTENTION RELEASE INTERVAL`
+- `QUESTION OVERLAP VISUAL LOAD`
+- `OLD-CONTEXT ADDRESS / NEW-EVIDENCE ADDRESS`
+- `PERSISTENT-MARKER COST`
+- `VISUAL RE-ANCHOR LATENCY`
+
+Provisional Visual verdict:
+
+`THE CABINET ARCHITECTURE PLAUSIBLY PROTECTS PHYSICAL HOME EVEN WHILE CONSEQUENCES REMAIN VISUALLY OPEN, BECAUSE PERSISTENT SCREEN CONTEXT AND NEW REEL EVIDENCE OCCUPY DIFFERENT STABLE PHYSICAL PLANES.`
+
+Exact timestamped state-by-state attention duty cycle remains unresolved; available video evidence in this pass was insufficient for a defensible numerical measurement.
+
+### Sound & Experience Director — NEXT
+- sample repeated real-machine footage for cue density and REST/silence intervals rather than memorable cues only;
 - distinguish question-closing audio, question-prolonging audio and HOME-restoring audio;
-- test audio behavior under the same `QUESTION OVERLAP` frame handed forward by Game & Reel;
+- use the same `QUESTION OVERLAP` frame from Game & Reel and Visual;
+- test whether an old unresolved question continues to claim audio attention when a new physical role event arrives;
+- distinguish `CONTEXT PRESENT` from `ATTENTION CLAIM ACTIVE` in audio as well as visuals;
+- identify audible re-anchor after CZ/BIG/ART foregrounds;
 - do not infer clean assets/SPL/speaker hardware from compressed footage.
 
 ### Playtest & QA Director
@@ -116,7 +143,8 @@ App behavior may generate questions but cannot prove unresolved real-machine pro
 `CASE_STUDY_03_PHASE_A_RUN2_MACHINE_INTEGRATED = TRUE`
 `CASE_STUDY_03_PHASE_A_RUN3_OPEN = TRUE`
 `CASE_STUDY_03_GAME_REEL_PHASE_A_RUN3_COMPLETE = TRUE`
-`NEXT_FIXED_DIRECTOR = VISUAL_&_MECHANISM`
+`CASE_STUDY_03_VISUAL_MECHANISM_PHASE_A_RUN3_COMPLETE = TRUE`
+`NEXT_FIXED_DIRECTOR = SOUND_&_EXPERIENCE`
 `PHASE_C_REAL_APP_TRANSLATION = NOT_OPEN`
 `HUMAN_GATE_1_NOT_READY`
 `REALITY_BASELINE_COMPLETE = FALSE`
