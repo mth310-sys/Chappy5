@@ -47,12 +47,26 @@ The current evidence already shows that a browser machine needs more than functi
 
 These are audit questions, not presumed deficiencies. Specialists must compare them against actual repository/遊創舎 assets before labeling a gap.
 
+## Game & Reel Director Run 1 summary
+Detailed audit: `docs/research/TECHNOLOGY_GAP_AUDIT_GAME_REEL_RUN1.md`
+
+Game & Reel concludes that the team is already strong in deterministic state architecture, evidence-status discipline, browser regression, seeded replay direction and broad pachislot loop literacy. It does **not** recommend another broad machine survey as the default next learning step.
+
+Highest-value unresolved capability areas:
+- `TECHNOLOGY GAP` — reusable generalized reel-stop/control representation for aim position, stop order, legal slip, internal role and observed stop form;
+- `PLATFORM GAP` — real iPhone touch timestamp → logical reel stop equivalence and latency/jitter evidence;
+- `MEASUREMENT GAP` — statistical acceptance harness linking authored theoretical targets to long-run simulation PASS/FAIL;
+- `TECHNOLOGY GAP` — canonical complete-spin event trace/replay contract;
+- `TECHNOLOGY GAP` — skill-policy payout simulation when a future machine depends on technical intervention.
+
+Commercial proprietary stop-control tables remain a `KNOWLEDGE GAP`, but Game & Reel explicitly does **not** recommend reverse-engineering them as a production prerequisite. The correct target is the ability to author and prove Chappy5's own original control law.
+
 ## Gate
 `CURRENT_SHARED_OBJECT = TECHNOLOGY_GAP_AUDIT`
 `TECHNOLOGY_GAP_AUDIT = OPEN`
 `MACHINE_AUDIT_FRAMEWORK = COMPLETE`
-`GAME_REEL_AUDIT = NEXT`
-`VISUAL_MECHANISM_AUDIT = PENDING`
+`GAME_REEL_AUDIT = COMPLETE_RUN1`
+`VISUAL_MECHANISM_AUDIT = NEXT`
 `SOUND_EXPERIENCE_AUDIT = PENDING`
 `PLAYTEST_QA_AUDIT = PENDING`
 `FINAL_MACHINE_AUDIT_INTEGRATION = PENDING`
