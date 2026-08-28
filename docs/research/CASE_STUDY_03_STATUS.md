@@ -19,7 +19,8 @@
 - Therefore `PHASE C — REAL↔APP TRANSLATION` is NOT opened.
 - Machine Director formally returned the shared object to `PHASE A — REAL MACHINE STUDY / RUN 2`.
 - Game & Reel Director Run 2 is complete.
-- Visual & Mechanism Director Run 2 is now complete.
+- Visual & Mechanism Director Run 2 is complete.
+- Sound & Experience Director Run 2 is now complete.
 
 The completed app cycle is retained only as a source of questions about what the real-machine baseline still lacks. App behavior must never be used as retroactive proof of unresolved real-machine properties.
 
@@ -66,6 +67,30 @@ Run 2 deepened the real-machine cabinet without turning inferred hardware into f
 
 Visual unresolved items retained: exact BAZOOKA II dimensions for this implementation, reel-window depth/seated sightline, exact speaker/driver locations, exact independent lamp map, timestamped long-form gaze-demand measurements, control-force/ergonomic measurements and state-by-state real-hall brightness/flash density.
 
+## Sound & Experience Run 2 additions
+
+Research file:
+`docs/research/CASE_STUDY_03_MADOKA_MAGICA_2_SOUND_EXPERIENCE_RUN2.md`
+
+Handoff:
+`docs/research/CASE_STUDY_03_STATUS_SOUND_EXPERIENCE_RUN2.md`
+
+Run 2 established/strengthened:
+- exact machine-specific BET/lever/reel/STOP/replay/payout samples remain unresolved and were not guessed;
+- BIG notification customization shows that certainty can be attached to different motor boundaries, including lever ON, reel start and payout-end timing;
+- `CERTAINTY TIMING IS AN EXPERIENCE PARAMETER`;
+- a cue's meaning includes which motor boundary it interrupts;
+- BIG end touch/PUSH voice is post-reward decision information, not merely decorative voice playback;
+- persistent ART audio should provide HOME/context while intermittent action/navigation cues temporarily own required-input timing;
+- BIG during ART is an audible interruption-and-return problem: `ART HOME -> BIG FOREGROUND -> BIG RESOLUTION -> ART HOME RESTORED`;
+- special-state music can become game information when its entry changes what the player knows, without copying the music itself;
+- memorability, information value, reward value and startle cost are separate evaluation axes;
+- long-form practical-play sources establish repeated-state topology, but clean per-100G cue density, SPL and frequency measurements remain unresolved;
+- exact speaker count/location, low-frequency hardware and cabinet-transmission behavior remain unresolved.
+
+Sound fatigue model retained for QA:
+`AUDIO FATIGUE LOAD = REPETITION COST + CONCURRENT CLAIMS + UNCERTAINTY DURATION + STARTLE COST + RE-ANCHOR COST`
+
 ## Phase B retained distinctions — not real-machine facts
 
 - `INPUT FIDELITY ≠ RULE FIDELITY`
@@ -87,13 +112,10 @@ All fixed Directors must separate:
 
 Prefer official/manual/manufacturer material, major strategy sources, reel/role documentation, long-form actual-play footage and reliable field reports. Do not copy third-party IP.
 
-## Run 2 remaining shared research targets
+## Run 2 remaining shared research target
 
-### Sound & Experience — NEXT
-Deepen baseline BET/lever/reel/STOP/settling/payout/replay cadence, repeated versus exceptional cues, BONUS/ART foreground, audible return-to-home behavior, speaker/low-frequency behavior where documented, and long-session fatigue. Do not reproduce melodies/samples/signature sounds.
-
-### Playtest & QA
-Reconstruct first 5 minutes, normal 100G, 500G dry spell, BIG without ART, base ART without exceptional extension, BIG during ART, return to normal and ~3-hour fatigue. Separate intrinsic loop quality from relief at finally hitting a reward.
+### Playtest & QA — NEXT
+Reconstruct first 5 minutes, normal 100G, 500G dry spell, BIG without ART, base ART without exceptional extension, BIG during ART, return to normal and ~3-hour fatigue. Separate intrinsic loop quality from relief at finally hitting a reward. Use Sound Run 2 to distinguish routine repetition cost, concurrent attention claims, uncertainty duration, startle cost and re-anchor cost; do not treat edited highlight clips as proof of long-session comfort.
 
 ## Machine integration record
 
@@ -106,7 +128,8 @@ See:
 `CURRENT_PHASE = PHASE_A_REAL_MACHINE_STUDY_RUN2`
 `CASE_STUDY_03_GAME_REEL_PHASE_A_RUN2_COMPLETE = TRUE`
 `CASE_STUDY_03_VISUAL_MECHANISM_PHASE_A_RUN2_COMPLETE = TRUE`
-`NEXT_FIXED_DIRECTOR = SOUND_&_EXPERIENCE`
+`CASE_STUDY_03_SOUND_EXPERIENCE_PHASE_A_RUN2_COMPLETE = TRUE`
+`NEXT_FIXED_DIRECTOR = PLAYTEST_&_QA`
 `CASE_STUDY_03_PHASE_A_FIRST_FIVE_DIRECTOR_CYCLE_COMPLETE = TRUE`
 `CASE_STUDY_03_PHASE_B_FIRST_FIVE_DIRECTOR_CYCLE_COMPLETE = TRUE`
 `PHASE_C_REAL_APP_TRANSLATION = NOT_OPEN`
