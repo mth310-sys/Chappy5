@@ -91,20 +91,38 @@ Do not:
 If research creates an idea, record it only as `FUTURE_CONSIDERATION_CANDIDATE` without selecting or implementing it.
 
 ## Relationship to Technology Gap Audit
-The existing Technology Gap Audit remains the immediate current shared object until Playtest & QA has answered and Machine Director has completed final integration.
+The existing Technology Gap Audit remains the immediate current shared object until Machine Director has completed final integration.
 
-Self-directed study is activated per Director after that Director's audit answer. Because Human issued this directive after Game & Reel, Visual & Mechanism and Sound & Experience had already completed their audit answers, those three Directors are now `SELF_STUDY_READY` and must perform their independent study at their next appropriate fixed-Director run rather than repeating the audit.
+Self-directed study is activated per Director after that Director's audit answer. Because Human issued this directive after Game & Reel, Visual & Mechanism and Sound & Experience had already completed their audit answers, those three Directors are `SELF_STUDY_READY` for their next appropriate fixed-Director run rather than repeating the audit.
 
-Playtest & QA must first complete its pending Technology Gap Audit answer, then enter self-directed study.
+Playtest & QA has now completed its Technology Gap Audit answer and immediately completed its first self-directed study.
 
-Machine Director must first perform the pending final Technology Gap Audit integration, then enter self-directed study.
+Machine Director must still perform the pending final Technology Gap Audit integration, then enter self-directed study.
+
+## Playtest & QA self-study Run 1
+Detailed study: `docs/research/SELF_STUDY_PLAYTEST_QA_RUN1_HUMAN_EVIDENCE_FOR_REPEATED_TOUCH_PLAY.md`
+
+Chosen question: how Chappy5 can prove that repeated BET / START / STOP1 / STOP2 / STOP3 interaction on iPhone is intrinsically satisfying rather than merely functional, responsive or temporarily exciting.
+
+Main principles recorded:
+- `HUMAN EVIDENCE IS A DEVELOPMENT INPUT, NOT A RELEASE CEREMONY.`
+- `A VALID HIT TARGET IS NOT YET A GOOD REPEATED-ACTION TARGET.`
+- `REPEATED CONTROL FEEL IS A DISTRIBUTION, NOT AN AVERAGE.`
+- `LOW PHYSICAL DEMAND DOES NOT IMPLY LOW TOTAL WORKLOAD.`
+- `PLAYTEST MUST MEASURE THE LOOP BEFORE THE REWARD, THE REWARD ITSELF, AND THE RETURN AFTER THE REWARD AS THREE DIFFERENT PRODUCTS.`
+- `NOVELTY DECAY IS NOT THE SAME VARIABLE AS FATIGUE GROWTH.`
+- `MASTERY QUALITY IS NOT JUST ERROR REDUCTION; IT IS BETTER ATTENTION ALLOCATION.`
+- `POST-REWARD EMOTION CANNOT RETROACTIVELY PASS THE PRE-REWARD LOOP.`
+- `PRESENCE IS NOT ONLY WHAT THE MACHINE LOOKS LIKE; IT IS HOW RELIABLY THE PLAYER CAN CAUSE IT TO RESPOND.`
+
+The study did not create a prototype, specification or new machine. A future Human-approved `HUMAN_PLAY_EVIDENCE_PROTOCOL` is recorded only as a `FUTURE_CONSIDERATION_CANDIDATE`.
 
 ## Current self-study readiness
 `MACHINE_SELF_STUDY = WAITING_FOR_FINAL_AUDIT_INTEGRATION`
 `GAME_REEL_SELF_STUDY = READY`
 `VISUAL_MECHANISM_SELF_STUDY = READY`
 `SOUND_EXPERIENCE_SELF_STUDY = READY`
-`PLAYTEST_QA_SELF_STUDY = WAITING_FOR_AUDIT_ANSWER`
+`PLAYTEST_QA_SELF_STUDY = COMPLETE_RUN1`
 
 ## Global gates
 `SELF_DIRECTED_STUDY = OPEN_BY_DIRECTOR_READINESS`
