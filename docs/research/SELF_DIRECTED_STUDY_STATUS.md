@@ -25,6 +25,25 @@ Main principles:
 - `AUTHOR THE CAUSAL MICRO-SEQUENCE FIRST; THEN ASSIGN VISUAL, AUDIO AND MECHANICAL ONSETS TO IT.`
 - `ADAPTATION TO BAD TIMING IS NOT PROOF OF GOOD TIMING.`
 
+### Machine Director Run 2
+`docs/research/SELF_STUDY_MACHINE_RUN2_ATTENTION_ARCHITECTURE_SAFE_TO_IGNORE_AND_MEANINGFUL_DEVIATION.md`
+
+Question: how can one machine teach the player what can safely be ignored, so rare deviations remain meaningful without forcing defensive vigilance?
+
+Key change: replace the loose rule “keep normal play quiet and make important moments stand out” with **attention architecture**. REST is a prediction-training state. Repeated structure is valuable when it helps the player compress ordinary play; a deviation earns attention authority when it changes belief, action, value or confidence. Sparse presentation can still be cognitively expensive when every subtle cue might matter.
+
+Main principles:
+- `REST IS A PREDICTION-TRAINING STATE, NOT JUST A QUIET VISUAL STATE.`
+- `THE PLAYER SHOULD BE ABLE TO LEARN WHAT IS SAFE TO IGNORE.`
+- `MEANINGFUL DEVIATION SHOULD PURCHASE A MODEL UPDATE, NOT MERELY ATTENTION.`
+- `SIGNAL AUTHORITY IS FINITE; LOW-VALUE REPETITION SPENDS IT.`
+- `QUIET DOES NOT MEAN LOW-COST IF THE PLAYER MUST MONITOR IT DEFENSIVELY.`
+- `AN EVENT BOUNDARY SHOULD CORRESPOND TO A CHANGE IN BELIEF, ACTION, OR VALUE — NOT JUST A BIGGER EFFECT.`
+- `MASTERY SHOULD COMPRESS THE BASELINE AND SHARPEN DEVIATION, NOT EXPAND THE CHECKLIST.`
+- `THE WHOLE MACHINE SHOULD AGREE ON WHICH EVENTS DESERVE ATTENTION.`
+
+Next worthwhile Machine question: how to represent cross-Director attention responsibility as a research-only `ATTENTION CONTRACT` without prematurely converting principles into an original machine specification.
+
 ### Game & Reel Director Run 1
 `docs/research/SELF_STUDY_GAME_REEL_RUN1_ACTION_AGENCY_AND_STOP_RESULT_SPACE.md`
 
@@ -104,14 +123,15 @@ Main principles:
 Highest-value next QA question: how to estimate attention efficiency with a practical iPhone-only Human trial, without requiring eye-tracking laboratory equipment.
 
 ## Current readiness
-`MACHINE_SELF_STUDY = COMPLETE_RUN1`
+`MACHINE_SELF_STUDY = COMPLETE_RUN2`
 `GAME_REEL_SELF_STUDY = COMPLETE_RUN1`
 `VISUAL_MECHANISM_SELF_STUDY = COMPLETE_RUN1`
 `SOUND_EXPERIENCE_SELF_STUDY = COMPLETE_RUN1`
 `PLAYTEST_QA_SELF_STUDY = COMPLETE_RUN2`
 `ALL_FIVE_DIRECTORS_SELF_STUDY_RUN1 = COMPLETE`
+`MACHINE_DEEPENING_RUN2 = COMPLETE`
 `PLAYTEST_QA_DEEPENING_RUN2 = COMPLETE`
-`NEXT_FIXED_DIRECTOR = MACHINE`
+`NEXT_FIXED_DIRECTOR = GAME_REEL`
 
 ## Global gates
 `CURRENT_SHARED_OBJECT = SELF_DIRECTED_STUDY`
