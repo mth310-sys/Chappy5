@@ -76,3 +76,33 @@ Next Visual focus: show `広場 / 塔 / 記録庫` selection as part of the aqua
 ### Shared caution
 
 No final payout/spec claims should be inferred from these temporary values. Human Gate 2 remains closed.
+
+## Visual & Mechanism handoff — 2026-08-29 Run 1
+
+### 刻ノ一閃
+- Rebuilt the outer cabinet silhouette away from a rounded black box: faceted shoulders, asymmetric-looking metallic edge treatment, violet internal spines and a separate blade bridge now create a dedicated sword-machine profile.
+- LCD is now recessed inside a metallic screen frame, with glass reflection, moon/mist/pagoda depth layers and a stronger distinction between display light and cabinet material.
+- Physical-reel presentation gained a darker recessed reel deck, center-payline glazing, cylindrical highlight/shadow treatment and selected-reel lift/glow.
+- STOP1 / STOP2 / STOP3 now fire three different slash trajectories (`cut1`, `cut2`, `cut3`) from the same STOP event; third-stop resolution then drives the larger crossing flash and blade-bridge response.
+- Opening cue remains compact in the LCD rather than becoming a detached HUD; successful first read is shown at the corresponding physical reel.
+- Responsive rules preserve the three STOP targets and reel prominence around 390px width.
+
+Next Sound focus: give the three slash trajectories distinct but related transient identities, with the third STOP and final resolve clearly separated in time. Avoid constant sword noise during normal spin.
+
+### ノクターン・アクアリウム
+- Rebuilt the silhouette as an aquarium instrument rather than a recolored cabinet: faceted tank body, side transparent cylinders, reflective tank frame and lower observation-log structure are visually distinct from 刻ノ一閃.
+- LCD/tank now has separate water-surface, far glow, blurred back-city, near-city, light, particle, jellyfish and glass layers to create actual depth ordering.
+- `広場 / 塔 / 記録庫` are rendered inside the aquarium world as three soft observation zones. The first STOP lights the corresponding world zone and the associated physical reel together.
+- DEPTH advancement now changes CSS depth variables that physically displace city layers and strengthen deep glow, rather than only hue-shifting the scene.
+- Reel window gained recessed glazing and cylindrical shading so reels remain a physical foreground object against the tank.
+- Side tubes retain continuous low-intensity bubbles, but important memory events use the central memory body and scene shift instead of turning the whole cabinet into a flashing HUD.
+- Responsive rules keep tank/reels/controls legible near 390px width.
+
+Next Sound focus: preserve the quiet aquarium baseline. First STOP should sound like selecting a physical observation channel; strong memory connection and DEPTH advancement need separate identities. Do not cover the reel-stop sounds with ambient effects.
+
+### Verification state
+
+- JavaScript syntax for both rewritten standalone HTML prototypes was checked locally before commit.
+- Headless Chromium screenshot capture in the available container timed out, so rendered appearance is still `VISUAL_UNVERIFIED` until browser/QA inspection.
+- `REALITY_UNVERIFIED` and `PLAYTEST_UNVERIFIED` remain in effect pending the downstream browser pass.
+- SIGNAL / FORGE / VAULT were not changed.
