@@ -77,14 +77,30 @@ Highest-value unresolved capability areas:
 
 Exact proprietary material recipes and exhaustive commercial cabinet construction remain knowledge gaps but are **not** production prerequisites. The recommended next learning is real→iPhone translation and measurement, not wider machine tourism.
 
+## Sound & Experience Director Run 1 summary
+Detailed audit: `docs/research/TECHNOLOGY_GAP_AUDIT_SOUND_EXPERIENCE_RUN1.md`
+
+Sound & Experience concludes that broad pachislot sound literacy is already sufficient for the current decision. The team understands repeated-operation audio hierarchy, attention headroom, silence/delay as routine deviation, reel/action-linked audio meaning, causal BGM/state transitions, and the key real→phone distinction between event grammar and lost cabinet acoustic mass. It does **not** recommend another broad real-machine audio survey as the default next learning step.
+
+Highest-value unresolved capability areas:
+- `TECHNOLOGY GAP` — deterministic audio-event scheduler driven by the same canonical Game/Reel event trace rather than private timers;
+- `TECHNOLOGY GAP` — state-aware priority/ducking/mix system for operation, reel/body, information, reward and BGM layers;
+- `MEASUREMENT GAP` — real iPhone touch/event→audible onset latency and jitter method, including repeated three-STOP timing;
+- `PLATFORM GAP` — Safari audio unlock, interruption, suspend/resume, route-change and loop-recovery behavior on target iPhone;
+- `PLATFORM GAP` — preserving information hierarchy across device speaker and headphones;
+- `MEASUREMENT GAP` — long-session/repetition-fatigue testing across normal cadence, wait-cut/accelerated cadence and action ownership;
+- `TECHNOLOGY GAP` — original machine-body acoustic substitution after causal timing and mix correctness are stable.
+
+Exact proprietary commercial speaker/cabinet transfer functions and mastering chains remain a `KNOWLEDGE GAP`, but they are **not** production prerequisites. Sound's recommendation is audio reality engineering and real-device measurement, not wider machine tourism or collection of recognizable commercial cues.
+
 ## Gate
 `CURRENT_SHARED_OBJECT = TECHNOLOGY_GAP_AUDIT`
 `TECHNOLOGY_GAP_AUDIT = OPEN`
 `MACHINE_AUDIT_FRAMEWORK = COMPLETE`
 `GAME_REEL_AUDIT = COMPLETE_RUN1`
 `VISUAL_MECHANISM_AUDIT = COMPLETE_RUN1`
-`SOUND_EXPERIENCE_AUDIT = NEXT`
-`PLAYTEST_QA_AUDIT = PENDING`
+`SOUND_EXPERIENCE_AUDIT = COMPLETE_RUN1`
+`PLAYTEST_QA_AUDIT = NEXT`
 `FINAL_MACHINE_AUDIT_INTEGRATION = PENDING`
 `HUMAN_GATE_1_NOT_READY`
 `REALITY_BASELINE_COMPLETE = FALSE`
