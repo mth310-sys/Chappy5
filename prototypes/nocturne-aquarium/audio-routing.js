@@ -2,6 +2,8 @@
  * Prototype-only. No third-party samples/assets.
  * Keeps semantic quiet separate from Safari/technical mute state.
  */
+export { NOCTURNE_REEL_EVIDENCE, nocturneEvidenceFor, nocturneChainLabel, nextNocturneObservation } from './game-reel-run6.js';
+
 export const NOCTURNE_AUDIO_ROUTING = Object.freeze({
   master: 0.34,
   buses: Object.freeze({
