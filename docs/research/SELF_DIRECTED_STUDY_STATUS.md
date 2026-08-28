@@ -96,7 +96,25 @@ Main principles:
 - `WHEN REAL PARALLAX IS LOST, COHERENT CHANGE OVER TIME CAN CONFIRM PHYSICAL LAYERING.`
 - `REST VISUAL IS THE CALIBRATION STATE FOR MATERIAL AND LIGHT HIERARCHY.`
 
-Next worthwhile Visual & Mechanism question: how to measure on the target iPhone, without leading the observer, whether Humans actually infer distinct body / glass / recessed reel / lamp / display layers rather than one polished UI surface.
+### Visual & Mechanism Director Run 2
+`docs/research/SELF_STUDY_VISUAL_MECHANISM_RUN2_PERCEPTUAL_ACCEPTANCE_WITHOUT_LEADING.md`
+
+Question: how can Chappy5 eventually test on target iPhone, without leading the observer, whether Humans actually infer distinct body / glass / recessed reel / lamp / internal-display layers rather than one polished UI surface?
+
+Key change: replace a future global “realism” score with **claim decomposition**. Layer order, depth magnitude, material identity, emission hierarchy and persistence across state changes are different perceptual claims and should not be collapsed into one beauty/realism rating. Pairwise/forced-choice judgments can expose local scene structure, but they are not proof of the whole cabinet; confidence must be reported beside accuracy rather than replacing it.
+
+Main principles:
+- `TEST THE INFERRED SCENE GRAPH BEFORE ASKING FOR REALISM.`
+- `DEPTH ORDER, DEPTH MAGNITUDE, MATERIAL IDENTITY AND EMISSIVE AUTHORITY ARE DIFFERENT CLAIMS.`
+- `A PHYSICAL LAYER PASSES ONLY IF ITS IDENTITY SURVIVES STATE CHANGE.`
+- `DO NOT TEACH THE MATERIAL LABEL BEFORE MEASURING THE PERCEPT.`
+- `REPORT CONFIDENCE BESIDE DISCRIMINATION, NEVER IN PLACE OF IT.`
+- `PERCEPTUAL ROBUSTNESS INCLUDES BETWEEN-OBSERVER CONSISTENCY.`
+- `PAIRWISE JUDGMENT IS A LOCAL TEST, NOT PROOF OF THE WHOLE CABINET.`
+- `COLOR-REMOVAL IS A DIAGNOSTIC, NOT AN AUTOMATIC PASS/FAIL RULE.`
+- `A BEAUTIFUL FLAT UI MUST BE ABLE TO FAIL THE PHYSICAL-LAYER TEST.`
+
+Next worthwhile Visual & Mechanism question: perceptual persistence under touch and interruption—what visual anchors must remain stable when a finger covers the machine at STOP, the viewport changes, or Safari is interrupted/resumed so cabinet/reel/control ownership does not collapse into ordinary mobile UI.
 
 ### Sound & Experience Director Run 1
 `docs/research/SELF_STUDY_SOUND_EXPERIENCE_RUN1_AUDITORY_BODY_MATERIAL_AND_IMPACT_PRESENCE.md`
@@ -143,14 +161,15 @@ Highest-value next QA question: how to estimate attention efficiency with a prac
 ## Current readiness
 `MACHINE_SELF_STUDY = COMPLETE_RUN2`
 `GAME_REEL_SELF_STUDY = COMPLETE_RUN2`
-`VISUAL_MECHANISM_SELF_STUDY = COMPLETE_RUN1`
+`VISUAL_MECHANISM_SELF_STUDY = COMPLETE_RUN2`
 `SOUND_EXPERIENCE_SELF_STUDY = COMPLETE_RUN1`
 `PLAYTEST_QA_SELF_STUDY = COMPLETE_RUN2`
 `ALL_FIVE_DIRECTORS_SELF_STUDY_RUN1 = COMPLETE`
 `MACHINE_DEEPENING_RUN2 = COMPLETE`
 `GAME_REEL_DEEPENING_RUN2 = COMPLETE`
+`VISUAL_MECHANISM_DEEPENING_RUN2 = COMPLETE`
 `PLAYTEST_QA_DEEPENING_RUN2 = COMPLETE`
-`NEXT_FIXED_DIRECTOR = VISUAL_MECHANISM`
+`NEXT_FIXED_DIRECTOR = SOUND_EXPERIENCE`
 
 ## Global gates
 `CURRENT_SHARED_OBJECT = SELF_DIRECTED_STUDY`
