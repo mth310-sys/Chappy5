@@ -1,6 +1,6 @@
 # Chappy5 — Five-Director Technology Gap Audit
 
-> Status: `OPEN`
+> Status: `OPEN_PENDING_FINAL_MACHINE_INTEGRATION`
 > Stage: `Stage 1 — Reality Baseline Study`
 > Human Gate: `HUMAN_GATE_1_NOT_READY`
 > Production: `DENIED_UNTIL_HUMAN_MACHINE_APPROVED`
@@ -93,29 +93,48 @@ Highest-value unresolved capability areas:
 
 Exact proprietary commercial speaker/cabinet transfer functions and mastering chains remain a `KNOWLEDGE GAP`, but they are **not** production prerequisites. Sound's recommendation is audio reality engineering and real-device measurement, not wider machine tourism or collection of recognizable commercial cues.
 
+## Playtest & QA Director Run 1 summary
+Detailed audit: `docs/research/TECHNOLOGY_GAP_AUDIT_PLAYTEST_QA_RUN1.md`
+
+Playtest & QA concludes that Chappy5 already understands the qualitative difference between browser correctness and real Human play quality, but it does not yet possess a repeatable Human evidence method capable of proving long-session playability and machine presence on the target iPhone.
+
+Highest-value unresolved capability areas:
+- `MEASUREMENT GAP` — versioned Human Experience acceptance protocol separating control integrity, causal response, workload, intrinsic loop value, reward/relief effect, HOME return and fatigue drift;
+- `PLATFORM GAP` — real iPhone hitbox, finger occlusion, accidental activation and repeated STOP ergonomics evidence;
+- `MEASUREMENT GAP` — repeated touch→visible/audio response distributions and inter-STOP jitter rather than average-only latency;
+- `MEASUREMENT GAP` — multidimensional workload/fatigue observation instead of one vague “tired” judgment;
+- `MEASUREMENT GAP` — pre-reward vs post-reward evidence that separates intrinsic normal-loop engagement from relief debt;
+- `MEASUREMENT GAP` — beginner→familiar→expert observation of attention allocation and mastery;
+- `PLATFORM GAP` — interruption/backgrounding/audio-route/viewport/thermal recovery evidence;
+- `MEASUREMENT GAP` — staged long-session evidence separating novelty decay from fatigue growth.
+
+Playtest & QA explicitly does **not** recommend another broad machine survey as the default next learning step. Its strongest gap is experience measurement: proving that repeated action, attention, feedback and return rhythm remain satisfying on the actual phone over time.
+
+Key conclusion:
+`BROWSER_CORRECTNESS ≠ HUMAN_PLAYABILITY ≠ LONG_SESSION_QUALITY ≠ REALITY_PRESENCE`
+
 ## Human directive — self-directed learning after each audit answer
-Human has now ordered a self-directed learning period after each Director's audit answer. Governing document: `docs/research/SELF_DIRECTED_STUDY_STATUS.md`.
+Governing document: `docs/research/SELF_DIRECTED_STUDY_STATUS.md`.
 
-This does not cancel the unfinished audit sequence. Playtest & QA must still provide the pending audit answer, and Machine Director must still perform final audit integration. After that Director's required audit responsibility is discharged, that Director enters self-directed study rather than repeating already-saved Case Study material.
-
-Because Game & Reel, Visual & Mechanism, and Sound & Experience had already answered before this directive arrived, all three are immediately `SELF_STUDY_READY` for their next appropriate fixed-Director run.
+Game & Reel, Visual & Mechanism and Sound & Experience are `SELF_STUDY_READY` for their next respective runs. Playtest & QA has now completed both its audit answer and Self-Directed Study Run 1. Machine Director must perform final five-Director audit integration, then enter Machine self-study.
 
 Self-study remains Stage 1 research only: no new-machine production, no original-concept refinement, no specification finalization, no prototype, no assets, no code, and no Human Gate crossing.
 
 ## Gate
 `CURRENT_SHARED_OBJECT = TECHNOLOGY_GAP_AUDIT`
-`TECHNOLOGY_GAP_AUDIT = OPEN`
+`TECHNOLOGY_GAP_AUDIT = FOUR_SPECIALISTS_COMPLETE_PENDING_MACHINE_INTEGRATION`
 `MACHINE_AUDIT_FRAMEWORK = COMPLETE`
 `GAME_REEL_AUDIT = COMPLETE_RUN1`
 `VISUAL_MECHANISM_AUDIT = COMPLETE_RUN1`
 `SOUND_EXPERIENCE_AUDIT = COMPLETE_RUN1`
-`PLAYTEST_QA_AUDIT = NEXT`
-`FINAL_MACHINE_AUDIT_INTEGRATION = PENDING`
+`PLAYTEST_QA_AUDIT = COMPLETE_RUN1`
+`FINAL_MACHINE_AUDIT_INTEGRATION = NEXT`
+`NEXT_FIXED_DIRECTOR = MACHINE`
 `SELF_DIRECTED_STUDY = OPEN_BY_DIRECTOR_READINESS`
 `GAME_REEL_SELF_STUDY = READY`
 `VISUAL_MECHANISM_SELF_STUDY = READY`
 `SOUND_EXPERIENCE_SELF_STUDY = READY`
-`PLAYTEST_QA_SELF_STUDY = WAITING_FOR_AUDIT_ANSWER`
+`PLAYTEST_QA_SELF_STUDY = COMPLETE_RUN1`
 `MACHINE_SELF_STUDY = WAITING_FOR_FINAL_AUDIT_INTEGRATION`
 `HUMAN_GATE_1_NOT_READY`
 `REALITY_BASELINE_COMPLETE = FALSE`
