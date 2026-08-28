@@ -1,6 +1,6 @@
-/* Game & Reel Run 6 — presentation-only cadence memory for the integrated Toki prototype.
+/* Game & Reel Run 6 + Visual & Mechanism Run 6 — presentation-only cadence memory.
  * Prototype-only. This module does NOT alter reel selection, payout, reward math or result logic.
- * It reads the already-stopped center symbols and exposes compact rhythm evidence for repeated play.
+ * It reads already-stopped center symbols and exposes a lightweight visual cause for the sword cabinet.
  */
 
 const REEL_NAMES = ['左', '中', '右'];
@@ -35,12 +35,28 @@ function chainLabel(stops) {
   return '重ね連閃';
 }
 
+function visualChain(chain) {
+  if (/決め七/.test(chain)) return 'finisher';
+  if (/三相/.test(chain)) return 'triple';
+  if (/三重/.test(chain)) return 'locked';
+  if (/刃筋上昇/.test(chain)) return 'rising';
+  if (/重ね/.test(chain)) return 'layered';
+  return 'flow';
+}
+
 function firstStopPattern(history) {
   const last3 = history.slice(-3);
   if (last3.length < 3) return '';
   if (last3.every(v => v === last3[0])) return `同起点×3：${REEL_NAMES[last3[0]]}`;
   if (new Set(last3).size === 3) return '三起点巡回';
   return '間合い変化';
+}
+
+function stanceToken(pattern) {
+  if (/同起点/.test(pattern)) return 'habit';
+  if (/三起点巡回/.test(pattern)) return 'circuit';
+  if (pattern) return 'change';
+  return '';
 }
 
 function annotateRail(rail, text) {
@@ -55,10 +71,33 @@ function annotateRail(rail, text) {
   }
 }
 
+function installVisualBridge(doc) {
+  if (doc.getElementById('vm-run6-toki')) return;
+  const style = doc.createElement('style');
+  style.id = 'vm-run6-toki';
+  style.textContent = `
+/* Visual & Mechanism Run 6 — low-compositor cadence response. */
+.machine[data-game-cadence='opening'] .screenFrame{box-shadow:0 8px 18px #000,inset 0 0 0 1px #d8bd73aa,0 0 10px #8e54be44!important}
+.machine[data-game-cadence='linking'] .screenFrame{box-shadow:0 8px 18px #000,inset 0 0 0 1px #e6ce8fbb,0 0 14px #9f56ce55!important}
+.machine[data-game-cadence='resolve-ready'] .screenFrame{box-shadow:0 8px 18px #000,inset 0 0 0 1px #f2d98dcc,0 0 18px #c889dd66!important}
+.machine[data-game-cadence='opening'] .bladeBridge:before{opacity:.62!important}
+.machine[data-game-cadence='linking'] .bladeBridge:before{opacity:.82!important;box-shadow:0 0 5px #fff2d0,0 0 13px #b57bd8!important}
+.machine[data-game-cadence='resolve-ready'] .bladeBridge:before{opacity:1!important;box-shadow:0 0 6px #fff4cf,0 0 17px #d5ad5f!important}
+.machine[data-vm-chain='finisher'] .screenFrame{box-shadow:0 8px 18px #000,inset 0 0 0 1px #ffe39ddd,0 0 21px #b94e6a77!important}
+.machine[data-vm-chain='triple'] .spine{opacity:1!important}.machine[data-vm-chain='triple'] .screenFrame{box-shadow:0 8px 18px #000,inset 0 0 0 1px #e8d493cc,0 0 18px #8e54df66!important}
+.machine[data-vm-chain='locked'] .bladeBridge:before{box-shadow:0 0 7px #fff6d8,0 0 19px #d7b762!important}
+.machine[data-vm-chain='rising'] .spine.r{opacity:1!important}.machine[data-vm-chain='layered'] .spine.l{opacity:1!important}
+.machine[data-vm-stance='habit'] .spine{opacity:.74!important}.machine[data-vm-stance='circuit'] .spine{opacity:.93!important}
+@media(max-width:390px){.machine[data-game-cadence] .screenFrame{outline:0!important}}
+`;
+  doc.head.appendChild(style);
+}
+
 function install(frame) {
   const doc = frame.contentDocument;
   if (!doc || doc.documentElement.dataset.gameReelRun6 === 'installed') return;
   doc.documentElement.dataset.gameReelRun6 = 'installed';
+  installVisualBridge(doc);
 
   const machine = doc.getElementById('machine') || doc.querySelector('.machine');
   let stopNo = 0;
@@ -74,7 +113,10 @@ function install(frame) {
       stops = [];
       if (machine) {
         machine.dataset.gameCadence = 'ready';
+        delete machine.dataset.cutChain;
+        delete machine.dataset.vmChain;
         delete machine.dataset.firstPattern;
+        delete machine.dataset.vmStance;
       }
       return;
     }
@@ -94,13 +136,16 @@ function install(frame) {
       const pattern = capturedStopNo === 3 ? firstStopPattern(firstHistory) : '';
       const rail = doc.querySelector('.toki-tempo');
 
-      // Base Run 5 paint runs from the same STOP event. Append after its short evidence update.
       setTimeout(() => annotateRail(rail, pattern ? `${chain} / ${pattern}` : chain), 78);
 
       if (machine) {
         machine.dataset.gameCadence = capturedStopNo === 1 ? 'opening' : capturedStopNo === 2 ? 'linking' : 'resolve-ready';
         machine.dataset.cutChain = chain;
-        if (pattern) machine.dataset.firstPattern = pattern;
+        machine.dataset.vmChain = visualChain(chain);
+        if (pattern) {
+          machine.dataset.firstPattern = pattern;
+          machine.dataset.vmStance = stanceToken(pattern);
+        }
       }
     });
   });
