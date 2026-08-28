@@ -84,14 +84,34 @@ Next worthwhile Sound & Experience question: how repeated mechanical/information
 
 Question: how to prove repeated BET / START / STOP1 / STOP2 / STOP3 interaction on iPhone is intrinsically satisfying rather than merely functional or temporarily exciting.
 
+### Playtest & QA Run 2
+`docs/research/SELF_STUDY_PLAYTEST_QA_RUN2_MASTERY_VS_VIGILANCE_BURDEN.md`
+
+Question: how can Chappy5 distinguish rewarding mastery from defensive vigilance—learning what matters and safely ignoring the rest versus being forced to continuously monitor the machine for fear of missing value?
+
+Key change: refine “mastery = better attention allocation” into a falsifiable QA model. **Mastery should increase useful information extracted per unit of attention while decreasing unnecessary monitoring, without reducing required detection/prediction accuracy.** Looking less is not automatically mastery; looking more is not automatically engagement.
+
+Main principles:
+- `MASTERY SHOULD INCREASE INFORMATION GAIN PER GLANCE.`
+- `GOOD MASTERY SHOULD REDUCE IRRELEVANT ATTENTION, NOT ACCUMULATE A LARGER CHECKLIST.`
+- `SPARSE PRESENTATION DOES NOT GUARANTEE LOW ATTENTION COST.`
+- `HIGH ATTENTION IS NOT PROOF OF ENGAGEMENT.`
+- `LOW ATTENTION IS NOT PROOF OF MASTERY.`
+- `MEASURE ATTENTION TOGETHER WITH DETECTION, PREDICTION AND CONFIDENCE.`
+- `THE GOAL IS NOT MINIMUM ATTENTION; IT IS HIGH-VALUE ATTENTION.`
+- `A REPEATED LOOP SHOULD CONTAIN SAFE-TO-IGNORE REGIONS.`
+
+Highest-value next QA question: how to estimate attention efficiency with a practical iPhone-only Human trial, without requiring eye-tracking laboratory equipment.
+
 ## Current readiness
 `MACHINE_SELF_STUDY = COMPLETE_RUN1`
 `GAME_REEL_SELF_STUDY = COMPLETE_RUN1`
 `VISUAL_MECHANISM_SELF_STUDY = COMPLETE_RUN1`
 `SOUND_EXPERIENCE_SELF_STUDY = COMPLETE_RUN1`
-`PLAYTEST_QA_SELF_STUDY = COMPLETE_RUN1`
+`PLAYTEST_QA_SELF_STUDY = COMPLETE_RUN2`
 `ALL_FIVE_DIRECTORS_SELF_STUDY_RUN1 = COMPLETE`
-`NEXT_FIXED_DIRECTOR = PLAYTEST_QA`
+`PLAYTEST_QA_DEEPENING_RUN2 = COMPLETE`
+`NEXT_FIXED_DIRECTOR = MACHINE`
 
 ## Global gates
 `CURRENT_SHARED_OBJECT = SELF_DIRECTED_STUDY`
