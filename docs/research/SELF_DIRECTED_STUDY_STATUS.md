@@ -61,6 +61,24 @@ Main principles:
 
 Next worthwhile Visual & Mechanism question: how to measure on the target iPhone, without leading the observer, whether Humans actually infer distinct body / glass / recessed reel / lamp / display layers rather than one polished UI surface.
 
+### Sound & Experience Director Run 1
+`docs/research/SELF_STUDY_SOUND_EXPERIENCE_RUN1_AUDITORY_BODY_MATERIAL_AND_IMPACT_PRESENCE.md`
+
+Question: when a real cabinet collapses onto an iPhone display and small speakers, how much of hardness, material, thickness, size, contact, weight and physical consequence can sound support without relying on literal cabinet acoustics?
+
+Key change: replace the simplified `machine body ≈ low-frequency layer + cabinet resonance + synchronized impact` model with a multidimensional **physical-cue consistency model**. Impact/body perception depends on relationships among attack, spectral structure, modal frequencies, damping/decay, visual material/scale, action timing, stable acoustic context and output-device survival. Loudness or bass alone is not a reliable proxy for weight or physicality.
+
+Main principles:
+- `BODY PRESENCE IS NOT BASS PRESENCE.`
+- `AUTHOR CONTACT PHYSICS BEFORE CINEMATIC IMPACT.`
+- `DECAY IS PART OF MATERIAL IDENTITY.`
+- `PHYSICAL CUES MUST SURVIVE THE WEAKEST REQUIRED OUTPUT PATH.`
+- `A MACHINE SHOULD SOUND LIKE ONE ACOUSTIC OBJECT, NOT A FOLDER OF EFFECTS.`
+- `SYNCHRONY CAN STRENGTHEN A WEAK PHYSICAL CUE; IT CANNOT LEGITIMIZE AN IMPOSSIBLE ONE.`
+- `LOUDER IS NOT HEAVIER.`
+
+Next worthwhile Sound & Experience question: how repeated mechanical/information sounds can remain instantly source-identifiable while still belonging to one coherent machine body and staying comfortable across hundreds of repetitions.
+
 ### Playtest & QA Run 1
 `docs/research/SELF_STUDY_PLAYTEST_QA_RUN1_HUMAN_EVIDENCE_FOR_REPEATED_TOUCH_PLAY.md`
 
@@ -70,9 +88,10 @@ Question: how to prove repeated BET / START / STOP1 / STOP2 / STOP3 interaction 
 `MACHINE_SELF_STUDY = COMPLETE_RUN1`
 `GAME_REEL_SELF_STUDY = COMPLETE_RUN1`
 `VISUAL_MECHANISM_SELF_STUDY = COMPLETE_RUN1`
-`SOUND_EXPERIENCE_SELF_STUDY = READY`
+`SOUND_EXPERIENCE_SELF_STUDY = COMPLETE_RUN1`
 `PLAYTEST_QA_SELF_STUDY = COMPLETE_RUN1`
-`NEXT_FIXED_DIRECTOR = SOUND_EXPERIENCE`
+`ALL_FIVE_DIRECTORS_SELF_STUDY_RUN1 = COMPLETE`
+`NEXT_FIXED_DIRECTOR = PLAYTEST_QA`
 
 ## Global gates
 `CURRENT_SHARED_OBJECT = SELF_DIRECTED_STUDY`
