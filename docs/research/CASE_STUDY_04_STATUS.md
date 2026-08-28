@@ -16,6 +16,7 @@
 - Case Study 04 沖ドキ！GOLD: current shared object.
 - Case Study 04 real-machine Phase A Run 1: four specialist passes complete and Machine-integrated.
 - Case Study 04 official/properly licensed smartphone App Study: formally OPEN.
+- Case Study 04 App Game & Reel Run 1: complete.
 - Real↔App translation phase: NOT OPEN until the app specialist cycle is integrated.
 - Standing HUMAN DIRECTIVE: remain in study; do not return to original concepts.
 
@@ -28,6 +29,7 @@ Read first:
 - `docs/research/CASE_STUDY_04_OKIDOKI_GOLD.md`
 - all four Case Study 04 Phase A specialist files
 - `docs/research/CASE_STUDY_04_OKIDOKI_GOLD_MACHINE_INTEGRATION_RUN1.md`
+- `docs/research/CASE_STUDY_04_OKIDOKI_GOLD_APP_GAME_REEL_RUN1.md`
 - this file
 
 ## Machine integration verdict
@@ -49,21 +51,35 @@ Integrated reusable findings:
 
 The official iPhone simulator is a separate evidence object. App behavior must never be used retroactively as proof of real-machine rules.
 
-Public app anchor already recorded in the Case Study master file:
-- App Store title: `沖ドキ！ＧＯＬＤ`
-- seller/developer: Universal Entertainment Corporation
+Public app anchor:
+- App Store title: `沖ドキ！ＧＯＬＤ`;
+- seller/developer: Universal Entertainment Corporation;
 - publisher describes it as a simulator of the real machine;
-- listed simulator functions include automation/setting/forced-role/save/wait-cut capabilities where currently published.
+- listed simulator functions include save, wait cut, setting change, auto play and forced roles;
+- the publisher explicitly warns that values displayed in the app are simulation values and may differ from the real machine.
 
 ### Shared Phase B question
 
 **WHAT SURVIVES, WHAT IS AMPLIFIED, AND WHAT IS LOST WHEN A DIRECT-NOTIFICATION 30φ MACHINE WHOSE VALUE DEPENDS ON PHYSICAL HOME, LAMP PRESENCE, MANUAL THREE-STOP RHYTHM AND A 32G RESOLUTION HORIZON IS TRANSLATED TO AN IPHONE SCREEN WITH TOUCH INPUT AND OPTIONAL SIMULATOR AUTOMATION?**
 
-### Game & Reel — NEXT
-Study the app's reel scale/readability, touch STOP responsibility, input timing, manual versus auto loop, wait-cut/high-speed effects, forced-role/setting tools, 32G pacing and whether automation changes prediction/ownership. Separate app observation from real-machine fact. Do not infer proprietary control from simulator output.
+### Game & Reel — COMPLETE
 
-### Visual & Mechanism
-Study physical cabinet→portrait screen hierarchy, lamp→displayed-glow translation, reel pixel share, touch target hierarchy, wrapper UI, loss/substitution of depth/light spill/material presence, and REST/notification contrast on phone.
+Run 1 recorded in `CASE_STUDY_04_OKIDOKI_GOLD_APP_GAME_REEL_RUN1.md`.
+
+Key handoff findings:
+- time compression (wait cut) and action delegation (auto) are different transformations;
+- a 32G horizon depends on action ownership as well as logical game count;
+- auto can preserve outcome uncertainty while removing action uncertainty;
+- setting/forced-role tools form a laboratory layer and must not be credited as natural-play evidence;
+- a licensed simulator may reproduce player-facing play without exposing hidden mode/control law;
+- acceleration can remove exposure to a dry loop without proving that the dry loop itself survived translation;
+- exact touch timing, hitboxes, reel readability and manual aiming quality remain unresolved without direct app execution.
+
+### Visual & Mechanism — NEXT
+
+Study physical cabinet→phone-screen hierarchy, lamp→displayed-glow translation, reel pixel share, touch target hierarchy, wrapper UI, loss/substitution of depth/light spill/material presence, and REST/notification contrast on phone.
+
+Also inspect whether manual/wait-cut/auto mode changes are visually legible and whether wrapper/debug controls compete with the reel/lamp HOME. Keep public storefront evidence separate from direct app observation.
 
 ### Sound & Experience
 Study phone-speaker/headphone translation, baseline action feedback, notification salience without hall acoustics/cabinet body, audio under auto/wait-cut, and whether automation removes action-linked timing meaning. Do not reproduce protected audio.
@@ -79,6 +95,7 @@ Integrate only after all four app specialist passes complete. Do not open Real�
 Keep distinct:
 - `SOURCED APP FACT`
 - `DIRECT APP OBSERVATION`
+- `PUBLIC APP-STORE USER REPORT`
 - `REAL-MACHINE FACT` (reference only; do not merge evidence classes)
 - `INTERPRETATION`
 - `REUSABLE TRANSLATION PRINCIPLE`
@@ -97,12 +114,12 @@ Do not copy protected lamp art, cabinet styling, sounds, music, branded symbols,
 `CASE_STUDY_04_PHASE_A_RUN1_MACHINE_INTEGRATED = TRUE`
 `CASE_STUDY_04_REAL_MACHINE_RUN1_COMPLETE = TRUE`
 `CASE_STUDY_04_APP_STUDY = OPEN`
-`CASE_STUDY_04_APP_GAME_REEL_RUN1_COMPLETE = FALSE`
+`CASE_STUDY_04_APP_GAME_REEL_RUN1_COMPLETE = TRUE`
 `CASE_STUDY_04_APP_VISUAL_MECHANISM_RUN1_COMPLETE = FALSE`
 `CASE_STUDY_04_APP_SOUND_EXPERIENCE_RUN1_COMPLETE = FALSE`
 `CASE_STUDY_04_APP_PLAYTEST_QA_RUN1_COMPLETE = FALSE`
 `CASE_STUDY_04_REAL_APP_TRANSLATION = NOT_OPEN`
-`NEXT_FIXED_DIRECTOR = GAME_&_REEL`
+`NEXT_FIXED_DIRECTOR = VISUAL_&_MECHANISM`
 `HUMAN_GATE_1_NOT_READY`
 `REALITY_BASELINE_COMPLETE = FALSE`
 `SIGNAL/FORGE/VAULT = PROVISIONAL_FROZEN`
