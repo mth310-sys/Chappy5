@@ -13,6 +13,14 @@ fs.mkdirSync(evidenceDir, { recursive: true });
 async function inner(page) {
   const frame = page.frameLocator('#game');
   await expect(frame.locator('body')).toBeVisible();
+  // Integrated shells enhance the iframe control deck on their load handler.
+  // Do not race that handoff: a 42px base BET can exist for a few ms before
+  // the submission shell applies its >=46px touch geometry.
+  await expect.poll(async () => {
+    const bet = frame.locator('#bet');
+    const box = await bet.boundingBox().catch(() => null);
+    return box ? box.height : 0;
+  }, { timeout: 1800, message: 'integrated touch deck must reach >=44px before play' }).toBeGreaterThanOrEqual(44);
   return frame;
 }
 
@@ -81,10 +89,6 @@ async function saveFailureEvidence(page, frame, label, error, history) {
   await page.screenshot({ path:path.join(evidenceDir, `dual-${safe}-failure.png`), fullPage:true }).catch(()=>{});
 }
 
-// Playwright locator.tap() waits for visual stability. These prototypes deliberately animate
-// cabinet/reel presentation around STOP events, so that check can false-fail despite a stationary
-// physical control deck. For iPhone QA we instead verify geometry ourselves and issue an actual
-// touchscreen coordinate tap at the button center, matching a finger more closely.
 async function fingerTap(page, locator, label) {
   await expect(locator, `${label} enabled`).toBeEnabled({ timeout: 1800 });
   const a = await locator.boundingBox();
@@ -108,10 +112,7 @@ async function playRound(page, frame, preferredOrder, hooks = {}) {
   if (hooks.before) await hooks.before('lever');
   await fingerTap(page, lever, 'LEVER');
   if (hooks.after) await hooks.after('lever');
-
-  // Wrong/early touch: disabled BET during spin must not corrupt state.
   await page.touchscreen.tap(69, 498).catch(()=>{});
-
   let stopSeq = 0;
   for (const preferred of preferredOrder) {
     let target = stops.nth(preferred);
@@ -126,7 +127,6 @@ async function playRound(page, frame, preferredOrder, hooks = {}) {
     if (hooks.after) await hooks.after(`stop${stopSeq}`);
     await page.waitForTimeout(28);
   }
-
   await expect.poll(async()=> (await bet.isEnabled()) || (await lever.isEnabled()), { timeout:1800, message:'machine must return to playable post-resolution state' }).toBeTruthy();
 }
 
@@ -147,13 +147,11 @@ for (const c of cases) {
     page.on('close', () => {
       if (!crashEvents.length) writeCheckpoint(c.name, { name:c.name, phase:'page-close-event' });
     });
-
     await page.goto(`http://127.0.0.1:4173${c.path}`, { waitUntil:'networkidle' });
     let frame=await inner(page);
     await assertTouchLayout(page, frame, c.name);
     const baseline = await checkpoint(page, frame, c.name, 0, 'loaded');
     const baselineNodes = baseline.state.domNodes;
-
     for (let round=0;round<c.rounds;round+=1) {
       if (round % 5 === 0) history.push(await checkpoint(page, frame, c.name, round, 'before-round'));
       try {
@@ -161,8 +159,7 @@ for (const c of cases) {
           before: phase => checkpoint(page, frame, c.name, round, `before-${phase}`),
           after: phase => checkpoint(page, frame, c.name, round, `after-${phase}`),
         });
-      }
-      catch (error) { await saveFailureEvidence(page, frame, `${c.name}-round-${round+1}`, error, history); throw error; }
+      } catch (error) { await saveFailureEvidence(page, frame, `${c.name}-round-${round+1}`, error, history); throw error; }
       if (round === 0) {
         const audioTech = await topAudioState(page);
         expect(audioTech, `${c.name} technical audio state after first real gesture`).not.toBe('resume-failed');
@@ -174,8 +171,6 @@ for (const c of cases) {
         expect(snap.state.domNodes, `${c.name} DOM node growth after repeated play`).toBeLessThanOrEqual(baselineNodes + 12);
       }
     }
-
-    // Rapid stray STOP touches while idle must be harmless.
     const stops=frame.locator('.stop');
     for (let i=0;i<6;i+=1) {
       const box=await stops.nth(i%3).boundingBox();
@@ -183,7 +178,6 @@ for (const c of cases) {
     }
     expect(errors, `${c.name} page errors after stress taps`).toEqual([]);
     expect(crashEvents, `${c.name} page crash events`).toEqual([]);
-
     await page.reload({ waitUntil:'networkidle' });
     frame=await inner(page);
     await assertTouchLayout(page, frame, `${c.name}-reload`);
