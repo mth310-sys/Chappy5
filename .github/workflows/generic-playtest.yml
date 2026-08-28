@@ -17,6 +17,7 @@ on:
       - 'playwright.config.js'
       - '.github/workflows/generic-playtest.yml'
       - 'visual_test/**'
+      - 'prototypes/**'
 
 permissions:
   contents: read
@@ -42,6 +43,8 @@ jobs:
           PLAYTEST_PATH: ${{ github.event.inputs.target_path || '/visual_test/index.html' }}
           PLAYTEST_MAX_ACTIONS: ${{ github.event.inputs.max_actions || '5' }}
         run: npx playwright test playtest/generic-interaction.spec.js --project=webkit-iphone12 --reporter=line
+      - name: Run dual prototype repeated-play QA
+        run: npx playwright test playtest/dual-prototype-qa.spec.js --project=webkit-iphone12 --reporter=line
       - name: Upload interaction evidence
         if: always()
         uses: actions/upload-artifact@v4
