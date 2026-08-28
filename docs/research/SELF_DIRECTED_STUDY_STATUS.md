@@ -25,6 +25,24 @@ Main principles:
 - `AUTHOR THE CAUSAL MICRO-SEQUENCE FIRST; THEN ASSIGN VISUAL, AUDIO AND MECHANICAL ONSETS TO IT.`
 - `ADAPTATION TO BAD TIMING IS NOT PROOF OF GOOD TIMING.`
 
+### Game & Reel Director Run 1
+`docs/research/SELF_STUDY_GAME_REEL_RUN1_ACTION_AGENCY_AND_STOP_RESULT_SPACE.md`
+
+Question: if internal lottery/result is already determined before reel stopping, what conditions make STOP1/2/3 meaningful player action rather than decorative confirmation?
+
+Key change: a generalized `aim -> slip -> actual stop` engine is necessary but insufficient. Reel depth also depends on whether the authored law contains learnable **counterfactual structure**—valid alternative player actions that would have changed the visible/skill result while remaining consistent with internal truth.
+
+Main principles:
+- `A STOP BUTTON IS MEANINGFUL ONLY WHEN THE PLAYER CAN EVENTUALLY LEARN WHAT THEIR ACTION CHANGED.`
+- `AUTHOR COUNTERFACTUALS, NOT ONLY OUTCOMES.`
+- `SKILL REQUIRES A STABLE ACTION -> CONSEQUENCE RELATION, NOT MERELY A NARROW TIMING WINDOW.`
+- `STOP1 / STOP2 / STOP3 SHOULD TRANSFORM THE REMAINING POSSIBILITY SPACE.`
+- `INTERNAL TRUTH MAY CONSTRAIN THE RESULT; PLAYER INPUT SHOULD SHAPE THE LEGIBLE FORM WITHIN THAT TRUTH WHEN THE DESIGN CLAIMS REEL AGENCY.`
+- `DO NOT COUNT ILLUSION OF CONTROL AS REEL DEPTH.`
+- `MASTERY SHOULD INCREASE PREDICTIVE COMPRESSION.`
+
+Next worthwhile Game & Reel question: how much reel possibility-space complexity can remain learnable for beginners while providing expert counterfactual depth, without producing false vigilance or arbitrary-feeling control.
+
 ### Playtest & QA Run 1
 `docs/research/SELF_STUDY_PLAYTEST_QA_RUN1_HUMAN_EVIDENCE_FOR_REPEATED_TOUCH_PLAY.md`
 
@@ -32,11 +50,11 @@ Question: how to prove repeated BET / START / STOP1 / STOP2 / STOP3 interaction 
 
 ## Current readiness
 `MACHINE_SELF_STUDY = COMPLETE_RUN1`
-`GAME_REEL_SELF_STUDY = READY`
+`GAME_REEL_SELF_STUDY = COMPLETE_RUN1`
 `VISUAL_MECHANISM_SELF_STUDY = READY`
 `SOUND_EXPERIENCE_SELF_STUDY = READY`
 `PLAYTEST_QA_SELF_STUDY = COMPLETE_RUN1`
-`NEXT_FIXED_DIRECTOR = GAME_REEL`
+`NEXT_FIXED_DIRECTOR = VISUAL_MECHANISM`
 
 ## Global gates
 `CURRENT_SHARED_OBJECT = SELF_DIRECTED_STUDY`
