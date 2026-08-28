@@ -17,6 +17,8 @@
 - Case Study 04 Game & Reel Phase A Run 1: complete.
 - Case Study 04 Visual & Mechanism Phase A Run 1: complete.
 - Case Study 04 Sound & Experience Phase A Run 1: complete.
+- Case Study 04 Playtest & QA Phase A Run 1: complete.
+- Case Study 04 four specialist Directors Phase A Run 1: complete; Machine integration is next.
 - Standing HUMAN DIRECTIVE: `REMAIN IN REAL-MACHINE STUDY; DO NOT RETURN TO ORIGINAL CONCEPTS.`
 - Standing HUMAN DIRECTIVE: after each completed machine cycle, move to a deliberately different lineage with an official/properly licensed smartphone app version and study `REAL MACHINE → APP → TRANSLATION`.
 
@@ -31,6 +33,7 @@ Read first:
 - `docs/research/CASE_STUDY_04_OKIDOKI_GOLD_GAME_REEL_RUN1.md`
 - `docs/research/CASE_STUDY_04_OKIDOKI_GOLD_VISUAL_MECHANISM_RUN1.md`
 - `docs/research/CASE_STUDY_04_OKIDOKI_GOLD_SOUND_EXPERIENCE_RUN1.md`
+- `docs/research/CASE_STUDY_04_OKIDOKI_GOLD_PLAYTEST_QA_RUN1.md`
 - this file
 
 ## Why this lineage now
@@ -53,7 +56,7 @@ Sources:
 - App Store: https://apps.apple.com/jp/app/id6443791490
 - Universal Entertainment app-release announcement: https://www.dreamnews.jp/press/0000273931
 
-App Study is NOT open yet. Every Director must first complete the real-machine pass. App behavior cannot be used to prove real-machine rules.
+App Study is NOT open yet. Every Director has now completed the real-machine specialist pass, but Machine Director must formally integrate the real-machine cycle before any app evidence is admitted as a study object. App behavior cannot be used retroactively to prove real-machine rules.
 
 ## Game & Reel Run 1 — COMPLETE
 
@@ -149,6 +152,42 @@ Reusable principles:
 
 **LOW INFORMATION DENSITY AND LOW ATTENTION COST ARE NOT THE SAME THING.**
 
+## Playtest & QA Run 1 — COMPLETE
+
+Detailed research:
+- `docs/research/CASE_STUDY_04_OKIDOKI_GOLD_PLAYTEST_QA_RUN1.md`
+
+Handoff findings:
+- beginner-safe operation can remain much smaller than the expert clue dictionary: left-reference routine, conditional follow, primary direct notification and the post-BONUS 32G horizon form a usable first-session contract;
+- ordinary 100G can plausibly become automatic without being empty, but only if the player can alternate between routine attention and event attention instead of auditing every micro-deviation;
+- 500G dry play must separate intrinsic physical routine, changing time/ceiling value and pure relief-seeking; a satisfying eventual light does not prove the preceding dry block was engaging;
+- notification, local BIG/REG reward, relief from waiting and future 32G expectation are separate QA dimensions;
+- BONUS can deepen the same 3 STOPs through temporal prediction without converting them into mandatory high-precision technical work;
+- 32G is a genuine state change because the resolution horizon compresses even if the physical HOME stays stable;
+- repeated chains require recovery windows between high-salience events; positive reward repetition can still create audio/attention fatigue;
+- skilled play mainly compresses uncertainty through optional clue/mode law while basic motor responsibility remains comparatively low;
+- low setting increases exposure to baseline waiting, so low-reward conditions are the strongest test of REST quality;
+- likely three-hour failure boundary is not motor difficulty but vigilance, relief debt, mode inference and commitment pressure.
+
+Reusable QA principles:
+
+**A SIMPLE MACHINE MAY HAVE DEEP EXPERT LAW, BUT SAFE FIRST-SESSION OPERATION MUST NOT DEPEND ON THAT LAW.**
+
+**DIRECT-NOTIFICATION QA MUST SEPARATE ANTICIPATION FROM RELIEF DEBT.**
+
+**MASTERY CAN CHANGE WHAT THE SAME INPUT REVEALS WITHOUT CHANGING WHAT THE INPUT REQUIRES.**
+
+**MEASURE STATE CHANGE BY PLAYER EXPECTATION, NOT ONLY BY PRESENTATION DELTA.**
+
+**TEST THE BASELINE WHERE THE PLAYER IS EXPOSED TO IT LONGEST.**
+
+**LOW MOTOR COST CAN MASK HIGH VIGILANCE COST.**
+
+**DO NOT CREDIT OUTCOME RELIEF TO THE INTRINSIC GAME LOOP.**
+
+Evidence limitation:
+- official long-form real-play videos are linked from the manufacturer page, but stable timestamp-level playback was unavailable in this run; no shot-by-shot observations were invented. This remains an explicit unresolved item for later triangulation.
+
 ## Phase A Run 1 shared objectives
 
 ### Game & Reel — COMPLETE
@@ -175,21 +214,21 @@ Reusable principles:
 - long dry-section hyper-vigilance and repeated-chain celebration fatigue identified as QA hypotheses;
 - signature sounds, voices and music were not reproduced.
 
-### Playtest & QA — NEXT
-Reconstruct real repeated play and verify rather than assume:
-- beginner first 5 minutes: can safe operation succeed without expert sound-law knowledge?
-- ordinary 100G: does baseline operation become automatic enough for true deviation to remain legible?
-- 500G dry play: is sparse presentation restful, or does waiting for the next lamp create hyper-vigilance?
-- notification → BONUS: separate intrinsic reward satisfaction from relief that waiting ended;
-- BIG/REG: classify action-required, predictive, celebratory and optional-expert audio duties;
-- preview/STOP persistence: test whether the same three STOPs gain engagement without mandatory technical difficulty;
-- BONUS → 32G: determine whether urgency rises without requiring continuous foreground audio;
-- repeated chain: check release between high-salience events and music repetition fatigue;
-- chain end → normal: measure perceptual re-anchor to ordinary HOME;
-- ~3h: separate fatigue from volume, vigilance, navigation duty, music repetition, mode inference and hall masking.
+### Playtest & QA — COMPLETE
+- first-5-minute safe-operation contract separated from optional expert clue law;
+- ordinary 100G automation evaluated against event-attention release;
+- 500G dry-spell quality separated from eventual-hit relief and ceiling/commitment value;
+- BIG/REG local reward separated from post-BONUS continuation value;
+- same three STOPs evaluated as an optional prediction clock during BONUS;
+- 32G urgency treated as horizon compression rather than mandatory continuous spectacle;
+- repeated-chain fatigue, end/re-anchor behavior and three-hour vigilance burden modeled;
+- low-setting / low-reward exposure identified as the strongest REST-quality test;
+- unresolved video-timestamp evidence preserved instead of fabricated.
 
-### Machine Director
-After Playtest & QA completes Run 1, integrate whether simplicity creates a trustworthy low-cost HOME or merely defers all value into the next lamp flash / 32G chain. Do not open App Study before the real-machine cycle is formally integrated.
+### Machine Director — NEXT
+Integrate all four specialist passes and decide whether the real-machine cycle supports the shared hypothesis: a simple direct-notification machine can preserve a low-cost HOME while creating strong value through horizon compression, provided vigilance and relief debt do not consume the long session.
+
+Do not open App Study until Machine Director formally integrates Phase A Run 1. Do not return to original concepts.
 
 ## Evidence discipline
 
@@ -216,10 +255,12 @@ Never copy protected lamp art, cabinet styling, sounds, music, branded symbols, 
 `CASE_STUDY_04_GAME_REEL_PHASE_A_RUN1_COMPLETE = TRUE`
 `CASE_STUDY_04_VISUAL_MECHANISM_PHASE_A_RUN1_COMPLETE = TRUE`
 `CASE_STUDY_04_SOUND_EXPERIENCE_PHASE_A_RUN1_COMPLETE = TRUE`
-`CASE_STUDY_04_PLAYTEST_QA_PHASE_A_RUN1_COMPLETE = FALSE`
+`CASE_STUDY_04_PLAYTEST_QA_PHASE_A_RUN1_COMPLETE = TRUE`
+`CASE_STUDY_04_PHASE_A_RUN1_FOUR_SPECIALIST_DIRECTORS_COMPLETE = TRUE`
+`CASE_STUDY_04_PHASE_A_RUN1_MACHINE_INTEGRATED = FALSE`
 `CASE_STUDY_04_APP_STUDY = NOT_OPEN`
 `CASE_STUDY_04_REAL_APP_TRANSLATION = NOT_OPEN`
-`NEXT_FIXED_DIRECTOR = PLAYTEST_&_QA`
+`NEXT_FIXED_DIRECTOR = MACHINE`
 `HUMAN_GATE_1_NOT_READY`
 `REALITY_BASELINE_COMPLETE = FALSE`
 `SIGNAL/FORGE/VAULT = PROVISIONAL_FROZEN`
