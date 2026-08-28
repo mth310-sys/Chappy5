@@ -18,7 +18,8 @@
 - Standing HUMAN DIRECTIVE: `REMAIN IN REAL-MACHINE STUDY; DO NOT RETURN TO ORIGINAL CONCEPTS.`
 - Therefore `PHASE C — REAL↔APP TRANSLATION` is NOT opened.
 - Machine Director formally returned the shared object to `PHASE A — REAL MACHINE STUDY / RUN 2`.
-- Game & Reel Director Run 2 is now complete.
+- Game & Reel Director Run 2 is complete.
+- Visual & Mechanism Director Run 2 is now complete.
 
 The completed app cycle is retained only as a source of questions about what the real-machine baseline still lacks. App behavior must never be used as retroactive proof of unresolved real-machine properties.
 
@@ -36,18 +37,34 @@ The completed app cycle is retained only as a source of questions about what the
 Research file:
 `docs/research/CASE_STUDY_03_MADOKA_MAGICA_2_GAME_REEL_RUN2.md`
 
-Run 2 established the following real-machine findings/principles without inventing undisclosed stop-control tables:
-
+Run 2 established:
 - normal stopping is a branch routine: the left BAR landmark allocates attention, and precision rises only on cherry/watermelon branches;
 - `ROLE CLASSIFICATION LATENCY ≠ CONSEQUENCE-RESOLUTION LATENCY`;
-- familiar role families are repriced across normal/CZ/ART/ART-end preparation rather than replaced by a new reel vocabulary;
+- familiar role families are repriced across normal/CZ/ART/ART-end preparation;
 - ART overlays stop-order compliance on the same physical 3 STOP body map;
-- BONUS during ART is a continuity test: the temporary real BONUS must return to the persistent ART contract with retained/added value;
-- ART-end preparation is a playable boundary because familiar roles can still determine return;
-- setting inference is multi-channel evidence: weak-cherry frequency, direct ART, selected BONUS routes and state/CZ behavior have different sample speeds;
+- BONUS during ART must return to the persistent ART contract with retained/added value;
+- ART-end preparation is a playable boundary;
+- setting inference is multi-channel evidence with different sample speeds;
 - over longer sessions motor routine becomes cheaper while state/statistical reasoning becomes richer.
 
-Remaining Game & Reel unresolved items include exact proprietary stop-control/slip tables, timestamped long-form video measurement of precision-branch frequency and BONUS-detection behavior, and an exhaustive all-state role-conversion graph.
+## Visual & Mechanism Run 2 additions
+
+Research file:
+`docs/research/CASE_STUDY_03_MADOKA_MAGICA_2_VISUAL_MECHANISM_RUN2.md`
+
+Run 2 deepened the real-machine cabinet without turning inferred hardware into facts:
+- the seated gaze loop is short and vertical: `LCD meaning -> reel evidence -> STOP action -> LCD consequence`;
+- the recessed reel opening uses border/occlusion/apparent depth to protect a small physical work surface beneath the much larger LCD;
+- `VISUAL HIERARCHY SHOULD BE MEASURED BY RE-ACQUISITION COST, NOT AREA ALONE`;
+- high-frequency inputs form a tight motor cluster, while PUSH/touch interaction remains spatially/contextually distinct;
+- static top/side/lower landmarks can provide hall-distance identity without constant giant mechanical motion;
+- visible translucent/light-guiding behavior is separated from unverified material construction;
+- REST VISUAL preserves orientation and leaves motion/brightness headroom for exceptional states;
+- the full-touch LCD can temporarily become an input surface without replacing the physical reel body map;
+- `VISUAL RE-ANCHOR = RESTORED STATE LOCATION + RESTORED ACTION LOCATION + RESTORED ATTENTION PRIORITY`;
+- ornamental richness is concentrated around the task surface rather than inside the reel-reading zone.
+
+Visual unresolved items retained: exact BAZOOKA II dimensions for this implementation, reel-window depth/seated sightline, exact speaker/driver locations, exact independent lamp map, timestamped long-form gaze-demand measurements, control-force/ergonomic measurements and state-by-state real-hall brightness/flash density.
 
 ## Phase B retained distinctions — not real-machine facts
 
@@ -61,7 +78,6 @@ Remaining Game & Reel unresolved items include exact proprietary stop-control/sl
 ## Run 2 evidence labels
 
 All fixed Directors must separate:
-
 - `SOURCED FACT`
 - `DIRECT REAL-MACHINE VIDEO/PHOTO OBSERVATION`
 - `FIELD REPORT`
@@ -73,11 +89,8 @@ Prefer official/manual/manufacturer material, major strategy sources, reel/role 
 
 ## Run 2 remaining shared research targets
 
-### Visual & Mechanism — NEXT
-Deepen physical reel-window readability/depth, seated sightline, LCD↔reel gaze travel, operation-deck ergonomics, cabinet proportions, REST VISUAL, lamp/speaker placement where documented and visual re-anchor after temporary foreground states. Label inferred depth/material as interpretation.
-
-### Sound & Experience
-Deepen baseline BET/lever/reel/STOP/settling/payout/replay cadence, repeated versus exceptional cues, BONUS/ART foreground, audible return-to-home behavior and long-session fatigue. Do not reproduce melodies/samples/signature sounds.
+### Sound & Experience — NEXT
+Deepen baseline BET/lever/reel/STOP/settling/payout/replay cadence, repeated versus exceptional cues, BONUS/ART foreground, audible return-to-home behavior, speaker/low-frequency behavior where documented, and long-session fatigue. Do not reproduce melodies/samples/signature sounds.
 
 ### Playtest & QA
 Reconstruct first 5 minutes, normal 100G, 500G dry spell, BIG without ART, base ART without exceptional extension, BIG during ART, return to normal and ~3-hour fatigue. Separate intrinsic loop quality from relief at finally hitting a reward.
@@ -92,7 +105,8 @@ See:
 `CURRENT_SHARED_OBJECT = CASE_STUDY_03`
 `CURRENT_PHASE = PHASE_A_REAL_MACHINE_STUDY_RUN2`
 `CASE_STUDY_03_GAME_REEL_PHASE_A_RUN2_COMPLETE = TRUE`
-`NEXT_FIXED_DIRECTOR = VISUAL_&_MECHANISM`
+`CASE_STUDY_03_VISUAL_MECHANISM_PHASE_A_RUN2_COMPLETE = TRUE`
+`NEXT_FIXED_DIRECTOR = SOUND_&_EXPERIENCE`
 `CASE_STUDY_03_PHASE_A_FIRST_FIVE_DIRECTOR_CYCLE_COMPLETE = TRUE`
 `CASE_STUDY_03_PHASE_B_FIRST_FIVE_DIRECTOR_CYCLE_COMPLETE = TRUE`
 `PHASE_C_REAL_APP_TRANSLATION = NOT_OPEN`
