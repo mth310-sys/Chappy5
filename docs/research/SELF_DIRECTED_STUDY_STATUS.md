@@ -43,6 +43,24 @@ Main principles:
 
 Next worthwhile Game & Reel question: how much reel possibility-space complexity can remain learnable for beginners while providing expert counterfactual depth, without producing false vigilance or arbitrary-feeling control.
 
+### Visual & Mechanism Director Run 1
+`docs/research/SELF_STUDY_VISUAL_MECHANISM_RUN1_EMISSIVE_SCREEN_MATERIAL_DEPTH_SEPARATION.md`
+
+Question: when cabinet body, glass, reels, lamps and internal display all collapse onto one emissive iPhone screen, what visual relationships still make them read as distinct materials and physical layers?
+
+Key change: replace a checklist model (`bevel + shadow + highlight + glow`) with a **cue-consistency model**. Material and depth perception depend on relationships among shape, diffuse shading, highlight orientation/position, dark reflected structure, occlusion, context and coherent change over time. Stronger effects are not automatically more physical.
+
+Main principles:
+- `MATERIAL IDENTITY IS A RELATIONSHIP BETWEEN SHAPE, LIGHT AND CONTEXT — NOT A COLOR PRESET.`
+- `DEPTH SHOULD BE OVERDETERMINED BY CONSISTENT CUES, NOT EXAGGERATED BY ONE CUE.`
+- `ON AN EMISSIVE SCREEN, REFLECTIVE SURFACES MUST SPEND LESS LUMINANCE AUTHORITY THAN TRUE SIGNAL SURFACES.`
+- `A HIGHLIGHT THAT DISAGREES WITH SHAPE CAN FLATTEN AN OBJECT EVEN WHEN IT IS BRIGHT.`
+- `DARK REFLECTION STRUCTURE CAN CARRY MATERIAL INFORMATION; GLOSS IS NOT SYNONYMOUS WITH WHITE BLOOM.`
+- `WHEN REAL PARALLAX IS LOST, COHERENT CHANGE OVER TIME CAN CONFIRM PHYSICAL LAYERING.`
+- `REST VISUAL IS THE CALIBRATION STATE FOR MATERIAL AND LIGHT HIERARCHY.`
+
+Next worthwhile Visual & Mechanism question: how to measure on the target iPhone, without leading the observer, whether Humans actually infer distinct body / glass / recessed reel / lamp / display layers rather than one polished UI surface.
+
 ### Playtest & QA Run 1
 `docs/research/SELF_STUDY_PLAYTEST_QA_RUN1_HUMAN_EVIDENCE_FOR_REPEATED_TOUCH_PLAY.md`
 
@@ -51,10 +69,10 @@ Question: how to prove repeated BET / START / STOP1 / STOP2 / STOP3 interaction 
 ## Current readiness
 `MACHINE_SELF_STUDY = COMPLETE_RUN1`
 `GAME_REEL_SELF_STUDY = COMPLETE_RUN1`
-`VISUAL_MECHANISM_SELF_STUDY = READY`
+`VISUAL_MECHANISM_SELF_STUDY = COMPLETE_RUN1`
 `SOUND_EXPERIENCE_SELF_STUDY = READY`
 `PLAYTEST_QA_SELF_STUDY = COMPLETE_RUN1`
-`NEXT_FIXED_DIRECTOR = VISUAL_MECHANISM`
+`NEXT_FIXED_DIRECTOR = SOUND_EXPERIENCE`
 
 ## Global gates
 `CURRENT_SHARED_OBJECT = SELF_DIRECTED_STUDY`
