@@ -93,6 +93,15 @@ Highest-value unresolved capability areas:
 
 Exact proprietary commercial speaker/cabinet transfer functions and mastering chains remain a `KNOWLEDGE GAP`, but they are **not** production prerequisites. Sound's recommendation is audio reality engineering and real-device measurement, not wider machine tourism or collection of recognizable commercial cues.
 
+## Human directive — self-directed learning after each audit answer
+Human has now ordered a self-directed learning period after each Director's audit answer. Governing document: `docs/research/SELF_DIRECTED_STUDY_STATUS.md`.
+
+This does not cancel the unfinished audit sequence. Playtest & QA must still provide the pending audit answer, and Machine Director must still perform final audit integration. After that Director's required audit responsibility is discharged, that Director enters self-directed study rather than repeating already-saved Case Study material.
+
+Because Game & Reel, Visual & Mechanism, and Sound & Experience had already answered before this directive arrived, all three are immediately `SELF_STUDY_READY` for their next appropriate fixed-Director run.
+
+Self-study remains Stage 1 research only: no new-machine production, no original-concept refinement, no specification finalization, no prototype, no assets, no code, and no Human Gate crossing.
+
 ## Gate
 `CURRENT_SHARED_OBJECT = TECHNOLOGY_GAP_AUDIT`
 `TECHNOLOGY_GAP_AUDIT = OPEN`
@@ -102,6 +111,12 @@ Exact proprietary commercial speaker/cabinet transfer functions and mastering ch
 `SOUND_EXPERIENCE_AUDIT = COMPLETE_RUN1`
 `PLAYTEST_QA_AUDIT = NEXT`
 `FINAL_MACHINE_AUDIT_INTEGRATION = PENDING`
+`SELF_DIRECTED_STUDY = OPEN_BY_DIRECTOR_READINESS`
+`GAME_REEL_SELF_STUDY = READY`
+`VISUAL_MECHANISM_SELF_STUDY = READY`
+`SOUND_EXPERIENCE_SELF_STUDY = READY`
+`PLAYTEST_QA_SELF_STUDY = WAITING_FOR_AUDIT_ANSWER`
+`MACHINE_SELF_STUDY = WAITING_FOR_FINAL_AUDIT_INTEGRATION`
 `HUMAN_GATE_1_NOT_READY`
 `REALITY_BASELINE_COMPLETE = FALSE`
 `SIGNAL/FORGE/VAULT = PROVISIONAL_FROZEN`
