@@ -18,6 +18,7 @@
 - Case Study 04 official/properly licensed smartphone App Study: formally OPEN.
 - Case Study 04 App Game & Reel Run 1: complete.
 - Case Study 04 App Visual & Mechanism Run 1: complete.
+- Case Study 04 App Sound & Experience Run 1: complete.
 - Real↔App translation phase: NOT OPEN until the app specialist cycle is integrated.
 - Standing HUMAN DIRECTIVE: remain in study; do not return to original concepts.
 
@@ -32,6 +33,7 @@ Read first:
 - `docs/research/CASE_STUDY_04_OKIDOKI_GOLD_MACHINE_INTEGRATION_RUN1.md`
 - `docs/research/CASE_STUDY_04_OKIDOKI_GOLD_APP_GAME_REEL_RUN1.md`
 - `docs/research/CASE_STUDY_04_OKIDOKI_GOLD_APP_VISUAL_MECHANISM_RUN1.md`
+- `docs/research/CASE_STUDY_04_OKIDOKI_GOLD_APP_SOUND_EXPERIENCE_RUN1.md`
 - this file
 
 ## Machine integration verdict
@@ -91,14 +93,34 @@ Key handoff findings:
 - static phone imagery is not automatically REST; continuous high-contrast cabinet art/chrome can still claim attention;
 - exact hitboxes, finger occlusion, STOP visual latency, lamp bloom, wrapper visibility and mode indicators remain unresolved without direct app execution.
 
-### Sound & Experience — NEXT
+### Sound & Experience — COMPLETE
 
-Study phone-speaker/headphone translation, baseline action feedback, notification salience without hall acoustics/cabinet body, audio under auto/wait-cut, and whether automation removes action-linked timing meaning. Do not reproduce protected audio.
+Run 1 recorded in `CASE_STUDY_04_OKIDOKI_GOLD_APP_SOUND_EXPERIENCE_RUN1.md`.
 
-Carry forward the Visual handoff question: if physical lamp presence becomes displayed contrast, does cabinet/body acoustic presence likewise become only a timing/spectral substitute on phone, and can the direct notification remain dominant without simply becoming louder?
+Key handoff findings:
+- licensed-simulator status supports intended player-facing translation, not physical acoustic equivalence;
+- event order/timing law is more portable than cabinet timbre/body presence;
+- informational audio fidelity and physical-body audio fidelity require separate PASS criteria;
+- when touch removes mechanical action noise, low-latency electronic action feedback inherits more confirmation responsibility;
+- phone truth signals should win through timing, contrast and mix priority before raw level;
+- wait cut changes cadence even when action ownership remains, so repeated-audio fatigue must be re-tested;
+- auto can preserve audio event order while converting player-revealed information into system-presented information;
+- accelerated observation is a different listening contract from manual play;
+- the same logical 32G can have different listening exposure under manual, wait-cut and auto modes;
+- mobile audio needs device-speaker and headphone QA frames;
+- designed silence on mobile must remain distinguishable from device-level absence/muting;
+- no direct app listening/execution was available in this Sound run, so latency, speaker/headphone mix, low-frequency response and wait-cut/auto sound-retention behavior remain explicitly unresolved.
 
-### Playtest & QA
+### Playtest & QA — NEXT
+
 Reconstruct first five minutes, manual 100G, automated 100G, dry 500G where practical/evidenced, BONUS, 32G manual versus accelerated, chain/end, and extended phone use. Separate convenience from preserved game experience.
+
+Sound handoff requirements:
+- compare manual, wait-cut and auto as different action/listening contracts rather than one speed continuum;
+- separate logical horizon, wall-clock exposure, human action exposure and listening exposure;
+- test/observe notification dominance without crediting mere loudness;
+- separate audio fatigue from vigilance fatigue, touch/screen fatigue and automation boredom;
+- where direct-device evidence is unavailable, preserve `UNRESOLVED` instead of inventing latency/mix/haptic behavior.
 
 ### Machine Director
 Integrate only after all four app specialist passes complete. Do not open Real↔App translation early. After the current app cycle, retain the Human-requested five-Director technology-gap audit: compare accumulated study findings against Chappy5/遊創舎 capabilities and identify what remains to learn before production readiness.
@@ -129,10 +151,10 @@ Do not copy protected lamp art, cabinet styling, sounds, music, branded symbols,
 `CASE_STUDY_04_APP_STUDY = OPEN`
 `CASE_STUDY_04_APP_GAME_REEL_RUN1_COMPLETE = TRUE`
 `CASE_STUDY_04_APP_VISUAL_MECHANISM_RUN1_COMPLETE = TRUE`
-`CASE_STUDY_04_APP_SOUND_EXPERIENCE_RUN1_COMPLETE = FALSE`
+`CASE_STUDY_04_APP_SOUND_EXPERIENCE_RUN1_COMPLETE = TRUE`
 `CASE_STUDY_04_APP_PLAYTEST_QA_RUN1_COMPLETE = FALSE`
 `CASE_STUDY_04_REAL_APP_TRANSLATION = NOT_OPEN`
-`NEXT_FIXED_DIRECTOR = SOUND_&_EXPERIENCE`
+`NEXT_FIXED_DIRECTOR = PLAYTEST_&_QA`
 `HUMAN_GATE_1_NOT_READY`
 `REALITY_BASELINE_COMPLETE = FALSE`
 `SIGNAL/FORGE/VAULT = PROVISIONAL_FROZEN`
