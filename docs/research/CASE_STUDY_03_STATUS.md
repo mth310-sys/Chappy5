@@ -16,7 +16,7 @@
 - Case Study 03 Phase A real-machine Run 1: complete and Machine-integrated.
 - Case Study 03 Phase B smartphone-app Run 1: complete and Machine-integrated, retained only as a source of questions.
 - Case Study 03 Phase A real-machine Run 2: all specialist Directors complete and Machine-integrated.
-- Case Study 03 Phase A real-machine Run 3: formally open; Game & Reel and Visual & Mechanism are complete.
+- Case Study 03 Phase A real-machine Run 3: formally open; Game & Reel, Visual & Mechanism, and Sound & Experience are complete.
 - Standing HUMAN DIRECTIVE: `REMAIN IN REAL-MACHINE STUDY; DO NOT RETURN TO ORIGINAL CONCEPTS.`
 - Therefore `PHASE C — REAL↔APP TRANSLATION` remains NOT OPEN.
 
@@ -106,20 +106,49 @@ Provisional Visual verdict:
 
 Exact timestamped state-by-state attention duty cycle remains unresolved; available video evidence in this pass was insufficient for a defensible numerical measurement.
 
-### Sound & Experience Director — NEXT
-- sample repeated real-machine footage for cue density and REST/silence intervals rather than memorable cues only;
-- distinguish question-closing audio, question-prolonging audio and HOME-restoring audio;
-- use the same `QUESTION OVERLAP` frame from Game & Reel and Visual;
-- test whether an old unresolved question continues to claim audio attention when a new physical role event arrives;
-- distinguish `CONTEXT PRESENT` from `ATTENTION CLAIM ACTIVE` in audio as well as visuals;
-- identify audible re-anchor after CZ/BIG/ART foregrounds;
-- do not infer clean assets/SPL/speaker hardware from compressed footage.
+### Sound & Experience Director — COMPLETE
 
-### Playtest & QA Director
+Read:
+`docs/research/CASE_STUDY_03_MADOKA_MAGICA_2_SOUND_EXPERIENCE_RUN3.md`
+
+Run 3 sound findings:
+- audio must support two clocks at once: `CURRENT MOTOR CLOCK` and `PERSISTENT CONSEQUENCE CLOCK`;
+- distinguish cue functions as `OPEN / PROLONG / NARROW / CLOSE / RE-ANCHOR` rather than ranking every cue by strength;
+- `PERSISTENT CONTEXT SHOULD NOT REQUIRE PERSISTENT ACOUSTIC FOREGROUND`;
+- distinguish `AUDIO CONTEXT PRESENT` from `AUDIO ATTENTION CLAIM ACTIVE`;
+- `STATE PRESENCE MAY BE CONTINUOUS; LISTENING DUTY SHOULD BE INTERMITTENT`;
+- when old consequence context overlaps a new physical reel event, new action-relevant evidence should temporarily outrank stale unresolved context rather than stacking equal foreground claims;
+- BIG remains a foreground interruption-and-return test: audible re-anchor is complete only when state identity and action duty are both restored;
+- music can carry state memory continuously while information duty occurs only at entry/change;
+- `AN OPEN QUESTION DOES NOT REQUIRE AN OPEN ATTENTION CLAIM`;
+- compressed hall footage can support attention topology but not exact cabinet acoustics, SPL, frequency response or speaker hardware.
+
+Run 3 sound metrics handed forward:
+- `AUDIO CONTEXT PRESENT`
+- `AUDIO ATTENTION CLAIM ACTIVE`
+- `ATTENTION RELEASE INTERVAL`
+- `QUESTION-PROLONG CUE COUNT`
+- `QUESTION-CLOSE CUE COUNT`
+- `AUDIBLE RE-ANCHOR LATENCY`
+- `CONCURRENT AUDIO CLAIM COUNT`
+- `NEW-EVIDENCE PRIORITY`
+- `ROUTINE-RETURN CLARITY`
+- `OPTIONAL LISTENING DUTY` vs `MANDATORY ACTION AUDIO`
+
+Provisional Sound verdict:
+
+`THE MACHINE PLAUSIBLY PROTECTS AUDIO HOME BY LETTING PERSISTENT STATES CARRY CONTEXT WHILE DISCRETE CUES CLAIM ATTENTION AT ACTION OR RESOLUTION BOUNDARIES; THE MAIN FAILURE RISK IS NOT LACK OF SOUND BUT ACCUMULATION OF PROLONGING CUES AND UNRESOLVED LISTENING DUTY WHEN QUESTIONS OVERLAP.`
+
+Exact cue density per 100G, machine-specific baseline SE map, speaker topology, SPL/frequency behavior and fully timestamped transition audit remain unresolved.
+
+### Playtest & QA Director — NEXT
 - reconstruct at least one dry/low-reward sequence and one reward-rich sequence under the same evaluation frame;
 - separate `REWARD SATISFACTION` from `RELIEF`;
 - track `OPEN-QUESTION COUNT`, `RE-ANCHOR LATENCY`, `QUESTION OVERLAP` and optional statistical-maintenance burden;
-- compare beginner-required duty with expert-chosen observation load.
+- compare beginner-required duty with expert-chosen observation load;
+- add audio measures from Sound Run 3: `QUESTION-PROLONG CUE COUNT`, `QUESTION-CLOSE CUE COUNT`, `AUDIBLE RE-ANCHOR LATENCY`, `CONCURRENT AUDIO CLAIM COUNT`;
+- test whether `QUESTION OPEN + AUDIO REST` actually reduces vigilance burden during dry play;
+- compare reward-rich play for meaningful closure versus simultaneous visual/audio claim stacking.
 
 ## Evidence labels
 
@@ -144,7 +173,8 @@ App behavior may generate questions but cannot prove unresolved real-machine pro
 `CASE_STUDY_03_PHASE_A_RUN3_OPEN = TRUE`
 `CASE_STUDY_03_GAME_REEL_PHASE_A_RUN3_COMPLETE = TRUE`
 `CASE_STUDY_03_VISUAL_MECHANISM_PHASE_A_RUN3_COMPLETE = TRUE`
-`NEXT_FIXED_DIRECTOR = SOUND_&_EXPERIENCE`
+`CASE_STUDY_03_SOUND_EXPERIENCE_PHASE_A_RUN3_COMPLETE = TRUE`
+`NEXT_FIXED_DIRECTOR = PLAYTEST_&_QA`
 `PHASE_C_REAL_APP_TRANSLATION = NOT_OPEN`
 `HUMAN_GATE_1_NOT_READY`
 `REALITY_BASELINE_COMPLETE = FALSE`
