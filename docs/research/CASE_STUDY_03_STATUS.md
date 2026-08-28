@@ -34,6 +34,8 @@ The app is not evidence for real-machine properties during Phase A.
 - `docs/research/CASE_STUDY_03_STATUS_VISUAL_MECHANISM_RUN1.md`
 - `docs/research/CASE_STUDY_03_MADOKA_MAGICA_2_SOUND_EXPERIENCE_RUN1.md`
 - `docs/research/CASE_STUDY_03_STATUS_SOUND_EXPERIENCE_RUN1.md`
+- `docs/research/CASE_STUDY_03_MADOKA_MAGICA_2_PLAYTEST_QA_RUN1.md`
+- `docs/research/CASE_STUDY_03_STATUS_PLAYTEST_QA_RUN1.md`
 - this file
 
 ## Why this case
@@ -57,7 +59,11 @@ The Human directive requires a properly licensed smartphone app. This case satis
 - Game & Reel Director: `PHASE_A_RUN1_COMPLETE`
 - Visual & Mechanism Director: `PHASE_A_RUN1_COMPLETE`
 - Sound & Experience Director: `PHASE_A_RUN1_COMPLETE`
-- Playtest & QA Director: `PENDING_PHASE_A`
+- Playtest & QA Director: `PHASE_A_RUN1_COMPLETE`
+
+`CASE_STUDY_03_PHASE_A_FIRST_FIVE_DIRECTOR_CYCLE_COMPLETE = TRUE`
+
+This does not mean the global Reality Baseline is complete. Machine Director must integrate and decide whether Phase A needs another evidence pass or whether Phase B may be formally opened.
 
 ## Game & Reel Run 1 — retained handoff
 
@@ -94,50 +100,61 @@ Key abstractions:
 - `REST VISUAL IS AN ACTIVE BASELINE, NOT AN ABSENCE OF PRESENTATION.`
 - `STATIC FORM CAN CARRY IDENTITY SO DYNAMIC CHANGE CAN BE RESERVED FOR GAME MEANING.`
 
-## Sound & Experience Run 1 — integrated handoff
-
-Primary research:
-- `docs/research/CASE_STUDY_03_MADOKA_MAGICA_2_SOUND_EXPERIENCE_RUN1.md`
+## Sound & Experience Run 1 — retained handoff
 
 Established:
-- A+ART audio is better understood as **parallel reward clocks** than as one permanent escalation ladder;
-- BIG is a short foreground reward, while ART is a persistent sound context that may need to sustain hundreds of games;
-- BIG notification type and BGM are selectable; the three notification modes change when certainty is delivered, not only aesthetic preference;
-- a field report describes the complete-notification event as physically startling, so `memorable / rewarding / comfortable` must be evaluated separately;
-- STOP3 may resolve the visible role while audio/presentation continues the unresolved consequence question;
-- CZ and extension states should be evaluated as temporary attention/intensity envelopes with a release edge;
-- ART navigation gives audio a motor-instruction responsibility that must outrank decorative BGM at the moment of action without requiring permanent maximum loudness;
-- BIG during ART should be evaluated as `ART HOME → BIG FOREGROUND → BIG RESOLUTION → ART RE-ANCHOR`;
-- exact speaker topology, SPL, driver specification and cabinet low-frequency behavior remain unresolved and must not be inferred from videos.
+- A+ART audio is better understood as parallel reward clocks than as one permanent escalation ladder;
+- BIG is a short foreground reward while ART is a persistent sound context;
+- BIG notification type/BGM choice changes when certainty is delivered, not only aesthetic preference;
+- complete-notification memorability and startle cost must be evaluated separately;
+- STOP3 may resolve visible role while presentation/audio keeps consequence open;
+- ART navigation needs motor-instruction priority over decorative BGM at action time;
+- BIG inside ART should be treated as `ART HOME → BIG FOREGROUND → BIG RESOLUTION → ART RE-ANCHOR`;
+- exact speaker topology/SPL/low-frequency behavior remains unresolved.
 
 Key abstractions:
 - `SHORT REWARD MAY TAKE THE FOREGROUND WITHOUT ERASING THE PERSISTENT AUDIO CONTEXT IT INTERRUPTS.`
 - `AUDIO CUSTOMIZATION CAN CHANGE WHEN THE PLAYER RECEIVES CERTAINTY, NOT JUST WHAT THE MACHINE SOUNDS LIKE.`
 - `MEMORABILITY MUST BE EVALUATED SEPARATELY FROM STARTLE COST.`
-- `A RARE PEAK BORROWS ITS POWER FROM THE HEADROOM LEFT BY ROUTINE AUDIO.`
-- `STOP3 MAY CLOSE THE MOTOR QUESTION WHILE AUDIO KEEPS THE CONSEQUENCE QUESTION OPEN.`
-- `TEMPORARY HIGH-DUTY AUDIO NEEDS A CLEAR RELEASE EDGE.`
 - `PERSISTENT BGM MAY OWN MOOD; INTERMITTENT CUES MUST OWN ACTION TIMING.`
-- `INTENSITY IS A TEMPORARY RESOURCE; SPECIAL STATES SHOULD RETURN IT WHEN THEIR LOCAL QUESTION ENDS.`
 - `A PARALLEL REWARD SHOULD HAVE AN AUDIBLE RETURN ADDRESS.`
 
-## Immediate next handoff — Playtest & QA
+## Playtest & QA Run 1 — integrated handoff
 
-Reconstruct real repeated play, not highlight clips. Priorities:
+Primary research:
+- `docs/research/CASE_STUDY_03_MADOKA_MAGICA_2_PLAYTEST_QA_RUN1.md`
 
-1. first 5 minutes: beginner aiming, screen attention and what must be ignored;
-2. normal 100G and 500G dry stretches: routine fatigue versus genuine intrinsic engagement;
-3. rare-role recognition → unresolved consequence → closure latency;
-4. CZ entry/failure → how quickly attention returns to NORMAL REST;
-5. BIG-only satisfaction when ART does not follow;
-6. three BIG notification modes as different certainty schedules;
-7. complete-notification reward value versus startle/fatigue cost;
-8. ART without major extension: whether the base state is itself sustainable;
-9. long ART: navigation cue, BGM, voice and visual concurrency fatigue;
-10. `BIG during ART → ART resume` re-anchor quality;
-11. extension-zone excitement versus return-to-ART recovery;
-12. 3-hour fatigue and whether the player is still enjoying play or merely waiting for relief/rare reward;
-13. no smartphone-app testing yet.
+Established:
+- beginner onboarding is primarily learning when extra aiming duty opens, not merely where to aim;
+- ordinary 100G is modeled as `LOW-DUTY ROUTINE → RARE-ROLE QUESTION → DEFERRED CONSEQUENCE → CLOSURE → HOME`;
+- sparse rare events can still create cognitive fatigue when consequence closure is slow;
+- 500G dry-play value must be separated from relief when a later hit finally arrives;
+- BIG without ART must retain local completion value or the real BONUS becomes transport;
+- the three BIG notification types are three certainty schedules;
+- CZ failure may leave system memory, but player duty needs a bounded release back to normal;
+- base ART must be tested without extension highlights to prove that the persistent state itself is sustainable;
+- `ART → BIG → ART` quality depends on low re-anchor/orientation cost;
+- expert mastery shifts burden from motor aiming toward contextual/statistical inference;
+- three-hour fatigue risk is strongly tied to context switching, semantic carryover and concurrent open questions rather than only presentation intensity.
+
+New QA metrics:
+- `CONSEQUENCE CLOSURE LATENCY`
+- `RELIEF DEPENDENCE RATIO`
+- `BIG-ONLY SATISFACTION`
+- `CERTAINTY SCHEDULE FIT`
+- `HOME RECOGNITION LATENCY`
+- `BASE-ART INDEPENDENCE`
+- `RE-ANCHOR LATENCY`
+- `CONCURRENT CLAIM COUNT`
+- `INTRINSIC PRE-HIT PLAY VALUE` vs `RELIEF VALUE`
+
+Key abstractions:
+- `A HIT AFTER A DRY SPELL MUST NOT BE USED AS RETROACTIVE PROOF THAT THE DRY SPELL WAS GOOD.`
+- `IN A PARALLEL-REWARD MACHINE, A REAL BONUS MUST RETAIN LOCAL COMPLETION VALUE EVEN WHEN IT DOES NOT OPEN THE PERSISTENT STATE.`
+- `THE PERSISTENT STATE MUST BE TESTED WITHOUT ITS HIGHLIGHT SUBSTATES.`
+- `MASTERY CAN MOVE LOAD FROM THE HANDS TO THE MODEL IN THE PLAYER'S HEAD.`
+- `FATIGUE CAN COME FROM TOO MANY SMALL OPEN QUESTIONS, NOT ONLY FROM HIGH PRESENTATION INTENSITY.`
+- `THE MACHINE MUST LET THE PLAYER RETURN TO A TRUSTED HOME ROUTINE AFTER EACH TEMPORARY CONTEXT, OR PARALLEL DEPTH TURNS INTO PARALLEL FATIGUE.`
 
 ## Cross-director unresolved items
 
@@ -166,11 +183,32 @@ Reconstruct real repeated play, not highlight clips. Priorities:
 - speaker count/location, low-frequency system and any dedicated vibration mechanism;
 - no SPL inference from edited/AGC video recordings.
 
+### Playtest & QA
+- time-coded unedited 100G density audit;
+- practical BONUS detection/alignment latency;
+- repeated complete-notification fatigue across multiple sessions;
+- time-coded BIG-inside-ART re-anchor observation;
+- trustworthy three-hour boredom/engagement ratio;
+- beginner/expert gaze evidence;
+- no smartphone-app testing before formal Phase B transition.
+
+## Immediate next handoff — Machine Director
+
+Integrate the first complete five-Director Phase A cycle.
+
+Required decision:
+1. preserve `HUMAN_GATE_1_NOT_READY` and `REALITY_BASELINE_COMPLETE = FALSE`;
+2. do not return to SIGNAL/FORGE/VAULT;
+3. decide whether unresolved real-machine evidence requires another Phase A pass;
+4. if Phase A is sufficiently established for this case, formally open `PHASE B — SMARTPHONE APP STUDY` for the same machine;
+5. Phase B must study the licensed app as a translation of the already-established real machine, not as a substitute source for real-machine properties.
+
 ## Gate
 
 `CURRENT_SHARED_OBJECT = CASE_STUDY_03`
 `CURRENT_PHASE = PHASE_A_REAL_MACHINE_STUDY`
-`NEXT_FIXED_DIRECTOR = PLAYTEST_&_QA`
+`NEXT_FIXED_DIRECTOR = MACHINE`
+`CASE_STUDY_03_PHASE_A_FIRST_FIVE_DIRECTOR_CYCLE_COMPLETE = TRUE`
 `HUMAN_GATE_1_NOT_READY`
 `REALITY_BASELINE_COMPLETE = FALSE`
 `SIGNAL/FORGE/VAULT = PROVISIONAL_FROZEN`
