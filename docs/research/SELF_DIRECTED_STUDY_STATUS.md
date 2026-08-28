@@ -60,7 +60,25 @@ Main principles:
 - `DO NOT COUNT ILLUSION OF CONTROL AS REEL DEPTH.`
 - `MASTERY SHOULD INCREASE PREDICTIVE COMPRESSION.`
 
-Next worthwhile Game & Reel question: how much reel possibility-space complexity can remain learnable for beginners while providing expert counterfactual depth, without producing false vigilance or arbitrary-feeling control.
+### Game & Reel Director Run 2
+`docs/research/SELF_STUDY_GAME_REEL_RUN2_REEL_COMPLEXITY_VS_LEARNABILITY.md`
+
+Question: how can a reel possibility-space remain simple enough for a beginner to operate safely while preserving learnable counterfactual depth for experts?
+
+Key change: replace raw branch-count thinking with **exposed decision entropy**. A control law may be internally rich while presenting a novice with only a few stable action classes. Expert depth can emerge by voluntarily reopening uncertainty through alternate routes that buy information or skill value, rather than forcing every branch into beginner working memory.
+
+Main principles:
+- `DEPTH SHOULD BE LATENT BEFORE IT BECOMES MANDATORY.`
+- `MEASURE EXPOSED DECISION ENTROPY, NOT RAW STOP-TABLE SIZE.`
+- `A SAFE DEFAULT ROUTE SHOULD COLLAPSE MANY STATES INTO FEW RELIABLE ACTION CLASSES.`
+- `EXPERT ROUTES MAY RE-EXPAND UNCERTAINTY ONLY WHEN THEY BUY INFORMATION, CONTROL LEGIBILITY, OR SKILL VALUE.`
+- `MASTERY SHOULD REDUCE THE NUMBER OF COGNITIVE UNITS NEEDED TO REPRESENT THE SAME POSSIBILITY-SPACE.`
+- `CONDITIONAL DUTY SHOULD OPEN FROM A CUE AND CLOSE WHEN THE CUE IS RESOLVED.`
+- `A STABLE BASE GRAMMAR MUST PRECEDE MEANINGFUL EXCEPTIONS.`
+- `GUIDANCE THAT NEVER BECOMES IGNORABLE CAN TURN BEGINNER ACCESSIBILITY INTO EXPERT FRICTION.`
+- `OPTIONAL COMPLEXITY IS REAL ONLY IF IGNORING IT REMAINS HONESTLY VIABLE.`
+
+Next worthwhile Game & Reel question: how reel grammar and action chunks recover after interruption—hours or days away—without requiring fresh memorization.
 
 ### Visual & Mechanism Director Run 1
 `docs/research/SELF_STUDY_VISUAL_MECHANISM_RUN1_EMISSIVE_SCREEN_MATERIAL_DEPTH_SEPARATION.md`
@@ -124,14 +142,15 @@ Highest-value next QA question: how to estimate attention efficiency with a prac
 
 ## Current readiness
 `MACHINE_SELF_STUDY = COMPLETE_RUN2`
-`GAME_REEL_SELF_STUDY = COMPLETE_RUN1`
+`GAME_REEL_SELF_STUDY = COMPLETE_RUN2`
 `VISUAL_MECHANISM_SELF_STUDY = COMPLETE_RUN1`
 `SOUND_EXPERIENCE_SELF_STUDY = COMPLETE_RUN1`
 `PLAYTEST_QA_SELF_STUDY = COMPLETE_RUN2`
 `ALL_FIVE_DIRECTORS_SELF_STUDY_RUN1 = COMPLETE`
 `MACHINE_DEEPENING_RUN2 = COMPLETE`
+`GAME_REEL_DEEPENING_RUN2 = COMPLETE`
 `PLAYTEST_QA_DEEPENING_RUN2 = COMPLETE`
-`NEXT_FIXED_DIRECTOR = GAME_REEL`
+`NEXT_FIXED_DIRECTOR = VISUAL_MECHANISM`
 
 ## Global gates
 `CURRENT_SHARED_OBJECT = SELF_DIRECTED_STUDY`
