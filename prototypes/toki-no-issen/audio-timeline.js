@@ -1,7 +1,7 @@
-/* Sound & Experience Run 6 — original Web Audio timing profile.
+/* Sound & Experience Run 7 — original Web Audio timing profile.
  * Prototype-only. No third-party samples/assets.
  * Keep the whole sword exchange on one causal timeline and avoid adding layers
- * merely because Visual Run 6 exposes more cadence tokens.
+ * merely because Visual Run 7 exposes more cadence tokens.
  */
 import './game-reel-run6.js';
 import './game-reel-run7.js';
@@ -25,33 +25,40 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
 }
 
 export const TOKI_AUDIO_TIMELINE = Object.freeze({
-  bet: { mechHz: 145, confirmHz: 290, confirmDelayMs: 20 },
+  bet: { mechHz: 145, confirmHz: 290, confirmDelayMs: 18 },
   lever: {
     mechHz: 72,
     spinBedHz: 54,
-    spinBedGain: 0.0042,
-    attackMs: 38,
-    releaseMs: 48
+    // Keep the spin bed below the hand-driven events; headphones/Bluetooth may
+    // add device latency, so do not try to compensate by moving game timing.
+    spinBedGain: 0.0036,
+    attackMs: 30,
+    releaseMs: 42
   },
   stop: {
     mechDelayMs: 0,
-    slashDelayMs: 10,
-    thirdBladeTailDelayMs: 34,
-    // Keep resolve close enough to feel caused by STOP3 on touch hardware.
-    resultDelayMs: 74,
-    resultReleaseMs: 112
+    slashDelayMs: 9,
+    thirdBladeTailDelayMs: 31,
+    // STOP3 remains the cause. The short gap is dramatic silence, not mute.
+    resultDelayMs: 70,
+    resultReleaseMs: 108
   },
   // Timbral identity is expressed by pitch/decay, not extra simultaneous voices.
   cuts: Object.freeze([
-    { bladeHz: 330, bladeMs: 42, gain: 0.018 },
-    { bladeHz: 410, bladeMs: 45, gain: 0.019 },
-    { bladeHz: 520, bladeMs: 48, gain: 0.020 }
+    { bladeHz: 330, bladeMs: 40, gain: 0.017 },
+    { bladeHz: 410, bladeMs: 43, gain: 0.018 },
+    { bladeHz: 520, bladeMs: 46, gain: 0.019 }
   ]),
   silence: {
     // Semantic silence after STOP3. Technical mute is tracked separately.
-    thirdStopToResolveMs: 40,
+    thirdStopToResolveMs: 39,
     technicalMuteDataset: 'audioTech'
-  }
+  },
+  transport: Object.freeze({
+    // Diagnostic policy only: Bluetooth/device latency must never alter reel logic.
+    compensateOutputLatency: false,
+    resumeOnNextGesture: true
+  })
 });
 
 export function tokiCutProfile(stopNo, reelIndex = 0) {
