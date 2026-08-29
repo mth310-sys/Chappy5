@@ -28,12 +28,16 @@ function writeEvidence(name, payload) {
 }
 
 for (const c of cases) {
-  test(`${c.name}: submission viewport, controls, audio boot and profile evidence`, async ({ page }) => {
+  test(`${c.name}: submission viewport, reels, controls, audio boot and profile evidence`, async ({ page }) => {
     test.setTimeout(30000);
     await page.goto(`http://127.0.0.1:4173${c.path}`, { waitUntil: 'networkidle' });
 
     const frame = page.frameLocator('#game');
     await expect(frame.locator('body')).toBeVisible();
+    await expect.poll(async () => {
+      const box = await frame.locator('#bet').boundingBox().catch(() => null);
+      return box ? box.height : 0;
+    }, { timeout: 1800, message: 'integrated touch deck must finish applying submission geometry' }).toBeGreaterThanOrEqual(44);
 
     const outer = await page.evaluate(() => ({
       width: innerWidth,
@@ -59,6 +63,7 @@ for (const c of cases) {
         bet: rect(document.querySelector('#bet')),
         lever: rect(document.querySelector('#lever')),
         stops: [...document.querySelectorAll('.stop')].map(rect),
+        reels: [...document.querySelectorAll('.reel')].map(rect),
       };
     });
 
@@ -73,6 +78,16 @@ for (const c of cases) {
       expect(control.right, `${label} right edge`).toBeLessThanOrEqual(innerLayout.width + 1);
       expect(control.y, `${label} top edge`).toBeGreaterThanOrEqual(0);
       expect(control.bottom, `${label} must be visible without vertical page scrolling`).toBeLessThanOrEqual(innerLayout.height + 1);
+    }
+
+    expect(innerLayout.reels.length, 'physical three-reel play must remain present').toBe(3);
+    for (const [i, reel] of innerLayout.reels.entries()) {
+      expect(reel.width, `REEL${i+1} must remain visually substantial on iPhone`).toBeGreaterThanOrEqual(44);
+      expect(reel.height, `REEL${i+1} must not collapse under LCD/world presentation`).toBeGreaterThanOrEqual(60);
+      expect(reel.x, `REEL${i+1} left clipping`).toBeGreaterThanOrEqual(0);
+      expect(reel.right, `REEL${i+1} right clipping`).toBeLessThanOrEqual(innerLayout.width + 1);
+      expect(reel.y, `REEL${i+1} top clipping`).toBeGreaterThanOrEqual(0);
+      expect(reel.bottom, `REEL${i+1} must remain in the no-scroll play surface`).toBeLessThanOrEqual(innerLayout.height + 1);
     }
 
     const bet = frame.locator('#bet');
@@ -90,6 +105,16 @@ for (const c of cases) {
     const profileName = path.basename(c.profile);
     const profileIntegrated = shellText.includes(profileName);
 
+    if (c.name === 'toki') {
+      expect(profileIntegrated, 'Toki submitted shell must use the approved STOP/audio timeline').toBeTruthy();
+      expect(shellText, 'Toki STOP input must drive slash from the same pointer event path').toContain('slash(stopNo,i)');
+      expect(shellText, 'Toki technical mute state must stay distinguishable from semantic silence').toContain('data-audio-tech');
+    } else {
+      expect(shellText, 'Nocturne public shell must retain separate physical mechanism bus').toContain('mechBus');
+      expect(shellText, 'Nocturne public shell must retain separate observation bus').toContain('observeBus');
+      expect(shellText, 'Nocturne public shell must retain separate memory bus').toContain('memoryBus');
+    }
+
     writeEvidence(c.name, {
       path: c.path,
       viewport: outer,
@@ -100,14 +125,14 @@ for (const c of cases) {
         exists: profileText.length > 0,
         integratedIntoPublishedShell: profileIntegrated,
         note: profileIntegrated
-          ? 'Sound Run 5 profile is referenced by the deployed integrated shell.'
-          : 'Sound Run 5 profile exists on main but is not referenced by the deployed integrated shell; do not claim its new routing/timeline is audible yet.',
+          ? 'Current audio profile is referenced by the deployed integrated shell.'
+          : 'Current audio profile exists on main but is not referenced by the deployed integrated shell; stable inline audio remains the submission baseline.',
       },
+      qaIntent: c.name === 'toki'
+        ? 'Protect STOP-to-slash causality and physical reel prominence.'
+        : 'Protect physical reel prominence from aquarium-world visual dominance and preserve audio-layer separation.',
     });
 
-    // Sound Run 5 explicitly left these profiles integration-pending. Record this as submission evidence
-    // without breaking otherwise-playable prototypes; Machine/Sound must close it before claiming the
-    // new profile behavior is part of the submitted build.
     expect(profileText.length, 'audio profile source must exist').toBeGreaterThan(0);
   });
 }
