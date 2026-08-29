@@ -3,136 +3,25 @@ const fs = require('fs');
 const path = require('path');
 
 const cases = [
-  {
-    name: 'toki',
-    path: '/prototypes/toki-no-issen/play.html',
-    shell: 'prototypes/toki-no-issen/play.html',
-    profile: 'prototypes/toki-no-issen/audio-timeline.js',
-  },
-  {
-    name: 'nocturne',
-    path: '/prototypes/nocturne-aquarium/play.html',
-    shell: 'prototypes/nocturne-aquarium/play.html',
-    profile: 'prototypes/nocturne-aquarium/audio-routing.js',
-  },
+  { name:'toki', path:'/prototypes/toki-no-issen/play.html', shell:'prototypes/toki-no-issen/play.html', profile:'prototypes/toki-no-issen/audio-timeline.js' },
+  { name:'nocturne', path:'/prototypes/nocturne-aquarium/play.html', shell:'prototypes/nocturne-aquarium/play.html', profile:'prototypes/nocturne-aquarium/audio-routing.js' },
 ];
-
-const evidenceDir = path.join(__dirname, 'evidence');
-fs.mkdirSync(evidenceDir, { recursive: true });
-
-function writeEvidence(name, payload) {
-  fs.writeFileSync(
-    path.join(evidenceDir, `submission-${name}.json`),
-    JSON.stringify(payload, null, 2),
-  );
-}
-
-for (const c of cases) {
-  test(`${c.name}: submission viewport, reels, controls, audio boot and profile evidence`, async ({ page }) => {
-    test.setTimeout(30000);
-    await page.goto(`http://127.0.0.1:4173${c.path}`, { waitUntil: 'networkidle' });
-
-    const frame = page.frameLocator('#game');
-    await expect(frame.locator('body')).toBeVisible();
-    await expect.poll(async () => {
-      const box = await frame.locator('#bet').boundingBox().catch(() => null);
-      return box ? box.height : 0;
-    }, { timeout: 1800, message: 'integrated touch deck must finish applying submission geometry' }).toBeGreaterThanOrEqual(44);
-
-    const outer = await page.evaluate(() => ({
-      width: innerWidth,
-      height: innerHeight,
-      scrollWidth: document.documentElement.scrollWidth,
-      scrollHeight: document.documentElement.scrollHeight,
-      audioTech: document.body.dataset.audioTech || 'not-started',
-    }));
-
-    expect(outer.width, 'iPhone project should remain around 390px wide').toBeLessThanOrEqual(430);
-    expect(outer.scrollWidth, 'integrated shell must not horizontally overflow').toBeLessThanOrEqual(outer.width + 1);
-
-    const innerLayout = await frame.locator('body').evaluate(() => {
-      const rect = el => {
-        const r = el.getBoundingClientRect();
-        return { x:r.x, y:r.y, width:r.width, height:r.height, bottom:r.bottom, right:r.right, disabled:!!el.disabled };
-      };
-      return {
-        width: innerWidth,
-        height: innerHeight,
-        scrollWidth: document.documentElement.scrollWidth,
-        scrollHeight: document.documentElement.scrollHeight,
-        bet: rect(document.querySelector('#bet')),
-        lever: rect(document.querySelector('#lever')),
-        stops: [...document.querySelectorAll('.stop')].map(rect),
-        reels: [...document.querySelectorAll('.reel')].map(rect),
-      };
-    });
-
-    expect(innerLayout.scrollWidth, 'prototype must not horizontally overflow').toBeLessThanOrEqual(innerLayout.width + 1);
-    for (const [label, control] of [
-      ['BET', innerLayout.bet],
-      ['LEVER', innerLayout.lever],
-      ...innerLayout.stops.map((s, i) => [`STOP${i+1}`, s]),
-    ]) {
-      expect(control.height, `${label} touch height`).toBeGreaterThanOrEqual(44);
-      expect(control.x, `${label} left edge`).toBeGreaterThanOrEqual(0);
-      expect(control.right, `${label} right edge`).toBeLessThanOrEqual(innerLayout.width + 1);
-      expect(control.y, `${label} top edge`).toBeGreaterThanOrEqual(0);
-      expect(control.bottom, `${label} must be visible without vertical page scrolling`).toBeLessThanOrEqual(innerLayout.height + 1);
-    }
-
-    expect(innerLayout.reels.length, 'physical three-reel play must remain present').toBe(3);
-    for (const [i, reel] of innerLayout.reels.entries()) {
-      expect(reel.width, `REEL${i+1} must remain visually substantial on iPhone`).toBeGreaterThanOrEqual(44);
-      expect(reel.height, `REEL${i+1} must not collapse under LCD/world presentation`).toBeGreaterThanOrEqual(60);
-      expect(reel.x, `REEL${i+1} left clipping`).toBeGreaterThanOrEqual(0);
-      expect(reel.right, `REEL${i+1} right clipping`).toBeLessThanOrEqual(innerLayout.width + 1);
-      expect(reel.y, `REEL${i+1} top clipping`).toBeGreaterThanOrEqual(0);
-      expect(reel.bottom, `REEL${i+1} must remain in the no-scroll play surface`).toBeLessThanOrEqual(innerLayout.height + 1);
-    }
-
-    const bet = frame.locator('#bet');
-    const lever = frame.locator('#lever');
-    if (await bet.isEnabled()) await bet.tap({ force: true });
-    if (await lever.isEnabled()) await lever.tap({ force: true });
-    await page.waitForTimeout(80);
-
-    const audioAfterGesture = await page.locator('body').evaluate(body => body.dataset.audioTech || 'not-started');
-    expect(audioAfterGesture, 'real user gesture must attempt Web Audio startup').not.toBe('not-started');
-    expect(audioAfterGesture, 'Safari-style audio resume must not fail').not.toBe('resume-failed');
-
-    const shellText = fs.readFileSync(path.join(process.cwd(), c.shell), 'utf8');
-    const profileText = fs.readFileSync(path.join(process.cwd(), c.profile), 'utf8');
-    const profileName = path.basename(c.profile);
-    const profileIntegrated = shellText.includes(profileName);
-
-    if (c.name === 'toki') {
-      expect(profileIntegrated, 'Toki submitted shell must use the approved STOP/audio timeline').toBeTruthy();
-      expect(shellText, 'Toki STOP input must drive slash from the same pointer event path').toContain('slash(stopNo,i)');
-      expect(shellText, 'Toki technical mute state must stay distinguishable from semantic silence').toContain('data-audio-tech');
-    } else {
-      expect(shellText, 'Nocturne public shell must retain separate physical mechanism bus').toContain('mechBus');
-      expect(shellText, 'Nocturne public shell must retain separate observation bus').toContain('observeBus');
-      expect(shellText, 'Nocturne public shell must retain separate memory bus').toContain('memoryBus');
-    }
-
-    writeEvidence(c.name, {
-      path: c.path,
-      viewport: outer,
-      innerLayout,
-      audioAfterGesture,
-      audioProfile: {
-        file: c.profile,
-        exists: profileText.length > 0,
-        integratedIntoPublishedShell: profileIntegrated,
-        note: profileIntegrated
-          ? 'Current audio profile is referenced by the deployed integrated shell.'
-          : 'Current audio profile exists on main but is not referenced by the deployed integrated shell; stable inline audio remains the submission baseline.',
-      },
-      qaIntent: c.name === 'toki'
-        ? 'Protect STOP-to-slash causality and physical reel prominence.'
-        : 'Protect physical reel prominence from aquarium-world visual dominance and preserve audio-layer separation.',
-    });
-
-    expect(profileText.length, 'audio profile source must exist').toBeGreaterThan(0);
-  });
+const evidenceDir=path.join(__dirname,'evidence'); fs.mkdirSync(evidenceDir,{recursive:true});
+function writeEvidence(name,payload){fs.writeFileSync(path.join(evidenceDir,`submission-${name}.json`),JSON.stringify(payload,null,2));}
+for(const c of cases){
+ test(`${c.name}: submission viewport, reels, controls, audio boot and profile evidence`,async({page})=>{
+  test.setTimeout(30000); await page.goto(`http://127.0.0.1:4173${c.path}`,{waitUntil:'networkidle'}); const frame=page.frameLocator('#game'); await expect(frame.locator('body')).toBeVisible();
+  await expect.poll(async()=>{const box=await frame.locator('#bet').boundingBox().catch(()=>null);return box?box.height:0;},{timeout:1800,message:'integrated touch deck must finish applying submission geometry'}).toBeGreaterThanOrEqual(44);
+  const outer=await page.evaluate(()=>({width:innerWidth,height:innerHeight,scrollWidth:document.documentElement.scrollWidth,scrollHeight:document.documentElement.scrollHeight,audioTech:document.body.dataset.audioTech||'not-started'}));
+  expect(outer.width,'iPhone project should remain around 390px wide').toBeLessThanOrEqual(430); expect(outer.scrollWidth,'integrated shell must not horizontally overflow').toBeLessThanOrEqual(outer.width+1);
+  const innerLayout=await frame.locator('body').evaluate(()=>{const rect=el=>{const r=el.getBoundingClientRect();return{x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom,right:r.right,disabled:!!el.disabled}};return{width:innerWidth,height:innerHeight,scrollWidth:document.documentElement.scrollWidth,scrollHeight:document.documentElement.scrollHeight,bet:rect(document.querySelector('#bet')),lever:rect(document.querySelector('#lever')),stops:[...document.querySelectorAll('.stop')].map(rect),reels:[...document.querySelectorAll('.reel')].map(rect)}});
+  expect(innerLayout.scrollWidth,'prototype must not horizontally overflow').toBeLessThanOrEqual(innerLayout.width+1);
+  for(const[label,control]of[['BET',innerLayout.bet],['LEVER',innerLayout.lever],...innerLayout.stops.map((s,i)=>[`STOP${i+1}`,s])]){expect(control.height,`${label} touch height`).toBeGreaterThanOrEqual(44);expect(control.x,`${label} left edge`).toBeGreaterThanOrEqual(0);expect(control.right,`${label} right edge`).toBeLessThanOrEqual(innerLayout.width+1);expect(control.y,`${label} top edge`).toBeGreaterThanOrEqual(0);expect(control.bottom,`${label} must be visible without vertical page scrolling`).toBeLessThanOrEqual(innerLayout.height+1)}
+  expect(innerLayout.reels.length,'physical three-reel play must remain present').toBe(3); for(const[i,reel]of innerLayout.reels.entries()){expect(reel.width,`REEL${i+1} must remain visually substantial on iPhone`).toBeGreaterThanOrEqual(44);expect(reel.height,`REEL${i+1} must not collapse under LCD/world presentation`).toBeGreaterThanOrEqual(60);expect(reel.x,`REEL${i+1} left clipping`).toBeGreaterThanOrEqual(0);expect(reel.right,`REEL${i+1} right clipping`).toBeLessThanOrEqual(innerLayout.width+1);expect(reel.y,`REEL${i+1} top clipping`).toBeGreaterThanOrEqual(0);expect(reel.bottom,`REEL${i+1} must remain in the no-scroll play surface`).toBeLessThanOrEqual(innerLayout.height+1)}
+  const bet=frame.locator('#bet'),lever=frame.locator('#lever'); if(await bet.isEnabled())await bet.tap({force:true}); if(await lever.isEnabled())await lever.tap({force:true}); await page.waitForTimeout(80);
+  const audioAfterGesture=await page.locator('body').evaluate(body=>body.dataset.audioTech||'not-started'); expect(audioAfterGesture,'real user gesture must attempt Web Audio startup').not.toBe('not-started'); expect(audioAfterGesture,'Safari-style audio resume must not fail').not.toBe('resume-failed');
+  const shellText=fs.readFileSync(path.join(process.cwd(),c.shell),'utf8'),profileText=fs.readFileSync(path.join(process.cwd(),c.profile),'utf8'),profileName=path.basename(c.profile),profileIntegrated=shellText.includes(profileName);
+  if(c.name==='toki'){expect(profileIntegrated,'Toki submitted shell must use the approved STOP/audio timeline').toBeTruthy();expect(shellText,'Toki STOP input must drive slash from the same pointer event path').toContain('slash(stopNo,i)');expect(shellText,'Toki technical mute state must stay distinguishable from semantic silence').toContain('audioTech')}else{expect(shellText,'Nocturne public shell must retain separate physical mechanism bus').toContain('mechBus');expect(shellText,'Nocturne public shell must retain separate observation bus').toContain('observeBus');expect(shellText,'Nocturne public shell must retain separate memory bus').toContain('memoryBus')}
+  writeEvidence(c.name,{path:c.path,viewport:outer,innerLayout,audioAfterGesture,audioProfile:{file:c.profile,exists:profileText.length>0,integratedIntoPublishedShell:profileIntegrated,note:profileIntegrated?'Current audio profile is referenced by the deployed integrated shell.':'Current audio profile exists on main but is not referenced by the deployed integrated shell; stable inline audio remains the submission baseline.'},qaIntent:c.name==='toki'?'Protect STOP-to-slash causality and physical reel prominence.':'Protect physical reel prominence from aquarium-world visual dominance and preserve audio-layer separation.'}); expect(profileText.length,'audio profile source must exist').toBeGreaterThan(0);
+ });
 }
