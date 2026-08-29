@@ -11,7 +11,11 @@ export {
   installNocturneVisualBridge,
   applyNocturneVisualEvidence
 } from './game-reel-run6.js';
-export { createNocturneObservationMemory } from './game-reel-run7.js';
+export {
+  createNocturneObservationMemory,
+  installNocturneRun7VisualBridge,
+  applyNocturneRun7VisualState
+} from './game-reel-run7.js';
 
 export const NOCTURNE_AUDIO_ROUTING = Object.freeze({
   master: 0.34,
