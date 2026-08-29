@@ -1,7 +1,7 @@
-/* Game & Reel Run 7 — repeat-play stance memory for 刻ノ一閃.
+/* Game & Reel Run 8 — repeat-play stance memory for 刻ノ一閃.
  * Prototype-only presentation/game-feel layer.
  * Does NOT alter reel selection, probability, payout, reward or result logic.
- * Visual & Mechanism Run 7 adds a low-cost cabinet response for the next stance.
+ * Run 8 keeps the submission geometry locked and improves only the reason to press NEXT BET.
  */
 
 const REEL_NAMES = ['左', '中', '右'];
@@ -20,15 +20,24 @@ function chainToken(symbols) {
   return 'layered';
 }
 
+function leastUsedFirst(recentFirst) {
+  const counts = [0, 1, 2].map(i => recentFirst.filter(v => v === i).length);
+  const min = Math.min(...counts);
+  const candidates = [0, 1, 2].filter(i => counts[i] === min);
+  const last = recentFirst.at(-1);
+  return candidates.find(i => i !== last) ?? candidates[0] ?? 0;
+}
+
 function nextStance(firstHistory, chainHistory) {
   const recentFirst = firstHistory.slice(-6);
-  const counts = [0, 1, 2].map(i => recentFirst.filter(v => v === i).length);
-  const least = counts.indexOf(Math.min(...counts));
+  const least = leastUsedFirst(recentFirst);
   const recentChains = chainHistory.slice(-4);
   const repeatedChain = recentChains.length >= 3 && new Set(recentChains.slice(-3)).size === 1;
+  const flowingChains = recentChains.length >= 4 && new Set(recentChains).size >= 3;
   if (repeatedChain) return { token: 'break-chain', text: `型替え：${REEL_NAMES[least]}から崩す` };
   if (recentFirst.length >= 3 && new Set(recentFirst.slice(-3)).size === 1) return { token: 'change-first', text: `間合い替え：${REEL_NAMES[least]}第一停止` };
   if (recentFirst.length >= 3 && new Set(recentFirst.slice(-3)).size === 3) return { token: 'free', text: '三起点巡回：出目で次を決める' };
+  if (flowingChains) return { token: 'flowing', text: '太刀筋変化中：初太刀は出目優先' };
   return { token: 'read', text: '次局：初太刀の出目を読む' };
 }
 
@@ -37,8 +46,9 @@ function installStanceVisuals(doc) {
   const style = doc.createElement('style');
   style.id = 'vm-run7-stance-style';
   style.textContent = `
-/* Visual & Mechanism Run 7: no new HUD; the existing blade/cabinet carries next-stance intent. */
+/* Visual & Mechanism Run 7/8: no new HUD; existing blade/cabinet carries next-stance intent. */
 .machine[data-next-stance='read'] .bladeBridge:before{opacity:.72!important;box-shadow:0 0 5px #fff2c7,0 0 12px #8f5fc9!important}
+.machine[data-next-stance='flowing'] .bladeBridge:before{opacity:.82!important;box-shadow:0 0 6px #f8e6b9,0 0 13px #8d6ad2!important}.machine[data-next-stance='flowing'] .spine{opacity:.82!important}
 .machine[data-next-stance='free'] .spine{opacity:.9!important}.machine[data-next-stance='free'] .screenFrame{box-shadow:0 8px 18px #000,inset 0 0 0 1px #dbc982aa,0 0 13px #7d5bd455!important}
 .machine[data-next-stance='change-first'] .spine.l{opacity:1!important}.machine[data-next-stance='change-first'] .spine.r{opacity:.58!important}.machine[data-next-stance='change-first'] .bladeBridge:before{box-shadow:0 0 7px #fff3cc,0 0 16px #d2a64f!important}
 .machine[data-next-stance='break-chain'] .spine.l,.machine[data-next-stance='break-chain'] .spine.r{opacity:1!important}.machine[data-next-stance='break-chain'] .screenFrame{box-shadow:0 8px 18px #000,inset 0 0 0 1px #efdd9dcc,0 0 18px #b84f815e!important}.machine[data-next-stance='break-chain'] .bladeBridge:before{box-shadow:0 0 8px #fff6d8,0 0 18px #c7668a!important}
