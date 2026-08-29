@@ -4,6 +4,7 @@
  * merely because Visual Run 6 exposes more cadence tokens.
  */
 import './game-reel-run6.js';
+import './game-reel-run7.js';
 
 /* Machine Run 7 integration guard.
  * play.html is an ES-module shell around index.html. On a fast/local WebKit load,
