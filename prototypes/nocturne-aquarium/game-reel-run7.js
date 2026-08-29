@@ -62,16 +62,28 @@ export function createNocturneObservationMemory() {
 }
 
 export function installNocturneRun7VisualBridge(doc) {
-  if (!doc || doc.getElementById('vm-run7-observation-style')) return false;
+  if (!doc || doc.getElementById('vm-run8-observation-style')) return false;
   const style = doc.createElement('style');
-  style.id = 'vm-run7-observation-style';
+  style.id = 'vm-run8-observation-style';
   style.textContent = `
-/* Visual & Mechanism Run 7/8: guide long-play variety through the aquarium itself. */
-.machine[data-next-observation] .vm-worldport{transition:opacity .18s,box-shadow .18s,transform .18s,color .18s}
-.machine[data-next-observation='0'] .vm-worldport[data-p='0'],.machine[data-next-observation='1'] .vm-worldport[data-p='1'],.machine[data-next-observation='2'] .vm-worldport[data-p='2']{opacity:.94;color:#efffff;transform:scale(1.08);box-shadow:inset 0 0 0 4px #08232baa,inset 0 0 11px #bfffff66,0 0 10px #68efff77}
-.machine[data-observation-mode='shift-layer'] .vm-glass-ribs,.machine[data-observation-mode='shift-evidence'] .vm-glass-ribs,.machine[data-observation-mode='seek-evidence'] .vm-glass-ribs{opacity:.9}.machine[data-observation-mode='balanced'] .vm-worldport{opacity:.7!important;transform:none!important}
-.machine[data-observation-mode='balanced'] .tankFrame{box-shadow:0 8px 18px #000,inset 0 0 0 1px #c8ffff77,0 0 16px #4ee9e938}
-@media(max-width:390px){.machine[data-next-observation] .vm-worldport{filter:none!important}}
+/* Visual & Mechanism Run 8: evidence lives inside the aquarium optics.
+   No panel, layout growth, continuous animation, blur stack or extra compositing. */
+.machine[data-next-observation] .vm-worldport,
+.machine[data-next-observation] .tankFrame,
+.machine[data-next-observation] .vm-glass-ribs{transition:opacity .18s ease,box-shadow .2s ease,transform .18s ease,color .18s ease}
+.machine[data-next-observation='0'] .vm-worldport[data-p='0'],
+.machine[data-next-observation='1'] .vm-worldport[data-p='1'],
+.machine[data-next-observation='2'] .vm-worldport[data-p='2']{opacity:.96;color:#efffff;transform:scale(1.07);box-shadow:inset 0 0 0 3px #08232baa,inset 0 0 10px #c8ffff70,0 0 9px #67e9ff70}
+.machine[data-observation-mode='seek'] .vm-glass-ribs{opacity:.72}
+.machine[data-observation-mode='seek-evidence'] .vm-glass-ribs{opacity:.88;box-shadow:inset 0 0 8px #7ceeff24!important}
+.machine[data-observation-mode='shift-layer'] .vm-glass-ribs{opacity:.94;box-shadow:inset 0 0 10px #7ceeff38!important}
+.machine[data-observation-mode='shift-evidence'] .vm-glass-ribs{opacity:1;box-shadow:inset 0 0 12px #b9ffff46!important}
+.machine[data-observation-mode='shift-layer'] .tankFrame,
+.machine[data-observation-mode='shift-evidence'] .tankFrame{box-shadow:0 8px 18px #000,inset 0 0 0 1px #c8ffff88,0 0 15px #42dfe944!important}
+.machine[data-observation-mode='balanced'] .vm-worldport{opacity:.66!important;transform:none!important;box-shadow:inset 0 0 0 2px #17343ba8,inset 0 0 7px #bfffff35!important}
+.machine[data-observation-mode='balanced'] .vm-glass-ribs{opacity:.62!important}
+.machine[data-observation-mode='balanced'] .tankFrame{box-shadow:0 8px 18px #000,inset 0 0 0 1px #c8ffff66,0 0 12px #4ee9e92e!important}
+@media(max-width:390px){.machine[data-next-observation] .vm-worldport{filter:none!important}.machine[data-next-observation] .tankFrame{outline:0!important}}
 `;
   doc.head.appendChild(style);
   return true;
