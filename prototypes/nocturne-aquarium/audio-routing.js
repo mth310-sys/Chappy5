@@ -1,4 +1,4 @@
-/* Sound & Experience Run 6 — original Nocturne routing profile.
+/* Sound & Experience Run 7 — original Nocturne routing profile.
  * Prototype-only. No third-party samples/assets.
  * Keeps semantic quiet separate from Safari/technical mute state and gives the
  * pending public-shell integration one explicit event vocabulary.
@@ -20,35 +20,55 @@ export {
 export const NOCTURNE_AUDIO_ROUTING = Object.freeze({
   master: 0.34,
   buses: Object.freeze({
-    environment: 0.035,
-    mechanism: 0.58,
-    operation: 0.82,
-    observation: 0.70,
-    memory: 0.76
+    environment: 0.032,
+    mechanism: 0.56,
+    operation: 0.80,
+    observation: 0.67,
+    memory: 0.74
   }),
-  environment: Object.freeze({ fundamentalHz: 43, lowpassHz: 96 }),
-  hierarchy: Object.freeze(['environment', 'operation', 'observation', 'memory', 'depth']),
-  technicalMuteDataset: 'audioTech'
+  environment: Object.freeze({ fundamentalHz: 43, lowpassHz: 92 }),
+  hierarchy: Object.freeze(['environment', 'mechanism', 'operation', 'observation', 'memory', 'depth']),
+  technicalMuteDataset: 'audioTech',
+  transport: Object.freeze({
+    compensateOutputLatency: false,
+    resumeOnNextGesture: true
+  })
 });
 
 /* One event = one meaning. Frequencies are synthetic prototype values, not
  * borrowed sound assets. Stronger memory events gain duration/spacing rather
  * than simply stacking many louder voices over the reel STOP sound. */
 export const NOCTURNE_AUDIO_EVENTS = Object.freeze({
-  bet: Object.freeze({ bus: 'operation', hz: 118, durationMs: 34, gain: 0.010 }),
-  lever: Object.freeze({ bus: 'mechanism', hz: 76, durationMs: 62, gain: 0.013 }),
-  stop: Object.freeze({ bus: 'mechanism', hz: 132, durationMs: 30, gain: 0.012 }),
+  bet: Object.freeze({ bus: 'operation', hz: 118, durationMs: 32, gain: 0.009 }),
+  lever: Object.freeze({ bus: 'mechanism', hz: 76, durationMs: 58, gain: 0.012 }),
+  stop: Object.freeze({ bus: 'mechanism', hz: 132, durationMs: 28, gain: 0.011 }),
   observation: Object.freeze({
     bus: 'observation',
     channelsHz: Object.freeze([286, 337, 401]),
-    durationMs: 65,
-    gain: 0.014,
-    overtoneDelayMs: 36
+    durationMs: 62,
+    gain: 0.013,
+    overtoneDelayMs: 34
   }),
-  survey: Object.freeze({ bus: 'observation', hz: 228, durationMs: 118, gain: 0.006 }),
-  memory: Object.freeze({ bus: 'memory', hz: 310, durationMs: 220, gain: 0.013, secondDelayMs: 82 }),
-  depth: Object.freeze({ bus: 'memory', hz: 164, durationMs: 440, gain: 0.017, stepMs: 82 })
+  survey: Object.freeze({ bus: 'observation', hz: 228, durationMs: 110, gain: 0.0055 }),
+  memory: Object.freeze({ bus: 'memory', hz: 310, durationMs: 215, gain: 0.012, secondDelayMs: 86 }),
+  depth: Object.freeze({ bus: 'memory', hz: 164, durationMs: 430, gain: 0.016, stepMs: 88 })
 });
+
+/* Preserve the quiet aquarium baseline by briefly making room for meaningful
+ * events instead of stacking more sound. This is an integration helper; it does
+ * not alter game timing and must only be called after AudioContext is running. */
+export function shapeNocturneEnvironment(ctx, environmentBus, kind = 'operation', at = ctx?.currentTime || 0) {
+  if (!ctx || !environmentBus?.gain) return;
+  const base = NOCTURNE_AUDIO_ROUTING.buses.environment;
+  const depth = kind === 'depth' ? 0.38 : kind === 'memory' ? 0.52 : kind === 'observation' ? 0.70 : 0.82;
+  const hold = kind === 'depth' ? 0.46 : kind === 'memory' ? 0.28 : 0.12;
+  const g = environmentBus.gain;
+  g.cancelScheduledValues(at);
+  g.setValueAtTime(Math.max(0.0001, g.value), at);
+  g.linearRampToValueAtTime(base * depth, at + 0.018);
+  g.setValueAtTime(base * depth, at + hold);
+  g.linearRampToValueAtTime(base, at + hold + 0.18);
+}
 
 export function nocturneObservationProfile(reelIndex = 0) {
   const event = NOCTURNE_AUDIO_EVENTS.observation;
