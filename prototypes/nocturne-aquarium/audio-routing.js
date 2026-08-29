@@ -1,7 +1,9 @@
-/* Sound & Experience Run 7 — original Nocturne routing profile.
+/* Sound & Experience Run 8 — original Nocturne routing profile.
  * Prototype-only. No third-party samples/assets.
- * Keeps semantic quiet separate from Safari/technical mute state and gives the
- * pending public-shell integration one explicit event vocabulary.
+ * Submission-stabilization pass: preserve the proven public shell while making
+ * the pending module route explicit about semantic silence, voice budget and
+ * Safari/Bluetooth policy. Visual Run 8 worldport/glass states do not earn a
+ * sound by themselves; reel/observation/memory events remain the cause.
  */
 export {
   NOCTURNE_REEL_EVIDENCE,
@@ -29,9 +31,21 @@ export const NOCTURNE_AUDIO_ROUTING = Object.freeze({
   environment: Object.freeze({ fundamentalHz: 43, lowpassHz: 92 }),
   hierarchy: Object.freeze(['environment', 'mechanism', 'operation', 'observation', 'memory', 'depth']),
   technicalMuteDataset: 'audioTech',
+  semanticSilenceDataset: 'audioSemantic',
+  experience: Object.freeze({
+    // Keep STOP mechanically readable even when the aquarium owns the eye.
+    stopOwnsMechanismBus: true,
+    // Visual Run 8 stance/worldport afterglow is a consequence, not a new cue.
+    visualStateSound: false,
+    // Strong discoveries make room in the ambience instead of adding a wall of sound.
+    maxEventVoices: 2,
+    memoryDucking: true
+  }),
   transport: Object.freeze({
     compensateOutputLatency: false,
-    resumeOnNextGesture: true
+    resumeOnNextGesture: true,
+    // Bluetooth/device output latency is diagnostic only; never move reel timing.
+    preserveGameClock: true
   })
 });
 
@@ -53,6 +67,35 @@ export const NOCTURNE_AUDIO_EVENTS = Object.freeze({
   memory: Object.freeze({ bus: 'memory', hz: 310, durationMs: 215, gain: 0.012, secondDelayMs: 86 }),
   depth: Object.freeze({ bus: 'memory', hz: 164, durationMs: 430, gain: 0.016, stepMs: 88 })
 });
+
+/* Submission-safe event plan. This does not schedule audio itself; it gives a
+ * future/public-shell integration a bounded two-voice plan so MEMORY/DEPTH can
+ * be clearly different from normal play without masking reel STOP transients. */
+export function nocturneEventPlan(kind = 'operation', reelIndex = 0) {
+  if (kind === 'observation') {
+    const p = nocturneObservationProfile(reelIndex);
+    return Object.freeze([
+      Object.freeze({ hz: p.hz, delayMs: 0, durationMs: p.durationMs, gain: p.gain }),
+      Object.freeze({ hz: p.hz * 2.01, delayMs: p.overtoneDelayMs, durationMs: 118, gain: p.gain * 0.46 })
+    ]);
+  }
+  if (kind === 'memory') {
+    const p = NOCTURNE_AUDIO_EVENTS.memory;
+    return Object.freeze([
+      Object.freeze({ hz: p.hz, delayMs: 0, durationMs: p.durationMs, gain: p.gain }),
+      Object.freeze({ hz: p.hz * 1.5, delayMs: p.secondDelayMs, durationMs: 240, gain: p.gain * 0.68 })
+    ]);
+  }
+  if (kind === 'depth') {
+    const p = NOCTURNE_AUDIO_EVENTS.depth;
+    return Object.freeze([
+      Object.freeze({ hz: p.hz, delayMs: 0, durationMs: p.durationMs, gain: p.gain }),
+      Object.freeze({ hz: p.hz * 1.5, delayMs: p.stepMs, durationMs: 470, gain: p.gain * 0.72 })
+    ]);
+  }
+  const p = NOCTURNE_AUDIO_EVENTS[kind] || NOCTURNE_AUDIO_EVENTS.stop;
+  return Object.freeze([Object.freeze({ hz: p.hz, delayMs: 0, durationMs: p.durationMs, gain: p.gain })]);
+}
 
 /* Preserve the quiet aquarium baseline by briefly making room for meaningful
  * events instead of stacking more sound. This is an integration helper; it does
