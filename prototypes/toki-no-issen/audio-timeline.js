@@ -5,6 +5,24 @@
  */
 import './game-reel-run6.js';
 
+/* Machine Run 7 integration guard.
+ * play.html is an ES-module shell around index.html. On a fast/local WebKit load,
+ * the iframe can finish before the module body registers its `load` listener.
+ * In that case none of the integrated touch/audio/visual enhancements run and the
+ * base 42px BET remains live. Re-dispatch `load` only when the iframe is complete
+ * AND the integrated cadence rail is still absent, so a normal load never gets a
+ * duplicate integration pass.
+ */
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  window.setTimeout(() => {
+    const frame = document.getElementById('game');
+    const inner = frame && frame.contentDocument;
+    if (frame && inner && inner.readyState === 'complete' && !inner.querySelector('.toki-tempo')) {
+      frame.dispatchEvent(new Event('load'));
+    }
+  }, 60);
+}
+
 export const TOKI_AUDIO_TIMELINE = Object.freeze({
   bet: { mechHz: 145, confirmHz: 290, confirmDelayMs: 20 },
   lever: {
