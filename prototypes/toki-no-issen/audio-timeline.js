@@ -6,22 +6,38 @@
 import './game-reel-run6.js';
 import './game-reel-run7.js';
 
-/* Machine Run 7 integration guard.
- * play.html is an ES-module shell around index.html. On a fast/local WebKit load,
- * the iframe can finish before the module body registers its `load` listener.
- * In that case none of the integrated touch/audio/visual enhancements run and the
- * base 42px BET remains live. Re-dispatch `load` only when the iframe is complete
- * AND the integrated cadence rail is still absent, so a normal load never gets a
- * duplicate integration pass.
+/* Machine Run 8 submission bootstrap guard.
+ * play.html is an ES-module shell around index.html. Fast/local Safari/WebKit can
+ * finish the iframe before the module body installs its `load` listener. The old
+ * one-shot 60ms recovery covered the observed race, but a busy iPhone can also
+ * land between module evaluation and iframe completion. Probe a few bounded
+ * points instead of polling forever; only re-dispatch when the iframe is complete
+ * and the integrated cadence rail is still absent. A normal integration remains
+ * single-pass because `.toki-tempo` becomes the idempotence marker.
  */
 if (typeof window !== 'undefined' && typeof document !== 'undefined') {
-  window.setTimeout(() => {
+  const recoverIntegratedShell = () => {
     const frame = document.getElementById('game');
     const inner = frame && frame.contentDocument;
-    if (frame && inner && inner.readyState === 'complete' && !inner.querySelector('.toki-tempo')) {
-      frame.dispatchEvent(new Event('load'));
+    if (!frame || !inner) return false;
+    if (inner.querySelector('.toki-tempo')) {
+      document.body.dataset.tokiShell = 'integrated';
+      return true;
     }
-  }, 60);
+    if (inner.readyState === 'complete') {
+      document.body.dataset.tokiShell = 'recovering';
+      frame.dispatchEvent(new Event('load'));
+      window.setTimeout(() => {
+        const current = frame.contentDocument;
+        document.body.dataset.tokiShell = current && current.querySelector('.toki-tempo') ? 'integrated' : 'integration-missed';
+      }, 0);
+      return true;
+    }
+    document.body.dataset.tokiShell = 'waiting';
+    return false;
+  };
+
+  [0, 80, 240].forEach(delay => window.setTimeout(recoverIntegratedShell, delay));
 }
 
 export const TOKI_AUDIO_TIMELINE = Object.freeze({
