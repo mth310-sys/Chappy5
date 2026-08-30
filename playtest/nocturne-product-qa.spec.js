@@ -3,13 +3,14 @@ const { test, expect } = require('@playwright/test');
 const URL='http://127.0.0.1:4173/prototypes/nocturne-aquarium/play-stage-v2.html?qa=product-loop';
 const orders=[[0,1,2],[1,2,0],[2,0,1],[0,2,1],[1,0,2],[2,1,0]];
 const FORBIDDEN_EXPLANATORY_TEXT=['現在の状態','第一停止で','選択してください','観測ログ','前兆状態'];
+const REQUIRED_EVENT_PATH=['bet','lever','stop','reel-role','resolve','chance-up','develop','bonus-hit','bonus-open','bonus-result','bonus-end','at-open','at-result','at-end','normal-return'];
 
 async function game(page){
   const sound=page.frameLocator('#shell');
   const play=sound.frameLocator('#shell');
   const game=play.frameLocator('#game');
   await expect(game.locator('body')).toBeVisible();
-  await expect.poll(async()=>game.locator('html').getAttribute('data-product-run'),{timeout:4000}).toBe('4');
+  await expect.poll(async()=>game.locator('html').getAttribute('data-product-run'),{timeout:4000}).toBe('5');
   return game;
 }
 async function tap(page,loc,label){
@@ -54,7 +55,7 @@ async function snapshot(g){return g.locator('body').evaluate(()=>({
   lastEvent:document.querySelector('.machine')?.dataset.lastGameEvent||'',
   bonusGames:Number(document.querySelector('.machine')?.dataset.bonusGames||0),
   atGames:Number(document.querySelector('.machine')?.dataset.atGames||0),
-  text:(document.querySelector('.screen')?.innerText||'').trim(),
+  text:(document.querySelector('.machine')?.innerText||'').trim(),
   hiddenLegacy:[...document.querySelectorAll('.gr-observe,.vm-worldports,.vm-optics')].every(el=>getComputedStyle(el).display==='none')
 }));}
 async function settleMode(g){
@@ -65,11 +66,19 @@ async function settleMode(g){
     return true;
   },{timeout:2200}).toBeTruthy();
 }
+async function installEventRecorder(g){
+  await g.locator('body').evaluate(()=>{
+    window.__nocturneQaEvents=[];
+    document.addEventListener('nocturne:game-event',e=>window.__nocturneQaEvents.push({type:e.detail?.type||'',detail:e.detail||{}}));
+  });
+}
+async function eventTypes(g){return g.locator('body').evaluate(()=>[...new Set((window.__nocturneQaEvents||[]).map(e=>e.type))]);}
 
-test('nocturne product: iPhone pachislot loop 36G, six orders, misuse, BONUS/AT/return',async({page})=>{
+test('nocturne product: iPhone pachislot loop 36G, six orders, misuse, event path, BONUS/AT/return',async({page})=>{
   test.setTimeout(120000); const errors=[],crashes=[];
   page.on('pageerror',e=>errors.push(String(e))); page.on('crash',()=>crashes.push('crash'));
   await page.goto(URL,{waitUntil:'networkidle'}); let g=await game(page);
+  await installEventRecorder(g);
   const base=await snapshot(g);
   expect(base.vw,'iPhone 390px viewport').toBe(390);
   expect(base.w).toBeLessThanOrEqual(base.vw+1);
@@ -95,8 +104,8 @@ test('nocturne product: iPhone pachislot loop 36G, six orders, misuse, BONUS/AT/
   const idleAfter=await snapshot(g);
   expect(idleAfter.lastEvent).toBe(idleBefore.lastEvent);
 
-  let sawDevelop=false,sawChance=false,sawBonus=false,sawAt=false,sawNormalAfterBonus=false,sawNormalAfterAt=false;
-  let wasBonus=false,wasAt=false,maxNodes=base.nodes,maxAnimations=base.animations||0;
+  let sawBonus=false,sawAt=false,sawNormalAfterAt=false;
+  let wasAt=false,maxNodes=base.nodes,maxAnimations=base.animations||0;
 
   for(let r=0;r<36;r++){
     const before=await snapshot(g);
@@ -112,27 +121,28 @@ test('nocturne product: iPhone pachislot loop 36G, six orders, misuse, BONUS/AT/
     expect(s.hiddenLegacy,`round ${r+1} legacy explanatory UI`).toBeTruthy();
     for(const phrase of FORBIDDEN_EXPLANATORY_TEXT) expect(s.text,`round ${r+1} explanatory prose: ${phrase}`).not.toContain(phrase);
 
-    const cls=await g.locator('.machine').getAttribute('class')||'';
-    if(cls.includes('na-develop')) sawDevelop=true;
-    if(cls.includes('na-chance')) sawChance=true;
-    if(s.mode==='bonus'||s.bonusGames>0){sawBonus=true;wasBonus=true;}
-    if(wasBonus&&s.mode==='normal'&&s.bonusGames===0){sawNormalAfterBonus=true;}
+    if(s.mode==='bonus'||s.bonusGames>0)sawBonus=true;
     if(s.mode==='at'||s.atGames>0){sawAt=true;wasAt=true;}
-    if(wasAt&&s.mode==='normal'&&s.atGames===0){sawNormalAfterAt=true;}
+    if(wasAt&&s.mode==='normal'&&s.atGames===0)sawNormalAfterAt=true;
   }
 
+  const events=await eventTypes(g);
   expect(errors,'JS errors').toEqual([]);
   expect(crashes,'WebKit crashes').toEqual([]);
   expect(sawBonus,'deterministic BONUS reachability').toBeTruthy();
   expect(sawAt,'deterministic AT reachability').toBeTruthy();
   expect(sawNormalAfterAt,'AT → normal return').toBeTruthy();
-  // Development/chance are transient classes; event/state assertions above are authoritative in automated timing.
-  expect(await g.locator('.machine').getAttribute('data-last-game-event')).toBeTruthy();
+  for(const type of REQUIRED_EVENT_PATH) expect(events,`pachislot event path includes ${type}`).toContain(type);
+
+  // Shared text rule: ordinary pachislot result/information labels are allowed and must not be treated as explanatory prose.
+  const sourceText=await g.locator('html').evaluate(()=>document.documentElement.innerHTML);
+  expect(sourceText,'BONUS presentation remains available').toContain('BONUS');
+  expect(sourceText,'AT presentation remains available').toContain('OCEAN RECORD');
 
   await page.reload({waitUntil:'networkidle'}); g=await game(page);
   const reloaded=await snapshot(g);
   expect(reloaded.vw).toBe(390);
   await round(page,g,[1,0,2]);
   expect(errors,'reload JS errors').toEqual([]); expect(crashes,'reload crashes').toEqual([]);
-  console.log(JSON.stringify({baseNodes:base.nodes,maxNodes,maxAnimations,sawDevelop,sawChance,sawBonus,sawAt,sawNormalAfterBonus,sawNormalAfterAt}));
+  console.log(JSON.stringify({baseNodes:base.nodes,maxNodes,maxAnimations,events,sawBonus,sawAt,sawNormalAfterAt}));
 });
