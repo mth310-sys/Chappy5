@@ -72,3 +72,64 @@
   function probe(){if(!install())setTimeout(probe,120)}
   rootFrame?.addEventListener('load',()=>setTimeout(probe,100));probe();
 })();
+
+/* Game & Reel Product Run 5 — pachislot stop-information semantic bridge.
+ * This block owns no visuals, payouts, probabilities or reel-control. It derives
+ * reusable weak/medium/strong STOP information from the canonical reel Game Events
+ * so Visual/Sound/QA can react to the same evidence without inventing their own logic.
+ */
+(()=>{
+  const rootFrame=document.getElementById('shell');
+  const getGameDoc=()=>{try{const a=rootFrame?.contentDocument,b=a?.getElementById('shell'),c=b?.contentDocument,g=c?.getElementById('game');return g?.contentDocument||null}catch(_){return null}};
+  const scoreOf=x=>Math.max(0,Number(x?.evidence?.score??x?.score??0)||0);
+  const symbolOf=x=>String(x?.symbol||'');
+  const stopBand=(ordinal,x)=>{
+    const score=scoreOf(x),symbol=symbolOf(x);
+    if(ordinal===1){if(symbol.includes('七'))return'medium';if(/[鍵月]/.test(symbol)||score>=1)return'weak';return'quiet'}
+    if(ordinal===2){if(score>=3)return'strong';if(score>=2)return'medium';if(score>=1)return'weak';return'quiet'}
+    if(score>=3)return'strong';if(score>=2)return'medium';if(score>=1)return'weak';return'quiet';
+  };
+  const resolveBand=x=>{const payout=Math.max(0,Number(x?.payout||x?.evidence?.payout||0)||0),score=scoreOf(x);if(payout>0)return'pay';if(score>=3)return'strong';if(score>=2)return'chance';if(score>=1)return'hint';return'plain'};
+  function install(){
+    const d=getGameDoc();if(!d||d.documentElement.dataset.gameReelProductRun5==='1')return false;
+    const machine=d.querySelector('.machine');if(!machine)return false;
+    d.documentElement.dataset.gameReelProductRun5='1';
+    let quietRun=0,lastOutcome='plain',lastStopBand='quiet';
+    const relay=(type,detail={})=>d.dispatchEvent(new CustomEvent('nocturne:game-event',{detail:{type,semanticOnly:true,prototypeRule:true,...detail}}));
+    d.addEventListener('nocturne:game-event',ev=>{
+      const x=ev.detail||{},type=String(x.type||'');if(type.startsWith('pachi-'))return;
+      if(type==='bet'&&x.mode==='normal'){
+        quietRun=(lastOutcome==='plain'||lastOutcome==='miss')?quietRun+1:0;
+        machine.dataset.pachiQuietRun=String(quietRun);machine.dataset.pachiStopBand='quiet';
+        relay('pachi-normal-rhythm',{quietRun,lastOutcome,gameNo:x.gameNo,mode:x.mode});
+      }else if(type==='lever'){
+        const carry=Math.max(0,Number(x.carry||0)||0),tier=x.tier||'base';
+        const band=tier==='omen'?'strong':tier==='rise'?'medium':tier==='whisper'?'weak':'quiet';
+        machine.dataset.pachiLeverBand=band;
+        relay('pachi-lever-read',{band,tier,carry,quietRun,mode:x.mode,gameNo:x.gameNo});
+      }else if(type==='reel-role'){
+        const ordinal=Math.max(1,Math.min(3,Number(x.ordinal||1)||1)),band=stopBand(ordinal,x);lastStopBand=band;
+        machine.dataset.pachiStopBand=band;machine.dataset.pachiStopOrdinal=String(ordinal);
+        relay('pachi-stop-read',{ordinal,reelIndex:x.reelIndex,band,symbol:x.symbol,evidence:x.evidence,previousBand:lastStopBand,mode:x.mode,gameNo:x.gameNo});
+      }else if(type==='resolve'){
+        const outcome=resolveBand(x);lastOutcome=outcome;machine.dataset.pachiOutcome=outcome;machine.dataset.pachiRole=String(x.role||x.evidence?.role||'PARTIAL');
+        if(outcome!=='plain')quietRun=0;
+        relay('pachi-role-resolved',{outcome,role:x.role||x.evidence?.role||'PARTIAL',payout:Number(x.payout||0),evidence:x.evidence,stopBand:lastStopBand,mode:x.mode,gameNo:x.gameNo});
+      }else if(type==='miss'){
+        lastOutcome='miss';machine.dataset.pachiOutcome='miss';relay('pachi-payoff-window',{phase:'miss',outcome:'miss',evidence:x.evidence,carry:x.carry,gameNo:x.gameNo});
+      }else if(type==='win'){
+        lastOutcome='win';quietRun=0;machine.dataset.pachiOutcome='win';relay('pachi-payoff-window',{phase:'win',outcome:'win',evidence:x.evidence,carry:x.carry,gameNo:x.gameNo});
+      }else if(type==='bonus-open'){
+        quietRun=0;relay('pachi-payoff-window',{phase:'bonus-open',outcome:'bonus',remaining:x.remaining,evidence:x.evidence,gameNo:x.gameNo});
+      }else if(type==='at-open'){
+        quietRun=0;relay('pachi-payoff-window',{phase:'at-open',outcome:'at',remaining:x.awardGames||x.remaining,total:x.total,gameNo:x.gameNo});
+      }else if(type==='normal-return'){
+        lastOutcome='return';quietRun=0;machine.dataset.pachiOutcome='return';relay('pachi-payoff-window',{phase:'normal-return',outcome:'return',gameNo:x.gameNo});
+      }
+    });
+    relay('pachi-semantic-ready',{model:'stop-information-v1',probabilityAuthority:'none',reelControlAuthority:'none'});
+    return true;
+  }
+  function probe(){if(!install())setTimeout(probe,120)}
+  rootFrame?.addEventListener('load',()=>setTimeout(probe,110));probe();
+})();
