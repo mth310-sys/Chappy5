@@ -14,9 +14,6 @@ async function inner(page) {
   const nested = await page.locator('#shell').count();
   const frame = nested ? page.frameLocator('#shell').frameLocator('#game') : page.frameLocator('#game');
   await expect(frame.locator('body')).toBeVisible();
-  // Integrated shells enhance the iframe control deck on their load handler.
-  // Do not race that handoff: a 42px base BET can exist for a few ms before
-  // the submission shell applies its >=46px touch geometry.
   await expect.poll(async () => {
     const bet = frame.locator('#bet');
     const box = await bet.boundingBox().catch(() => null);
@@ -138,7 +135,9 @@ function orderFor(round) {
 
 for (const c of cases) {
   test(`${c.name}: iPhone ${c.rounds}G touch, repeat, misuse, reload smoke`, async ({ page }) => {
-    test.setTimeout(90000);
+    // Nocturne now traverses the real sound wrapper plus nested machine shell.
+    // 50G with per-action evidence is intentionally heavier than the flat legacy path.
+    test.setTimeout(180000);
     const errors=[]; const history=[]; const crashEvents=[];
     page.on('pageerror', e=>errors.push(String(e)));
     page.on('crash', () => {
