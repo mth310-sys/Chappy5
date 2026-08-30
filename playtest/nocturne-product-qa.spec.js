@@ -3,14 +3,16 @@ const { test, expect } = require('@playwright/test');
 const URL='http://127.0.0.1:4173/prototypes/nocturne-aquarium/play-stage-v2.html?qa=product-loop';
 const orders=[[0,1,2],[1,2,0],[2,0,1],[0,2,1],[1,0,2],[2,1,0]];
 const FORBIDDEN_EXPLANATORY_TEXT=['現在の状態','第一停止で','選択してください','観測ログ','前兆状態'];
-const REQUIRED_EVENT_PATH=['bet','lever','stop','reel-role','resolve','chance-up','develop','bonus-hit','bonus-open','bonus-result','bonus-end','at-open','at-result','at-end','normal-return'];
+const REQUIRED_EVENT_PATH=['bet','lever','stop','reel-role','resolve','chance-up','develop','judgment','win','bonus-hit','bonus-open','bonus-result','bonus-end','at-open','at-result','at-end','normal-return'];
 
 async function game(page){
   const sound=page.frameLocator('#shell');
   const play=sound.frameLocator('#shell');
   const game=play.frameLocator('#game');
   await expect(game.locator('body')).toBeVisible();
-  await expect.poll(async()=>game.locator('html').getAttribute('data-product-run'),{timeout:4000}).toBe('5');
+  await expect.poll(async()=>game.locator('html').getAttribute('data-product-run'),{timeout:5000}).toBe('6');
+  await expect.poll(async()=>game.locator('html').getAttribute('data-visual-product-run4'),{timeout:5000}).toBe('1');
+  await expect.poll(async()=>game.locator('html').getAttribute('data-sound-product-run4'),{timeout:5000}).toBe('1');
   return game;
 }
 async function tap(page,loc,label){
@@ -51,8 +53,11 @@ async function snapshot(g){return g.locator('body').evaluate(()=>({
   w:document.documentElement.scrollWidth,
   vw:innerWidth,
   product:document.documentElement.dataset.productRun,
+  visualRun4:document.documentElement.dataset.visualProductRun4,
+  soundRun4:document.documentElement.dataset.soundProductRun4,
   mode:document.querySelector('.machine')?.dataset.gameMode||'normal',
   lastEvent:document.querySelector('.machine')?.dataset.lastGameEvent||'',
+  v4Beat:document.querySelector('.machine')?.dataset.v4Beat||'',
   bonusGames:Number(document.querySelector('.machine')?.dataset.bonusGames||0),
   atGames:Number(document.querySelector('.machine')?.dataset.atGames||0),
   text:(document.querySelector('.machine')?.innerText||'').trim(),
@@ -74,14 +79,17 @@ async function installEventRecorder(g){
 }
 async function eventTypes(g){return g.locator('body').evaluate(()=>[...new Set((window.__nocturneQaEvents||[]).map(e=>e.type))]);}
 
-test('nocturne product: iPhone pachislot loop 36G, six orders, misuse, event path, BONUS/AT/return',async({page})=>{
-  test.setTimeout(120000); const errors=[],crashes=[];
+test('nocturne product: iPhone pachislot loop 36G, six orders, misuse, integrated V4 cadence, BONUS/AT/return',async({page})=>{
+  test.setTimeout(130000); const errors=[],crashes=[];
   page.on('pageerror',e=>errors.push(String(e))); page.on('crash',()=>crashes.push('crash'));
   await page.goto(URL,{waitUntil:'networkidle'}); let g=await game(page);
   await installEventRecorder(g);
   const base=await snapshot(g);
   expect(base.vw,'iPhone 390px viewport').toBe(390);
   expect(base.w).toBeLessThanOrEqual(base.vw+1);
+  expect(base.product).toBe('6');
+  expect(base.visualRun4,'Run 4 visual companion loaded').toBe('1');
+  expect(base.soundRun4,'Run 4 sound companion loaded').toBe('1');
   expect(base.hiddenLegacy,'legacy explanatory/observation UI hidden').toBeTruthy();
   for(const phrase of FORBIDDEN_EXPLANATORY_TEXT) expect(base.text,`explanatory prose: ${phrase}`).not.toContain(phrase);
 
@@ -118,6 +126,8 @@ test('nocturne product: iPhone pachislot loop 36G, six orders, misuse, event pat
     maxNodes=Math.max(maxNodes,s.nodes); maxAnimations=Math.max(maxAnimations,s.animations||0);
     expect(s.w,`round ${r+1} overflow`).toBeLessThanOrEqual(s.vw+1);
     expect(s.nodes,`round ${r+1} DOM growth`).toBeLessThanOrEqual(base.nodes+32);
+    expect(s.visualRun4,`round ${r+1} visual companion`).toBe('1');
+    expect(s.soundRun4,`round ${r+1} sound companion`).toBe('1');
     expect(s.hiddenLegacy,`round ${r+1} legacy explanatory UI`).toBeTruthy();
     for(const phrase of FORBIDDEN_EXPLANATORY_TEXT) expect(s.text,`round ${r+1} explanatory prose: ${phrase}`).not.toContain(phrase);
 
@@ -136,12 +146,18 @@ test('nocturne product: iPhone pachislot loop 36G, six orders, misuse, event pat
 
   // Shared text rule: ordinary pachislot result/information labels are allowed and must not be treated as explanatory prose.
   const sourceText=await g.locator('html').evaluate(()=>document.documentElement.innerHTML);
+  expect(sourceText,'CHANCE presentation remains available').toContain('CHANCE');
   expect(sourceText,'BONUS presentation remains available').toContain('BONUS');
+  expect(sourceText,'WIN presentation remains available').toContain('WIN');
   expect(sourceText,'AT presentation remains available').toContain('OCEAN RECORD');
+  expect(sourceText,'remaining-game presentation remains available').toContain('残り');
+  expect(sourceText,'TOTAL presentation remains available').toContain('TOTAL');
 
   await page.reload({waitUntil:'networkidle'}); g=await game(page);
   const reloaded=await snapshot(g);
   expect(reloaded.vw).toBe(390);
+  expect(reloaded.visualRun4).toBe('1');
+  expect(reloaded.soundRun4).toBe('1');
   await round(page,g,[1,0,2]);
   expect(errors,'reload JS errors').toEqual([]); expect(crashes,'reload crashes').toEqual([]);
   console.log(JSON.stringify({baseNodes:base.nodes,maxNodes,maxAnimations,events,sawBonus,sawAt,sawNormalAfterAt}));
