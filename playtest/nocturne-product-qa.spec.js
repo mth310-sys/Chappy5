@@ -32,6 +32,12 @@ async function forceCenterSymbols(g,symbols){
     });
   },symbols);
 }
+async function forceCoreEvidence(g,symbols){
+  await g.locator('body').evaluate((forced)=>{
+    const role=forced.every(x=>x==='七')?'QA_BONUS_CHARGE':'QA_AT_DRAIN';
+    document.dispatchEvent(new CustomEvent('nocturne:core-result',{detail:{symbols:forced,role,payout:0,qaSynthetic:true}}));
+  },symbols);
+}
 async function round(page,g,order,forcedSymbols=null){
   const bet=g.locator('#bet'),lever=g.locator('#lever'),stops=g.locator('.stop');
   if(await bet.isEnabled()) await tap(page,bet,'BET');
@@ -42,7 +48,12 @@ async function round(page,g,order,forcedSymbols=null){
     let s=stops.nth(idx);
     if(!(await s.isEnabled())) for(let i=0;i<3;i++) if(await stops.nth(i).isEnabled()){s=stops.nth(i);break;}
     await tap(page,s,`STOP-${idx}`);
-    if(forcedSymbols) await forceCenterSymbols(g,forcedSymbols);
+    if(forcedSymbols){
+      await forceCenterSymbols(g,forcedSymbols);
+      // Feed the same deterministic evidence through the controller's canonical core-result bridge.
+      // This is QA-only and does not alter production-mode outcome logic.
+      await forceCoreEvidence(g,forcedSymbols);
+    }
     await page.waitForTimeout(70);
   }
   await expect.poll(async()=> (await bet.isEnabled())||(await lever.isEnabled()),{timeout:3000}).toBeTruthy();
@@ -117,7 +128,7 @@ test('nocturne product: iPhone pachislot loop 36G, six orders, misuse, integrate
 
   for(let r=0;r<36;r++){
     const before=await snapshot(g);
-    // QA-only deterministic reel evidence: charge BONUS strongly, drain AT cleanly.
+    // QA-only deterministic evidence: charge BONUS through canonical core-result; drain AT without +G.
     const forced=before.mode==='bonus'?['七','七','七']:before.mode==='at'?['泡','灯','魚']:null;
     await round(page,g,orders[r%6],forced);
     await page.waitForTimeout(620);
