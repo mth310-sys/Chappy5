@@ -6,52 +6,36 @@
 
 - READMEのルールにより、INDEX本体より本 `LATEST_HANDOFF.md` を最新進捗として優先する。
 - ミッションv0.7を正本として、性能コアに加え `resetBehavior` を新規機種で同時収集する。
-- 前回までに2006年12月境界監査を終え、2007年1月へ進行。`バトルリーガーX` と `アイムジャグラーEX` まで登録済み、LATEST_HANDOFF基準70件だった。
-- 今回、2007年1月のメーカー別/年別一覧・当時業界記事・P-WORLD・当時解析を横断し、未処理だった `新日本プロレスまでもがパチスロ機`、`南国美人`、`南国美人30`、`ぐるぐる爆侍` を新規登録した。
-- **LATEST_HANDOFF基準の収録数は74件。**
+- 前回までに2006年12月境界監査を終え、2007年1月へ進行。前回時点で74件収録。
+- 今回、2007年1月残り候補から `ジャンジャン年中猛特訓` を新規登録した。
+- 既存COMPLETE_COREの遡及QAとして `ニューオアシス` にresetBehaviorを追加し、coreStatusはCOMPLETE_COREのまま維持、resetBehaviorQAをPARTIALとして別管理した。
+- **LATEST_HANDOFF基準の収録数は75件。**
 
 ## 今回追加
 
-### `machines/2007-01_shin-nihon-pro-wrestling.md`
-- 新日本プロレスまでもがパチスロ機 / 平和・HEIWA BROS / 2007年1月初旬納品予定。
-- 当時グリーンべると、HAZUSE、パチマガスロマガを横断。
-- BIG約312枚、CB平均約145枚（業界記事では最大221枚）、REG約104枚、全ボーナス後60G RTを確認。
-- 設定別BIG/CB/REG/合算、1000円あたり36.0〜38.0GをHAZUSE当時解析から取得。
-- 機械割はHAZUSE 94.2/96.6/101.4/103.2/105.5/107.1%と、後年5号機クロニクル94.5/97.1/100.8/103.0/105.7/107.6%が競合。平均せずCONFLICT。
-- 後年5号機クロニクルのBIG約250枚+RT50G記載も、当時業界/解析3系統のBIG約312枚+RT60Gと競合するため別根拠として保持。
-- resetBehaviorは設定変更/据え置き/電源断/朝一/RT引継ぎを表記変更して再探索したが、高信頼資料で確定できずPARTIAL。
+### `machines/2007-01_janjan-nenju-motokkun.md`
+- ジャンジャン年中猛特訓 / SNKプレイモア / 2007年1月下旬納品予定。
+- 当時グリーンべると、P-WORLD、パチマガスロマガ、5号機クロニクル、SNK旧公式を横断。
+- 赤7BIG約235枚+RT77G、青7BIG約123枚+RT33G、BAR CT約175枚+RT77G、BAR/BAR/赤7 CT約112枚+RT33G。
+- 設定別4ボーナス確率と合算をパチマガスロマガから取得。合算は設定1 1/181.04〜設定6 1/146.29。
+- 機械割/PAYOUTはパチマガスロマガのシミュレート96.88〜107.59%と、5号機クロニクル96.5〜105.5%が競合。平均せずCONFLICTとして双方保存。
+- 50枚ベース、RT純増/Gは検索語を変え再探索したが確定できずUNVERIFIED。
+- resetBehaviorは設定変更/据え置き/朝一/電源OFF→ON/RT引継ぎ/ガックンまで再探索したが高信頼資料で確定できずPARTIAL。
 
-### `machines/2007-01_nangoku-bijin.md`
-- 南国美人 / オリンピア / 2007年1月 / 25Φ。
-- パチマガスロマガで設定別BIG/REG/合算、PAYOUT 95.43〜108.46%、1000円あたり38.44〜40.80Gを取得。
-- BIG約250枚、REG約105枚。ボーナス後CZ経由RT「南国タイム」は最大100G、約0.4枚/G。
-- P-WORLDでボーナス確率を照合。
-- 性能コアはCOMPLETE_CORE。resetBehaviorは設定変更/据え置き/電源OFF→ON時のCZ/RT処理、朝一恩恵/変更判別を再探索したが未確認のためresetBehaviorQAはPARTIAL。
+## resetBehavior 遡及QA
 
-### `machines/2007-01_nangoku-bijin-30.md`
-- 南国美人30 / オリンピア / 2007年1月 / 30Φ派生。
-- パチマガスロマガが「南国美人&30」として共通解析を掲載し、P-WORLDにも30Φ独立DBがあるため全機種方針に従い独立レコード化。
-- 設定別性能、ベース、BIG/REG獲得、RT最大100G・約0.4枚/Gは25Φと共通資料で確認。
-- 性能コアCOMPLETE_CORE、resetBehaviorQA PARTIAL。
-
-### `machines/2007-01-21_guruguru-bakusamurai.md`
-- ぐるぐる爆侍 / JPS / 型式名グルグルバクザムライ。
-- 当時グリーンべるとで2007-01-21納品開始予定を確認。
-- BIG約275枚、青7 CTと突Bの2種CT。青7 CT後最大50G RT、突B後最大100G RT。
-- RTは順押し約0.2枚/G、逆押し約0枚/Gでパンク回避を優先できる仕様。
-- HAZUSE、P-WORLD、パチマガで設定別BIG/CT/合算を照合。
-- 市場掲載出玉率98.0〜107.0%とパチマガのシミュレートPAYOUT96.70〜106.26%は定義が異なるためCONFLICTとして双方保持。
-- CT純増もパチマガ約115枚と業界記事フリー打ち約140枚の差を平均せず保持。
-- 50枚ベースは検索語を変えて再探索したが確定できずUNVERIFIED。
-- resetBehaviorも設定変更/据え置き/電断/朝一/RT引継ぎを再探索したが高信頼情報未確認のためPARTIAL。
+### `machines/2006-02_new-oasis.md`
+- 性能コアは従来どおりCOMPLETE_COREを維持。
+- 完全告知ノーマル機で、公開仕様上は天井・モード管理・RT/ART・有利区間は非該当として整理。
+- 設定変更/据え置き/電源OFF→ON固有挙動、内部ボーナス成立状態処理、ガックン等の変更判別は検索語と資料系統を変えて再探索したが高信頼資料を確定できずUNVERIFIED。
+- `coreStatus: COMPLETE_CORE` と `resetBehaviorQA: PARTIAL` を別管理で保存。
+- 遡及QA日: 2026-08-31。
 
 ## 2007年1月残り候補監査メモ
 
-年別一覧・A+RT一覧などから、以下の未処理候補を確認している。導入月だけで即登録せず、当時業界記事・メーカー資料・P-WORLD等で実導入/納品時期を解像して時系列に処理すること。
-
+未処理候補:
 - PS行くぜ大工の源さんVD / 三洋物産
 - サクスロ / ラスター
-- ジャンジャン年中猛特訓 / SNKプレイモア
 - ビジトジ / 銀座
 - マリーンギャング / パイオニア
 - 嗚呼!我ら日本松柔道部 / ラスター
@@ -64,43 +48,36 @@
 - 南国美人
 - 南国美人30
 - ぐるぐる爆侍
+- ジャンジャン年中猛特訓
 
 2月送り:
 - プレイボーイ / プレイボーイ-30: 2007-02-04納品予定資料あり。
 
 ## 次回再開地点
 
-**2007年1月の残り未処理候補を実導入/納品日順に監査して収集する。上記7候補について、機種名表記揺れ・型式名・メーカー名を使い、メーカー/業界一次資料→当時解析→P-WORLD/古いDB→回顧資料の順で性能コアとresetBehaviorを同時収集する。1月の漏れ監査が完了してから2007年2月へ進む。**
+**2007年1月の残り未処理6候補を実導入/納品日順に監査して収集する。特に `PS行くぜ大工の源さんVD` はP-WORLDと5号機クロニクルで2007年1月導入を確認済みだが、性能値のメーカー未発表/資料不足が多いため、当時解析・古いDB・保存アーカイブまで横断してからPARTIAL判定する。並行QAでは既存レコードを古い順に1件ずつ遡及し、resetBehavior未収集機を補完する。次の遡及候補は `新世紀エヴァンゲリオン` から古い順に進める。**
 
 ### 次回チェック優先
 
-- `PS行くぜ大工の源さんVD`、`サクスロ`、`ジャンジャン年中猛特訓`、`ビジトジ`、`マリーンギャング`、`嗚呼!我ら日本松柔道部`、`空手バカ一代` の実導入/納品日を当時資料で確定または月単位まで解像する。
+- `PS行くぜ大工の源さんVD`、`サクスロ`、`ビジトジ`、`マリーンギャング`、`嗚呼!我ら日本松柔道部`、`空手バカ一代` の実導入/納品日と性能コアを解像する。
 - 発表日と実納品/導入日を混同しない。
 - 新規機種は必ずv0.7 resetBehaviorも同時探索する。
-- 最初の検索でresetBehaviorが見つからなくても、設定変更/リセット/朝一/据え置き/電源OFF ON/RT引継ぎ/天井/ガックン等へ検索語を変えてからUNVERIFIED判定する。
-- 既存性能値は最初からやり直さず、必要な境界確認のみ行う。
+- 最初の検索で見つからなくても、設定変更/リセット/朝一/据え置き/電源OFF ON/RT引継ぎ/天井/ガックン等へ検索語を変える。
+- 既存性能値のCOMPLETE_COREは不用意に崩さず、resetBehaviorQAを別管理する。
+- resetBehavior遡及は古い順に継続する。
 
 ## 今回の主要資料
 
-### 新日本プロレスまでもがパチスロ機
-- グリーンべると — https://web-greenbelt.jp/00004980/
-- HAZUSE — https://www.hazuse.com/i/data/shinnihon/top.htm
-- パチマガスロマガ — https://cs62.cs-plaza.com/g/pachi/pla/s_conq/heiwabros_slot/01/a.php
-- 5号機クロニクル — https://5goki.com/heiwa-olympia
+### ジャンジャン年中猛特訓
+- グリーンべると / P-WORLD業界ニュース — https://news.p-world.co.jp/articles/1971/greenbelt
+- パチマガスロマガ基本 — https://cs62.cs-plaza.com/g/pachi/pla/s_conq/snk_slot/09/a.php
+- パチマガスロマガ確率/PAYOUT — https://cs62.cs-plaza.com/g/pachi/pla/s_conq/snk_slot/09/h.php
+- P-WORLD — https://www.p-world.co.jp/machine/database/4528
+- 5号機クロニクル — https://5goki.com/snkplaymore
+- SNK旧公式 — https://slot.snk-corp.co.jp/official/janjan-motokkun/download/kiyaku.html
 
-### 南国美人 / 南国美人30
-- パチマガスロマガ基本 — https://cs62.cs-plaza.com/g/pachi/pla/s_conq/olympia_slot/77/a.php
-- パチマガスロマガ確率/PAYOUT — https://cs62.cs-plaza.com/g/pachi/pla/s_conq/olympia_slot/77/k.php
-- パチマガスロマガ通常時データ — https://cs62.cs-plaza.com/g/pachi/pla/s_conq/olympia_slot/77/c.php
-- P-WORLD 25Φ — https://www.p-world.co.jp/machine/database/4515
-- P-WORLD 30Φ — https://www.p-world.co.jp/machine/database/4519
-
-### ぐるぐる爆侍
-- グリーンべると — https://web-greenbelt.jp/00005003/
-- HAZUSE — https://hazuse.com/i/data/guruguru-bakusamurai/guruguru-bakusamurai/top.htm
-- P-WORLD — https://www.p-world.co.jp/machine/database/4510
-- パチマガスロマガ確率/PAYOUT — https://cs62.cs-plaza.com/g/pachi/pla/s_conq/jps_slot/07/h.php
-- パチマガスロマガ基本 — https://cs62.cs-plaza.com/g/pachi/pla/s_conq/jps_slot/07/a.php
+### ニューオアシス resetBehavior QA
+- グリーンべると — https://web-greenbelt.jp/00004505/
 
 ### 2007年候補監査
 - 2007年導入一覧 — https://dorubako.biz/year/2007.html
