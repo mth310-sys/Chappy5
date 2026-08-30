@@ -49,6 +49,8 @@ jobs:
         run: npx playwright test playtest/submission-readiness.spec.js --project=webkit-iphone12 --reporter=line
       - name: Run Nocturne product integrated QA
         run: npx playwright test playtest/nocturne-product-qa.spec.js --project=webkit-iphone12 --reporter=line
+      - name: Run Nocturne STOP semantic regression QA
+        run: npx playwright test playtest/nocturne-stop-semantics.spec.js --project=webkit-iphone12 --reporter=line
       - name: Upload interaction evidence
         if: always()
         uses: actions/upload-artifact@v4
