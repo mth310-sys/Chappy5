@@ -108,9 +108,10 @@
         machine.dataset.pachiLeverBand=band;
         relay('pachi-lever-read',{band,tier,carry,quietRun,mode:x.mode,gameNo:x.gameNo});
       }else if(type==='reel-role'){
-        const ordinal=Math.max(1,Math.min(3,Number(x.ordinal||1)||1)),band=stopBand(ordinal,x);lastStopBand=band;
+        const ordinal=Math.max(1,Math.min(3,Number(x.ordinal||1)||1)),band=stopBand(ordinal,x),previousBand=lastStopBand;
+        lastStopBand=band;
         machine.dataset.pachiStopBand=band;machine.dataset.pachiStopOrdinal=String(ordinal);
-        relay('pachi-stop-read',{ordinal,reelIndex:x.reelIndex,band,symbol:x.symbol,evidence:x.evidence,previousBand:lastStopBand,mode:x.mode,gameNo:x.gameNo});
+        relay('pachi-stop-read',{ordinal,reelIndex:x.reelIndex,band,symbol:x.symbol,evidence:x.evidence,previousBand,mode:x.mode,gameNo:x.gameNo});
       }else if(type==='resolve'){
         const outcome=resolveBand(x);lastOutcome=outcome;machine.dataset.pachiOutcome=outcome;machine.dataset.pachiRole=String(x.role||x.evidence?.role||'PARTIAL');
         if(outcome!=='plain')quietRun=0;
