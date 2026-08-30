@@ -37,10 +37,10 @@
       else if(type==='pachi-stop-read'){const b=x.band||'quiet',o=Math.max(1,Math.min(3,Number(x.ordinal||1)));band(b,b==='quiet'?260:b==='weak'?430:b==='medium'?560:720);stopPulse(o,b)}
       else if(type==='pachi-role-resolved'){const b=x.band||x.outcome||'plain';if(b==='pay'){band('pay',980);pulse(machine,'v5-pay',980)}else if(b==='strong'){band('strong',780);pulse(machine,'v5-strong',780)}else if(b==='chance')band('medium',650);else if(b==='hint')band('weak',460);else band('quiet',260)}
       else if(type==='pachi-payoff-window'){
-        const outcome=x.outcome||x.window||x.payoff||'';
-        if(outcome==='miss'){pulse(machine,'v5-miss',360);setTimeout(()=>band('quiet'),180)}
-        else if(outcome==='win'||outcome==='bonus-open'||outcome==='at-open'){band('pay',1100);pulse(machine,'v5-pay',1100)}
-        else if(outcome==='normal-return'){pulse(machine,'v5-return',520);band('quiet')}
+        const phase=x.phase||x.window||x.payoff||x.outcome||'';
+        if(phase==='miss'){pulse(machine,'v5-miss',360);setTimeout(()=>band('quiet'),180)}
+        else if(phase==='win'||phase==='bonus-open'||phase==='at-open'){band('pay',1100);pulse(machine,'v5-pay',1100)}
+        else if(phase==='normal-return'){pulse(machine,'v5-return',520);band('quiet')}
       }
     });
     return true;
