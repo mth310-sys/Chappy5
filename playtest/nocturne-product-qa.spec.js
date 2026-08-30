@@ -82,19 +82,30 @@ async function settleMode(g){
     return true;
   },{timeout:2200}).toBeTruthy();
 }
-async function installEventRecorder(g){
+async function installRecorders(g){
   await g.locator('body').evaluate(()=>{
     window.__nocturneQaEvents=[];
+    window.__nocturneQaTexts=[];
     document.addEventListener('nocturne:game-event',e=>window.__nocturneQaEvents.push({type:e.detail?.type||'',detail:e.detail||{}}));
+    const machine=document.querySelector('.machine');
+    const capture=()=>{
+      const text=(machine?.innerText||'').trim();
+      if(text&&window.__nocturneQaTexts[window.__nocturneQaTexts.length-1]!==text) window.__nocturneQaTexts.push(text);
+    };
+    const observer=new MutationObserver(capture);
+    if(machine) observer.observe(machine,{subtree:true,childList:true,characterData:true,attributes:true});
+    capture();
+    window.__nocturneQaTextObserver=observer;
   });
 }
 async function eventTypes(g){return g.locator('body').evaluate(()=>[...new Set((window.__nocturneQaEvents||[]).map(e=>e.type))]);}
+async function observedPresentation(g){return g.locator('body').evaluate(()=> (window.__nocturneQaTexts||[]).join('\n'))}
 
 test('nocturne product: iPhone pachislot loop 36G, six orders, misuse, integrated V4 cadence, BONUS/AT/return',async({page})=>{
   test.setTimeout(130000); const errors=[],crashes=[];
   page.on('pageerror',e=>errors.push(String(e))); page.on('crash',()=>crashes.push('crash'));
   await page.goto(URL,{waitUntil:'networkidle'}); let g=await game(page);
-  await installEventRecorder(g);
+  await installRecorders(g);
   const base=await snapshot(g);
   expect(base.vw,'iPhone 390px viewport').toBe(390);
   expect(base.w).toBeLessThanOrEqual(base.vw+1);
@@ -148,6 +159,7 @@ test('nocturne product: iPhone pachislot loop 36G, six orders, misuse, integrate
   }
 
   const events=await eventTypes(g);
+  const presentation=await observedPresentation(g);
   expect(errors,'JS errors').toEqual([]);
   expect(crashes,'WebKit crashes').toEqual([]);
   expect(sawBonus,'deterministic BONUS reachability').toBeTruthy();
@@ -155,14 +167,14 @@ test('nocturne product: iPhone pachislot loop 36G, six orders, misuse, integrate
   expect(sawNormalAfterAt,'AT → normal return').toBeTruthy();
   for(const type of REQUIRED_EVENT_PATH) expect(events,`pachislot event path includes ${type}`).toContain(type);
 
-  // Shared text rule: ordinary pachislot result/information labels are allowed and must not be treated as explanatory prose.
-  const sourceText=await g.locator('html').evaluate(()=>document.documentElement.innerHTML);
-  expect(sourceText,'CHANCE presentation remains available').toContain('CHANCE');
-  expect(sourceText,'BONUS presentation remains available').toContain('BONUS');
-  expect(sourceText,'WIN presentation remains available').toContain('WIN');
-  expect(sourceText,'AT presentation remains available').toContain('OCEAN RECORD');
-  expect(sourceText,'remaining-game presentation remains available').toContain('残り');
-  expect(sourceText,'TOTAL presentation remains available').toContain('TOTAL');
+  // Shared text rule: verify actual player-facing presentation observed during play, not static source strings.
+  expect(presentation,'CHANCE presentation observed').toContain('CHANCE');
+  expect(presentation,'BONUS presentation observed').toContain('BONUS');
+  expect(presentation,'WIN presentation observed').toContain('WIN');
+  expect(presentation,'AT presentation observed').toContain('OCEAN RECORD');
+  expect(presentation,'remaining-game presentation observed').toContain('残り');
+  expect(presentation,'TOTAL presentation observed').toContain('TOTAL');
+  for(const phrase of FORBIDDEN_EXPLANATORY_TEXT) expect(presentation,`observed explanatory prose: ${phrase}`).not.toContain(phrase);
 
   await page.reload({waitUntil:'networkidle'}); g=await game(page);
   const reloaded=await snapshot(g);
@@ -171,5 +183,5 @@ test('nocturne product: iPhone pachislot loop 36G, six orders, misuse, integrate
   expect(reloaded.soundRun4).toBe('1');
   await round(page,g,[1,0,2]);
   expect(errors,'reload JS errors').toEqual([]); expect(crashes,'reload crashes').toEqual([]);
-  console.log(JSON.stringify({baseNodes:base.nodes,maxNodes,maxAnimations,events,sawBonus,sawAt,sawNormalAfterAt}));
+  console.log(JSON.stringify({baseNodes:base.nodes,maxNodes,maxAnimations,events,sawBonus,sawAt,sawNormalAfterAt,presentationSamples:(presentation.match(/CHANCE|WIN|BONUS|OCEAN RECORD|残り \d+G|TOTAL \d+枚/g)||[])}));
 });
