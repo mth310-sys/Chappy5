@@ -80,10 +80,13 @@ Chappy5は、地元の小さなパチスロホールを立て直していく経�
 
 実機DB:
 - `docs/real_machine_db/INDEX.md`
+- `docs/real_machine_db/LATEST_HANDOFF.md`
 - `docs/real_machine_db/machines/`
 
 系統別物差し:
 - `docs/real_machine_db/yardsticks/`
+
+`LATEST_HANDOFF.md` が存在する場合は必ず確認する。INDEXより新しいコミットで更新されている場合、直近の再開地点は `LATEST_HANDOFF.md` を優先し、次回INDEX更新時に統合する。
 
 ## 作業方式 — リレー方式
 
@@ -94,7 +97,7 @@ Chappy5は、地元の小さなパチスロホールを立て直していく経�
 1. 最新mainを取得する
 2. READMEを全文読む
 3. 最新ミッション文書を読む
-4. `docs/real_machine_db/INDEX.md` と既存機種データを確認する
+4. `docs/real_machine_db/INDEX.md` と `docs/real_machine_db/LATEST_HANDOFF.md`（存在する場合）と既存機種データを確認する
 5. 直前の作業者が完了した地点を特定する
 6. **その次の未処理機種から**収集を再開する
 7. 調査結果・出典・進捗をGitHubへ保存する
@@ -107,7 +110,7 @@ Chappy5は、地元の小さなパチスロホールを立て直していく経�
 - 既収集機種を最初からやり直さない
 - 未処理機種を飛ばさない
 - 並列で別年代へ勝手に分岐しない
-- 進捗地点をINDEX等に明示する
+- 進捗地点をINDEXまたはLATEST_HANDOFFに明示する
 - 境界が不明な場合は最新データを確認して重複より漏れ防止を優先する
 - 定期的に重複・出典・CONFLICT・欠損を確認する
 - PARTIAL機種は後続QAで再探索対象にし、簡単に欠損確定しない
@@ -126,4 +129,4 @@ Chappy5は、地元の小さなパチスロホールを立て直していく経�
 
 ---
 
-**作業開始時は README → 最新の正本文書 → INDEX / 既存データ → 直前の進捗地点 → 次の未処理機種、の順で確認してください。**
+**作業開始時は README → 最新の正本文書 → INDEX / LATEST_HANDOFF / 既存データ → 直前の進捗地点 → 次の未処理機種、の順で確認してください。**
