@@ -8,6 +8,8 @@ async function game(page){
   const game=play.frameLocator('#game');
   await expect(game.locator('body')).toBeVisible();
   await expect.poll(async()=>game.locator('html').getAttribute('data-game-reel-product-run5'),{timeout:5000}).toBe('1');
+  await expect.poll(async()=>game.locator('html').getAttribute('data-visual-product-run5'),{timeout:5000}).toBe('1');
+  await expect.poll(async()=>game.locator('html').getAttribute('data-sound-product-run5'),{timeout:5000}).toBe('semantic-stop-v1');
   return game;
 }
 
@@ -43,6 +45,39 @@ test('Nocturne STOP1→STOP2→STOP3 semantics retain the actual previous inform
 
   const dataset=await g.locator('.machine').evaluate(el=>({band:el.dataset.pachiStopBand,ordinal:el.dataset.pachiStopOrdinal}));
   expect(dataset).toEqual({band:'weak',ordinal:'3'});
+  expect(errors,'JS errors').toEqual([]);
+  expect(crashes,'WebKit crashes').toEqual([]);
+});
+
+test('Nocturne Run 5 Visual/Sound consume the same payoff phase contract',async({page})=>{
+  test.setTimeout(30000);
+  const errors=[],crashes=[];
+  page.on('pageerror',e=>errors.push(String(e)));
+  page.on('crash',()=>crashes.push('crash'));
+  await page.goto(URL,{waitUntil:'networkidle'});
+  const g=await game(page);
+  const machine=g.locator('.machine');
+
+  // The semantic bridge owns phase names. Visual and Sound must consume that same field;
+  // outcome can be a broader state label (bonus/at/return), so it cannot replace phase.
+  await g.locator('body').evaluate(()=>document.dispatchEvent(new CustomEvent('nocturne:game-event',{detail:{
+    type:'pachi-payoff-window',semanticOnly:true,qaSynthetic:true,phase:'bonus-open',outcome:'bonus'
+  }})));
+  await expect.poll(async()=>machine.getAttribute('data-v5-band'),{timeout:1000}).toBe('pay');
+  await expect.poll(async()=>machine.evaluate(el=>el.classList.contains('v5-pay')),{timeout:1000}).toBeTruthy();
+
+  await g.locator('body').evaluate(()=>document.dispatchEvent(new CustomEvent('nocturne:game-event',{detail:{
+    type:'pachi-payoff-window',semanticOnly:true,qaSynthetic:true,phase:'normal-return',outcome:'return'
+  }})));
+  await expect.poll(async()=>machine.getAttribute('data-v5-band'),{timeout:1000}).toBe('quiet');
+  await expect.poll(async()=>machine.evaluate(el=>el.classList.contains('v5-return')),{timeout:1000}).toBeTruthy();
+
+  const markers=await g.locator('html').evaluate(el=>({
+    game:el.dataset.gameReelProductRun5,
+    visual:el.dataset.visualProductRun5,
+    sound:el.dataset.soundProductRun5
+  }));
+  expect(markers).toEqual({game:'1',visual:'1',sound:'semantic-stop-v1'});
   expect(errors,'JS errors').toEqual([]);
   expect(crashes,'WebKit crashes').toEqual([]);
 });
