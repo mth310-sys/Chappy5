@@ -4,14 +4,15 @@ const path = require('path');
 
 const cases = [
   { name: 'toki', path: '/prototypes/toki-no-issen/play.html', rounds: 30 },
-  { name: 'nocturne', path: '/prototypes/nocturne-aquarium/play.html', rounds: 50 },
+  { name: 'nocturne', path: '/prototypes/nocturne-aquarium/play-sound.html', rounds: 50, nestedShell: true },
 ];
 
 const evidenceDir = path.join(__dirname, 'evidence');
 fs.mkdirSync(evidenceDir, { recursive: true });
 
 async function inner(page) {
-  const frame = page.frameLocator('#game');
+  const nested = await page.locator('#shell').count();
+  const frame = nested ? page.frameLocator('#shell').frameLocator('#game') : page.frameLocator('#game');
   await expect(frame.locator('body')).toBeVisible();
   // Integrated shells enhance the iframe control deck on their load handler.
   // Do not race that handoff: a 42px base BET can exist for a few ms before
