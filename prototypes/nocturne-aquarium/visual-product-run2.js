@@ -34,7 +34,11 @@
       .machine.v2-stop2 .reelDeck{box-shadow:0 10px 22px #000,inset 0 0 26px #000,inset 0 1px #d9ffff19,0 0 15px #69f1ff66!important}
       .machine.v2-stop3 .reelDeck{box-shadow:0 10px 22px #000,inset 0 0 26px #000,inset 0 1px #d9ffff19,0 0 22px #b9ffff83!important}
       .machine.v2-win .reelDeck{box-shadow:0 10px 22px #000,inset 0 0 25px #dfffff22,0 0 26px #dfffff9c!important}
-      @media(max-width:390px){.na-v2-copy{font-size:19px}.na-v2-copy.big{font-size:25px}.na-v2-shadow{width:126px;margin-left:-63px}.na-v2-gate{width:98px;height:98px;margin:-49px}}
+      @media(max-width:390px){
+        .controls{grid-template-columns:50px repeat(3,minmax(44px,1fr)) 50px!important;gap:4px!important}
+        .stop{min-width:44px!important;width:100%!important}
+        .na-v2-copy{font-size:19px}.na-v2-copy.big{font-size:25px}.na-v2-shadow{width:126px;margin-left:-63px}.na-v2-gate{width:98px;height:98px;margin:-49px}
+      }
     `;d.head.appendChild(style);
     const scene=d.createElement('div');scene.className='na-v2-scene';scene.innerHTML='<div class="na-v2-depth"></div><div class="na-v2-city"></div><i class="na-v2-jelly j1"></i><i class="na-v2-jelly j2"></i><i class="na-v2-jelly j3"></i><div class="na-v2-shadow"></div><div class="na-v2-gate"></div><div class="na-v2-flash"></div><div class="na-v2-copy"></div>';
     screen.appendChild(scene);const copy=scene.querySelector('.na-v2-copy'),flash=scene.querySelector('.na-v2-flash');
