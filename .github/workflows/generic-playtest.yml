@@ -47,6 +47,8 @@ jobs:
         run: npx playwright test playtest/dual-prototype-qa.spec.js --project=webkit-iphone12 --reporter=line
       - name: Run dual prototype submission readiness QA
         run: npx playwright test playtest/submission-readiness.spec.js --project=webkit-iphone12 --reporter=line
+      - name: Run Nocturne product integrated QA
+        run: npx playwright test playtest/nocturne-product-qa.spec.js --project=webkit-iphone12 --reporter=line
       - name: Upload interaction evidence
         if: always()
         uses: actions/upload-artifact@v4
