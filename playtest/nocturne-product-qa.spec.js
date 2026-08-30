@@ -24,7 +24,7 @@ async function tap(page,loc,label){
   await page.touchscreen.tap(b.x+b.width/2,b.y+b.height/2);
 }
 async function forceCenterSymbols(g,symbols){
-  await g.locator('body').evaluate((forced)=>{
+  await g.locator('body').evaluate((_body,forced)=>{
     [...document.querySelectorAll('.reel')].slice(0,3).forEach((reel,i)=>{
       const syms=[...reel.querySelectorAll('.sym')];
       const center=syms[1]||syms[0];
@@ -33,7 +33,7 @@ async function forceCenterSymbols(g,symbols){
   },symbols);
 }
 async function forceCoreEvidence(g,symbols){
-  await g.locator('body').evaluate((forced)=>{
+  await g.locator('body').evaluate((_body,forced)=>{
     const role=forced.every(x=>x==='七')?'QA_BONUS_CHARGE':'QA_AT_DRAIN';
     document.dispatchEvent(new CustomEvent('nocturne:core-result',{detail:{symbols:forced,role,payout:0,qaSynthetic:true}}));
   },symbols);
