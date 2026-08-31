@@ -33,12 +33,13 @@ resetBehaviorQA: PARTIAL
 | 3 | 1/442.81 | 1/675.63 | 1/267.49 |
 | 4 | 1/420.10 | 1/661.98 | 1/257.00 |
 | 5 | 1/387.79 | 1/624.15 | 1/239.18 |
-| 6 | 1/359.97 | 1/569.88 | 1/220.66 |
+| 6 | 1/360.09 | 1/569.88 | 1/220.66 |
 
 - BIGはスーパーBIGとノーマルBIGの合算を物差し主値とする。
-- HAZUSE DATAの合算値・REG値とも整合する。
+- 全BIG合算・ボーナス合算は必勝本とHAZUSE/後年整理資料で丸め差の範囲で整合する。
+- REGは設定1/2/4/5/6が整合する一方、設定3のみ必勝本 `1/675.63`・pachinko's blog `1/676` に対しHAZUSE DATA `1/645.6` と競合する。二系統が整合する `1/675.63` を主値とするが、HAZUSE値を破棄せずCONFLICTとして保持する。
 
-信頼度: ANALYSIS_HIGH
+信頼度: ANALYSIS_HIGH / 設定3 REGのみ CONFLICT
 
 ## baseGamesPer50
 
@@ -90,7 +91,7 @@ HAZUSE DATAの払い出し条件:
 ## resetBehavior
 
 settingChangeBehavior: UNVERIFIED。本機固有の設定変更時内部処理を直接記した高信頼資料を確定できず。
-carryOverBehavior: UNVERIFIED。据え置き時の本機固有挙動を直接確定できず。
+carryOverBehavior: UNVERIFIED。据え置き時の本機固有挙動は確定できず。
 powerCycleBehavior: UNVERIFIED。電源OFF→ONのみの場合の本機固有挙動を確定できず。
 gameCounterReset: NOT_APPLICABLE / NONE_CONFIRMED。通常時ゲーム数天井は確認されない。
 ceilingAfterReset: NONE_CONFIRMED。リセット短縮天井・変更天井は確認されない。
@@ -120,11 +121,11 @@ numericResetData: NONE_CONFIRMED。公開された設定変更時モード振り
    - reliability: ANALYSIS_HIGH
 3. HAZUSE DATA — くりぃむしちゅー
    - https://data.hazuse.com/?machine_code=6S1216
-   - 設定別ボーナス確率、丸めPAYOUT、ボーナス払い出し条件
+   - 設定別ボーナス確率、丸めPAYOUT、ボーナス払い出し条件。設定3 REGは他資料とCONFLICT。
    - reliability: ANALYSIS_HIGH
 4. pachinko’s blog — ロデオ「パチスロ くりぃむしちゅー」の筺体＆スペック＆情報
    - https://pachinko.hatenablog.jp/entry/2007/09/creamStew
-   - 2007年9月リリース、ボーナス確率整理
+   - 2007年9月リリース、ボーナス確率整理。設定3 REGは約1/676で必勝本と整合。
    - reliability: ANALYSIS_SINGLE
 5. slotmaniac保存ページ検索インデックス — くりぃむしちゅーの解析,攻略
    - https://slotmaniac.web.fc2.com/kaiseki/creamstew.html
@@ -153,6 +154,9 @@ numericResetData: NONE_CONFIRMED。公開された設定変更時モード振り
 
 ## conflicts
 
-重大な性能値CONFLICTなし。
-
-- 機械割は必勝本の97.4〜110.8%とHAZUSEの整数表記97〜111%が存在するが、後者は丸め精度差と判断。
+- 設定3 REG:
+  - パチ＆スロ必勝本: `1/675.63`
+  - pachinko's blog: `1/676`（丸め）
+  - HAZUSE DATA: `1/645.6`
+  - 平均化しない。必勝本+別系統二次資料が整合する `1/675.63` を主値とし、HAZUSE値をCONFLICTとして保持。
+- 機械割は必勝本の97.4〜110.8%とHAZUSEの整数表記97〜111%が存在するが、後者は丸め精度差と判断しCONFLICTにはしない。
