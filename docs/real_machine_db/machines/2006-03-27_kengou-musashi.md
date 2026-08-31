@@ -1,5 +1,8 @@
 # 剣豪！武蔵
 
+status: COMPLETE_CORE
+qaResetBehavior: PARTIAL
+
 machineName: 剣豪！武蔵
 manufacturer: エレコ
 generation: 5号機初期
@@ -60,6 +63,53 @@ RT「巌流島GAME」:
 - RT100Gで約80枚増加見込みとの公式説明
 - 小役とボーナスの同時抽選を採用
 - 型式名: 斬3（P-WORLD）
+- 通常時ゲーム数天井は確認されない
+- 有利区間制度導入前
+
+## resetBehavior
+
+resetBehaviorQA: PARTIAL
+
+settingChangeBehavior:
+- 「剣豪！武蔵 / 剣豪武蔵 / 斬3 / エレコ」と「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 巌流島GAME / RT / ガックン」を組み替え、メーカー公式、P-WORLD、当時解析、古い機種DB、後年資料を再探索したが、本機固有の設定変更時RT処理を明記した高信頼資料は今回確認できずUNVERIFIED。
+
+carryOverBehavior:
+- 通常時ゲーム数天井はNONE_CONFIRMED / NOT_APPLICABLE相当。
+- 前日「巌流島GAME」中の据え置き時残G・内部状態引継ぎはUNVERIFIED。
+
+powerCycleBehavior:
+- 電源OFF→ONのみで「巌流島GAME」残G・内部状態が維持/消滅するかはUNVERIFIED。
+- 電源OFF→ONのみで朝一専用恩恵が発生する根拠はNONE_CONFIRMED。
+
+gameCounterReset:
+- 通常時ゲーム数天井はNONE_CONFIRMED / NOT_APPLICABLE相当。
+
+ceilingAfterReset:
+- NONE_CONFIRMED。
+
+modeAfterReset:
+- ゲーム数管理モード/朝一専用モードはNONE_CONFIRMED。
+
+stateAfterReset:
+- BIG後100G RT「巌流島GAME」は確認済み。
+- 設定変更/据え置き/電源OFF→ON時のRT残G・内部状態処理は十分再探索後もUNVERIFIED。
+
+advantageousSectionReset:
+- NOT_APPLICABLE（5号機初期・有利区間制度導入前）。
+
+resetBenefits:
+- 朝一/設定変更専用の短縮天井、専用モード、初当たり優遇はNONE_CONFIRMED。
+
+resetPenalties:
+- 設定変更固有の主要不利要素はNONE_CONFIRMED。
+
+resetDetection:
+- 本機固有のガックン、表示、RT挙動等による変更判別は十分再探索後もUNVERIFIED。
+
+numericResetData:
+- 設定変更時モード振り分け: NONE_CONFIRMED
+- 短縮天井: NONE_CONFIRMED
+- 朝一当選率/恩恵発生率: NONE_CONFIRMED
 
 ## sources
 
@@ -88,8 +138,15 @@ RT「巌流島GAME」:
 
 ## missingFields
 
-現時点で物差し最低限の主要項目は概ね取得済み。設定構成が本当に1/6の2段階のみかは追加一次資料照合余地あり。
+- 設定変更/据え置き/電源OFF→ON時の「巌流島GAME」残G・内部状態処理
+- 本機固有の設定変更判別
+- 設定構成が本当に1/6の2段階のみかは追加一次資料照合余地あり
 
 ## conflicts
 
 重大な数値CONFLICTは現時点で確認していない。
+
+## QA note
+
+- 性能コアはCOMPLETE_COREを維持。
+- v0.7 resetBehaviorを遡及追加。天井/朝一専用モード/有利区間は非該当またはNONE_CONFIRMED。RTの変更・据え置き・電断時処理と変更判別のみ十分再探索後もUNVERIFIED。
