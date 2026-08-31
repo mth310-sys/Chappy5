@@ -1,0 +1,163 @@
+# ニューハナハナ-30
+
+machineName: ニューハナハナ-30
+manufacturer: パイオニア
+releaseDate: 2007-02（パイオニア公式・P-WORLDで月単位確認。日単位の全国納品/稼働開始日は今回確定できず）
+generation: 5号機初期
+systemType: ノーマル / 完全告知 / 30Φ
+
+## payoutRateBySetting
+
+### 市場掲載値
+- 設定1: 95%
+- 設定2: 98%
+- 設定3: 100%
+- 設定4: 103%
+- 設定5: 105%
+- 設定6: 107%
+
+P-WORLDとpacnkの掲載値が一致。
+
+信頼度: ANALYSIS_HIGH
+
+### パチマガスロマガ旧攻略 シミュレート値
+- 設定1: 96.80%
+- 設定2: 98.99%
+- 設定3: 101.16%
+- 設定4: 103.39%
+- 設定5: 105.10%
+- 設定6: 106.87%
+
+市場掲載の機械割とシミュレート値は定義を分離して保持し、平均しない。
+
+信頼度: ANALYSIS_HIGH
+
+## initialHitBySetting
+
+### BIG
+- 設定1: 1/327.68
+- 設定2: 1/315.08
+- 設定3: 1/303.41
+- 設定4: 1/292.57
+- 設定5: 1/284.94
+- 設定6: 1/277.69
+
+### REG
+- 設定1: 1/555.39
+- 設定2: 1/512.00
+- 設定3: 1/474.90
+- 設定4: 1/442.81
+- 設定5: 1/420.10
+- 設定6: 1/399.61
+
+### ボーナス合成
+- 設定1: 1/206.09
+- 設定2: 1/195.05
+- 設定3: 1/185.13
+- 設定4: 1/176.17
+- 設定5: 1/169.78
+- 設定6: 1/163.84
+
+P-WORLDの丸め値（BIG 1/327→1/277、REG 1/555→1/399、合算1/206→1/163）と整合。
+
+信頼度: ANALYSIS_HIGH
+
+## baseGamesPer50
+
+UNVERIFIED
+
+「ニューハナハナ-30 / ニューハナハナ30 / P5NHD-30 / パイオニア」に「50枚 / 1000円 / 千円 / ベース / コイン持ち / ゲーム数 / 1k」を組み合わせ、P-WORLD、旧パチマガスロマガ、pacnk、ハナハナ系後年回顧、業界記事を横断したが、本機固有の比較可能な公表値を今回確定できなかった。後継・別機種の37〜40G台の値は混入させない。
+
+信頼度: UNVERIFIED
+
+## netIncrease
+
+- 非該当。RT/ART/AT等の付加機能なし。
+
+## basicPayout
+
+- BIG: 348枚を超える払い出しで終了、純増目安 約300枚
+- REG: 168枚を超える払い出しで終了、純増目安 約150枚
+
+P-WORLDと旧パチマガスロマガで一致。
+
+信頼度: ANALYSIS_HIGH
+
+## modeSpecificMinimumData
+
+- 5号機 / 5ライン
+- 30Φ沖スロ
+- 完全告知
+- ボーナスは単独成立のみ
+- RTなどの付加機能なし
+- 告知タイミングは成立ゲームのレバーON約90%、成立次ゲームのレバーON約10%
+- ハイビスカス告知。通常以外の点滅パターンはBIG確定
+- 型式名: P5NHD-30
+- 検定番号: 5S1305
+- 天井機能: 本機固有の天井は確認できず。ゲーム性資料上もボーナスのみの純Aタイプに近い構成
+- 有利区間制度導入前
+
+## resetBehavior
+
+resetBehaviorQA: PARTIAL
+
+- settingChangeBehavior: ボーナスのみのノーマル機で、設定変更時に再抽選される天井・モード・AT/RT状態は確認なし。本機固有の電断/設定変更内部処理の一次資料は未確認
+- carryOverBehavior: 据え置き時に引き継ぐ天井・モード・有利区間は非該当/確認なし。本機固有のリール初期位置処理は一次資料未確認
+- powerCycleBehavior: 電源OFF→ONのみの固有挙動を高信頼資料で確定できず UNVERIFIED
+- gameCounterReset: 天井ゲーム数カウンタは確認なし
+- ceilingAfterReset: リセット短縮天井なし/非該当相当。少なくとも公開ゲーム性上、天井機能は確認できず
+- modeAfterReset: 朝一専用モード・通常モード移行系は確認なし
+- stateAfterReset: 朝一に再抽選対象となるRT/AT等の内部状態は非該当
+- advantageousSectionReset: 非該当（有利区間制度導入前）
+- resetBenefits: 朝一/設定変更固有の出玉恩恵は確認できず
+- resetPenalties: 設定変更固有の主要不利要素は確認できず
+- resetDetection: 後年ハナハナ専門資料ではニューハナハナ30の朝一設定変更判別としてガックンチェックが紹介されている。ただしメーカー一次資料ではないため ANALYSIS_SINGLE として保持
+- numericResetData: 設定変更時専用の比較可能な公開数値は今回確認できず
+
+### resetBehavior 再探索メモ
+
+「ニューハナハナ-30 / ニューハナハナ30 / P5NHD-30 / ハナハナ / パイオニア」に「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / 天井短縮 / モード / ガックン / リール / 状態」を組み合わせ、メーカー公式、P-WORLD、旧攻略、設定判別DB、ハナハナ専門回顧資料を横断した。純ノーマル機ゆえ天井・モード・RT/AT状態は確認できない一方、ガックン判別は後年専門資料に本機向け情報として残る。電源OFF→ONとの厳密な差や対策時挙動は高信頼で確定できないため推測しない。
+
+## sources
+
+取得日: 2026-08-31
+
+1. パイオニア公式 — パチスロ機種情報2001年〜2009年 / ニューハナハナ-30
+   - https://www.slot-pioneer.co.jp/products/2009.html
+   - https://www.slot-pioneer.co.jp/product/new_hanahana/nh1.html
+   - 2007年発売、メーカー/シリーズ同定
+   - reliability: OFFICIAL
+2. P-WORLD — ニューハナハナ30
+   - https://www.p-world.co.jp/machine/database/4539
+   - 5号機ノーマル/完全告知/沖スロ、設定別BIG/REG/合算、市場掲載機械割、BIG約300枚/REG約150枚、型式P5NHD-30、検定番号5S1305、2007年2月導入
+   - reliability: INDUSTRY
+3. パチマガスロマガ旧攻略 — 基本システム
+   - https://cs62.cs-plaza.com/g/pachi/pla/s_conq/pioneer_slot/82/a.php
+   - 5号機/5ライン、付加機能なし、BIG348枚超/約300枚、REG168枚超/約150枚
+   - reliability: ANALYSIS_HIGH
+4. パチマガスロマガ旧攻略 — ボーナス抽選確率
+   - https://cs62.cs-plaza.com/g/pachi/pla/s_conq/pioneer_slot/82/h-2.php
+   - 設定別BIG/REG/合成確率、PAYOUTシミュレート値96.80〜106.87%
+   - reliability: ANALYSIS_HIGH
+5. pacnk — ニューハナハナ30 設定判別ツール
+   - https://pacnk.com/slot/tools/sh_newhana.html
+   - 2007年2月導入、BIG/REG、市場掲載PAYOUT 95〜107%の照合
+   - reliability: ANALYSIS_SINGLE
+6. ハナハナ専門回顧資料 — ハナハナ機種情報
+   - https://hanahana-blog.com/category/model-information
+   - ニューハナハナ30の設定差整理と朝一ガックンチェックへの言及
+   - reliability: ANALYSIS_SINGLE
+
+## missingFields
+
+- 正確な全国納品/稼働開始日（日単位）
+- 50枚あたりゲーム数 / 1000円ベース
+- 電源OFF→ONのみと設定変更時のリール初期化挙動の厳密な差
+- ガックン判別のメーカー一次/当時一次資料照合
+
+## conflicts
+
+- 機械割はP-WORLD/pacnkの市場掲載値95/98/100/103/105/107%と、旧パチマガスロマガのシミュレート値96.80/98.99/101.16/103.39/105.10/106.87%がある。定義が異なるため平均せず別系列として保持。
+
+coreStatus: PARTIAL
+resetBehaviorQA: PARTIAL
