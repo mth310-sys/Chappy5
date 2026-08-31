@@ -6,83 +6,107 @@
 
 - 最新mainのREADME全文、最新ミッション v0.7、INDEX、LATEST_HANDOFF、既存レコードを再確認して継続。
 - INDEXは旧19件地点のまま。README規定どおりLATEST_HANDOFFを進捗正本とする。
-- **LATEST_HANDOFF基準145件。**
-- 144件目 `マジカルハロウィン` の次候補 `Bun Bun Maru` を境界監査し、パチスロ5号機としての独立確認に至らなかったため誤登録せず保留。
-- 2007年7月下旬候補を再監査した結果、`がんばれ元気` は当時業界記事で「2007-07-22から納品予定」と確認でき、7/23群より前へ遡るべき未登録機と判定。145件目として遡及追加した。
+- **LATEST_HANDOFF基準147件。**
+- 前回145件目 `がんばれ元気` まで完了済み。
+- 2007-07-22〜07-29境界を再監査し、`パチスロ北斗の拳2 乱世覇王伝 天覇の章` がゲッターマウスより前の7月下旬導入機であることを確認したため146件目として先に追加。
+- 続けて当時業界記事で2007-07-29納品開始が明確な `ゲッターマウス7R` を147件目として追加。
 - 既存性能値はやり直さず、新規機の性能コア + v0.7 resetBehaviorを収集。
 
 ## 今回新規追加
 
-### 145. がんばれ元気（ヤーマ）
+### 146. パチスロ北斗の拳2 乱世覇王伝 天覇の章（サミー）
 
-- `docs/real_machine_db/machines/2007-07-22_ganbare-genki.md`
-- releaseDate: `2007-07-22`
-  - 2007-06-29グリーンべると: 納品は7月22日からスタート予定。
-  - ALL7.jp: 2007-07-30導入予定。
-  - P-Gabu: 2007-06-25導入日。
-  - ベルコ公式製品アーカイブ: 2007年7月登場。
-  - 具体日は競合のため平均せず保持し、時系列本線は当時業界記事の具体納品予定日を採用。
-- systemType: ボーナス + ART（チャンピオンロード）
-- coreStatus/status: `PARTIAL`
+- `docs/real_machine_db/machines/2007-07-23_hokuto-no-ken2-ranse-haouden-tenha.md`
+- typeName: `北斗の拳2G`
+- releaseDate: `2007-07-23`
+  - OFFICIAL/INDUSTRYで2007年7月発売を確認。
+  - 2007-07-20サミーネットワークス発表が体験版を「ホール導入に先駆けて」と記載。
+  - 2007-07-23当時掲示板ログに「本日からホールに登場」と同日記録あり。日単位は補助根拠扱いで、月単位より信頼度を下げて記録。
+- systemType: ボーナス + RT（覇王モード / パンク回避型・減少型RT）
+- status/coreStatus: `PARTIAL`
 - qaResetBehavior: `PARTIAL`
-- ボーナス合成: `1/327.68 → 1/237.45`。
-- BIG合成: `1/712.35 → 1/564.97`、REG: `1/606.81 → 1/409.60`。
-- BIG純増約312枚、REG純増約54枚。
-- ART「チャンピオンロード」純増約`+1.5枚/G`。金は次回ボーナスまで、赤は111G。
-- HAZUSEでは金:赤 約1:4.5、REG後ART突入約35%、赤ART完走後のARTループ約20%。
-- 通常時天井は解析上「チャレンジファイト終了後950G」。天井CZでART失敗時はATへ移行し、AT時コイン持ち約75G/1000円という公開値あり。ただし通常時ベースとは混ぜない。
-- 通常時50枚ベースは十分再探索したが比較可能値を確定できず `UNVERIFIED`。
-- 機械割はK-Navi/HAZUSE等 `95.0/98.0/101.0/103.5/106.0/108.5%` と、パチマガスロマガのシミュレート `96.48/99.73/102.63/105.12/106.86/107.62%` が異なるため `CONFLICT`。
-- 設定変更/据え置き/電源OFF→ONで950G天井進行、ART/CZ/AT状態をどう扱うかは本機固有の高信頼資料で確定できず `UNVERIFIED`。
-- 朝一専用モード、短縮天井、設定変更固有恩恵/不利、ガックン/変更判別、公開朝一数値は `NONE_CONFIRMED / UNVERIFIED`。
+- BIG合成: `1/336.08 → 1/296.54`
+- MID: `1/789.59 → 1/512.00`
+- ボーナス合成: `1/235.74 → 1/187.78`
+- BIG平均約230枚、MID平均約104枚。
+- RT「覇王モード」は約`-0.5枚/G`の減少型。最大500G。
+- 機械割は必勝本シミュレート `96.73〜106.83%` とパチマガスロマガ `96.90〜107.25%` に差があるため平均せず `CONFLICT`。
+- 通常時50枚ベースは再探索後も比較可能値を確定できず `UNVERIFIED`。RT中50枚ベース約95.6〜103.6Gは通常時ベースと混ぜない。
+- 通常時ゲーム数天井、リセット短縮天井、朝一専用恩恵は `NONE_CONFIRMED`。
+- 設定変更/据え置き/電源OFF→ON時の内部モード、RT状態処理、本機固有ガックンは十分再探索後も `UNVERIFIED`。
 - 有利区間は `NOT_APPLICABLE`。
 
-## Bun Bun Maru 境界監査
+### 147. ゲッターマウス7R（アルゼ）
 
-- ALL7.jpは `Bun Bun Maru / 平和 / 2007-07-23` と掲載。
-- しかし通常検索、平和系資料、検定系資料を再探索した範囲では「2007年平和のパチスロ5号機」として独立確認できない。
-- 同時期に確実に確認できるのは平和のパチンコ `CRスーパーブンブン丸` 系。2007-05-25時点で検定通過情報があり、グリーンべるとでは納品2007-09-17開始とされる。
-- よってALL7の混在一覧だけを根拠にパチスロDBへ登録しない。`Bun Bun Maru` は `UNRESOLVED / HOLD` とし、型式名・検定区分・当時P-WORLD等でパチスロ独立証拠が出た場合のみ再検討する。
+- `docs/real_machine_db/machines/2007-07-29_getter-mouse-7r.md`
+- typeName: `ゲッターマウス1`
+- releaseDate: `2007-07-29`
+  - ユニバーサル公式: 2007年7月。
+  - グリーンべると2007-07-13: 納品は7月29日より。
+- systemType: ボーナス主体/Aタイプ + ハマリ救済RT
+- status/coreStatus: `PARTIAL`
+- qaResetBehavior: `PARTIAL`
+- BIG: `1/287.44 → 1/240.06`（設定1/4/6/H）
+- REG: `1/327.68 → 1/240.06`
+- 合算: `1/153.12 → 1/120.03`
+- 1000円あたりコイン持ち: `35.0 / 35.6 / 36.3 / 37.1G`。
+- BIG約312枚、REG/ゲッターチャンス約104枚。
+- BIG後1000G / REG後800Gでハマリ救済RT。
+- 機械割はHAZUSE `98.7/102.5/107.5/111.0%` とパチマガスロマガ `97.82/101.92/106.47/111.23%` が異なるため `CONFLICT`。
+- 救済RTの1Gあたり純増/減少値は十分再探索しても比較可能値を確定できず `UNVERIFIED`。
+- P-WORLD当時掲示板には救済G数が「設定変更でも引き継ぐ」とする回答があるが、ユーザー投稿のため `COMMUNITY_SUPPORT / ANALYSIS_SINGLE` に留め、高信頼確定にはしない。
+- 電源OFF→ON時の救済G数/RT状態、救済RT中の設定変更処理、本機固有ガックンは `UNVERIFIED`。
+- 設定変更専用の短縮天井/朝一専用モード/朝一当選率等は `NONE_CONFIRMED`。
+- 有利区間は `NOT_APPLICABLE`。
+
+## Bun Bun Maru 境界監査（継続HOLD）
+
+- ALL7.jpは `Bun Bun Maru / 平和 / 2007-07-23` と掲載するが、平和系資料・検定系資料の横断でも2007年パチスロ5号機として独立確認できない。
+- 同時期に確実に存在するのはパチンコ `CRスーパーブンブン丸` 系。
+- パチスロ独立証拠が出るまで `UNRESOLVED / HOLD`。誤登録しない。
 
 ## resetBehavior 遡及QA進捗
 
-- 今回、古いレコードの `はいさい潮姫`（2005-12）と `ロード・オブ・ザ・リング`（2006-06）をmainで再確認。
-- いずれもv0.7 `resetBehavior` / `qaResetBehavior: PARTIAL` が既に保存済みで、性能コア状態とリセットQA状態が分離されていることを確認。重複改変は行っていない。
-- `はいさい潮姫`: 通常時天井/朝一専用モードはNONE_CONFIRMED、有利区間NOT_APPLICABLE、設定変更/電断固有挙動・ガックンはUNVERIFIED。
-- `ロード・オブ・ザ・リング`: BIG+CB主体で通常時天井/RT/ART/朝一専用モードはNONE_CONFIRMED、有利区間NOT_APPLICABLE、ガックン等はUNVERIFIED。
-- 次回も既存全レコードを古い順に確認し、`resetBehavior` 欠損を見つけた最古レコードから補完する。既に補完済みのものは再作成しない。
+- 新規146・147はv0.7形式を同時収集済み。
+- 古い既存レコードは、既にresetBehaviorが入っているものを重複改変しない。
+- 次回も古い順に欠損有無を確認し、resetBehavior未追加の最古レコードが見つかった場合のみ補完する。
 
 ## 今回の主要出典
 
-### がんばれ元気
-- ベルコ公式: https://www.s-bellco.co.jp/products/slot/yama_genki/
-- グリーンべると / P-WORLD: https://news.p-world.co.jp/articles/2267/greenbelt
-- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yama_slot/08/h.php
-- HAZUSE: https://www.hazuse.com/i/data/ganbaregenki/top.htm
-- K-Navi: https://p-kn.com/slot/604/
-- CrankySeven基本/天井: https://crankyseven.com/ganbaregenki-pc.htm
-- CrankySeven天井一覧: https://crankyseven.com/sp/tenjo-5ka.htm
-- ALL7.jp: https://www.all7.jp/plans/index/2007/07
-- P-Gabuヤーマ一覧: https://p-gabu.jp/guideworks/machine/maker/yama
+### パチスロ北斗の拳2 乱世覇王伝 天覇の章
+- セガサミーHD資料: https://www.segasammy.co.jp/cms/wp-content/uploads/pdf/ja/ir/2008_2q_stockholder.pdf
+- グリーンべると: https://web-greenbelt.jp/00004265/
+- 4Gamer / サミーネットワークス発表: https://www.4gamer.net/games/021/G002122/20070720125529/
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sammy_slot/109/h.php
+- パチ＆スロ必勝本: https://p.hisshobon.jp/machine/list.php?c=1&d=14600&mid=929&p=2
+- K-Navi: https://p-kn.com/slot/601/
+- パチ7回顧: https://pachiseven.jp/articles/detail/10788
+- 当時北斗系掲示板ログ: https://hokutosite.com/hokusai/bbs_log/bbslog_2007.html
 
-### Bun Bun Maru監査
-- ALL7.jp: https://www.all7.jp/plans/index/2007/07
-- パチンコビレッジ検定情報: https://www.pachinkovillage.com/undefined/?id=1797
-- P-WORLD / グリーンべると `スーパーブンブン丸`: https://news.p-world.co.jp/articles/2362/greenbelt
+### ゲッターマウス7R
+- ユニバーサル公式: https://www.universal-777.com/product/slot/getter_mouse_7r/
+- グリーンべると: https://web-greenbelt.jp/00004245/
+- P-WORLD: https://www.p-world.co.jp/machine/database/4826
+- HAZUSE: https://hazuse.com/i/data/gettermouse/top.htm
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/aruze_slot/01/h.php
+- K-Navi: https://p-kn.com/slot/602/
+- P-WORLD掲示板: https://www.p-world.co.jp/kisyubbs/bbs.cgi?file=p4826
 
 取得日: 2026-08-31
 
 ## 今回GitHub反映
 
-- `がんばれ元気` 新規追加: `82e693cb7a262fae22b76035a982c8efdae26f29`
+- `パチスロ北斗の拳2 乱世覇王伝 天覇の章` 新規追加: `1b506f4736c18ea2607bcec180f2e41e87039ee1`
+- `ゲッターマウス7R` 新規追加: `c371c3b553798387d9abf51fe762106a634c3975`
 - 本LATEST_HANDOFF更新: このコミット
 
 ## 次回再開地点
 
-1. **LATEST_HANDOFF基準145件地点から継続。まず2007-07-22〜07-23境界の漏れをもう一度短く監査し、問題なければ7月下旬未処理へ進む。**
-2. `Bun Bun Maru` はパチスロ独立証拠がない限りHOLD。パチンコ `スーパーブンブン丸` を誤混入させない。
-3. 次の新規候補は `ゲッターマウス`。ALL7では2007-07-30。ユニバーサル公式/当時業界記事/P-WORLD等で実導入日と性能を確認し、未登録なら性能コア + resetBehaviorを収集する。
-4. `パチスロ北斗の拳2 乱世覇王伝 天覇の章` も7月下旬候補として具体納品日を継続監査する。
-5. QAは古い既存レコードを順次確認し、`resetBehavior` 欠損を見つけた最古機から補完。既存COMPLETE_COREは性能完了判定として維持し、resetBehaviorQAを別管理する。
-6. PARTIAL/UNVERIFIEDは表記揺れ・型式・メーカー・シリーズ名と `設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間` を組み替え、公式/業界/当時解析/古いDB/アーカイブ/回顧資料を十分再探索する。
-7. INDEXは旧19件地点のため、README規定どおり**LATEST_HANDOFFの145件地点を正**として継続する。
+1. **LATEST_HANDOFF基準147件地点から継続。2007-07-30〜08-05境界を短く再監査し、7月末の未登録5号機がないことを確認してから2007年8月へ進む。**
+2. ALL7の2007-07-30一覧は `がんばれ元気` と `ゲッターマウス` 以外にパチンコ機が混在しているため、種別を別資料で確認して誤混入させない。
+3. 8月の早い候補は `学習パチスロ算数`（ALL7 2007-08-06）。遊人/当時業界記事/P-WORLD/旧解析で実導入日と性能を確認し、未登録なら性能コア + resetBehaviorを収集する。
+4. その後の候補として `戦国無双`、`パタリロ!`、`信長の野望 天下創世 第二の刻` 等が2007-08-20前後に並ぶため、実納品日順を業界記事で確定してから進める。
+5. `Bun Bun Maru` はパチスロ独立証拠がない限りHOLD継続。
+6. QAは既存全レコードを古い順に確認し、`resetBehavior` 欠損を見つけた最古機から補完。既存COMPLETE_COREは性能完了判定として維持し、resetBehaviorQAを別管理する。
+7. PARTIAL/UNVERIFIEDは表記揺れ・型式・メーカー・シリーズ名と `設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間` を組み替え、公式/業界/当時解析/古いDB/アーカイブ/回顧資料を十分再探索する。
+8. INDEXは旧19件地点のため、README規定どおり**LATEST_HANDOFFの147件地点を正**として継続する。
