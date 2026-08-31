@@ -6,106 +6,76 @@
 
 - 最新mainのREADME全文、最新ミッション v0.7、INDEX、LATEST_HANDOFF、既存レコードを再確認して継続。
 - INDEXは旧19件地点のまま。README規定どおりLATEST_HANDOFFを進捗正本とする。
-- **LATEST_HANDOFF基準139件。**
-- 138件目 `電撃ネットワーク` の次、前handoff指定どおり `新世紀エヴァンゲリオン～まごころを、君に～` を139件目として登録。
-- resetBehavior遡及QAは前handoffで未完だった `サンダーバードNEOXX` を再検索し、v0.7項目を追加。既存性能コアPARTIALは維持し、reset QAを別管理。
+- **LATEST_HANDOFF基準140件。**
+- 139件目 `新世紀エヴァンゲリオン～まごころを、君に～` の次、前handoff指定どおり `俺の名はルパン三世` を140件目として登録。
+- 既存性能値はやり直さず、今回新規機の性能コア + v0.7 resetBehaviorを収集。
 
 ## 今回新規追加
 
-### 新世紀エヴァンゲリオン～まごころを、君に～（ビスティ）
+### 俺の名はルパン三世（平和 / オリンピア）
 
-- `docs/real_machine_db/machines/2007-07-09_shinseiki-evangelion-magokoro.md`
-- releaseDate: `2007-07-09`（ALL7.jp導入予定日。2007年7月市場投入は当時業界記事でも確認）
+- `docs/real_machine_db/machines/2007-07-16_ore-no-na-wa-lupin-sansee.md`
+- releaseDate: `2007-07-16`（グリーンべると当時記事の納品開始予定日）
+- 型式名: `俺の名はルパン三世P`
 - systemType: ボーナス + RT
 - coreStatus: `COMPLETE_CORE`
 - qaResetBehavior: `PARTIAL`
+- HEIWA BROS側ルパンパネル / オリンピア側次元パネル等は同一性能機のパネル違いとして1件に統合し、二重計上しない。
 
 ### 性能コア
 
-- 設定別BIG: `1/372.36 → 1/284.94`
-- 設定別REG: `1/809.09 → 1/585.14`
-- 合算: `1/255.00 → 1/191.63`
-- 50枚ベース（解析シミュレーション）: `41.36 → 48.42G`
-- 赤/青BIG: 約401〜416枚級、黄BIG: 約251〜260枚級、REG: 約50〜52枚 + RT50G。
-- REG後は最大50GのRT `レイチャンス`。特殊リプレイ成立で次回ボーナスまでRT `暴走モード`。
-- RT純増はP-WORLD約+0.9枚/G、K-Navi暴走モード約+1枚/G。別解析に「コイン増加は見込めない」表現があるため定義差をCONFLICT注記。
+- S-BIG: `1/668.7 → 1/555.4`
+- N-BIG: `1/668.7 → 1/555.4`
+- BIG合算: `1/334.4 → 1/277.7`
+- REG: `1/668.7 → 1/560.1`
+- ボーナス合算: `1/222.9 → 1/185.7`
+- 機械割: P-WORLD `94.9 / 97.5 / 101.5 / 103.4 / 105.2 / 107.0%`
+  - K-Navi/旧攻略は設定1のみ `95.0%`。0.1ptの丸め差として双方保持。
+- 50枚ベース: 当時業界記事で1000円あたり約 `36〜38G`（設定差あり）。
+- S-BIG約300枚 + RT100G。
+- N-BIG約300枚、RTなし。
+- REG約150枚 + RT50G。
+- RT増減は当時業界記事 `現状維持程度`、旧攻略 `微減`。数値平均せず表現差をCONFLICT注記。
+- 通常時天井は旧攻略で `なし`。P-WORLD/K-Navi基本仕様にもゲーム数天井掲載なし。
 
-### 機械割CONFLICT
+## v0.7 resetBehavior — 俺の名はルパン三世
 
-系統A:
-- 95.3 / 98.2 / 101.7 / 104.5 / 107.4 / 113.5%
-
-系統B:
-- 96.2 / 98.7 / 101.5 / 103.8 / 106.2 / 111.2%
-
-平均せず双方保持。
-
-### 天井関連CONFLICT
-
-- 後年回顧資料にはBIG後1000G/REG後800Gから天井RTとする記述あり。
-- 一方、別後年記録には天井なしとする記述あり。
-- 当時一次/解析本文で今回確定できなかったため、天井を確定値として扱わずCONFLICT/UNVERIFIED。
-
-## v0.7 resetBehavior — エヴァまごころ
-
-- settingChangeBehavior: RT/内部状態/天井候補ゲーム数の設定変更時処理はUNVERIFIED。
-- carryOverBehavior: 据え置き時のRT状態/ゲーム数引継ぎはUNVERIFIED。
-- powerCycleBehavior: 電源OFF→ONのみのRT/内部カウンタ処理はUNVERIFIED。
-- gameCounterReset / ceilingAfterReset: 天井仕様自体に資料差があるためUNVERIFIED。
-- modeAfterReset: 朝一専用/変更専用モードはNONE_CONFIRMED。
-- stateAfterReset: レイチャンス/暴走モード状態の変更時処理はUNVERIFIED。
+- settingChangeBehavior: S-BIG後/REG後RTの残G・内部RT状態を設定変更でどう処理するかは、表記揺れ/型式名/平和/オリンピア/HEIWABROSと検索語を変え、業界記事・P-WORLD・K-Navi・旧攻略・古いDB・後年資料まで横断したがUNVERIFIED。
+- carryOverBehavior: 据え置き時のRT残G/内部RT状態引継ぎはUNVERIFIED。通常時天井は確認されないため通常時天井G引継ぎはNONE_CONFIRMED。
+- powerCycleBehavior: 電源OFF→ONのみのRT残G/内部状態処理はUNVERIFIED。
+- gameCounterReset: 通常時ゲーム数天井なしのためNOT_APPLICABLE寄りのNONE_CONFIRMED。
+- ceilingAfterReset: 設定変更時短縮天井/朝一天井はNONE_CONFIRMED。
+- modeAfterReset: 朝一専用/変更専用ゲーム数モードはNONE_CONFIRMED。
+- stateAfterReset: RT中の設定変更/電断時状態処理はUNVERIFIED。
 - advantageousSectionReset: NOT_APPLICABLE。
 - resetBenefits / resetPenalties: 設定変更固有の確定恩恵/不利はNONE_CONFIRMED。
-- resetDetection: K-Navi本機メニューに `BGM変化で設定変更判別` の項目存在を確認。ただし詳細ページは取得環境で403のため具体条件/判定方向はUNVERIFIED。本機固有ガックンも未確定。
-- numericResetData: 設定変更時モード振り分け、朝一当選率、短縮G数等はUNVERIFIED。
-
-## resetBehavior遡及QA
-
-### サンダーバードNEOXX（藤商事 / 2006-06）
-
-- `docs/real_machine_db/machines/2006-06_thunderbirds-neo-xx.md`
-- 既存 `PARTIAL` 性能コアは維持。
-- `qaResetBehavior: PARTIAL` を追加。
-- SBIG後50G RTは既存資料で確認済み。
-- 設定変更/据え置き/電源OFF→ON時のRT残G・内部RT状態処理は、表記揺れ/メーカー名/設定変更/朝一/RT/ガックン等で資料系統を変えて再探索したがUNVERIFIED。
-- 通常時天井、変更時短縮、朝一専用モード、変更固有恩恵/不利は今回NONE_CONFIRMED。
-- 有利区間はNOT_APPLICABLE。
-- 本機固有の変更判別/ガックン、公開朝一数値はUNVERIFIED。
+- resetDetection: 本機固有のガックン、液晶表示等による変更/据え置き判別は十分再探索後もUNVERIFIED。後年ルパン機の情報は流用しない。
+- numericResetData: 設定変更時のモード振り分け、朝一当選率、短縮G数、変更時RT突入率等の公開数値はUNVERIFIED。
 
 ## 今回の主要出典
 
-### エヴァまごころ
-- ALL7.jp: https://www.all7.jp/plans/index/2007/07/20
-- グリーンべると: https://web-greenbelt.jp/00004271/
-- P-WORLD: https://www.p-world.co.jp/machine/database/4743
-- K-Navi: https://p-kn.com/slot/591/
-- K-Navi 暴走モード: https://p-kn.com/slot/591/3515/
-- HAZUSE: https://hazuse.com/machine/pachislot/7S0173/
-- けんのスロットシミュレーション: https://kenslo65536.com/kaiseki/eva-magokoro.html
-- パチナビ: https://pachinavi.net/machines/eva-magokoro-1/settei/
-- 旧解析: https://ccw.moryou.com/evaeva/koyaku1.html
-- P-TRO回顧: https://ptro.live/p-evangelion.html
-
-### サンダーバードNEOXX
-- HAZUSE: https://www.hazuse.com/i/data/thunderbirds/top.htm
-- 藤商事後年整理: https://artikeldigital.com/ja/%E8%97%A4%E5%95%86%E4%BA%8B
-- 娯楽の学校: https://goraku-gakkou.com/5gouki-2005-2006/
+- グリーンべると: https://web-greenbelt.jp/00004178/
+- P-WORLD: https://www.p-world.co.jp/machine/database/4814
+- K-Navi: https://p-kn.com/slot/611/
+- パチスロ救急車: https://www.eightbeat.com/slot99/kishu/a_gyou/o/orenonaLupin3/page_menu.html
+- P-WORLD業界ニュース（グリーンべると転載）: https://news.p-world.co.jp/articles/2262/greenbelt
+- 中一商事 中古実機資料: https://www.nakaiti.com/html/sOlympia20070717.html
 
 取得日: 2026-08-31
 
 ## 今回GitHub反映
 
-- エヴァまごころ新規追加: `1976406bf5d099cdedb565d4d40bb1c61da34f9c`
-- サンダーバードNEOXX resetBehavior QA: `6696b73ba0166aa0f78c13045760d1f66feed008`
+- `俺の名はルパン三世` 新規追加: `d25143ab6280dc91a7e5f04f87fc6d2b28f805ac`
 
 ## 次回再開地点
 
-1. **2007-07-16納品開始予定が当時業界記事で確認できる `俺の名はルパン三世` を次の未処理候補として、性能コア + v0.7 resetBehaviorを収集する。**
-2. グリーンべると2007-06-25記事で、平和/オリンピア合同発表、納品 `2007年7月16日から予定`、SBB/NBB各約300枚、SBB後100G RT・RB後50G RT、RTは現状維持程度、1000円約36〜38Gまで事前確認済み。
-3. `俺の名はルパン三世` の設定別SBB/NBB/RB、合算、機械割を複数資料で照合し、同一機の平和HEIWA BROSパネル/オリンピア次元パネルを別性能機として二重計上しない。
-4. その後2007-07-16〜07-23境界をメーカー横断監査する。ALL7.jpでは7/23に `Bun Bun Maru / ジャンジャン飯店 / ハワイ / ハワイっ娘 / マジカルハロウィン` 等の予定を確認済み。
-5. `パチスロ北斗の拳2 乱世覇王伝 天覇の章` は7/20時点のサミーネットワークス公式リリースで「ホール導入に先駆けて」体験版配信と確認できるため、7/20以前の実導入として扱わず、7月下旬候補として具体納品日を別途監査する。
-6. `ラーメン王` は以前のhandoffどおり2007-07-29納品開始候補として保留。
-7. resetBehavior遡及QAはサンダーバードNEOXXの次の未対応最古レコードをGitHub最新mainで検索し、既補完なら次へ進む。
-8. PARTIAL/UNVERIFIEDやリセット欠損は検索語・資料系統を変え、公式/業界/当時解析/古いDB/アーカイブ/回顧資料を十分再探索する。
-9. INDEXは旧19件地点のため、README規定どおり**LATEST_HANDOFFの139件地点を正**として継続する。
+1. **2007-07-17〜07-22境界をメーカー横断で監査し、未処理5号機がなければ2007-07-23群へ進む。**
+2. ALL7.jpの7月一覧では `2007-07-23` 候補として `Bun Bun Maru / ジャンジャン飯店 / ハワイ / ハワイっ娘 / マジカルハロウィン` を確認。パチンコ混在一覧なので各機が実際にパチスロかを別資料で確認してから登録する。
+3. `ハワイ` はNET公式製品情報で2007年7月のパチスロ機として確認済み。次回、具体導入日・設定別性能・resetBehaviorを収集する。
+4. `ハワイっ娘` は5号機クロニクルのIGT一覧で2007年5号機として存在確認済み。具体導入日と性能を別系統照合する。
+5. `マジカルハロウィン` は2007年7月のKPE 5号機として存在確認済み。7/23導入予定の妥当性を業界/メーカー系で再確認する。
+6. `Bun Bun Maru` と `ジャンジャン飯店` は名称混同・パチンコ同名機の可能性を排除してから、本線登録可否を確定する。
+7. `パチスロ北斗の拳2 乱世覇王伝 天覇の章` は7月下旬候補として具体納品日を継続監査する。
+8. `ラーメン王` は過去handoffに日付競合があるため、再登場時に既存レコード有無と実導入日をGitHub mainで確認し、重複登録しない。
+9. PARTIAL/UNVERIFIEDやリセット欠損は、表記揺れ・型式・メーカー・シリーズ名と `設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックン/有利区間` を組み替え、公式/業界/当時解析/古いDB/アーカイブ/回顧資料を十分再探索する。
+10. INDEXは旧19件地点のため、README規定どおり**LATEST_HANDOFFの140件地点を正**として継続する。
