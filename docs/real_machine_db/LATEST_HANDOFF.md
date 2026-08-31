@@ -6,88 +6,73 @@
 
 - 最新mainの `README.md`、実機DBミッションv0.7、`INDEX.md`、既存レコード、直前 `LATEST_HANDOFF.md` を再読して継続。
 - `INDEX.md` は旧19件地点のままなので、README規定どおり本 `LATEST_HANDOFF.md` を進捗正本とする。
-- 直前地点は196件目 `NEO花物語`。
-- 2007-11-12同日漏れを監査し、パチビー掲載の `華一番` がmain未登録であることを確認。
-- パイオニア公式では25φ `ハナイチバン` と30φ `ハナイチバン-30` が別機種として同時発表・別掲載されているため、当時解析の `華一番&30` 共通スペック根拠も照合し、**197件目 `華一番`、198件目 `華一番-30` を独立レコードとして追加済み。**
+- 直前地点は198件目 `華一番-30`。
+- 2007-11-12群の境界を確認後、パチビーの2007-11-19導入一覧にある `スーパービンゴV / 超お父さん2` を次群として確認。
+- main内検索で `スーパービンゴV` の既存レコードがないことを再確認し、**199件目 `スーパービンゴV` を追加済み。**
 
-## 197. 華一番
+## 199. スーパービンゴV
 
-- new record: `docs/real_machine_db/machines/2007-11-12_hana-ichiban.md`
-- commit: `57a28374b13987938e8fa79c8d0b68288658d7fe`
-- manufacturer: パイオニア
-- releaseDate: 2007-11-12
+- new record: `docs/real_machine_db/machines/2007-11-19_super-bingo-v.md`
+- commit: `ce01e582f55f31c34377fa198586224400db5553`
+- manufacturer: ベルコ
+- releaseDate: 2007-11-19
 - generation: 5号機
-- systemType: ノーマル / ボーナス主体 + 演出用RT
-- medalType: 25φ
-- coreStatus: `COMPLETE_CORE`
+- systemType: ボーナス + ART / CZ
+- coreStatus: `PARTIAL`
 - resetBehaviorQA: `PARTIAL`
+
+### 導入・系統
+
+- ベルコ公式: `スーパービンゴV`、2007年11月登場、5号機・ART。
+- 当時グリーンべると: 2007-10-10発表、2007-11-18納品開始。
+- パチビー: 2007-11-19ホール導入。
+- releaseDateはホール導入日基準の2007-11-19を採用。納品開始日との差は定義差として保持。
 
 ### 性能コア
 
-- BIG: 設定1 `1/334` → 設定6 `1/273`
-- REG: 設定1 `1/381` → 設定6 `1/315`
-- 合算: 設定1 `1/178` → 設定6 `1/146`
-- 機械割: `97.0 / 99.0 / 101.0 / 103.0 / 105.0 / 107.0%`
-- 1000円あたり: 約37G（20円貸しで約50枚相当）
-- BIG純増: 約300枚
-- REG純増: 約100枚
-- K-Naviの規定払い出しはBIG 348枚超、REG/CHANCE BONUS 108枚超で終了。
-- 演出用RT `おかわりタイム` は最低7G。「並」「超」あり。
-
-### 導入日定義
-
-- パイオニア公式: 2007年11月発売。
-- 当時グリーンべると: 2007-11-11から納品開始予定。
-- パチビー: 2007-11-12導入。
-- 平均せず定義差として保持。DBのreleaseDateはホール導入日基準で2007-11-12。
+- BIG合算: 設定1 `1/315.08` → 設定6 `1/277.69`。
+- スーパーBIG: 設定1〜4 `1/4096`、設定5 `1/3276`、設定6 `1/2730`。
+- ノーマルBIG: 設定1 `1/341.33` → 設定6 `1/309.13`。
+- 機械割: 旧攻略/5号機クロニクル `96.5 / 99.0 / 101.0 / 103.0 / 105.0 / 108.0%`。
+- PACNKは設定1のみ `96.0%`、設定2〜6は一致。設定1は平均せず `CONFLICT`。
+- スーパーBIG: 約312枚、ノーマルBIG: 約120枚。
+- ART純増: 約+1.6枚/G。
+- ART `ビンゴチャンス`: 77G、80%ループ。
+- `スーパービンゴチャンス`: 最大5000G。
+- 通常状態900G消化で救済CZ `ビンゴゲーム` へ突入する天井を確認。
+- 50枚ベースは `50枚 / 1000円 / ベース / コイン持ち / 千円ゲーム数` と表記を変え、公式・業界・パチマガスロマガ・旧攻略DB・後年DBまで横断したが確定できず `UNVERIFIED`。
 
 ### v0.7 resetBehavior
 
-`華一番 / ハナイチバン / 華一番-30 / ハナイチバン-30 / パイオニア` と `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / 天井短縮 / モード / おかわりタイム / RT / ガックン` を組み替え、公式・業界記事・当時解析・旧DB・回顧資料を横断。
+`スーパービンゴV / SUPER BINGO V / ベルコ / ビンゴゲーム / SBC / BC` と、`設定変更 / リセット / 朝一 / 朝イチ / 据え置き / 電源OFF ON / 宵越し / 天井 / 900G / 天井短縮 / モード / 状態 / ガックン` を組み替えて再探索。
 
-- settingChangeBehavior: 設定変更時のおかわりタイム残G/内部RT状態 `UNVERIFIED`。
-- carryOverBehavior: 据え置き時の演出用RT残G/内部状態 `UNVERIFIED`。
-- powerCycleBehavior: 電源OFF→ONのみ時の演出用RT残G/内部状態 `UNVERIFIED`。
-- gameCounterReset: 通常時ゲーム数天井 `NONE_CONFIRMED`。最低7Gは演出用RT継続G数であり天井ではない。
-- ceilingAfterReset: `NONE_CONFIRMED`。
+- settingChangeBehavior: 設定変更時の900G天井カウンタ、CZ/ART状態処理 `UNVERIFIED`。
+- carryOverBehavior: 据え置き時の900G天井ゲーム数/CZ/ART状態の引継ぎ `UNVERIFIED`。
+- powerCycleBehavior: 電源OFF→ONのみ時の900G天井ゲーム数/CZ/ART状態 `UNVERIFIED`。
+- gameCounterReset: 通常状態900G天井そのものは `CONFIRMED`。変更/据え置き/電断時処理は `UNVERIFIED`。
+- ceilingAfterReset: 設定変更専用短縮天井 / 朝一専用天井 `NONE_CONFIRMED`。通常天井900G。
 - modeAfterReset: 朝一/設定変更専用モード `NONE_CONFIRMED`。
-- stateAfterReset: 演出用RTの設定変更/据え置き/電断時処理 `UNVERIFIED`。
+- stateAfterReset: CZ/ART内部状態の変更/据え置き/電断処理 `UNVERIFIED`。
 - advantageousSectionReset: `NOT_APPLICABLE`。
 - resetBenefits / resetPenalties: `NONE_CONFIRMED`。
-- resetDetection: 本機固有ガックン/初期出目/高確率ランプ等の変更判別 `UNVERIFIED`。
-- numericResetData: 公開朝一専用数値・短縮天井G・変更時振り分け `NONE_CONFIRMED`。
+- resetDetection: 本機固有ガックン/初期出目/表示等の変更判別 `UNVERIFIED`。
+- numericResetData: 通常時天井900Gは確認。設定変更専用天井G、朝一当選率、変更時モード振り分け、リセット恩恵発生率は `NONE_CONFIRMED`。
 
 主要出典:
-- パイオニア公式: https://www.slot-pioneer.co.jp/products/2009.html
-- グリーンべると/P-WORLD: https://news.p-world.co.jp/articles/2426/greenbelt
-- K-Navi: https://p-kn.com/slot/723/
+- ベルコ公式: https://www.s-bellco.co.jp/products/slot/superbingo_v/
+- グリーンべると: https://web-greenbelt.jp/00004349/
 - パチビー: https://www.pachibee.jp/machines/schedule/2007-11
-- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/pioneer_slot/84/a.php
-- Pマンズ/プレイグラフ: https://p-mans.blogspot.com/2007/10/
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/belco_slot/80/a.php
+- PACNK: https://pacnk.com/slot/tools/sh_bing.html
+- 旧解析: https://crankyseven.com/superbingo-pc.htm
+- 5号機クロニクル: https://5goki.com/bellco
 
-## 198. 華一番-30
+## 直前の既存群
 
-- new record: `docs/real_machine_db/machines/2007-11-12_hana-ichiban-30.md`
-- commit: `950c1250d058f03f8ce2ee67c53de21cf3c2a610`
-- manufacturer: パイオニア
-- releaseDate: 2007-11-12
-- generation: 5号機
-- systemType: ノーマル / ボーナス主体 + 演出用RT
-- medalType: 30φ
-- coreStatus: `COMPLETE_CORE`
-- resetBehaviorQA: `PARTIAL`
-
-### 25φ版との関係
-
-- パイオニア公式が25φ `ハナイチバン` と30φ `ハナイチバン-30` を別機種として掲載し、「25Φ・30Φデザイン違いで同時発表」と明記。
-- パチマガスロマガは `華一番&30` として共通攻略ページを設け、基本システム・規定払い出しを共通掲載。
-- よって別機種としてカウントする一方、性能コアは公式のデザイン違い記述 + 当時解析の共通スペック扱いを根拠に同一値を保存。別兄弟機からの推定流用ではない。
-
-### 性能・resetBehavior
-
-- 設定別BIG/REG/合算、機械割、約37G/1000円、BIG約300枚、REG約100枚、おかわりタイム最低7Gは25φ版と同一資料系統で確認。
-- resetBehaviorも25φ/30φ共通資料を含めて再探索したが、設定変更/据え置き/電源OFF→ON時の演出用RT残G・内部状態と本機固有変更判別のみ `UNVERIFIED`。
-- 通常時天井、短縮天井、朝一専用モード、公開朝一数値は `NONE_CONFIRMED`。有利区間は `NOT_APPLICABLE`。
+- 196件目 `NEO花物語`
+- 197件目 `華一番`（25φ）
+- 198件目 `華一番-30`（30φ）
+- 25φ/30φはパイオニア公式で別機種掲載され、当時解析で共通スペック扱いを確認したうえで独立レコード化済み。
 
 ## resetBehavior 遡及QA
 
@@ -101,13 +86,14 @@
 
 ## 次回再開地点
 
-1. **LATEST_HANDOFF基準198件地点から継続。**
-2. 2007-11-12同日群は `NEO花物語 / 華一番 / 華一番-30` まで処理済み。より古い同日漏れがないか最終境界監査してから11/19へ進む。
-3. 次候補は2007-11-19 `スーパービンゴV` と `超お父さん2`。今回、推定パス `2007-11-19_super-bingo-v.md` / `2007-11-19_cho-otosan-2.md` はmainに存在しないことを確認したが、別命名既存レコードがないかディレクトリ/検索でも再確認してから登録する。
-4. その後は2007-11-20 `哲也～雀聖と呼ばれた男～`、2007-11-26 `赤ドン` / `ファイアーヒーローS` の既存有無と時系列を突合する。
-5. `NEO花物語` は50枚ベースと設定別性能の第二ソース照合、resetBehavior直接資料が追加QA対象。
-6. resetBehavior遡及QAは `電撃フランケン` より後の既存レコードを時系列走査し、`resetBehavior`節未収集の最古機から継続する。
-7. PARTIAL/UNVERIFIEDは最初の検索で確定せず、表記揺れ・型式・メーカー・シリーズ・設定変更/リセット/朝一/据え置き/電断/天井/モード/ガックン/有利区間を組み替え、公式・業界・当時解析・旧DB・アーカイブ・回顧資料を横断する。
-8. 競合値は平均せず `CONFLICT`。別機種・兄弟スペック・後継機仕様は根拠なしに流用しない。
+1. **LATEST_HANDOFF基準199件地点から継続。**
+2. 2007-11-19同日群の次は `超お父さん2`。mainに別命名既存レコードがないか検索/ディレクトリで再確認してから登録する。
+3. その後は2007-11-20 `哲也～雀聖と呼ばれた男～`、2007-11-26 `赤ドン` / `ファイアーヒーローS` を時系列で処理する。
+4. 2007年11月の月次監査候補として `パチってスロット / パチスロシティーハンター / ビーチクラブ` も存在するため、具体導入日・既存有無を確認して日付順の漏れを防ぐ。
+5. `スーパービンゴV` は50枚ベース、設定変更/据え置き/電源OFF→ON時の900G天井カウンタ/CZ/ART引継ぎ、本機固有変更判別が追加QA対象。
+6. `NEO花物語` は50枚ベースと設定別性能の第二ソース照合、resetBehavior直接資料が追加QA対象。
+7. resetBehavior遡及QAは `電撃フランケン` より後の既存レコードを時系列走査し、`resetBehavior`節未収集の最古機から継続する。
+8. PARTIAL/UNVERIFIEDは最初の検索で確定せず、表記揺れ・型式・メーカー・シリーズ・設定変更/リセット/朝一/据え置き/電断/天井/モード/ガックン/有利区間を組み替え、公式・業界・当時解析・旧DB・アーカイブ・回顧資料を横断する。
+9. 競合値は平均せず `CONFLICT`。別機種・兄弟スペック・後継機仕様は根拠なしに流用しない。
 
 取得日: 2026-09-01
