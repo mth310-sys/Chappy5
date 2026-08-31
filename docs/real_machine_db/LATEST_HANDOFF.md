@@ -6,82 +6,78 @@
 
 - 最新mainのREADME、実機DBミッションv0.7、INDEX、既存レコード、直前HANDOFFを確認して継続。
 - INDEXは旧19件地点のままなので、README規定どおりLATEST_HANDOFFを進捗正本とする。
-- 171件目 `デジパラダイス`（デージー、2007-09）までを継承。
-- **172件目として `くりぃむしちゅー`（ロデオ、2007-09）を登録。**
-- 新規レコード: `docs/real_machine_db/machines/2007-09_cream-stew.md`
+- 172件目 `くりぃむしちゅー`（ロデオ、2007-09）までを継承。
+- **173件目として `めんそーれ2-30`（エマ、2007-09）を登録。**
+- 新規レコード: `docs/real_machine_db/machines/2007-09_mensore2-30.md`
 - coreStatus: `COMPLETE_CORE`
 - resetBehaviorQA: `PARTIAL`
-- 新規レコードcommit: `03c4dc75522d625ac050841e592cfecade6e3326`
-- CONFLICT補正commit: `8eb70c58f0e6120d3ae2f48e7537945a5cac6388`
+- 新規レコードcommit: `15e31821d8a8537e423cb68b8db01afe44913dc6`
 
-## 172. くりぃむしちゅー
+## 173. めんそーれ2-30
 
-- manufacturer: ロデオ
+- manufacturer: エマ
 - releaseDate: `2007-09`
 - generation: 5号機初期
-- systemType: ノーマル / BIG+REG / 演出用10G RT
+- systemType: ボーナス+RT / 完全告知 / 沖スロ30Φ
 - coreStatus: `COMPLETE_CORE`
 - resetBehaviorQA: `PARTIAL`
 
 ### 導入・機種同定
 
-- フィールズ株式会社の2007-08-10公式リリースで、ロデオ製パチスロ機『くりぃむしちゅー』を全国発売し、2007年9月にホールで遊技可能になる予定と明記。
-- フィールズ決算資料・複数機種DBでも2007年9月発売/導入で一致。
-- `9月3日 / 9月10日 / 9月17日 / 9月24日 / 納品 / 導入開始` を含めて再探索したが、具体納品日を一次/高信頼資料で確定できなかったため月精度 `2007-09` とした。
+- 5号機クロニクル/PACNKで2007年9月導入を確認。
+- 2009年7月30日のグリーンべると回顧記事は、前作『めんそーれ2』を「07年7月に発表」としRT搭載機と明記。
+- `2007年9月 / 納品 / 導入 / 発売 / 9月3日 / 9月10日 / 9月17日 / 9月24日` 等へ検索語を変えて再探索したが、一次/業界高信頼資料から具体納品開始日は確定できず、月精度 `2007-09` とした。
 
 ### 性能コア
 
-| 設定 | 全BIG合算 | REG | ボーナス合算 | 機械割 |
-|---|---:|---:|---:|---:|
-| 1 | 1/485.45 | 1/753.29 | 1/295.21 | 97.4% |
-| 2 | 1/485.45 | 1/753.29 | 1/295.21 | 98.5% |
-| 3 | 1/442.81 | 1/675.63* | 1/267.49 | 101.2% |
-| 4 | 1/420.10 | 1/661.98 | 1/257.00 | 104.0% |
-| 5 | 1/387.79 | 1/624.15 | 1/239.18 | 106.7% |
-| 6 | 1/360.09 | 1/569.88 | 1/220.66 | 110.8% |
+| 設定 | BIG系合算 | REG系合算 | 全ボーナス合算 | パチマガPAYOUT | P-WORLD/5号機クロニクル |
+|---|---:|---:|---:|---:|---:|
+| 1 | 約1/232.40 | 約1/239.18 | 1/117.87 | 95.61% | 94.2% |
+| 2 | 約1/234.06 | 約1/252.06 | 1/121.36 | 98.40% | 96.8% |
+| 3 | 約1/221.41 | 約1/240.94 | 1/115.38 | 102.23% | 101.0% |
+| 4 | 約1/215.58 | 約1/239.18 | 1/113.38 | 104.31% | 103.2% |
+| 5 | 約1/206.09 | 約1/234.06 | 1/109.59 | 107.65% | 106.9% |
+| 6 | 約1/207.39 | 約1/204.80 | 1/103.04 | 110.57% | 110.4% |
 
-- 機械割はパチ＆スロ必勝本のシミュレート値を主値。HAZUSEの整数丸め97/98/101/104/107/111%とも整合。
-- `*` 設定3 REGは必勝本 `1/675.63`、pachinko's blog `1/676` に対しHAZUSE DATA `1/645.6`。平均せず `CONFLICT` として全値を保持し、2資料が一致する1/675.63を主値に採用。
-- SUPER BIG平均約448枚、NORMAL BIG平均約348枚、REG平均約112枚。
-- HAZUSEの払い出し条件: S-BIG 465枚超、N-BIG 420枚超、REG 12Gまたは8回入賞。
-- 特殊リプレイ契機の10G演出用プチRT「緊急事態」を搭載。
-- 1000円G数は旧解析検索インデックスで設定1 47.48G、設定2 50.01G、設定3 48.5Gまで確認。設定4〜6は直接値を取得できず推定していない。物差し用途では設定1 47.48Gを低設定代表値として保持。
+- PACNKのPAYOUTは96/98/100/103/106/109%で、上記2系列とも一部大きく異なる。平均せず `CONFLICT` として3系列を保持。
+- 50枚ベースはパチマガスロマガで設定1〜6 `36.57 / 36.56 / 36.59 / 36.59 / 36.65 / 36.68G`。
+- めんそーれBIGは約256枚、BIG約192枚、REG約64枚。払い出し終了条件は345枚超 / 253枚超 / 77枚超でP-WORLDとも一致。
+- RT「ネオ・スーパーモード」を搭載。特殊リプレイが契機。白7REG成立で終了し、白7REG後1G目は特殊リプレイ確率が上がり再突入契機となる。
+- RT純増枚数/Gは表記揺れ・RT名・型式・純増等へ検索を分岐したが高信頼値を確定できず `UNVERIFIED`。
 
 ### v0.7 resetBehavior
 
 - settingChangeBehavior: `UNVERIFIED`。本機固有の設定変更時内部処理を直接確定できず。
-- carryOverBehavior: `UNVERIFIED`。
-- powerCycleBehavior: `UNVERIFIED`。
-- gameCounterReset: `NOT_APPLICABLE / NONE_CONFIRMED`。通常時ゲーム数天井なし。
+- carryOverBehavior: `UNVERIFIED`。据え置き時RT/内部状態引継ぎを直接確定できず。
+- powerCycleBehavior: `UNVERIFIED`。電源OFF→ONのみのRT/内部状態処理を直接確定できず。
+- gameCounterReset: `NOT_APPLICABLE / NONE_CONFIRMED`。天井非搭載。
 - ceilingAfterReset: `NONE_CONFIRMED`。リセット短縮天井なし。
-- modeAfterReset: `NONE_CONFIRMED`。朝一専用モード/変更時モード振り分けの公開情報なし。
-- stateAfterReset: `UNVERIFIED`。10G「緊急事態」中の設定変更/電断時RT残G・内部状態処理を確定できず。
+- modeAfterReset: `NONE_CONFIRMED`。朝一専用通常モード/変更時モード振り分けは確認されない。
+- stateAfterReset: `UNVERIFIED`。ネオ・スーパーモード中の設定変更/据え置き/電断時RT状態処理を確定できず。
 - advantageousSectionReset: `NOT_APPLICABLE`。
 - resetBenefits / resetPenalties: 公開された朝一専用恩恵・不利要素 `NONE_CONFIRMED`。
-- resetDetection: `UNVERIFIED`。本機固有ガックン・初期出目・液晶/ランプ挙動による変更判別を確定できず。
+- resetDetection: `UNVERIFIED`。本機固有ガックン・初期出目・告知ランプ/ドット等による変更判別を確定できず。
 - numericResetData: `NONE_CONFIRMED`。
 
 ## 主要出典
 
-### くりぃむしちゅー
-- フィールズ株式会社 2007-08-10公式発売リリース: https://ircms.irstreet.com/contents/data_file.php?brand=79&filename=pdf_file.pdf&folder_contents=9517&src_data=38407&template=39
-- パチ＆スロ必勝本 基本スペック: https://p.hisshobon.jp/machine/981/1/15099
-- HAZUSE DATA: https://data.hazuse.com/?machine_code=6S1216
-- pachinko’s blog: https://pachinko.hatenablog.jp/entry/2007/09/creamStew
-- 旧slotmaniac解析: https://slotmaniac.web.fc2.com/kaiseki/creamstew.html
-- パチスロ天井パラダイス 2007年: https://sloten7.com/years/y2007/
-- パチ7 タイアップ史: https://pachiseven.jp/articles/detail/11773
-- パチ7 回顧: https://pachiseven.jp/articles/detail/10261
+### めんそーれ2-30
+- パチマガスロマガ 基本システム: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/ema_slot/26/a.php
+- パチマガスロマガ ボーナス確率/PAYOUT: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/ema_slot/26/h.php
+- パチマガスロマガ 1000円G数: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/ema_slot/26/c.php
+- P-WORLD: https://www.p-world.co.jp/machine/database/4842
+- 5号機クロニクル: https://5goki.com/ema
+- PACNK: https://pacnk.com/slot/tools/sh_mensore22007.html
+- ドラス公式シミュレーター: https://www.dorasu.com/pc/game/pc/menso2/index.html
+- P-WORLD / グリーンべると回顧: https://news.p-world.co.jp/articles/3552/greenbelt
 
 取得日: 2026-09-01
 
 ## 次回再開地点
 
-1. **LATEST_HANDOFF基準172件地点から継続。2007年9月残候補の最古未処理を監査する。**
-2. 残候補: `めんそーれ2-30 / サザンドリーム / ザ・ドゥーナッツのトンdeピース / ハイサイネオ / バリバリ伝説 / マスクオブゾロ / 学習パチスロ国語 / 春夏秋冬 / 熊酒場30`。
-3. 次の優先候補は `めんそーれ2-30`。エマ、2007年9月導入は5号機クロニクル/PACNKで確認済み。5号機沖スロ、ボーナス+RT「ネオスーパーモード」、天井非搭載。具体納品日と性能値を別系統資料で照合して登録する。
-4. `めんそーれ2-30` の機械割は5号機クロニクル `94.2/96.8/101.0/103.2/106.9/110.4%` とPACNK `96/98/100/103/106/109%` が大きく異なるため、登録時は平均せず `CONFLICT` として双方の定義・根拠を保持する。
-5. 2007年9月内の月精度機は、具体日を十分再探索しても確定できない場合のみ月精度で登録する。
-6. 9月漏れ監査完了後に2007年10月へ進む。`マッドジー` 2007-10-09、`マジックモンスター2` 2007-10-22予定は既確認。
-7. resetBehavior遡及QAは、`ウイニングレッド / ウイニングレッド30` の次に位置する既存レコードを最新mainで時系列確認し、resetBehavior未補完の最古機から続行する。既補完機を重複改変しない。
-8. `Bun Bun Maru-L / -R` は2007年5号機としての独立証拠が弱いため `UNRESOLVED / HOLD` 継続。
+1. **LATEST_HANDOFF基準173件地点から継続。2007年9月残候補の最古未処理を監査する。**
+2. 残候補: `サザンドリーム / ザ・ドゥーナッツのトンdeピース / ハイサイネオ / バリバリ伝説 / マスクオブゾロ / 学習パチスロ国語 / 春夏秋冬 / 熊酒場30`。
+3. 次回は上記残候補について具体納品日/ホール導入日を再比較し、最古を確定して登録する。月精度しか得られない場合は十分な再探索後に限り `2007-09` とする。
+4. 2007年9月漏れ監査完了後に2007年10月へ進む。既確認候補は `マッドジー` 2007-10-09、`マジックモンスター2` 2007-10-22予定。
+5. resetBehavior遡及QAは、`ウイニングレッド / ウイニングレッド30` の次に位置する既存レコードを最新mainで時系列確認し、未補完の最古機から続行する。既補完機を重複改変しない。
+6. `Bun Bun Maru-L / -R` は2007年5号機としての独立証拠が弱いため `UNRESOLVED / HOLD` 継続。
