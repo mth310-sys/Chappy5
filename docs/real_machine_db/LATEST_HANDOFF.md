@@ -6,87 +6,94 @@
 
 - 最新mainのREADME、実機DBミッションv0.7、INDEX、既存レコード、直前HANDOFFを確認して継続。
 - INDEXは旧19件地点のままなので、README規定どおりLATEST_HANDOFFを進捗正本とする。
-- 174件目 `バリバリ伝説`（平和、2007-09-09）までを継承。
-- 2007年9月残候補を再監査したところ、当時業者向け「スロット新台一覧」保存資料に `熊酒場-30` の納品開始 `9/2` が残っていることを確認。時系列漏れ防止のため9/9より前へ遡及して優先処理。
-- **175件目として `熊酒場-30`（ネット、2007-09-02）を登録。**
-- 新規レコード: `docs/real_machine_db/machines/2007-09-02_kuma-sakaba-30.md`
-- coreStatus: `COMPLETE_CORE`
+- 175件目 `熊酒場-30`（ネット、2007-09-02）までを継承。
+- 2007-09-02〜09-09の残候補を、当時業者向け新台一覧、グリーンべると/P-WORLD業界記事、検定保存記事、K-Navi、旧DB、5号機回顧で再監査。残候補 `サザンドリーム / ザ・ドゥーナッツのトンdeピース / ハイサイネオ / マスクオブゾロ / 学習パチスロ国語` について、この区間へ置ける具体納品日は今回確定できず、推測挿入しない。
+- 次に具体納品日を業界記事で確定できる `スロット春夏秋冬` の納品開始予定 `2007-09-24` へ前進。
+- **176件目として `スロット春夏秋冬`（西陣 / ソフィア、2007-09-24）を登録。**
+- 新規レコード: `docs/real_machine_db/machines/2007-09-24_slot-shunkashuto.md`
+- coreStatus: `PARTIAL`（通常時50枚ベースのみ未確定）
 - resetBehaviorQA: `PARTIAL`
-- 新規レコードcommit: `1ca1cea8a8e319e7a2a0b902f661d1303ea79680`
+- 新規レコードcommit: `fece32f2311df6423d64292d1faffa5b0d4a8847`
+- resetBehavior遡及QAは `ルーニー・テューンズ バック・イン・アクション`（2006-05-15）の欠損を補完。既存性能status `PARTIAL`は維持し、reset QAを別管理で `PARTIAL` とした。
+- Looney Tunes reset QA commit: `7a79acb83a79b0e137f7eb7baa649af880717dec`
 
-## 175. 熊酒場-30
+## 176. スロット春夏秋冬
 
-- manufacturer: ネット
-- releaseDate: `2007-09-02`
+- manufacturer: 西陣 / ソフィア
+- releaseDate: `2007-09-24`
 - generation: 5号機初期
-- systemType: ノーマル / 完全告知 / プチRT / 30Φ
-- coreStatus: `COMPLETE_CORE`
+- systemType: ボーナス + 固定G数RT
+- coreStatus: `PARTIAL`
 - resetBehaviorQA: `PARTIAL`
 
 ### 導入・機種同定
 
-- K-Navi 2007-07-25当時記事でネットの30Φ版として発売決定、ホールデビューは「9月上旬予定」と明記。
-- P-WORLDは型式名 `クマサカバX1-30`、導入開始2007年9月、30Φとして掲載。
-- 当時業者向け新台一覧保存資料にネット `熊酒場-30` の納品開始 `9/2` が掲載されているため、本DBでは具体日 `2007-09-02` を採用。
-- パチマガスロマガは25Φ版とは内部確率が若干異なると明記しており、30Φ派生を独立スペックとして扱う。
+- グリーンべると2007-08-24当時記事で、8月20日に西陣が `スロット春夏秋冬AR1` を発表し、**納品予定は9月24日から**と明記。
+- 2007-07-30東京都公安委員会の検定保存記事では型式 `スロット春夏秋冬AR1`、申請主体はソフィアとして確認。
+- K-Navi/P-WORLD/5号機クロニクルはいずれも2007年9月機として一致。
 
 ### 性能コア
 
-| 設定 | BIG合成 | REG | 全ボーナス合成 | パチマガPAYOUT | K-Navi機械割 |
-|---|---:|---:|---:|---:|---:|
-| 1 | 1/277.69 | 1/451.97 | 1/172.01 | 97.81% | 98.8% |
-| 3 | 1/264.26 | 1/425.56 | 1/163.02 | 100.21% | 100.2% |
-| 5 | 1/250.14 | 1/402.06 | 1/154.20 | 104.71% | 104.5% |
-| 7 | 1/239.18 | 1/381.02 | 1/146.94 | 108.96% | 108.4% |
+| 設定 | BIG | REG | 合算 | 機械割 |
+|---|---:|---:|---:|---:|
+| 1 | 1/381.02 | 1/630.15 | 1/237.45 | 96.41% |
+| 2 | 1/360.09 | 1/618.26 | 1/227.56 | 98.64% |
+| 3 | 1/344.93 | 1/606.81 | 1/219.92 | 100.93% |
+| 4 | 1/327.68 | 1/585.14 | 1/210.05 | 102.90% |
+| 5 | 1/315.08 | 1/574.88 | 1/203.53 | 105.54% |
+| 6 | 1/300.62 | 1/555.39 | 1/195.05 | 106.91% |
 
-- 赤7BIG/BAR BIGは同確率。設定1 `1/555.39` → 設定7 `1/478.36`。
-- K-Naviは設定7 BIGを `1/235` としておりパチマガ `1/239.18` と差があるため `CONFLICT`。
-- 機械割も両資料に差があるため平均せず `CONFLICT` 保持。
-- 50枚ベース: 設定1/3/5/7 `34.94 / 34.95 / 36.34 / 37.86G`。
-- BIG: 345枚超払い出し終了、純増312枚。
-- REG: 134枚超払い出し終了、純増117枚。
-- 基本システムはノーマル/プチRT/同時成立あり。プチRTの比較可能な純増/G・継続G数は十分再探索後も確定できず `UNVERIFIED`。
+- K-Navi、P-WORLD、5号機クロニクル丸め値で機械割が整合。
+- グリーンべると: 赤7BIG純増平均約324枚、そよかBIG/祭BIG約270枚。
+- 赤7BIG後100G RT、他2BIG後50G RT、RT純増約+0.7枚/G。
+- P-WORLDは赤7約394枚・そよか約305枚を `BB+RT` 込みとして掲載するため、ボーナス単体純増と混同せず定義差として保存。
+- 通常時50枚/1000円ベースは検索語・資料系統を変えて再探索後も確定できず `UNVERIFIED`。このためcoreStatusは `PARTIAL`。
 
 ### v0.7 resetBehavior
 
-- settingChangeBehavior: `NONE_CONFIRMED / PARTIAL`。パチマガスロマガの「攻め時・ヤメ時・設定変更時→特にナシ」を確認。変更専用恩恵/短縮天井等は確認されないが、内部プチRT状態の厳密処理は未確認。
-- carryOverBehavior: `UNVERIFIED`。据え置き時の内部プチRT状態処理を直接確定できず。
-- powerCycleBehavior: `UNVERIFIED`。電源OFF→ONのみの場合の内部状態処理を直接確定できず。
-- gameCounterReset: `NOT_APPLICABLE / NONE_CONFIRMED`。通常時ゲーム数天井は確認されない。
-- ceilingAfterReset: `NONE_CONFIRMED`。
-- modeAfterReset: `NONE_CONFIRMED`。朝一専用モード/変更時専用モード振り分けは確認されない。
-- stateAfterReset: `UNVERIFIED`。プチRT中の変更・据え置き・電断時残状態処理は未確認。
+- settingChangeBehavior: `UNVERIFIED / PARTIAL`。設定変更時の100G/50G RT残G・内部RT状態処理を直接確定できず。
+- carryOverBehavior: `UNVERIFIED`。据え置き時のRT残G/状態引継ぎを直接確定できず。
+- powerCycleBehavior: `UNVERIFIED`。電源OFF→ONのみのRT状態処理を直接確定できず。
+- gameCounterReset / ceilingAfterReset: 通常時ゲーム数天井・短縮天井は `NONE_CONFIRMED`。100G/50Gはボーナス後RTであり通常時天井ではない。
+- modeAfterReset: 朝一専用モード/変更時モード振り分け `NONE_CONFIRMED`。
+- stateAfterReset: RT状態処理 `UNVERIFIED`。
 - advantageousSectionReset: `NOT_APPLICABLE`。
 - resetBenefits / resetPenalties: `NONE_CONFIRMED`。
-- resetDetection: `UNVERIFIED`。本機固有ガックン・初期出目・扉/ランプ等での変更判別を確定できず。
-- numericResetData: `NONE_CONFIRMED`。
+- resetDetection: 本機固有ガックン・初期出目・液晶/ランプ変更判別 `UNVERIFIED`。
+- numericResetData: 公開朝一専用数値 `NONE_CONFIRMED`。
 
-### 再探索実施
+## resetBehavior遡及QA
 
-`熊酒場-30 / 熊酒場30 / クマサカバX1-30 / ネット / 設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / ガックン / プチRT / 天井 / 30Φ` を組み替え、K-Navi、P-WORLD、パチマガスロマガ、旧DB、後年回顧、当時業者向け資料まで横断。性能コアは比較可能な主要値を取得。リセット特性は「設定変更時→特にナシ」までは確認できたが、内部プチRT状態の具体的引継ぎ/初期化と変更判別は直接資料がなく推測しない。
+### ルーニー・テューンズ バック・イン・アクション（2006-05-15）
+
+- 既存性能status `PARTIAL`を維持し、v0.7 `resetBehavior`を追加。
+- SUPER BIG後200G、バグズBIG後50GのRT「ルーニーチャンス」（約+0.8枚/G）は既存コア情報として維持。
+- 200G/50Gは通常時ハマリ天井ではないことを明確化。
+- 設定変更、据え置き、電源OFF→ONでのRT残G/内部RT状態の扱いは、機種名表記揺れ・メーカー名・RT名・朝一/ガックン等を組み替えて再探索しても直接確定資料を取得できず `UNVERIFIED`。
+- 朝一専用モード、リセット短縮天井、公開朝一数値、固有ガックンは `NONE_CONFIRMED / UNVERIFIED`。
+- resetBehaviorQAは `PARTIAL`。性能コア判定とは別管理。
 
 ## 主要出典
 
-### 熊酒場-30
-- K-Navi 発売決定記事（2007-07-25）: https://p-kn.com/topics/news/287/
-- K-Navi 機種情報: https://p-kn.com/slot/569/
-- P-WORLD: https://www.p-world.co.jp/machine/database/4851
-- パチマガスロマガ ボーナス確率/PAYOUT: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/net_slot/135/h.php
-- パチマガスロマガ 1000円G数: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/net_slot/135/c.php
-- パチマガスロマガ 基本システム: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/net_slot/135/a.php
-- パチマガスロマガ 機種メニュー: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/net_slot/135/net_slot_135.php
-- 当時業者向けスロット新台一覧保存資料: https://paperzz.com/doc/5762410/%E3%82%B9%E3%83%AD%E3%83%83%E3%83%88%E6%96%B0%E5%8F%B0%E4%B8%80%E8%A6%A7
+### スロット春夏秋冬
+- グリーンべると/P-WORLD業界ニュース（2007-08-24）: https://news.p-world.co.jp/articles/2347/greenbelt
+- K-Navi: https://p-kn.com/slot/643/
+- P-WORLD: https://www.p-world.co.jp/machine/database/4889
+- 5号機クロニクル 西陣: https://5goki.com/nishijin
+- Pマンズ保存記事（2007-07-30検定情報）: https://p-mans.blogspot.com/2007/
+
+### ルーニー・テューンズ バック・イン・アクション
+- P_Style777: https://ps777.net/data/looneytunes.htm
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/goldolympia_slot/01/a.php
 
 取得日: 2026-09-01
 
 ## 次回再開地点
 
-1. **LATEST_HANDOFF基準175件地点から継続。2007年9月残候補のうち、2007-09-09以前に具体納品日が出る未処理機がないか再監査する。**
-2. 残候補: `サザンドリーム / ザ・ドゥーナッツのトンdeピース / ハイサイネオ / マスクオブゾロ / 学習パチスロ国語 / 春夏秋冬`。`熊酒場30` は今回処理済み。
-3. `春夏秋冬` はグリーンべると当時記事で納品予定 `2007-09-24` を確認済み。
-4. `サザンドリーム` はP-WORLD/パチマガ/5号機クロニクルで2007年9月、P-WORLD掲示板では9/27に実打報告がある。具体納品日は未確定なので引き続き再探索。
-5. `ザ・ドゥーナッツのトンdeピース` は2007年9月導入、10月2日に都内ホールでイベント実施の業界記録あり。具体納品日は引き続き監査。
-6. 当時業者向け新台一覧は時系列漏れ発見に有効だったため、残候補名を個別に照合し、9/2〜9/9間またはそれ以前の具体日がないか優先確認する。
-7. 2007年9月漏れ監査完了後に2007年10月へ進む。既確認候補は `マッドジー` 2007-10-09、`マジックモンスター2` 2007-10-22予定。
-8. resetBehavior遡及QAは既補完機を重複改変せず、最新main上の未補完最古機から続行する。
-9. `Bun Bun Maru-L / -R` は2007年5号機としての独立証拠が弱いため `UNRESOLVED / HOLD` 継続。
+1. **LATEST_HANDOFF基準176件地点から継続。** 2007年9月残候補 `サザンドリーム / ザ・ドゥーナッツのトンdeピース / ハイサイネオ / マスクオブゾロ / 学習パチスロ国語` の具体納品日を引き続き再探索する。
+2. これらが月精度しか取れない場合は、日付を推測せず `2007-09` として性能コアを収集して欠損明示する方式へ切り替え、9月漏れを閉じて2007年10月へ進む。
+3. `ザ・ドゥーナッツのトンdeピース` は2007年9月導入、2007-10-02に都内ホールイベント実施までは確認済み。型式 `トンデピースZ` は2007-07-30検定情報で確認済み。
+4. `サザンドリーム` は2007年9月導入と機械割96.9〜107.1%を確認済みだが、具体納品日は未確定。
+5. 2007年10月の既確認候補は `マッドジー` 2007-10-09、`マジックモンスター2` 2007-10-22予定。
+6. **resetBehavior遡及QAの次候補は `ゴールドシオ30`（2006-05）。** 最新mainでは `COMPLETE_CORE`だがresetBehavior未収集を確認済み。既存COMPLETE_COREを崩さずreset QAを別管理で補完する。
+7. `Bun Bun Maru-L / -R` は2007年5号機としての独立証拠が弱いため `UNRESOLVED / HOLD` 継続。
