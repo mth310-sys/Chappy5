@@ -1,5 +1,7 @@
 # 信長の野望・天下創世R
 
+qaResetBehavior: PARTIAL
+
 machineName: 信長の野望・天下創世R
 manufacturer: IGTジャパン
 releaseDate: 2005-12
@@ -102,6 +104,49 @@ UNVERIFIED
 
 信頼度: ANALYSIS_SINGLE
 
+## resetBehavior
+
+resetBehaviorQA: PARTIAL
+
+settingChangeBehavior:
+- 「信長の野望・天下創世R / 天下創世 / IGT / 設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / モード / ガックン」を組み合わせて再探索したが、本機固有の設定変更時内部状態を明記した高信頼資料は確認できずUNVERIFIED。
+
+carryOverBehavior:
+- ボーナス主体Aタイプで、通常時ゲーム数天井を示す現存解析は確認できない。宵越し天井の比較対象はNONE_CONFIRMED。
+
+powerCycleBehavior:
+- 電源OFF→ONのみと設定変更を区別する本機固有挙動はUNVERIFIED。
+
+gameCounterReset:
+- NOT_APPLICABLE_TO_NORMAL_CEILING。通常時ゲーム数天井は確認できない。
+
+ceilingAfterReset:
+- NONE_CONFIRMED。設定変更時の短縮天井・朝一天井は確認できない。
+
+modeAfterReset:
+- 通常時ゲーム数モード/朝一専用モードの公開仕様は確認できない。
+
+stateAfterReset:
+- ボーナス主体機で、朝一客行動に影響する設定変更時の内部状態再抽選を示す公開資料は確認できない。
+
+advantageousSectionReset:
+- NOT_APPLICABLE（5号機初期・有利区間制度導入前）。
+
+resetBenefits:
+- NONE_CONFIRMED。
+
+resetPenalties:
+- NONE_CONFIRMED。
+
+resetDetection:
+- UNVERIFIED。ガックン、表示、ゲーム数挙動等による本機固有の設定変更判別は再探索後も確定できない。
+
+numericResetData:
+- 通常時天井: NONE_CONFIRMED
+- リセット時短縮天井: NONE_CONFIRMED
+- 朝一専用モード数値: NONE_CONFIRMED
+- リセット恩恵発生率: NONE_CONFIRMED
+
 ## sources
 
 取得日: 2026-08-31
@@ -116,11 +161,15 @@ UNVERIFIED
    - reliability: ANALYSIS_SINGLE
 3. pacnk — 信長の野望・天下創世R 設定判別ツール
    - https://pacnk.com/slot/tools/sh_nobunaganoyaboutenchisouseir.html
-   - IGTジャパン、2005年12月導入、設定別BIG/REG/機械割
+   - IGTジャパン、2005年12月導入、設定別BIG/REG/機械割。現存ページ上で示唆演出なし・数値判別主体も確認。
    - reliability: ANALYSIS_SINGLE
 4. A-SLOT — IGT 信長の野望・天下創世R 実機ページ
    - https://www.a-slot.com/SHOP/igt3.html
    - IGT実機、5号機後継機であることの補助確認
+   - reliability: ANALYSIS_SINGLE
+5. Play-Asia — PS2「パチスロ 信長の野望 天下創世」
+   - https://www.play-asia.com/pachislot-nobunaga-no-yabou-tenka-souyo/13/70166r
+   - 実機シミュレーターとして本機を再現した製品の存在を補助確認。リセット固有挙動の記載はなし。
    - reliability: ANALYSIS_SINGLE
 
 ## missingFields
@@ -128,8 +177,12 @@ UNVERIFIED
 - 50枚あたりゲーム数 / ベース
 - 機械割の設定3〜6の確定値
 - 設定1REG確率の確定値
+- 設定変更/据え置き/電源OFF→ON時の本機固有挙動
+- 本機固有の設定変更判別
 
 ## conflicts
 
 - 機械割: 5号機クロニクルは設定3〜6=101.7/103.7/105.4/107.0%、pacnkは101.0/103.0/105.0/106.0%。平均化しない。
 - REG設定1: 5号機クロニクル 1/810、pacnk 1/819.20。設定2〜6はほぼ一致。
+
+resetBehaviorQA: PARTIAL
