@@ -6,39 +6,34 @@
 
 - 最新mainの `README.md`、実機DBミッションv0.7、`INDEX.md`、既存レコード、直前 `LATEST_HANDOFF.md`、直近commitを確認して継続。
 - `INDEX.md` は旧19件地点のままなので、README規定どおり `LATEST_HANDOFF.md` を進捗正本とする。
-- 183件目 `マスクオブゾロ` までを継承。
-- 直近commit履歴と実ファイルを再確認した結果、旧handoffで「次候補」となっていた `ハイサイネオ` はすでに `docs/real_machine_db/machines/2007-09_haisai-neo.md` として登録済み（commit `6d5bdd4cf2dc5fb7991adec8b503ffc328b48213`）。重複追加しない。
-- `ビッグハイビ-30` も `docs/real_machine_db/machines/2007-09-03_big-haibi-30.md` が既存。2007-08-10付グリーンべるとでは9月2日納品開始予定を確認したため、9月初頭漏れとしては既収録扱いで通過。
-- **184件目として `西部警察`（ニューギン、2007-09-09）を9月漏れとして遡及追加済み。**
-- 新規レコード: `docs/real_machine_db/machines/2007-09-09_seibu-keisatsu.md`
-- coreStatus: `COMPLETE_CORE`
+- 184件目 `西部警察` までを継承。
+- **185件目として `ストップ!! ひばりくん!`（SANKYO、2007-09-02）を9月漏れとして遡及追加済み。**
+- 新規レコード: `docs/real_machine_db/machines/2007-09-02_stop-hibari-kun.md`
+- coreStatus: `PARTIAL`
 - resetBehaviorQA: `PARTIAL`
-- 新規レコードcommit: `20f2218fd93b0a05029aa97d648e2a71311246b9`
+- 新規レコードcommit: `6d8945139f4363ce4fd7d34f80cd8f38727f369c`
 
-## 184. 西部警察
+## 185. ストップ!! ひばりくん!
 
-- manufacturer: ニューギン
-- formalModel: `セイブケイサツX`
-- releaseDate: `2007-09-09`（2007-08-24付グリーンべると記事が納品日を明記）
+- manufacturer: SANKYO
+- formalModel: `ストップ!! ヒバリクン!S`
+- releaseDate: `2007-09-02`（2007-07-27付グリーンべると当時記事が納品開始日を明記。SANKYO公式/P-WORLDは2007.09）
 - generation: 5号機初期
 - systemType: A+RT / ボーナス+固定G数RT
-- coreStatus: `COMPLETE_CORE`
+- coreStatus: `PARTIAL`
 - resetBehaviorQA: `PARTIAL`
 
 ### 性能コア
 
-- 青BIG: 設定1 `1/443` → 設定6 `1/299`
-- 赤BIG: 設定1 `1/1040` → 設定6 `1/898`
-- 黒BIG: 設定1 `1/1040` → 設定6 `1/898`
-- ボーナス合成: 設定1 `1/239` → 設定6 `1/180`
-- 機械割: 設定1 `95.8%` → 設定6 `110.9%`
-- 50枚ベース: 約38G
-- 青7BIG: 約300枚
-- 赤7BIG: 約200枚 + RT50G
-- 黒7BIG: 約100枚 + RT100G
-- RT「木暮チャンス」完走時増加見込み: 50G約17.6枚 / 100G約35.3枚
-- 当時業界記事の設定6合成約1/180と、後年設定別DBの1/180が整合。
-- 全設定のボーナス表・機械割は5号機クロニクルの後年整理値のため `ANALYSIS_SINGLE`、設定6合成は当時業界記事で照合済み。
+- 4段階設定。SANKYO公式・P-WORLDで設定別BB/RB/合算一致。
+- 設定1: BB 1/404 / RB 1/555 / 合算 1/234 / 機械割96%
+- 設定2: BB 1/374 / RB 1/516 / 合算 1/217 / 機械割99%
+- 設定3: BB 1/346 / RB 1/485 / 合算 1/202 / 機械割103%
+- 設定4: BB 1/324 / RB 1/452 / 合算 1/188 / 機械割106%
+- BIG: 純増約310枚、346枚超払い出し終了。
+- REG: 純増約100枚、12Gまたは8回入賞で終了。
+- BIG後RT「ひばりステージ」33Gまたは77G。
+- 50枚ベース、RT純増/Gは表記揺れ・項目語・資料系統を変えて再探索したが確定できず `UNVERIFIED`。
 
 ### v0.7 resetBehavior
 
@@ -48,34 +43,34 @@
 - gameCounterReset: `NONE_CONFIRMED / RT残G処理はUNVERIFIED`
 - ceilingAfterReset: `NONE_CONFIRMED`
 - modeAfterReset: `NOT_APPLICABLE / NONE_CONFIRMED`
-- stateAfterReset: `RT中の設定変更時状態処理はUNVERIFIED`
+- stateAfterReset: `RT中の設定変更・据え置き・電断時状態処理はUNVERIFIED`
 - advantageousSectionReset: `NOT_APPLICABLE`
 - resetBenefits / resetPenalties: `NONE_CONFIRMED`
 - resetDetection: `UNVERIFIED`
 - numericResetData: `NONE_CONFIRMED`
-- `西部警察 / 西部警察X / セイブケイサツX / ニューギン` と `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / RT / RT残り / 天井 / ガックン / 変更判別` を組み替え、当時業界記事、P-WORLD、パチマガスロマガ保存ページ、5号機クロニクル、旧DB/回顧資料を横断。
-- 通常時天井、リセット短縮、朝一専用モード、公開朝一恩恵/不利数値は確認できず `NONE_CONFIRMED`。
-- ボーナス後RT50/100Gを持つためRT中の設定変更/電断/据え置き処理は意味があるが、本機固有の直接資料を確定できず `UNVERIFIED`。一般的5号機挙動から推定しない。
+- `ストップ!!ひばりくん! / ストップ!!ヒバリクン!S / SANKYO` と `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / RT / RT残り / 天井 / 天井短縮 / モード / ガックン / 変更判別` を組み替え、メーカー公式、当時業界記事、P-WORLD、旧解析/回顧資料を横断。
+- 通常時ゲーム数天井、短縮天井、朝一専用モード、設定変更専用恩恵/不利、公開朝一数値は確認できず `NONE_CONFIRMED`。
+- RT33/77G中の設定変更・据え置き・電断処理は本機固有の直接資料が取れず `UNVERIFIED`。一般的な5号機挙動から推定しない。
 
 ## 主要出典
 
-### 西部警察
-- グリーンべると（2007-08-24）: https://web-greenbelt.jp/00004285/
-- P-WORLD: https://www.p-world.co.jp/machine/database/4880
-- パチマガスロマガ 基本システム: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/newgin_slot/03/a.php
-- パチマガスロマガ 機種トップ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/newgin_slot/03/newgin_slot_03.php
-- 5号機クロニクル ニューギン＆エキサイト: https://5goki.com/newgin-excite
+### ストップ!! ひばりくん!
+- SANKYOオンライン博物館: https://www.sankyo-fever.jp/collection/530/
+- SANKYO公式ミニパンフ: https://www.sankyo-fever.jp/assets/images/collection/pamphlet/1121.pdf
+- グリーンべると（2007-07-27、P-WORLDアーカイブ）: https://news.p-world.co.jp/articles/2310/greenbelt
+- P-WORLD: https://www.p-world.co.jp/machine/database/4857
 
 取得日: 2026-09-01
 
 ## 9月漏れ監査メモ
 
-- `ハイサイネオ` は既存（commit `6d5bdd4cf2dc5fb7991adec8b503ffc328b48213`）。旧handoffの次候補記述は実ファイル/commit履歴より古いので無視する。
-- `ビッグハイビ-30` は既存 `2007-09-03_big-haibi-30.md`。当時記事では9/2納品開始予定。
-- `KODA KUMI PACHISLOT LIVE IN HALL` は既存 `2007-09-17_koda-kumi-pachislot-live-in-hall.md`。
-- `ザ・ドゥーナッツのトンdeピース`、`サザンドリーム`、`恐怖新聞`、`クレイジージョーカー`、`熊酒場30`、`時空大作戦`、`春夏秋冬` もmain既存確認済み。
-- `ストップ!! ひばりくん!` は最新main検索で独立レコードを確認できず。SANKYO公式オンライン博物館で導入年月2007.09、型式 `ストップ!! ヒバリクン!S`、BB後33/77G RT、設定1〜4のBB/RB/合算を先行確認済み。具体導入日・設定5/6有無/数値・機械割・ベース・resetBehaviorを再探索して未処理なら次に追加する。
-- `Bun Bun Maru-L / -R` は2007年5号機としての独立証拠が弱いため `UNRESOLVED / HOLD` 継続。
+- `ストップ!! ひばりくん!` を185件目として追加し、2007-09-02納品開始を確定。
+- `ぱちすろおり姫は告知がお好き` は既存 `2007-09-16_orihime-kokuchi.md`。
+- `ビーキッズクラブR` は既存 `2007-09-17_bee-kids-club-r.md`。
+- `DECOICHI` は既存 `2007-09-17_decoichi.md`。
+- `エリア88` は既存 `2007-09-25_area88-a.md`。
+- **`ハワイ-30 / ハワイ30` はmain検索で独立レコードを確認できず、次の優先漏れ候補。** 2007-07-25付K-Navi当時記事でNET製30φ機、ホールデビュー9月上旬予定を確認。後年5号機クロニクル/Pacnkも2007年9月機として掲載。具体導入日→性能コア→resetBehaviorを再探索する。
+- P-WORLD 2007年9月一覧とmain既存群を引き続き突合し、ハワイ-30より古い具体日が判明する未処理機があれば漏れ防止を優先する。
 
 ## resetBehavior 遡及QA
 
@@ -85,8 +80,8 @@
 
 ## 次回再開地点
 
-1. **LATEST_HANDOFF基準184件地点から継続。** 2007年9月残漏れ `ストップ!! ひばりくん!` を最優先で、具体導入日→性能コア→v0.7 resetBehaviorを再探索し、main未処理なら185件目として追加する。
-2. 同時に9月の他候補をmain既存検索し、日付がより古い未処理機が判明した場合は漏れ防止を優先して遡及追加する。
+1. **LATEST_HANDOFF基準185件地点から継続。** 2007年9月残漏れ `ハワイ-30` を最優先で、具体導入日→性能コア→v0.7 resetBehaviorを再探索し、main未処理なら186件目として追加する。
+2. 同時にP-WORLD 2007年9月全29機種とmain既存レコードを突合し、より古い具体導入日の未処理機が判明した場合はそちらを先に遡及追加する。
 3. 9月漏れ監査を閉じた後、2007年10月へ前進。既確認候補は `マッドジー` 2007-10-09、`マジックモンスター2` 2007-10-22予定。
 4. resetBehavior遡及QAは **2006年7月 `花盛`** から再開。既存性能コアはやり直さず、v0.7 resetBehaviorのみ補完する。
 5. PARTIAL/UNVERIFIEDは検索語・型式/メーカー/シリーズ表記と資料系統を変えて再探索し、競合値は平均せず `CONFLICT` を維持する。
