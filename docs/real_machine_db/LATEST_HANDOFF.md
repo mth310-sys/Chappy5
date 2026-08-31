@@ -7,29 +7,24 @@
 - READMEのルールにより、INDEX本体より本 `LATEST_HANDOFF.md` を最新進捗として優先する。
 - 正本は `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` の v0.7。
 - 新規機種では性能コア + `resetBehavior` を同時収集する。
-- 前回LATEST_HANDOFF基準90件。
-- 今回 `パチスロ鉄拳伝タフ` を新規登録し、**LATEST_HANDOFF基準91件**。
+- 前回LATEST_HANDOFF基準91件。
+- 今回 `ニューハナハナ-30` を新規登録し、**LATEST_HANDOFF基準92件**。
 - 2007年2月はまだ未完了。
 - `パチスロ暴れん坊将軍`（2007-03-04）は既登録なので再処理しない。
 
 ## 今回追加
 
-### `machines/2007-02_pachislot-tekken-den-tough.md`
+### `machines/2007-02_new-hanahana-30.md`
 
-- パチスロ鉄拳伝タフ / オーイズミネオ・オーイズミ。
-- 複数検索で2007年2月導入までは確認。日単位の全国納品日は高信頼資料で確定できず、推測せず `2007-02` とした。
-- パチマガスロマガ旧攻略解析値:
-  - BIG合成 1/496.48 → 1/420.10
-  - REG合成 1/753.29 → 1/648.87
-  - ボーナス合成 1/299.25 → 1/255.00
-  - 1000円あたり 36.34〜36.35P → 41.29〜41.33P
-  - BIG約300枚 / REG約100枚
-  - BIG後100P RT / REG後12P RT
-  - RT純増 +0.74〜+0.87枚/P（設定別）
-- 機械割はpacnk掲載 96 / 98 / 101 / 103 / 106 / 108%。旧パチマガのPAYOUT欄は「現在調査中」のため別系統照合未完了、ANALYSIS_SINGLE。
-- 旧攻略の攻め時・ヤメ時は「特にナシ」。通常時ゲーム数天井は確認できず。
-- resetBehaviorは、設定変更/据え置き/電源OFF→ON時のRT内部状態・残G処理が高信頼資料で確定できずPARTIAL。朝一専用モード・短縮天井・有利区間は確認なし/非該当。
-- coreStatus: COMPLETE_CORE
+- ニューハナハナ-30 / パイオニア / 型式 P5NHD-30 / 検定番号5S1305。
+- パイオニア公式とP-WORLDで2007年2月導入を確認。日単位の全国納品/稼働開始日は再探索でも確定できず `2007-02` とした。
+- BIG 1/327.68 → 1/277.69、REG 1/555.39 → 1/399.61、合算 1/206.09 → 1/163.84。
+- 市場掲載機械割は95/98/100/103/105/107%。旧パチマガスロマガのシミュレート値96.80/98.99/101.16/103.39/105.10/106.87%は定義を分けて保持。
+- BIGは348枚超払い出し/純増約300枚、REGは168枚超払い出し/純増約150枚。P-WORLDと旧パチマガで一致。
+- 付加RT/ATなしの完全告知ノーマル。型式・基本仕様はP-WORLD、シリーズ/発売年はパイオニア公式で確認。
+- 50枚/1000円ベースは機種名・型式・メーカー・1k/千円/コイン持ち等へ検索語を変え、後継機の値を除外して再探索したが本機固有公表値を確定できずUNVERIFIED。
+- resetBehaviorは天井・モード・RT/AT・有利区間が非該当/確認なし。後年ハナハナ専門資料に本機の朝一ガックンチェック言及あり。ただしメーカー一次ではないためresetDetectionはANALYSIS_SINGLE。電源OFF→ONとの厳密な差はUNVERIFIED。
+- coreStatus: PARTIAL（baseGamesPer50のみ未確定）
 - resetBehaviorQA: PARTIAL
 
 ## 2007年2月 進行状況
@@ -43,38 +38,38 @@
 - PSアドリブ王子（2007-02-18）
 - 仮面ライダーDX〜走れ！スーパーバイク編（2007-02-18）
 - 科学忍者隊ガッチャマン（全国予定2007-02-18、関東/東北は3月上旬へ延期）
-- パチスロ鉄拳伝タフ（2007-02、日単位納品日未確定） ← 今回追加
+- パチスロ鉄拳伝タフ（2007-02、日単位納品日未確定）
+- ニューハナハナ-30（2007-02、日単位納品日未確定） ← 今回追加
 
 未処理候補:
-- ニューハナハナ-30（パイオニア公式で2007年2月発売、正確な納品日を再監査）
 - パチスロ あっぱれ応援団（グリーンべるとで納品2007-02-25確認）
-- トレジャーパイレーツ（KPEがあっぱれ応援団と同時発表。導入月/納品日を再監査）
 - その他2007年2月導入5号機
+
+3月送り確認済み:
+- トレジャーパイレーツ（同時発表だがグリーンべるとで納品2007-03-11予定を確認）
 
 ## 次回再開地点
 
-**2007年2月の残りを時系列監査する。最優先は `ニューハナハナ-30`。パイオニア公式で2007年2月発売、pacnkで設定別BIG/REG/PAYOUTを確認済みなので、まず正確な納品/稼働開始日と50枚ベース・獲得枚数・resetBehaviorを別系統資料まで掘る。日付上2/25以前と確定できる場合はそのまま新規登録する。続いて納品2007-02-25確認済みの `パチスロ あっぱれ応援団`、その後 `トレジャーパイレーツ` の導入日を監査する。**
+**2007年2月の残りを時系列監査する。次は `パチスロ あっぱれ応援団`（KPE）。グリーンべると/ P-WORLD転載で納品2007-02-25、コナミ公式アーカイブで2007年2月稼働開始を確認済み。業界一次資料から合算1/243→1/199、赤7BB約255枚、青7BB約186枚、RB約108枚、1000円平均40G、RT50/RT150、RT純増0.5〜0.6枚/Gまで取得できる。設定別BB/RB・機械割とresetBehaviorを別系統資料まで掘ってから登録する。その後2007年2月のその他漏れを月次監査し、3月へ進む。トレジャーパイレーツは納品3/11なので2月へ入れない。**
 
 ### 次回優先検索
 
-- ニューハナハナ-30 / パイオニア / 2007年2月 / 納品日 / 導入日 / 型式名
-- ニューハナハナ30 / BIG / REG / 合算 / 機械割 / 1000円 / 50枚 / ベース / 獲得枚数
-- ニューハナハナ30 / 設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / ガックン / 天井
-- パチスロ あっぱれ応援団 / KPE / 2007-02-25 / BIG / REG / 機械割 / 1000円 / RT / 純増 / リセット
-- トレジャーパイレーツ / KPE / 2007年2月 / 2007年3月 / 納品 / 導入 / 5号機
+- パチスロ あっぱれ応援団 / KPE / 2007-02-25 / 型式名
+- あっぱれ応援団 / BIG / REG / 合算 / 機械割 / PAYOUT / 1000円 / 50枚 / RT / 純増
+- あっぱれ応援団 / 設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / RT引継ぎ / ガックン
+- 2007年2月 パチスロ 5号機 新台 / 納品 / 導入 / 発売
 
 ## 今回の主要資料
 
-### パチスロ鉄拳伝タフ
-- パチマガスロマガ旧攻略 基本 — https://cs62.cs-plaza.com/g/pachi/pla/s_conq/oizumineo_slot/02/a.php
-- パチマガスロマガ旧攻略 ボーナス — https://cs62.cs-plaza.com/g/pachi/pla/s_conq/oizumineo_slot/02/h.php
-- パチマガスロマガ旧攻略 小役/1000円 — https://cs62.cs-plaza.com/g/pachi/pla/s_conq/oizumineo_slot/02/c.php
-- パチマガスロマガ旧攻略 小役別版 — https://cs62.cs-plaza.com/g/pachi/pla/s_conq/oizumineo_slot/02/c_1.php
-- パチマガスロマガ旧攻略 RT — https://cs62.cs-plaza.com/g/pachi/pla/s_conq/oizumineo_slot/02/k_1.php
-- pacnk — https://pacnk.com/slot/tools/sh_tekkendentafu.html
-- 後年解析回顧 — https://plaza.rakuten.co.jp/slotlife777/
-
-### 次回候補
+### ニューハナハナ-30
 - パイオニア公式2001〜2009 — https://www.slot-pioneer.co.jp/products/2009.html
-- pacnk ニューハナハナ30 — https://pacnk.com/slot/tools/sh_newhana.html
+- パイオニア公式製品ページ — https://www.slot-pioneer.co.jp/product/new_hanahana/nh1.html
+- P-WORLD — https://www.p-world.co.jp/machine/database/4539
+- パチマガスロマガ旧攻略 基本 — https://cs62.cs-plaza.com/g/pachi/pla/s_conq/pioneer_slot/82/a.php
+- パチマガスロマガ旧攻略 ボーナス — https://cs62.cs-plaza.com/g/pachi/pla/s_conq/pioneer_slot/82/h-2.php
+- pacnk — https://pacnk.com/slot/tools/sh_newhana.html
+- ハナハナ専門回顧 — https://hanahana-blog.com/category/model-information
+
+### 次回候補 / 境界確認
 - グリーンべると KPE2機種同時発表 — https://web-greenbelt.jp/00004042/
+- コナミ公式 あっぱれ応援団アーカイブ — https://www.konami.com/amusement/psm/archive/ps/2007/appare/
