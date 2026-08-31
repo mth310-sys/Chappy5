@@ -19,22 +19,37 @@ systemType: ノーマル / Aタイプ（ボーナス主体、RT非搭載）
 
 ## initialHitBySetting
 
-ボーナス合成:
+### BIG（赤7・青7合算）
+| 設定 | BIG確率 |
+|---|---:|
+| 1 | 1/334.37 |
+| 6 | 1/282.48 |
 
+### REG
+| 設定 | REG確率 |
+|---|---:|
+| 1 | 1/873.81 |
+| 6 | 1/819.20 |
+
+### ボーナス合成
 | 設定 | ボーナス合成 |
 |---|---:|
 | 1 | 1/241.83 |
 | 6 | 1/210.05 |
 
-信頼度: ANALYSIS_HIGH
+旧パチマガスロマガ機種DBの設定別解析値。赤7・青7は同一確率とされる。
 
-旧パチマガスロマガ機種DBの設定別BIG/ボーナス合成値を採用。設定差はボーナス確率に存在する。
+信頼度: ANALYSIS_HIGH
 
 ## baseGamesPer50
 
-UNVERIFIED
+旧パチマガスロマガの1000円あたりプレイ数:
+- 設定1: 43.58P
+- 設定6: 44.19P
 
-「通常時のベースが高め」とする後年の実戦回顧は確認できたが、50枚あたりの比較可能な確定数値は今回の再探索では確認できなかった。
+50枚貸し前提の比較用ベースとして採用。
+
+信頼度: ANALYSIS_HIGH
 
 ## netIncrease
 
@@ -44,23 +59,42 @@ UNVERIFIED
 
 - スーパーBIG（赤7）: 465枚超の払い出しで終了 / 純増約370枚
 - ノーマルBIG（青7）: 350枚超の払い出しで終了 / 純増約275枚
-- REG: 非搭載
+- REG: 8回入賞または12G消化で終了 / 純増約96枚
 
-払い出し終了条件はメーカー公式、純増目安は2005年当時の業界記事と5号機クロニクルで確認。
+払い出し終了条件はメーカー公式/旧解析、純増目安は2005年当時の業界記事および旧解析で確認。
+
+信頼度: ANALYSIS_HIGH
 
 ## modeSpecificMinimumData
 
-### BIG確率（赤7・青7合算）
+- 設定は1・6の2段階。
+- S-BIG（赤7）とN-BIG（青7）のツインBIG。
+- REG搭載。
+- 小役同時成立なし。
+- RT/AT/ART非搭載。
+- 通常時ゲーム数解除/天井は確認できず。
+- 有利区間制度導入前。
 
-| 設定 | BIG確率 |
-|---|---:|
-| 1 | 1/334.37 |
-| 6 | 1/282.48 |
+## resetBehavior
 
-- 赤7と青7は同一確率と旧攻略DBに記載。
-- REG確率: 非搭載
+resetBehaviorQA: PARTIAL
 
-信頼度: ANALYSIS_HIGH
+- settingChangeBehavior: 本機固有の設定変更時内部処理を明記した高信頼資料を確認できず UNVERIFIED
+- carryOverBehavior: 通常時に天井・RT・ART・AT・モード管理を確認できず、物差し上引き継ぐ主要朝一要素は確認なし。本機固有のボーナス成立状態等の電断処理は未確認
+- powerCycleBehavior: 電源OFF→ONのみの本機固有挙動を明記した高信頼資料を確認できず UNVERIFIED
+- gameCounterReset: 通常時天井/ゲーム数解除を確認できず、天井用ゲーム数カウンタは非該当
+- ceilingAfterReset: 天井短縮・リセット天井は確認できず
+- modeAfterReset: 通常時モード/朝一専用モードは確認できず
+- stateAfterReset: RT/ART/AT状態は非該当。本機固有の設定変更時状態再抽選資料は未確認
+- advantageousSectionReset: 非該当（有利区間制度導入前）
+- resetBenefits: 朝一/設定変更固有の主要出玉恩恵は確認できず
+- resetPenalties: 設定変更固有の主要不利要素は確認できず
+- resetDetection: 「サクラ大戦S2 / サクラ大戦 エレコ」に「設定変更 / リセット / 朝一 / 据え置き / ガックン」を組み合わせて再探索したが、本機固有の高信頼な変更判別情報は確定できず UNVERIFIED
+- numericResetData: 公開朝一専用数値は確認できず
+
+### resetBehavior 再探索メモ
+
+メーカー/当時業界資料、旧パチマガスロマガ、後年回顧資料を横断。RTやATは一切なく、通常時天井・モード管理も確認できない一方、設定変更/電源OFF→ON時の本機固有処理やガックン判別を直接記す高信頼資料は発見できなかったため推測で埋めない。
 
 ## sources
 
@@ -74,23 +108,43 @@ UNVERIFIED
    - https://web-greenbelt.jp/00005251/
    - サクラ大戦S2・デビルマン3を発表、両機とも設定1/6の2段階、サクラ大戦S2の純増約370枚/約275枚
    - reliability: INDUSTRY
-3. パチマガスロマガ — サクラ大戦S2
+3. パチマガスロマガ — サクラ大戦S2 設定推測
    - https://cs62.cs-plaza.com/g/pachi/pla/s_conq/eleco_slot/55/e.php
-   - BIG確率 設定1 1/334.37・設定6 1/282.48、ボーナス合成 設定1 1/241.83・設定6 1/210.05、REG非搭載を示す構成
+   - BIG 設定1 1/334.37・設定6 1/282.48、REG 1/873.81・1/819.20、合算 1/241.83・1/210.05
    - reliability: ANALYSIS_HIGH
-4. 5号機クロニクル — ユニバーサル系5号機全機種一覧
+4. パチマガスロマガ — サクラ大戦S2 基本システム
+   - https://cs62.cs-plaza.com/g/pachi/pla/s_conq/eleco_slot/55/a.php
+   - RTなし、S-BIG約370枚、N-BIG約275枚、REG約96枚
+   - reliability: ANALYSIS_HIGH
+5. パチマガスロマガ — サクラ大戦S2 小役確率
+   - https://cs62.cs-plaza.com/g/pachi/pla/s_conq/eleco_slot/55/c.php
+   - 1000円あたり設定1 43.58P、設定6 44.19P
+   - reliability: ANALYSIS_HIGH
+6. 5号機クロニクル — ユニバーサル系5号機全機種一覧
    - https://5goki.com/universal
-   - 2005年10月、エレコ、Aタイプ、機械割97.3%/103.8%、スーパーBIG約370枚/ノーマルBIG約275枚
+   - 2005年10月、エレコ、Aタイプ、機械割97.3%/103.8%
    - reliability: ANALYSIS_SINGLE
-5. パチ7 — 『珍古台』を大切にするホールを満喫！
-   - https://pachiseven.jp/articles/detail/4065
-   - 2005年エレコ機、通常ベース高め、設定1/6の2段階、RT/小役同時当選なしの補助確認
-   - reliability: ANALYSIS_SINGLE
+7. パチマガスロマガFREE — 名機 the ORIGIN サクラ大戦S2
+   - https://pachimaga.com/free/special/5f9945d7f3fa87318ca147a545efea04f53261a2.php
+   - 2005年10月、ノーマルタイプ、設定1/6、RT/ATなし
+   - reliability: ANALYSIS_HIGH
 
 ## missingFields
 
-- baseGamesPer50（比較可能な数値）
+- 設定変更時の本機固有内部処理
+- 電源OFF→ONのみの本機固有挙動
+- 本機固有の変更判別
+- 公開朝一専用数値
 
 ## conflicts
 
-- 機械割は97.3%/103.8%、97%/103%、97.38%/103.84%の表記があるが、丸め精度の違いとみられる。現時点では5号機クロニクルの97.3%/103.8%を記録し、元資料精度がより高い一次・当時解析資料が見つかれば更新する。
+- 機械割は97.3%/103.8%、97%/103%、97.38%/103.84%の表記があるが、丸め精度の違いとみられる。現時点では5号機クロニクルの97.3%/103.8%を記録。
+
+## QA修正履歴
+
+- 2026-08-31: 旧レコードの「REG非搭載」を旧パチマガスロマガのREG確率・REG約96枚資料に基づき訂正。
+- 2026-08-31: それまでUNVERIFIEDだったbaseGamesPer50を43.58P/44.19Pで補完。
+- 2026-08-31: v0.7 resetBehaviorを遡及追加。
+
+coreStatus: COMPLETE_CORE
+resetBehaviorQA: PARTIAL
