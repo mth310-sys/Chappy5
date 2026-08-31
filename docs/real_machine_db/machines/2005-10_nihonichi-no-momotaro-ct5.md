@@ -81,6 +81,28 @@ systemType: ボーナス主体 / 2種BB（CT）搭載 / RTなし
 - RTなし
 - 技術介入要素は基本的になしとパチマガスロマガが説明
 - ベルコ公式では「初の5号機＆5号機 CTボーナス業界初搭載」と記載
+- パチマガスロマガ旧攻略の「攻め時・ヤメ時」は特になし。通常時天井・RT/ART・朝一専用ゾーンを示す記載は確認されない
+
+## resetBehavior
+
+resetBehaviorQA: PARTIAL
+
+- settingChangeBehavior: 設定変更時の本機固有挙動を明記した高信頼公開資料を確認できず UNVERIFIED
+- carryOverBehavior: 据え置き時に引き継ぐべき天井/RT/モード構造自体を確認しない。通常時の特別なゲーム数管理は確認されず
+- powerCycleBehavior: 電源OFF→ONのみで変化する本機固有状態を明記した公開資料を確認できず UNVERIFIED
+- gameCounterReset: 通常時ゲーム数天井を確認できず、比較対象となる天井ゲーム数カウンタは非該当と整理
+- ceilingAfterReset: 非該当（通常時天井を確認せず）
+- modeAfterReset: 朝一専用モード/設定変更専用モードを確認できず
+- stateAfterReset: RT/ART非搭載。設定変更時に再抽選される主要内部状態の公開情報を確認できず
+- advantageousSectionReset: 非該当（有利区間制度導入前）
+- resetBenefits: 設定変更・朝一固有の主要恩恵を確認できず
+- resetPenalties: 設定変更固有の主要不利要素を確認できず
+- resetDetection: 本機固有のガックン・表示・出目等による設定変更判別を高信頼で確定できず
+- numericResetData: 公開された設定変更時専用の比較可能数値は確認できず
+
+### resetBehavior 再探索メモ
+
+「日本一の桃太郎CT5 / 日本一の桃太郎 / CT5 / ベルコ」に「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / ガックン / CT / 状態」を組み合わせ、ベルコ公式、当時業界記事、パチマガスロマガ旧攻略、HAZUSE、5号機クロニクル、後年の2種BB解説まで横断した。RTなし・通常時の攻め時/ヤメ時特になしは確認できたが、設定変更/電断時の本機固有処理を明記した高信頼資料は得られなかったため推測しない。
 
 ## sources
 
@@ -90,35 +112,52 @@ systemType: ボーナス主体 / 2種BB（CT）搭載 / RTなし
    - https://www.s-bellco.co.jp/products/slot/
    - 2005年10月登場、ベルコ初の5号機、CTボーナス業界初搭載
    - reliability: OFFICIAL
-2. グリーンべると — 日電協加盟メーカーが初の5号機適合
+2. BELLCO公式 — 日本一の桃太郎CT5
+   - https://www.s-bellco.co.jp/products/slot/momoraro/
+   - 5号機、ノーマル、CT搭載
+   - reliability: OFFICIAL
+3. グリーンべると — 日電協加盟メーカーが初の5号機適合
    - https://web-greenbelt.jp/00005181/
    - 型式「日本一の桃太郎CT5」、日電協加盟メーカー初の新要件機適合、10月上旬納品予定
    - reliability: INDUSTRY
-3. パチマガスロマガ — 日本一の桃太郎CT5 基本システム
+4. パチマガスロマガ — 日本一の桃太郎CT5 基本システム
    - https://cs62.cs-plaza.com/g/pachi/pla/s_conq/belco_slot/75/a.php
    - BIG/CBの規定払い出し・純増、RTなし
    - reliability: ANALYSIS_HIGH
-4. パチマガスロマガ — ボーナス抽選確率・PAYOUT
+5. パチマガスロマガ — 日本一の桃太郎CT5 機種トップ
+   - https://cs62.cs-plaza.com/g/pachi/pla/s_conq/belco_slot/75/belco_slot_75.php
+   - 攻め時・ヤメ時「特にナシ」、通常時の特別な天井/RTを示す項目なし
+   - reliability: ANALYSIS_HIGH
+6. パチマガスロマガ — ボーナス抽選確率・PAYOUT
    - https://cs62.cs-plaza.com/g/pachi/pla/s_conq/belco_slot/75/h.php
    - 設定別BIG/CB確率、PAYOUTシミュレート値
    - reliability: ANALYSIS_HIGH
-5. パチマガスロマガ — 小役確率・1000円あたりゲーム数
+7. パチマガスロマガ — 小役確率・1000円あたりゲーム数
    - https://cs62.cs-plaza.com/g/pachi/pla/s_conq/belco_slot/75/c.php
    - 設定別1000円あたり平均ゲーム数
    - reliability: ANALYSIS_HIGH
-6. 5号機クロニクル — ベルコ5号機全機種一覧
+8. 5号機クロニクル — ベルコ5号機全機種一覧
    - https://5goki.com/bellco
    - CT5/CT30の導入時期、設定別機械割
    - reliability: ANALYSIS_SINGLE
-7. パチ7 — 5号機では必需品!? 第二種特別役物
+9. パチ7 — 5号機では必需品!? 第二種特別役物
    - https://pachiseven.jp/articles/detail/1364
    - 日本一の桃太郎CT5を初期2種BB搭載例として解説
    - reliability: ANALYSIS_HIGH
+10. HAZUSE i-mode版 — 旧機種一覧
+   - https://www.hazuse.com/i/i_2.htm
+   - 当時機種情報アーカイブ上に日本一の桃太郎CT5を確認
+   - reliability: ANALYSIS_SINGLE
 
 ## missingFields
 
 - CT30がCT5と完全同一スペックか、独立レコードに分離すべき差異の一次/高信頼資料確認
+- 設定変更/電源OFF→ON時の本機固有挙動
+- 本機固有のresetDetection
 
 ## conflicts
 
 機械割はパチマガスロマガのシミュレート値 94.32〜104.64% と、5号機クロニクルの 94.5〜104.2% に差がある。定義差（シミュレート条件等）の可能性があるため平均化しない。
+
+coreStatus: COMPLETE_CORE
+resetBehaviorQA: PARTIAL
