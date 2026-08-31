@@ -5,6 +5,8 @@ manufacturer: JPS
 releaseDate: 2006-04
 generation: 5号機初期
 systemType: ノーマル / 完全告知 / BIG+CT / 30φ
+coreStatus: COMPLETE_CORE
+resetBehaviorQA: PARTIAL
 
 ## payoutRateBySetting
 
@@ -56,9 +58,28 @@ systemType: ノーマル / 完全告知 / BIG+CT / 30φ
 - 30φ版は先告知のみ。25φ版は複数告知パターンを持つ。
 - 小役との同時当選あり。
 
+## resetBehavior
+
+settingChangeBehavior: UNVERIFIED。本機固有の設定変更時の成立済みボーナス/内部状態処理を確定できず。
+carryOverBehavior: UNVERIFIED。据え置き時の本機固有挙動を確定できず。
+powerCycleBehavior: UNVERIFIED。電源OFF→ONのみの場合の本機固有挙動を確定できず。
+gameCounterReset: NOT_APPLICABLE / NONE_CONFIRMED。通常時ゲーム数天井・RTゲーム数は確認されない。
+ceilingAfterReset: NONE_CONFIRMED。リセット短縮天井の公開情報なし。
+modeAfterReset: NONE_CONFIRMED。朝一/設定変更専用モードの公開情報なし。
+stateAfterReset: NONE_CONFIRMED。RT/ART/CZのような比較対象状態を搭載しない。
+advantageousSectionReset: NOT_APPLICABLE。
+resetBenefits: NONE_CONFIRMED。公開された朝一専用恩恵なし。
+resetPenalties: NONE_CONFIRMED。公開された設定変更時専用不利要素なし。
+resetDetection: UNVERIFIED。ガックンや初期出目等を用いた本機固有の変更判別を確定できず。
+numericResetData: NONE_CONFIRMED。公開朝一数値なし。
+
+### resetBehavior QA note
+
+`ウイニングレッド30 / ウイニングレッド-30 / JPS / 設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / ガックン / 天井` を組み替え、当時解析・旧DB・業界記事・回顧資料を再探索。後継ホークIII-30には設定変更後無限RTが明記されるが、それを本機へ流用しない。本機固有のリセット恩恵・天井・RTは確認できないため、コアのCOMPLETE_COREを維持しresetBehavior QAのみPARTIALとする。
+
 ## sources
 
-取得日: 2026-08-31
+取得日: 2026-09-01
 
 1. パチマガスロマガ — ウイニングレッド30
    - https://cs62.cs-plaza.com/g/pachi/pla/s_conq/jps_slot/03/a.php
@@ -76,10 +97,15 @@ systemType: ノーマル / 完全告知 / BIG+CT / 30φ
    - https://5goki.com/jps
    - 2006/4、25φ/30φとして機械割97.5〜106.5%
    - reliability: ANALYSIS_SINGLE
+5. P-WORLD業界ニュース — ホークIII発表（比較用）
+   - https://news.p-world.co.jp/articles/1856/greenbelt
+   - 後継ホークIII-30には設定変更後無限RTを明記。前作ウイニングレッドの告知モード踏襲も明記
+   - reliability: INDUSTRY
 
 ## missingFields
 
-なし（物差し必須コア項目は充足）。
+- 設定変更/据え置き/電源OFF→ONの本機固有挙動
+- 本機固有の変更判別挙動
 
 ## conflicts
 
