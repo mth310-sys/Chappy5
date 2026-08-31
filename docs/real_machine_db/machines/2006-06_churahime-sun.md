@@ -5,6 +5,7 @@ manufacturer: エレコ
 releaseDate: 2006-06
 generation: 5号機初期
 systemType: ノーマル / 沖縄系 / 準完全告知 / 2段階設定
+qaResetBehavior: PARTIAL
 
 ## payoutRateBySetting
 
@@ -58,6 +59,53 @@ systemType: ノーマル / 沖縄系 / 準完全告知 / 2段階設定
 - 設定別BIG単独確率: UNVERIFIED
 - 設定別CHURA CHANCE単独確率: UNVERIFIED
 
+## resetBehavior
+
+resetBehaviorQA: PARTIAL
+
+settingChangeBehavior:
+- `ちゅら姫SUN / ちゅら姫 サン / エレコ` と `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / ガックン / リール初動 / 天井 / RT` を組み替えて再探索。
+- 本機固有の設定変更時内部状態処理を示す高信頼資料は確認できずUNVERIFIED。
+- 既存の公式・当時解析仕様ではボーナス主体のノーマル機として確認され、通常時ゲーム数天井、RT/AT、朝一専用CZ・ゲーム数モードはNONE_CONFIRMED。
+
+carryOverBehavior:
+- 通常時天井/ゲーム数管理モード、RT/AT残ゲームはNONE_CONFIRMED / NOT_APPLICABLE。
+- 据え置き固有の公開恩恵・不利はNONE_CONFIRMED。
+
+powerCycleBehavior:
+- 電源OFF→ONのみで引き継ぐべきゲーム数天井・RT/AT状態はNONE_CONFIRMED / NOT_APPLICABLE。
+- 本機固有の液晶/告知状態やその他内部状態の電断復帰挙動はUNVERIFIED。
+
+gameCounterReset:
+- 通常時ボーナス天井・周期天井はNONE_CONFIRMED / NOT_APPLICABLE。
+
+ceilingAfterReset:
+- 設定変更時短縮天井を含めNONE_CONFIRMED / NOT_APPLICABLE。
+
+modeAfterReset:
+- 朝一専用モード、設定変更専用モード、ゲーム数管理モードはNONE_CONFIRMED。
+
+stateAfterReset:
+- RT/AT/CZの継続状態は公開仕様上NONE_CONFIRMED / NOT_APPLICABLE。
+- その他の朝一客行動へ影響する公開内部状態再抽選はNONE_CONFIRMED。
+
+advantageousSectionReset:
+- NOT_APPLICABLE（5号機初期・有利区間制度導入前）。
+
+resetBenefits:
+- 設定変更専用の短縮天井、朝一モード、CZ優遇、初当たり優遇など比較可能な公開恩恵はNONE_CONFIRMED。
+
+resetPenalties:
+- 設定変更固有の主要な公開不利要素はNONE_CONFIRMED。
+
+resetDetection:
+- 本機固有のガックン、リール初動、表示、ゲーム数挙動による設定変更/据え置き判別は検索語・資料系統変更後もUNVERIFIED。
+
+numericResetData:
+- 公開朝一数値: 今回未確認
+- 短縮天井: NOT_APPLICABLE / NONE_CONFIRMED
+- 設定変更時モード振り分け: NONE_CONFIRMED
+
 ## sources
 
 取得日: 2026-08-31
@@ -91,6 +139,9 @@ systemType: ノーマル / 沖縄系 / 準完全告知 / 2段階設定
 
 - 設定別BIG確率
 - 設定別CHURA CHANCE確率
+- 本機固有の設定変更/据え置き/電源OFF→ON挙動
+- 本機固有のガックン/変更判別
+- 公開朝一数値
 
 ## conflicts
 
