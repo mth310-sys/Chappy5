@@ -6,91 +6,100 @@
 
 - README全文、最新ミッション v0.7、INDEX、既存レコード、直前handoffを最新mainで再確認して継続。
 - INDEXは旧19件地点のまま。README規定どおりLATEST_HANDOFFを進捗正本とする。
-- **LATEST_HANDOFF基準128件。**
-- 127件地点の次候補 `アントニオ猪木も燃えるパチスロ機` と `トリプルクラウン30` の導入境界を再監査。
-- 当時グリーンべると2007-04-06記事は猪木を「6月上旬から納品」と明記。P-WORLDは「導入開始 2007年05月」とするため月表記はCONFLICTとして保持したが、具体的な当時納品予定を時系列本線として**2007年6月上旬の未処理機**として登録。
-- `トリプルクラウン-30` はALL7.jpで導入予定2007-06-25を確認済みのため、今回の猪木より後として次回候補へ。
+- **LATEST_HANDOFF基準129件。**
+- 128件地点の次の未処理機 `トリプルクラウン-30`（清龍ゲームジャパン）を登録済み。
+- 時系列本線はALL7.jpの具体的な導入予定 **2007-06-25** を採用。P-WORLDは導入開始2007年05月、後年整理は2007.06のため日付定義差をCONFLICTとして保持。
 
 ## 今回新規追加
 
-### アントニオ猪木も燃えるパチスロ機（HEIWABROS / 平和）
+### トリプルクラウン-30（清龍ゲームジャパン）
 
-- `docs/real_machine_db/machines/2007-06_antonio-inoki-mo-moeru-pachislot-ki.md`
-- 2007-06上旬（時系列本線） / 5号機初期 / ボーナス+完走型RT / REG後CZ。
-- パチマガスロマガ精密ボーナス値:
-  - BIG合成 1/372.36 → 1/321.25
-  - REG合成 1/1024.00 → 1/569.88
-  - 全ボーナス合成 1/273.07 → 1/205.44
-- 機械割はパチマガスロマガ・シミュレート96.40〜107.66%と、後年整理95.60〜107.61%で設定1〜5に差があるため平均せずCONFLICT。
-- BIG約240枚、REG約120枚。闘魂BIG後200G RT、通常BIG後100G RT、REG後8G CZから特殊リプレイ成立で100G RT。
-- RT純増は当時グリーンべると約0.6枚/G、後年整理約0.65枚/G、P-WORLD約0.7枚/Gで表記差があるためCONFLICT。
-- 通常時天井なし。
-- 50枚/1000円ベースは再探索したが、パチマガスロマガ該当ページ自体が「現在調査中」。比較可能値を確定できずUNVERIFIED。
+- `docs/real_machine_db/machines/2007-06-25_triple-crown-30.md`
+- status: `COMPLETE_CORE`
+- qaResetBehavior: `PARTIAL`
+- 5号機初期 / ノーマル / 完全告知 / 30Φ沖スロ。
+- 本線スペック（P-WORLD・パチマガスロマガ・メーカー由来後年整理で一致）:
+  - BIG: 1/327.68 → 1/262.14
+  - BG/REG: 1/546.13 → 1/385.51
+  - 合算: 1/204.80 → 1/156.04
+  - BIG約312枚 / BG・REG約104枚
+  - 1000円（50枚）あたり **40.52G**
+- 機械割はメーカー由来整理/P-WORLDの96.47〜107.72%と、パチマガスロマガのPAYOUTシミュレート96.95〜107.52%が異なるため平均せずCONFLICT。
+- K-NaviにはBIG 1/312.0〜1/247.3、BAR 1/504.1〜1/354.2という別の設定別確率が掲載されるためCONFLICTとして保持。本線値は複数資料一致側。
+- 2012年グリーンべるとの `トリプルクラウンZERO-30` 発表記事が「初代トリプルクラウン-30の出玉性能を完全継承」と明記し、初代由来BIG/REG/出玉率の設定1〜6レンジを再確認できる。
 
-## v0.7 resetBehavior — アントニオ猪木も燃えるパチスロ機
+## v0.7 resetBehavior — トリプルクラウン-30
 
-- 通常時ゲーム数天井なし。短縮天井はNOT_APPLICABLE。
+- 通常時ゲーム数天井・RT/ART/CZ・ゲーム数管理モードなしとして、天井短縮/モード朝一恩恵はNOT_APPLICABLE / NONE_CONFIRMED。
 - 有利区間はNOT_APPLICABLE。
-- 設定変更専用の朝一ゲーム数優遇/短縮天井はNONE_CONFIRMED。
-- 設定変更/据え置き/電源OFF→ON時のRT/CZ状態・残G処理、本機固有ガックン/変更判別は表記揺れ・RT名・CZ名・リセット関連語を変えて再探索後もUNVERIFIED。
-- P-WORLD掲示板には電源OFF時内部状態を問う投稿が残るが、質問投稿自体は根拠として採用していない。
+- 設定変更/据え置き/電源OFF→ON時の本機固有の成立済みボーナス処理、リール初動、ガックン等は表記揺れ・型式名・メーカー名・シリーズ名で再探索後もUNVERIFIED。
+- 公開朝一専用数値は未確認。
 
 ## resetBehavior遡及QA
 
-### ゴルゴ13 ザ・プロフェッショナルJ
+### お庭でドン（バルテック、2006-04-16）
 
-- `docs/real_machine_db/machines/2006-03-27_golgo13-the-professional.md` にv0.7 resetBehaviorを追加。
-- パチマガスロマガでSモード最大130P、BIG後必ずSモード突入、Gモードの存在を確認。
-- 設定変更/据え置き/電源OFF→ON時のSモード/Gモード状態・残P処理、本機固有ガックンは検索語・資料系統変更後もUNVERIFIED。
-- 設定変更専用の短縮天井/朝一初当たり優遇はNONE_CONFIRMED。
-- 有利区間はNOT_APPLICABLE。
+- `docs/real_machine_db/machines/2006-04-16_oniwa-de-don.md` にv0.7 resetBehaviorを追加。
+- 既存の性能コア `PARTIAL` は維持し、リセットQAを別管理。
+- パチマガスロマガで赤7BIG約312枚 / 青7BIG約264枚 / 白7BIG約202枚、赤7BIG後100G RTを再確認し、既存のグリーンべると丸め値（約310/260/200枚）と整合。
+- 設定別機械割/設定別BIG確率/50枚ベースは追加再探索でも確定できず既存UNVERIFIEDを維持。パチマガスロマガ機種メニュー自体が「ボーナス確率・PAYOUT→特にナシ」。
+- 設定変更/据え置き/電源OFF→ON時の100G RT残G・内部RT状態、本機固有ガックンは十分再探索後もUNVERIFIED。
+- 通常時天井、朝一専用ゲーム数モード、リセット短縮天井はNONE_CONFIRMED。有利区間はNOT_APPLICABLE。
 
-## 2007年6月境界メモ
+## 2007年6月25日境界メモ
 
 処理済み:
 - ディスクアップオルタナティブ — 2007-06として登録済み。
-- アントニオ猪木も燃えるパチスロ機 — 今回登録。グリーンべると6月上旬納品予定/P-WORLD 2007年05月表記はCONFLICT保持。
+- アントニオ猪木も燃えるパチスロ機 — 2007-06上旬時系列本線で登録済み。
+- トリプルクラウン-30 — 今回、2007-06-25本線で登録済み。
 
-次候補:
-- `トリプルクラウン-30`（清龍ゲームジャパン）
-  - 検定通過: 2007-05-10（後年検定整理）
-  - 2007.06リリース表記あり
-  - ALL7.jp導入予定: **2007-06-25**
-  - 後年整理スペック: 機械割96.47〜107.72%、BIG 1/327.68〜1/262.14、ボーナスゲーム 1/546.13〜1/385.51、合算1/204.80〜1/156.04
-  - K-Navi/P-WORLD/後年整理間の設定別確率・呼称差を監査し、同名後継機 `ニュートリプルクラウン30` 等と混同しないこと。
-- 2007-06-25には同日に `スーパーキューティーハニー`、`ズーマニア`、`ニューパルサーV`、`モーニング娘。`、`ラーメン王` 等もALL7.jpに掲載。トリプルクラウン登録後、同日導入5号機を漏れ監査して時系列継続する。
+同日未処理候補（ALL7.jp 2007-06-25）:
+- スーパーキューティーハニー（エレコ）
+- ズーマニア（アリストクラート）
+- ニューパルサーV（山佐）
+- モーニング娘。（ビスティ）
+- ラーメン王（オーイズミ）
+
+### 次候補の事前確認 — スーパーキューティーハニー
+
+- ユニバーサル公式: 5号機、エレコ、ボーナス+RT、発売2007年6月。
+- 公式: BIG約327枚、BIG後RT「キューティーゲーム」、約+0.5枚/G、最大999G、チェリー出現またはBIG当選まで継続。
+- 後年解析: 設定1/4/6の3段階、BIG合算1/474.9 / 1/442.8 / 1/394.8、機械割98.3 / 101.5 / 106.8%。
+- ALL7.jpの2007-06-25同日候補として、次回は導入日定義・設定別BIG詳細・ベース・resetBehaviorを複数系統照合してから登録する。
 
 ## 今回の主要出典
 
-### アントニオ猪木も燃えるパチスロ機
-- グリーンべると 2007-04-06: https://web-greenbelt.jp/00004124/
-- P-WORLD: https://www.p-world.co.jp/machine/database/4688
-- パチマガスロマガ 基本: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/heiwabros_slot/04/a.php
-- パチマガスロマガ 確率/PAYOUT: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/heiwabros_slot/04/h-1.php
-- パチマガスロマガ 1000円G数ページ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/heiwabros_slot/04/c.php
-- パチスロ救急車: https://www.eightbeat.com/slot99/kishu/a_gyou/a/antonmomoeru5/page_menu.html
-- 後年猪木シリーズ整理: https://www.marimo0925.net/pachisuro-rekidai-ranking-inoki/
-
-### ゴルゴ13 resetBehavior QA
-- P-WORLD/グリーンべると: https://news.p-world.co.jp/articles/1576/greenbelt
-- パチマガスロマガ ATの特徴: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/heiwa_slot/29/e.php
-- パチ7 AT・ART変遷: https://pachiseven.jp/articles/detail/14122
-
-### 次候補トリプルクラウン-30
-- ALL7.jp 2007年6月導入予定: https://www.all7.jp/plans/index/2007/06
+### トリプルクラウン-30
+- ALL7.jp: https://www.all7.jp/plans/index/2007/06
 - P-WORLD: https://www.p-world.co.jp/machine/database/4719
-- K-Navi: https://p-kn.com/slot/642/
-- 後年検定整理: https://q-and-a.hatenablog.com/entry/2016/10/21/095330
-- 後年2007.06スペック整理: https://pachinko.hatenablog.jp/entry/2007/06/tripleCrown-30
+- パチマガスロマガ 基本: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/seiryu_slot/02/a.php
+- パチマガスロマガ 確率/PAYOUT: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/seiryu_slot/02/h.php
+- パチマガスロマガ 1000円G数: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/seiryu_slot/02/c.php
+- グリーンべると 2012年初代性能継承確認: https://web-greenbelt.jp/00001447/
+- K-Navi競合値: https://p-kn.com/slot/642/
+- 清龍5号機整理: https://5goki.com/seiryu
+- 検定通過整理: https://q-and-a.hatenablog.com/entry/2016/10/21/095330
+
+### お庭でドン resetBehavior QA
+- グリーンべると: https://web-greenbelt.jp/00004571/
+- パチマガスロマガ 基本: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/baltech_slot/45/a.php
+- パチマガスロマガ 機種メニュー: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/baltech_slot/45/baltech_slot_45.php
+- パチマガスロマガ RT演出: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/baltech_slot/45/h.php
+
+### 次候補スーパーキューティーハニー
+- ユニバーサル公式: https://www.universal-777.com/product/slot/super_cutiehoney/
+- P-WORLD: https://www.p-world.co.jp/machine/database/4798
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/eleco_slot/70/a.php
+- 後年設定別整理: https://pacnk.com/slot/tools/sh_superqthani.html
 
 取得日: 2026-08-31
 
 ## 次回再開地点
 
-1. **`トリプルクラウン-30`（清龍ゲームジャパン、ALL7.jp導入予定2007-06-25）を次の未処理機として性能コア+v0.7 resetBehavior収集。**
-2. 設定別確率・機械割はK-Navi/P-WORLD/後年整理を照合し、`ニュートリプルクラウン30`、`トリプルクラウンS2-30` 等の後継スペックと混同しない。競合なら平均せずCONFLICT。
-3. 50枚ベース、設定変更/据え置き/電源OFF→ON、朝一、ガックン、ボーナス状態の扱いを表記揺れ・型式名・メーカー名・シリーズ名で十分再探索してからのみUNVERIFIED。
-4. `トリプルクラウン-30` 後は2007-06-25同日導入5号機（スーパーキューティーハニー、ズーマニア、ニューパルサーV、モーニング娘。、ラーメン王等）を漏れ監査し、導入順を確定して進む。
-5. 発表日・検定日・発売月・納品開始日・ホール導入日を分離し、日付を推測しない。
-6. resetBehavior遡及QAはゴルゴ13 ザ・プロフェッショナルJの次の未対応最古レコードを1機以上補完する。既補完機を重複処理しない。
-7. INDEXは旧19件地点のため、README規定どおり**LATEST_HANDOFFの128件地点を正**として継続する。
+1. **2007-06-25同日未処理5号機を漏れ監査し、最古未処理として `スーパーキューティーハニー` を第一候補に性能コア+v0.7 resetBehavior収集。**
+2. スーパーキューティーハニーは公式のBIG約327枚/RT約+0.5枚/G/最大999Gと、解析資料の設定1・4・6 BIG確率/機械割を別系統照合。50枚ベースも「1000円/コイン持ち/ベース」で再探索する。
+3. その後、同日候補 `ズーマニア`、`ニューパルサーV`、`モーニング娘。`、`ラーメン王` の実導入/納品順を監査し、未処理を飛ばさず進む。
+4. 発表日・検定日・発売月・納品開始日・ホール導入日を分離し、日付を推測しない。
+5. resetBehavior遡及QAは `お庭でドン` の次の未対応最古レコードを1機以上補完する。既補完機を重複処理しない。
+6. 既存COMPLETE_COREは性能コア完了として維持し、リセットQA状態を別管理する。
+7. INDEXは旧19件地点のため、README規定どおり**LATEST_HANDOFFの129件地点を正**として継続する。
