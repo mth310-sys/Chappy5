@@ -5,6 +5,8 @@ manufacturer: JPS
 releaseDate: 2006-04
 generation: 5号機初期
 systemType: ノーマル / 完全告知 / BIG+CT / 25φ
+coreStatus: COMPLETE_CORE
+resetBehaviorQA: PARTIAL
 
 ## payoutRateBySetting
 
@@ -55,9 +57,28 @@ P-WORLDとHAZUSEでほぼ一致。設定1・4のBIGは丸め差。
 - 25φは複数の告知タイミングを持つ。30φは先告知のみ。
 - 小役との同時当選あり。
 
+## resetBehavior
+
+settingChangeBehavior: UNVERIFIED。本機固有の設定変更時の成立済みボーナス/内部状態処理を確定できず。
+carryOverBehavior: UNVERIFIED。据え置き時の本機固有挙動を確定できず。
+powerCycleBehavior: UNVERIFIED。電源OFF→ONのみの場合の本機固有挙動を確定できず。
+gameCounterReset: NOT_APPLICABLE / NONE_CONFIRMED。通常時ゲーム数天井・RTゲーム数は確認されない。
+ceilingAfterReset: NONE_CONFIRMED。リセット短縮天井の公開情報なし。
+modeAfterReset: NONE_CONFIRMED。朝一/設定変更専用モードの公開情報なし。
+stateAfterReset: NONE_CONFIRMED。RT/ART/CZのような比較対象状態を搭載しない。
+advantageousSectionReset: NOT_APPLICABLE。
+resetBenefits: NONE_CONFIRMED。公開された朝一専用恩恵なし。
+resetPenalties: NONE_CONFIRMED。公開された設定変更時専用不利要素なし。
+resetDetection: UNVERIFIED。ガックンや初期出目等を用いた本機固有の変更判別を確定できず。
+numericResetData: NONE_CONFIRMED。公開朝一数値なし。
+
+### resetBehavior QA note
+
+`ウイニングレッド / ソヨカゼ / JPS / 設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / ガックン / 天井` を組み替え、当時解析・旧DB・業界記事・回顧資料を再探索。後継機ホークIIIには明確な設定変更後無限RTがあるが、それを本機へ流用しない。本機固有のリセット恩恵・天井・RTは確認できないため、コアのCOMPLETE_COREを維持しresetBehavior QAのみPARTIALとする。
+
 ## sources
 
-取得日: 2026-08-31
+取得日: 2026-09-01
 
 1. P-WORLD — ウイニングレッド
    - https://www.p-world.co.jp/machine/database/4158
@@ -75,10 +96,15 @@ P-WORLDとHAZUSEでほぼ一致。設定1・4のBIGは丸め差。
    - https://psmaga.com/database/maker.php?id=85&mode=2
    - ウイニングレッドとウイニングレッド30を別機種として掲載
    - reliability: ANALYSIS_HIGH
+5. P-WORLD業界ニュース — ホークIII発表（比較用）
+   - https://news.p-world.co.jp/articles/1856/greenbelt
+   - 後継ホークIIIには設定変更後無限RTを明記。ウイニングレッドの告知モード踏襲も明記
+   - reliability: INDUSTRY
 
 ## missingFields
 
-なし（物差し必須コア項目は充足）。
+- 設定変更/据え置き/電源OFF→ONの本機固有挙動
+- 本機固有の変更判別挙動
 
 ## conflicts
 
