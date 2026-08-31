@@ -6,73 +6,75 @@
 
 - 最新mainの `README.md`、実機DBミッションv0.7、`INDEX.md`、既存レコード、直前 `LATEST_HANDOFF.md`、直近commitを確認して継続。
 - `INDEX.md` は旧19件地点のままなので、README規定どおり `LATEST_HANDOFF.md` を進捗正本とする。
-- 186件目 `ハワイ-30` までを継承。
-- **187件目として `南国姉妹-30`（アスワン東京）を追加済み。**
-- 新規レコード: `docs/real_machine_db/machines/2007-09_or_10_nangoku-shimai-30.md`
-- coreStatus: `PARTIAL`
+- 187件目 `南国姉妹-30` までを継承。
+- **188件目として `しぇんしぇーのスロットマシーン30`（トリビー）を追加済み。**
+- 新規レコード: `docs/real_machine_db/machines/2007-08-06_shenshe-slot-machine-30.md`
+- coreStatus: `COMPLETE_CORE`
 - resetBehaviorQA: `PARTIAL`
-- 新規レコードcommit: `19b5d9022a9704707123b7fd141d9a8862cf7303`
+- 新規レコードcommit: `9fc25481e8507f045678f24a7c2bdface4973526`
 
-## 187. 南国姉妹-30
+## 188. しぇんしぇーのスロットマシーン30
 
-- manufacturer: アスワン東京
-- releaseDate: `2007-09 / 2007-10 (CONFLICT)`
+- manufacturer: トリビー
+- releaseDate: `2007-08-06（沖縄先行） / 2007-09上旬（全国販売）`
 - generation: 5号機初期
-- systemType: A+RT / ボーナス+固定G数RT / 30Φ / 完全告知系
-- coreStatus: `PARTIAL`
+- systemType: A+RT / ボーナス+固定100G RT / 30Φ / 完全告知 / 設定2〜6の5段階設定
+- coreStatus: `COMPLETE_CORE`
 - resetBehaviorQA: `PARTIAL`
-
-### 性能コア
-
-- K-Naviの当時機種ページでは設定1〜6のBIG/REG/機械割がすべて `未発表`。30Φ固有の設定別数値を十分再探索したが確定できず `UNVERIFIED`。
-- 25Φ同名機や他の南国シリーズから性能値を自動流用しない。
-- 赤7BIG/青7BIGは348枚超払い出し終了、CHALLENGE BONUSは132枚超払い出し終了。
-- RT `スーパーウェーブタイム(SWT)` を搭載。K-Naviでは赤7後SWTのボーナスGET率 `80%強`。
-- 青7BIG後RTはP-WORLD `100G` とK-Navi画面表示 `200G` が競合するため `CONFLICT`。
-- 50枚ベース、実純増枚数、SWT純増/Gは表記揺れ・項目語・資料系統を変えて再探索したが確定できず `UNVERIFIED`。
 
 ### 導入時期
 
-- pacnk 2007年度一覧は2007年9月群に掲載。
-- pacnk頭文字一覧、スロリスクタイム、後年2007年回顧資料は2007年10月。
-- 当時slothistoryでは2007-08-11時点で検定通過/発売確定側へ移動している一方、2007-12-28更新に未確定欄記述もあり、実納品月を一意に確定できない。
-- 平均・推定せず `2007-09 / 2007-10 CONFLICT` を保持。
+- PachinkoVistaは2007年8月導入開始。
+- slothistory 2007-08-11更新で「8/6に沖縄限定発売されてたが、全国販売が決定」「2007/9/上発売」と記録。
+- 5号機クロニクルも2007/8導入として整理。
+- 本DBでは最初の市場導入 `2007-08-06` を主日付とし、全国販売 `2007-09上旬` を併記。9月漏れ監査で発見した遡及漏れ。
+
+### 性能コア
+
+- 設定1なし、設定2〜6の5段階設定。
+- 機械割（設定2→6）: `94.0 / 97.0 / 100.0 / 105.0 / 108.0%`。PachinkoVistaと5号機クロニクルで一致。
+- BIG（設定2→6）: `1/327.2 / 1/302.8 / 1/292.0 / 1/271.3 / 1/258.4`。
+- BABY/REG: `1/678.3 / 1/608.5 / 1/525.1 / 1/412.1 / 1/422.8`。
+- 合算: `1/220.7 / 1/220.2 / 1/187.6 / 1/163.6 / 1/160.4`。
+- 50枚ベース（設定2→6）: `35.94 / 36.07 / 36.17 / 36.66 / 37.24G`。パチマガスロマガ値（スイカ・チェリー取りこぼし算出）。
+- BIG: 345枚超払い出し終了、実純増目安約290枚。
+- BABY: 180枚超払い出し終了、実純増目安約140枚。
+- 赤7BIG後のみ100G RT `しぇんしぇーたいむ`。RT純増/Gは再探索後も `UNVERIFIED`。
 
 ### v0.7 resetBehavior
 
-- settingChangeBehavior: 専用モード/短縮天井/朝一恩恵は `NONE_CONFIRMED`、SWT中変更時のRT残G/状態処理は `UNVERIFIED`
-- carryOverBehavior: 通常時天井は `NONE_CONFIRMED`、SWT中据え置き時のRT残G/状態処理は `UNVERIFIED`
-- powerCycleBehavior: 電源OFF→ONのみの通常時恩恵は `NONE_CONFIRMED`、SWT中電断復帰は `UNVERIFIED`
-- gameCounterReset: 正規仕様として通常時ゲーム数天井を確認できず `NONE_CONFIRMED`
+- settingChangeBehavior: 専用モード/短縮天井/朝一恩恵 `NONE_CONFIRMED`、RT中変更時の残G/内部状態処理 `UNVERIFIED`
+- carryOverBehavior: 通常時天井 `NONE_CONFIRMED`、RT中据え置き時残G/状態処理 `UNVERIFIED`
+- powerCycleBehavior: 電源OFF→ONのみの通常時固有変化 `NONE_CONFIRMED`、RT中電断復帰 `UNVERIFIED`
+- gameCounterReset: 通常時ゲーム数天井を確認できず `NONE_CONFIRMED`
 - ceilingAfterReset: `NONE_CONFIRMED`
-- modeAfterReset: 朝一/設定変更専用モード、公開振り分け `NONE_CONFIRMED`
-- stateAfterReset: SWT中設定変更/据え置き/電断時処理 `UNVERIFIED`
+- modeAfterReset: 朝一/設定変更専用モード・公開振り分け `NONE_CONFIRMED`
+- stateAfterReset: RT中設定変更/据え置き/電断時処理 `UNVERIFIED`
 - advantageousSectionReset: `NOT_APPLICABLE`
 - resetBenefits / resetPenalties: `NONE_CONFIRMED`
-- resetDetection: 本機固有ガックン/初期出目/告知ランプ等 `UNVERIFIED`
+- resetDetection: 本機固有ガックン/初期出目等 `UNVERIFIED`
 - numericResetData: `NONE_CONFIRMED`
-- `南国姉妹-30 / 南国姉妹30 / 南国姉妹 / アスワン東京` と `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / ガックン / 天井 / 天井短縮 / モード / SWT / RT残り / 変更判別` を組み替え、K-Navi、P-WORLD、pacnk、slothistory、古いDB/回顧資料を横断。
-- P-WORLD掲示板に1000G/1300〜1400Gの「天井」情報があるが、正規仕様か裏基板/改造機由来か判別不能のため本線へ採用しない。
+- 表記揺れ `しぇんしぇーのスロットマシーン30 / シェンシェ-30 / しぇんしぇーたいむ / トリビー` と、設定変更/リセット/朝一/据え置き/電源OFF ON/ガックン/天井/モード/RT残り/変更判別を組み替え、当時解析・旧DB・回顧/アーカイブ資料を横断済み。
 
 ## 主要出典
 
-### 南国姉妹-30
-- K-Navi: https://p-kn.com/slot/655/
-- P-WORLD: https://www.p-world.co.jp/machine/database/4949
-- pacnk 2007年度一覧: https://pacnk.com/photoslot/plist2007_0_0.html
-- pacnk「な」一覧: https://pacnk.com/slot/s/mlist_na.html
-- スロリスクタイム5号機一覧: https://pachisuro100.com/itiran/
+### しぇんしぇーのスロットマシーン30
+- PachinkoVista: https://www.pachinkovista.com/pfactory/model.php?km=2&nid=016696
+- パチマガスロマガ 基本システム: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/trivy_slot/08/a.php
+- パチマガスロマガ ベース: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/trivy_slot/08/c.php
+- 5号機クロニクル トリビー一覧: https://5goki.com/trivy
 - slothistory 更新情報4: https://slothistory.com/kousin_kako04.html
+- あみゅのスロット談話室: https://plaza.rakuten.co.jp/slotamyu/diary/
 
 取得日: 2026-09-01
 
 ## 9月漏れ監査メモ
 
-- `南国姉妹-30` を187件目として追加。導入月は2007-09/10 CONFLICTを維持。
-- `クレイジージョーカー` はmainに既存レコード `docs/real_machine_db/machines/2007-09-17_crazy-joker.md` を確認済み。重複追加しない。
-- `熊酒場-30` は既存 `2007-09-02_kuma-sakaba-30.md`。重複追加しない。
-- P-WORLD/Pacnk/当時一覧とmain既存群を引き続き突合し、**9月独立未登録機を閉じてから10月へ進む**。
-- 9月残候補として `しぇんしぇーのスロットマシーン-30`、`セブンボンバーA`、`ミスターマリック` 等が回顧一覧に見えるため、まずパチスロ種別・5号機・実導入時期・main既存有無を確認する。候補名だけで登録しない。
+- `しぇんしぇーのスロットマシーン30` は全国販売が9月上旬だが、沖縄先行 `2007-08-06` を確認したため遡及追加。188件目。
+- `セブンボンバーA` は既存レコードを前リレーで追加済みのため重複しない。
+- `ミスターマリック` も既存main有無を次回最優先で再確認する。候補名だけで登録しない。
+- `クレイジージョーカー`、`熊酒場-30` は既存確認済み。
+- P-WORLD/Pacnk/slothistory/当時一覧とmain既存群を突き合わせ、9月独立未登録機を閉じてから10月へ進む。
 
 ## resetBehavior 遡及QA
 
@@ -83,8 +85,9 @@
 
 ## 次回再開地点
 
-1. **LATEST_HANDOFF基準187件地点から継続。** 2007年9月一覧とmain既存群を再照合し、残る独立未登録5号機の最古から追加する。
-2. 優先監査候補: `しぇんしぇーのスロットマシーン-30` → `セブンボンバーA` → `ミスターマリック`。各候補は型式/メーカー/実導入月を別資料で確認し、より古い未処理機が判明した場合は漏れ防止を優先する。
-3. 9月監査を閉じた後、2007年10月へ前進。既確認候補は `マッドジー` 2007-10-09、`マジックモンスター2` 2007-10-22予定。`南国姉妹-30` は導入月CONFLICTのため10月側監査でも再照合対象にするが、性能レコード自体は重複作成しない。
-4. resetBehavior遡及QAは **2006年7月 `大江戸漫遊記`** から再開。
-5. PARTIAL/UNVERIFIEDは最初の検索で確定せず、表記揺れ・型式・メーカー・シリーズ・設定変更/リセット/朝一/据え置き/電断/天井/モード/ガックン/有利区間を組み替えて資料系統を横断する。競合値は平均せず `CONFLICT`。
+1. **LATEST_HANDOFF基準188件地点から継続。** 2007年9月一覧とmain既存群を再照合し、残る独立未登録5号機の最古から追加する。
+2. 最優先監査: `ミスターマリック` のmain既存有無・メーカー/型式/実導入時期を確認。`セブンボンバーA` は既存のため重複追加しない。
+3. 9月監査でより古い未処理機が判明した場合は遡及漏れとして先に追加する。9月を閉じた後2007年10月へ前進。
+4. 10月既確認候補は `マッドジー` 2007-10-09、`マジックモンスター2` 2007-10-22予定。`南国姉妹-30` は導入月CONFLICTのため10月側でも再照合するが性能レコードは重複作成しない。
+5. resetBehavior遡及QAは **2006年7月 `大江戸漫遊記`** から再開。
+6. PARTIAL/UNVERIFIEDは最初の検索で確定せず、表記揺れ・型式・メーカー・シリーズ・設定変更/リセット/朝一/据え置き/電断/天井/モード/ガックン/有利区間を組み替えて資料系統を横断する。競合値は平均せず `CONFLICT`。
