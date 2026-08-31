@@ -12,6 +12,7 @@
 - coreStatus: `COMPLETE_CORE`
 - resetBehaviorQA: `PARTIAL`
 - 新規レコードcommit: `03c4dc75522d625ac050841e592cfecade6e3326`
+- CONFLICT補正commit: `8eb70c58f0e6120d3ae2f48e7537945a5cac6388`
 
 ## 172. くりぃむしちゅー
 
@@ -34,12 +35,13 @@
 |---|---:|---:|---:|---:|
 | 1 | 1/485.45 | 1/753.29 | 1/295.21 | 97.4% |
 | 2 | 1/485.45 | 1/753.29 | 1/295.21 | 98.5% |
-| 3 | 1/442.81 | 1/675.63 | 1/267.49 | 101.2% |
+| 3 | 1/442.81 | 1/675.63* | 1/267.49 | 101.2% |
 | 4 | 1/420.10 | 1/661.98 | 1/257.00 | 104.0% |
 | 5 | 1/387.79 | 1/624.15 | 1/239.18 | 106.7% |
-| 6 | 1/359.97 | 1/569.88 | 1/220.66 | 110.8% |
+| 6 | 1/360.09 | 1/569.88 | 1/220.66 | 110.8% |
 
 - 機械割はパチ＆スロ必勝本のシミュレート値を主値。HAZUSEの整数丸め97/98/101/104/107/111%とも整合。
+- `*` 設定3 REGは必勝本 `1/675.63`、pachinko's blog `1/676` に対しHAZUSE DATA `1/645.6`。平均せず `CONFLICT` として全値を保持し、2資料が一致する1/675.63を主値に採用。
 - SUPER BIG平均約448枚、NORMAL BIG平均約348枚、REG平均約112枚。
 - HAZUSEの払い出し条件: S-BIG 465枚超、N-BIG 420枚超、REG 12Gまたは8回入賞。
 - 特殊リプレイ契機の10G演出用プチRT「緊急事態」を搭載。
@@ -52,7 +54,7 @@
 - powerCycleBehavior: `UNVERIFIED`。
 - gameCounterReset: `NOT_APPLICABLE / NONE_CONFIRMED`。通常時ゲーム数天井なし。
 - ceilingAfterReset: `NONE_CONFIRMED`。リセット短縮天井なし。
-- modeAfterReset: `NONE_CONFIRMED`。朝一専用モード/変更時モード振り分けなしを示す公開値は確認されない。
+- modeAfterReset: `NONE_CONFIRMED`。朝一専用モード/変更時モード振り分けの公開情報なし。
 - stateAfterReset: `UNVERIFIED`。10G「緊急事態」中の設定変更/電断時RT残G・内部状態処理を確定できず。
 - advantageousSectionReset: `NOT_APPLICABLE`。
 - resetBenefits / resetPenalties: 公開された朝一専用恩恵・不利要素 `NONE_CONFIRMED`。
