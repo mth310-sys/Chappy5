@@ -1,11 +1,10 @@
-// Chappy5 hall visual prototype v0.1
+// Chappy5 hall visual prototype v0.1.1
 // Pure Canvas, dependency-free, iPhone-friendly. Customer AI is intentionally not connected yet.
 (() => {
   'use strict';
 
   const canvas = document.getElementById('hall');
   const ctx = canvas.getContext('2d');
-  ctx.imageSmoothingEnabled = false;
 
   const WORLD = { w: 1280, h: 820 };
   const view = { x: 0, y: 0, zoom: 1 };
@@ -13,6 +12,7 @@
   let dragStart = null;
   let pinchStart = null;
   let lastTap = 0;
+  let dpr = 1;
 
   const C = {
     bg: '#071018', wall: '#3f4547', wallHi: '#696f70', floor: '#c7ad83',
@@ -24,22 +24,26 @@
     changer: '#707d89', text: '#f4ecd8', label: '#18232d', plant: '#456f3a'
   };
 
-  function resize() {
+  function canvasSize() {
     const r = canvas.getBoundingClientRect();
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
-    canvas.width = Math.max(1, Math.floor(r.width * dpr));
-    canvas.height = Math.max(1, Math.floor(r.height * dpr));
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    return { width: r.width, height: r.height, left: r.left, top: r.top };
+  }
+
+  function resize() {
+    const r = canvasSize();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = Math.max(1, Math.round(r.width * dpr));
+    canvas.height = Math.max(1, Math.round(r.height * dpr));
     fitView();
     draw();
   }
 
   function fitView() {
-    const r = canvas.getBoundingClientRect();
-    const z = Math.min(r.width / WORLD.w, r.height / WORLD.h) * 0.98;
+    const r = canvasSize();
+    const z = Math.min(r.width / WORLD.w, r.height / WORLD.h) * 0.94;
     view.zoom = z;
-    view.x = (r.width - WORLD.w * z) / 2;
-    view.y = (r.height - WORLD.h * z) / 2;
+    view.x = Math.round((r.width - WORLD.w * z) / 2);
+    view.y = Math.round((r.height - WORLD.h * z) / 2);
   }
 
   function rect(x,y,w,h,fill,stroke=null,lw=1) {
@@ -94,7 +98,6 @@
     rect(x,y,w,60,C.island,C.machineEdge,2);
     rect(x+3,y+27,w-6,6,C.islandTop);
 
-    // distribute installed slots across both sides while preserving 18-slot capacity.
     const occupied = new Set();
     const order = [0,9,1,10,2,11,3,12,4,13,5,14,6,15,7,16,8,17];
     for (let i=0;i<installedCount;i++) occupied.add(order[i]);
@@ -127,20 +130,17 @@
 
   function drawHall() {
     rect(0,0,WORLD.w,WORLD.h,C.bg);
-
-    // Main shell and floor
     rect(70,45,1140,720,C.wallHi,'#242a2d',4);
     tiledFloor(86,61,1108,688);
 
-    // Upper facilities: rest / toilet / smoking
     room(250,76,180,100,'休憩所',C.rest);
     room(452,76,205,100,'トイレ',C.toilet);
     room(680,76,180,100,'喫煙所',C.smoke);
-    for(let i=0;i<3;i++) { rect(275+i*48,120,34,22,'#a47f53'); }
-    for(let i=0;i<3;i++) { rect(477+i*52,118,35,40,'#8ea2aa'); }
+    for(let i=0;i<3;i++) rect(275+i*48,120,34,22,'#a47f53');
+    for(let i=0;i<3;i++) rect(477+i*52,118,35,40,'#8ea2aa');
     rect(705,115,120,36,'#737d69');
 
-    // Central cross-shaped circulation
+    // Provisional approved skeleton: 4 blocks around a central cross aisle.
     rect(535,190,90,520,C.aisle);
     rect(100,390,1030,90,C.aisle);
 
@@ -155,7 +155,6 @@
     for (const y of bottomYs) island(leftX,y,installed[k],k++);
     for (const y of bottomYs) island(rightX,y,installed[k],k++);
 
-    // Entrance, counter and operational areas
     rect(72,407,35,56,'#354d58','#0e171c',2); label('入口',108,421,60);
     room(1030,340,145,115,'カウンター',C.counter);
     rect(1050,390,105,16,'#d6b97f');
@@ -163,55 +162,123 @@
     room(1010,610,76,112,'倉庫',C.storage);
     room(1094,610,82,112,'事務所',C.office);
 
-    // Four changers at block ends near the central cross aisle.
     changer(500,300,1); changer(632,300,2); changer(500,565,3); changer(632,565,4);
-
-    // Sparse old hall decoration
     [[112,210],[112,690],[1150,205],[985,188],[965,695],[550,185]].forEach(([x,y])=>plant(x,y));
 
-    // Section labels
     label('上左ブロック',165,190,120); label('上右ブロック',650,190,120);
     label('下左ブロック',165,465,120); label('下右ブロック',650,465,120);
-
-    // Bottom info plaque
     rect(86,735,1108,14,'#7c6650');
   }
 
   function draw() {
-    const r = canvas.getBoundingClientRect();
+    // Clear the complete physical backing store first. This is important on Retina iPhones:
+    // clearing only CSS-pixel dimensions left old fragments on screen after pinch zoom.
     ctx.setTransform(1,0,0,1,0,0);
-    ctx.clearRect(0,0,r.width,r.height);
-    ctx.save();
-    ctx.translate(view.x,view.y); ctx.scale(view.zoom,view.zoom);
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+
+    // All game/world coordinates remain CSS pixels. DPR is applied exactly once here,
+    // then the camera transform is applied on top of it.
+    ctx.setTransform(dpr * view.zoom, 0, 0, dpr * view.zoom, dpr * view.x, dpr * view.y);
+    ctx.imageSmoothingEnabled = false;
     drawHall();
-    ctx.restore();
   }
 
-  function clampZoom(z) { return Math.max(0.35, Math.min(2.5, z)); }
+  function clampZoom(z) {
+    const fit = Math.min(canvas.clientWidth / WORLD.w, canvas.clientHeight / WORLD.h) * 0.94;
+    return Math.max(fit * 0.85, Math.min(2.5, z));
+  }
+
   function zoomAt(clientX,clientY,factor) {
-    const r=canvas.getBoundingClientRect();
-    const sx=clientX-r.left, sy=clientY-r.top;
-    const wx=(sx-view.x)/view.zoom, wy=(sy-view.y)/view.zoom;
-    view.zoom=clampZoom(view.zoom*factor);
-    view.x=sx-wx*view.zoom; view.y=sy-wy*view.zoom; draw();
+    const r = canvasSize();
+    const sx = clientX-r.left, sy = clientY-r.top;
+    const wx = (sx-view.x)/view.zoom, wy = (sy-view.y)/view.zoom;
+    view.zoom = clampZoom(view.zoom*factor);
+    view.x = sx-wx*view.zoom;
+    view.y = sy-wy*view.zoom;
+    draw();
   }
 
-  canvas.addEventListener('wheel',e=>{ e.preventDefault(); zoomAt(e.clientX,e.clientY,e.deltaY<0?1.12:.89); },{passive:false});
+  function beginPinch() {
+    const r = canvasSize();
+    const p = [...pointers.values()];
+    if (p.length !== 2) return;
+    const mx = (p[0].x + p[1].x) / 2 - r.left;
+    const my = (p[0].y + p[1].y) / 2 - r.top;
+    const d = Math.hypot(p[1].x-p[0].x,p[1].y-p[0].y);
+    pinchStart = {
+      d,
+      zoom: view.zoom,
+      worldX: (mx-view.x)/view.zoom,
+      worldY: (my-view.y)/view.zoom
+    };
+    dragStart = null;
+  }
+
+  canvas.addEventListener('wheel',e=>{
+    e.preventDefault();
+    zoomAt(e.clientX,e.clientY,e.deltaY<0?1.12:.89);
+  },{passive:false});
+
   canvas.addEventListener('pointerdown',e=>{
-    canvas.setPointerCapture(e.pointerId); pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});
-    if(pointers.size===1) dragStart={px:e.clientX,py:e.clientY,vx:view.x,vy:view.y};
-    if(pointers.size===2){ const p=[...pointers.values()]; pinchStart={d:Math.hypot(p[1].x-p[0].x,p[1].y-p[0].y),z:view.zoom}; }
+    e.preventDefault();
+    canvas.setPointerCapture(e.pointerId);
+    pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});
+    if(pointers.size===1) {
+      dragStart={px:e.clientX,py:e.clientY,vx:view.x,vy:view.y};
+      pinchStart=null;
+    } else if(pointers.size===2) {
+      beginPinch();
+    }
   });
+
   canvas.addEventListener('pointermove',e=>{
-    if(!pointers.has(e.pointerId))return; pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});
-    if(pointers.size===1 && dragStart){ view.x=dragStart.vx+(e.clientX-dragStart.px); view.y=dragStart.vy+(e.clientY-dragStart.py); draw(); }
-    if(pointers.size===2 && pinchStart){ const p=[...pointers.values()]; const d=Math.hypot(p[1].x-p[0].x,p[1].y-p[0].y); view.zoom=clampZoom(pinchStart.z*d/pinchStart.d); draw(); }
+    if(!pointers.has(e.pointerId)) return;
+    e.preventDefault();
+    pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});
+
+    if(pointers.size===1 && dragStart) {
+      view.x=dragStart.vx+(e.clientX-dragStart.px);
+      view.y=dragStart.vy+(e.clientY-dragStart.py);
+      draw();
+      return;
+    }
+
+    if(pointers.size===2 && pinchStart) {
+      const r = canvasSize();
+      const p=[...pointers.values()];
+      const d=Math.hypot(p[1].x-p[0].x,p[1].y-p[0].y);
+      const mx=(p[0].x+p[1].x)/2-r.left;
+      const my=(p[0].y+p[1].y)/2-r.top;
+      view.zoom=clampZoom(pinchStart.zoom*d/Math.max(1,pinchStart.d));
+      view.x=mx-pinchStart.worldX*view.zoom;
+      view.y=my-pinchStart.worldY*view.zoom;
+      draw();
+    }
+  }, {passive:false});
+
+  function pointerEnd(e) {
+    pointers.delete(e.pointerId);
+    if (pointers.size===1) {
+      const p=[...pointers.values()][0];
+      dragStart={px:p.x,py:p.y,vx:view.x,vy:view.y};
+      pinchStart=null;
+    } else {
+      dragStart=null;
+      pinchStart=null;
+    }
+  }
+
+  canvas.addEventListener('pointerup',e=>{
+    pointerEnd(e);
+    const now=Date.now();
+    if(now-lastTap<300) { fitView(); draw(); }
+    lastTap=now;
   });
-  function pointerEnd(e){ pointers.delete(e.pointerId); dragStart=null; pinchStart=null; }
-  canvas.addEventListener('pointerup',pointerEnd); canvas.addEventListener('pointercancel',pointerEnd);
-  canvas.addEventListener('dblclick',()=>{fitView();draw();});
-  canvas.addEventListener('pointerup',e=>{ const now=Date.now(); if(now-lastTap<300){fitView();draw();} lastTap=now; });
+  canvas.addEventListener('pointercancel',pointerEnd);
+  canvas.addEventListener('dblclick',()=>{ fitView(); draw(); });
+  canvas.addEventListener('contextmenu',e=>e.preventDefault());
 
   window.addEventListener('resize',resize,{passive:true});
+  window.addEventListener('orientationchange',()=>setTimeout(resize,80),{passive:true});
   resize();
 })();
