@@ -105,6 +105,27 @@ REG純増は別解析サイトに「約100枚」とする記載があり競合�
 - 青7BIG後RT: 30G
 - REG後RT: 1000G
 
+## resetBehavior
+
+resetBehaviorQA: PARTIAL
+
+settingChangeBehavior: UNVERIFIED
+carryOverBehavior: UNVERIFIED
+powerCycleBehavior: UNVERIFIED
+gameCounterReset: NOT_APPLICABLE_TO_CEILING（通常時天井は確認されず。ボーナス後RT残G数の設定変更/電断時処理は未確定）
+ceilingAfterReset: NOT_APPLICABLE（通常時天井機能を確認できず）
+modeAfterReset: NOT_APPLICABLE（通常時のモード管理機を示す資料なし）
+stateAfterReset: UNVERIFIED（ボーナス後RT中の設定変更/電断時のRT状態処理を本機固有資料で確定できず）
+advantageousSectionReset: NOT_APPLICABLE（5号機初期・有利区間制度導入前）
+resetBenefits: NONE_CONFIRMED
+resetPenalties: NONE_CONFIRMED
+resetDetection: UNVERIFIED（本機固有のガックン等の変更判別を確定できる資料未発見）
+numericResetData: NONE_CONFIRMED
+
+### resetBehavior research memo
+
+取得日2026-08-31。「出ましたハクション大魔王」「ハクション大魔王 5号機」「サミー」を軸に、設定変更/リセット/朝一/据え置き/電源OFF ON/ガックン/RT/ドキドキタイム/REG後1000G/天井へ検索語を変更。P-WORLD、パチマガスロマガ、パチ＆スロ必勝本、Cranky Seven、後年回顧資料を横断した。全ボーナス後RT（赤180G/白60G/青30G/REG1000G）と通常時天井を示す資料がないことは確認できるが、設定変更または単純電断時に残存RTを消去/保持するかを明示した機種固有資料には到達できなかった。初期5号機一般論から推測せずUNVERIFIEDのままとする。
+
 ## sources
 
 取得日: 2026-08-31
@@ -119,7 +140,7 @@ REG純増は別解析サイトに「約100枚」とする記載があり競合�
    - reliability: ANALYSIS_HIGH
 3. Cranky Seven — 出ましたハクション大魔王解析
    - https://crankyseven.com/sp/demasitahakusyon-pc.htm
-   - BIG3種設定別確率、BIG合成、REG、機械割、BIG純増約230枚、RT各ゲーム数
+   - BIG3種設定別確率、BIG合成、REG、機械割、BIG純増約230枚、RT各ゲーム数。設定変更情報を含むサイト内導線も確認したが本機固有のリセット処理は取得できず。
    - reliability: ANALYSIS_HIGH
 4. パチマガスロマガ — 出ましたハクション大魔王 基本システム
    - https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sammy_slot/92/a.php
@@ -133,13 +154,27 @@ REG純増は別解析サイトに「約100枚」とする記載があり競合�
    - https://www.dorubako.biz/year/2005.html
    - 出玉率95.33%〜106.23%の補助照合
    - reliability: ANALYSIS_SINGLE
+7. パチ＆スロ必勝本「出ましたハクション大魔王 基本スペック」
+   - https://p.hisshobon.jp/machine/492/1/8407
+   - メーカー発表値としてBIG/REG・機械割、全ボーナス後RT、REG後1000G RTを再照合
+   - reliability: ANALYSIS_HIGH
+8. P-WORLD「出ましたハクション大魔王」
+   - https://www.p-world.co.jp/machine/database/4006
+   - 5号機RT、2005年11月導入、出玉率を再照合
+   - reliability: HIGH
 
 ## missingFields
 
 - 50枚あたりゲーム数 / ベース
+- 設定変更時のRT残G数/状態処理
+- 据え置き/電源OFF→ON時のRT状態処理
+- 本機固有の変更判別挙動
 
 ## conflicts
 
 - 導入時期: サミー現行製品一覧は2005.10表記、複数の5号機資料は2005/11導入とする。本DBのreleaseDateはホール導入時期を優先し2005-11とし、公式の2005.10は製品年月候補として保持。
 - REG純増: パチマガスロマガは約48枚、Cranky Sevenは約100枚。定義/算出差の可能性があるため平均化せずCONFLICT。物差し利用時は約48枚を高信頼資料値として優先する。
 - 機械割: 95.4〜106.2%と95.33〜106.23%があるが、同一値の丸め精度差とみなし、95.4〜106.2%表を採用。
+
+coreStatus: PARTIAL
+resetBehaviorQA: PARTIAL
