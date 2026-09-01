@@ -6,109 +6,102 @@
 
 - 最新mainの `README.md`、実機DBミッションv0.7、`INDEX.md`、既存レコード、直前 `LATEST_HANDOFF.md` を再読して継続。
 - `INDEX.md` は旧19件地点のため、README規定どおり本 `LATEST_HANDOFF.md` を進捗正本とする。
-- 直前handoffは244件地点 / 2008-04-14 `デジスロV-30` まで完了。
-- 2008-04-15〜19を旧業界史・メーカー別一覧・2008年度機種一覧で境界監査し、244件より前へ差し込む未処理5号機は今回確認できず。
-- 今回、2008-04-20納品開始の `エイリアン2` を245件目、同日納品開始の `クイージ` を246件目として追加。
-- 導入時系列の具体日前進地点は **2008-04-20**。
+- 直前handoffは246件地点 / 2008-04-20 `クイージ` まで完了。
+- 4/20同日残と4/21境界を再監査し、既存 `月光仮面（2008-04-06）` が238件目として既に収録済みであることも再確認。重複追加しない。
+- 今回、KPE `ビートマニア / beatmania` を247件目として追加。
+- 導入時系列の具体日前進地点は **2008-04-21（一部先行導入）**。通常導入は2008-05-07、当時発表の納品開始予定は2008-05-06で、定義を混ぜず併記。
 - resetBehavior遡及QAは直前handoffどおり `球児（2006-09）` まで補完済み。次対象は `ジャックポット・トロピカルバージョン2（2006-09）` 以降。
 
-## 245. エイリアン2（アビリット）
+## 247. ビートマニア / beatmania（KPE）
 
-- record: `docs/real_machine_db/machines/2008-04-20_alien2.md`
-- commit: `46331831c28e12bc795b3b8668ff696397771bab`
-- modelName: `ALIENS-X`
-- releaseDate: `2008-04-20`
-- releaseDateConfidence: `INDUSTRY_PRIMARY_EXACT_DELIVERY_DATE`
-- systemType: ボーナス + CZ経由RT / 技術介入
-- settingStructure: `1 / 2 / 5 / 6`
-- coreStatus: `COMPLETE_CORE_WITH_CONFLICT`
+- record: `docs/real_machine_db/machines/2008-04-21_beatmania.md`
+- commit: `67bd0b95896cd2de9196131b157d4b04bab24f47`
+- modelName: `ビートマニアJA`
+- releaseDate: `2008-04-21`
+- releaseDateDefinition: 一部先行導入開始日
+- regularIntroduction: `2008-05-07`
+- announcedDeliveryStart: `2008-05-06`
+- releaseDateConfidence: `INDUSTRY_PRIMARY_EXACT_ADVANCE_INTRODUCTION_DATE`
+- systemType: ボーナス + AT + ART
+- coreStatus: `PARTIAL_CORE_BASE_UNVERIFIED`
 - resetBehaviorQA: `PARTIAL`
 
 ### 性能コア
 
-- BIG合成: `1/799.22 / 1/728.18 / 1/655.36 / 1/618.26`。
-- MID: `1/799.22 / 1/728.18 / 1/655.36 / 1/618.26`。
-- REG: `1/1638.40 / 1/1638.40 / 1/1489.45 / 1/1260.31`。
-- ボーナス合成: `1/321.25 / 1/297.89 / 1/268.59 / 1/248.24`。
-- 1000円ベース: `39.73 / 40.14 / 40.62 / 41.48G`。パチマガスロマガとK-Naviで同系列を確認。
-- BIG約307〜310枚、MID約205枚、REG約77〜80枚。
-- 全ボーナス後に最大30G CZ「デンジャーゾーン」。特殊リプレイで50Gまたは1000G RTへ。
-- RT純増約 `+0.6枚/G`。50G契機を目押しで回避して1000G契機を待つ技術介入構造。
+- BIG: `1/390 / 1/379 / 1/352 / 1/334 / 1/315 / 1/303`。
+- REG: `1/780 / 1/753 / 1/745 / 1/728 / 1/705 / 1/676`。
+- 全ボーナス合成: `1/260 / 1/252 / 1/239 / 1/229 / 1/218 / 1/209`。
+- 機械割: `98.3 / 99.9 / 103.1 / 105.7 / 108.7 / 111.0%`。当時攻略の丸め系列 `98 / 99 / 103 / 105 / 109 / 111%` と整合。
+- BIG実獲得目安: 約270〜273枚。
+- REG実獲得目安: 約50〜56枚。
+- BIG後はART `RAVE TIME / レイブタイム` に100%突入、最大100G。通常時にはAT `TRANCE MODE / トランスモード` を搭載。
+- 50枚ベースは `ビートマニア / beatmania / ビートマニアJA / KPE` と `50枚 / 1000円 / ベース / コイン持ち / 通常時小役` を変えて、当時業界、K-Navi、P-WORLD、旧攻略、後年DB、中古実機資料まで横断したが比較可能値を確定できず `UNVERIFIED_AFTER_RESEARCH`。
 
-### 機械割CONFLICT
+### CONFLICT
 
-- 当時事前営業/フル攻略表記: `98 / 103 / 110 / 118%`。
-- パチマガスロマガ実解析シミュレート: `95.67 / 98.82 / 104.15 / 108.79%`。
-- 2008-05-01時点の旧業界議論/回顧にも「118%と営業されたが実質108%」との記録あり。
-- 平均化せず `CONFLICT_PAYOUT_DEFINITION_AND_PRELAUNCH_CLAIM` として双方保持。
-
-### v0.7 resetBehavior
-
-- 通常時ゲーム数天井、リセット短縮天井、朝一専用モード、公開朝一恩恵/不利数値は `NONE_CONFIRMED`。
-- 有利区間は `NOT_APPLICABLE`。
-- CZ中または50G/1000G RT中の設定変更・据え置き・電源OFF→ON時の残G/内部RT状態、本機固有ガックン/初期出目等は、表記揺れ・型式名・メーカー名を含めメーカー発表系、当時業界、K-Navi、パチマガ、P-WORLD、当時攻略、旧業界史まで横断後も直接資料を確定できず `UNVERIFIED_AFTER_RESEARCH`。
-
-## 246. クイージ（コルモ / SNKプレイモア総販売）
-
-- record: `docs/real_machine_db/machines/2008-04-20_quieasy.md`
-- commit: `7f71079fccf82a3ed980b9b2272a2dec9ed9c58e`
-- releaseDate: `2008-04-20`
-- releaseDateConfidence: `INDUSTRY_PRIMARY_EXACT_DELIVERY_DATE`
-- systemType: ボーナス + CZ経由100G完走型RT
-- coreStatus: `COMPLETE_CORE`
-- resetBehaviorQA: `PARTIAL`
-
-### 性能コア
-
-- BIG合成: `1/390.10 / 1/368.18 / 1/348.60 / 1/315.08 / 1/287.44 / 1/266.41`。
-- MB合成: `1/799.22 / 1/728.18 / 1/682.67 / 1/655.36 / 1/630.15 / 1/404.54`。
-- 全ボーナス合成: `1/262.14 / 1/244.54 / 1/230.76 / 1/212.78 / 1/197.40 / 1/160.63`。当時業界記事の1/262.1〜1/160.6と一致。
-- 機械割: `95.22 / 97.53 / 99.77 / 103.19 / 106.62 / 112.23%`。
-- 1000円ベース: `34.95 / 35.18 / 35.44 / 35.70 / 35.96 / 36.32G`。
-- BIG約254枚、MB約108枚。
-- BIG後は最長30G CZ「わくわくタイム」。特殊リプレイで100G完走型RT「アイスエイジタイム」、純増約 `+0.7枚/G`。
-- 通常時にも特殊リプレイ確率が上がる内部CZが周期的に存在。
+- `CONFLICT_ART_NET_INCREASE_0.3_VS_0.4`
+  - 当時グリーンべると: 100Gで約30枚期待 → 約+0.3枚/G相当。
+  - 旧実機販売DB: 約+0.3枚/G。
+  - 当時攻略パチスロ救急車: 約+0.4枚/G。
+  - 平均化しない。
+- `CONFLICT_BIG_PAYOUT_THRESHOLD_350_OVER_VS_305_OVER`
+  - K-Navi: BIGは350枚超払い出し終了。
+  - P-WORLD: BIGは305枚超払い出し終了。
+  - REGは70枚超払い出し終了で一致。
 
 ### v0.7 resetBehavior
 
-- 通常時周期CZの存在は当時業界/攻略資料で確認。ただし正確な周期G数は今回の再探索で確定できず `UNVERIFIED_AFTER_RESEARCH`。
-- 周期CZカウンタの設定変更時リセット/据え置き・電源OFF→ON引継ぎ、CZ/RT中の残G・内部状態処理、本機固有変更判別は、検索語・資料系統を変えて再探索後も `UNVERIFIED_AFTER_RESEARCH`。
-- 通常ゲーム数天井、設定変更時短縮天井、朝一専用モード、公開朝一数値は `NONE_CONFIRMED`。
-- 有利区間は `NOT_APPLICABLE`。
+- settingChangeBehavior: `UNVERIFIED_AFTER_RESEARCH`
+- carryOverBehavior: `UNVERIFIED_AFTER_RESEARCH`
+- powerCycleBehavior: `UNVERIFIED_AFTER_RESEARCH`
+- gameCounterReset: `NOT_APPLICABLE_NORMAL_CEILING_NONE_CONFIRMED`
+- ceilingAfterReset: `NONE_NORMAL_CEILING_CONFIRMED_BY_OLD_ANALYSIS`
+- modeAfterReset: `UNVERIFIED_AFTER_RESEARCH_AT_STATE`
+- stateAfterReset: `UNVERIFIED_AFTER_RESEARCH_AT_ART_RT_STATE`
+- advantageousSectionReset: `NOT_APPLICABLE`
+- resetBenefits: `NONE_CONFIRMED`
+- resetPenalties: `NONE_CONFIRMED`
+- resetDetection: `UNVERIFIED_AFTER_RESEARCH`
+- numericResetData: `NONE_CONFIRMED`
+
+### resetBehavior調査要点
+
+- `ビートマニア / beatmania / ビートマニアJA / KPE` と `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 電断 / レイブタイム / トランスモード / RT状態 / ART状態 / ガックン / 初期出目 / 天井` を組み替えて再探索。
+- メーカー現存アーカイブ、当時グリーンべると/P-WORLD業界記事、K-Navi、P-WORLD機種DB、当時攻略サイト、旧実機DB・販売資料、後年回顧DBを横断。
+- 通常時ゲーム数天井は旧攻略資料で「なし」と確認。
+- 設定変更時のAT状態、ART/RT内部状態の初期化/引継ぎ、据え置き・電源OFF→ONとの差、本機固有ガックン/初期出目等は直接資料を確定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 朝一専用モード、設定変更専用恩恵/不利、公開朝一数値は `NONE_CONFIRMED`。
+- 一般的なKPE/5号機挙動から推測補完しない。
 
 ## 今回の主要出典
 
 取得日: 2026-09-01
 
-### エイリアン2
-- グリーンべると: https://web-greenbelt.jp/00003522/
-- K-Navi機種TOP: https://p-kn.com/slot/790/
-- K-Navi通常時小役/ベース: https://p-kn.com/slot/790/5458/
-- パチマガスロマガ基本: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/abilit_slot/20/kyotai.php
-- パチマガスロマガボーナス/機械割: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/abilit_slot/20/h.php
-- パチマガスロマガ小役/ベース: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/abilit_slot/20/c.php
-- P-WORLD: https://www.p-world.co.jp/machine/database/5131
-- 当時新台紹介: https://ameblo.jp/samurai777net/entry-10076921692.html
-- パチスロ業界初まとめ個別仕様: https://slothistory.com/bangai_ksiyou.html
-- パチスロ業界初まとめ議論11: https://www.slothistory.com/kokolog-11.html
-- 当時攻略アーカイブ: https://plaza.rakuten.co.jp/mosnet/diaryall/
-
-### クイージ
-- グリーンべると: https://web-greenbelt.jp/00003513/
-- P-WORLD業界ニュース転載: https://news.p-world.co.jp/articles/2737/greenbelt
-- パチマガスロマガ基本: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/colmo_slot/02/a.php
-- パチマガスロマガボーナス/機械割: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/colmo_slot/02/h.php
-- パチマガスロマガ小役/ベース: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/colmo_slot/02/c.php
-- パチマガスロマガ単独抽選: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/colmo_slot/02/k.php
-- K-Navi: https://p-kn.com/slot/792/direct/
-- 当時攻略アーカイブ: https://plaza.rakuten.co.jp/mosnet/diaryall/
+### ビートマニア
+- グリーンべると / P-WORLD業界ニュース「音ゲー『ビートマニア』をKPEがS機に」
+  - https://news.p-world.co.jp/articles/2728/greenbelt
+- グリーンべると / P-WORLD業界ニュース「ビートマニア段位認定キャンペーン開催」
+  - https://news.p-world.co.jp/articles/2827/greenbelt
+- コナミアミューズメント機種アーカイブ
+  - https://www.konami.com/amusement/psm/archive/ps/2008/beatmania/
+- K-Navi
+  - https://p-kn.com/slot/796/
+- P-WORLD
+  - https://www.p-world.co.jp/machine/database/5138
+- パチスロ救急車
+  - https://www.eightbeat.com/slot99/kishu/ha_gyou/hi/beatmania/page_menu.html
+- pachinko’s blog スペック整理
+  - https://pachinko.hatenablog.jp/entry/2008/05/beatmania
+- 中一商事 実機資料
+  - https://www.nakaiti.com/html/sKpe051.html
 
 ## 重複防止
 
-- 既存244件の再追加禁止。
-- 245 `エイリアン2`、246 `クイージ` も再追加禁止。
-- `ALIENS2` / `ALIENS-X` は245の表記・型式系として扱い別レコード化しない。
-- クイージはコルモ製、イートレック共同開発、SNKプレイモア総販売。メーカー名揺れで別レコード化しない。
+- 既存246件の再追加禁止。
+- 247 `ビートマニア / beatmania` も再追加禁止。
+- `ビートマニアJA` は247の型式名であり別レコード化しない。
+- 4/21は一部先行導入、5/7は通常導入。5/7で同機を再追加しない。
+- `月光仮面 / ゲッコウカメン2A` は238として既収録。4/6境界監査で再確認済み。
 
 ## resetBehavior 遡及QA
 
@@ -119,9 +112,10 @@
 
 ## 次回再開地点
 
-1. **LATEST_HANDOFF基準246件地点 / 2008-04-20まで完了。**
-2. **同日4/20の残候補がないか最終監査してから、4/21一部先行導入説のある `ビートマニア（KPE）` を最優先で日付定義監査する。**
-3. `ビートマニア` は4/21一部先行導入と5/7本導入の資料差を混同せず、先行導入をreleaseDateに採用するかを当時一次/業界資料で決める。
-4. 4月後半の `シートラッド` 等、月精度しかない候補も具体日を再探索し、ビートマニアより前なら差し込む。
-5. resetBehavior遡及QAは `ジャックポット・トロピカルバージョン2（2006-09）` から継続。
-6. 欠損は表記揺れ・型式名・メーカー・シリーズ名と、設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックン/有利区間等へ検索語を変え、公式・業界・当時解析・旧DB・アーカイブ・回顧資料を横断してから `UNVERIFIED` 判定する。
+1. **LATEST_HANDOFF基準247件地点 / 最初の実ホール導入確認日2008-04-21まで完了。**
+2. **2008-04-22〜30の未処理5号機を境界監査する。月精度候補は具体日を再探索し、4月後半導入が確定するものがあれば時系列で差し込む。**
+3. `シートラッド / シートラッド30（岡崎産業）` は2008年5月導入とする後年資料があるため、4月機と決め打ちしない。25φ/30φの独立型式・具体導入日・性能共通性を先に監査する。
+4. ビートマニアは5/7通常導入でも再追加しない。
+5. 4月後半に具体日根拠を持つ未処理がなければ、2008年5月の最古未処理機から前進する。
+6. resetBehavior遡及QAは `ジャックポット・トロピカルバージョン2（2006-09）` から継続。
+7. 欠損は表記揺れ・型式名・メーカー・シリーズ名と、設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックン/有利区間等へ検索語を変え、公式・業界・当時解析・旧DB・アーカイブ・回顧資料を横断してから `UNVERIFIED` 判定する。
