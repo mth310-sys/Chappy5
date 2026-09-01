@@ -6,106 +6,62 @@
 
 - 最新mainの `README.md`、実機DBミッションv0.7、`INDEX.md`、既存レコード、直前 `LATEST_HANDOFF.md` を再読して継続。
 - `INDEX.md` は旧19件地点のため、README規定どおり本 `LATEST_HANDOFF.md` を進捗正本とする。
-- 直前正本は **304 `まつり屋華恋`（フォープ企画・プロデュース / KPE製造 / 2008-10-19）**。
-- 2008年10月境界を再監査し、直前地点より前へ遡る未登録2機種を確定。
-- **305 `バウンティキラー`（山佐 / 2008-10-05）**、**306 `豊漁`（北電子 / 2008-10-05）** を遡及追加済み。既存304件は再収集せず、漏れ補完として扱う。
-- 2機種とも性能コア + ミッションv0.7 `resetBehavior` を同時収集。競合値は平均せず保持。
+- 直前正本は **306 `豊漁`（北電子 / 2008-10-05）**。
+- 2008年10月後半の境界監査を継続し、ALL7.jpの2008年10月導入一覧とrepo既存レコードを照合。
+- ALL7一覧の `GU-GUガンモ`、`ジャックラッシュ`、`我 藤岡弘、柳生十兵衛見参` 等はパチンコ機であり、本パチスロDB本線には混入させない。
+- 10月27日導入予定の未登録パチスロ **307 `パチスロクローズ武装戦線`（トリビー）** を追加。
+- 性能コア + ミッションv0.7 `resetBehavior` を同時収集。競合値は平均せず保持。
 
-## 305. バウンティキラー
+## 307. パチスロクローズ武装戦線
 
-- record: `docs/real_machine_db/machines/2008-10-05_bounty-killer.md`
-- manufacturer: 山佐
-- modelNumber: `バウンティキラーC`（P-WORLD / HAZUSEで照合、HAZUSE検定番号6S1046）
-- releaseDate: **2008-10-05**。グリーンべると2008-09-20記事で「納品は10月5日からの予定」と明記。
+- record: `docs/real_machine_db/machines/2008-10-27_crows-busosen.md`
+- manufacturer: トリビー
+- modelNumber: `パチスロ クローズ R`（2008年トリビー検定通過記録。メーカー一次現存資料未回収のためRETROSPECTIVE扱い）
+- releaseDate: **2008-10-27**。ALL7.jp 2008年10月導入予定一覧で確認。5号機クロニクルの2008年10月表記とも整合。
 - generation: 5号機
-- systemType: ボーナス+CZ+次回ボーナスまでRT（RT中3択メイン役ナビ）。
-- BIG合算: **1/448.88 / 1/414.78 / 1/374.49 / 1/346.75**（設定1〜4）。
-- REG: **1/897.75 / 1/829.57 / 1/682.67 / 1/564.97**。
-- ボーナス合算: **1/299.25 / 1/276.52 / 1/241.83 / 1/214.87**。
-- 1000円ベース: **31.80 / 32.05 / 32.31 / 33.31G**（設定1〜4、パチマガスロマガ）。当時グリーンべるとの約32Gとも整合。
-- RT「バウンティタイム」純増約**+0.5枚/G**。ボーナス後最大100Gの「バウンティゾーン」から特殊リプレイで入り、次回ボーナスまで継続（シングル役一部入賞でパンクあり）。
-- 平均獲得: HYPER BIG約**406枚** / NORMAL BIG約**330枚** / REG約**80枚**。
-- 通常ゲーム数天井は確認なし。ボーナス後最大100Gゾーンを通常天井と混同しない。
-- 機械割はパチマガスロマガのシミュレート **96.32 / 99.55 / 105.64 / 111.24%** とHAZUSE **96.5 / 99.6 / 105.1 / 110.1%** が競合。平均せず `CONFLICT`。
-- BIG規定払い出し条件もパチマガとK-Naviに差があり `CONFLICT`。実獲得枚数とは定義分離。
-- 一部後年DBのバウンティキラー欄に別機種由来とみられる説明混入を確認し、導入時期・性能値の根拠から除外。
-- `coreStatus: COMPLETE_CORE_WITH_PAYOUT_AND_PAYOUT_CONDITION_CONFLICTS`。
+- systemType: ボーナス + CZ/モード + 100G RT。
+- BIG合算: **1/332.67 / 1/319.69 / 1/306.24 / 1/296.54 / 1/287.44 / 1/277.69**。
+- REG合算: **1/574.88 / 1/532.81 / 1/481.88 / 1/445.82 / 1/404.54 / 1/390.10**。
+- ボーナス合算: **1/210.73 / 1/199.80 / 1/187.25 / 1/178.09 / 1/168.04 / 1/162.22**。
+- 1000円ベース: **35.39 / 35.76 / 35.88 / 36.21 / 36.33 / 36.71G**（設定1〜6、パチマガスロマガ）。
+- BIG約**312枚**、REG約**117枚**。
+- RT「クローズチャンス」は**100G**。通常時はステップアップリプレイで春道/P.A.D/武装モードへ移行し、スペシャルリプレイ成立からRT突入を狙う構造。
+- RT純増/Gは現存資料から比較可能な直接値を確定できず `UNVERIFIED_AFTER_RESEARCH`。旧前作「パチスロクローズ」の無限ART約0.9枚/Gは別機種なので流用していない。
+- 機械割はパチマガスロマガ・シミュレート **98.02 / 100.22 / 102.50 / 104.55 / 106.60 / 108.59%** と5号機クロニクル **97.0 / 99.0 / 102.0 / 104.0 / 107.0 / 110.0%** が競合。平均せず `CONFLICT`。
+- `coreStatus: COMPLETE_CORE_EXCEPT_RT_NET_INCREASE_WITH_PAYOUT_RATE_CONFLICT`。
 
-### resetBehavior（305）
+### resetBehavior（307）
 
-- `settingChangeBehavior`: `UNVERIFIED_AFTER_RESEARCH`。パチマガスロマガの現存インデックスに「攻め時・ヤメ時・設定変更時」項目は存在するが本文を回収できず、機種名/型式名/山佐 + 設定変更/リセット/朝一/据え置き/電源OFF ON/天井/RT/ガックンを組み替えても直接値を確定できず。
-- `carryOverBehavior`: `UNVERIFIED_AFTER_RESEARCH`。据え置き時のバウンティゾーン残G/RT状態を直接確定できず。
-- `powerCycleBehavior`: `UNVERIFIED_AFTER_RESEARCH`。電源OFF→ONのみのゾーン残G/RT/初期出目処理を直接確定できず。
-- `gameCounterReset`: 通常ゲーム数天井は非該当。バウンティゾーン残Gの設定変更時処理のみ未確定。
+- `settingChangeBehavior`: `UNVERIFIED_AFTER_RESEARCH`。クローズ武装戦線 / パチスロ クローズ R / トリビーと「設定変更・リセット・朝一・据え置き・電源OFF ON・ガックン・RT・CZ・モード」を組み替え、当時解析・旧DB・回顧資料を横断したが、本機固有の設定変更時初期モード/CZ/RT状態を直接確定できず。
+- `carryOverBehavior`: `UNVERIFIED_AFTER_RESEARCH`。据え置き時の春道/P.A.D/武装モード、CZ相当状態、RT残Gの保持方法は未確定。
+- `powerCycleBehavior`: `UNVERIFIED_AFTER_RESEARCH`。電源OFF→ONのみの場合のモード/CZ/RT残状態・初期出目処理は未確定。
+- `gameCounterReset`: 通常ゲーム数天井は確認なし。RT残Gの設定変更/電断時処理のみ未確定。
 - `ceilingAfterReset`: 通常天井/リセット専用短縮天井は確認なし。
-- `modeAfterReset` / `stateAfterReset`: 本機固有の初期状態を直接確定できず。
+- `modeAfterReset` / `stateAfterReset`: 通常時モード・RT/CZ構造自体は存在するが、設定変更時の初期振り分け/保持処理を直接確定できず。
 - `advantageousSectionReset`: `NOT_APPLICABLE`（5号機・有利区間制度前）。
 - `resetBenefits` / `resetPenalties`: 朝一専用の公開恩恵/不利を確認できず。
-- `resetDetection`: ガックン/初期出目/表示等を含め再探索したが本機固有条件は未確定。
-- 公開朝一専用数値: 短縮天井、モード振り分け、朝一当選率、リセット恩恵発生率はいずれも確認なし。
+- `resetDetection`: ガックン/初期出目/背景モード/液晶表示等を含め再探索したが本機固有条件は未確定。
+- 公開朝一数値: 短縮天井、設定変更時モード振り分け、朝一当選率、リセット恩恵率はいずれも確認なし。
 
-## 306. 豊漁
-
-- record: `docs/real_machine_db/machines/2008-10-05_horyo.md`
-- manufacturer: 北電子
-- modelNumber: **`ホウリョウ7`**。北電子公式検定情報と当時グリーンべるとで確認。
-- releaseDate: **2008-10-05**。グリーンべると2008-08-29記事で「10月5日より納品がスタート」と明記。
-- generation: 5号機
-- systemType: ノーマル/完全告知 + 演出用プチRT。
-- BIG: **1/292.57 / 1/282.48 / 1/273.07 / 1/264.26 / 1/256.00 / 1/248.24**。
-- REG: **1/512.00 / 1/512.00 / 1/431.16 / 1/372.36 / 1/341.33 / 1/327.68**。
-- 合算: **1/186.18 / 1/182.04 / 1/167.18 / 1/154.57 / 1/146.29 / 1/141.24**。
-- 1000円ベース: **36.90G（設定1〜5） / 38.57G（設定6）**（パチマガスロマガ、プチRT非考慮）。
-- BIG約**312枚**、REG約**104枚**。
-- タイ図柄/特殊リプレイ後の「豊漁チャンス」は出玉獲得用RTではなく演出用プチRT。P-WORLD/業界記事の最大4Gとパチマガの入賞後3G表記は数え方差の可能性があるため `CONFLICT_DEFINITION_OR_COUNTING` として併記。
-- 機械割はK-Navi **96.54 / 97.76 / 99.97 / 102.13 / 104.06 / 107.30%**（5号機クロニクルは丸め一致）に対し、パチマガスロマガ・シミュレート **97.31 / 98.53 / 100.98 / 103.48 / 105.56 / 109.12%**。平均せず `CONFLICT`。
-- `coreStatus: COMPLETE_CORE_WITH_PAYOUT_RATE_CONFLICT`。
-
-### resetBehavior（306）
-
-- `settingChangeBehavior`: `UNVERIFIED_AFTER_RESEARCH`。豊漁/豊漁7/ホウリョウ7/北電子 + 設定変更/リセット/朝一/据え置き/電源OFF ON/天井/ガックンを組み替え、公式・当時記事・攻略・旧DBを横断しても本機固有の変更時初期状態を直接確定できず。
-- `carryOverBehavior`: 通常ゲーム数天井は非該当。演出用プチRT残状態の据え置き処理のみ未確定。
-- `powerCycleBehavior`: 電源OFF→ONのみの演出用プチRT残状態/初期出目処理を直接確定できず。
-- `gameCounterReset`: `NOT_APPLICABLE`。通常ゲーム数/ボーナス間ゲーム数による天井は確認なし。
-- `ceilingAfterReset`: `NOT_APPLICABLE`。通常天井/リセット短縮天井は確認なし。
-- `modeAfterReset`: 通常時モード管理/朝一専用モードは確認なし。
-- `stateAfterReset`: 演出用プチRT残状態のみ未確定。
-- `advantageousSectionReset`: `NOT_APPLICABLE`（5号機・有利区間制度前）。
-- `resetBenefits` / `resetPenalties`: 朝一専用の公開恩恵/不利は確認なし。
-- `resetDetection`: ガックン/初期出目/告知ランプ/液晶表示を含め再探索したが本機固有条件は未確定。
-- 公開朝一数値: 短縮天井、モード振り分け、朝一当選率、リセット恩恵率はいずれも確認なし。
-
-## 305-306主要出典
+## 307主要出典
 
 取得日: 2026-09-02
 
-### バウンティキラー
-- https://web-greenbelt.jp/00003809/
-- https://www.p-world.co.jp/machine/database/5301
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/159/h.php
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/159/c.php
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/159/a.php
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/159/yamasa_slot_159.php
-- https://hazuse.com/machine/pachislot/6S1046/
-- https://p-kn.com/slot/861/
-
-### 豊漁
-- https://web-greenbelt.jp/00003747/
-- https://www.kitadenshi.co.jp/slot-kentei/horyo/
-- https://www.p-world.co.jp/machine/database/5308
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/kitac_slot/67/h.php
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/kitac_slot/67/c.php
-- https://p-kn.com/slot/855/6875/
-- https://p-kn.com/slot/855/
-- https://5goki.com/kitac
+- https://www.all7.jp/plans/index/2008/10
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/trivy_slot/11/a.php
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/trivy_slot/11/h.php
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/trivy_slot/11/c.php
+- https://5goki.com/trivy
+- https://q-and-a.hatenablog.com/entry/2016/10/06/114509
+- https://www.marimo0925.net/pachislot-kikaiwari-ranking-close-ban/
 
 ## 境界監査・重複防止
 
-- **既存306件の再追加禁止。**
-- 305/306は304より前の日付のため、件数番号は追加順、releaseDateは実導入/納品時系列として扱う。将来INDEX統合時に日付ソートと件数表示を整理する。
-- `バウンティキラー` と `豊漁` はともに2008-10-05納品群の漏れとして補完。
+- **既存307件の再追加禁止。**
+- 305 `バウンティキラー`、306 `豊漁` は2008-10-05の遡及漏れ補完。
 - 302 `アカギ～永続の闘牌～` は2008-10-14、303 `天地を喰らう` と304 `まつり屋華恋` は2008-10-19で処理済み。
-- 2008-10-06〜13、および10-20〜31は引き続き境界監査対象。既存レコードと照合し、今回同様に直前地点より前の漏れが見つかった場合は遡及追加する。
+- ALL7.jpの10月20日群ではパチンコ機が混在するため、名称だけでパチスロ本線へ入れない。`天地を喰らう` / `まつり屋華恋` は既存済み。
+- `パチスロクローズ武装戦線` は2008-10-27導入予定として新規追加。
 - `ハードボイルド～グリフォンの幻影～`、`南国育ち` は2008-11-03納品群として確認済みで、10月群へ混入させない。
 - `鬼火`、`サイサイ` は2008-11-24納品開始資料があるため10月へ混入させない。
 
@@ -116,7 +72,7 @@
 
 ## 次回再開地点
 
-1. **LATEST_HANDOFF基準306件地点。まず2008-10-06〜13と10-20〜31の境界を再監査し、既存未登録機を具体納品/導入日順に補完する。**
-2. 旧候補 `赤ジャック / 赤ジャック30 / クローズ武装戦線 / 逆境ナイン` 等はrepo既存登録・正式導入日を再確認し、未登録かつ2008-10の根拠があるものだけ追加する。
-3. 10月残を閉じたら2008-11-03納品群（`ハードボイルド～グリフォンの幻影～`、`南国育ち` 等）のrepo既存登録を検索し、最古未処理から進む。
-4. PARTIAL/UNVERIFIEDは表記揺れ・型式・メーカー・シリーズ名と設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックン/有利区間を組み替え、複数資料系統を横断してから判定する。競合は平均せず `CONFLICT` を維持する。
+1. **LATEST_HANDOFF基準307件地点。2008-10-06〜13の最終漏れをもう一度閉じ、10月20〜31の残存パチスロをALL7/P-WORLD/当時業界記事/メーカー別一覧で照合する。**
+2. 10月27日前後の候補はパチンコ混入を除外し、未登録パチスロだけを具体納品/導入日順に追加する。
+3. 10月を閉じたら **2008-11-03 `ハードボイルド～グリフォンの幻影～` / `南国育ち` 群**から11月キューへ進む。
+4. resetBehavior遡及QA再開地点は引き続き **`球児（2006-09）` の次**。
