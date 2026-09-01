@@ -6,65 +6,66 @@
 
 - 最新mainの `README.md`、実機DBミッションv0.7、`INDEX.md`、既存レコード、直前 `LATEST_HANDOFF.md` を再読して継続。
 - `INDEX.md` は旧19件地点のため、README規定どおり本 `LATEST_HANDOFF.md` を進捗正本とする。
-- 直前正本は **316 `海遊記`（ベルコ / 2008-11 / 型式カイユウキY）**。
-- 今回 **317 `モンキーモンキー`（ヤーマ / 型式モンキーモンキー3 / 2008-11-24納品開始）** を追加。
-- handoffで未解決だったベルコ/ヤーマ表記を監査。ベルコ公式が `yama_monkeymonkey` の製品ページを公開し©yamaと明記、P-WORLDは表示名「モンキーモンキー」の型式名を「モンキーモンキー3」と記載、当時販売実務資料は「モンキーモンキー3＠ヤーマ」「ベルコとの業務提携記念特別販売キャンペーン第3弾」と記録するため、**ベルコ版/ヤーマ版の別機ではなく同一機種**と確定し1レコードのみ登録。
-- 性能コア + v0.7 `resetBehavior` を同時収集。機械割は回顧DB単一系列、BIG規定払い出し・ART名称/公式最大突入率を保存。設定別初当たり、ベース、ART純増等は検索語・資料系統変更後も直接値を確定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 直前正本は **317 `モンキーモンキー`（ヤーマ / 型式モンキーモンキー3 / 2008-11-24納品開始）**。
+- handoff指定の11月残群 `ハネスロナイツ` / `バックトゥザフューチャーデラックス` を監査し、両機とも複数DBで **2008年11月導入**を確認。具体的な全国導入/納品日の強い根拠は今回回収できなかったため、日付順を推測しない。
+- 今回 **318 `ハネスロナイツ`（オーイズミ / 型式ハネスロナイツ / 検定8S0770 / 2008-11月精度）** を追加。
+- 性能コア + v0.7 `resetBehavior` を同時収集。P-WORLDと5号機クロニクルで設定1〜6機械割が全一致。設定別4種ボーナス確率、合算、60/120/180/240枚の基本獲得性能を保存。
+- 50枚ベースは掲示板実戦値を解析値として流用せず、十分な再探索後 `UNVERIFIED_AFTER_RESEARCH`。
 
-## 317. モンキーモンキー
+## 318. ハネスロナイツ
 
-- record: `docs/real_machine_db/machines/2008-11-24_monkey-monkey.md`
-- manufacturer: ヤーマ
-- distributionPartner: ベルコ
-- modelNumber: `モンキーモンキー3`
-- releaseDate: **2008-11-24（納品開始 / 当時販売実務系資料。メーカー公式は2008年11月登場）**。
+- record: `docs/real_machine_db/machines/2008-11_hanesuro-knights.md`
+- manufacturer: オーイズミ
+- modelNumber: `ハネスロナイツ`
+- inspectionNumber: `8S0770`
+- releaseDate: **2008-11（月精度 / P-WORLD・5号機クロニクル一致）**。
 - generation: 5号機
-- systemType: ボーナス + ART
-- settings: **1 / 2 / 3 / 4**（5号機クロニクル掲載体系。別系統で設定構成の直接照合待ち）
-- 機械割: **96.5 / 99.5 / 104.0 / 108.0%**（5号機クロニクル。単一回顧DB値のため `RETROSPECTIVE_DATABASE_SINGLE`）。
-- BIG: **465枚を超える払い出しで終了**（P-WORLD）。実獲得枚数は未確定。
-- ART: **暴走モード**。ベルコ公式は「暴走モード突入率最大70%以上」と表記。設定別ART初当たり率とは解釈せず、公式のART突入率上限表現としてのみ保存。
-- 設定別BIG/主要初当たり: `UNVERIFIED_AFTER_RESEARCH`。
+- systemType: ノーマル / ボーナス主体
+- settings: **1 / 2 / 3 / 4 / 5 / 6**
+- 1倍BONUS: **1/257 / 1/286.18 / 1/257 / 1/286.18 / 1/257 / 1/257**。
+- 2倍BONUS: **1/327.68 / 1/286.18 / 1/307.68 / 1/267.49 / 1/282.49 / 1/235.74**。
+- 3倍BONUS: **1/655.36 / 1/455.11 / 1/618.26 / 1/399.61 / 1/512 / 1/341.33**。
+- 4倍BONUS: **1/504.12 / 1/655.36 / 1/468.11 / 1/590.41 / 1/385.51 / 1/468.11**。
+- ボーナス合算: **1/95.67 / 1/93.36 / 1/91.79 / 1/87.50 / 1/83.49 / 1/75.76**。
+- 機械割: **96.6 / 98.3 / 100.0 / 103.4 / 108.0 / 114.8%**（P-WORLD・5号機クロニクル一致）。
+- 基本獲得: **60 / 120 / 180 / 240枚**。規定払い出し終了は順に74枚超 / 149枚超 / 224枚超 / 253枚超。
 - 50枚ベース: `UNVERIFIED_AFTER_RESEARCH`。
-- ART純増/G・基本G数: `UNVERIFIED_AFTER_RESEARCH`。
 - `coreStatus: PARTIAL`。
 
-### resetBehavior（317）
+### resetBehavior（318）
 
-- `settingChangeBehavior`: `UNVERIFIED_AFTER_RESEARCH`。機種名/型式名/ヤーマ/ベルコと「設定変更」「リセット」「朝一」「攻め時」「ヤメ時」「暴走モード」「ART」を組み替え、メーカー公式、P-WORLD、パチマガスロマガ旧解析、5号機クロニクル、当時販売資料、回顧資料を横断。パチマガ旧ページに **「攻め時・ヤメ時・設定変更時」** の解析項目が存在することは確認したが、現存検索インデックスから本文を回収できず、本機固有挙動は確定しない。
-- `carryOverBehavior`: `UNVERIFIED_AFTER_RESEARCH`。ART状態/残G等の据え置き引継ぎを直接確定できず。
-- `powerCycleBehavior`: `UNVERIFIED_AFTER_RESEARCH`。電源OFF→ONのみでのART/内部状態処理を直接確定できず。
-- `gameCounterReset`: `NOT_APPLICABLE_OR_NONE_CONFIRMED`。通常ゲーム数到達型天井を確認できず。
-- `ceilingAfterReset`: `NONE_CONFIRMED_AFTER_RESEARCH`。リセット専用短縮天井を確認できず。
-- `modeAfterReset`: `UNVERIFIED_AFTER_RESEARCH`。設定変更時の内部モード再抽選/引継ぎ、朝一専用モードを確定できず。
-- `stateAfterReset`: `UNVERIFIED_AFTER_RESEARCH`。ART等の内部状態処理を確定できず。
+- `settingChangeBehavior`: `UNVERIFIED_AFTER_RESEARCH`。機種名/型式/メーカーと「設定変更」「リセット」「朝一」「据え置き」「電源OFF ON」「ガックン」「初期出目」「攻め時」「ヤメ時」を組み替え、P-WORLD、K-Navi、5号機クロニクル、販売/実機資料、当時・回顧検索を横断したが本機固有処理を直接確定できず。
+- `carryOverBehavior`: `NOT_APPLICABLE_OR_NONE_CONFIRMED`。ボーナスのみのノーマルタイプで、RT/ART/AT、通常ゲーム数天井、周期CZ、公開持続モード等を確認できず。
+- `powerCycleBehavior`: `UNVERIFIED_AFTER_RESEARCH`。単純電源OFF→ON時の初期出目/表示を含む本機固有処理は未確定。
+- `gameCounterReset`: `NOT_APPLICABLE_OR_NONE_CONFIRMED`。ゲーム数天井・救済RT・周期CZなしを確認範囲で保持。
+- `ceilingAfterReset`: `NONE_CONFIRMED_AFTER_RESEARCH`。
+- `modeAfterReset`: `NOT_APPLICABLE_OR_NONE_CONFIRMED`。公開された通常時内部モード/朝一専用モードなし。
+- `stateAfterReset`: `NOT_APPLICABLE_OR_NONE_CONFIRMED`。
 - `advantageousSectionReset`: `NOT_APPLICABLE`（5号機・有利区間制度前）。
 - `resetBenefits`: `NONE_CONFIRMED_AFTER_RESEARCH`。
 - `resetPenalties`: `NONE_CONFIRMED_AFTER_RESEARCH`。
-- `resetDetection`: `UNVERIFIED_AFTER_RESEARCH`。ガックン/初期出目/表示等の変更判別を回収できず。
-- `numericResetData`: リセット固有の短縮天井・モード振り分け・朝一当選率・恩恵発生率は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- `resetDetection`: `UNVERIFIED_AFTER_RESEARCH`。ガックン/初期出目/表示等の本機固有変更判別を回収できず。
+- `numericResetData`: リセット固有の短縮天井・モード振り分け・朝一当選率・恩恵発生率は `NONE_CONFIRMED_AFTER_RESEARCH` / `NOT_APPLICABLE_OR_NONE_CONFIRMED`。
 
-## 317主要出典
+## 318主要出典
 
 取得日: 2026-09-02
 
-- https://www.s-bellco.co.jp/products/slot/yama_monkeymonkey/ — ベルコ公式。2008年11月登場、5号機ART、暴走モード、最大70%以上、©yama。
-- https://www.p-world.co.jp/machine/database/5344 — P-WORLD。表示名モンキーモンキー、型式名モンキーモンキー3、BIG 465枚超払い出し終了。
-- https://ameblo.jp/swv0523/entry-10137975605.html — 当時遊技機販売・ホール実務系資料。2008-11-24納品開始、ヤーマ、ベルコ業務提携キャンペーン第3弾。
-- https://5goki.com/yama — 5号機クロニクル。2008年11月、設定1〜4機械割96.5 / 99.5 / 104.0 / 108.0%。
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yama_slot/12/yama_slot_12.php — パチマガスロマガ旧攻略ページ。ボーナス確率/PAYOUT/ART/「攻め時・ヤメ時・設定変更時」項目の存在を確認。本文未回収のため具体値・変更挙動には不使用。
+- https://www.p-world.co.jp/machine/database/5354 — P-WORLD。オーイズミ、5号機ノーマル、型式/検定番号、2008年11月、設定別4種ボーナス・合算・機械割、60/120/180/240枚、規定払い出し終了条件。
+- https://5goki.com/oizumi — 5号機クロニクル。2008年11月、機械割96.6 / 98.3 / 100.0 / 103.4 / 108.0 / 114.8%。P-WORLDと全設定一致。
+- https://p-kn.com/slot/881/direct/ — K-Navi。オーイズミ「ハネスロナイツ」プレス発表会/新機種ニュースの存在、シリーズ第3弾・4倍ボーナスの補助確認。
+- https://store.shopping.yahoo.co.jp/hollup/6360.html — 当時販促パンフレット/カタログ資料の現存確認。数値根拠には不使用。
 
 ## 境界監査・重複防止
 
-- **既存317件の再追加禁止。**
-- `モンキーモンキー` と型式 `モンキーモンキー3` は同一機種。ベルコ公式掲載はヤーマブランド/業務提携流通であり、ベルコ別機として追加しない。
-- `海遊記` は2000年4号機版と2008年5号機版を混同しない。316は2008年5号機 `カイユウキY`。
+- **既存318件の再追加禁止。**
+- `ハネスロナイツ` はP-WORLD・5号機クロニクルとも2008年11月。ただし具体導入日は未確定なので `2008-11` の月精度を維持する。
+- `バックトゥザフューチャーデラックス`（ロデオ）はP-WORLD/5号機クロニクルで2008年11月候補。P-WORLDではBIG 1/358.1〜1/291.3、REG 1/574.9〜1/474.9、合算1/220.7〜1/180.5、5号機クロニクルでは機械割97.3〜107.8%まで候補値を取得済み。次回正式型式・導入境界・性能コア・resetBehaviorを詰める。
 - `ぱちスロSTゴジラ` / `ぱちスロST行け!稲中卓球部` は2008-12-08候補、`HAIBいちろう` は2008-12-15候補として11月列へ混入させない。
-- 11月境界候補の `ハネスロナイツ` / `バックトゥザフューチャーデラックス` は今回の一般検索では具体導入日を確定できていない。次回はメーカー名・型式名・当時業界記事・メーカー一覧・P-WORLD・旧攻略DBへ検索系統を広げて最終判定する。
 
 ## 次回再開地点
 
-1. **LATEST_HANDOFF基準317件地点。まず `ハネスロナイツ` / `バックトゥザフューチャーデラックス` の正式表記・メーカー・型式・2008年11月の実導入/納品日を監査する。**
-2. 11月中の未処理実導入機が確定した場合、最古のものから性能コア + v0.7 resetBehaviorを収集して318件目へ進む。
-3. 同候補が11月外・既収録・実導入根拠不足なら、2008年11月残群をメーカー別一覧/当時業界記事で閉じ、2008年12月最古未処理機へ進む。
-4. resetBehavior遡及QAは別QAリレーで継続し、新規収集の進行を止めない。
+1. **LATEST_HANDOFF基準318件地点。`バックトゥザフューチャーデラックス`（ロデオ）を最優先。正式型式、2008年11月の具体導入/納品日を当時業界記事・メーカー系資料・P-WORLD・旧解析DBで再確認する。**
+2. 性能コアは既にP-WORLDの設定別BIG/REG/合算、5号機クロニクルの機械割系列を候補確保済み。50枚ベース、ボーナス実獲得、RT/ART有無を追加探索する。
+3. v0.7 `resetBehavior` は設定変更/据え置き/電源OFF→ON、ゲーム数・天井、モード・状態、朝一恩恵/不利、変更判別、公開朝一数値を表記・型式・メーカー違いで再探索する。
+4. 同機処理後、2008年11月メーカー別一覧をもう一度閉じてから2008年12月最古未処理機へ進む。
