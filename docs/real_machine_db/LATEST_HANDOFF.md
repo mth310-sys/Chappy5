@@ -6,116 +6,109 @@
 
 - 最新mainの `README.md`、実機DBミッションv0.7、`INDEX.md`、既存レコード、直前 `LATEST_HANDOFF.md` を再読して継続。
 - `INDEX.md` は旧19件地点のため、README規定どおり本 `LATEST_HANDOFF.md` を進捗正本とする。
-- 開始時点は271件地点 `スーパールーレット（25Φ、2008-07月精度）` まで完了済みだった。
-- 今回、272 `スーパールーレット30`、273 `花浪漫R-30`、274 `爺サマー` を追加。性能コア + v0.7 resetBehaviorを同時収集した。
+- 開始時点は274件地点 `爺サマー（2008年7月下旬）` まで完了済み。
+- 今回、2008年7月中旬の境界監査で時系列漏れを確認し、275 `パチスロ桃太郎電鉄`、276 `紅三四郎` を遡及追加。性能コア + v0.7 resetBehaviorを同時収集した。
 - resetBehavior遡及QAは既存handoffどおり `球児（2006-09）` まで補完済み。次対象の2006年機ファイル同定問題は維持し、今回性能本線を優先した。
 
-## 272. スーパールーレット30（30Φ）
+## 275. パチスロ桃太郎電鉄
 
-- record: `docs/real_machine_db/machines/2008-07_super-roulette-30.md`
-- commit: `cfb2021503d0278d552b92868ac7a894d8400c40`
-- releaseDate: `2008-07`
-- releaseDatePrecision: `MONTH_CONFIRMED_EXACT_DATE_UNVERIFIED`
-- manufacturer: ネイチャー・アセスメント
-- systemType: ノーマル / 30Φ / 完全告知 / 同時成立あり
-- coreStatus: `PARTIAL`
-- resetBehaviorQA: `COMPLETE_FOR_PUBLICLY_CONFIRMABLE_RESET_SCOPE_WITH_DEVICE_SPECIFIC_BEHAVIOR_UNVERIFIED`
-
-### 性能コア
-
-- 赤7: 全設定 `1/1236.53`
-- その他3ボーナス各: `1/789.59 / 753.29 / 736.36 / 704.69 / 668.73 / 642.51`
-- ボーナス合成: `1/217.01 / 208.71 / 204.80 / 197.40 / 188.86 / 182.55`
-- シミュレートPAYOUT: `94.00 / 98.03 / 99.23 / 100.91 / 102.94 / 104.65%`
-- 4種類のボーナス純増: `約448 / 273 / 182 / 91枚`
-- 30Φは25Φより通常時コイン持ちが若干低く、その分ボーナス確率が高いことが旧攻略資料に明記されるため別スペックとして登録。25Φ値は転記していない。
-- 30Φ固有50枚ベースは表記揺れ/1000円/コイン持ちまで再探索後も数値未確定。
-
-## 273. 花浪漫R-30
-
-- record: `docs/real_machine_db/machines/2008-07_hanaroman-r-30.md`
-- commit: `b58cc15a94c6c3935cbfe534c26eaef5d1314752`
-- releaseDate: `2008-07`
-- releaseDatePrecision: `LATE_MONTH_CONFIRMED_EXACT_DATE_UNVERIFIED`
-- manufacturer: タイヨー
-- modelName: `花浪漫R-30（沖縄限定バージョン）`
-- systemType: ノーマル / 30Φ / 沖縄限定 / 完全告知系
-- coreStatus: `PARTIAL`
+- record: `docs/real_machine_db/machines/2008-07_pachislot-momotaro-dentetsu.md`
+- commit: `e1f536802f9ceb7fc03696aa83e61bccfc15921f`
+- manufacturer: サミー
+- modelName: `桃太郎電鉄G`
+- releaseDate: `2008-07-14 / 2008-07-15`
+- releaseDatePrecision: `CONFLICT_EXACT_DAY_WITHIN_MID_JULY`
+- systemType: ノーマル / ボーナス主体 + 7G演出RT / 技術介入
+- coreStatus: `COMPLETE_CORE_WITH_PAYOUT_CONFLICT`
 
 ### 性能コア
 
-- BIG: `1/326.0 / 313.6 / 303.4 / 291.3 / 280.1 / 268.6`
-- REG: `1/555.4 / 528.5 / 500.3 / 455.1 / 431.2 / 402.1`
-- 合算: `1/205.4 / 196.8 / 188.9 / 177.6 / 169.8 / 161.0`
-- 機械割: `96.7 / 98.1 / 99.7 / 102.2 / 104.3 / 106.3%`（pacnkと5号機クロニクル一致）
-- BIG約300枚、REG約149枚。P-WORLDでは349枚超/169枚超払い出し終了条件を確認。
-- グリーンべると2008-08-08記事が「7月下旬より導入」と過去形で明記。具体日は推測せず下旬精度で保持。
-- 50枚ベースは十分再探索後も未確定。
+- BIG: `1/293.9 / 282.5 / 266.4 / 249.2 / 234.1 / 216.3`
+- MID: `1/390.1 / 366.1 / 337.8 / 309.1 / 283.7 / 257.0`
+- 合算: `1/167.6 / 159.5 / 148.9 / 138.0 / 128.3 / 117.4`
+- 50枚ベース: `35.05 / 35.35 / 35.67 / 35.99 / 36.33 / 36.69G`（単一旧解析値、ANALYSIS_SINGLE）
+- BIG最大約311枚、MID最大約91枚。
+- 特殊リプレイ後に7Gの短期RT。P-WORLDでは特殊リプレイ約1/75と掲載。
+- 機械割は資料系列が競合:
+  - Pachibee: `97.6 / 99.8 / 103.0 / 106.7 / 110.4 / 115.2%`
+  - 旧スペック整理: `96.7 / 98.7 / 101.6 / 105.0 / 108.4 / 115.0%`
+  - 旧解析シミュレーション: `98.5 / 100.6 / 103.5 / 106.9 / 110.3 / 114.6%`
+- 平均せず `CONFLICT` として全系列を保持。
+- 導入日は後年一覧の2008-07-14とPachibeeの2008-07-15が競合。どちらも7月中旬で、爺サマー（下旬）より前であることは確実なため漏れとして遡及追加。
+- 2024年KONAMIスマスロ「桃太郎電鉄 ～パチスロも定番！～」のAT/天井/有利区間/リセット値は一切流用していない。
 
-## 274. 爺サマー
+## 276. 紅三四郎
 
-- record: `docs/real_machine_db/machines/2008-07_jii-summer.md`
-- commit: `de395c154c8f605a4ab78ae092149759edb56425`
-- releaseDate: `2008-07`
-- releaseDatePrecision: `LATE_MONTH_CONFIRMED_EXACT_DATE_UNVERIFIED`
-- manufacturer: 大都技研
-- modelName: `ジイサマー7`
-- systemType: ノーマル / 完全告知 / BIG+MB / 同時成立あり
+- record: `docs/real_machine_db/machines/2008-07_kurenai-sanshiro.md`
+- commit: `82cbd006acf20ca28e968d5f111c167b6de1f978`
+- manufacturer: JPS（ジェイピーエス）
+- modelName: `紅三四郎SP`
+- releaseDate: `2008-07-13 / 2008-07-14`
+- releaseDatePrecision: `CONFLICT_PLANNED_SHIPMENT_VS_RELEASE_DAY`
+- systemType: ボーナス + 30G完走型ループRT / 周期CZ
 - coreStatus: `PARTIAL`
 
 ### 性能コア
 
-- BIG: `1/287.44 / 275.36 / 264.26 / 252.06 / 236.59 / 219.92`
-- MB: `1/512.00 / 504.12 / 496.48 / 489.07 / 474.90 / 394.80`
-- 合算: `1/184.09 / 178.09 / 172.46 / 166.34 / 157.92 / 141.24`
-- パチマガ旧攻略シミュレートPAYOUT: `96.66 / 98.57 / 100.52 / 102.70 / 105.82 / 111.99%`
-- 後年回顧の整数丸め系列 `97 / 99 / 101 / 103 / 106 / 112%` は平均せず併記。
-- BIG約312枚、MB約104枚。
-- 2008-07-02グリーンべるとで「7月下旬より納品開始予定」、後年パチマガ回顧も2008年7月ホールデビューで一致。具体日は未確定。
-- 50枚ベースは十分再探索後も未確定。
-- 2010年 `ギラギラ爺サマー` / 2022年 `超ギラギラ爺サマー` のAT・天井・リセット情報は別機種として一切流用していない。
+- 赤BIG: `1/655.36 / 585.14 / 630.15 / 655.36 / 564.97 / 585.14`
+- 青BIG: `1/655.36 / 655.36 / 585.14 / 564.97 / 585.14 / 546.13`
+- CT: `1/682.67 / 712.35 / 630.15 / 546.13 / 546.13 / 496.48`
+- 合算: `1/221.41 / 215.58 / 204.80 / 195.05 / 188.32 / 180.04`
+- 赤BIG平均約308枚、青BIG平均約200枚、CT平均約155枚。
+- 30G完走型RT、純増約`0.5枚/G`、最大ループ率90%。通常状態256G消化でも周期CZへ入る。
+- 256Gはボーナス天井ではなく **RT突入契機となる周期CZ到達ゲーム数**。天井値と混同しない。
+- 機械割は競合:
+  - 5号機クロニクル/旧5号機wiki: `97.0 / 98.5 / 100.7 / 102.0 / 105.3 / 107.9%`
+  - パチマガ旧攻略シミュレート: `96.73 / 98.14 / 100.06 / 101.46 / 103.75 / 105.68%`
+- 50枚ベースは表記揺れ/型式/JPS/1000円/コイン持ちまで再探索後も未確定。
+- グリーンべると一次記事は2008-07-13納品予定、旧業界史は2008-07-14発売。日付定義差として双方保持。
 
-## v0.7 resetBehavior（272〜274）
+## v0.7 resetBehavior（275〜276）
 
-- 3機種とも設定変更/リセット/朝一/据え置き/電源OFF→ON/天井/モード/ガックンを、機種名・型式/メーカー・シリーズ名と組み替えて当時攻略、業界、旧DB、回顧資料を横断。
-- `settingChangeBehavior / carryOverBehavior / powerCycleBehavior / resetDetection`: 本機固有の直接資料は十分再探索後も確定できず `UNVERIFIED_AFTER_RESEARCH`。
-- 通常ゲーム数天井/周期CZ等は公開仕様を確認できず `gameCounterReset: NOT_APPLICABLE_OR_NONE_CONFIRMED`、リセット短縮天井は `NONE_CONFIRMED_AFTER_RESEARCH`。
-- 公開された朝一専用モード/高確等は確認できず、`modeAfterReset / stateAfterReset` は `NOT_APPLICABLE_OR_NONE_CONFIRMED`。
-- `advantageousSectionReset`: 全機 `NOT_APPLICABLE`（5号機・有利区間制度前）。
-- `resetBenefits / resetPenalties / numericResetData`: `NONE_CONFIRMED_AFTER_RESEARCH`。
-- 一般的な5号機ノーマル機やシリーズ後継機の挙動は流用していない。
+### パチスロ桃太郎電鉄
+
+- 2008年サミー機/型式 `桃太郎電鉄G` に限定し、設定変更/リセット/朝一/据え置き/電源OFF→ON/天井/モード/ガックンを旧解析・旧DB・回顧資料で再探索。
+- 通常ゲーム数天井は旧解析で `なし`。`ceilingAfterReset: NOT_APPLICABLE`。
+- 7G演出RTの設定変更/据え置き/電源断時残状態、本機固有ガックン/初期出目等は直接根拠を確定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 朝一専用モード/公開恩恵/不利/数値は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- `advantageousSectionReset: NOT_APPLICABLE`。
+
+### 紅三四郎
+
+- 通常状態256Gで周期CZへ入る仕様自体は一次業界資料で確認。
+- 設定変更時に256G周期カウンタが0へ戻るか、据え置き/電源OFF→ONで引継ぐかは本機固有資料を確定できず `UNVERIFIED_AFTER_RESEARCH`。
+- CZ/30G RT状態・残Gの設定変更/電源断処理も `UNVERIFIED_AFTER_RESEARCH`。
+- 256Gは天井ではないため、リセット短縮天井は `NOT_APPLICABLE_OR_NONE_CONFIRMED`。
+- 朝一専用モード/公開恩恵/不利/ガックン等は十分再探索後も未確定。
+- `advantageousSectionReset: NOT_APPLICABLE`。
 
 ## 今回の主要出典
 
 取得日: 2026-09-01
 
-### スーパールーレット30
-- https://web-greenbelt.jp/00003685/
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/nature_slot/03/a.php
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/nature_slot/03/h.php
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/nature_slot/03/k.php
-- https://5goki.com/nature-assessment
+### パチスロ桃太郎電鉄
+- https://www.pachibee.jp/machines/index/209090090
+- https://www.p-world.co.jp/machine/database/5208
+- https://pachinko.hatenablog.jp/entry/2008/07/momotaro-dentetsu
+- https://kenslo65536.com/kaiseki/momotaroudentetu.html
+- https://w.atwiki.jp/5gouki/pages/97.html
+- https://piro-shiki.com/minashiki-tekkyo/
+- https://initialp.cart.fc2.com/ca4/846/
 
-### 花浪漫R-30
-- https://web-greenbelt.jp/00003774/
-- https://www.p-world.co.jp/machine/database/5294
-- https://pacnk.com/slot/tools/sh_hanaromanr.html
-- https://5goki.com/taiyo
+### 紅三四郎
+- https://web-greenbelt.jp/00003677/
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/jps_slot/15/h.php
+- https://w.atwiki.jp/5gouki/pages/149.html
+- https://5goki.com/jps
+- https://slothistory.com/kousin_kako05.html
 
-### 爺サマー
-- https://web-greenbelt.jp/00003743/
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/daitogiken_slot/41/h.php
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/daitogiken_slot/41/i.php
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/daitogiken_slot/41/k.php
-- https://pachimaga.com/free/special/92f47d856bd09b78e06942216886cc2ee130a79a.php
+## 重複防止・境界管理
 
-## 重複防止・競合管理
-
-- 既存274件の再追加禁止。
-- `スーパールーレット`=271（25Φ）、`スーパールーレット30`=272（30Φ）。性能差明記のため別レコード。
-- `花浪漫N-30`=270、`花浪漫R-30`=273。Rは沖縄限定別スペック。
-- `爺サマー`=274。後継 `ギラギラ爺サマー` / `超ギラギラ爺サマー` と混同禁止。
-- `海人 / 海人G-30` は旧業界史で2008-08-04発売資料があるため、2008年7月残監査完了前に先行登録しない。
+- 既存276件の再追加禁止。
+- `パチスロ桃太郎電鉄` は2008年サミー5号機。2024年KONAMIスマスロと混同禁止。
+- `紅三四郎` はJPS 2008年機。周期256Gはボーナス天井ではなくCZ周期。
+- 274 `爺サマー` は7月下旬。今回275/276は番号上は後だが、境界監査で見つかった7月13〜15日の時系列漏れを遡及追加したもの。
+- `海人 / 海人G-30` は旧業界史で2008-08-04発売資料があるため、7月残監査完了前に先行登録しない。
 
 ## resetBehavior 遡及QA
 
@@ -126,8 +119,9 @@
 
 ## 次回再開地点
 
-1. **LATEST_HANDOFF基準274件地点。2008年7月下旬 `爺サマー` まで追加済み。**
-2. まず2008年7月下旬〜月末の未処理機をメーカー別一覧・当時業界記事・旧DBで境界監査し、`パチスロ 桃太郎電鉄 / 紅三四郎 / レッドライオン / ミッション・イン・ポッシブー / ゲッターロボ` 等の2008年7月掲載候補について、既存登録有無と具体導入/納品日を確認する。月掲載だけで順序を決めない。
-3. 7月残候補が既存または後日と確定したら、2008-08-04資料がある `海人 / 海人G-30` を次候補として処理する。
-4. 25Φ/30Φ、沖縄限定、同名別型式は性能差を確認し別機扱いを継続する。
-5. 欠損は表記揺れ・型式名・メーカー・シリーズ名と設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックン/有利区間等へ検索語を変え、公式・業界・当時解析・旧DB・アーカイブ・回顧資料を横断してから `UNVERIFIED` 判定する。
+1. **LATEST_HANDOFF基準276件地点。2008年7月下旬 `爺サマー` まで本線追加済みだが、7月中旬の漏れ2機を遡及追加済み。**
+2. 次は同じ7月13〜14日境界の未処理候補 **`ミッション・イン・ポッシブー`** を最優先。グリーンべるとでは「7月中旬から納品予定」、旧業界史では `2008-07-14発売` が既に確認できているため、既存登録有無を再確認して未登録なら収集する。
+3. その後 `スロットレッドライオン`（当時資料で7月中旬〜下旬導入予定）、`パチスロ桃太郎電鉄`周辺の同日群、`ゲッターロボ`（Pachibee 2008-07-22）を具体日で比較し、時系列漏れを閉じる。
+4. `紅三四郎` は一次記事の2008-07-13納品予定と旧業界史の2008-07-14発売の差を解消できる一次資料が見つかればCONFLICT QA対象。
+5. 7月残候補が閉じたら2008-08-04資料がある `海人 / 海人G-30` へ進む。
+6. 欠損は表記揺れ・型式名・メーカー・シリーズ名と設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックン/有利区間等へ検索語を変え、公式・業界・当時解析・旧DB・アーカイブ・回顧資料を横断してから `UNVERIFIED` 判定する。
