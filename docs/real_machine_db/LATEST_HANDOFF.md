@@ -5,135 +5,100 @@
 ## 現在地点
 
 - 最新mainの `README.md`、実機DBミッションv0.7、`INDEX.md`、既存レコード、直前 `LATEST_HANDOFF.md` を再読して継続。
-- `INDEX.md` は旧19件地点のままなので、README規定どおり本 `LATEST_HANDOFF.md` を進捗正本とする。
-- 直前地点は205件目 `パチってスロット`。
-- 2007年11月の境界監査で `華一番` / `華一番-30` がmain未収録と確認。
-- パイオニア公式が25φ `ハナイチバン` と30φ `ハナイチバン-30` を別製品として掲載し、デザイン違いで同時発表・2007年11月発売と明記。
-- パチマガスロマガは `華一番&30` 共通解析ページで性能値を掲載しており、兄弟機の推定流用ではなく25φ/30φ共通性能の直接根拠がある。
-- **206件目 `華一番`、207件目 `華一番-30` を独立レコードとして追加済み。**
+- `INDEX.md` は旧地点のため、README規定どおり本 `LATEST_HANDOFF.md` を進捗正本とする。
+- 直前handoffは207件地点（華一番 / 華一番-30追加済み）。
+- 直前handoffの境界監査メモに「NEO花物語 / スーパービンゴVがmain未収録」とあるが、最新main再検索・ファイル取得で両機とも既存レコードを確認したため、この未収録判定は stale として訂正。重複追加しない。
+- 2007年12月1〜5日を再監査し、main未収録かつ具体日を当時資料で確定できた最古候補として `パチスロ「機動戦士ガンダムII～哀・戦士編～」` を処理。
+- **208件目として `パチスロ「機動戦士ガンダムII～哀・戦士編～」を追加済み。**
 
-## 206. 華一番
+## 208. パチスロ「機動戦士ガンダムII～哀・戦士編～」
 
-- new record: `docs/real_machine_db/machines/2007-11-11_hana-ichiban.md`
-- commit: `ca9af462e8f5ac309cfe0759a5bfaf8dc43afc80`
-- manufacturer: パイオニア
+- new record: `docs/real_machine_db/machines/2007-12-03_mobile-suit-gundam-ii-ai-senshi.md`
+- commit: `b5e3ca63f3e0de363b559bf63f28e879b859961a`
+- manufacturer: 山佐
 - generation: 5号機
-- systemType: ノーマル / ボーナス主体 + 7GプチRT
-- medalDiameter: 25φ
+- systemType: ボーナス + 完走型RT
 - coreStatus: `COMPLETE_CORE`
 - resetBehaviorQA: `PARTIAL`
 
 ### 導入・型式
 
-- パイオニア公式: ハナイチバン / ハナイチバン-30を別製品として掲載、25φ・30φデザイン違い同時発表、2007年11月発売。
-- グリーンべると2007-10-12記事: `2007-11-11` 納品開始予定。
-- パチビー: `2007-11-12` 導入機種として掲載。
-- 納品開始とホール導入日の定義差のためCONFLICT扱いせず双方保持。
+- 型式名: `機動戦士ガンダム2-C`。
+- グリーンべると2007-11-30記事: `2007-12-03` から稼働開始と明記。
+- HAZUSE: 導入開始日 `2007-12-03`。
+- K-Navi 2007-09-15発表会記事: ホールデビュー12月上旬予定。
+- P-WORLDはページ下部で導入開始 `2007年11月` とするため `CONFLICT_DATE_MONTH`。具体日の当時業界記事を優先し12/3採用。
 
 ### 性能コア
 
-- BIG: `1/334 → 1/273`
-- REG: `1/381 → 1/315`
-- 合算: `1/178 → 1/146`
-- 機械割: `97 / 99 / 101 / 103 / 105 / 107%`
-- 1000円ベース: `36.37 / 36.37 / 37.40 / 38.14 / 39.01 / 39.12G`
-- BIG: 348枚超払い出し終了、純増約300枚。
-- REG: 108枚超払い出し終了、純増約100枚。
-- 巻物またはチェリー成立後7Gの演出用プチRT `おかわりタイム`。
+- 青7BIG: `1/468.1 → 1/461.5`
+- 赤7BIG: `1/809.1 → 1/425.6`
+- BIG合成: `1/296.5 → 1/221.4`
+- REG: `1/612.5 → 1/319.7`
+- ボーナス合成: `1/199.8 → 1/130.8`
+- 機械割: `97.5 / 99.5 / 101.5 / 104.0 / 107.5 / 111.0%`
+- 1000円ベース: `35.28 / 35.31 / 35.34 / 35.53 / 35.92 / 36.43G`
+- 青7BIG約300枚 / 赤7BIG約180枚 / REG最大82枚。
+- BIG後は必ず78G完走型RT `Gエピソード`。純増約 `+0.3枚/G`、完走時約23枚。
+- 設定3赤7BIGのみHAZUSE `1/642.5` / P-WORLD `1/642.2` の微差があり `CONFLICT_DETAIL`。
 
 ### v0.7 resetBehavior
 
-- settingChangeBehavior: 7GプチRT残状態/初期状態は `UNVERIFIED_AFTER_RESEARCH`。
-- carryOverBehavior: 据え置き時プチRT残G・内部状態は `UNVERIFIED_AFTER_RESEARCH`。
-- powerCycleBehavior: 電源OFF→ON時プチRT残G・内部状態は `UNVERIFIED_AFTER_RESEARCH`。
-- gameCounterReset: 通常時ゲーム数天井は `NONE_CONFIRMED`。
+- settingChangeBehavior: 設定変更時の78G RT残G・内部RT・成立済みボーナス・リール初期挙動は `UNVERIFIED_AFTER_RESEARCH`。
+- carryOverBehavior: 据え置き時のRT残G/内部RT状態は `UNVERIFIED_AFTER_RESEARCH`。
+- powerCycleBehavior: 電源OFF→ON時のRT残G/内部状態は `UNVERIFIED_AFTER_RESEARCH`。
+- gameCounterReset: 通常時ゲーム数天井は `NONE_CONFIRMED`。78GはBIG後RT継続G数でありハマリ天井ではない。
 - ceilingAfterReset: 短縮天井/変更後専用天井 `NONE_CONFIRMED`。
-- modeAfterReset: 朝一専用モード/設定変更時モード振り分け `NONE_CONFIRMED`。
-- stateAfterReset: 7GプチRT中の変更/電断時残状態処理 `UNVERIFIED_AFTER_RESEARCH`。
+- modeAfterReset: 朝一専用モード/公開変更時モード振り分け `NONE_CONFIRMED`。
+- stateAfterReset: Gエピソード中の変更/電断時残状態処理 `UNVERIFIED_AFTER_RESEARCH`。
 - advantageousSectionReset: `NOT_APPLICABLE`。
 - resetBenefits / resetPenalties: 公開朝一固有恩恵・不利要素 `NONE_CONFIRMED`。
-- resetDetection: 本機固有ガックン/初期出目/ランプ・役物等による変更判別 `UNVERIFIED_AFTER_RESEARCH`。
-- numericResetData: 公開された設定変更時専用数値は確認できず。
+- resetDetection: 本機固有ガックン/初期出目/液晶・ランプ等による変更判別 `UNVERIFIED_AFTER_RESEARCH`。
+- numericResetData: 公開設定変更時専用数値なし確認。
 
 主要出典:
-- パイオニア公式: https://www.slot-pioneer.co.jp/products/2009.html
-- グリーンべると/P-WORLD業界ニュース: https://news.p-world.co.jp/articles/2426/greenbelt
-- パチビー2007年11月導入カレンダー: https://www.pachibee.jp/machines/schedule/2007-11
-- パチマガスロマガ ボーナス/PAYOUT: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/pioneer_slot/84/h.php
-- パチマガスロマガ 基本システム: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/pioneer_slot/84/a-1.php
-- パチマガスロマガ 小役/ベース: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/pioneer_slot/84/c-1.php
-- K-Navi: https://p-kn.com/slot/723/
-
-## 207. 華一番-30
-
-- new record: `docs/real_machine_db/machines/2007-11-11_hana-ichiban-30.md`
-- commit: `1ab82bc3d1f30deaab1f2d02f948076f3f62160f`
-- manufacturer: パイオニア
-- generation: 5号機
-- systemType: ノーマル / ボーナス主体 + 7GプチRT
-- medalDiameter: 30φ
-- coreStatus: `COMPLETE_CORE`
-- resetBehaviorQA: `PARTIAL`
-
-### 25φとの扱い
-
-- メーカー公式が25φと30φを別製品として掲載するため、本DBでも独立レコード化。
-- 一方、パチマガスロマガは `華一番&30` として同一ページに設定別BIG/REG/合算、機械割、ベース、ボーナス獲得性能、プチRT仕様を掲載。
-- したがって性能コアは「兄弟機だから同じ」と推定したものではなく、25φ/30φ共通解析値として採用。
-
-### 性能コア
-
-25φ版と共通の直接解析値:
-- BIG: `1/334 → 1/273`
-- REG: `1/381 → 1/315`
-- 合算: `1/178 → 1/146`
-- 機械割: `97 → 107%`
-- 1000円ベース: `36.37 → 39.12G`
-- BIG純増約300枚 / REG純増約100枚。
-- 7GプチRT `おかわりタイム`。
-
-### v0.7 resetBehavior
-
-- 設定変更/据え置き/電源OFF→ON時の7GプチRT残状態は `UNVERIFIED_AFTER_RESEARCH`。
-- 通常時ゲーム数天井、リセット短縮天井、朝一専用モード、変更固有恩恵/不利、公開朝一数値は `NONE_CONFIRMED`。
-- 有利区間は `NOT_APPLICABLE`。
-- 30φ固有または25/30共通の変更判別要素は `UNVERIFIED_AFTER_RESEARCH`。
-
-## 直前の既存群
-
-- 200件目 `超お父さん2`
-- 201件目 `哲也～雀聖と呼ばれた男～`
-- 202件目 `赤ドン`
-- 203件目 `ファイアーヒーローS`
-- 204件目 `ビーチクラブ`
-- 205件目 `パチってスロット`
-- 206件目 `華一番`
-- 207件目 `華一番-30`
-
-## 境界監査メモ
-
-- `パチスロシティーハンター` はグリーンべると2007-11-09記事で納品12月6日開始予定確認済み。12月キューへ送る。
-- パチビー2007年11月導入カレンダーでは `NEO花物語` と `華一番` が11月12日、`スーパービンゴV` と `超お父さん2` が11月19日、`哲也` が11月20日、`赤ドン` / `ファイアーヒーローS` が11月26日。
-- main検索で `NEO花物語` と `スーパービンゴV` の既存レコードが見つからないことを今回確認。
-- 華一番25φ/30φは今回登録済み。
+- グリーンべると/P-WORLD業界ニュース: https://news.p-world.co.jp/articles/2532/greenbelt
+- HAZUSE: https://hazuse.com/machine/pachislot/7S0680/
+- P-WORLD: https://www.p-world.co.jp/machine/database/4934
+- パチマガスロマガ 小役/1000円ベース: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/154/c.php
+- K-Navi発表会: https://p-kn.com/topics/exhibition/186/
 
 ## resetBehavior 遡及QA
 
-### クランキーコンドルX（2006-08）
+### じゃりン子チエ（2006-08）
 
-- 既存性能コア値・既存CONFLICTを維持したままv0.7 `resetBehavior` 追加済み。
-- QA commit: `866b551249aab530513527a8dae09955e359ad9c`
-- 次は2006年8月群の既存レコードを時系列走査し、resetBehavior節未収集の最古機から継続。
+- QA record: `docs/real_machine_db/machines/2006-08_jarinko-chie.md`
+- QA commit: `37577b33bcf0bafe7accd4cff7d807fd47899f6f`
+- 既存性能 `PARTIAL` は維持し、v0.7 `resetBehavior` を別管理で追加。
+- 設定変更/据え置き/電源OFF→ON時の100G/50G完走型RT残G・内部RT状態は、表記揺れ・型式 `じゃりン子チエSP`・メーカー名・朝一/リセット/ガックン/据え置き/電断を組み替えて再探索したが直接資料を確定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 100G/50Gはボーナス後RT継続G数であり通常時天井ではない。通常時ハマリ天井、短縮天井、朝一専用モード、公開朝一恩恵/不利、公開専用数値は `NONE_CONFIRMED`。
+- 後継 `じゃりン子チエ 雷蔵伝説` はART/天井搭載の別仕様なので流用しない。
+- QA再探索で既存欠損性能を追加回収: 1000円ベース `44.06G`、RT純増 `+0.06枚/G`、RT中リプレイ `1/1.87`、RT中ハズレ約 `1/3.48`。
+- 設定別総ボーナス成立確率表は未確定のため `coreStatus=PARTIAL` のまま。
+
+主要出典:
+- グリーンべると: https://web-greenbelt.jp/00004714/
+- パチマガスロマガ 基本: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/baltech_slot/46/a.php
+- パチマガスロマガ 小役/RT/ベース: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/baltech_slot/46/c.php
+- パチマガスロマガ 設定推測: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/baltech_slot/46/i.php
+- ITmedia: https://www.itmedia.co.jp/mobile/articles/0701/31/news098.html
+
+## 直前の既存確認・重複防止
+
+- `NEO花物語`: 最新mainに `docs/real_machine_db/machines/2007-11-12_neo-hana-monogatari.md` が存在。再追加禁止。
+- `スーパービンゴV`: 最新mainに `docs/real_machine_db/machines/2007-11-19_super-bingo-v.md` が存在。再追加禁止。
+- `CANスロ`: 最新mainに `docs/real_machine_db/machines/2007-10-29_can-slot.md` が存在。再追加禁止。
+- `パチスロ「機動戦士ガンダムII～哀・戦士編～」`: 今回追加済み。
 
 ## 次回再開地点
 
-1. **LATEST_HANDOFF基準207件地点から継続。**
-2. 2007年11月12日候補のうちmain未収録を確認した **`NEO花物語`（オーイズミ）を最優先**で性能コア + v0.7 resetBehaviorまで処理する。
-3. その後、11月12〜18日の漏れを監査し、問題なければmain未収録確認済み **`スーパービンゴV`（2007-11-19導入カレンダー）**へ進む。
-4. 11月全体をメーカー別一覧・当時業界記事・導入カレンダー・旧DBで閉じた後、12月1〜5日候補を監査し、未処理がなければ `パチスロシティーハンター`（12月6日納品開始予定）へ進む。
-5. 華一番/華一番-30追加QAは、設定変更/据え置き/電断時7GプチRT残状態、本機固有変更判別、30φ版の日単位ホール導入実績日を優先。
-6. resetBehavior遡及QAは `クランキーコンドルX` の次の既存レコードを時系列走査し、2006年8月群（`じゃりン子チエ` / `ランブルローズ` / `逮捕しちゃうぞ` 等）の既補完有無をmainで確認してから処理。
-7. 既存 `COMPLETE_CORE` は性能コア完了判定を不用意に崩さず、resetBehaviorQAを別管理する。
+1. **LATEST_HANDOFF基準208件地点から継続。**
+2. 2007-12-03同日〜12-05の未処理機をメーカー別一覧・導入カレンダー・当時業界記事で最終監査。
+3. それより早い未処理機がなければ、main未収録を確認済みの `パチスロシティーハンター` を優先。グリーンべると2007-11-09記事で **2007-12-06納品開始予定** を確認済み。
+4. `パチスロシティーハンター` は性能コア + v0.7 resetBehaviorを同時収集し、設定変更/据え置き/電断、ゲーム数/天井、モード/状態、朝一恩恵/不利、変更判別、公開朝一数値まで資料系統を変えて探索する。
+5. resetBehavior遡及QAは `じゃりン子チエ` の次の未補完既存レコード **`ランブルローズ`（2006-08）** から再開。最新mainでresetBehavior節未収集を確認済み。
+6. その後 `逮捕しちゃうぞ` 等を時系列に走査し、既補完済み機は重複改変しない。
+7. 既存 `COMPLETE_CORE` は性能完了判定を不用意に崩さず、resetBehaviorQAを別管理する。
 8. PARTIAL/UNVERIFIEDは表記揺れ・型式・メーカー・シリーズ・設定変更/リセット/朝一/据え置き/電断/天井/モード/ガックン/有利区間を組み替え、公式・業界・当時解析・旧DB・アーカイブ・回顧資料を横断する。
 9. 競合値は平均せず `CONFLICT`。別機種・兄弟スペック・後継機仕様は根拠なしに流用しない。
 
