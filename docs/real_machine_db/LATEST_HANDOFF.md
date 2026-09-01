@@ -6,112 +6,107 @@
 
 - 最新mainの `README.md`、実機DBミッションv0.7、`INDEX.md`、既存レコード、直前 `LATEST_HANDOFF.md` を再読して継続。
 - `INDEX.md` は旧19件地点のため、README規定どおり本 `LATEST_HANDOFF.md` を進捗正本とする。
-- 直前handoffは211件地点（`バーチャファイターT` 追加済み）。
-- 2007-12-01〜12-16境界監査を継続し、未処理候補 `ぴかっとシーサー` を当時業界記事、パチマガスロマガ、5号機クロニクル、2007年度機種一覧、ノーマル機一覧、小冊子収集記録、業界史整理で横断。
-- main未登録を確認し、**212件目として `ぴかっとシーサー` を追加済み。**
+- 直前handoffは212件地点（`ぴかっとシーサー` 追加済み）。
+- 2007-12-01〜12-16境界候補を再監査。`バミューダ / サンバ×サンバ / 学習パチスロ理科 / まぁさん` は複数の2007年度一覧で12月群として扱われるが、今回の検索では日単位の実導入順を確定できない。
+- そのうち `バミューダ` はパチマガスロマガで性能コアを十分回収でき、5号機クロニクルとパチンコFANで2007-12を照合できたため、日付を推測せず **213件目として月精度で追加済み。**
 
-## 212. ぴかっとシーサー
+## 213. バミューダ
 
-- new record: `docs/real_machine_db/machines/2007-12_pikatto-shisa.md`
-- commit: `2040c94aa7e977f4ed924b28dd6d1ff8d9227ff5`
-- manufacturer: デンケン販売（メーカー帰属CONFLICT注記あり）
+- new record: `docs/real_machine_db/machines/2007-12_bermuda.md`
+- commit: `3841e200ecfebac4f8a0e912dd8122e6deb107f3`
+- manufacturer: ネイチャー・アセスメント
 - generation: 5号機
-- releaseDate: `2007-12` 主系列 / `2007-11` 小冊子収集資料あり → `CONFLICT_RELEASE_MONTH`
-- systemType: ノーマル / 完全告知 / 同時成立あり / 高技術介入
-- coreStatus: `COMPLETE_CORE_WITH_CONFLICTS`
+- releaseDate: `2007-12`
+- systemType: ノーマル / ボーナス主体 / 同時成立あり / ボーナスチェック機能
+- coreStatus: `COMPLETE_CORE`
 - resetBehaviorQA: `PARTIAL`
 
 ### 導入・同定
 
-- 2007-07-10付の当時業界記事転載で、電遊協5社合同展示会に **デンケン販売「ぴかっとシーサー」** が展示され、「秋ごろ発売予定」と確認。
-- 5号機クロニクル、パチンコFAN、スロリスクタイムは **2007-12** で一致。
-- 小冊子収集リストには **2007-11** 設置表記が残るため、平均せず `CONFLICT_RELEASE_MONTH`。
-- 後年業界史整理には「当初パチンコビレッジはデンケン販売、後の娯楽産業協会ニュースはデージー表記」とする注記がある。現存当時展示記事・パチマガスロマガ・複数DBはデンケン販売で一致するため主表記はデンケン販売としつつ、帰属差を `CONFLICT_MANUFACTURER_ATTRIBUTION` として保存。
-- 具体納品開始日 / 全国ホール導入日は検索語・資料系統変更後も確定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 5号機クロニクルでネイチャー・アセスメントの2007年導入機として `バミューダ`、導入時期 `2007/12`。
+- パチンコFANの2007年度一覧でも2007年12月欄に `バミューダ（ネイチャー・アセスメント）`。
+- パチマガスロマガも `バミューダ（ネイチャーアセスメント）` と同定。
+- 具体的な納品開始日 / 全国ホール導入日は表記揺れ・メーカー名・旧DB・当時実戦記録まで変えて再探索したが確定できず `UNVERIFIED_AFTER_RESEARCH`。12/16以降へ恣意的に置かず月精度で保存。
 
 ### 性能コア
 
-- パチマガスロマガ BIG: `1/409.60 / 1/409.60 / 1/364.09 / 1/364.09 / 1/327.68 / 1/327.68`。
-- REG: `1/1170.29 / 1/819.20 / 1/1092.27 / 1/655.36 / 1/1092.27 / 1/655.36`。
-- 合算: `1/303.41 / 1/273.07 / 1/273.07 / 1/234.06 / 1/252.06 / 1/218.45`。
-- 完全手順時シミュレート機械割: `101.49 / 103.15 / 105.53 / 107.92 / 109.73 / 111.96%`。
-- チェリー狙い適当打ち時: `98.78 / 100.28 / 102.65 / 104.91 / 106.61 / 108.73%`。
-- 5号機クロニクルは完全手順系列を `101.4 / 103.1 / 105.4 / 107.6 / 109.4 / 111.4%` と掲載。設定3〜6は単純丸めだけではないため平均せず `CONFLICT_ROUNDING_OR_SIMULATION_DEFINITION`。
-- 50枚ベース完全手順: `63.12 / 64.08 / 64.86 / 65.65 / 67.71 / 68.14G`。
-- チェリー狙い適当打ち: `51.85 / 52.05 / 52.19 / 52.38 / 52.69 / 52.82G`。
-- BIG約312枚、REG約104枚。
-- RT/ART/ATなし。完全告知ノーマル。
-- 小役取得手順でベース・機械割が大幅に変わるため、通常手順と完全攻略手順を別定義で保持。
+- BIG合成: `1/390.10 / 1/372.36 / 1/356.17 / 1/356.17 / 1/356.17 / 1/356.17`。
+- REG合成: `1/630.15 / 1/630.15 / 1/630.15 / 1/546.13 / 1/512.00 / 1/474.90`。
+- ボーナス合成: `1/240.94 / 1/234.06 / 1/227.56 / 1/215.58 / 1/210.05 / 1/203.53`。
+- 50枚ベース: `44.33 / 44.78 / 45.25 / 46.20 / 47.72 / 48.78G/1000円`。
+- BIG: 400枚超払い出し終了、純増約350枚。
+- REG: 105枚超払い出し終了、純増約100枚。
+- RT / ART / ATなし。
+- 機械割: 5号機クロニクル `97.4 / 99.2 / 101.0 / 102.6 / 104.1 / 105.4%`。今回は独立した第二数値資料まで取得できなかったため、数列自体の信頼度は `ANALYSIS_SINGLE` と明記。
+- パチマガスロマガの基本・確率・小役/1000円Gで主要性能が揃うため、性能コアは `COMPLETE_CORE`。機械割第二照合不足はmissingとして残す。
 
 ### v0.7 resetBehavior
 
-- settingChangeBehavior: 本機固有の変更時RAM処理は直接資料を確認できず `UNVERIFIED_AFTER_RESEARCH`。
-- carryOverBehavior: 据え置きで引継ぐべきゲーム数天井・モード・RT/ART残Gは `NOT_APPLICABLE / NONE_CONFIRMED`。ボーナス成立状態等の内部電断跨ぎは未確認。
-- powerCycleBehavior: 電源OFF→ON時のボーナス成立状態・初期出目・告知状態の扱いは `UNVERIFIED_AFTER_RESEARCH`。
-- gameCounterReset: 通常時ゲーム数天井 / 周期CZ / AT当選管理 `NONE_CONFIRMED`。
+- settingChangeBehavior: 本機固有RAM処理は `UNVERIFIED_AFTER_RESEARCH`。
+- carryOverBehavior: 通常時天井 / RT・ART・CZ残G / モードは `NONE_CONFIRMED / NOT_APPLICABLE`。成立済みボーナス等の内部状態引継ぎは未確認。
+- powerCycleBehavior: 電源OFF→ON時の成立済みボーナス、初期出目、告知状態は `UNVERIFIED_AFTER_RESEARCH`。
+- gameCounterReset: 通常時ゲーム数天井 / 周期CZ / ATゲーム数管理 `NONE_CONFIRMED`。
 - ceilingAfterReset: 通常天井 / 短縮天井 / 朝一専用天井 `NONE_CONFIRMED`。
-- modeAfterReset: モード管理 / 朝一専用モード / 設定変更時公開振り分け `NONE_CONFIRMED`。
-- stateAfterReset: RT/ART/AT/CZ状態は `NOT_APPLICABLE`。内部RAMレベルのボーナス成立状態等は未確認。
+- modeAfterReset: 通常時モード / 朝一専用モード / 設定変更時公開振り分け `NONE_CONFIRMED`。
+- stateAfterReset: RT / ART / AT / CZ `NOT_APPLICABLE`。RAMレベルのボーナス成立状態は未確認。
 - advantageousSectionReset: `NOT_APPLICABLE`。
-- resetBenefits: 朝一RT、短縮天井、専用モード、初当たり優遇等 `NONE_CONFIRMED`。
-- resetPenalties: `NONE_CONFIRMED`。
-- resetDetection: ガックン / 初期出目 / 告知ランプ等を再探索したが、本機固有の変更判別要素は `UNVERIFIED_AFTER_RESEARCH`。
+- resetBenefits / resetPenalties: `NONE_CONFIRMED`。
+- resetDetection: ガックン / 初期出目 / ボーナスチェックランプ等を再探索したが、本機固有の設定変更判別は `UNVERIFIED_AFTER_RESEARCH`。通常の「ボーナスチェック機能」を変更判別とは扱わない。
 - numericResetData: 設定変更時専用の比較可能な公開朝一数値 `NONE_CONFIRMED`。
-- パチマガスロマガ機種トップには **「攻め時・ヤメ時→特にナシ」** と掲載。
 
-### CONFLICT / missing
+### 主要出典
 
-- 導入月: 2007-12複数資料 vs 2007-11小冊子収集資料。
-- メーカー帰属: デンケン販売が主系列だが、後の娯楽産業協会ニュースでデージー表記だったという業界史注記あり。
-- 完全手順機械割: パチマガスロマガ101.49〜111.96% vs 5号機クロニクル101.4〜111.4%。平均せず双方保持。
-- 未確定: 具体導入日、正式型式名、設定変更時RAM処理、電源OFF→ON時内部処理、本機固有変更判別。
+- パチマガスロマガ 基本: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/nature_slot/01/a.php
+- パチマガスロマガ ボーナス確率: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/nature_slot/01/h.php
+- パチマガスロマガ 小役 / 1000円G: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/nature_slot/01/c.php
+- 5号機クロニクル: https://5goki.com/nature-assessment
+- パチンコFAN 2007年度一覧: https://pacnk.com/photoslot/plist2007_0_0.html
+- 当時実戦補助資料: https://ameblo.jp/w-wolfvct/
 
-主要出典:
-- Pマンズ / 当時業界記事転載: https://p-mans.blogspot.com/2007/07/
-- パチマガスロマガ 基本: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/denken_slot/01/a.php
-- パチマガスロマガ 確率/PAYOUT: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/denken_slot/01/h.php
-- パチマガスロマガ 小役/1000円G: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/denken_slot/01/c.php
-- パチマガスロマガ 機種トップ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/denken_slot/01/denken_slot_01.php
-- 5号機クロニクル: https://5goki.com/denkenhanbai
-- パチンコFAN: https://pacnk.com/photoslot/plist2007_0_0.html
-- スロリスクタイム: https://pachisuro100.com/normal/
-- 小冊子リスト5: https://plaza.rakuten.co.jp/sukisukiyamasa/20006/
-- パチスロ業界初まとめ: https://slothistory.com/kousin_kako04.html
-
-## 直前の211件目
-
-### バーチャファイターT
-
-- record: `docs/real_machine_db/machines/2007-12_virtua-fighter-t.md`
-- commit: `e90d9d0d7c868a8ee06707612ba5db711c863937`
-- coreStatus: `PARTIAL`
-- resetBehaviorQA: `PARTIAL`
-- サミー公式で2007.12。通常状態300G周期CZ、通常設定変更だけなら周期G数引継ぎを確認済み。
+取得日: 2026-09-01
 
 ## resetBehavior 遡及QA
 
-- `じゃりン子チエ（2006-08）` まで遡及追加済み。
-- 新規キューを止めず、次回以降に時系列で次の未補完既存レコードも監査する。
+### ランブルローズ（2006-08）まで補完済み
+
+- record: `docs/real_machine_db/machines/2006-08_rumble-roses.md`
+- QA commit: `cee5c485ab82c9c7178b1b84b45456f82646f60c`
+- 既存 `coreStatus=PARTIAL` は維持し、リセットQAを別管理で `PARTIAL` とした。
+- 初代ランブルローズについて `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / チャレンジタイム / RAM / ガックン` 等へ検索語を変更して再探索。
+- 初代固有の設定変更・据え置き・電断時チャレンジタイム/2種BB内部状態処理は確定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 通常時ゲーム数天井、朝一専用モード、短縮天井、公開朝一数値は `NONE_CONFIRMED`、有利区間は `NOT_APPLICABLE`。
+- 後継 `ランブルローズXX` / `ランブルローズ3D` のART・モード・天井仕様は初代へ流用しないことを明記。
+- 再探索の副産物として中一商事の初代実機概要から、従来欠損だったBIG `1/504 → 1/336`、REG全設定 `1/437` を回収。解析専門資料の第二照合前なので `ANALYSIS_SINGLE`。
+- 50枚ベースは引き続き `UNVERIFIED_AFTER_RESEARCH`。
+
+主要出典:
+- コナミ公式アーカイブ: https://www.konami.com/amusement/psm/archive/ps/2006/rumble/
+- グリーンべると回顧: https://web-greenbelt.jp/00003794/
+- 中一商事 初代実機概要: https://www.nakaiti.com/html/sKpe040.html
+- 5号機クロニクル KPE: https://5goki.com/kpe
+- パチ7 5号機ボーナス構造解説: https://pachiseven.jp/articles/detail/7071
+
+取得日: 2026-09-01
 
 ## 重複防止
 
 - `NEO花物語`: 既存レコードあり。再追加禁止。
 - `スーパービンゴV`: 既存レコードあり。再追加禁止。
 - `CANスロ`: 既存レコードあり。再追加禁止。
-- `パチスロ「機動戦士ガンダムII～哀・戦士編～」`: 208件目として追加済み。
-- `パチスロシティーハンター`: 209件目として追加済み。
-- `名門!夢色学園生徒会`: 210件目として追加済み。
-- `バーチャファイターT`: 211件目として追加済み。
-- `ぴかっとシーサー`: 212件目として追加済み。
+- `パチスロ「機動戦士ガンダムII～哀・戦士編～」`: 208件目。
+- `パチスロシティーハンター`: 209件目。
+- `名門!夢色学園生徒会`: 210件目。
+- `バーチャファイターT`: 211件目。
+- `ぴかっとシーサー`: 212件目。
+- `バミューダ`: 213件目。再追加禁止。
 
 ## 次回再開地点
 
-1. **LATEST_HANDOFF基準212件地点から継続。**
-2. 2007-12-01〜12-16境界監査を続行。未処理月単位候補 **`バミューダ / サンバ×サンバ / 学習パチスロ理科 / まぁさん`** と `バーチャファイターF` の実導入時期をメーカー公式・当時業界・P-WORLD旧DB・解析アーカイブで比較する。
-3. `ぴかっとシーサー` は完了済み。再追加禁止。
-4. サミー公式では `バーチャファイターT=2007.12` を確認済み。`バーチャファイターF` はK-Naviで2007-12-19に発売決定記事があるため、T/Fを同一日扱いしない。
-5. 具体日が確定している後続候補: `ハナマル!学園奮闘記!` はグリーンべるとで **2007-12-16納品開始** / K-Naviで12/17導入予定、`ダイナマイトリターンズ` はK-Naviで **2007-12-17ホール導入予定**、`パンドラ` は12/25設置開始候補。境界監査後に最古から進める。
-6. 新規機種は性能コア + v0.7 resetBehaviorを同時収集。欠損は表記揺れ・型式・メーカー・シリーズ、設定変更/リセット/朝一/据え置き/電断/天井/モード/ガックン/有利区間まで検索語を変え、別系統資料を横断した後だけ `UNVERIFIED_AFTER_RESEARCH`。
-7. 競合値は平均せず `CONFLICT`。別機種・兄弟スペック・後継機仕様は根拠なしに流用しない。
+1. **LATEST_HANDOFF基準213件地点から継続。**
+2. 2007年12月前半の残る月単位候補 **`サンバ×サンバ / 学習パチスロ理科 / まぁさん`** を優先監査。具体日が確定しなくても、複数資料で12月機と同定でき性能コアを回収できるものは月精度を明示して順次収録する。
+3. `バーチャファイターF` はTとは別機種として扱う。K-Naviの2007-12-19発売決定記事等から具体導入時期を詰める。
+4. 月単位候補の境界監査後、具体日確定候補は `ハナマル!学園奮闘記!`（グリーンべると **2007-12-16納品開始** / K-Navi 12/17ホール導入予定）、`ダイナマイトリターンズ`（12/17候補）、`パンドラ`（12/25候補）の順で比較する。
+5. resetBehavior遡及QAは、`ランブルローズ` より後で未補完を確認した **`逮捕しちゃうぞ（2006-08-28）`** から再開。既存性能はCONFLICTを含むため不用意に改変せず、resetBehaviorを別管理で追加する。
+6. 新規 / QAとも欠損は検索語・資料系統を十分変更してから `UNVERIFIED_AFTER_RESEARCH`。競合は平均せず `CONFLICT`。兄弟機・後継機仕様を根拠なしに流用しない。
 
 取得日: 2026-09-01
