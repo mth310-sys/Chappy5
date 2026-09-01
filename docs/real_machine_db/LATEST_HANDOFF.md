@@ -6,72 +6,86 @@
 
 - 最新mainの `README.md`、実機DBミッションv0.7、`INDEX.md`、既存レコード、直前 `LATEST_HANDOFF.md` を再読して継続。
 - `INDEX.md` は旧19件地点のため、README規定どおり本 `LATEST_HANDOFF.md` を進捗正本とする。
-- 直前正本は **320 `いみそ～れ2ピュアエディション25`（エマ / 2008-12-08）**。
-- 今回、直前handoff最優先候補 **321 `いみそ～れ2ピュアエディション30`（エマ / 2008-12-08）** を追加。
-- グリーンべると当時記事で、ピュア・エディション『プレミアムビスカス』に25φ/30φ双方が存在することを確認。後年一覧でも25/30を別機種名として掲載するため、全機種方針に従い30φを独立レコード化。
-- ただし30φ固有の型式/固有スペック表は未回収。25φP-WORLD/pacnk値を30φ固有値として自動転記せず、パチマガスロマガが径を分けず掲載する『ピュアエディション』共通解析値だけを `ANALYSIS_SINGLE_EDITION_COMMON` と明示して採用。
+- 直前正本は **321 `いみそ～れ2ピュアエディション30`（エマ / 2008-12-08）**。
+- バーニングエディション25/30は2008年12月導入までは確認したが、12/08以前・同日と断定できる具体導入日を十分な再探索後も確定できず、直前handoff指示どおり12/08具体日確定群を先に処理。
+- 今回 **322 `ぱちスロST ゴジラ`（サミー / 型式ゴジラXS / 2008-12-08）** を追加。
+- 性能コア + v0.7 `resetBehavior` を同時収集。設定変更時の内部CZスタートを朝一差として保持し、据え置き/単純電断のカウンタ挙動は推測していない。
 
-## 321. いみそ～れ2ピュアエディション30
+## 322. ぱちスロST ゴジラ
 
-- record: `docs/real_machine_db/machines/2008-12_imisore2-pure-edition-30.md`
-- manufacturer: エマ
-- modelNumber: `UNVERIFIED_AFTER_RESEARCH`
+- record: `docs/real_machine_db/machines/2008-12-08_pachislo-st-godzilla.md`
+- manufacturer: サミー
+- modelNumber: **ゴジラXS**
 - inspectionNumber: `UNVERIFIED_AFTER_RESEARCH`
-- releaseDate: **2008-12-08**。ALL7が『いみそ～れ2 ピュアエディション プレミアムビスカス』を同日導入予定とし、グリーンべるとが同プレミアムビスカスに25φ/30φ双方があることを当時記事で明記。
+- releaseDate: **2008-12-08**（ALL7導入予定 + Pachibee導入日で照合）
 - generation: 5号機
-- systemType: **ノーマル / 完全告知 / ボーナス主体（RT非搭載ピュア・エディション / 30φ）**
+- systemType: **ボーナス + CZ + 無限RT（次回ボーナスまで）**
 - settings: **1 / 2 / 3 / 4 / 5 / 6**
-- BIG（エディション共通解析）: **1/318.1 / 1/309.1 / 1/297.9 / 1/277.7 / 1/264.3 / 1/248.2**
-- REG（エディション共通解析）: **1/337.8 / 1/327.7 / 1/321.3 / 1/297.9 / 1/282.5 / 1/262.1**
-- 合算: **1/163.8 / 1/159.1 / 1/154.6 / 1/143.7 / 1/136.5 / 1/127.5**
-- シミュレートPAYOUT: **96.92 / 98.54 / 100.74 / 104.64 / 107.75 / 111.55%**
-- 1000円/50枚あたりゲーム数: **36.37 / 36.67 / 37.28 / 37.73 / 38.23 / 38.55G**
-- BIG: **345枚を超える払い出しで終了 / 約312枚**
-- REG: **105枚を超える払い出しで終了 / 約104枚**
-- RT/ART/AT/CZ: **NOT_APPLICABLE_PURE_EDITION**。バーニング版のネオクラッシュモードを流用しない。
-- 通常ゲーム数天井: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- `coreStatus: PARTIAL`（30φ固有型式・独立スペック照合待ち）
+- BIG: **1/1310.72 / 1/1092.27 / 1/949.80 / 1/840.21 / 1/744.73 / 1/642.51**
+- REG: **1/108.15 / 1/109.59 / 1/111.08 / 1/112.60 / 1/114.17 / 1/116.20**
+- 合算: **1/99.90 / 1/99.60 / 1/99.45 / 1/99.30 / 1/99.00 / 1/98.40**
+- 50枚/1000円ベース: **44.83 / 45.09 / 45.64 / 46.20 / 46.48 / 46.74G**
+- BIG: **465枚超払い出しで終了 / 約311枚**
+- REG: **27枚超払い出しで終了 / 約24枚**
+- CZ `索敵MODE`: 全ボーナス後。通常状態**300G消化**でも移行。特殊リプレイでRT、通常リプレイでCZ終了。
+- RT `迎撃MODE`: **約+1.0枚/G**、次回ボーナスまで継続。CZ→RT突入期待度は当時業界資料で**約30%**。
+- 通常300Gはボーナス直撃天井ではなく **CZ到達型** として記録。
+- `coreStatus: COMPLETE_CORE`
 
-### resetBehavior（321）
+### 機械割CONFLICT（322）
 
-- `settingChangeBehavior`: `UNVERIFIED_AFTER_RESEARCH`。機種名表記揺れ、PureEdition30、プレミアムビスカス30、エマと設定変更/リセット/朝一/据え置き/電源OFF ON/ガックン/初期出目を組み替え、当時業界・解析・古いDB・後年一覧まで再探索したが本30φ固有挙動は確定できず。
-- `carryOverBehavior`: `NO_GAME_COUNT_CEILING_OR_MODE_TO_CARRY_CONFIRMED`。RT/ART/AT/CZ/通常時モード/ゲーム数天井を持つ公開仕様は確認されない。
-- `powerCycleBehavior`: `UNVERIFIED_AFTER_RESEARCH`。
-- `gameCounterReset`: `NOT_APPLICABLE_NO_GAME_COUNT_CEILING`。
-- `ceilingAfterReset`: `NOT_APPLICABLE_NO_CEILING`。
-- `modeAfterReset`: `NONE_CONFIRMED_AFTER_RESEARCH`。
-- `stateAfterReset`: `NONE_CONFIRMED_AFTER_RESEARCH`。
+- 市場掲載/後年DB系列: **97.9 / 99.7 / 102.0 / 104.4 / 106.2 / 110.5%**
+- パチマガスロマガ・シミュレート: **99.78 / 101.76 / 104.12 / 106.82 / 108.49 / 113.42%**
+- 算出条件/定義差の可能性があるため平均化せず `CONFLICT`。
+- 後年単一資料にさらに異なる機械割とBIG/REG/RT仕様があるが、当時業界資料・複数解析と大きく矛盾するため `LOW_CONFIDENCE_CONFLICT` としてコア採用しない。
+
+### resetBehavior（322）
+
+- `settingChangeBehavior`: **INTERNAL_CZ_START_CONFIRMED_RETROSPECTIVE**。設定変更時は内部CZスタートと後年DBで確認。
+- `carryOverBehavior`: `UNVERIFIED_AFTER_RESEARCH`。据え置き時の通常300G→CZカウンタ、CZ/RT状態の持越しを本機固有資料で確定できず。
+- `powerCycleBehavior`: `UNVERIFIED_AFTER_RESEARCH`。設定変更なしの電源OFF→ONでのカウンタ/CZ/RT処理は直接資料なし。
+- `gameCounterReset`: `UNVERIFIED_EXACT_COUNTER_BEHAVIOR_SETTING_CHANGE_STARTS_INTERNAL_CZ`。設定変更後は通常300G待ちをせず内部CZ開始するが、内部カウンタ初期値自体は未確認。
+- `ceilingAfterReset`: **IMMEDIATE_INTERNAL_CZ_START_NOT_NUMERIC_BONUS_CEILING**。
+- `modeAfterReset` / `stateAfterReset`: **INTERNAL_CZ_START_CONFIRMED_RETROSPECTIVE**。
 - `advantageousSectionReset`: `NOT_APPLICABLE`（5号機・有利区間制度前）。
-- `resetBenefits`: `NONE_CONFIRMED_AFTER_RESEARCH`。
+- `resetBenefits`: 設定変更後は通常300Gを待たずRT突入契機のCZから開始。
 - `resetPenalties`: `NONE_CONFIRMED_AFTER_RESEARCH`。
-- `resetDetection`: `UNVERIFIED_AFTER_RESEARCH`。
-- 公開朝一数値: リセット固有短縮天井 `NOT_APPLICABLE`、リセットモード振り分け/朝一当選率/恩恵発生率 `NONE_CONFIRMED_AFTER_RESEARCH`。
+- `resetDetection`: `UNVERIFIED_AFTER_RESEARCH`。ガックン/初期出目/表示等の本機固有変更判別は再探索後も確定できず。
+- 公開朝一数値: 設定変更専用のモード振り分け/朝一当選率/恩恵発生率は `NONE_CONFIRMED_AFTER_RESEARCH`。通常CZ→RT期待度約30%は公開値だが「設定変更時専用30%」とは扱わない。
 
-## 321主要出典
+## 322主要出典
 
 取得日: 2026-09-02
 
-- https://www.all7.jp/plans/index/2008/12/10 — ALL7。プレミアムビスカスの2008-12-08導入予定。
-- https://web-greenbelt.jp/00003852/ — グリーンべると。2008-10-23発表、ピュア/バーニング仕様分離、ピュア『プレミアムビスカス』25φ/30φ双方の存在、ピュアはネオクラッシュモード非搭載。
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/ema_slot/31/a.php — パチマガスロマガ。ピュア・エディション共通の基本システム、BIG/REG払い出し・実獲得枚数。
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/ema_slot/31/h.php — パチマガスロマガ。ピュア・エディション共通の設定別BIG/REG/合算、シミュレートPAYOUT。
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/ema_slot/31/c.php — パチマガスロマガ。ピュア・エディション共通の設定別1000円あたりゲーム数36.37～38.55G。
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/ema_slot/31/ema_slot_31.php — パチマガスロマガ。攻め時・ヤメ時『特にナシ』。
-- https://pacnk.com/photoslot/mlist_2008.html — 後年DB。ピュア25/30、バーニング25/30を別名称で2008年12月掲載。
-- https://pacnk.com/slot/s/mlist_i.html — 後年DB。ピュアエディション30の独立機種名・2008.12掲載（詳細未載）。
+- https://www.all7.jp/plans/index/2008/12/10 — ALL7。2008-12-08導入予定、メーカー=サミー。
+- https://www.pachibee.jp/machines/movie/217020107 — Pachibee。2008-12-08導入日の照合。
+- https://www.p-world.co.jp/machine/database/5389 — P-WORLD。型式ゴジラXS、設定別合算確率。
+- https://web-greenbelt.jp/00003914/ — グリーンべると。当時発表、BIG約311枚/REG約24枚、CZ索敵MODE、RT迎撃MODE、CZ→RT約30%、RT約+1枚/G・次回ボーナスまで。
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sammy_slot/116/a.php — パチマガスロマガ。基本システム、BIG/REG払い出し条件。
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sammy_slot/116/h.php — パチマガスロマガ。設定別BIG/REG/合算、シミュレート機械割。
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sammy_slot/116/c.php — パチマガスロマガ。設定別1000円あたりゲーム数44.83～46.74G。
+- https://pacnk.com/slot/tools/sh_stgozira.html — 後年DB。市場掲載機械割、通常状態300GでCZ、設定変更時内部CZスタート。
+- https://crankyseven.com/sp/tenjo-5ka.htm — 旧解析一覧。通常状態300GでCZの補助照合。
+- https://p-kn.com/slot/893/ — K-Navi。BIG/REG払い出し、RT純増の補助照合。
+
+## 321 QAで新規判明
+
+- **`いみそ～れ2ピュアエディション30` の正式型式は `イミソーレ2N-30` と判断できる新規根拠を回収。**
+- 2008-11-17東京都公安委員会告示第396号の検定記録にエマ `イミソーレ2N-30` があり、機器対応表が `イミソーレ2ピュアエディション30（イミソーレ2N-30）` と対応付ける。
+- 現321レコードは `modelNumber: UNVERIFIED_AFTER_RESEARCH` のままなので、次回QA時に **`イミソーレ2N-30`へ修正可能**。25φの `イミソーレ2H` とは混同しない。
+- 根拠: https://p-mans.blogspot.com/2008/11/ （東京都公安委員会検定告示転載） / https://happylibus.com/doc/672417/灰皿フタ機種対応表
 
 ## 境界監査・重複防止
 
-- **既存321件の再追加禁止。**
-- `いみそ～れ2ピュアエディション30` の型式名は30φ固有一次/業界DBを回収できていない。25φP-WORLDの `イミソーレ2H` を30φへ自動転記しない。
-- パチマガスロマガのピュア版解析は径別表記なし。グリーンべるとがピュア版に25φ/30φ双方を明記するためエディション共通値として保存したが、30φ固有表が見つかれば照合し、差があれば `CONFLICT` または別性能として修正する。
-- 今回の再探索でパチマガスロマガにピュア版の設定別1000円あたりゲーム数 **36.37～38.55G** が現存することを確認。320（25φ）のbase欠損は次回QAで追記可能だが、新規本線を止めないため今回は321処理を優先。
-- バーニング25/30は2008年12月導入までは複数後年資料で一致するが、具体導入日をまだ確定できていない。ALL7 12/08一覧にはピュア版のみ明示されるため、バーニングを12/08と推測しない。
+- **既存322件の再追加禁止。**
+- `いみそ～れ2バーニングエディション25/30` は2008年12月導入は確認済みだが具体導入日未確定。12/08と推測しない。ネオクラッシュモード搭載のためピュア版性能を流用しない。
+- 321 pure30 の型式は次回QAで `イミソーレ2N-30` へ修正候補。正式レコード修正前でも、本handoffの新規根拠を失わないこと。
 
 ## 次回再開地点
 
-1. **LATEST_HANDOFF基準321件地点 / 2008-12-08境界。**
-2. 最優先で `いみそ～れ2バーニングエディション25` / `30` の実納品・初回ホール導入日を当時業界記事、販売資料、P-WORLD、古いホール新台記録まで再探索する。12/08以前または同日が確定すれば最古の未処理版から322件目へ進む。
-3. バーニング版の具体日が12/08より後または月精度止まりの場合、12/08確定群 `ぱちスロST ゴジラ` → `ぱちスロST 行け!稲中卓球部` → `ウルトラマン・ザ・スロット` → `カイジ2` → `ハイサイ蝶特急` の既存登録有無を監査し、時系列最古の未処理機を322件目として処理する。
-4. バーニング版ではRT『ネオクラッシュモード』の突入契機・継続条件・純増、性能コアとv0.7 `resetBehavior` を同時収集し、ピュア版性能を流用しない。
-5. 各欠損は表記揺れ・型式・メーカー・シリーズ名と資料系統を変えて十分再探索後のみ `UNVERIFIED_AFTER_RESEARCH` とする。
+1. **LATEST_HANDOFF基準322件地点 / 2008-12-08同日群。**
+2. 次の本線は **`ぱちスロST 行け!稲中卓球部`（サミー）**。既存登録有無を再確認してから、性能コア + v0.7 `resetBehavior` を収集する。
+3. 当時グリーンべると同時発表記事で、同機は設定1合算約1/109.8～設定6約1/79.9、中ボーナス約104枚、RT `イタズラタイム` 搭載まで候補値を確認済み。次回は設定別詳細、ベース、RT純増/継続、CZ/天井、リセット挙動を詰める。
+4. その後 `ウルトラマン・ザ・スロット` → `カイジ2` → `ハイサイ蝶特急` の12/08群を時系列監査。
+5. バーニング25/30の具体導入日が後続調査で12/08以前または同日と確定した場合は漏れ防止のため遡及挿入する。具体日がない限り月精度候補として保持。
+6. 各欠損は表記揺れ・型式・メーカー・シリーズ名とリセット関連検索語、資料系統を変えて十分再探索後のみ `UNVERIFIED_AFTER_RESEARCH` とする。
