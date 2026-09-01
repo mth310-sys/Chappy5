@@ -6,82 +6,80 @@
 
 - 最新mainの `README.md`、実機DBミッションv0.7、`INDEX.md`、既存レコード、直前 `LATEST_HANDOFF.md` を再読して継続。
 - `INDEX.md` は旧19件地点のため、README規定どおり本 `LATEST_HANDOFF.md` を進捗正本とする。
-- 直前handoffは236件地点。236 `ジアマゾンロード` まで追加済み。
-- 今回、直前指定の最優先候補 `256（ジゴロ）` を調査し、237件目として追加。
-- 当時グリーンべると記事では `2008-03-30納品予定`。旧業界史には `2008-03-31発売` 表記があるため、納品日/発売日ラベル差の可能性はあるが推測統一せず `CONFLICT_DATE_LABEL` として保持。
-- 導入時系列の具体日前進地点は2008-03-30まで到達。2008-03-25〜31の残監査はまだ閉じていない。
+- 直前handoffは237件地点。237 `256（ジゴロ）` まで追加済み。
+- 2008-03-25〜03-31境界を当時業界一覧・旧DBで再監査。3/31発売系列で確認できる `ハナダマシイ / ハナダマシイ-30` は既に232/233、`256（ジゴロ）` は237として登録済みで、今回新たに追加すべき3月末本線機種は確認されなかったため2008年3月列を閉じた。
+- 2008年4月へ前進し、北電子 `月光仮面`（型式 `ゲッコウカメン2A`）を238件目として追加。
+- 当時グリーンべるとは `2008-04-06納品開始`、旧業界史は `2008-04-07発売` とするため、納品開始/発売ラベル差として `CONFLICT_DATE_LABEL` を保持。
+- 導入時系列の具体日前進地点は2008-04-06まで到達。
 - resetBehavior遡及QAは `球児（2006-09）` まで補完済み。次対象は `ジャックポット・トロピカルバージョン2（2006-09）` 以降。
 
-## 237. 256（ジゴロ）（SNKプレイモア）
+## 238. 月光仮面（北電子）
 
-- new record: `docs/real_machine_db/machines/2008-03-30_256-jigoro.md`
-- manufacturer: SNKプレイモア
-- releaseDate: `2008-03-30`
-- releaseDateConfidence: `INDUSTRY_PLANNED_DELIVERY`
+- new record: `docs/real_machine_db/machines/2008-04-06_gekkou-kamen.md`
+- manufacturer: 北電子
+- modelName: `ゲッコウカメン2A`
+- releaseDate: `2008-04-06`
+- releaseDateConfidence: `INDUSTRY_DELIVERY_START`
 - generation: 5号機初期
-- systemType: ボーナス + RT/ART + 天井AT（1ライン）
-- coreStatus: `PARTIAL`
+- systemType: ノーマルA / ボーナス主体（RTなし・小役同時当選あり）
+- coreStatus: `COMPLETE_CORE`
 - resetBehaviorQA: `PARTIAL`
 
 ### 性能コア
 
-- 赤7BIG: `1/897.75 → 1/762.05`。
-- 緑5BIG: `1/897.75 → 1/771.01`。
-- 青3BIG: `1/897.75 → 1/771.01`。
-- BIG合成: `1/299.25 / 1/291.27 / 1/283.71 / 1/276.52 / 1/269.70 / 1/256.00`。P-WORLDの丸め値とも整合。
-- パチマガスロマガのシミュレート機械割: `96.62 / 99.45 / 102.17 / 105.13 / 107.90 / 113.69%`。
-- 旧5号機Wiki: `97.3 / 99.9 / 102.4 / 105.0 / 107.5 / 112.4%`。
-- 機械割は資料差があるため `CONFLICT_PAYOUT_RATE`。平均化しない。
-- 各BIGは299枚超払い出し終了、純増約204枚。
-- 全BIG後に最大100GのチャンスRTへ移行し、特殊リプレイ成立でART `256タイム` へ。
-- `256タイム` は100Gまたは1000G、純増約+1.2枚/G、規定G消化またはボーナス成立で終了。
-- 通常時からARTへ入るルートも存在。
-- ボーナス間999Gで小役アシストが作動しコイン持ちが上がる救済機能（天井AT）を当時業界記事で確認。
-- 50枚ベースは `256 / ジゴロ / SNKプレイモア / 50枚 / 1000円 / 千円 / ベース / コイン持ち` 等へ検索語を変更し、当時解析・旧DB・P-WORLD・業界記事・回顧資料を横断したが具体値を確定できず `UNVERIFIED_AFTER_RESEARCH`。
+- BIG: `1/295.21 / 1/281.27 / 1/269.70 / 1/259.04 / 1/248.24 / 1/240.94`。
+- REG: `1/590.41 / 1/560.14 / 1/520.13 / 1/478.36 / 1/399.61 / 1/364.09`。
+- ボーナス合成: `1/196.80 / 1/187.25 / 1/177.60 / 1/168.04 / 1/153.12 / 1/144.99`。
+- 北電子公式の工場データ予測出玉率: `95.21 / 97.16 / 99.10 / 101.21 / 104.23 / 107.39%`。
+- パチマガスロマガのシミュレートPAYOUT: `96.10 / 98.22 / 100.37 / 102.64 / 106.13 / 109.63%`。
+- 出玉率は定義/条件差があるため `CONFLICT_PAYOUT_DEFINITION`。平均化しない。
+- 50枚ベース: 設定1〜5 `35.98G`、設定6 `36.99G`。
+- BIG約314枚、REG約126枚。
+- BIGは345枚超払い出し、REGは120枚超払い出しで終了。
+- RT/ART/ATなしのノーマルA。全小役でボーナス同時抽選。
 
 ### v0.7 resetBehavior
 
 - settingChangeBehavior: `UNVERIFIED_AFTER_RESEARCH`
 - carryOverBehavior: `UNVERIFIED_AFTER_RESEARCH`
 - powerCycleBehavior: `UNVERIFIED_AFTER_RESEARCH`
-- gameCounterReset: `UNVERIFIED_AFTER_RESEARCH`
-- ceilingAfterReset: `UNVERIFIED_AFTER_RESEARCH`
-- modeAfterReset / stateAfterReset: `UNVERIFIED_AFTER_RESEARCH`
+- gameCounterReset: `NOT_APPLICABLE_NO_GAME_COUNT_CEILING_CONFIRMED`
+- ceilingAfterReset: `NOT_APPLICABLE_NO_CEILING_CONFIRMED`
+- modeAfterReset: `NOT_APPLICABLE_NO_MODE_SYSTEM_CONFIRMED`
+- stateAfterReset: `NOT_APPLICABLE_NO_INTERNAL_STATE_SYSTEM_CONFIRMED`
 - advantageousSectionReset: `NOT_APPLICABLE`
 - resetBenefits / resetPenalties / numericResetData: `NONE_CONFIRMED`
 - resetDetection: `UNVERIFIED_AFTER_RESEARCH`
-- 通常時の999G救済そのものはCONFIRMED。ただし設定変更時に999Gカウンタを初期化するか、据え置き/電源OFF→ONで引き継ぐか、短縮されるかは本機固有の直接根拠を発見できず一般論で補完しない。
-- 設定変更/電断時のチャンスRT・256タイム残G/ART権利/内部状態処理も直接根拠なし。
-- `256 / ジゴロ / SNKプレイモア` と `設定変更 / リセット / 朝一 / 朝イチ / 据え置き / 電源OFF ON / 999G / 天井 / ガックン / 初期出目` を組み替えて再探索済み。
+- `月光仮面 / 月光仮面2A / 月光仮面A2 / ゲッコウカメン2A / 北電子` と `設定変更 / リセット / 朝一 / 朝イチ / 据え置き / 電源OFF ON / 電源 / ガックン / 初期出目 / 天井` を組み替え、公式・当時解析・旧DB・中古実機資料・業界アーカイブ・回顧資料を横断したが、本機固有の設定変更/据え置き/電断時初期挙動と変更判別は直接根拠を発見できず一般論で補完しない。
 
 ## 今回の境界監査メモ
 
-- `256（ジゴロ）` は2008-02-25にSNKプレイモアが発表。当時グリーンべるとは3月30日納品予定、旧業界史は3月31日発売とするため日付表現差を保持。
-- `ハナダマシイ / ハナダマシイ-30` は既に232/233として登録済み。3/31発売資料があっても重複追加禁止。
-- 2008-03-25〜03-31のメーカー/業界一覧監査は未完。`256` 以外の漏れがないことを確認してから2008年3月を閉じる。
-- 既知4月候補は北電子 `月光仮面2A`（2008-04-07発売記録）、アルゼ `アレックス7R`（2008-04-21発売記録）。3月残監査を優先する。
+- 2008年3月末は `ハナダマシイ / ハナダマシイ-30 / 256（ジゴロ）` が既登録であることを再確認し、3月列を閉じた。
+- 北電子は `ジャンキージャグラー` と `月光仮面` の2機種を同時発表し、当時グリーンべるとは双方とも `2008-04-06` 納品開始と明記。今回はhandoffで明示されていた `月光仮面` を238として処理したため、同日未処理の `ジャンキージャグラー` が次回最優先。
+- その後の具体日候補は `ナイトライダーSP`、`クローズS`（旧業界史では2008-04-07発売）、`デジスロF / デジスロV-30`（2008-04-14発売）。既存登録を必ず確認して時系列で処理する。
+- 旧handoffにあった `アレックス7R 2008-04-21` は再監査で不確実。旧業界史は `2008-05-07 or 05-12発売（04-07先行導入済み）` とするため、4月本線へ自動配置せず導入日定義を再調査してから扱う。
 
 ## 今回の主要出典
 
 取得日: 2026-09-01
 
-### 256（ジゴロ）
-- SNKプレイモア公式: https://slot.snk-corp.co.jp/official/256/about/index.html
-- グリーンべると: https://web-greenbelt.jp/00003430/
-- プレイグラフ転載: https://p-mans.blogspot.com/2008/02/
-- パチマガスロマガ 基本: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/snk_slot/19/a.php
-- パチマガスロマガ ボーナス/機械割: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/snk_slot/19/h.php
-- P-WORLD: https://www.p-world.co.jp/machine/database/5113
-- 旧5号機Wiki: https://w.atwiki.jp/5gouki/pages/64.html
-- 5号機クロニクル: https://5goki.com/snkplaymore
+### 月光仮面
+- 北電子公式: https://www.kitadenshi.co.jp/slot/gekkoukamen/
+- グリーンべると / P-WORLD業界ニュース: https://news.p-world.co.jp/articles/2700/greenbelt
+- パチマガスロマガ 基本: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/kitac_slot/65/a.php
+- パチマガスロマガ ボーナス/機械割: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/kitac_slot/65/h.php
+- パチマガスロマガ 1000円あたりゲーム数: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/kitac_slot/65/c.php
+- K-Navi: https://p-kn.com/slot/791/
+- 中一商事（型式/RTなし補助）: https://www.nakaiti.com/html/sKitadenshi054.html
 - パチスロ業界初まとめ: https://slothistory.com/kousin_kako05.html
+- Pマンズ 2008年2月（型式告示転載）: https://p-mans.blogspot.com/2008/02/
 
 ## 重複防止
 
-- 既存236件の再追加禁止。
-- 237 `256（ジゴロ）` も再追加禁止。
-- `ハナダマシイ / ハナダマシイ-30` は232/233登録済み。日付根拠を追加する場合も新規レコードを作らず既存日付QAへ回す。
-- `256` と `ジゴロ` を別機種として二重登録しない。
+- 既存237件の再追加禁止。
+- 238 `月光仮面` も再追加禁止。
+- `月光仮面 / 月光仮面2A / 月光仮面A2 / ゲッコウカメン2A` を別機種として二重登録しない。
+- `ハナダマシイ / ハナダマシイ-30` は232/233、`256（ジゴロ）` は237登録済み。
 
 ## resetBehavior 遡及QA
 
@@ -92,8 +90,9 @@
 
 ## 次回再開地点
 
-1. **LATEST_HANDOFF基準237件地点から継続。**
-2. **2008-03-25〜03-31の残監査をメーカー公式/当時業界一覧/古いDBで続け、`256（ジゴロ）` 以外に未処理機がないか確認する。**
-3. 3月列を閉じたら2008年4月へ前進し、具体導入日を比較して最古未処理機から追加する。既知候補は北電子 `月光仮面2A`（2008-04-07）とアルゼ `アレックス7R`（2008-04-21）。
-4. resetBehavior遡及QAは `ジャックポット・トロピカルバージョン2（2006-09）` から継続。
-5. 欠損は表記揺れ・型式名・メーカー名・シリーズ名と、設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックンを変えて十分再探索してから `UNVERIFIED_AFTER_RESEARCH`。競合は平均せず `CONFLICT`。
+1. **LATEST_HANDOFF基準238件地点から継続。**
+2. **同じ2008-04-06納品開始の北電子 `ジャンキージャグラー` を最優先。既存レコードを確認し未登録なら239件目として性能コア + v0.7 resetBehaviorを収集する。**
+3. 続いて2008-04-07候補 `ナイトライダーSP / クローズS` を具体導入日と既存登録で比較し、未処理を時系列順に追加する。
+4. 4月14日候補 `デジスロF / デジスロV-30`、その他4月一覧の漏れをメーカー公式/当時業界/古いDBで監査する。
+5. resetBehavior遡及QAは `ジャックポット・トロピカルバージョン2（2006-09）` から継続。
+6. 欠損は表記揺れ・型式名・メーカー名・シリーズ名と、設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックンを変えて十分再探索してから `UNVERIFIED_AFTER_RESEARCH`。競合は平均せず `CONFLICT`。
