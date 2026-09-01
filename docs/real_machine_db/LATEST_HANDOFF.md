@@ -6,93 +6,83 @@
 
 - 最新mainの `README.md`、実機DBミッションv0.7、`INDEX.md`、既存レコード、直前 `LATEST_HANDOFF.md` を再読して継続。
 - `INDEX.md` は旧19件地点のため、README規定どおり本 `LATEST_HANDOFF.md` を進捗正本とする。
-- 直前handoffは209件地点（`パチスロシティーハンター` 追加済み）。
-- 2007年12月境界をメーカー別一覧・旧DB・当時業界記事で再監査した結果、既存209件より時系列上前に入る未処理機 `名門!夢色学園生徒会` を発見。
-- 当時グリーンべると記事で **2007-12-02納品開始** が具体日まで確定したため、漏れ防止優先ルールに従い遡及追加。
-- **210件目として `名門!夢色学園生徒会` を追加済み。**
+- 直前handoffは210件地点（`名門!夢色学園生徒会` 追加済み）。
+- 2007-12-01〜12-16境界をメーカー公式、メーカー別5号機一覧、P-WORLD、K-Navi、当時業界記事、旧解析で再監査。
+- サミー公式製品一覧でロデオ `バーチャファイターT` の **2007.12** を確認し、main未登録も確認。
+- 具体納品日は再探索しても確定できなかったが、月単位候補を未処理のまま飛ばさないルールに従い、**211件目として `バーチャファイターT` を追加済み。**
 
-## 210. 名門!夢色学園生徒会
+## 211. バーチャファイターT
 
-- new record: `docs/real_machine_db/machines/2007-12-02_meimon-yumeiro-gakuen-seitokai.md`
-- commit: `c0d8b2a5dbe6675aeb6c9f5f6295a5a7ec070243`
-- manufacturer: オーイズミ（オーイズミNEOブランド）
-- formalType: ユメガク
+- new record: `docs/real_machine_db/machines/2007-12_virtua-fighter-t.md`
+- commit: `e90d9d0d7c868a8ee06707612ba5db711c863937`
+- manufacturer: ロデオ
 - generation: 5号機
-- systemType: ボーナス + CZ + RT
+- releaseDate: `2007-12`（サミー公式。日単位はUNVERIFIED）
+- systemType: ボーナス + CZ + 完走型RT
 - coreStatus: `PARTIAL`
 - resetBehaviorQA: `PARTIAL`
 
 ### 導入・同定
 
-- グリーンべると2007-11-16記事は、オーイズミNEOブランド、型式名 `ユメガク`、**2007-12-02納品開始**を明記。
-- P-WORLD業界ニュース保存版でも同内容を確認。
-- HAZUSE旧解析は `<2007年11月>`、後年整理は `2007.12` のため `CONFLICT_DATE_MONTH`。具体日を持つ当時業界記事を優先して12/2採用。
+- サミー公式パチスロ製品一覧で `バーチャファイターT`、ロデオ、`2007.12` を確認。
+- グリーンべると2007-10-26記事で、ロデオ製『バーチャファイター』の発表展示会を11/1からフィールズ全国拠点で開始、完走型RTループタイプと確認。
+- `納品 / 導入 / ホール導入 / 12月` まで検索語を変更したが、具体的な納品開始日/ホール導入日は高信頼資料で確定できず `UNVERIFIED_AFTER_RESEARCH`。
 
 ### 性能コア
 
-- BIG: `1/390 / 1/372 / 1/356 / 1/341 / 1/328 / 1/315`。
-- REG: `1/780 / 1/745 / 1/712 / 1/683 / 1/655 / 1/630`。
-- 合算: `1/260 / 1/248 / 1/237 / 1/228 / 1/218 / 1/210`。
-- BIG純増平均約237枚、REG純増平均約102枚。
-- 全ボーナス後にCZ。CZ中の特殊リプレイから60G RT `ストーリーモード`、純増約 `+0.7枚/G`。
-- 当時業界記事ではCZ↔RT約50%ループ、RT中ボーナス成立期待20〜25%。
-- HAZUSEには最大1000GのプレミアムRTも記載されるが突入条件は資料自体が調査中のため、内部抽選は補完していない。
-- 設定別機械割/出玉率は表記揺れ・型式・メーカー名まで変えて業界/旧解析/後年DBを横断したが高信頼数値を確定できず `UNVERIFIED_AFTER_RESEARCH`。
-- 50枚ベースも `50枚 / 1000円 / ベース / コイン持ち / 千円ゲーム数` まで検索語変更後も確定できず `UNVERIFIED_AFTER_RESEARCH`。
+- K-Navi BIG合算: `1/399.6 / 1/381.0 / 1/364.1 / 1/348.6 / 1/334.4 / 1/309.1`。
+- K-Navi REG合算: `1/799.2 / 1/762.1 / 1/728.2 / 1/697.2 / 1/668.7 / 1/618.3`。
+- 全ボーナス合算は5号機まとめwikiで `1/266 / 1/254 / 1/243 / 1/232 / 1/223 / 1/206`。K-Navi値からの合算と丸め範囲で整合。
+- 機械割はK-Navi `96.2 / 98.6 / 101.0 / 104.8 / 109.2 / 114.1%`、5号機まとめwiki `96.3 / 98.7 / 101.0 / 104.9 / 109.2 / 114.1%`。平均せず `CONFLICT_ROUNDING_OR_DEFINITION`。
+- 同色BIG平均純増約315枚、異色BIG/MIDDLE約210枚、REG約56枚。
+- 全ボーナス後CZ。特殊リプレイ先行で44G完走型RT `最終決戦ステージ`。
+- RT純増約 `+0.7枚/G`、グリーンべるとではRT突入＋継続＋ボーナスのVFL期待値約70%。
+- 通常状態300Gで周期CZ。
+- 比較可能な50枚ベースは `50枚 / 1000円 / ベース / コイン持ち` を変えて再探索したが直接値を確定できず `UNVERIFIED_AFTER_RESEARCH`。小役確率から独自逆算しない。
 
 ### v0.7 resetBehavior
 
-- settingChangeBehavior: 設定変更時の通常/CZ/60G RT/プレミアムRT状態、残G処理は `UNVERIFIED_AFTER_RESEARCH`。
-- carryOverBehavior: 据え置き時のCZ/RT残G・内部状態は `UNVERIFIED_AFTER_RESEARCH`。
-- powerCycleBehavior: 電源OFF→ONのみの場合のCZ/RT残G・内部状態・表示は `UNVERIFIED_AFTER_RESEARCH`。
-- gameCounterReset: 通常時ハマリ天井は `NONE_CONFIRMED`。60G/最大1000GはRT継続G数であり通常時天井ではない。
-- ceilingAfterReset: 設定変更後短縮天井/朝一専用天井 `NONE_CONFIRMED`。
-- modeAfterReset: 朝一専用モード/公開変更時モード振り分け `NONE_CONFIRMED`。
-- stateAfterReset: CZ/RT中の設定変更・据え置き・電断処理 `UNVERIFIED_AFTER_RESEARCH`。
+- settingChangeBehavior: 5号機まとめwikiに **「RAMクリアしない限り設定変更してもG数は引き継ぐ」** と明記。通常時300G周期CZカウンタは通常の設定変更だけではリセットされない。
+- carryOverBehavior: 通常時周期G数は同解析のRAMクリア条件から引継ぎ側を支持。ただしCZ/RT残G・状態の据え置き専用直接記述は `UNVERIFIED_AFTER_RESEARCH`。
+- powerCycleBehavior: 電源OFF→ONのみの周期G数/CZ/RT状態処理は `UNVERIFIED_AFTER_RESEARCH`。
+- gameCounterReset: 周期CZは通常状態300G。設定変更のみでは引継ぎ `CONFIRMED_ANALYSIS`。
+- ceilingAfterReset: 設定変更時短縮周期/短縮天井/朝一専用天井 `NONE_CONFIRMED`。
+- modeAfterReset: 朝一専用モード/設定変更時公開モード振り分け `NONE_CONFIRMED`。
+- stateAfterReset: 通常時周期G数引継ぎは確認済み。CZ中/44G RT中の変更・据え置き・電断時状態/残Gは `UNVERIFIED_AFTER_RESEARCH`。
 - advantageousSectionReset: `NOT_APPLICABLE`。
-- resetBenefits / resetPenalties: 公開朝一固有恩恵・不利要素 `NONE_CONFIRMED`。
-- resetDetection: 本機固有ガックン/初期出目/液晶・ランプ等の変更判別 `UNVERIFIED_AFTER_RESEARCH`。
-- numericResetData: 公開設定変更時専用数値 `NONE_CONFIRMED`。
+- resetBenefits: 設定変更でも周期G数を引き継ぐため、朝一の周期CZ狙いに影響し得る。設定変更専用追加優遇は `NONE_CONFIRMED`。
+- resetPenalties: `NONE_CONFIRMED`。
+- resetDetection: 周期G数が設定変更でリセットされないため、周期到達だけでは変更/据え置きを単純判別できない。本機固有ガックン等は `UNVERIFIED_AFTER_RESEARCH`。
+- numericResetData: 通常時周期CZ `300G`、設定変更のみならカウンタ引継ぎ。
 
-### CONFLICT
+### CONFLICT / missing
 
-- 導入時期: 当時グリーンべると `2007-12-02` 納品開始、HAZUSE `<2007年11月>`、後年整理 `2007.12`。12/2を採用し差を保持。
-- RT終了条件: グリーンべるとは「60G完走型RT」、HAZUSEは終了条件を「ボーナス当選/60G消化」と記載。物差し確定値は60G・約+0.7枚/Gに限定し、細則は `CONFLICT_DETAIL`。
+- 機械割: K-Naviと5号機まとめwikiで設定1/2/4に0.1pt差。平均化せず双方保持。
+- 未確定: 具体導入日、正式型式名、50枚ベース、CZ/RT中の変更/据え置き/電断処理、電源OFF→ONのみの周期カウンタ処理、本機固有変更判別。
 
 主要出典:
-- グリーンべると: https://web-greenbelt.jp/00004412/
-- P-WORLD業界ニュース保存: https://news.p-world.co.jp/articles/2489/greenbelt
-- P-WORLD機種DB: https://www.p-world.co.jp/machine/database/4992
-- HAZUSE旧解析: https://hazuse.com/i/data/yumeirogakuen/top.html
-- 後年スペック整理: https://pachinko.hatenablog.jp/entry/2007/12/meimon-yumeiro-gakuen-seitokai
+- サミー公式: https://www.sammy.co.jp/japanese/products/pachislot/index.html
+- グリーンべると: https://web-greenbelt.jp/00006462/
+- K-Navi: https://p-kn.com/slot/732/
+- P-WORLD: https://www.p-world.co.jp/machine/database/4976
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/rodeo_slot/46/a.php
+- 5号機まとめwiki: https://w.atwiki.jp/5gouki/pages/75.html
+- SLONET旧攻略: https://slonet.sakura.ne.jp/kouryaku/virtuafighter.html
 
-## 直前の209件目
+## 直前の210件目
 
-### パチスロシティーハンター
+### 名門!夢色学園生徒会
 
-- record: `docs/real_machine_db/machines/2007-12-06_pachislot-city-hunter.md`
-- commit: `d891b7962592cf032410cf203000f682cc0596c5`
+- record: `docs/real_machine_db/machines/2007-12-02_meimon-yumeiro-gakuen-seitokai.md`
+- commit: `c0d8b2a5dbe6675aeb6c9f5f6295a5a7ec070243`
 - coreStatus: `PARTIAL`
 - resetBehaviorQA: `PARTIAL`
-- 当時業界記事の具体納品日は2007-12-06。REG後100G RT `XYZタイム`、約+0.9枚/G。
-
-## 直前の208件目
-
-### パチスロ「機動戦士ガンダムII～哀・戦士編～」
-
-- record: `docs/real_machine_db/machines/2007-12-03_mobile-suit-gundam-ii-ai-senshi.md`
-- commit: `b5e3ca63f3e0de363b559bf63f28e879b859961a`
-- coreStatus: `COMPLETE_CORE`
-- resetBehaviorQA: `PARTIAL`
+- 当時業界記事で2007-12-02納品開始。
 
 ## resetBehavior 遡及QA
 
-### じゃりン子チエ（2006-08）
-
-- QA record: `docs/real_machine_db/machines/2006-08_jarinko-chie.md`
-- QA commit: `37577b33bcf0bafe7accd4cff7d807fd47899f6f`
-- 既存性能 `PARTIAL` を維持しv0.7 `resetBehavior` 追加済み。
-- 次の未補完既存レコードは時系列で再監査する。直前候補 `ランブルローズ（2006-08）` は検索インデックス不安定のためmachinesディレクトリ実体を先に確認する。
+- `じゃりン子チエ（2006-08）` まで遡及追加済み。
+- 新規キューを止めず、次回以降に時系列で次の未補完既存レコードも監査する。
 
 ## 重複防止
 
@@ -101,16 +91,17 @@
 - `CANスロ`: 既存レコードあり。再追加禁止。
 - `パチスロ「機動戦士ガンダムII～哀・戦士編～」`: 208件目として追加済み。
 - `パチスロシティーハンター`: 209件目として追加済み。
-- `名門!夢色学園生徒会`: 210件目として今回追加済み。
+- `名門!夢色学園生徒会`: 210件目として追加済み。
+- `バーチャファイターT`: 211件目として追加済み。
 
 ## 次回再開地点
 
-1. **LATEST_HANDOFF基準210件地点から継続。**
-2. 今回12/2の遡及漏れが見つかったため、2007-12-01〜12-16境界をもう一度メーカー別一覧・P-WORLD旧導入情報・当時業界記事で監査し、12/2より早い未処理機または12/3〜12/16の未処理機があれば時系列優先で追加する。
-3. 現時点で具体導入日が確認できている後続候補は `ダイナマイトリターンズ`（2007-12-16〜17納品/導入）、`ハナマル!学園奮闘記!`（2007-12-17資料あり）、`パンドラ`（2007-12-25設置開始）。月単位候補として `ぴかっとシーサー / バーチャファイターT/F / バミューダ / サンバ×サンバ / 学習パチスロ理科 / まぁさん` 等も未登録有無と具体導入日を確認する。
-4. `ぴかっとシーサー` はmain検索で未登録。性能値は一部回収可能だが具体導入日をまだ確定できていないため、月だけで先送り順を決めず境界監査を優先する。
-5. 新規機種は性能コア + v0.7 resetBehaviorを同時収集。欠損は表記揺れ・型式・メーカー・シリーズ、設定変更/リセット/朝一/据え置き/電断/天井/モード/ガックン/有利区間まで検索語を変え、別系統資料を横断した後だけ `UNVERIFIED_AFTER_RESEARCH` とする。
-6. resetBehavior遡及QAは新規キューを止めず、`じゃりン子チエ` の次の未補完既存レコードをmachines実体から特定して進める。
+1. **LATEST_HANDOFF基準211件地点から継続。**
+2. 2007-12-01〜12-16境界監査を続行。月単位未処理候補 `ぴかっとシーサー / バミューダ / サンバ×サンバ / 学習パチスロ理科 / まぁさん` と、`バーチャファイターF` の実導入時期をメーカー公式・当時業界・P-WORLD旧DBで再比較する。
+3. サミー公式一覧では `バーチャファイターT=2007.12` を確認した一方、同一覧の `バーチャファイターF` 表示は周辺項目との対応を再確認してから採用する。K-Naviでは2007-12-19にF発売決定記事があるため、T/Fを同一日扱いしない。
+4. 具体日が確定している後続候補: `ダイナマイトリターンズ` はK-Naviで2007-12-17ホール導入予定、`ハナマル!学園奮闘記!` はK-Naviで12/17導入予定・グリーンべるとで12/16納品開始、`パンドラ` は12/25設置開始候補。境界監査後に最古から進める。
+5. `ぴかっとシーサー` はデンケン販売5号機一覧で2007/12、機械割101.4〜111.4%まで先行確認。具体日・性能コア・resetBehaviorを次回優先監査する。
+6. 新規機種は性能コア + v0.7 resetBehaviorを同時収集。欠損は表記揺れ・型式・メーカー・シリーズ、設定変更/リセット/朝一/据え置き/電断/天井/モード/ガックン/有利区間まで検索語を変え、別系統資料を横断した後だけ `UNVERIFIED_AFTER_RESEARCH`。
 7. 競合値は平均せず `CONFLICT`。別機種・兄弟スペック・後継機仕様は根拠なしに流用しない。
 
 取得日: 2026-09-01
