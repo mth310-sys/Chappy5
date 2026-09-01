@@ -6,81 +6,77 @@
 
 - 最新mainの `README.md`、実機DBミッションv0.7、`INDEX.md`、既存レコード、直前 `LATEST_HANDOFF.md` を再読して継続。
 - `INDEX.md` は旧19件地点のため、README規定どおり本 `LATEST_HANDOFF.md` を進捗正本とする。
-- 直前正本は **314 `サイサイ`（北電子 / 2008-11-24）**。
-- 11月境界監査で、**315 `パンダーゼット`（ラスター / 型式 パンダーゼットA）** が11月24日以前の未収録機として残っていたため遡及追加。
-- P-WORLDは導入月 **2008年11月**、型式 `パンダーゼットA`、検定番号 `8S0530` を掲載。さらに掲示板に **2008-11-14時点で「新装初日」実戦投稿**が残るため、少なくとも11月24日より前に実導入済みだった痕跡として時系列漏れを補完。全国納品開始の具体日は未確定なので日付を推測せず月精度で保存。
-- 性能コア + v0.7 `resetBehavior` を同時収集。設定1/3/5/7のボーナス確率、機械割、50枚ベース、3種約120枚ボーナス、30G/300G ART、1000G/2004G救済構造まで保存。
+- 直前正本は **315 `パンダーゼット`（ラスター / 2008-11、2008-11-14までの実稼働痕跡あり）**。
+- 今回 **316 `海遊記`（ベルコ / 型式カイユウキY）** を追加。
+- ベルコ公式は5号機版を **2008年11月登場**、5号機ARTと明記。P-WORLD当該5号機ページの「導入開始 2000年07月」はベルコ公式の旧4号機版 `海遊記` の登場月と一致するため、旧作との混線として採用しない。
+- 全国納品開始/ホール導入の具体日は、表記揺れ・型式・メーカー・11月の具体日を変えて再探索したが確定できず、月精度 `2008-11` のまま保存。
+- 性能コア + v0.7 `resetBehavior` を同時収集。設定別3種ボーナス確率、合算、機械割CONFLICT、基本獲得、ART/CZ構造を保存。
 
-## 315. パンダーゼット
+## 316. 海遊記（2008年5号機）
 
-- record: `docs/real_machine_db/machines/2008-11_pandaz.md`
-- manufacturer: ラスター
-- modelNumber: `パンダーゼットA`
-- inspectionNumber: `8S0530`
-- releaseDate: **2008-11（月精度）**。P-WORLD掲示板に2008-11-14時点の新装初日実戦痕跡あり。
+- record: `docs/real_machine_db/machines/2008-11_kaiyuki-2008.md`
+- manufacturer: ベルコ
+- modelNumber: `カイユウキY`
+- inspectionNumber: `8S0694`
+- releaseDate: **2008-11（月精度 / メーカー公式）**。
 - generation: 5号機
-- systemType: ボーナス + CZ/スタンバイモード + ART + 救済AT。
-- settings: **1 / 3 / 5 / 7**。
-- BAR揃いボーナス: **1/2730.67 / 1/2048.00 / 1/1724.63 / 1/1560.38**。
-- 白7揃い: **全設定1/500.27**。
-- 白白BAR: **全設定1/809.09**。
-- ボーナス合算: **1/277.69 / 1/268.59 / 1/262.14 / 1/258.02**。
-- 50枚ベース: **31.68G/50枚（全設定共通）**。
-- 3種ボーナス: いずれも約**120枚**、179枚超払い出し終了。
-- ART `どか～んタイム`: **30G / 約+1.2枚/G**。
-- ART `スーパーどか～んタイム`: **300G / 約+1.5枚/G**。
-- ARTループ率: **全設定共通95%**。
-- 通常時1000G消化後: **リプレイ2連のたび30GチェリーナビAT**。
-- 通常時2004G消化: **95%ループのスタンバイモード**へ。
-- `coreStatus: COMPLETE_CORE`。
+- systemType: ボーナス + CZ + ART
+- BIG: **1/1489.45 / 1/1365.33 / 1/1260.31 / 1/1170.29 / 1/1092.27 / 1/1489.45**。
+- カニBONUS: **1/282.48 / 1/327.68 / 1/260.06 / 1/321.25 / 1/256.00 / 1/230.76**。
+- カメBONUS: **1/327.68 / 1/268.59 / 1/327.68 / 1/256.00 / 1/315.08 / 1/230.76**。
+- ボーナス合算: **1/137.68 / 1/133.20 / 1/130.03 / 1/127.01 / 1/125.07 / 1/107.08**。
+- BIG純増: **約384枚**。
+- カニ/カメBONUS純増: **各約108枚**。
+- 50枚ベース: `UNVERIFIED_AFTER_RESEARCH`。
+- ART純増/G: `UNVERIFIED_AFTER_RESEARCH`。
+- メーカー公式: 通常時は演出の異なる2モード、ART突入率の異なる3種類ボーナス。
+- 後年実機回顧資料: 100G消化または次回ボーナス成立まで継続する2種類ARTの存在を補助確認。
+- `coreStatus: PARTIAL`。
 
-### 機械割・設定ラベルCONFLICT（315）
+### 機械割CONFLICT（316）
 
-- 当時系二次資料: 設定1/3/5/7で **96.2 / 99.1 / 103.5 / 108.1%**。
-- 5号機クロニクル: 数値は **96.2 / 99.1 / 103.5 / 108.1%** と一致するが、最上位を設定6表記。
-- パチマガスロマガ/K-Naviは確率・ボーナス中数値を明確に設定1/3/5/7表記しているため、本DBの設定構成は1/3/5/7を採用。後年DBの最上位設定ラベルだけ `CONFLICT` として保持し、数値は平均・改変しない。
+- パチマガスロマガ シミュレート: **99.25 / 101.53 / 103.74 / 106.61 / 109.71 / 113.45%**。
+- 5号機クロニクル: **98.8 / 100.9 / 102.9 / 105.5 / 108.3 / 111.6%**。
+- 全設定で差があるため平均せず `CONFLICT` として両系列を保存。
 
-### resetBehavior（315）
+### resetBehavior（316）
 
-- `settingChangeBehavior`: `UNVERIFIED_AFTER_RESEARCH`。パンダーゼット/パンダーZ/パンダーゼットA/ラスターと設定変更・リセット・朝一・据え置き・1000G・2004G・ART・スタンバイ・ガックンを組み替え、P-WORLD、K-Navi、パチマガスロマガ、旧DB、当時系二次資料、回顧資料を横断したが、本機固有の設定変更処理を直接確定できず。
-- `carryOverBehavior`: `UNVERIFIED_AFTER_RESEARCH`。1000G/2004G救済カウンタおよびCZ/ART状態の据え置き引継ぎを直接確定できず。
-- `powerCycleBehavior`: `UNVERIFIED_AFTER_RESEARCH`。電源OFF→ONのみでのカウンタ/CZ/ART状態処理を直接確定できず。
-- `gameCounterReset`: `UNVERIFIED_AFTER_RESEARCH`。通常1000G/2004Gに救済があるため重要だが、設定変更時・電断時のカウンタ処理は未確定。
-- `ceilingAfterReset`: `NONE_CONFIRMED_AFTER_RESEARCH`。設定変更後専用の短縮G数は確認なし。
-- `modeAfterReset`: `UNVERIFIED_AFTER_RESEARCH`。スタンバイモード等の変更時移行/引継ぎは未確定。朝一専用モードの公開資料は確認なし。
-- `stateAfterReset`: `UNVERIFIED_AFTER_RESEARCH`。ART/CZ/救済AT状態の変更・電断処理は未確定。
+- `settingChangeBehavior`: `UNVERIFIED_AFTER_RESEARCH`。海遊記/カイユウキY/ベルコ/5号機と「設定変更」「リセット」「朝一」「据え置き」「電源OFF ON」「CZ」「ART」「100G」「天井」「ガックン」を組み替え、メーカー公式、P-WORLD、パチマガスロマガ、5号機クロニクル、当時/回顧資料を横断したが、本機固有の設定変更処理を直接確定できず。
+- `carryOverBehavior`: `UNVERIFIED_AFTER_RESEARCH`。CZ/ART状態・ART残Gの据え置き引継ぎを直接確定できず。
+- `powerCycleBehavior`: `UNVERIFIED_AFTER_RESEARCH`。電源OFF→ONのみでのCZ/ART状態・残G処理を直接確定できず。
+- `gameCounterReset`: `NOT_APPLICABLE_OR_NONE_CONFIRMED`。通常ゲーム数到達型天井を確認できず。
+- `ceilingAfterReset`: `NONE_CONFIRMED_AFTER_RESEARCH`。リセット専用短縮天井を確認できず。
+- `modeAfterReset`: `UNVERIFIED_AFTER_RESEARCH`。内部モードの再抽選/引継ぎ、朝一専用モードを直接確認できず。
+- `stateAfterReset`: `UNVERIFIED_AFTER_RESEARCH`。CZ/ART内部状態の変更・電断処理は未確定。
 - `advantageousSectionReset`: `NOT_APPLICABLE`（5号機・有利区間制度前）。
-- `resetBenefits`: `NONE_CONFIRMED_AFTER_RESEARCH`。1000G/2004G救済は通常仕様で、リセット専用恩恵ではない。
+- `resetBenefits`: `NONE_CONFIRMED_AFTER_RESEARCH`。
 - `resetPenalties`: `NONE_CONFIRMED_AFTER_RESEARCH`。
-- `resetDetection`: `UNVERIFIED_AFTER_RESEARCH`。本機固有のガックン/初期出目/表示による変更判別を回収できず。
-- `numericResetData`: 通常救済は **1000G→リプレイ2連で30G AT / 2004G→95%ループスタンバイ**。リセット固有の短縮天井・モード振り分け・朝一当選率は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- `resetDetection`: `UNVERIFIED_AFTER_RESEARCH`。ガックン/初期出目/表示等の本機固有変更判別を回収できず。
+- `numericResetData`: リセット固有の短縮天井・モード振り分け・朝一当選率・恩恵発生率は `NONE_CONFIRMED_AFTER_RESEARCH`。
 
-## 315主要出典
+## 316主要出典
 
 取得日: 2026-09-02
 
-- https://www.p-world.co.jp/machine/database/5347 — 型式パンダーゼットA、検定8S0530、2008年11月導入、合算、179枚超払い出し終了。2008-11-14新装初日実戦投稿。
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/luster_slot/19/h.php — 設定1/3/5/7の各ボーナス確率・合算。PAYOUT欄は調査中のため機械割には不使用。
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/luster_slot/19/c.php — 全設定共通31.68G/50枚。
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/luster_slot/19/a.php — ART/AT/天井ART/CZ構成、全ボーナス約120枚、179枚超払い出し終了、95%ループ概要。
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/luster_slot/19/e.php — BARボーナス中ピンク7揃い後ART約+1.5枚/G、設定別期待度50/59/66/70%。
-- https://p-kn.com/slot/873/ — 設定1/3/5/7の合算、30G/300G ART、95%ループ照合。
-- https://p-kn.com/slot/873/7195/ — 30G約+1.2枚/G、300G約+1.5枚/Gの第二照合。
-- https://ameblo.jp/samurai777net/entry-10143442917.html — 2008年11月、機械割96.2〜108.1%、1000G救済AT、2004Gスタンバイ、ART性能の当時系二次資料。
-- https://5goki.com/luster — 2008年11月、機械割数値の後年照合。ただし最上位設定ラベル6表記はCONFLICT。
+- https://www.s-bellco.co.jp/products/slot/kaiyuki_2008/ — ベルコ公式。2008年11月登場、5号機ART、通常時2モード、3種類ボーナス。
+- https://www.s-bellco.co.jp/products/slot/kaiyuki/ — ベルコ公式旧4号機版。2000年7月登場。P-WORLD日付混線の切り分けに使用。
+- https://www.p-world.co.jp/machine/database/5351 — 型式カイユウキY、検定8S0694、5号機ART、規定払い出し。2000年07月表示は旧作混線のため導入日には不使用。
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/belco_slot/83/a.php — ART/CZ、BIG約384枚、カニ/カメ約108枚。
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/belco_slot/83/h.php — 設定別3種ボーナス、合算、PAYOUT 99.25〜113.45%。
+- https://5goki.com/bellco — 2008年11月、機械割98.8〜111.6%の別系列。
+- https://www.youtube.com/watch?v=ROySDhrla8c — 後年実機回顧。100G/次回ボーナス型2種類ARTの補助確認。純増値には不使用。
 
 ## 境界監査・重複防止
 
-- **既存315件の再追加禁止。**
-- `パンダーゼット` は具体的な全国納品開始日こそ未確定だが、2008-11-14時点の新装初日実戦痕跡があるため `鬼火` / `サイサイ`（11/24）より前の漏れとして遡及追加済み。
-- 次候補 `海遊記`（ベルコ）は公式が **2008年11月登場**、5号機ARTと明記。P-WORLD側は5号機ページの導入開始欄が旧4号機の2000年7月を誤表示しているため、その日付は絶対に採用しない。5号機の型式 `カイユウキY`、検定 `8S0694` はP-WORLDで確認可能。
-- ベルコ公式2008年一覧には `海遊記` と `モンキーモンキー` の両方が2008年11月登場として掲載されているため、具体日を詰めて順序決定する。
+- **既存316件の再追加禁止。**
+- `海遊記` は2000年4号機版と2008年5号機版を混同しない。今回レコードは **2008年5号機 / カイユウキY** 専用。
+- 11月同月精度機は具体日未確定のため、番号は調査処理順。後から全国納品開始日が判明した場合は時系列メタデータを修正するがレコード重複追加はしない。
+- `モンキーモンキー` はGitHub既存検索で未収録。ベルコ公式2008年11月群に存在し、当時系資料には **ヤーマ「モンキーモンキー3」納品開始2008-11-24** の記録がある。ベルコ/ヤーマのメーカー表記・正式型式・同一機種性を確認して次キューで処理する。
 - `ぱちスロSTゴジラ` / `ぱちスロST行け!稲中卓球部` は2008-12-08候補、`HAIBいちろう` は2008-12-15候補として11月列へ混入させない。
 
 ## 次回再開地点
 
-1. **LATEST_HANDOFF基準315件地点。まず `海遊記`（ベルコ / 型式カイユウキY）の2008年11月具体納品・導入日を再監査する。** ベルコ公式の2008年11月登場を基準とし、P-WORLDの2000年7月表示は4号機旧作との混線なので使用禁止。
-2. `海遊記` はベルコ公式で5号機ART、パチマガスロマガでBIG約384枚・カニ/カメ約108枚、ART/CZ構造までは確認済み。設定別確率、機械割、50枚ベース、ART純増、天井、resetBehaviorを表記揺れ・型式・メーカー込みで横断再探索する。
-3. 同じベルコ公式2008年11月群の `モンキーモンキー` も具体日を詰め、`海遊記` より早ければ時系列優先で処理する。
-4. 続いて `ハネスロナイツ` / `バックトゥザフューチャーデラックス` 等の11月境界候補を監査し、11月を閉じて2008年12月へ進む。
-5. resetBehavior遡及QAは別QAリレーで継続し、新規収集の進行を止めない。
+1. **LATEST_HANDOFF基準316件地点。まず `モンキーモンキー` / `モンキーモンキー3` のベルコ・ヤーマ表記と正式型式を照合し、2008-11-24納品開始資料との同一性を確定する。**
+2. 同一機種と確定した場合は性能コア + v0.7 resetBehaviorを収集して317件目へ。別型式/別機なら混同せず各機を時系列で分離する。
+3. 続いて `ハネスロナイツ` / `バックトゥザフューチャーデラックス` 等の11月境界候補を監査し、11月を閉じて2008年12月へ進む。
+4. resetBehavior遡及QAは別QAリレーで継続し、新規収集の進行を止めない。
