@@ -6,54 +6,50 @@
 
 - 最新mainの `README.md`、実機DBミッションv0.7、`INDEX.md`、既存レコード、直前 `LATEST_HANDOFF.md` を再読して継続。
 - `INDEX.md` は旧19件地点のため、README規定どおり本 `LATEST_HANDOFF.md` を進捗正本とする。
-- 直前handoffは228件地点（`リーチ目発見！スロガッパ` 追加済み）。
-- **山佐 `パチスロ「PLAYBOY」Limited Edition` を229件目として追加済み。**
+- 直前handoffは229件地点（`パチスロ「PLAYBOY」Limited Edition` 追加済み）。
+- **サミー `パチスロ北斗の拳2 ネクストゾーン闘` を230件目として追加済み。**
 - resetBehavior遡及QAは前回 `球児（2006-09）` まで補完済み。次対象は `ジャックポット・トロピカルバージョン2（2006-09）` 以降。
 
-## 229. パチスロ「PLAYBOY」Limited Edition（山佐）
+## 230. パチスロ北斗の拳2 ネクストゾーン闘（サミー）
 
-- new record: `docs/real_machine_db/machines/2008-02_playboy-limited-edition.md`
-- commit: `4f502b367bdbc1d92cce71d401131fe7b7f5c525`
-- manufacturer: 山佐
-- modelName: `UNVERIFIED_AFTER_RESEARCH`
-- releaseDate: `2008-02`（具体ホール導入日は未確定）
+- new record: `docs/real_machine_db/machines/2008-03-02_hokuto2-next-zone-tou.md`
+- commit: `f4f6b2e309ee2373330cdf903ab4ee04c41327d8`
+- manufacturer: サミー
+- modelName: `北斗の拳2NE`
+- releaseDate: `2008-03-02`（当時業界記事の納品開始予定日）
 - generation: 5号機初期
-- systemType: Aタイプ / ボーナス主体 + ボーナス後20G RT
-- coreStatus: `PARTIAL`
+- systemType: ボーナス + RT（覇王モード）
+- coreStatus: `COMPLETE_CORE`
 - resetBehaviorQA: `PARTIAL`
 
-### 同定・時期
+### 導入境界の修正
 
-- 山佐公式は5号機Aタイプ、稼働時期2008年2月と明記。
-- 当時HAZUSEも2008年2月機として掲載。
-- 信頼できる具体ホール導入日は今回確定できなかったため、推測日を作らず月精度 `2008-02` で保存。
-- 型式名も信頼できる直接資料を確定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 後年DBの一部は『闘』を2008年2月導入とするが、2008-02-01のグリーンべるとは『闘』『将』の納品を **2008-03-02から開始予定** と明記。
+- 2008-02-18のサミーネットワークス発表転載も、777タウンの2/25テスト版を **「ホールへの実機導入に先駆けて」** と明記している。
+- よって2月機として登録せず、3月導入系列へ移動。releaseDateは納品開始予定日 `2008-03-02` を採用。
 
 ### 性能コア
 
-- 設定: `1 / 2 / 3 / 4 / 5 / 6`。
-- HAZUSE ボーナス合成:
-  - 1: `1/219.1`
-  - 2: `1/209.3`
-  - 3: `1/197.9`
-  - 4: `1/189.9`
-  - 5: `1/179.5`
-  - 6: `1/162.2`
-- HAZUSE 機械割: `96.9 / 99.1 / 101.5 / 103.5 / 106.1 / 112.0%`。
-- BIG約304枚、REG約199枚。
-- BIG/REG終了後20G RT。パチスロ救急車ではRT純増約 `+0.7枚/G`。
-- 50枚ベースは公式に「ベースアップ」、HAZUSEに「コイン持ちが良くなった」とあるが、比較可能な具体ゲーム数を確定できず `UNVERIFIED_AFTER_RESEARCH`。
-- 通常時ゲーム数天井は旧解析で「天井なし」。
+- 設定1〜6 BIG: `1/407.1 / 387.8 / 374.5 / 358.1 / 343.1 / 327.7`
+- MIDDLE: `1/799.2 / 780.2 / 753.3 / 712.3 / 689.9 / 655.4`
+- 合成: `1/269.7 / 259.0 / 250.1 / 238.3 / 229.1 / 218.5`
+- 50枚ベース（K-Navi）: `36.82 / 37.26 / 37.72 / 38.17 / 38.65 / 39.26G`
+- BIG純増約264枚、MIDDLE純増約104枚。
+- RT「覇王モード」: 約 `+0.05枚/G`、最大3000G、継続率50/60/70/80/90/95%。
+- 機械割は資料競合:
+  - 解析セブン: `98.8 / 100.8 / 102.8 / 105.0 / 107.2 / 109.7%`
+  - 後年回顧資料: `97.8 / 99.6 / 101.4 / 103.4 / 105.5 / 107.7%`
+  - 平均化せず `CONFLICT_PAYOUT_RATE`。
 
 ### v0.7 resetBehavior
 
 - settingChangeBehavior: `UNVERIFIED_AFTER_RESEARCH`
 - carryOverBehavior: `UNVERIFIED_AFTER_RESEARCH`
 - powerCycleBehavior: `UNVERIFIED_AFTER_RESEARCH`
-- gameCounterReset: `NOT_APPLICABLE_TO_CEILING`（通常時ゲーム数天井なし）
+- gameCounterReset: `NOT_APPLICABLE_TO_NORMAL_CEILING`（通常時ゲーム数天井なし相当。RT最大3000Gは通常時天井ではない）
 - ceilingAfterReset: `NONE_CONFIRMED`
-- modeAfterReset: `NONE_CONFIRMED`
-- stateAfterReset: `UNVERIFIED_AFTER_RESEARCH`（20G RT中の設定変更/電断時状態・残G）
+- modeAfterReset: `UNVERIFIED_AFTER_RESEARCH`（RT継続率/内部モードの設定変更時処理）
+- stateAfterReset: `UNVERIFIED_AFTER_RESEARCH`（RT/チャンスタイム中の設定変更・電断処理）
 - advantageousSectionReset: `NOT_APPLICABLE`
 - resetBenefits / resetPenalties: `NONE_CONFIRMED`
 - resetDetection: `UNVERIFIED_AFTER_RESEARCH`
@@ -61,9 +57,12 @@
 
 ### 主要出典
 
-- 山佐ネクスト公式: https://yamasa-next.co.jp/model_plbl/
-- HAZUSE: https://hazuse.com/i/data/patisuro_playboy_limitedededition/top.htm
-- パチスロ救急車: https://www.eightbeat.com/slot99/kishu/ha_gyou/hu/playboyLE/page_menu.html
+- グリーンべると: https://web-greenbelt.jp/00003486/
+- 4Gamer（サミーネットワークス発表転載）: https://www.4gamer.net/games/021/G002122/20080218018/
+- K-Navi: https://p-kn.com/slot/760/
+- K-Navi 小役/ベース: https://p-kn.com/slot/760/4922/
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sammy_slot/111/a.php
+- 解析セブン: https://crankyseven.com/sp/hokuto2_nexttou-pc.htm
 
 取得日: 2026-09-01
 
@@ -78,18 +77,34 @@
 
 - 228: `リーチ目発見！スロガッパ`。再追加禁止。
 - 229: `パチスロ「PLAYBOY」Limited Edition`。再追加禁止。
-- `パチスロ北斗の拳2 ネクストゾーン 闘` は2008年2月系列。2008-02-18のメーカー発表転載では2月25日時点でホール実機導入前とされるため、2月後半以降として境界監査する。
-- `北斗の拳2 ネクストゾーン 将` も同月候補。闘との発売/導入順と具体日を別途確定する。
-- 2008年2月前半〜中盤に229より早い未処理機が新たに確認された場合は漏れ防止を優先して遡及挿入する。
+- `パチスロ北斗の拳2 ネクストゾーン闘 / 将` は当時一次資料により2月ではなく3月導入系列へ修正。
+- 現時点では229より後、2008年2月内に強い日付根拠を持つ未処理機は未確定。漏れ候補が見つかった場合は遡及挿入を優先。
+
+## 2008年3月境界監査
+
+- 230: `パチスロ北斗の拳2 ネクストゾーン闘`。再追加禁止。
+- **同日系列の `パチスロ北斗の拳2 ネクストゾーン将`（型式 北斗の拳2ZS）が次の最優先未処理。**
+- グリーンべるとでは『闘』『将』とも納品2008-03-02開始予定。
+- 将は闘と別スペック・別型式で、性能値を混用しない。
+- 将の先行確認値:
+  - BIG `1/290 → 1/236`
+  - MID `1/524 → 1/289`
+  - 合成 `1/187 → 1/130`
+  - BIG約312枚、MID約100〜116枚（資料定義差を監査）
+  - 北斗BIG後は次回ボーナスまでRT
+  - 非北斗BIG後999G / MID後666Gで天井RT
+  - 旧解析に「設定変更後も前日のG数を引き継ぐ」記録あり。resetBehaviorの重要確認対象。
+- 将処理後、2008年3月の他未処理機を具体導入日順で監査する。
 
 ## 重複防止
 
-既存229件は再追加禁止。初代 `PLAYBOY` / `PLAYBOY30` は今回のLimited Editionとは別機種なので性能値を混用しない。`キングガッパ` も `リーチ目発見！スロガッパ` とは別機種・後発。
+既存230件は再追加禁止。`北斗の拳2 ネクストゾーン闘` と `将` は名称が一文字違うが、型式・ゲーム性・ボーナス性能・RT構造が異なる独立機種。前作 `北斗の拳2 乱世覇王伝 天覇の章` とも混用禁止。
 
 ## 次回再開地点
 
-1. **LATEST_HANDOFF基準229件地点から継続。**
-2. **2008年2月残候補を具体導入日で再監査。最優先は `パチスロ北斗の拳2 ネクストゾーン 闘 / 将` の導入日・兄弟機区別・既存有無の確定。より早い未処理機が見つかればそちらを優先。**
-3. 2月境界を閉じた後は2008年3月の最古未処理機へ進む。
-4. resetBehavior遡及QAは `ジャックポット・トロピカルバージョン2（2006-09）` 以降の未補完レコードから継続。
-5. 欠損は表記揺れ・型式名・メーカー名・シリーズ名と、設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックンを変えて十分再探索してから `UNVERIFIED_AFTER_RESEARCH`。競合は平均せず `CONFLICT`。
+1. **LATEST_HANDOFF基準230件地点から継続。**
+2. **最優先: `パチスロ北斗の拳2 ネクストゾーン将` を同日2008-03-02系列として調査・登録。**
+3. 将では性能コアに加え、BIG後999G / MID後666G天井RTと、設定変更時のG数引継ぎ、据え置き、電源OFF→ON、RT状態、朝一判別を重点確認する。
+4. その後、2008年3月の最古未処理機を具体導入日で再監査して時系列順に進む。
+5. resetBehavior遡及QAは `ジャックポット・トロピカルバージョン2（2006-09）` 以降の未補完レコードから継続。
+6. 欠損は表記揺れ・型式名・メーカー名・シリーズ名と、設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックンを変えて十分再探索してから `UNVERIFIED_AFTER_RESEARCH`。競合は平均せず `CONFLICT`。
