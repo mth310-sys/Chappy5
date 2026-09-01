@@ -6,82 +6,117 @@
 
 - 最新mainの `README.md`、実機DBミッションv0.7、`INDEX.md`、既存レコード、直前 `LATEST_HANDOFF.md` を再読して継続。
 - `INDEX.md` は旧19件地点のため、README規定どおり本 `LATEST_HANDOFF.md` を進捗正本とする。
-- 直前正本は **303 `天地を喰らう`（ロデオ / 2008-10-19）**。
-- repo内で `まつり屋華恋` の既存登録がないことを確認し、同じ2008-10-19納品群を継続。
-- **304 `まつり屋華恋`（フォープ企画・プロデュース / KPE製造 / 2008-10-19）** を追加。性能コア + ミッションv0.7 `resetBehavior` を同時収集。
+- 直前正本は **304 `まつり屋華恋`（フォープ企画・プロデュース / KPE製造 / 2008-10-19）**。
+- 2008年10月境界を再監査し、直前地点より前へ遡る未登録2機種を確定。
+- **305 `バウンティキラー`（山佐 / 2008-10-05）**、**306 `豊漁`（北電子 / 2008-10-05）** を遡及追加済み。既存304件は再収集せず、漏れ補完として扱う。
+- 2機種とも性能コア + ミッションv0.7 `resetBehavior` を同時収集。競合値は平均せず保持。
 
-## 304. まつり屋華恋
+## 305. バウンティキラー
 
-- record: `docs/real_machine_db/machines/2008-10-19_matsuriya-karen.md`
-- manufacturer: フォープ（企画・プロデュース） / KPE（製造）
-- releaseDate: **2008-10-19**。グリーンべると2008-09-11記事で「納品は10月19日からの予定」と明記。
+- record: `docs/real_machine_db/machines/2008-10-05_bounty-killer.md`
+- manufacturer: 山佐
+- modelNumber: `バウンティキラーC`（P-WORLD / HAZUSEで照合、HAZUSE検定番号6S1046）
+- releaseDate: **2008-10-05**。グリーンべると2008-09-20記事で「納品は10月5日からの予定」と明記。
 - generation: 5号機
-- systemType: ボーナス+ART / ボーナス後ART。
-- 設定別機械割: **97.9 / 99.9 / 101.9 / 103.9 / 106.5 / 108.3%**。現時点では5号機クロニクルの単一整理値のため `ANALYSIS_SINGLE`。
-- 設定別BIG/REG/ボーナス合算確率: 機種名表記揺れ・メーカー名・ボーナス種別・設定1〜6等で当時攻略/旧DB/回顧資料を再探索したが比較可能な設定別表を確定できず `UNVERIFIED_AFTER_RESEARCH`。パチマガスロマガ現存ページも「現在調査中」。
-- 1000円ベース: **約38G**（当時グリーンべると）。設定別値は未確認。
-- 華恋BB約308枚、太郎BB約210枚、REG約100枚。
-- 規定払い出しはS・BIG430枚超、BIG290枚超、REG140枚超で終了。
-- ART「まつり屋タイム」は約**+0.4枚/G**、スーパーART「超まつり屋タイム」は約**+1.0枚/G**。
-- 華恋BB後200G、太郎BB後150GのART、REG後50GのスーパーART。BIG中「超」マークでスーパーART昇格。
-- ART中のボーナス当選、および**ボーナス間888G以降のボーナス当選**でスーパーART確定。
-- 888Gは到達即発動型の通常天井として扱わず、「以降のボーナス当選時スーパーART確定」という恩恵条件として分離保存。
-- `coreStatus: PARTIAL`（設定別ボーナス確率が未回収のため）。
+- systemType: ボーナス+CZ+次回ボーナスまでRT（RT中3択メイン役ナビ）。
+- BIG合算: **1/448.88 / 1/414.78 / 1/374.49 / 1/346.75**（設定1〜4）。
+- REG: **1/897.75 / 1/829.57 / 1/682.67 / 1/564.97**。
+- ボーナス合算: **1/299.25 / 1/276.52 / 1/241.83 / 1/214.87**。
+- 1000円ベース: **31.80 / 32.05 / 32.31 / 33.31G**（設定1〜4、パチマガスロマガ）。当時グリーンべるとの約32Gとも整合。
+- RT「バウンティタイム」純増約**+0.5枚/G**。ボーナス後最大100Gの「バウンティゾーン」から特殊リプレイで入り、次回ボーナスまで継続（シングル役一部入賞でパンクあり）。
+- 平均獲得: HYPER BIG約**406枚** / NORMAL BIG約**330枚** / REG約**80枚**。
+- 通常ゲーム数天井は確認なし。ボーナス後最大100Gゾーンを通常天井と混同しない。
+- 機械割はパチマガスロマガのシミュレート **96.32 / 99.55 / 105.64 / 111.24%** とHAZUSE **96.5 / 99.6 / 105.1 / 110.1%** が競合。平均せず `CONFLICT`。
+- BIG規定払い出し条件もパチマガとK-Naviに差があり `CONFLICT`。実獲得枚数とは定義分離。
+- 一部後年DBのバウンティキラー欄に別機種由来とみられる説明混入を確認し、導入時期・性能値の根拠から除外。
+- `coreStatus: COMPLETE_CORE_WITH_PAYOUT_AND_PAYOUT_CONDITION_CONFLICTS`。
 
-### resetBehavior（304）
+### resetBehavior（305）
 
-- `settingChangeBehavior`: `UNVERIFIED_AFTER_RESEARCH`。パチマガスロマガ現存TOPに「攻め時・ヤメ時・設定変更時」専用項目が存在することは確認したが本文を回収できず、設定変更時の888Gカウンタ/ART状態を直接確定できない。
-- `carryOverBehavior`: `UNVERIFIED_AFTER_RESEARCH`。据え置き時のボーナス間888Gカウンタ・ART残G・内部状態の引継ぎを本機固有資料で確定できず。
-- `powerCycleBehavior`: `UNVERIFIED_AFTER_RESEARCH`。電源OFF→ONのみのカウンタ/ART状態/表示処理を直接確定できず。
-- `gameCounterReset`: `UNVERIFIED_AFTER_RESEARCH`。888G恩恵条件カウンタが設定変更でリセットか引継ぎか未確定。
-- `ceilingAfterReset`: `NOT_APPLICABLE_OR_UNVERIFIED`。通常の到達即発動型天井は確認できず、888G恩恵条件の設定変更後短縮/据え置き数値は未確認。
-- `modeAfterReset`: `NONE_CONFIRMED_AFTER_RESEARCH`。朝一専用モード/変更専用モード振り分け確認なし。
-- `stateAfterReset`: `UNVERIFIED_AFTER_RESEARCH`。設定変更時のART/RT/内部状態処理を直接確定できず。
+- `settingChangeBehavior`: `UNVERIFIED_AFTER_RESEARCH`。パチマガスロマガの現存インデックスに「攻め時・ヤメ時・設定変更時」項目は存在するが本文を回収できず、機種名/型式名/山佐 + 設定変更/リセット/朝一/据え置き/電源OFF ON/天井/RT/ガックンを組み替えても直接値を確定できず。
+- `carryOverBehavior`: `UNVERIFIED_AFTER_RESEARCH`。据え置き時のバウンティゾーン残G/RT状態を直接確定できず。
+- `powerCycleBehavior`: `UNVERIFIED_AFTER_RESEARCH`。電源OFF→ONのみのゾーン残G/RT/初期出目処理を直接確定できず。
+- `gameCounterReset`: 通常ゲーム数天井は非該当。バウンティゾーン残Gの設定変更時処理のみ未確定。
+- `ceilingAfterReset`: 通常天井/リセット専用短縮天井は確認なし。
+- `modeAfterReset` / `stateAfterReset`: 本機固有の初期状態を直接確定できず。
 - `advantageousSectionReset`: `NOT_APPLICABLE`（5号機・有利区間制度前）。
-- `resetBenefits`: `NONE_CONFIRMED_AFTER_RESEARCH`。
-- `resetPenalties`: `NONE_CONFIRMED_AFTER_RESEARCH`。
-- `resetDetection`: `UNVERIFIED_AFTER_RESEARCH`。ガックン/初期出目/表示/BGM等による本機固有の変更判別を確定できず。
-- 公開朝一数値: 設定変更専用の短縮天井、モード振り分け、朝一当選率、恩恵発生率は確認なし。通常側の比較値としてボーナス間888G以降のボーナス当選でスーパーART確定のみ保持。
-- `resetBehaviorQA: PARTIAL_AFTER_MULTI_SOURCE_RESEARCH`。
+- `resetBenefits` / `resetPenalties`: 朝一専用の公開恩恵/不利を確認できず。
+- `resetDetection`: ガックン/初期出目/表示等を含め再探索したが本機固有条件は未確定。
+- 公開朝一専用数値: 短縮天井、モード振り分け、朝一当選率、リセット恩恵発生率はいずれも確認なし。
 
-## 304主要出典
+## 306. 豊漁
+
+- record: `docs/real_machine_db/machines/2008-10-05_horyo.md`
+- manufacturer: 北電子
+- modelNumber: **`ホウリョウ7`**。北電子公式検定情報と当時グリーンべるとで確認。
+- releaseDate: **2008-10-05**。グリーンべると2008-08-29記事で「10月5日より納品がスタート」と明記。
+- generation: 5号機
+- systemType: ノーマル/完全告知 + 演出用プチRT。
+- BIG: **1/292.57 / 1/282.48 / 1/273.07 / 1/264.26 / 1/256.00 / 1/248.24**。
+- REG: **1/512.00 / 1/512.00 / 1/431.16 / 1/372.36 / 1/341.33 / 1/327.68**。
+- 合算: **1/186.18 / 1/182.04 / 1/167.18 / 1/154.57 / 1/146.29 / 1/141.24**。
+- 1000円ベース: **36.90G（設定1〜5） / 38.57G（設定6）**（パチマガスロマガ、プチRT非考慮）。
+- BIG約**312枚**、REG約**104枚**。
+- タイ図柄/特殊リプレイ後の「豊漁チャンス」は出玉獲得用RTではなく演出用プチRT。P-WORLD/業界記事の最大4Gとパチマガの入賞後3G表記は数え方差の可能性があるため `CONFLICT_DEFINITION_OR_COUNTING` として併記。
+- 機械割はK-Navi **96.54 / 97.76 / 99.97 / 102.13 / 104.06 / 107.30%**（5号機クロニクルは丸め一致）に対し、パチマガスロマガ・シミュレート **97.31 / 98.53 / 100.98 / 103.48 / 105.56 / 109.12%**。平均せず `CONFLICT`。
+- `coreStatus: COMPLETE_CORE_WITH_PAYOUT_RATE_CONFLICT`。
+
+### resetBehavior（306）
+
+- `settingChangeBehavior`: `UNVERIFIED_AFTER_RESEARCH`。豊漁/豊漁7/ホウリョウ7/北電子 + 設定変更/リセット/朝一/据え置き/電源OFF ON/天井/ガックンを組み替え、公式・当時記事・攻略・旧DBを横断しても本機固有の変更時初期状態を直接確定できず。
+- `carryOverBehavior`: 通常ゲーム数天井は非該当。演出用プチRT残状態の据え置き処理のみ未確定。
+- `powerCycleBehavior`: 電源OFF→ONのみの演出用プチRT残状態/初期出目処理を直接確定できず。
+- `gameCounterReset`: `NOT_APPLICABLE`。通常ゲーム数/ボーナス間ゲーム数による天井は確認なし。
+- `ceilingAfterReset`: `NOT_APPLICABLE`。通常天井/リセット短縮天井は確認なし。
+- `modeAfterReset`: 通常時モード管理/朝一専用モードは確認なし。
+- `stateAfterReset`: 演出用プチRT残状態のみ未確定。
+- `advantageousSectionReset`: `NOT_APPLICABLE`（5号機・有利区間制度前）。
+- `resetBenefits` / `resetPenalties`: 朝一専用の公開恩恵/不利は確認なし。
+- `resetDetection`: ガックン/初期出目/告知ランプ/液晶表示を含め再探索したが本機固有条件は未確定。
+- 公開朝一数値: 短縮天井、モード振り分け、朝一当選率、リセット恩恵率はいずれも確認なし。
+
+## 305-306主要出典
 
 取得日: 2026-09-02
 
-- https://web-greenbelt.jp/00003825/
-  - 当時グリーンべると。2008-10-19納品開始予定、フォープ企画/KPE製造、ART純増約0.4枚/G・スーパーART約1.0枚/G、888G以降ボーナス時スーパーART確定、華恋BB約308枚/太郎BB約210枚/RB約100枚、1000円約38G。
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/akushima_slot/01/a.php
-  - パチマガスロマガ。ボーナス後ART/RT構造、規定払い出しS・BIG430枚/BIG290枚/REG140枚、純増約308/210/100枚。
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/akushima_slot/01/h.php
-  - パチマガスロマガ。ボーナス抽選確率/PAYOUTが現存ページでは「現在調査中」であることを確認。欠損を推測補完しない根拠。
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/akushima_slot/01/akushima_slot_01.php
-  - パチマガスロマガTOP。「攻め時・ヤメ時・設定変更時」項目の存在確認。本文条件は回収不能。
-- https://www.p-world.co.jp/machine/database/5319
-  - P-WORLD。S・BIG430枚超/BIG290枚超/REG140枚超の払い出し終了条件を照合。
-- https://5goki.com/others
-  - 5号機クロニクル。2008年10月導入、メーカー表記フォープ、設定別機械割97.9〜108.3%。
-- https://p-mans.blogspot.com/2008/09/
-  - 2008年当時業界記事アーカイブ。フォープ企画・KPE製造、発表/内覧会時系列を補助照合。
+### バウンティキラー
+- https://web-greenbelt.jp/00003809/
+- https://www.p-world.co.jp/machine/database/5301
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/159/h.php
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/159/c.php
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/159/a.php
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/159/yamasa_slot_159.php
+- https://hazuse.com/machine/pachislot/6S1046/
+- https://p-kn.com/slot/861/
+
+### 豊漁
+- https://web-greenbelt.jp/00003747/
+- https://www.kitadenshi.co.jp/slot-kentei/horyo/
+- https://www.p-world.co.jp/machine/database/5308
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/kitac_slot/67/h.php
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/kitac_slot/67/c.php
+- https://p-kn.com/slot/855/6875/
+- https://p-kn.com/slot/855/
+- https://5goki.com/kitac
 
 ## 境界監査・重複防止
 
-- **既存304件の再追加禁止。**
-- 302 `アカギ～永続の闘牌～` は2008-10-14納品開始で処理済み。
-- 303 `天地を喰らう` は2008-10-19納品開始で処理済み。
-- 304 `まつり屋華恋` は2008-10-19納品開始予定で処理済み。
-- 2008-10-20〜31は次回境界監査対象。今回の追加検索では、10月21〜22日の実店舗新台入替記録に `天地を喰らう`、`アカギ～永続の闘牌～`、`爺サマー`、`バウンティキラー` 等が見えるが、これらが全国納品開始日を示す一次根拠ではないため、時系列順確定には使わない。
-- `ハードボイルド～グリフォンの幻影～`、`南国育ち` はグリーンべるとで2008-11-03納品予定を確認しており10月群へ混入させない。
-- `サイサイ` は2008-11-24納品開始予定のため10月群へ混入させない。
+- **既存306件の再追加禁止。**
+- 305/306は304より前の日付のため、件数番号は追加順、releaseDateは実導入/納品時系列として扱う。将来INDEX統合時に日付ソートと件数表示を整理する。
+- `バウンティキラー` と `豊漁` はともに2008-10-05納品群の漏れとして補完。
+- 302 `アカギ～永続の闘牌～` は2008-10-14、303 `天地を喰らう` と304 `まつり屋華恋` は2008-10-19で処理済み。
+- 2008-10-06〜13、および10-20〜31は引き続き境界監査対象。既存レコードと照合し、今回同様に直前地点より前の漏れが見つかった場合は遡及追加する。
+- `ハードボイルド～グリフォンの幻影～`、`南国育ち` は2008-11-03納品群として確認済みで、10月群へ混入させない。
+- `鬼火`、`サイサイ` は2008-11-24納品開始資料があるため10月へ混入させない。
 
 ## resetBehavior 遡及QA
 
 - 最終補完済み地点 **`球児（2006-09）`** を維持。
-- 旧handoffで次候補として記録されてきた「ジャックポット・トロピカルバージョン2（2006-09）」は名称再監査が必要。2006年ヤーマ初代機と後年Ver.2を混同しない。
-- 新規収集を優先しつつ、次回QA時に2006年8〜10月の既存実ファイルを直接走査して正しいレコードを同定後、v0.7を補完する。
+- 新規収集を優先しつつ、既存QAは別リレーで順次補完する。
 
 ## 次回再開地点
 
-1. **LATEST_HANDOFF基準304件地点。2008-10-20〜31の未処理5号機を具体導入/納品日順に境界監査して再開。**
-2. メーカー/業界一次資料、当時導入カレンダー、旧機種DBを横断し、10月19日より後かつ11月3日より前の具体日付き未登録機を優先する。
-3. 10月後半に未処理機を確定できなければ、2008-11-03納品群（`ハードボイルド～グリフォンの幻影～`、`南国育ち` 等）のrepo既存登録を先に検索し、最古未処理から進む。
-4. PARTIAL/UNVERIFIEDは検索語・資料系統を変えて再探索し、競合は平均せず `CONFLICT` を維持する。
+1. **LATEST_HANDOFF基準306件地点。まず2008-10-06〜13と10-20〜31の境界を再監査し、既存未登録機を具体納品/導入日順に補完する。**
+2. 旧候補 `赤ジャック / 赤ジャック30 / クローズ武装戦線 / 逆境ナイン` 等はrepo既存登録・正式導入日を再確認し、未登録かつ2008-10の根拠があるものだけ追加する。
+3. 10月残を閉じたら2008-11-03納品群（`ハードボイルド～グリフォンの幻影～`、`南国育ち` 等）のrepo既存登録を検索し、最古未処理から進む。
+4. PARTIAL/UNVERIFIEDは表記揺れ・型式・メーカー・シリーズ名と設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックン/有利区間を組み替え、複数資料系統を横断してから判定する。競合は平均せず `CONFLICT` を維持する。
