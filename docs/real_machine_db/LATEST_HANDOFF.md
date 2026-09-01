@@ -6,117 +6,110 @@
 
 - 最新mainの `README.md`、実機DBミッションv0.7、`INDEX.md`、既存レコード、直前 `LATEST_HANDOFF.md` を再読して継続。
 - `INDEX.md` は旧19件地点のため、README規定どおり本 `LATEST_HANDOFF.md` を進捗正本とする。
-- 直前handoffは247件地点 / 最初の実ホール導入確認日2008-04-21 `ビートマニア` まで完了。
-- 2008-04-22〜30を境界監査。後年資料の月表記だけで4月後半へ押し込まず、具体日を検索したが今回独立未処理機の確定日根拠を得られなかった。
-- `シートラッド / シートラッド30（岡崎産業）` は後年全機種DBで2008年5月導入。具体日はなお未確定のため、5月機として保留し4月へ遡及追加しない。
-- 今回、タイヨー `一騎当千` を248件目、`一騎当千A` を249件目として追加。
-- 当時グリーンべると記事は2機種の納品開始を2008-05-11、パチビー等はホール導入を2008-05-12とする。DB主日付は実ホール導入基準の2008-05-12、納品日を別定義で保持。
-- resetBehavior遡及QAは直前handoffどおり `球児（2006-09）` まで補完済み。次対象は `ジャックポット・トロピカルバージョン2（2006-09）` 以降。
+- 直前handoffは249件地点 / 実ホール導入日2008-05-12 `一騎当千 / 一騎当千A` まで完了。
+- 指定どおり2008-05-01〜11境界を再監査したところ、岡崎産業 `シートラッド / シートラッド30` に具体日資料を発見。
+- 当時業界史 `パチスロ業界初まとめ` は2機種を `2008/4/21発売（10台未満は5/12）`、型式 `BORABORA/-30` と記録。5号機クロニクル/pacnk等は2008年5月導入。後年一覧には20/25φを4月・30φを5月とする資料もある。
+- 月精度資料だけで5月機として固定せず、具体日のある4/21を主日付に採用。ただし4/21は10台未満の極少数先行、5/12が一般展開側という定義差を `CONFLICT_RELEASE_DATE_DEFINITION` として保持。
+- 今回、遡及追加として250件目 `シートラッド`、251件目 `シートラッド30` を追加。
+- resetBehavior遡及QAは `球児（2006-09）` まで補完済み。次対象は `ジャックポット・トロピカルバージョン2（2006-09）` 以降。
 
-## 248. 一騎当千（タイヨー）
+## 250. シートラッド（岡崎産業）
 
-- record: `docs/real_machine_db/machines/2008-05-12_ikkitousen.md`
-- commit: `3668a6aa71e6bf781893cf3bbe5ba2453fd1fb0e`
-- releaseDate: `2008-05-12`
-- announcedDeliveryStart: `2008-05-11`
-- systemType: ボーナス + CZ + RT/ARTループ
-- coreStatus: `PARTIAL_CORE_INDIVIDUAL_BONUS_AND_BASE_UNVERIFIED`
+- record: `docs/real_machine_db/machines/2008-04-21_seatrad.md`
+- commit: `aa90d1aaeaebb79041e8f6c5e27c9c07457e62eb`
+- modelName: `BORABORA`
+- releaseDate: `2008-04-21`
+- generalRolloutReference: `2008-05-12`
+- systemType: ノーマル / 純Aタイプ / 20・25φ側 / 後告知主体
+- coreStatus: `COMPLETE_CORE_WITH_PAYOUT_RATE_CONFLICT`
 - resetBehaviorQA: `PARTIAL`
 
 ### 性能コア
 
-- 当時業界記事のボーナス合成は設定1 `1/197.1` → 設定6 `1/153.1`。
-- BIG約238枚、REG約90枚。
-- CZ中リプレイで7G、スイカで77GのRT/ART `関羽雲長 千人斬り!!`。7G主体ループ率約85%、純増約+1.0枚/G。
-- 機械割は後年DB間で `96.9 / 98.3 / 99.8 / 102.4 / 104.9 / 107.4%` と `96.1 / 98.3 / 99.6 / 102.8 / 105.9 / 109.1%` 系列が競合。兄弟機Aとの混同可能性もあるため平均せず `CONFLICT_PAYOUT_RATE`。
-- 設定別BIG/REG全表と50枚ベースは十分な再探索後も比較可能な直接値を確定できず `UNVERIFIED_AFTER_RESEARCH`。
+- BIG: `1/321.25 / 1/306.24 / 1/293.88 / 1/281.27 / 1/264.26 / 1/248.24`。
+- REG: `1/422.81 / 1/390.10 / 1/364.09 / 1/337.81 / 1/306.24 / 1/282.48`。
+- 合成: `1/182.55 / 1/171.56 / 1/162.62 / 1/153.48 / 1/141.85 / 1/132.13`。
+- 1000円あたりゲーム数: `37.14 / 37.48 / 38.14 / 38.50 / 38.88 / 39.59G`。
+- BIG: 規定払い出し346枚超、純増約305枚。
+- REG: 規定払い出し140枚超、技術介入最高119枚。
+- RT/AT等なし、天井なし。
+- 機械割はパチマガスロマガ `95.59〜111.94%`、pacnk `95.5〜111.7%`、5号機クロニクル `94.4〜111.6%` の系列差を `CONFLICT_PAYOUT_RATE` として保持。
 
 ### v0.7 resetBehavior
 
-- settingChangeBehavior: `UNVERIFIED_AFTER_RESEARCH`
-- carryOverBehavior: `UNVERIFIED_AFTER_RESEARCH`
-- powerCycleBehavior: `UNVERIFIED_AFTER_RESEARCH`
-- gameCounterReset: `UNVERIFIED_AFTER_RESEARCH_1000G_CZ_CEILING`
-- ceilingAfterReset: `UNVERIFIED_AFTER_RESEARCH`
-- modeAfterReset: `NOT_APPLICABLE_COMPLEX_INTERNAL_MODE_NONE_CONFIRMED`
-- stateAfterReset: `UNVERIFIED_AFTER_RESEARCH_CZ_RT_STATE`
+- settingChangeBehavior: `NO_SPECIAL_GAMEPLAY_EFFECT_CONFIRMED`
+- carryOverBehavior: `NOT_APPLICABLE_NO_CEILING_MODE_RT_ART_CONFIRMED`
+- powerCycleBehavior: `NOT_APPLICABLE_NO_CEILING_MODE_RT_ART_CONFIRMED`
+- gameCounterReset: `NOT_APPLICABLE_NO_CEILING`
+- ceilingAfterReset: `NOT_APPLICABLE_NO_CEILING`
+- modeAfterReset: `NOT_APPLICABLE_NO_INTERNAL_MODE_CONFIRMED`
+- stateAfterReset: `NOT_APPLICABLE_NO_RT_ART_CZ_STATE`
+- advantageousSectionReset: `NOT_APPLICABLE`
+- resetBenefits: `NONE_CONFIRMED`
+- resetPenalties: `NONE_CONFIRMED`
+- resetDetection: `UNVERIFIED_AFTER_RESEARCH`
+- numericResetData: `NONE_CONFIRMED`
+- 当時パチマガスロマガ機種ページの「攻め時・ヤメ時・設定変更時→特にナシ」を根拠に、専用朝一恩恵/不利なしを確認。ただしガックン/初期出目など変更判別は直接資料未確認。
+
+## 251. シートラッド30（岡崎産業）
+
+- record: `docs/real_machine_db/machines/2008-04-21_seatrad-30.md`
+- commit: `151f549ccb435cf056c28271ff74fd9b7ce05f50`
+- modelName: `BORABORA-30`
+- releaseDate: `2008-04-21`
+- generalRolloutReference: `2008-05-12`
+- systemType: ノーマル / 純Aタイプ / 30Φ / 先告知主体
+- coreStatus: `COMPLETE_CORE_WITH_PAYOUT_RATE_CONFLICT`
+- resetBehaviorQA: `PARTIAL`
+
+### 性能コア
+
+- BIG/REG/合成、1000円ゲーム数、BIG約305枚・REG最高119枚はパチマガスロマガの `シートラッド&30` 共通解析で250と同値。
+- pacnkも30φのBIG/REGを丸め差の範囲で一致して掲載。
+- 30φはハイビスカス点滅による準完全告知、先告知主体。20/25φ側は後告知主体で予告音/デジタルアクション搭載。
+- RT/AT等なし、天井なし。
+- 機械割は複数系列が競合するため平均せず `CONFLICT_PAYOUT_RATE`。
+
+### v0.7 resetBehavior
+
+- settingChangeBehavior: `NO_SPECIAL_GAMEPLAY_EFFECT_CONFIRMED`
+- carryOverBehavior: `NOT_APPLICABLE_NO_CEILING_MODE_RT_ART_CONFIRMED`
+- powerCycleBehavior: `NOT_APPLICABLE_NO_CEILING_MODE_RT_ART_CONFIRMED`
+- gameCounterReset: `NOT_APPLICABLE_NO_CEILING`
+- ceilingAfterReset: `NOT_APPLICABLE_NO_CEILING`
+- modeAfterReset: `NOT_APPLICABLE_NO_INTERNAL_MODE_CONFIRMED`
+- stateAfterReset: `NOT_APPLICABLE_NO_RT_ART_CZ_STATE`
 - advantageousSectionReset: `NOT_APPLICABLE`
 - resetBenefits: `NONE_CONFIRMED`
 - resetPenalties: `NONE_CONFIRMED`
 - resetDetection: `UNVERIFIED_AFTER_RESEARCH`
 - numericResetData: `NONE_CONFIRMED`
 
-## 249. 一騎当千A（タイヨー）
-
-- record: `docs/real_machine_db/machines/2008-05-12_ikkitousen-a.md`
-- commit: `6e27ddd756baa742eecee824c48985f2f8d28aaa`
-- modelName: `一騎当千A`
-- releaseDate: `2008-05-12`
-- announcedDeliveryStart: `2008-05-11`
-- systemType: ボーナス + CZ + RTループ
-- coreStatus: `PARTIAL_CORE_INDIVIDUAL_BONUS_AND_BASE_UNVERIFIED`
-- resetBehaviorQA: `PARTIAL`
-
-### 性能コア
-
-- ボーナス合成: `1/197.4 / 1/190.5 / 1/184.1 / 1/172.5 / 1/162.2 / 1/153.1`。当時記事の上下端は `1/197.1 → 1/153.1`。
-- BIG約300枚、REG約100枚。実機資料ではBIG349枚超、REG153枚超払い出し終了。
-- RT `関羽雲長 千人斬り!!`: 7Gまたは77G、約+0.4枚/G。7G主体ループ率約80%。
-- 通常ゲーム1000G消化でCZへ入る天井をP-WORLD、パチビー、中一商事で照合。
-- 機械割は5号機クロニクル `97.1 / 98.8 / 100.4 / 103.3 / 104.9 / 107.7%` とpacnk `96.1 / 98.3 / 99.6 / 102.8 / 105.9 / 109.1%` が競合。平均せず `CONFLICT_PAYOUT_RATE`。
-- 50枚ベースは直接値を確定できず `UNVERIFIED_AFTER_RESEARCH`。
-
-### v0.7 resetBehavior
-
-- settingChangeBehavior: `UNVERIFIED_AFTER_RESEARCH`
-- carryOverBehavior: `UNVERIFIED_AFTER_RESEARCH`
-- powerCycleBehavior: `UNVERIFIED_AFTER_RESEARCH`
-- gameCounterReset: `UNVERIFIED_AFTER_RESEARCH_1000G_CZ_CEILING`
-- ceilingAfterReset: `UNVERIFIED_AFTER_RESEARCH_NO_SHORTENING_VALUE_CONFIRMED`
-- modeAfterReset: `NOT_APPLICABLE_COMPLEX_INTERNAL_MODE_NONE_CONFIRMED`
-- stateAfterReset: `UNVERIFIED_AFTER_RESEARCH_CZ_RT_STATE`
-- advantageousSectionReset: `NOT_APPLICABLE`
-- resetBenefits: `NONE_CONFIRMED`
-- resetPenalties: `NONE_CONFIRMED`
-- resetDetection: `UNVERIFIED_AFTER_RESEARCH`
-- numericResetData: `NORMAL_CEILING_1000G_TO_CZ_ONLY`
-
-### resetBehavior調査要点
-
-- `一騎当千 / 一騎当千A / Dragon Destiny / タイヨー / 青パネル / 赤パネル / 2008` と `設定変更 / リセット / 朝一 / 朝イチ / 据え置き / 電源OFF ON / 電断 / 天井短縮 / 1000G / CZ / RT / ART / ガックン / 初期出目` を組み替えて再探索。
-- 当時業界、P-WORLD、パチビー、旧/後年解析DB、中古実機アーカイブを横断。
-- 現行スマスロ `L 真・一騎当千` のリセット天井400G等が検索結果に大量混入するが、完全な別機種なので2008年初代へ一切流用しない。
-- 一騎当千Aの通常1000G→CZは複数資料で確定。一方、設定変更時にそのカウンタをクリア/引継ぎするか、短縮があるか、据え置き/電源OFF→ONでCZ/RT状態を維持するか、本機固有ガックン/初期出目等は直接資料を確定できず `UNVERIFIED_AFTER_RESEARCH`。
-- 朝一専用モード、設定変更専用恩恵/不利、公開朝一専用数値は `NONE_CONFIRMED`。
-
 ## 今回の主要出典
 
 取得日: 2026-09-01
 
-- グリーンべると / P-WORLD業界ニュース「タイヨー、ARTループの『一騎当千』発表」
-  - https://news.p-world.co.jp/articles/2748/greenbelt
-- パチビー「一騎当千A」
-  - https://www.pachibee.jp/machines/about/211040011
-- P-WORLD「一騎当千A」
-  - https://www.p-world.co.jp/machine/database/5163
-- 5号機クロニクル「タイヨー5号機全機種一覧」
-  - https://5goki.com/taiyo
-- pacnk「一騎当千A 設定判別ツール」
-  - https://pacnk.com/slot/tools/sh_ikkitousena.html
-- 中一商事「タイヨー 一騎当千A」
-  - https://www.nakaiti.com/html/sTaiyo005.html
-- パチマガスロマガFREE「5号機ヒストリア2008年前編」
-  - https://pachimaga.com/free/playback/1192d11673cba62908327e8fbb81e19c017a610d.php
+- パチマガスロマガ「シートラッド&30」
+  - https://cs62.cs-plaza.com/g/pachi/pla/s_conq/okazaki_slot/56/okazaki_slot_56.php
+  - https://cs62.cs-plaza.com/g/pachi/pla/s_conq/okazaki_slot/56/a.php
+  - https://cs62.cs-plaza.com/g/pachi/pla/s_conq/okazaki_slot/56/c.php
+  - https://cs62.cs-plaza.com/g/pachi/pla/s_conq/okazaki_slot/56/e.php
+  - https://cs62.cs-plaza.com/g/pachi/pla/s_conq/okazaki_slot/56/h.php
+- pacnk「シートラッド30 設定判別ツール」
+  - https://pacnk.com/slot/tools/sh_ctoraddo2008b.html
 - 5号機クロニクル「岡崎産業」
   - https://5goki.com/okazaki
+- パチスロ業界初まとめ 更新情報5
+  - https://slothistory.com/kousin_kako05.html
+- マイクロオーダーサービス旧記事（2008-05-23）
+  - https://plaza.rakuten.co.jp/mosnet/diaryall/
 
 ## 重複防止
 
-- 既存247件の再追加禁止。
-- 248 `一騎当千`、249 `一騎当千A` も再追加禁止。
-- 2機種は同一タイアップ/同時発表だが、青/赤パネルの単なる外装差ではなく、ボーナス獲得枚数、RT純増、ループ率、機械割系列が異なるスペック違いなので別レコード。
-- `L 真・一騎当千`、`一騎当千2`、`一騎当千BB外伝` 等の後継機データを初代へ流用しない。
-- `ビートマニア` は5/7通常導入でも247として既登録。再追加しない。
+- 既存249件の再追加禁止。
+- 250 `シートラッド`、251 `シートラッド30` も再追加禁止。
+- 20/25φ側と30φ側は性能数値が共通解析されるが、型式が `BORABORA / BORABORA-30` と分かれ、告知方式・演出仕様も異なるため全機種方針上は別レコード。
+- 4/21と5/12は同一2機種の先行/一般導入定義差として保持し、5/12に再度別レコードを作らない。
 
 ## resetBehavior 遡及QA
 
@@ -127,9 +120,8 @@
 
 ## 次回再開地点
 
-1. **LATEST_HANDOFF基準249件地点 / 実ホール導入日2008-05-12まで前進。**
-2. **2008-05-01〜11について、月精度のみの候補をもう一度境界監査する。特に `シートラッド / シートラッド30（岡崎産業）` の具体導入日を優先確定し、5/12より早ければ時系列遡及追加する。**
-3. 5/12同日群を再監査し、`一騎当千 / 一騎当千A` 以外の未処理機があれば同日順不同で追加する。
-4. その後、2008年5月の `格闘美神 武龍 / 潮風-30 / 監獄JACK / ドキューン / ニューパルサー エボリューション / ソニックライブ / 熱血硬派くにおくん / ヒミコスタイル / 大繁盛本舗 江戸ver.` 等を具体導入日で並べ、最古の未処理から進める。
-5. resetBehavior遡及QAは `ジャックポット・トロピカルバージョン2（2006-09）` から継続。
-6. 欠損は表記揺れ・型式名・メーカー・シリーズ名と、設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックン/有利区間等へ検索語を変え、公式・業界・当時解析・旧DB・アーカイブ・回顧資料を横断してから `UNVERIFIED` 判定する。
+1. **LATEST_HANDOFF基準251件地点。時系列上の最新一般導入確認日は2008-05-12 `一騎当千 / 一騎当千A`、ただし250/251は2008-04-21へ遡及追加済み。**
+2. **2008-05-12同日群を再監査し、`一騎当千 / 一騎当千A / シートラッド / シートラッド30` 以外の未処理機がないか確認。シートラッド2機種は再追加禁止。**
+3. その後、2008年5月の `格闘美神 武龍 / 潮風-30（表記揺れ: 潮風25/潮風30） / 監獄JACK / ドキューン / ニューパルサー エボリューション / ソニックライブ / 熱血硬派くにおくん / ヒミコスタイル / 大繁盛本舗 江戸ver.` 等を具体導入日で並べ、最古の未処理から進める。
+4. resetBehavior遡及QAは `ジャックポット・トロピカルバージョン2（2006-09）` から継続。
+5. 欠損は表記揺れ・型式名・メーカー・シリーズ名と、設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックン/有利区間等へ検索語を変え、公式・業界・当時解析・旧DB・アーカイブ・回顧資料を横断してから `UNVERIFIED` 判定する。
