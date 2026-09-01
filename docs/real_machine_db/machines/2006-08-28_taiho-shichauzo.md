@@ -99,3 +99,46 @@ RT「特売タイム」: 約0.3枚/Gとする複数二次資料あり。
 ## conflicts
 
 - ボーナス確率: 5号機クロニクルのBIG 1/819.4〜1/689.9・合成1/327.7〜1/304.8と、みんスロのBIG 1/524〜1/437・合成1/267〜1/243が大きく競合。機械割は一致するため別機種混同より、BIG分類/集計単位差の可能性がある。確定表が得られるまで双方保持し物差し集計へは使用しない。
+
+## v0.7 resetBehavior QA（2026-09-01）
+
+resetBehaviorQA: PARTIAL
+resetBehaviorConfidence: LOW
+
+- settingChangeBehavior: `UNVERIFIED_AFTER_RESEARCH`
+  - 本機固有の設定変更時に、ループBIG後無限RT「特売タイム」の内部RT状態や成立済みボーナス状態をどう扱うかを直接確認できる資料は未取得。
+- carryOverBehavior: `UNVERIFIED_AFTER_RESEARCH`
+  - 据え置き時の「特売タイム」状態継続について、本機固有の直接資料を確定できず。
+- powerCycleBehavior: `UNVERIFIED_AFTER_RESEARCH`
+  - 電源OFF→ONのみを行った場合の無限RT状態・内部状態の扱いは直接資料未確定。
+- gameCounterReset: `NONE_CONFIRMED`
+  - 通常時の規定ゲーム数天井/周期天井は今回確認した当時解析・旧DB・回顧資料では確認できず。無限RTは「次回ボーナスまで」であり、固定G数天井とは分離。
+- ceilingAfterReset: `NONE_CONFIRMED`
+  - 設定変更後短縮天井/朝一専用天井の公開仕様は確認できず。
+- modeAfterReset: `NONE_CONFIRMED`
+  - 朝一専用モード/設定変更専用モードの公開仕様は確認できず。
+- stateAfterReset: `UNVERIFIED_AFTER_RESEARCH`
+  - ループBIG後の無限RT「特売タイム」中に設定変更・据え置き・電断を行った場合の残存/消滅処理は未確定。
+- advantageousSectionReset: `NOT_APPLICABLE`
+- resetBenefits: `NONE_CONFIRMED`
+- resetPenalties: `NONE_CONFIRMED`
+- resetDetection: `UNVERIFIED_AFTER_RESEARCH`
+  - ガックン、初期出目、液晶/ランプ、RT挙動などを用いた本機固有の設定変更判別法は、検索語と資料系統を変更しても確定できず。
+- numericResetData: `NONE_CONFIRMED`
+  - 朝一専用移行率、短縮G数等の公開数値は確認できず。
+
+### resetBehavior QA source notes
+
+取得日: 2026-09-01
+
+- パチマガスロマガの基本システム、悠遊道の当時機回顧、パチセブンのIGT Japan回顧、K-Navi系機種情報を再探索。
+- パチセブン回顧でも本機が「特定ボーナスから次回ボーナスまで続く無限RT」を持つことは確認できたが、設定変更・据え置き・電断時の状態処理までは記載なし。
+  - https://pachiseven.jp/articles/detail/13009
+- 実機販売資料も確認したが、家庭用動作説明をホール朝一挙動の根拠には採用していない。
+  - https://www.a-slot.com/SHOP/igt4.html
+- 一般的な5号機のリセット挙動や他IGT機の仕様は、本機固有仕様として流用していない。
+
+### resetBehavior QA judgment
+
+- 既存性能の判定・CONFLICTはそのまま維持し、resetBehaviorのQA状態のみ別管理。
+- `UNVERIFIED_AFTER_RESEARCH` は「一般論では推測できても本機固有資料で確定できない」項目に限定。
