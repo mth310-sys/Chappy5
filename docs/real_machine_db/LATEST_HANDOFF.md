@@ -6,89 +6,79 @@
 
 - 最新mainの `README.md`、実機DBミッションv0.7、`INDEX.md`、既存レコード、直前 `LATEST_HANDOFF.md` を再読して継続。
 - `INDEX.md` は旧19件地点のため、README規定どおり本 `LATEST_HANDOFF.md` を進捗正本とする。
-- 直前正本は **300 `バウンティキラー`（山佐 / 2008-10-05納品予定）**。
-- 2008年10月6〜18日候補を再監査し、一次/当時業界系で **`天晴招猫` は「10月上旬導入予定」**、`アカギ～永続の闘牌～` は **2008-10-14納品開始** を確認。時系列漏れ防止のため、10月上旬候補である **301 `天晴招猫`（エマ / 2008-10・月精度）** を先に追加。
-- `天晴招猫` は性能コア + ミッションv0.7 `resetBehavior` を同時収集。
+- 直前正本は **301 `天晴招猫`（エマ / 2008-10・月精度）**。
+- 2008年10月上旬〜13日を再監査し、具体日付きで301より後かつ10月14日より前と強く確定できる未処理候補を今回確定できなかったため、当時業界資料で納品日が明記された **302 `アカギ～永続の闘牌～`（藤商事 / 2008-10-14）** を追加。
+- 302は性能コア + ミッションv0.7 `resetBehavior` を同時収集。
 
-## 301. 天晴招猫
+## 302. アカギ～永続の闘牌～
 
-- record: `docs/real_machine_db/machines/2008-10_appare-manekineko.md`
-- manufacturer: エマ
-- modelNumber: `アッパレマネキネコV`（P-WORLD、検定番号8S0324）
+- record: `docs/real_machine_db/machines/2008-10-14_akagi-eizoku-no-tohai.md`
+- manufacturer: 藤商事
+- modelNumber: `アカギエイゾクノトウハイFSC`
 - generation: 5号機
-- systemType: ボーナス主体 + 天井RT / 小役優先制御
-- releaseDate: **2008-10（月精度）**。K-Navi当時業界ニュースは2008-09-03時点で「ホールへの導入は10月上旬を予定」。P-WORLD・5号機クロニクルは2008年10月で一致。具体日の強い根拠は得られず、日付を捏造しない。
-- 設定: **1 / 2 / 3 / 4 / 5 / 6**。
-- BIG合成: **1/309.1 / 1/297.9 / 1/287.4 / 1/273.1 / 1/260.1 / 1/240.9**。
-- REG: **1/425.6 / 1/414.8 / 1/399.6 / 1/385.5 / 1/360.1 / 1/331.0**。
-- 総合算: **1/179.1 / 1/173.4 / 1/167.2 / 1/159.8 / 1/151.0 / 1/139.4**。
-- 1000円あたり: **37.10 / 37.45 / 37.86 / 38.21 / 38.61 / 39.06G**。
-- BIG約**312枚** / REG約**117枚**。規定払い出しはBIG345枚超 / REG120枚超。
-- 天井RT搭載は複数資料で確認。ただし今回、**天井発動G数とRT純増/Gの直接本文を確定できず**、十分な再探索後 `UNVERIFIED_AFTER_RESEARCH`。
+- releaseDate: **2008-10-14**。グリーンべると2008-09-08記事で「10月14日より納品」と明記。
+- systemType: BIG非搭載、REG契機・継続率管理ART。
+- ART: **20G/1セット、純増約+1.5枚/G**。REG成立時にART突入抽選、継続率は**50%〜最大90%以上**。藤商事公式・当時業界・K-Naviで主要構造を照合。
+- 通常時天井: 旧解析資料で**天井なし**を確認。
+- REG純増目安は現存パチマガスロマガの約5枚と2008年当時個人整理資料の約10枚で差があるため `CONFLICT`。平均しない。
+- 機械割は後年回顧で **96 / 98 / 101 / 104 / 106 / 110%** を取得したが、当時解析の独立第二照合がないため `ANALYSIS_SINGLE`。
+- 設定別REG/ART初当たり・50枚ベースは十分再探索後も比較可能な確定値を回収できず `UNVERIFIED_AFTER_RESEARCH`。
+- `coreStatus: PARTIAL`。
 
-### 機械割（301）
+### resetBehavior（302）
 
-- パチマガスロマガ simulation: **97.78 / 99.63 / 101.68 / 104.29 / 107.27 / 111.83%**。
-- 5号機クロニクル: **97.9 / 99.8 / 101.8 / 104.4 / 107.5 / 112.0%**。
-- 平均せず別系列として保持。差は概ね丸め・集計精度差の範囲とみなし、現時点では `CONFLICT` ではなく `ROUNDING_VARIANCE_NOT_CONFLICT`。
-
-### resetBehavior（301）
-
-- `settingChangeBehavior`: `UNVERIFIED_AFTER_RESEARCH`。パチマガスロマガ現存インデックスに「攻め時・ヤメ時・設定変更時」専用項目は存在するが本文回収不能。設定変更時の天井カウンタ/RT初期状態を直接確定できず。
-- `carryOverBehavior`: `UNVERIFIED_AFTER_RESEARCH` — 据え置き時の天井ゲーム数/RT状態引継ぎを確定できず。
-- `powerCycleBehavior`: `UNVERIFIED_AFTER_RESEARCH` — 電源OFF→ONのみの天井カウンタ/RT/初期出目処理を確定できず。
-- `gameCounterReset`: `UNVERIFIED_AFTER_RESEARCH` — 天井RT搭載は確認済みだが設定変更時のカウンタ処理は未確定。
-- `ceilingAfterReset`: `UNVERIFIED_AFTER_RESEARCH` — 通常天井の閾値本文と短縮有無/数値を今回回収できず。
-- `modeAfterReset`: `NONE_CONFIRMED_OR_UNVERIFIED`。
-- `stateAfterReset`: `UNVERIFIED_AFTER_RESEARCH`。
+- `settingChangeBehavior`: `UNVERIFIED_AFTER_RESEARCH` — 設定変更時の通常状態/ART関連内部状態を直接確定できず。
+- `carryOverBehavior`: `UNVERIFIED_AFTER_RESEARCH` — 据え置き時の状態引継ぎ条件を確定できず。
+- `powerCycleBehavior`: `UNVERIFIED_AFTER_RESEARCH` — 電源OFF→ONのみの内部状態/表示/初期出目を確定できず。
+- `gameCounterReset` / `ceilingAfterReset`: 通常天井なし資料を確認しており、朝一狙い用の通常天井G数は `NOT_APPLICABLE_OR_NONE_CONFIRMED`。リセット短縮天井も確認できず。
+- `modeAfterReset` / `stateAfterReset`: `UNVERIFIED_AFTER_RESEARCH`。
 - `advantageousSectionReset`: `NOT_APPLICABLE`（5号機・有利区間制度前）。
 - `resetBenefits` / `resetPenalties`: `NONE_CONFIRMED_AFTER_RESEARCH`。
-- `resetDetection`: `UNVERIFIED_AFTER_RESEARCH` — ガックン、初期出目、表示等の本機固有判別条件を確定できず。
-- `numericResetData`: リセット天井、モード振り分け、朝一当選率、恩恵発生率は `NONE_CONFIRMED_OR_UNVERIFIED`。
+- `resetDetection`: `UNVERIFIED_AFTER_RESEARCH` — ガックン、初期出目、表示等の本機固有変更判別を確定できず。
+- 公開朝一数値（リセット天井・モード振り分け・朝一当選率・恩恵発生率）: `NONE_CONFIRMED_OR_UNVERIFIED`。
+- `resetBehaviorQA: PARTIAL_WITH_DEVICE_SPECIFIC_RESET_DETAILS_UNVERIFIED_AFTER_MULTI_SOURCE_RESEARCH`。
 
 ## 今回の主要出典
 
 取得日: 2026-09-02
 
-### 天晴招猫
-- https://p-kn.com/topics/news/618/
-  - 2008-09-03当時業界ニュース。ホール導入10月上旬予定、小役優先制御、2828通りのリーチ目/チャンス目、天井RT搭載。
-- https://www.p-world.co.jp/machine/database/5309
-  - 型式名アッパレマネキネコV、検定番号8S0324、2008年10月導入。
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/ema_slot/30/h.php
-  - 設定別赤7BIG/猫BIG/BIG合成/REG/総合算、simulation PAYOUT。
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/ema_slot/30/c.php
-  - 1000円あたり37.10〜39.06G。
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/ema_slot/30/a.php
-  - 天井RT、BIG約312枚、REG約117枚、規定払い出し条件。
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/ema_slot/30/ema_slot_30.php
-  - 「天井RTについて」「攻め時・ヤメ時・設定変更時」専用解析項目の存在確認。本文値は今回回収不能のため推測転記しない。
-- https://p-kn.com/slot/859/
-  - 天井RT搭載、小役優先制御、BIG/REG規定払い出し条件の独立確認。
-- https://5goki.com/ema
-  - 2008年10月導入、機械割97.9〜112.0%の独立系列。
-
-### 10月境界監査
+- https://www.fujimarukun.co.jp/products/akagi/
+  - 藤商事公式。ART搭載、純増約1.5枚/G、REGULAR BONUS終了条件。
 - https://news.p-world.co.jp/articles/3031/greenbelt
-  - 藤商事 `アカギ～永続の闘牌～` は2008-10-14より納品。
+  - 2008-09-08グリーンべると。型式、ART20G/純増1.5枚/G、REG成立時ART抽選、継続率50%〜最大90%以上、2008-10-14納品開始。
+- https://p-kn.com/slot/857/6903/
+  - K-Navi。20G/1セット、継続率50〜90%、純増約1.5枚/Gを独立確認。
+- https://p-kn.com/slot/857/
+  - K-Navi機種ページ。BIG非搭載、REG+ART構造。設定別機械割/REGは未発表表示のため数値転記せず。
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/fuji_slot/08/a.php
+  - パチマガスロマガ現存基本システム。REG約5枚、20GセットART。
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/fuji_slot/08/fuji_slot_08.php
+  - 「ボーナス確率/PAYOUT/ART/攻め時・ヤメ時・設定変更時」専用項目の存在確認。本文未回収部分は推測しない。
+- https://www.eightbeat.com/slot99/kishu/a_gyou/a/akagi/page_menu.html
+  - 旧解析DB。天井なし、ART純増+1.5枚/G、2008年10月登場の独立確認。
+- https://www.marimo0925.net/pachislot-kikaiwari-ranking-akagi-ban/
+  - 後年回顧。設定別機械割96/98/101/104/106/110%。当時第二照合待ちのため `ANALYSIS_SINGLE`。
+- https://plaza.rakuten.co.jp/kirialoverio/diary/200808250000/
+  - 2008年当時個人整理資料。REG約10枚記述。高信頼資料の約5枚と競合するため正本化せず `CONFLICT` 保持。
 
 ## 境界監査・重複防止
 
-- **既存301件の再追加禁止。**
-- 2008-10-05は `豊漁` / `バウンティキラー` を処理済み。`逆境ナイン` は2008-10月精度で299登録済み。
-- `天晴招猫` は「10月上旬導入予定」のため301として月精度登録済み。
-- `アカギ～永続の闘牌～` は一次業界資料で **2008-10-14納品開始** を確認済み。
+- **既存302件の再追加禁止。**
+- 301 `天晴招猫` は2008年10月上旬・月精度で処理済み。
+- 302 `アカギ～永続の闘牌～` は2008-10-14納品開始で処理済み。
 - `天地を喰らう` と `まつり屋華恋` は一次業界資料で **2008-10-19納品開始予定** を確認済み。
-- `ハードボイルド～グリフォンの幻影～` は **2008-11-03納品予定** のため10月群へ混入させない。
+- `ハードボイルド～グリフォンの幻影～` は **2008-11-03納品予定** のため10月中旬群へ混入させない。
 
 ## resetBehavior 遡及QA
 
-- 最終補完済み地点 `球児（2006-09）` を維持。
-- 新規収集本線を止めない。
+- 最終補完済み地点 **`球児（2006-09）`** を維持。
+- 旧handoffで次候補として記録されてきた **「ジャックポット・トロピカルバージョン2（2006-09）」** は名称再監査が必要。2006年ヤーマ機は「ジャックポット トロピカルバージョン」表記が存在する一方、後年に別機 `Ver.2` があるため、2017年機等のresetBehaviorを混入させない。
+- 今回repo内検索・実ファイル走査を行ったが、安全に同定できる既存レコードの実パスを確定できなかったため、**推測パスへのQA書き込みは実施していない**。既存COMPLETE_CORE/PARTIALを壊さないことを優先。
+- 次回は2006年8〜10月の既存実ファイルを直接走査し、ヤーマ初代機の正しいレコードを同定してからv0.7 resetBehaviorを補完する。
 
 ## 次回再開地点
 
-1. **LATEST_HANDOFF基準301件地点。次は2008年10月上旬〜13日の残候補を再監査。**
-2. `完熟ちぇりー / 赤ジャック / 赤ジャック-30 / クローズ武装戦線` の具体納品・初回ホール導入日を優先して比較する。月精度しか得られない場合は日付を捏造せず、一次/当時資料で「上旬」「中旬」等の相対順が取れるものを優先。
-3. 10月13日以前の具体日付き未処理機がなければ、**2008-10-14 `アカギ～永続の闘牌～`** を次の本線として処理する。
-4. その後10月15〜18日を再監査し、未処理がなければ **2008-10-19 `天地を喰らう` / `まつり屋華恋`** の同日群へ進む。
+1. **LATEST_HANDOFF基準302件地点。2008-10-15〜18日の未処理機を再監査。**
+2. 10月15〜18日に未処理がなければ、一次業界資料で **2008-10-19** 納品開始予定を確認済みの `天地を喰らう` / `まつり屋華恋` 同日群へ進む。既存登録を先に確認し重複禁止。
+3. 遡及QAは `球児（2006-09）` の次から再開し、旧称「ジャックポット・トロピカルバージョン2」の実体をrepo既存レコードと当時資料で確定してから補完する。
+4. PARTIAL/UNVERIFIEDは検索語・資料系統を変えて再探索し、競合は平均せず `CONFLICT` を維持する。
