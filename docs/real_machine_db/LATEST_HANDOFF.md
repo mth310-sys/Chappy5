@@ -6,73 +6,67 @@
 
 - 最新mainの `README.md`、実機DBミッションv0.7、`INDEX.md`、既存レコード、直前 `LATEST_HANDOFF.md` を再読して継続。
 - `INDEX.md` は旧19件地点のため、README規定どおり本 `LATEST_HANDOFF.md` を進捗正本とする。
-- 直前は **284 `海人G-30`（トリビー / 2008-08-04）**。
-- 今回新規で **285 `爆音伝説サクラ`（KPE / 2008-08-04）** を追加した。
+- 直前は **285 `爆音伝説サクラ`（KPE / 2008-08-04）**。
+- 今回新規で **286 `犬キング`（コルモ / 型式イヌキングX / 2008-08-04）** を追加した。
 - 性能コア + ミッションv0.7 `resetBehavior` を同時収集。
 
-## 285. 爆音伝説サクラ
+## 286. 犬キング
 
-- record: `docs/real_machine_db/machines/2008-08-04_bakuon-densetsu-sakura.md`
-- manufacturer: KPE
-- modelName: `爆音伝説サクラJG`
-- releaseDate: `2008-08-04`
+- record: `docs/real_machine_db/machines/2008-08-04_inuking.md`
+- manufacturer: コルモ
+- modelName: `イヌキングX`
 - generation: 5号機
-- systemType: ボーナス+ループ型RT
-- コナミ公式アーカイブで2008年8月稼働開始を確認。当時グリーンべるとで8月4日納品予定、当時解析でも8/4導入開始予定を確認。
-- BIG/MID/REG約320/220/49枚。CZ中ベルで30G RT、特殊リプレイで100G RT。発売版RT純増は約+1.0枚/G。
-- 通常時550G消化で天井CZ。
-- 設定変更後は内部CZへ突入することを当時解析2系統で確認。
-- 設定変更後CZのRT突入期待度は、CrankySevenが約50%とする一方、パチ＆スロ必勝本は「調査中」。確定数値として採用せず `CONFLICT_RESET_RT_ENTRY_EXPECTATION` とした。
-- 設定別ボーナス確率はパチ＆スロ必勝本とCrankySevenで一部差異があるため平均せずCONFLICT保持。
-- 機械割は必勝本が各設定レンジ、CrankySevenが概ねレンジ下端、5号機クロニクルが概ね上端。定義差本文を完全回収できないためレンジ保持。
-- 50枚ベースは表記・型式・検索項目・資料系統を変えて再探索しても比較可能値を確定できず `UNVERIFIED_AFTER_RESEARCH`。
-- coreStatus: `PARTIAL_CORE_AFTER_RESEARCH`
+- systemType: ボーナス+押し順ナビAT+5G RT
+- 導入時期はグリーンべるとが2008-08-03納品開始予定、当時業界アーカイブが2008-08-04発売。定義差を保持し、主releaseDateは2008-08-04。
+- ボーナス合成は設定1〜6で 1/282.48, 1/266.41, 1/252.06, 1/227.56, 1/207.39, 1/183.06。
+- BIG合成は1/564.97〜1/368.18、CHALLENGE/CB合成は1/564.97〜1/364.09。
+- BIG約300枚、CHALLENGE約221枚。
+- 通常時ベース約41G/50枚、AT状態約55G/50枚（当時業界記事の1000円あたり値を20円スロット50枚=1000円として整理）。
+- 5G RT「ワンワンタイム」は旧解析で純増約+0.2枚/G。
+- パチマガスロマガPAYOUTは 96.39/98.52/100.77/104.78/109.10/114.54%。pacnkは 97.10/98.90/101.40/105.10/109.20/114.10%、旧解析は概ね後者系列。平均せず `CONFLICT_PAYOUT_RATE`。
+- 旧解析で通常ゲーム数天井「なし」を確認。
+- coreStatus: `COMPLETE_CORE_WITH_PAYOUT_CONFLICT`
 
-### resetBehavior（285）
+### resetBehavior（286）
 
-- `settingChangeBehavior`: `CONFIRMED` — 設定変更後は内部CZ。
-- `carryOverBehavior`: `UNVERIFIED_AFTER_RESEARCH` — 据え置き時の550G周期カウンタ/CZ状態の前日跨ぎ処理を本機固有資料で確定できず。
-- `powerCycleBehavior`: `UNVERIFIED_AFTER_RESEARCH` — 電源OFF→ONのみで周期カウンタ/CZ状態を維持するか未確定。
-- `gameCounterReset`: `UNVERIFIED_AFTER_RESEARCH` — 変更後CZは確定だが内部550G周期カウンタのリセット定義を直接資料で確定できず。
-- `ceilingAfterReset`: `SETTING_CHANGE_BYPASSES_550G_WAIT_TO_CZ_CONFIRMED` — 通常550G待ちに対し設定変更後は即CZ。短縮天井0Gという推定表現は使わない。
-- `modeAfterReset`: `NOT_APPLICABLE_OR_NONE_CONFIRMED`
-- `stateAfterReset`: `INTERNAL_CZ_CONFIRMED`
+- `settingChangeBehavior`: `UNVERIFIED_AFTER_RESEARCH` — 設定変更時のAT残G/ナビ率状態処理を本機固有本文で確定できず。
+- `carryOverBehavior`: `UNVERIFIED_AFTER_RESEARCH` — 据え置き時のAT残G/ナビ率状態の前日跨ぎ処理を確定できず。
+- `powerCycleBehavior`: `UNVERIFIED_AFTER_RESEARCH` — 電源OFF→ONのみのAT残G/ナビ率状態処理を確定できず。
+- `gameCounterReset`: `NOT_APPLICABLE_FOR_CEILING` — 通常ゲーム数天井なし。AT残G処理は別途未確定。
+- `ceilingAfterReset`: `NOT_APPLICABLE` — 通常ゲーム数天井なし。
+- `modeAfterReset`: `UNVERIFIED_AFTER_RESEARCH` — ナビ率10/33/100%状態の設定変更時再抽選/初期状態、朝一専用モードは確定できず。
+- `stateAfterReset`: `UNVERIFIED_AFTER_RESEARCH`
 - `advantageousSectionReset`: `NOT_APPLICABLE`（5号機・有利区間制度前）
-- `resetBenefits`: 設定変更直後からRT契機の内部CZへ入る点を確認。
+- `resetBenefits`: `NONE_CONFIRMED_AFTER_RESEARCH`
 - `resetPenalties`: `NONE_CONFIRMED_AFTER_RESEARCH`
-- `resetDetection`: `UNVERIFIED_AFTER_RESEARCH`
-- `numericResetData`: 通常天井CZ 550G、設定変更後CZ即突入。変更後CZのRT期待度はCONFLICT/UNRESOLVED。
+- `resetDetection`: `UNVERIFIED_AFTER_RESEARCH` — ガックン、初期出目、表示、犬のキモチメーター等による本機固有の変更判別を確定できず。
+- `numericResetData`: 通常ゲーム数天井なし。朝一専用数値は確認できず。
 
 ## 今回の主要出典
 
 取得日: 2026-09-01
 
-- https://www.konami.com/amusement/psm/archive/ps/2008/sakura/
-  - コナミ公式。2008年8月稼働開始、5号機RT。
-- https://news.p-world.co.jp/articles/2880/greenbelt
-  - 2008年新基準対応版発表。8月4日納品予定、RT約+1枚/G、30G/100G、BIG約320枚、550G天井CZ。
-- https://news.p-world.co.jp/articles/2537/greenbelt
-  - 2007年旧仕様発表。RT約+0.8枚/G、BIG/MID/REG約320/220/49枚、550G救済CZ。発売版とは仕様履歴を分離。
-- https://p.hisshobon.jp/machine/1038/1/17844
-  - 当時解析。8/4導入予定、設定別BIG/MID/REG/合算、設定別機械割レンジ。
-- https://p.hisshobon.jp/machine/1038/1/17848
-  - 設定変更後は内部CZ、通常550Gで天井CZ。
-- https://p.hisshobon.jp/machine/1038/1/17849
-  - CZ/RT詳細。BIG後80%、MID後53%、REG後20.2%、RT後51%、周期51%、設定変更後期待度は調査中。
-- https://crankyseven.com/bakuonsakura-pc.htm
-  - 別解析系列。設定別数値、設定変更後CZ、変更後から約50%RTという記載。競合検出に使用。
-- https://5goki.com/kpe
-  - 2008年8月、機械割98.3〜111.6%系列の照合。
-- https://www.nakaiti.com/html/sKpe052.html
-  - 型式名 `爆音伝説サクラJG`、基本獲得性能の補助照合。
+- https://news.p-world.co.jp/articles/2890/greenbelt
+  - 当時業界一次。8月3日納品開始予定、BIG約300枚、CHALLENGE約221枚、押し順ナビAT、5G RT、合算1/282.5〜1/183.1、通常約41G/1000円・AT約55G/1000円。
+- https://www.p-world.co.jp/machine/database/5236
+  - 型式名 `イヌキングX`、検定番号7S1289、2008年8月導入、払い出し条件。
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/colmo_slot/03/h.php
+  - 当時解析系。設定別BIG/CB/合算、シミュレートPAYOUT。
+- https://pacnk.com/slot/tools/sh_inuking.html
+  - 別DB。設定別合算とPAYOUTの照合、CONFLICT検出。
+- https://www.eightbeat.com/slot99/kishu/a_gyou/i/inuking/page_menu.html
+  - 旧解析。天井なし、5G RT、純増約+0.2枚/G、設定別確率の丸め照合、ATナビ率10/33/100%。
+- https://p-kn.com/slot/832/
+  - 旧攻略DB。押し順ナビAT、5G RT、ボーナス払い出し条件、AT最大2000G上乗せ記載の補助確認。
 - https://slothistory.com/kousin_kako05.html
-  - 2008-08-04発売痕跡、新基準対応版としての再登場履歴。
+  - 当時業界アーカイブ。2008-08-04発売記録。
 
 ## 重複防止・境界管理
 
-- **既存285件の再追加禁止。**
-- 2007年1月予定の旧仕様と2008年8月発売版を同一数値として混在させない。RT純増0.8枚/Gは旧仕様履歴、発売版主値は約1.0枚/G。
-- `海人G-30` と25Φ `海人` は別レコード。兄弟機の数値を根拠なく共通化しない。
+- **既存286件の再追加禁止。**
+- `犬キング` は型式 `イヌキングX`。同名表記揺れとして二重登録しない。
+- `爆音伝説サクラ` は2007年旧仕様と2008年発売版の数値を混在させない。
+- `海人G-30` と25Φ `海人` は別レコード。
 - `完熟チェリー` は2008年10月境界で再確認する。
 - `スーパージャックポットK / P-30` は別型式痕跡の同一機/別機判定を後続QAで継続する。
 - 情報提供端子板の対応機種化日だけを導入日として扱わない。
@@ -85,9 +79,9 @@
 
 ## 次回再開地点
 
-1. **LATEST_HANDOFF基準285件地点。時系列は2008-08-04 `爆音伝説サクラ` まで進行。**
-2. 次は同日候補 **`犬キング / イヌキングX`（コルモ）** を最優先。グリーンべるとは2008-08-03納品開始予定、当時業界アーカイブは2008-08-04発売と記録するため、納品日/発売日の定義差を保持して導入日を確定する。
-3. `犬キング` は当時業界記事ですでにボーナス合算1/282.5〜1/183.1、通常時約41G/1000円・AT時約55G/1000円、BIG約300枚/CHALLENGE約221枚、押し順ナビAT+5G RTを確認できる。型式 `イヌキングX` と設定別機械割/初当たり、ATの物差し最低値を複数資料で照合する。
-4. `犬キング` のv0.7 resetBehaviorでは、AT残G/ナビ状態の設定変更・据え置き・電源OFF→ON処理、ゲーム数天井有無、朝一恩恵/不利、変更判別、公開朝一数値を重点監査する。
-5. その後2008年8月初旬群を具体日順に監査し、`メガラニカ` 等の未処理候補へ進む。
+1. **LATEST_HANDOFF基準286件地点。時系列は2008-08-04 `犬キング` まで進行。**
+2. 次は2008年8月初旬の **`メガラニカ`（ウィンネットテクノロジー/ラスター）** を最優先で具体導入日監査する。現時点で2008年8月リリース、型式痕跡 `メガラニカ`（検定2008-06-19）および後発 `メガラニカDX`（検定2008-08-18）を確認しているため、DXを同一機として混ぜない。
+3. `メガラニカ` は後年資料でノーマルタイプ、機械割98.1〜109.5%、BIG 1/297.9〜1/264.3、REG 1/3276.8、MEGAゲーム1/468.1〜1/364.1、合算1/172.5〜1/146.3まで候補値を確認済み。登録前に当時業界/解析資料で照合し、基本獲得枚数・50枚ベース・MEGAゲームの定義を確定する。
+4. v0.7 resetBehaviorではノーマル機であることを前提に決め打ちせず、設定変更/据え置き/電源OFF→ON/ゲーム数天井/モード・状態/朝一恩恵・不利/変更判別を機種名・型式・メーカー名で再探索する。
+5. その後、2008年8月初旬群を具体日順に監査し、より早い未処理機があれば先に遡及追加する。
 6. 欠損は表記揺れ・型式名・メーカー・シリーズ名と検索項目を変え、公式・業界・当時解析・旧DB・アーカイブ・回顧資料を横断してから `UNVERIFIED` 判定する。
