@@ -6,77 +6,71 @@
 
 - 作業開始ごとに最新mainの `README.md`、実機DBミッションv0.7、旧 `INDEX.md`、本 `LATEST_HANDOFF.md`、既存レコード、直近コミットを再取得する。
 - `INDEX.md` は19件地点の旧履歴集計。運用上の正本は本 `LATEST_HANDOFF.md` とrepoの実ファイル/直近mainコミット。
-- 本リレー開始時の最新mainは382件 `サタデーナイトフィーバー` まで進行済み。過去会話の古い件数には戻らず382を正本として継続した。
-- K-Navi 2009年6月全国一斉導入カレンダーを再確認し、2009-06-16〜21に新規パチスロ導入日は掲載されていない。表記揺れ・メーカー名・当時資料も再探索し、この境界で安全に追加できる具体日付き未処理機を今回確定できなかった。
-- 2009-06-22のラスター `ぶっちゃけはっちゃけ大奥浪漫` はrepo検索で未登録を確認し、性能コア＋v0.7 resetBehaviorを **383** として追加。
+- 本リレー開始時の最新mainは383件 `ぶっちゃけはっちゃけ大奥浪漫` まで進行済み。過去会話の古い件数には戻らず383を正本として継続した。
+- K-Navi 2009年6月全国一斉導入カレンダーを再確認し、2009-06-23〜28に新規パチスロ導入日は掲載されていない。表記揺れ・メーカー名・当時資料も再探索し、この境界で安全に追加できる具体日付き未処理機を今回確定できなかった。
+- 2009-06-29のパラジェーピー `ワイルドドッグ` はrepo検索で未登録を確認し、性能コア＋v0.7 resetBehaviorを **384** として追加。
 
-## 383. ぶっちゃけはっちゃけ大奥浪漫
+## 384. ワイルドドッグ
 
 record:
-- `docs/real_machine_db/machines/2009-06-22_oo-oku-roman.md`
+- `docs/real_machine_db/machines/2009-06-29_wild-dog.md`
 
 要点:
-- manufacturer: **ラスター**
-- alternateNames: **大奥浪漫 / ぶっちゃけはっちゃけ 大奥浪漫**
+- manufacturer: **パラジェーピー**
+- alternateNames: **ワイルドドッグX**（発売前資料で確認。ただし正式型式名かは未確定）
 - formalModelName / inspectionNumber: **UNVERIFIED_AFTER_RESEARCH**
-- releaseDate主値: **2009-06-22**。K-Navi全国一斉導入カレンダーと当時のパチスロ業界初まとめが一致。5号機クロニクルは2009/6で月整合。
+- releaseDate主値: **2009-06-29**。K-Navi全国一斉導入開始。P-WORLD/5号機クロニクルは2009年6月で月整合。当時業界初まとめには2009/6/中へ納期前倒しとの記録があるため発売/物流と全国一斉導入の差として保持。
 - generation: **5号機**
-- systemType: **A+RT / ボーナス+CZ+ループ型RT**
+- systemType: **ノーマル / Aタイプ / 同時成立あり**
 - settings: **1〜6**
-- 機械割: **97.2 / 98.7 / 100.3 / 102.1 / 104.1 / 106.1%**。5号機クロニクルの回顧DB値。パチマガ旧解析PAYOUT欄は「現在調査中」で、別系統直接照合がないため `RETROSPECTIVE_SINGLE_SERIES`。
-- BIG: **1/378.82 / 1/372.36 / 1/360.09 / 1/339.56 / 1/315.08 / 1/278.88**。
-- REG: **1/524.29 / 1/492.75 / 1/442.81 / 1/431.16 / 1/374.49 / 1/278.88**。
-- 合算: **1/219.92 / 1/212.09 / 1/198.59 / 1/189.96 / 1/171.11 / 1/139.44**。
-- 50枚ベース: **UNVERIFIED_AFTER_RESEARCH**。パチマガ旧解析の1000円あたりゲーム数も「現在調査中」。
-- BIG約**245枚**、REG約**70枚**。
-- ボーナス後または通常時**777G消化**でCZ「好色チャンス」。CZから**15G / 37G / 10000G**の3種類RTへ分岐し、RT終了後は再度CZへ戻るループ型。
-- 当時資料のRT純増目安は約**+0.7枚/G**。PAPIMOは3種類RT・ループ率70%以上を紹介。
-- 通常時777Gはボーナス確定天井ではなく**CZ突入条件**として保存。
-- `coreStatus=COMPLETE_CORE_WITH_BASE_UNVERIFIED_AND_PAYOUT_SINGLE_RETROSPECTIVE_SOURCE`。
+- 機械割は **CONFLICT**。
+  - パチマガ旧解析シミュレート: **95.78 / 96.76 / 98.80 / 101.17 / 104.56 / 106.11%**
+  - 5号機クロニクル: **96.5 / 97.7 / 99.8 / 102.2 / 106.2 / 107.9%**
+  - 条件差を直接確定できないため平均せず双方保持。
+- BIG: **1/287.44 / 1/281.27 / 1/281.27 / 1/271.93 / 1/268.59 / 1/266.41**。
+- REG: **1/455.11 / 1/442.81 / 1/348.60 / 1/321.25 / 1/268.59 / 1/268.59**。
+- 合算: **1/176.17 / 1/172.01 / 1/155.67 / 1/147.27 / 1/134.30 / 1/133.75**。
+- 50枚ベース: **35.10 / 35.10 / 35.11 / 35.32 / 36.01 / 37.02G**。
+- BIG約**312枚**、REG約**104枚**。規定払い出しは345枚/105枚。
+- RT/ART/AT/CZ/通常ゲーム数天井は確認されないノーマル機。
+- `coreStatus=COMPLETE_CORE_WITH_PAYOUT_CONFLICT`。
 
-### v0.7 resetBehavior — ぶっちゃけはっちゃけ大奥浪漫
+### v0.7 resetBehavior — ワイルドドッグ
 
-- settingChangeBehavior: **UNVERIFIED_AFTER_RESEARCH**。777G進捗、CZ/RT処理を直接確定できず。
-- carryOverBehavior: **UNVERIFIED_AFTER_RESEARCH**。据え置き時の777G進捗、CZ/RT残状態引継ぎを直接確定できず。
-- powerCycleBehavior: **UNVERIFIED_AFTER_RESEARCH**。単純電源OFF→ON時の777G進捗、CZ/RT復帰処理を直接確定できず。
-- gameCounterReset: **UNVERIFIED_AFTER_RESEARCH**。通常777G→CZは確認済みだが、設定変更時リセット/引継ぎ本文なし。
-- ceilingAfterReset: **UNVERIFIED_AFTER_RESEARCH**。リセット専用短縮値は確認できず。777GはCZ突入条件でありボーナス確定天井ではない。
-- modeAfterReset / stateAfterReset: **UNVERIFIED_AFTER_RESEARCH**。
+- settingChangeBehavior: **UNVERIFIED_AFTER_RESEARCH**。設定変更時のリール/初期出目等、本機固有挙動は直接確定できず。
+- carryOverBehavior: **NO_GAME_COUNTED_CEILING_OR_MODE_TO_CARRY_CONFIRMED**。通常ゲーム数天井/CZ/RT/ART/ゲーム数モードは確認なし。
+- powerCycleBehavior: **UNVERIFIED_AFTER_RESEARCH**。単純電源OFF→ON時のリール出目、告知状態、設定変更時との差は直接資料なし。
+- gameCounterReset: **NOT_APPLICABLE_NO_GAME_COUNTED_CEILING_CONFIRMED**。
+- ceilingAfterReset: **NOT_APPLICABLE_NO_CEILING_CONFIRMED**。
+- modeAfterReset: **NOT_APPLICABLE_NO_NORMAL_MODE_SYSTEM_CONFIRMED**。
+- stateAfterReset: **NOT_APPLICABLE_NO_CZ_RT_ART_STATE_CONFIRMED**。
 - advantageousSectionReset: **NOT_APPLICABLE**（5号機・有利区間制度前）。
 - resetBenefits / resetPenalties: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- resetDetection: **UNVERIFIED_AFTER_RESEARCH**。ガックン/初期出目/液晶/CZ表示等を含めて再探索したが本機固有の直接根拠なし。
+- resetDetection: **UNVERIFIED_AFTER_RESEARCH**。ガックン/初期出目/表示等を再探索したが本機固有根拠なし。
 - 公開朝一数値: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- パチマガスロマガ機種トップに「攻め時・ヤメ時・設定変更時」専用項目の存在までは確認したが、現存検索結果から具体本文を回収できないため推測しない。
-- `resetBehaviorQA=COMPLETE_RESEARCH_PASS_WITH_PRIMARY_RESET_FIELDS_UNVERIFIED_AFTER_MULTI_SOURCE_RESEARCH`。
+- `resetBehaviorQA=COMPLETE_RESEARCH_PASS_NORMAL_TYPE_WITH_HARD_RESET_DETAILS_UNVERIFIED`。
 
 欠損判定前の再探索:
-- `ぶっちゃけはっちゃけ大奥浪漫` / `ぶっちゃけはっちゃけ 大奥浪漫` / `大奥浪漫` / `ラスター`
-- 設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 777G / 天井 / 天井短縮 / モード / CZ / 好色チャンス / 好色タイム / ガックン / 50枚 / 1000円 / ベース / 型式 / 検定番号
-- K-Navi、当時業界アーカイブ、パチマガスロマガ旧解析、PAPIMO、5号機クロニクル、旧DB/回顧資料を横断。
+- `ワイルドドッグ` / `ワイルドドッグX` / `パラジェーピー`
+- 設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / モード / 状態 / ガックン / 初期出目 / 50枚 / 1000円 / ベース / 型式 / 検定番号
+- K-Navi、P-WORLD、パチマガスロマガ旧解析、5号機クロニクル、パチスロ業界初まとめ、2009年当時ブログ/回顧資料を横断。
 
-主要出典はレコード本文にURL・取得日2026-09-02・信頼度を保存:
-- K-Navi 2009年6月導入カレンダー
-- パチスロ業界初まとめ（当時アーカイブ）
-- パチマガスロマガ旧解析（基本システム / ボーナス確率 / 1000円ゲーム数 / 機種トップ）
-- 5号機クロニクル
-- PAPIMO
+主要出典はレコード本文にURL・取得日2026-09-02・信頼度を保存。
 
 ## 直前mainの主な進捗
+
+### 383. ぶっちゃけはっちゃけ大奥浪漫
+- `docs/real_machine_db/machines/2009-06-22_oo-oku-roman.md`
+- machine record commit: `a889b7665f0cc6ec45ed1a65b8ee5f6fa1208533`
+- 性能コア＋v0.7 resetBehavior保存済み。
 
 ### 382. サタデーナイトフィーバー
 - `docs/real_machine_db/machines/2009-06-15_saturday-night-fever.md`
 - machine record commit: `a3ba184e01b893fddfbeedc59d6de162658cd4b8`
-- 性能コア＋v0.7 resetBehavior保存済み。
 
 ### 381. パチスロ「BON JOVI」
 - `docs/real_machine_db/machines/2009-06-08_bon-jovi.md`
 - machine record commit: `8a6fe6f186903aec297541fb308f1508b0540d09`
-- 性能コア＋v0.7 resetBehavior保存済み。
-
-### 380. 銀河豪華客船クイーンギャラクシア
-- `docs/real_machine_db/machines/2009-06-08_queen-galaxia.md`
-- machine record commit: `97c716263c67646776007237654094a0652eb971`
-- 性能コア＋v0.7 resetBehavior保存済み。
 
 ## resetBehavior遡及QA
 
@@ -87,10 +81,10 @@ record:
 ## 次回再開地点
 
 ### 本線
-1. **383件地点 / 2009-06-22 `ぶっちゃけはっちゃけ大奥浪漫`まで完了**から再開。
-2. 2009-06-23〜28をメーカー別一覧・当時業界記事・旧導入カレンダーで境界監査する。
-3. 具体日付き未処理機がなければ **2009-06-29 `ワイルドドッグ`（パラジェーピー）** をrepo検索して384候補として性能コア＋v0.7 resetBehaviorを処理。
-4. 6月29日同日群と6月30日の漏れ監査を閉じた後、2009年7月へ時系列接続する。
+1. **384件地点 / 2009-06-29 `ワイルドドッグ`まで完了**から再開。
+2. 2009-06-29同日群と2009-06-30をメーカー別一覧・当時業界記事・旧導入カレンダーで最終監査する。
+3. 6月末に未処理機がなければ2009年7月へ接続。ALL7では現時点で最古の具体日付き7月パチスロ群は **2009-07-06 `サイボーグ009～未知なる加速へ～` / `スーパーセブン` / `ドキッと!ビキニパイ`**。repo検索で既存有無を確認し、同日群の最古未処理機を385候補として処理する。
+4. 2009-07-01〜05に別の具体日付き未処理機がないか、K-Navi/P-WORLD/メーカー公式/当時業界記事で境界監査してから7月6日群へ進む。
 5. 過去月の月精度/納品日だけ判明している機種は具体日を推測挿入せず、別根拠が取れた時だけ遡及処理する。
 
 ### 次回の必須開始手順
@@ -100,6 +94,6 @@ record:
 
 ## 今回の保存
 
-- 383 ぶっちゃけはっちゃけ大奥浪漫: `docs/real_machine_db/machines/2009-06-22_oo-oku-roman.md`
-- machine record commit: `a889b7665f0cc6ec45ed1a65b8ee5f6fa1208533`
-- 本 `LATEST_HANDOFF.md` を383件地点へ更新。
+- 384 ワイルドドッグ: `docs/real_machine_db/machines/2009-06-29_wild-dog.md`
+- machine record commit: `537e0ef9115e2362f2c46c8070c3cb4cb245efc8`
+- 本 `LATEST_HANDOFF.md` を384件地点へ更新。
