@@ -6,73 +6,71 @@
 
 - 最新mainの `README.md`、実機DBミッションv0.7、`INDEX.md`、既存レコード、直前進捗を再取得して継続。
 - `INDEX.md` は旧19件地点のため、README規定どおり本 `LATEST_HANDOFF.md` を進捗正本とする。
-- 直前HANDOFFは364件地点 `もっと楽シーサー30Φ沖縄バージョン`。
-- **今回 365「タイムリミット」（JPS）を追加。既存365件の再追加禁止。**
+- 直前HANDOFFは365件地点 `タイムリミット`。
+- **今回 366「パチスロ アタックNo.1」（三洋物産）を追加。既存366件の再追加禁止。**
 
-## 365. タイムリミット
+## 366. パチスロ アタックNo.1
 
 record:
-- `docs/real_machine_db/machines/2009-05-07_time-limit.md`
+- `docs/real_machine_db/machines/2009-05-10_attack-no1.md`
 
 要点:
-- manufacturer: JPS
-- formalModelName: `タイムリミットX`
-- inspectionNumber: `8S1329`
-- releaseDate: **2009-05-07**。パチ＆スロ必勝本が「5/7導入開始予定」、当時のパチスロ業界初まとめもタイムリミットXを2009/5/7発売確定としており、P-WORLD/5号機クロニクルの2009年5月表記とも整合。
+- manufacturer: 三洋物産
+- formalModelName: `アタックNo.1KG`
+- inspectionNumber: `8S1174`
+- releaseDate: **2009-05-10**。グリーンべるとが2009-04-15記事で「納品は5月10日からスタートする予定」と明記。K-Naviは5月中旬、P-WORLDは2009年5月導入で整合。
 - generation: 5号機
-- systemType: **AT + ART / TYPE-F / JACボーナス保持型ART**
+- systemType: **ボーナス + 完走型RT / CZ / パンク回避型**
 - settings: 1 / 2 / 3 / 4 / 5 / 6
-- 機械割: **97.7 / 99.2 / 101.5 / 104.0 / 107.2 / 112.0%**。P-WORLD、必勝本、当時Wiki、5号機クロニクルで一致。
-- 主JAC確率: **1/112.2 / 1/111.5 / 1/110.7 / 1/110.0 / 1/109.2 / 1/108.5**。P-WORLD/必勝本一致。
-- 当時5号機まとめwikiにはREG **1/129.0→1/123.9** の別系列があり、定義差または解析更新差を解消できないため `CONFLICT` として双方保持。
-- JAC約36枚。
-- ART「バトルモード」純増約**+1.5枚/G**、ライフポイント消滅または最大約**857G**まで継続。
-- AT「フォルトゥナタイム」は**20G+30%ループ**、EXモードは次回ボーナスまで継続。
-- 通常時は通常 / 高確 / 高確+ATの3状態。
-- 50枚ベースは機種名/型式タイムリミットX/検定8S1329/JPSと「50枚/1000円/千円/ベース/コイン持ち/1k」を組み替え、P-WORLD、必勝本、パチマガスロマガ、当時Wiki、回顧資料を横断したが直接値を確定できず `UNVERIFIED_AFTER_RESEARCH`。
+- BIG: **1/458.29 / 1/445.82 / 1/431.16 / 1/414.79 / 1/409.60 / 1/399.61**
+- REG: **1/655.36 / 1/630.16 / 1/606.82 / 1/585.15 / 1/474.90 / 1/399.61**
+- 合算: **1/269.7 / 1/261.1 / 1/252.1 / 1/242.7 / 1/219.9 / 1/199.8**
+- 機械割はP-WORLD **98.2 / 99.7 / 101.6 / 104.3 / 108.1 / 112.3%** とpacnk **98.1 / 99.7 / 101.6 / 104.3 / 108.0 / 112.2%** に0.1pt差があるため `CONFLICT_ROUNDING_SMALL`。平均しない。
+- BIG約305枚、REG約73枚。
+- RT「アタックタイム」は基本約80G、純増約**+0.6枚/G**。技術介入で5G延長可能。スーパーアタックタイムは最大150G級。
+- 通常時**2000G消化でCZ**へ突入する天井構造をP-WORLDで確認。
+- 2009年版の50枚ベースは表記揺れ/型式/検定番号と「50枚/1000円/千円/ベース/コイン持ち/1k」を組み替えて再探索したが直接値を確定できず `UNVERIFIED_AFTER_RESEARCH`。2013年版「開幕!世界選手権～」の30.9〜31.1Gは別機種なので流用禁止。
 
 ### v0.7 resetBehavior
 
-- settingChangeBehavior: `UNVERIFIED_AFTER_RESEARCH`。パチマガスロマガに設定変更時専用攻略項目の存在までは確認したが本文条件を取得できず、通常/高確/高確+ATのどこから開始するかは推測しない。
-- carryOverBehavior: `UNVERIFIED_AFTER_RESEARCH`。据え置き時の通常/高確/AT、EXモード、ART残状態の翌日引継ぎを直接確認できず。
-- powerCycleBehavior: `UNVERIFIED_AFTER_RESEARCH`。単純電源OFF→ON時の内部状態・AT/ART残状態を直接確認できず。
-- gameCounterReset: `NOT_APPLICABLE_NO_GAME_COUNT_CEILING_CONFIRMED_IN_AVAILABLE_SYSTEM_DESCRIPTIONS`。
-- ceilingAfterReset: `NOT_APPLICABLE_NO_GAME_COUNT_CEILING_CONFIRMED`。
-- modeAfterReset / stateAfterReset: `UNVERIFIED_AFTER_RESEARCH`。通常/高確/高確+ATおよび高確ショート/ミドル/ロング等の設定変更時初期状態を直接確認できず。
+- settingChangeBehavior: **設定変更後はCZスタート**。P-WORLD 2009年版の初打ちレクチャーに直接記載。
+- carryOverBehavior: `UNVERIFIED_AFTER_RESEARCH`。据え置き時の2000G天井カウンタ、CZ/RT状態、RT残Gの翌日引継ぎを直接確定できず。
+- powerCycleBehavior: `UNVERIFIED_AFTER_RESEARCH`。単純電源OFF→ON時の天井カウンタ/CZ/RT状態を直接確定できず。
+- gameCounterReset: `UNVERIFIED_AFTER_RESEARCH`。通常2000G→CZは確認済みだが、設定変更時の内部カウンタ消去/引継ぎは直接資料なし。設定変更後は別途CZスタートすることのみ確定。
+- ceilingAfterReset: **SETTING_CHANGE_STARTS_IN_CZ_IMMEDIATELY**。通常2000G到達型CZに対する朝一実質恩恵。短縮天井G数とは定義を分ける。
+- modeAfterReset: 朝一専用モード振り分けは確認できず。
+- stateAfterReset: **CZ_START_CONFIRMED_ON_SETTING_CHANGE**。CZ内部詳細は物差し用途外/資料不足のため深追いしない。
 - advantageousSectionReset: `NOT_APPLICABLE`（5号機・有利区間制度前）。
-- resetBenefits / resetPenalties: `NONE_CONFIRMED_AFTER_RESEARCH`。
-- resetDetection: ガックン、初期出目、液晶、ランプ等を機種名・型式・メーカー・設定変更/リセット/朝一/据え置き等で多段検索したが直接根拠を確認できず `UNVERIFIED_AFTER_RESEARCH`。
-- numericResetData: normalCeiling=`NOT_APPLICABLE_NO_GAME_COUNT_CEILING_CONFIRMED`、resetSpecificCeiling=`NOT_APPLICABLE`、resetModeDistribution/resetStateDistribution=`UNVERIFIED_AFTER_RESEARCH`、morningHitRate/resetBenefitRate=`NONE_CONFIRMED_AFTER_RESEARCH`。
+- resetBenefits: **設定変更後CZスタート**。P-WORLDは朝一RT突入チャンスと記載。
+- resetPenalties: `NONE_CONFIRMED_AFTER_RESEARCH`。
+- resetDetection: ガックン、初期出目、液晶、ランプ等を機種名/型式/メーカー/設定変更/朝一/据え置き/電源で多段検索したが直接根拠を確認できず `UNVERIFIED_AFTER_RESEARCH`。
+- numericResetData: normalCeiling=`2000GでCZ`、resetSpecificCeiling=`NOT_A_GAME_COUNT_SHORTENING_SETTING_CHANGE_STARTS_CZ_IMMEDIATELY`、morningHitRate/resetBenefitRate=`UNVERIFIED_AFTER_RESEARCH`。
 
 主要出典（取得日 2026-09-02）:
-- パチ＆スロ必勝本 / 基本スペック[タイムリミット] — ANALYSIS_HIGH
-  - https://p.hisshobon.jp/machine/1353/1/20669
-- P-WORLD / タイムリミット — ANALYSIS_HIGH_DATABASE
-  - https://www.p-world.co.jp/machine/database/5515
-- グリーンべると / ライフポイント制ARTを搭載、『タイムリミット』 — INDUSTRY
-  - https://web-greenbelt.jp/00003037/
-- パチ＆スロ必勝本 / 通常時の状態[タイムリミット] — ANALYSIS_HIGH
-  - https://p.hisshobon.jp/machine/1353/1/20673
-- K-Navi / フォルトゥナタイム&EXモード(AT) — OLD_ANALYSIS
-  - https://p-kn.com/slot/953/10132/
-- パチスロ5号機まとめwiki / タイムリミット — OLD_CONTEMPORARY_DATABASE
-  - https://w.atwiki.jp/5gouki/pages/165.html
-- パチマガスロマガ / タイムリミット — OLD_ANALYSIS_INDEX
-  - https://cs62.cs-plaza.com/g/pachi/pla/s_conq/jps_slot/18/jps_slot_18.php
-- パチスロ業界初まとめ ～更新情報7 — OLD_CONTEMPORARY_DATABASE
-  - https://slothistory.com/kousin_kako07.html
-- 5号機クロニクル / JPS 5号機全機種一覧 — RETROSPECTIVE_SECONDARY
-  - https://5goki.com/jps
+- グリーンべると / スポ根漫画の名作「アタックNo.1」がパチスロに — INDUSTRY
+  - https://web-greenbelt.jp/00003085/
+- P-WORLD / パチスロアタックNo.1「2009年」 — ANALYSIS_HIGH_DATABASE
+  - https://www.p-world.co.jp/machine/database/5536
+- K-Navi / 新機種「パチスロ アタックNO.1」内覧会 — OLD_INDUSTRY_ANALYSIS
+  - https://p-kn.com/topics/exhibition/471/
+- K-Navi / 元祖スポ根少女アニメとのタイアップ機 — OLD_INDUSTRY_ANALYSIS
+  - https://p-kn.com/topics/news/782/
+- pacnk / パチスロ アタックNo.1 設定判別ツール — RETROSPECTIVE_ANALYSIS
+  - https://pacnk.com/slot/tools/sh_attackno1.html
+- パチマガスロマガ / アタックNo.1 — OLD_ANALYSIS_INDEX
+  - https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sanyo_slot/08/sanyo_slot_08.php
 
 commit:
-- 365 タイムリミット: `aca238055e53007a3d374226ec052b6705b4d21a`
+- 366 パチスロ アタックNo.1: `a12a7bf300f3e1cca386a530a5e2f708c12a1c78`
 
 ## 2009年5月初頭 境界監査
 
-- 2009-05-07群として `もっと楽シーサー25Φ / 30Φ全国 / 30Φ沖縄 / タイムリミット` まで収録。
-- 次は**2009-05-07同日群〜5月10日**を具体日付き資料で監査する。
-- `スーパーアロハ/-30` は当時更新資料内に **2009/5/11発売** と **2009/5/7発売** に読める記載が混在するため、別資料で具体日を再照合してから挿入する。
-- その後 `スターマンアイズ / スロットニュートラッド / デュエルドラゴンキングダム / パチスロアタックNo.1 / レキオ2-30 / 琉球浪漫25 / 琉球浪漫30 / 緑ドン` 等を具体導入日順に監査する。
+- 2009-05-07群は `もっと楽シーサー25Φ / 30Φ全国 / 30Φ沖縄 / タイムリミット` まで収録済み。
+- 2009-05-08〜09は今回の具体日監査で安全に追加できる未処理機を確定できず。
+- **2009-05-10「パチスロ アタックNo.1」を今回追加。**
+- `スーパーアロハ` は当時グリーンべるとで **2009-05-11納品開始予定**、パイオニア公式で2009年5月発売。Pマンズ当時記事では25φ機と明記。
+- `スーパーアロハ-30` という2009年別機種はパイオニア公式2009年一覧/5号機一覧で確認できず、現時点で独立レコード候補から外す。名称だけで30φ派生を捏造しない。
+- その後 `スターマンアイズ / スロットニュートラッド / デュエルドラゴンキングダム / レキオ2-30 / 琉球浪漫25 / 琉球浪漫30 / 緑ドン` 等を具体導入日順に監査する。
 - `天誅` はALL7 2009-05-01とK-Navi 2009-06-01/回顧2009-06が競合するため、推測で5月1日へ遡及挿入しない。
 
 ## resetBehavior遡及QA進捗
@@ -83,9 +81,9 @@ commit:
 
 ## 次回再開地点
 
-1. **LATEST_HANDOFF基準365件地点。既存365件の再追加禁止。**
-2. **2009-05-07同日群〜5月10日の未処理機を具体日順に境界監査する。**
-3. 最優先候補は `スーパーアロハ/-30`。2009/5/7と5/11の具体日競合を別系統資料で解消/CONFLICT確定し、未登録なら次件として処理する。
+1. **LATEST_HANDOFF基準366件地点。既存366件の再追加禁止。**
+2. **2009-05-10同日群を最終監査し、未処理がなければ2009-05-11「スーパーアロハ」（パイオニア）を最優先候補として処理する。**
+3. スーパーアロハは25φ機として当時資料あり。別30φ版は公式一覧で確認できないため独立追加しない unless 新しい直接資料が見つかる。
 4. その後2009年5月月内候補を具体導入日順に進める。
 5. 毎回GitHub最新mainで既存登録を確認し、未処理のみ追加する。
 6. 遡及QAは **竹中直人のパチスロ太閤記より後の最初のresetBehavior未補完機**から再開する。
@@ -96,3 +94,4 @@ commit:
 - 363 もっと楽シーサー30Φ全国バージョン: `2a46545e16bd7cdab4b46f1fdbfa2c9d7db8ee82`
 - 364 もっと楽シーサー30Φ沖縄バージョン: `6e39c042e4c0333b7d3a0b883e0c3111eb5b9b10`
 - 365 タイムリミット: `aca238055e53007a3d374226ec052b6705b4d21a`
+- 366 パチスロ アタックNo.1: `a12a7bf300f3e1cca386a530a5e2f708c12a1c78`
