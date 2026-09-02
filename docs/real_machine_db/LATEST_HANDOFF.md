@@ -6,10 +6,49 @@
 
 - 毎回最新mainの `README.md`、実機DBミッションv0.7、旧 `INDEX.md`、本 `LATEST_HANDOFF.md`、既存レコード、直近コミットを再取得する。
 - `INDEX.md` は19件地点の旧履歴集計。運用上の正本は本 `LATEST_HANDOFF.md` とrepoの実ファイル/直近mainコミット。
-- 今回開始時の最新mainは400件 `パチスロがんばれ!!ロボコン` まで完了済み。400を正本として継続。
-- 2009-08-24同日群の次の未処理 `めぞん一刻2` を **401** に追加。
+- 今回開始時の最新mainは **401件 `めぞん一刻2`** まで完了済みだったため、401を正本として継続。
+- 2009-08-24同日群を再監査し、未登録だったエマ `イケイケめんそーれ-30` を発見。repo検索で未登録確認後、**402** に追加。
 
-## 401. めぞん一刻2
+## 402. イケイケめんそーれ-30
+
+record:
+- `docs/real_machine_db/machines/2009-08-24_ikeike-mensore-30.md`
+
+machine record commit:
+- `9e5bdf1898752bcc0b638ba4341ba87d4e19954c`
+
+要点:
+- manufacturer: **エマ**
+- formalModelName: **メンソーレ3H-30**（2009年当時グリーンべると）
+- inspectionNumber: **UNVERIFIED_AFTER_RESEARCH**
+- releaseDate: **2009-08-24**（K-Naviホール導入開始）。2009-07-30グリーンべるとは「8月下旬納品開始」。5号機クロニクルは2009/9、筐体回顧は2009/6表記のため月表記差を `CONFLICT` として保持。
+- generation: **5号機**
+- systemType: **ノーマル / 完全告知 / 30Φ / BB+RB**
+- RT非搭載の純正ノーマルタイプ。
+- BIG **1/318.14 → 1/266.41**、REG **1/537.18 → 1/381.02**、合算 **1/199.80 → 1/156.78**。当時パチマガスロマガ精密値、K-Navi丸め値、当時業界記事端点で整合。
+- 50枚ベース相当（1000円あたり）は設定1→6で **38.02 / 38.21 / 38.46 / 38.67 / 38.93 / 39.14G**。
+- BIG約**312枚**、REG約**130枚**。
+- 機械割は資料系列が不一致のため `CONFLICT_PAYOUT_RATE`：
+  - 当時パチマガスロマガ（シミュレート） **96.54 / 98.68 / 100.93 / 103.06 / 105.26 / 107.42%**
+  - 5号機クロニクル **97.1 / 99.1 / 101.2 / 103.2 / 105.2 / 107.3%**
+  - pacnk **96.2 / 98.5 / 100.3 / 103.3 / 106.1 / 109.0%**
+- 算出条件を直接解消できないため平均せず三系列保持。
+- `coreStatus=COMPLETE_CORE_WITH_PAYOUT_AND_RELEASE_DATE_CONFLICT_INSPECTION_UNVERIFIED`。
+
+### v0.7 resetBehavior — イケイケめんそーれ-30
+
+- 純正ノーマルでRT/ART/AT/CZ非搭載。当時パチマガスロマガも「攻め時・ヤメ時→特にナシ」。ゲーム数天井、周期CZ、ゲーム数管理モード、朝一専用モードは確認されない。
+- `gameCounterReset=NOT_APPLICABLE_NO_CEILING_OR_GAME_COUNT_SYSTEM_CONFIRMED`。
+- `ceilingAfterReset=NOT_APPLICABLE_NO_CEILING_CONFIRMED`。
+- `modeAfterReset=NOT_APPLICABLE_NO_GAME_COUNT_MODE_SYSTEM_CONFIRMED`。
+- `stateAfterReset=NOT_APPLICABLE_FOR_RT_ART_CZ_STATE / OTHER_INTERNAL_START_STATE_UNVERIFIED`。
+- 有利区間は5号機のため `NOT_APPLICABLE`。
+- 設定変更固有の短縮天井、モード優遇、CZ/初当たり優遇等の公開朝一恩恵/不利は多段再探索後も確認なし。
+- 一方、設定変更操作時や単純電源OFF→ON時の**リール初期位置・ガックン・ハイビスカス/ドット表示等の本機固有ハード起動挙動**は、型式名 `メンソーレ3H-30` も含め検索語・資料系統を変えても直接確証を取れず `UNVERIFIED_AFTER_RESEARCH`。
+- 4号機「めんそーれ30」には設定変更時モード解析があるが、5号機純正ノーマルの本機とは別機種なので混入させない。
+- 公開朝一数値は `NONE_CONFIRMED`。
+
+## 401. めぞん一刻2（直前）
 
 record:
 - `docs/real_machine_db/machines/2009-08-24_maison-ikkoku-2.md`
@@ -17,35 +56,11 @@ record:
 machine record commit:
 - `a9aace00fd72e504553d51390e8fbab1fd14c54e`
 
-要点:
-- manufacturer: **オリンピア**
-- releaseDate: **2009-08-24**（K-Naviホール導入開始）
-- formalModelName / inspectionNumber: **UNVERIFIED_AFTER_RESEARCH**
-- generation: **5号機**
-- systemType: **ボーナス+ART / ゲーム数管理ART / 無限ART / 振り分け型天井**
-- 機械割は当時パチマガスロマガのシミュレート値 **97.88 / 99.78 / 102.10 / 104.78 / 107.96 / 112.16%**。
-- BIG **1/397.19 → 1/315.08**、REG **1/485.45 → 1/390.10**、合算 **1/218.45 → 1/174.30**。K-Naviの丸め表示とも整合。
-- 50枚ベースは多段再探索後も直接値を確定できず `UNVERIFIED_AFTER_RESEARCH`。
-- BIG約**250枚**、REG約**50枚**。
-- ART「ドラマチックタイム」は**50G/セット**。純増は当時K-Navi/パチマガスロマガ約**+1.0枚/G**、後年パチセブン約**+0.9枚/G**で `CONFLICT_NET_INCREASE_0_9_VS_1_0`。
-- 最大天井は**1590G**。浅い振り分け天井は無限ART「ドラマチックタイムSP」、1590G到達は無限ARTを80%で継続する「ウエディングモード」。510G/950Gが代表点という後年回顧と、500G 10% / 900G 20%という別回顧の表現差は未解消のため注記保持。
-- `coreStatus=PARTIAL_BASE_AND_FORMAL_MODEL_UNVERIFIED`。
+- 設定変更時ART＆ストック消滅 / 天井ゲーム数再セットを確認済み。
+- 設定変更後の公開朝一数値として **50%で590G以内 / 85%で990G以内**の天井発動を保存済み。
+- 単純電断、内部高確/通常モード、本機固有ガックンは未確認部分を分離済み。
 
-### v0.7 resetBehavior — めぞん一刻2
-
-- 2009-11-09の当時ブログ解析で、**設定変更時はART＆ストック消滅 / 天井ゲーム数再セット**を直接確認。
-- 同資料で設定変更後の天井発動は **50%で590G以内 / 85%で990G以内** と公開朝一数値あり。
-- 後年天井整理でも本機は **宵越し× / 設定変更時天井ゲーム数再セット** と一致。
-- 設定変更しても **液晶＆次回エピソードは変化しない**。設定変更判別は難しいが、天井発動約10G前から「ぴよぴよ演出」が頻発するため、前日G+当日Gとの照合で変更/据え置きを推測する方法が当時資料に記載。
-- `settingChangeBehavior=CONFIRMED_RESET_RESEEDS_CEILING_AND_ERASES_ART_STOCK`。
-- `gameCounterReset=CONFIRMED_RESET_ON_SETTING_CHANGE`。
-- `ceilingAfterReset=CONFIRMED_RESELECTION_WITH_PUBLIC_MORNING_DISTRIBUTION_SUMMARY`。
-- `stateAfterReset=PARTIAL_CONFIRMED_ART_AND_STOCK_ERASED`。
-- 据え置き時の天井カウンタ継続は当時判別説明から強く示唆されるが、ART/ストック/高確まで含む完全な据え置き仕様は未確認のため `PARTIAL_CONFIRMED_BY_CONTRAST`。
-- 単純電源OFF→ON、設定変更時の内部高確/通常モード振り分け、本機固有ガックンは多段検索後も `UNVERIFIED_AFTER_RESEARCH`。
-- 有利区間は5号機のため `NOT_APPLICABLE`。
-
-## 400. パチスロがんばれ!!ロボコン（直前）
+## 400. パチスロがんばれ!!ロボコン
 
 record:
 - `docs/real_machine_db/machines/2009-08-24_ganbare-robocon.md`
@@ -85,11 +100,12 @@ machine record commit:
 ## 次回再開地点
 
 ### 本線
-1. **401件地点 / めぞん一刻2まで完了**から再開。
-2. **2009-08-24同日群を最終監査**。メーカー別/当時導入一覧で同日未処理がないか確認する。
+1. **402件地点 / イケイケめんそーれ-30まで完了**から再開。
+2. **2009-08-24同日群をもう一度最終監査**。K-Navi/メーカー別一覧/当時導入一覧で未処理がないか確認する。今回、同日群からイケイケめんそーれ-30の漏れを発見したため、同日閉鎖を急がない。
 3. 同日群終了後、**2009-08-25〜29**を境界監査する。
-4. `サンサンハナハナ-30` はパイオニア公式2009年8月発売、当時グリーンべると2009-08-30納品予定の候補として月末群でrepo未登録確認後に処理する。
+4. `サンサンハナハナ-30` はパイオニア2009年モデル。2009-07-31グリーンべるとが **2009-08-30納品予定**、P-WORLDが2009年8月導入としている。repo未登録確認後、8/24〜29により古い未処理がなければ次の有力候補。
 5. 8月30日群を閉じたら8月31日/9月初頭へ時系列継続する。
+6. `イケイケめんそーれ-30` は5号機クロニクルで2009/9表記もあるが、K-Naviの具体的ホール導入日2009-08-24と当時業界記事の8月下旬納品が整合するため、時系列本線では8/24同日群として処理済み。再登録しない。
 
 ### resetBehavior遡及QA
 1. **スパイダーマン2Gまで補完済み**。
@@ -104,6 +120,6 @@ machine record commit:
 
 ## 今回の保存
 
-- 401 めぞん一刻2: `docs/real_machine_db/machines/2009-08-24_maison-ikkoku-2.md`
-- machine record commit: `a9aace00fd72e504553d51390e8fbab1fd14c54e`
-- 本 `LATEST_HANDOFF.md` を401件地点へ更新。
+- 402 イケイケめんそーれ-30: `docs/real_machine_db/machines/2009-08-24_ikeike-mensore-30.md`
+- machine record commit: `9e5bdf1898752bcc0b638ba4341ba87d4e19954c`
+- 本 `LATEST_HANDOFF.md` を402件地点へ更新。
