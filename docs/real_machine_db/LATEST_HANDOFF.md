@@ -6,9 +6,57 @@
 
 - 毎回最新mainの `README.md`、実機DBミッションv0.7、旧 `INDEX.md`、本 `LATEST_HANDOFF.md`、既存レコード、直近mainを再取得する。
 - `INDEX.md` は旧履歴集計。運用上の正本は本 `LATEST_HANDOFF.md` とrepo実ファイル/直近mainコミット。
-- 本線は **420件 `タイムレスキュー777`** まで進行。
-- 419 `噴火でDON!` 後、2009-10-26同日群〜10/31を具体日付きで再監査。安全に追加できる未登録機を確定できなかったため11月初旬へ接続した。
+- 本線は **421件 `タイムレスキューS`** まで進行。
+- 420 `タイムレスキュー777` の同時発売ファミリーを監査し、HAZUSEで2009-11-01導入開始、当時グリーンべるとで777/Sとも11/1納品開始予定を確認したため、日付補正としてSを421件目に追加。
 - `ハイパールーレット` / `パチスロ遠山の金さん` は2009年10月中旬までは確認済みだが、具体日を高信頼確定できていないため保留継続。具体日を無理に捏造しない。
+
+## 421. タイムレスキューS
+
+record:
+- `docs/real_machine_db/machines/2009-11-01_time-rescue-s.md`
+
+machine record commit:
+- `2e7c3025b818b6522bf9cb50c64744e195aeff40`
+
+要点:
+- manufacturer: **山佐**
+- formalModelName: **タイムレスキュー**
+- approvalNumber: **9S0739**
+- releaseDate: **2009-11-01（HAZUSE導入開始 / グリーンべると納品開始予定）**
+- generation: **5号機**
+- systemType: **ノーマル / BIG+REG / 天井非搭載**
+- BIG合算: **1/364.09 → 1/284.94**
+- REG: **1/520.13 → 1/409.60**
+- 合算: **1/214.17 → 1/168.04**
+- P-WORLD系列機械割: **96.5 / 97.8 / 99.4 / 102.9 / 106.3 / 111.5%**
+- P_Style777系列: **96.4 / 97.7 / 99.3 / 102.8 / 106.2 / 109.7%**
+- 旧パチマガシミュレートPAYOUT: **95.60 / 96.83 / 98.45 / 101.86 / 105.40 / 109.10%**
+- 算出条件差未確定につき3系列を `CONFLICT`、平均せず保持。
+- 50枚ベース: **38.02 / 38.32 / 38.93 / 39.86 / 41.23 / 43.06G**（旧パチマガ直接値）。
+- S-BIGフリー打ち平均約398枚/最大402枚、N-BIG約302枚/最大307枚、REG約98枚/最大103枚。
+- Sは天井非搭載。兄弟機777のみボーナス間777Gの天井RTあり。
+
+### v0.7 resetBehavior — タイムレスキューS
+
+- `settingChangeBehavior`: **UNVERIFIED_AFTER_RESEARCH_FOR_MACHINE_SPECIFIC_VISIBLE_STATE**。天井/RT/ART/AT/CZ/ゲーム数解除モードがないため、それらのリセット処理は非該当。設定変更時の液晶初期ステージ・初期出目等は本機固有直接資料を確定できず。
+- `gameCounterReset`: `NOT_APPLICABLE_FOR_CEILING_COUNTER`。
+- `ceilingAfterReset`: `NOT_APPLICABLE`。通常天井・短縮天井なし。
+- `modeAfterReset`: `NOT_APPLICABLE_FOR_GAME_NUMBER_RELEASE_MODE`。
+- `stateAfterReset`: `NOT_APPLICABLE_FOR_RT_ART_AT_CZ_STATE`。その他の演出内部状態は未確認。
+- `carryOverBehavior`: 天井G数/ARTストック等の保持対象なし。液晶ステージ等の電断跨ぎは未確認。
+- `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH**。
+- `advantageousSectionReset`: `NOT_APPLICABLE`（5号機）。
+- `resetBenefits`: **NONE_CONFIRMED_AFTER_RESEARCH**。旧パチマガ「攻め時・ヤメ時」は「特にナシ」。朝一専用短縮天井/高確/CZ/当選率等は確認されず。
+- `resetPenalties`: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- `resetDetection`: **UNVERIFIED_AFTER_RESEARCH**。ガックン、初期出目、液晶初期ステージ、ランプ等による変更判別を直接確定できず。
+- 公開朝一専用当選率/モード振分/恩恵率: `NONE_CONFIRMED_AFTER_RESEARCH`。
+
+### データ品質メモ — タイムレスキューS
+
+- 山佐現行アーカイブ、2009年当時グリーンべると/K-Navi、P-WORLD、HAZUSE、P_Style777、パチマガスロマガ旧解析、後年回顧を横断。
+- 性能コアは高整合。機械割のみ3系列競合のため平均せずCONFLICT。
+- 50枚ベースは旧パチマガの直接値を取得できたため推定計算なし。
+- resetBehavior欠損は `タイムレスキューS / タイムレスキューＳ / タイムレスキュー / 山佐 / 9S0739` と `設定変更 / リセット / 朝一 / 朝イチ / 据え置き / 宵越し / 電源OFF ON / 天井 / RT / ガックン / 初期出目 / ステージ` を組み替え、公式・当時業界・旧解析・後年回顧まで再探索後のみUNVERIFIEDとした。
 
 ## 420. タイムレスキュー777
 
@@ -19,42 +67,13 @@ machine record commit:
 - `0d337b88a31dd442c41b54fc1dfa8078998dd40f`
 
 要点:
-- manufacturer: **山佐**
-- formalModelName: **タイムレスキュー777**
-- approvalNumber: **9S0670**
-- releaseDate: **2009-11-02（HAZUSE導入開始） / 2009-11-01〜（グリーンべると当時記事の納品開始予定）**
-- generation: **5号機**
-- systemType: **ノーマル / BIG+REG / 天井RT**
-- BIG合算: **1/348.60 → 1/273.07**
-- REG: **1/736.36 → 1/564.97**
-- 合算: **1/236.59 → 1/184.09**
-- 市場機械割: **96.1 / 97.8 / 100.1 / 103.2 / 106.4 / 111.5%**
-- 旧パチマガシミュレートPAYOUT: **94.47 / 96.64 / 98.95 / 102.01 / 105.16 / 109.38%** → 算出条件差未確定につき `CONFLICT`、平均せず両系列保持。
-- 50枚ベース: **37.39 / 38.30 / 39.26 / 40.22 / 41.25 / 42.67G**（旧パチマガ直接値）。
-- S-BIGフリー打ち平均約398枚/最大402枚、N-BIG約302枚/最大307枚、REG約98枚/最大103枚。
-- ボーナス間777Gで天井RT「レスキュータイム」、次回ボーナスまで継続、約+0.1枚/G。
-
-### v0.7 resetBehavior — タイムレスキュー777
-
-- `settingChangeBehavior`: **PARTIAL_CONFIRMED**。後年解析DBで「設定変更後も天井までのゲーム数を引き継ぎ、リセットされない」と直接記載。旧パチマガには「攻め時・ヤメ時・設定変更時」専用項目の存在まで確認したが本文未回収のため、単一直接資料として信頼度を抑えて採用。
-- `gameCounterReset`: **CARRY_OVER_ON_SETTING_CHANGE_CONFIRMED_SINGLE_ANALYSIS_SOURCE**。
-- `ceilingAfterReset`: **777G_FROM_LAST_BONUS_EFFECTIVELY_CARRY_OVER**。設定変更専用短縮天井は確認されず。
-- `carryOverBehavior`: 天井ゲーム数進捗は引継ぎ確認。その他の成立状態/演出内部履歴は未確認。
-- `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH**。単純電源OFF→ON時の777Gカウンタ、天井RT中状態、演出ステージ、小役レスキュー内部履歴を直接確定できず。
-- `stateAfterReset`: **UNVERIFIED_FOR_ACTIVE_CEILING_RT**。天井RT突入済み状態で設定変更した場合のRT状態処理は直接確定できず。
-- `modeAfterReset`: `NOT_APPLICABLE_FOR_GAME_NUMBER_RELEASE_MODE`。
-- `advantageousSectionReset`: `NOT_APPLICABLE`（5号機）。
-- `resetBenefits`: 天井進捗が設定変更で消去されないため、前日ハマリが残れば朝一の残り天井G数が短くなり得る。ただし専用リセット恩恵抽選ではない。
-- `resetPenalties`: `NONE_CONFIRMED_AFTER_RESEARCH`。
-- `resetDetection`: **UNVERIFIED_AFTER_RESEARCH**。ガックン、初期出目、液晶初期ステージ、天井告知ランプ等による変更判別を直接確定できず。
-- 公開朝一専用当選率/モード振分/恩恵率: `NONE_CONFIRMED_AFTER_RESEARCH`。
-
-### データ品質メモ — タイムレスキュー777
-
-- 山佐現行アーカイブ、2009年当時グリーンべると、P-WORLD、HAZUSE、パチマガスロマガ旧解析、後年設定判別DB、回顧資料を横断。
-- 性能コアは高整合。機械割のみ市場掲載値と旧パチマガシミュレート値が競合するため平均せずCONFLICT。
-- 50枚ベースは旧パチマガの直接値を取得できたため推定計算なし。
-- resetBehavior欠損は `タイムレスキュー777 / タイムレスキュー７７７ / タイムレスキュー / 山佐 / 9S0670` と `設定変更 / リセット / 朝一 / 朝イチ / 据え置き / 宵越し / 電源OFF ON / 天井 / RT / レスキュータイム / ガックン / 初期出目` を組み替え、公式・当時業界・旧解析・後年DB/回顧まで再探索後のみUNVERIFIEDとした。
+- 山佐 / 型式タイムレスキュー777 / 検定9S0670。
+- 2009-11-02導入開始 / 2009-11-01〜納品開始予定。
+- BIG 1/348.60→1/273.07、REG 1/736.36→1/564.97、合算1/236.59→1/184.09。
+- 市場機械割96.1→111.5%、旧パチマガシミュレート94.47→109.38%でCONFLICT。
+- 50枚ベース37.39→42.67G。
+- ボーナス間777Gで天井RT、約+0.1枚/G。
+- 設定変更後も天井までのゲーム数を引継ぐ直接解析あり。単純電断、天井RT突入済み状態、変更判別は未確認。
 
 ## 419. 噴火でDON!
 
@@ -69,7 +88,6 @@ machine record commit:
 - 2009-10-25納品開始 / 2009-10-26ホール導入開始。
 - BIG 1/297.89→1/236.59、REG 1/364.09→1/239.18、機械割97.0→113.4%。
 - 50枚ベース34.05→35.14G。通常ゲーム数天井、RT/ART/AT、周期CZ、ゲーム数管理モードは確認されず。
-- 設定変更/据え置き/単純電源OFF→ON/変更判別は十分再探索後もUNVERIFIED。
 
 ## resetBehavior遡及QA
 
@@ -90,12 +108,10 @@ machine record commit:
 ## 次回再開地点
 
 ### 本線
-1. **420件地点 / タイムレスキュー777まで収録**から再開。
-2. 同時発売ファミリーの **`タイムレスキューS`** を最優先で未登録確認して追加する。HAZUSEでは **2009-11-01導入開始**、グリーンべるとでは777/Sとも **2009-11-01納品開始予定**。777を420件目として先行登録したため、Sは日付上1日前の遡及追加になるが、具体日を確定できた時系列補正として421件目に収録してよい。
-3. Sの既確認候補値: BIG 1/364.08→1/284.93、REG 1/520.13→1/409.60、合算1/214.16→1/168.04、P_Style777機械割96.4→109.7%、HAZUSE 50枚ベース設定1〜6約38.0〜43.1G。天井は非搭載。設定変更/据え置き/電源OFF→ON/変更判別は本機固有資料を再探索してから確定する。
-4. タイムレスキュー2スペックを閉じた後、**2009-11-02同日群 → 11月3日以降**をP-WORLD / K-Navi / パチビー / 当時グリーンべると / メーカー公式・旧発売一覧で境界監査する。
-5. `ハイパールーレット` / `パチスロ遠山の金さん` は具体日を公式/当時業界/主要DBで高信頼確定できれば正しい位置へ遡及追加。確定できなければ月/旬精度の不確実性を保持して本線を止めない。
-6. 各候補は性能コア＋v0.7 resetBehaviorを同時収集。競合値は平均せずCONFLICT、欠損は検索語・資料系統を十分変更して再探索した後のみUNVERIFIED_AFTER_RESEARCH。
+1. **421件地点 / タイムレスキューSまで収録**から再開。
+2. タイムレスキュー2スペックは閉じた。次は **2009-11-02同日群 → 11月3日以降**をP-WORLD / K-Navi / パチビー / 当時グリーンべると / メーカー公式・旧発売一覧で境界監査し、最古の未登録具体日機から422として進める。
+3. `ハイパールーレット` / `パチスロ遠山の金さん` は具体日を公式/当時業界/主要DBで高信頼確定できれば正しい位置へ遡及追加。確定できなければ月/旬精度の不確実性を保持して本線を止めない。
+4. 各候補は性能コア＋v0.7 resetBehaviorを同時収集。競合値は平均せずCONFLICT、欠損は検索語・資料系統を十分変更して再探索した後のみUNVERIFIED_AFTER_RESEARCH。
 
 ### resetBehavior遡及QA
 1. **スロ原人まで補完済み**。
@@ -111,6 +127,6 @@ machine record commit:
 
 ## 今回の保存
 
-- machine record: `docs/real_machine_db/machines/2009-11-02_time-rescue-777.md`
-- machine commit: `0d337b88a31dd442c41b54fc1dfa8078998dd40f`
-- handoff: 本ファイルを420件地点へ更新。
+- machine record: `docs/real_machine_db/machines/2009-11-01_time-rescue-s.md`
+- machine commit: `2e7c3025b818b6522bf9cb50c64744e195aeff40`
+- handoff: 本ファイルを421件地点へ更新。
