@@ -4,77 +4,86 @@
 
 ## 現在地点
 
-- recordCount: **429**
-- latestMachine: **剣豪**
-- latestRecord: `docs/real_machine_db/machines/2009-11-23_kengou.md`
+- recordCount: **430**
+- latestMachineAdded: **ワンバー1A-30**（月次境界監査で判明した遡及漏れ補完）
+- latestRecord: `docs/real_machine_db/machines/2009-11_onebar-1a-30.md`
+- chronologicalFrontier: **2009-11-23 / 剣豪（429）**
 - schema: **resetBehavior v0.7**
 - status: **READY_TO_CONTINUE**
 
 ## 今回の継続確認
 
-- GitHub最新mainのREADME、最新ミッションv0.7、INDEX、既存428番レコード `ときめきメモリアル`、直前LATEST_HANDOFF、直近コミットを再読。
-- INDEX本体は古い19件地点のままだが、README規定に従い、INDEXより新しい `LATEST_HANDOFF.md` と実ファイルを直近の正本進捗として優先。
-- 作業開始時の正本は428件目 `ときめきメモリアル`。次候補 `剣豪`（DAXEL）がrepo未登録であることを確認して調査。
-- `剣豪 / DAXEL / ダクセル` と `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / CZ / RT / 開眼モード / ガックン / 50枚 / 1000円 / ベース` を組み替え、当時業界記事、P-WORLD、旧パチマガスロマガ系、旧DB、回顧資料を横断。
-- 同名・類似機 `剣豪!武蔵`、後年の `サムライスピリッツ～剣豪八番勝負～` の仕様は混入させていない。
+- GitHub最新mainのREADME、最新ミッションv0.7、INDEX、既存429番レコード `剣豪`、直前LATEST_HANDOFF、直近コミットを再読。
+- INDEX本体は古い19件地点のまま。README規定どおり、INDEXより新しい `LATEST_HANDOFF.md` と実ファイルを直近の正本進捗として優先。
+- 作業開始時mainは429件 / `剣豪`。直前HANDOFFの次候補 `妖怪人間ベム` を再分類した結果、2009-11-23の対象は**CRパチンコ機**であり本パチスロDB本線から除外。
+- 同じHANDOFFで保留されていた `風雲新撰組`、11月末候補 `新大江戸日記～月夜に咲く華～` もP-WORLD月次分類ではCRパチンコ側にあり、パチスロ候補として無条件追加しない。
+- 2009年11月のパチスロ月次一覧を再監査し、ベルコ公式に存在する `ワンバー1A-30` がrepo検索で未登録だったため、時系列漏れとして430件目に遡及追加。
+- `ワンバー1A-30 / ワンバーワン1A-30 / ONE BAR / ベルコ` と `機械割 / 出玉率 / BIG / REG / ART初当たり / 50枚 / 1000円 / ベース / 設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / 天井短縮 / モード / 状態 / ガックン / 変更判別` を組み替え、公式・旧DB・一覧/回顧資料を横断。
+- 2012年以降の `ニューワンバー-30`、2017年 `ワンバーワン-30/-25`、2020年 `ワンバーS-30` の性能/reset仕様は流用していない。
 
-## 429 — 剣豪 要約
+## 430 — ワンバー1A-30 要約
 
-- メーカー: DAXEL
-- 導入時期: **2009-11-23（グリーンべると掲載の納品開始予定） / 2009-11（月粒度資料）**
-- システム: 5号機 / ボーナス+RT / CZ / 技術介入型
-- 青7BIG: `1/1008.2 → 1/771.0`
-- 赤7BIG: `1/458.3 → 1/337.8`
-- REG: `1/500.3 → 1/468.1`
-- ボーナス合算: `1/193.3 → 1/156.4`
-- フル攻略機械割: `100.5 / 101.9 / 103.9 / 106.9 / 109.5 / 112.0%`
-- 青7BIG MAX310枚 / 赤7BIG MAX206枚 / REG MAX103枚
-- RT「剣豪チャンス」: **33G・約+0.7枚/G**、完走後CZ再移行、ループ率約50%
+- メーカー: **ベルコ**
+- 導入時期: **2009-11（月粒度・ベルコ公式）**
+- 世代: **5号機**
+- システム: **ART / 30Φ**
+- ベルコ公式キャッチコピー: `ワンバー再上陸!`
+- 設定別機械割: **UNVERIFIED_AFTER_RESEARCH**
+- 主要初当たり: **UNVERIFIED_AFTER_RESEARCH**
 - 50枚ベース: **UNVERIFIED_AFTER_RESEARCH**
-- 型式名・検定番号: **UNVERIFIED_AFTER_RESEARCH**
-- coreStatus: `PARTIAL_BASE_AND_FORMAL_IDENTITY_UNVERIFIED_RESET_BEHAVIOR_PARTIAL`
+- ART純増数値: **UNVERIFIED_AFTER_RESEARCH**（ART機であること自体はOFFICIAL）
+- 基本獲得枚数: **UNVERIFIED_AFTER_RESEARCH**
+- 型式名 / 検定番号: **UNVERIFIED_AFTER_RESEARCH**
+- coreStatus: `PARTIAL_IDENTITY_TYPE_AND_RELEASE_MONTH_CONFIRMED_CORE_NUMERICS_UNVERIFIED_RESET_BEHAVIOR_UNVERIFIED`
 
-## resetBehavior v0.7
+## resetBehavior v0.7 — ワンバー1A-30
 
-- **設定変更**: P-WORLDが**設定変更後はCZ「開眼モード」スタート**と明記。`CONFIRMED_CZ_START`。
-- **据え置き**: 前日CZ/RT状態の持越しを直接確定できず `UNVERIFIED_AFTER_RESEARCH`。
-- **電源OFF→ON**: CZ/RT状態・初期表示の復帰処理を本機固有資料で確定できず `UNVERIFIED_AFTER_RESEARCH`。
-- **ゲーム数・天井**: 通常G数型天井の確定数値を今回の主要資料から回収できず `UNVERIFIED_AFTER_RESEARCH`。設定変更時のG数処理も推測しない。
-- **モード・状態**: 設定変更直後CZ開始のみ確定。RT中設定変更時の残G/内部RT処理は未確定。
-- **有利区間**: `NOT_APPLICABLE`（5号機・制度前）。
-- **朝一恩恵/不利**: 設定変更後CZ開始を朝一特性として確定。専用RT突入率・期待枚数などの公開数値は未確認。不利要素は確定なし。
-- **変更判別**: P-WORLDは「朝イチにRT突入となれば設定変更濃厚!?」と記載。CZ開始を利用した**確率的・間接的示唆**として保存し、RT非突入=据え置きとは扱わない。
-- **公開朝一数値**: 専用モード振分、朝一RT突入率、リセット期待値などは `NONE_CONFIRMED_AFTER_RESEARCH`。
+- **設定変更**: `UNVERIFIED_AFTER_RESEARCH`
+- **据え置き**: `UNVERIFIED_AFTER_RESEARCH`
+- **電源OFF→ON**: `UNVERIFIED_AFTER_RESEARCH`
+- **ゲーム数/天井**: 通常天井の存在・設定変更時クリア/引継ぎとも `UNVERIFIED_AFTER_RESEARCH`
+- **リセット短縮天井**: `NONE_CONFIRMED_AFTER_RESEARCH`。通常天井の不存在を意味しない。
+- **モード/状態**: `UNVERIFIED_AFTER_RESEARCH`
+- **有利区間**: `NOT_APPLICABLE`（5号機・制度前）
+- **朝一恩恵/不利**: `NONE_CONFIRMED_AFTER_RESEARCH`
+- **変更判別**: ガックン、初期出目、ランプ、液晶、朝一挙動を含めて再探索したが `NONE_CONFIRMED_AFTER_RESEARCH`
+- **公開朝一数値**: モード振分、短縮天井、朝一当選率、恩恵発生率とも `NONE_CONFIRMED_AFTER_RESEARCH`
 
-## データ品質メモ
+## 境界監査での分類修正
 
-- 2009-10-15グリーンべるととP-WORLDで、青7BIG310枚/赤7BIG206枚/REG103枚、RT33G・約+0.7枚/Gの主要性能が整合。
-- フル攻略設定1=100.5%はグリーンべるとでも直接確認。設定別100.5〜112.0%系列はP-WORLD、pacnk、5号機クロニクルで再照合。
-- 技術介入機のため、上記機械割はフル攻略系列として定義を明示し、別定義のホール割と混同しない。
-- 50枚ベース、型式名/検定番号、通常G数天井、据え置き/電断処理は検索語・資料系統を変えても確定できず、推測値を入れていない。
-- 11月23日は**納品開始予定日**であり、全国一斉ホール導入日と同義とは断定していない。
+### パチスロ本線から除外
+- `妖怪人間ベム`（2009-11-23）: パチビー/旧パチマガで**CRパチンコ**を確認。直前HANDOFFの「高砂の次パチスロ候補」は誤候補。
+- `風雲新撰組`: P-WORLD 2009年11月一覧では `CR風雲新撰組` 各スペックとしてパチンコ分類。パチスロ本線へ追加しない。
+- `新大江戸日記～月夜に咲く華～`: P-WORLD 2009年11月一覧でCR機として分類。パチスロ候補から外す。
+
+### 月次一覧から要監査のパチスロ候補
+P-WORLD 2009年11月月次一覧ではパチスロ12機種が確認される。既存登録済み機と実ファイルを突合し、検索indexだけで未登録判定しないこと。
+
+特に次回優先:
+1. **ネオン物語**（中京遊技） — PachiBeeで2009-11-17導入、P-WORLDで5号機RT/CZ/天井、repo検索ではヒットなし。実ファイル/履歴でも重複確認後、漏れなら次の遡及追加候補。
+2. **サラマンダー** — P-WORLD 2009年11月パチスロ一覧に存在、repo検索ヒットなし。具体導入日・メーカー・既存実ファイル有無を先に確定し、ネオン物語との時系列を比較する。
+3. `青ドン~花火の匠~ / スーパービンゴSP3 / どんまい!!ちゅ~吉 / タイムレスキューS / Rio2プレミアム / 島唄 / 剣豪 / アイアムコニシキ` 等、月次12機種全体をmachine tree/履歴基準で突合し、既存なら再収集しない。
 
 ## resetBehavior 遡及QA進捗
 
-- 既存レコードの遡及補完は **スロ原人（`docs/real_machine_db/machines/2006-10_surogenjin.md`）まで補完済み**であることをコミット `3194bc98054c649f7d841525dca97f30b22258a0` と実差分から再確認。
-- 今回は本線429の確定を優先。スロ原人直後の「最初の実ファイルでresetBehavior未収集機」は、古いINDEXが19件地点で停止しており、repo検索indexも完全ではないため安全に一意特定できず、誤対象へQAを書かない方を優先した。
-- 次回はmachine tree/コミット履歴を実ファイル基準で時系列走査し、**2006-10以降の最初のresetBehavior欠損機**を特定してから補完する。既存COMPLETE_COREは性能コアを崩さず、resetBehaviorQAだけ別管理する。
+- 既存レコードの遡及補完は **スロ原人（`docs/real_machine_db/machines/2006-10_surogenjin.md`）まで補完済み**という直前進捗を維持。
+- 新規本線収集を止めず、次回以降machine tree/コミット履歴を実ファイル基準で時系列走査し、2006-10以降の最初のresetBehavior欠損機を特定してQAを再開する。
+- 既存性能コアを無駄に再調査せず、resetBehaviorのみ遡及補完する。
 
 ## 主要出典（取得日 2026-09-03）
 
-- グリーンべると 2009-10-15: `https://web-greenbelt.jp/00003321/`
-- P-WORLD「剣豪」: `https://www.p-world.co.jp/machine/database/5737`
-- pacnk「剣豪 設定判別ツール」: `https://pacnk.com/slot/tools/sh_kengou.html`
-- 5号機クロニクル DAXEL一覧: `https://5goki.com/daxel`
-- パチマガスロマガ旧攻略ページ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/daxel_slot/01/d.php`
+- ベルコ公式 パチスロ機種一覧: `https://www.s-bellco.co.jp/products/slot/`
+- スロリスクタイム 5号機一覧: `https://pachisuro100.com/itiran/`
+- スロリスクタイム わ行一覧: `https://pachisuro100.com/wagyo/`
+- パチビー `CR妖怪人間ベム`: `https://www.pachibee.jp/machines/about/111020003`
+- 旧パチマガスロマガ `CR妖怪人間ベム`: `https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/abilit_pachi/025/p_dai.php`
 
 ## 次回再開地点
 
-1. **429件地点 / 2009-11-23〜11-24群**から再開。
-2. 次の最優先候補は **`妖怪人間ベム`（高砂）**。直前handoffで同日群の続候補として保持済み。具体導入日・メーカー/型式・repo重複を再照合して430件目候補とする。
-3. **`風雲新撰組`（豊丸）** はパチスロ対象機かパチンコ混入かを正式分類資料で確認するまで追加しない。
-4. 11月24日群を閉じた後、**2009-11-25〜11-30** を具体導入日順に境界監査。11月30日候補 `新大江戸日記～月夜に咲く華～`（ニューギン）を保持。
-5. QAは **スロ原人直後の2006-10以降最初のresetBehavior欠損実ファイル**を特定して再開。
-6. 追加・修正前に必ず最新mainと直近コミットを再取得し、他リレーによる進行がないか確認する。
-7. 性能コア＋resetBehavior v0.7を同じ基準で収集し、競合は平均せず `CONFLICT`、十分な再探索後のみ `UNVERIFIED_AFTER_RESEARCH` とする。
-8. 完全再現用の詳細内部抽選は収集対象外。
+1. **recordCount 430 / chronologicalFrontier 2009-11-23**。ただし11月月次監査で遡及漏れが残っている可能性が高いため、前進前に11月1〜23日のパチスロ12機種一覧と実ファイルを突合する。
+2. 最優先は **サラマンダーの具体日・メーカー・実ファイル有無** と **ネオン物語（PachiBee 2009-11-17）の実ファイル/履歴重複確認**。両者のうち時系列が早い未登録機を431として追加する。
+3. `妖怪人間ベム / 風雲新撰組 / 新大江戸日記～月夜に咲く華～` はCRパチンコ分類を確認済みのため、同名の別パチスロ型式が独立して確認されない限り本線へ入れない。
+4. 11月23日以前の漏れを閉じてから11月24〜30日へ前進し、12月へ接続する。
+5. 追加・修正前に必ず最新main・LATEST_HANDOFF・直近コミットを再取得し、他リレーの進行を取り込む。
+6. 性能コア＋resetBehavior v0.7を同じ基準で収集し、競合は平均せず `CONFLICT`、十分な再探索後のみ `UNVERIFIED_AFTER_RESEARCH` とする。
+7. 完全再現用の詳細内部抽選は収集対象外。
