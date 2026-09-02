@@ -4,13 +4,52 @@
 
 ## 現在地点
 
-- 毎回最新mainの `README.md`、実機DBミッションv0.7、旧 `INDEX.md`、本 `LATEST_HANDOFF.md`、既存レコード、直近コミットを再取得する。
+- 毎回最新mainの `README.md`、実機DBミッションv0.7、旧 `INDEX.md`、本 `LATEST_HANDOFF.md`、既存レコード、直近mainを再取得する。
 - `INDEX.md` は旧履歴集計。運用上の正本は本 `LATEST_HANDOFF.md` とrepo実ファイル/直近mainコミット。
-- 本線は **412件 `ゴールデンベルE`** まで進行。
-- 411 `スモモチャン` 後、2009-10-01同日群と10-02〜10-11境界を再監査。P-WORLD月次一覧では月精度だったベルコ `ゴールデンベルE` について、同機ページの2009-10-09当時掲示板に「設置済み」言及、10-12にはダイナム専用機として実戦した言及を確認した。
-- 全国導入開始の具体日は一次/業界資料で確定できなかったため、412の `releaseDate` は **2009-10（月精度）** のまま保持し、10-09は `earliestObservedInstallationTrace` 相当の補助証拠としてのみ扱う。ユーザー投稿を全国導入日へ格上げしない。
+- 本線は **413件 `KODA KUMI PACHISLOT LIVE IN HALL II`** まで進行。
+- 412 `ゴールデンベルE` 後、2009-10-02〜10-12境界を再監査。ネイチャー・アセスメント `ハイパールーレット` は2009-09-01当時グリーンべるとで **10月中旬より納品開始予定**、大一 `パチスロ遠山の金さん` は2009-09-01 K-Navi発表会記事で **10月中旬ホール導入予定** までで、10/13より前の具体日を高信頼確定できなかった。
+- よって、具体日が確認できる SANKYO `KODA KUMI PACHISLOT LIVE IN HALL II` の **K-Naviホール導入開始2009-10-13** を次の時系列点として413に登録した。
 
-## 412. ゴールデンベルE
+## 413. KODA KUMI PACHISLOT LIVE IN HALL II
+
+record:
+- `docs/real_machine_db/machines/2009-10-13_koda-kumi-pachislot-live-in-hall-ii.md`
+
+machine record commit:
+- `e8ad79b24c5c27159a07be1555c11221fa3afaac`
+
+要点:
+- manufacturer: **SANKYO**
+- formalModelName: **KODA KUMI PACHISLOT LIVE IN HALL II F**（SANKYO公式）
+- approvalNumber: **UNVERIFIED_AFTER_RESEARCH**
+- releaseDate: **2009-10-13**（K-Naviホール導入開始。SANKYO公式は2009.10）
+- generation: **5号機**
+- systemType: **ボーナス+RT / CZ**
+- 機械割: **95.8 / 98.2 / 100.6 / 103.6 / 106.7 / 110.0%**
+- BIG: **1/312 → 1/262**
+- CHALLENGE BONUS: **1/420 → 1/273**
+- 合算: **1/179 → 1/133**
+- 50枚ベース: **35.88 / 36.36 / 36.86 / 37.37 / 37.89 / 38.48G**（パチマガスロマガ旧解析の1000円あたりゲーム数）
+- RT `LIVE TIME`: **約+0.1枚/G**。33Gまたは3333G、完走後CHANCE TIMEへ戻り約50%ループ。
+- 基本獲得: SPECIAL BIG約290枚 / BIG約280枚 / CHALLENGE BONUS系約80枚。
+- 通常ゲーム数天井は非搭載。
+
+### v0.7 resetBehavior — KODA KUMI II
+
+- `gameCounterReset`: `NOT_APPLICABLE_NO_GAME_COUNT_CEILING_CONFIRMED`
+- `ceilingAfterReset`: `NOT_APPLICABLE_NO_CEILING_CONFIRMED`
+- `advantageousSectionReset`: `NOT_APPLICABLE`（5号機）
+- パチマガスロマガの本機INDEXに **「攻め時・ヤメ時・設定変更時」** 専用項目の存在までは確認したが、その本文を今回回収できず、設定変更/据え置き/単純電源OFF→ON時の `CHANCE TIME / LIVE TIME / SPECIAL LIVE TIME` 状態処理は **UNVERIFIED_AFTER_RESEARCH**。
+- ガックン、初期出目、表示、リール状態などの本機固有変更判別も検索語・資料系統を変えて再探索したが **UNVERIFIED_AFTER_RESEARCH**。
+- 朝一専用モード、短縮天井、設定変更専用当選率/恩恵率/不利数値は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- `resetBehaviorQA=PARTIAL_NO_CEILING_RESET_RT_CZ_STATE_POWER_CYCLE_CHANGE_DETECTION_UNVERIFIED`。
+
+### データ品質メモ
+
+- SANKYO公式、K-Navi、P-WORLD、2009年グリーンべると、パチマガスロマガ旧解析の本機仕様は **ボーナス+RT** で整合。
+- 5号機クロニクルの同機欄は機械割95.8〜110.0%だけK-Naviと一致する一方、`A+ART / 約1.2枚/G / BIG約204枚 / REG約50枚 / 別初当たり系列` が混在し、公式/P-WORLD/当時業界資料と矛盾する。別機種データ混入の可能性が高いため、性能本値へ平均・転用せず `CONFLICT/LIKELY_DATA_MIXUP` としてレコード内に隔離した。
+
+## 412. ゴールデンベルE（直前）
 
 record:
 - `docs/real_machine_db/machines/2009-10_golden-bell-e.md`
@@ -19,41 +58,18 @@ machine record commit:
 - `5d8618a6746013a8b86f03ad6ea56e547fec7d33`
 
 要点:
-- manufacturer: **ベルコ**
-- formalModelName: **ゴールデンベルE**
-- approvalNumber: **8S1379**
-- releaseDate: **2009-10**。P-WORLD掲示板に2009-10-09時点の設置済み言及あり。ただし全国導入具体日は `UNVERIFIED_AFTER_RESEARCH`。
-- generation: **5号機**
-- systemType: **ノーマル / ボーナス主体**
-- BIG: **1/297.0 → 1/260.0**
-- REG: **1/481.0 → 1/321.0**
-- 合算: **1/184.0 → 1/143.0**
-- BIGは345枚超払い出しで終了、REGは119枚超払い出しで終了。実純増枚数は終了条件と混同せず未確定。
-- 設定別機械割、50枚ベースは、P-WORLD / 5号機クロニクル / pacnk と表記・検索語を変えて再探索したが直接値を確定できず `UNVERIFIED_AFTER_RESEARCH`。5号機クロニクルも本機の機械割欄が空欄。
+- ベルコ / ゴールデンベルE / 検定8S1379。
+- releaseDateは2009-10月精度。2009-10-09時点の設置済み当時投稿は補助証拠のみで全国導入具体日へ格上げしない。
+- BIG 1/297.0→1/260.0、REG 1/481.0→1/321.0、合算1/184.0→1/143.0。
+- 機械割/50枚ベースは十分再探索後 `UNVERIFIED_AFTER_RESEARCH`。
 
-### v0.7 resetBehavior — ゴールデンベルE
-
-- ノーマル/ボーナス主体で、通常ゲーム数天井・RT/ART/AT/CZ・長期ゲーム数モードは確認されない。
-- よってゲーム数天井カウンタ、リセット短縮天井、RT/ART状態リセットは `NOT_APPLICABLE`。
-- 有利区間は5号機のため `NOT_APPLICABLE`。
-- 設定変更/据え置き/単純電源OFF→ON時のリール挙動、初期出目、ランプ、ガックン等の本機固有変更判別は、機種名・型式8S1379・ベルコ・ベルシリーズと検索語を組み替えても直接根拠を確定できず `UNVERIFIED_AFTER_RESEARCH`。
-- 朝一専用当選率、リセット恩恵率、短縮天井、設定変更固有ペナルティは `NONE_CONFIRMED_AFTER_RESEARCH`。
-- `resetBehaviorQA=PARTIAL_NO_CEILING_OR_GAMEPLAY_STATE_MACHINE_SPECIFIC_CHANGE_DETECTION_POWER_BEHAVIOR_UNVERIFIED`。
-
-## 411. スモモチャン（直前）
+## 411. スモモチャン
 
 record:
 - `docs/real_machine_db/machines/2009-10-01_sumomo-chan.md`
 
 machine record commit:
 - `980569219f8e56b568262bf7a317574c0c6a95a8`
-
-要点:
-- ニューギン / スモモチャンV / 検定9S0445。
-- releaseDateは **CONFLICT — 2009-10-01 K-Naviホール導入開始 / 2009-10-12 当時業界資料の納品予定**。
-- P-WORLD主系列の機械割 95.9〜105.1%、BIG 1/287.44→1/268.59、REG 1/455.11→1/268.59、合算1/176.2→1/134.3。
-- 50枚ベースは約34.5〜35.8Gレンジのみ。
-- resetBehaviorは天井/RT/ART/AT/CZ非該当。ホール選択告知音モードによる設定変更推測の直接記載あり、具体保持/初期化条件は未確認。
 
 ## 410. 銀河英雄伝説
 
@@ -63,11 +79,6 @@ record:
 machine record commit:
 - `8cdaeda62ec4d45f52c61eabdfe4c247ab56a83e`
 
-要点:
-- 2009-09-28導入、ミズホ、ボーナス+ART。
-- ART純増約+2.0枚/G、通常ART間1600G天井。
-- K-Naviに設定変更時天井短縮を示す攻略項目存在。具体数値未回収。
-
 ## 409. パチスロ交響詩篇エウレカセブン
 
 record:
@@ -75,10 +86,6 @@ record:
 
 machine record commit:
 - `974821dbe62d72e51494278c1aad019f5b754fcb`
-
-要点:
-- 設定変更後は内部高確スタートを旧解析で直接確認。
-- 通常時909Gで天井ART3セット以上。
 
 ## resetBehavior遡及QA
 
@@ -99,14 +106,13 @@ machine record commit:
 ## 次回再開地点
 
 ### 本線
-1. **412件地点 / ゴールデンベルEまで収録**から再開。
-2. ゴールデンベルEの全国導入具体日は未確定なので、2009-10-02〜10-12境界について、他の月精度機を具体日機より誤って前へ置かないよう再監査を続ける。
-3. 現時点で具体日を高信頼確認済みの次候補は SANKYO **`KODA KUMI PACHISLOT LIVE IN HALL II` — K-Naviホール導入開始 2009-10-13**。repo未登録を再確認してから413候補として処理する。
-4. ただし `ハイパールーレット` は当時業界資料で10月中旬納品、`パチスロ遠山の金さん` も10月中旬予定なので、10/13より前の具体日を確定できる資料がないか先に最終監査する。
-5. 10/19群として `球児2`、`GS美神極楽大作戦!!`、`マジックスパイス`、`ダブルアタック`、`パチスロ エイリアンVSプレデター` などを確認済み。ただし納品日/ホール開始日の資料差は個別に保持し、具体日順で処理する。
-6. `青ドン〜花火の極〜` はP-WORLD月次では10月側に見えるが、当時業界資料は11/3納品開始、K-Naviは11/4ホール導入開始を示すため10月本線へ前倒ししない。
-7. 候補ごとに性能コア＋v0.7 resetBehaviorを同時収集。欠損は公式・業界・当時解析・古いDB・アーカイブ・回顧まで十分再探索後のみ `UNVERIFIED_AFTER_RESEARCH`。
-8. 競合値は平均せず `CONFLICT`。後継/同名別機種の数値を転用しない。
+1. **413件地点 / KODA KUMI PACHISLOT LIVE IN HALL IIまで収録**から再開。
+2. まず **2009-10-14〜10-18境界監査**。月精度/「中旬」表記の `ハイパールーレット`、`パチスロ遠山の金さん` に10/13〜10/18の具体導入/納品日を確定できる当時一次・業界・解析資料がないか再確認する。
+3. 具体日を確定できた機種は日付順に処理。中旬表記のままなら、無理に10/19具体日群より前へ固定せず月/旬精度として競合・時系列不確実性を保持する。
+4. **10/19群**として `球児2`、`GS美神極楽大作戦!!`、`マジックスパイス`、`ダブルアタック`、`パチスロ エイリアンVSプレデター` を候補確認済み。各候補はrepo未登録・正式導入日を再確認してから次件とする。
+5. `青ドン〜花火の極〜` は当時業界資料11/3納品開始、K-Navi11/4ホール導入開始を示すため10月へ前倒ししない。
+6. 候補ごとに性能コア＋v0.7 resetBehaviorを同時収集。欠損は公式・業界・当時解析・古いDB・アーカイブ・回顧まで十分再探索後のみ `UNVERIFIED_AFTER_RESEARCH`。
+7. 競合値は平均せず `CONFLICT`。後継/同名別機種の数値を転用しない。
 
 ### resetBehavior遡及QA
 1. **スロ原人まで補完済み**。
@@ -122,6 +128,6 @@ machine record commit:
 
 ## 今回の保存
 
-- 412 ゴールデンベルE: `docs/real_machine_db/machines/2009-10_golden-bell-e.md`
-- machine record commit: `5d8618a6746013a8b86f03ad6ea56e547fec7d33`
-- 本 `LATEST_HANDOFF.md` を412件地点へ更新。
+- 413 KODA KUMI PACHISLOT LIVE IN HALL II: `docs/real_machine_db/machines/2009-10-13_koda-kumi-pachislot-live-in-hall-ii.md`
+- machine record commit: `e8ad79b24c5c27159a07be1555c11221fa3afaac`
+- 本 `LATEST_HANDOFF.md` を413件地点へ更新。
