@@ -6,10 +6,46 @@
 
 - 毎回最新mainの `README.md`、実機DBミッションv0.7、旧 `INDEX.md`、本 `LATEST_HANDOFF.md`、既存レコード、直近コミットを再取得する。
 - `INDEX.md` は旧履歴集計。運用上の正本は本 `LATEST_HANDOFF.md` とrepo実ファイル/直近mainコミット。
-- 今回開始時の最新mainは **408件 `デコトラの鷲`** まで進行済み。
-- 2009-09-28同日群を再監査し、repo未登録かつ具体導入日2009-09-28を確認した **`パチスロ交響詩篇エウレカセブン`** を **409** として性能コア＋v0.7 resetBehavior同時収集した。
+- 今回開始時の最新mainは **409件 `パチスロ交響詩篇エウレカセブン`** まで進行済み。
+- 2009-09-28同日群を継続監査し、repo未登録かつ具体導入日2009-09-28を確認したミズホ **`銀河英雄伝説`** を **410** として性能コア＋v0.7 resetBehavior同時収集した。
 
-## 409. パチスロ交響詩篇エウレカセブン
+## 410. 銀河英雄伝説
+
+record:
+- `docs/real_machine_db/machines/2009-09-28_ginga-eiyuu-densetsu.md`
+
+machine record commit:
+- `8cdaeda62ec4d45f52c61eabdfe4c247ab56a83e`
+
+要点:
+- manufacturer: **ミズホ**
+- releaseDate: **2009-09-28**（K-Naviホール導入開始）。ユニバーサル公式は2009年9月発売で整合。
+- generation: **5号機**
+- systemType: **ボーナス+ART / 押し順ART**
+- ユニバーサル公式で「M.B.S（マシンガンボーナスシステム）」、純増**約+2.0枚/G**、完全押し順ナビを確認。
+- パチマガスロマガ旧解析の機械割: **97.1 / 99.2 / 102.1 / 106.1 / 110.0 / 119.6%**。
+- ボーナス合成: **1/297.89 → 1/268.59**。
+- P-WORLDのART突入率: **1/442.3 / 1/327.0 / 1/412.7 / 1/253.3 / 1/360.2 / 1/181.5**。
+- 50枚ベース: **36.2 / 36.2 / 36.2 / 36.1 / 36.0 / 35.9G**（パチマガスロマガ旧解析）。
+- ボーナス実獲得目安はパチマガ約105枚、P-WORLD約104枚で近似。ただし名称表記がBIG/REGで揺れるため名称はCONFLICT保持。
+- G.S.RUSH中の赤7揃い1回でART **33G or 99G** 上乗せ、最大36連、最大3564G。
+- P-WORLDでART間**1600G**天井→G.S.RUSHを直接確認。ペナルティ時は1600G超となる場合あり。
+- formalModelName / approvalNumber は十分再探索後も直接確定できず `UNVERIFIED_AFTER_RESEARCH`。
+
+### v0.7 resetBehavior — 銀河英雄伝説
+
+- K-Navi現存機種ページに本機固有の朝一攻略項目 **「設定変更後は狙い目?」「天井ゲーム数が短縮?」** が存在。
+- したがって設定変更時に通常1600G天井と異なる朝一天井挙動/短縮系恩恵が存在する資料痕跡は直接確認できた。
+- ただし該当記事本文の具体数値・条件を今回確定回収できず、**短縮天井G数を推測しない**。
+- `ceilingAfterReset=RESET_CEILING_CHANGE_INDICATED_VALUE_UNVERIFIED`。
+- 設定変更時のART間天井カウンタが0G化/再セット/一部引継ぎのどれかは直接確定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 据え置き時のART間1600G進捗、単純電源OFF→ON、内部状態/ART待機状態の処理も本機固有直接資料を確定できず `UNVERIFIED_AFTER_RESEARCH`。
+- ガックン/初期出目/液晶/ステージ等の変更判別も十分再探索後 `UNVERIFIED_AFTER_RESEARCH`。
+- 有利区間は5号機のため `NOT_APPLICABLE`。
+- 2025年スマスロ「銀河英雄伝説 Die Neue These」のリセット情報は別機種のため絶対に転用しない。
+- `resetBehaviorQA=PARTIAL_HIGH_VALUE_RESET_CEILING_CHANGE_INDICATED_NUMERIC_COUNTER_POWER_CARRYOVER_UNVERIFIED`。
+
+## 409. パチスロ交響詩篇エウレカセブン（直前）
 
 record:
 - `docs/real_machine_db/machines/2009-09-28_eureka-seven.md`
@@ -18,33 +54,11 @@ machine record commit:
 - `974821dbe62d72e51494278c1aad019f5b754fcb`
 
 要点:
-- manufacturer: **サミー**
-- formalModelName: **エウレカセブンZ**
-- approvalNumber: **9S0472**
-- releaseDate主値: **2009-09-28**（K-Navi）。セガサミー公式回顧は2009年9月発売、ハズセは2009-10-31のため日付差をCONFLICT保持。
-- generation: **5号機**
-- systemType: **A+ART / セットストック型ART**
-- 機械割: **96.5 / 98.0 / 100.1 / 104.2 / 108.7 / 112.6%**。pachirinko旧解析と2009年更新5号機まとめwikiで同系列確認。
-- BIG: **1/409.60 → 1/364.09**、REG: **1/655.36 → 1/512.00**、ボーナス合算: **1/252.06 → 1/212.78**。
-- ART出現率: **1/212.9 → 1/144.0**。
-- ART「コーラリアンモード」1セット**50G**。当時旧解析純増約**+1.5枚/G**、後年回顧約**+1.6枚/G**でCONFLICT。平均しない。
-- 赤7BIG約**303枚**、白7BIG約**204枚**、REG約**30〜50枚**。
-- 通常時**909G**で天井ART、**3セット以上**確定。
-- 50枚ベースは表記揺れ・型式・メーカー・50枚/1000円/コイン持ち等を組み替えて再探索したが直接値を確定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 設定変更後は内部高確スタートをpachirinko旧解析で直接確認。
+- 通常時909Gで天井ART3セット以上。
+- 天井カウンタ/据え置き/電源OFF→ONは直接資料不足でUNVERIFIED。
 
-### v0.7 resetBehavior — エウレカセブン
-
-- **重要直接確認: pachirinko旧解析に「設定変更後は内部的に高確率状態からスタートする」と明記。**
-- `settingChangeBehavior=HIGH_STATE_START_CONFIRMED`。
-- `stateAfterReset=HIGH_CONFIRMED`。
-- 朝一恩恵として設定変更後は内部高確スタート。初代の設定別高確スタート率は直接資料を確定できず、後継機の数値を転用しない。
-- 天井909G自体は確認済みだが、**設定変更時の天井カウンタがリセットか引継ぎかは直接資料不足**で `UNVERIFIED_AFTER_RESEARCH`。
-- 据え置き時の天井進捗/内部状態/ARTストック、単純電源OFF→ON時処理も本機固有直接資料を確定できず `UNVERIFIED_AFTER_RESEARCH`。
-- ガックン/初期出目/液晶/ステージ等の変更判別も十分な再探索後 `UNVERIFIED_AFTER_RESEARCH`。
-- 有利区間は5号機のため `NOT_APPLICABLE`。
-- `resetBehaviorQA=PARTIAL_HIGH_VALUE_DIRECT_HIGH_STATE_START_CONFIRMED_COUNTER_POWER_CARRYOVER_UNVERIFIED`。
-
-## 408. デコトラの鷲（直前）
+## 408. デコトラの鷲
 
 record:
 - `docs/real_machine_db/machines/2009-09-28_dekotora-no-shu.md`
@@ -76,11 +90,12 @@ machine record commit:
 ## 次回再開地点
 
 ### 本線
-1. **409件地点 / パチスロ交響詩篇エウレカセブンまで完了**から再開。
-2. **2009-09-28同日群を継続監査**。現時点の最優先候補はミズホ **`銀河英雄伝説`**。K-Naviで2009-09-28ホール導入開始を確認済み、repoコミット検索では未登録。
-3. 銀河英雄伝説のrepo実ファイル/履歴未登録を再確認し、同日またはそれ以前の未処理パチスロがなければ410として処理する。
-4. その後9月29〜30日境界を閉じ、2009年10月群へ進む。月精度しかない機種を具体日機より前へ誤配置しない。
-5. 既存レコードの欠損は後続QAで直接資料が見つかった場合のみ補完。推定値は入れない。
+1. **410件地点 / 銀河英雄伝説まで完了**から再開。
+2. **2009-09-28同日群をもう一度最終監査**。同日候補・既存登録をrepo実ファイル/履歴と当時導入資料で突合し、漏れを閉じる。
+3. その後 **2009-09-29〜09-30** を境界監査。具体日付き未処理パチスロがあれば最古から411として処理する。
+4. 9月末を閉じた後 **2009年10月** へ進む。月精度しかない機種を具体日機より前へ誤配置しない。
+5. 候補ごとに性能コア＋v0.7 resetBehaviorを同時収集し、欠損は公式・業界・当時解析・古いDB・アーカイブ・回顧まで十分再探索後のみUNVERIFIED。
+6. 競合値は平均せずCONFLICT。後継/同名スマスロ等の数値を旧機へ転用しない。
 
 ### resetBehavior遡及QA
 1. **スロ原人まで補完済み**。
@@ -96,6 +111,6 @@ machine record commit:
 
 ## 今回の保存
 
-- 409 パチスロ交響詩篇エウレカセブン: `docs/real_machine_db/machines/2009-09-28_eureka-seven.md`
-- machine record commit: `974821dbe62d72e51494278c1aad019f5b754fcb`
-- 本 `LATEST_HANDOFF.md` を409件地点へ更新。
+- 410 銀河英雄伝説: `docs/real_machine_db/machines/2009-09-28_ginga-eiyuu-densetsu.md`
+- machine record commit: `8cdaeda62ec4d45f52c61eabdfe4c247ab56a83e`
+- 本 `LATEST_HANDOFF.md` を410件地点へ更新。
