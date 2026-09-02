@@ -4,67 +4,66 @@
 
 ## 現在地点
 
-- 最新mainの `README.md`、実機DBミッションv0.7、`INDEX.md`、既存レコード、直前進捗を再取得して継続。
-- `INDEX.md` は旧地点のため、README規定どおり本 `LATEST_HANDOFF.md` を進捗正本とする。
-- 作業開始時は372件 `緑ドン` だったが、作業中にmainが373件 `がんばれゴエモン` まで進んだため、競合上書き・重複登録を避けて最新mainを優先した。
-- 373 `がんばれゴエモン` と `ホークIII（25φ）` resetBehavior QA は直前mainで保存済み。
-- 今回は2009-05-25同日群の未処理 `デュエルドラゴンキングダム` を **374として追加**。
-- 新規性能コアとresetBehavior QAは分離管理し、最初の検索だけでUNVERIFIED/PARTIALにせず、多段検索後も直接根拠が回収できない項目だけを欠損として残す方針を維持。
+- 最新mainの `README.md`、実機DBミッションv0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、直近コミット、既存レコードを再取得して継続。
+- `INDEX.md` は19件地点の旧版のため、README規定どおり本 `LATEST_HANDOFF.md` を進捗正本とする。
+- 作業開始時の最新mainは **374件 `デュエルドラゴンキングダム`**。
+- 2009-05-26〜31を境界監査。K-Navi 2009年5月全国一斉導入カレンダーでは5月25日が月内最後のパチスロ導入群で、26〜31日に追加の全国一斉導入パチスロを確認できなかった。検索語を日付・納品・導入で変えて業界記事も再確認し、今回安全に追加できる未処理機は確定せず、この境界を閉じた。
+- 2009-06-01同日群へ進み、**`天誅` を375として追加**。
+- 欠損は最初の検索で確定せず、型式 `天誅V`・メーカー・シリーズ名と、50枚/ベース/コイン持ち、設定変更/据え置き/電源OFF→ON/朝一/RT/ガックン等を多段検索した後のみUNVERIFIEDとした。
 
-## 374. デュエルドラゴンキングダム
+## 375. 天誅
 
 record:
-- `docs/real_machine_db/machines/2009-05-25_duel-dragon-kingdom.md`
+- `docs/real_machine_db/machines/2009-06-01_tenchu.md`
 
 要点:
-- manufacturer: エレコ
-- formalModelName: **デュエルドラゴンキングダムF1**
-- inspectionNumber: **8S1252**
-- releaseDate主値: **2009-05-25**（K-Navi全国一斉導入開始）。ユニバーサル公式は2009年5月発売。旧DBの2009-03-30はテスト導入として分離。
+- manufacturer: **ニューギン**
+- formalModelName: **天誅V**
+- inspectionNumber: **9S0120**
+- releaseDate主値: **2009-06-01**（K-Navi全国一斉導入開始）。P-WORLDは2009年06月、別整理資料も2009年6月リリースで整合。
 - generation: 5号機
-- systemType: **ボーナス+ART / A+ART / ボーナス後CZ**
-- 青7BIG: **1/1285.02 / 1/1285.02 / 1/1285.02 / 1/1260.31 / 1/1260.31 / 1/1260.31**。
-- 赤7BIG: **1/704.69 / 1/689.85 / 1/675.63 / 1/668.73 / 1/655.36 / 1/642.51**。
-- BIG合成: **1/455.11 / 1/448.88 / 1/442.81 / 1/436.91 / 1/431.16 / 1/425.56**。
-- REG: **1/789.59 / 1/780.19 / 1/762.05 / 1/753.29 / 1/736.36 / 1/728.18**。
-- ボーナス合成: **1/288.70 / 1/284.94 / 1/280.07 / 1/276.52 / 1/271.93 / 1/268.59**。
-- 50枚ベース: **35.51 / 35.53 / 35.70 / 35.87 / 36.05 / 36.22G**（パチマガ旧解析）。
-- ART: **約+1.0枚/G**。公式とP-WORLDで照合。
-- 獲得目安: 青7BIG約351枚 / 赤7BIG約252枚 / REG約108枚（P-WORLD）。公式も350枚超ボーナスを明記。
-- 5号機クロニクルのBIG約204枚/REG約48枚とは大きく競合するため、平均せず `CONFLICT` として分離。
-- 機械割は設定6 **119.8%** を当時旧DBと別系統ランキングで照合。設定1〜5はパチマガPAYOUT欄が「現在調査中」で、表記揺れ・型式・メーカー・旧DBを横断しても直接系列を確定できなかったため `UNVERIFIED_AFTER_RESEARCH`。推定補間しない。
-- 全ボーナス後CZ→30G完走でART。ナビポイント最大200（P-WORLD換算約1800G相当）を確認。ボーナス成立だけではナビポイントはリセットされない。
-- P-WORLDは「天井」搭載分類だが、現存本文から具体到達G数・発動条件を回収できず、閾値は推測しない。
-- `coreStatus=PARTIAL_WITH_CORE_PROBABILITIES_BASE_ART_RECOVERED_PAYOUT_RATE_1_TO_5_UNVERIFIED`。
+- systemType: **ボーナス+RT / 技術介入 / REG後RT・無限RT昇格型**
+- 機械割: **96.0 / 98.7 / 101.7 / 105.2 / 108.4 / 115.2%**。
+- BIG合算: **1/409.6 / 1/387.7 / 1/381.0 / 1/350.4 / 1/330.9 / 1/280.0**。
+- REG: **1/675.6 / 1/630.2 / 1/550.7 / 1/550.7 / 1/546.1 / 1/585.1**。
+- ボーナス合算: **1/255.0 / 1/240.1 / 1/225.2 / 1/214.2 / 1/206.1 / 1/189.4**。
+- ボーナス獲得目安: **天誅BIG約404枚 / 決戦BIG約230枚 / REG約50枚**。
+- RT純増: **約+0.5枚/G**（P-WORLD）。
+- REG後は**50GのRT**へ入り、特殊リプレイを介して「疾風RT」「皆伝RT」へ昇格し、次回ボーナスまで続くRTへ移行可能。
+- 50枚ベースは表記・資料系統を変えて再探索したが直接数値を確定できず `UNVERIFIED_AFTER_RESEARCH`。小役確率から逆算しない。
+- 通常時ゲーム数天井は確認できない。**2012年後継機 `天誅～Deadly Blow～` の1400G天井・ART約+1.5枚/Gを混入しない**。
+- `coreStatus=PARTIAL_BASE_GAMES_PER_50_UNVERIFIED_OTHER_CORE_RECOVERED`。
 
-### v0.7 resetBehavior — デュエルドラゴンキングダム
+### v0.7 resetBehavior — 天誅
 
-- パチマガ旧解析INDEXに **「攻め時・ヤメ時・設定変更時」専用項目の存在**までは確認したが、現存本文を直接回収できない。
-- settingChangeBehavior: `UNVERIFIED_AFTER_RESEARCH`。ナビポイント/CZ/ART/天井進捗の設定変更時処理を推測しない。
-- carryOverBehavior: `UNVERIFIED_AFTER_RESEARCH`。据え置き/宵越し/ナビポイント/天井で再探索済み。
-- powerCycleBehavior: `UNVERIFIED_AFTER_RESEARCH`。電源OFF→ON/電断/朝一を型式名まで含め再探索済み。
-- gameCounterReset / ceilingAfterReset: `UNVERIFIED_AFTER_RESEARCH`。天井搭載分類はあるが、通常天井閾値と変更時カウンタ処理を確定できない。
-- modeAfterReset / stateAfterReset: `UNVERIFIED_AFTER_RESEARCH`。
+- settingChangeBehavior: `UNVERIFIED_AFTER_RESEARCH`。設定変更時のREG後RT/無限RT状態処理の直接根拠を回収できず。
+- carryOverBehavior: `UNVERIFIED_AFTER_RESEARCH`。据え置き・宵越し時のRT引継ぎを確定できず。
+- powerCycleBehavior: `UNVERIFIED_AFTER_RESEARCH`。電源OFF→ON/電断時のRT状態を確定できず。
+- gameCounterReset / ceilingAfterReset: 通常時ゲーム数天井・ゲーム数管理当選を確認できないため `NOT_APPLICABLE_NO_GAME_COUNT_CEILING_CONFIRMED`。
+- modeAfterReset: 公開された通常時ゲーム数モードを確認できず `NOT_APPLICABLE_NO_NORMAL_GAME_COUNT_MODE_CONFIRMED`。
+- stateAfterReset: RT状態処理のみ `UNVERIFIED_AFTER_RESEARCH`。
 - advantageousSectionReset: `NOT_APPLICABLE`（5号機・有利区間制度前）。
-- resetBenefits / resetPenalties: 設定変更固有の直接情報なし。ナビポイント消滅等は断定しない。
-- resetDetection: `UNVERIFIED_AFTER_RESEARCH`。ガックン/リールガックン/初期出目/設定変更判別/朝一まで再探索したが、本機固有の確定的判別手段なし。
-- 公開朝一数値: 設定変更専用短縮天井、朝一ART当選率、恩恵率を確認できず。
-- `resetBehaviorQA=UNVERIFIED_AFTER_MULTI_QUERY_RESEARCH_EXCEPT_ADVANTAGEOUS_SECTION_NA`。
+- resetBenefits / resetPenalties: 設定変更専用の短縮天井、朝一RT、当選率優遇/不利は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- resetDetection: ガックン/初期出目/朝一ランプ等を再探索したが本機固有の確定手段なし、`UNVERIFIED_AFTER_RESEARCH`。
+- 公開朝一数値: 確認できず。
+- `resetBehaviorQA=UNVERIFIED_AFTER_MULTI_QUERY_RESEARCH_EXCEPT_NON_APPLICABLE_FIELDS`。
 
 主要出典はレコード本文にURL・取得日2026-09-02・信頼度を保存:
-- ユニバーサル公式機種ページ
-- K-Navi 2009年5月導入カレンダー
-- P-WORLD
-- パチマガスロマガ旧解析（確率 / 50枚ベース / 解析INDEX）
-- パチスロ業界初まとめ旧DB
-- ART機最高設定機械割ランキング回顧資料
-- 5号機クロニクル（競合値確認用）
+- K-Navi 2009年6月導入カレンダー
+- P-WORLD `天誅`
+- 2009年6月更新のパチスロ5号機まとめwiki
+- K-Navi `天誅` 機種ページ
+- 後年スペック整理資料（数値別系統照合）
 
 ## 直前保存済み事項
 
+### 374 デュエルドラゴンキングダム
+- `docs/real_machine_db/machines/2009-05-25_duel-dragon-kingdom.md`
+- 2009-05-25。性能コアとv0.7 resetBehaviorまで保存済み。
+
 ### 373 がんばれゴエモン
 - `docs/real_machine_db/machines/2009-05-25_ganbare-goemon.md`
-- 2009-05-25。設定変更時ARTストック消滅 / キャラ数1人 / 表示ステージ維持まで回収済み。
+- 設定変更時ARTストック消滅 / キャラ数1人 / 表示ステージ維持まで回収済み。
 
 ### resetBehavior遡及QA
 - `ホークIII（25φ）` は補完済み。
@@ -74,20 +73,23 @@ record:
 ## 次回再開地点
 
 ### 本線
-1. **374件地点から2009-05-26〜31を境界監査**。メーカー名・型式名・シリーズ名・当時導入カレンダー/業界記事/旧DBを横断し、5月25日群の取りこぼしも同時に再確認。
-2. `レキオ2-30` / `緑ドン` / `がんばれゴエモン` / `デュエルドラゴンキングダム` は既収録のため重複禁止。
-3. 5月26〜31に未処理機がなければ **2009-06-01同日群**へ進む。
-4. 6月1日候補としてK-Navi導入カレンダーで **`天誅` / `琉球浪漫` / `Get The Ranker` / `ニューパルサー3`** を確認済み。個別機種ページでは **`COBRA THE SLOT`** も2009-06-01候補のため、同日群監査時に既存登録有無・具体日を再確認して時系列順に処理する。
-5. 月単位候補や導入日競合は具体日を無理に作らず、テスト導入/納品/全国導入/稼働開始など定義差を分離する。
+1. **375件地点の2009-06-01同日群を継続**。
+2. K-Naviで同日導入を確認済みの未処理候補を、既存登録チェック後に処理する:
+   - `琉球浪漫`（タイヨー）
+   - `Get The Ranker`（アリストクラート）
+   - `ニューパルサー3`（山佐）
+3. `COBRA THE SLOT`（藤商事）も個別K-Naviページで2009-06-01導入開始を確認済みのため、同日群監査で既存登録有無・他ソースの日付を確認し、漏れなら同日群へ追加する。
+4. 同日群内の順序は資料掲載順を絶対視せず、納品/全国導入/発売月など日付定義を分離し、未処理漏れ防止を優先する。
+5. 6月1日群を閉じた後はK-Navi上の次群 **2009-06-08 `銀河豪華客船クイーンギャラクシア` / `パチスロ「BON JOVI」`**へ接続する。
 
 ### 遡及resetBehavior QA
-1. **ホークIII（25φ）より後**をrepo実ファイルの時系列順に走査。
-2. 最初の `resetBehavior` 未補完レコードを選び、性能 `coreStatus` を維持したままv0.7のみ補完。
-3. 既にv0.7補完済みの機種は飛ばし、新規本線を止めない。
+1. `ホークIII（25φ）` より後をrepo実ファイルの時系列順に走査。
+2. 最初の `resetBehavior` 未補完レコードを選び、既存 `coreStatus` を維持してv0.7のみ補完。
+3. 新規本線を止めず、既補完機は飛ばす。
 
 ## 今回の保存
 
-- 374 デュエルドラゴンキングダム: `docs/real_machine_db/machines/2009-05-25_duel-dragon-kingdom.md`
-- 本 `LATEST_HANDOFF.md` を374件地点へ更新。
+- 375 天誅: `docs/real_machine_db/machines/2009-06-01_tenchu.md`
+- 本 `LATEST_HANDOFF.md` を375件地点へ更新。
 
-次回も作業開始時に必ず最新mainのREADME / ミッション / INDEX / LATEST_HANDOFF / 対象既存レコードを再取得し、この引継ぎよりmainが進んでいればGitHub最新mainを優先する。
+次回も作業開始時に必ず最新mainのREADME / ミッション / INDEX / LATEST_HANDOFF / 既存レコード / 直近コミットを再取得し、この引継ぎよりmainが進んでいればGitHub最新mainを優先する。
