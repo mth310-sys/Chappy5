@@ -6,41 +6,42 @@
 
 - 毎回最新mainの `README.md`、実機DBミッションv0.7、旧 `INDEX.md`、本 `LATEST_HANDOFF.md`、既存レコード、直近コミットを再取得する。
 - `INDEX.md` は19件地点の旧履歴集計。運用上の正本は本 `LATEST_HANDOFF.md` とrepoの実ファイル/直近mainコミット。
-- 今回開始時は396件 `真・女神転生` まで完了済み。README→ミッションv0.7→INDEX→LATEST_HANDOFF→既存396レコード→直近コミットを再取得し、396を正本として継続。
-- 同じ2009-08-17群の `侍ジャイアンツ2` はrepo未登録を確認し、性能コア＋v0.7 resetBehaviorを収集して **397** に追加。
+- 今回開始時の最新mainは397件 `侍ジャイアンツ2` まで完了済み。README→ミッションv0.7→INDEX→LATEST_HANDOFF→既存397レコード→直近コミットを再取得し、397を正本として継続。
+- 2009-08-18〜23を境界監査。安全に確定できる別の未処理機を確認できず、JPS `2027II ～すべてはここから～` は2009-08-23納品開始 / 2009-08-24ホール導入開始を確認、repo未登録のため **398** に追加。
 
-## 397. 侍ジャイアンツ2
+## 398. 2027II ～すべてはここから～
 
 record:
-- `docs/real_machine_db/machines/2009-08-17_samurai-giants2.md`
+- `docs/real_machine_db/machines/2009-08-23_2027ii.md`
 
 machine record commit:
-- `1cde1235d995f9383211dbbd902ace7e9e369120`
+- `550285467e30f0e7b46231a94fdf938755ac680f`
 
 要点:
-- manufacturer: **ニューギン**
-- formalModelName: **侍ジャイアンツ2X**
-- releaseDate: **2009-08-16納品予定 / 2009-08-17発売 CONFLICT_DEFINITION_DELIVERY_VS_RELEASE**
+- manufacturer: **JPS**
+- formalModelName: **ニーマルニーナナセカンド**
+- releaseDate: **2009-08-23納品開始 / 2009-08-24ホール導入開始 CONFLICT_DEFINITION_DELIVERY_VS_HALL_START**
 - generation: **5号機**
-- systemType: **ボーナス+RT / 150G周期CZ / 次回ボーナスまでRT**
-- 5号機クロニクルの設定別BIG **1/728.2→1/452.0**、REG/MB **1/496.5→1/452.0**、合算 **1/295.2→1/226.0**。
-- 機械割は5号機クロニクル **96.7/99.3/101.0/103.4/105.3/108.0%** と後年シリーズ回顧 **96.2/100.2/102.6/106.4/108.9/112.8%** が競合。平均せず保持。
-- BIG平均約**308枚**、MB平均約**85枚**。P-WORLDではBIG440枚超、MIDDLE120枚超払い出し終了、REG搭載も確認。
-- RT「サムライドリームマッチ」は **約+0.7枚/G、次回ボーナスまで継続**。グリーンべると、旧パチマガ、当時業界資料で一致。
-- 通常時**150G消化でCZ**。これは周期CZであり、一般的なゲーム数到達型天井とは区別。
-- 50枚ベースは旧パチマガ現存ページでも「現在調査中」。表記揺れ/型式/メーカー/50枚/1000円/ベース/コイン持ちで再探索後も直接値を確定できず `UNVERIFIED_AFTER_RESEARCH`。
-- `coreStatus=PARTIAL_CORE_BASE_UNVERIFIED_PAYOUT_CONFLICT`。
+- systemType: **ボーナス+ART / 無限ART（次回ボーナスまで） / 高確・潜航系モード**
+- P-WORLD掲載BIG **1/2730.67→1/2048.00**、REG **1/67.70→1/66.60**、合算 **1/66.1→1/64.5**、ART初当たり **1/518.3→1/210.5**。
+- 機械割はP-WORLD・5号機クロニクルで **96.8/99.8/101.6/105.9/109.9/115.7%** が一致。当時業界回顧の発売前整理は最高115.0%のため、設定6最大値は平均せず `CONFLICT_PAYOUT_MAX_115_7_VS_115_0`。
+- BIG約**112枚**、REG約**35枚**。
+- ART「BATTLE MODE」は **約+2.0枚/G、次回ボーナスまで継続**。継続率70〜95%。低確REGでも当時業界発表で約10%の自力ART突入期待。
+- 50枚ベースは表記揺れ/型式/メーカー/50枚/1000円/ベース/コイン持ちで、P-WORLD・K-Navi・旧パチマガ・5号機クロニクル・当時業界資料・777TOWN・公式派生資料・回顧まで再探索したが直接値を確定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 通常ゲーム数到達型のボーナス/ART確定天井は再探索後も確認できず。
+- `coreStatus=PARTIAL_CORE_BASE_UNVERIFIED_PAYOUT_MAX_CONFLICT`。
 
-### v0.7 resetBehavior — 侍ジャイアンツ2
+### v0.7 resetBehavior — 2027II
 
 - 旧パチマガスロマガに本機専用 **「攻め時・ヤメ時・設定変更時」** 項目の存在までは確認。
-- settingChangeBehavior / gameCounterReset: **UNVERIFIED_AFTER_RESEARCH**。設定変更時に150G周期カウンタがclear/retainされる具体本文を回収できず、一般的5号機挙動から補完しない。
-- carryOverBehavior / powerCycleBehavior: **UNVERIFIED_AFTER_RESEARCH**。据え置き/単純電源OFF→ON時の周期進捗、CZ/RT状態の処理を本機固有資料で確定できず。
-- ceilingAfterReset: **NOT_APPLICABLE_NO_GAME_COUNT_CEILING_CONFIRMED**。150Gは周期CZであり短縮天井とは扱わない。
+- settingChangeBehavior: **UNVERIFIED_AFTER_RESEARCH**。設定変更時の高確/潜航/追跡/ART潜伏状態の具体処理を回収できず、一般的5号機挙動から補完しない。
+- carryOverBehavior / powerCycleBehavior: **UNVERIFIED_AFTER_RESEARCH**。据え置き/単純電源OFF→ON時の内部モード・ART潜伏等の処理を本機固有資料で確定できず。
+- gameCounterReset / ceilingAfterReset: **NOT_APPLICABLE_NO_GAME_COUNT_CEILING_CONFIRMED**。通常時ゲーム数天井を確認できず、朝一短縮天井数値も未確認。
 - modeAfterReset / stateAfterReset / resetDetection: **UNVERIFIED_AFTER_RESEARCH**。
 - resetBenefits / resetPenalties: **NONE_CONFIRMED_AFTER_RESEARCH**。朝一専用モード振り分け・当選率・恩恵率も未確認。
 - advantageousSectionReset: **NOT_APPLICABLE**（5号機・有利区間制度前）。
-- `侍ジャイアンツ2 / 侍ジャイアンツ２ / 侍ジャイアンツ2X / ニューギン` と `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 宵越し / 150G / CZ / RT / ガックン / 天井` を組み替えて再探索済み。
+- `2027II / 2027Ⅱ / 2027セカンド / 2027II すべてはここから / ニーマルニーナナセカンド / JPS` と `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 宵越し / 天井 / 高確 / 潜航 / 追跡 / ART潜伏 / ガックン` を組み替えて再探索済み。
+- 2010年 `2027IINEO` のリセット/高確仕様は別スペックのため本機へ逆輸入しない。
 
 ## resetBehavior遡及QA
 
@@ -55,9 +56,9 @@ machine record commit:
 ## 次回再開地点
 
 ### 本線
-1. **397件地点 / 侍ジャイアンツ2まで完了**から再開。
-2. **2009-08-18〜23を境界監査**し、具体導入日付き未処理機を最古から追加する。検定通過日・発表日だけを導入日と誤認しない。
-3. 境界内に未処理がなければ2009-08-24群へ進み、**`2027II`、`神たま～ARTやで!全員集合～`、`パチスロがんばれ!!ロボコン`、`めぞん一刻2`** 等をrepo既存確認しながら時系列処理。
+1. **398件地点 / 2027IIまで完了**から再開。
+2. **2009-08-24同日群を継続監査**。候補 `神たま～ARTやで!全員集合～`、`パチスロがんばれ!!ロボコン`、`めぞん一刻2` はrepo既存有無を確認し、納品開始/ホール導入の具体日を資料横断で比較して最古の未処理から追加する。
+3. 同日群終了後、2009-08-25〜29を境界監査する。
 4. `サンサンハナハナ-30` はパイオニア公式2009年8月発売、当時グリーンべるとで2009-08-30納品予定確認済み。8月末群で具体日順を再確認する。
 
 ### resetBehavior遡及QA
@@ -73,6 +74,6 @@ machine record commit:
 
 ## 今回の保存
 
-- 397 侍ジャイアンツ2: `docs/real_machine_db/machines/2009-08-17_samurai-giants2.md`
-- machine record commit: `1cde1235d995f9383211dbbd902ace7e9e369120`
-- 本 `LATEST_HANDOFF.md` を397件地点へ更新。
+- 398 2027II ～すべてはここから～: `docs/real_machine_db/machines/2009-08-23_2027ii.md`
+- machine record commit: `550285467e30f0e7b46231a94fdf938755ac680f`
+- 本 `LATEST_HANDOFF.md` を398件地点へ更新。
