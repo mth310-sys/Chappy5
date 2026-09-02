@@ -6,10 +6,61 @@
 
 - 毎回最新mainの `README.md`、実機DBミッションv0.7、旧 `INDEX.md`、本 `LATEST_HANDOFF.md`、既存レコード、直近mainを再取得する。
 - `INDEX.md` は旧履歴集計。運用上の正本は本 `LATEST_HANDOFF.md` とrepo実ファイル/直近mainコミット。
-- 本線は **415件 `GS美神 極楽大作戦!!`** まで進行。
-- 414 `球児2` 後の10/18〜10/19境界を再監査。
-- ネイチャー・アセスメント `ハイパールーレット` は2009-09-01当時グリーンべるとで **10月中旬より納品開始予定** までで、今回も具体日を高信頼確定できず。大一 `パチスロ遠山の金さん` も当時K-Naviでは **10月中旬ホール導入予定**、後年DBでは2009-10月精度まで。具体日を無理に固定しない。
-- アビリット `GS美神 極楽大作戦!!` はグリーンべると当時記事で **2009-10-18納品予定**、K-Navi/コミックナタリーで **2009-10-19ホール導入予定/全国ホール順次稼働** を確認。物流開始とホール導入の定義差を保持し、主releaseDateは2009-10-19とした。
+- 本線は **416件 `マジックスパイス`** まで進行。
+- 415 `GS美神 極楽大作戦!!` 後の2009-10-19同日群を継続監査。
+- `ハイパールーレット` / `パチスロ遠山の金さん` は2009年10月中旬までは確認済みだが具体日を高信頼確定できていないため、無理に日付固定せず保留継続。
+
+## 416. マジックスパイス
+
+record:
+- `docs/real_machine_db/machines/2009-10-19_magic-spice.md`
+
+machine record commit:
+- `2287f03e356b0416a011932cf5b561ca685d12a8`
+
+要点:
+- manufacturer: **岡崎産業（STLYブランド）**
+- releaseDate: **2009-10-19**（パチビーの導入日基準。グリーンべると当時記事は2009-10-18納品開始予定）
+- generation: **5号機**
+- systemType: **ボーナス + BRT（ボーナスリプレイタイム / ART・パンク回避型）**
+- PSB: **1/1236.5 → 1/840.2**
+- SB: **1/590.4 → 1/300.6**
+- PSB+SB: **1/399.6 → 1/221.4**
+- MG: **全設定1/46.2**
+- ボーナス合算: **1/41.4 → 1/38.2**
+- 50枚/1000円ベース: **29.2 / 29.3 / 29.4 / 29.8 / 30.2 / 30.9G**（パチマガスロマガ旧解析）
+- BRT「MAGIC RUSH」: **約+0.6枚/G**。
+- PSB後BRTロングはSB当選まで継続。メーカー発表平均1000枚。
+- SB後BRTショートはパンクリプレイ成立まで継続。メーカー発表平均150枚。
+
+### 機械割CONFLICT
+
+- P-WORLD / パチビー掲載: **96.5 / 98.6 / 100.7 / 102.7 / 104.6 / 106.2%**
+- パチマガスロマガ旧解析シミュレート: **96.01 / 98.41 / 100.95 / 102.08 / 103.50 / 105.12%**
+- 定義/シミュレーション条件差の可能性があるため平均せず両系列保持。
+
+### v0.7 resetBehavior — マジックスパイス
+
+- `settingChangeBehavior`: **UNVERIFIED_AFTER_RESEARCH**。BRTロング/ショート、PSB/SB後状態、パンク回避状態の設定変更処理を本機固有資料で確定できず。
+- `carryOverBehavior`: **UNVERIFIED_AFTER_RESEARCH**。据え置き時のBRT状態等の引継ぎを直接確認できず。
+- `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH**。単純電源OFF→ON時のBRT内部状態/表示復帰を直接確認できず。
+- `gameCounterReset`: `NOT_APPLICABLE_NO_NORMAL_GAME_COUNT_CEILING_CONFIRMED`。
+- `ceilingAfterReset`: `NOT_APPLICABLE_NO_NORMAL_GAME_COUNT_CEILING_CONFIRMED`。
+- `modeAfterReset`: `NOT_APPLICABLE_NO_GAME_COUNT_MODE_CONFIRMED`。
+- `stateAfterReset`: **UNVERIFIED_AFTER_RESEARCH_FOR_BRT_STATE**。
+- `advantageousSectionReset`: `NOT_APPLICABLE`（5号機）。
+- `resetBenefits` / `resetPenalties`: `NONE_CONFIRMED_AFTER_RESEARCH`。
+- `resetDetection`: **UNVERIFIED_AFTER_RESEARCH**。
+- 公開朝一専用当選率/モード振分/恩恵率: `NONE_CONFIRMED_AFTER_RESEARCH`。
+
+### データ品質メモ — マジックスパイス
+
+- 岡崎産業メーカー発表、グリーンべると当時記事、P-WORLD、パチビー、パチマガスロマガ旧解析、後年メーカー系アプリ紹介を横断。
+- 性能コア主要確率は複数系統で高整合。
+- 50枚ベースは旧パチマガ単一主要解析値のため `ANALYSIS_SINGLE_OLD_MAJOR`。
+- formalModelName / approvalNumberは今回確定できず `UNVERIFIED_AFTER_RESEARCH`。
+- releaseDateは10/18納品予定 vs 10/19導入の定義差として両方保持。
+- resetBehavior欠損は機種名/メーカー/ブランドと `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / 宵越し / ガックン / BRT / MAGIC RUSH / パンク` を組み替え、複数資料系統再探索後のみUNVERIFIEDとした。
 
 ## 415. GS美神 極楽大作戦!!
 
@@ -20,80 +71,8 @@ machine record commit:
 - `b5b1570cde63e3dce5411d001adbc47570838e7e`
 
 要点:
-- manufacturer: **アビリット（現コナミアミューズメント系）**
-- formalModelName: **GSミカミX**
-- approvalNumber: **0S0430**
-- releaseDate: **2009-10-19**（K-Navi/コミックナタリーのホール導入基準。グリーンべるとは10/18納品予定）
-- generation: **5号機**
-- systemType: **ボーナス + RT / CZ + 天井RT**
-- 機械割: **97.5 / 99.1 / 101.5 / 103.8 / 106.2 / 109.3%**
-- BIG合算: **1/343.1 → 1/274.2**
-- REG: **1/504.12 → 1/422.81**
-- ボーナス合算: **1/199.8 → 1/159.0**
-- 50枚/1000円ベース: **39.44 / 40.23 / 41.06 / 42.34 / 43.64 / 45.53G**（パチマガスロマガ旧解析）
-- S-BIG約350枚 / 赤7BIG約300枚 / 青7BIG約180枚 / REG約80枚 / 追跡チャンス約18枚。
-- RT「追跡タイム」: **約+0.4枚/G、次回ボーナスまで**。
-- 通常時 **999Gハマリ**で天井RT（P-WORLD）。当時記事は「約1000G/1000G消化」と表現。
-
-### v0.7 resetBehavior — GS美神
-
-- `settingChangeBehavior`: **UNVERIFIED_AFTER_RESEARCH**。999G天井カウンタ、CZ、追跡タイム滞在中の設定変更処理を本機固有資料で確定できず。
-- `carryOverBehavior`: **UNVERIFIED_AFTER_RESEARCH**。据え置き時の天井カウンタ/CZ/RT状態引継ぎを直接確認できず。
-- `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH**。単純電源OFF→ON時の天井/CZ/RT/表示状態を直接確認できず。
-- `gameCounterReset`: **UNVERIFIED_AFTER_RESEARCH**。通常時999G天井は確定したが、設定変更でリセットか引継ぎかは未確定。
-- `ceilingAfterReset`: **UNVERIFIED_AFTER_RESEARCH**。設定変更専用短縮天井/変更後天井値は未確認。
-- `modeAfterReset`: `NOT_APPLICABLE_NO_GAME_COUNT_MODE_CONFIRMED`。
-- `stateAfterReset`: **UNVERIFIED_AFTER_RESEARCH_FOR_CZ_RT_STATE**。
-- `advantageousSectionReset`: `NOT_APPLICABLE`（5号機）。
-- `resetBenefits` / `resetPenalties`: `NONE_CONFIRMED_AFTER_RESEARCH`。
-- `resetDetection`: ガックン/初期出目/液晶/RT表示等を含め再探索したが **UNVERIFIED_AFTER_RESEARCH**。
-- `numericResetData.normalGameCountCeiling`: **999Gハマリで天井RT**。
-- 公開朝一専用当選率・モード振分・恩恵率: `NONE_CONFIRMED_AFTER_RESEARCH`。
-
-### データ品質メモ — GS美神
-
-- 当時グリーンべると、K-Navi、コミックナタリー、P-WORLD、パチマガスロマガ旧解析、5号機クロニクル、pacnkを横断。
-- 性能コアは複数系統で高整合。50枚ベースは旧パチマガ単一主要解析値のため `ANALYSIS_SINGLE_OLD_MAJOR`。
-- releaseDateは10/18納品予定 vs 10/19ホール導入予定の定義差を平均せず保持。
-- 天井表現は999Gハマリ vs 約1000G/1000G消化。数え方差の可能性が高いが原表記を保持。
-- resetBehavior欠損は機種名/型式/メーカーと `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / 天井短縮 / 宵越し / ガックン / RT / CZ` を組み替え、複数資料系統を再探索後のみUNVERIFIEDとした。
-
-## 414. 球児2
-
-record:
-- `docs/real_machine_db/machines/2009-10-18_kyuji2.md`
-
-machine record commit:
-- `d1c45aa8756ed3c9b176d0c80a6e43ac61f05652`
-
-要点:
-- SNKプレイモア / 2009-10-18納品開始 / ボーナス主体+天井RT+技術介入。
-- ボーナス間922Gで天井RT。
-- 設定変更でも天井までのゲーム数はリセットされないことを本機固有資料で確認。
-
-## 413. KODA KUMI PACHISLOT LIVE IN HALL II
-
-record:
-- `docs/real_machine_db/machines/2009-10-13_koda-kumi-pachislot-live-in-hall-ii.md`
-
-machine record commit:
-- `e8ad79b24c5c27159a07be1555c11221fa3afaac`
-
-## 412. ゴールデンベルE
-
-record:
-- `docs/real_machine_db/machines/2009-10_golden-bell-e.md`
-
-machine record commit:
-- `5d8618a6746013a8b86f03ad6ea56e547fec7d33`
-
-## 411. スモモチャン
-
-record:
-- `docs/real_machine_db/machines/2009-10-01_sumomo-chan.md`
-
-machine record commit:
-- `980569219f8e56b568262bf7a317574c0c6a95a8`
+- 2009-10-19ホール導入基準、10/18納品予定との定義差保持。
+- 機械割97.5〜109.3%、50枚ベース39.44〜45.53G、通常999Gハマリで天井RT。
 
 ## resetBehavior遡及QA
 
@@ -108,23 +87,22 @@ machine record commit:
 直近QA:
 - `docs/real_machine_db/machines/2006-10_surogenjin.md`
 - QA commit: `3194bc98054c649f7d841525dca97f30b22258a0`
-- 次はrepo実ファイルを時系列順に走査し、スロ原人直後の最初の `resetBehavior — v0.7` 未補完レコードから続行する。
+- 今回、repo検索/旧INDEXも再確認したが、検索indexからスロ原人直後の実ファイルを安全に一意特定できなかったため、推測で別機種をQA対象にしなかった。
+- **次はrepo contents/treeを時系列順に再走査し、スロ原人直後の最初の `resetBehavior — v0.7` 未補完レコードから続行する。**
 - 性能コアの既存COMPLETE_CORE/既存coreStatusは不用意に崩さず、resetBehavior QAを別管理する。
 
 ## 次回再開地点
 
 ### 本線
-1. **415件地点 / GS美神 極楽大作戦!!（2009-10-19ホール導入）まで収録**から再開。
-2. `ハイパールーレット` / `パチスロ遠山の金さん` は引き続き10月中旬の具体日が取れれば時系列へ正しく挿入する。具体日を確定できなければ月/旬精度の不確実性を保持し、本線を止めない。
-3. 次の同日未処理候補は **2009-10-19 `マジックスパイス`**。パチビーで10/19導入を確認済み。repo未登録を再確認して416候補とする。
-4. 同じく **2009-10-19 `ダブルアタック`（オーイズミ）** はパチビーで10/19導入を確認済み。マジックスパイス後の候補。
-5. `パチスロ エイリアンVSプレデター` はグリーンべると当時記事で **2009-10-25納品開始** と確認済みのため10/19群へ混ぜない。
-6. 各候補はrepo未登録・導入日を再確認してから、性能コア＋v0.7 resetBehaviorを同時収集する。
-7. 欠損は公式・業界・当時解析・古いDB・アーカイブ・回顧まで十分再探索後のみ `UNVERIFIED_AFTER_RESEARCH`。競合値は平均せず `CONFLICT`。
+1. **416件地点 / マジックスパイス（2009-10-19）まで収録**から再開。
+2. 同日未処理候補 **2009-10-19 `ダブルアタック`（オーイズミ）** を最優先。導入日とrepo未登録を再確認して417候補とする。
+3. `パチスロ エイリアンVSプレデター` はグリーンべると当時記事で **2009-10-25納品開始** と確認済みのため10/19群へ混ぜない。
+4. `ハイパールーレット` / `パチスロ遠山の金さん` は具体日を取れれば正しい時系列へ挿入。取れなければ月/旬精度の不確実性を保持し、本線を止めない。
+5. 各候補は性能コア＋v0.7 resetBehaviorを同時収集。競合値は平均せずCONFLICT、欠損は十分な再探索後のみUNVERIFIED_AFTER_RESEARCH。
 
 ### resetBehavior遡及QA
 1. **スロ原人まで補完済み**。
-2. 次はスロ原人直後の最初のv0.7未補完既存レコードを実ファイル順で特定。
+2. 次はスロ原人直後の最初のv0.7未補完既存レコードをrepo実ファイル順で特定。
 3. PARTIAL/UNVERIFIEDは機種名/型式/メーカー/シリーズ名と `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / RT/ART状態 / ガックン` を組み替え、公式・当時業界・当時解析・古いDB・アーカイブ・回顧まで再探索する。
 
 ### 次回の必須開始手順
@@ -136,6 +114,6 @@ machine record commit:
 
 ## 今回の保存
 
-- 415 GS美神 極楽大作戦!!: `docs/real_machine_db/machines/2009-10-19_gs-mikami-gokuraku-daisakusen.md`
-- machine record commit: `b5b1570cde63e3dce5411d001adbc47570838e7e`
-- 本 `LATEST_HANDOFF.md` を415件地点へ更新。
+- 416 マジックスパイス: `docs/real_machine_db/machines/2009-10-19_magic-spice.md`
+- machine record commit: `2287f03e356b0416a011932cf5b561ca685d12a8`
+- 本 `LATEST_HANDOFF.md` を416件地点へ更新。
