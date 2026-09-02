@@ -6,9 +6,53 @@
 
 - 毎回最新mainの `README.md`、実機DBミッションv0.7、旧 `INDEX.md`、本 `LATEST_HANDOFF.md`、既存レコード、直近mainを再取得する。
 - `INDEX.md` は旧履歴集計。運用上の正本は本 `LATEST_HANDOFF.md` とrepo実ファイル/直近mainコミット。
-- 本線は **421件 `タイムレスキューS`** まで進行。
-- 420 `タイムレスキュー777` の同時発売ファミリーを監査し、HAZUSEで2009-11-01導入開始、当時グリーンべるとで777/Sとも11/1納品開始予定を確認したため、日付補正としてSを421件目に追加。
+- 本線は **422件 `どんまい!!ちゅ～吉`** まで進行。
+- 2009-11-02同日群の監査を継続し、ALL7でJPS `どんまい!!ちゅ～吉` の具体日2009-11-02を確認、repo未登録を確認後422件目として追加。
 - `ハイパールーレット` / `パチスロ遠山の金さん` は2009年10月中旬までは確認済みだが、具体日を高信頼確定できていないため保留継続。具体日を無理に捏造しない。
+
+## 422. どんまい!!ちゅ～吉
+
+record:
+- `docs/real_machine_db/machines/2009-11-02_donmai-chukichi.md`
+
+machine record commit:
+- `ff85db65607709e23966abbf10811d01a338681a`
+
+要点:
+- manufacturer: **ジェイピーエス（JPS）**
+- formalModelName: **ドンマイチュウキチA**
+- approvalNumber: **UNVERIFIED_AFTER_RESEARCH**
+- releaseDate: **2009-11-02（ALL7導入予定） / 2009-11（5号機クロニクル）**
+- generation: **5号機**
+- systemType: **A+ART / BIG+REG + 押し順ART**
+- 機械割: **97.5 / 99.5 / 101.5 / 104.4 / 108.3 / 112.4%**
+- ボーナス合算: **1/88.5 / 1/86.6 / 1/84.8 / 1/81.9 / 1/79.1 / 1/76.5**
+- 50枚ベース: **約38.4G/1000円（全設定共通の後年実機配信記録、単一回顧値）**
+- ART `マンモスタイム`: **約+2.0枚/G、20G/40G/80G、最高継続率90%以上**。
+- 赤7BIG約100枚、白7BIG約50枚、ちゅ～ちゅ～ボーナス約50枚。
+- 通常時に高/低確状態が存在することは当時グリーンべるとで確認。
+- 通常ゲーム数天井、設定別ART初当たり、検定番号は十分な再探索後も今回直接確定できず。
+
+### v0.7 resetBehavior — どんまい!!ちゅ～吉
+
+- `settingChangeBehavior`: **UNVERIFIED_AFTER_RESEARCH**。設定変更時の高/低確、ART/CZ、継続状態の初期化/再抽選本文を回収できず。
+- `carryOverBehavior`: **UNVERIFIED_AFTER_RESEARCH**。据え置き時の高/低確、ART/CZ、ART継続状態の保持可否を直接確定できず。
+- `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH**。単純電源OFF→ONの本機固有挙動を直接確定できず。
+- `gameCounterReset`: `NO_NORMAL_GAME_NUMBER_CEILING_CONFIRMED / OTHER_PROGRESS_COUNTERS_UNVERIFIED`。
+- `ceilingAfterReset`: `NO_RESET_SHORTENED_CEILING_CONFIRMED_AFTER_RESEARCH`。
+- `modeAfterReset`: **UNVERIFIED_AFTER_RESEARCH**。高/低確状態の変更時振分・朝一専用モードは直接資料未確認。
+- `stateAfterReset`: **UNVERIFIED_AFTER_RESEARCH**。
+- `advantageousSectionReset`: `NOT_APPLICABLE`（5号機）。
+- `resetBenefits`: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- `resetPenalties`: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- `resetDetection`: **UNVERIFIED_AFTER_RESEARCH**。ガックン、初期出目、液晶/ランプ等の変更判別を本機固有資料で確定できず。
+- 公開朝一専用当選率/モード振分/恩恵率: `NONE_CONFIRMED_AFTER_RESEARCH`。
+
+### データ品質メモ — どんまい!!ちゅ～吉
+
+- 当時グリーンべると、P-WORLD、パチトラ、ALL7、5号機クロニクル、A-SLOT、旧パチマガ索引、実機回顧/配信記録まで横断。
+- 性能コア主要値は複数系統で高整合。50枚ベースのみ直接回収できたのが後年実機配信記録の単一値のため信頼度を分離。
+- resetBehavior欠損は `どんまい!!ちゅ～吉 / どんまいちゅ～吉 / どんまいちゅー吉 / ドンマイチュウキチA / JPS / ジェイピーエス` と `設定変更 / リセット / 朝一 / 朝イチ / 据え置き / 宵越し / 電源OFF ON / 電源オンオフ / 天井 / 高確 / 低確 / ART / ストック / ガックン / 初期出目` を組み替えて再探索後のみUNVERIFIEDとした。
 
 ## 421. タイムレスキューS
 
@@ -108,10 +152,11 @@ machine record commit:
 ## 次回再開地点
 
 ### 本線
-1. **421件地点 / タイムレスキューSまで収録**から再開。
-2. タイムレスキュー2スペックは閉じた。次は **2009-11-02同日群 → 11月3日以降**をP-WORLD / K-Navi / パチビー / 当時グリーンべると / メーカー公式・旧発売一覧で境界監査し、最古の未登録具体日機から422として進める。
-3. `ハイパールーレット` / `パチスロ遠山の金さん` は具体日を公式/当時業界/主要DBで高信頼確定できれば正しい位置へ遡及追加。確定できなければ月/旬精度の不確実性を保持して本線を止めない。
-4. 各候補は性能コア＋v0.7 resetBehaviorを同時収集。競合値は平均せずCONFLICT、欠損は検索語・資料系統を十分変更して再探索した後のみUNVERIFIED_AFTER_RESEARCH。
+1. **422件地点 / どんまい!!ちゅ～吉まで収録**から再開。
+2. **2009-11-02同日群の残りを最終監査**。ALL7同日候補は `ダイ・ハード`（藤商事）、`新サーキットの狼`（ニューギン）、`決戦‐天翔る覇者‐`（西陣）。ALL7はパチンコ/パチスロ混在一覧なので、各候補が回胴式遊技機かをP-WORLD・メーカー・当時業界資料で確認し、パチスロだけを本DBへ追加する。
+3. 同日群を閉じたら **2009-11-03 `青ドン 花火の極`** を次の具体日候補としてrepo未登録監査する。
+4. `ハイパールーレット` / `パチスロ遠山の金さん` は具体日を公式/当時業界/主要DBで高信頼確定できれば正しい位置へ遡及追加。確定できなければ月/旬精度の不確実性を保持して本線を止めない。
+5. 各候補は性能コア＋v0.7 resetBehaviorを同時収集。競合値は平均せずCONFLICT、欠損は検索語・資料系統を十分変更して再探索した後のみUNVERIFIED_AFTER_RESEARCH。
 
 ### resetBehavior遡及QA
 1. **スロ原人まで補完済み**。
@@ -127,6 +172,6 @@ machine record commit:
 
 ## 今回の保存
 
-- machine record: `docs/real_machine_db/machines/2009-11-01_time-rescue-s.md`
-- machine commit: `2e7c3025b818b6522bf9cb50c64744e195aeff40`
-- handoff: 本ファイルを421件地点へ更新。
+- machine record: `docs/real_machine_db/machines/2009-11-02_donmai-chukichi.md`
+- machine commit: `ff85db65607709e23966abbf10811d01a338681a`
+- handoff: 本ファイルを422件地点へ更新。
