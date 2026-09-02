@@ -6,77 +6,84 @@
 
 - 最新mainの `README.md`、実機DBミッションv0.7、`INDEX.md`、既存レコード、直前 `LATEST_HANDOFF.md` を再読して継続。
 - `INDEX.md` は旧19件地点のため、README規定どおり本 `LATEST_HANDOFF.md` を進捗正本とする。
-- 直前正本は **331件地点 / 時系列本線2008-12-14（鬼浜爆走紅蓮隊 爆音烈士編）まで完了**。
-- 今回、直前引継ぎの2008-12-15群から最優先候補を監査し、**332 `シンゾウニンゲン（新造人間キャシャーン）`（JPS）** を追加。
-- 当時グリーンべるとで **2008-12-14から納品**、ALL7で **2008-12-15導入予定**を確認したため、納品/導入定義差を保持し、レコード主日付は当時業界一次の12/14とした。
-- **既存332件の再追加禁止。**
+- 直前正本は **332件地点 / 時系列本線2008-12-14 シンゾウニンゲンまで完了**。
+- 今回、2008-12-15群の最優先候補 **333 `トリプル沖V-30`（デンケン販売）** を追加。
+- 同時にresetBehavior遡及QAを進め、**大山鳴動漢みちスロ!（2006-09）** をv0.7化。既存性能コアの `PARTIAL` は維持し、リセットQAを別管理した。
+- **既存333件の再追加禁止。**
 
-## 332. シンゾウニンゲン（新造人間キャシャーン）
+## 333. トリプル沖V-30
 
 record:
-- `docs/real_machine_db/machines/2008-12-14_shinzo-ningen.md`
+- `docs/real_machine_db/machines/2008-12-15_triple-oki-v-30.md`
 
 要点:
-- machineName: シンゾウニンゲン（新造人間キャシャーン）
-- manufacturer: **JPS（ジェイピーエス）**
-- releaseDate: **2008-12-14**（グリーンべると納品開始） / ALL7導入予定 **2008-12-15**
-- modelName: `シンゾウニンゲン`
-- inspectionNumber: `8S0731`
-- identity: **2006年同名機「新造人間キャシャーン / 型式パープル2」とは別機種**。2008年機のデータへ2006年機のスペックを混入させない。
-- generation: 5号機
-- systemType: **A+ART / TYPE-F**
-- 設定別機械割: **96.3 / 98.8 / 100.5 / 103.9 / 109.7 / 116.7%**。P-WORLD・当時系資料・旧DB/回顧で同系列を確認。
-- ボーナス合算: **1/39.3 / 1/39.3 / 1/39.2 / 1/39.2 / 1/39.1 / 1/39.0**。個別BIG/MISSION BONUS設定別確率は十分再探索後も未確定のため逆算しない。
-- BIG: **130枚超払い出し終了 / 純増約90枚**（当時販社系資料）。MISSION BONUSは4Gまたは4回入賞終了、比較可能な純増枚数は未確定。
-- ART `キャシャーンタイム`（資料に`バトルタイム`表記もあり）: **約+2.0枚/G**、1セット10G、平均20セット、最大100セット＝最大1000G。
-- ART主要契機: 白7（15枚小役）入賞、通常ボーナス当選時抽選、**天井200G後のボーナス当選**。
-- 通常時は **通常 / 高確率 / 超高確率**。当時業界記事では高確・超高確中のボーナス当選はART100%当選。
-- 50枚ベースは表記揺れ・型式・メーカー・50枚/1000円/ベース/コイン持ちで再探索後も確定できず `UNVERIFIED_AFTER_RESEARCH`。
-
-### 天井
-
-- 当時グリーンべると: **天井200G後のボーナス当選**をART発動条件として明記。
-- 当時販社系資料: **通常時200G消化で天井超高確率モードへ移行**。
-- したがって200G到達でボーナス/ARTが即発動する天井ではなく、**200Gで天井超高確率へ入り、その後のボーナス当選がART契機**となる構造として保存。
+- machineName: **トリプル沖V-30**
+- manufacturer: **デンケン販売**
+- releaseDate: **2008-12-15**（ALL7導入予定）
+- generation: **5号機**
+- identity: ALL7は「トリプル沖V」、パチンコFAN・後年デンケン回顧・5号機一覧は「トリプル沖V-30 / トリプル沖V 30」。30φ機として複数系統一致。
+- 性能コアは表記揺れを変えて再探索したが、設定別BIG/REG/合算、機械割、50枚ベース、ボーナス純増、RT/ART/CZの有無と純増/Gを本文で確定できず **`coreStatus=PARTIAL_IDENTITY_AND_RELEASE_ONLY_AFTER_RESEARCH`**。
+- 清龍ゲームジャパンの「トリプルクラウンV-30」等、名称の近い別機種が検索上大量混入するため、後年機の数値を本機へ流用していない。
 
 ### v0.7 resetBehavior
 
-- settingChangeBehavior: **UNVERIFIED_AFTER_RESEARCH**。設定変更時の200Gカウンタ・内部3状態・ART関連状態の初期化/再抽選を直接資料で確定できず。
-- carryOverBehavior: **UNVERIFIED_AFTER_RESEARCH**。据え置き時の200Gカウンタ、内部状態、ART権利/残G引継ぎを確定できず。
-- powerCycleBehavior: **UNVERIFIED_AFTER_RESEARCH**。電源OFF→ONのみ時の200Gカウンタ・内部状態・ART状態処理を確定できず。
-- gameCounterReset: **UNVERIFIED_AFTER_RESEARCH**。200G天井自体は確定したが、設定変更で0Gへ戻るか据え置きで継続するかは不明。
-- ceilingAfterReset: **UNVERIFIED_AFTER_RESEARCH**。変更時専用短縮天井/別天井は確認できず。
-- modeAfterReset / stateAfterReset: **UNVERIFIED_AFTER_RESEARCH**。通常/高確/超高確の存在は確認できるが、変更時振り分けは未確認。
-- advantageousSectionReset: **NOT_APPLICABLE**（5号機・有利区間制度前）。
-- resetBenefits / resetPenalties: **NONE_CONFIRMED_AFTER_RESEARCH**。通常200G天井をリセット恩恵とは扱わない。
-- resetDetection: **UNVERIFIED_AFTER_RESEARCH**。ガックン、初期出目、液晶ステージ、200G挙動など本機固有の変更判別条件を確定できず。
-- 公開朝一数値: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- settingChangeBehavior: **UNVERIFIED_AFTER_RESEARCH**
+- carryOverBehavior: **UNVERIFIED_AFTER_RESEARCH**
+- powerCycleBehavior: **UNVERIFIED_AFTER_RESEARCH**
+- gameCounterReset: **UNVERIFIED_AFTER_RESEARCH**。通常時ゲーム数天井そのものを本機固有資料で確定できず。
+- ceilingAfterReset: **NONE_CONFIRMED_AFTER_RESEARCH**
+- modeAfterReset / stateAfterReset: **UNVERIFIED_AFTER_RESEARCH**
+- advantageousSectionReset: **NOT_APPLICABLE**（5号機・有利区間制度前）
+- resetBenefits / resetPenalties: **NONE_CONFIRMED_AFTER_RESEARCH**
+- resetDetection: **UNVERIFIED_AFTER_RESEARCH**
+- 公開朝一数値: **NONE_CONFIRMED_AFTER_RESEARCH**
+- resetBehaviorQA: **UNVERIFIED_AFTER_RESEARCH_NO_DEVICE_SPECIFIC_RESET_RULE**
 
 主要出典（取得日 2026-09-02）:
-- https://web-greenbelt.jp/00003901/
 - https://www.all7.jp/plans/index/2008/12
-- https://www.p-world.co.jp/machine/database/5391
-- https://ameblo.jp/samurai777net/entry-10160992884.html
-- https://www.a-slot.com/SHOP/jps11.html
-- https://pachiseven.jp/articles/detail/11436
-- https://pachiseven.jp/articles/detail/14268
-- https://slothistory.com/zenkishu_7.html
+- https://pacnk.com/photoslot/mlist_2008.html
+- https://psumma.jp/pachislo/26345/
+- https://onlineslotpro.blog.fc2.com/blog-entry-1229.html
 
-## 今回の境界監査
+## resetBehavior遡及QA進捗
 
-- 直前引継ぎでは `シンゾウニンゲン` を2008-12-15群としていたが、当時グリーンべると本文から **12/14納品開始**を回収。ALL7の12/15導入予定と1日差があるため、平均/丸めせず納品/導入定義差として保持した。
-- 2006年にも同じ表示名「新造人間キャシャーン」があるが、2006年は型式`パープル2`、2008年は型式`シンゾウニンゲン`・検定`8S0731`。P-WORLD/回顧資料で別機種と確認したため完全分離。
-- `魔界城` / `シャドウハーツII` は引き続き具体導入日が確定した場合のみ遡及挿入する。月情報だけで推測しない。
+### 今回補完: 大山鳴動漢みちスロ!（2006-09）
+
+record:
+- `docs/real_machine_db/machines/2006-09_oyama-meido-otokomichi-slot.md`
+
+QA要点:
+- 既存 `coreStatus=PARTIAL` は崩さず維持。
+- 当時HAZUSEで **6種類BB / RT「みちのくチャンス」/ 最大引き戻し率78.5% / 同時当選なし** を再確認。
+- 設定別機械割 **95.0 / 97.4 / 99.7 / 102.6 / 105.2 / 106.7%** は既存旧DBと当時HAZUSEで一致したため、機械割信頼度を複数系統一致へ補強。
+- グリーンべるとで、最大純増416枚BBにはRTを絡めず、**出玉のない2種類のBB終了時にRT発動**する構造を再照合。
+- settingChangeBehavior / carryOverBehavior / powerCycleBehavior: **UNVERIFIED_AFTER_RESEARCH**。RT残G/内部RT状態の本機固有処理を直接資料で確定できず。
+- 通常時ゲーム数天井、変更時短縮天井、朝一恩恵/不利、変更判別、公開朝一数値は **NONE_CONFIRMED / UNVERIFIED_AFTER_RESEARCH**。
+- 有利区間は **NOT_APPLICABLE**。
+- `resetBehaviorQA=PARTIAL_WITH_DEVICE_SPECIFIC_RESET_DETAILS_UNVERIFIED_AFTER_MULTI_SOURCE_RESEARCH`。
+
+追加出典（取得日 2026-09-02）:
+- https://hazuse.com/i/data/sasuke/top.htm
+- https://web-greenbelt.jp/00004919/
+- https://p-mans.blogspot.com/2006/
+- https://goraku-gakkou.com/5gouki-2005-2006/
+
+### 遡及QA次回地点
+
+- **次は `2006-09_takenaka-naoto-taikoki.md`（竹中直人のパチスロ太閤記）**。
+- その後は時系列順にresetBehavior未収集機を進める。
+- 旧handoffで名称混同が続いたジャックポット系は実ファイル `2006-11_jackpot-tropical-version.md` を既に同定済み。2017年Ver.2や2007年30φ派生と分離して処理する。
 
 ## 次回再開地点
 
-1. **LATEST_HANDOFF基準332件地点 / 時系列本線は2008-12-14のシンゾウニンゲンまで完了。**
-2. 次は同境界の未処理 **2008-12-15群** を続行し、最優先で **`トリプル沖V`（デンケン販売）** を既存レコード照合 → 正式メーカー/型式/具体導入日 → 性能コア → v0.7 resetBehavior の順で処理する。
-3. その次は **`HAIBいちろう`（イープレイ）**。
-4. 同日群を閉じた後、具体日確定済みの **2008-12-22 `スロット代紋TAKE2`** へ進む。
-5. `魔界城` / `シャドウハーツII` は具体導入日が後続調査で確定した時点で時系列へ遡及挿入する。
-6. 欠損は表記揺れ・型式・メーカー・シリーズ名と、設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間を含む検索語・資料系統を変え、公式・業界・当時解析・古いDB・アーカイブ・回顧資料まで十分再探索後のみ `UNVERIFIED_AFTER_RESEARCH` とする。
+1. **LATEST_HANDOFF基準333件地点 / 時系列本線は2008-12-15 トリプル沖V-30まで完了。**
+2. 次は同日群の **`HAIBいちろう`（イープレイ）** を既存照合 → 正式メーカー/型式/具体導入日 → 性能コア → v0.7 resetBehavior の順で処理する。
+3. 2008-12-15群の残候補を監査後、具体日確定済み **2008-12-22 `スロット代紋TAKE2`** へ進む。
+4. `魔界城` / `シャドウハーツII` 等の月単位候補は具体導入日が確定した場合のみ時系列へ遡及挿入する。
+5. 遡及QAは **竹中直人のパチスロ太閤記（2006-09）** から再開。
+6. PARTIAL/UNVERIFIEDやreset欠損は、表記揺れ・型式・メーカー・シリーズ名に設定変更/リセット/朝一/据え置き/電源OFF ON/天井/モード/状態/ガックンを組み替え、公式・業界・当時解析・古いDB・アーカイブ・回顧資料まで再探索する。一般的な5号機挙動や別機種値から推測補完しない。
 
 ## コミット（今回）
 
-- 332 シンゾウニンゲン: `11339018ca7ffe3ed3c94cda8033935f07bde329`
+- 333 トリプル沖V-30: `03b938de625238557828606ee221086e2d19e7de`
+- 大山鳴動漢みちスロ! v0.7 reset QA: `69daf5df0fd11c25814a8ed91789011cb0063ea0`
