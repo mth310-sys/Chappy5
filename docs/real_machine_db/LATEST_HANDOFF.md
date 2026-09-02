@@ -6,67 +6,96 @@
 
 - 最新mainの `README.md`、実機DBミッションv0.7、`INDEX.md`、既存レコード、直前 `LATEST_HANDOFF.md` を再読して継続。
 - `INDEX.md` は旧19件地点のため、README規定どおり本 `LATEST_HANDOFF.md` を進捗正本とする。
-- 直前正本は **325 `回胴黙示録カイジ2`（ロデオ / 2008-12-08）**。
-- 今回 **326 `ハイサイ蝶特急`（タイヨー / 2008-12-08）** を追加。
-- **既存326件の再追加禁止。**
+- 直前正本は **326 `ハイサイ蝶特急`（タイヨー / 2008-12-08）**。
+- 今回、2008-12-08境界監査と11月漏れ再監査から以下4レコードを追加。
+  - **327 `いみそ～れ2 ピュアエディション25`（エマ / 2008-12-08）**
+  - **328 `いみそ～れ2 ピュアエディション30`（エマ / 2008-12-08）**
+  - **329 `いみそ～れ2 バーニングエディション25`（エマ / 2008-11-16納品開始予定）** ※遡及追加
+  - **330 `いみそ～れ2 バーニングエディション30`（エマ / 2008-11-16納品開始予定）** ※遡及追加
+- **既存330件の再追加禁止。**
 
-## 326. ハイサイ蝶特急
+## 327-328. いみそ～れ2 ピュアエディション25 / 30
 
-- record: `docs/real_machine_db/machines/2008-12-08_haisai-cho-tokkyu.md`
-- manufacturer: タイヨー
-- releaseDate: **2008-12-08**（ALL7当時導入予定）
+records:
+- `docs/real_machine_db/machines/2008-12-08_imisore2-pure-edition-25.md`
+- `docs/real_machine_db/machines/2008-12-08_imisore2-pure-edition-30.md`
+
+共通要点:
+- manufacturer: エマ
+- releaseDate: **2008-12-08**（ALL7導入予定）。グリーンべるとでは**12/7から納品予定**。
 - generation: 5号機
-- systemType: **A+ART / 2027タイプ**。JAC BONUS成立後、ボーナスを入賞させず赤7揃いからART「蝶特急MODE」を消化。
-- settings: **1 / 2 / 3 / 4 / 5 / 6**
-- ボーナス成立確率: **全設定共通 1/99.0（パチマガスロマガ） / 1/99.3（旧5号機DB）**。平均せず差を保持。
-- 50枚/1000円ベース: **31.0G**（全設定共通、パチマガスロマガ）。
-- JAC BONUS: **2G消化で終了**。本機は主に入賞させずARTを継続する方式。
-- ART `蝶特急MODE`: 3択9枚ナビ型。純増は **約+1.8枚/G（パチマガスロマガ） vs 約+1.9枚/G（旧5号機DB）でCONFLICT**。
-- 通常時 **501Gハマリで高確テーブル参照/天井高確**の旧解析あり。ボーナス直撃天井ではない。
-- 機械割は **CONFLICT**：
-  - 旧5号機DB: **96.0 / 98.3 / 99.8 / 103.1 / 105.6 / 110.0%**
-  - パチマガスロマガ・シミュレート: **96.35 / 98.34 / 100.07 / 102.35 / 104.72 / 107.63%**
-- `coreStatus: COMPLETE_CORE_WITH_CONFLICTS`
+- systemType: **ノーマル / 完全告知 / ボーナス主体**
+- variant: プレミアムビスカス **25φ / 30φ**。当時グリーンべるとが両仕様を明記。
+- BIG: **1/318.1 → 1/248.2**
+- REG: **1/337.8 → 1/262.1**
+- 合成: **1/163.8 → 1/127.5**
+- 50枚/1000円ベース: **36.37G → 38.55G**
+- BIG約**312枚** / REG約**104枚**
+- RT非搭載。バーニング・エディションと構造を分離。
+- 25φ型式: **イミソーレ2H**（P-WORLD）。30φ正式型式は今回独立確定できず自動転記しない。
+- 機械割は25φP-WORLD市場掲載 **96.7〜112.0%** とパチマガスロマガ・シミュレート **96.92〜111.55%** に小差。平均せず保持。
+- resetBehavior: ゲーム数天井/RT/ART/CZ/通常モードは非該当または確認なし。設定変更・据え置き・電源OFF→ON時の初期出目/ガックン等、本機固有の変更判別だけは十分再探索後も直接資料を確定できず `UNVERIFIED_AFTER_RESEARCH`。
 
-### resetBehavior（326）
+主要出典（取得日 2026-09-02）:
+- https://web-greenbelt.jp/00003852/
+- https://www.all7.jp/plans/index/2008/12/10
+- https://www.p-world.co.jp/machine/database/5374
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/ema_slot/31/a.php
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/ema_slot/31/c.php
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/ema_slot/31/h.php
+- https://pacnk.com/photoslot/mlist_2008.html
 
-- `settingChangeBehavior`: **UNVERIFIED_AFTER_RESEARCH**。旧5号機まとめwikiの「高確率状態について（未確定情報）」に **設定変更時1/2で高確テーブル参照**という候補値があるが、資料自身が未確定情報と明示。確定仕様へ昇格させない。
-- `carryOverBehavior`: **UNVERIFIED_AFTER_RESEARCH**。据え置き時の501Gカウンタ、高確/低確テーブル、ARTナビ残回数の扱いを本機固有資料で確定できず。
-- `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH**。電源OFF→ONのみの501Gカウンタ、高確/ART状態処理を確定できず。
-- `gameCounterReset`: **UNVERIFIED_AFTER_RESEARCH**。通常時501G到達条件は確認済みだが設定変更/据え置き/電断でのカウンタ処理は直接根拠なし。
-- `ceilingAfterReset`: **UNVERIFIED_AFTER_RESEARCH**。設定変更専用短縮ゲーム数は確認できず。
-- `modeAfterReset`: **UNVERIFIED_CANDIDATE**。設定変更時高確50%候補のみ存在し、独立裏取りなし。
-- `stateAfterReset`: **UNVERIFIED_AFTER_RESEARCH**。
-- `advantageousSectionReset`: **NOT_APPLICABLE**（5号機・有利区間制度前）。
-- `resetBenefits`: **NONE_CONFIRMED_AFTER_RESEARCH**。50%高確候補は未確定情報のため確定恩恵に数えない。
-- `resetPenalties`: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- `resetDetection`: **UNVERIFIED_AFTER_RESEARCH**。ガックン/初期出目/表示/朝一ART挙動による本機固有判別法は確定できず。
-- 公開朝一数値: **候補として「設定変更時 高確テーブル1/2」**があるが `UNVERIFIED_SOURCE_EXPLICITLY_LABELS_INFORMATION_UNCONFIRMED`。確定値として使用禁止。
+## 329-330. いみそ～れ2 バーニングエディション25 / 30（遡及）
 
-## 326主要出典
+records:
+- `docs/real_machine_db/machines/2008-11-16_imisore2-burning-edition-25.md`
+- `docs/real_machine_db/machines/2008-11-16_imisore2-burning-edition-30.md`
 
-取得日: 2026-09-02
+共通要点:
+- manufacturer: エマ
+- releaseDate: **2008-11-16（当時グリーンべると納品開始予定）**
+- 後年一覧は2008年12月分類だが、具体日を持つ当時業界一次資料を時系列主根拠とし、月分類差をCONFLICTとして保存。
+- generation: 5号機
+- systemType: **A+RT / 完全告知**
+- variant: 25φ=`ゴールデンビスカス` / 30φ=`バイオレットビスカス`
+- BIG: **1/341.33 → 1/266.41**
+- REG: **1/512.00 → 1/341.33**
+- 合成: **1/204.80 → 1/149.63**
+- 50枚/1000円ベース: **35.63G → 37.40G**
+- BIG約**273枚** / REG約**101枚**
+- RT `ネオクラッシュモード`: BIG中白7揃いから突入し、**次回BIGまで継続**。REGでは終了しない。RT純増は当時業界記事で**現状維持程度**。設定不問でBIG4回に1回程度突入期待。
+- 機械割はパチマガスロマガ・シミュレート **97.71〜109.93%** と後年25φDB **96.2〜110.6%** に差。平均せず保持。
+- resetBehavior: 通常ゲーム数天井/短縮天井/朝一専用モードは確認なし。有利区間は非該当。設定変更・据え置き・電源OFF→ON時のRT内部状態、ガックン/初期出目変更判別は十分再探索後も本機固有直接資料を確定できず `UNVERIFIED_AFTER_RESEARCH`。
 
-- https://www.all7.jp/plans/index/2008/12/10 — ALL7。当時新台導入予定、タイヨー、2008-12-08。
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/taiyo_slot/66/a.php — パチマガスロマガ。2027タイプART、JAC BONUS 2G終了、ART約+1.8枚/G。
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/taiyo_slot/66/c.php — パチマガスロマガ。1000円あたり31.0G、赤7揃い/ボーナス成立全設定共通1/99.0。
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/taiyo_slot/66/d.php — パチマガスロマガ。ボーナスを入賞させずARTを消化する方式。
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/taiyo_slot/66/h.php — パチマガスロマガ。全設定共通ボーナス1/99.0、シミュレート機械割96.35〜107.63%。
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/taiyo_slot/66/taiyo_slot_66.php — パチマガスロマガ。当該機種に「攻め時・ヤメ時・設定変更時」項目が存在。本文未回収のためリセット確定根拠には未使用。
-- https://w.atwiki.jp/5gouki/pages/132.html — 旧5号機まとめwiki。ART約+1.9枚/G、501G高確、REG1/99.3、機械割96.0〜110.0%、設定変更時1/2高確候補。ただし高確条件は同ページ自身が「未確定情報」と明示。
+主要出典（取得日 2026-09-02）:
+- https://web-greenbelt.jp/00003852/
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/ema_slot/32/a.php
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/ema_slot/32/c.php
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/ema_slot/32/h.php
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/ema_slot/32/ema_slot_32.php
+- https://pacnk.com/slot/tools/sh_imisore2baningued2008b.html
+- https://pacnk.com/photoslot/mlist_2008.html
 
-## 境界監査・重複防止
+## 12月8日境界監査
 
-- **既存326件の再追加禁止。**
-- 2008-12-08群では、ALL7に `いみそ～れ2 ピュアエディション プレミアムビスカス` が同日候補として掲載されるが、既存のピュアエディション25/30とのパネル/仕様同一性を確認してから独立追加可否を判断する。既存性能の安易な複製は禁止。
-- `AうたテレQUEEN(80'sアイドルS)` もALL7 12/08一覧に見えるため、パチスロ対象機か別遊技機かを再確認してから本線へ含める。
-- `いみそ～れ2バーニングエディション25/30` は2008年12月導入までは確認済みだが具体日未確定。12/08以前/同日と確定した場合のみ漏れ防止で遡及追加する。
-- ハイサイ蝶特急の正式型式/検定番号、設定変更時1/2高確候補の独立裏取りは後続QA対象。
+- `AうたテレQUEEN(80'sアイドルS)` は大一の**パチンコ**（CRAうたテレQUEEN）であり、パチスロ本線対象外。ALL7の「すべて」一覧混在をパチスロと誤認しない。
+- `いみそ～れ2 ピュアエディション プレミアムビスカス` はパチスロで、当時資料が25φ/30φを明記。全機種方針と後年独立機種一覧に合わせ327/328として独立登録。
+- `いみそ～れ2 バーニングエディション25/30` は当時グリーンべるとで**2008-11-16から納品予定**と判明。12月候補として先送りせず329/330として遡及補完。
+- 2008年12月後続候補の具体日も短く監査。ALL7では `鬼浜爆走紅蓮隊 爆音烈士編` が **12/14**、`シンゾウニンゲン` と `トリプル沖V` が **12/15**、`スロット代紋TAKE2` が **12/22**。したがって現時点で次の具体日最古は鬼浜12/14。
+- `魔界城`、`シャドウハーツII` は2008年12月機であることは確認できるが、このランでは12/14より前の具体導入日を確定できていない。次回の鬼浜登録前に両機の具体日を短く再監査し、12/14以前と確定すれば漏れ防止で先に挿入する。
 
 ## 次回再開地点
 
-1. **LATEST_HANDOFF基準326件地点 / 2008-12-08境界。**
-2. まず同日候補 `AうたテレQUEEN(80'sアイドルS)` と `いみそ～れ2 ピュアエディション プレミアムビスカス` の対象/重複性を短く監査する。
-3. 同日未処理パチスロがなければ、次の具体導入候補 **`鬼浜爆走紅蓮隊 爆音烈士編`（高砂 / ALL7 2008-12-14導入予定）** を本線として性能コア + v0.7 `resetBehavior` を収集する。
-4. 12/08以前/同日に具体導入日付き漏れが見つかれば遡及挿入する。
-5. 欠損は表記揺れ・型式・メーカー・シリーズ名と、設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックン/有利区間を含む検索語・資料系統を変えて十分再探索後のみ `UNVERIFIED_AFTER_RESEARCH` とする。
+1. **LATEST_HANDOFF基準330件地点 / 時系列本線は2008-12-08完了。**
+2. まず `魔界城`（岡崎産業）と `シャドウハーツII`（ミズホ）の具体導入日を再監査し、**2008-12-14より前**と確定するか確認する。
+3. それ以前の未登録がなければ次は **`鬼浜爆走紅蓮隊 爆音烈士編`（アビリット/高砂系、2008-12-14納品開始予定）**。性能コア + v0.7 `resetBehavior` を収集する。
+4. その後はALL7具体日順に、12/15群（少なくともパチスロ `シンゾウニンゲン` / `トリプル沖V` / 既存確認が必要な `HAIBいちろう`）→12/22 `スロット代紋TAKE2` を監査。
+5. 後年12月一覧にあるその他機種（例: `魔界城` / `シャドウハーツII`）も具体日を確定して順序へ挿入する。
+6. 欠損は表記揺れ・型式・メーカー・シリーズ名と、設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックン/有利区間を含む検索語・資料系統を変えて十分再探索後のみ `UNVERIFIED_AFTER_RESEARCH` とする。
+
+## コミット（今回）
+
+- 327 ピュア25: `bd41450ff7ea2c999de3e88f216ad2d6777d0c3f`
+- 328 ピュア30: `b123107f93c1ede7bdd5d3b1f31f016d849ff04c`
+- 329 バーニング25: `bf8694ad21c9ee282e5ed19ddef4df77d5d39a1c`
+- 330 バーニング30: `80996db7bd875e1f3f9aff1a9723d84c6d5dc9ef`
