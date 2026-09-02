@@ -6,87 +6,99 @@
 
 - 最新mainの `README.md`、実機DBミッションv0.7、`INDEX.md`、既存レコード、直前 `LATEST_HANDOFF.md` を再読して継続。
 - `INDEX.md` は旧19件地点のため、README規定どおり本 `LATEST_HANDOFF.md` を進捗正本とする。
-- 直前正本は **336件地点 / 2009-01-12 キング・コングまで完了**。
-- 直前指示どおり2009-01-01〜11を再監査した結果、**2009-01-04納品開始の未処理機「パチスロ秘密戦隊ゴレンジャー」**を当時グリーンべると記事で確定。
-- 今回、時系列漏れとして **337 `パチスロ秘密戦隊ゴレンジャー`（SANKYO）** を遡及追加。
-- **既存337件の再追加禁止。**
+- 直前正本は **337件地点 / 2009-01-04 パチスロ秘密戦隊ゴレンジャーを遡及追加済み**。
+- 2009-01-01〜04の追加具体日未処理機を再監査し、今回さらに安全に挿入すべき機種は確定せず。
+- 次候補 `悪魔城ドラキュラ` は旧資料の日精度が **2009-01-05 / 2009-01-06で競合**することを確認したため、日付を平均・推測せずCONFLICTとして **338件目**に追加。
+- **既存338件の再追加禁止。**
 
-## 337. パチスロ秘密戦隊ゴレンジャー
+## 338. 悪魔城ドラキュラ
 
 record:
-- `docs/real_machine_db/machines/2009-01-04_himitsu-sentai-gorenger.md`
+- `docs/real_machine_db/machines/2009-01-05_akumajo-dracula.md`
 
 要点:
-- machineName: **パチスロ秘密戦隊ゴレンジャー**
-- manufacturer: **SANKYO**
-- releaseDate: **2009-01-04**。当時グリーンべると記事が「1月4日から納品を開始」と明記。SANKYO公式オンライン博物館は導入年月2009.01。
-- modelNumber: **パチスロ秘密戦隊ゴレンジャー**
-- approvalNumber: **8S0923**（P-WORLD）
+- machineName: **悪魔城ドラキュラ**
+- manufacturer: **KPE**
+- releaseDate: **CONFLICT_DAY: 2009-01-05 / 2009-01-06**。HAZUSE DATAは導入開始日1/5、パチビーは導入日1/6。KONAMI公式機種アーカイブは稼働開始2009年1月までなので、日精度は競合のまま保持。
+- modelNumber: **悪魔城ドラキュラJG**
+- approvalNumber: **8S0855**
 - generation: **5号機**
-- systemType: **ボーナス+貫通型RT**
+- systemType: **ボーナス+RT/CZ+継続率ART**
 - 設定構成: **1 / 2 / 3 / 4 / 5 / 6**
-- 機械割: **97 / 99 / 101 / 104 / 108 / 112%**。K-Navi、P-WORLD、当時5号機まとめで一致。
-- BIG合算: **1/496 → 1/385**、CHALLENGE BONUS合算: **1/81 → 1/62**、総ボーナス合算: **1/69 → 1/53**。SANKYO公式アーカイブとK-Naviで一致。
-- 50枚ベース: **34.01 / 34.36 / 34.69 / 35.04 / 35.36 / 35.74G**。当時5号機まとめの単一表なので `ANALYSIS_SINGLE` として保持し、別系統照合待ち。
-- 赤BIG約**260枚**、青/黄BIG約**120枚**、赤CB約**90枚**、青CB約**63枚**、黄CB約**45枚**。パチマガスロマガ旧ページとP-WORLDで整合。
-- RT「ゴレンジャータイム」はBIG後必ず突入。青/黄BIG後**200G**、赤BIG後**9999Gまたは次回BIGまで**。RT中CBでは終了しない貫通型。
-- RT純増はP-WORLDが**現状維持程度**、当時5号機まとめが**CB込み期待値約+0.9枚/G**。定義が異なるためCONFLICT扱いせず別定義で保持。
-- `coreStatus=COMPLETE_CORE_WITH_BASE_SINGLE_SOURCE`。
+- 機械割: **97.8 / 99.2 / 101.3 / 104.0 / 108.4 / 112.1%**。P-WORLD、K-Navi、パチビーで一致。
+- BIG: **1/516.0 → 1/481.9**。REGはP-WORLD/K-Navi系列 **1/555.4 → 1/422.8** とHAZUSE系列で一部設定に小差があるためCONFLICT保持。
+- 50枚ベース: **32.2 / 32.2 / 32.1 / 32.3 / 32.1 / 32.1G**（CrankySeven設定別表、別系統設定別照合待ち）。
+- BIG約**260枚**、REG約**45枚**。
+- ART「バトルゾーン」: **30G/1セット、約+1.1枚/G、継続率66/77/88/99%**。
+- RT/CZ「チャレンジゾーン」は規定G最大40G、チェリー入賞で通常へ転落。ART後はリベンジモード。
+- 通常状態**1000G**で天井ART。天井ARTは事実上次回ボーナスまで、約+0.2枚/G。
+- `coreStatus=COMPLETE_CORE_WITH_MINOR_INITIAL_HIT_CONFLICT_AND_BASE_SINGLE_SOURCE`。
 
 ### v0.7 resetBehavior
 
-- `settingChangeBehavior`: **UNVERIFIED_AFTER_RESEARCH**。
-- `carryOverBehavior`: **UNVERIFIED_AFTER_RESEARCH**。
+- `settingChangeBehavior`: **天井までのG数、滞在ステージ、チェリーナビストック、内部状態、十字架個数は設定変更でもリセットされない**。
+- `gameCounterReset`: **NOT_RESET_ON_SETTING_CHANGE**。
+- `ceilingAfterReset`: 通常1000G天井を設定変更しても残りG数引継ぎ。短縮天井への再設定ではない。
+- `modeAfterReset`: 滞在ステージはリセットされない。朝一専用モードは確認できず。
+- `stateAfterReset`: 内部状態はリセットされない。
+- `carryOverBehavior`: 設定変更でも保持される仕様と据え置き保持は整合するが、「据え置き時」直接記述は未回収のためPARTIAL。
 - `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH**。
-- `gameCounterReset`: **NONE_CONFIRMED_AFTER_RESEARCH**。通常時ゲーム数天井を本機固有資料で確認できず。
-- `ceilingAfterReset`: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- `modeAfterReset`: **NOT_APPLICABLE_OR_NONE_CONFIRMED_AFTER_RESEARCH**。
-- `stateAfterReset`: **UNVERIFIED_AFTER_RESEARCH**。
-- `advantageousSectionReset`: **NOT_APPLICABLE**（5号機・有利区間制度前）。
-- `resetBenefits` / `resetPenalties`: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- `resetDetection`: **UNVERIFIED_AFTER_RESEARCH**。
-- 公開朝一数値: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- 機種名/型式/メーカーに設定変更/リセット/朝一/据え置き/電源OFF ON/天井/RT/状態/ガックンを組み替え、SANKYO公式、業界記事、P-WORLD、K-Navi、パチマガスロマガ旧ページ、当時5号機まとめ/回顧資料まで横断後にUNVERIFIED判定。BIG後RT200G/9999Gを通常時天井やリセット天井へ流用しない。一般的5号機挙動から補完しない。
-
-### 資料QA注意
-
-- 現行の5号機クロニクルSANKYO一覧の検索結果には、本機をA+ART・BIG約208枚/REG約60枚・ART初当たり等とする、SANKYO公式/P-WORLD/K-Navi/当時パチマガと整合しない記述が混入している。
-- 別機種級の内容不整合と判断し、本機の性能値には採用しない。競合値として平均もしない。
+- `advantageousSectionReset`: **NOT_APPLICABLE**。
+- `resetBenefits`: 前日天井残G・十字架・チェリーナビ等が設定変更後も残るため、前日状況次第で朝一狙い価値が残存。設定変更専用の追加恩恵は確認できず。
+- `resetDetection`: K-Naviに「朝イチにRTスタート?」「十字架の数に注目」の攻略項目は現存するが本文復元不能。ガックン等の確定判別はUNVERIFIED。
+- 公開朝一当選率/恩恵発生率: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- パチビーとCrankySevenで「天井G数が設定変更でもクリアされない」が一致。パチビーはさらに滞在ステージ・チェリーナビストック・内部状態・十字架個数も非リセットと明記。中一商事の実機資料にも同一説明あり。
+- `resetBehaviorQA=PARTIAL_HIGH_CONFIDENCE_SETTING_CHANGE_BEHAVIOR_POWER_CYCLE_UNVERIFIED`。
 
 主要出典（取得日 2026-09-02）:
-- https://web-greenbelt.jp/00003962/
-- https://www.sankyo-fever.jp/collection/531/
-- https://www.p-world.co.jp/machine/database/5407
-- https://p-kn.com/slot/900/
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sankyo_slot/15/a.php
-- https://w.atwiki.jp/5gouki/pages/138.html
-- https://sulocale.sulopachinews.com/archives/23606
+- https://www.konami.com/amusement/psm/archive/ps/2009/dracula/
+- https://www.pachibee.jp/machines/index/209090001
+- https://data.hazuse.com/?genre=208&machine_code=8S0855
+- https://www.p-world.co.jp/machine/database/5384
+- https://p-kn.com/slot/898/
+- https://crankyseven.com/sp/akumajou-pc.htm
+- https://www.nakaiti.com/html/sKpe20250201.html
+- https://p-mans.blogspot.com/2008/11/
 
 ## 2009-01境界監査
 
-- 直前336件地点では、具体日を強く確認できた最古候補を1/12キング・コングとしていたが、今回再監査で **1/4 パチスロ秘密戦隊ゴレンジャー**を当時業界記事から確定したため遡及追加。
-- **悪魔城ドラキュラ（KPE）**はパチビーで **2009-01-06導入**、KONAMI公式アーカイブで稼働開始2009年1月を確認済み。現時点の次の具体日未処理本線候補。
-- **南国育ち30** はグリーンべるとで **2009-01-18納品**を確認済み。
-- 月単位候補 `がんばれ満月姫! / アイムマジック / バケーション / KELOT / マキシマムインパクト / 忍魂 / 甘ぴかっ` は具体導入日を確定してから時系列へ入れる。月情報だけで順序を推測しない。
+- 1/4 `パチスロ秘密戦隊ゴレンジャー`は既存337として保持。
+- `悪魔城ドラキュラ`は1/5（HAZUSE）/1/6（パチビー）のCONFLICTだが、いずれも1/4より後かつ既存1/12キング・コングより前なので、この区間へ338として挿入。
+- 次は **2009-01-07〜11** の具体日付き未処理機を監査する。
+- 1/12 `キング・コング` は既存レコードのため再追加禁止。同日群に未処理があれば追加する。
+- 1/13〜17を閉じた後、既確認の **1/18 南国育ち30** へ接続する。
+- 月単位候補 `がんばれ満月姫! / アイムマジック / バケーション / KELOT / マキシマムインパクト / 忍魂 / 甘ぴかっ` は具体導入日を確定してから時系列へ入れる。
 - `魔界城` / `シャドウハーツII` の具体日が判明した場合は2008-12の正しい位置へ遡及挿入する。
 
 ## resetBehavior遡及QA進捗
 
-- 直前までに **大山鳴動漢みちスロ!（2006-09）** をv0.7化済み。
-- 次は `2006-09_takenaka-naoto-taikoki.md`（竹中直人のパチスロ太閤記）。
-- 新規本線を止めず、QAリレー時に時系列順で進める。
+- **竹中直人のパチスロ太閤記（2006-09）** をv0.7化。
+- 既存`coreStatus=PARTIAL`は維持し、`resetBehaviorQA=PARTIAL_WITH_DEVICE_SPECIFIC_RESET_DETAILS_UNVERIFIED_AFTER_MULTI_SOURCE_RESEARCH`を別管理で追加。
+- パチマガスロマガ旧解析からRT突入契機（MB後/ボーナス成立後/1枚役/RT目）と技術介入構造を再確認し、後年回顧からMB後RT最大100Gも補強。
+- 設定変更・据え置き・電源OFF→ON時のRT残G/内部状態、朝一恩恵/不利、変更判別、公開朝一数値は本機固有資料を確定できず `UNVERIFIED_AFTER_RESEARCH`。一般的初期5号機の挙動から補完していない。
+- 性能PARTIAL再探索も実施したが、設定別BIG/MB確率の数表、50枚ベース、RT純増/Gは今回も安全に復元できず、性能完了判定を上げていない。
+- 次回は既存レコードを時系列走査し、**竹中直人のパチスロ太閤記の次に残るresetBehavior未補完機**から継続する。既にv0.7化済みの機種は飛ばす。
+
+竹中直人のパチスロ太閤記 追加出典（取得日 2026-09-02）:
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/luster_slot/10/a.php
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/luster_slot/10/k.php
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/luster_slot/10/luster_slot_10.php
+- https://www.pachinkovista.com/pfactory/model.php?dsp=1&gc=0&km=2&nid=015898
+- https://pachiseven.jp/articles/detail/11773
+- https://nana-press.com/post/1559653
+- https://5goki.com/luster
 
 ## 次回再開地点
 
-1. **LATEST_HANDOFF基準337件地点。時系列上は2009-01-04 パチスロ秘密戦隊ゴレンジャーを遡及追加済み。336キング・コングも既存レコードとして保持。**
-2. まず **2009-01-01〜05** にさらに具体日付き未処理機がないか短く再監査する。
-3. 未処理がなければ **2009-01-06「悪魔城ドラキュラ」（KPE）** を次の本線として性能コア+v0.7 resetBehaviorを収集する。
-4. その後、1/7〜11と1/12同日群を監査し、キング・コングへ時系列を接続する。キング・コングは再追加しない。
-5. 1/13〜17を閉じ、未処理具体日機がなければ **1/18 南国育ち30** へ進む。
-6. 月単位候補は具体日確定後のみ正しい位置へ追加する。
-7. 遡及QAは **竹中直人のパチスロ太閤記（2006-09）** から再開。
-8. PARTIAL/UNVERIFIEDやreset欠損は、表記揺れ・型式・メーカー・シリーズ名に設定変更/リセット/朝一/据え置き/電源OFF ON/天井/モード/状態/ガックンを組み替え、公式・業界・当時解析・古いDB・アーカイブ・回顧資料まで再探索する。一般論や別機種値から推測補完しない。
+1. **LATEST_HANDOFF基準338件地点。1/4秘密戦隊ゴレンジャー → 1/5・1/6日付CONFLICTの悪魔城ドラキュラまで接続済み。既存1/12キング・コングも保持。**
+2. まず **2009-01-07〜11** に具体日付き未処理機がないか監査する。
+3. 未処理があれば古い順に性能コア+v0.7 resetBehaviorを収集。なければ1/12同日群を監査して既存キング・コングへ接続する。
+4. 1/13〜17を閉じ、未処理具体日機がなければ **2009-01-18 南国育ち30** へ進む。
+5. 月単位候補は具体日確定後のみ正しい位置へ追加する。
+6. 遡及QAは既存レコードを時系列走査し、**竹中直人のパチスロ太閤記より後の最初のresetBehavior未補完機**から再開する。
+7. PARTIAL/UNVERIFIEDやreset欠損は表記揺れ・型式・メーカー・シリーズ名と検索語を組み替え、公式・業界・当時解析・古いDB・アーカイブ・回顧資料まで横断。一般論や別機種値から推測補完しない。
 
 ## コミット（今回）
 
-- 337 パチスロ秘密戦隊ゴレンジャー: `980d48893f8e24039e1fadf7faa67bab87bca9be`
+- 338 悪魔城ドラキュラ: `4c0a76a20b78efd07c354dc8846f5cde5bfac43e`
+- 竹中直人のパチスロ太閤記 resetBehavior QA: `b439a8500949cd97733139bdb7cae021ea9920c2`
