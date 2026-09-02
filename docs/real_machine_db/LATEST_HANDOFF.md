@@ -6,9 +6,64 @@
 
 - 毎回最新mainの `README.md`、実機DBミッションv0.7、旧 `INDEX.md`、本 `LATEST_HANDOFF.md`、既存レコード、直近mainを再取得する。
 - `INDEX.md` は旧履歴集計。運用上の正本は本 `LATEST_HANDOFF.md` とrepo実ファイル/直近mainコミット。
-- 本線は **417件 `ダブルアタック`** まで進行。
-- 416 `マジックスパイス` 後の2009-10-19同日群を継続監査し、HANDOFF指定の未処理候補 `ダブルアタック` を追加した。
+- 本線は **418件 `パチスロ エイリアンVSプレデター`** まで進行。
+- 417 `ダブルアタック` 後の2009-10-19同日群・10/20〜25境界を監査。HANDOFFではグリーンべると当時記事の2009-10-25納品開始を根拠に次候補としていたが、パチビーでは導入日2009-10-19が確認できたため、日付定義CONFLICTを保持したうえで10/19同日群の遡及漏れとして追加した。
 - `ハイパールーレット` / `パチスロ遠山の金さん` は2009年10月中旬までは確認済みだが具体日を高信頼確定できていないため、無理に日付固定せず保留継続。
+
+## 418. パチスロ エイリアンVSプレデター
+
+record:
+- `docs/real_machine_db/machines/2009-10_alien-vs-predator.md`
+
+machine record commit:
+- `113b91c5b097024fb2ce53c218f02cb58bf44fef`
+
+要点:
+- manufacturer: **藤商事**
+- formalModelName: **エーブイピーFS2**
+- approvalNumber: **9S0386**
+- releaseDate: **CONFLICT_DATE_DEFINITION — 2009-10-19（パチビー導入日） / 2009-10-25〜（グリーンべると当時記事の納品開始） / 2009年10月（P-WORLD・藤商事公式精度）**
+- generation: **5号機**
+- systemType: **ボーナス + ART / AT・周期CZ / 2段階ボーナス間天井**
+- BIG: **全設定1/436.9**
+- REG: **1/478.4 → 1/445.8**
+- 合算: **1/228.4 → 1/220.7**
+- 機械割主系列: **97.3 / 99.3 / 104.0 / 106.8 / 114.0 / 119.0%**
+- 旧パチマガPAYOUTレンジ: **97.0〜97.3 / 98.4〜99.3 / 102.4〜104.0 / 105.2〜106.8 / 110.0〜114.0 / 119.0%**
+- BIG約**252枚**、REG/BONUS GAME約**56枚**。
+- ART「バーサスラッシュ」: **50G/セット、約+1.2枚/G**。当時グリーンべるとの1セット純増約60枚と整合。
+- 通常時約100G周期でCZ「エイリアンミッション」。
+- ボーナス間 **1200G** 到達後の次回ボーナスでART確定。**1700G** 到達後はBIGならART7セット以上、REGなら9セット以上。
+
+### baseGamesPer50
+
+- `パチスロ エイリアンVSプレデター / エイリアンvsプレデター / AVP / エーブイピーFS2 / FS1 / 藤商事` と `50枚 / 1000円 / ベース / コイン持ち / 回転数 / 小役確率` を組み替え再探索。
+- パチマガスロマガ旧解析の本機小役ページにも `[1000円あたりのゲーム数] 現在調査中` と残っており、直接値を確定できず。
+- 小役確率から推定せず `UNVERIFIED_AFTER_RESEARCH`。
+
+### v0.7 resetBehavior — エイリアンVSプレデター
+
+- `settingChangeBehavior`: **UNVERIFIED_AFTER_RESEARCH**。1200/1700G進捗、約100G周期CZ、AT/ART・セットストックの設定変更処理を本機固有本文で確定できず。
+- `carryOverBehavior`: **UNVERIFIED_AFTER_RESEARCH**。据え置き時の天井進捗・周期CZ・AT/ART/ストック引継ぎを直接確認できず。
+- `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH**。単純電源OFF→ON時の天井進捗、周期CZ、AT/ART/ストック、表示状態を直接確認できず。
+- `gameCounterReset`: **UNVERIFIED_AFTER_RESEARCH**。通常1200/1700G天井は確定したが、設定変更でリセットか引継ぎか未確定。
+- `ceilingAfterReset`: **UNVERIFIED_AFTER_RESEARCH**。リセット専用短縮/変更値は未確認。
+- `modeAfterReset`: **UNVERIFIED_AFTER_RESEARCH_FOR_PERIODIC_CZ_PROGRESS**。
+- `stateAfterReset`: **UNVERIFIED_AFTER_RESEARCH_FOR_AT_ART_AND_STOCK_STATE**。
+- `advantageousSectionReset`: `NOT_APPLICABLE`（5号機）。
+- `resetBenefits` / `resetPenalties`: `NONE_CONFIRMED_AFTER_RESEARCH`。
+- `resetDetection`: **UNVERIFIED_AFTER_RESEARCH**。
+- 公開朝一専用当選率/モード振分/恩恵率: `NONE_CONFIRMED_AFTER_RESEARCH`。
+- 旧パチマガ機種INDEXに「攻め時・ヤメ時・設定変更時」項目の存在までは確認したが具体本文を回収できず、一般的5号機挙動で補完しなかった。
+
+### データ品質メモ — エイリアンVSプレデター
+
+- 藤商事公式、グリーンべると2009年当時記事、P-WORLD、パチビー、パチマガスロマガ旧解析、2009年検定情報、旧機種まとめ、後年回顧を横断。
+- 型式名・検定番号はP-WORLDと2009年検定情報/旧まとめの型式対応で整合。
+- 主要ボーナス確率、ART純増、獲得枚数、1200/1700G天井は複数資料系統で高整合。
+- 導入日だけパチビー2009-10-19とグリーンべると納品開始2009-10-25が並立するため `CONFLICT_DATE_DEFINITION`。
+- 後年個人回顧に設定6機械割110.01%という値があるが、当時業界記事・P-WORLD・パチビー・旧パチマガの119%と明確に矛盾するため主値に採用せず低信頼競合として隔離。
+- resetBehavior欠損は表記揺れ/型式/メーカーと `設定変更 / リセット / 朝一 / 朝イチ / 据え置き / 電源OFF ON / 天井 / 1200G / 1700G / 周期 / 宵越し / ガックン / ART` を組み替え、複数資料系統を再探索後のみUNVERIFIEDとした。
 
 ## 417. ダブルアタック
 
@@ -19,52 +74,10 @@ machine record commit:
 - `d401b48e8865ea7b2d7af7a1c59f7d7420c81f0e`
 
 要点:
-- manufacturer: **オーイズミ**
-- formalModelName: **ダブルアタック2X**
-- approvalNumber: **9S0581**
-- releaseDate: **2009-10-19**（パチビー導入日。P-WORLDは2009年10月精度）
-- generation: **5号機**
-- systemType: **ボーナス + ART / CZ・333G以降高確率状態**
-- 赤7DC: **1/119.59 → 1/99.90**
-- 青7DC: **1/595.78 → 1/840.21**
-- 合算: **1/99.60 → 1/89.29**
-- 赤7/青7とも基本獲得約38枚。
-- ART「ラッシュタイム」: **約+1.5枚/G**。
-- ボーナス後ダブルアップは最大5回成功で初期ARTゲーム数を最大32倍。
-- 通常時 **333G以降は次回ボーナスまで高確率状態**となり、ボーナス中の大量ART獲得期待が上がる。
-
-### 機械割CONFLICT
-
-- メーカー発表値（P-WORLD/パチマガ掲載）: **98.0 / 99.3 / 101.0 / 103.4 / 105.6 / 110.1%**
-- パチマガスロマガ旧解析シミュレート: **98.58 / 99.64 / 101.19 / 102.89 / 104.51 / 108.03%**
-- 設定4〜6を中心に単純丸め差ではないため平均せず両系列保持。
-
-### baseGamesPer50
-
-- `ダブルアタック / ダブルアタック2X / オーイズミ` と `50枚 / 1000円 / ベース / コイン持ち / 回転数 / 小役確率` を組み替え、P-WORLD、パチビー、パチマガスロマガ旧DB、回顧資料を再探索したが比較可能な直接値を確定できず。
-- 小役確率から推定せず `UNVERIFIED_AFTER_RESEARCH`。
-
-### v0.7 resetBehavior — ダブルアタック
-
-- `settingChangeBehavior`: **UNVERIFIED_AFTER_RESEARCH**。333G以降高確率状態、通常ゲーム数、ART残G、ボーナス後ダブルアップ状態の設定変更処理を本機固有資料で確定できず。
-- `carryOverBehavior`: **UNVERIFIED_AFTER_RESEARCH**。据え置き時の333G進捗/高確率状態/ART残G引継ぎを直接確認できず。
-- `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH**。単純電源OFF→ON時の333G進捗、高確率状態、ART残G、表示状態を直接確認できず。
-- `gameCounterReset`: **UNVERIFIED_AFTER_RESEARCH**。333G閾値そのものは確定したが、設定変更でカウンタをリセットするか引き継ぐかは未確定。
-- `ceilingAfterReset`: **UNVERIFIED_AFTER_RESEARCH**。設定変更専用短縮/変更値は未確認。
-- `modeAfterReset`: `NOT_APPLICABLE_NO_GAME_COUNT_MODE_CONFIRMED`。
-- `stateAfterReset`: **UNVERIFIED_AFTER_RESEARCH_FOR_HIGH_PROBABILITY_AND_ART_STATE**。
-- `advantageousSectionReset`: `NOT_APPLICABLE`（5号機）。
-- `resetBenefits` / `resetPenalties`: `NONE_CONFIRMED_AFTER_RESEARCH`。
-- `resetDetection`: **UNVERIFIED_AFTER_RESEARCH**。
-- 公開朝一専用当選率/モード振分/恩恵率: `NONE_CONFIRMED_AFTER_RESEARCH`。
-- 2024年 `Lダブルアタック2 with OZS-1000&RAPHAEL` のリセット仕様は別機種のため一切流用していない。
-
-### データ品質メモ — ダブルアタック
-
-- パチビー、P-WORLD、K-Navi、パチマガスロマガ旧DB/旧解析、後年回顧資料を横断。
-- 導入日、型式、検定番号、主要ボーナス確率、ART純増、基本獲得は複数系統で高整合。
-- 50枚ベースだけは直接値を確定できず `UNVERIFIED_AFTER_RESEARCH`。
-- resetBehavior欠損は機種名/型式/メーカーと `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / 333G / 高確 / 宵越し / ガックン / ART / ラッシュタイム` を組み替え、複数資料系統を再探索後のみUNVERIFIEDとした。
+- オーイズミ / 型式ダブルアタック2X / 2009-10-19。
+- 赤7DC 1/119.59→1/99.90、青7DC 1/595.78→1/840.21、合算1/99.60→1/89.29。
+- ART約+1.5枚/G、333G以降は次回ボーナスまで高確率状態。
+- 機械割はメーカー発表値98.0〜110.1%と旧パチマガシミュレート98.58〜108.03%がCONFLICT。
 
 ## 416. マジックスパイス
 
@@ -77,7 +90,6 @@ machine record commit:
 要点:
 - 岡崎産業（STLYブランド） / 2009-10-19。
 - ボーナス + BRT。50枚ベース29.2〜30.9G、BRT約+0.6枚/G。
-- 機械割はP-WORLD/パチビー系列96.5〜106.2%と旧パチマガシミュレート96.01〜105.12%がCONFLICT。
 
 ## 415. GS美神 極楽大作戦!!
 
@@ -110,10 +122,10 @@ machine record commit:
 ## 次回再開地点
 
 ### 本線
-1. **417件地点 / ダブルアタック（2009-10-19）まで収録**から再開。
-2. 2009-10-19同日群を最終監査し、未処理具体日機がなければ **2009-10-20〜10-24** を境界監査。
-3. `パチスロ エイリアンVSプレデター` はグリーンべると当時記事で **2009-10-25納品開始** と確認済み。10/19群・10/20〜24に未処理がなければ次の有力候補として処理する。
-4. `ハイパールーレット` / `パチスロ遠山の金さん` は具体日を取れれば正しい時系列へ挿入。取れなければ月/旬精度の不確実性を保持し、本線を止めない。
+1. **418件地点 / パチスロ エイリアンVSプレデターまで収録**から再開。
+2. 2009-10-19同日群を最終監査し、**2009-10-20〜10-31** の具体日付き未処理機を境界監査する。エイリアンVSプレデターは導入日10/19・納品開始10/25の定義差を保持済みなので再登録しない。
+3. `ハイパールーレット` はグリーンべると当時記事で **2009年10月中旬より納品開始予定**、`パチスロ遠山の金さん` はK-Naviで **2009年10月中旬ホール導入予定** まで確認済み。具体日を高信頼確定できれば正しい位置へ遡及挿入し、確定できなければ月/旬精度の不確実性を保持して本線を止めない。
+4. 10月末まで具体日付き未処理がなければ **2009年11月初旬群** へ進む。必ずP-WORLD/パチビー/当時業界記事/旧発売一覧を再横断し、候補を確定してから追加する。
 5. 各候補は性能コア＋v0.7 resetBehaviorを同時収集。競合値は平均せずCONFLICT、欠損は十分な再探索後のみUNVERIFIED_AFTER_RESEARCH。
 
 ### resetBehavior遡及QA
@@ -130,6 +142,6 @@ machine record commit:
 
 ## 今回の保存
 
-- 417 ダブルアタック: `docs/real_machine_db/machines/2009-10-19_double-attack.md`
-- machine record commit: `d401b48e8865ea7b2d7af7a1c59f7d7420c81f0e`
-- 本 `LATEST_HANDOFF.md` を417件地点へ更新。
+- 418 パチスロ エイリアンVSプレデター: `docs/real_machine_db/machines/2009-10_alien-vs-predator.md`
+- machine record commit: `113b91c5b097024fb2ce53c218f02cb58bf44fef`
+- 本 `LATEST_HANDOFF.md` を418件地点へ更新。
