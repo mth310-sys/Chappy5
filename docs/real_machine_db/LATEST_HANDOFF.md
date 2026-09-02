@@ -6,10 +6,46 @@
 
 - 毎回最新mainの `README.md`、実機DBミッションv0.7、旧 `INDEX.md`、本 `LATEST_HANDOFF.md`、既存レコード、直近コミットを再取得する。
 - `INDEX.md` は19件地点の旧履歴集計。運用上の正本は本 `LATEST_HANDOFF.md` とrepoの実ファイル/直近mainコミット。
-- 今回開始時の最新mainは **401件 `めぞん一刻2`** まで完了済みだったため、401を正本として継続。
-- 2009-08-24同日群を再監査し、未登録だったエマ `イケイケめんそーれ-30` を発見。repo検索で未登録確認後、**402** に追加。
+- 今回開始時の最新mainは **402件 `イケイケめんそーれ-30`** まで完了済みだったため、402を正本として継続。
+- 2009-08-24同日群を最終監査し、2009-08-25〜29も日付/導入/納品検索を行ったが、402より後かつ8月30日より前に今回安全に追加できる未登録5号機は確認できず。
+- repo検索で未登録を確認したうえで、パイオニア **`サンサンハナハナ-30`** を **403** に追加。
 
-## 402. イケイケめんそーれ-30
+## 403. サンサンハナハナ-30
+
+record:
+- `docs/real_machine_db/machines/2009-08-30_sansan-hanahana-30.md`
+
+machine record commit:
+- `b2e7a3075a4416362eb9a3008f12f97fd6f2284a`
+
+要点:
+- manufacturer: **パイオニア**
+- formalModelName: **UNVERIFIED_AFTER_RESEARCH**
+- inspectionNumber: **UNVERIFIED_AFTER_RESEARCH**
+- releaseDate: **2009-08-30（納品開始予定日）**。2009-07-31グリーンべるとが8月30日納品予定、パイオニア公式は2009年08月発売。全国ホール稼働開始の別具体日を確定できないため定義を明記。
+- generation: **5号機**
+- systemType: **ノーマル / 完全告知 / 30Φ / BB+RB**
+- BIG **1/306 → 1/244**、REG **1/496 → 1/364**、合算 **1/189 → 1/146**。
+- 機械割（メーカー発表値） **95 / 98 / 100 / 103 / 106 / 110%**。P-WORLD、当時パチマガ、回顧資料で一致。
+- 1000円あたりのゲーム数は当時業界記事で **約37G**。設定別ベース表は多段再探索後も未確定のため単一値を全設定へ展開しない。
+- BIG平均約**312枚**、REG平均約**130枚**。
+- P-WORLDは「ボーナスのみの仕様」と明記。RT/ART/AT/CZ非搭載の純正ノーマル。
+- `coreStatus=COMPLETE_CORE_WITH_FORMAL_MODEL_AND_INSPECTION_UNVERIFIED_RELEASE_DATE_IS_DELIVERY_START`。
+
+### v0.7 resetBehavior — サンサンハナハナ-30
+
+- 通常ゲーム数天井、周期CZ、ゲーム数解除、RT/ART/AT/CZ、ゲーム数管理モード、朝一専用モードは確認されない。
+- `gameCounterReset=NOT_APPLICABLE_NO_CEILING_OR_GAME_COUNT_SYSTEM_CONFIRMED`。
+- `ceilingAfterReset=NOT_APPLICABLE_NO_CEILING_CONFIRMED`。
+- `modeAfterReset=NOT_APPLICABLE_NO_GAME_COUNT_MODE_SYSTEM_CONFIRMED`。
+- `stateAfterReset=NOT_APPLICABLE_FOR_RT_ART_AT_CZ_STATE / OTHER_INTERNAL_START_STATE_UNVERIFIED`。
+- 有利区間は5号機のため `NOT_APPLICABLE`。
+- 設定変更固有の短縮天井、朝一モード優遇、CZ/初当たり優遇、公開朝一当選率/恩恵率は多段再探索後も確認なし。
+- 一方、設定変更時・単純電源OFF→ON時の**リール初期位置、ハイビスカス/サイドランプ、ガックン、初期出目等の本機固有ハード起動挙動**は、機種名/略称/メーカー名と検索語を組み替え、公式、2009年業界記事、P-WORLD、K-Navi、当時パチマガ、旧DB、回顧資料を横断しても直接確証を取れず `UNVERIFIED_AFTER_RESEARCH`。
+- 6号機AT `スーパーハナハナ` 等のリセット解析は別世代・別システムなので流用しない。
+- 公開朝一数値は `NONE_CONFIRMED`。
+
+## 402. イケイケめんそーれ-30（直前）
 
 record:
 - `docs/real_machine_db/machines/2009-08-24_ikeike-mensore-30.md`
@@ -17,70 +53,9 @@ record:
 machine record commit:
 - `9e5bdf1898752bcc0b638ba4341ba87d4e19954c`
 
-要点:
-- manufacturer: **エマ**
-- formalModelName: **メンソーレ3H-30**（2009年当時グリーンべると）
-- inspectionNumber: **UNVERIFIED_AFTER_RESEARCH**
-- releaseDate: **2009-08-24**（K-Naviホール導入開始）。2009-07-30グリーンべるとは「8月下旬納品開始」。5号機クロニクルは2009/9、筐体回顧は2009/6表記のため月表記差を `CONFLICT` として保持。
-- generation: **5号機**
-- systemType: **ノーマル / 完全告知 / 30Φ / BB+RB**
-- RT非搭載の純正ノーマルタイプ。
-- BIG **1/318.14 → 1/266.41**、REG **1/537.18 → 1/381.02**、合算 **1/199.80 → 1/156.78**。当時パチマガスロマガ精密値、K-Navi丸め値、当時業界記事端点で整合。
-- 50枚ベース相当（1000円あたり）は設定1→6で **38.02 / 38.21 / 38.46 / 38.67 / 38.93 / 39.14G**。
-- BIG約**312枚**、REG約**130枚**。
-- 機械割は資料系列が不一致のため `CONFLICT_PAYOUT_RATE`：
-  - 当時パチマガスロマガ（シミュレート） **96.54 / 98.68 / 100.93 / 103.06 / 105.26 / 107.42%**
-  - 5号機クロニクル **97.1 / 99.1 / 101.2 / 103.2 / 105.2 / 107.3%**
-  - pacnk **96.2 / 98.5 / 100.3 / 103.3 / 106.1 / 109.0%**
-- 算出条件を直接解消できないため平均せず三系列保持。
-- `coreStatus=COMPLETE_CORE_WITH_PAYOUT_AND_RELEASE_DATE_CONFLICT_INSPECTION_UNVERIFIED`。
-
-### v0.7 resetBehavior — イケイケめんそーれ-30
-
-- 純正ノーマルでRT/ART/AT/CZ非搭載。当時パチマガスロマガも「攻め時・ヤメ時→特にナシ」。ゲーム数天井、周期CZ、ゲーム数管理モード、朝一専用モードは確認されない。
-- `gameCounterReset=NOT_APPLICABLE_NO_CEILING_OR_GAME_COUNT_SYSTEM_CONFIRMED`。
-- `ceilingAfterReset=NOT_APPLICABLE_NO_CEILING_CONFIRMED`。
-- `modeAfterReset=NOT_APPLICABLE_NO_GAME_COUNT_MODE_SYSTEM_CONFIRMED`。
-- `stateAfterReset=NOT_APPLICABLE_FOR_RT_ART_CZ_STATE / OTHER_INTERNAL_START_STATE_UNVERIFIED`。
-- 有利区間は5号機のため `NOT_APPLICABLE`。
-- 設定変更固有の短縮天井、モード優遇、CZ/初当たり優遇等の公開朝一恩恵/不利は多段再探索後も確認なし。
-- 一方、設定変更操作時や単純電源OFF→ON時の**リール初期位置・ガックン・ハイビスカス/ドット表示等の本機固有ハード起動挙動**は、型式名 `メンソーレ3H-30` も含め検索語・資料系統を変えても直接確証を取れず `UNVERIFIED_AFTER_RESEARCH`。
-- 4号機「めんそーれ30」には設定変更時モード解析があるが、5号機純正ノーマルの本機とは別機種なので混入させない。
-- 公開朝一数値は `NONE_CONFIRMED`。
-
-## 401. めぞん一刻2（直前）
-
-record:
-- `docs/real_machine_db/machines/2009-08-24_maison-ikkoku-2.md`
-
-machine record commit:
-- `a9aace00fd72e504553d51390e8fbab1fd14c54e`
-
-- 設定変更時ART＆ストック消滅 / 天井ゲーム数再セットを確認済み。
-- 設定変更後の公開朝一数値として **50%で590G以内 / 85%で990G以内**の天井発動を保存済み。
-- 単純電断、内部高確/通常モード、本機固有ガックンは未確認部分を分離済み。
-
-## 400. パチスロがんばれ!!ロボコン
-
-record:
-- `docs/real_machine_db/machines/2009-08-24_ganbare-robocon.md`
-
-machine record commit:
-- `1780df9c1b33f1df524b716eddac04408bb051e4`
-
-- 設定変更後は内部CZ開始まで確認済み。
-- 900G天井カウンタclear/retain、据え置き、単純電断、変更判別は未確認部分を分離して保存済み。
-
-## 399. 神たま～ARTやで!全員集合～
-
-record:
-- `docs/real_machine_db/machines/2009-08-24_kamitama-art.md`
-
-machine record commit:
-- `f9b7c96cc03f221a70f9376b6ebc4da9634abb81`
-
-- 設定変更時ナビストック消滅 / 1/2高確スタートまで確認済み。
-- 999G天井高確カウンタ、周期CZカウンタ、据え置き、単純電断、変更判別は未確認部分を分離して保存済み。
+- 純正ノーマル/30Φ、天井・RT/ART・ゲーム数モード非搭載。
+- 設定変更/電断ハード挙動は本機固有資料未確認部分を分離済み。
+- 機械割は三系列CONFLICTを平均せず保持。
 
 ## resetBehavior遡及QA
 
@@ -100,12 +75,11 @@ machine record commit:
 ## 次回再開地点
 
 ### 本線
-1. **402件地点 / イケイケめんそーれ-30まで完了**から再開。
-2. **2009-08-24同日群をもう一度最終監査**。K-Navi/メーカー別一覧/当時導入一覧で未処理がないか確認する。今回、同日群からイケイケめんそーれ-30の漏れを発見したため、同日閉鎖を急がない。
-3. 同日群終了後、**2009-08-25〜29**を境界監査する。
-4. `サンサンハナハナ-30` はパイオニア2009年モデル。2009-07-31グリーンべるとが **2009-08-30納品予定**、P-WORLDが2009年8月導入としている。repo未登録確認後、8/24〜29により古い未処理がなければ次の有力候補。
-5. 8月30日群を閉じたら8月31日/9月初頭へ時系列継続する。
-6. `イケイケめんそーれ-30` は5号機クロニクルで2009/9表記もあるが、K-Naviの具体的ホール導入日2009-08-24と当時業界記事の8月下旬納品が整合するため、時系列本線では8/24同日群として処理済み。再登録しない。
+1. **403件地点 / サンサンハナハナ-30まで完了**から再開。
+2. **2009-08-30同日群を最終監査**。メーカー別一覧/K-Navi/当時導入・納品一覧で、サンサンハナハナ-30より先に処理すべき同日未登録機がないか確認する。
+3. 同日群を閉じたら **2009-08-31〜2009-09-06** を境界監査する。今回の一般検索では8月31日固有の安全な未登録機を確定できていないため、次担当は表記/型式/メーカー別一覧を変えて再監査してから9月へ進む。
+4. その後は **2009年9月本線**を導入/納品日の古い順に継続する。後年記事やパチンコ機を混入させない。
+5. `サンサンハナハナ-30` は2009-08-30を「全国ホール導入日」と断定せず、当時業界記事の「納品開始予定日」として登録済み。別の具体的ホール稼働開始日が後続QAで取れた場合のみ更新する。
 
 ### resetBehavior遡及QA
 1. **スパイダーマン2Gまで補完済み**。
@@ -120,6 +94,6 @@ machine record commit:
 
 ## 今回の保存
 
-- 402 イケイケめんそーれ-30: `docs/real_machine_db/machines/2009-08-24_ikeike-mensore-30.md`
-- machine record commit: `9e5bdf1898752bcc0b638ba4341ba87d4e19954c`
-- 本 `LATEST_HANDOFF.md` を402件地点へ更新。
+- 403 サンサンハナハナ-30: `docs/real_machine_db/machines/2009-08-30_sansan-hanahana-30.md`
+- machine record commit: `b2e7a3075a4416362eb9a3008f12f97fd6f2284a`
+- 本 `LATEST_HANDOFF.md` を403件地点へ更新。
