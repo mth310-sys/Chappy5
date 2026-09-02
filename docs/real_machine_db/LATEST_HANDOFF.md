@@ -6,11 +6,41 @@
 
 - 毎回最新mainの `README.md`、実機DBミッションv0.7、旧 `INDEX.md`、本 `LATEST_HANDOFF.md`、既存レコード、直近コミットを再取得する。
 - `INDEX.md` は旧履歴集計。運用上の正本は本 `LATEST_HANDOFF.md` とrepo実ファイル/直近mainコミット。
-- 今回開始時の最新mainは **410件 `銀河英雄伝説`** まで進行済み。
-- 2009-09-28同日群と2009-09-29〜30境界を再監査し、追加の安全な未登録パチスロを確定できなかったため9月を閉じた。
-- 2009年10月へ進み、repo未登録かつ具体日資料を確認したニューギン **`スモモチャン`** を **411** として性能コア＋v0.7 resetBehavior同時収集した。
+- 本線は **412件 `ゴールデンベルE`** まで進行。
+- 411 `スモモチャン` 後、2009-10-01同日群と10-02〜10-11境界を再監査。P-WORLD月次一覧では月精度だったベルコ `ゴールデンベルE` について、同機ページの2009-10-09当時掲示板に「設置済み」言及、10-12にはダイナム専用機として実戦した言及を確認した。
+- 全国導入開始の具体日は一次/業界資料で確定できなかったため、412の `releaseDate` は **2009-10（月精度）** のまま保持し、10-09は `earliestObservedInstallationTrace` 相当の補助証拠としてのみ扱う。ユーザー投稿を全国導入日へ格上げしない。
 
-## 411. スモモチャン
+## 412. ゴールデンベルE
+
+record:
+- `docs/real_machine_db/machines/2009-10_golden-bell-e.md`
+
+machine record commit:
+- `5d8618a6746013a8b86f03ad6ea56e547fec7d33`
+
+要点:
+- manufacturer: **ベルコ**
+- formalModelName: **ゴールデンベルE**
+- approvalNumber: **8S1379**
+- releaseDate: **2009-10**。P-WORLD掲示板に2009-10-09時点の設置済み言及あり。ただし全国導入具体日は `UNVERIFIED_AFTER_RESEARCH`。
+- generation: **5号機**
+- systemType: **ノーマル / ボーナス主体**
+- BIG: **1/297.0 → 1/260.0**
+- REG: **1/481.0 → 1/321.0**
+- 合算: **1/184.0 → 1/143.0**
+- BIGは345枚超払い出しで終了、REGは119枚超払い出しで終了。実純増枚数は終了条件と混同せず未確定。
+- 設定別機械割、50枚ベースは、P-WORLD / 5号機クロニクル / pacnk と表記・検索語を変えて再探索したが直接値を確定できず `UNVERIFIED_AFTER_RESEARCH`。5号機クロニクルも本機の機械割欄が空欄。
+
+### v0.7 resetBehavior — ゴールデンベルE
+
+- ノーマル/ボーナス主体で、通常ゲーム数天井・RT/ART/AT/CZ・長期ゲーム数モードは確認されない。
+- よってゲーム数天井カウンタ、リセット短縮天井、RT/ART状態リセットは `NOT_APPLICABLE`。
+- 有利区間は5号機のため `NOT_APPLICABLE`。
+- 設定変更/据え置き/単純電源OFF→ON時のリール挙動、初期出目、ランプ、ガックン等の本機固有変更判別は、機種名・型式8S1379・ベルコ・ベルシリーズと検索語を組み替えても直接根拠を確定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 朝一専用当選率、リセット恩恵率、短縮天井、設定変更固有ペナルティは `NONE_CONFIRMED_AFTER_RESEARCH`。
+- `resetBehaviorQA=PARTIAL_NO_CEILING_OR_GAMEPLAY_STATE_MACHINE_SPECIFIC_CHANGE_DETECTION_POWER_BEHAVIOR_UNVERIFIED`。
+
+## 411. スモモチャン（直前）
 
 record:
 - `docs/real_machine_db/machines/2009-10-01_sumomo-chan.md`
@@ -19,29 +49,13 @@ machine record commit:
 - `980569219f8e56b568262bf7a317574c0c6a95a8`
 
 要点:
-- manufacturer: **ニューギン**
-- formalModelName: **スモモチャンV**
-- approvalNumber: **9S0445**
-- releaseDate: **CONFLICT — 2009-10-01（K-Naviホール導入開始） / 2009-10-12（2009年当時業界資料の納品予定）**。平均せず両方保持。
-- generation: **5号機**
-- systemType: **ノーマル / ボーナス主体 / 完全告知**
-- P-WORLD主系列の機械割: **95.9 / 96.7 / 98.7 / 100.8 / 102.8 / 105.1%**。旧解析系列は設定1 95.8%、設定6 105.2%でCONFLICT。
-- BIG: **1/287.44 → 1/268.59**、REG: **1/455.11 → 1/268.59**、合算: **1/176.2 → 1/134.3**。
-- BIG平均約**325枚**、REG約**104枚**。
-- 旧解析で50枚ベースは **約34.5〜35.8G** のレンジのみ確認。設定別表は未回収のため各設定へ割り当てない。
-- ボーナスのみで出玉を増やし、通常ゲーム数天井・RT/ART/AT/CZは確認されない。
+- ニューギン / スモモチャンV / 検定9S0445。
+- releaseDateは **CONFLICT — 2009-10-01 K-Naviホール導入開始 / 2009-10-12 当時業界資料の納品予定**。
+- P-WORLD主系列の機械割 95.9〜105.1%、BIG 1/287.44→1/268.59、REG 1/455.11→1/268.59、合算1/176.2→1/134.3。
+- 50枚ベースは約34.5〜35.8Gレンジのみ。
+- resetBehaviorは天井/RT/ART/AT/CZ非該当。ホール選択告知音モードによる設定変更推測の直接記載あり、具体保持/初期化条件は未確認。
 
-### v0.7 resetBehavior — スモモチャン
-
-- ゲーム数天井・RT/ART/AT/CZ・通常時長期ゲームモードがないため、天井カウンタ/短縮天井/ART状態リセットは `NOT_APPLICABLE`。
-- 有利区間は5号機のため `NOT_APPLICABLE`。
-- P-WORLDに、ホールが選択できる「キュイン」「スペシャルキュイン」の有無とモードによっては**設定変更を推測できる**旨の直接記載あり。
-- ただし告知音設定のどの初期化/保持挙動が判別根拠になるか、設定変更時・据え置き時・単純電源OFF→ON時に告知音設定が保持されるかは本機固有資料を確定できず `UNVERIFIED_AFTER_RESEARCH`。
-- ガックン、初期出目、ランプ初期状態など別手段の変更判別も十分再探索後 `UNVERIFIED_AFTER_RESEARCH`。
-- 朝一専用当選率、短縮天井、リセット恩恵率、設定変更固有の不利要素は `NONE_CONFIRMED_AFTER_RESEARCH`。
-- `resetBehaviorQA=PARTIAL_HIGH_VALUE_DETECTION_TRACE_CONFIRMED_NO_CEILING_STATE_POWER_NOTIFICATION_PERSISTENCE_UNVERIFIED`。
-
-## 410. 銀河英雄伝説（直前）
+## 410. 銀河英雄伝説
 
 record:
 - `docs/real_machine_db/machines/2009-09-28_ginga-eiyuu-densetsu.md`
@@ -52,8 +66,7 @@ machine record commit:
 要点:
 - 2009-09-28導入、ミズホ、ボーナス+ART。
 - ART純増約+2.0枚/G、通常ART間1600G天井。
-- K-Naviに設定変更時の天井短縮を示す攻略項目存在を確認したが具体数値は未回収。
-- 天井カウンタ/据え置き/電源OFF→ONの詳細は `UNVERIFIED_AFTER_RESEARCH`。
+- K-Naviに設定変更時天井短縮を示す攻略項目存在。具体数値未回収。
 
 ## 409. パチスロ交響詩篇エウレカセブン
 
@@ -66,7 +79,6 @@ machine record commit:
 要点:
 - 設定変更後は内部高確スタートを旧解析で直接確認。
 - 通常時909Gで天井ART3セット以上。
-- 天井カウンタ/据え置き/電源OFF→ONは直接資料不足でUNVERIFIED。
 
 ## resetBehavior遡及QA
 
@@ -87,13 +99,14 @@ machine record commit:
 ## 次回再開地点
 
 ### 本線
-1. **411件地点 / スモモチャンまで完了**から再開。
-2. **2009-10-01同日群を最終監査**。同日候補・既存登録をrepo実ファイル/履歴と当時導入資料で突合し、漏れを閉じる。
-3. その後 **2009-10-02〜10-11** を境界監査。具体日付き未処理パチスロがあれば最古から412として処理する。
-4. 10月12日群へ進む場合、スモモチャンは当時業界資料で10月12日納品予定でもあるが本レコードで日付CONFLICTとして既収録のため重複登録しない。同日またはそれ以前の別機種を探索する。
-5. その後も2009年10月を具体日優先で前進。月精度しかない機種を具体日機より前へ誤配置しない。
-6. 候補ごとに性能コア＋v0.7 resetBehaviorを同時収集し、欠損は公式・業界・当時解析・古いDB・アーカイブ・回顧まで十分再探索後のみUNVERIFIED。
-7. 競合値は平均せずCONFLICT。後継/同名別機種の数値を転用しない。
+1. **412件地点 / ゴールデンベルEまで収録**から再開。
+2. ゴールデンベルEの全国導入具体日は未確定なので、2009-10-02〜10-12境界について、他の月精度機を具体日機より誤って前へ置かないよう再監査を続ける。
+3. 現時点で具体日を高信頼確認済みの次候補は SANKYO **`KODA KUMI PACHISLOT LIVE IN HALL II` — K-Naviホール導入開始 2009-10-13**。repo未登録を再確認してから413候補として処理する。
+4. ただし `ハイパールーレット` は当時業界資料で10月中旬納品、`パチスロ遠山の金さん` も10月中旬予定なので、10/13より前の具体日を確定できる資料がないか先に最終監査する。
+5. 10/19群として `球児2`、`GS美神極楽大作戦!!`、`マジックスパイス`、`ダブルアタック`、`パチスロ エイリアンVSプレデター` などを確認済み。ただし納品日/ホール開始日の資料差は個別に保持し、具体日順で処理する。
+6. `青ドン〜花火の極〜` はP-WORLD月次では10月側に見えるが、当時業界資料は11/3納品開始、K-Naviは11/4ホール導入開始を示すため10月本線へ前倒ししない。
+7. 候補ごとに性能コア＋v0.7 resetBehaviorを同時収集。欠損は公式・業界・当時解析・古いDB・アーカイブ・回顧まで十分再探索後のみ `UNVERIFIED_AFTER_RESEARCH`。
+8. 競合値は平均せず `CONFLICT`。後継/同名別機種の数値を転用しない。
 
 ### resetBehavior遡及QA
 1. **スロ原人まで補完済み**。
@@ -109,6 +122,6 @@ machine record commit:
 
 ## 今回の保存
 
-- 411 スモモチャン: `docs/real_machine_db/machines/2009-10-01_sumomo-chan.md`
-- machine record commit: `980569219f8e56b568262bf7a317574c0c6a95a8`
-- 本 `LATEST_HANDOFF.md` を411件地点へ更新。
+- 412 ゴールデンベルE: `docs/real_machine_db/machines/2009-10_golden-bell-e.md`
+- machine record commit: `5d8618a6746013a8b86f03ad6ea56e547fec7d33`
+- 本 `LATEST_HANDOFF.md` を412件地点へ更新。
