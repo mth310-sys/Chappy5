@@ -6,88 +6,85 @@
 
 - 毎回最新mainの `README.md`、実機DBミッションv0.7、旧 `INDEX.md`、本 `LATEST_HANDOFF.md`、既存レコード、直近コミットを再取得する。
 - `INDEX.md` は19件地点の旧履歴集計。運用上の正本は本 `LATEST_HANDOFF.md` とrepoの実ファイル/直近mainコミット。
-- 今回開始時は393件 `パチスロ「機動戦士ガンダムIII～めぐりあい宇宙編～」` まで完了済みだったため393を正本として継続。
-- 2009-07-21同日群と2009-07-22〜31を再監査。ALL7の7/27群はパチンコのみで、今回追加可能な未登録パチスロを確認できず7月を閉じた。
-- 2009年8月へ進み、最古の安全な未処理機としてアリストクラート `絶対衝激～PLATONIC HEART～` を性能コア＋v0.7 resetBehavior付きで **394** として追加。
+- 今回開始時は394件 `絶対衝激～PLATONIC HEART～` まで完了済みだったため394を正本として継続。
+- 2009-08-03同日群候補 `つばさTAKEOFF` を再監査。P-WORLD/パチビー/パチマガスロマガで正式メーカーは **コルモ**、型式 **ツバサテイクオフ**、検定8S0943を確認。当時導入日ブログのみ「エマ」表記のためmetadata conflictとして保持。
+- 具体導入日はパチビー **2009-08-04**、当時導入日ブログ **2009-08-03**、P-WORLDは2009-08月精度。日差を潰さずCONFLICTとして **395** に追加。
 
-## 394. 絶対衝激～PLATONIC HEART～
+## 395. つばさTAKEOFF
 
 record:
-- `docs/real_machine_db/machines/2009-08-03_zettai-shogeki-platonic-heart.md`
+- `docs/real_machine_db/machines/2009-08-04_tsubasa-takeoff.md`
 
 machine record commit:
-- `d68f3af119807319e973fbd43643e2de89eb6659`
+- `f9f24c57898db949a64bc84c5fe05b635b632fa8`
 
 要点:
-- manufacturer: **アリストクラートテクノロジーズ**
-- formalModelName: **ゼッタイショウゲキA**
-- inspectionNumber: **9S0409**
-- releaseDate: **2009-08-03**（K-Naviホール導入開始）。P-WORLDは2009年7月の月表記、後年資料は2009年8月発売。具体日のホール導入を主値とし粒度差を保持。
+- manufacturer: **コルモ**
+- formalModelName: **ツバサテイクオフ**
+- inspectionNumber: **8S0943**
+- releaseDate: **2009-08-04 / 2009-08-03 CONFLICT**（P-WORLDは2009-08月精度）
 - generation: **5号機**
-- systemType: **A+ART / CZ絶対領域 + ストック型ART Platonic Time / パンク回避 / 天井ART**
-- 機械割: **97.1 / 98.9 / 101.4 / 104.4 / 106.8 / 110.5%**。
-- BIG: **1/376.6 → 1/299.3**、REG: **1/376.6 → 1/341.3**、合算: **1/188.3 → 1/159.46**。
-- 基本獲得: 絶対BONUS約**210枚**、BATTLE BONUS/REGはP-WORLD同一ページ内で約**51枚 / 56枚**表記差を保持。
-- ART純増: **約+1.1枚/G**。当時グリーンべるととP-WORLDで照合。
-- 通常時**900G**消化で天井ART突入。
-- 50枚ベースは初代2009年固有の直接値を十分再探索しても確定できず `UNVERIFIED_AFTER_RESEARCH`。2025年スマスロ復刻版の36.7G/50枚は流用しない。
-- `coreStatus=PARTIAL_BASE_GAMES_UNVERIFIED`。
+- systemType: **A+ART / AT / パンク回避 / 天井RT・ART / 技術介入**
+- 赤7BIG **1/1310.72→1/636.27**、黒/紫7BIG **1/1092.27→1/1872.46**、緑7BIG **1/595.78→1/675.63**、合算 **1/297.89→1/278.88**。
+- 50枚ベース **35.93 / 36.15 / 36.37 / 36.59 / 36.81 / 37.11G**。
+- 赤/黒BIG約300枚、緑BIG約100枚。
+- ART「リゾートタイム」約**+1.0枚/G**。通常モード赤7後は最大800Gナビ、高確中赤7後は次回ボーナスまでナビ。黒/緑BIGは高確中なら最大400G AT。
+- 通常時 **1200Gで天井RT / 1500Gで天井ART**。
+- 機械割はP-WORLD市場掲載 **97.1〜115.2%**、旧パチマガシミュレートは攻略なし **93.37〜106.72%** / 攻略あり **96.81〜117.05%**。測定/攻略条件差として平均せず別系列保存。
+- `coreStatus=COMPLETE_CORE_WITH_PAYOUT_DEFINITION_CONFLICT_AND_RELEASE_DAY_CONFLICT`。
 
-### v0.7 resetBehavior — 絶対衝激
+### v0.7 resetBehavior — つばさTAKEOFF
 
-- K-Naviが初代2009年機に **「宵越アリ」** を明記。據え置き時の前日ゲーム数を利用した宵越し天井狙いが成立する根拠として保存。
-- settingChangeBehavior: **UNVERIFIED_AFTER_RESEARCH**。設定変更時に900G天井カウンタ/内部モード/CZ・ARTストックをリセットか引継ぎか、初代固有の直接本文を今回確定回収できず。
-- carryOverBehavior: **YOIGOSHI_AVAILABLE_ON_UNCHANGED_CONFIRMED**。ただし内部モード/ARTストックまで全て引継ぐとは拡張解釈しない。
-- powerCycleBehavior: **UNVERIFIED_AFTER_RESEARCH**。単純電源OFF→ONの天井/状態処理を初代固有資料で確定できず。
-- gameCounterReset: **据え置き宵越し可 / 設定変更時UNVERIFIED**。
-- ceilingAfterReset: 通常天井900G。設定変更時の短縮/起算変更は **UNVERIFIED_AFTER_RESEARCH**。
+- settingChangeBehavior / carryOverBehavior / powerCycleBehavior: **UNVERIFIED_AFTER_RESEARCH**。設定変更・据え置き・単純電断時の1200/1500G天井カウンタ、通常/高確モード、ART/AT状態処理を本機固有の直接本文で確定できず。
+- gameCounterReset: **UNVERIFIED_AFTER_RESEARCH**。通常1200G RT / 1500G ART天井自体は確定。
+- ceilingAfterReset: **UNVERIFIED_AFTER_RESEARCH**。設定変更時の短縮・再起算は未確定。
 - modeAfterReset / stateAfterReset: **UNVERIFIED_AFTER_RESEARCH**。
 - advantageousSectionReset: **NOT_APPLICABLE**（5号機・有利区間制度前）。
-- resetBenefits: 据え置きなら宵越し天井狙い可。設定変更固有恩恵は `NONE_CONFIRMED_AFTER_RESEARCH`。
-- resetPenalties: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- resetDetection: **UNVERIFIED_AFTER_RESEARCH**。ガックン/初期出目/液晶/ゲーム数挙動の本機固有判別を確定できず。
-- 設定変更専用の公開朝一当選率・恩恵率: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- 2021年III、2025年スマスロ復刻、2025年IVのresetBehaviorは別機として混入させない。
-- `resetBehaviorQA=COMPLETE_RESEARCH_PASS_YOIGOSHI_CONFIRMED_SETTING_CHANGE_POWER_CYCLE_MODE_STATE_AND_DETECTION_UNVERIFIED`。
-
-主要出典・取得日2026-09-02・信頼度はレコード本文へ保存。
-
-## 直前mainの主な進捗
-
-### 393. パチスロ「機動戦士ガンダムIII～めぐりあい宇宙編～」
-- `docs/real_machine_db/machines/2009-07-20_gundam3-meguriai-uchu.md`
-- machine record commit: `556c91cd038a534617347f88f638906ed7cd1489`
-
-### 392. ヴァンパイア
-- `docs/real_machine_db/machines/2009-07-06_vampire-enterrise.md`
-
-### 391. ビガーV
-- `docs/real_machine_db/machines/2009-07-06_vigor-v.md`
-
-### 390. パチスロうる星やつら2
-- `docs/real_machine_db/machines/2009-07-06_urusei-yatsura2.md`
+- resetBenefits / resetPenalties: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- resetDetection: **UNVERIFIED_AFTER_RESEARCH**。
+- `resetBehaviorQA=PARTIAL_RESEARCH_PASS_NORMAL_1200G_RT_1500G_ART_CEILINGS_CONFIRMED_RESET_COUNTER_MODE_STATE_POWER_CYCLE_AND_DETECTION_UNVERIFIED`。
 
 ## resetBehavior遡及QA
 
-進捗:
-- `バーグラー` v0.7補完済み。
-- `快盗天使ツインエンジェル` v0.7補完済み。
-- `格闘激戦区` v0.7補完済み。
-- 性能コアの既存値/完了判定は変更せず、resetBehavior QAのみ別管理で進める。
+今回補完:
+- `docs/real_machine_db/machines/2006-10_nangoku-musume-30.md`
+- commit: `467f2ebd745f2e3b35c678c7ffb2b31a3784efe4`
+
+### 南国娘30 QA結果
+
+- 旧レコードで未確認だった性能コアも、30Φ版パチマガスロマガ直接ページから回収。
+- 機械割 **97.09 / 99.66 / 101.73 / 103.44 / 105.92 / 108.77%**。
+- 50枚ベース **36.15 / 36.65 / 37.00 / 37.30 / 37.74 / 39.21G**。
+- BIG **1/264.26→1/219.92**、REG **1/528.52→1/439.84**。
+- BIG後50G RT、RT純増約**+0.6枚/G**。
+- これにより旧 `payoutRateBySetting / baseGamesPer50 / 30Φ版単独RT純増` 欠損を解消。既存性能値を壊さず、直接解析値で補強。
+- 設定変更/据え置き/電源OFF→ON時のBIG後RT残G・内部RT状態処理は、本機固有の直接資料を今回も確定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 通常ゲーム数到達型天井・ゲーム数管理モードは公開解析で確認されず非該当として分離。
+- 有利区間は5号機のため `NOT_APPLICABLE`。
+- 2020年以降の `南国娘2` / `南国育ち30` のリセット情報は別機種として混入させない。
+- `resetBehaviorQA=PARTIAL_RESEARCH_PASS_NO_GAME_COUNT_CEILING_OR_RESET_BENEFIT_FOUND_RT_STATE_CARRYOVER_POWER_CYCLE_AND_DETECTION_UNVERIFIED`。
+
+既補完:
+- バーグラー
+- 快盗天使ツインエンジェル
+- 格闘激戦区
+- 南国娘30 ← 今回到達
+
+性能コアの既存COMPLETE_CORE完了判定は不用意に崩さず、resetBehavior QAを別管理する。
 
 ## 次回再開地点
 
 ### 本線
-1. **394件地点 / 2009-08-03 `絶対衝激～PLATONIC HEART～`まで完了**から再開。
-2. 2009-08-03同日群を最終監査。現在の最優先未処理候補は **`つばさTAKEOFF`**。当時導入日資料で2009-08-03を確認済みだが、メーカー表記にコルモ/エマ等の揺れがあるため、正式メーカー・型式・具体導入日を複数資料で再確認してから395候補として処理する。
-3. 同日群を閉じた後、2009-08-04〜16を境界監査し、漏れがなければ **2009-08-17 `真・女神転生` / `侍ジャイアンツ2`** 群へ進む。
+1. **395件地点 / つばさTAKEOFFまで完了**から再開。
+2. 2009-08-05〜16を境界監査。2009-08-03/04群で追加漏れがないかも最後に確認する。
+3. 未処理がなければ **2009-08-17 `真・女神転生` / `侍ジャイアンツ2`** 群へ進む。
 4. その後2009-08-24群の `2027II`、`神たま～ARTやで!全員集合～`、`パチスロがんばれ!!ロボコン`、`めぞん一刻2` 等をrepo既存確認しながら時系列処理。
-5. `サンサンハナハナ-30` はパイオニア公式2009年8月発売、当時グリーンべるとで **2009-08-30納品予定**まで確認済み。8月末群で具体日順を再確認する。
+5. `サンサンハナハナ-30` はパイオニア公式2009年8月発売、当時グリーンべるとで2009-08-30納品予定確認済み。8月末群で具体日順を再確認する。
 
 ### resetBehavior遡及QA
-1. **格闘激戦区まで補完済み**。
-2. 次の実ファイル候補は `docs/real_machine_db/machines/2006-10_nangoku-musume-30.md`。開始時に最新mainを再走査し、resetBehavior未補完なら処理。
-3. その後 `2006-10_spiderman2g.md` → `2006-10_surogenjin.md` の順で欠損確認。補完済みなら飛ばす。
+1. **南国娘30まで補完済み**。
+2. 次の実ファイルは `docs/real_machine_db/machines/2006-10_spiderman2g.md`。現時点でresetBehavior未収集を確認済み。次回は設定変更/据え置き/電断時の最大150G/50G RT残G・内部RT状態、パンク回避状態、変更判別を当時業界/旧解析中心に再探索して補完する。
+3. その後 `2006-10_surogenjin.md` を確認。補完済みなら次の未補完実ファイルへ進む。
 
 ### 次回の必須開始手順
 - 最新mainのREADME / 最新ミッション / INDEX / LATEST_HANDOFF / 既存machine tree / 直近コミットを再取得。
@@ -97,6 +94,7 @@ machine record commit:
 
 ## 今回の保存
 
-- 394 絶対衝激～PLATONIC HEART～: `docs/real_machine_db/machines/2009-08-03_zettai-shogeki-platonic-heart.md`
-- machine record commit: `d68f3af119807319e973fbd43643e2de89eb6659`
-- 本 `LATEST_HANDOFF.md` を394件地点へ更新。
+- 395 つばさTAKEOFF: `docs/real_machine_db/machines/2009-08-04_tsubasa-takeoff.md`
+- machine record commit: `f9f24c57898db949a64bc84c5fe05b635b632fa8`
+- 南国娘30 resetBehavior QA + 性能コア補強: commit `467f2ebd745f2e3b35c678c7ffb2b31a3784efe4`
+- 本 `LATEST_HANDOFF.md` を395件地点へ更新。
