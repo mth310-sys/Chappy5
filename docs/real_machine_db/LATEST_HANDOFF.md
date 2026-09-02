@@ -6,61 +6,64 @@
 
 - 作業開始ごとに最新mainの `README.md`、実機DBミッションv0.7、旧 `INDEX.md`、本 `LATEST_HANDOFF.md`、既存レコード、直近コミットを再取得する。
 - `INDEX.md` は19件地点の旧履歴集計。運用上の正本は本 `LATEST_HANDOFF.md` とrepoの実ファイル/直近mainコミット。
-- 本リレー開始時、mainは **379件 `COBRA -THE SLOT-`** まで進行済みだったため、過去チャットの371件地点へ戻らず379件地点を正本として継続。
-- K-Navi 2009年6月カレンダーで2009-06-08群を監査し、未登録だった **オーイズミ `銀河豪華客船クイーンギャラクシア` を380として追加**。
-- 同日群では **北電子 `パチスロ「BON JOVI」`** が次の未処理候補。repo既存登録を再確認してから381候補として調査する。
+- 本リレー開始時、mainは **380件 `銀河豪華客船クイーンギャラクシア`** まで進行済みだったため、380件地点を正本として継続。
+- 次候補だった **北電子 `パチスロ「BON JOVI」`** はrepo検索で未登録を確認し、性能コア＋v0.7 resetBehaviorを381として追加。
+- K-Navi 2009年6月全国一斉導入カレンダー上、2009-06-08のパチスロは `銀河豪華客船クイーンギャラクシア` と `パチスロ「BON JOVI」` の2機種。別表記/日付検索も再確認し、今回安全に追加できる同日未処理機を確定できなかったため、2009-06-08群を閉じる。
 
-## 380. 銀河豪華客船クイーンギャラクシア
+## 381. パチスロ「BON JOVI」
 
 record:
-- `docs/real_machine_db/machines/2009-06-08_queen-galaxia.md`
+- `docs/real_machine_db/machines/2009-06-08_bon-jovi.md`
 
 要点:
-- manufacturer: **オーイズミ**
-- formalModelName: **クイーンギャラクシア4X**
-- inspectionNumber: **8S1254**
-- releaseDate主値: **2009-06-08**（K-Navi全国一斉導入開始）。当時グリーンべるとは **2009-06-07納品開始**。物流開始/全国導入の1日差として保持。
+- manufacturer: **北電子**
+- formalModelName: **ボンジョビ5**
+- inspectionNumber: **8S1007**
+- releaseDate主値: **2009-06-08**（K-Navi全国一斉導入開始、当時パチスロ業界初まとめも2009-06-08発売）。パチビーは **2009-06-09** と掲載するため、全国導入/掲載基準差として保持。
 - generation: **5号機**
-- systemType: **ボーナス+RT / CZ経由 / パンク回避型RT**
-- 機械割: **97.4 / 99.7 / 102.6 / 105.2 / 108.7 / 114.5%**。P-WORLD・pacnk・パチマガスロマガで一致し、パチマガはメーカー発表値と明記。
-- QB: 全設定 **1/1985.94**。
-- BIG合成: **1/481.88 / 1/461.52 / 1/448.88 / 1/436.91 / 1/425.56 / 1/409.60**。
-- REG合成: **1/390.10 / 1/381.02 / 1/372.36 / 1/364.09 / 1/352.34 / 1/337.81**。
-- ボーナス合算: **1/194.47 / 1/188.86 / 1/184.61 / 1/180.54 / 1/175.70 / 1/169.34**。
-- 50枚ベース: **31.49 / 31.85 / 32.23 / 32.61 / 33.01 / 33.49G**。旧パチマガ直接値。別系統の同一設定別系列を直接再照合できないため `ANALYSIS_SINGLE_OLD_MAJOR`。
-- QB約270枚+RT、BIG約270枚、REG約80枚。
-- RT「ギャラクシードライブ」: P-WORLD/pacnkは **約+0.5枚/G**、2009年当時グリーンべるとは **約+0.6枚/G**。平均化せず `CONFLICT_SMALL_ESTIMATE_DIFFERENCE`。
-- RTループ率は **1% / 75% / 85%**。炎の惑星は平均約50G、氷の惑星は平均約150Gの解析値。
-- 天井: **QB/BIG後1200G、REG後800G** で次回ボーナスまで継続するRTへ突入。P-WORLDと旧天井DBで照合。
-- `coreStatus=COMPLETE_CORE_WITH_BASE_SINGLE_SOURCE_AND_NET_INCREASE_CONFLICT`。
+- systemType: **ノーマル / ボーナス主体 / 技術介入あり / 演出用プチRT**
+- 北電子公式出玉率: **96.6 / 98.0 / 101.0 / 103.5 / 105.8 / 108.3%**。P-WORLD、パチビー、2009年更新5号機まとめで照合。
+- BIG: **1/280.1 / 1/270.8 / 1/260.1 / 1/251.1 / 1/244.5 / 1/240.1**。
+- REG主値: **1/489.1 / 1/471.5 / 1/436.9 / 1/409.6 / 1/378.8 / 1/316.6**。
+- 合算: **1/178.1 / 1/172.0 / 1/163.0 / 1/155.7 / 1/148.6 / 1/136.5**。
+- K-NaviのREG設定3〜5だけ **1/471.5 / 1/436.9 / 1/409.6** と公式系列から1段ずれたような表記で、同ページの合算値とも不整合。平均せずCONFLICT保持し、北電子公式+パチビー+当時5号機まとめ一致系列を主値とした。
+- 50枚ベース: **35.10 / 35.10 / 35.93 / 36.54 / 37.17 / 37.17G**。旧パチマガの1000円あたりゲーム数直接値。別系統の同一設定別表を直接照合できないため `ANALYSIS_SINGLE_OLD_MAJOR`。
+- BIG平均約**307枚**。REG **MAX129枚**、パチビーは平均約**117枚**も併記。
+- 特殊リプレイ成立後に **3Gの演出用プチRT**、リプレイ確率 **1/3.08**。出玉増加用RTではなく、物差し上のnetIncreaseは`NOT_APPLICABLE_AS_OUTPUT_SYSTEM`。
+- 通常ゲーム数天井/ゲーム数管理当選/ART・AT/長期通常モードなし。`coreStatus=COMPLETE_CORE_WITH_BASE_SINGLE_SOURCE_AND_KNAVI_REG_TABLE_CONFLICT`。
 
-### v0.7 resetBehavior — 銀河豪華客船クイーンギャラクシア
+### v0.7 resetBehavior — BON JOVI
 
-- settingChangeBehavior: `UNVERIFIED_AFTER_RESEARCH`。
-- carryOverBehavior: `UNVERIFIED_AFTER_RESEARCH`。1200G/800G天井進捗、高確/CZ/RT状態の据え置き時引継ぎを直接確定できず。
-- powerCycleBehavior: `UNVERIFIED_AFTER_RESEARCH`。単純電源OFF→ON時の天井進捗、高確/CZ/RT状態を直接確定できず。
-- gameCounterReset: `UNVERIFIED_AFTER_RESEARCH`。通常天井値は確認済みだが設定変更時RESET/CARRY_OVERは未確認。
-- ceilingAfterReset: `UNVERIFIED_AFTER_RESEARCH`。設定変更後の短縮天井・別ゲーム数を確認できず、「短縮なし」と断定する直接資料も未回収。
-- modeAfterReset: `UNVERIFIED_AFTER_RESEARCH`。高確モードの存在は確認済みだが設定変更時の初期モード/振り分けは未確認。
-- stateAfterReset: `UNVERIFIED_AFTER_RESEARCH`。CZ/RT状態、高確状態の設定変更時処理は未確認。
+- settingChangeBehavior: 通常ゲーム数天井・長期通常モード等の主要リセット対象はなし。特殊リプレイ後3GプチRT中の設定変更時処理のみ `UNVERIFIED_AFTER_RESEARCH`。
+- carryOverBehavior: 通常ゲーム数天井/通常モードの据え置き引継ぎは `NOT_APPLICABLE`。瞬間的内部状態の据え置き処理は直接資料未確認。
+- powerCycleBehavior: 通常ゲーム数天井/通常モードは `NOT_APPLICABLE`。3GプチRT中の単純電源OFF→ON復帰処理のみ `UNVERIFIED_AFTER_RESEARCH`。
+- gameCounterReset: `NOT_APPLICABLE_NO_GAME_COUNT_CEILING_CONFIRMED`。
+- ceilingAfterReset: `NOT_APPLICABLE_NO_GAME_COUNT_CEILING_CONFIRMED`。
+- modeAfterReset: `NOT_APPLICABLE_NO_PERSISTENT_NORMAL_MODE_CONFIRMED`。
+- stateAfterReset: `UNVERIFIED_AFTER_RESEARCH_FOR_TRANSIENT_3G_RT_ONLY`。
 - advantageousSectionReset: `NOT_APPLICABLE`（5号機・有利区間制度前）。
 - resetBenefits / resetPenalties: `NONE_CONFIRMED_AFTER_RESEARCH`。
-- resetDetection: ガックン/初期出目/液晶背景/ゲーム数挙動まで検索語を変えて再探索したが `UNVERIFIED_AFTER_RESEARCH`。
+- resetDetection: ガックン、初期出目、液晶、BON JOVIランプ等まで検索語を変えて公式/業界/旧解析/古いDBを横断したが `UNVERIFIED_AFTER_RESEARCH`。
 - 公開朝一数値: `NONE_CONFIRMED_AFTER_RESEARCH`。
-- パチマガスロマガの機種トップに **「攻め時・ヤメ時・設定変更時」** 項目の存在までは確認したが、現存検索結果から具体本文を回収できなかったため内容を推測しない。
-- `resetBehaviorQA=PARTIAL_RESET_CARRYOVER_POWER_CYCLE_COUNTER_MODE_STATE_AND_DETECTION_UNVERIFIED_AFTER_RESEARCH`。
+- パチマガスロマガ機種トップに **「攻め時・ヤメ時・設定変更時」** 項目の存在までは確認したが、現存検索結果から具体本文を回収できず推測しない。
+- `resetBehaviorQA=COMPLETE_FOR_HALL_SIM_PRIMARY_ITEMS_WITH_TRANSIENT_3G_RT_AND_RESET_DETECTION_UNVERIFIED`。
 
 主要出典はレコード本文にURL・取得日2026-09-02・信頼度を保存:
-- K-Navi 2009年6月導入カレンダー
-- グリーンべると 2009-04-20
+- 北電子公式製品ページ
+- K-Navi 2009年6月導入カレンダー / 機種ページ
 - P-WORLD
-- パチマガスロマガ旧解析（基本システム / 小役・1000円ゲーム数 / ボーナス確率・PAYOUT / 機種トップ）
-- pacnk旧機種DB
-- 旧天井DB
-- 5号機クロニクル
-- パチスロ業界初まとめ旧アーカイブ
+- パチビー
+- パチマガスロマガ旧解析（基本システム / 小役・1000円ゲーム数 / 機種トップ）
+- 2009年更新パチスロ5号機まとめwiki
+- パチスロ業界初まとめ旧更新履歴
+- グリーンべると2009年完成披露記事
 
 ## 直前mainの主な進捗
+
+### 380. 銀河豪華客船クイーンギャラクシア
+- `docs/real_machine_db/machines/2009-06-08_queen-galaxia.md`
+- machine record commit: `97c716263c67646776007237654094a0652eb971`
+- 性能コア＋v0.7 resetBehavior保存済み。
 
 ### 379. COBRA -THE SLOT-
 - `docs/real_machine_db/machines/2009-06-01_cobra-the-slot.md`
@@ -77,14 +80,6 @@ record:
 - commit: `b8d0472083d35b563c4245be0bff520558719965`
 - 性能コア＋v0.7 resetBehavior保存済み。
 
-### 376. 琉球浪漫（25φ）
-- `docs/real_machine_db/machines/2009-06-01_ryukyu-roman.md`
-- 30φ既存機と分離。性能コア＋v0.7 resetBehavior保存済み。
-
-### 375. 天誅
-- `docs/real_machine_db/machines/2009-06-01_tenchu.md`
-- 性能コア＋v0.7 resetBehavior保存済み。
-
 ## resetBehavior遡及QA
 
 - `バーグラー` v0.7補完済み。
@@ -94,10 +89,10 @@ record:
 ## 次回再開地点
 
 ### 本線
-1. **380件地点 / 2009-06-08群**から再開。
-2. 同日群の次候補 **北電子 `パチスロ「BON JOVI」`** をrepo検索して未登録確認し、未処理なら381として性能コア＋v0.7 resetBehaviorを収集。
-3. BON JOVI処理後、2009-06-08同日群をメーカー別一覧・当時業界記事で最終監査して漏れを閉じる。
-4. その後は **2009-06-15 `サタデーナイトフィーバー`（ビスティ）** → **2009-06-22 `ぶっちゃけはっちゃけ大奥浪漫`（ラスター）** → **2009-06-29 `ワイルドドッグ`（パラジェーピー）** の順に、各境界漏れ監査を挟みながら接続する。
+1. **381件地点 / 2009-06-08群完了**から再開。
+2. 2009-06-09〜14をメーカー別一覧・当時業界記事・旧導入カレンダーで境界監査し、具体日付き未処理機がなければ **2009-06-15 `サタデーナイトフィーバー`（ビスティ）** をrepo検索して382候補として処理。
+3. `サタデーナイトフィーバー`後は **2009-06-22 `ぶっちゃけはっちゃけ大奥浪漫`（ラスター）** → **2009-06-29 `ワイルドドッグ`（パラジェーピー）** の順に、各境界漏れ監査を挟みながら接続。
+4. パチスロ業界初まとめには `天誅` を2009-06-08発売とする記載もある一方、K-Naviは2009-06-01全国導入、repoでは既に375として2009-06-01登録済み。これは新規追加せず、日付定義QA候補として既存レコード側で必要時にCONFLICT補強する。
 5. 過去月の月精度/納品日だけ判明している機種は具体日を推測挿入せず、別根拠が取れた時だけ遡及処理する。
 
 ### 次回の必須開始手順
@@ -107,6 +102,6 @@ record:
 
 ## 今回の保存
 
-- 380 銀河豪華客船クイーンギャラクシア: `docs/real_machine_db/machines/2009-06-08_queen-galaxia.md`
-- machine record commit: `97c716263c67646776007237654094a0652eb971`
-- 本 `LATEST_HANDOFF.md` を380件地点へ更新。
+- 381 パチスロ「BON JOVI」: `docs/real_machine_db/machines/2009-06-08_bon-jovi.md`
+- machine record commit: `8a6fe6f186903aec297541fb308f1508b0540d09`
+- 本 `LATEST_HANDOFF.md` を381件地点へ更新。
