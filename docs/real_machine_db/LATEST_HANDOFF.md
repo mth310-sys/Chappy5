@@ -6,92 +6,90 @@
 
 - 最新mainの `README.md`、実機DBミッションv0.7、`INDEX.md`、既存レコード、直前進捗を再取得して継続。
 - `INDEX.md` は旧19件地点のため、README規定どおり本 `LATEST_HANDOFF.md` を進捗正本とする。
-- 直前HANDOFFは354件地点 `夢花月`（2009-04-05納品開始予定 / 2009-04-06ホール導入開始資料あり）。既存354件を再追加せず、2009-04-06〜04-12を具体導入/納品日で監査した。
-- ALL7 2009年4月一覧、当時グリーンべると記事、機種別資料を照合し、4/6〜4/12へ安全に置ける未処理パチスロ具体日を今回確定できなかった。記事投稿日・発表日を導入日に代用していない。
-- 4/13群へ接続し、北電子 `クラシックジャグラー` を355件目として追加。
-- **今回 355「クラシックジャグラー」を追加。既存355件の再追加禁止。**
+- 直前HANDOFFは355件地点 `クラシックジャグラー`（2009-04-13）。既存355件を再追加せず、4/13同日群の未処理機を監査。
+- ALL7で2009-04-13導入予定のコルモ `シーシー` を確認し、GitHub既存レコードを検索して未登録を確認。
+- **今回 356「シーシー」を追加。既存356件の再追加禁止。**
 
-## 354. 夢花月（継承）
-
-record:
-- `docs/real_machine_db/machines/2009-04-05_yume-kagetsu.md`
-
-要点:
-- 山佐 / 型式 `ユメカゲツD`
-- 2009-04-05納品開始予定。K-Naviは2009-04-06ホール導入開始、山佐公式は2009年4月稼働。
-- A+ART / 完走型ART。
-- 機械割はP-WORLD 97.1〜110.7% と旧解析97.2〜110.0%でCONFLICT、平均化せず保持。
-- BIG 1/1524.1→1/993.0、ART初当り1/195.2→1/118.4、50枚ベース29.88→29.85G。
-- ART「花月乱舞」約+1.5枚/G、33/77/111/333/555/777/999G。
-- resetBehaviorは設定変更後液晶開始ステージに単一旧独自調査の報告あり。他の内部状態/電断/ART残G等はUNVERIFIED_AFTER_RESEARCH。有利区間NOT_APPLICABLE。
-- commit: `131ad235224d14cb77b34f8c6e5ae8f69b860640`
-
-## 355. クラシックジャグラー
+## 355. クラシックジャグラー（継承）
 
 record:
 - `docs/real_machine_db/machines/2009-04-13_classic-juggler.md`
 
 要点:
-- manufacturer: 北電子
-- formalModelName: `クラシックジャグラーIII`（当時グリーンべると / HAZUSE、検定番号8S1176）
-- releaseDate: **2009-04-13**（HAZUSE等の具体日）。当時K-Naviは「4月中旬導入予定」なので、具体日と当時予定表現を分離保持。
+- 北電子 / 型式 `クラシックジャグラーIII`
+- 2009-04-13導入開始。
+- ノーマル / 完全告知 / ボーナス主体。
+- 公式機械割96.9〜107.4%、BIG 1/287.4〜1/240.9、REG 1/420.1〜1/309.1、50枚ベース35.24〜36.37G、BIG約312枚、REG約117枚。
+- 天井なし。resetBehaviorは朝一価値に関わる専用恩恵なしを確認しつつ、機種固有の電断/ガックン等はUNVERIFIED_AFTER_RESEARCH。
+- commit: `bcaad8ff882a0f25a7ae9fa5c2bcb4bad3b10643`
+
+## 356. シーシー
+
+record:
+- `docs/real_machine_db/machines/2009-04-13_cc-colmo.md`
+
+要点:
+- manufacturer: コルモ
+- formalModelName: `シーシー1`
+- 検定番号: `8S1325`（P-WORLD）
+- releaseDate主値: **2009-04-13**（ALL7）。P-WORLD/パチンコビスタ等は2009年4月で整合。
+- releaseDate conflict: 777パチガブのみ **2009-02-23** 表記。検定時期との混同可能性を推測で断定せず、CONFLICTとして保持。
 - generation: 5号機
-- systemType: ノーマル / 完全告知 / ボーナス主体
+- systemType: ノーマル / ネオストック / ボーナス主体 / 4ライン
 - settings: 1 / 2 / 3 / 4 / 5 / 6
-- 北電子公式機械割: **96.9 / 97.8 / 100.7 / 102.6 / 104.7 / 107.4%**
-- BIG: **1/287.4 / 1/282.5 / 1/268.6 / 1/260.1 / 1/248.2 / 1/240.9**
-- REG: **1/420.1 / 1/409.6 / 1/381.0 / 1/356.2 / 1/348.6 / 1/309.1**
-- 合算: **1/170.7 / 1/167.2 / 1/157.5 / 1/150.3 / 1/145.0 / 1/135.4**
-- 50枚ベース: **35.24 / 35.35 / 35.77 / 35.91 / 36.10 / 36.37G**（単一解析掲載値のためANALYSIS_SINGLE）
-- BIG約312枚、REG約117枚。当時グリーンべるととパチマガスロマガで照合。
-- RT/ART/AT非搭載、天井なし。
-- 北電子公式の設定1機械割96.9%に対し旧整理資料の一部96.8%表記あり。公式値を主値とし平均化しない。
-- 一部後年DBにBIG240枚/REG96枚という本5号機と整合しない値が見られるため、北電子公式・当時業界・当時解析系列を優先し不採用。
+- 機械割主系列: **96.1 / 97.7 / 99.7 / 101.8 / 104.6 / 108.1%**（P-WORLD）。旧解析は設定6のみ108.0%で丸め差CONFLICT。
+- 成立ベースBIG: 全設定 **1/256.0**
+- 赤7REG: 全設定 **1/409.6**
+- 太鼓REG: 全設定 **1/1024.0**
+- CB: 全設定 **1/2048.0**
+- 成立ボーナス合算: 全設定 **1/128.0**
+- 実質ボーナス出現率: **1/162.69 → 1/129.81**。ネオストック機のため成立確率と実質出現率を混ぜない。
+- BIG約312枚、REG約104枚、CB約26枚。
+- 5号機初とされるボーナスストック機能。複数ボーナス貯留ではなく、成立後に純ハズレを待って入賞可能になるネオストック方式。
+- 連チャン/通常/ハマリ状態の純ハズレは1/16.0、1/41.0、設定1 1/197.4〜設定6 1/64.0。方式比較に必要な最小限として保持。
+- 50枚ベースは、機種名/型式/メーカーと50枚・1000円・千円・コイン持ち・ベースを組み替え、P-WORLD、パチンコビスタ、旧解析、機種DB、中古機資料を横断したが直接掲載値を確定できず `UNVERIFIED_AFTER_RESEARCH`。小役確率から逆算していない。
 
 ### v0.7 resetBehavior
 
-- settingChangeBehavior: `NO_MACHINE_SPECIFIC_RESET_EFFECT_CONFIRMED_AFTER_RESEARCH`。設定変更専用の天井短縮、モード優遇、状態振分、朝一当選率は確認できず。ガックン等の機種固有挙動は直接資料未確定。
-- carryOverBehavior: `NOT_APPLICABLE_TO_GAME_NUMBER_CEILING_AND_MODE / MACHINE_SPECIFIC_REEL_OR_DISPLAY_BEHAVIOR_UNVERIFIED`。据え置きで引き継ぐ天井G数、ART/RT残G、通常時モードは該当なし。
-- powerCycleBehavior: `UNVERIFIED_AFTER_RESEARCH`。単純電源OFF→ON時の本機固有リール初期位置、ランプ、内部成立状態等の直接資料を確定できず。
-- gameCounterReset: `NOT_APPLICABLE`。ゲーム数天井・ゲーム数管理当選なし。
-- ceilingAfterReset: `NOT_APPLICABLE / NO_CEILING`。
-- modeAfterReset: `NOT_APPLICABLE_TO_PUBLISHED_NORMAL_MODES`。
-- stateAfterReset: `NOT_APPLICABLE_TO_PUBLISHED_PERSISTENT_STATES`。
+- settingChangeBehavior: `UNVERIFIED_AFTER_RESEARCH`。設定変更時にネオストック内部状態/成立済みボーナス状態がどう初期化されるか本機固有資料を確定できず。
+- carryOverBehavior: `UNVERIFIED_AFTER_RESEARCH`。据え置き時のネオストック状態/成立済みボーナス状態の引継ぎを直接確認できず。ゲーム数天井は確認されないため天井G引継ぎはNOT_APPLICABLE。
+- powerCycleBehavior: `UNVERIFIED_AFTER_RESEARCH`。単純電源OFF→ON時の内部状態、表示、リール初期挙動を直接確定できず。
+- gameCounterReset: `NOT_APPLICABLE_TO_PUBLISHED_GAME_NUMBER_CEILING`。
+- ceilingAfterReset: `NOT_APPLICABLE / NO_PUBLISHED_GAME_NUMBER_CEILING_CONFIRMED`。リセット短縮天井も確認なし。
+- modeAfterReset/stateAfterReset: `UNVERIFIED_AFTER_RESEARCH`。連チャン/通常/ハマリ状態および成立済みボーナス状態の変更時処理は不明。朝一専用モード振分は確認なし。
 - advantageousSectionReset: `NOT_APPLICABLE`（5号機・有利区間制度前）。
 - resetBenefits: `NONE_CONFIRMED_AFTER_RESEARCH`。
 - resetPenalties: `NONE_CONFIRMED_AFTER_RESEARCH`。
-- resetDetection: `UNVERIFIED_AFTER_RESEARCH`。ジャグラーシリーズ一般論を本機固有情報として転記しない。
-- numericResetData: リセット専用天井はNOT_APPLICABLE、朝一当選率/恩恵率はNONE_CONFIRMED_AFTER_RESEARCH。
+- resetDetection: `UNVERIFIED_AFTER_RESEARCH`。ガックン、初期出目、液晶背景等を変更/据え置き判別へ直接結び付ける資料なし。夕方背景移行率は通常の設定判別要素でありresetDetectionへ流用しない。
+- numericResetData: リセット専用天井/朝一当選率/恩恵率/専用モード振分は `NONE_CONFIRMED_AFTER_RESEARCH`。
 
 主要出典（取得日 2026-09-02）:
-- 北電子公式 / クラシックジャグラー — OFFICIAL
-  - https://www.kitadenshi.co.jp/slot/classicjuggler/
-- グリーンべると / 北電子が『クラシックジャグラー』を発表 — INDUSTRY_CONTEMPORARY
-  - https://news.p-world.co.jp/articles/3289/greenbelt
-- K-Navi / クラシックジャグラー発売ニュース — INDUSTRY_CONTEMPORARY_SECONDARY
-  - https://p-kn.com/topics/news/738/
-- HAZUSE / クラシックジャグラー — ANALYSIS_DATABASE
-  - https://hazuse.com/machine/pachislot/8S1176/
-- パチマガスロマガ / クラシックジャグラー — ANALYSIS_HIGH
-  - https://cs62.cs-plaza.com/g/pachi/pla/s_conq/kitac_slot/69/a.php
-- けんのスロットシミュレーション / クラシックジャグラー — ANALYSIS_SINGLE
-  - https://kenslo65536.com/kaiseki/juggler-classic.html
-- P_Style777 / クラシックジャグラー — OLD_ANALYSIS
-  - https://ps777.net/data/kitadenshi/classic-juggler.htm
 - ALL7 / 2009年4月導入予定一覧 — INDUSTRY_SCHEDULE_DATABASE
   - https://www.all7.jp/plans/index/2009/04
+- P-WORLD / シーシー — ANALYSIS_HIGH_DATABASE
+  - https://www.p-world.co.jp/machine/database/5495
+- パチンコビスタ / シーシー — ANALYSIS_DATABASE
+  - https://www.pachinkovista.com/pfactory/model.php?nid=17529&dsp=0
+- CrankySeven / シーシー解析攻略 — OLD_ANALYSIS
+  - https://crankyseven.com/cc-pc.htm
+- A-SLOT / コルモ シーシー — SECONDARY_MACHINE_DATABASE
+  - https://www.a-slot.com/SHOP/colmo1.html
+- 777パチガブ / コルモ機種一覧 — SECONDARY_DATABASE_CONFLICTING_DATE
+  - https://p-gabu.jp/guideworks/machine/maker/COLMO
+- コルモ検定通過機種メモ — SECONDARY_APPROVAL_LIST
+  - https://q-and-a.hatenablog.com/entry/2016/10/23/105244
 
 commit:
-- 355 クラシックジャグラー: `bcaad8ff882a0f25a7ae9fa5c2bcb4bad3b10643`
+- 356 シーシー: `98a07df0f48dfb6b919f11c20b44a4316820594e`
 
 ## 2009年4月 境界監査
 
 - 4/5 `夢花月` 既存354（4/6ホール導入開始資料も保持）。
-- 4/6〜4/12は今回、具体日付きで安全に追加できる未処理パチスロを確定できず。
-- 4/13 `クラシックジャグラー` 今回355。
-- ALL7では4/13に **`シーシー`（コルモ）** を確認。次回の最優先同日群候補。
-- ALL7の4/13表示にはパチンコ `デビルマン～悪魔聖戦～`、`フィーバー銀牙伝説WEED`、`中村美律子の人生祭りだ!だんじりだ!` も混在するため、パチスロ本線へ誤混入しない。
-- 4/20群には `RIO2 クルージング・ヴァナディース`、`さすがの猿飛`、`エースをねらえ!`、`プリティ戦記`、`国際サラリーマンとおるくん` が候補として見えるため、4/13同日群を閉じた後に4/14〜4/19を監査して接続する。
+- 4/6〜4/12は具体日付きで安全に追加できる未処理パチスロを直前監査で確定できず。
+- 4/13 `クラシックジャグラー` 既存355、`シーシー` 今回356。
+- ALL7の4/13表示に混在する `デビルマン～悪魔聖戦～`、`フィーバー銀牙伝説WEED`、`中村美律子の人生祭りだ!だんじりだ!` はパチンコのため本線へ混入させない。
+- 4/14〜4/19を日付指定検索したが、今回新たに安全な未処理パチスロ具体日を確定できなかった。記事投稿日や掲示板投稿日は導入日に代用しない。
+- 次の明確な同日群はALL7 **2009-04-20**。候補: `RIO2 クルージング・ヴァナディース / さすがの猿飛 / エースをねらえ! / プリティ戦記 / 国際サラリーマンとおるくん`。
 - `スターマンアイズ / ジュードーズ` は具体日が新たに取れた場合のみ正しい時系列位置へ遡及追加する。
 
 ## resetBehavior遡及QA進捗
@@ -102,12 +100,12 @@ commit:
 
 ## 次回再開地点
 
-1. **LATEST_HANDOFF基準355件地点。既存355件の再追加禁止。**
-2. **2009-04-13同日群を継続監査**する。
-3. 最優先は **`シーシー`（コルモ）**。ALL7で2009-04-13導入予定を確認済み。正式型式、当時業界/メーカー資料、性能コア、v0.7 resetBehaviorを収集し、既存未登録なら次番号候補とする。
-4. 4/13同日群の他パチスロ候補がないことを確認後、2009-04-14〜04-19を具体納品/導入日で監査する。
-5. 4/14〜4/19に未処理機がなければ4/20群へ進む。ALL7候補は `RIO2 クルージング・ヴァナディース / さすがの猿飛 / エースをねらえ! / プリティ戦記 / 国際サラリーマンとおるくん`。
-6. `スターマンアイズ / ジュードーズ` は具体日が新たに取れた場合のみ正しい時系列位置へ遡及追加する。
+1. **LATEST_HANDOFF基準356件地点。既存356件の再追加禁止。**
+2. **2009-04-20同日群へ接続する前に、4/14〜4/19の漏れをメーカー別/当時業界記事/旧DBでもう一段監査**する。
+3. 4/14〜4/19に安全な未処理機がなければ、2009-04-20群を時系列同日扱いで処理する。
+4. 4/20群の最優先候補は `RIO2 クルージング・ヴァナディース`。次いで `さすがの猿飛 / エースをねらえ! / プリティ戦記 / 国際サラリーマンとおるくん`。毎回既存登録を検索してから追加する。
+5. 各新規機で性能コアに加えv0.7 resetBehaviorを同時収集し、設定変更/据え置き/電源OFF→ON/天井短縮/モード/状態/ガックン/有利区間を表記揺れ・型式・メーカー込みで多段検索する。
+6. `スターマンアイズ / ジュードーズ` は具体導入/納品日が新たに取れた場合のみ遡及追加。
 7. 遡及QAは **竹中直人のパチスロ太閤記より後の最初のresetBehavior未補完機**から再開する。
 8. 一般論、後継機、同名別メーカー機の値で推測補完しない。
 
@@ -115,3 +113,4 @@ commit:
 
 - 354 夢花月: `131ad235224d14cb77b34f8c6e5ae8f69b860640`
 - 355 クラシックジャグラー: `bcaad8ff882a0f25a7ae9fa5c2bcb4bad3b10643`
+- 356 シーシー: `98a07df0f48dfb6b919f11c20b44a4316820594e`
