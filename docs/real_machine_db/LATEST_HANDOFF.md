@@ -6,11 +6,46 @@
 
 - 毎回最新mainの `README.md`、実機DBミッションv0.7、旧 `INDEX.md`、本 `LATEST_HANDOFF.md`、既存レコード、直近コミットを再取得する。
 - `INDEX.md` は旧履歴集計。運用上の正本は本 `LATEST_HANDOFF.md` とrepo実ファイル/直近mainコミット。
-- 今回開始時の最新mainは **406件 `リノNo.5`** まで進行済み。過去会話上の402件地点へ戻らず406を正本として継続した。
-- 2009-09-07同日群および09-08〜09-13境界は直前handoffの監査結果を引継ぎ、repo未登録の **`ドリームJラッシュ`** を **407** として性能コア＋v0.7 resetBehavior同時収集した。
-- 既存402 `イケイケめんそーれ-30`、404 `シークレット・プリンセス`、405 `スーパーアイムマジックEX`、406 `リノNo.5` は重複追加しない。
+- 今回開始時の最新mainは **407件 `ドリームJラッシュ`** まで進行済み。過去会話上の405件地点へ戻らず407を正本として継続した。
+- 2009-09-14同日群と2009-09-15〜09-27境界を再監査し、現時点で407より後かつ9/28より前に具体導入日を持つ未処理機は確認できなかった。
+- repo未登録を確認した **`デコトラの鷲`** を **408** として性能コア＋v0.7 resetBehavior同時収集した。
 
-## 407. ドリームJラッシュ
+## 408. デコトラの鷲
+
+record:
+- `docs/real_machine_db/machines/2009-09-28_dekotora-no-shu.md`
+
+machine record commit:
+- `eac3415de671921a42ba1fe7b85fe2c05e3d0360`
+
+要点:
+- manufacturer: **大都技研**
+- formalModelName: **デコトラの鷲4**
+- releaseDate: **2009-09-28**（パチビー具体導入日。P-WORLD/P_Style777は2009年9月）
+- generation: **5号機**（P_Style777表記5.1号機）
+- systemType: **A+ART / ナビ回数管理型ART / CZ / パンク回避型**
+- ART純増: **約+1.6枚/G**（P-WORLD、パチビー、2009-07-27グリーンべると一致）
+- 基本獲得: デコトラBIG約**30枚**、通常BIG約**204枚**、REG約**48枚**、ART1セット約**70枚**目安。
+- ボーナス合算は設定1 **1/252** → 設定6 **1/225**（P_Style777）。
+- 50枚ベースは十分な再探索後も直接値を回収できず `UNVERIFIED_AFTER_RESEARCH`。
+- ART設定別初当たりも直接比較表を回収できず `UNVERIFIED_AFTER_RESEARCH`。
+- 機械割はCONFLICT: P_Style777 **97.5/99.5/101.5/104.5/107.5/110.5%** vs pachirinko **96.3/98.2/99.9/103.9/107.4/111.1%**。平均しない。
+
+### v0.7 resetBehavior — デコトラの鷲
+
+- **重要直接確認: P_Style777当時解析に「設定変更でも天井ゲーム数は引き継ぐ」と明記。**
+- 第1天井はチャンスゾーン間**999G**でART3セット以上。
+- さらに999Gで第2天井、ART**7 or 10セット**。
+- pachirinko掲載の第2天井振り分け: 設定1〜4は10個100%、設定5は7個6.2%/10個93.7%、設定6は7個25%/10個75%。単一解析値として保持。
+- `gameCounterReset=CARRY_OVER_ON_SETTING_CHANGE`。
+- `ceilingAfterReset=NO_RESET_SHORTENING_CONFIRMED; EXISTING_PROGRESS_CARRIED_OVER`。
+- 前日ハマリ台は設定変更されても天井進捗が残るため、朝一客AI上の価値が残る。
+- 通常時に低確/高確状態が存在するが、設定変更時の状態再抽選/引継ぎ、CZ、ARTストック、ART中状態は直接資料不足で `UNVERIFIED_AFTER_RESEARCH`。
+- 単純電源OFF→ON時の処理、ガックン/初期出目/表示等による設定変更判別も `UNVERIFIED_AFTER_RESEARCH`。
+- 有利区間は5号機のため `NOT_APPLICABLE`。
+- `resetBehaviorQA=PARTIAL_HIGH_VALUE_DIRECT_CEILING_CARRYOVER_CONFIRMED_OTHER_STATE_HANDLING_UNVERIFIED`。
+
+## 407. ドリームJラッシュ（直前）
 
 record:
 - `docs/real_machine_db/machines/2009-09-14_dream-j-rush.md`
@@ -19,43 +54,9 @@ machine record commit:
 - `ea110e710f765172a403b6ad1ddffb1a9c746059`
 
 要点:
-- manufacturer: **ウィンネットテクノロジー / ラスター**
-- formalModelName: **ぱちすろドリームジャック**
-- inspectionNumber: **9S0344**
-- releaseDate: **2009-09-14**（ALL7当時導入一覧の具体日。P-WORLDは2009年09月、2009-09-29付グリーンべるとは「納品は既に開始」）
-- generation: **5号機**
-- systemType: **ART主体 / パンク回避型 / ゲーム数管理ART**
-- 50枚ベース: **20.27G/50枚・全設定共通**（旧パチマガスロマガ直接値）
-- ART純増: **約+2.0枚/G**（P-WORLD/K-Navi/当時グリーンべると一致）
-- ART初当たり時基本G数: **100 / 300 / 500G**。開始前ドリームチャレンジでゲーム数を賭けて増加可能。
-- BIG: **1/32768・約448枚**。REG: **1/45.20・約42枚**。ボーナス合算約**1/45.13**。
-- 設定別ART初当たりは十分再探索後も比較可能表を回収できず `UNVERIFIED_AFTER_RESEARCH`。
-- 機械割は大きくCONFLICT: P-WORLD **94/98/100/104/109/115%** vs 旧パチマガスロマガsimulation **97.33/98.71/100.44/102.52/105.26/107.93%**。平均しない。
-- `coreStatus=COMPLETE_CORE_WITH_PAYOUT_CONFLICT_ART_INITIAL_HIT_RESET_BEHAVIOR_PARTIAL`。
-
-### v0.7 resetBehavior — ドリームJラッシュ
-
-- 通常時に**3モード**、前兆モード移行後は最大32G前兆という基本構造はP-WORLD/K-Naviで確認。
-- 旧パチマガスロマガの機種INDEXに**「攻め時・ヤメ時・設定変更時」専用項目の存在**までは確認できたが、現存検索結果から設定変更時本文を確定回収できなかった。
-- 設定変更時の通常3モード再抽選/引継ぎ、前兆、ART潜伏、内部REG/JAC成立状態、据え置き、単純電源OFF→ONの扱いは `UNVERIFIED_AFTER_RESEARCH`。一般的5号機挙動から補完しない。
-- 通常ゲーム数天井そのものを今回直接確認できず、`gameCounterReset=CEILING_GAME_COUNTER_NOT_CONFIRMED`、`ceilingAfterReset=NONE_CONFIRMED_AFTER_RESEARCH`。
-- 設定変更専用の朝一モード振り分け、短縮天井、ART/CZ当選率、恩恵率は `NONE_CONFIRMED_AFTER_RESEARCH`。
-- ガックン/初期出目/セグ等による変更判別は `UNVERIFIED_AFTER_RESEARCH`。
-- 通常時の押し順/15枚役/JAC入賞ペナルティは存在するが、設定変更時固有の不利要素とは分離。
-- 有利区間は5号機のため `NOT_APPLICABLE`。
-- `resetBehaviorQA=PARTIAL_AFTER_MULTI_SOURCE_RESEARCH_MODE_EXISTS_BUT_RESET_HANDLING_UNVERIFIED`。
-
-## 406. リノNo.5（直前）
-
-record:
-- `docs/real_machine_db/machines/2009-09-07_rino-no5.md`
-
-machine record commit:
-- `d1e7948c4dcc4b8ca9e04aa01a55004a064b0a45`
-
-- 50枚ベース **30.1 → 31.8G**、BIG約308枚、MIDDLE約155枚、SMALL約84/81枚CONFLICT。
-- 機械割P_Style777 **97.5〜109.5%** vs CrankySeven **96.6〜110.5%** CONFLICT。
-- 天井なし。設定変更/単純電断時の5GプチRT残状態と変更判別は直接根拠不足でUNVERIFIED。
+- ART純増約+2.0枚/G、50枚20.27G、ART初当たり時100/300/500G。
+- 機械割 P-WORLD 94〜115% vs 旧パチマガ97.33〜107.93%でCONFLICT。
+- 通常時3モードは確認、設定変更時のモード/状態処理は未確認。
 
 ## resetBehavior遡及QA
 
@@ -76,10 +77,10 @@ machine record commit:
 ## 次回再開地点
 
 ### 本線
-1. **407件地点 / ドリームJラッシュまで完了**から再開。
-2. **2009-09-14同日群を最終監査**。メーカー別一覧、P-WORLD月間一覧、当時導入一覧、型式資料で同日またはそれ以前の未処理パチスロがないか閉じる。
-3. **2009-09-15〜09-27境界監査**。月精度しかない機種を具体日より前へ誤配置しない。
-4. 現時点の先行候補は9月後半の **`デコトラの鷲`、`交響詩篇エウレカセブン`、`銀河英雄伝説`** 等。必ず具体納品/導入日とrepo既存有無を再確認し、最古の未処理機を408として処理する。
+1. **408件地点 / デコトラの鷲まで完了**から再開。
+2. **2009-09-28同日群を最終監査**。メーカー別一覧、P-WORLD月間一覧、当時導入一覧、型式資料で同日またはそれ以前の未処理パチスロがないか閉じる。
+3. 現時点の次候補は **`交響詩篇エウレカセブン`、`銀河英雄伝説`**。具体納品/導入日とrepo既存有無を再確認し、最古の未処理機を409として処理する。
+4. 月精度しかない機種を具体日機より前へ誤配置しない。
 5. 既存レコードの欠損は後続QAで直接資料が見つかった場合のみ補完。推定値は入れない。
 
 ### resetBehavior遡及QA
@@ -96,6 +97,6 @@ machine record commit:
 
 ## 今回の保存
 
-- 407 ドリームJラッシュ: `docs/real_machine_db/machines/2009-09-14_dream-j-rush.md`
-- machine record commit: `ea110e710f765172a403b6ad1ddffb1a9c746059`
-- 本 `LATEST_HANDOFF.md` を407件地点へ更新。
+- 408 デコトラの鷲: `docs/real_machine_db/machines/2009-09-28_dekotora-no-shu.md`
+- machine record commit: `eac3415de671921a42ba1fe7b85fe2c05e3d0360`
+- 本 `LATEST_HANDOFF.md` を408件地点へ更新。
