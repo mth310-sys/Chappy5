@@ -6,11 +6,46 @@
 
 - 毎回最新mainの `README.md`、実機DBミッションv0.7、旧 `INDEX.md`、本 `LATEST_HANDOFF.md`、既存レコード、直近コミットを再取得する。
 - `INDEX.md` は旧履歴集計。運用上の正本は本 `LATEST_HANDOFF.md` とrepoの実ファイル/直近mainコミット。
-- 今回開始時の最新mainは **404件 `シークレット・プリンセス`** まで進行済みだったため、過去会話の400件地点には戻らず404を正本として継続。
-- 2009-09-01〜09-06境界と9/7群を監査し、repo未登録のパラジェーピー **`スーパーアイムマジックEX`** を確認。性能コア＋v0.7 resetBehaviorを **405** として追加。
-- 途中の境界再監査で `イケイケめんそーれ-30` が検索上未登録に見えたが、実ファイルと履歴を再取得して **既存402（commit 9e5bdf1898752bcc0b638ba4341ba87d4e19954c）** と確認。重複追加しなかった。
+- 今回開始時の最新mainは **405件 `スーパーアイムマジックEX`** まで進行済み。過去会話の401件地点へ戻らず405を正本として継続した。
+- 2009-09-07同日群を再監査し、repo未登録の山佐 **`リノNo.5`** を確認。性能コア＋v0.7 resetBehaviorを **406** として追加した。
+- `ドリームJラッシュ` はコード検索・コミット履歴とも未登録。ALL7の当時導入一覧では **2009-09-14** のため、9/8〜13境界を閉じた後の次候補とする。
+- 既存402 `イケイケめんそーれ-30`、404 `シークレット・プリンセス`、405 `スーパーアイムマジックEX` は重複追加しない。
 
-## 405. スーパーアイムマジックEX
+## 406. リノNo.5
+
+record:
+- `docs/real_machine_db/machines/2009-09-07_rino-no5.md`
+
+machine record commit:
+- `d1e7948c4dcc4b8ca9e04aa01a55004a064b0a45`
+
+要点:
+- manufacturer: **山佐**
+- formalModelName: **リノNo.5-B**
+- inspectionNumber: **7S1200**
+- releaseDate: **2009-09-07**（ALL7当時導入予定日。山佐公式/P-WORLDは2009年9月、当時グリーンべるとは9月上旬納品予定）
+- generation: **5号機**（旧解析に5.1号機表記あり）
+- systemType: **ノーマル / BIG+MIDDLE+SMALL / レモン後5GプチRT「リノチャンス5」**
+- BIG: **1/334.4 → 1/283.7**
+- MIDDLE: **1/350.5 → 1/284.9**
+- SMALL: **1/350.5 → 1/284.9**
+- 合算: **1/115.0 → 1/94.8〜1/94.9**
+- 50枚ベース: **30.1 / 30.3 / 30.6 / 30.9 / 31.3 / 31.8G**
+- BIG約**308枚**、MIDDLE約**155枚**。SMALLは約**84枚**と約**81枚**でCONFLICT。
+- 機械割はP_Style777 **97.5〜109.5%** とCrankySeven **96.6〜110.5%** が競合。算出条件を解消できないため平均せずCONFLICT保持。
+- `coreStatus=COMPLETE_CORE_WITH_PAYOUT_AND_SMALL_BONUS_CONFLICT_RESET_POWER_CYCLE_UNVERIFIED`。
+
+### v0.7 resetBehavior — リノNo.5
+
+- P_Style777は**天井機能なし**、旧パチマガスロマガは「攻め時・ヤメ時→特にナシ」。ゲーム数天井/リセット短縮天井は `NOT_APPLICABLE`。
+- 公開された通常ゲーム数モード/朝一専用モードは確認されず、`modeAfterReset=NOT_APPLICABLE_FOR_PUBLIC_GAME_COUNT_MODE`。
+- 設定変更時および単純電源OFF→ON時に、レモン後5GプチRTの残状態・成立状態・初期出目をどう処理するかは、本機固有直接資料を再探索しても確定できず `UNVERIFIED_AFTER_RESEARCH`。
+- ガックン/初期出目/ランプ等による設定変更・据え置き判別も `UNVERIFIED_AFTER_RESEARCH`。
+- 設定変更専用の天井短縮、モード優遇、朝一当選率、恩恵率は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- 有利区間は5号機のため `NOT_APPLICABLE`。
+- `resetBehaviorQA=COMPLETE_FOR_CEILING_MODE_SCOPE_WITH_TRANSIENT_RT_POWER_CYCLE_AND_DETECTION_UNVERIFIED`。
+
+## 405. スーパーアイムマジックEX（直前）
 
 record:
 - `docs/real_machine_db/machines/2009-09-07_super-im-magic-ex.md`
@@ -18,42 +53,11 @@ record:
 machine record commit:
 - `063ca9857c16fe9268798cf4d7f54218cad6f2ec`
 
-要点:
-- manufacturer: **パラジェーピー（PARA JP）**
-- formalModelName: **スーパーアイムマジック EX**（検定通過機種名として後年整理資料で確認）
-- inspectionNumber: **UNVERIFIED_AFTER_RESEARCH**
-- releaseDate: **2009-09-07**（2009-08-31時点の当時導入一覧。複数後年DBは2009年9月の月精度）
-- generation: **5号機**
-- systemType: **ノーマル / ボーナス主体 / 完全告知 / BIG+REG**
-- BIG: **1/287.44 → 1/266.41**
-- REG: **1/455.11 → 1/268.59**
-- 合算: **1/176.17 → 1/133.75**
-- 50枚ベース: **35.91 / 35.91 / 35.92 / 36.15 / 36.87 / 37.93G**
-- BIG約**312枚**、REG約**104枚**。
-- 機械割は5号機クロニクル/pacnk系の約 **96.8〜108.1%** と、旧パチマガスロマガのシミュレート **95.42〜105.79%** が競合。設定6で約2.3pt差があり単純丸めではないため平均せずCONFLICT保持。
-- `coreStatus=COMPLETE_CORE_WITH_PAYOUT_CONFLICT_AND_RESET_DETECTION_UNVERIFIED`。
-
-### v0.7 resetBehavior — スーパーアイムマジックEX
-
-- pacnkは**天井機能非搭載**、旧パチマガスロマガも「攻め時・ヤメ時→特にナシ」。ゲーム数天井/リセット短縮天井は `NOT_APPLICABLE`。
-- 公開された通常ゲーム数モード、CZ、ART/AT、朝一専用モードは確認されず、該当範囲は `NOT_APPLICABLE / NONE_CONFIRMED`。
-- 単純電源OFF→ONと設定変更の差、ガックン/初期出目/告知ランプ等による変更判別は、本機固有直接資料を再探索しても確定できず `UNVERIFIED_AFTER_RESEARCH`。
-- 有利区間は5号機のため `NOT_APPLICABLE`。
-- 後年の個人所有実機記事に「リセットすると高確率で100G以内のモーニング」とする記述があるが、同記事系列は当該個体について裏物/基板改変を疑う文脈を明記している。**純正実機のresetBenefitsには採用せず `REJECTED_EVIDENCE`** としてレコードに残した。
-- 純正機の公開朝一当選率/恩恵率は `NONE_CONFIRMED_AFTER_RESEARCH`。
-- `resetBehaviorQA=COMPLETE_FOR_CEILING_MODE_SCOPE_WITH_POWER_CYCLE_AND_DETECTION_UNVERIFIED`。
-
-## 404. シークレット・プリンセス（直前）
-
-record:
-- `docs/real_machine_db/machines/2009-09-01_secret-princess.md`
-
-machine record commit:
-- `bc6f93e4cb2ad38c4ea79044b41002e7056ad6a9`
-
-- releaseDateはK-Navi 2009-09-01 / 当時導入一覧2009-09-07でCONFLICT。
-- ART「デートタイム」初当たり **1/401.96 → 1/271.76**、純増約**+2.1枚/G**。
-- P-WORLDは天井搭載分類だが具体G数/発動条件、50枚ベース、設定変更/据え置き/単純電断処理は十分な再探索後も未確定。
+- releaseDate: **2009-09-07**。
+- BIG **1/287.44 → 1/266.41**、REG **1/455.11 → 1/268.59**、合算 **1/176.17 → 1/133.75**。
+- 50枚ベース **35.91 → 37.93G**、BIG約312枚、REG約104枚。
+- 機械割は約96.8〜108.1%系列と95.42〜105.79%系列がCONFLICT。
+- 天井非搭載。純正機の設定変更専用恩恵・ガックン・単純電断差は直接資料未確定。
 
 ## resetBehavior遡及QA
 
@@ -74,11 +78,12 @@ machine record commit:
 ## 次回再開地点
 
 ### 本線
-1. **405件地点 / スーパーアイムマジックEXまで完了**から再開。
-2. **2009-09-07同日群を最終監査**。シークレット・プリンセスは9/1/9/7 CONFLICT、スーパーアイムマジックEXは9/7主値。メーカー別一覧・型式・当時導入一覧を再確認し、同日未登録機を飛ばしていないか閉じる。
-3. その後 **2009-09-08〜09-27を日付境界監査**。月精度だけの機種を具体日へ誤配置しない。K-Navi/P-WORLD/当時業界記事/メーカー一覧/古い導入一覧を横断し、次の未処理機を具体日順に確定する。
-4. 先行候補として当時導入一覧に **2009-09-28 `デコトラの鷲`（大都技研）** があるが、9/8〜27の未処理機がないことを確認するまで先に進まない。
-5. シークレット・プリンセスの天井数値・50枚ベース、スーパーアイムマジックEXの純正reset-specific起動挙動は、後続QAで直接資料が見つかった場合のみ補完する。推定値は入れない。
+1. **406件地点 / リノNo.5まで完了**から再開。
+2. **2009-09-07同日群を最終監査**。既存402 `イケイケめんそーれ-30`、404 `シークレット・プリンセス`（9/1/9/7 CONFLICT）、405 `スーパーアイムマジックEX`、406 `リノNo.5` を重複させず、メーカー別一覧・型式・当時導入一覧で残件有無を確認して閉じる。
+3. **2009-09-08〜09-13境界監査**。ALL7当時導入一覧では次の具体日付きパチスロ候補が **2009-09-14 `ドリームJラッシュ`**。P-WORLD月間機種一覧とも照合し、月精度のみの機種を誤配置しない。
+4. `ドリームJラッシュ` は今回コード検索・コミット履歴とも未登録確認済み。境界監査でより早い未処理機が出なければ **407候補として最優先処理**する。
+5. その後 **2009-09-15〜09-27** を監査し、9/28群へ進む。先行候補は `デコトラの鷲`、同月資料上の `交響詩篇エウレカセブン`、`銀河英雄伝説` 等だが、日付順を崩さない。
+6. 既存レコードの欠損は後続QAで直接資料が見つかった場合のみ補完する。推定値は入れない。
 
 ### resetBehavior遡及QA
 1. **スロ原人まで補完済み**。
@@ -94,7 +99,6 @@ machine record commit:
 
 ## 今回の保存
 
-- 405 スーパーアイムマジックEX: `docs/real_machine_db/machines/2009-09-07_super-im-magic-ex.md`
-- machine record commit: `063ca9857c16fe9268798cf4d7f54218cad6f2ec`
-- 既存402 イケイケめんそーれ-30の重複回避確認: commit `9e5bdf1898752bcc0b638ba4341ba87d4e19954c`
-- 本 `LATEST_HANDOFF.md` を405件地点へ更新。
+- 406 リノNo.5: `docs/real_machine_db/machines/2009-09-07_rino-no5.md`
+- machine record commit: `d1e7948c4dcc4b8ca9e04aa01a55004a064b0a45`
+- 本 `LATEST_HANDOFF.md` を406件地点へ更新。
