@@ -5,13 +5,47 @@
 ## 現在地点
 
 - 毎回最新mainの `README.md`、実機DBミッションv0.7、旧 `INDEX.md`、本 `LATEST_HANDOFF.md`、既存レコード、直近コミットを再取得する。
-- `INDEX.md` は旧履歴集計。運用上の正本は本 `LATEST_HANDOFF.md` とrepoの実ファイル/直近mainコミット。
-- 今回開始時の最新mainは **405件 `スーパーアイムマジックEX`** まで進行済み。過去会話の401件地点へ戻らず405を正本として継続した。
-- 2009-09-07同日群を再監査し、repo未登録の山佐 **`リノNo.5`** を確認。性能コア＋v0.7 resetBehaviorを **406** として追加した。
-- `ドリームJラッシュ` はコード検索・コミット履歴とも未登録。ALL7の当時導入一覧では **2009-09-14** のため、9/8〜13境界を閉じた後の次候補とする。
-- 既存402 `イケイケめんそーれ-30`、404 `シークレット・プリンセス`、405 `スーパーアイムマジックEX` は重複追加しない。
+- `INDEX.md` は旧履歴集計。運用上の正本は本 `LATEST_HANDOFF.md` とrepo実ファイル/直近mainコミット。
+- 今回開始時の最新mainは **406件 `リノNo.5`** まで進行済み。過去会話上の402件地点へ戻らず406を正本として継続した。
+- 2009-09-07同日群および09-08〜09-13境界は直前handoffの監査結果を引継ぎ、repo未登録の **`ドリームJラッシュ`** を **407** として性能コア＋v0.7 resetBehavior同時収集した。
+- 既存402 `イケイケめんそーれ-30`、404 `シークレット・プリンセス`、405 `スーパーアイムマジックEX`、406 `リノNo.5` は重複追加しない。
 
-## 406. リノNo.5
+## 407. ドリームJラッシュ
+
+record:
+- `docs/real_machine_db/machines/2009-09-14_dream-j-rush.md`
+
+machine record commit:
+- `ea110e710f765172a403b6ad1ddffb1a9c746059`
+
+要点:
+- manufacturer: **ウィンネットテクノロジー / ラスター**
+- formalModelName: **ぱちすろドリームジャック**
+- inspectionNumber: **9S0344**
+- releaseDate: **2009-09-14**（ALL7当時導入一覧の具体日。P-WORLDは2009年09月、2009-09-29付グリーンべるとは「納品は既に開始」）
+- generation: **5号機**
+- systemType: **ART主体 / パンク回避型 / ゲーム数管理ART**
+- 50枚ベース: **20.27G/50枚・全設定共通**（旧パチマガスロマガ直接値）
+- ART純増: **約+2.0枚/G**（P-WORLD/K-Navi/当時グリーンべると一致）
+- ART初当たり時基本G数: **100 / 300 / 500G**。開始前ドリームチャレンジでゲーム数を賭けて増加可能。
+- BIG: **1/32768・約448枚**。REG: **1/45.20・約42枚**。ボーナス合算約**1/45.13**。
+- 設定別ART初当たりは十分再探索後も比較可能表を回収できず `UNVERIFIED_AFTER_RESEARCH`。
+- 機械割は大きくCONFLICT: P-WORLD **94/98/100/104/109/115%** vs 旧パチマガスロマガsimulation **97.33/98.71/100.44/102.52/105.26/107.93%**。平均しない。
+- `coreStatus=COMPLETE_CORE_WITH_PAYOUT_CONFLICT_ART_INITIAL_HIT_RESET_BEHAVIOR_PARTIAL`。
+
+### v0.7 resetBehavior — ドリームJラッシュ
+
+- 通常時に**3モード**、前兆モード移行後は最大32G前兆という基本構造はP-WORLD/K-Naviで確認。
+- 旧パチマガスロマガの機種INDEXに**「攻め時・ヤメ時・設定変更時」専用項目の存在**までは確認できたが、現存検索結果から設定変更時本文を確定回収できなかった。
+- 設定変更時の通常3モード再抽選/引継ぎ、前兆、ART潜伏、内部REG/JAC成立状態、据え置き、単純電源OFF→ONの扱いは `UNVERIFIED_AFTER_RESEARCH`。一般的5号機挙動から補完しない。
+- 通常ゲーム数天井そのものを今回直接確認できず、`gameCounterReset=CEILING_GAME_COUNTER_NOT_CONFIRMED`、`ceilingAfterReset=NONE_CONFIRMED_AFTER_RESEARCH`。
+- 設定変更専用の朝一モード振り分け、短縮天井、ART/CZ当選率、恩恵率は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- ガックン/初期出目/セグ等による変更判別は `UNVERIFIED_AFTER_RESEARCH`。
+- 通常時の押し順/15枚役/JAC入賞ペナルティは存在するが、設定変更時固有の不利要素とは分離。
+- 有利区間は5号機のため `NOT_APPLICABLE`。
+- `resetBehaviorQA=PARTIAL_AFTER_MULTI_SOURCE_RESEARCH_MODE_EXISTS_BUT_RESET_HANDLING_UNVERIFIED`。
+
+## 406. リノNo.5（直前）
 
 record:
 - `docs/real_machine_db/machines/2009-09-07_rino-no5.md`
@@ -19,45 +53,9 @@ record:
 machine record commit:
 - `d1e7948c4dcc4b8ca9e04aa01a55004a064b0a45`
 
-要点:
-- manufacturer: **山佐**
-- formalModelName: **リノNo.5-B**
-- inspectionNumber: **7S1200**
-- releaseDate: **2009-09-07**（ALL7当時導入予定日。山佐公式/P-WORLDは2009年9月、当時グリーンべるとは9月上旬納品予定）
-- generation: **5号機**（旧解析に5.1号機表記あり）
-- systemType: **ノーマル / BIG+MIDDLE+SMALL / レモン後5GプチRT「リノチャンス5」**
-- BIG: **1/334.4 → 1/283.7**
-- MIDDLE: **1/350.5 → 1/284.9**
-- SMALL: **1/350.5 → 1/284.9**
-- 合算: **1/115.0 → 1/94.8〜1/94.9**
-- 50枚ベース: **30.1 / 30.3 / 30.6 / 30.9 / 31.3 / 31.8G**
-- BIG約**308枚**、MIDDLE約**155枚**。SMALLは約**84枚**と約**81枚**でCONFLICT。
-- 機械割はP_Style777 **97.5〜109.5%** とCrankySeven **96.6〜110.5%** が競合。算出条件を解消できないため平均せずCONFLICT保持。
-- `coreStatus=COMPLETE_CORE_WITH_PAYOUT_AND_SMALL_BONUS_CONFLICT_RESET_POWER_CYCLE_UNVERIFIED`。
-
-### v0.7 resetBehavior — リノNo.5
-
-- P_Style777は**天井機能なし**、旧パチマガスロマガは「攻め時・ヤメ時→特にナシ」。ゲーム数天井/リセット短縮天井は `NOT_APPLICABLE`。
-- 公開された通常ゲーム数モード/朝一専用モードは確認されず、`modeAfterReset=NOT_APPLICABLE_FOR_PUBLIC_GAME_COUNT_MODE`。
-- 設定変更時および単純電源OFF→ON時に、レモン後5GプチRTの残状態・成立状態・初期出目をどう処理するかは、本機固有直接資料を再探索しても確定できず `UNVERIFIED_AFTER_RESEARCH`。
-- ガックン/初期出目/ランプ等による設定変更・据え置き判別も `UNVERIFIED_AFTER_RESEARCH`。
-- 設定変更専用の天井短縮、モード優遇、朝一当選率、恩恵率は `NONE_CONFIRMED_AFTER_RESEARCH`。
-- 有利区間は5号機のため `NOT_APPLICABLE`。
-- `resetBehaviorQA=COMPLETE_FOR_CEILING_MODE_SCOPE_WITH_TRANSIENT_RT_POWER_CYCLE_AND_DETECTION_UNVERIFIED`。
-
-## 405. スーパーアイムマジックEX（直前）
-
-record:
-- `docs/real_machine_db/machines/2009-09-07_super-im-magic-ex.md`
-
-machine record commit:
-- `063ca9857c16fe9268798cf4d7f54218cad6f2ec`
-
-- releaseDate: **2009-09-07**。
-- BIG **1/287.44 → 1/266.41**、REG **1/455.11 → 1/268.59**、合算 **1/176.17 → 1/133.75**。
-- 50枚ベース **35.91 → 37.93G**、BIG約312枚、REG約104枚。
-- 機械割は約96.8〜108.1%系列と95.42〜105.79%系列がCONFLICT。
-- 天井非搭載。純正機の設定変更専用恩恵・ガックン・単純電断差は直接資料未確定。
+- 50枚ベース **30.1 → 31.8G**、BIG約308枚、MIDDLE約155枚、SMALL約84/81枚CONFLICT。
+- 機械割P_Style777 **97.5〜109.5%** vs CrankySeven **96.6〜110.5%** CONFLICT。
+- 天井なし。設定変更/単純電断時の5GプチRT残状態と変更判別は直接根拠不足でUNVERIFIED。
 
 ## resetBehavior遡及QA
 
@@ -78,12 +76,11 @@ machine record commit:
 ## 次回再開地点
 
 ### 本線
-1. **406件地点 / リノNo.5まで完了**から再開。
-2. **2009-09-07同日群を最終監査**。既存402 `イケイケめんそーれ-30`、404 `シークレット・プリンセス`（9/1/9/7 CONFLICT）、405 `スーパーアイムマジックEX`、406 `リノNo.5` を重複させず、メーカー別一覧・型式・当時導入一覧で残件有無を確認して閉じる。
-3. **2009-09-08〜09-13境界監査**。ALL7当時導入一覧では次の具体日付きパチスロ候補が **2009-09-14 `ドリームJラッシュ`**。P-WORLD月間機種一覧とも照合し、月精度のみの機種を誤配置しない。
-4. `ドリームJラッシュ` は今回コード検索・コミット履歴とも未登録確認済み。境界監査でより早い未処理機が出なければ **407候補として最優先処理**する。
-5. その後 **2009-09-15〜09-27** を監査し、9/28群へ進む。先行候補は `デコトラの鷲`、同月資料上の `交響詩篇エウレカセブン`、`銀河英雄伝説` 等だが、日付順を崩さない。
-6. 既存レコードの欠損は後続QAで直接資料が見つかった場合のみ補完する。推定値は入れない。
+1. **407件地点 / ドリームJラッシュまで完了**から再開。
+2. **2009-09-14同日群を最終監査**。メーカー別一覧、P-WORLD月間一覧、当時導入一覧、型式資料で同日またはそれ以前の未処理パチスロがないか閉じる。
+3. **2009-09-15〜09-27境界監査**。月精度しかない機種を具体日より前へ誤配置しない。
+4. 現時点の先行候補は9月後半の **`デコトラの鷲`、`交響詩篇エウレカセブン`、`銀河英雄伝説`** 等。必ず具体納品/導入日とrepo既存有無を再確認し、最古の未処理機を408として処理する。
+5. 既存レコードの欠損は後続QAで直接資料が見つかった場合のみ補完。推定値は入れない。
 
 ### resetBehavior遡及QA
 1. **スロ原人まで補完済み**。
@@ -99,6 +96,6 @@ machine record commit:
 
 ## 今回の保存
 
-- 406 リノNo.5: `docs/real_machine_db/machines/2009-09-07_rino-no5.md`
-- machine record commit: `d1e7948c4dcc4b8ca9e04aa01a55004a064b0a45`
-- 本 `LATEST_HANDOFF.md` を406件地点へ更新。
+- 407 ドリームJラッシュ: `docs/real_machine_db/machines/2009-09-14_dream-j-rush.md`
+- machine record commit: `ea110e710f765172a403b6ad1ddffb1a9c746059`
+- 本 `LATEST_HANDOFF.md` を407件地点へ更新。
