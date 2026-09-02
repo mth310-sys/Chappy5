@@ -6,83 +6,76 @@
 
 - 最新mainの `README.md`、実機DBミッションv0.7、`INDEX.md`、既存レコード、直前進捗を再取得して継続。
 - `INDEX.md` は旧19件地点のため、README規定どおり本 `LATEST_HANDOFF.md` を進捗正本とする。
-- 直前HANDOFFは360件地点 `プリティ戦記`。既存360件を再追加せず、2009-04-20同日群の次候補を監査。
-- **今回 361「国際サラリーマンとおるくん」を追加。既存361件の再追加禁止。**
-- 2009-04-20同日群は `Rio2 クルージング・ヴァナディース` 既存357、`さすがの猿飛` は当時納品日精密化により2009-04-19主値で既存358、`エースをねらえ!` 既存359、`プリティ戦記` 既存360、今回 `国際サラリーマンとおるくん` を361として追加。
+- 直前HANDOFFは361件地点 `国際サラリーマンとおるくん`。既存361件を再追加せず、2009-04-21〜04-30の月末境界を監査した。
+- ALL7 2009年4月一覧では4/20群より後に安全に追加できるパチスロ掲載を確認できず、メーカー/業界/古い導入資料の検索でも4/21〜4/30に具体日付きで優先すべき未処理機を確定できなかったため、4月末境界をいったん閉じて2009年5月へ進行。
+- **今回 362「もっと楽シーサー25Φ」を追加。既存362件の再追加禁止。**
 
-## 361. 国際サラリーマンとおるくん
+## 362. もっと楽シーサー25Φ
 
 record:
-- `docs/real_machine_db/machines/2009-04-20_kokusai-salaryman-toru-kun.md`
+- `docs/real_machine_db/machines/2009-05-06_motto-tanoshisa-25.md`
 
 要点:
-- manufacturer: KPE
-- formalModelName: `国際サラリーマンとおるくんJC`
-- inspectionNumber: `8S0198`
-- releaseDate: **2009-04-20**。ALL7導入予定日を主値とし、KONAMI公式機種アーカイブの2009年4月稼働開始、P-WORLDの2009年4月導入開始と整合。
+- manufacturer: SANKYO
+- formalModelName: `もっと楽シーサーG`
+- inspectionNumber: `8S0995`
+- releaseDate: **2009-05-06**。当時グリーンべるとが納品開始を5月6日と明記。ALL7/ハズセは2009-05-07導入開始、SANKYO公式は2009.05導入。物流開始とホール導入開始の1日差として保持。
 - generation: 5号機
-- systemType: **ボーナス + RT / パンク回避型RT**
+- systemType: **ノーマル / ボーナス主体 + 天井RT**
 - settings: 1 / 2 / 3 / 4 / 5 / 6
-- 機械割は2系列が競合。pacnk: **96.9 / 97.9 / 100.1 / 102.7 / 105.5 / 108.4%**。P-WORLD/5号機クロニクル: **98.1 / 99.1 / 101.4 / 103.9 / 106.8 / 109.8%**。通常/完全攻略差の可能性はあるが直接資料で計算条件を確定できず、平均せず `CONFLICT_DEFINITION_UNRESOLVED`。
-- 青7BIG: **1/2114.06 / 1/2114.06 / 1/2114.06 / 1/1985.94 / 1/1985.94 / 1/1872.46**。
-- 赤7BIG: **1/668.73 / 1/630.15 / 1/555.39 / 1/512.00 / 1/448.88 / 1/417.43**。
-- BIG合算: **1/508.0 / 1/485.5 / 1/439.8 / 1/407.1 / 1/366.1 / 1/341.3**。
-- REG: **1/1092.27 / 1/1092.27 / 1/1024.00 / 1/949.80 / 1/873.81 / 1/819.20**。
-- 全ボーナス合算: **1/346.8 / 1/336.1 / 1/307.7 / 1/284.9 / 1/258.0 / 1/240.9**。
-- BIG約300枚、REG約70枚。
-- 全ボーナス終了後RT。赤7BIG後100G、REG後50G、青7BIG後は次回ボーナスまで続くRT「バブルタイム」。RTはパンク役入賞で終了し、ナビ時に赤7を狙うことで回避可能。
-- P-WORLDはRT純増を約**+0.7枚/G**と掲載。一方pacnkは赤7/REG後RTを「現状維持RT」、青7後を「増加型RT」と表現するため、RT別個別純増へ展開せず定義差を保持。
-- **天井非搭載**を直接確認。
-- 50枚ベースは機種名/型式/KPEと「50枚」「1000円」「ベース」「コイン持ち」を組み替え、P-WORLD、pacnk、パチマガスロマガ、後年DB/回顧資料まで再探索したが `UNVERIFIED_AFTER_RESEARCH`。パチマガスロマガの1000円あたりゲーム数欄は「現在調査中」のまま。
+- 機械割は2系列が競合。P-WORLD等: **95.3 / 97.5 / 99.5 / 103.0 / 107.0 / 115.5%**。pacnk: **96.53 / 99.04 / 101.14 / 104.71 / 109.11 / 117.00%**。攻略条件差等の可能性はあるが正式定義を直接確定できず `CONFLICT_DEFINITION_UNRESOLVED`。
+- BIG: **1/299.25 / 1/288.70 / 1/281.27 / 1/266.41 / 1/249.19 / 1/219.92**。
+- CB: **1/322.84 / 1/309.13 / 1/299.25 / 1/278.88 / 1/259.04 / 1/227.56**。
+- 合算: **1/155.29 / 1/149.28 / 1/144.99 / 1/136.24 / 1/127.00 / 1/111.83**。
+- 50枚ベース: **34.27 / 34.91 / 35.57 / 36.27 / 37.00 / 37.76G**。旧パチマガスロマガの1000円あたりゲーム数直接値。
+- BIG約310枚、CB104枚。
+- ボーナス間**777G**で次回ボーナスまで継続する天井RTへ突入。純増約**+0.4枚/G**。
 
 ### v0.7 resetBehavior
 
-- settingChangeBehavior: `UNVERIFIED_AFTER_RESEARCH`。機種名/型式/KPEと「設定変更」「リセット」「朝一」「据え置き」「RT」「バブルタイム」「パンク」を組み替えた。パチマガスロマガに「攻め時・ヤメ時・設定変更時」専用項目の存在までは確認したが本文を回収できず、設定変更時のRT状態を断定しない。
-- carryOverBehavior: `UNVERIFIED_AFTER_RESEARCH`。据え置き時の赤7後RT/REG後RT/バブルタイム残状態引継ぎを確定できず。
-- powerCycleBehavior: `UNVERIFIED_AFTER_RESEARCH`。単純電源OFF→ON時のRT残状態を確定できず。
-- gameCounterReset: `NOT_APPLICABLE_TO_GAME_COUNT_CEILING`。天井非搭載のため天井G数カウンタ対象なし。
-- ceilingAfterReset: `NOT_APPLICABLE`。通常天井・リセット専用短縮天井なし。
-- modeAfterReset: `NONE_CONFIRMED_AFTER_RESEARCH`。
-- stateAfterReset: `UNVERIFIED_AFTER_RESEARCH`。RT中の設定変更/電断時の状態初期化・継続を確定できず。
+- settingChangeBehavior: pacnkに**「設定変更後もゲーム数を引き継ぐ」**との本機解析あり。メーカー一次未照合のため `ANALYSIS_SINGLE_FINDING` として保持。
+- carryOverBehavior: `UNVERIFIED_AFTER_RESEARCH`。据え置き時の本機固有明記を直接回収できず、一般論で補完しない。
+- powerCycleBehavior: `UNVERIFIED_AFTER_RESEARCH`。単純電源OFF→ON時の天井カウンタ/RT状態を確定できず。
+- gameCounterReset: `SETTING_CHANGE_CARRY_OVER_REPORTED`。777G天井のため朝一宵越し狙いに直接影響する重要特性。
+- ceilingAfterReset: `NO_SHORTENING_CONFIRMED`。通常777G。設定変更後ゲーム数引継ぎとの解析値があり、リセット専用短縮天井は確認されない。
+- modeAfterReset: `NOT_APPLICABLE_TO_PUBLISHED_MODE_SYSTEM`。
+- stateAfterReset: `UNVERIFIED_AFTER_RESEARCH`。天井RT中の設定変更/電断でRT状態そのものが継続するかは未確定。
 - advantageousSectionReset: `NOT_APPLICABLE`（5号機・有利区間制度前）。
-- resetBenefits/resetPenalties: `NONE_CONFIRMED_AFTER_RESEARCH`。
-- resetDetection: `UNVERIFIED_AFTER_RESEARCH`。ガックン、初期出目、RT表示/液晶等の本機固有判別条件を確定できず。
-- numericResetData: 設定変更専用モード振分/状態振分/朝一当選率/恩恵率は `NONE_CONFIRMED_AFTER_RESEARCH`、短縮天井は `NOT_APPLICABLE`。
+- resetBenefits: 設定変更でボーナス間ゲーム数を消さない解析値が正しければ、前日ハマリが朝一に残る。短縮恩恵ではなく「カウンタ非リセット」として記録。
+- resetPenalties: `NONE_CONFIRMED_AFTER_RESEARCH`。
+- resetDetection: 天井約10G前の上部ランプ/役物背景点滅は天井接近示唆であり変更判別ではない。ガックン/初期出目等は `UNVERIFIED_AFTER_RESEARCH`。
+- numericResetData: normalCeiling=777G、gameCountAfterSettingChange=`CARRY_OVER_REPORTED`。設定変更専用モード振分、朝一当選率、恩恵率は `NONE_CONFIRMED_AFTER_RESEARCH`。
 
 主要出典（取得日 2026-09-02）:
-- KONAMI / 国際サラリーマンとおるくん機種アーカイブ — OFFICIAL
-  - https://www.konami.com/amusement/psm/archive/ps/2009/kokusai/
-- ALL7 / 2009年4月導入予定一覧 — INDUSTRY_SCHEDULE_DATABASE
-  - https://www.all7.jp/plans/index/2009/04
-- P-WORLD / 国際サラリーマンとおるくん — ANALYSIS_HIGH_DATABASE
-  - https://www.p-world.co.jp/machine/database/5489
-- pacnk / 国際サラリーマンとおるくん 設定判別ツール — SECONDARY_ANALYSIS_DATABASE
-  - https://pacnk.com/slot/tools/sh_kokusaisarariman.html
-- パチマガスロマガ / 基本システム — OLD_ANALYSIS_HIGH
-  - https://cs62.cs-plaza.com/g/pachi/pla/s_conq/kpe_slot/14/a.php
-- パチマガスロマガ / 1000円あたりゲーム数 — OLD_ANALYSIS_HIGH
-  - https://cs62.cs-plaza.com/g/pachi/pla/s_conq/kpe_slot/14/c.php
+- SANKYO / 「もっと楽シーサー」の機種詳細 — OFFICIAL
+  - https://www.sankyo-fever.jp/collection/536/
+- グリーンべると / 全てがパワーアップ！『もっと楽シーサー』 — INDUSTRY
+  - https://web-greenbelt.jp/00003039/
+- ALL7 / 2009年5月の導入機種一覧 — INDUSTRY_SCHEDULE_DATABASE
+  - https://www.all7.jp/plans/index/2009/05/10
+- P-WORLD / もっと楽シーサー25Φ — ANALYSIS_HIGH_DATABASE
+  - https://www.p-world.co.jp/machine/database/5503
+- ハズセ / もっと楽シーサー(赤パネルver.) — OLD_ANALYSIS_DATABASE
+  - https://hazuse.com/machine/pachislot/8S0995/
+- パチマガスロマガ / 小役確率・1000円あたりゲーム数 — OLD_ANALYSIS_HIGH
+  - https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sankyo_slot/16/c.php
 - パチマガスロマガ / 機種索引 — OLD_ANALYSIS_INDEX
-  - https://cs62.cs-plaza.com/g/pachi/pla/s_conq/kpe_slot/14/kpe_slot_14.php
-- 5号機クロニクル / KPE一覧 — SECONDARY_RETROSPECTIVE
-  - https://5goki.com/kpe
-- pachinko’s blog / KPE「国際サラリーマンとおるくん」 — SECONDARY_ARCHIVE
-  - https://pachinko.hatenablog.jp/entry/2009/04/kokusai-salaryman-toru-kun
-- slothistory / 更新情報5 — OLD_ARCHIVE
-  - https://slothistory.com/kousin_kako05.html
+  - https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sankyo_slot/16/sankyo_slot_16.php
+- pacnk / もっと楽シーサー 設定判別ツール — SECONDARY_ANALYSIS_DATABASE
+  - https://pacnk.com/slot/tools/sh_mottotanosisa.html
+- パチスロ5号機まとめwiki / もっと楽シーサー — OLD_SECONDARY_ARCHIVE
+  - https://w.atwiki.jp/5gouki/pages/166.html
 
 commit:
-- 361 国際サラリーマンとおるくん: `f8a9510d08507ee4c2ab86600a3997a92b6f4903`
+- 362 もっと楽シーサー25Φ: `addc89840a0572f7b11c261ae832db3dabe2444b`
 
-## 2009年4月 境界監査
+## 2009年4月末〜5月初頭 境界監査
 
-- 4/5 `夢花月` 既存354。
-- 4/13 `クラシックジャグラー` 既存355、`シーシー` 既存356。
-- 4/14〜4/18は具体日付きで安全に追加できる未処理パチスロを前リレーまでに確定できず。
-- 4/19 `さすがの猿飛` 既存358（ALL7 4/20群から当時納品日で精密化）。
-- 4/20 `Rio2 クルージング・ヴァナディース` 既存357、`エースをねらえ!` 既存359、`プリティ戦記` 既存360、`国際サラリーマンとおるくん` 今回361。
-- ALL7の4/20掲載パチスロ群は上記まで処理済み。次回は**2009-04-21〜04-30の月末境界を、ALL7だけでなく当時業界記事・メーカー資料・古い導入一覧まで横断して監査**し、具体日付き未処理機があれば時系列順に追加する。
-- `スターマンアイズ / ジュードーズ` は具体導入/納品日が新たに取れた場合のみ正しい時系列位置へ遡及追加する。
+- 4/20までの同日群は既存361件まで処理済み。
+- 4/21〜4/30は、今回の監査で具体日付きの未処理パチスロを安全に確定できず、4月末境界を閉じた。
+- ALL7は `天誅` を2009-05-01として掲載するが、K-Naviは**2009-06-01**、後年回顧資料も**2009年6月**としており、さらに2009-05-25時点の検定関連記録もあるため、**5/1を確定導入日として362より前へ挿入しない**。`天誅` は導入日CONFLICT候補として2009年6月境界で再監査する。
+- SANKYO公式で `もっと楽シーサー` は25Φに加えて**30Φ全国バージョン / 30Φ沖縄バージョン**の別スペックが存在することを確認済み。全機種方針上は独立レコード候補だが、各30Φの具体的納品/導入日を次回先に監査する。
+- 30Φ群の時系列が確定した後、ALL7 5/7群の `タイムリミット` 等へ進む。
 
 ## resetBehavior遡及QA進捗
 
@@ -92,12 +85,13 @@ commit:
 
 ## 次回再開地点
 
-1. **LATEST_HANDOFF基準361件地点。既存361件の再追加禁止。**
-2. **2009-04-21〜04-30の月末境界監査から継続。具体日付き未処理機があれば最古から追加し、境界を閉じてから2009年5月へ進む。**
-3. 毎回GitHub最新mainで既存登録を確認し、未処理のみ追加する。
-4. 各新規機で性能コアとv0.7 resetBehaviorを同時収集し、設定変更/据え置き/電源OFF→ON/天井/モード/状態/ガックン/有利区間を表記揺れ・型式・メーカー込みで多段検索する。
-5. `スターマンアイズ / ジュードーズ` は具体導入/納品日が新たに取れた場合のみ遡及追加。
-6. 遡及QAは **竹中直人のパチスロ太閤記より後の最初のresetBehavior未補完機**から再開する。
+1. **LATEST_HANDOFF基準362件地点。既存362件の再追加禁止。**
+2. **まず `もっと楽シーサー30Φ全国バージョン / 30Φ沖縄バージョン` の正式型式・具体納品/導入日・独立性能を監査する。25Φと同日/直後で独立レコード化すべきと確認できたものを最古から363件目へ追加する。**
+3. 30Φ群を閉じた後、2009-05-07前後の `タイムリミット` など同日群を導入/納品の具体日で監査する。
+4. `天誅` はALL7 2009-05-01とK-Navi 2009-06-01/回顧2009-06が競合するため、現時点では5月1日へ挿入せず2009年6月境界で再監査する。
+5. 毎回GitHub最新mainで既存登録を確認し、未処理のみ追加する。
+6. 各新規機で性能コアとv0.7 resetBehaviorを同時収集し、設定変更/据え置き/電源OFF→ON/天井/モード/状態/ガックン/有利区間を表記揺れ・型式・メーカー込みで多段検索する。
+7. 遡及QAは **竹中直人のパチスロ太閤記より後の最初のresetBehavior未補完機**から再開する。
 
 ## コミット
 
@@ -109,3 +103,4 @@ commit:
 - 359 エースをねらえ!: `405172802b73290cf1222ff6f8ea70489056971c`
 - 360 プリティ戦記: `a834bd17236dc67a52086fa0c7a7f4941080972a`
 - 361 国際サラリーマンとおるくん: `f8a9510d08507ee4c2ab86600a3997a92b6f4903`
+- 362 もっと楽シーサー25Φ: `addc89840a0572f7b11c261ae832db3dabe2444b`
