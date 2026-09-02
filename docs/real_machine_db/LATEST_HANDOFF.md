@@ -6,112 +6,96 @@
 
 - 最新mainの `README.md`、実機DBミッションv0.7、`INDEX.md`、既存レコード、直前進捗を再取得して継続。
 - `INDEX.md` は旧19件地点のため、README規定どおり本 `LATEST_HANDOFF.md` を進捗正本とする。
-- 直前HANDOFFは349件地点だったが、mainにはその後 **350「スクール☆ウォーズ」** が既に追加済みだったため重複作業せず引き継いだ。
-- 今回 **351「マジカルハロウィンR」** を2009-03-16同日群として追加。
-- さらに境界再監査で、旧HANDOFFに月単位候補として残っていたNET **「ドラキュラ」** に当時業界資料の **2009-03-01納品開始予定**を確認。既存レコードがなかったため **352件目として遡及追加**。
-- **既存352件の再追加禁止。**
+- 直前HANDOFFは352件地点。既存352件を再追加せず、2009年3月前半〜3/29の残候補を具体日で再監査した。
+- `ニューパルサー3` はALL7で **2009-06-01導入予定**を確認し、3月候補から除外。
+- `スターマンアイズ` は当時グリーンべるとで **2009年3月下旬納品予定**までで具体日未確定。3/16以前へ推測挿入しない。
+- `ジュードーズ` は2009年3月機であることは確認できるが、今回も具体納品/導入日を確定できず、推測配置しない。
+- ALL7の2009年3月具体日一覧では、3/16後のパチスロ次候補は **2009-03-30「快盗天使ツインエンジェル2」**。3/17〜3/29に具体日付き未処理パチスロを確定できなかったため接続。
+- 今回 **353「快盗天使ツインエンジェル2」** を追加。
+- **既存353件の再追加禁止。**
 
-## 350. スクール☆ウォーズ（既存main確認）
+## 350〜352（直前mainの継承）
 
-record:
-- `docs/real_machine_db/machines/2009-03-16_school-wars.md`
+- 350 `スクール☆ウォーズ` / 銀座 / 2009-03-16 / commit `2606adf3959ac1d483146e686b718efeae0edb11`
+- 351 `マジカルハロウィンR` / KPE / 2009-03-16 / commit `61eb3a75db4f05e4c96257fbaab11d919308ec53`
+- 352 `ドラキュラ` / NET / 2009-03-01遡及 / commit `3e9bf222191351eecc3104a66b50a02cddd5ae38`
 
-要点:
-- manufacturer: 銀座
-- formalModelName: スクールウォーズR
-- releaseDate: 2009-03-16
-- settings: 1 / 3 / 5 / H
-- BIG: 1/374.49 → 1/315.08、REG: 1/744.73 → 1/624.15、合算: 1/249.19 → 1/209.38
-- 機械割: 98.0 / 101.1 / 105.1 / 110.0%（回顧資料と丸め差あり）
-- ART「ライジングチャンス」約+1.0枚/G、BIG約240枚、REG約60枚
-- ボーナス間1000G天井。設定変更後は約50%で高確率状態スタートをP-WORLDで確認済み。
-- 350追加commit: `2606adf3959ac1d483146e686b718efeae0edb11`
-
-## 351. マジカルハロウィンR
+## 353. 快盗天使ツインエンジェル2
 
 record:
-- `docs/real_machine_db/machines/2009-03-16_magical-halloween-r.md`
+- `docs/real_machine_db/machines/2009-03-30_kaito-tenshi-twin-angel-2.md`
 
 要点:
-- manufacturer: KPE
-- formalModelName: マジカルハロウィンR JF
-- releaseDate: 2009-03-16（ALL7導入予定）。当時グリーンべるとは3/15納品開始予定、KONAMI公式は2009年3月稼働開始。
+- manufacturer: サミー（Sammy）
+- formalModelName: `UNVERIFIED_AFTER_RESEARCH`
+- releaseDate: 2009-03-30（ALL7導入予定・パチビー導入日）。2009年末マイナビニュースには「2009年4月にホール登場」表記があるため月表記差を注記。
 - generation: 5号機
-- systemType: ボーナス+ART / カボチャレンジ・カボチャンス
-- 機械割: 98.40 / 99.57 / 102.21 / 104.31 / 105.91 / 109.29%。2009年解析の丸め系列98.4 / 99.6 / 102.2 / 104.3 / 105.9 / 109.3%と整合。
-- BIG全設定1/2048.0。BG/REG 1/183.1 → 1/164.7。ボーナス合算 1/168.0 → 1/152.4。突カボ 1/240.9 → 1/282.5。
-- 50枚ベース約36G、ART約+1.4枚/G、BIG約160枚、BG約30枚。
-- 通常救済はボーナス後573G高確、999Gで魔界ゾーン。設定変更専用短縮天井とは確認できないため分離。
-- ART純増は当時資料約+1.4枚/G、後年回顧約+1.5枚/Gのため平均せずCONFLICT注記。
+- systemType: ボーナス+RT / CZ / RTナビストック / 天井RT / 技術介入
+- settings: 1 / 2 / 3 / 4 / 5 / 6
+- 機械割: 96.8 / 98.8 / 100.9 / 103.2 / 108.0 / 111.8%。P-WORLD、5号機クロニクル、旧攻略資料で同系列を照合。
+- H-BIG: 1/560.1 → 1/434.0
+- N-BIG: 1/720.2 → 1/452.0
+- MID: 1/541.6 → 1/383.3
+- ボーナス合算: 1/199.2 → 1/140.3
+- 基本獲得: H-BIG約255枚 / N-BIG約200枚 / MID約80枚
+- RT「エンジェルタイム」: 33G/セット。
+- RT純増は P-WORLD約+0.3〜0.5枚/G、パチビー約+0.5枚/G、パチスロ救急車約+0.6枚/Gで `CONFLICT`。平均しない。
+- 50枚ベースは検索語・資料系統変更後も本機固有の比較可能値を直接確定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 通常救済: CZ/RTを除く通常側の999G到達後、ボーナス成立までCZ→RTをループする天井RT構造を確認。
 
 ### v0.7 resetBehavior
 
-- 設定変更、据え置き、単純電源OFF→ON時の573G/999Gカウンタ、高確/魔界/RT/ART状態処理は本機固有の直接資料を確定できず `UNVERIFIED_AFTER_RESEARCH`。
-- リセット専用モード振分・短縮天井・朝一当選率/恩恵発生率は公開値を確認できず。
-- ガックン/初期出目/液晶・ランプ等の変更判別も直接資料未確定。
-- 後継のマジカルハロウィン2/5/8等の朝一仕様は流用しない。
-- 有利区間は5号機のため `NOT_APPLICABLE`。
+- settingChangeBehavior: **CONFIRMED**。設定変更で天井までのゲーム数をリセットし、RTナビストックも消滅。内部的にCZ「エンジェルチャレンジ」からスタート。
+- carryOverBehavior: `UNVERIFIED_AFTER_RESEARCH`。据え置き時の天井カウンタ・ナビストック・CZ/RT状態を本機固有資料で確定できず。
+- powerCycleBehavior: `UNVERIFIED_AFTER_RESEARCH`。単純電源OFF→ONのみの場合のカウンタ・ナビストック・CZ/RT状態処理は未確定。
+- gameCounterReset: `RESET_ON_SETTING_CHANGE_CONFIRMED`。
+- ceilingAfterReset: 通常999G構造。設定変更専用の短縮天井は確認なし。
+- modeAfterReset: `STARTS_IN_ANGEL_CHALLENGE_CZ_CONFIRMED`。
+- stateAfterReset: ナビストック消滅は確認。高確/低確等のその他内部状態初期値は未確定。
+- advantageousSectionReset: `NOT_APPLICABLE`（5号機・有利区間制度前）。
+- resetBenefits: 設定変更後CZスタート。通常CZの自力RT連チャン率33%はK-Naviにあるが、朝一専用率ではないため別定義で保持。
+- resetPenalties: 前日保持のRTナビストックが設定変更で消滅。
+- resetDetection: 朝一にRT突入リプレイ（リプレイ・リプレイ・羽根）または転落リプレイ（ベル・ベル・リプレイ）が早期出現した場合、設定変更の可能性が高いとする旧解析あり。ガックン/初期出目/ランプは `UNVERIFIED_AFTER_RESEARCH`。
+- 公開朝一専用モード振分・朝一当選率・リセット恩恵発生率は確認なし。
 
 主要出典（取得日 2026-09-02）:
-- https://www.konami.com/amusement/psm/archive/ps/2009/magihalloR/
-- https://web-greenbelt.jp/00002951/
-- https://www.all7.jp/plans/index/2009/03
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/kpe_slot/13/a.php
-- https://w.atwiki.jp/5gouki/pages/145.html
-- https://pachinko.hatenablog.jp/archive/2009/03/01
+- ALL7 / 2009年3月導入予定一覧 — INDUSTRY_SCHEDULE_DATABASE
+  - https://www.all7.jp/plans/index/2009/03
+- パチビー / 快盗天使ツインエンジェル2 — INDUSTRY_DATABASE
+  - https://www.pachibee.jp/machines/reach/209080009
+- グリーンべると / 萌え系パチスロ『ツインエンジェル』が再び登場 — INDUSTRY
+  - https://news.p-world.co.jp/articles/3321/greenbelt
+- P-WORLD / 快盗天使ツインエンジェル2 — INDUSTRY_DATABASE
+  - https://www.p-world.co.jp/machine/database/5479
+- K-Navi / 快盗天使ツインエンジェル2 — ANALYSIS_HIGH
+  - https://p-kn.com/slot/927/
+- K-Navi / エンジェルチャレンジ(CZ) — ANALYSIS_HIGH
+  - https://p-kn.com/slot/927/9290/
+- パチマガスロマガ / 快盗天使ツインエンジェル2 — ANALYSIS_HIGH
+  - https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sammy_slot/117/a.php
+- ツインエンジェル2攻略 — ANALYSIS_SINGLE_CROSSCHECKED
+  - https://twinangel.husuma.com/
+- slot-navi / ツインエンジェル2解析・攻略 — ANALYSIS_SINGLE
+  - https://slot-navi.com/10/twin-angel2/
+- パチスロ救急車 / ツインエンジェル2 — OLD_ANALYSIS_SINGLE
+  - https://www.eightbeat.com/slot99/kishu/ka_gyou/ka/twinE2/page_menu.html
+- マイナビニュース / 2009年4月ホール登場表記 — CONTEMPORARY_MEDIA
+  - https://news.mynavi.jp/article/20091218-a083/
 
 commit:
-- `61eb3a75db4f05e4c96257fbaab11d919308ec53`
-
-## 352. ドラキュラ（NET・遡及追加）
-
-record:
-- `docs/real_machine_db/machines/2009-03-01_dracula-net.md`
-
-要点:
-- manufacturer: ネット（NET）
-- releaseDate: 2009-03-01（当時グリーンべると納品開始予定）
-- KPE「悪魔城ドラキュラ」とは別機種。NET「ドラキュラ」/ネオストックとして分離。
-- systemType: ネオストック / ボーナス集中型 / 出玉増加目的RTなし
-- D.RUSH: 全設定約1/14.9
-- D.ZONE主系列: 1/354.2 → 1/177.1
-- 機械割主系列: 95.5 / 97.5 / 99.6 / 102.0 / 105.0 / 115.0%
-- 別シミュレーション系列: 95.3 / 97.3 / 99.3 / 101.8 / 104.8 / 114.8%のため `CONFLICT`。平均しない。
-- 50枚ベース（単一解析）: 通常35.29 → 35.53G、連荘状態32.93 → 33.53G。
-- D.RUSH/D.ZONEともP-WORLDで最大41枚。当時業界発表は29枚超払い出し終了で、定義差を分離。
-- 通常ゲーム数天井は確認なし。
-- 2009年更新wikiのD.ZONE設定別主系列と、シミュレーション解析の別系列が競合するため統合しない。
-- 後年5号機クロニクルには十字架/ART等、別機との混同が疑われる記述があり、主根拠には採用していない。
-
-### v0.7 resetBehavior
-
-- 設定変更/据え置き/単純電源OFF→ON時の通常・高確率・内部ボーナス状態処理は、本機固有直接資料を確定できず `UNVERIFIED_AFTER_RESEARCH`。
-- 通常ゲーム数天井なし。設定変更専用短縮天井、朝一専用モード振分、朝一当選率/恩恵発生率も確認なし。
-- ボーナス後100G押し順ナビ残Gの変更/電断時処理は未確定。
-- ガックン/初期出目/ランプ/朝一高確等による変更判別は直接資料未確定。
-- 有利区間は `NOT_APPLICABLE`。
-
-主要出典（取得日 2026-09-02）:
-- https://web-greenbelt.jp/00002940/
-- https://w.atwiki.jp/5gouki/pages/143.html
-- https://www.p-world.co.jp/machine/database/5466
-- https://kenslo65536.com/kaiseki/dorakyura.html
-- https://pachiseven.jp/articles/detail/8995
-
-commit:
-- `3e9bf222191351eecc3104a66b50a02cddd5ae38`
+- 353 快盗天使ツインエンジェル2: `1b7ec7f9a5a281582b8ae6a636b625acf5adc601`
 
 ## 2009年3月 境界監査
 
 - 3/1 `タコスロ7R` は既存348。
 - 3/1 `バトルアスリーテス大運動会` は既存349。
-- 3/1 NET `ドラキュラ` は今回352として遡及追加。
+- 3/1 NET `ドラキュラ` は既存352（遡及）。
 - 3/16 `スクール☆ウォーズ` は既存350。
-- 3/16 `マジカルハロウィンR` は今回351として追加。
-- 月単位候補 `ニューパルサー3 / スターマンアイズ / ジュードーズ` 等は、記事投稿日・発売月のみを導入日と誤認せず、具体納品/導入日を引き続き監査する。
-- `快盗天使ツインエンジェル2` はALL7/パチビーで2009-03-30導入予定/導入日候補を確保しているが、3/17〜3/29の未処理機監査を先に閉じる。
-- `スターマンアイズ` は「3月下旬納品予定」と「2009年4月」系資料があるため、具体日確定前に配置しない。
-- 2月以前・2008年末の月単位候補も、具体日が判明した場合のみ正しい位置へ遡及追加する。
+- 3/16 `マジカルハロウィンR` は既存351。
+- 3/30 `快盗天使ツインエンジェル2` は今回353。
+- `ニューパルサー3` は2009-06-01へ送る。
+- `スターマンアイズ` は3月下旬予定だが具体日未確定のため、月末境界監査で継続確認する。
+- `ジュードーズ` は3月機だが具体日未確定。安全な具体日が得られた場合のみ正しい位置へ遡及追加する。
 
 ## resetBehavior遡及QA進捗
 
@@ -121,15 +105,16 @@ commit:
 
 ## 次回再開地点
 
-1. **LATEST_HANDOFF基準352件地点。既存352件の再追加禁止。**
-2. **2009-03-01〜03-16境界の残候補を具体日で最終監査**する。特に `ニューパルサー3 / スターマンアイズ / ジュードーズ` 等。具体日が3/16以前なら遡及追加する。
-3. 3/16以前を閉じたら **2009-03-17〜03-29** を時系列監査し、最古の未処理パチスロから進める。
-4. その区間に未処理がなければ、具体日候補を確保済みの **2009-03-30「快盗天使ツインエンジェル2」** へ接続する。
+1. **LATEST_HANDOFF基準353件地点。既存353件の再追加禁止。**
+2. **2009-03-30〜03-31同日/月末群を最終監査**し、`スターマンアイズ / ジュードーズ` を含む月単位候補に具体日が取れれば正しい位置へ遡及追加する。
+3. 3月を閉じたら **2009年4月最古の具体日付き未処理パチスロ**へ進む。
+4. 現時点で当時グリーンべるとから **山佐「夢花月」2009-04-05納品開始予定**を次月の有力具体日候補として確保済み。4/1〜4/4の未処理監査を先に閉じ、既存確認後に接続する。
 5. 遡及QAは **竹中直人のパチスロ太閤記より後の最初のresetBehavior未補完機**から再開する。
 6. 一般論、後継機、同名別メーカー機の値で推測補完しない。
 
 ## コミット
 
-- 350 スクール☆ウォーズ（既存main）: `2606adf3959ac1d483146e686b718efeae0edb11`
+- 350 スクール☆ウォーズ: `2606adf3959ac1d483146e686b718efeae0edb11`
 - 351 マジカルハロウィンR: `61eb3a75db4f05e4c96257fbaab11d919308ec53`
 - 352 ドラキュラ（NET・遡及）: `3e9bf222191351eecc3104a66b50a02cddd5ae38`
+- 353 快盗天使ツインエンジェル2: `1b7ec7f9a5a281582b8ae6a636b625acf5adc601`
