@@ -6,74 +6,78 @@
 
 - 最新mainの `README.md`、実機DBミッションv0.7、`INDEX.md`、既存レコード、直前 `LATEST_HANDOFF.md` を再読して継続。
 - `INDEX.md` は旧19件地点のため、README規定どおり本 `LATEST_HANDOFF.md` を進捗正本とする。
-- 直前正本は **333件地点 / 時系列本線2008-12-15 トリプル沖V-30まで完了**。
-- 今回、同日未処理の **334 `HAIBいちろう`（イープレイ / 歓喜社）** を追加。
-- **既存334件の再追加禁止。**
+- 直前正本は **334件地点 / 2008-12-15 HAIBいちろうまで完了**。
+- 今回、境界監査後に **335 `スロット代紋TAKE2`（エレコ）** を追加。
+- **既存335件の再追加禁止。**
 
-## 334. HAIBいちろう
+## 335. スロット代紋TAKE2
 
 record:
-- `docs/real_machine_db/machines/2008-12-15_haib-ichiro.md`
+- `docs/real_machine_db/machines/2008-12-22_slot-emblem-take2.md`
 
 要点:
-- machineName: **HAIBいちろう**
-- manufacturer: **イープレイ / 歓喜社**
-- releaseDate: **2008-12-15**（ALL7導入予定）
+- machineName: **スロット代紋TAKE2**
+- manufacturer: **エレコ**
+- releaseDate: **2008-12-22**（ALL7導入予定）。グリーンべるとは2008-12-21納品開始予定のため、物流開始/ホール導入予定の定義差として分離。
+- modelNumber: **エンブレムTAKE2-3**（P-WORLD型式名）
 - generation: **5号機**
-- 2008-10-20東京都公安委員会告示の検定情報にイープレイ「HAIBいちろう」が掲載された当時記事を確認。検定通過日とホール導入日は分離。
-- 当時パチマガスロマガは **「完全告知/ノーマル」** と明記。BIGは345枚超払い出し終了・純増約**312枚**、REGは105枚超払い出し終了・純増約**104枚**。
-- 同資料はオリジナル乱数抽選システムを採用した「チェーンヒットボーナス」を特徴として記載。ただし内部乱数・連鎖抽選詳細は物差しDB対象外。
-- 設定別BIG/REG/合算、機械割、50枚ベースはパチマガスロマガ内に専用欄/ページが存在するものの本文が **「現在調査中」**。表記揺れ・メーカー名・項目名を変えて別系統も再探索したが数値を確定できず推測補完しない。
-- 後年スロリスクタイムは **A+RT / 2008年11月** に分類するが、当時詳細資料のノーマル分類とALL7の2008-12-15具体導入予定に競合。RTの継続G数/突入条件/純増を当時本文で確認できないため **`CONFLICT_SYSTEM_TYPE` / `CONFLICT_RELEASE_MONTH`** として平均・融合せず保持。
-- `coreStatus=PARTIAL_CORE_WITH_CONFIRMED_BASIC_PAYOUT_AND_SYSTEM_CONFLICT`。
+- systemType: **ボーナス+RT / CZ**。ユニバーサル公式「ボーナス+RT」、当時パチマガ「RT/CZ」を主根拠とする。後年5号機クロニクルのA+ART分類はCONFLICT。
+- 設定構成は当時解析で **1 / 4 / 6 / H**。
+- BIG合算 **1/364.09 → 1/229.15**、REG合算 **1/655.36 → 1/404.54**、ボーナス合算 **1/234.06 → 1/146.29**。
+- 50枚ベース **36.77 / 36.75 / 36.73 / 36.71G**。
+- メーカー発表PAYOUT（当時解析掲載） **97.8 / 101.0 / 108.1 / 115.0%**。公式最高出玉率115%とも整合。
+- BIG約**312枚**、REG約**105枚**。100Gまたは2100G継続RT、RT中は当時業界記事で「コイン微増」。比較可能な枚/G純増は未確定。
+- 後年5号機クロニクルは設定1/4/5/6、機械割98.0/102.0/107.1/114.2%、A+ART、BIG約252枚/REG約104枚としており、設定ラベル・機械割・ゲーム性・BIG枚数を **CONFLICT** 保存。平均/融合しない。
+- `coreStatus=COMPLETE_CORE_EXCEPT_NUMERIC_RT_NET_INCREASE_WITH_CONFLICTS_PRESERVED`。
 
 ### v0.7 resetBehavior
 
-- `settingChangeBehavior`: **UNVERIFIED_AFTER_RESEARCH**。パチマガスロマガ機種トップに「攻め時・ヤメ時・設定変更時」項目の存在は確認したが、本機固有本文を回収できず。
+- `settingChangeBehavior`: **UNVERIFIED_AFTER_RESEARCH**。
 - `carryOverBehavior`: **UNVERIFIED_AFTER_RESEARCH**。
 - `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH**。
-- `gameCounterReset`: **NONE_CONFIRMED_AFTER_RESEARCH**。通常時ゲーム数天井自体を本機固有資料で確認できない。
+- `gameCounterReset`: **NONE_CONFIRMED_AFTER_RESEARCH**。通常ゲーム数到達型天井を本機固有資料で確認できず。
 - `ceilingAfterReset`: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- `modeAfterReset`: **NONE_CONFIRMED_AFTER_RESEARCH**。朝一専用モード/変更時モード振り分けを確認できず。
-- `stateAfterReset`: **UNVERIFIED_AFTER_RESEARCH**。
+- `modeAfterReset`: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- `stateAfterReset`: **UNVERIFIED_AFTER_RESEARCH**。CZ/RT残状態を含む変更時処理を直接確定できず。
 - `advantageousSectionReset`: **NOT_APPLICABLE**（5号機・有利区間制度前）。
 - `resetBenefits` / `resetPenalties`: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- `resetDetection`: **UNVERIFIED_AFTER_RESEARCH**。当時掲示板に本機固有の特殊なリール始動挙動の記録はあるが、設定変更/据え置き判別との因果を示す資料はなく変更判別値に採用しない。
+- `resetDetection`: **UNVERIFIED_AFTER_RESEARCH**。ガックン/初期出目/ランプ等の機種固有判別を確定できず。
 - 公開朝一数値: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- `resetBehaviorQA=UNVERIFIED_AFTER_MULTI_SOURCE_RESEARCH_NO_DEVICE_SPECIFIC_RESET_RULE`。
+- 機種名/型式/メーカー表記に設定変更・リセット・朝一・据え置き・電源OFF ON・天井・モード・ガックンを組み替え、公式・業界記事・当時解析・旧DB・回顧資料を横断してからUNVERIFIED判定。一般的5号機挙動から補完しない。
 
 主要出典（取得日 2026-09-02）:
+- https://www.universal-777.com/product/slot/emblem_take2/
+- https://www.universal-777.com/product/slot/2008/
+- https://web-greenbelt.jp/00003896/
 - https://www.all7.jp/plans/index/2008/12
-- https://p-mans.blogspot.com/2008/10/
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/eplay_slot/03/a.php
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/eplay_slot/03/h.php
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/eplay_slot/03/c.php
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/eplay_slot/03/eplay_slot_03.php
-- https://pachisuro100.com/a-rt/
-- https://kako.5ch.io/test/read.cgi/slot/1220309558/l-
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/eleco_slot/75/h.php
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/eleco_slot/75/c.php
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/eleco_slot/75/a.php
+- https://www.p-world.co.jp/machine/database/5362
+- https://5goki.com/universal
 
-## 2008-12-15境界監査
+## 2008-12境界監査
 
-- ALL7同日一覧のうち、既存 **332 `シンゾウニンゲン`、333 `トリプル沖V-30`、今回334 `HAIBいちろう`** をパチスロ本線として処理済み。
-- `F愛の戦士レインボーマン / KISSワールドツアー / ウイングマン / 加山雄三～海とエレキと若大将～ / 快傑ライオン丸 / 遠山の金さん` はALL7一覧上同日だがパチンコ側名称・メーカー機であり、本DBのパチスロ本線へ誤混入させない。
-- HAIBいちろうの後年2008/11分類は、P-WORLD 2008年11月導入一覧にHAIBいちろうを確認できず、ALL7の具体日2008-12-15を本線日付として維持する。ただし後年分類差自体はCONFLICTとしてレコードに保存。
+- ALL7 2008年12月一覧では12/15群の次の具体導入予定日は **12/22 スロット代紋TAKE2**。2008-12-16〜21に本線へ入る具体日未処理機は同一覧で確認できず。
+- グリーンべるとの **12/21** は本機の「納品開始予定」であり、ALL7の **12/22導入予定** と定義を分離した。
+- 月単位候補 **魔界城** は岡崎産業/業界記事で2008年12月機まで確認できるが、今回の再探索では具体ホール導入日を確定できず、月だけを理由に12/22以前へ推測挿入しない。
+- 月単位候補 **シャドウハーツII** もユニバーサル公式で2008年12月発売まで確認。具体導入日が確定した場合のみ正しい時系列位置へ遡及挿入する。
 
 ## resetBehavior遡及QA進捗
 
 - 直前までに **大山鳴動漢みちスロ!（2006-09）** をv0.7化済み。
-- **次は `2006-09_takenaka-naoto-taikoki.md`（竹中直人のパチスロ太閤記）**。
-- その後は時系列順にresetBehavior未収集機を進める。
-- ジャックポット系は実ファイル `2006-11_jackpot-tropical-version.md` を既に同定済み。2017年Ver.2や2007年30φ派生と分離して処理する。
+- 次は `2006-09_takenaka-naoto-taikoki.md`（竹中直人のパチスロ太閤記）。
+- 新規本線を止めず、QAリレー時に時系列順で進める。
 
 ## 次回再開地点
 
-1. **LATEST_HANDOFF基準334件地点 / 時系列本線は2008-12-15 HAIBいちろうまで完了。**
-2. 次は具体日確定済み **2008-12-22 `スロット代紋TAKE2`（エレコ）** を最優先。既存照合 → 正式型式/導入日 → 性能コア → v0.7 resetBehavior の順で処理する。
-3. 2008-12-16〜21に本線へ入る未処理機がないか、メーカー別一覧・当時新台/納品記事・旧DBで境界監査してから12/22を確定追加する。
-4. `魔界城` / `シャドウハーツII` 等の月単位候補は具体導入日が確定した場合のみ時系列へ遡及挿入する。
+1. **LATEST_HANDOFF基準335件地点 / 時系列本線は2008-12-22 スロット代紋TAKE2まで完了。**
+2. 2008-12-23〜31の未処理具体日機種をメーカー公式・当時新台/納品記事・旧DBで最終監査する。
+3. `魔界城` / `シャドウハーツII` 等の2008-12月単位候補は、具体導入日が確定した場合のみ時系列へ遡及挿入する。月情報だけで順序を推測しない。
+4. 12月末を閉じられれば **2009年1月の最古未処理機**へ進む。
 5. 遡及QAは **竹中直人のパチスロ太閤記（2006-09）** から再開。
-6. PARTIAL/UNVERIFIEDやreset欠損は、表記揺れ・型式・メーカー・シリーズ名に設定変更/リセット/朝一/据え置き/電源OFF ON/天井/モード/状態/ガックンを組み替え、公式・業界・当時解析・古いDB・アーカイブ・回顧資料まで再探索する。一般的な5号機挙動や別機種値から推測補完しない。
+6. PARTIAL/UNVERIFIEDやreset欠損は、表記揺れ・型式・メーカー・シリーズ名に設定変更/リセット/朝一/据え置き/電源OFF ON/天井/モード/状態/ガックンを組み替え、公式・業界・当時解析・古いDB・アーカイブ・回顧資料まで再探索する。一般論や別機種値から推測補完しない。
 
 ## コミット（今回）
 
-- 334 HAIBいちろう: `47de48d3ee048fd324f2bd5f19a1a3710e5784f2`
+- 335 スロット代紋TAKE2: `4f5964b2686b686019e7e85eeb0262ee62423501`
