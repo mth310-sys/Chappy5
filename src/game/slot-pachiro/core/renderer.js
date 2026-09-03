@@ -1,7 +1,8 @@
 import { depthKey, orientationScreenAngle, projectedBounds, toScreen } from './grid.js';
 import { materializeCells } from './facility.js';
-import { FLOOR_BOUNDS, SPEC } from './layout.js';
+import { BUILDING_SHELL, FLOOR_BOUNDS, SPEC } from './layout.js';
 
+const SVG_NS = 'http://www.w3.org/2000/svg';
 const machineInner = '<div class="unit9"><div class="shadow"></div><div class="backboard"></div><div class="header9"></div><div class="data9"></div><div class="mount9"></div><div class="rail-left"></div><div class="rail-right"></div><div class="sand9"></div><div class="divider"></div><div class="box-side"><div class="box-stack"><div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div></div></div><div class="counter9"></div><div class="fascia9"></div><div class="foot"></div></div>';
 
 function place(scene, element, item, extraRise = 0) {
@@ -28,6 +29,47 @@ function orientedPoint(item, offset) {
   return materializeCells(item, [{ x: offset.x, y: offset.y }])[0];
 }
 
+function line(svg, a, b, className) {
+  const node = document.createElementNS(SVG_NS, 'line');
+  node.setAttribute('x1', String(a.x));
+  node.setAttribute('y1', String(a.y));
+  node.setAttribute('x2', String(b.x));
+  node.setAttribute('y2', String(b.y));
+  node.setAttribute('class', className);
+  svg.appendChild(node);
+}
+
+function renderLogicalGrid(scene) {
+  scene.querySelector('.logicalGrid')?.remove();
+  const svg = document.createElementNS(SVG_NS, 'svg');
+  svg.setAttribute('class', 'logicalGrid');
+  svg.setAttribute('width', String(scene.clientWidth || 650));
+  svg.setAttribute('height', String(scene.clientHeight || 690));
+  svg.setAttribute('aria-hidden', 'true');
+
+  for (let x = FLOOR_BOUNDS.minX; x <= FLOOR_BOUNDS.maxX + 1; x++) {
+    line(svg, toScreen(x, FLOOR_BOUNDS.minY), toScreen(x, FLOOR_BOUNDS.maxY + 1), 'gridLine');
+  }
+  for (let y = FLOOR_BOUNDS.minY; y <= FLOOR_BOUNDS.maxY + 1; y++) {
+    line(svg, toScreen(FLOOR_BOUNDS.minX, y), toScreen(FLOOR_BOUNDS.maxX + 1, y), 'gridLine');
+  }
+  scene.appendChild(svg);
+}
+
+function renderBuildingShell(scene) {
+  scene.querySelectorAll('.structureNode').forEach((node) => node.remove());
+  for (const wall of BUILDING_SHELL.walls) {
+    const node = makeNode('structureNode wallCell');
+    const point = toScreen(wall.x, wall.y, 2);
+    node.style.left = `${point.x}px`;
+    node.style.top = `${point.y}px`;
+    node.style.zIndex = String(70 + wall.x + wall.y);
+    node.dataset.gridX = wall.x;
+    node.dataset.gridY = wall.y;
+    scene.appendChild(node);
+  }
+}
+
 function renderMapBase(scene) {
   const bounds = projectedBounds(FLOOR_BOUNDS);
   const floor = scene.querySelector('.floor');
@@ -44,7 +86,9 @@ function renderMapBase(scene) {
   lot.style.width = `${bounds.width + marginX * 2}px`;
   lot.style.height = `${bounds.height + marginY * 2}px`;
   road.style.top = `${bounds.bottom + 70}px`;
-  scene.style.height = `${bounds.bottom + 190}px`;
+  scene.style.height = `${Math.max(690, bounds.bottom + 190)}px`;
+  renderLogicalGrid(scene);
+  renderBuildingShell(scene);
 }
 
 function makeIsland(item) {
@@ -67,22 +111,22 @@ function makeIsland(item) {
 function renderIsland(scene, item, index) {
   place(scene, makeIsland(item), item);
   const chairCell = orientedPoint(item, SPEC.chairOffset);
-  const chairItem = { id:`${item.id}-chair`, x:chairCell.x, y:chairCell.y, w:1, d:1, rise:8, orientation:item.orientation };
+  const chairItem = { id: `${item.id}-chair`, x: chairCell.x, y: chairCell.y, w: 1, d: 1, rise: 8, orientation: item.orientation };
   place(scene, makeNode('chair'), chairItem);
   const playerCell = orientedPoint(item, SPEC.playerOffset);
-  const playerItem = { id:`${item.id}-player`, x:playerCell.x, y:playerCell.y, w:1, d:1, rise:22, orientation:item.orientation };
-  const colors = ['#d86670','#67a862','#9272c8','#d69a49'];
-  const player = makeNode('person','<i class="hair"></i>');
+  const playerItem = { id: `${item.id}-player`, x: playerCell.x, y: playerCell.y, w: 1, d: 1, rise: 22, orientation: item.orientation };
+  const colors = ['#d86670', '#67a862', '#9272c8', '#d69a49'];
+  const player = makeNode('person', '<i class="hair"></i>');
   player.style.background = colors[index % colors.length];
   place(scene, player, playerItem);
 }
 
 function renderFixture(scene, item) {
   switch (item.type) {
-    case 'counter': place(scene, makeNode('counterdesk','<div class="ctop"></div><div class="cface">景品交換</div>'), item); break;
-    case 'staff': place(scene, makeNode('staff','<i class="hair"></i>'), item); break;
+    case 'counter': place(scene, makeNode('counterdesk', '<div class="ctop"></div><div class="cface">景品交換</div>'), item); break;
+    case 'staff': place(scene, makeNode('staff', '<i class="hair"></i>'), item); break;
     case 'plant': place(scene, makeNode('plant'), item); break;
-    case 'entrance': place(scene, makeNode('entrance','<span>入口</span>'), item); break;
+    case 'entrance': place(scene, makeNode('entrance', '<span>入口</span>'), item); break;
     default: throw new Error(`Unknown fixture type: ${item.type}`);
   }
 }
