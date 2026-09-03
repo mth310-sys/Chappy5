@@ -4,80 +4,68 @@
 
 ## 現在地点
 
-- recordCount: **540**
-- latestMachineAdded: **じゃりン子チエ 雷蔵伝説**（バルテック / 2011-01-24）
-- latestRecord: `docs/real_machine_db/machines/2011-01-24_jarinko-chie-raizo-densetsu.md`
+- recordCount: **541**
+- latestMachineAdded: **シスタークエスト2 ～魔剣の騎士と白銀の巫女～**（SNKプレイモア / 2011-01-11 / BACKFILL）
+- latestRecord: `docs/real_machine_db/machines/2011-01-11_sister-quest2.md`
 - chronologicalFrontier: **2011-01-24**
-- frontierLatestMachine: **じゃりン子チエ 雷蔵伝説**（同日群継続中）
+- frontierLatestMachine: **じゃりン子チエ 雷蔵伝説**（2011-01-24同日群継続中）
 - schema: **resetBehavior v0.7**
 - status: **READY_TO_CONTINUE**
 
 ## 今回の継続確認
 
-- 最新mainの `README.md`、正本ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、538「燃えよ!功夫大戦」、539「凄忍」を再取得。
+- 最新mainの `README.md`、正本ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、540「じゃりン子チエ 雷蔵伝説」を再取得。
 - `INDEX.md` は旧19件地点のためREADME規定どおり `LATEST_HANDOFF.md`＋main実レコードを進捗正本として使用。
-- 開始時は recordCount 539 / chronologicalFrontier 2011-01-24。
-- LATEST_HANDOFF最優先の「じゃりン子チエ 雷蔵伝説」をrepo検索し、未登録を確認して540件目として追加。
-- chronologicalFrontierは2011-01-24同日群継続のため維持。
+- 開始時は recordCount 540 / chronologicalFrontier 2011-01-24。
+- 前handoffで遡及漏れ候補として明示されていた `シスタークエスト2` をrepo検索し、未登録を確認。
+- K-Naviの2011-01-11ホール導入開始、当時業界記事の2011年1月中旬予定、後年回顧の同日導入整理を照合し、541件目としてBACKFILL追加。
+- BACKFILLのため chronologicalFrontier は2011-01-24のまま維持。
 
-## 540 — じゃりン子チエ 雷蔵伝説
+## 541 — シスタークエスト2 ～魔剣の騎士と白銀の巫女～
 
-- メーカー: **バルテック / BALTEC**
-- 型式名: **ジャリンコチエ2**
-- 検定番号: **0S0992**
-- 世代/タイプ: **5号機 / A+ART / 押し順ART / セットストック / 引き戻しCZ / 2種天井**
-- 導入主値: **2011-01-24**（K-Navi、パチ＆スロ必勝本等）。HAZUSEは2011-01-21で日付CONFLICT。
-- 機械割主系列: **97.1 / 99.0 / 100.3 / 104.6 / 106.2 / 111.0%**。CrankySevenは設定6のみ110.0%でCONFLICT。
-- ボーナス合算: **1/137.68 / 135.69 / 133.20 / 130.81 / 128.50 / 124.12**
-- すぺしゃるBONUS: **1/1985.94 / 1927.53 / 1820.44 / 1771.24 / 1638.40 / 1985.94**
-- ばくだんBONUS: **1/374.49 / 370.26 / 364.09 / 364.09 / 352.34 / 374.49**
-- じゃりン子BONUS: **1/244.54 / 240.94 / 237.45 / 230.76 / 230.76 / 204.80**
-- 50枚ベース: **約33.6G/1000円**
-- 各ボーナス: **約56枚**
-- ART「闘猫」: **30G / 約+1.6枚/G / セットストック式**
-- ART終了後: **起死回生モード**。最大3回の転落2択リプレイ回避またはボーナスで復帰条件。
-- 通常ゲーム数天井: **通常状態555G -> 次回ボーナスまで3択ベル完全ナビAT**
-- ART非当選ボーナス回数天井: **10回（K-Navi/P-WORLD/CrankySeven） vs 13回（パチ＆スロ必勝本/pacnk） = CONFLICT**
+- メーカー: **SNKプレイモア**
+- 型式名: **シスタークエスト2D**
+- 世代/タイプ: **5号機 / ノーマルA / ボーナス主体 / 天井RT**
+- 導入主値: **2011-01-11**
+- 機械割: **96.7 / 98.3 / 100.2 / 104.5 / 108.4 / 112.2%**
+- BIG: **1/268.5 / 268.5 / 262.1 / 253.0 / 238.3 / 228.3**
+- REG: **1/455.1 / 420.1 / 390.1 / 346.7 / 316.6 / 291.2**
+- ボーナス合算: **1/168.9 / 163.8 / 156.7 / 146.2 / 135.9 / 128.0**
+- 50枚ベース: **34.26 / 34.81 / 35.55 / 35.98 / 36.37 / 36.91G/1000円**
+- BIG: **約312枚**
+- REG: **約104枚**
+- 天井: **BIG終了後999G / REG終了後777G -> 次回ボーナスまで現状維持型RT**
 - coreStatus: **COMPLETE_CORE_RESET_BEHAVIOR_PARTIAL**
 
 ### resetBehavior v0.7
 
-- settingChangeBehavior: **VERIFIED_PARTIAL**。設定変更で高確スタート、ゲーム数天井と回数天井を双方リセット、ホルモン屋店内ステージスタート。
-- carryOverBehavior: **UNVERIFIED_AFTER_RESEARCH**。据え置き時の555G進捗/回数天井/高確/ART-CZ状態は本機固有直接資料を確定できず。
-- powerCycleBehavior: **UNVERIFIED_AFTER_RESEARCH**。単純電源OFF→ON時の天井/状態/ART-CZ処理を直接確定できず。
-- gameCounterReset: **CLEAR_ON_SETTING_CHANGE / VERIFIED_MULTI_SOURCE**
-- ceilingAfterReset: **通常天井をゼロから再計数。設定変更専用短縮天井はNONE_CONFIRMED_AFTER_RESEARCH**
-- modeAfterReset: **長期ゲーム数モードなし確認範囲。通常時状態は高確スタート**
-- stateAfterReset: **HIGH_PROBABILITY_STATE_START / VERIFIED_MULTI_SOURCE**
+- settingChangeBehavior: **VERIFIED_PARTIAL**。設定変更しても天井までの消化ゲーム数はリセットされない。
+- carryOverBehavior: **CEILING_GAME_COUNTER_CARRYOVER_VERIFIED**。前日大ハマリ台について設定変更後でも宵越し天井RT狙い可能とする直接資料あり。
+- powerCycleBehavior: **UNVERIFIED_AFTER_RESEARCH**。単純電源OFF→ON時の本機固有処理は直接確定できず。
+- gameCounterReset: **RETAIN_ON_SETTING_CHANGE / VERIFIED_CROSS_ARCHIVE**
+- ceilingAfterReset: **NO_RESET_RESTART / NO_SHORTENED_RESET_CEILING_CONFIRMED**。BIG後999G/REG後777Gの通常天井進捗を保持。
+- modeAfterReset: **NOT_APPLICABLE_AS_LONG_GAME_MODE / NO_DEDICATED_MODE_CONFIRMED**
+- stateAfterReset: **UNVERIFIED_AFTER_RESEARCH**
 - advantageousSectionReset: **NOT_APPLICABLE**（5号機）
-- resetBenefits: **高確スタート / ホルモン屋店内ステージスタート**
-- resetPenalties: **555G天井進捗消失 / ART非当選ボーナス回数進捗消失**
-- resetDetection: **PARTIAL**。設定変更時の開始ステージは公開。ガックン/初期出目等はUNVERIFIED_AFTER_RESEARCH。据え置き時開始ステージが同条件で未確認なのでステージ単独で確定判別とはしない。
+- resetBenefits: **設定変更後でも前日天井進捗が残り、客側は宵越し天井を狙える**
+- resetPenalties: 客側の設定変更固有不利は **NONE_CONFIRMED_AFTER_RESEARCH**。ホール側は設定変更だけで深い天井進捗を消せない。
+- resetDetection: **UNVERIFIED_AFTER_RESEARCH**。ガックン/初期出目/表示等の本機固有確定材料は未確認。
 
-## CONFLICT / QA注意 — 540
+## 主要出典 — 541（取得日 2026-09-04）
 
-1. 機械割設定6: **111.0%**（K-Navi/P-WORLD/必勝本/5号機クロニクル） vs **110.0%**（CrankySeven）。
-2. ART非当選ボーナス回数天井: **10回** vs **13回**。平均せず双方保持。
-3. 導入開始日: **2011-01-24**主系列 vs **2011-01-21** HAZUSE。
-
-## 主要出典 — 540（取得日 2026-09-04）
-
-- バルテック公式: `https://www.baltec.co.jp/product/product10.html`
-- 日電協新機種情報: `https://www.nichidenkyo.or.jp/newcomer/list`
-- Pマンズ/プレイグラフ転載: `https://p-mans.blogspot.com/2010/`
-- K-Navi: `https://p-kn.com/slot/1338/`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/6212`
-- パチ＆スロ必勝本 基本スペック: `https://p.hisshobon.jp/machine/1737/1/27333`
-- パチ＆スロ必勝本 設定変更&天井: `https://p.hisshobon.jp/machine/1737/1/27337`
-- CrankySeven: `https://crankyseven.com/sp/jarinkotie-raizou-pc.htm`
-- pacnk: `https://pacnk.com/slot/tools/sh_jyarinkochie.html`
-- HAZUSE: `https://hazuse.com/machine/pachislot/0S0992/`
-- 5号機クロニクル: `https://5goki.com/baltec`
+- K-Navi 基本スペック: `https://p-kn.com/slot/1321/`
+- K-Navi 機械割: `https://p-kn.com/slot/1321/28815/`
+- パチマガスロマガ保存ページ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/snk_slot/32/c.php`
+- P-WORLD旧機種DB: `https://www.p-world.co.jp/machine/database/6169`
+- 中一商事保存機種ページ: `https://www.nakaiti.com/html/sSNK078.html`
+- P-Mans / PlayGraph転載: `https://p-mans.blogspot.com/2010/11/`
+- アニメ！アニメ！: `https://animeanime.jp/article/2010/11/14/7181.html`
+- パチ7回顧: `https://pachiseven.jp/articles/detail/18844`
 
 ## 今回のGitHub更新
 
-- 540追加: `docs/real_machine_db/machines/2011-01-24_jarinko-chie-raizo-densetsu.md`
-- machine record commit: `b5195b8e1cf67e4c29fa9f379d26e81fcc9de1d2`
+- 541追加: `docs/real_machine_db/machines/2011-01-11_sister-quest2.md`
+- machine record commit: `9487d602fdade91ce2265553e992be02c9b4fa13`
 - LATEST_HANDOFF: 本更新
 
 ## 遡及QA継続地点
@@ -87,8 +75,8 @@
 
 ## 次回再開地点
 
-1. **recordCount 540 / chronologicalFrontier 2011-01-24**。開始時は最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 539「凄忍」/ 540「じゃりン子チエ 雷蔵伝説」を再取得。
-2. **2011-01-24同日群を継続**。`超重神グラヴィオン`（ロデオ）はmain検索で未登録。P-WORLD/5号機クロニクル/当時業界記事で2011年1月機、グリーンべるとは2011年1月以降納品開始予定を確認。K-Navi等で具体導入日を再確定し、1/24同日なら541件目最優先候補。
-3. `シスタークエスト2` は外部一覧で2011-01-11導入表記があるため、既存登録の有無を再確認し、未登録なら**時系列遡及漏れ**として先に補完する。
-4. `あっぱれ剣士道`、`残機尽きるまで私は戦う` 等の2011年1月候補も実ホール導入/納品日を再照合。`残機尽きるまで私は戦う` の2011-01-21は展示会日なので導入日と混同しない。
+1. **recordCount 541 / chronologicalFrontier 2011-01-24**。開始時は最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 540「じゃりン子チエ 雷蔵伝説」/ 541「シスタークエスト2」を再取得。
+2. **2011-01-24同日群へ復帰**。`超重神グラヴィオン`（ロデオ）は前回main検索で未登録。K-Navi等で具体導入日を最終確定し、1/24同日なら542件目最優先候補。
+3. `あっぱれ剣士道`、`残機尽きるまで私は戦う` 等の2011年1月候補も、実ホール導入/納品/展示会日を分離して時系列監査する。
+4. 特に `残機尽きるまで私は戦う` の2011-01-21は展示会日として扱い、導入日と混同しない。
 5. 欠損は表記・型式・メーカー・項目語を変え、公式/業界/当時解析/古いDB/アーカイブ/回顧を横断後のみUNVERIFIED。競合は平均せずCONFLICT。
