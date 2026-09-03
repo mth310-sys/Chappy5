@@ -12,6 +12,7 @@ export const SPEC = Object.freeze({
 });
 
 export const FLOOR_BOUNDS = Object.freeze({ minX: -12, maxX: 12, minY: -14, maxY: 14 });
+export const ENTRANCE_BOUNDARY = Object.freeze({ x: 0, y: FLOOR_BOUNDS.maxY });
 
 const islandReservation = Object.freeze([
   ...Array.from({ length: 9 }, (_, x) => Object.freeze({ x, y: 1, role: 'chair-zone' })),
@@ -45,6 +46,7 @@ export const layout = Object.freeze({
 function definitionFor(item) { const d=FACILITY_DEFS[item.type]; if(!d) throw new Error(`Missing facility definition: ${item.type}`); return d; }
 
 function validateIslandRows(islands) {
+  if (!islands.length) return;
   const rows=[...islands].sort((a,b)=>a.y-b.y);
   for(let i=1;i<rows.length;i++){
     if(rows[i].orientation!==rows[0].orientation) throw new Error('Foundation island rows must share orientation');
@@ -54,9 +56,9 @@ function validateIslandRows(islands) {
   }
 }
 
-function buildMap() {
-  const map=createLogicalMap(FLOOR_BOUNDS); blockBoundary(map); openBoundaryPortal(map,0,FLOOR_BOUNDS.maxY);
-  const all=[...layout.islands,...layout.fixtures], ports=[];
+export function buildLogicalLayout(candidate = layout) {
+  const map=createLogicalMap(FLOOR_BOUNDS); blockBoundary(map); openBoundaryPortal(map,ENTRANCE_BOUNDARY.x,ENTRANCE_BOUNDARY.y);
+  const all=[...candidate.islands,...candidate.fixtures], ports=[];
   for(const item of all){
     const def=definitionFor(item), hard=hardCells(item,def), reserved=reservationCells(item,def), itemPorts=accessPorts(item,def);
     occupyCells(map,item.id,hard); reserveCells(map,item.id,reserved);
@@ -72,9 +74,9 @@ function validateRequiredAccess(map,ports){
   return reachable;
 }
 
-export function validateLayout(){
-  validateIslandRows(layout.islands);
-  const {map,ports,all}=buildMap(), reachable=validateRequiredAccess(map,ports), occupied=new Map();
+export function validateLayout(candidate = layout){
+  validateIslandRows(candidate.islands);
+  const {map,ports,all}=buildLogicalLayout(candidate), reachable=validateRequiredAccess(map,ports), occupied=new Map();
   for(const cell of map.cells.values())if(cell.occupiedBy)occupied.set(cellKey(cell.x,cell.y),cell.occupiedBy);
   return {map,ports,reachable,occupied,itemCount:all.length,reachableCells:reachable.size};
 }
