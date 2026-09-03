@@ -4,9 +4,9 @@
 
 ## 現在地点
 
-- recordCount: **514**
-- latestMachineAdded: **パチスロ「ケロット」～スウィートver.～**（山佐 / 2010-09-06 / BACKFILL）
-- latestRecord: `docs/real_machine_db/machines/2010-09-06_kerot-sweet-ver.md`
+- recordCount: **515**
+- latestMachineAdded: **パチスロピンポン**（三洋物産 / 2010-09-06 / BACKFILL）
+- latestRecord: `docs/real_machine_db/machines/2010-09-06_pachislot-ping-pong.md`
 - chronologicalFrontier: **2010-09-27**
 - frontierLatestMachine: **リングにかけろ1 ～黄金の日本Jr.編～**
 - schema: **resetBehavior v0.7**
@@ -14,61 +14,63 @@
 
 ## 今回の継続確認
 
-- 最新mainの `README.md`、正本ミッション `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、前線513実レコード「リングにかけろ1 ～黄金の日本Jr.編～」を再取得。
+- 最新mainの `README.md`、正本ミッション `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、前線実レコードを再取得。
 - `INDEX.md` は旧地点のため、README規定どおり最新 `LATEST_HANDOFF.md`＋main実レコードを進捗正本として使用。
-- 開始時正本地点は recordCount **513** / chronologicalFrontier **2010-09-27**。
-- LATEST_HANDOFF指定の9/27同日・同時期漏れ監査を継続。`マイジャグラー` はcode searchでは見えなかったが、実ファイル `2010-09-06_my-juggler.md` を直接再取得し既登録を確認したため重複追加しなかった。
-- 同じ2010-09-06導入の **パチスロ「ケロット」～スウィートver.～** は実ファイル未登録を確認し、514件目として遡及追加。
+- 開始時正本地点は recordCount **514** / chronologicalFrontier **2010-09-27**。
+- LATEST_HANDOFF指定の2010年9月漏れ監査を継続し、**パチスロピンポン**がrepo未登録であることを確認して515件目として遡及追加。
+- コミックナタリーは本機を**2010-09-06より全国ホールで順次稼働予定**、東京地区は10月上旬と報道。一方K-Naviは**2010-10-04**を掲載するが、同カレンダーは「全国一斉導入開始日」で地域差ありと明記。日付定義を分離しCONFLICTにはしない。
 - 本機は前線より古いBACKFILLのため `chronologicalFrontier` は **2010-09-27** のまま維持する。
 
-## 514 — パチスロ「ケロット」～スウィートver.～
+## 515 — パチスロピンポン
 
-- メーカー: **山佐**
-- 導入: **2010-09-06**（パチビー具体日、山佐公式2010年9月稼働で整合）
-- 世代/タイプ: **5号機 / ノーマルAタイプ / 3GプチRT**
-- 機械割: **98.5 / 98.5 / 99.5 / 99.5 / 102.5 / 105.0%**
-- BIG: **1/166.3 / 1/188.3 / 1/160.6 / 1/181.0 / 1/145.6 / 1/148.9**
-- REG: **1/250.1 / 1/212.7 / 1/264.2 / 1/222.9 / 1/318.1 / 1/303.4**
-- ボーナス合算: **全設定約1/99.9**（山佐公式）
-- 50枚/1000円: **35.63 / 38.73 / 35.92 / 38.91 / 35.87 / 39.19G**（パチマガスロマガ公式アーカイブ）
-- SWEET BONUS: **約200枚**、REG: **約40枚**。
-- オレンジ入賞後: **3GプチRT**。
-- P-WORLD本文のREG約48枚表記は、同ページ役構成・パチビー・パチマガスロマガの約40枚と競合するため `CONFLICT`。多数一致の40枚を主値として保持。
+- メーカー: **三洋物産**
+- 地域順次稼働開始: **2010-09-06**
+- 全国一斉導入基準: **2010-10-04**（K-Navi定義）
+- 世代/タイプ: **5号機 / ゲーム数管理型ART**
+- 機械割: **96.6 / 98.1 / 100.2 / 103.4 / 107.1 / 112.0%**
+- ART初当たり: **1/146.5 / 1/135.2 / 1/131.0 / 1/111.4 / 1/103.3 / 1/84.4**
+- ボーナス＋ART合算: **1/135.6 / 1/125.9 / 1/122.2 / 1/105.0 / 1/97.7 / 1/79.6**
+- 50枚/1000円: **約33.2G**
+- BIG: **約240枚**
+- ART: **約+1.9枚/G**、ナビ15/25/35/50回+α
+- モード最大規定G: **A 989G / B 999G / 天国99G / 超天国32G**
 - coreStatus: **COMPLETE_CORE_RESET_BEHAVIOR_PARTIAL**
 
-### resetBehavior v0.7 — ケロット～スウィートver.～
+### resetBehavior v0.7 — パチスロピンポン
 
-- ゲーム数天井・規定G数解除は確認なし。`gameCounterReset` / `ceilingAfterReset` は **NOT_APPLICABLE_FOR_GAME_COUNT_CEILING**。
-- AT/ART朝一モード、高確/CZ/ART状態、有利区間は非該当。有利区間は5号機のため **NOT_APPLICABLE**。
-- 設定変更、据え置き、単純電源OFF→ONの本機固有挙動は、表記揺れ・メーカー・シリーズ名と「設定変更/リセット/朝一/据え置き/電源OFF ON/ガックン」を組み替えて探索したが直接高信頼本文を確定できず `UNVERIFIED_AFTER_RESEARCH`。
-- 3GプチRTの設定変更/電断時処理も直接資料未回収のため推測しない。
-- 朝一高確、天井短縮、CZ優遇等のリセット恩恵/不利は確認なし。
-- 本機固有のガックン、初期出目、液晶状態等の変更判別も `UNVERIFIED_AFTER_RESEARCH`。
+- 設定変更時は**滞在モード再抽選**を確認。
+- 公開設定変更モード振り分け（全設定共通）: **A 80.0% / B 17.0% / 天国 3.0%**。超天国は設定変更振り分け表に掲載なし。
+- 設定変更後の公開朝一数値として、3%で天国スタート→**最大99G**を保持。A/B選択時はそれぞれ最大989/999G。
+- 旧天井狙い資料は本機を「宵越し×」「設定変更時モードを再セット」とするため、設定変更後に前日のハマリ進捗を天井狙いへそのまま加算できない点を実戦上の不利として保持。ただし内部カウンタ変数の厳密なCLEAR方式は `UNVERIFIED_AFTER_RESEARCH`。
+- 据え置き時の内部カウンタ/モード保持は、本機固有の高信頼直接本文を確定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 単純電源OFF→ON時のモード・規定G・ART状態は検索語と資料系統を変えて再探索しても直接根拠を確定できず `UNVERIFIED_AFTER_RESEARCH`。
+- ガックン、初期出目、液晶、ランプ等の変更判別も `UNVERIFIED_AFTER_RESEARCH`。
+- 有利区間は5号機のため **NOT_APPLICABLE**。
 
 ## CONFLICT / 注意
 
-- REG純増は主値 **約40枚**。P-WORLDの台紹介本文だけ約48枚だが、同ページ役構成は40枚、パチビー/パチマガスロマガも40枚。平均しない。
-- `マイジャグラー` は検索インデックス結果だけで未登録判定しない。実ファイル `docs/real_machine_db/machines/2010-09-06_my-juggler.md` が存在するため既登録。
-- 遡及追加を行っても時系列前線は後退させない。現在の `chronologicalFrontier` は2010-09-27。
+- 導入日差は**CONFLICTではなく定義分離**。2010-09-06は全国順次稼働開始予定、2010-10-04はK-Naviの全国一斉導入開始日。K-Navi自身が地域により前後すると注記。
+- P-WORLDは通常A/Bをまとめて最大999Gと簡略化。詳細解析はA989G/B999G。全体最大999Gとして両者は整合するためCONFLICT扱いしない。
+- 2010-10-04の全国一斉導入群を処理する際、**ピンポンは515で登録済みなので重複追加しない**。
 
 ## 主要出典（取得日 2026-09-04）
 
-- 山佐ネクスト公式: `https://yamasa-next.co.jp/model_klts/`
-- パチビー: `https://www.pachibee.jp/machines/index/210070010`
-- K-Navi: `https://p-kn.com/slot/1279/26646/`
-- パチマガスロマガ公式アーカイブ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/174/a.php`
-- パチマガスロマガ公式アーカイブ（1000円あたりゲーム数）: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/174/c.php`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/6065`
+- コミックナタリー: `https://natalie.mu/comic/news/35630`
+- K-Navi機種ページ: `https://p-kn.com/slot/1262/`
+- K-Navi 2010年10月導入カレンダー: `https://p-kn.com/calendar/201010/`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/6062`
+- Cranky Seven: `https://crankyseven.com/pinpon-pc.htm`
+- 天井ハイエナ生活（宵越し補助資料）: `https://macerate.seesaa.net/article/226312110.html`
 
 ## 今回のGitHub更新
 
-- 514 ケロット～スウィートver.～追加: `docs/real_machine_db/machines/2010-09-06_kerot-sweet-ver.md`
+- 515 パチスロピンポン追加: `docs/real_machine_db/machines/2010-09-06_pachislot-ping-pong.md`
 - LATEST_HANDOFF: このコミット。
 
 ## 次回再開地点
 
-1. **recordCount 514 / chronologicalFrontier 2010-09-27**。開始時は必ず最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 前線実レコードを再取得。
-2. 2010年9月の漏れ監査を継続。**パチスロ ピンポン**はコミックナタリーで9月6日より全国順次稼働予定が確認できる一方、K-Navi全国一斉導入カレンダーは10月4日表記なので、地域差/全国一斉導入定義を分離してrepo実登録を確認する。
-3. **ロケットパニック**はK-Navi全国一斉導入が2010-10-04。9月機として推測配置せず、9月境界を閉じた後の10月候補として扱う。
-4. 9/27同日群・9月月粒度機の漏れを閉じ、未登録なら最古の具体導入日から追加。既登録はファイル実体を確認し重複追加しない。
+1. **recordCount 515 / chronologicalFrontier 2010-09-27**。開始時は必ず最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 前線実レコードを再取得。
+2. 9/27同日群・2010年9月の月粒度/地域差機の漏れ監査を閉じる。具体日が9/27以前の未登録機が見つかればBACKFILLし、frontierは後退させない。
+3. 9/28～10/3の境界を監査。未登録の具体導入日がなければ2010-10-04全国一斉導入群へ進む。
+4. K-Navi 2010-10-04群のパチスロ候補は **ビッグシオV / ロケットパニック / 極お父さん ～舞い降りた天使???～ / 出番だ!葉月ちゃん / パチスロピンポン**。各候補をrepo実ファイルで重複確認し、最古の未登録機を次レコードへ。**ピンポンは515で登録済みのため重複禁止**。
 5. 遡及QAは既存正本の **Jackまで補完済み + Thunder既収集済み**を維持。新規時系列前進を止めず、次の実在resetBehavior欠損pathが一意確定できた時のみ補完する。
