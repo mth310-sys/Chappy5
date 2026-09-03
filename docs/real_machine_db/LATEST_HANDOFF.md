@@ -4,61 +4,55 @@
 
 ## 現在地点
 
-- recordCount: **504**
-- latestMachineAdded: **アベノ橋魔法☆商店街**（ビスティ / exact導入日CONFLICT、時系列主値2010-08-23）
-- latestRecord: `docs/real_machine_db/machines/2010-08-23_abenobashi-mahou-shotengai.md`
-- chronologicalFrontier: **2010-08-23**
-- frontierLatestMachine: **アベノ橋魔法☆商店街**
+- recordCount: **505**
+- latestMachineAdded: **デビルマンII ～悪魔復活～**（エレコ / exact導入日CONFLICT、時系列主値2010-08-27）
+- latestRecord: `docs/real_machine_db/machines/2010-08-27_devilman2-akuma-fukkatsu.md`
+- chronologicalFrontier: **2010-08-27**
+- frontierLatestMachine: **デビルマンII ～悪魔復活～**
 - schema: **resetBehavior v0.7**
 - status: **READY_TO_CONTINUE**
 
 ## 今回の継続確認
 
-- 最新mainの `README.md`、正本ミッション `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、前線503実レコード「ワイルドキャッツ」を再取得。
+- 最新mainの `README.md`、正本ミッション `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、前線504実レコード「アベノ橋魔法☆商店街」を再取得。
 - `INDEX.md` は旧19件地点のため、README規定どおり最新 `LATEST_HANDOFF.md`＋main実レコードを進捗正本として使用。
-- 開始時正本地点は recordCount **503** / chronologicalFrontier **2010-08-23**。
-- 8/23同日群と8/24境界を再監査し、未登録「アベノ橋魔法☆商店街」を発見。repo検索で既存レコードなしを確認して504件目として追加。
-- 導入日はSANKYO公式/フィールズが2010年8月、HAZUSEが2010-08-16、当時解析ブログが最速ホール導入日2010-08-23、パチビーが2010-08-24で競合。日付を平均・消去せずCONFLICTとして全根拠を保存し、時系列主値のみ2010-08-23とした。
-- exact date conflictを理由に前線を8/24へ進めず、chronologicalFrontierは2010-08-23を維持する。
+- 開始時正本地点は recordCount **504** / chronologicalFrontier **2010-08-23**。
+- 2010-08-24〜2010-08-29境界を監査し、旧導入カレンダーの8/27候補を確認。候補はhandoffに8/30アンカーとして残っていた同一機「デビルマンII ～悪魔復活～」であり、repo未登録を確認して505件目として追加。
+- exact dateはユニバーサル公式が2010年8月、HAZUSEが2010-08-27、K-Navi/パチビーが2010-08-30で競合。二重登録せず1レコードに統合し、時系列主値は確認できた最古の直接導入日2010-08-27とした。
 
-## 504 — アベノ橋魔法☆商店街 要約
+## 505 — デビルマンII ～悪魔復活～ 要約
 
-- メーカー: **ビスティ**
-- 公式販売名/型式名: **アベノ橋魔法商店街Ａ**（SANKYO公式）。HAZUSEは**アベノ橋魔法商店街S**とするため型式名差はCONFLICT。
-- 検定番号: **0S0449**（HAZUSE）
-- 世代/タイプ: **5号機 / A+ART / 30G ART / CZ / 無限ART「陰陽師モード」**
-- 機械割: **97.2 / 99.1 / 101.2 / 104.9 / 109.5 / 115.1%**
-- BIG: **1/402.1 / 1/390.1 / 1/385.5 / 1/374.5 / 1/364.1 / 1/348.6**
-- REG: **1/434.0 / 1/425.6 / 1/407.1 / 1/392.4 / 1/372.4 / 1/358.1**
-- PC: **全設定1/4096.0**
-- ボーナス合算: **1/198.6 / 1/193.9 / 1/188.9 / 1/183.1 / 1/176.2 / 1/169.3**
-- 50枚ベース: **UNVERIFIED_AFTER_RESEARCH**。表記揺れ・型式・メーカー＋50枚/1000円/ベース/コイン持ち/千円回転で資料系統を変えて再探索し、直接値を確定できず。小役から逆算しない。
-- ART: **30G / 約+1.2枚/G**
-- BIG約**252枚**、REG約**63枚**、PC約**14枚**
-- 通常ゲーム数天井: **1000G** → 次回ボーナスまでのART。
-- ボーナス後ART非突入回数型天井はHAZUSE **2〜5回の規定回数**、パチビー **6連続**でCONFLICT。
-- coreStatus: **COMPLETE_CORE_RESET_BEHAVIOR_PARTIAL_RELEASE_DATE_AND_CEILING_COUNT_CONFLICT_BASE_UNVERIFIED**
+- メーカー: **エレコ**
+- 世代/タイプ: **5号機 / A+ART / セットストック型ART「アーマゲドン」**
+- 機械割: **98.1 / 99.9 / 104.2 / 107.2 / 112.7 / 119.3%**
+- BIG: **1/431.2 / 1/422.8 / 1/394.8 / 1/383.3 / 1/368.2 / 1/339.6**
+- ボーナス合算: **1/275.4 / 1/271.9 / 1/260.1 / 1/255.0 / 1/248.2 / 1/234.9**
+- ART初当たり: **1/526.5 / 1/454.2 / 1/450.0 / 1/386.1 / 1/359.5 / 1/224.6**
+- ボーナス＋ART合算: **1/181.8 / 1/170.1 / 1/164.8 / 1/153.6 / 1/146.9 / 1/114.8**
+- 50枚ベース: **UNVERIFIED_AFTER_RESEARCH**。表記揺れ・メーカー＋50枚/1000円/千円/ベース/コイン持ち/千円回転へ検索語を変え、公式・主要DB・旧解析を横断したが直接値を確定できず。小役から逆算しない。
+- ART: **50G / 約+1.4枚/G**
+- BIG約/最大**210枚**、REG系約/最大**102枚**
+- 通常天井: 複数旧解析資料で**ボーナス間1500G** → ART。
+- coreStatus: **COMPLETE_CORE_RESET_BEHAVIOR_PARTIAL_RELEASE_DATE_CONFLICT_BASE_UNVERIFIED**
 
-## resetBehavior v0.7 — アベノ橋魔法☆商店街
+## resetBehavior v0.7 — デビルマンII ～悪魔復活～
 
-- **設定変更**: HAZUSEで、通常1000G天井のゲーム数進捗は**クリアされず引継ぎ**。一方、ボーナス後ART非突入回数型天井の進捗は**クリア**。その他CZ/ART/内部状態は直接資料を確定できず `UNVERIFIED_AFTER_RESEARCH`。
-- **据え置き**: CZ/ART/内部状態、ART残G・権利、回数型天井カウンタを一括して説明する本機固有資料は `UNVERIFIED_AFTER_RESEARCH`。1000Gカウンタについて「設定変更でも引継ぐ」事実から一般的据え置き挙動へ推論しない。
-- **電源OFF→ON**: 1000G/回数型カウンタ、CZ/ART/内部状態、初期出目・液晶の単純電源断復帰は `UNVERIFIED_AFTER_RESEARCH`。
-- **ゲーム数/天井**: 設定変更時、**1000Gカウンタ=RETAIN / ART非突入回数型カウンタ=CLEAR**。
-- **リセット天井短縮**: 1000G天井の専用短縮は確認せず、既存進捗を引き継ぐ仕様。
-- **モード/状態**: 設定変更専用モード振り分け・朝一専用モード・CZ/ART状態再抽選は `UNVERIFIED_AFTER_RESEARCH`。
+- **設定変更**: 通常内部状態を低確/高確へ再抽選することをHAZUSEとパチ＆スロ必勝本で確認。
+- **公開朝一数値**: 全設定共通で **低確65.89% / 高確34.11%**。両高信頼解析で一致。
+- **状態CONFLICT**: 単一旧二次資料のみ **低確34.1% / 高確65.9%** と逆転表記。平均化せず、主値は高信頼2系統一致を採用し競合値も保持。
+- **ゲーム数/天井**: 通常天井1500G自体は確認。設定変更時の1500G進捗CLEAR/RETAINは本機固有の直接高信頼資料を確定できず `UNVERIFIED_AFTER_RESEARCH`。
+- **据え置き**: 天井カウンタ、内部状態、ARTストック/残Gの保持は `UNVERIFIED_AFTER_RESEARCH`。
+- **電源OFF→ON**: 天井カウンタ、内部状態、ARTストック/残G、初期出目/液晶の単純電源断復帰は `UNVERIFIED_AFTER_RESEARCH`。
+- **天井短縮**: 設定変更専用の短縮/変更は `UNVERIFIED_AFTER_RESEARCH`。
 - **有利区間**: **NOT_APPLICABLE**（5号機）。
-- **朝一恩恵**: 設定変更されても1000G天井進捗が残るため、前日ハマリが朝一天井距離に影響し得る。
-- **朝一不利**: ART非突入回数型天井の進捗は設定変更でクリア。
-- **変更判別**: ガックン、初期出目、ランプ、液晶、CZ挙動等は表記揺れ・型式・メーカー＋朝一/設定変更/リセット/据え置き/電源OFF ONで再探索後も `UNVERIFIED_AFTER_RESEARCH`。
-- **公開朝一数値**: normalGameNumberCeiling **1000G**、settingChangeNormalGameCounter **RETAIN**、settingChangeArtNonEntryCount **CLEAR**。リセット専用ART初当たり率/モード振り分けは確認できず。
+- **朝一恩恵/不利**: 設定変更時に高確スタート34.11%、低確スタート65.89%。
+- **変更判別**: 当時実戦番組に「朝イチきっちり変更判別」の記述は残るが手順が公開本文で確認できず、ガックン/初期出目/ランプ/液晶等も再探索後 `SPECIFIC_METHOD_UNVERIFIED_AFTER_RESEARCH`。
 
 ## conflicts
 
-- exact release date: HAZUSE **2010-08-16** / 当時解析ブログ **2010-08-23（最速ホール導入日）** / パチビー **2010-08-24**。公式は2010年8月まで。
-- formal model: SANKYO公式 **アベノ橋魔法商店街Ａ** / HAZUSE **アベノ橋魔法商店街S**。
-- ART非突入回数型天井: HAZUSE **2〜5回** / パチビー **6連続**。
-- REG設定2: HAZUSE/P-WORLD系 **1/425.6** / 単一当時解析ブログ **1/453**。主値は複数一致する1/425.6、競合値も保持。
+- exact release date: 公式 **2010年8月** / HAZUSE **2010-08-27** / K-Navi・パチビー **2010-08-30**。
+- settingChangeStateDistribution: HAZUSE＋必勝本 **低確65.89% / 高確34.11%** / 単一旧二次資料 **低確34.1% / 高確65.9%**。
+- 後発別機種 `SLOTデビルマンχ` の1280G天井を本機へ混入させない。本機は複数旧解析資料でボーナス間1500G。
 
 ## resetBehavior 遡及QA — 継続地点
 
@@ -69,27 +63,27 @@
 
 ## 主要出典（取得日 2026-09-04）
 
-### アベノ橋魔法☆商店街
-- SANKYO公式オンラインミュージアム: `https://www.sankyo-fever.jp/collection/872/`
-- HAZUSE: `https://hazuse.com/machine/pachislot/0S0449/`
-- パチビー: `https://www.pachibee.jp/machines/index/210060008`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/6047`
-- K-Navi: `https://p-kn.com/slot/1255/`
-- P-Mans / 当時業界紹介: `https://p-mans.blogspot.com/2010/07/`
-- フィールズ2010年資料: `https://www.tsuburaya-fields.co.jp/ir/j/files/press/2010/press_20101104a.pdf`
-- 当時解析ブログ: `https://slotkaiseki777.blog102.fc2.com/blog-entry-936.html`
-- P-WORLD掲示板（導入時期補助）: `https://www.p-world.co.jp/sp/search_kisyubbs.cgi?code=&group_id=3511&mode=thread_list&page=1`
+### デビルマンII ～悪魔復活～
+- ユニバーサル公式: `https://www.universal-777.com/product/slot/devilman2/`
+- HAZUSE DATA: `https://data.hazuse.com/?genre=209&machine_code=0S0434`
+- K-Navi: `https://p-kn.com/slot/1250/`
+- パチビー: `https://www.pachibee.jp/machines/about/210070002`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/6044`
+- パチ＆スロ必勝本: `https://p.hisshobon.jp/machine/1650/1/26196`
+- slot-navi旧解析: `https://slot-navi.com/10/devilman2/`
+- Seven Peace旧解析: `https://www.mb.ccnw.ne.jp/seven-peace.com/a-na/tatata/debiru2/debirumannakuma.html`
+- アニヲタWiki回顧: `https://w.atwiki.jp/aniwotawiki/pages/19076.html`
+- ビデオマーケット変更判別実戦紹介: `https://www.videomarket.jp/title/082072/A082072015999H01`
 
 ## 今回のGitHub更新
 
-- 504 アベノ橋魔法☆商店街追加: commit `58d29737c02181c3c3afc229b367830933471686`
+- 505 デビルマンII ～悪魔復活～追加: commit `efbdf0514590d99356cef67edbcfb0aa0380a531`
 - LATEST_HANDOFF更新: このコミット
 
 ## 次回再開地点
 
-1. **recordCount 504 / chronologicalFrontier 2010-08-23**。開始時は必ず最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 前線実レコードを再取得。
-2. 504のexact導入日CONFLICTは新しい一次/当時高信頼資料が出ない限り再調査で時間を使わず保持する。
-3. **2010-08-24〜2010-08-29**を日付境界監査する。特に旧導入カレンダー上の8/27候補を再確認し、最古の未登録5号機があれば505件目とする。
-4. 8/24〜29を閉じられた場合、現時点で確認できている次の強いアンカーは **2010-08-30「デビルマンⅡ ～悪魔復活～」**（エレコ）。repo未登録確認後、より古い候補がない場合のみ追加する。
-5. 504のreset後続QAは、単純電源OFF→ON、据え置き時の回数型カウンタ/CZ/ART状態、ガックン/初期出目等の変更判別、設定変更専用モード/状態数値の新資料が見つかった場合のみ追補。既存性能コアをやり直さない。
-6. 遡及QAは `2006-11_jack-to-mamenoki.md` 直後の実ファイルpath確定から再開し、既にresetBehavior済みの `2006-11-27_thunder-v-special.md` はスキップする。
+1. **recordCount 505 / chronologicalFrontier 2010-08-27**。開始時は必ず最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 前線実レコードを再取得。
+2. **2010-08-28〜2010-08-29**を境界監査。HAZUSE新台カレンダーでは8/27の次の2010年8月アンカーが8/30であることを確認済みだが、別系統導入資料で漏れを潰す。
+3. 8/28〜29を閉じたら**2010-08-30同日群**を監査する。「デビルマンII ～悪魔復活～」は8/30説も505に統合済みのため重複追加しない。同日他機種の最古未登録を探して506件目とする。
+4. 505の追加QAは、設定変更/据え置き時の1500G天井カウンタ、単純電源OFF→ON、具体的な朝一変更判別法、50枚ベースの新しい直接資料が見つかった場合のみ追補。既存性能コアをやり直さない。
+5. 遡及QAは `2006-11_jack-to-mamenoki.md` 直後の実ファイルpath確定から再開し、既にresetBehavior済みの `2006-11-27_thunder-v-special.md` はスキップする。
