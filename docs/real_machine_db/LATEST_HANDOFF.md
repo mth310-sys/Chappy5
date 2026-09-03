@@ -4,9 +4,9 @@
 
 ## 現在地点
 
-- recordCount: **478**
-- latestMachineAdded: **スパイガール**（KPE / 主値2010-04-19・導入日CONFLICT）
-- latestRecord: `docs/real_machine_db/machines/2010-04-19_spy-girl.md`
+- recordCount: **479**
+- latestMachineAdded: **ファニーサンタ2**（タイヨー / 主値2010-04-18・導入日CONFLICT / 遡及補完）
+- latestRecord: `docs/real_machine_db/machines/2010-04-18_funny-santa-2.md`
 - chronologicalFrontier: **2010-04-19**
 - frontierLatestMachine: **スパイガール**（主値2010-04-19）
 - schema: **resetBehavior v0.7**
@@ -14,57 +14,59 @@
 
 ## 今回の継続確認
 
-- 最新mainの `README.md`、正本ミッション `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前477「2027II NEO」を再取得。
+- 最新mainの `README.md`、正本ミッション `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前478「スパイガール」を再取得。
 - `INDEX.md` は旧19件地点のため、README規定どおり `LATEST_HANDOFF.md`＋main実レコードを進捗正本として使用。
-- 開始時正本は recordCount **477** / chronologicalFrontier **2010-04-19**。
-- LATEST_HANDOFF指定の最優先境界監査対象「スパイガール」（KPE）をrepo検索し未登録確認後、478件目として追加。
-- 導入日はK-Navi **2010-02-22** vs パチビー **2010-04-19** / PachiNavi・pacnk **2010年4月**で競合。2010-02-05時点のKPE内覧会記事も確認したが、メーカー一次の納品開始日までは回収できず、主値2010-04-19を暫定採用し `CONFLICT` を保持。
-- P-WORLD、K-Navi、旧パチマガスロマガ、パチビー、現行整理DB、当時内覧会資料を横断し、性能コア＋v0.7 resetBehaviorを収集。
+- 開始時正本は recordCount **478** / chronologicalFrontier **2010-04-19**。
+- 2010-04-19同日群→2010-04-20〜25境界を再監査中、当時グリーンべると2010-04-26記事に **「ファニーサンタ2」は4月18日にはパーラーに導入** とあることを確認。
+- 旧HANDOFFではK-Naviの2010-04-26全国導入日を次候補としていたが、より古い当時業界一次寄り資料を得たため、repo未登録確認後に479件目として遡及補完。
+- K-Naviは2010-04-26全国導入開始、メーカー協力アプリ資料は2010年4月発売。日付は平均せず `CONFLICT` として保持。
+- P-WORLD、K-Navi、旧パチマガスロマガ、pacnk、当時グリーンべると、遊技通信転載、メーカー協力プレスリリースを横断し、性能コア＋v0.7 resetBehaviorを収集。
 
-## 478 — スパイガール 要約
+## 479 — ファニーサンタ2 要約
 
-- メーカー: **KPE**
-- 型式: **スパイガールG**
-- 検定番号: **9S1008**
-- 導入主値: **2010-04-19（暫定）**
-- releaseDate CONFLICT: **K-Navi 2010-02-22 / パチビー 2010-04-19 / 複数DB 2010-04**
-- 世代/タイプ: **5号機 / ボーナス＋完走型ART / 周期CZ / トリプルストック**
-- PAYOUT: **96.6 / 98.5 / 101.6 / 104.5 / 108.4 / 112.9%**
-- BIG: **1/368.2 → 1/327.7**
-- REG: **1/394.8 → 1/346.8**
-- ボーナス合算: **1/190.5 → 1/168.5**
-- 設定別ART初当たり: **UNVERIFIED_AFTER_RESEARCH**
-- 50枚ベース: **32.7G**
-- BIG: **約203枚**
-- REG: **約50枚**
-- ART「大作戦タイム」: **30G / 約+1.4枚/G**
-- 標準天井/CZ: **通常時333GごとにCZ、3回目CZは押し順ナビ発生＝ART確定**
-- coreStatus: **COMPLETE_CORE_EXCEPT_ART_INITIAL_RESET_PARTIAL_RELEASEDATE_CONFLICT**
+- メーカー: **タイヨー**
+- 型式: **UNVERIFIED_AFTER_RESEARCH**
+- 検定番号: **UNVERIFIED_AFTER_RESEARCH**
+- 導入主値: **2010-04-18**
+- releaseDate CONFLICT: **当時グリーンべると 2010-04-18実導入 / K-Navi 2010-04-26全国導入開始 / メーカー協力資料 2010年4月発売**
+- 世代/タイプ: **5号機 / ノーマルAタイプ / 完全告知（絶対告知） / 技術介入**
+- BIG: **1/268.59 → 1/229.95**
+- REG: **1/464.79 → 1/284.94**
+- 合算: **1/170.22 → 1/127.25**
+- 50枚ベース: **34.29 / 34.60 / 34.88 / 34.66 / 34.91 / 35.31G**
+- BIG: **MAX311枚**
+- REG: **MAX103枚**
+- 天井/ART/AT/CZ: **非搭載**
+- PAYOUT: **CONFLICT**
+  - P-WORLD/pacnk系列: **97.2 / 98.7 / 100.5 / 102.5 / 105.4 / 108.6%**
+  - 旧パチマガスロマガ・シミュレート: **96.99 / 98.64 / 100.48 / 102.67 / 105.87 / 109.27%**
+- coreStatus: **COMPLETE_CORE_RESET_NO_PERSISTENT_PROGRESS_RELEASEDATE_CONFLICT_MODEL_UNVERIFIED**
 
-## resetBehavior v0.7 — スパイガール
+## resetBehavior v0.7 — ファニーサンタ2
 
-- **設定変更**: K-Naviに本機専用「設定変更後の挙動は?」項目の存在までは確認したが本文の具体処理を回収できず。333G周期進捗/CZ回数、ART各ストック、内部状態の処理は `UNVERIFIED_AFTER_RESEARCH`。
-- **据え置き**: 周期/CZ回数・ストック・状態の引継ぎを直接確定できず `UNVERIFIED_AFTER_RESEARCH`。
-- **電源OFF→ON**: 周期/CZ回数・ストック・状態の保持/初期化を直接確定できず `UNVERIFIED_AFTER_RESEARCH`。
-- **ゲーム数/天井**: 標準仕様として **333G周期CZ、3回目CZでART確定**。ただし設定変更時リセット/引継ぎは `UNVERIFIED_AFTER_RESEARCH`。
-- **リセット短縮**: 設定変更専用の短縮周期/別天井は `NONE_CONFIRMED_AFTER_RESEARCH`。
-- **モード/状態**: フリーウェイ/クライマックス等は確認済みだが、変更時の初期再抽選・振り分けは未確認。
+- **設定変更**: 天井・ART/AT/CZ・周期モードがないため、朝一客行動へ影響する持続ゲーム数進捗/天井/モードの設定変更処理は `NOT_APPLICABLE` 相当。低レベル内部処理は直接資料未確認のため推測しない。
+- **据え置き**: 引継ぎ対象となる天井ゲーム数・周期・ART/AT/CZモードなし。低レベル処理は `UNVERIFIED_AFTER_RESEARCH`。
+- **電源OFF→ON**: 天井/周期/モードに関する差は対象機能なし。低レベルRAM/成立フラグ処理は `UNVERIFIED_AFTER_RESEARCH`。
+- **ゲーム数・天井**: P-WORLDとpacnkで **天井機能/天井RT非搭載**を確認。`gameCounterReset=NOT_APPLICABLE`、`ceilingAfterReset=NOT_APPLICABLE`。
+- **モード・状態**: 朝一に持ち越す通常モード/周期モード/ART状態なし。`NOT_APPLICABLE_FOR_PERSISTENT_GAMEPLAY_MODE`。
 - **有利区間**: `NOT_APPLICABLE`。
-- **朝一恩恵/不利**: 設定変更専用の確定恩恵/不利は `NONE_CONFIRMED_AFTER_RESEARCH`。通常333G周期を朝一恩恵として扱わない。
-- **変更判別**: ガックン、初期出目、液晶/ランプ、周期挙動等は `UNVERIFIED_AFTER_RESEARCH`。
-- **公開朝一数値**: リセット固有数値は確認なし。
-- resetBehaviorQA: **SETTING_CHANGE_CARRYOVER_POWER_CYCLE_GAME_COUNTER_MODE_STATE_DETECTION_UNVERIFIED_AFTER_RESEARCH**
+- **朝一恩恵/不利**: 設定変更専用の高確、短縮天井、朝一当選率優遇、天井進捗消失等は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- **変更判別**: ガックン・初期出目・告知ランプ等を使う本機固有の変更判別は `UNVERIFIED_AFTER_RESEARCH`。
+- **公開朝一数値**: リセット固有数値なし。
+- resetBehaviorQA: **RESET_RELEVANT_GAME_COUNT_CEILING_MODE_NOT_APPLICABLE_DETECTION_UNVERIFIED_AFTER_RESEARCH**
 
 ## 主要出典（取得日 2026-09-03）
 
-- パチビー「スパイガール」: `https://www.pachibee.jp/movies/index/2379`
-- K-Navi「スパイガール」: `https://p-kn.com/slot/1138/`
-- P-WORLD「スパイガール」: `https://www.p-world.co.jp/machine/database/5832`
-- パチマガスロマガ旧攻略 50枚ベース: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/kpe_slot/19/c.php`
-- K-Navi「ボーナスの種類」: `https://p-kn.com/slot/1138/17878/`
-- PachiNavi「スパイガール」: `https://pachinavi.net/machines/spy-girl/`
-- pacnk「スパイガール」: `https://pacnk.com/slot/tools/sh_spygirl.html`
-- アサガヲBlog 2010-02-05内覧会試打: `https://blog.livedoor.jp/asagawoblog/archives/99328.html`
+- グリーンべると「タイヨー、民事再生法手続き申請へ」: `https://web-greenbelt.jp/00002631/`
+- K-Navi「ファニーサンタ2」: `https://p-kn.com/slot/1184/`
+- K-Navi「2010年4月 新台導入カレンダー」: `https://p-kn.com/calendar/201004/`
+- P-WORLD「ファニーサンタ2」: `https://www.p-world.co.jp/machine/database/5902`
+- パチマガスロマガ旧攻略 ボーナス/PAYOUT: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/taiyo_slot/71/h.php`
+- パチマガスロマガ旧攻略 50枚ベース: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/taiyo_slot/71/c.php`
+- パチマガスロマガ旧攻略トップ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/taiyo_slot/71/taiyo_slot_71.php`
+- pacnk「ファニーサンタ2」: `https://pacnk.com/slot/tools/sh_funnysanta.html`
+- @Press メーカー協力アプリ資料: `https://www.atpress.ne.jp/news/15709`
+- 遊技通信記事転載（2010-03-25）: `https://p-mans.blogspot.com/2010/03/`
 
 ## resetBehavior 遡及QA進捗
 
@@ -73,10 +75,11 @@
 
 ## 次回再開地点
 
-1. **recordCount 478 / chronologicalFrontier 2010-04-19**。
-2. **2010-04-19同日群を最終監査**し、K-Naviカレンダー、P-WORLD、当時業界記事、メーカー別一覧で未登録機がないか確認する。
-3. 同日群を閉じた後、**2010-04-20〜25**を具体導入日順に境界監査する。
-4. 次の具体日候補は **2010-04-26「ファニーサンタ2」（タイヨー）**。repo重複確認後、より古い未処理機がなければ479件目候補とする。
-5. **スパイガール導入日CONFLICT**は未解消。メーカー一次/当時納品開始資料を後続QAで得た場合のみ主値を再判定する。K-Navi 2010-02-22を削除しない。
-6. **神人 八犬伝導入日CONFLICT**（K-Navi 2010-04-12 vs 当時資料2010-04-19）も保持。一次/メーカー納品資料が得られた場合のみ主値を再判定する。
-7. 次回追加前も必ず最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 前線実レコード / main状態を再取得し、他リレー競合・重複を防ぐ。
+1. **recordCount 479 / chronologicalFrontier 2010-04-19**。479は前線より古い2010-04-18の遡及補完なので、前線日は進めない。
+2. **2010-04-19同日群はK-Naviカレンダー上のパチスロ本線が既存「2027II NEO」中心で、スパイガールは日付CONFLICTとして既に478で補完済み。メーカー別一覧/当時業界記事をもう一段確認して閉じる。**
+3. その後 **2010-04-20〜25** を具体導入日順に境界監査。現時点のK-Navi月間カレンダーではパチスロ追加日なしだが、月精度資料・地域先行導入漏れを当時記事で再確認する。
+4. 境界を閉じた後の次の全国具体日候補は **2010-04-26**。旧候補「ファニーサンタ2」は今回479として処理済みなので重複追加しない。
+5. **2010-04-26同日/近接日の別未登録パチスロ**をK-Navi、P-WORLD、当時業界記事、メーカー別一覧で洗い出し、最古の未処理機から480件目を処理する。
+6. **ファニーサンタ2導入日CONFLICT**（2010-04-18 vs 2010-04-26）は保持。メーカー一次の納品開始/全国販売資料が得られた場合のみ主値再判定。
+7. **スパイガール導入日CONFLICT**（K-Navi 2010-02-22 vs 主値2010-04-19）と **神人 八犬伝導入日CONFLICT**（K-Navi 2010-04-12 vs 当時資料2010-04-19）も維持。
+8. 次回追加前も必ず最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 前線実レコード / main状態を再取得し、他リレー競合・重複を防ぐ。
