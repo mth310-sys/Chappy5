@@ -4,74 +4,74 @@
 
 ## 現在地点
 
-- recordCount: **470**
-- latestMachineAdded: **鮪伝説**（大都技研 / 2010-04-05）
-- latestRecord: `docs/real_machine_db/machines/2010-04-05_maguro-densetsu.md`
+- recordCount: **471**
+- latestMachineAdded: **スーパーマジカルセブン**（トリビー / 2010-04-05）
+- latestRecord: `docs/real_machine_db/machines/2010-04-05_super-magical-seven.md`
 - chronologicalFrontier: **2010-04-05**
-- frontierLatestMachine: **鮪伝説**（大都技研 / 2010-04-05）
+- frontierLatestMachine: **スーパーマジカルセブン**（トリビー / 2010-04-05）
 - schema: **resetBehavior v0.7**
 - status: **READY_TO_CONTINUE**
 
 ## 今回の継続確認
 
-- 最新mainの `README.md`、正本ミッション `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直近レコードを再取得。
+- 最新mainの `README.md`、正本ミッション `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直近470「鮪伝説」を再取得。
 - `INDEX.md` は旧地点のため、README規定どおりLATEST_HANDOFF＋main実レコードを進捗正本として使用。
-- 開始時正本は recordCount **469** / chronologicalFrontier **2010-04-05** / latestMachineAdded「ペガサスW（ニューペガサスブラック）」。
-- 2010-04-05同日群を継続監査し、repo内検索で「鮪伝説」が未登録であることを確認して470件目として追加。
-- K-Naviとパチビーはホール導入を **2010-04-05** とする。一方、2010-02-15公開の事前スペック記事には「納品3/22〜・導入3/23〜」という旧予定値が残る。2010-03-12の業界発表は「4月上旬から納品開始予定」として4/5側を補強するため、本DB主値は2010-04-05としつつ `CONFLICT` を保持した。
+- 開始時正本は recordCount **470** / chronologicalFrontier **2010-04-05** / latestMachineAdded「鮪伝説」。
+- 2010-04-05同日群を継続し、repo内検索で「スーパーマジカルセブン」「パチスロ宇宙戦艦ヤマト」「ハッピージャグラーV」が未登録であることを確認。
+- K-Navi導入カレンダーは3機とも2010-04-05群に置く。今回は業界発表・P-WORLD・旧パチマガ・当時解析に加えてresetBehaviorの特殊電源リセット情報まで回収できた「スーパーマジカルセブン」を471件目として追加。
 
-## 470 — 鮪伝説 要約
+## 471 — スーパーマジカルセブン 要約
 
-- メーカー: **大都技研**
-- 型式: **鮪伝説 S3**（回顧資料単独のため formal identity は部分確定）
-- 検定番号: **UNVERIFIED_AFTER_RESEARCH**
-- 導入: **2010-04-05**を主値 / 旧事前予定 **2010-03-23** とCONFLICT保持
-- 世代/タイプ: **5号機 / ボーナス + 無限ART**
-- 機械割: **96.5 / 97.4 / 99.8 / 103.8 / 107.8 / 111.5%**
-- BIG合成: **1/348.60 → 1/315.08**
-- REG/LIGHT: **1/819.20 → 1/546.13**
-- ボーナス合算: **1/244.54 → 1/199.80**
-- 50枚ベース: **約33G**
-- 大漁BIG/BIG: **約204枚**、LIGHT BONUS: **約48枚**
-- 無限ART「大漁道」: **約+1.5枚/G**、次回ボーナスまで継続
-- 通常救済: **995GでART突入率アップ / 1920Gで天井ART**
-- 複数内部モード・高確状態の存在を確認。
-- coreStatus: **COMPLETE_CORE_RESET_PARTIAL_RELEASE_DATE_CONFLICT_FORMAL_IDENTITY_PARTIAL**
+- メーカー: **トリビー**
+- 型式/検定番号: **UNVERIFIED_AFTER_RESEARCH**
+- 導入: **2010-04-05**（業界発表では納品4/4予定）
+- 世代/タイプ: **5号機 / ボーナス非搭載・ナビ回数管理ART / AT・CZ併用**
+- ART初当たり: **1/300 / 1/287 / 1/269 / 1/257 / 1/245 / 1/218**
+- 機械割: **CONFLICT**
+  - パチマガスロマガ: **97.0 / 98.5 / 99.9 / 102.0 / 105.0 / 111.1%**
+  - P-WORLD / 5号機クロニクル: **97.9 / 99.7 / 101.2 / 103.1 / 104.8 / 111.1%**
+- 50枚ベース: **約35G**（当時解析単独の直接値）
+- ART「ドリームラッシュ」: **約+2.0枚/G**
+- 基本獲得性能: **20回≈120枚 / 50回≈300枚 / 80回≈480枚**
+- 通常天井: 特殊リプレイ成立回数管理。通常A/B系最大34回、ハマリ系最大50回、天国1〜5回。
+- coreStatus: **COMPLETE_CORE_RESET_PARTIAL_PAYOUT_CONFLICT_FORMAL_IDENTITY_PARTIAL**
 
-## resetBehavior v0.7 — 鮪伝説
+## resetBehavior v0.7 — スーパーマジカルセブン
 
-- **設定変更**: K-Naviに本機専用「設定変更後の挙動」解析項目が存在することまでは確認。ただし現存サブページ本文を取得できず、天井カウンタのclear/retain、内部モード再抽選値等は `UNVERIFIED_AFTER_RESEARCH`。一般的な5号機挙動で補完しない。
-- **据え置き**: 995G/1920G進捗、内部モード、高確、ART関連状態の保持を本機固有高信頼本文で確定できず `UNVERIFIED_AFTER_RESEARCH`。
-- **電源OFF→ON**: 天井カウンタ、内部モード、高確、ART状態の扱いは `UNVERIFIED_AFTER_RESEARCH`。
-- **ゲーム数/天井**: 通常時の **995G / 1920G** は確定。設定変更後のクリア/引継ぎと短縮天井は未確定。
-- **モード/状態**: 複数モード・高確は存在するが、変更時振分や電断時処理は未確定。
+- **設定変更**: 当時解析に設定変更時モード選択を確認。全設定共通で **通常A25% / 通常B25% / ハマリ40% / 天国10%**。
+- **据え置き**: 通常の「据え置き=前日状態保持」と単純化できない。本機には約150分経過でモード/天井が自動リセットされる特殊電源挙動の記録があり、設定据え置きでも朝一リセット状態になり得る。
+- **電源OFF→ON**: **約150分でリセット**する特殊挙動は複数の当時/回顧資料で一致。ただし起算点が「電源OFF後150分」対「電源ON後150分」で資料競合するため `CONFLICT`。
+- **ゲーム数/天井**: G数ではなく特殊リプレイ成立回数管理。設定変更または150分経過リセット時に天井進捗がリセットされる資料を採用。
+- **リセット時モード**: 通常A25% / 通常B25% / ハマリ40% / 天国10%。
+- **朝一恩恵**: リセット時 **10%で天国**。天国なら特殊リプレイ **1〜5回**でART天井。振分は **1回25% / 2回12.5% / 3回25% / 4回12.5% / 5回25%**。
 - **有利区間**: `NOT_APPLICABLE`（5号機・制度前）。
-- **朝一恩恵/不利**: 当時K-Naviユーザー投稿に「朝一100回転高確ねらい」の記述はあるが解析本文ではないため、公開朝一数値として昇格せず低信頼参考値に留めた。確定不利要素はなし。
-- **変更判別**: 当時ユーザー投稿に「設定変更がすぐわかる」との言及はあるが、判別条件・演出・確率を高信頼資料で回収できず `PARTIAL_LOW_CONFIDENCE_CLAIM_ONLY`。ガックン等を推測補完しない。
-- resetBehaviorQA: **PARTIAL_AFTER_MULTI_SOURCE_RESEARCH**
+- **変更判別**: 本機固有の高信頼なガックン/初期出目条件は未確定。150分自動リセット仕様のため、朝一挙動のみで設定変更と据え置きを区別しにくい。
+- resetBehaviorQA: **PARTIAL_HIGH_VALUE_RESET_BEHAVIOR_RECOVERED_WITH_TIMER_ORIGIN_CONFLICT**
 
 ## 主要出典（取得日 2026-09-03）
 
-- K-Navi「鮪伝説」: `https://p-kn.com/slot/1180/`
-- パチビー「鮪伝説」: `https://www.pachibee.jp/machines/index/209100007`
-- P-WORLD「鮪伝説」: `https://www.p-world.co.jp/machine/database/5890`
-- 娯楽産業「大都技研 パチスロ新機種『鮪伝説』発表」: `https://www.goraku-sangyo.com/大都技研　パチスロ新機種「鮪伝説」発表/`
-- P-WORLD/グリーンべると「次回ボーナスまで継続のARTがアツい『鮪伝説』」: `https://news.p-world.co.jp/articles/3872/greenbelt`
-- 当時解析まとめ「鮪伝説 攻略＆解析情報」: `https://ameblo.jp/pachimatome/entry-10498857544.html`
-- 当時事前スペック記事: `https://ameblo.jp/pachimatome/entry-10459567199.html`
-- pachinko’s blog「大都技研『鮪伝説』の筺体＆情報」: `https://pachinko.hatenablog.jp/entry/2010/04/maguroDensetsu`
+- グリーンべると/P-WORLD「トリビーが『スーパーマジカルセブン』を発表」: `https://news.p-world.co.jp/articles/3834/greenbelt`
+- K-Navi 2010年4月導入カレンダー: `https://p-kn.com/calendar/201004/`
+- P-WORLD「スーパーマジカルセブン」: `https://www.p-world.co.jp/machine/database/5871`
+- パチマガスロマガ ART確率/PAYOUT: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/trivy_slot/14/h.php`
+- パチマガスロマガ 基本システム: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/trivy_slot/14/a.php`
+- 当時解析まとめ: `https://ameblo.jp/pachimatome/entry-10499026926.html`
+- My パチスロ覚書 解析情報: `https://wikiwiki.jp/miduki/トリビー/スーパーマジカルセブン/解析情報`
+- My パチスロ覚書 立ち回り: `https://wikiwiki.jp/miduki/トリビー/スーパーマジカルセブン/立ち回り`
+- 旧HAZUSE記述引用の過去ログ: `https://kako.5ch.io/test/read.cgi/slot/1247787165`
+- 5号機クロニクル トリビー一覧: `https://5goki.com/trivy`
 
 ## resetBehavior 遡及QA進捗
 
 - 既存遡及補完は **スロ原人（`docs/real_machine_db/machines/2006-10_surogenjin.md`）まで補完済み**という正本進捗を維持。
-- 今回も前線収集と並行して次の欠損実ファイル特定を試みたが、実ファイル順を保証した状態で対象を一意確定できていないため、推測で別機種をQA済みにする変更は行わなかった。
-- 次回はmachine tree/履歴を用いて、**スロ原人直後の最初の `resetBehavior` 欠損実ファイル**を一意特定してから補完する。既存 `COMPLETE_CORE` は不用意に変更せず、reset QA状態のみ別管理する。
+- 前線収集を優先し、推測で遡及QA済み範囲を進めない。
+- 次回はmachine tree/履歴を用いて、**スロ原人直後の最初の `resetBehavior` 欠損実ファイル**を一意特定してから補完する。
 
 ## 次回再開地点
 
-1. **recordCount 470 / chronologicalFrontier 2010-04-05**。
-2. **2010-04-05同日群を継続**。未処理候補として少なくとも **スーパーマジカルセブン（トリビー） / パチスロ宇宙戦艦ヤマト（山佐） / ハッピージャグラーV（北電子）** を再監査し、repo重複を確認して未登録の最古候補から追加する。
-3. 4/5同日群を閉じる前に、メーカー別一覧・当時導入カレンダー・旧解析DBを横断して同日漏れを再監査する。
+1. **recordCount 471 / chronologicalFrontier 2010-04-05**。
+2. **2010-04-05同日群を継続**。未処理確認済みの **パチスロ宇宙戦艦ヤマト（山佐） / ハッピージャグラーV（北電子）** を優先し、repo重複を再確認して次を追加する。
+3. 同日群を閉じる前にK-Navi導入カレンダー、メーカー別一覧、当時業界記事・旧解析DBを横断し、4/5の追加漏れを再監査する。
 4. **スパイガール日付CONFLICT監査を保持**: K-Navi `2010-02-22` vs パチビー/当時スケジュール `2010-04-19` / 複数DB `2010-04`。4月境界で再確認し、既存登録有無とreleaseDate定義を混同しない。
 5. 遡及QAは **スロ原人直後の最初のresetBehavior欠損実ファイル**を特定して再開。
 6. 次回追加前も必ず最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 前線実レコード / main状態を再取得し、他リレー競合・重複を防ぐ。
