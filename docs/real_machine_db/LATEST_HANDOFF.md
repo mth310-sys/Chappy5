@@ -4,11 +4,11 @@
 
 ## 現在地点
 
-- recordCount: **518**
-- latestMachineAdded: **極お父さん ～舞い降りた天使???～**（SNKプレイモア / 2010-10-04）
-- latestRecord: `docs/real_machine_db/machines/2010-10-04_hyper-otousan.md`
+- recordCount: **519**
+- latestMachineAdded: **出番だ！葉月ちゃん**（エレコ / 全国一斉導入基準 2010-10-04）
+- latestRecord: `docs/real_machine_db/machines/2010-10-04_deban-da-hazuki-chan.md`
 - chronologicalFrontier: **2010-10-04**
-- frontierLatestMachine: **極お父さん ～舞い降りた天使???～**
+- frontierLatestMachine: **出番だ！葉月ちゃん**
 - schema: **resetBehavior v0.7**
 - status: **READY_TO_CONTINUE**
 
@@ -16,60 +16,60 @@
 
 - 最新mainの `README.md`、正本ミッション `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、前線実レコードを再取得。
 - `INDEX.md` は旧19件地点のため、README規定どおり最新 `LATEST_HANDOFF.md`＋main実レコードを進捗正本として使用。
-- 開始時正本は recordCount **517** / chronologicalFrontier **2010-10-04** / latestMachineAdded **ロケットパニック**。
-- 2010-10-04同日群を継続し、repo未登録の**極お父さん ～舞い降りた天使???～**を518件目として追加。
+- 開始時正本は recordCount **518** / chronologicalFrontier **2010-10-04** / latestMachineAdded **極お父さん ～舞い降りた天使???～**。
+- LATEST_HANDOFFの2010-10-04同日群を継続。パチスロピンポン、ロケットパニック、極お父さんは登録済みを確認し、repo未登録の**出番だ！葉月ちゃん**を519件目として追加。
+- K-Navi 2010年10月4日全国一斉導入カレンダーのパチスロ5機種（ビッグシオV / ロケットパニック / 極お父さん / 出番だ!葉月ちゃん / パチスロピンポン）は全てmain登録済みとなった。
 - 既登録性能値は再調査せず、新規対象の性能コア＋resetBehavior v0.7に限定して収集した。
 
-## 518 — 極お父さん ～舞い降りた天使???～
+## 519 — 出番だ！葉月ちゃん
 
-- メーカー: **SNKプレイモア**
-- ホール導入開始: **2010-10-04**（K-Navi）
-- 月粒度別資料: **2010/9**（5号機クロニクル）
-- 世代/タイプ: **5号機 / A+ART / ボーナス+RT+ART**
-- 型式: **ハイパーオトウサンD**
-- 検定番号: **UNVERIFIED_AFTER_RESEARCH**
-- 機械割主系列: **96.8 / 98.6 / 100.2 / 105.4 / 110.1 / 115.2%**
-- 機械割設定2: 後年回顧記事のみ **96.6%** → `CONFLICT`、平均化しない
-- BIG: **1/331.0 → 1/287.4**
-- REG: **1/496.5 → 1/376.6**
-- ART初当たり: **1/561.6 → 1/312.5**（設定ごと非単調）
-- 50枚/1000円: **UNVERIFIED_AFTER_RESEARCH**
-- BIG: **約200枚** / REG: **約50枚**
-- RT「追跡モード」: **30G / 約+0.1枚/G**
-- ART「バトルチャンス」: **30G / 約+1.2枚/G / 継続率66・80・87・95%**
-- 通常天井: **ボーナス or RT or ART間MAX600G → 天井状態 → 1枚役成立でART**
+- メーカー: **エレコ / ユニバーサルエンターテインメント**
+- 全国一斉導入基準: **2010-10-04**（K-Navi＋2010-08-17当時解析記事）
+- 別日付資料: **2010-09-21**（HAZUSE） / **2010年9月発売**（メーカー公式） → `CONFLICT`、定義差を分離
+- 世代/タイプ: **5号機 / ノーマル / A+RT**
+- 型式: **出番だ！葉月ちゃんEA**
+- 検定番号: **0S0151**
+- 機械割: **97.2 / 99.9 / 104.8 / 108.5 / 113.1 / 119.1%**
+- BIG: **1/299.3 → 1/219.9**
+- REG: **1/431.2 → 1/219.9**
+- ボーナス合算: **約1/177 → 約1/110**
+- 50枚/1000円: **約34G**（2010-08-17当時解析）
+- BIG: **約310枚**
+- REG / 葉月ボーナス: **最大約116枚**を主値。5号機クロニクル最大104枚は `CONFLICT`
+- 5GプチRT「葉月チャンス」
+- 次回ボーナスまでRT「葉月タイム」: **約+0.3枚/G**
+- 固定ゲーム数天井: **NO_FIXED_GAME_COUNT_CEILING_CONFIRMED_AFTER_RESEARCH**
 - coreStatus: **COMPLETE_CORE_RESET_BEHAVIOR_PARTIAL**
 
-### resetBehavior v0.7 — 極お父さん
+### resetBehavior v0.7 — 出番だ！葉月ちゃん
 
-- 「極お父さん / ハイパーオトウサンD / SNKプレイモア / お父さんシリーズ」と「設定変更 / リセット / 朝一 / 据え置き / 宵越し / 電源OFF ON / 天井 / 600G / モード / ガックン」を組み替えて複数経路で再探索。
-- 通常天井MAX600Gは複数資料で確認したが、**設定変更時に600G進捗をclear/retainするかは直接根拠を回収できず `UNVERIFIED_AFTER_RESEARCH`**。
-- 据え置き、単純電源OFF→ON、低確/高確/超高確、RT、ARTストック/潜伏状態の保持/初期化も本機固有の直接資料を確定できず。
-- 設定変更専用短縮天井、朝一ART確定、高確優遇、公開されたリセットモード振り分けは **NONE_CONFIRMED_AFTER_RESEARCH / UNVERIFIED_AFTER_RESEARCH**。
-- ガックン、初期出目、液晶/ランプによる変更判別も高信頼資料を確定できず。
+- 「出番だ！葉月ちゃん / 出番だ葉月ちゃん / 出番だ！葉月ちゃんEA / エレコ / ユニバーサル / HANABI / ドンちゃん」と「設定変更 / リセット / 朝一 / 据え置き / 宵越し / 電源OFF ON / RT / 葉月タイム / 天井 / ガックン」を組み替え、公式・当時解析・HAZUSE・保存実機資料・回顧DBを横断。
+- 規定ゲーム数解除型の通常天井、設定変更専用の短縮天井、朝一専用天井数値は確認できず **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 設定変更時・据え置き・単純電源OFF→ON時の5GプチRT「葉月チャンス」/次回ボーナスまでRT「葉月タイム」の状態保持/初期化は本機固有の直接高信頼資料を確定できず **UNVERIFIED_AFTER_RESEARCH**。
+- 設定変更専用の高確/RT優遇、朝一ボーナス/RT確率、公開リセットモード振り分けは **NONE_CONFIRMED_AFTER_RESEARCH / UNVERIFIED_AFTER_RESEARCH**。
+- ガックン、初期出目、液晶/ランプ等による変更判別も本機固有の直接根拠を確定できず。
 - 有利区間は5号機のため **NOT_APPLICABLE**。
-- 一般的な5号機挙動から推測補完しない。
+- 一般的な5号機・ノーマル機の挙動から推測補完しない。
 
 ## CONFLICT / 注意
 
-- 導入時期: K-Navi **2010-10-04**、5号機クロニクル **2010/9**。日粒度導入開始と月粒度メタデータを分離。
-- 機械割設定2: 5号機クロニクル **98.6%** / 後年回顧記事 **96.6%**。他設定は一致するが自動修正せずCONFLICT保持。
-- BIG設定3: **1/321.1 / 1/321.3** の丸め差を保持。
+- 導入時期: K-Navi全国一斉導入＋2010-08-17当時解析 **2010-10-04**（納品10-03〜）、HAZUSE **2010-09-21**、メーカー公式 **2010年9月発売**。地域先行/発売月/全国一斉導入の定義差を含むため平均化しない。
+- REG基本獲得: 当時解析＋A-SLOT保存説明 **最大約116枚** / 5号機クロニクル **最大104枚**。平均化せずCONFLICT保持。
 
 ## 主要出典（取得日 2026-09-04）
 
-- K-Navi: `https://p-kn.com/slot/1273/`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/6079`
-- 5号機クロニクル SNKプレイモア一覧: `https://5goki.com/snkplaymore`
-- pacnk: `https://pacnk.com/slot/2010/hyperotousan/top.php`
-- 中一商事 保存実機スペック: `https://www.nakaiti.com/html/sSNK077.html`
-- marimo0925 回顧機械割: `https://www.marimo0925.net/pachislot-kikaiwari-ranking-superfather-ban/`
-- ハンゲーム パチスロWiki保存解析: `https://wikiwiki.jp/hanpachi/%E3%81%AA%E3%81%AA%E3%81%B1%E3%81%A1%20%E3%83%91%E3%83%81%E3%82%B9%E3%83%AD/%E6%A5%B5%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%EF%BD%9E%E8%88%9E%E3%81%84%E9%99%8D%E3%82%8A%E3%81%9F%E5%A4%A9%E4%BD%BF%EF%BC%9F%EF%BC%9F%EF%BC%9F%EF%BD%9E`
+- ユニバーサル公式: `https://www.universal-777.com/product/slot/hazukichan/`
+- K-Navi 2010年10月導入カレンダー: `https://p-kn.com/calendar/201010/`
+- HAZUSE: `https://hazuse.com/machine/pachislot/0S0151/`
+- 当時2010-08-17解析記事: `https://ameblo.jp/pachimatome/`
+- A-SLOT保存実機説明: `https://www.a-slot.com/SHOP/eleco30.html`
+- 5号機クロニクル ユニバーサル一覧: `https://5goki.com/universal`
+- なな徹 ハナビシリーズ回顧: `https://nana-press.com/post/1570386`
 
 ## 今回のGitHub更新
 
-- 518 極お父さん追加: `docs/real_machine_db/machines/2010-10-04_hyper-otousan.md`
-- レコード追加commit: `04cfbc99a5aff7e25f2a6607bedb017db9f265d6`
+- 519 出番だ！葉月ちゃん追加: `docs/real_machine_db/machines/2010-10-04_deban-da-hazuki-chan.md`
+- レコード追加commit: `f7ad854c8a2fea94a1be238384b1cdadd7183e45`
 - LATEST_HANDOFF: このコミット
 
 ## 遡及QA継続地点
@@ -80,7 +80,8 @@
 
 ## 次回再開地点
 
-1. **recordCount 518 / chronologicalFrontier 2010-10-04**。開始時は最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 前線実レコードを必ず再取得。
-2. 2010-10-04同日群を継続。次候補は **出番だ!葉月ちゃん**。パチスロピンポン、ロケットパニック、極お父さんは登録済みのため重複追加禁止。
-3. 2010-10-04同日群の漏れを最終監査後、2010-10-05〜10-15境界を監査し、次節点2010-10-16「天空のシンフォニア」へ進む。
-4. 遡及QAは `2006-11_kaidouou.md` を次候補とする。
+1. **recordCount 519 / chronologicalFrontier 2010-10-04**。開始時は最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 前線実レコードを必ず再取得。
+2. **2010-10-04 K-Navi全国一斉導入群は5機種すべて登録済み**。メーカー別・当時業界記事で同日/先行日の漏れを最終監査し、重複追加しない。
+3. 2010-10-05〜10-15境界を監査。K-Naviの次の明確なパチスロ節点は **2010-10-16 コルモ「天空のシンフォニア」**。境界に未登録がなければ520件目候補として進む。
+4. その次はK-Navi基準 **2010-10-18「舞-HiME」（岡崎産業）/「ジャイアン」（ニューアーク）**。
+5. 遡及QAは `2006-11_kaidouou.md` を次候補とする。
