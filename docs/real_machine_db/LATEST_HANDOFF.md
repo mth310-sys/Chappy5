@@ -4,11 +4,11 @@
 
 ## 現在地点
 
-- recordCount: **521**
-- latestMachineAdded: **舞-HiME**（岡崎産業 / 全国一斉導入基準 2010-10-18）
-- latestRecord: `docs/real_machine_db/machines/2010-10-18_mai-hime.md`
+- recordCount: **522**
+- latestMachineAdded: **ジャイアン～情熱のタイ編～**（ラスター / ニューアーク発表・販売 / 全国一斉導入基準 2010-10-18）
+- latestRecord: `docs/real_machine_db/machines/2010-10-18_jaian-jounetsu-no-thailand.md`
 - chronologicalFrontier: **2010-10-18**
-- frontierLatestMachine: **舞-HiME**
+- frontierLatestMachine: **ジャイアン～情熱のタイ編～**
 - schema: **resetBehavior v0.7**
 - status: **READY_TO_CONTINUE**
 
@@ -16,67 +16,93 @@
 
 - 最新mainの `README.md`、正本ミッション `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、前線実レコードを再取得。
 - `INDEX.md` は旧19件地点のため、README規定どおり最新 `LATEST_HANDOFF.md`＋main実レコードを進捗正本として使用。
-- 開始時正本は recordCount **520** / chronologicalFrontier **2010-10-16** / latestMachineAdded **天空のシンフォニア**。
-- K-Navi 2010年10月導入カレンダーを再監査し、10月17日にパチスロ掲載がなく、次節点が **2010-10-18** であることを確認。
-- 同日群は岡崎産業「舞-HiME」とニューアーク「ジャイアン」。repo検索で舞-HiME既登録なしを確認し、時系列優先で舞-HiMEを521件目として追加。
-- 既登録性能値は再調査せず、新規対象の性能コア＋resetBehavior v0.7に限定して収集した。
+- 開始時正本は recordCount **521** / chronologicalFrontier **2010-10-18** / latestMachineAdded **舞-HiME**。
+- 2010-10-18同日群の未処理「ジャイアン～情熱のタイ編～」をrepo重複確認後に522件目として追加。
+- 2010-10-19〜24境界を再監査し、K-Navi 2010年10月導入カレンダーでも10月25日はパチスロ新規掲載なし（パチンコのみ）。次の未処理パチスロ節点は11月側を含めて再監査する。
+- 遡及QAは `docs/real_machine_db/machines/2006-11_kaidouou.md`（怪胴王）を処理し、resetBehavior v0.7を追加。性能コアの既存判定とreset QAを分離した。
 
-## 521 — 舞-HiME
+## 522 — ジャイアン～情熱のタイ編～
 
-- メーカー: **岡崎産業**
+- メーカー: **ラスター**（当時ニューアークが発表・販売。役割分離）
 - 全国一斉導入基準: **2010-10-18**（K-Navi）
-- 世代/タイプ: **5号機 / ボーナス主体 + 完走型ループRT / CZ / 技術介入**
-- 機械割: **97.37 / 99.22 / 101.15 / 105.01 / 109.03 / 115.46%**
-- BIG合成: **1/322.84 → 1/215.58**
-- ナギボーナス: **1/383.25 → 1/246.38**
-- ボーナス合算: **1/175.23 → 1/114.98**
-- 50枚/1000円: **36.98 / 37.18 / 37.39 / 37.65 / 37.99 / 39.51G**
-- RT「アリッサゾーン」: **50G or 100G / 約+0.6枚/G**
-- 舞衣/なつきBIG: 約300枚、命BIG: 約200枚、ナギボーナス: 最大109枚
-- 天井: **なし**
+- 世代/タイプ: **5号機 / BIG + 押し順ART / CZ / 天井**
+- 機械割: **96.0 / 98.6 / 101.3 / 105.1 / 109.0 / 115.3%**
+- BIG: **1/281.3 → 1/240.1**
+- ART初当たり: **1/223.4 → 1/152.7**
+- BIG+ART合成: **1/124.5 → 1/93.3**
+- 50枚/1000円: **約34G**
+- ART「ジャイアンボーナス」: **1セット50G / 約+1.43枚/G / 1契機最大10セット**
+- BIG: **約174枚**
+- チャンス目: **約1/100.52**、成立後は平均約8GのCZ
+- 天井: **BIG間1840G以降で天井ART**
 - coreStatus: **COMPLETE_CORE_RESET_BEHAVIOR_PARTIAL**
 
-### resetBehavior v0.7 — 舞-HiME
+### resetBehavior v0.7 — ジャイアン
 
-- **設定変更後はCZ「風華モード」からスタート**することをCrankySevenで直接確認。パチマガスロマガにも本機専用の「朝イチ・設定変更」項目が存在。
-- 通常時のゲーム数天井は存在しないため、gameCounterReset / ceilingAfterReset は天井用途では **NOT_APPLICABLE**。
-- 設定変更後に風華モードから始まるため、朝一からチャンス目成立で50G RTへ入る機会がある。ただし設定変更専用のRT当選率/期待度は確定できず、数値推定しない。
-- 据え置き時の前日CZ/RT状態・RT残りGの保持、単純電源OFF→ON時のCZ/RT状態、ガックン・初期出目・液晶/ランプ等による変更判別は、表記/検索語/資料系統を変えて再探索しても本機固有の直接根拠を確定できず **UNVERIFIED_AFTER_RESEARCH**。
-- 朝一風華モードだけで設定変更確定判別とはしない。据え置きでも前日の終了状態次第で風華モード開始となり得るかを直接確定できないため。
+- パチマガスロマガに本機専用「朝イチ・設定変更」項目が存在することは確認したが、現存検索結果から本文を回収できず。
+- **設定変更時のBIG間1840G天井カウンタclear/retain、ARTストック、CZ/RT状態の初期化内容はUNVERIFIED_AFTER_RESEARCH**。一般的5号機挙動から推測しない。
+- 据え置き時のBIG間天井G・ARTストック・CZ/RT状態の引継ぎは **UNVERIFIED_AFTER_RESEARCH**。
+- 単純電源OFF→ON時のBIG間天井G・ARTストック・CZ/RT状態・液晶/ランプ初期状態は **UNVERIFIED_AFTER_RESEARCH**。
+- 設定変更専用短縮天井、朝一専用モード振り分け、朝一ART確率、設定変更固有の恩恵/不利は再探索後も **NONE_CONFIRMED_AFTER_RESEARCH / UNVERIFIED_AFTER_RESEARCH**。
+- ガックン、初期出目、液晶/ランプ等による変更判別は **UNVERIFIED_AFTER_RESEARCH**。
 - 有利区間は5号機のため **NOT_APPLICABLE**。
+- resetBehaviorQA: **PARTIAL_AFTER_MULTI_SOURCE_RESEARCH**。
 
-## CONFLICT / 注意
+## CONFLICT / 注意 — ジャイアン
 
-- 機械割はP-WORLDの精密値とCrankySevenの丸め値が一致範囲で、CONFLICT扱いしない。
-- パチンコ「CR舞-HiME」（西陣）や「舞-乙HiME」系の情報を混入させない。
-- formalModelName / inspectionNumber は今回十分な再探索後も確定できず UNVERIFIED_AFTER_RESEARCH。
+- メーカー表記はP-WORLD「ラスター」、当時グリーンべるとではニューアークがラスターとの業務提携第2弾として発表。製造メーカー=ラスター、発表/販売ブランド=ニューアークとして役割分離し、数値CONFLICTとは扱わない。
+- formalModelName / inspectionNumber は十分再探索後も **UNVERIFIED_AFTER_RESEARCH**。
 
-## 主要出典（取得日 2026-09-04）
+## 主要出典 — ジャイアン（取得日 2026-09-04）
 
 - K-Navi 2010年10月導入カレンダー: `https://p-kn.com/calendar/201010/`
-- K-Navi機種ページ: `https://p-kn.com/slot/1287/`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/6108`
-- パチビー: `https://www.pachibee.jp/machines/about/210090001`
-- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/okazaki_slot/62/okazaki_slot_62.php`
-- パチマガスロマガ1000円あたりG数: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/okazaki_slot/62/c.php`
-- CrankySeven: `https://crankyseven.com/maihime-pc.htm`
+- グリーンべると / P-WORLD業界ニュース: `https://news.p-world.co.jp/articles/4158/greenbelt`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/6113`
+- パチマガスロマガ基本システム: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/newark_slot/02/newark_slot_02.php`
+- パチマガスロマガ基本ゲーム性: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/newark_slot/02/a.php`
+- パチマガスロマガ設定別確率/PAYOUT: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/newark_slot/02/h.php`
+- パチマガスロマガ小役/1000円G数: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/newark_slot/02/c.php`
+
+## 遡及QA — 怪胴王
+
+対象: `docs/real_machine_db/machines/2006-11_kaidouou.md`
+
+- formalModelName: **爆裂王2**。
+- 既存性能コアはPARTIALのため不用意な完了判定変更をせず、reset QA状態を別管理。
+- ハマリ救済として、**規定ゲーム数到達で次回ボーナスまでAT**となる仕様を当時業界記事で再確認。ただし具体的規定G数は高信頼値未確定。
+- 設定変更時の救済進捗、AT権利/残G、内部RT状態のclear/retainは直接資料を確定できず **UNVERIFIED_AFTER_RESEARCH**。
+- 据え置き、単純電源OFF→ON、設定変更判別、公開朝一数値も本機固有の確定資料を回収できず **UNVERIFIED_AFTER_RESEARCH**。
+- 有利区間は5号機初期のため **NOT_APPLICABLE**。
+- AT純増は当時業界記事 **約+1.2枚/G** と攻略資料 **約+1.1枚/G** を平均せずCONFLICT保持。
+- 機械割設定2は **98.2%（pacnk） / 98.7%（後年回顧）** をCONFLICT保持。設定1/3/4/5/6は 95.2 / 100.8 / 104.0 / 106.9 / 109.6%。
+- resetBehaviorQA: **PARTIAL_AFTER_MULTI_SOURCE_RESEARCH**。
+
+### 怪胴王 主要出典（取得日 2026-09-04）
+
+- グリーンべると: `https://web-greenbelt.jp/00004874/`
+- P-WORLD / グリーンべると転載: `https://news.p-world.co.jp/articles/1904/greenbelt`
+- HAZUSE: `https://hazuse.com/i/data/kaidouou/top.htm`
+- CrankySeven: `https://crankyseven.com/kaidouou-pc.htm`
+- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/arist_slot/27/a.php`
+- pacnk: `https://pacnk.com/slot/tools/sh_kaidouou.html`
+- pachinko's blog: `https://pachinko.hatenablog.jp/entry/2006/11/kaidou-oh`
 
 ## 今回のGitHub更新
 
-- 521 舞-HiME追加: `docs/real_machine_db/machines/2010-10-18_mai-hime.md`
-- レコード追加commit: `b6087a43a74b63f21fae97e7dadb3d8f82fc0875`
-- LATEST_HANDOFF: このコミット
+- 522 ジャイアン～情熱のタイ編～追加: `docs/real_machine_db/machines/2010-10-18_jaian-jounetsu-no-thailand.md`
+- 怪胴王 resetBehavior v0.7 QA追補: `docs/real_machine_db/machines/2006-11_kaidouou.md`
+- LATEST_HANDOFF: 本更新
 
 ## 遡及QA継続地点
 
-- **ジャックポット・トロピカルバージョンまで補完済み**。
-- machine tree上の次の候補は `docs/real_machine_db/machines/2006-11_kaidouou.md`。resetBehavior欠損なら次回QA対象。
+- **怪胴王まで補完済み**。
+- 次回はmachine treeの実パス順を再確認し、`2006-11_kaidouou.md`直後の**最初の実在resetBehavior欠損レコード**を特定して処理する。タイトル推測でQA済み範囲を進めない。
 - COMPLETE_CORE性能判定はreset欠損のみを理由に崩さず、reset QA状態を別管理する。
 
 ## 次回再開地点
 
-1. **recordCount 521 / chronologicalFrontier 2010-10-18**。開始時は最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 前線実レコードを必ず再取得。
-2. 2010-10-18同日群を継続し、repo重複を確認して **ニューアーク「ジャイアン」** を522件目候補として処理する。
-3. 「ジャイアン」完了後、2010-10-19〜24境界をメーカー別/当時業界記事で監査する。
-4. K-Navi 2010年10月カレンダーでは10月25日にパチスロ掲載なし（パチンコのみ）のため、次の未処理パチスロ節点は11月側を含めて再探索する。
-5. 遡及QAは `2006-11_kaidouou.md` を次候補とする。
+1. **recordCount 522 / chronologicalFrontier 2010-10-18**。開始時は最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 前線実レコードを必ず再取得。
+2. 2010-10-19〜31境界を再監査。K-Navi 2010年10月カレンダーでは10月25日に新規パチスロ掲載なしのため、11月導入カレンダー・P-WORLD・当時業界記事を照合し、**2010年11月側の最古未登録機**を523件目候補として確定する。
+3. 同日群が複数ある場合は導入日/納品日定義を分離し、repo重複監査後に時系列で追加する。
+4. 遡及QAは **怪胴王直後の最初の実在resetBehavior欠損machine pathの確定**から再開する。
+5. PARTIAL/UNVERIFIEDとreset欠損は検索語・資料系統を変えて十分再探索し、競合は平均せずCONFLICT、推測補完しない。
