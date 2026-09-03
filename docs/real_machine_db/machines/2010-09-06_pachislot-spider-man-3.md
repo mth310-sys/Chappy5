@@ -89,11 +89,12 @@ confidence: ANALYSIS_MULTI_SOURCE_HIGH
 
 - BIG: **MAX306枚**（パチマガスロマガは純増約303枚表記）
 - MB: **MAX162枚**（パチマガスロマガは純増約160枚表記）
-- P-WORLD/K-Naviは払い出し終了条件をBIG 396枚超、MB 204枚超と記載。
+- BIG払い出し終了条件は **K-Navi/パチマガスロマガ: 396枚超** に対し **P-WORLD: 369枚超** と表記競合。MAX306枚という実獲得側の主値は当時業界記事・複数解析で一致するため維持し、終了条件だけ `CONFLICT` として分離保持。
+- MB払い出し終了条件は **204枚超** で一致。
 - 2010年当時グリーンべるとはBIG306枚 / ミドル162枚を紹介。
 
 MAX値と解析上の約純増値は定義が異なるためCONFLICT扱いせず併記。
-confidence: INDUSTRY_PLUS_ANALYSIS_MULTI_SOURCE_HIGH
+confidence: INDUSTRY_PLUS_ANALYSIS_MULTI_SOURCE_HIGH / BIG_PAYOUT_END_CONDITION_CONFLICT
 
 ## modeSpecificMinimumData
 
@@ -145,6 +146,7 @@ resetBehaviorQA: PARTIAL_DIRECT_RESET_BEHAVIOR_FOUND / CEILING_COUNTER_AND_POWER
 ## conflicts
 
 - payoutRateBySetting: P-WORLD/K-Navi公称系列 **97.0 / 98.7 / 101.3 / 106.8 / 112.3 / 119.99%** vs パチマガスロマガ・シミュレート **97.71 / 99.63 / 102.62 / 106.94 / 112.75 / 119.99%**。平均化しない。
+- BIG payout-end condition: **K-Navi/パチマガスロマガ 396枚超** vs **P-WORLD 369枚超**。MAX306枚の実獲得主値は複数資料一致のため維持し、終了条件表記のみCONFLICT保持。
 - 後年「5号機クロニクル」には本機を2010/8、BIG約204枚/REG約48枚、ART約+1.4枚/Gとする記述があるが、2010年当時グリーンべると、K-Navi、P-WORLD、パチマガスロマガが一致するBIG約303〜306枚/MB約160〜162枚、ART約+1.0枚/Gと大きく異なり、別機/後年整理混同の可能性が高いため本機コア主値には採用しない。資料競合として注記のみ保持。
 
 ## missingFields
@@ -163,10 +165,10 @@ resetBehaviorQA: PARTIAL_DIRECT_RESET_BEHAVIOR_FOUND / CEILING_COUNTER_AND_POWER
 取得日: 2026-09-04
 
 1. グリーンべると「前作を超える衝撃！『黒』のスパイダーマン」 — https://web-greenbelt.jp/00002740/ — 2010-07-20発表記事。サミー新機種、BIG306枚/MIDDLE162枚、2種類ART、9月上旬納品予定。
-2. K-Navi「パチスロスパイダーマン3」 — https://p-kn.com/slot/1256/ — ホール導入2010-09-06、ボーナス合算、BIG/MB終了条件、MAX獲得枚数、ART構造。
+2. K-Navi「パチスロスパイダーマン3」 — https://p-kn.com/slot/1256/ — ホール導入2010-09-06、ボーナス合算、BIG/MB終了条件、MAX獲得枚数、ART構造。BIG終了条件は396枚超。
 3. K-Navi「2種類のART」 — https://p-kn.com/slot/1256/26571/ — アクロバティックゾーン50G、クライムチャレンジ、純増約+1.0枚/G、突入/終了構造。
-4. P-WORLD「パチスロスパイダーマン3」 — https://www.p-world.co.jp/machine/database/6048 — BIG/MB確率、合算、機械割、天井1200G、チェリー成立時ART2個以上、ART純増/基本G数、獲得枚数。
-5. パチマガスロマガ「スパイダーマン3 基本システム」 — https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sammy_slot/125/a.php — ART約+1.0枚/G、ボーナス後ART、天井1200G、BIG約303枚/MB約160枚。
+4. P-WORLD「パチスロスパイダーマン3」 — https://www.p-world.co.jp/machine/database/6048 — BIG/MB確率、合算、機械割、天井1200G、チェリー成立時ART2個以上、ART純増/基本G数、獲得枚数。BIG終了条件は369枚超表記でK-Navi/パチマガスロマガとCONFLICT。
+5. パチマガスロマガ「スパイダーマン3 基本システム」 — https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sammy_slot/125/a.php — ART約+1.0枚/G、ボーナス後ART、天井1200G、BIG約303枚/MB約160枚、BIG396枚超/MB204枚超払い出し終了。
 6. パチマガスロマガ「スパイダーマン3 ボーナス抽選確率/PAYOUT」 — https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sammy_slot/125/h.php — 精密BIG/MB/合算確率、シミュレートPAYOUT 97.71〜119.99%。
 7. パチマガスロマガ「スパイダーマン3 機種インデックス」 — https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sammy_slot/125/sammy_slot_125.php — 本機専用「天井」「朝イチ・設定変更」項目の存在を確認。現存検索取得では当該本文を直接回収できず。
 8. slot-navi「スパイダーマン3 解析・攻略」 — https://slot-navi.com/10/spiderman3/ — 設定変更時「高確＋周期CZ」スタート、ガックンを実戦上のリセット推測材料として扱う当時系解析。天井カウンタ処理は同資料自身が調査中のため推測部分は不採用。
