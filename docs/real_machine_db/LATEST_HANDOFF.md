@@ -4,70 +4,74 @@
 
 ## 現在地点
 
-- recordCount: **437**
-- latestMachineAdded: **バジリスク ～甲賀忍法帖～**
-- latestRecord: `docs/real_machine_db/machines/2009-12-14_basilisk-kouga-ninpouchou.md`
-- chronologicalFrontier: **2009-12-14**
+- recordCount: **438**
+- latestMachineAdded: **マジカルハロウィン2**
+- latestRecord: `docs/real_machine_db/machines/2010-01-05_magical-halloween2.md`
+- chronologicalFrontier: **2010-01-05（導入日CONFLICT: 2010-01-05 / 2010-01-12）**
 - schema: **resetBehavior v0.7**
 - status: **READY_TO_CONTINUE**
 
 ## 今回の継続確認
 
-- GitHub最新mainの `README.md`、最新ミッション `CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、最新436 `2009-12-14_bakusou-rettou.md` を再読。
+- GitHub最新mainの `README.md`、最新ミッション `CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、最新437 `2009-12-14_basilisk-kouga-ninpouchou.md` を再読。
 - INDEXは旧19件地点のためREADME規定どおり進捗正本には使わず、LATEST_HANDOFF＋実レコードを優先。
-- 開始時mainは436件 / chronologicalFrontier 2009-12-14。
-- 直前HANDOFF指定の初代 `バジリスク ～甲賀忍法帖～` を次の未処理候補として監査。候補パスは追加直前までNot Found。
-- K-Naviが2009-12-14ホール導入開始を明記。P-WORLD、旧パチマガ、5号機回顧DBを横断して性能コア＋resetBehavior v0.7を収集。
-- 後継「バジリスク～甲賀忍法帖～絆」（2014）、「II」「絆2」「天膳」のreset解析は別機種として除外。
-- 追加直前にLATEST_HANDOFFを再取得し436件地点のままで競合がないことを確認、437件目として追加。
+- 開始時mainは437件 / chronologicalFrontier 2009-12-14。
+- P-WORLD 2009年12月新台一覧のパチスロ6機種（哲也 新宿vs上野 / パチスロリッジレーサー2 / 炎の熱血教師 / 爆走列島 / 一騎当千2Brilliant Battle / バジリスク 甲賀忍法帖）を境界監査し、いずれも本線収録済みのため2009年12月を閉じ、2010年1月へ前進。
+- 2010年1月群の最早候補として `マジカルハロウィン2` を監査。追加前repo検索で未登録、LATEST_HANDOFF再取得でも437件のままで競合なしを確認して438件目として追加。
+- 導入日はHAZUSE 2010-01-05、パチビー/必勝本 2010-01-12、KPE公式は2010年1月（月精度）。平均化せずCONFLICT保持。
 
-## 437 — バジリスク ～甲賀忍法帖～ 要約
+## 438 — マジカルハロウィン2 要約
 
-- メーカー: **ミズホ**
-- 型式: **バジリスク1**
-- 検定番号: **9S0771**
-- ホール導入: **2009-12-14**（K-Navi）
+- メーカー: **KPE**
+- 型式: **マジカルハロウィン2A**
+- 検定番号: **9S0947**
+- 導入日: **CONFLICT — 2010-01-05 / 2010-01-12**
 - 世代: **5号機**
-- システム: **ART / BC契機バトルART**
-- BC合算: **1/128 → 1/93**
-- 機械割: **97.1 / 99.5 / 102.1 / 106.2 / 110.1 / 119.0%**
-- ART「バジリスクタイム」: **約+2.3枚/G**
-- BC: **約45枚**
-- 救済天井: **ART非当選BCが9連続すると、次回BC成立時のART突入確定**（BC9スルー後の10回目BC）
+- システム: **A+ART / CZ経由ストックART**
+- BIG: **1/354.3 → 1/319.7**
+- REG: **1/364.1 → 1/327.7**
+- ボーナス合算: **1/179.6 → 1/161.8**
+- 機械割: **96.6 / 98.8 / 101.2 / 104.5 / 108.3 / 113.1%**
+- BIG約210枚 / REG約60枚
+- ART「カボチャンス」: **1セット30G / 約+1.2枚/G**
+- 通常天井: **1280G → スーパーカボチャンス**
+- 50枚ベース: **UNVERIFIED_AFTER_RESEARCH**
 
 ## resetBehavior v0.7
 
-- **設定変更**: `UNVERIFIED_AFTER_RESEARCH`。K-Navi初代ページに「設定変更時はどうなる?」、旧パチマガ初代ページに「攻め時・ヤメ時・設定変更時」の専用項目が存在することまでは確認したが、取得できた本文では初代固有の変更時処理を回収できず。後継「絆」の値は流用しない。
-- **据え置き**: `UNVERIFIED_AFTER_RESEARCH`。BCスルー進捗・ART関連状態の保持範囲を初代固有資料で確定できず。
-- **電源OFF→ON**: `UNVERIFIED_AFTER_RESEARCH`。BCスルー回数、ART状態、初期リール/液晶状態の直接資料未回収。
-- **gameCounterReset**: 通常G数天井ではなくBCスルー回数管理。設定変更時に9スルー進捗がクリア/引継ぎ/再抽選のどれかは `UNVERIFIED_AFTER_RESEARCH`。
-- **ceilingAfterReset**: 設定変更専用短縮回数・別天井値は `NONE_CONFIRMED_AFTER_RESEARCH`。
-- **mode/state**: 設定変更専用モード振分・状態処理は `UNVERIFIED_AFTER_RESEARCH`。
+- **設定変更**: `UNVERIFIED_AFTER_RESEARCH`。必勝本に本機専用「設定変更&天井情報」項目が存在し、KONAMI公式回顧Q&Aでも本機の「設定変更時の一枚絵」の存在を確認したが、1280G天井カウンタ・内部モード・ナビストック・CZ/ART状態の具体処理本文は未回収。
+- **据え置き**: `UNVERIFIED_AFTER_RESEARCH`。天井進捗、モード、ナビストック、CZ/ART状態の保持範囲を本機固有資料で確定できず。
+- **電源OFF→ON**: `UNVERIFIED_AFTER_RESEARCH`。単純電断時の天井進捗・内部状態処理の直接資料未回収。
+- **gameCounterReset**: 通常1280G天井は確定。設定変更時のclear/retain/別値化は `UNVERIFIED_AFTER_RESEARCH`。
+- **ceilingAfterReset**: 設定変更専用短縮天井は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- **mode/state**: 設定変更時の振分・保持は `UNVERIFIED_AFTER_RESEARCH`。
 - **有利区間**: `NOT_APPLICABLE`（5号機・制度前）。
-- **朝一恩恵/不利**: 初代固有の設定変更専用恩恵率・不利要素は `NONE_CONFIRMED_AFTER_RESEARCH`。
-- **変更判別**: ガックン、初期出目、液晶、BCスルー挙動等は `UNVERIFIED_AFTER_RESEARCH`。
+- **朝一恩恵/不利**: 設定変更専用の数値恩恵・不利要素は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- **変更判別**: `PARTIAL_OFFICIAL_RETROSPECTIVE`。KONAMI公式開発Q&Aがマジハロ2の「設定変更時の一枚絵」の存在を明記。表示条件・タイミングは未確定。
 - **公開朝一数値**: 設定変更専用モード振分・朝一当選率・リセット恩恵率は `NONE_CONFIRMED_AFTER_RESEARCH`。
-- **50枚ベース**: `UNVERIFIED_AFTER_RESEARCH`。初代と後継の検索混入が非常に多く、初代固有値を確定できないため流用なし。
 
 ## 主要出典（取得日 2026-09-03）
 
-- K-Navi 初代: `https://p-kn.com/slot/1124/`
-- P-WORLD 初代: `https://www.p-world.co.jp/machine/database/5796`
-- 旧パチマガ 初代機種トップ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/mizuho_slot/32/mizuho_slot_32.php`
-- 5号機クロニクル ユニバーサル系一覧: `https://5goki.com/universal`
+- KONAMI機種アーカイブ: `https://www.konami.com/amusement/psm/archive/ps/2010/magihallo2/`
+- KONAMI「まじおつ。」公式Q&A: `https://www.konami.com/amusement/psm/portal/magihallo/magiotsu_23/20200717.html`
+- HAZUSE: `https://hazuse.com/machine/pachislot/9S0924/`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/5762`
+- パチビー: `https://www.pachibee.jp/machines/index/209110011`
+- K-Navi ART/CZ: `https://p-kn.com/slot/1096/14845/` / `https://p-kn.com/slot/1096/14844/`
+- パチスロ必勝本: `https://p.hisshobon.jp/machine/1491/1/22442`
 
 ## resetBehavior 遡及QA進捗
 
-- 既存遡及補完は **スロ原人（`docs/real_machine_db/machines/2006-10_surogenjin.md`）まで補完済み**という直前進捗を維持。
-- 新規本線収集を止めず、2006-10以降の最初のresetBehavior欠損機を後続QAで補完する。
+- 既存遡及補完は **スロ原人（`docs/real_machine_db/machines/2006-10_surogenjin.md`）まで補完済み**という正本進捗を維持。
+- 今回は本線の2009年12月境界監査→2010年1月移行→438件目追加を優先。2006-10以降の「最初のresetBehavior欠損実ファイル」を安全に一意特定してから補完する方針を維持し、推測で別レコードをQA済みにしない。
+- 次回QAはmachine tree/実ファイル順を再走査し、スロ原人直後の最初の `resetBehavior` 欠損機を1件以上補完する。
 
 ## 次回再開地点
 
-1. **recordCount 437 / chronologicalFrontier 2009-12-14**。
-2. まず **2009-12-14同日群の残件最終監査**を継続。PachiBee / P-WORLD / K-Navi / 当時業界記事 / メーカー別一覧で同日を閉じる。
-3. 同日群に追加すべき未登録機がなければ **2009-12-15以降**へ前進する。
-4. `パチスロあしたのジョー`、`元祖！大江戸桜吹雪` は2009-12-10前後の発表記事だけを導入日に流用せず、具体ホール導入日を確定した時点で正しい時系列位置へ追加する。
-5. 2009-12-15の検定記事には `とんでも戦士ムテキングT`、`カラスZ`、`パチスロワニワニパニックS` 等の型式が見えるが、**検定告示日を導入日にしない**。製品名・メーカー・ホール導入日を別資料で確定してから本線へ置く。
+1. **recordCount 438 / 2010年1月群へ移行済み**。
+2. `マジカルハロウィン2` の導入日CONFLICT（1/5 vs 1/12）は保持。新資料が得られた場合のみ解消する。
+3. 次の最有力候補は **パチスロ機動戦艦ナデシコ（SANKYO）**。HAZUSEで2010-01-11、SANKYO公式アーカイブで2010年1月を確認済み。repo既存検索→具体日境界監査→性能コア＋resetBehavior v0.7を収集して439件候補とする。
+4. 同じ1月群では `夢幻の如く`（2010-01-12）、P-WORLD月次掲載の `ファイヤービーク`、`パチスロあしたのジョー`、`元祖!大江戸桜吹雪`、`島唄RXH-30`、`パチスロエイム`、`シオサー30` も具体導入日を別資料で確定して時系列配置する。
+5. P-WORLD 2010年1月一覧には `ニュートリプルクラウン30` もあるが、K-Naviは2009-11-24導入を示すため、月次掲載月だけで2010年1月機として再追加しない。既存登録有無と導入日定義を監査する。
 6. 追加前に必ずrepo既存検索＋LATEST_HANDOFF再取得を行い、重複・他リレー競合を防ぐ。
-7. 性能コア＋resetBehavior v0.7を同基準で収集。競合は平均せず `CONFLICT`、十分な再探索後のみ `UNVERIFIED_AFTER_RESEARCH`。
-8. 完全再現用の細かな内部抽選は対象外。
+7. 遡及QAはスロ原人直後の最初のresetBehavior欠損実ファイルから再開する。
