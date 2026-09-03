@@ -6,7 +6,7 @@ export function createLogicalMap(bounds) {
     for (let x = bounds.minX; x <= bounds.maxX; x++) {
       cells.set(cellKey(x, y), {
         x, y, floor: true, buildable: true, occupiedBy: null,
-        reservations: new Map(), portal: null, blocked: false,
+        reservations: new Map(), portal: null, blocked: false, structure: null,
       });
     }
   }
@@ -45,23 +45,8 @@ export function reserveCells(map, facilityId, cells) {
 export function setPortal(map, portal) {
   const cell = requireCell(map, portal.x, portal.y, `${portal.facilityId} portal`);
   if (cell.occupiedBy) throw new Error(`portal blocked at ${portal.x},${portal.y} by ${cell.occupiedBy}`);
+  if (cell.structure && cell.structure !== 'entrance' && cell.structure !== 'opening') throw new Error(`portal conflicts with structure at ${portal.x},${portal.y}`);
   cell.portal = portal;
-}
-
-export function blockBoundary(map) {
-  const { minX, maxX, minY, maxY } = map.bounds;
-  for (const cell of map.cells.values()) {
-    if (cell.x === minX || cell.x === maxX || cell.y === minY || cell.y === maxY) {
-      cell.blocked = true;
-      cell.buildable = false;
-    }
-  }
-}
-
-export function openBoundaryPortal(map, x, y) {
-  const cell = requireCell(map, x, y, 'boundary portal');
-  cell.blocked = false;
-  cell.buildable = false;
 }
 
 export function isWalkable(cell) { return Boolean(cell && cell.floor && !cell.blocked && !cell.occupiedBy); }
