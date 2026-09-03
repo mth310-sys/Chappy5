@@ -4,9 +4,9 @@
 
 ## 現在地点
 
-- recordCount: **513**
-- latestMachineAdded: **リングにかけろ1 ～黄金の日本Jr.編～**（タイヨーエレック / 2010-09-27）
-- latestRecord: `docs/real_machine_db/machines/2010-09-27_ring-ni-kakero-1-ogon-no-nihon-jr-hen.md`
+- recordCount: **514**
+- latestMachineAdded: **パチスロ「ケロット」～スウィートver.～**（山佐 / 2010-09-06 / BACKFILL）
+- latestRecord: `docs/real_machine_db/machines/2010-09-06_kerot-sweet-ver.md`
 - chronologicalFrontier: **2010-09-27**
 - frontierLatestMachine: **リングにかけろ1 ～黄金の日本Jr.編～**
 - schema: **resetBehavior v0.7**
@@ -14,103 +14,61 @@
 
 ## 今回の継続確認
 
-- 最新mainの `README.md`、正本ミッション `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、前線511実レコード「沖楽」を再取得。
+- 最新mainの `README.md`、正本ミッション `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、前線513実レコード「リングにかけろ1 ～黄金の日本Jr.編～」を再取得。
 - `INDEX.md` は旧地点のため、README規定どおり最新 `LATEST_HANDOFF.md`＋main実レコードを進捗正本として使用。
-- 開始時正本地点は recordCount **511** / chronologicalFrontier **2010-09-21**。
-- 9/21同日群と9/22以降を再監査。2010-09-27「茉莉花の剣」が並行更新で512件目としてmainへ追加されたことを検知し、その最新版を正本として採用。
-- 同日導入の「リングにかけろ1 ～黄金の日本Jr.編～」をrepo検索で未登録確認し、513件目として追加。
-- 並行更新との競合で一時的に作成された重複「茉莉花の剣」ファイル `2010-09-27_marika-no-tsurugi.md` は削除し、既存正本 `2010-09-27_marika-no-ken.md` に一本化。recordCountを二重加算していない。
-- 茉莉花の剣の天井について、既存正本は**899G**。K-Navi現存ページは天井解析項目の存在のみで数値本文が取得不能だった一方、2010-10-08当時実戦/紹介記録は「ボーナスまたはART終了後899G」と明記。別後年資料の889G値は高信頼で再確認できなかったため、現正本899Gを維持しCONFLICTを無理に平均しない。
+- 開始時正本地点は recordCount **513** / chronologicalFrontier **2010-09-27**。
+- LATEST_HANDOFF指定の9/27同日・同時期漏れ監査を継続。`マイジャグラー` はcode searchでは見えなかったが、実ファイル `2010-09-06_my-juggler.md` を直接再取得し既登録を確認したため重複追加しなかった。
+- 同じ2010-09-06導入の **パチスロ「ケロット」～スウィートver.～** は実ファイル未登録を確認し、514件目として遡及追加。
+- 本機は前線より古いBACKFILLのため `chronologicalFrontier` は **2010-09-27** のまま維持する。
 
-## 512 — 茉莉花の剣（既存並行更新を正本採用）
+## 514 — パチスロ「ケロット」～スウィートver.～
 
-- メーカー: **ネット（NET）**
-- 導入: **2010-09-27**
-- 世代/タイプ: **5号機 / A+ART / CZ搭載**
-- 機械割: **96.5 / 98.0 / 100.0 / 102.5 / 105.0 / 110.0%**
-- BIG合算: **1/378 / 1/381 / 1/376 / 1/378 / 1/374 / 1/376**
-- REG: **1/420 / 1/412 / 1/404 / 1/397 / 1/387 / 1/378**
-- ボーナス合算: **1/199 / 1/197 / 1/195 / 1/193 / 1/190 / 1/188**
-- ART「試練の刻」: **40G+α / 約+1.3枚/G**
-- 赤7BIG約**275枚**、青7BIG約**208枚**、REG約**70枚**。
-- 通常時CZは**20G固定**。
-- 天井: **ボーナスおよびART間899G**で前兆を経てART。
-- 50枚ベース: **UNVERIFIED_AFTER_RESEARCH**。
-- resetBehavior: K-Naviに「設定変更後の挙動」専用項目の存在は確認したが本文回収不能。設定変更時899G進捗、据え置き、電源OFF→ON、CZ/ART状態、変更判別、専用朝一数値は未確認。有利区間は**NOT_APPLICABLE**。
-- 5号機クロニクルのART名称/セットG/純増に当時K-Naviとの重大不整合があるため後年側を主値に混ぜない。
-
-## 513 — リングにかけろ1 ～黄金の日本Jr.編～
-
-- メーカー: **タイヨーエレック**
-- 導入: **2010-09-27**（K-Navi＋サミーネットワークス公式で具体日整合）
-- 世代/タイプ: **5号機 / A+ART**
-- 型式参考: **リングにかけろ1黄金のJr.編ZR**（secondary physical-market reference、限定採用）
-- 機械割: **97.35 / 98.89 / 101.41 / 106.04 / 112.00 / 119.22%**
-- BIG合成: **1/362.1 / 1/350.5 / 1/339.6 / 1/329.3 / 1/319.7 / 1/312.1**
-- REG: **1/704.7 / 1/675.6 / 1/655.4 / 1/630.2 / 1/606.8 / 1/590.4**
-- ボーナス合算: **1/239.2 / 1/230.8 / 1/223.7 / 1/216.3 / 1/209.4 / 1/204.2**
-- NEXT ART突入率: **1/2341.0 → 1/1129.9**
-- 50枚ベース: **約34.0G**
-- ART「ブーメランRUSH」: **約+1.0枚/G / 30G+α**。NEXT ARTは次回ボーナスまで継続。
-- 天井は固定G数単純管理ではなく**周期回数管理**。通常64G周期を15回連続で外した後、次の16回目チャンス演出でNEXT ART確定。実G数目安はボーナス/ART後**約1150G**。
+- メーカー: **山佐**
+- 導入: **2010-09-06**（パチビー具体日、山佐公式2010年9月稼働で整合）
+- 世代/タイプ: **5号機 / ノーマルAタイプ / 3GプチRT**
+- 機械割: **98.5 / 98.5 / 99.5 / 99.5 / 102.5 / 105.0%**
+- BIG: **1/166.3 / 1/188.3 / 1/160.6 / 1/181.0 / 1/145.6 / 1/148.9**
+- REG: **1/250.1 / 1/212.7 / 1/264.2 / 1/222.9 / 1/318.1 / 1/303.4**
+- ボーナス合算: **全設定約1/99.9**（山佐公式）
+- 50枚/1000円: **35.63 / 38.73 / 35.92 / 38.91 / 35.87 / 39.19G**（パチマガスロマガ公式アーカイブ）
+- SWEET BONUS: **約200枚**、REG: **約40枚**。
+- オレンジ入賞後: **3GプチRT**。
+- P-WORLD本文のREG約48枚表記は、同ページ役構成・パチビー・パチマガスロマガの約40枚と競合するため `CONFLICT`。多数一致の40枚を主値として保持。
 - coreStatus: **COMPLETE_CORE_RESET_BEHAVIOR_PARTIAL**
 
-### resetBehavior v0.7 — リングにかけろ1 ～黄金の日本Jr.編～
+### resetBehavior v0.7 — ケロット～スウィートver.～
 
-- **設定変更後は周期CZへ直接突入**。
-- 設定変更で**天井周期回数CLEAR**。
-- 設定変更で**NEXT ART抽選テーブルRESELECT**。
-- 液晶上のグローブは設定変更でクリア。さらに**単純電源OFF→ONだけでも可視グローブはクリア**。
-- 設定変更専用の短縮天井は確認なし。通常16周期構造を最初から積み直す。
-- 据え置き時の周期回数/内部状態保持、電源OFF→ON時の周期回数・抽選テーブル・ARTストック/内部RTは直接資料未回収のため `UNVERIFIED_AFTER_RESEARCH`。
-- 朝一周期CZは変更示唆に使えるが、ボーナス後等もCZ突入契機なので単独で変更確定にはしない。
-- グローブ消去は電源OFF→ONだけでも起こるため設定変更判別には使えない。
-- ガックン確率は未確認。
-- 有利区間: **NOT_APPLICABLE**。
+- ゲーム数天井・規定G数解除は確認なし。`gameCounterReset` / `ceilingAfterReset` は **NOT_APPLICABLE_FOR_GAME_COUNT_CEILING**。
+- AT/ART朝一モード、高確/CZ/ART状態、有利区間は非該当。有利区間は5号機のため **NOT_APPLICABLE**。
+- 設定変更、据え置き、単純電源OFF→ONの本機固有挙動は、表記揺れ・メーカー・シリーズ名と「設定変更/リセット/朝一/据え置き/電源OFF ON/ガックン」を組み替えて探索したが直接高信頼本文を確定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 3GプチRTの設定変更/電断時処理も直接資料未回収のため推測しない。
+- 朝一高確、天井短縮、CZ優遇等のリセット恩恵/不利は確認なし。
+- 本機固有のガックン、初期出目、液晶状態等の変更判別も `UNVERIFIED_AFTER_RESEARCH`。
 
 ## CONFLICT / 注意
 
-- 茉莉花の剣: 当時K-NaviはART「試練の刻」約+1.3枚/G・20G固定CZを明記。後年5号機クロニクルには別ART名・別仕様が混在するため主値不採用。
-- 茉莉花の剣の天井は現正本**899G**。一時作成した重複レコード内の889Gは再検証で高信頼裏付け不足と判断し、重複ごと削除。推測平均しない。
-- リングにかけろ1: K-Navi/Cranky Seven/当時グリーンべるとの機械割は最高設定**119.22%**で整合。一方、後年DBに**96.5〜110.0%**系列があるためCONFLICT分離。
-- リングにかけろ1天井: 「約1150G天井」だけで単純化せず、**64G周期×15回失敗→16回目NEXT ART確定**という構造を保持。
-
-## resetBehavior 遡及QA — 継続地点
-
-- `2006-11_jack-to-mamenoki.md` までv0.7遡及追加済み、という既存正本進捗を維持。
-- `2006-11-27_thunder-v-special.md` は既にresetBehaviorありのため重複QAしない。
-- machine directory、recursive tree、code search、commit/date検索を再試行したが、Jack/Thunder直後の「最初の実在かつresetBehavior欠損ファイル」を時系列順序保証付きで一意確定できなかった。
-- 「小野真弓のかわいい日本昔話」「海童王」等の候補をpath未確認のままQA済みにしない。
-- 新規時系列前進を止めず、次回も実ファイルpath/commit historyから次の欠損を確定する。
+- REG純増は主値 **約40枚**。P-WORLDの台紹介本文だけ約48枚だが、同ページ役構成は40枚、パチビー/パチマガスロマガも40枚。平均しない。
+- `マイジャグラー` は検索インデックス結果だけで未登録判定しない。実ファイル `docs/real_machine_db/machines/2010-09-06_my-juggler.md` が存在するため既登録。
+- 遡及追加を行っても時系列前線は後退させない。現在の `chronologicalFrontier` は2010-09-27。
 
 ## 主要出典（取得日 2026-09-04）
 
-### 茉莉花の剣
-- K-Navi: `https://p-kn.com/slot/1269/`
-- P-WORLD: `https://www.p-world.co.jp/_machine/hoollst.cgi?ken=all&kisyu=%EF%BF%BD%EF%BF%BD%E8%BD%B2%D6%A4%CE%B7%EF%BF%BD&kisyukind=&mno=p6074`
-- 5号機クロニクル（競合確認のみ）: `https://5goki.com/net`
-- 2010-10-08当時実戦/紹介記録: `https://plaza.rakuten.co.jp/gaebulggaebolga/diaryall/`
-
-### リングにかけろ1 ～黄金の日本Jr.編～
-- K-Navi: `https://p-kn.com/slot/1261/`
-- Cranky Seven: `https://crankyseven.com/sp/ringnikakero-ougon-pc.htm`
-- 侍～samurai～777 当時解析: `https://ameblo.jp/samurai777net/entry-10669262756.html`
-- グリーンべると当時記事: `https://web-greenbelt.jp/00002723/`
-- サミーネットワークス公式PDF: `https://www.sammy-net.jp/news/pachisloringnikakero0927.pdf`
-- パチマガスロマガ公式アーカイブ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/taiyoelec_slot/08/c.php`
+- 山佐ネクスト公式: `https://yamasa-next.co.jp/model_klts/`
+- パチビー: `https://www.pachibee.jp/machines/index/210070010`
+- K-Navi: `https://p-kn.com/slot/1279/26646/`
+- パチマガスロマガ公式アーカイブ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/174/a.php`
+- パチマガスロマガ公式アーカイブ（1000円あたりゲーム数）: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/174/c.php`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/6065`
 
 ## 今回のGitHub更新
 
-- 512 茉莉花の剣: 並行更新の既存正本 `docs/real_machine_db/machines/2010-09-27_marika-no-ken.md` を採用。
-- 重複茉莉花レコード削除: `docs/real_machine_db/machines/2010-09-27_marika-no-tsurugi.md`。
-- 513 リングにかけろ1 ～黄金の日本Jr.編～追加: `docs/real_machine_db/machines/2010-09-27_ring-ni-kakero-1-ogon-no-nihon-jr-hen.md`。
-- LATEST_HANDOFF更新: このコミット。
+- 514 ケロット～スウィートver.～追加: `docs/real_machine_db/machines/2010-09-06_kerot-sweet-ver.md`
+- LATEST_HANDOFF: このコミット。
 
 ## 次回再開地点
 
-1. **recordCount 513 / chronologicalFrontier 2010-09-27**。開始時は必ず最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 512・513実レコードを再取得。
-2. **2010-09-27同日群を最終監査**。特に「Myジャグラー」「ケロット～スウィートVer.～」「ピンポン」「ロケットパニック」等、同時期機の具体導入日とrepo登録を再確認。
-3. 同日群を閉じたら、**9/28以降の最古の具体導入日が確定する未登録機**へ前進。具体日不明の2010年9月月粒度機も漏れ監査を継続し、推測配置しない。
-4. 茉莉花の剣はK-Navi「設定変更後の挙動」本文、50枚ベース、正式型式/検定番号が回収できた場合のみ追補。
-5. リングにかけろ1は据え置き時周期保持、電源OFF→ON時の内部周期/テーブル/ART状態、設定変更直後NEXT ARTテーブル専用振り分け、ガックン確率を優先QA。
-6. 遡及QAは **Jackまで補完済み + Thunder既収集済み**。次の実在resetBehavior欠損pathをgit tree/commit履歴で確定してからパッチし、推測タイトルでは進めない。
+1. **recordCount 514 / chronologicalFrontier 2010-09-27**。開始時は必ず最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 前線実レコードを再取得。
+2. 2010年9月の漏れ監査を継続。**パチスロ ピンポン**はコミックナタリーで9月6日より全国順次稼働予定が確認できる一方、K-Navi全国一斉導入カレンダーは10月4日表記なので、地域差/全国一斉導入定義を分離してrepo実登録を確認する。
+3. **ロケットパニック**はK-Navi全国一斉導入が2010-10-04。9月機として推測配置せず、9月境界を閉じた後の10月候補として扱う。
+4. 9/27同日群・9月月粒度機の漏れを閉じ、未登録なら最古の具体導入日から追加。既登録はファイル実体を確認し重複追加しない。
+5. 遡及QAは既存正本の **Jackまで補完済み + Thunder既収集済み**を維持。新規時系列前進を止めず、次の実在resetBehavior欠損pathが一意確定できた時のみ補完する。
