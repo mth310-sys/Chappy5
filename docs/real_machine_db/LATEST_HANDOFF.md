@@ -4,75 +4,71 @@
 
 ## 現在地点
 
-- recordCount: **524**
-- latestMachineAdded: **月面兎兵器ミーナ**（スパイキー / 2010-11-14納品開始基準）
-- latestRecord: `docs/real_machine_db/machines/2010-11-14_getsumen-toheiki-mina.md`
-- chronologicalFrontier: **2010-11-14**
-- frontierLatestMachine: **月面兎兵器ミーナ**
+- recordCount: **525**
+- latestMachineAdded: **パチスロ超時空要塞マクロス**（SANKYO / 2010-11-15ホール導入開始）
+- latestRecord: `docs/real_machine_db/machines/2010-11-15_choujikuu-yousai-macross.md`
+- chronologicalFrontier: **2010-11-15**
+- frontierLatestMachine: **パチスロ超時空要塞マクロス**
 - schema: **resetBehavior v0.7**
 - status: **READY_TO_CONTINUE**
 
 ## 今回の継続確認
 
-- 最新mainの `README.md`、正本ミッション `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前523「エニィバー」を再取得。
+- 最新mainの `README.md`、正本ミッション `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前524「月面兎兵器ミーナ」を再取得。
 - `INDEX.md` は旧19件地点のため、README規定どおり最新 `LATEST_HANDOFF.md`＋main実レコードを進捗正本として使用。
-- 開始時正本は recordCount **523** / chronologicalFrontier **2010-11-12**。
-- 2010-11-13〜14境界を再監査し、未登録「月面兎兵器ミーナ」を確認。グリーンべるとは **2010-11-14納品開始予定**、K-Navi・アニメ！アニメ！は **11月中旬以降/11月中旬から全国導入**としており、具体日と導入定義差を保持したうえで524件目として追加。
-- HAZUSE DATA一覧から本機リンクの `machine_code=0S0800` を確認。ただし正式型式名との同一性は追加照合待ちとして断定しない。
+- 開始時正本は recordCount **524** / chronologicalFrontier **2010-11-14**。
+- handoff指定の2010-11-15同日群を継続し、repo未登録の **「パチスロ超時空要塞マクロス」** を確認。K-Naviのホール導入開始 **2010-11-15** とSANKYO公式の導入年月 **2010.11** を照合し525件目として追加。
+- 既存性能値は再調査せず、新規対象の性能コア＋resetBehavior v0.7に限定して収集。
 
-## 524 — 月面兎兵器ミーナ
+## 525 — パチスロ超時空要塞マクロス
 
-- メーカー: **スパイキー**
-- 導入基準: **2010-11-14（納品開始予定）**
-- 世代/タイプ: **5号機 / A+ART / セットストックART + 無限ART**
-- 機械割: **97.3 / 98.8 / 100.6 / 104.5 / 108.5 / 113.0%**
-- BIG合成: **1/397.19 → 1/343.12**
-- REG: **1/397.19 → 1/360.09**
-- ボーナス合成: **1/198.59 → 1/175.70**
-- ART初当たり: **1/274 → 1/167**
-- 汁実TIME: **50G / 約+1.1枚/G**
-- 汁実RUSH: **次回ボーナスまで / 約+1.1枚/G**
-- S・BIG: **約250枚**、異色BIG: **約200枚**、REG: **最大81枚**
-- 通常天井: **ボーナス間1317G → 無限ART**
+- メーカー: **SANKYO**
+- 導入基準: **2010-11-15**（K-Naviホール導入開始）
+- 公式導入年月: **2010.11**
+- 型式: **超時空要塞マクロスZG**（SANKYO公式）
+- 世代/タイプ: **5号機 / A+ART / セットストック型ART**
+- 機械割: **96.8 / 98.3 / 100.1 / 103.9 / 107.7 / 112.0%**
+- BIG: **1/428 → 1/394**
+- ATTACK BONUS / REG相当: **1/648 → 1/508**
+- ボーナス合算: **1/258 → 1/222**
+- ボーナス＋ART合算: **1/111 → 1/83**
 - 50枚ベース: **UNVERIFIED_AFTER_RESEARCH**
+- ART「バルキリータイム」: **50G / 約+1.5枚/G / セットストック**
+- PREMIUM/赤7 BIG: **約304枚**、青7 BIG: **約206枚**、ATTACK BONUS: **約32枚**
+- 通常天井: **ボーナス間またはART間888G → 天井状態 / ART大量ストック**
 - coreStatus: **PARTIAL_CORE_RESET_BEHAVIOR_PARTIAL**
 
-### resetBehavior v0.7 — 月面兎兵器ミーナ
+### resetBehavior v0.7 — パチスロ超時空要塞マクロス
 
-- パチマガスロマガには本機専用の「朝イチ・設定変更」項目が現存するが、検索取得本文では詳細を回収できず。
-- 後年の天井狙い整理資料は本機を **「宵越し×」「リセット高確率有り」** と記載。設定変更時の天井進捗CLEARと朝一高確系恩恵を示唆するが、単一二次資料のため確定値へ昇格させず `ANALYSIS_SINGLE_LOW` として保持。
-- 設定変更時の高確正確振り分け・継続G数、ARTストック/潜伏処理は **UNVERIFIED_AFTER_RESEARCH**。
-- 据え置き時1317G進捗の本機固有直接根拠は **UNVERIFIED_AFTER_RESEARCH**。
-- 単純電源OFF→ON時の天井進捗・ARTストック・内部状態は **UNVERIFIED_AFTER_RESEARCH**。
-- リセット専用短縮天井は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 「超時空要塞マクロス / 超時空要塞マクロスZG / SANKYO」と「設定変更 / リセット / 朝一 / 据え置き / 宵越し / 電源OFF ON / 天井 / 888G / モード / ガックン」を組み替え、メーカー公式・P-WORLD・K-Navi・パチマガスロマガ・pacnk・古い天井/回顧資料を横断。
+- 通常天井 **ボーナス間またはART間888G** と、通常/高確/超高確の3内部モードは確定。
+- ただし設定変更時の888GカウンタCLEAR/RETAIN、設定変更時のモード再抽選/固定、高確スタート、ARTストック/潜伏処理は直接資料を確定できず **UNVERIFIED_AFTER_RESEARCH**。
+- 据え置き時の888G進捗・内部モード・ARTストック保持は **UNVERIFIED_AFTER_RESEARCH**。
+- 単純電源OFF→ON時の888G進捗・内部モード・ARTストック/潜伏処理は **UNVERIFIED_AFTER_RESEARCH**。
+- 設定変更専用短縮天井、朝一専用当選率/ARTストック、高確振り分け等の公開数値は **NONE_CONFIRMED_AFTER_RESEARCH / UNVERIFIED_AFTER_RESEARCH**。
 - ガックン、初期出目、液晶/ランプ等の変更判別は **UNVERIFIED_AFTER_RESEARCH**。
 - 有利区間は5号機のため **NOT_APPLICABLE**。
-- 公開朝一専用数値/高確振り分けは **UNVERIFIED_AFTER_RESEARCH**。
 - resetBehaviorQA: **PARTIAL_AFTER_MULTI_SOURCE_RESEARCH**。
 
-## CONFLICT / 注意 — 月面兎兵器ミーナ
+## CONFLICT / 注意 — パチスロ超時空要塞マクロス
 
-- `2010-11-14` はグリーンべるとの **納品開始予定日**。K-Navi/アニメ！アニメ！は日単位を示さず「11月中旬以降/11月中旬から全国導入」。全国一斉ホール導入日と同一視しない。
-- HAZUSE DATAの `machine_code=0S0800` はDBキーとして確認したが、正式型式表記を別資料で直接確認できていないため `formalModelName` は未確定。
-- resetの「宵越し× / リセット高確率有り」は後年単一整理資料。パチマガスロマガの専用項目存在とは整合するが本文詳細未回収のため、確定的な振り分けやゲーム数を作らない。
+- 後年「5号機クロニクル」の本機欄には、SANKYO公式/K-Navi/P-WORLD/pacnkと大きく異なるボーナス・ART初当たり系列や後続マクロス系を混同したように見える記述が含まれる。主系列へ平均統合せず **CONFLICT / POSSIBLE_SERIES_CONTAMINATION** として隔離。
+- 2026年の一部自動生成回顧ページには本機を「6号機」と誤記する箇所がある。P-WORLD・当時資料および2010年機であることから本DBでは **5号機** とする。
+- ART単独初当たりは今回の高信頼資料で直接表を回収できず、ボーナス＋ART合算から逆算して作らない。
 
-## 主要出典 — 月面兎兵器ミーナ（取得日 2026-09-04）
+## 主要出典 — パチスロ超時空要塞マクロス（取得日 2026-09-04）
 
-- グリーンべると / P-WORLD: `https://news.p-world.co.jp/articles/4198/greenbelt`
-- K-Navi発表会: `https://p-kn.com/topics/exhibition/720/`
-- アニメ！アニメ！: `https://animeanime.jp/article/2010/10/09/7043.html`
-- パチマガスロマガ基本: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/spiky_slot/02/a.php`
-- パチマガスロマガ確率/PAYOUT: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/spiky_slot/02/h.php`
-- P-WORLD機種DB: `https://www.p-world.co.jp/machine/database/6127`
-- pacnk: `https://pacnk.com/slot/tools/sh_mina.html`
-- HAZUSE DATA一覧: `https://data.hazuse.com/?type=s`
-- 天井ハイエナ生活: `https://macerate.seesaa.net/article/226196713.html`
-- パチスロ立ち回り講座: `https://crankyseven.com/sp/tenjo-5ka.htm`
+- SANKYOオンライン博物館: `https://www.sankyo-fever.jp/collection/537/`
+- K-Navi: `https://p-kn.com/slot/1290/`
+- P-WORLD機種DB: `https://www.p-world.co.jp/machine/database/6116`
+- パチマガスロマガ基本: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sankyo_slot/22/a.php`
+- pacnk: `https://pacnk.com/slot/tools/sh_macross.html`
+- 5号機クロニクル（CONFLICT検出用）: `https://5goki.com/sankyo`
 
 ## 今回のGitHub更新
 
-- 524 月面兎兵器ミーナ追加: `docs/real_machine_db/machines/2010-11-14_getsumen-toheiki-mina.md`
-- machine record commit: `24cf167b7c2adff96e68238a1e3b65c4279bf54d`
+- 525 パチスロ超時空要塞マクロス追加: `docs/real_machine_db/machines/2010-11-15_choujikuu-yousai-macross.md`
+- machine record commit: `550c7fef12e7fdfd41cab9c53c063d0030e1e2ba`
 - LATEST_HANDOFF: 本更新
 
 ## 遡及QA継続地点
@@ -83,8 +79,8 @@
 
 ## 次回再開地点
 
-1. **recordCount 524 / chronologicalFrontier 2010-11-14**。開始時は最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 前線実レコードを再取得。
-2. **2010-11-15同日群を最古未登録から処理**。既知候補は「パチスロ超時空要塞マクロス」「パチスロ戦国無双～猛将伝～」「エピソード ドライブ」。HAZUSE DATA上の並びだけを日付根拠にせず、K-Navi・P-WORLD・業界記事・メーカー資料で具体導入/納品日を照合する。
-3. 同日群はrepo重複を都度確認し、既登録機を二重追加しない。
+1. **recordCount 525 / chronologicalFrontier 2010-11-15**。開始時は最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 前線実レコードを再取得。
+2. **2010-11-15同日群を継続**。既知未処理候補は **「パチスロ戦国無双～猛将伝～」「エピソード ドライブ」**。repo重複を確認し、具体的導入/納品日をK-Navi・P-WORLD・業界記事・メーカー資料で照合して最古未登録から処理する。
+3. 同日群を閉じる前に、11/15前後の地域先行・納品開始日も境界監査し、既登録機を二重追加しない。
 4. 50枚ベースやresetBehaviorは型式・メーカー・シリーズ名＋設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックン等へ検索語を変え、公式・業界・当時解析・古いDB・回顧資料を横断してからUNVERIFIED判定する。
 5. 競合値は平均せずCONFLICT。実機完全再現用の細かな内部抽選は収集しない。
