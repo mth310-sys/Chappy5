@@ -1,5 +1,5 @@
-import { depthKey, toScreen } from './grid.js';
-import { SPEC } from './layout.js';
+import { depthKey, projectedBounds, toScreen } from './grid.js';
+import { FLOOR_BOUNDS, SPEC } from './layout.js';
 
 const machineInner = '<div class="unit9"><div class="shadow"></div><div class="backboard"></div><div class="header9"></div><div class="data9"></div><div class="mount9"></div><div class="rail-left"></div><div class="rail-right"></div><div class="sand9"></div><div class="divider"></div><div class="box-side"><div class="box-stack"><div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div></div></div><div class="counter9"></div><div class="fascia9"></div><div class="foot"></div></div>';
 
@@ -20,6 +20,29 @@ function makeNode(className, html = '') {
   node.className = `gridNode ${className}`;
   node.innerHTML = html;
   return node;
+}
+
+function renderMapBase(scene) {
+  const bounds = projectedBounds(FLOOR_BOUNDS);
+  const floor = scene.querySelector('.floor');
+  const lot = scene.querySelector('.lot');
+  const road = scene.querySelector('.road');
+  if (!floor || !lot || !road) throw new Error('Map base elements are missing');
+
+  floor.style.left = `${bounds.left}px`;
+  floor.style.top = `${bounds.top}px`;
+  floor.style.width = `${bounds.width}px`;
+  floor.style.height = `${bounds.height}px`;
+
+  const marginX = 45;
+  const marginY = 30;
+  lot.style.left = `${bounds.left - marginX}px`;
+  lot.style.top = `${bounds.top - marginY}px`;
+  lot.style.width = `${bounds.width + marginX * 2}px`;
+  lot.style.height = `${bounds.height + marginY * 2}px`;
+
+  road.style.top = `${bounds.bottom + 70}px`;
+  scene.style.height = `${bounds.bottom + 190}px`;
 }
 
 function makeIsland(item) {
@@ -87,6 +110,7 @@ function renderFixture(scene, item) {
 
 export function renderLayout(scene, layout) {
   scene.querySelectorAll('.gridNode').forEach((node) => node.remove());
+  renderMapBase(scene);
   layout.islands.forEach((item, index) => renderIsland(scene, item, index));
   layout.fixtures.forEach((item) => renderFixture(scene, item));
 }
