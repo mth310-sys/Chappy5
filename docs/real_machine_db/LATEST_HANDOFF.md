@@ -4,56 +4,55 @@
 
 ## 現在地点
 
-- recordCount: **495**
-- latestMachineAdded: **アイムラッキーパレード**（タイヨー / 主値2010-06-28）
-- latestRecord: `docs/real_machine_db/machines/2010-06-28_im-lucky-parade.md`
-- chronologicalFrontier: **2010-06-28**
-- frontierLatestMachine: **アイムラッキーパレード**
+- recordCount: **496**
+- latestMachineAdded: **トップをねらえ2!**（平和 / 2010-07-05）
+- latestRecord: `docs/real_machine_db/machines/2010-07-05_top-wo-nerae2.md`
+- chronologicalFrontier: **2010-07-05**
+- frontierLatestMachine: **トップをねらえ2!**
 - schema: **resetBehavior v0.7**
 - status: **READY_TO_CONTINUE**
 
 ## 今回の継続確認
 
-- 最新mainの `README.md`、正本ミッション `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、前線実レコードを再取得。
+- 最新mainの `README.md`、正本ミッション `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、前線実レコード495「アイムラッキーパレード」を再取得。
 - `INDEX.md` は旧19件地点のため、README規定どおり `LATEST_HANDOFF.md`＋main実レコードを進捗正本として使用。
-- 開始時の最新mainは recordCount **494** / chronologicalFrontier **2010-06-21**。古い会話上の490地点へ戻らず、最新mainを採用。
-- 前回handoffに残っていた493「コード・ルージュ」の `baseGamesPer50` QAを実施。当時グリーンべるとと当時パチマガスロマガで **37.6G/1000円** が一致したため `UNVERIFIED_AFTER_RESEARCH` から補完。
-- 6/22〜6/27をパチビー2010年6月月間一覧で境界監査し、次の明確なパチスロ新規導入として6/28「アイムラッキーパレード」を確認。
-- repo検索で未登録を確認後、495件目として追加。
+- 開始時の最新mainは recordCount **495** / chronologicalFrontier **2010-06-28**。会話上の古い491地点へ戻らず最新mainを採用。
+- K-Navi 2010年7月導入カレンダーで6/29〜7/4を境界監査。次の明確な全国導入パチスロ群は **2010-07-05「トップをねらえ2!」「お座敷の茶々」**。
+- repo検索で「トップをねらえ2!」未登録を確認し、496件目として追加。
 
-## 495 — アイムラッキーパレード 要約
+## 496 — トップをねらえ2! 要約
 
-- メーカー: **タイヨー**
-- 導入主値: **2010-06-28**。パチビー月間一覧とパチスロ業界史整理資料で一致。
-- 日付CONFLICT: パチンコビレッジ導入カレンダーは **2010-07-05**。平均化せず両方保持し、主値は6/28。
-- 世代/タイプ: **5号機 / ノーマル / 完全告知 / ボーナス主体**
-- 機械割: **96.73 / 97.47 / 99.91 / 102.31 / 106.33 / 108.32%**
-- BIG: **1/284.9 → 1/264.3**
-- REG: **1/455.1 → 1/268.6**
-- 合算: **1/175.2 → 1/133.2**
-- 基本獲得: BIG **約312枚** / REG **約104枚**
-- 50枚ベース: **UNVERIFIED_AFTER_RESEARCH**。当時パチマガスロマガの1000円あたりゲーム数欄自体が「現在調査中」で残存。
-- ART/RT: **非搭載**。純増は `NOT_APPLICABLE`。
-- 天井: pacnkで**天井機能非搭載**を確認。
+- メーカー: **平和**
+- 型式名: **トップをねらえ2！X**
+- 検定番号: **0S0074**
+- 導入主値: **2010-07-05**。K-Navi・パチビーで一致。当時グリーンべるとは納品7/4予定と報道し、物流開始とホール導入を分離。
+- 世代/タイプ: **5号機 / A+ART / セットストックART + ゲーム数管理ART / 無限ART / 3段階天井**
+- 機械割主系列: **97.3 / 99.5 / 101.9 / 105.2 / 108.8 / 114.3%**（P-WORLD/pacnk）
+- 機械割CONFLICT: 当時パチマガスロマガシミュレート **96.95 / 99.38 / 102.17 / 105.92 / 110.03 / 114.73%**。平均化せず定義差保持。
+- 通常BIG合算: **1/318.14 → 1/258.02**
+- 黒BIG: **1/5041.23（全設定共通）**
+- 全BIG合算: **1/299.25 → 1/245.45**
+- ART初当り: **1/555 → 1/283**
+- 50枚ベース: **34.78 / 34.82 / 34.86 / 34.92 / 34.98 / 35.06G/1000円**（当時パチマガスロマガ直接値）
+- BIG: **約204枚**
+- ART「バスターゾーン」: **30G / 約+1.4枚/G**
+- ART「バスターミッション」: **5G+α / 約+1.4枚/G**
+- 無限ART「ダイバスターゾーン」: **次回ボーナスまで / 約+1.4枚/G**
+- 通常天井: **600 / 900 / 1200Gの3段階**
 - coreStatus: **COMPLETE_CORE_RESET_BEHAVIOR_PARTIAL**
 
-## resetBehavior v0.7 — アイムラッキーパレード
+## resetBehavior v0.7 — トップをねらえ2!
 
-- **設定変更**: 天井・ゲーム数解除モード・ART/RT/CZ等の持続性ゲーム資源が確認されないため、朝一期待値へ影響するリセット資源は実質非該当。初期出目/リール等の物理的リセット詳細は `UNVERIFIED_AFTER_RESEARCH`。
-- **据え置き**: 引継ぎ対象となる天井ゲーム数・モード・ART/RT/CZ状態は `NOT_APPLICABLE`。
-- **電源OFF→ON**: ゲーム資源としての差は実質非該当。初期出目/ランプ等の本機固有挙動は未確認。
-- **ゲーム数・天井**: **NOT_APPLICABLE / NO_CEILING**。
-- **モード・状態**: ゲーム数解除モード、朝一専用モード、ART/RT/CZ、高確等の持続性状態は確認されない。
+- **設定変更**: P-WORLDは「ボーナス終了後および設定変更後」600/900/1200Gと明記、pacnkも**設定変更時は天井までのG数リセット**と明記。設定変更後は0Gから3段階天井を再計測。
+- **据え置き**: 設定変更時のみG数リセットは直接確認したが、「据え置きなら前日G数を引き継ぐ」と明記する本機固有高信頼資料は今回確定できず `UNVERIFIED_AFTER_RESEARCH`。一般論で断定しない。
+- **電源OFF→ON**: 2010年当時実戦記で設定変更・単純電源ON/OFF双方で**ダイナーステージ開始**との報告あり。ただし単一ユーザー資料なので補助扱い。天井G数/ARTストック/内部状態の電源OFF→ON処理は `UNVERIFIED_AFTER_RESEARCH`。
+- **ゲーム数/天井**: 設定変更でカウンタリセット。リセット後も **600 / 900 / 1200G**、専用短縮天井なし確認。
+- **モード/状態**: 低確/高確あり。設定変更時の低確スタートは同2010年実戦記で報告されるが、K-Navi「設定変更時の挙動」本文が現状403で直接回収できず、高信頼確定にはしない。ARTストック/準備/潜伏の設定変更時処理も `UNVERIFIED_AFTER_RESEARCH`。
 - **有利区間**: **NOT_APPLICABLE**（5号機・制度前）。
-- **朝一恩恵/不利**: 短縮天井・専用モード・当選率優遇・既得ART/CZ消失等は `NONE_CONFIRMED / PRACTICALLY_NOT_APPLICABLE`。
-- **変更判別**: ガックン、初期出目、Lucky Luckyランプ、リール、電源復帰等まで検索語を変えて再探索したが、本機固有高信頼情報は `UNVERIFIED_AFTER_RESEARCH`。
-- **公開朝一数値**: なし。天井非搭載。
-
-## 493 コード・ルージュ QA完了
-
-- `baseGamesPer50` を **37.6G/1000円** へ補完済み。
-- 根拠: 当時グリーンべると + 当時パチマガスロマガの一致。
-- commit: `b0b77e12783d1a9a8a0720e15f584c39fb5a0d8a`
+- **朝一恩恵**: 設定変更専用短縮天井・専用当選率・モード優遇は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- **朝一不利**: **前日の天井進捗を失う**ことは確定。その他ストック/高確消失は直接高信頼根拠がなく断定しない。
+- **変更判別**: 単一当時実戦記では設定変更時も電源ON/OFF時もダイナーステージになるため、ステージでは変更判別困難との報告。ガックン/初期出目/ランプ等の本機固有高信頼情報は `UNVERIFIED_AFTER_RESEARCH`。
+- **公開朝一数値**: リセット後天井 **600 / 900 / 1200G**。朝一専用当選率/恩恵率は確認されず。
 
 ## resetBehavior 遡及QA — 継続地点
 
@@ -63,32 +62,30 @@
 
 ## 主要出典（取得日 2026-09-03）
 
-### アイムラッキーパレード
-- パチビー 2010年6月導入一覧: `https://www.pachibee.jp/machines/schedule/2010-06`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/6006`
-- パチマガスロマガ 基本システム: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/taiyo_slot/72/a.php`
-- パチマガスロマガ 小役/1000円: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/taiyo_slot/72/c.php`
-- パチマガスロマガ 機種トップ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/taiyo_slot/72/taiyo_slot_72.php`
-- pacnk: `https://pacnk.com/slot/tools/sh_imluckyparade.html`
-- パチスロ業界初項目一覧: `https://slothistory.com/ball_frame.html`
-- パチスロ全機種一覧2009〜2010: `https://slothistory.com/zenkishu_9.html`
-- パチンコビレッジ導入カレンダー2010: `https://www.pachinkovillage.com/introduction/index.php?Y=2010&action=archive`
-
-### コード・ルージュ QA
-- グリーンべると 2010-05-21: `https://web-greenbelt.jp/00002696/`
-- パチマガスロマガ 小役/ベース: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/net_slot/146/c.php`
+### トップをねらえ2!
+- グリーンべると 2010-05-31: `https://web-greenbelt.jp/00002682/`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/5984`
+- パチビー: `https://www.pachibee.jp/machines/index/210050008`
+- K-Navi機種ページ: `https://p-kn.com/slot/1228/`
+- K-Navi 2010年7月導入カレンダー: `https://p-kn.com/calendar/201007/`
+- pacnk: `https://pacnk.com/slot/2010/topoonerae/top.php`
+- パチマガスロマガ 基本システム: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/heiwa_slot/38/a.php`
+- パチマガスロマガ 小役/1000円: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/heiwa_slot/38/c.php`
+- パチマガスロマガ ボーナス/PAYOUT: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/heiwa_slot/38/h.php`
+- パチマガスロマガ 機種トップ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/heiwa_slot/38/heiwa_slot_38.php`
+- 立ち回り解析整理: `https://www.pachirinko.com/5.top.wo.nerae2.html`
+- 2010年当時実戦記（補助証拠のみ）: `https://plaza.rakuten.co.jp/battensan/diary/201008270000/`
 
 ## 今回のGitHub更新
 
-- 493 コード・ルージュ ベースQA: commit `b0b77e12783d1a9a8a0720e15f584c39fb5a0d8a`
-- 495 アイムラッキーパレード追加: commit `6e3d6a4801af80e5334467b6f48b02fab32f5e2a`
+- 496 トップをねらえ2!追加: commit `5350a0e237b9f4a601580255482c71963dbfadc1`
 - LATEST_HANDOFF更新: このコミット
 
 ## 次回再開地点
 
-1. **recordCount 495 / chronologicalFrontier 2010-06-28**。開始時は必ず最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 前線実レコードを再取得。
-2. 6/28同日群を別系統導入一覧でもう一度漏れ監査。パチビーではパチスロは「アイムラッキーパレード」のみ。
-3. **2010-06-29〜2010-07-04** を境界監査後、パチビー2010年7月一覧上の次の明確なパチスロ群は **2010-07-05「トップをねらえ2!」「お座敷の茶々」**。repo重複確認し、同日群の最古未処理から続行。
-4. アイムラッキーパレードの `formalModelName` / `approvalNumber` / `baseGamesPer50` / `resetDetection` / 物理的powerCycleBehaviorは後続QA対象。一般論で補完しない。
-5. 導入日6/28と7/5の差はCONFLICTのまま保持し、新証拠が出るまで平均化・断定修正しない。
-6. 競合値は平均化しない。直接根拠がないresetBehaviorを世代一般論だけで確定しない。
+1. **recordCount 496 / chronologicalFrontier 2010-07-05**。開始時は必ず最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 前線実レコードを再取得。
+2. **2010-07-05同日群の未処理「お座敷の茶々」（バルテック）**を最優先でrepo重複確認し、未登録なら497件目として収集する。
+3. 7/5同日群を別系統導入一覧でも再監査し、漏れがないことを確認後に前進する。
+4. K-Navi 2010年7月導入カレンダー上、次の明確な全国導入パチスロ群は **2010-07-20「悪魔城ドラキュラII」「幕末浪漫 月華の剣士外伝～あかりと七つの妖珠～」**、その次が **2010-07-26「科学忍者隊ガッチャマンGR」**。ただし7/6〜19の別系統資料も境界監査してから進む。
+5. トップをねらえ2! の `carryOverBehavior`、内部状態/ARTストックの設定変更・電源OFF→ON処理、ガックン等変更判別は後続QA対象。単一ユーザー実戦記を高信頼確定へ格上げしない。
+6. 機械割の市場掲載系列とパチマガシミュレート系列はCONFLICTのまま保持し、平均化しない。
