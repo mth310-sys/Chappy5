@@ -5,6 +5,7 @@ manufacturer: アビリット
 releaseDate: 2006-11-22（本州初導入。北海道で先行導入あり）
 generation: 5号機初期
 systemType: ボーナス + RT / CS（カードスロット）
+coreStatus: COMPLETE_CORE_RESET_QA_PARTIAL
 
 ## payoutRateBySetting
 
@@ -73,11 +74,47 @@ RT純増/G: UNVERIFIED
 - ボーナスは小役との同時成立
 - BIG後50G RT
 - 原人ラッシュ後20G RT
+- **天井機能は非搭載**（pacnk現行整理で明記。旧パチマガスロマガも攻め時・ヤメ時「特にナシ」で、ボーナス後固定RTが主な状態性）
 - CS = カードスロット。遊技機本体から貸出メダルを直接払い出す方式だが、ゲーム性能は通常のパチスロとして扱う
+
+## resetBehavior — v0.7 QA
+
+settingChangeBehavior: **UNVERIFIED_AFTER_RESEARCH_FOR_RT_STATE**。本機固有の設定変更時に、ボーナス後RT中の残りゲーム数/RT状態を保持・終了・再構成するかの直接資料を確定できず。天井・周期・ART/ATモードは非搭載のため、それらのゲーム数リセット問題は対象外。
+
+carryOverBehavior: **UNVERIFIED_AFTER_RESEARCH_FOR_RT_STATE**。据え置き時の固定RT残Gの扱いを本機固有資料で直接確定できず。天井カウンタや周期モードは存在しない。
+
+powerCycleBehavior: **UNVERIFIED_AFTER_RESEARCH_FOR_RT_STATE**。単純電源OFF→ON時にBIG後50G/原人ラッシュ後20G RTの残G・RT状態をどう扱うか高信頼な直接資料を確定できず。一般的な5号機挙動から推測しない。
+
+gameCounterReset: **NOT_APPLICABLE_FOR_CEILING_OR_CYCLE**。天井非搭載、通常時周期救済なし。ボーナス後RTの残G処理は別項目としてUNVERIFIED_AFTER_RESEARCH。
+
+ceilingAfterReset: **NOT_APPLICABLE**。天井機能非搭載。
+
+modeAfterReset: **NOT_APPLICABLE_FOR_PERSISTENT_NORMAL_MODE**。通常時の天井/周期/ARTモードを持たない。RT状態処理のみ未確認。
+
+stateAfterReset: **UNVERIFIED_AFTER_RESEARCH_FOR_RT_STATE**。ボーナス後固定RT中に設定変更/据え置き/単純電断を跨ぐ場合の状態処理は直接確定できず。
+
+advantageousSectionReset: **NOT_APPLICABLE**（5号機初期・有利区間制度前）
+
+resetBenefits: **NONE_CONFIRMED_AFTER_RESEARCH**。設定変更専用の朝一高確、短縮天井、RT付与等は確認できず。ボーナス後RTは通常仕様で朝一恩恵ではない。
+
+resetPenalties: **NONE_CONFIRMED_AFTER_RESEARCH**。RT残G消失等を直接確認できないため不利要素として推測登録しない。
+
+resetDetection: **UNVERIFIED_AFTER_RESEARCH**。ガックン、初期出目、ランプ、RT挙動等を用いた本機固有の設定変更/据え置き判別を、検索語・資料系統を変えた再探索でも高信頼に確定できず。
+
+numericResetData:
+- normalRTAfterBIG: **50G**
+- normalRTAfterGenjinRush: **20G**
+- normalCeiling: **NOT_APPLICABLE / 天井非搭載**
+- resetCeilingShortening: **NOT_APPLICABLE**
+- resetMorningHitRate: **NONE_CONFIRMED_AFTER_RESEARCH**
+- resetModeDistribution: **NOT_APPLICABLE_FOR_PERSISTENT_NORMAL_MODE**
+- resetDetectionNumeric: **UNVERIFIED_AFTER_RESEARCH**
+
+resetBehaviorQA: COMPLETE_FOR_CEILING_CYCLE_NA_RT_STATE_AND_DETECTION_UNVERIFIED_AFTER_RESEARCH
 
 ## sources
 
-取得日: 2026-08-31
+取得日: 2026-08-31（resetBehavior QA追補: 2026-09-03）
 
 1. グリーンべると — アビリットのカードパチスロ機、本州初導入
    - https://web-greenbelt.jp/00004918/
@@ -97,16 +134,25 @@ RT純増/G: UNVERIFIED
    - reliability: INDUSTRY
 5. pacnk — CSスロ原人 設定判別ツール
    - https://pacnk.com/slot/tools/sh_cssurogenzin.html
-   - 設定別BIG/原人ラッシュ/機械割
+   - 設定別BIG/原人ラッシュ/機械割、天井非搭載、ボーナス後固定RT
    - reliability: ANALYSIS_SINGLE
 6. 5号機クロニクル — コナミアミューズメント（高砂電器・アビリット）5号機一覧
    - https://5goki.com/konami
    - 設定別BIG/REG/合成/機械割
    - reliability: ANALYSIS_SINGLE
+7. パチマガスロマガ — CSスロ原人 攻略トップ
+   - https://cs62.cs-plaza.com/g/pachi/pla/s_conq/abilit_slot/13/abilit_slot_13.php
+   - 攻め時・ヤメ時「特にナシ」、基本システム各項目への導線
+   - reliability: ANALYSIS_HIGH
 
 ## missingFields
 
 - RT純増/G
+- settingChangeBehavior for active RT: UNVERIFIED_AFTER_RESEARCH
+- carryOverBehavior for active RT: UNVERIFIED_AFTER_RESEARCH
+- powerCycleBehavior for active RT: UNVERIFIED_AFTER_RESEARCH
+- resetDetection: UNVERIFIED_AFTER_RESEARCH
+- public reset-specific morning numeric data: NONE_CONFIRMED_AFTER_RESEARCH
 
 ## conflicts
 
