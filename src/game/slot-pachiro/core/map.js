@@ -5,23 +5,15 @@ export function createLogicalMap(bounds) {
   for (let y = bounds.minY; y <= bounds.maxY; y++) {
     for (let x = bounds.minX; x <= bounds.maxX; x++) {
       cells.set(cellKey(x, y), {
-        x,
-        y,
-        floor: true,
-        buildable: true,
-        occupiedBy: null,
-        reservations: new Set(),
-        portal: null,
-        blocked: false,
+        x, y, floor: true, buildable: true, occupiedBy: null,
+        reservations: new Map(), portal: null, blocked: false,
       });
     }
   }
   return { bounds, cells };
 }
 
-export function getCell(map, x, y) {
-  return map.cells.get(cellKey(x, y)) ?? null;
-}
+export function getCell(map, x, y) { return map.cells.get(cellKey(x, y)) ?? null; }
 
 export function requireCell(map, x, y, label = 'cell') {
   const cell = getCell(map, x, y);
@@ -32,7 +24,9 @@ export function requireCell(map, x, y, label = 'cell') {
 export function occupyCells(map, facilityId, cells) {
   for (const point of cells) {
     const cell = requireCell(map, point.x, point.y, facilityId);
+    if (!cell.buildable) throw new Error(`${facilityId} on non-buildable cell ${point.x},${point.y}`);
     if (cell.occupiedBy) throw new Error(`grid collision at ${point.x},${point.y}: ${cell.occupiedBy} / ${facilityId}`);
+    if ([...cell.reservations.keys()].some((id) => id !== facilityId)) throw new Error(`facility ${facilityId} intrudes reserved access at ${point.x},${point.y}`);
     cell.occupiedBy = facilityId;
   }
 }
@@ -40,10 +34,11 @@ export function occupyCells(map, facilityId, cells) {
 export function reserveCells(map, facilityId, cells) {
   for (const point of cells) {
     const cell = requireCell(map, point.x, point.y, `${facilityId} reservation`);
-    if (cell.occupiedBy && cell.occupiedBy !== facilityId) {
-      throw new Error(`reservation collision at ${point.x},${point.y}: ${cell.occupiedBy} / ${facilityId}`);
-    }
-    cell.reservations.add(facilityId);
+    if (cell.occupiedBy && cell.occupiedBy !== facilityId) throw new Error(`reservation collision at ${point.x},${point.y}: ${cell.occupiedBy} / ${facilityId}`);
+    const role = point.role ?? 'clearance';
+    const existing = cell.reservations.get(facilityId) ?? new Set();
+    existing.add(role);
+    cell.reservations.set(facilityId, existing);
   }
 }
 
@@ -53,10 +48,21 @@ export function setPortal(map, portal) {
   cell.portal = portal;
 }
 
-export function isWalkable(cell) {
-  return Boolean(cell && cell.floor && !cell.blocked && !cell.occupiedBy);
+export function blockBoundary(map) {
+  const { minX, maxX, minY, maxY } = map.bounds;
+  for (const cell of map.cells.values()) {
+    if (cell.x === minX || cell.x === maxX || cell.y === minY || cell.y === maxY) {
+      cell.blocked = true;
+      cell.buildable = false;
+    }
+  }
 }
 
-export function walkableCells(map) {
-  return [...map.cells.values()].filter(isWalkable);
+export function openBoundaryPortal(map, x, y) {
+  const cell = requireCell(map, x, y, 'boundary portal');
+  cell.blocked = false;
+  cell.buildable = false;
 }
+
+export function isWalkable(cell) { return Boolean(cell && cell.floor && !cell.blocked && !cell.occupiedBy); }
+export function walkableCells(map) { return [...map.cells.values()].filter(isWalkable); }
