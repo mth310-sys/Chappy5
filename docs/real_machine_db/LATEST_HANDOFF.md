@@ -4,105 +4,85 @@
 
 ## 現在地点
 
-- recordCount: **522**
-- latestMachineAdded: **ジャイアン～情熱のタイ編～**（ラスター / ニューアーク発表・販売 / 全国一斉導入基準 2010-10-18）
-- latestRecord: `docs/real_machine_db/machines/2010-10-18_jaian-jounetsu-no-thailand.md`
-- chronologicalFrontier: **2010-10-18**
-- frontierLatestMachine: **ジャイアン～情熱のタイ編～**
+- recordCount: **523**
+- latestMachineAdded: **エニィバー**（ヤーマ / HAZUSE導入開始基準 2010-11-12）
+- latestRecord: `docs/real_machine_db/machines/2010-11-12_anybar.md`
+- chronologicalFrontier: **2010-11-12**
+- frontierLatestMachine: **エニィバー**
 - schema: **resetBehavior v0.7**
 - status: **READY_TO_CONTINUE**
 
 ## 今回の継続確認
 
-- 最新mainの `README.md`、正本ミッション `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、前線実レコードを再取得。
+- 最新mainの `README.md`、正本ミッション `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前522「ジャイアン～情熱のタイ編～」を再取得。
 - `INDEX.md` は旧19件地点のため、README規定どおり最新 `LATEST_HANDOFF.md`＋main実レコードを進捗正本として使用。
-- 開始時正本は recordCount **521** / chronologicalFrontier **2010-10-18** / latestMachineAdded **舞-HiME**。
-- 2010-10-18同日群の未処理「ジャイアン～情熱のタイ編～」をrepo重複確認後に522件目として追加。
-- 2010-10-19〜24境界を再監査し、K-Navi 2010年10月導入カレンダーでも10月25日はパチスロ新規掲載なし（パチンコのみ）。次の未処理パチスロ節点は11月側を含めて再監査する。
-- 遡及QAは `docs/real_machine_db/machines/2006-11_kaidouou.md`（怪胴王）を処理し、resetBehavior v0.7を追加。性能コアの既存判定とreset QAを分離した。
+- 開始時正本は recordCount **522** / chronologicalFrontier **2010-10-18**。
+- K-Navi 2010年10月導入カレンダーでは10/25はパチンコのみ。2010-10-19〜31と11月前半を再監査し、HAZUSEで「エニィバー」の導入開始 **2010-11-12** を確認。repo重複なしを確認して523件目として追加。
+- 25φ「エニィバー」と30φ「エニィバー-30」はベルコ現公式が同一製品ページで掲載し、5号機クロニクルも共通性能系列として整理するためvariant併記とし、別性能レコードへ分割しない。
 
-## 522 — ジャイアン～情熱のタイ編～
+## 523 — エニィバー
 
-- メーカー: **ラスター**（当時ニューアークが発表・販売。役割分離）
-- 全国一斉導入基準: **2010-10-18**（K-Navi）
-- 世代/タイプ: **5号機 / BIG + 押し順ART / CZ / 天井**
-- 機械割: **96.0 / 98.6 / 101.3 / 105.1 / 109.0 / 115.3%**
-- BIG: **1/281.3 → 1/240.1**
-- ART初当たり: **1/223.4 → 1/152.7**
-- BIG+ART合成: **1/124.5 → 1/93.3**
-- 50枚/1000円: **約34G**
-- ART「ジャイアンボーナス」: **1セット50G / 約+1.43枚/G / 1契機最大10セット**
-- BIG: **約174枚**
-- チャンス目: **約1/100.52**、成立後は平均約8GのCZ
-- 天井: **BIG間1840G以降で天井ART**
-- coreStatus: **COMPLETE_CORE_RESET_BEHAVIOR_PARTIAL**
+- メーカー: **ヤーマ**
+- 型式: **エニィバー**
+- 検定番号: **0S0625**
+- 導入開始: **2010-11-12**（HAZUSE）
+- 世代/タイプ: **5号機 / ボーナス主体 + BIG・MID後33G RT / 25φ・30φ**
+- 機械割: **97.5 / 99.0 / 101.0 / 103.0 / 105.5 / 108.0%**
+- 全ボーナス合成: **1/128 → 1/109**
+- BIG: **1/230 → 1/199 / 約221枚**
+- MID: **1/1170 → 1/963 / 約156枚**
+- LB: **1/1170 → 1/963 / 約104枚**
+- REG: **1/564 → 1/496 / 約52枚**
+- BIG/MID後RT: **33G**
+- 通常ゲーム数天井: **なしを確認**
+- 50枚ベース: **UNVERIFIED_AFTER_RESEARCH**
+- RT純増/G: **UNVERIFIED_AFTER_RESEARCH**
+- coreStatus: **PARTIAL_CORE_RESET_BEHAVIOR_PARTIAL**
 
-### resetBehavior v0.7 — ジャイアン
+### resetBehavior v0.7 — エニィバー
 
-- パチマガスロマガに本機専用「朝イチ・設定変更」項目が存在することは確認したが、現存検索結果から本文を回収できず。
-- **設定変更時のBIG間1840G天井カウンタclear/retain、ARTストック、CZ/RT状態の初期化内容はUNVERIFIED_AFTER_RESEARCH**。一般的5号機挙動から推測しない。
-- 据え置き時のBIG間天井G・ARTストック・CZ/RT状態の引継ぎは **UNVERIFIED_AFTER_RESEARCH**。
-- 単純電源OFF→ON時のBIG間天井G・ARTストック・CZ/RT状態・液晶/ランプ初期状態は **UNVERIFIED_AFTER_RESEARCH**。
-- 設定変更専用短縮天井、朝一専用モード振り分け、朝一ART確率、設定変更固有の恩恵/不利は再探索後も **NONE_CONFIRMED_AFTER_RESEARCH / UNVERIFIED_AFTER_RESEARCH**。
-- ガックン、初期出目、液晶/ランプ等による変更判別は **UNVERIFIED_AFTER_RESEARCH**。
+- 設定変更、リセット、朝一、据え置き、電源OFF→ON、ガックン、RTと、25φ/30φ・型式0S0625・メーカー名を組み替えて再探索。
+- 本機には通常ゲーム数天井を確認しないため `gameCounterReset` / `ceilingAfterReset` は **NOT_APPLICABLE_FOR_CEILING / NO_CEILING_CONFIRMED**。
+- BIG/MID後33G RT途中の設定変更時残G・RT状態処理は **UNVERIFIED_AFTER_RESEARCH**。
+- 据え置き時の33G RT残G処理は **UNVERIFIED_AFTER_RESEARCH**。
+- 単純電源OFF→ON時の33G RT残G、リール/ランプ/初期出目は **UNVERIFIED_AFTER_RESEARCH**。
+- 朝一専用高確、短縮天井、初当たり優遇、設定変更固有の不利は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- ガックン等の本機固有変更判別は **UNVERIFIED_AFTER_RESEARCH**。
 - 有利区間は5号機のため **NOT_APPLICABLE**。
 - resetBehaviorQA: **PARTIAL_AFTER_MULTI_SOURCE_RESEARCH**。
 
-## CONFLICT / 注意 — ジャイアン
+## CONFLICT / 注意 — エニィバー
 
-- メーカー表記はP-WORLD「ラスター」、当時グリーンべるとではニューアークがラスターとの業務提携第2弾として発表。製造メーカー=ラスター、発表/販売ブランド=ニューアークとして役割分離し、数値CONFLICTとは扱わない。
-- formalModelName / inspectionNumber は十分再探索後も **UNVERIFIED_AFTER_RESEARCH**。
+- 設定3 REGはパチマガスロマガとpacnkが **1/546**、HAZUSEが **1/564**。平均せずCONFLICT保持。主系列は2系統一致の1/546を採用し、HAZUSE異値を消さない。
+- HAZUSEの「BIG/REG/合成」表は4ボーナス区分を簡略化している。全ボーナス合成1/128〜1/109は他資料と整合するため、物差し比較は全ボーナス合成を主軸にする。
 
-## 主要出典 — ジャイアン（取得日 2026-09-04）
+## 主要出典 — エニィバー（取得日 2026-09-04）
 
-- K-Navi 2010年10月導入カレンダー: `https://p-kn.com/calendar/201010/`
-- グリーンべると / P-WORLD業界ニュース: `https://news.p-world.co.jp/articles/4158/greenbelt`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/6113`
-- パチマガスロマガ基本システム: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/newark_slot/02/newark_slot_02.php`
-- パチマガスロマガ基本ゲーム性: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/newark_slot/02/a.php`
-- パチマガスロマガ設定別確率/PAYOUT: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/newark_slot/02/h.php`
-- パチマガスロマガ小役/1000円G数: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/newark_slot/02/c.php`
-
-## 遡及QA — 怪胴王
-
-対象: `docs/real_machine_db/machines/2006-11_kaidouou.md`
-
-- formalModelName: **爆裂王2**。
-- 既存性能コアはPARTIALのため不用意な完了判定変更をせず、reset QA状態を別管理。
-- ハマリ救済として、**規定ゲーム数到達で次回ボーナスまでAT**となる仕様を当時業界記事で再確認。ただし具体的規定G数は高信頼値未確定。
-- 設定変更時の救済進捗、AT権利/残G、内部RT状態のclear/retainは直接資料を確定できず **UNVERIFIED_AFTER_RESEARCH**。
-- 据え置き、単純電源OFF→ON、設定変更判別、公開朝一数値も本機固有の確定資料を回収できず **UNVERIFIED_AFTER_RESEARCH**。
-- 有利区間は5号機初期のため **NOT_APPLICABLE**。
-- AT純増は当時業界記事 **約+1.2枚/G** と攻略資料 **約+1.1枚/G** を平均せずCONFLICT保持。
-- 機械割設定2は **98.2%（pacnk） / 98.7%（後年回顧）** をCONFLICT保持。設定1/3/4/5/6は 95.2 / 100.8 / 104.0 / 106.9 / 109.6%。
-- resetBehaviorQA: **PARTIAL_AFTER_MULTI_SOURCE_RESEARCH**。
-
-### 怪胴王 主要出典（取得日 2026-09-04）
-
-- グリーンべると: `https://web-greenbelt.jp/00004874/`
-- P-WORLD / グリーンべると転載: `https://news.p-world.co.jp/articles/1904/greenbelt`
-- HAZUSE: `https://hazuse.com/i/data/kaidouou/top.htm`
-- CrankySeven: `https://crankyseven.com/kaidouou-pc.htm`
-- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/arist_slot/27/a.php`
-- pacnk: `https://pacnk.com/slot/tools/sh_kaidouou.html`
-- pachinko's blog: `https://pachinko.hatenablog.jp/entry/2006/11/kaidou-oh`
+- HAZUSE: `https://hazuse.com/machine/pachislot/0S0625/`
+- ベルコ現公式（旧ヤーマ製品）: `https://www.s-bellco.co.jp/products/slot/yama_anybar/`
+- グリーンべると: `https://web-greenbelt.jp/00002872/`
+- P-WORLD / グリーンべると転載: `https://news.p-world.co.jp/articles/4183/greenbelt`
+- パチマガスロマガ基本システム: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yama_slot/14/a.php`
+- パチマガスロマガ設定別確率: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yama_slot/14/h.php`
+- pacnk: `https://pacnk.com/slot/tools/sh_anybar.html`
+- 5号機クロニクル: `https://5goki.com/yama`
 
 ## 今回のGitHub更新
 
-- 522 ジャイアン～情熱のタイ編～追加: `docs/real_machine_db/machines/2010-10-18_jaian-jounetsu-no-thailand.md`
-- 怪胴王 resetBehavior v0.7 QA追補: `docs/real_machine_db/machines/2006-11_kaidouou.md`
+- 523 エニィバー追加: `docs/real_machine_db/machines/2010-11-12_anybar.md`
+- machine record commit: `e525119e9069d4b81e0cb934985ac3d15733c6b4`
 - LATEST_HANDOFF: 本更新
 
 ## 遡及QA継続地点
 
-- **怪胴王まで補完済み**。
-- 次回はmachine treeの実パス順を再確認し、`2006-11_kaidouou.md`直後の**最初の実在resetBehavior欠損レコード**を特定して処理する。タイトル推測でQA済み範囲を進めない。
+- **怪胴王 (`docs/real_machine_db/machines/2006-11_kaidouou.md`) まで補完済み**。
+- 次回はmachine treeの実パス順を確認し、怪胴王直後の**最初の実在resetBehavior欠損レコード**を特定して処理する。タイトル推測でQA済み範囲を進めない。
 - COMPLETE_CORE性能判定はreset欠損のみを理由に崩さず、reset QA状態を別管理する。
 
 ## 次回再開地点
 
-1. **recordCount 522 / chronologicalFrontier 2010-10-18**。開始時は最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 前線実レコードを必ず再取得。
-2. 2010-10-19〜31境界を再監査。K-Navi 2010年10月カレンダーでは10月25日に新規パチスロ掲載なしのため、11月導入カレンダー・P-WORLD・当時業界記事を照合し、**2010年11月側の最古未登録機**を523件目候補として確定する。
-3. 同日群が複数ある場合は導入日/納品日定義を分離し、repo重複監査後に時系列で追加する。
-4. 遡及QAは **怪胴王直後の最初の実在resetBehavior欠損machine pathの確定**から再開する。
-5. PARTIAL/UNVERIFIEDとreset欠損は検索語・資料系統を変えて十分再探索し、競合は平均せずCONFLICT、推測補完しない。
+1. **recordCount 523 / chronologicalFrontier 2010-11-12**。開始時は最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 前線実レコードを必ず再取得。
+2. **2010-11-13〜14境界を監査**。特に「月面兎兵器ミーナ」は11月中旬/11月14日前後の納品・導入表記を区別し、確定導入日が11/15群より早いか再照合する。
+3. その後、明確な **2010-11-15同日群**（「パチスロ超時空要塞マクロス」「パチスロ戦国無双～猛将伝～」「エピソードドライブ」等）をrepo重複監査して時系列追加する。
+4. 50枚ベースやresetBehaviorを最初の検索だけで欠損扱いにせず、型式・メーカー・シリーズ名と朝一/リセット/据え置き/電源OFF ON/天井/モード/ガックン等を組み替え、公式・業界・当時解析・古いDB・回顧資料を横断する。
+5. 競合値は平均せずCONFLICT、既存性能値は無駄にやり直さない。
