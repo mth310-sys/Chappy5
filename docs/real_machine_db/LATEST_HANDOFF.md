@@ -4,79 +4,85 @@
 
 ## 現在地点
 
-- recordCount: **492**
-- latestMachineAdded: **戦国物語-猛虎激闘絵巻-**（ニューギン / 2010-06-14）
-- latestRecord: `docs/real_machine_db/machines/2010-06-14_sengoku-monogatari.md`
-- chronologicalFrontier: **2010-06-14**
-- frontierLatestMachine: **戦国物語-猛虎激闘絵巻-**
+- recordCount: **493**
+- latestMachineAdded: **コード・ルージュ**（ネット / 2010-06-21）
+- latestRecord: `docs/real_machine_db/machines/2010-06-21_code-rouge.md`
+- chronologicalFrontier: **2010-06-21**
+- frontierLatestMachine: **コード・ルージュ**
 - schema: **resetBehavior v0.7**
 - status: **READY_TO_CONTINUE**
 
 ## 今回の継続確認
 
-- 最新mainの `README.md`、正本ミッション `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前491「ゴッドハンターV」を再取得。
-- `INDEX.md` は旧19件地点のため、README規定どおり `LATEST_HANDOFF.md`＋main実レコードを進捗正本として使用。
-- 開始時正本は recordCount **491** / chronologicalFrontier **2010-06-08**。
-- パチビー2010年6月月間導入一覧を再監査。6/9〜6/13に新規パチスロ掲載はなく、次の明確なパチスロ候補は6/14「戦国物語-猛虎激闘絵巻-」。
-- 当時グリーンべるとは2010-05-12記事で「戦国物語」は6/13から納品開始予定と報道。K-Navi・パチビーは6/14ホール導入で一致するため、本DBのreleaseDate/chronologicalFrontierは2010-06-14を採用し、6/13は物流開始予定として分離保存。
-- repoコード検索で「戦国物語」未登録を確認後、492件目として追加。
+- 最新mainの `README.md`、正本ミッション `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前492「戦国物語-猛虎激闘絵巻-」を再取得。
+- `INDEX.md` は旧地点のため、README規定どおり `LATEST_HANDOFF.md`＋main実レコードを進捗正本として使用。
+- 開始時正本は recordCount **492** / chronologicalFrontier **2010-06-14**。
+- パチビー2010年6月月間導入一覧を再監査。6/15はパチンコのみ、6/16〜20に新規パチスロ掲載はなく、次の明確なパチスロ導入群は6/21「コード・ルージュ」「恐怖新聞～第二章～」。
+- repo検索で「コード・ルージュ」未登録を確認後、6/21同日群の先頭として493件目に追加。
 
-## 492 — 戦国物語-猛虎激闘絵巻- 要約
+## 493 — コード・ルージュ 要約
 
-- メーカー: **ニューギン**
-- 導入主値: **2010-06-14**（K-Navi / パチビー一致）
-- 納品開始予定: **2010-06-13**（当時グリーンべると）
-- 世代/タイプ: **5号機 / ノーマル / ボーナス主体 / 単純告知 / ART・AT・CZ非搭載**
-- 機械割: K-Navi **97.3 / 98.8 / 100.8 / 103.2 / 106.1 / 111.1%**、パチマガスロマガは設定6のみ **111.6%** → `CONFLICT`
-- BIG合成: **1/266 / 1/261 / 1/254 / 1/245 / 1/233 / 1/213**
-- REG: **1/397 / 1/377 / 1/350 / 1/324 / 1/299 / 1/271**
-- ボーナス合成: **約1/159 → 約1/119**（K-Navi/P-WORLD端数値1/159.5〜1/119.2）
-- 50枚ベース: **UNVERIFIED_AFTER_RESEARCH**
-- 基本獲得: 同色BIG **約312枚**、戦BONUS **200〜300枚・平均約260枚**、REG **約104枚**
-- 戦BONUSの「異色BIG約206枚」表記と「平均約260枚」は固定純増欄とJAC変動平均の定義差をレコード内に保持。
-- coreStatus: **COMPLETE_CORE_RESET_BEHAVIOR_PARTIAL**
+- メーカー: **ネット**
+- 導入: **2010-06-21**（パチビー機種ページ / 月間導入一覧）
+- 世代/タイプ: **5号機 / ボーナス+押し順ART / ストックART / 無限ART搭載**
+- 機械割主系列（当時パチマガスロマガ）: **97.5 / 99.5 / 101.5 / 104.0 / 106.5 / 111.0%**
+- 後年5号機クロニクルは設定6=110.0%だが、同ページのゲーム性説明に本機と整合しない情報が混在するため、主系列へ平均せず汚染疑いの競合として保持。
+- BIG: 設定1〜3 **1/1149**、設定4〜6 **1/1040**
+- REG合成: **全設定1/152**
+- ボーナス合成: 設定1〜3 **1/134**、設定4〜6 **1/132**
+- ART初当たり: **1/389.1 / 1/322.7 / 1/323.3 / 1/267.2 / 1/264.7 / 1/206.2**
+- ボーナス+ART合成: **1/99 / 1/94 / 1/95 / 1/88 / 1/88 / 1/80**
+- ART DRIVE: **40G / 約+1.8枚/G**、1回の抽選で最大10セットの可能性。
+- SUPER ART DRIVE: 次回ボーナスまでの無限ART、ボーナス後も**約50%ループ**。
+- 基本獲得: SBB/BIG **約114枚**、BB/REG相当 **約36枚**（資料間で呼称差、枚数は一致）。
+- 通常状態: **通常 / 高確 / 超高確**。
+- 50枚ベース: **UNVERIFIED_AFTER_RESEARCH**。
+- 通常ゲーム数天井: **UNVERIFIED_AFTER_RESEARCH / NONE_CONFIRMED**。存在を推測しない。
+- formalModelName / approvalNumber: **UNVERIFIED_AFTER_RESEARCH**。
+- coreStatus: **COMPLETE_CORE_RESET_BEHAVIOR_PARTIAL**。
 
-## resetBehavior v0.7 — 戦国物語
+## resetBehavior v0.7 — コード・ルージュ
 
-- **設定変更**: 天井・ART/AT/CZ・持続型ゲーム数モードが確認されないノーマル機なので、朝一客行動へ影響する主要進行要素はなし。本機固有の低レベルRAM/初期化処理は十分再探索後も直接根拠を確定できず `UNVERIFIED_AFTER_RESEARCH`。
-- **据え置き**: 引継ぎ対象となる天井G数・ART/AT/CZ・周期/持続モードは `NOT_APPLICABLE`。低レベル状態は未確認。
-- **電源OFF→ON**: 初期出目・リール等の本機固有処理は `UNVERIFIED_AFTER_RESEARCH`。
-- **ゲーム数・天井**: ゲーム数天井/周期天井なしとして `NOT_APPLICABLE / NONE_CONFIRMED`。リセット短縮天井も `NOT_APPLICABLE`。
-- **モード・状態**: 朝一へ持ち越す継続型モード/高確/ART/CZ状態は確認されず。低レベル内部状態のみ未確認。
-- **有利区間**: `NOT_APPLICABLE`。
-- **朝一恩恵/不利**: `NONE_CONFIRMED_AFTER_RESEARCH`。
-- **変更判別**: ガックン/初期出目/リール/ランプ/シャッター等まで再探索したが本機固有高信頼情報は `UNVERIFIED_AFTER_RESEARCH`。
+- **設定変更**: 通常/高確/超高確の再セット先、ARTストック・潜伏ART・前兆の消去/保持は、本機固有の直接解析本文を十分再探索後も確定できず `UNVERIFIED_AFTER_RESEARCH`。
+- **据え置き**: 内部状態・ARTストック・潜伏/前兆の引継ぎ処理は `UNVERIFIED_AFTER_RESEARCH`。
+- **電源OFF→ON**: 内部状態、ARTストック、潜伏/前兆、初期画面/リール等の本機固有処理は `UNVERIFIED_AFTER_RESEARCH`。
+- **ゲーム数・天井**: 高信頼な通常ゲーム数天井を確定できず、設定変更時のカウンタclear/retainも未確定。設定変更専用短縮天井は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- **モード・状態**: 通常/高確/超高確を確認。ただし設定変更時振り分けは `UNVERIFIED_AFTER_RESEARCH`。
+- **有利区間**: **NOT_APPLICABLE**（5号機・制度前）。
+- **朝一恩恵/不利**: 専用高確/ART付与/短縮天井等は `NONE_CONFIRMED_AFTER_RESEARCH`。直接根拠のない既得状態消失も不利として断定しない。
+- **変更判別**: 朝一/設定変更/据え置き/ガックン/十字架/シャッター/初期出目/ART潜伏まで再探索したが本機固有高信頼情報は `UNVERIFIED_AFTER_RESEARCH`。P-WORLD掲示板のユーザー質問は解析根拠に昇格しない。
 - **公開朝一数値**: `NONE_CONFIRMED_AFTER_RESEARCH`。
+- resetBehaviorQA: **PARTIAL_STATE_SYSTEM_CONFIRMED_SETTING_CHANGE_CARRYOVER_POWER_CYCLE_RESET_NUMERICS_UNVERIFIED_AFTER_RESEARCH**。
 
 ## resetBehavior 遡及QA — 継続地点
 
 - CSスロ原人（2006-11-22）まで補完済み。
 - `2006-11-27_thunder-v-special.md` は既にresetBehavior収集済み。
 - `2006-11_jack-to-mamenoki.md` までv0.7遡及追加済み。
-- 次の欠損候補は2006-11群の `小野真弓のかわいい日本昔話` / `海童王`。既存レコードのreleaseDateと実ファイル順を確認し、順序を固定してから補完する。
+- 直前handoffが次候補として挙げた `小野真弓のかわいい日本昔話` / `海童王` を今回repoコード検索で再確認したが、タイトル文字列から既存実レコードを一意確定できなかった。
+- **存在・順序を推測してQA済みにしない**。確定遡及進捗は **ジャックと豆の木まで**を維持。
+- 次回はmainのmachine tree / commit履歴 / 2006-11〜12実レコード群から「ジャックと豆の木」直後に実在する最初の `resetBehavior` 欠損ファイルをパスで確定してから補完する。
 
 ## 主要出典（取得日 2026-09-03）
 
-### 戦国物語-猛虎激闘絵巻-
-- K-Navi: `https://p-kn.com/slot/1212/`
-- K-Navi 機械割&期待収支: `https://p-kn.com/slot/1212/19279/`
+### コード・ルージュ
+- パチビー機種ページ: `https://www.pachibee.jp/machines/about/210050003`
 - パチビー2010年6月導入一覧: `https://www.pachibee.jp/machines/schedule/2010-06`
-- パチビー機種ページ: `https://www.pachibee.jp/machines/reach/210050002`
-- グリーンべると 2010-05-12: `https://web-greenbelt.jp/00006598/`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/5964`
-- パチマガスロマガ 基本システム: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/newgin_slot/14/a.php`
-- パチマガスロマガ ボーナス抽選確率: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/newgin_slot/14/h.php`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/5958`
+- パチマガスロマガ 基本システム: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/net_slot/146/a.php`
+- パチマガスロマガ ボーナス抽選確率: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/net_slot/146/h.php`
+- 5号機クロニクル NET一覧: `https://5goki.com/net`（本機説明の混在疑いがあるため補助/競合検知のみ）
 
 ## 今回のGitHub更新
 
-- 492 戦国物語-猛虎激闘絵巻-追加: commit `724caff1f72ddf54f1724b9d08504b26065103d4`
+- 493 コード・ルージュ追加: commit `55b5b473b758b8eabaf7151201f0de60fecd9e2f`
+- LATEST_HANDOFF更新: このコミット
 
 ## 次回再開地点
 
-1. **recordCount 492 / chronologicalFrontier 2010-06-14**。開始時は必ず最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 前線実レコードを再取得。
-2. **2010-06-14同日群を別系統の月間導入一覧・K-Navi・P-WORLD・当時業界記事で最終監査**し、戦国物語以外の未登録パチスロがあれば同日群から先に処理する。
-3. 6/14同日群を閉じたら **2010-06-15〜2010-06-20** を境界監査。パチビー月間一覧上の次の明確なパチスロ群は **2010-06-21「コード・ルージュ」「恐怖新聞～第二章～」**。
-4. 6/15〜20に地域先行/別資料日付の未登録機がないか確認してから、6/21同日群の最古未登録を処理する。
-5. 戦国物語の `formalModelName` / `approvalNumber` / `baseGamesPer50` は今回十分再探索後も未確定。後続QAで公的検定資料・保存アーカイブに直接値が見つかれば補完する。
-6. 遡及QAは **ジャックと豆の木まで補完済み**。次は2006-11群の `小野真弓のかわいい日本昔話` / `海童王` の順序を固定し、最初のresetBehavior欠損を補完する。
-7. 競合値は平均化しない。直接根拠がないresetBehaviorを世代一般論だけで確定しない。
+1. **recordCount 493 / chronologicalFrontier 2010-06-21**。開始時は必ず最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 前線実レコードを再取得。
+2. **2010-06-21同日群を継続**し、未登録確認後 **「恐怖新聞～第二章～」** を494件目の第一候補として性能コア＋v0.7 resetBehaviorを収集する。
+3. 6/21同日群を別系統の導入一覧/K-Navi/P-WORLD/当時業界資料でも閉じ、未登録がなければ次の具体導入日群へ前進する。
+4. コード・ルージュの `formalModelName` / `approvalNumber` / `baseGamesPer50` / reset詳細は今回十分再探索後も未確定。後続QAで公的検定資料・保存アーカイブ・当時解析本文に直接値が見つかれば補完する。
+5. 遡及QAは **ジャックと豆の木まで確定補完済み**。machine tree / commit履歴からその直後の実在resetBehavior欠損ファイルをパスで確定して補完する。`小野真弓のかわいい日本昔話` / `海童王` は実レコード存在・順序を確定するまで推測更新しない。
+6. 競合値は平均化しない。直接根拠がないresetBehaviorを世代一般論だけで確定しない。
