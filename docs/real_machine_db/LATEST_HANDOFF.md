@@ -4,75 +4,69 @@
 
 ## 現在地点
 
-- recordCount: **465**
-- latestMachineAdded: **満福箱**（ホール導入2010-03-15）
-- latestRecord: `docs/real_machine_db/machines/2010-03-15_manpukubako.md`
-- chronologicalFrontier: **2010-03-15**
+- recordCount: **466**
+- latestMachineAdded: **新鬼武者**（ロデオ / ホール導入2010-03-23）
+- latestRecord: `docs/real_machine_db/machines/2010-03-23_shin-onimusha.md`
+- chronologicalFrontier: **2010-03-23**
 - schema: **resetBehavior v0.7**
 - status: **READY_TO_CONTINUE**
 
 ## 今回の継続確認
 
-- 最新mainの `README.md`、正本ミッション `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前実レコード「まことちゃん」を再取得。
-- `INDEX.md` は旧地点のため、README規定どおりLATEST_HANDOFF＋main実レコードを進捗正本として使用。
-- 開始時正本はrecordCount 464 / chronologicalFrontier 2010-03-08 / latestMachineAdded「まことちゃん」。
-- 2010-03-08同日群の残候補「哲也 新宿VS上野天涯孤独DX」を再監査。当時スケジュールの長表記は既存457「哲也 新宿VS上野DX」/型式「哲也DX2」と同じ2010年DX版を指すと判断し、重複追加しなかった。
-- 当時新台スケジュール上、3月8日の次のパチスロ導入群は3月15日。3月9〜14日に別の具体日確認済み未登録機を確定できなかったため、「満福箱」を465件目へ追加。
+- 最新mainの `README.md`、正本ミッション `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前実レコード「満福箱」を再取得。
+- `INDEX.md` は旧地点（19件）のため、README規定どおりLATEST_HANDOFF＋main実レコードを進捗正本として使用。
+- 開始時正本は recordCount **465** / chronologicalFrontier **2010-03-15** / latestMachineAdded「満福箱」。
+- 2010-03-15同日群と03-16〜22境界を再監査。次の具体的ホール導入群2010-03-23へ進み、未登録の「新鬼武者」を466件目へ追加。
 
-## 465 — 満福箱 要約
+## 466 — 新鬼武者 要約
 
-- メーカー表記: **メテオ / ラスター**。旧パチマガはメテオ/©METEOR、後年DBはラスター、当時導入表はメテオ/ラスター併記。
-- 正式型式: **UNVERIFIED_AFTER_RESEARCH**
-- 検定番号: **UNVERIFIED_AFTER_RESEARCH**
-- 導入: **2010-03-15**。当時スケジュールは3月14日納品・3月15日導入。複数後年DBも2010年3月機で整合。
-- 世代: **5号機**
-- タイプ: **端メダル専用ノーマル / 1・2・3BET対応 / 特賞ボーナス主体**
-- 設定: **2段階**
-- 特賞確率:
-  - 1BET: 設定1 **1/189.96** / 設定2 **1/199.80**
-  - 2BET: 設定1 **1/84.89** / 設定2 **1/94.98**
-  - 3BET: 設定1 **1/54.98** / 設定2 **1/58.00**
-- 特賞: **約47枚**（規定払い出し50枚）
-- 50枚ベース: **UNVERIFIED_AFTER_RESEARCH**。旧パチマガ本機ページ自体が「現在調査中」。特殊な端メダル用途のため逆算しない。
-- 機械割: **UNVERIFIED / BET_CONDITION_DEPENDENT**。後年記事に設定1約63.6%との回顧値があるがBET条件不明、5号機クロニクルは不明。標準設定1値として固定しない。
-- 後年記事の「1枚掛けでも1/98くらい」は旧パチマガ直接値1BET 1/189.96〜1/199.80と競合するため `CONFLICT_RETROSPECTIVE_APPROXIMATION` として平均せず保持。
+- メーカー: **ロデオ**
+- 型式表記: **新鬼武者Z**を当時系記事・実機流通表記で確認。ただし検定公示一次資料の直接照合は未完。
+- 導入: **2010-03-23**。K-Navi、パチ&スロ必勝本で一致。
+- 世代/タイプ: **5号機 / A+ART / 押し順ART**
+- BIG: **約204枚**、REG: **約60枚**
+- ART「蒼剣RUSH」: **約50G+α / 約+1.4枚/G / 継続率50〜89%**
+- ボーナス合算: 設定1 **1/263.20** → 設定6 **1/229.95**
+- BIG合算: 設定1 **1/394.80** → 設定6 **1/344.93**
+- REG: 設定1 **1/789.59** → 設定6 **1/689.85**
+- 機械割: 必勝本シミュレート **98.52〜111.26%** と後年回顧 **96.4〜110.0%** が競合。平均せず `CONFLICT`。
+- 50枚ベース: **UNVERIFIED_AFTER_RESEARCH**。2020/2022/2025年の同名・後継機を混入しない。
+- 通常天井: **ボーナス間1400G**。到達後の天井高確中、ART抽選契機役成立で**継続率89% ART**へ。
 
-## resetBehavior v0.7 — 満福箱
+## resetBehavior v0.7 — 新鬼武者
 
-- **設定変更**: `UNVERIFIED_AFTER_RESEARCH_FOR_MACHINE_SETTING_OPERATION`。設定変更操作時の低レベル挙動は直接資料なし。
-- **据え置き**: `NOT_APPLICABLE_FOR_GAME_COUNT_CEILING / NO_PERSISTENT_MODE_CONFIRMED`。公開された天井・周期・ART/ATストック・持続モードを確認せず。
-- **電源OFF→ON**: `UNVERIFIED_FOR_LOW_LEVEL_STATE / NOT_APPLICABLE_FOR_PUBLIC_CEILING_COUNTER`。低レベル内部状態は未確定だが、公開天井カウンタ自体がない。
-- **ゲーム数/天井**: `NOT_APPLICABLE_NO_GAME_COUNT_CEILING_CONFIRMED`。
-- **リセット短縮**: `NOT_APPLICABLE / NONE_CONFIRMED`。
-- **モード**: `NOT_APPLICABLE_NO_MODE_SYSTEM_CONFIRMED`。
-- **状態**: ART/AT/CZ/RTは `NOT_APPLICABLE`。ボーナス成立済み等の低レベル内部状態のみ `UNVERIFIED`。
+- **設定変更**: 鬼モード・ARTストック等が消滅し、内部状態を再抽選することを本機固有資料で確認。
+- **設定変更時の状態振り分け**:
+  - 設定1〜4: 超低確70% / 低確5% / 高確20% / 超高確5% → **高確以上25%**
+  - 設定5・6: 超低確55% / 低確5% / 高確35% / 超高確5% → **高確以上40%**
+- **据え置き判別**: 当時解析では、朝一に鬼モードまたはARTから開始すれば据え置き確定。チャンス役なしで高確示唆が出れば設定変更期待度上昇。
+- **1400G天井カウンタ**: 設定変更時のclear/retainを直接本文で確定できず `UNVERIFIED_AFTER_RESEARCH`。一般的5号機挙動で補完しない。
+- **電源OFF→ON**: 天井カウンタ・内部状態・ART情報の処理を本機固有直接資料で確定できず `UNVERIFIED_AFTER_RESEARCH`。
+- **リセット短縮天井**: `NONE_CONFIRMED_AFTER_RESEARCH`。
 - **有利区間**: `NOT_APPLICABLE`（5号機・制度前）。
-- **朝一恩恵/不利**: `NONE_CONFIRMED_AFTER_RESEARCH`。
-- **変更判別**: `UNVERIFIED_AFTER_RESEARCH`。ガックン、初期出目、リール、ランプ、据え置き判別まで検索語変更済み。
-- **公開朝一数値**: リセット短縮天井・モード振分・朝一当選率・恩恵率はいずれも確認なし。
+- **主要不利**: 設定変更でARTストック・鬼モード消滅。
+- **ガックン等物理判別**: `UNVERIFIED_AFTER_RESEARCH`。
 
 ## 主要出典（取得日 2026-09-03）
 
-- パチマガスロマガ旧解析 基本: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/meteor_slot/02/a.php`
-- パチマガスロマガ旧解析 ボーナス確率: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/meteor_slot/02/h.php`
-- パチマガスロマガ旧解析 小役/ベース: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/meteor_slot/02/c.php`
-- パチマガスロマガ旧解析トップ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/meteor_slot/02/meteor_slot_02.php`
-- 2010年3月1日～4月19日新台導入スケジュール: `https://ameblo.jp/pachimatome/entry-10470039494.html`
-- 5号機クロニクル ラスター: `https://5goki.com/luster`
-- パチ7 5号機ロースペック回顧: `https://pachiseven.jp/articles/detail/14329`
-- なな徹 過去最低出玉率回顧: `https://nana-press.com/post/1575422`
-- P-WORLD 2010年03月導入カレンダー: `https://www.p-world.co.jp/database/machine/introduce_calendar.cgi?year_month=2010-03`
+- K-Navi 新鬼武者: `https://p-kn.com/slot/1174/`
+- K-Navi 設定変更後の状態移行: `https://p-kn.com/slot/1174/18213/`
+- パチ&スロ必勝本 基本スペック: `https://p.hisshobon.jp/machine/1568/1/24056`
+- P-WORLD 新鬼武者「2010年」: `https://www.p-world.co.jp/machine/database/5874`
+- パチマガスロマガ旧解析 基本: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/rodeo_slot/53/a.php`
+- 当時系解析まとめ: `https://ameblo.jp/pachimatome/entry-10503414806.html`
+- 当時系「新鬼武者Z」記事: `https://ameblo.jp/gunp06s/entry-10460321805.html`
 
 ## resetBehavior 遡及QA進捗
 
 - 既存遡及補完は **スロ原人（`docs/real_machine_db/machines/2006-10_surogenjin.md`）まで補完済み**という正本進捗を維持。
-- 本線前進を止めず、次の遡及QA対象はスロ原人直後の実ファイル順で最初の `resetBehavior` 欠損機を一意特定してから補完する。
+- 今回はGitHubコード検索indexから「スロ原人直後」の実ファイルを順序保証付きで一意特定できなかったため、別機種を推測でQA済みにせず、誤更新を回避。
+- 次回はmachine tree/コミット履歴を用いてスロ原人直後の最初の `resetBehavior` 欠損実ファイルを特定し、その機種から遡及QAを再開する。
 
 ## 次回再開地点
 
-1. **recordCount 465 / chronologicalFrontier 2010-03-15**。最新追加は「満福箱」。
-2. **2010-03-15同日群を最終監査**し、別の未登録パチスロがないか既存レコードと突合。
-3. 同日群を閉じたら **2010-03-16〜22境界監査**。発表日・検定日を導入日と混同せず、具体的ホール導入日を優先する。
-4. 当時新台スケジュールの次の具体的パチスロ導入群は **2010-03-23**。候補は「新鬼武者」（ロデオ）、「続・お見事！サブちゃん」「ノーマルだよ！サブちゃん」（オリンピア）、「デジスロA」（ベルコ）。既存登録と突合し、最古の未登録機から466件目へ進む。
-5. **スパイガール日付CONFLICT監査を保持**: K-Navi `2010-02-22` vs パチビー/当時スケジュール `2010-04-19` / 複数DB `2010-04`。現時点では4月側を優勢とし、4月境界で再確認。
-6. 次回追加前も必ず最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 前線実レコード / 直近main状態を再取得し、他リレー競合・重複を防ぐ。
+1. **recordCount 466 / chronologicalFrontier 2010-03-23**。最新追加は「新鬼武者」。
+2. **2010-03-23同日群を継続監査**。LATEST_HANDOFF旧候補の「続・お見事！サブちゃん」「ノーマルだよ！サブちゃん」（オリンピア）、「デジスロA」（ベルコ）を既存登録と突合し、最古の未登録機から467件目へ進む。
+3. 03-23群完了後、次の具体導入日境界へ時系列前進。
+4. **スパイガール日付CONFLICT監査を保持**: K-Navi `2010-02-22` vs パチビー/当時スケジュール `2010-04-19` / 複数DB `2010-04`。4月境界で再確認。
+5. 次回追加前も必ず最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 前線実レコード / 直近main状態を再取得し、他リレー競合・重複を防ぐ。
