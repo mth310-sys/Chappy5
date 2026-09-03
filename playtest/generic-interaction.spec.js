@@ -36,17 +36,41 @@ test('generic iPhone eyes and hands smoke', async ({ page }) => {
     scrollHeight: Math.max(document.documentElement.scrollHeight, document.body.scrollHeight)
   }));
 
-  const maxX = Math.max(0, dimensions.scrollWidth - dimensions.viewportWidth);
-  if (maxX > 0) {
-    await page.evaluate(x => window.scrollTo({ left: x, top: 0, behavior: 'instant' }), Math.round(maxX / 2));
+  const scrollTarget = await page.evaluate(() => {
+    const candidates = [...document.querySelectorAll('[data-playtest-scroll], .stage')];
+    const internal = candidates.find(el => el.scrollWidth > el.clientWidth + 1);
+    if (internal) {
+      return {
+        kind: 'element',
+        selector: internal.hasAttribute('data-playtest-scroll') ? '[data-playtest-scroll]' : '.stage',
+        maxX: internal.scrollWidth - internal.clientWidth
+      };
+    }
+    return {
+      kind: 'window',
+      selector: null,
+      maxX: Math.max(0, Math.max(document.documentElement.scrollWidth, document.body.scrollWidth) - window.innerWidth)
+    };
+  });
+
+  async function scrollX(x) {
+    if (scrollTarget.kind === 'element') {
+      await page.locator(scrollTarget.selector).evaluate((el, value) => el.scrollTo({ left: value, top: el.scrollTop, behavior: 'instant' }), x);
+    } else {
+      await page.evaluate(value => window.scrollTo({ left: value, top: window.scrollY, behavior: 'instant' }), x);
+    }
+  }
+
+  if (scrollTarget.maxX > 0) {
+    await scrollX(Math.round(scrollTarget.maxX / 2));
     await page.waitForTimeout(150);
     await saveShot(page, `${label}-01-middle.png`);
 
-    await page.evaluate(x => window.scrollTo({ left: x, top: 0, behavior: 'instant' }), maxX);
+    await scrollX(scrollTarget.maxX);
     await page.waitForTimeout(150);
     await saveShot(page, `${label}-02-right.png`);
 
-    await page.evaluate(() => window.scrollTo({ left: 0, top: 0, behavior: 'instant' }));
+    await scrollX(0);
     await page.waitForTimeout(100);
   }
 
@@ -58,6 +82,7 @@ test('generic iPhone eyes and hands smoke', async ({ page }) => {
   console.log(`TARGET ${url}`);
   console.log(`VIEWPORT ${dimensions.viewportWidth}x${dimensions.viewportHeight}`);
   console.log(`DOCUMENT ${dimensions.scrollWidth}x${dimensions.scrollHeight}`);
+  console.log(`HORIZONTAL_SCROLL ${scrollTarget.kind} ${scrollTarget.maxX}`);
   console.log(`INTERACTIVE_TARGETS ${count}`);
 
   for (let i = 0; i < count; i += 1) {
@@ -84,7 +109,7 @@ test('generic iPhone eyes and hands smoke', async ({ page }) => {
   const report = {
     target: url,
     dimensions,
-    horizontalScrollMax: maxX,
+    horizontalScroll: scrollTarget,
     interactiveTargets: count,
     finalUrl: page.url(),
     state,
