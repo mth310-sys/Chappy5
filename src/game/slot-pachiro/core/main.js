@@ -9,10 +9,13 @@ function assertRejected(result, label) {
 function runFoundationSelfChecks() {
   const islandB = layout.islands.find((item) => item.id === 'island-b');
   const plant = layout.fixtures.find((item) => item.id === 'plant-1');
-  if (!islandB || !plant) throw new Error('Foundation self-check fixtures missing');
+  const entrance = layout.fixtures.find((item) => item.id === 'entrance');
+  if (!islandB || !plant || !entrance) throw new Error('Foundation self-check fixtures missing');
 
   assertRejected(testPlacement(layout, { ...islandB, y: -5 }), 'insufficient island aisle');
   assertRejected(testPlacement(layout, { ...plant, x: -4, y: -6 }), 'facility collision');
+  assertRejected(testPlacement(layout, { ...plant, x: -12, y: 0 }), 'building wall occupation');
+  assertRejected(testPlacement(layout, { ...entrance, x: 1 }), 'entrance moved away from opening');
 }
 
 function boot() {
