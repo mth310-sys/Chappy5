@@ -4,68 +4,78 @@
 
 ## 現在地点
 
-- recordCount: **541**
-- latestMachineAdded: **シスタークエスト2 ～魔剣の騎士と白銀の巫女～**（SNKプレイモア / 2011-01-11 / BACKFILL）
-- latestRecord: `docs/real_machine_db/machines/2011-01-11_sister-quest2.md`
+- recordCount: **542**
+- latestMachineAdded: **超重神グラヴィオン**（ロデオ / 2011-01-24）
+- latestRecord: `docs/real_machine_db/machines/2011-01-24_choujuushin-gravion.md`
 - chronologicalFrontier: **2011-01-24**
-- frontierLatestMachine: **じゃりン子チエ 雷蔵伝説**（2011-01-24同日群継続中）
+- frontierLatestMachine: **超重神グラヴィオン**（2011-01-24同日群継続中）
 - schema: **resetBehavior v0.7**
 - status: **READY_TO_CONTINUE**
 
 ## 今回の継続確認
 
-- 最新mainの `README.md`、正本ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、540「じゃりン子チエ 雷蔵伝説」を再取得。
+- 最新mainの `README.md`、正本ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前進捗を再取得。
 - `INDEX.md` は旧19件地点のためREADME規定どおり `LATEST_HANDOFF.md`＋main実レコードを進捗正本として使用。
-- 開始時は recordCount 540 / chronologicalFrontier 2011-01-24。
-- 前handoffで遡及漏れ候補として明示されていた `シスタークエスト2` をrepo検索し、未登録を確認。
-- K-Naviの2011-01-11ホール導入開始、当時業界記事の2011年1月中旬予定、後年回顧の同日導入整理を照合し、541件目としてBACKFILL追加。
-- BACKFILLのため chronologicalFrontier は2011-01-24のまま維持。
+- 開始時は recordCount 541 / chronologicalFrontier 2011-01-24。
+- 前handoff最優先候補 `超重神グラヴィオン` をrepo検索し未登録を確認。
+- DMMぱちタウン、パチンコビレッジ、必勝本、旧機種一覧等で **2011-01-24導入**を複数照合し542件目として追加。
 
-## 541 — シスタークエスト2 ～魔剣の騎士と白銀の巫女～
+## 542 — 超重神グラヴィオン
 
-- メーカー: **SNKプレイモア**
-- 型式名: **シスタークエスト2D**
-- 世代/タイプ: **5号機 / ノーマルA / ボーナス主体 / 天井RT**
-- 導入主値: **2011-01-11**
-- 機械割: **96.7 / 98.3 / 100.2 / 104.5 / 108.4 / 112.2%**
-- BIG: **1/268.5 / 268.5 / 262.1 / 253.0 / 238.3 / 228.3**
-- REG: **1/455.1 / 420.1 / 390.1 / 346.7 / 316.6 / 291.2**
-- ボーナス合算: **1/168.9 / 163.8 / 156.7 / 146.2 / 135.9 / 128.0**
-- 50枚ベース: **34.26 / 34.81 / 35.55 / 35.98 / 36.37 / 36.91G/1000円**
-- BIG: **約312枚**
-- REG: **約104枚**
-- 天井: **BIG終了後999G / REG終了後777G -> 次回ボーナスまで現状維持型RT**
+- メーカー: **ロデオ**
+- 型式名: **超重神グラヴィオンXA**
+- 世代/タイプ: **5号機 / A+ART / セットストック式ART / 天井あり**
+- 導入主値: **2011-01-24**
+- 機械割主系列: **96.8 / 98.6 / 101.6 / 105.0 / 109.0 / 113.1%**
+- ボーナス合算: **1/128.0 / 121.6 / 124.6 / 118.5 / 121.4 / 115.6**
+- 50枚ベース: **29.75 / 29.95 / 29.84 / 30.04 / 29.94 / 30.14G/1000円**
+- グラヴィオンBONUS: **約203枚 + ART**
+- メイドBONUS: **約105枚**
+- REG: **約35枚**
+- ART「アルティメットデュエル」: **約+1.5枚/G / 継続G数非固定**
+- 通常G数天井: **通常時500G消化後、次回ボーナスでART確定 / ストック3個**
+- ART非当選回数天井: **9回 / 12回 / 15回連続非当選で段階的救済**
 - coreStatus: **COMPLETE_CORE_RESET_BEHAVIOR_PARTIAL**
 
 ### resetBehavior v0.7
 
-- settingChangeBehavior: **VERIFIED_PARTIAL**。設定変更しても天井までの消化ゲーム数はリセットされない。
-- carryOverBehavior: **CEILING_GAME_COUNTER_CARRYOVER_VERIFIED**。前日大ハマリ台について設定変更後でも宵越し天井RT狙い可能とする直接資料あり。
-- powerCycleBehavior: **UNVERIFIED_AFTER_RESEARCH**。単純電源OFF→ON時の本機固有処理は直接確定できず。
-- gameCounterReset: **RETAIN_ON_SETTING_CHANGE / VERIFIED_CROSS_ARCHIVE**
-- ceilingAfterReset: **NO_RESET_RESTART / NO_SHORTENED_RESET_CEILING_CONFIRMED**。BIG後999G/REG後777Gの通常天井進捗を保持。
-- modeAfterReset: **NOT_APPLICABLE_AS_LONG_GAME_MODE / NO_DEDICATED_MODE_CONFIRMED**
+- settingChangeBehavior: **UNVERIFIED_AFTER_RESEARCH**。パチマガ保存インデックスに本機専用「朝イチ・設定変更」項目の存在までは確認したが具体本文を今回回収できず。
+- carryOverBehavior: **UNVERIFIED_AFTER_RESEARCH**。通常のART終了時に500G天井/非当選回数を引き継ぐ資料はあるが、日跨ぎ据え置きと自動同一視しない。
+- powerCycleBehavior: **UNVERIFIED_AFTER_RESEARCH**。
+- gameCounterReset: **UNVERIFIED_AFTER_RESEARCH**。設定変更時の500G天井進捗・ART非当選回数のCLEAR/RETAINを直接確定できず。
+- ceilingAfterReset: 設定変更専用短縮天井は **NONE_CONFIRMED_AFTER_RESEARCH**。通常天井進捗処理は未確定。
+- modeAfterReset: **UNVERIFIED_AFTER_RESEARCH**
 - stateAfterReset: **UNVERIFIED_AFTER_RESEARCH**
 - advantageousSectionReset: **NOT_APPLICABLE**（5号機）
-- resetBenefits: **設定変更後でも前日天井進捗が残り、客側は宵越し天井を狙える**
-- resetPenalties: 客側の設定変更固有不利は **NONE_CONFIRMED_AFTER_RESEARCH**。ホール側は設定変更だけで深い天井進捗を消せない。
-- resetDetection: **UNVERIFIED_AFTER_RESEARCH**。ガックン/初期出目/表示等の本機固有確定材料は未確認。
+- resetBenefits: 設定変更専用恩恵は **NONE_CONFIRMED_AFTER_RESEARCH**
+- resetPenalties: **NONE_CONFIRMED_AFTER_RESEARCH**（天井進捗消去の有無自体を断定しない）
+- resetDetection: **UNVERIFIED_AFTER_RESEARCH**
 
-## 主要出典 — 541（取得日 2026-09-04）
+## CONFLICT — 542
 
-- K-Navi 基本スペック: `https://p-kn.com/slot/1321/`
-- K-Navi 機械割: `https://p-kn.com/slot/1321/28815/`
-- パチマガスロマガ保存ページ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/snk_slot/32/c.php`
-- P-WORLD旧機種DB: `https://www.p-world.co.jp/machine/database/6169`
-- 中一商事保存機種ページ: `https://www.nakaiti.com/html/sSNK078.html`
-- P-Mans / PlayGraph転載: `https://p-mans.blogspot.com/2010/11/`
-- アニメ！アニメ！: `https://animeanime.jp/article/2010/11/14/7181.html`
-- パチ7回顧: `https://pachiseven.jp/articles/detail/18844`
+- 主系列の機械割はP-WORLD / pacnk / 5号機クロニクルで **96.8 / 98.6 / 101.6 / 105.0 / 109.0 / 113.1%**。
+- 2011-01-09当時個人解析では **96.8 / 98.6 / 100.6 / 104.3 / 108.2 / 113.1%**。
+- 平均せず、複数一致の主系列を採用し別系列をレコード内CONFLICTとして保持。
+
+## 主要出典 — 542（取得日 2026-09-04）
+
+- DMMぱちタウン: `https://p-town.dmm.com/`
+- パチンコビレッジ2011導入日カレンダー: `https://www.pachinkovillage.com/introduction/index.php?Y=2011&action=archive`
+- パチスロ必勝本: `https://p.hisshobon.jp/machine/1735/1/27714`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/6209`
+- パチマガスロマガ基本: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/rodeo_slot/56/a.php`
+- パチマガスロマガ1000円G数: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/rodeo_slot/56/c.php`
+- パチマガスロマガ機種INDEX: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/rodeo_slot/56/rodeo_slot_56.php`
+- pacnk: `https://pacnk.com/slot/tools/sh_gravion.html`
+- 5号機クロニクル: `https://5goki.com/rodeo`
+- P-Mans / グリーンべると転載: `https://p-mans.blogspot.com/2010/`
+- 当時個人解析: `https://slotwinner777.blog84.fc2.com/blog-entry-57.html`
+- 型式一覧補助: `https://www.fukuoka-yukyo.jp/`
 
 ## 今回のGitHub更新
 
-- 541追加: `docs/real_machine_db/machines/2011-01-11_sister-quest2.md`
-- machine record commit: `9487d602fdade91ce2265553e992be02c9b4fa13`
+- 542追加: `docs/real_machine_db/machines/2011-01-24_choujuushin-gravion.md`
+- machine record commit: `4776c7b5b2d0fe1e6646726f1de91386c564a9c1`
 - LATEST_HANDOFF: 本更新
 
 ## 遡及QA継続地点
@@ -75,8 +85,10 @@
 
 ## 次回再開地点
 
-1. **recordCount 541 / chronologicalFrontier 2011-01-24**。開始時は最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 540「じゃりン子チエ 雷蔵伝説」/ 541「シスタークエスト2」を再取得。
-2. **2011-01-24同日群へ復帰**。`超重神グラヴィオン`（ロデオ）は前回main検索で未登録。K-Navi等で具体導入日を最終確定し、1/24同日なら542件目最優先候補。
-3. `あっぱれ剣士道`、`残機尽きるまで私は戦う` 等の2011年1月候補も、実ホール導入/納品/展示会日を分離して時系列監査する。
-4. 特に `残機尽きるまで私は戦う` の2011-01-21は展示会日として扱い、導入日と混同しない。
-5. 欠損は表記・型式・メーカー・項目語を変え、公式/業界/当時解析/古いDB/アーカイブ/回顧を横断後のみUNVERIFIED。競合は平均せずCONFLICT。
+1. **recordCount 542 / chronologicalFrontier 2011-01-24**。開始時は最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 542本体を再取得。
+2. **2011-01-24同日群の残存監査**を継続。すでに登録済みの燃えよ!功夫大戦・凄忍・じゃりン子チエ雷蔵伝説・キャプテンハーロックG・超重神グラヴィオンを重複追加しない。
+3. `あっぱれ剣士道` は外部導入日カレンダーで **2011-01-17** 掲載が確認されているため、repo未登録なら時系列BACKFILL候補として最優先監査する。
+4. `009-1` も外部導入日カレンダーで **2011-01-17** 掲載。repo未登録なら同様にBACKFILL対象。
+5. `残機尽きるまで私は戦う` は **2011-01-21が展示会日**という既知注意を維持し、実ホール導入/納品日を別途確定してから追加する。
+6. 1/24群と遡及漏れを閉じた後、2011-01-25以降へ進む。パチンコビレッジ上の次節点は2011-01-31で、`楽々温泉記` 等をrepo照合して未登録最古機から継続する。
+7. 欠損は表記・型式・メーカー・項目語を変え、公式/業界/当時解析/古いDB/アーカイブ/回顧を横断後のみUNVERIFIED。競合は平均せずCONFLICT。
