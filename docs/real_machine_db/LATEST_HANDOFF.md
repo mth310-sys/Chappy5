@@ -4,82 +4,75 @@
 
 ## 現在地点
 
-- recordCount: **526**
-- latestMachineAdded: **パチスロ戦国無双～猛将伝～**（山佐 / 2010-11-15ホール導入開始）
-- latestRecord: `docs/real_machine_db/machines/2010-11-15_sengoku-musou-moushouden.md`
+- recordCount: **527**
+- latestMachineAdded: **エピソードドライブ**（ニューギン / 2010-11-15ホール導入開始）
+- latestRecord: `docs/real_machine_db/machines/2010-11-15_episode-drive.md`
 - chronologicalFrontier: **2010-11-15**
-- frontierLatestMachine: **パチスロ戦国無双～猛将伝～**
+- frontierLatestMachine: **エピソードドライブ**
 - schema: **resetBehavior v0.7**
 - status: **READY_TO_CONTINUE**
 
 ## 今回の継続確認
 
-- 最新mainの `README.md`、正本ミッション `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前525「パチスロ超時空要塞マクロス」を再取得。
-- `INDEX.md` は旧19件地点のため、README規定どおり最新 `LATEST_HANDOFF.md`＋main実レコードを進捗正本として使用。
-- 開始時正本は recordCount **525** / chronologicalFrontier **2010-11-15**。
-- handoff指定の2010-11-15同日群を継続し、repo未登録の **「パチスロ戦国無双～猛将伝～」** を確認。K-Naviのホール導入開始 **2010-11-15**、山佐公式の稼働時期 **2010年11月**、グリーンべるとの **11月中旬納品予定** を照合し526件目として追加。
-- 既存性能値は再調査せず、新規対象の性能コア＋resetBehavior v0.7に限定して収集。
+- 最新mainの `README.md`、正本ミッション `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前526「パチスロ戦国無双～猛将伝～」を再取得。
+- `INDEX.md` は旧19件地点のため、README規定どおり `LATEST_HANDOFF.md`＋main実レコードを進捗正本として使用。
+- 開始時正本は recordCount **526** / chronologicalFrontier **2010-11-15**。
+- handoff指定の2010-11-15同日群を継続し、repo未登録の **「エピソードドライブ」** を527件目として追加。
+- K-Naviのホール導入開始 **2010-11-15**、P-WORLDの2010年11月粒度、既存handoffにあるグリーンべると2010-10-21記事の **2010-11-14納品予定（地域差あり）** を分離保持。
 
-## 526 — パチスロ戦国無双～猛将伝～
+## 527 — エピソードドライブ
 
-- メーカー: **山佐**
+- メーカー: **ニューギン**
+- 型式: **エピソード ドライブZ**
+- 検定番号: **0S0398**
+- 世代/タイプ: **5号機 / A+RT / CZ / ループ式RT**
 - 導入基準: **2010-11-15**（K-Naviホール導入開始）
-- 公式稼働時期: **2010年11月**
-- 世代/タイプ: **5号機 / A+ART / ARTストック方式**
-- BIG: **1/420.10 → 1/394.80**
-- BG/REG: **1/630.15 → 1/528.52**
-- ボーナス合算: **1/252.06 → 1/225.99**
-- ART初当たり: **1/215.7 → 1/134.3**
-- 50枚ベース: **33.39 / 33.43 / 33.47 / 33.52 / 33.56 / 33.60G**
-- ART「戦国RUSH」: **約+1.1枚/G**。幸村10/20/30G継続率型、半蔵20Gミッション型、慶次は条件達成で無限ART。
-- BIG: **MAX217枚**、BG/REG: **56枚**
-- coreStatus: **COMPLETE_CORE_RESET_BEHAVIOR_PARTIAL**
+- 機械割: **96.6 / 98.6 / 101.2 / 104.3 / 107.8 / 114.2%**
+- ボーナス合算: **1/198.6 / 1/192.8 / 1/184.6 / 1/176.2 / 1/168.0 / 1/158.7**
+- BIG: **約250枚**、REG: **約60枚**
+- RT「RTステージ」: **1セット30G / 約+0.4枚/G**
+- RT継続率: **1% / 66% / 75% / 85% / 99%**
+- 通常時CZ「ドライブチャンス」: **7G**
+- 内部状態: **通常 / 高確 / 超高確**
+- 50枚ベース: **UNVERIFIED_AFTER_RESEARCH**
+- 通常ゲーム数型固定天井: **NONE_CONFIRMED_AFTER_RESEARCH**
+- coreStatus: **PARTIAL_CORE_RESET_BEHAVIOR_PARTIAL**
 
-### 機械割CONFLICT
+### resetBehavior v0.7 — エピソードドライブ
 
-- P-WORLD等の市場掲載系列: **97.5 / 99.5 / 101.5 / 104.5 / 108.5 / 115.5%**
-- 当時パチマガスロマガのシミュレート値: **98.20 / 99.97 / 102.18 / 105.50 / 108.76 / 116.23%**
-- 算出条件/定義差の可能性があるため平均せず `CONFLICT` として両系列を保存。
-
-### resetBehavior v0.7 — パチスロ戦国無双～猛将伝～
-
-- 「パチスロ戦国無双～猛将伝～ / 戦国無双猛将伝 / 山佐」と「設定変更 / リセット / 朝一 / 据え置き / 宵越し / 電源OFF ON / 天井 / モード移行率 / ガックン」を組み替え、山佐公式・K-Navi・P-WORLD・当時パチマガスロマガ・業界記事・古い天井系・回顧資料を横断。
-- K-Navi本機ページに **「設定変更後の挙動」「モード移行率(設定変更)」** という専用解析項目が現存することを確認。
-- ただし検索インデックス/取得可能本文から、その専用ページの具体的な移行先・振り分け数値・天井CLEAR/RETAINを安全に回収できなかったため推定しない。
-- 据え置き時の天井進捗・内部モード・ARTストック/潜伏保持は **UNVERIFIED_AFTER_RESEARCH**。
-- 単純電源OFF→ON時の天井進捗・内部モード・ARTストック/潜伏処理は **UNVERIFIED_AFTER_RESEARCH**。
-- 天井機能搭載自体はP-WORLD/K-Navi/パチマガスロマガで確認したが、今回アクセス可能な資料から正確なゲーム数・基準・恩恵を複数系統で確定できず **UNVERIFIED_AFTER_RESEARCH**。
-- ガックン、初期出目、液晶ステージ等の本機固有変更判別も **UNVERIFIED_AFTER_RESEARCH**。
-- 有利区間は5号機のため **NOT_APPLICABLE**。
+- K-Navi本機ページに専用 **「設定変更後の挙動」** 解析項目が存在することを確認したが、現行取得経路から具体本文を安全に回収できず。
+- 設定変更時の通常/高確/超高確、セットアップポイント、CZ/RT権利・継続率の処理: **UNVERIFIED_AFTER_RESEARCH**。
+- 据え置き時のポイント・内部状態・RT権利保持: **UNVERIFIED_AFTER_RESEARCH**。
+- 単純電源OFF→ON時のポイント・内部状態・CZ/RT処理: **UNVERIFIED_AFTER_RESEARCH**。
+- 設定変更専用短縮天井・朝一専用G数・朝一RT優遇: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- ガックン/初期出目/液晶/ポイント表示による変更判別: **UNVERIFIED_AFTER_RESEARCH**。
+- 有利区間: **NOT_APPLICABLE**。
 - resetBehaviorQA: **PARTIAL_AFTER_MULTI_SOURCE_RESEARCH**。
 
-## 主要出典 — パチスロ戦国無双～猛将伝～（取得日 2026-09-04）
+## 主要出典 — エピソードドライブ（取得日 2026-09-04）
 
-- 山佐ネクスト公式: `https://yamasa-next.co.jp/model_sgx/`
-- K-Navi: `https://p-kn.com/slot/1296/`
-- P-WORLD機種DB: `https://www.p-world.co.jp/machine/database/6128`
-- パチマガスロマガ基本: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/175/a.php`
-- パチマガスロマガ通常時小役/1000円G数: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/175/c.php`
-- パチマガスロマガ確率/PAYOUT: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/175/h.php`
-- グリーンべると/P-WORLD業界ニュース: `https://news.p-world.co.jp/articles/4189/greenbelt`
+- K-Navi: `https://p-kn.com/slot/1303/`
+- P-WORLD機種DB: `https://www.p-world.co.jp/machine/database/6139`
+- 5号機クロニクル: `https://5goki.com/newgin-excite`
+- グリーンべると: 既存handoff確認済み2010-10-21発表記事（2010-11-14納品予定、地域差あり）
 
 ## 今回のGitHub更新
 
-- 526 パチスロ戦国無双～猛将伝～追加: `docs/real_machine_db/machines/2010-11-15_sengoku-musou-moushouden.md`
-- machine record commit: `262d566c60b8541eac14328ce200d080415b635f`
+- 527 エピソードドライブ追加: `docs/real_machine_db/machines/2010-11-15_episode-drive.md`
+- machine record commit: `78e85250b09012b36416f93f25927e560c5a80e7`
 - LATEST_HANDOFF: 本更新
 
 ## 遡及QA継続地点
 
-- **怪胴王 (`docs/real_machine_db/machines/2006-11_kaidouou.md`) まで補完済み**。
-- 次回はmachine treeの実パス順を確認し、怪胴王直後の**最初の実在resetBehavior欠損レコード**を特定して処理する。
+- **怪胴王 (`docs/real_machine_db/machines/2006-11_kaidouou.md`) まで補完済み**を維持。
+- 今回GitHub code search / machine directory再探索でも、怪胴王直後の最初の実在resetBehavior欠損レコードを順序保証付きで一意確定できなかったため、推測でQA済み範囲を進めていない。
+- 次回もmachine tree / commit履歴 / 実ファイル日付を使い、怪胴王直後の**最初の実在resetBehavior欠損レコード**を確定してから処理する。
 - COMPLETE_CORE性能判定はreset欠損のみを理由に崩さず、reset QA状態を別管理する。
 
 ## 次回再開地点
 
-1. **recordCount 526 / chronologicalFrontier 2010-11-15**。開始時は最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 前線実レコードを再取得。
-2. **2010-11-15同日群を継続**。既知未処理候補はニューギン **「エピソードドライブ」**。repo code searchで現時点未登録を確認済み。
-3. エピソードドライブはK-Naviで **2010-11-15ホール導入開始**、2010-10-21グリーンべるとで **2010-11-14納品予定（地域差あり）** を確認済み。物流日とホール導入日を混同せず両定義を保持して527件目候補として処理する。
-4. 同日群を閉じる前に、11/15前後の地域先行・納品開始日も境界監査し、既登録機を二重追加しない。
-5. 50枚ベースやresetBehaviorは型式・メーカー・シリーズ名＋設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックン等へ検索語を変え、公式・業界・当時解析・古いDB・回顧資料を横断してからUNVERIFIED判定する。
-6. 競合値は平均せずCONFLICT。実機完全再現用の細かな内部抽選は収集しない。
+1. **recordCount 527 / chronologicalFrontier 2010-11-15**。開始時は最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 前線実レコードを再取得。
+2. **2010-11-15同日群を最終監査**。同日未登録がなければ2010-11-16以降の最古未処理へ進む。
+3. 現時点で次の強い日付アンカーはK-Naviの **2010-11-29「アントニオ猪木が元気にするパチスロ機」**。ただし11/16〜11/28を導入一覧・当時業界記事・K-Navi/P-WORLD等で境界監査してから採用する。
+4. 50枚ベースやresetBehaviorは型式・メーカー・シリーズ名＋設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックン等へ検索語を変え、公式・業界・当時解析・古いDB・回顧資料を横断してからUNVERIFIED判定する。
+5. 競合値は平均せずCONFLICT。実機完全再現用の細かな内部抽選は収集しない。
