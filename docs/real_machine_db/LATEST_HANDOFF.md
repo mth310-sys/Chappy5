@@ -4,70 +4,70 @@
 
 ## 現在地点
 
-- recordCount: **439**
-- latestMachineAdded: **パチスロ 機動戦艦ナデシコ**
-- latestRecord: `docs/real_machine_db/machines/2010-01-11_kidou-senkan-nadesico.md`
-- chronologicalFrontier: **2010-01-11**
+- recordCount: **440**
+- latestMachineAdded: **夢幻の如く**
+- latestRecord: `docs/real_machine_db/machines/2010-01-12_mugen-no-gotoku.md`
+- chronologicalFrontier: **2010-01-12**
 - schema: **resetBehavior v0.7**
 - status: **READY_TO_CONTINUE**
 
 ## 今回の継続確認
 
-- GitHub最新mainの `README.md`、最新ミッション `CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、最新438 `2010-01-05_magical-halloween2.md` を再読。
+- GitHub最新mainの `README.md`、最新ミッション `CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、最新439 `2010-01-11_kidou-senkan-nadesico.md` を再読。
 - INDEXは旧19件地点のためREADME規定どおり進捗正本には使わず、LATEST_HANDOFF＋実レコードを優先。
-- 開始時mainは438件 / chronologicalFrontier 2010-01-05（マジカルハロウィン2の導入日は1/5 vs 1/12 CONFLICT）。
-- HANDOFF指定の次候補 `パチスロ 機動戦艦ナデシコ` をrepo検索し、想定パスの実ファイル不存在まで確認して未登録を確定。
-- HAZUSEの具体日2010-01-11、SANKYO公式の2010年1月（月精度）を照合して439件目として追加。
+- 開始時mainは439件 / chronologicalFrontier 2010-01-11。
+- HANDOFF指定の次候補 `夢幻の如く` をrepo検索し、未登録を確認。追加直前にLATEST_HANDOFFを再取得して439件地点のままであることも確認し、リレー競合なし。
+- K-Naviとパチビーが2010-01-12導入を明示。IGTジャパン機として440件目に追加。
 
-## 439 — パチスロ 機動戦艦ナデシコ 要約
+## 440 — 夢幻の如く 要約
 
-- メーカー: **SANKYO**
-- 型式: **機動戦艦ナデシコ**
-- 検定番号: **9S1035**
-- 導入日: **2010-01-11**（HAZUSE具体日 / SANKYO公式2010.01）
+- メーカー: **IGTジャパン**
+- 型式: **ユメマボロシノゴトクY7**（中古実機資料による。公的検定資料未回収のため信頼度低め）
+- 検定番号: **UNVERIFIED_AFTER_RESEARCH**
+- 導入日: **2010-01-12**
 - 世代: **5号機**
-- システム: **ノーマル / ボーナス+RT / 天井RT**
-- BIG合算: **約1/374 → 約1/291**
-- REG: **約1/744 → 約1/560**
-- ボーナス合算: **約1/249 → 約1/191**
-- 機械割: **97.8 / 99.7 / 102.9 / 105.8 / 109.1 / 113.0%**
-- SUPER BIG: **約448枚（赤/青） / 約402枚（黄）**
-- NORMAL BIG: **約259枚**
-- REG: **約116枚**
-- RT「ゲキガンモード」: **約+0.3枚/G、次回ボーナスまで**
-- RT「超ゲキガンモード」: **約+0.6枚/G、次回ボーナスまで**
-- 通常天井状態: **BIG後1000G / REG後800Gで特殊リプレイ確率大幅アップ**
-- 50枚ベース: **UNVERIFIED_AFTER_RESEARCH**
+- システム: **A+ART / CZ / ゲーム数・連続敗北救済**
+- 機械割: **97.80 / 99.65 / 102.83 / 105.22 / 108.17 / 110.48%**
+- 覇王BONUS: **1/5957.82 → 1/4681.14**
+- 出航BONUS: **1/91.02 → 1/87.38**
+- ボーナス合算: **1/89.65 → 1/85.78**
+- 50枚ベース: **33.77 / 33.88 / 34.10 / 34.32 / 34.55 / 35.59G**
+- ART「夢幻RUSH」: **基本30G / 約+1.7枚/G / 最大900G上乗せ**
+- 覇王BONUS: **約145〜148枚**
+- 出航BONUS: **約48枚**
+- 通常救済: **通常状態600G消化 → 次回ボーナス後ART確定**
+- 別救済: **合戦チャンス13連続敗北 → 次回ボーナス後ART確定**
 
 ## resetBehavior v0.7
 
-- **設定変更**: `GAME_COUNTER_RETAIN_CONFIRMED`。slot-naviとpacnkで、設定変更後もゲーム数を引き継ぐ旨を別系統確認。
-- **据え置き**: `CEILING_GAME_COUNT_RETAIN`。前日ハマリを利用した宵越し天井狙いが可能と旧解析に明記。全内部状態の保持までは拡張しない。
-- **電源OFF→ON**: `UNVERIFIED_AFTER_RESEARCH`。単純電断時の天井ゲーム数・RT状態等は本機固有本文を確定できず。
-- **gameCounterReset**: `RETAIN_ON_SETTING_CHANGE`。BIG後1000G / REG後800Gの天井ゲーム数を設定変更後も引継ぎ。
-- **ceilingAfterReset**: 設定変更専用短縮は `NONE_CONFIRMED_AFTER_RESEARCH`。通常天井進捗をそのまま利用可能。
-- **mode/state**: ゲーム数解除型モードは非該当。RT/天井状態等の設定変更処理はゲーム数引継ぎ以外 `UNVERIFIED_AFTER_RESEARCH`。
+- **設定変更**: `GAME_COUNTER_CLEAR_CONFIRMED`。本機専用解析に「設定変更時、天井までのゲーム数はクリアされる」と明記されており、通常600G救済進捗のクリアを確定。
+- **据え置き**: `PARTIAL_INFERRED_FROM_DIRECT_SETTING_CHANGE_SPEC`。設定変更時のみ600G進捗がクリアされる直接記述から、設定変更を伴わない据え置きでは600G進捗を利用する運用価値が残ると扱う。ただし13連敗カウンタ、内部状態、CZ/ART状態の保持範囲は `UNVERIFIED_AFTER_RESEARCH`。
+- **電源OFF→ON**: `UNVERIFIED_AFTER_RESEARCH`。単純電断時の600G進捗、13連敗、内部状態の本機固有本文を確定できず。
+- **gameCounterReset**: `RESET_ON_SETTING_CHANGE`。通常600G救済進捗は設定変更でクリア。
+- **ceilingAfterReset**: `NORMAL_600G_FROM_ZERO`。設定変更専用の短縮天井は確認できず、通常600G救済を0Gから再計数。13連敗救済の設定変更時処理は未確認。
+- **modeAfterReset**: `UNVERIFIED_AFTER_RESEARCH`。設定変更専用モード振り分けの本文を回収できず、通常時のモード解析値を転用しない。
+- **stateAfterReset**: `UNVERIFIED_AFTER_RESEARCH`。高確/低確、合戦チャンス、ART状態等は600Gカウンタ以外未確定。
 - **有利区間**: `NOT_APPLICABLE`（5号機・制度前）。
-- **朝一恩恵**: 前日ハマリが設定変更されても残るため、宵越し天井狙い価値が残る。
-- **朝一不利**: `NONE_CONFIRMED_AFTER_RESEARCH`。
-- **変更判別**: `UNVERIFIED_AFTER_RESEARCH`。ガックン、初期出目、ステージ、ランプ等を含め再探索したが本機固有の直接資料なし。
-- **公開朝一数値**: BIG後1000G / REG後800Gという通常天井値と、その設定変更後引継ぎを確認。専用モード振分・朝一当選率・恩恵率は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- **朝一恩恵**: `NONE_CONFIRMED_AFTER_RESEARCH`。リセット短縮天井・朝一専用ART優遇は確認できない。
+- **朝一不利**: `600G_CEILING_PROGRESS_LOST`。前日の通常時ハマリは設定変更で600G救済進捗が消える。
+- **変更判別**: `UNVERIFIED_AFTER_RESEARCH`。ガックン、初期出目、ステージ、液晶、ランプ等を含め再探索したが、本機固有の直接根拠を確定できず。
+- **公開朝一数値**: 設定変更専用モード振り分け、朝一当選率、リセット恩恵率は `NONE_CONFIRMED_AFTER_RESEARCH`。通常救済600Gと13連敗救済のみ確定。
 
-## 重要な資料競合
+## 重要な資料差
 
-- 5号機クロニクルの現行SANKYO一覧には本機を「ボーナス非搭載ART特化 / ナデシコラッシュ約+1.4枚/G」とする記述がある。
-- SANKYO公式、P-WORLD、HAZUSE、pacnkはいずれも本機をBIG/REG搭載＋2種RTとしており根本的に矛盾するため、5号機クロニクルの当該記述は **REJECTED_SOURCE_CONFLICT（別機種情報混入疑い）** とし、性能値へ混ぜない。
-- BIG設定4はSANKYO公式丸め1/330、pacnk精密値1/331.00。系列全体は整合しているため双方を表記精度差として保持し、平均しない。
+- 覇王BONUS実獲得は旧パチマガ約145枚、P-WORLD/パチビー約148枚。216枚超払い出し終了という規定は整合するため、実獲得目安の丸め差として両方保持。
+- 型式 `ユメマボロシノゴトクY7` は中古実機販売資料で確認。公的検定資料を直接回収できていないため、検定番号は推測せず `UNVERIFIED_AFTER_RESEARCH`。
 
 ## 主要出典（取得日 2026-09-03）
 
-- SANKYO公式アーカイブ: `https://www.sankyo-fever.jp/collection/534/`
-- HAZUSE: `https://hazuse.com/machine/pachislot/9S1035/`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/5771`
-- pacnk: `https://pacnk.com/slot/tools/sh_nadesiko.html`
-- slot-navi: `https://slot-navi.com/10/nadesico/`
-- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sankyo_slot/20/sankyo_slot_20.php`
-- 5号機クロニクルSANKYO一覧: `https://5goki.com/sankyo`（当該機記述はREJECTED_SOURCE_CONFLICT）
+- K-Navi: `https://p-kn.com/slot/1101/`
+- パチマガスロマガ 基本システム: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/igt_slot/54/a.php`
+- パチマガスロマガ ボーナス/PAYOUT: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/igt_slot/54/h.php`
+- パチマガスロマガ 1000円あたりG数: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/igt_slot/54/c.php`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/5764`
+- パチビー: `https://www.pachibee.jp/machines/index/209110013`
+- crankyseven: `https://crankyseven.com/yumemaborosi-pc.htm`
+- A-SLOT中古実機: `https://www.a-slot.com/SHOP/igt11.html`
 
 ## resetBehavior 遡及QA進捗
 
@@ -76,10 +76,9 @@
 
 ## 次回再開地点
 
-1. **recordCount 439 / chronologicalFrontier 2010-01-11**。
-2. 次の具体日候補は **夢幻の如く（IGTジャパン）**。K-Navi・パチビーで **2010-01-12** 導入を確認済み。追加前にrepo既存検索＋実ファイル確認を行い、未登録なら440候補として性能コア＋resetBehavior v0.7を収集する。
-3. 2010年1月群は日付順に監査を継続する。`パチスロあしたのジョー`はグリーンべるとで2010-01-25ホールデビューを確認済みなので1/12群より後ろに配置する。
-4. `ファイヤービーク`、`元祖!大江戸桜吹雪`、`島唄RXH-30`、`パチスロエイム`、`シオサー30`等は具体日を別資料で確定してから配置する。
-5. `ニュートリプルクラウン30`はK-Naviが2009-11-24導入を示すため、P-WORLD月次掲載だけで2010年1月機として再追加しない。既存登録有無と導入日定義を監査する。
-6. 追加前に必ずrepo既存検索＋LATEST_HANDOFF再取得を行い、重複・他リレー競合を防ぐ。
-7. `マジカルハロウィン2` の導入日CONFLICT（2010-01-05 / 2010-01-12）は新しい一次資料が得られた場合のみ解消する。
+1. **recordCount 440 / chronologicalFrontier 2010-01-12**。
+2. まず **2010-01-13〜01-24の境界監査**を行う。月精度候補の `ファイヤービーク`、`元祖!大江戸桜吹雪`、`島唄RXH-30`、`パチスロエイム`、`シオサー-30` 等は、具体導入日を当時資料・別DBで確定し、repo既存検索を行ってから日付順に配置する。
+3. `パチスロあしたのジョー` は当時業界資料で **2010-01-25ホールデビュー**確認済み。1/13〜1/24に未処理機がなければ次の具体日候補とする。
+4. `ニュートリプルクラウン30` はK-Naviが2009-11-24導入を示すため、2010年1月月次一覧だけを根拠に再追加しない。既存登録有無と導入日定義を監査する。
+5. 追加前に必ずrepo既存検索＋LATEST_HANDOFF再取得を行い、重複・他リレー競合を防ぐ。
+6. `マジカルハロウィン2` の導入日CONFLICT（2010-01-05 / 2010-01-12）は新しい一次資料が得られた場合のみ解消する。
