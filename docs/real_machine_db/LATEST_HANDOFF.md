@@ -4,52 +4,58 @@
 
 ## 現在地点
 
-- recordCount: **481**
-- latestMachineAdded: **押忍！操**（大都技研 / 2010-05-24）
-- latestRecord: `docs/real_machine_db/machines/2010-05-24_osu-misao.md`
-- chronologicalFrontier: **2010-05-24**
-- frontierLatestMachine: **押忍！操**
+- recordCount: **482**
+- latestMachineAdded: **南国育ちスペシャル**（オリンピア / 2010-06-07）
+- latestRecord: `docs/real_machine_db/machines/2010-06-07_nangoku-sodachi-special.md`
+- chronologicalFrontier: **2010-06-07**
+- frontierLatestMachine: **南国育ちスペシャル**
 - schema: **resetBehavior v0.7**
 - status: **READY_TO_CONTINUE**
 
 ## 今回の継続確認
 
-- 最新mainの `README.md`、正本ミッション `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、前線480「パチスロ蒼天の拳」を再取得。
+- 最新mainの `README.md`、正本ミッション `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、前線481「押忍！操」を再取得。
 - `INDEX.md` は旧19件地点のため、README規定どおり `LATEST_HANDOFF.md`＋main実レコードを進捗正本として使用。
-- 開始時正本は recordCount **480** / chronologicalFrontier **2010-05-10**。
-- 2010-05-11〜23を導入日検索・当時ニュース・メーカー/攻略DBで境界監査し、今回5/24より前の新たな全国具体日未登録パチスロは高信頼に確定できず。
-- 次の具体日候補「押忍！操」をrepo検索し未登録確認後、481件目として追加。
-- 後継「押忍！番長2/3/4」「アオハル♪操 A-LIVE」、4号機「押忍！番長」のreset/性能情報は別機種として除外。
+- 開始時正本は recordCount **481** / chronologicalFrontier **2010-05-24**。
+- 2010-05-25〜06-06境界を再監査し、今回新たな全国具体日未登録パチスロを高信頼に確定できず。
+- 2010-06-07同日群へ進み、25φ「南国育ちスペシャル」をrepo未登録確認後482件目として追加。
+- 30φ「南国育ちスペシャル-30」は別型式 `南国育ちスペシャルYH-30` / 検定番号 `0S0130` のため別レコード候補として分離。25φとの自動同一扱いはしない。
 
-## 481 — 押忍！操 要約
+## 482 — 南国育ちスペシャル 要約
 
-- メーカー: **大都技研**
-- 導入: **2010-05-24**（K-Navi・パチビー一致。2010-04-30当時ニュースの「5月下旬導入予定」とも整合）
-- 世代/タイプ: **5号機 / ボーナス＋押し順ART / 高確周期 / 無限ART / 天井救済**
-- ボーナス＋ART合算: **1/166.6 / 1/148.0 / 1/151.5 / 1/128.8 / 1/129.2 / 1/107.9**
-- ART初当たり: **1/384.5 / 1/309.6 / 1/340.1 / 1/260.1 / 1/275.1 / 1/209.8**
-- PAYOUT: **97.4 / 98.9 / 99.8 / 104.6 / 108.1 / 113.1%**。フル系列は後年単一二次資料、設定6 113.1%のみK-Naviで別系統照合。設定1〜5は追加照合待ち。
-- 50枚ベース: **UNVERIFIED_AFTER_RESEARCH**
-- SBB: **MAX408枚** / NBB: **MAX276枚** / REG: **約56枚**
-- ART「操LIVE BONUS」: **1セット50G / 約+1.2枚/G / 1回当選最大10セット**
-- SUPER 操LIVE BONUS: **次回ボーナスまで継続する無限ART**
-- 通常高確率帯: **1-64 / 193-288 / 417-512 / 641-736 / 865-960 / 1089-1184G**
-- 通常時 **1281G以降**は救済高確率域。到達時点でART1セット確定とはせず、次回ボーナスまでARTストック抽選が大幅優遇される仕様として保持。
-- coreStatus: **PARTIAL_CORE_PAYOUT_FULL_SERIES_RETROSPECTIVE_SINGLE_BASE_UNVERIFIED_RESET_PARTIAL**
+- メーカー: **オリンピア**
+- 導入主値: **2010-06-07**（K-Navi）。当時グリーンべるとは **2010-06-06納品開始予定**で、納品/導入の定義差として保持。
+- 型式名: **南国育ちスペシャルZ**（複数中古実機系二次資料で一致。公式型式一覧未回収）
+- 世代/タイプ: **5号機 / ボーナス＋ART / モード管理 / 2段階天井 / 無限ART**
+- PAYOUT: **96.2 / 99.2 / 102.4 / 106.4 / 111.3 / 116.3%**
+- BIG: **1/397 / 1/392 / 1/390 / 1/386 / 1/383 / 1/381**
+- REG: **1/655 / 1/636 / 1/618 / 1/590 / 1/565 / 1/537**
+- 合算: **1/247 / 1/243 / 1/239 / 1/233 / 1/228 / 1/223**
+- 50枚ベース: **30.5G**
+- BIG: **約204枚** / REG: **約48枚**
+- ART「南国チャンス」: **50G / 約+1.5枚/G / 継続率83%超**
+- 無限南国チャンス: **次回ボーナスまで継続**
+- 通常内部モード: **通常 / 高確率 / 天国 / スペシャル南国**
+- スペシャル南国モード: ボーナス時ART突入 **75%** / ART終了後同モード再移行 **75%**
+- 第1天井: **ボーナス間996G → AT状態**
+- 第2天井: **通常時1600G → 次回ボーナスまで無限ART**
+- coreStatus: **COMPLETE_CORE_RESET_PARTIAL**
 
-## resetBehavior v0.7 — 押忍！操
+## resetBehavior v0.7 — 南国育ちスペシャル
 
-- **設定変更**: 1281G救済カウンタ、高確周期、ARTストック/内部状態のclear/retain/reselectを初代本機固有資料で直接確定できず `UNVERIFIED_AFTER_RESEARCH`。
-- **据え置き**: 1281G進捗、高確周期、ARTストック/前兆状態の保持は `UNVERIFIED_AFTER_RESEARCH`。
-- **電源OFF→ON**: ゲーム数進捗、高確周期、ART関連状態の保持/初期化は `UNVERIFIED_AFTER_RESEARCH`。
-- **ゲーム数/天井**: 通常1281G以降の救済域は確認済み。設定変更時カウンタ処理は未確認。
-- **リセット短縮**: `NONE_CONFIRMED_AFTER_RESEARCH`。
-- **モード/状態**: 通常高確周期は確認済み。設定変更時の初期高確・再抽選・振り分けは `UNVERIFIED_AFTER_RESEARCH`。
+- **設定変更**: パチ＆スロ必勝本の本機専用解析で、**高確モードスタート**を直接確認。
+- **ゲーム数/天井**: **996G/1600Gの両天井カウンタは設定変更でもリセットされない**と同解析に明記。
+- **据え置き**: 天井カウンタに関しては少なくとも設定変更でも保持されるため進捗消失なし。モード/状態の据え置き専用挙動は直接未確認。
+- **電源OFF→ON**: ゲーム数、モード、高確、ART関連状態の扱いは `UNVERIFIED_AFTER_RESEARCH`。
+- **リセット短縮**: `NONE_CONFIRMED`。通常天井996G/1600Gを短縮せずカウンタ引継ぎ。
+- **モード**: 設定変更時 **高確モードスタート**。具体的振り分け率は未確認。
+- **状態**: ARTストック/前兆/RT状態等の個別clear/retainは `UNVERIFIED_AFTER_RESEARCH`。
 - **有利区間**: `NOT_APPLICABLE`。
-- **朝一恩恵/不利**: 設定変更専用の短縮天井・ART優遇・専用高確、および進捗消失等の不利は直接確認できず `NONE_CONFIRMED_AFTER_RESEARCH`。
-- **変更判別**: ガックン、初期出目、液晶/ランプ等による本機固有判別は `UNVERIFIED_AFTER_RESEARCH`。
-- **公開朝一数値**: 設定変更専用モード振分、朝一当選率、恩恵発生率は `NONE_CONFIRMED_AFTER_RESEARCH`。
-- resetBehaviorQA: **SETTING_CHANGE_CARRYOVER_POWER_CYCLE_GAME_COUNTER_MODE_STATE_DETECTION_UNVERIFIED_AFTER_RESEARCH**
+- **朝一恩恵**: **設定変更時高確モードスタート**。天井進捗も消えない。
+- **朝一不利**: 明確な公開不利要素は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- **変更判別**: ガックン、初期出目、パトランプ等による本機固有判別は `UNVERIFIED_AFTER_RESEARCH`。
+- **公開朝一数値**: 高確スタートの具体振り分け率/朝一当選率は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- resetBehaviorQA: **SETTING_CHANGE_HIGH_MODE_AND_BOTH_CEILING_COUNTERS_CONFIRMED_POWER_CYCLE_STATE_DETECTION_UNVERIFIED**
 
 ## resetBehavior 遡及QA — 継続地点
 
@@ -60,22 +66,18 @@
 
 ## 主要出典（取得日 2026-09-03）
 
-### 押忍！操
-- K-Navi: `https://p-kn.com/slot/1199/`
-- パチビー: `https://www.pachibee.jp/machines/about/210030012`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/5919`
-- K-Navi当時業界ニュース: `https://p-kn.com/topics/news/1026/`
-- スロット専門ゲームセンター スパイダー: `https://ameblo.jp/kenchan-retro/entry-12851416258.html`
-
-### 前線480 パチスロ蒼天の拳
-- HAZUSE: `https://hazuse.com/machine/pachislot/9S1458/`
-- パチビー: `https://www.pachibee.jp/machines/index/210030005`
-- K-Navi: `https://p-kn.com/slot/1188/`
+### 南国育ちスペシャル
+- グリーンべると / P-WORLD業界ニュース: `https://news.p-world.co.jp/articles/3927/greenbelt`
+- K-Navi: `https://p-kn.com/slot/1196/`
+- K-Navi ボーナス出現率: `https://p-kn.com/slot/1196/18947/`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/5927`
+- パチ＆スロ必勝本 設定変更&天井情報: `https://p.hisshobon.jp/machine/1578/1/23986`
+- crankyseven: `https://crankyseven.com/nangokusodachisp-pc.htm`
 
 ## 次回再開地点
 
-1. **recordCount 481 / chronologicalFrontier 2010-05-24**。開始時は必ず最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 前線実レコードを再取得。
-2. **2010-05-24同日群と05-25〜06-06境界**を再監査し、押忍！操以外の未登録具体日機を優先する。
-3. 今回の先行検索では、次の強い具体日群として **2010-06-07** に「南国育ちスペシャル」「ゴッドハンターV」「とんでも戦士ムテキング」「ガメラ」をK-Naviで確認。5/25〜6/6の漏れを閉じてから、同日群の最古未登録機を482件目候補とする。
-4. 押忍！操の `baseGamesPer50`、設定1〜5機械割の当時/別系統照合、正式型式/検定番号、設定変更時1281Gカウンタclear/retain、据え置き、単純電源OFF→ON、変更判別は追加探索可能。ただし新規収集を止めない。
-5. 競合/定義差は平均化せず保持。後継番長/後継操のreset情報を初代へ転記しない。
+1. **recordCount 482 / chronologicalFrontier 2010-06-07**。開始時は必ず最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 前線実レコードを再取得。
+2. **2010-06-07同日群を継続**。まず別型式の **「南国育ちスペシャル-30」**をrepo重複確認後に処理候補とする。HAZUSEでは `南国育ちスペシャルYH-30 / 0S0130`、導入開始日2010-06-04表記がある一方、K-Navi/パチビー/当時グリーンべると系では6/7導入・6/6納品予定系があるため、日付は次回 `CONFLICT`/定義差を精査してから登録する。
+3. その後の同日未処理強候補: **ゴッドハンターV / とんでも戦士ムテキング / ガメラ / メタルスラッグSV-001 / ニューパルサーV2 / サンサンオアシス キュイーンVer. / コウヘイ最凶伝 -地獄の閻魔覚醒の刻- / マジックライアン**。パチビー2010-06スケジュールで6/7群を確認。
+4. 25φ「南国育ちスペシャル」のapprovalNumber、単純電源OFF→ON、据え置き時モード/内部状態、ガックン等変更判別は追加探索可能。ただし新規収集を止めない。
+5. 競合/定義差は平均化せず保持。2026年スマスロ「L南国育ち SPECIAL」のリセット情報は2010年機へ絶対に転記しない。
