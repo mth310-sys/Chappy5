@@ -4,82 +4,85 @@
 
 ## 現在地点
 
-- recordCount: **479**
-- latestMachineAdded: **ファニーサンタ2**（タイヨー / 主値2010-04-18・導入日CONFLICT / 遡及補完）
-- latestRecord: `docs/real_machine_db/machines/2010-04-18_funny-santa-2.md`
-- chronologicalFrontier: **2010-04-19**
-- frontierLatestMachine: **スパイガール**（主値2010-04-19）
+- recordCount: **480**
+- latestMachineAdded: **パチスロ蒼天の拳**（サミー / 主値2010-05-10・導入日CONFLICT）
+- latestRecord: `docs/real_machine_db/machines/2010-05-10_souten-no-ken.md`
+- chronologicalFrontier: **2010-05-10**
+- frontierLatestMachine: **パチスロ蒼天の拳**
 - schema: **resetBehavior v0.7**
 - status: **READY_TO_CONTINUE**
 
 ## 今回の継続確認
 
-- 最新mainの `README.md`、正本ミッション `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前478「スパイガール」を再取得。
+- 最新mainの `README.md`、正本ミッション `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、前線実レコードを再取得。
 - `INDEX.md` は旧19件地点のため、README規定どおり `LATEST_HANDOFF.md`＋main実レコードを進捗正本として使用。
-- 開始時正本は recordCount **478** / chronologicalFrontier **2010-04-19**。
-- 2010-04-19同日群→2010-04-20〜25境界を再監査中、当時グリーンべると2010-04-26記事に **「ファニーサンタ2」は4月18日にはパーラーに導入** とあることを確認。
-- 旧HANDOFFではK-Naviの2010-04-26全国導入日を次候補としていたが、より古い当時業界一次寄り資料を得たため、repo未登録確認後に479件目として遡及補完。
-- K-Naviは2010-04-26全国導入開始、メーカー協力アプリ資料は2010年4月発売。日付は平均せず `CONFLICT` として保持。
-- P-WORLD、K-Navi、旧パチマガスロマガ、pacnk、当時グリーンべると、遊技通信転載、メーカー協力プレスリリースを横断し、性能コア＋v0.7 resetBehaviorを収集。
+- 開始時正本は recordCount **479** / chronologicalFrontier **2010-04-19**。479「ファニーサンタ2」は前線より古い4/18遡及補完だったため、4/19から境界監査を継続。
+- K-Navi 2010年4月全国導入カレンダー、当時業界記事、既存main実レコードを照合し、4/19同日群および4月末までの既知全国具体日候補を監査。4/26候補「ファニーサンタ2」は479で処理済みのため重複追加せず。
+- 次の未登録具体日候補として初代「パチスロ蒼天の拳」をrepo検索し未登録確認。HAZUSE 2010-05-07 vs K-Navi/パチビー/2010年当時資料 2010-05-10の導入日競合を保持し、複数一致の2010-05-10を時系列主値として480件目へ追加。
+- 並行QAでは machine tree を再確認し、スロ原人直後のresetBehavior欠損として **CSスロ原人（2006-11-22）** を特定。性能コアの既存判定を崩さずresetBehavior v0.7のみ追記。
 
-## 479 — ファニーサンタ2 要約
+## 480 — パチスロ蒼天の拳 要約
 
-- メーカー: **タイヨー**
-- 型式: **UNVERIFIED_AFTER_RESEARCH**
-- 検定番号: **UNVERIFIED_AFTER_RESEARCH**
-- 導入主値: **2010-04-18**
-- releaseDate CONFLICT: **当時グリーンべると 2010-04-18実導入 / K-Navi 2010-04-26全国導入開始 / メーカー協力資料 2010年4月発売**
-- 世代/タイプ: **5号機 / ノーマルAタイプ / 完全告知（絶対告知） / 技術介入**
-- BIG: **1/268.59 → 1/229.95**
-- REG: **1/464.79 → 1/284.94**
-- 合算: **1/170.22 → 1/127.25**
-- 50枚ベース: **34.29 / 34.60 / 34.88 / 34.66 / 34.91 / 35.31G**
-- BIG: **MAX311枚**
-- REG: **MAX103枚**
-- 天井/ART/AT/CZ: **非搭載**
-- PAYOUT: **CONFLICT**
-  - P-WORLD/pacnk系列: **97.2 / 98.7 / 100.5 / 102.5 / 105.4 / 108.6%**
-  - 旧パチマガスロマガ・シミュレート: **96.99 / 98.64 / 100.48 / 102.67 / 105.87 / 109.27%**
-- coreStatus: **COMPLETE_CORE_RESET_NO_PERSISTENT_PROGRESS_RELEASEDATE_CONFLICT_MODEL_UNVERIFIED**
+- メーカー: **サミー**
+- 型式: **蒼天の拳Z**
+- 検定番号: **9S1458**
+- 導入主値: **2010-05-10**
+- releaseDate CONFLICT: **HAZUSE 2010-05-07 / K-Navi・パチビー・2010年当時新機種資料 2010-05-10**
+- 世代/タイプ: **5号機 / ボーナス＋ストック式ART / モード管理 / 天井**
+- BIG＋ART合成: **1/293.0 / 1/280.2 / 1/266.5 / 1/248.8 / 1/231.0 / 1/205.2**
+- ART初当たり（パチビー）: **1/327 / 1/313 / 1/297 / 1/276 / 1/255 / 1/224**
+- PAYOUT: **96.5 / 98.1〜98.2 / 100.1〜100.2 / 103.2〜103.3 / 106.4 / 113.1%**。0.1pt差は平均化せず範囲保持。
+- 50枚ベース: **UNVERIFIED_AFTER_RESEARCH**。後継「蒼天2/4」の数値混入を避ける。
+- BIG: **約300枚**
+- ART: **1セット40G / 約+1.7枚/G**
+- 通常内部モード: **低確 / 通常 / 高確 / 超高確**
+- 天井: **BIG後1200G / ART後1160G + 最大32G前兆**（パチビー）。HAZUSEは通常1200Gハマリ表記。
+- coreStatus: **COMPLETE_CORE_EXCEPT_BASE_RESET_PARTIAL_RELEASEDATE_CONFLICT_PAYOUT_MINOR_CONFLICT**
 
-## resetBehavior v0.7 — ファニーサンタ2
+## resetBehavior v0.7 — パチスロ蒼天の拳
 
-- **設定変更**: 天井・ART/AT/CZ・周期モードがないため、朝一客行動へ影響する持続ゲーム数進捗/天井/モードの設定変更処理は `NOT_APPLICABLE` 相当。低レベル内部処理は直接資料未確認のため推測しない。
-- **据え置き**: 引継ぎ対象となる天井ゲーム数・周期・ART/AT/CZモードなし。低レベル処理は `UNVERIFIED_AFTER_RESEARCH`。
-- **電源OFF→ON**: 天井/周期/モードに関する差は対象機能なし。低レベルRAM/成立フラグ処理は `UNVERIFIED_AFTER_RESEARCH`。
-- **ゲーム数・天井**: P-WORLDとpacnkで **天井機能/天井RT非搭載**を確認。`gameCounterReset=NOT_APPLICABLE`、`ceilingAfterReset=NOT_APPLICABLE`。
-- **モード・状態**: 朝一に持ち越す通常モード/周期モード/ART状態なし。`NOT_APPLICABLE_FOR_PERSISTENT_GAMEPLAY_MODE`。
+- **設定変更**: `PARTIAL_CONFIRMED`。パチビーが「設定変更後は高設定ほど天国モードへ移行しやすい」と直接記載。モード再振り分けの存在を採用し、設定別具体率は未確認。
+- **据え置き**: BIG後1200G/ART後1160G進捗、内部モード、ARTストック等の保持は `UNVERIFIED_AFTER_RESEARCH`。
+- **電源OFF→ON**: 天井進捗・モード・ARTストック/前兆状態は `UNVERIFIED_AFTER_RESEARCH`。
+- **ゲーム数・天井**: 通常天井数値は確認済みだが、設定変更時のclear/retainは `UNVERIFIED_AFTER_RESEARCH`。設定変更専用短縮天井は確認できず。
+- **モード・状態**: 設定変更後の天国モード抽選のみ `PARTIAL_CONFIRMED`。ARTストック/前兆等は未確認。
 - **有利区間**: `NOT_APPLICABLE`。
-- **朝一恩恵/不利**: 設定変更専用の高確、短縮天井、朝一当選率優遇、天井進捗消失等は `NONE_CONFIRMED_AFTER_RESEARCH`。
-- **変更判別**: ガックン・初期出目・告知ランプ等を使う本機固有の変更判別は `UNVERIFIED_AFTER_RESEARCH`。
-- **公開朝一数値**: リセット固有数値なし。
-- resetBehaviorQA: **RESET_RELEVANT_GAME_COUNT_CEILING_MODE_NOT_APPLICABLE_DETECTION_UNVERIFIED_AFTER_RESEARCH**
+- **朝一恩恵**: 設定変更後の天国モード移行があり、高設定ほど優遇。ただし天国確定ではない。
+- **変更判別**: 朝一の上部サイドランプ色矛盾、大オーラ、拳志郎が服を破る、キリン柄等の天国/前兆示唆が出れば「設定変更かつ高設定」の期待度が上がる。確定判別ではなく `PARTIAL_PROBABILISTIC`。
+- **公開朝一数値**: 設定別天国移行率・朝一当選率は今回 `UNVERIFIED_AFTER_RESEARCH`。
+- resetBehaviorQA: **SETTING_CHANGE_MODE_PARTIAL_CONFIRMED_CARRYOVER_POWER_CYCLE_GAME_COUNTER_UNVERIFIED_DETECTION_PROBABILISTIC**
+
+## resetBehavior 遡及QA — CSスロ原人
+
+- 対象: `docs/real_machine_db/machines/2006-11_cs-surogenjin.md`
+- 既存性能コアは維持し `coreStatus: COMPLETE_CORE_RESET_QA_PARTIAL` としてreset QAを別管理。
+- pacnk・旧パチマガスロマガを再探索し、**天井非搭載**、BIG後**50G RT**、原人ラッシュ後**20G RT**を再確認。
+- 天井/周期ゲーム数のreset問題は `NOT_APPLICABLE`。
+- 設定変更・据え置き・単純電源OFF→ON時の**固定RT残G/RT状態**は本機固有の直接資料を確定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 有利区間は `NOT_APPLICABLE`。
+- 設定変更専用の朝一恩恵/不利、変更判別、公開朝一数値は `NONE_CONFIRMED_AFTER_RESEARCH / UNVERIFIED_AFTER_RESEARCH`。
+- resetBehaviorQA: **COMPLETE_FOR_CEILING_CYCLE_NA_RT_STATE_AND_DETECTION_UNVERIFIED_AFTER_RESEARCH**
+- 次の実ファイル `2006-11-27_thunder-v-special.md` はすでに `qaResetBehavior: PARTIAL` かつ設定変更時天井G数引継ぎまで収集済みのため、重複QAせずその次の2006-11月精度レコード群から最初のresetBehavior欠損を探す。
 
 ## 主要出典（取得日 2026-09-03）
 
-- グリーンべると「タイヨー、民事再生法手続き申請へ」: `https://web-greenbelt.jp/00002631/`
-- K-Navi「ファニーサンタ2」: `https://p-kn.com/slot/1184/`
-- K-Navi「2010年4月 新台導入カレンダー」: `https://p-kn.com/calendar/201004/`
-- P-WORLD「ファニーサンタ2」: `https://www.p-world.co.jp/machine/database/5902`
-- パチマガスロマガ旧攻略 ボーナス/PAYOUT: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/taiyo_slot/71/h.php`
-- パチマガスロマガ旧攻略 50枚ベース: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/taiyo_slot/71/c.php`
-- パチマガスロマガ旧攻略トップ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/taiyo_slot/71/taiyo_slot_71.php`
-- pacnk「ファニーサンタ2」: `https://pacnk.com/slot/tools/sh_funnysanta.html`
-- @Press メーカー協力アプリ資料: `https://www.atpress.ne.jp/news/15709`
-- 遊技通信記事転載（2010-03-25）: `https://p-mans.blogspot.com/2010/03/`
+### パチスロ蒼天の拳
+- HAZUSE: `https://hazuse.com/machine/pachislot/9S1458/`
+- パチビー: `https://www.pachibee.jp/machines/index/210030005`
+- K-Navi: `https://p-kn.com/slot/1188/`
+- 2010年当時新機種資料: `https://ameblo.jp/pachimatome/entry-10468397859.html`
+- 初代回顧整理: `https://pachislot.win/pachislot-souten-no-ken-shodai-guide/`
 
-## resetBehavior 遡及QA進捗
-
-- 既存遡及補完は **スロ原人（`docs/real_machine_db/machines/2006-10_surogenjin.md`）まで補完済み**という正本進捗を維持。
-- 新規収集を止めず、次回QAでスロ原人直後の最初のresetBehavior欠損実ファイルを日付順/コミット履歴から一意特定して再開する。
+### CSスロ原人 QA
+- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/abilit_slot/13/abilit_slot_13.php`
+- pacnk: `https://pacnk.com/slot/tools/sh_cssurogenzin.html`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/4335`
 
 ## 次回再開地点
 
-1. **recordCount 479 / chronologicalFrontier 2010-04-19**。479は前線より古い2010-04-18の遡及補完なので、前線日は進めない。
-2. **2010-04-19同日群はK-Naviカレンダー上のパチスロ本線が既存「2027II NEO」中心で、スパイガールは日付CONFLICTとして既に478で補完済み。メーカー別一覧/当時業界記事をもう一段確認して閉じる。**
-3. その後 **2010-04-20〜25** を具体導入日順に境界監査。現時点のK-Navi月間カレンダーではパチスロ追加日なしだが、月精度資料・地域先行導入漏れを当時記事で再確認する。
-4. 境界を閉じた後の次の全国具体日候補は **2010-04-26**。旧候補「ファニーサンタ2」は今回479として処理済みなので重複追加しない。
-5. **2010-04-26同日/近接日の別未登録パチスロ**をK-Navi、P-WORLD、当時業界記事、メーカー別一覧で洗い出し、最古の未処理機から480件目を処理する。
-6. **ファニーサンタ2導入日CONFLICT**（2010-04-18 vs 2010-04-26）は保持。メーカー一次の納品開始/全国販売資料が得られた場合のみ主値再判定。
-7. **スパイガール導入日CONFLICT**（K-Navi 2010-02-22 vs 主値2010-04-19）と **神人 八犬伝導入日CONFLICT**（K-Navi 2010-04-12 vs 当時資料2010-04-19）も維持。
-8. 次回追加前も必ず最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 前線実レコード / main状態を再取得し、他リレー競合・重複を防ぐ。
+1. **recordCount 480 / chronologicalFrontier 2010-05-10**。開始時は必ず最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 前線実レコードを再取得。
+2. **2010-05-07〜10同日/近接群**を再監査。蒼天の拳の5/7 vs 5/10導入日CONFLICTは保持し、メーカー一次の全国納品資料が得られた場合のみ再判定。
+3. 2010年5月全国導入カレンダー・P-WORLD・当時業界記事・メーカー別一覧から、**2010-05-10同日群の別未登録パチスロ**を洗い出し、最古候補を481件目へ。
+4. 蒼天の拳の `baseGamesPer50`、設定変更時天井カウンタclear/retain、据え置き、単純電源OFF→ON、設定別天国モード移行率は資料系統を変えて再探索可能。ただし新規収集を止めない。
+5. 遡及QAは **CSスロ原人まで補完済み**。`2006-11-27_thunder-v-special.md` は既にresetBehavior収集済みなのでスキップし、その次の2006-11月精度レコード群から最初のresetBehavior欠損実ファイルを特定して補完する。
+6. 既存 `COMPLETE_CORE` の性能完了判定は不用意に崩さず、resetBehavior QA状態を別管理する。
