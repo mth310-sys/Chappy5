@@ -65,10 +65,10 @@ confidence: ANALYSIS_HIGH_MULTI_SOURCE_FOR_SETTING1_TOTAL / ANALYSIS_HIGH_SINGLE
 
 ## baseGamesPer50
 
-**UNVERIFIED_AFTER_RESEARCH**
+**37.6G/1000円**
 
-「コード・ルージュ / コードルージュ / NET」と「50枚 / 千円 / 1000円 / ベース / コイン持ち / 通常時ゲーム数」を組み替え、P-WORLD、パチビー、当時パチマガスロマガ、回顧DBを再探索したが、比較可能な直接値を高信頼で確定できなかったため推定しない。
-confidence: UNVERIFIED
+当時グリーンべると記事と当時パチマガスロマガ解析アーカイブの双方で37.6G/1000円が一致。2026-09-03の前線QAで新規確認し、従来の `UNVERIFIED_AFTER_RESEARCH` を補完。
+confidence: INDUSTRY_PRIMARY + CONTEMPORARY_ANALYSIS_ARCHIVE / MULTI_SOURCE_MATCH
 
 ## netIncrease
 
@@ -142,7 +142,6 @@ resetBehaviorQA: PARTIAL_STATE_SYSTEM_CONFIRMED_SETTING_CHANGE_CARRYOVER_POWER_C
 
 - formalModelName: UNVERIFIED_AFTER_RESEARCH
 - approvalNumber: UNVERIFIED_AFTER_RESEARCH
-- baseGamesPer50: UNVERIFIED_AFTER_RESEARCH
 - normalCeiling: UNVERIFIED_AFTER_RESEARCH / NONE_CONFIRMED
 - settingChangeBehavior: UNVERIFIED_AFTER_RESEARCH
 - carryOverBehavior: UNVERIFIED_AFTER_RESEARCH
@@ -160,3 +159,5 @@ resetBehaviorQA: PARTIAL_STATE_SYSTEM_CONFIRMED_SETTING_CHANGE_CARRYOVER_POWER_C
 4. パチマガスロマガ「コード・ルージュ 基本システム」 — https://cs62.cs-plaza.com/g/pachi/pla/s_conq/net_slot/146/a.php — ART約1.8枚/G・40G、最大10個ストック、無限ART50%ループ、BIG約114枚/REG約36枚 — reliability: CONTEMPORARY_ANALYSIS_ARCHIVE
 5. パチマガスロマガ「コード・ルージュ ボーナス抽選確率」 — https://cs62.cs-plaza.com/g/pachi/pla/s_conq/net_slot/146/h.php — BIG/REG/合算、ART初当たり、ボーナス+ART、機械割全設定 — reliability: CONTEMPORARY_ANALYSIS_ARCHIVE
 6. 5号機クロニクル「ネット5号機全機種一覧」 — https://5goki.com/net — 機械割設定1〜5は当時系列と一致、設定6=110.0%。同ページのゲーム性説明に本機不整合情報が混在するため補助/競合検知専用 — reliability: RETROSPECTIVE_LOW_FOR_THIS_RECORD
+7. グリーンべると 2010-05-21 — https://web-greenbelt.jp/00002696/ — 通常時37.6G/1000円 — reliability: INDUSTRY_PRIMARY
+8. パチマガスロマガ「コード・ルージュ 小役/ベース」 — https://cs62.cs-plaza.com/g/pachi/pla/s_conq/net_slot/146/c.php — 1000円あたり37.6G — reliability: CONTEMPORARY_ANALYSIS_ARCHIVE
