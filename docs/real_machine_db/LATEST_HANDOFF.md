@@ -4,77 +4,81 @@
 
 ## 現在地点
 
-- recordCount: **451**
-- latestMachineAdded: **ゼットゴールドEX**
-- latestRecord: `docs/real_machine_db/machines/2010-02-21_z-gold-ex.md`
-- chronologicalFrontier: **2010-02-21**
+- recordCount: **452**
+- latestMachineAdded: **ピカ吾郎V2**（遡及漏れ修復）
+- latestRecord: `docs/real_machine_db/machines/2010-02-07_pikagoro-v2.md`
+- chronologicalFrontier: **2010-02-21**（ゼットゴールドEX地点を維持）
 - schema: **resetBehavior v0.7**
 - status: **READY_TO_CONTINUE**
-- note: 450件「パチスロ BLOOD+」地点から2010-02-15同日群〜2/20境界を再監査し、発表/内覧会日を導入日と混同しないよう確認。これより早い具体導入日の未登録パチスロを確定できなかったため、具体日確認済みの「ゼットゴールドEX」（2010-02-21）を451件目として追加。
+- note: 451件・2010-02-21「ゼットゴールドEX」から前進する前に、LATEST_HANDOFFに残っていた2010年2月月内候補を具体日へ落とす境界監査を実施。未登録だった「ピカ吾郎V2」がHAZUSEで2010-02-07導入、当時グリーンべるとで2/7納品開始予定、山佐公式で2010年2月稼働と確定したため、452件目として遡及追加した。時系列前線は後退させず2010-02-21を維持する。
 
 ## 今回の継続確認
 
-- GitHub最新mainの `README.md`、正本ミッション `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、前線レコード `2010-02-15_pachislot-blood-plus.md` を再読。
-- `INDEX.md` は旧19件地点のため、README規定どおり進捗正本には使わずLATEST_HANDOFF＋実レコードを優先。
-- 開始時mainは450件 / chronologicalFrontier 2010-02-15 / latestMachineAdded パチスロ BLOOD+。
-- repo検索で「ゼットゴールドEX」既存レコードなしを確認してから追加。
+- GitHub最新mainの `README.md`、正本ミッション `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、前線レコード `2010-02-21_z-gold-ex.md` を再読。
+- `INDEX.md` は旧19件地点のためREADME規定どおり進捗正本には使わず、LATEST_HANDOFF＋main実ツリー＋既存レコードを優先。
+- main実ツリーとrepo検索で「ピカ吾郎V2」既存レコードなしを確認。推測ファイルパスも不存在だった。
+- 2010-02-21→2/22へ進む前の月内候補監査で、ピカ吾郎V2に2010-02-07の具体日があることを確認したため時系列漏れとして先に修復。
 
-## 451 — ゼットゴールドEX 要約
+## 452 — ピカ吾郎V2 要約
 
-- メーカー: **ネット**
-- 型式: **ゼットゴールドEX3**
-- 検定番号: **9S1211**
-- 導入: **2010-02-21**（HAZUSE具体日。NET公式は2010年2月製品として整合）
+- メーカー: **山佐**
+- 型式: **ピカゴロウV2A**
+- 検定番号: **9S1127**
+- 導入: **2010-02-07**（HAZUSE具体日。当時グリーンべるとは2/7納品開始予定、山佐公式は2010年2月稼働）
 - 世代: **5号機**
-- システム: **ネオストック / アシストボーナス(ABナビ) / RT系**
-- 機械割: **96.7 / 100.2 / 102.0 / 106.4 / 107.7 / 113.3%**
-- Z-BONUS: 設定1/3/5 **1/57043**、設定2/4/6 **1/118332**
-- Z-RUSH: **約1/65.5〜1/65.6**、ボーナス合算約**1/65.5**
-- 50枚ベース: **約33.7G**
-- Z-BONUS: **約221枚**
-- Z-RUSH: **約27〜29枚**（資料差をCONFLICT保持）
-- スーパーZゾーン/ABナビ連状態の比較用出玉速度: **約+2.2枚/G**
-- 通常天井: **ボーナス間333G** または **ABナビ間W Z揃い20回**。到達時最低7ナビ以上。
-- 天井時平均ナビ数（解析公開値）: 設定1〜6 **12.5 / 8.5 / 12.5 / 8.5 / 19.5 / 8.5個**。
+- タイプ: **Aタイプ / ノーマル / 技術介入**
+- BIG: 設定1〜6 **1/287.44 / 1/282.48 / 1/274.21 / 1/269.70 / 1/260.06 / 1/248.24**
+- REG: **1/451.97 / 1/436.91 / 1/422.81 / 1/362.08 / 1/303.41 / 1/252.06**
+- 合成: **1/175.70 / 1/171.56 / 1/166.34 / 1/154.57 / 1/140.03 / 1/125.07**
+- 機械割公称/旧DB: **97.0 / 98.0 / 99.5 / 101.5 / 105.0 / 110.0%**
+- パチマガスロマガ・シミュレートPAYOUT: **97.10 / 98.16 / 99.71 / 101.83 / 105.49 / 110.18%** → 定義差を `CONFLICT_SIMULATION_VS_NOMINAL` として保持、平均しない。
+- 50枚ベース: 当時記事 **約35G/1000円**（通常20円貸しで約50枚相当）
+- BIG: **約321枚**、技術介入成功時 **MAX324枚**
+- REG: **約104枚**
+- ART/AT純増: **NOT_APPLICABLE**（ボーナスのみで増やすAタイプ）
 
-## resetBehavior v0.7 — ゼットゴールドEX
+## resetBehavior v0.7 — ピカ吾郎V2
 
-- **設定変更**: `UNVERIFIED_AFTER_RESEARCH`。333Gカウンタ、W Z揃い回数、ABナビストック、通常/Zゾーン/スーパーZゾーン状態の設定変更時処理を本機固有資料で確定できず。
-- **据え置き**: `UNVERIFIED_AFTER_RESEARCH`。設定変更の逆から推定しない。
-- **電源OFF→ON**: `UNVERIFIED_AFTER_RESEARCH`。天井進捗/ストック/状態処理の直接根拠なし。
-- **gameCounterReset**: `UNVERIFIED_AFTER_RESEARCH`。通常天井333G自体は確定するが変更/電断時clear/retainは未確認。
-- **ceilingAfterReset**: `UNVERIFIED_AFTER_RESEARCH`。設定変更専用短縮天井なしとは断定しない。
-- **modeAfterReset / stateAfterReset**: `UNVERIFIED_AFTER_RESEARCH`。
+- **設定変更**: `UNVERIFIED_AFTER_RESEARCH`。設定変更時の初期出目/リール/LED挙動を本機固有資料で確定できず。
+- **据え置き**: 天井/長期モード引継ぎは `NOT_APPLICABLE_NO_CEILING_OR_LONG_TERM_MODE_CONFIRMED`。物理的朝一状態は `UNVERIFIED_AFTER_RESEARCH`。
+- **電源OFF→ON**: 天井/長期モード進捗は非該当。初期出目/リール/LED挙動は `UNVERIFIED_AFTER_RESEARCH`。
+- **gameCounterReset / ceilingAfterReset**: 通常天井・リセット短縮天井とも `NONE_CONFIRMED_AFTER_RESEARCH`。P-WORLDはボーナスのみで出玉を増やすノーマル機、旧パチマガも「攻め時・ヤメ時→特にナシ」。
+- **modeAfterReset**: `NOT_APPLICABLE_NO_LONG_TERM_MODE_SYSTEM_CONFIRMED`。
+- **stateAfterReset**: `NOT_APPLICABLE_NO_PERSISTENT_AT_ART_CZ_STATE_CONFIRMED`。
 - **有利区間**: `NOT_APPLICABLE`（5号機・制度前）
-- **朝一恩恵/不利**: `NONE_CONFIRMED_AFTER_RESEARCH`。通常天井の救済を設定変更恩恵と混同しない。
-- **変更判別**: `UNVERIFIED_AFTER_RESEARCH`。ガックン/初期出目/液晶状態/天井挙動を再探索したが本機固有の高信頼根拠なし。
+- **朝一恩恵/不利**: `NONE_CONFIRMED_AFTER_RESEARCH`。
+- **変更判別**: `UNVERIFIED_AFTER_RESEARCH`。ガックン/初期出目/LED等を再探索したが直接根拠なし。
+- **注意**: 本機には通常演出としてリール始動時に震える「ブルスタート」がある。これを朝一ガックン/設定変更判別の根拠へ誤用しない。
 - **公開朝一数値**: `NONE_CONFIRMED_AFTER_RESEARCH`。
 
-## 主要CONFLICT / 欠損
+## 主要CONFLICT / QA
 
-- Z-RUSH獲得: P-WORLD/旧解析 **約27枚**、パチマガスロマガ **約29枚**。平均せず範囲と出典を保持。
-- 5号機クロニクルは同機項目内に別ゲーム性と思われる説明混入が見られるため、機械割系列一致の補助照合以外には使用しない。
-- resetBehaviorの設定変更/据え置き/電断/変更判別は十分な再探索後も直接根拠を確定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 機械割は公称/旧DB系列とパチマガのシミュレート系列を平均せず双方保存。
+- BIG約321枚とMAX324枚は標準純増表記と技術介入時MAXの条件差として併記。
+- 5号機クロニクルの「2010年7月導入」は、HAZUSE 2010-02-07、当時グリーンべると2/7納品、山佐公式2010年2月の三系統と大きく競合するため `REJECTED_SOURCE_DATE_CONFLICT`。機械割の補助照合以外には採用しない。
+- resetBehaviorは表記揺れ・型式・メーカーと、設定変更/リセット/朝一/据え置き/電源OFF ON/天井/ガックン/変更判別を組み替えて再探索した後のみ未確認判定。
 
 ## 主要出典（取得日 2026-09-03）
 
-- NET公式: `https://www.net-fun.co.jp/product/page/6`
-- HAZUSE: `https://hazuse.com/machine/pachislot/9S1211/`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/5812`
-- パチスロ救急車: `https://www.eightbeat.com/slot99/kishu/sa_gyou/se/ZgoldEX/page_menu.html`
-- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/net_slot/145/a.php`
+- 山佐公式: `https://yamasa-next.co.jp/model_pkv2/`
+- HAZUSE: `https://hazuse.com/machine/pachislot/9S1127/`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/5802`
+- グリーンべると/P-WORLD業界ニュース: `https://news.p-world.co.jp/articles/3744/greenbelt`
+- パチマガスロマガ（ボーナス/PAYOUT）: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/170/h.php`
+- パチマガスロマガ（機種メニュー）: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/170/yamasa_slot_170.php`
+- 5号機クロニクル（導入月は不採用）: `https://5goki.com/yamasa`
 
 ## resetBehavior 遡及QA進捗
 
 - 既存遡及補完は **スロ原人（`docs/real_machine_db/machines/2006-10_surogenjin.md`）まで補完済み**という正本進捗を維持。
-- 今回は本線451件目を確定・保存。スロ原人直後の最初のresetBehavior欠損実ファイルを安全に一意特定できるところまで完結しなかったため、性能コアや別機種を推測更新していない。
-- 次回QAは実ファイル/時系列を再走査し、**スロ原人直後の最初のresetBehavior未収集機**を特定してから補完する。
+- 今回は時系列漏れ修復を優先し、既存性能値を無駄にやり直していない。
+- 次回QAは実ファイル順でスロ原人直後の最初のresetBehavior欠損機を安全に特定してから補完する。
 
 ## 次回再開地点
 
-1. **recordCount 451 / chronologicalFrontier 2010-02-21**。
-2. まず **2010-02-21同日群を最終監査**し、ゼットゴールドEXより同日内で未登録のパチスロがないか確認。
-3. 次の具体日確認済み候補は **みどりのマキバオー 2010-02-22**。ただし2/21同日内の未処理を飛ばさない。
-4. 2010年2月月内候補 `ビューティフルジョー`、`ピカ吾郎V2`、`バイオレントゾーン`、`列強伝`、`新世紀エヴァンゲリオン～魂の軌跡～`、`ハイハイ30`、`真田純勇士`、`哲也 新宿vs上野DX` 等は具体導入日へ落として最古から処理する。
-5. 遡及QAはスロ原人直後の実ファイル順で最初のresetBehavior欠損機を特定し、既存 `COMPLETE_CORE` を不用意に崩さずreset QAだけ別管理で補完する。
+1. **recordCount 452 / chronologicalFrontier 2010-02-21**。最新追加レコードの日付は遡及修復の2010-02-07だが、前線はゼットゴールドEXの2010-02-21を維持。
+2. **2/22へ進む前に、LATEST_HANDOFFに残る2010年2月月内候補のうち2/21以前へ落ちる漏れがないか再監査**する。特に `ビューティフルジョー`、`バイオレントゾーン`、`列強伝`、`ハイハイ-30`、`真田純勇士`、`哲也 新宿VS上野DX` を具体日に落とす。
+3. `新世紀エヴァンゲリオン～魂の軌跡～` はK-Naviで **2010-03-01**、FIELDS系当時リリースでも2010年3月以降導入予定を確認したため、2月前線の候補から外して3月へ送る。
+4. `ハイハイ-30` はパイオニア公式で **2010年2月発売**、`列強伝` も二次資料で **2010年2月リリース**までは確認。具体日が確定するまで順序を推測しない。
+5. 2/21以前の追加漏れが閉じたら **2010-02-21同日群を最終監査**し、その後、具体日確認済みの **みどりのマキバオー 2010-02-22**へ進む。
 6. 次回追加前も必ず最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 前線実レコードを再取得し、repo検索で重複・他リレー競合を防ぐ。
