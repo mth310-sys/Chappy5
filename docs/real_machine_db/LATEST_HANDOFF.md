@@ -4,65 +4,71 @@
 
 ## 現在地点
 
-- recordCount: **473**
-- latestMachineAdded: **ハッピージャグラーV**（北電子 / 2010-04-05）
-- latestRecord: `docs/real_machine_db/machines/2010-04-05_happy-juggler-v.md`
-- chronologicalFrontier: **2010-04-05**
-- frontierLatestMachine: **ハッピージャグラーV**（北電子 / 2010-04-05）
+- recordCount: **474**
+- latestMachineAdded: **神人 八犬伝**（コルモ / 主値2010-04-12、日付CONFLICTあり）
+- latestRecord: `docs/real_machine_db/machines/2010-04-12_shinhakkenden.md`
+- chronologicalFrontier: **2010-04-12**
+- frontierLatestMachine: **神人 八犬伝**（コルモ / 2010-04-12主値）
 - schema: **resetBehavior v0.7**
 - status: **READY_TO_CONTINUE**
 
 ## 今回の継続確認
 
-- 最新mainの `README.md`、正本ミッション `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直近472「パチスロ『宇宙戦艦ヤマト』」を再取得。
+- 最新mainの `README.md`、正本ミッション `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直近473「ハッピージャグラーV」を再取得。
 - `INDEX.md` は旧19件地点のため、README規定どおり `LATEST_HANDOFF.md`＋main実レコードを進捗正本として使用。
-- 開始時正本は recordCount **472** / chronologicalFrontier **2010-04-05**。
-- LATEST_HANDOFFで2010-04-05同日群の未処理確認済み候補だった **ハッピージャグラーV** をrepo重複確認後、473件目として追加。
-- 北電子公式、グリーンべると、K-Navi、P-WORLD、旧パチマガスロマガ、ダイナム、後年解析整理資料を横断。性能コア、ベース、ガックン判別まで回収。
-- K-Navi 2010年4月導入カレンダーの4/5パチスロ欄は **鮪伝説 / スーパーマジカルセブン / ペガサスW / パチスロ『宇宙戦艦ヤマト』 / ハッピージャグラーV** の5機種。これらは今回までに全て本線登録済みとなったため、2010-04-05同日群をK-Navi基準で閉じる。ただし別系統資料の遡及漏れ監査は継続する。
+- 開始時正本は recordCount **473** / chronologicalFrontier **2010-04-05**。
+- K-Navi 2010年4月全国導入カレンダーで4/5群の次は4/12の **神人 八犬伝 / 皆伝丸**。4/6〜4/11には同カレンダー上の新規パチスロ導入群なし。
+- repo重複検索と想定path確認で「神人 八犬伝」未登録を確認し、474件目として追加。
+- グリーンべると、K-Navi、P-WORLD、旧パチマガスロマガ、pacnk、2010年当時スペック整理資料、検定回顧資料を横断し、性能コア＋v0.7 resetBehaviorを収集。
 
-## 473 — ハッピージャグラーV 要約
+## 474 — 神人 八犬伝 要約
 
-- メーカー: **北電子**
-- 型式: **ハッピージャグラーV8**
-- 検定番号: **9S1076**
-- 導入: **2010-04-05**（K-Navi。グリーンべるとは4/4納品開始予定、北電子公式は2010年4月全国設置）
-- 世代/タイプ: **5号機 / ノーマル / 完全告知**
-- BIG: **1/287.4 / 1/282.5 / 1/273.1 / 1/264.3 / 1/252.1 / 1/240.9**
-- REG: **1/409.6 / 1/364.1 / 1/341.3 / 1/315.1 / 1/287.4 / 1/273.1**
-- 合算: **1/168.9 → 1/128.0**
-- 機械割: **CONFLICT**
-  - 北電子公式/K-Navi/P-WORLD: **96.1 / 97.9 / 99.9 / 102.9 / 105.8 / 108.4%**
-  - 後年解析整理値: **95.7 / 97.6 / 99.9 / 102.8 / 106.0 / 108.8%**
-- 50枚ベース: **34.14 / 34.34 / 34.55 / 35.27 / 35.49 / 35.71G**（小役取得条件付きパチマガ値）
-- BIG: **約312枚**、REG: **約104枚**
-- 通常ゲーム数天井/周期CZ/ART/AT: **なし / NOT_APPLICABLE**
-- coreStatus: **COMPLETE_CORE_RESET_DETECTION_CONFIRMED_PAYOUT_CONFLICT_POWER_CYCLE_PARTIAL**
+- メーカー: **コルモ**
+- 型式: **シンハッケンデン1**
+- 検定番号: **UNVERIFIED_AFTER_RESEARCH**
+- 導入: **CONFLICT**
+  - K-Navi全国導入開始: **2010-04-12**
+  - 2010年当時スペック整理資料: **納品2010-04-18 / 導入2010-04-19**
+  - 平均化せず双方を保持。本線主値は全国導入開始日を明示するK-Navi 2010-04-12。
+- 世代/タイプ: **5号機 / ART専用 / ボーナス非搭載**
+- 設定: **1 / 3 / 5 / 6 の4段階**
+- ART初当たり: **1/255.1 / 1/221.6 / 1/195.0 / 1/163.0**
+- 機械割主値: **97.1 / 99.8 / 104.2 / 109.0%**
+- 当時資料には **95.9〜97.1 / 98.5〜99.8 / 102.8〜104.2 / 107.5〜109.0%** の幅表記もあり、定義不明のため平均化せず補足保持。
+- 50枚ベース: **約36G/1000円**（当時単一二次資料。旧パチマガは調査中表記のため `ANALYSIS_SINGLE`）
+- ART「殲鬼モード」: **約+2.0枚/G**
+- 「瞬」: **20G / 約40枚**
+- 「烈」: **150G / 約300枚**
+- ARTループ率: **全設定共通84%**
+- 通常ゲーム数天井: **非搭載**
+- coreStatus: **COMPLETE_CORE_BASE_SINGLE_RELEASE_DATE_CONFLICT_RESET_PARTIAL**
 
-## resetBehavior v0.7 — ハッピージャグラーV
+## resetBehavior v0.7 — 神人 八犬伝
 
-- **設定変更**: 天井・周期・ゲーム数管理モードのリセット対象はなし。設定変更後、店側の1G回し等の対策がなければ朝一1G目のリールガックンによる変更推測が可能。
-- **据え置き**: 天井/周期/モード進捗の引継ぎ対象なし。非ガックンでも店側対策があり得るため据え置き確定にはしない。
-- **電源OFF→ON**: 本機固有の初回リール挙動・内部状態処理は十分な直接資料を確定できず `UNVERIFIED_AFTER_RESEARCH`。
-- **ゲーム数/天井**: `NOT_APPLICABLE`。
-- **モード/状態**: 朝一専用モードや設定変更時モード振分は確認なし。実機完全再現用の内部フラグ処理は推測しない。
+- **設定変更**: 通常時RT/モード・高確・ART/CZ状態の初期化/再抽選/引継ぎを本機固有資料で直接確定できず `UNVERIFIED_AFTER_RESEARCH`。
+- **据え置き**: 通常時RT/モード・ART関連状態の引継ぎを直接確定できず `UNVERIFIED_AFTER_RESEARCH`。
+- **電源OFF→ON**: RT/モード/ART関連状態の保持・初期化を直接確定できず `UNVERIFIED_AFTER_RESEARCH`。
+- **ゲーム数/天井**: 通常ゲーム数天井は非搭載のため `NOT_APPLICABLE_FOR_CEILING_GAME_COUNT`。
+- **リセット後天井**: `NOT_APPLICABLE`。
+- **モード/状態**: 通常時に複数RT状態/モードがあること自体は業界資料で確認。ただし設定変更時の初期モード・振分・状態処理は `UNVERIFIED_AFTER_RESEARCH`。
 - **有利区間**: `NOT_APPLICABLE`。
-- **朝一恩恵/不利**: 短縮天井・朝一高確・当選率優遇等は `NONE_CONFIRMED_AFTER_RESEARCH`。
-- **変更判別**: ガックンを確認。ただし店側対策で無効化可能。初期出目/ランプ等は `UNVERIFIED_AFTER_RESEARCH`。
-- resetBehaviorQA: **CORE_RESET_NOT_APPLICABLE_GAKKUN_CONFIRMED_POWER_CYCLE_PARTIAL**
+- **朝一恩恵/不利**: 短縮天井・朝一高確・設定変更専用ART/CZ優遇等は `NONE_CONFIRMED_AFTER_RESEARCH`。モード消失等は確定できないため不利扱いを推測しない。
+- **変更判別**: ガックン、初期出目、液晶/ランプ等の本機固有判別は `UNVERIFIED_AFTER_RESEARCH`。
+- **公開朝一数値**: 確認なし。
+- resetBehaviorQA: **CEILING_NOT_APPLICABLE_MODE_STATE_POWER_CYCLE_DETECTION_UNVERIFIED_AFTER_RESEARCH**
 
 ## 主要出典（取得日 2026-09-03）
 
-- 北電子公式: `https://www.kitadenshi.co.jp/slot/happyjugglerv/`
-- 北電子公式アプリ: `https://www.kitadenshi.co.jp/fun/apps/happy-jugg/`
-- グリーンべると: `https://news.p-world.co.jp/articles/3821/greenbelt`
-- K-Navi本機: `https://p-kn.com/slot/1164/`
-- K-Navi機械割: `https://p-kn.com/slot/1164/17299/`
+- グリーンべると: `https://web-greenbelt.jp/00002544/`
+- K-Navi本機: `https://p-kn.com/slot/1165/`
 - K-Navi 2010年4月導入カレンダー: `https://p-kn.com/calendar/201004/`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/5865`
-- パチマガスロマガ小役/1000円G: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/kitac_slot/72/c.php`
-- すろぱちくえすと: `https://www.slopachi-quest.com/article/happy-juggler-v/`
-- ダイナム: `https://www.dynam.jp/amusement/machines/s0005210001.html`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/5867`
+- パチマガスロマガ基本システム: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/colmo_slot/07/a.php`
+- パチマガスロマガ1000円G欄: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/colmo_slot/07/c.php`
+- pacnk: `https://pacnk.com/slot/tools/sh_shinhakkenden.html`
+- 2010年当時スペック整理資料: `https://ameblo.jp/pachimatome/entry-10456194856.html`
+- 2010年4月機種回顧DB: `https://pachinko.hatenablog.jp/archive/2010/04/01`
+- コルモ検定通過回顧資料: `https://q-and-a.hatenablog.com/entry/2016/10/23/105244`
 
 ## resetBehavior 遡及QA進捗
 
@@ -72,9 +78,11 @@
 
 ## 次回再開地点
 
-1. **recordCount 473 / chronologicalFrontier 2010-04-05**。
-2. K-Navi基準の2010-04-05同日群5機種は登録完了。次は **2010-04-06以降の最古未処理パチスロ** をK-Navi導入カレンダー、メーカー別一覧、当時業界記事、旧解析DBで突合して追加する。
-3. 4/6〜4/18の境界を先に監査し、具体日が確認できる最古未処理機から時系列継続する。
-4. **スパイガール日付CONFLICT監査を保持**: K-Navi `2010-02-22` vs パチビー/当時スケジュール `2010-04-19` / 複数DB `2010-04`。4/19到達時に既存登録有無とreleaseDate定義を再確認し、同一機の重複追加はしない。
-5. 遡及QAは **スロ原人直後の最初のresetBehavior欠損実ファイル**を特定して再開。
-6. 次回追加前も必ず最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 前線実レコード / main状態を再取得し、他リレー競合・重複を防ぐ。
+1. **recordCount 474 / chronologicalFrontier 2010-04-12**。
+2. まず **2010-04-12同日群の残件「皆伝丸」（アリストクラート）** をrepo既存確認後に処理する。神人 八犬伝と同日扱いのため、未登録なら次の475件目。
+3. 4/12同日群を閉じた後、**2010-04-13〜15**をメーカー別一覧・当時業界記事・旧解析DBで境界監査する。
+4. 次のK-Navi具体日候補は **2010-04-16「パチスロ ひぐらしのなく頃に祭」**。既存登録有無を確認して時系列継続する。
+5. **神人 八犬伝の導入日CONFLICTを保持**: K-Navi 2010-04-12 vs 2010年当時資料 2010-04-19。将来QAで一次/メーカー納品資料が得られた場合のみ主値を再判定する。
+6. **スパイガール日付CONFLICT監査を保持**: K-Navi `2010-02-22` vs パチビー/当時スケジュール `2010-04-19` / 複数DB `2010-04`。4/19到達時に既存登録有無とreleaseDate定義を再確認し、同一機を重複追加しない。
+7. 遡及QAは **スロ原人直後の最初のresetBehavior欠損実ファイル**を特定して再開。
+8. 次回追加前も必ず最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 前線実レコード / main状態を再取得し、他リレー競合・重複を防ぐ。
