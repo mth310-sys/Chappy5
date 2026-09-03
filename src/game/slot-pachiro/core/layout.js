@@ -18,7 +18,7 @@ export const SPEC = Object.freeze({
   playerOffset: Object.freeze({ x: 4, y: 2 }),
 });
 
-export const FLOOR_BOUNDS = Object.freeze({ minX: -20, maxX: 28, minY: -18, maxY: 30 });
+export const FLOOR_BOUNDS = Object.freeze({ minX: 0, maxX: 19, minY: 0, maxY: 19 });
 
 const islandReservation = Object.freeze([
   ...Array.from({ length: 9 }, (_, x) => Object.freeze({ x, y: 1, role: 'chair-zone' })),
@@ -63,17 +63,17 @@ export const FACILITY_DEFS = Object.freeze({
 
 export const layout = Object.freeze({
   islands: Object.freeze([
-    Object.freeze({ id: 'island-a', type: 'island', x: -4, y: -6, orientation: 'E', w: 9, d: 1 }),
-    Object.freeze({ id: 'island-b', type: 'island', x: -4, y: -2, orientation: 'E', w: 9, d: 1 }),
-    Object.freeze({ id: 'island-c', type: 'island', x: -4, y: 2, orientation: 'E', w: 9, d: 1 }),
-    Object.freeze({ id: 'island-d', type: 'island', x: -4, y: 6, orientation: 'E', w: 9, d: 1 }),
+    Object.freeze({ id: 'island-a', type: 'island', x: 5, y: 2, orientation: 'E', w: 9, d: 1 }),
+    Object.freeze({ id: 'island-b', type: 'island', x: 5, y: 6, orientation: 'E', w: 9, d: 1 }),
+    Object.freeze({ id: 'island-c', type: 'island', x: 5, y: 10, orientation: 'E', w: 9, d: 1 }),
+    Object.freeze({ id: 'island-d', type: 'island', x: 5, y: 14, orientation: 'E', w: 9, d: 1 }),
   ]),
   fixtures: Object.freeze([
-    Object.freeze({ id: 'counter', type: 'counter', x: 10, y: -12, orientation: 'E', w: 4, d: 2, rise: 86 }),
-    Object.freeze({ id: 'staff-1', type: 'staff', x: 11, y: -9, orientation: 'E', rise: 24 }),
-    Object.freeze({ id: 'plant-1', type: 'plant', x: -11, y: -8, orientation: 'E', w: 1, d: 1, rise: 20 }),
-    Object.freeze({ id: 'plant-2', type: 'plant', x: 17, y: 8, orientation: 'E', w: 1, d: 1, rise: 20 }),
-    Object.freeze({ id: 'entrance', type: 'entrance', x: -2, y: 26, orientation: 'E', rise: 0 }),
+    Object.freeze({ id: 'counter', type: 'counter', x: 14, y: 1, orientation: 'E', w: 4, d: 2, rise: 86 }),
+    Object.freeze({ id: 'staff-1', type: 'staff', x: 15, y: 4, orientation: 'E', rise: 24 }),
+    Object.freeze({ id: 'plant-1', type: 'plant', x: 2, y: 3, orientation: 'E', w: 1, d: 1, rise: 20 }),
+    Object.freeze({ id: 'plant-2', type: 'plant', x: 17, y: 14, orientation: 'E', w: 1, d: 1, rise: 20 }),
+    Object.freeze({ id: 'entrance', type: 'entrance', x: 9, y: 19, orientation: 'E', rise: 0 }),
   ]),
 });
 
