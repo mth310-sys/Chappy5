@@ -29,10 +29,12 @@ function renderMapBase(scene) {
   const road = scene.querySelector('.road');
   if (!floor || !lot || !road) throw new Error('Map base elements are missing');
 
+  const diamond = 'polygon(50% 0,100% 50%,50% 100%,0 50%)';
   floor.style.left = `${bounds.left}px`;
   floor.style.top = `${bounds.top}px`;
   floor.style.width = `${bounds.width}px`;
   floor.style.height = `${bounds.height}px`;
+  floor.style.clipPath = diamond;
 
   const marginX = 45;
   const marginY = 30;
@@ -40,6 +42,7 @@ function renderMapBase(scene) {
   lot.style.top = `${bounds.top - marginY}px`;
   lot.style.width = `${bounds.width + marginX * 2}px`;
   lot.style.height = `${bounds.height + marginY * 2}px`;
+  lot.style.clipPath = diamond;
 
   road.style.top = `${bounds.bottom + 70}px`;
   scene.style.height = `${bounds.bottom + 190}px`;
