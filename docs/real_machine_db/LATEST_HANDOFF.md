@@ -4,50 +4,52 @@
 
 ## 現在地点
 
-- recordCount: **485**
-- latestMachineAdded: **サンサンオアシス キュイーンVer.**（パイオニア / 2010-06-04導入開始・6/6納品予定の定義差）
-- latestRecord: `docs/real_machine_db/machines/2010-06-04_sunsun-oasis-kyuin-ver.md`
+- recordCount: **486**
+- latestMachineAdded: **メタルスラッグSV-001**（SNKプレイモア / 2010-06-07）
+- latestRecord: `docs/real_machine_db/machines/2010-06-07_metal-slug-sv-001.md`
 - chronologicalFrontier: **2010-06-07**
-- frontierLatestMachine: **コウヘイ最凶伝 ～地獄の閻魔覚醒の刻～**
+- frontierLatestMachine: **メタルスラッグSV-001**
 - schema: **resetBehavior v0.7**
 - status: **READY_TO_CONTINUE**
 
 ## 今回の継続確認
 
-- 最新mainの `README.md`、正本ミッション `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、前線484「コウヘイ最凶伝」を再取得。
+- 最新mainの `README.md`、正本ミッション `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前485「サンサンオアシス キュイーンVer.」を再取得。
 - `INDEX.md` は旧19件地点のため、README規定どおり `LATEST_HANDOFF.md`＋main実レコードを進捗正本として使用。
-- 開始時正本は recordCount **484** / chronologicalFrontier **2010-06-07**。
-- LATEST_HANDOFFの6/7同日群未処理候補だった「サンサンオアシス キュイーンVer.」をrepo未登録確認後に再監査。
-- HAZUSEに **2010-06-04導入開始**、2010-04-23付グリーンべるとに **6月6日から納品予定**、パイオニア公式に **2010年6月発売**が残っていたため、前線より前の漏れとして485件目に遡及追加。
-- 異なる日付定義を平均せず `DATE_DEFINITION_DIFFERENCE` として保持し、chronologicalFrontierは **2010-06-07のまま維持**。
+- 開始時正本は recordCount **485** / chronologicalFrontier **2010-06-07**。
+- 2010-06-07同日群候補「メタルスラッグSV-001」をrepo未登録確認後に486件目として追加。
+- パチビー機種ページ/同月導入スケジュールで **2010-06-07導入**を確認し、5号機クロニクルの2010年6月とも整合。
+- chronologicalFrontierは **2010-06-07** のまま同日群を継続する。
 
-## 485 — サンサンオアシス キュイーンVer. 要約
+## 486 — メタルスラッグSV-001 要約
 
-- メーカー: **パイオニア**
-- 導入主値: **2010-06-04**（HAZUSE「導入開始日」）
-- 日付補足: グリーンべると **2010-06-06から納品予定** / パイオニア公式 **2010年6月発売**
-- 世代/タイプ: **5号機 / ノーマル / 完全告知 / 技術介入 / 25φ**
-- PAYOUT: **97 / 99 / 101 / 104 / 107 / 110%**
-- BIG: **1/297 / 1/287 / 1/276 / 1/265 / 1/253 / 1/240**
-- REG: **1/496 / 1/464 / 1/434 / 1/399 / 1/370 / 1/344**
-- 合算: **1/186 / 1/177 / 1/168 / 1/159 / 1/150 / 1/141**
-- 50枚ベース: **約37G/1000円**
-- BIG: **MAX312枚** / REG: **MAX125枚（技術介入時）**
-- 通常ゲーム数天井・AT/ART/CZモード: **NOT_APPLICABLE**
-- coreStatus: **COMPLETE_CORE_RESET_NON_APPLICABLE_FIELDS_CONFIRMED_POWER_CYCLE_DETECTION_UNVERIFIED**
+- メーカー: **SNKプレイモア**
+- 型式名: **メタルスラッグSV-001Y**（中古実機DB）
+- 導入: **2010-06-07**
+- 世代/タイプ: **5号機 / A+ART / チャンスゾーン / パンク回避 / 波形管理ART**
+- 機械割: **96.7 / 98.9 / 100.2 / 105.6 / 110.3 / 115.0%**
+- BIG: **1/496.5 / 1/489.1 / 1/481.9 / 1/474.9 / 1/468.1 / 1/431.2**
+- REG: **1/744.7 / 1/728.2 / 1/712.3 / 1/697.2 / 1/655.4 / 1/528.5**
+- MB: **全設定1/1489.5**
+- 合算: **1/248.2 / 1/244.5 / 1/240.9 / 1/237.4 / 1/230.8 / 1/204.8**
+- 50枚ベース: **UNVERIFIED_AFTER_RESEARCH**
+- BIG約**301枚** / REG約**70枚** / MB約**28枚**
+- ART純増: **約+1.2枚/G**
+- 天井: ボーナス間 **111 / 333 / 555 / 777 / 999 / 1111G** の奇数ゾロ目で段階的に突入抽選
+- coreStatus: **PARTIAL_CORE_BASE_UNVERIFIED_RESET_DIRECT_EVIDENCE_PARTIAL**
 
-## resetBehavior v0.7 — サンサンオアシス キュイーンVer.
+## resetBehavior v0.7 — メタルスラッグSV-001
 
-- **設定変更**: ボーナスのみのノーマルタイプで、天井/AT・ART・CZモード等の長期ゲーム数リセット対象は該当なし。本機固有のリール初期位置・ランプ等は `UNVERIFIED_AFTER_RESEARCH`。
-- **据え置き**: 宵越し天井/モード/ARTストック等の引継ぎ対象は `NOT_APPLICABLE`。
-- **電源OFF→ON**: 天井/モード観点は該当なし。リール位置・ランプ等の見た目の本機固有挙動は `UNVERIFIED_AFTER_RESEARCH`。
-- **ゲーム数/天井**: `NOT_APPLICABLE`。リセット短縮天井なし。
-- **モード/状態**: 朝一狙いへ影響するAT/ART/CZ長期内部モードは `NOT_APPLICABLE`。
+- **設定変更**: 高信頼な本機専用解析で「設定変更時に天井ゲーム数をリセット」と直接書かれた本文は今回取得できず `UNVERIFIED_AFTER_RESEARCH`。後年の天井狙い整理資料に **「宵越し×」** があり、天井進捗を利用できない可能性を低信頼補助情報として保持。
+- **据え置き**: 同じく「宵越し×」の低信頼情報はあるが、設定変更/単純電源OFFとの条件分離が不足するため `LOW_CONFIDENCE_EVIDENCE_SUGGESTS_NO_CARRYOVER` に留める。
+- **電源OFF→ON**: 天井、高確/超高確、ART残G・無敵ラッシュストックの処理を直接確認できず `UNVERIFIED_AFTER_RESEARCH`。
+- **ゲーム数・天井**: 通常天井ポイント自体はP-WORLD等で確定。設定変更時のリセット/引継ぎは未確定。
+- **モード・状態**: 通常時の高確/超高確は存在確認。設定変更時の振り分け/引継ぎは未確認。
 - **有利区間**: `NOT_APPLICABLE`。
-- **朝一恩恵/不利**: 数値化された設定変更専用恩恵・不利は `NONE_CONFIRMED_AFTER_RESEARCH`。
-- **変更判別**: `サンサンオアシス キュイーンVer. / レッドパネル / パイオニア`と設定変更/リセット/朝一/据え置き/電源OFF ON/ガックン/初期出目/判別を組み替え、公式・P-WORLD・K-Navi・HAZUSE・当時業界記事を横断したが本機固有情報を直接確定できず `UNVERIFIED_AFTER_RESEARCH`。
-- **公開朝一数値**: 朝一当選率、リセット恩恵率、変更専用モード振分率は `NONE_CONFIRMED_AFTER_RESEARCH`。
-- resetBehaviorQA: **NORMAL_BONUS_ONLY_NO_CEILING_MODE_RESET_RELEVANCE_CONFIRMED_POWER_CYCLE_VISIBLE_STATE_AND_DETECTION_UNVERIFIED**
+- **朝一恩恵/不利**: リセット専用短縮天井・高確スタート数値等は `NONE_CONFIRMED_AFTER_RESEARCH`。天井進捗消失は低信頼補助情報のみ。
+- **変更判別**: ガックン、初期出目、液晶状態等の本機固有変更判別は `UNVERIFIED_AFTER_RESEARCH`。
+- **公開朝一数値**: リセット時モード振り分け、朝一当選率、恩恵率は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- resetBehaviorQA: **CEILING_EXISTENCE_CONFIRMED_RESET_DIRECT_EVIDENCE_INSUFFICIENT_LOW_CONFIDENCE_NO_CARRYOVER_INDICATION_POWER_CYCLE_MODE_STATE_DETECTION_UNVERIFIED**
 
 ## resetBehavior 遡及QA — 継続地点
 
@@ -58,19 +60,23 @@
 
 ## 主要出典（取得日 2026-09-03）
 
-### サンサンオアシス キュイーンVer.
-- パイオニア公式2010年製品一覧: `https://www.slot-pioneer.co.jp/products/2010.html`
-- パイオニア公式発売案内: `https://www.slot-pioneer.co.jp/information/ssoasis.html`
-- グリーンべると: `https://web-greenbelt.jp/00002639/`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/5940`
-- HAZUSE DATA: `https://data.hazuse.com/?machine_code=0S0163`
-- K-Navi: `https://p-kn.com/slot/1208/`
-- K-Navi機械割: `https://p-kn.com/slot/1208/19145/`
+### メタルスラッグSV-001
+- パチビー機種ページ: `https://www.pachibee.jp/machines/index/210030010`
+- パチビー2010年6月導入スケジュール: `https://www.pachibee.jp/machines/schedule/2010-06`
+- グリーンべると: `https://web-greenbelt.jp/00002662/`
+- 娯楽産業: `https://www.goraku-sangyo.com/snk%E3%83%97%E3%83%AC%E3%82%A4%E3%83%A2%E3%82%A2%E3%80%80%E3%83%91%E3%83%81%E3%82%B9%E3%83%AD%E6%96%B0%E6%A9%9F%E7%A8%AE%E3%80%8C%E3%83%A1%E3%82%BF%E3%83%AB%E3%82%B9%E3%83%A9%E3%83%83%E3%82%B0sv-001/`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/5924`
+- K-Navi機械割: `https://p-kn.com/slot/1197/19099/`
+- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/snk_slot/29/a.php`
+- 5号機クロニクル: `https://5goki.com/snkplaymore`
+- 中一商事: `https://www.nakaiti.com/html/sSNK073.html`
+- 天井ハイエナ生活（低信頼補助）: `https://macerate.seesaa.net/article/268277971.html`
 
 ## 次回再開地点
 
-1. **recordCount 485 / chronologicalFrontier 2010-06-07**。開始時は必ず最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 前線実レコードを再取得。
-2. **2010-06-07同日群を継続**。未処理候補: **メタルスラッグSV-001 / ガメラ / ニューパルサーV2 / マジックライアン / とんでも戦士ムテキング**。各repo重複確認後、最古未処理を次に追加する。
-3. **ゴッドハンターV**はK-Naviが2010-06-07、パチビー月間スケジュールが2010-06-08で日付競合。6/7同日群を閉じる前後で別系統資料を追加照合し、推測せずCONFLICT/定義差を判定する。
-4. サンサンオアシスのformalModelName / approvalNumber、設定変更・単純電源OFF→ON時の見た目挙動、ガックン等変更判別は追加探索余地あり。ただし新規収集を止めない。
-5. 競合値は平均化しない。納品予定日・導入開始日・発売月など定義の異なる日付は分離して保持する。
+1. **recordCount 486 / chronologicalFrontier 2010-06-07**。開始時は必ず最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 前線実レコードを再取得。
+2. **2010-06-07同日群を継続**。未処理候補: **ガメラ / ニューパルサーV2 / マジックライアン / とんでも戦士ムテキング**。各repo重複確認後、最古未処理を次に追加する。
+3. **南国育ちスペシャル-30**は既登録か別型式確認を再実施し、同日群を閉じる前に重複/漏れを監査する。
+4. **ゴッドハンターV**はK-Naviが2010-06-07、パチビー月間スケジュールが2010-06-08で日付競合。6/7同日群を閉じる前後で別系統資料を追加照合し、推測せずCONFLICT/定義差を判定する。
+5. メタルスラッグSV-001の50枚ベース、approvalNumber、設定変更時の天井リセット直接根拠、電源OFF→ON、モード/状態、ガックン等変更判別は追加探索余地あり。ただし新規収集を止めない。
+6. 競合値は平均化しない。後年低信頼資料だけでresetBehaviorを確定しない。
