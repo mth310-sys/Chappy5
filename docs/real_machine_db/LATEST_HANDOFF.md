@@ -4,75 +4,72 @@
 
 ## 現在地点
 
-- recordCount: **435**
-- latestMachineAdded: **哲也 ～雀聖と呼ばれた男～ 新宿VS上野編**
-- latestRecord: `docs/real_machine_db/machines/2009-12-07_tetsuya-shinjuku-vs-ueno.md`
-- chronologicalFrontier: **2009-12-07**
+- recordCount: **436**
+- latestMachineAdded: **爆走列島**
+- latestRecord: `docs/real_machine_db/machines/2009-12-14_bakusou-rettou.md`
+- chronologicalFrontier: **2009-12-14**
 - schema: **resetBehavior v0.7**
 - status: **READY_TO_CONTINUE**
 
 ## 今回の継続確認
 
-- GitHub最新mainの `README.md`、最新ミッション `CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、最新434 `2009-12-07_honoo-no-nekketsu-kyoushi.md` を再読。
+- GitHub最新mainの `README.md`、最新ミッション `CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、最新435 `2009-12-07_tetsuya-shinjuku-vs-ueno.md` を再読。
 - INDEXは旧19件地点のためREADME規定どおり進捗正本には使わず、LATEST_HANDOFF＋実レコードを優先。
-- 開始時mainは434件 / chronologicalFrontier 2009-12-07。
-- 直前handoffで同日未処理候補として指定されていた `哲也 新宿VS上野` をrepo検索し未登録を確認。
-- K-Navi、当時グリーンべると、旧パチマガ、後年DB・実機資料・天井回顧を横断し、性能コア＋resetBehavior v0.7を収集。
-- 追加直前にLATEST_HANDOFFを再取得して434件地点のままで競合がないことを確認し、435件目として追加。
+- 開始時mainは435件 / chronologicalFrontier 2009-12-07。
+- 2009-12-07同日群と12-08〜12-13境界を、PachiBee / P-WORLD / 当時業界記事 / 旧解析 / メーカー別後年一覧で再監査。12-08〜12-13は発表日記事は存在するが、今回本線へ追加すべき具体ホール導入日の未登録パチスロを確定できず。
+- 直前handoffで後続候補に指定されていた `爆走列島` をrepo既存パス確認し未登録を確認。
+- PachiBeeがホール導入日を2009-12-14と明示。当時遊技通信転載の2009-11-16は発表日として分離。
+- 旧パチマガ、P-WORLD、PachiBee、5号機クロニクル、pacnk、当時業界転載を横断し、性能コア＋resetBehavior v0.7を収集。
+- 追加直前にLATEST_HANDOFFを再取得して435件地点のままで競合がないことを確認し、436件目として追加。
 
-## 435 — 哲也 ～雀聖と呼ばれた男～ 新宿VS上野編 要約
+## 436 — 爆走列島 要約
 
-- メーカー: **アリストクラートテクノロジーズ**
-- ホール導入開始: **2009-12-07**（K-Navi）
+- メーカー: **SNKプレイモア**
+- ホール導入: **2009-12-14**（PachiBee）
+- 発表: **2009-11-16**（当時遊技通信転載）
 - 世代: **5号機**
-- システム: **A+ART / 周期CZ / ストックART**
-- BIG: **1/383.25 → 1/276.52**
-- REG: **1/618.26 → 1/431.16**
-- ボーナス合成: **1/236.59 → 1/168.47**
-- 50枚ベース: **31.88 → 32.09G**
-- ART「玄人TIME」: **約+1.1枚/G / 30G・100G・1000G**
-- BIG約250枚 / REG最大約77枚
+- システム: **A+ART / 完走型ART / CZ / ナビストック**
+- ボーナス合成: **1/266.41 → 1/189.41**
+- 50枚ベース: **34.76G（設定1〜5） / 36.23G（設定6）**
+- ART「スゴロクタイム」: **50G / 約+1.2枚/G**
+- 爆走ボーナス約255枚 / 赤7・青7BIG約125枚
+- CZ自力ART突入: **35.7%（旧パチマガ） / 約36%（P-WORLD）**
 
-## CONFLICT — 機械割
+## 機械割
 
-平均せず両系列を保存。
+- **96.6 / 98.2 / 100.1 / 104.3 / 107.5 / 111.2%**
+- 旧パチマガ直接値、5号機クロニクル、pacnkの系列が一致。今回明確なCONFLICTなし。
 
-- 旧パチマガシミュレート: **97.76 / 99.45 / 101.65 / 104.32 / 106.76 / 111.56%**
-- 後年DB・実機系で広く流通: **97.3 / 98.8 / 100.9 / 104.2 / 107.0 / 112.1%**
-- 単純な丸めでは一致しないため `CONFLICT`。
+## 天井・resetBehavior v0.7
 
-## 天井・CZ
-
-- 通常**500G**で第1天井CZ。
-- K-Naviには第2・第3天井CZの専用項目が存在。
-- 回顧資料では第1天井後さらに通常500Gで第2、第2天井後さらに通常500Gで第3。第2はARTストック5個以上、第3は10個以上という記録がある。
-- 当時実戦掲示板にも第1→第2→第3の500G周期到達例が残るため、補助照合に限定して保持。
-
-## resetBehavior v0.7
-
-- **設定変更**: `UNVERIFIED_AFTER_RESEARCH`。K-Naviに「朝イチは狙い目!?」「ガックン判別は可能!?」、旧パチマガに「攻め時・ヤメ時・設定変更時」専用項目の存在は確認したが本文具体値を回収できず。
-- **据え置き**: `PARTIAL_CONFIRMED`。K-Naviが本機を明示的に **「宵越アリ」** と分類。据え置き時に宵越し狙いが成立することは確認。ただし第1〜第3天井進捗、ARTナビストック、CZ状態の保持範囲は未確定。
-- **電源OFF→ON**: `UNVERIFIED_AFTER_RESEARCH`。天井進捗・CZ/ART・ナビストック・初期出目の復帰挙動を確定できず。
-- **ゲーム数/天井**: 500G周期の天井CZ構造は確認。設定変更時clear/retainは未確定。
-- **天井短縮**: `NONE_CONFIRMED_AFTER_RESEARCH`。
-- **モード/状態**: 設定変更専用・朝一専用の公開振分は `NONE_CONFIRMED_AFTER_RESEARCH`、CZ/ART状態処理は未確定。
+- **ゲーム数天井**: ボーナス&ART間**999G**で天井CZ（pacnk）。
+- **設定変更**: `PARTIAL_CONFIRMED`。
+  - 天井までのゲーム数は**設定変更後も引き継ぐ**。
+  - ARTナビストックは**設定変更で消滅**。
+- **据え置き**: `PARTIAL_CONFIRMED_FOR_CEILING`。少なくとも天井進捗は設定変更でも消えない構造。純粋な据え置き時のCZ/ART状態・ナビストック保持範囲を明記した別系統資料は未回収。
+- **電源OFF→ON**: `UNVERIFIED_AFTER_RESEARCH`。999G進捗、CZ/ART、ナビストック、初期リール状態の本機固有直接資料を確定できず。
+- **gameCounterReset**: `NOT_RESET_BY_SETTING_CHANGE / CARRIED_OVER`。
+- **ceilingAfterReset**: 短縮ではなく通常999Gへの進捗引継ぎ。リセット専用別天井値は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- **modeAfterReset**: 朝一専用モード・設定変更時モード振分は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- **stateAfterReset**: ナビストック消滅のみ直接確認。CZ滞在・ART中・無限ART等の変更時処理は未確定。
 - **有利区間**: `NOT_APPLICABLE`（5号機・制度前）。
-- **朝一恩恵/不利**: 専用朝一項目の存在までは確認したが具体本文未回収のため恩恵を推測せず `NONE_CONFIRMED_AFTER_RESEARCH`。不利要素も同様。
-- **変更判別**: ガックン専用項目の存在は確認したが可否・条件を回収できず `UNVERIFIED_AFTER_RESEARCH`。
-- **公開朝一数値**: `NONE_CONFIRMED_AFTER_RESEARCH`。
+- **朝一恩恵**: 前日天井ハマリ進捗を設定変更でも保持するため宵越し価値が残る。
+- **朝一不利**: ARTナビストックは設定変更で消滅。
+- **変更判別**: ガックン、初期出目、液晶/CZ表示等は `UNVERIFIED_AFTER_RESEARCH`。天井ゲーム数だけでは設定変更/据え置き判別にならない。
+- **公開朝一数値**: 設定変更専用モード振分・朝一当選率・リセット恩恵率は `NONE_CONFIRMED_AFTER_RESEARCH`。
 
 ## 主要出典（取得日 2026-09-03）
 
-- K-Navi: `https://p-kn.com/slot/1083/`
-- 当時グリーンべると/P-WORLDニュース: `https://news.p-world.co.jp/articles/3649/greenbelt`
-- 旧パチマガ ボーナス/PAYOUT: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/arist_slot/39/h.php`
-- 旧パチマガ 1000円あたりG数: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/arist_slot/39/c.php`
-- 旧パチマガ 基本システム: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/arist_slot/39/a.php`
-- 旧パチマガ 機種トップ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/arist_slot/39/arist_slot_39.php`
-- みんスロ: `https://minslo.com/%E5%93%B2%E4%B9%9F-%E6%96%B0%E5%AE%BFvs%E4%B8%8A%E9%87%8E/`
-- 天井回顧: `https://kotuumai.exblog.jp/`
-- P-WORLD掲示板: `https://www.p-world.co.jp/sp/search_kisyubbs.cgi?code=&group_id=3332&mode=thread_list&page=65`
-- ホームスロット実機資料: `https://home-slot.net/SHOP/s-aristocrat9.html`
+- PachiBee: `https://www.pachibee.jp/machines/reach/209110014`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/5767`
+- 旧パチマガ 基本システム: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/snk_slot/27/a.php`
+- 旧パチマガ PAYOUT/ボーナス: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/snk_slot/27/h.php`
+- 旧パチマガ 1000円あたりG数: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/snk_slot/27/c.php`
+- 旧パチマガ 機種トップ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/snk_slot/27/snk_slot_27.php`
+- 5号機クロニクル SNKプレイモア一覧: `https://5goki.com/snkplaymore`
+- pacnk: `https://pacnk.com/slot/tools/sh_bakuso.html`
+- 当時遊技通信転載（Pマンズ）: `https://p-mans.blogspot.com/2009/11/`
+- パチ7 SNKプレイモア史: `https://pachiseven.jp/articles/detail/11157`
 
 ## resetBehavior 遡及QA進捗
 
@@ -81,10 +78,11 @@
 
 ## 次回再開地点
 
-1. **recordCount 435 / chronologicalFrontier 2009-12-07**。
-2. まず **2009-12-07同日群の残件監査**を継続。PachiBee / P-WORLD / K-Navi / 当時業界記事 / メーカー一覧を突合して、炎の熱血教師・哲也以外の未登録パチスロがないか閉じる。
-3. 同日群を閉じたら **2009-12-08〜12-13境界監査**へ進む。
-4. `爆走列島` はPachiBeeで **2009-12-14** ホール導入確認済みの後続候補。11/16発表日と混同しない。
-5. 追加前に必ずrepo既存検索＋LATEST_HANDOFF再取得を行い、重複・他リレー競合を防ぐ。
-6. 性能コア＋resetBehavior v0.7を同基準で収集。競合は平均せず `CONFLICT`、十分な再探索後のみ `UNVERIFIED_AFTER_RESEARCH`。
-7. 完全再現用の細かな内部抽選は対象外。
+1. **recordCount 436 / chronologicalFrontier 2009-12-14**。
+2. まず **2009-12-14同日群の残件監査**を継続。
+3. 初代 **`バジリスク ～甲賀忍法帖～`** はK-Naviで **2009-12-14ホール導入開始**を確認済み。repo既存パス候補 `docs/real_machine_db/machines/2009-12-14_basilisk-kouga-ninpouchou.md` は追加前確認時点でNot Foundだったため、次の有力未処理候補。
+4. 同日群には他機種が存在する可能性があるため、PachiBee / P-WORLD / K-Navi / 当時業界記事 / メーカー一覧で12-14を閉じてから12-15以降へ進む。
+5. `パチスロあしたのジョー`、`元祖！大江戸桜吹雪` は2009-12-10前後に発表記事があるが、発表日を導入日に流用しない。具体ホール導入日を確定してから本線へ置く。
+6. 追加前に必ずrepo既存検索＋LATEST_HANDOFF再取得を行い、重複・他リレー競合を防ぐ。
+7. 性能コア＋resetBehavior v0.7を同基準で収集。競合は平均せず `CONFLICT`、十分な再探索後のみ `UNVERIFIED_AFTER_RESEARCH`。
+8. 完全再現用の細かな内部抽選は対象外。
