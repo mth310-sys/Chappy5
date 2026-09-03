@@ -1,6 +1,6 @@
 export const GRID = Object.freeze({
   originX: 325,
-  originY: 176,
+  originY: 78,
   halfW: 13,
   halfH: 6.5,
   tileW: 26,
@@ -44,4 +44,20 @@ export function depthKey(item) {
   const w = item.w ?? 1;
   const d = item.d ?? 1;
   return item.x + w - 1 + item.y + d - 1;
+}
+
+export function projectedBounds(bounds) {
+  const corners = [
+    toScreen(bounds.minX, bounds.minY),
+    toScreen(bounds.maxX + 1, bounds.minY),
+    toScreen(bounds.maxX + 1, bounds.maxY + 1),
+    toScreen(bounds.minX, bounds.maxY + 1),
+  ];
+  const xs = corners.map((p) => p.x);
+  const ys = corners.map((p) => p.y);
+  const left = Math.min(...xs);
+  const top = Math.min(...ys);
+  const right = Math.max(...xs);
+  const bottom = Math.max(...ys);
+  return { corners, left, top, right, bottom, width: right - left, height: bottom - top };
 }
