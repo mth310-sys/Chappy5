@@ -11,7 +11,7 @@ function boot() {
   renderLayout(scene, layout);
 
   if (status) {
-    status.textContent = `GRID OK / ${report.itemCount} objects`;
+    status.textContent = `MAP OK / PATH ${report.reachableCells}`;
     status.dataset.state = 'ok';
   }
 
@@ -25,7 +25,7 @@ try {
   console.error('[Slot Pachiro foundation]', error);
   const status = document.getElementById('foundation-status');
   if (status) {
-    status.textContent = `GRID ERROR`;
+    status.textContent = 'FOUNDATION ERROR';
     status.dataset.state = 'error';
   }
 }
