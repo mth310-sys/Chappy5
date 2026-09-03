@@ -4,98 +4,83 @@
 
 ## 現在地点
 
-- recordCount: **517**
-- latestMachineAdded: **ロケットパニック**（JPS / 全国一斉導入基準 2010-10-04）
-- latestRecord: `docs/real_machine_db/machines/2010-10-04_rocket-panic.md`
+- recordCount: **518**
+- latestMachineAdded: **極お父さん ～舞い降りた天使???～**（SNKプレイモア / 2010-10-04）
+- latestRecord: `docs/real_machine_db/machines/2010-10-04_hyper-otousan.md`
 - chronologicalFrontier: **2010-10-04**
-- frontierLatestMachine: **ロケットパニック**
+- frontierLatestMachine: **極お父さん ～舞い降りた天使???～**
 - schema: **resetBehavior v0.7**
 - status: **READY_TO_CONTINUE**
 
 ## 今回の継続確認
 
 - 最新mainの `README.md`、正本ミッション `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、前線実レコードを再取得。
-- `INDEX.md` は旧地点のため、README規定どおり最新 `LATEST_HANDOFF.md`＋main実レコードを進捗正本として使用。
-- 開始時正本は recordCount **516** / chronologicalFrontier **2010-10-04** / latestMachineAdded **ビッグシオV**。
-- LATEST_HANDOFF指定の2010-10-04同日群を継続し、repo未登録の**ロケットパニック**を517件目として追加。
-- K-Naviは全国一斉導入開始2010-10-04。P-WORLD/5号機クロニクルは2010年09月（月粒度）を掲載するため、全国一斉導入日と先行地域/月粒度メタデータを分離して保持した。
-- 遡及QAではmachine treeを再確認し、`2006-11_jack-to-mamenoki.md`直後の実在resetBehavior欠損pathを **`2006-11_jackpot-tropical-version.md`** と一意確定。resetBehavior v0.7を追補した。
+- `INDEX.md` は旧19件地点のため、README規定どおり最新 `LATEST_HANDOFF.md`＋main実レコードを進捗正本として使用。
+- 開始時正本は recordCount **517** / chronologicalFrontier **2010-10-04** / latestMachineAdded **ロケットパニック**。
+- 2010-10-04同日群を継続し、repo未登録の**極お父さん ～舞い降りた天使???～**を518件目として追加。
+- 既登録性能値は再調査せず、新規対象の性能コア＋resetBehavior v0.7に限定して収集した。
 
-## 517 — ロケットパニック
+## 518 — 極お父さん ～舞い降りた天使???～
 
-- メーカー: **JPS**
-- 全国一斉導入基準: **2010-10-04**
-- 先行地域/月粒度記録: **2010-09**（P-WORLD / 5号機クロニクル）
-- 世代/タイプ: **5号機 / A+ART / ボーナス契機ART**
-- 型式: **ロケットパニック2**
-- 検定番号: **9S1020**
-- 機械割: **96.5 / 98.8 / 100.2 / 103.5 / 106.8 / 110.2%**
-- PB: **1/341.3 → 1/309.1**
-- CB: **1/150.3 → 1/151.7**（設定ごと非単調。設定3は現存パチマガページ誤記疑いを別管理）
-- ボーナス合算: **1/104.4 → 1/101.8**
+- メーカー: **SNKプレイモア**
+- ホール導入開始: **2010-10-04**（K-Navi）
+- 月粒度別資料: **2010/9**（5号機クロニクル）
+- 世代/タイプ: **5号機 / A+ART / ボーナス+RT+ART**
+- 型式: **ハイパーオトウサンD**
+- 検定番号: **UNVERIFIED_AFTER_RESEARCH**
+- 機械割主系列: **96.8 / 98.6 / 100.2 / 105.4 / 110.1 / 115.2%**
+- 機械割設定2: 後年回顧記事のみ **96.6%** → `CONFLICT`、平均化しない
+- BIG: **1/331.0 → 1/287.4**
+- REG: **1/496.5 → 1/376.6**
+- ART初当たり: **1/561.6 → 1/312.5**（設定ごと非単調）
 - 50枚/1000円: **UNVERIFIED_AFTER_RESEARCH**
-- PB: **最大約54枚** / CB: **最大約48枚**
-- ART「パニックモード」: **20/40/80G**
-- ART純増: **CONFLICT 約+1.8枚/G（パチマガ） / 約+1.9枚/G（P-WORLD）**
-- 天井/救済: **ボーナス20回連続ART非突入で天井ART**
+- BIG: **約200枚** / REG: **約50枚**
+- RT「追跡モード」: **30G / 約+0.1枚/G**
+- ART「バトルチャンス」: **30G / 約+1.2枚/G / 継続率66・80・87・95%**
+- 通常天井: **ボーナス or RT or ART間MAX600G → 天井状態 → 1枚役成立でART**
 - coreStatus: **COMPLETE_CORE_RESET_BEHAVIOR_PARTIAL**
 
-### resetBehavior v0.7 — ロケットパニック
+### resetBehavior v0.7 — 極お父さん
 
-- 現存パチマガスロマガ機種ページに「朝イチ・設定変更」専用解析項目が存在することまでは確認。
-- ただし詳細本文を現存クロールから回収できず、**設定変更時のボーナス20回天井進捗clear/retain、内部モード、ARTストック/潜伏/CZ、据え置き、単純電源OFF→ON**は `UNVERIFIED_AFTER_RESEARCH`。
-- 通常の救済条件は**ボーナス20回連続ART非突入**。固定ゲーム数天井とは分離。
-- 設定変更専用の短縮天井、朝一ART確率、高確移行率、ガックン/初期出目等の変更判別数値は確認できず。
+- 「極お父さん / ハイパーオトウサンD / SNKプレイモア / お父さんシリーズ」と「設定変更 / リセット / 朝一 / 据え置き / 宵越し / 電源OFF ON / 天井 / 600G / モード / ガックン」を組み替えて複数経路で再探索。
+- 通常天井MAX600Gは複数資料で確認したが、**設定変更時に600G進捗をclear/retainするかは直接根拠を回収できず `UNVERIFIED_AFTER_RESEARCH`**。
+- 据え置き、単純電源OFF→ON、低確/高確/超高確、RT、ARTストック/潜伏状態の保持/初期化も本機固有の直接資料を確定できず。
+- 設定変更専用短縮天井、朝一ART確定、高確優遇、公開されたリセットモード振り分けは **NONE_CONFIRMED_AFTER_RESEARCH / UNVERIFIED_AFTER_RESEARCH**。
+- ガックン、初期出目、液晶/ランプによる変更判別も高信頼資料を確定できず。
 - 有利区間は5号機のため **NOT_APPLICABLE**。
 - 一般的な5号機挙動から推測補完しない。
 
-## 遡及QA — ジャックポット・トロピカルバージョン
-
-- 対象path: `docs/real_machine_db/machines/2006-11_jackpot-tropical-version.md`
-- 既存性能コアは維持し、`coreStatus: COMPLETE_CORE_RESET_QA_PARTIAL`としてreset QAを別管理。
-- 当時業界記事は岡崎産業5号機第1弾・BIG+REGのノーマル機として紹介。後年保存スペックもノーマルタイプで整合。
-- 再探索でも通常ゲーム数天井、ART/RT残G、ゲーム数モード、朝一専用短縮/高確等は確認できず。
-- 設定変更/据え置き/単純電源OFF→ONの低レベル内部処理、ガックン/初期出目等は `UNVERIFIED_AFTER_RESEARCH`。
-- 後年設定判別資料はBIG/REG/オレンジの数値判別を中心とし「設定示唆なし」。これは朝一設定変更確定判別ではないため混同しない。
-- 有利区間は **NOT_APPLICABLE**。
-- 遡及QA進捗は**ジャックポット・トロピカルバージョンまで補完済み**へ前進。
-
 ## CONFLICT / 注意
 
-- ロケットパニック導入時期: K-Navi **2010-10-04全国一斉導入開始**、P-WORLD/5号機クロニクル **2010年09月**。地域先行/月粒度メタデータの可能性を別フィールド保持。
-- ロケットパニックART純増: パチマガ **約+1.8枚/G**、P-WORLD **約+1.9枚/G**。平均化せずCONFLICT。
-- ロケットパニックCB設定3: 現存パチマガページは **1/248.9** と表示するが同ページ合算1/103.0と不整合。別保存資料 **1/148.9** は合算と整合するため採用値1/148.9、元値は誤記疑いで保持。
-- ジャックポット・トロピカルバージョン設定1機械割は既存CONFLICT（96.18〜96.2% / 98.18%）を維持し、reset QAのために性能完了判定を崩していない。
+- 導入時期: K-Navi **2010-10-04**、5号機クロニクル **2010/9**。日粒度導入開始と月粒度メタデータを分離。
+- 機械割設定2: 5号機クロニクル **98.6%** / 後年回顧記事 **96.6%**。他設定は一致するが自動修正せずCONFLICT保持。
+- BIG設定3: **1/321.1 / 1/321.3** の丸め差を保持。
 
 ## 主要出典（取得日 2026-09-04）
 
-### ロケットパニック
-- K-Navi 2010年10月導入カレンダー: `https://p-kn.com/calendar/201010/`
-- パチマガスロマガ 基本システム: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/jps_slot/23/a.php`
-- パチマガスロマガ ボーナス確率/PAYOUT: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/jps_slot/23/h.php`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/6078`
-- 5号機クロニクル JPS一覧: `https://5goki.com/jps`
-- ホームスロット保存スペック: `https://home-slot.net/SHOP/s-jps22.html`
-- 2010年業界資料保存: `https://paperzz.com/doc/5546047/2010`
-
-### ジャックポット・トロピカルバージョン reset QA
-- P-WORLD/グリーンべると当時記事: `https://news.p-world.co.jp/articles/1861/greenbelt`
-- 5号機クロニクル 岡崎産業一覧: `https://5goki.com/okazaki`
-- 保存スペック: `https://pachinko.hatenablog.jp/entry/2006/10/jackpot-tropical-version`
-- pacnk 設定判別: `https://pacnk.com/slot/tools/sh_jakkupottotoropikaruv2006.html`
+- K-Navi: `https://p-kn.com/slot/1273/`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/6079`
+- 5号機クロニクル SNKプレイモア一覧: `https://5goki.com/snkplaymore`
+- pacnk: `https://pacnk.com/slot/2010/hyperotousan/top.php`
+- 中一商事 保存実機スペック: `https://www.nakaiti.com/html/sSNK077.html`
+- marimo0925 回顧機械割: `https://www.marimo0925.net/pachislot-kikaiwari-ranking-superfather-ban/`
+- ハンゲーム パチスロWiki保存解析: `https://wikiwiki.jp/hanpachi/%E3%81%AA%E3%81%AA%E3%81%B1%E3%81%A1%20%E3%83%91%E3%83%81%E3%82%B9%E3%83%AD/%E6%A5%B5%E3%81%8A%E7%88%B6%E3%81%95%E3%82%93%EF%BD%9E%E8%88%9E%E3%81%84%E9%99%8D%E3%82%8A%E3%81%9F%E5%A4%A9%E4%BD%BF%EF%BC%9F%EF%BC%9F%EF%BC%9F%EF%BD%9E`
 
 ## 今回のGitHub更新
 
-- 517 ロケットパニック追加: `docs/real_machine_db/machines/2010-10-04_rocket-panic.md`
-- レコード追加commit: `89dd87970331871b40e49551f3b27e0d115c1277`
-- 遡及QA追補: `docs/real_machine_db/machines/2006-11_jackpot-tropical-version.md`
-- QA追補commit: `b79870b4e3a2d4c6765860ce89060dbe0f6d1747`
-- LATEST_HANDOFF: このコミット。
+- 518 極お父さん追加: `docs/real_machine_db/machines/2010-10-04_hyper-otousan.md`
+- レコード追加commit: `04cfbc99a5aff7e25f2a6607bedb017db9f265d6`
+- LATEST_HANDOFF: このコミット
+
+## 遡及QA継続地点
+
+- **ジャックポット・トロピカルバージョンまで補完済み**。
+- machine tree上の次の候補は `docs/real_machine_db/machines/2006-11_kaidouou.md`。resetBehavior欠損なら次回QA対象。
+- COMPLETE_CORE性能判定はreset欠損のみを理由に崩さず、reset QA状態を別管理する。
 
 ## 次回再開地点
 
-1. **recordCount 517 / chronologicalFrontier 2010-10-04**。開始時は必ず最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 前線実レコードを再取得。
-2. 2010-10-04同日群を継続。次候補は **極お父さん ～舞い降りた天使???～ / 出番だ!葉月ちゃん**。**パチスロピンポンは515で登録済みのため重複追加禁止**。
-3. 同日群を閉じた後、2010-10-05〜10-15境界を監査し、次節点2010-10-16「天空のシンフォニア」へ進む。
-4. 遡及QAは**ジャックポット・トロピカルバージョンまで補完済み**。machine tree上の次の実在path **`2006-11_kaidouou.md`** をresetBehavior欠損確認し、欠損なら次回QA対象とする。
-5. COMPLETE_CORE性能判定はreset欠損のみを理由に崩さず、reset QA状態を別管理する。
+1. **recordCount 518 / chronologicalFrontier 2010-10-04**。開始時は最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 前線実レコードを必ず再取得。
+2. 2010-10-04同日群を継続。次候補は **出番だ!葉月ちゃん**。パチスロピンポン、ロケットパニック、極お父さんは登録済みのため重複追加禁止。
+3. 2010-10-04同日群の漏れを最終監査後、2010-10-05〜10-15境界を監査し、次節点2010-10-16「天空のシンフォニア」へ進む。
+4. 遡及QAは `2006-11_kaidouou.md` を次候補とする。
