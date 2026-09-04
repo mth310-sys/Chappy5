@@ -4,77 +4,88 @@
 
 ## 現在地点
 
-- recordCount: **573**
-- latestMachineAdded: **バリスタゴルフ**（アイウィル / 2011-05-30ホール導入予定）
-- latestRecord: `docs/real_machine_db/machines/2011-05-30_barista-golf.md`
-- chronologicalFrontier: **2011-05-30**
-- frontierLatestExactDateMachine: **バリスタゴルフ**
+- recordCount: **574**
+- latestMachineAdded: **キングハイビ-30**（パイオニア / 2011-06-05納品開始予定）
+- latestRecord: `docs/real_machine_db/machines/2011-06-05_king-highbi-30.md`
+- chronologicalFrontier: **2011-06-05**
+- frontierLatestExactDateMachine: **キングハイビ-30**
 - schema: **resetBehavior v0.7**
 - status: **READY_TO_CONTINUE**
 
 ## 今回の継続確認
 
-- 最新mainの `README.md`、正本ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、572前線レコード「雀龍桜花」を再取得して開始。
-- `INDEX.md` は旧19件地点のため、README規約どおり最新 `LATEST_HANDOFF.md` とmachineレコードを進捗正本として使用。
-- 572件地点の次候補としてHANDOFF指定されていた「バリスタゴルフ」をrepo検索し未登録確認。2011-05-30ホール導入予定を当時プレイグラフ転載で確認して573件目へ追加。
+- 最新mainの `README.md`、正本ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、573前線レコード「バリスタゴルフ」を再取得して開始。
+- `INDEX.md` は旧地点のため、README規約どおり最新 `LATEST_HANDOFF.md` とmachineレコードを進捗正本として使用。
+- 573件地点の次は6/6群とされていたが、2011-05-31〜06-05境界を再監査した結果、グリーンべると当時記事に「キングハイビ-30」の **2011-06-05納品開始予定**を確認。6/6群へ飛ばさず574件目として追加。
 
-## 今回追加 — 573 バリスタゴルフ
+## 今回追加 — 574 キングハイビ-30
 
-- メーカー: **アイウィル**
-- 導入キー: **2011-05-30（ホール導入予定）**
-- 5号機 / **A+ART / CZ / ストック+ループ+ゲーム数型ART**
-- 機械割: **96.1 / 98.1 / 101.9 / 104.0 / 109.3 / 112.0%**
-- BIG: **1/436.9 / 1/422.8 / 1/409.6 / 1/397.2 / 1/385.5 / 1/352.3**
-- REG: **1/565.0 / 1/541.6 / 1/524.3 / 1/504.1 / 1/478.4 / 1/461.5**
-- ボーナス合算: **1/246.4 / 1/237.4 / 1/230.0 / 1/222.2 / 1/213.5 / 1/199.8**
-- ART初当たり: **1/449.1 / 1/382.6 / 1/410.4 / 1/343.4 / 1/365.7 / 1/287.6**
-- 50枚ベース（1000円あたり）: **32.7 / 32.8 / 32.8 / 32.9 / 32.9 / 33.0G**
-- ART「バリスタモード」: **約+1.3枚/G / 基本約30G / ループ率33〜95% / 上乗せ25〜300G**
-- 基本獲得: 主値 **BIG約210枚 / REG約56枚**
-- 獲得枚数CONFLICT: 5号機クロニクル **BIG約204枚 / REG約48枚**。平均せず保持。
+- メーカー: **パイオニア**
+- 型式名: **キングハイビV-30**
+- 検定番号: **0S1420**
+- 時系列キー: **2011-06-05（納品開始予定）**
+- 5号機 / **ノーマルAタイプ / 完全告知 / 30φ**
+- 機械割: **96 / 98 / 100 / 102 / 105 / 108%**
+- BIG: **1/255 / 1/251 / 1/245 / 1/240 / 1/231 / 1/222**
+- REG: **1/569 / 1/541 / 1/516 / 1/481 / 1/431 / 1/368**
+- ボーナス合算: **1/176 / 1/171 / 1/166 / 1/160 / 1/150 / 1/138**
+- 獲得枚数: **BIG約307枚 / REG約100枚**
+- 1000円あたり: **約34〜36G**
+- AT/ART/RT継続純増: **NOT_APPLICABLE_NORMAL_TYPE**
 
-### resetBehavior v0.7 — 573
+### chronology CONFLICT / SOURCE_DATE_DIFFERENCE
 
-- パチマガスロマガに本機専用 **「天井」「朝イチ・設定変更」**解析項目の存在を確認。
-- P-WORLDで通常時にART期待度の異なる内部モードが存在することも確認。
-- ただし今回取得可能な本文・検索スニペットから、通常天井の正確なゲーム数/恩恵、設定変更時CLEAR/RETAIN、据え置き、単純電源OFF→ON、モード/状態の変更時処理、ガックン等の判別を安全に直接確定できず。
-- 表記揺れ・メーカー・天井・宵越し・reset系検索語を変え、P-WORLD、パチマガ、当時業界転載、5号機クロニクル、旧ブログ/回顧資料を横断後に該当項目を `UNVERIFIED_AFTER_RESEARCH` とした。
-- 設定変更専用短縮天井、高確確定、ART優遇等の公開朝一数値: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- グリーンべると当時記事: **2011-06-05納品開始予定**
+- プレイグラフ転載 / K-Navi: **2011-06-06ホール導入**
+- Hazuse: **2011-06-03導入開始日**
+- パイオニア公式: **2011年6月発売**（月粒度）
+- 日付定義/DB差を平均せず全て保持し、最も直接的な納品開始記述の06-05を時系列キーに採用。
+
+### resetBehavior v0.7 — 574
+
+- P-WORLDで「ボーナスのみでコインを増やす、シンプルなノーマルタイプ」を直接確認。AT/ART/CZおよび長期ゲーム数モードは非搭載として整理。
+- `gameCounterReset`: **NOT_APPLICABLE_NO_GAME_COUNT_SYSTEM_CONFIRMED**。
+- `ceilingAfterReset`: **NONE_CONFIRMED_AFTER_RESEARCH**。K-Navi、Hazuse、P-WORLD、公式、当時業界記事を横断しても本機のゲーム数天井/設定変更専用短縮天井は確認できず。
+- `modeAfterReset`: **NOT_APPLICABLE_NO_LONG_TERM_MODE_CONFIRMED**。
+- `stateAfterReset`: **NOT_APPLICABLE_FOR_AT_ART_CZ_STATE**。成立済みボーナス等の低レベル内部状態は別途未確認。
 - 有利区間: **NOT_APPLICABLE**。
+- 朝一短縮天井、高確スタート、RT/ART優遇、朝一特定G数当選率等の公開数値: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 設定変更時の低レベル出目/フラグ、据え置き、単純電源OFF→ON、ガックン/ランプ等の変更判別は本機固有資料を確定できず **UNVERIFIED_AFTER_RESEARCH**。一般的な5号機挙動で補完しない。
+- 性能コア `COMPLETE_CORE` を維持し、reset QAは `PARTIAL_RESET_QA` として別管理。
 
-## 主要出典 — 573（取得日 2026-09-04）
+## 主要出典 — 574（取得日 2026-09-04）
 
-- P-WORLD: `https://www.p-world.co.jp/machine/database/6341`
-  - BIG/REG/ART初当たり/機械割、BIG約210枚、REG約56枚、ART約+1.3枚/G、内部モード/CZ
-- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/iwill_slot/03/h.php`
-  - BIG/REG/ボーナス合算/PAYOUT全設定
-- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/iwill_slot/03/c.php`
-  - 1000円あたり32.7〜33.0G
-- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/iwill_slot/03/a.php`
-  - ART30G、純増1.3枚/G、ループ率33〜95%、BIG約210枚/REG約56枚
-- パチマガスロマガ機種トップ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/iwill_slot/03/iwill_slot_03.php`
-  - 「天井」「朝イチ・設定変更」専用項目の存在
-- Pマンズ/プレイグラフ転載: `https://p-mans.blogspot.com/2011/04/`
-  - 2011-05-30ホール導入予定、ART約+1.3枚/G
-- 5号機クロニクル: `https://5goki.com/iwill`
-  - 2011年5月導入、確率照合、獲得枚数204/48枚の競合値
+- パイオニア公式 2011年製品一覧: `https://www.slot-pioneer.co.jp/products/2011.html`
+  - 2011年6月発売、製品概要
+- グリーンべると / P-WORLD業界ニュース: `https://news.p-world.co.jp/articles/4588/greenbelt`
+  - 2011-06-05納品開始予定、設定1/6のBIG・REG・合算・出玉率端点、307/100枚、34〜36G
+- P-WORLD: `https://www.p-world.co.jp/machine/database/6326`
+  - パイオニア、5号機ノーマルタイプ、307/100枚、ボーナスのみのゲームフロー
+- K-Navi: `https://p-kn.com/slot/1402/`
+  - 2011-06-06ホール導入開始、ノーマルAタイプ、確率端点、規定払い出し
+- Hazuse: `https://hazuse.com/machine/pachislot/0S1420/`
+  - 型式名/検定番号、2011-06-03、BIG/REG/合算/PAY OUT全設定
+- Pマンズ / プレイグラフ・グリーンべると転載: `https://p-mans.blogspot.com/2011/04/`
+  - 06-06ホール導入予定、06-05納品開始予定、主要性能照合
 
 ## 今回のGitHub更新
 
-- 573: `docs/real_machine_db/machines/2011-05-30_barista-golf.md`
-  - create commit: `b9ae214f8d4a174e1cb5f9b0170416d5ae61e8fb`
+- 574: `docs/real_machine_db/machines/2011-06-05_king-highbi-30.md`
+  - create commit: `ac6a375de0c26cd97500ed9edc12f29f6ac76714`
 - LATEST_HANDOFF: 本更新
 
 ## 遡及QA継続地点
 
 - **怪胴王 (`docs/real_machine_db/machines/2006-11_kaidouou.md`) まで補完済み**を維持。
 - `2006-11-27_thunder-v-special.md` は既にresetBehavior収集済みのため重複QA対象外。
-- QA済み範囲を推測では動かさず、怪胴王直後のmachine treeを実パス/日付順に直接確認して最初のresetBehavior欠損から再開する。
+- 今回、recursive machine treeの再取得も行ったが、大規模tree応答から怪胴王直後の「最初の実在resetBehavior欠損」を日付/実パス順で安全に一意確定できなかった。QA済み範囲を推測では動かさない。
+- 次回も怪胴王直後のmachine pathを直接列挙/取得し、最初のresetBehavior欠損を確定してから遡及する。
 
 ## 次回再開地点
 
-1. **recordCount 573 / chronologicalFrontier 2011-05-30**。最新main README / mission / INDEX / LATEST_HANDOFF / 572・573レコードを再取得。
-2. **2011-05-31〜06-05境界を最終監査**し、5月末の未登録機を閉じる。
-3. 漏れがなければ **2011-06-06同日群**へ進む。現時点で具体日を確認済みの強い候補は **「パチスロ エイリヤンビギンズ」（サミー）、「スターマン バイキング」（SANKO）、「キングハイビ-30」（パイオニア）**。いずれも2011-06-06導入情報あり。repo重複を確認して最古未登録から574件目とする。
-4. **スカイラブ3は2011-06-27ホール導入開始**をK-Navi/パチビーで確認済み。6/6群より先へ誤ジャンプしない。
-5. PARTIAL/UNVERIFIEDは表記揺れ・型式・メーカー・シリーズ・reset検索語を変え、資料系統を横断した後だけ残す。CONFLICTは平均しない。
+1. **recordCount 574 / chronologicalFrontier 2011-06-05**。最新main README / mission / INDEX / LATEST_HANDOFF / 573・574レコードを再取得。
+2. **2011-06-05同日群の残存未登録を最終監査**。
+3. 閉じたら **2011-06-06同日群**へ進む。既確認候補は **「パチスロ エイリヤンビギンズ」（サミー）、「スターマン バイキング」（SANKO）**。repo重複を確認し、最古未処理から575件目とする。
+4. **スカイラブ3は2011-06-27ホール導入開始**。6/6群より先へ誤ジャンプしない。
+5. 遡及QAは怪胴王直後の最初の実在resetBehavior欠損machine path確定から再開。
+6. PARTIAL/UNVERIFIEDは表記揺れ・型式・メーカー・シリーズ・reset検索語を変え、資料系統を横断した後だけ残す。CONFLICTは平均しない。
