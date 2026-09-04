@@ -82,8 +82,6 @@ export function bindPlacementCursorControls(cursor, root = document) {
     else if (event.key === 'ArrowUp') { event.preventDefault(); cursor.move(0, -1); }
     else if (event.key === 'ArrowDown') { event.preventDefault(); cursor.move(0, 1); }
     else if (event.key.toLowerCase() === 'r') { event.preventDefault(); cursor.rotate(1); }
-    else if (event.key === 'Enter') { event.preventDefault(); cursor.commit(); }
-    else if (event.key === 'Escape') { event.preventDefault(); cursor.cancel(); }
   }
   root.addEventListener('keydown', handleKey);
   return () => root.removeEventListener('keydown', handleKey);
