@@ -4,53 +4,53 @@
 
 ## 現在地点
 
-- recordCount: **624**
-- latestMachineAdded: **クイーンジャック-30**（岡崎産業）
-- latestRecord: `docs/real_machine_db/machines/2011-11-21_queen-jack-30.md`
-- chronologicalFrontier: **2011-11-21**
-- frontierLatestExactDateMachine: **クイーンジャック-30**
+- recordCount: **625**
+- latestMachineAdded: **パチスロ北斗の拳 世紀末救世主伝説**（Sammy / サミー）
+- latestRecord: `docs/real_machine_db/machines/2011-12-05_hokuto-no-ken-seikimatsu-kyuseishu-densetsu.md`
+- chronologicalFrontier: **2011-12-05**
+- frontierLatestExactDateMachine: **パチスロ北斗の拳 世紀末救世主伝説**
 - schema: **resetBehavior v0.7**
-- status: **2011-11-21_GROUP_CLOSED_ADVANCE_TO_2011-12-02**
+- status: **2011-12-05_GROUP_OPEN_CONTINUE_SAME_DAY**
 
-## 今回の本線追加 — クイーンジャック-30
+## 今回の本線追加 — パチスロ北斗の拳 世紀末救世主伝説
 
-- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード「クイーンジャック」を再取得して開始。
-- 開始時正本は **recordCount 623 / chronologicalFrontier 2011-11-21**。INDEXは旧19件地点のためREADME規定どおりLATEST_HANDOFFを進捗正本として使用。
-- LATEST_HANDOFF最優先候補の30Φ派生「クイーンジャック-30」を調査し、repo code search未検出を確認して624件目として追加。
-- P-WORLD個別ページで独立機種、型式名 **クイーンジャック-30**、検定番号 **1S0667** を確認。
-- パチンコビレッジで導入日 **2011-11-21**、25Φ/30Φ同時リリース、ゲーム性同一を確認。
-- グリーンべると系当時記事は2011-11-20納品開始予定。releaseDateはホール導入日定義を優先して2011-11-21。
+- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード「クイーンジャック-30」を再取得して開始。
+- 開始時正本は **recordCount 624 / chronologicalFrontier 2011-11-21**。INDEXは旧19件地点のためREADME規定どおりLATEST_HANDOFFを進捗正本として使用。
+- LATEST_HANDOFF指定の2011-12-02枠をHAZUSEカレンダー、日付完全一致検索、業界記事検索で監査したが、2011-12-02導入の5号機パチスロ実機候補を今回確定できなかった。
+- 2011-12-05についてHAZUSE・アタリ7で「パチスロ北斗の拳 世紀末救世主伝説」の導入日が一致。repo code search未検出を確認し625件目として追加。
+- 型式名 **パチスロ北斗の拳F**、検定番号 **1S0777**。
 
 ### 性能コア
 
-- 5号機 / ノーマル / Aタイプ / BIG+REG / 30Φ。
-- BIG最大約 **321枚**、REG約 **104枚**をP-WORLD 30Φ個別ページとパチンコビレッジで機種固有クロスチェック。
-- ART/AT/RTなし。天井なし。
-- 25Φ版には設定別機械割・BIG/REG確率が公開されているが、30Φ型式1S0667に同一数値を明示する設定別直接表は今回確定できず、**推測転記しない**。
-- `payoutRateBySetting` / `initialHitBySetting` は **UNVERIFIED_AFTER_RESEARCH_FOR_30PHI_VARIANT**。
-- `baseGamesPer50` は機種名表記揺れ・型式1S0667・50枚/1000円/1k/コイン持ち/ベース/回転数で資料系統を変えて再探索したが直接値を確定できず **UNVERIFIED_AFTER_RESEARCH**。
-- coreStatus: **PARTIAL_CORE_SETTING_SPEC_AND_BASE_UNVERIFIED**。
+- 5号機 / ボーナス+ART。
+- 機械割: **97.0 / 98.5 / 100.6 / 104.4 / 109.4 / 115.2%**。
+- ART「激闘乱舞」初当たり: **1/389.5 / 1/378.5 / 1/354.4 / 1/318.8 / 1/271.1 / 1/221.6**。
+- ボーナス+ART初当たり合成: **1/298.9 / 1/288.5 / 1/272.0 / 1/247.7 / 1/216.5 / 1/182.2**。ART単独初当たりとは定義を分離。
+- ART「激闘乱舞」: **1セット30G+α+継続バトル8G / 約+2.2枚/G**。
+- 通常時ボーナス「宿命の刻」約 **113枚**、ART中「TURBO」約 **76枚**。
+- 通常天井: **1599G**。到達時は **89%継続ART + トキストック1個**。
+- `baseGamesPer50` は34.6～35.0G級の整理値を検索履歴上確認したものの、今回保存時に比較可能な高信頼直接表を再取得できず、推測転記せず **UNVERIFIED_AFTER_RESEARCH**。
 
 ### resetBehavior v0.7
 
-- 30Φ個別資料でノーマルタイプかつ **天井なし**を確認。
-- `gameCounterReset` / `ceilingAfterReset`: **NOT_APPLICABLE**。
-- 持続的規定G数モード、ART/AT/CZ、朝一専用モードは確認しないため `modeAfterReset` は **NOT_APPLICABLE_NO_PERSISTENT_GAMEPLAY_MODE_CONFIRMED**。
-- 有利区間は制度導入前の5号機なので **NOT_APPLICABLE**。
-- 設定変更時の天井短縮・朝一CZ/ART・専用モード優遇等は **NONE_CONFIRMED_AFTER_RESEARCH**。
-- 設定変更/据え置き/単純電源OFF→ON時のリール位置・デジタル表示・一時告知状態、ガックン/初期出目等の変更判別は、機種名/型式と設定変更/リセット/朝一/据え置き/電源OFF ON/ガックン/初期出目/デジタル表示を組み替えて再探索しても本機固有の直接根拠を確定できず **UNVERIFIED_AFTER_RESEARCH**。
-- resetQaStatus: **RESET_BEHAVIOR_APPLICABILITY_CONFIRMED_WITH_MACHINE_SPECIFIC_DETAILS_UNVERIFIED**。
-
-### CONFLICT / 粒度
-
-- 25Φ版の設定別性能を30Φへ自動転記していないため、30Φ固有の観測値CONFLICTは現時点で作らない。
-- 5号機クロニクルは「クイーンジャック」1項目で扱う一方、P-WORLD・パチンコビレッジ等は30Φを独立機種として扱う。独立型式 **1S0667** の存在を優先し、全機種方針上は別レコードとする。
+- `gameCounterReset`: **CLEAR_ON_SETTING_CHANGE_CONFIRMED**。設定変更で1599G天井へのゲーム数をクリア。
+- `modeAfterReset`: **設定変更時にモード再抽選**。
+  - 低確: **54.9 / 53.8 / 51.0 / 48.0 / 44.0 / 40.0%**
+  - 通常: **全設定30.0%**
+  - 天国: **15.1 / 16.2 / 19.0 / 22.0 / 26.0 / 30.0%**
+- `resetBenefits`: 設定変更時の天国スタート抽選。設定1で15.1%、設定6で30.0%。短縮天井は確認なし。
+- `resetPenalties`: 設定変更で前日の天井進捗が消失。
+- `resetDetection`: 設定変更後も液晶ステージを引き継ぐため、画面初期化による単純判別は不可。K-Naviはその後の演出から滞在モードを読む旨を記載。ガックンは本機固有根拠を確定できずUNVERIFIED_AFTER_RESEARCH。
+- `powerCycleBehavior`: CrankySevenは設定変更や電源OFFがあっても液晶ステージ・同行キャラは変化しないと記載。ただし単純電源OFF→ONのみの天井カウンタ/内部モードは直接根拠未確定。
+- `carryOverBehavior`: 据え置き時の1599G天井進捗・内部モード引継ぎは本機固有の直接明示を今回確定できずUNVERIFIED_AFTER_RESEARCH。
+- 有利区間は制度導入前なので **NOT_APPLICABLE**。
 
 ## 時系列監査
 
-- HAZUSE新台カレンダーでは2011年11月の最後の導入枠が **11月21日**。
-- 次のカレンダー枠は **2011年12月02日**で、11月22日～11月30日の別導入枠は掲載されていない。
-- 11/21既知群（巨人の星V / 赤ドン雅 / ミラクルジャグラー / 黒ひげ危機一発 / クイーンジャック / クイーンジャック-30、ストリートファイターIVの11/21資料CONFLICTは既存11/07レコード内保持）との突合を完了し、**2011-11-21同日群を閉鎖**。
+- 2011-11-21群は前回閉鎖済み。
+- HAZUSE新台カレンダー上の次枠2011-12-02を監査したが、今回の検索では同日導入の新規5号機パチスロ実機を確定できなかった。
+- 2011-12-05には少なくとも「パチスロ北斗の拳 世紀末救世主伝説」と「パチスロ ぷよぷよ！」が存在するため、**12/05同日群は未閉鎖**。
+- 後日へ進む前に12/05群をメーカー別一覧・K-Navi・HAZUSE・当時業界記事で横断して漏れを閉じる。
 
 ## 遡及resetBehavior QA 次回再開地点
 
@@ -61,28 +61,31 @@
 
 ## 本線の次回再開地点
 
-1. **recordCount 624 / chronologicalFrontier 2011-11-21**から開始。
-2. 2011-11-21同日群は閉鎖済み。次は **2011-12-02** 枠を最優先で監査する。
-3. HAZUSE 2011年12月カレンダーの12/02枠、K-Navi、メーカー別一覧、当時業界記事を横断し、その日のパチスロ機種名を確定 → repo重複確認 → 最初の未登録機から625件目候補として処理。
-4. 12/02枠で対象機がない/日付定義のみの場合は、12/05枠へ飛ばす前に12/01～12/04の納品日・導入日を業界記事で漏れ監査する。
+1. **recordCount 625 / chronologicalFrontier 2011-12-05**から開始。
+2. 2011-12-05同日群を継続監査する。
+3. 最優先既知候補は **「パチスロ ぷよぷよ！」（タイヨーエレック）**。導入日・型式・repo重複を再確認し、未登録なら626件目候補として性能コア＋resetBehavior v0.7を収集。
+4. 同時に12/05の他メーカー機をHAZUSE/K-Navi/業界記事/古いDBで横断し、同日群を閉じるまでは12/09以降へ進まない。
 5. PARTIAL/UNVERIFIEDは機種名/型式/メーカー/シリーズ名と設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/周期/モード/状態/ガックン/有利区間を組み替えて再探索。
-6. 競合値は平均せずCONFLICT。一般則・別径版からの性能補完は禁止。
+6. 競合値は平均せずCONFLICT。一般則・別機種からの補完は禁止。
 
 ## 主要出典 — 今回取得日 2026-09-05
 
-### クイーンジャック-30
-- P-WORLD: `https://www.p-world.co.jp/machine/database/6544`
-- パチンコビレッジ: `https://www.pachinkovillage.com/search/?M=3706`
-- グリーンべると / P-WORLD業界ニュース（2011-11-02）: `https://news.p-world.co.jp/articles/4976/greenbelt`
-- P-WORLD機種一覧: `https://www.p-world.co.jp/_machine/t_machine.cgi?aflag=1&key=,%EF%BF%BD%CB%A3%D0%A3%EF%BF%BD,&mode=0&start=1250`
-- パチンコFAN機種一覧: `https://pacnk.com/photoslot/plist52_0_0.html`
-- スロリスクタイム ノーマルタイプ一覧: `https://pachisuro100.com/normal/`
+### パチスロ北斗の拳 世紀末救世主伝説
+- HAZUSE: `https://hazuse.com/machine/pachislot/1S0777/`
+- K-Navi 設定変更時モード移行率: `https://p-kn.com/slot/1512/36183/`
+- CrankySeven 天井/設定変更: `https://www.crankyseven.com/sp/hokutonoken-seikimatu19-pc.htm`
+- CrankySeven 機種解析: `https://crankyseven.com/hokutonoken-seikimatu-pc.htm`
+- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sammy_slot/131/a.php`
+- 中一商事: `https://www.nakaiti.com/html/sSammy164.html`
+- アタリ7: `https://www.atari7.com/slot/date1320203826.php`
+- 北斗シリーズ回顧: `https://hyakuretsu.com/sammy_hokutonoken_kyudai_shindai/`
 
-### 時系列監査
+### 12/02時系列監査
+- グリーンべると 2011-12-02記事: `https://web-greenbelt.jp/00002470/`
 - HAZUSE新台カレンダー: `https://hazuse.com/new-machine-calendar/newmachine-calendar/`
 
 ### 今回のGitHub commit
-- 624番レコード追加: `cc7e2154634c46c10f59de2e7cb4fe3b5c6aee80`
+- 625番レコード追加: `ef6ec33e73a89ff3d2a9ed04c5b1b60c348be11e`
 
 ### 次回順序確認
-- **2011-12-02枠の実機候補を確定 → repo重複確認 → 未登録なら625件目として性能コア＋resetBehavior v0.7を収集。**
+- **2011-12-05同日群継続 → 「パチスロ ぷよぷよ！」repo重複確認 → 未登録なら626件目候補。**
