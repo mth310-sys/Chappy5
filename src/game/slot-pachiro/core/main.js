@@ -1,3 +1,4 @@
+import { renderFoundationDebug } from './debug.js';
 import { layout, validateLayout } from './layout.js';
 import { testPlacement } from './placement.js';
 import { renderLayout } from './renderer.js';
@@ -18,6 +19,10 @@ function runFoundationSelfChecks() {
   assertRejected(testPlacement(layout, { ...entrance, x: 1 }), 'entrance moved away from opening');
 }
 
+function debugEnabled() {
+  return new URLSearchParams(location.search).get('foundationDebug') === '1';
+}
+
 function boot() {
   const scene = document.getElementById('scene');
   const viewport = document.getElementById('vp');
@@ -27,6 +32,13 @@ function boot() {
   runFoundationSelfChecks();
   const report = validateLayout();
   renderLayout(scene, layout);
+
+  if (debugEnabled()) {
+    const islandB = layout.islands.find((item) => item.id === 'island-b');
+    const preview = testPlacement(layout, { ...islandB, y: -5 });
+    renderFoundationDebug(scene, report, preview);
+    scene.dataset.foundationDebug = 'on';
+  }
 
   if (status) {
     status.textContent = `GRID OK / ${report.itemCount} objects / ${report.reachableCells} walk`;
