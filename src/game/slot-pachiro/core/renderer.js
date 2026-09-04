@@ -123,17 +123,11 @@ function makeIsland(item) {
   return wrapper;
 }
 
-function renderIsland(scene, item, index) {
+function renderIsland(scene, item) {
   place(scene, makeIsland(item), item);
   const chairCell = orientedPoint(item, SPEC.chairOffset);
   const chairItem = { id: `${item.id}-chair`, x: chairCell.x, y: chairCell.y, w: 1, d: 1, rise: 8, orientation: item.orientation };
   place(scene, makeNode('chair'), chairItem);
-  const playerCell = orientedPoint(item, SPEC.playerOffset);
-  const playerItem = { id: `${item.id}-player`, x: playerCell.x, y: playerCell.y, w: 1, d: 1, rise: 22, orientation: item.orientation };
-  const colors = ['#d86670', '#67a862', '#9272c8', '#d69a49'];
-  const player = makeNode('person', '<i class="hair"></i>');
-  player.style.background = colors[index % colors.length];
-  place(scene, player, playerItem);
 }
 
 function renderFixture(scene, item) {
@@ -146,9 +140,25 @@ function renderFixture(scene, item) {
   }
 }
 
+export function renderCustomerActor(scene, customer) {
+  const actor = makeNode('person customerActor', '<i class="hair"></i>');
+  actor.style.background = '#d86670';
+  return place(scene, actor, { id: customer.id, x: customer.x, y: customer.y, w: 1, d: 1, rise: 22, orientation: 'E' });
+}
+
+export function updateCustomerActor(actor, customer) {
+  const point = toScreen(customer.x, customer.y, 22);
+  actor.style.left = `${point.x}px`;
+  actor.style.top = `${point.y}px`;
+  actor.style.zIndex = String(100 + Math.round(customer.x + customer.y));
+  actor.dataset.gridX = customer.x;
+  actor.dataset.gridY = customer.y;
+  actor.dataset.customerState = customer.state;
+}
+
 export function renderLayout(scene, layout) {
   scene.querySelectorAll('.gridNode').forEach((node) => node.remove());
   renderMapBase(scene);
-  layout.islands.forEach((item, index) => renderIsland(scene, item, index));
+  layout.islands.forEach((item) => renderIsland(scene, item));
   layout.fixtures.forEach((item) => renderFixture(scene, item));
 }
