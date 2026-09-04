@@ -4,66 +4,70 @@
 
 ## 現在地点
 
-- recordCount: **547**
-- latestMachineAdded: **パチスロスーパー海物語IN沖縄**（三洋物産 / 2011-02-07）
-- latestRecord: `docs/real_machine_db/machines/2011-02-07_pachislot-super-umi-monogatari-in-okinawa.md`
+- recordCount: **548**
+- latestMachineAdded: **秘宝伝 ～封じられた女神～**（大都技研 / 2011-02-07）
+- latestRecord: `docs/real_machine_db/machines/2011-02-07_hihouden-fuujirareta-megami.md`
 - chronologicalFrontier: **2011-02-07**
-- frontierLatestMachine: **パチスロスーパー海物語IN沖縄**（同日群継続中）
+- frontierLatestMachine: **秘宝伝 ～封じられた女神～**（同日群継続中）
 - schema: **resetBehavior v0.7**
 - status: **READY_TO_CONTINUE**
 
 ## 今回の継続確認
 
-- 最新mainの `README.md`、正本ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、前線レコード `楽々温泉記` / `サムライチャンプルー極` を再取得して開始。
-- 開始時正本は **recordCount 546 / chronologicalFrontier 2011-01-31**。旧チャット地点ではなく最新mainを正本として採用。
-- 2011-01-31同日群を追加監査し、新たな確定未登録機を確認できなかったため次節点へ前進。
-- K-Naviで `パチスロスーパー海物語IN沖縄` の **2011-02-07ホール導入開始**を確認。repo code searchで未登録を確認して547件目として追加。
-- 追加後 chronologicalFrontier を **2011-02-07**へ更新。同日群はまだ閉じていない。
+- 最新mainの `README.md`、正本ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、前線547レコード `パチスロスーパー海物語IN沖縄` を再取得して開始。
+- 開始時正本は **recordCount 547 / chronologicalFrontier 2011-02-07**。
+- `パチスロ スーパー海物語IN沖縄30KD` は別スペックで2011年2月導入まで確認済みだが、今回も具体的ホール導入日を確定できず、2/7以前・同日を推定しなかった。
+- K-Navi / パチ＆スロ必勝本で `秘宝伝 ～封じられた女神～` の **2011-02-07導入**を確認。repo code searchで未登録を確認し548件目として追加。
+- chronologicalFrontierは **2011-02-07** のまま。同日群はまだ閉じていない。
 
-## 今回追加 — パチスロスーパー海物語IN沖縄
+## 今回追加 — 秘宝伝 ～封じられた女神～
 
-- メーカー: **三洋物産 / SANYO**
+- メーカー: **大都技研**
 - 導入: **2011-02-07**
-- タイプ: **5号機 / ノーマルA / ボーナス主体 / 完全告知 / ART非搭載**
-- 機械割: **97.5 / 98.8 / 100.1 / 103.1 / 106.2 / 110.0%**
-- BIG: **1/288.7 / 282.5 / 277.7 / 267.5 / 259.0 / 246.4**
-- REG: **1/471.5 / 445.8 / 420.1 / 370.3 / 322.8 / 300.6**
-- ボーナス合算: **1/179.1 / 172.9 / 167.2 / 155.3 / 143.7 / 135.4**
-- baseGamesPer50: **34.34 / 34.42 / 34.57 / 34.93 / 35.38 / 36.18G**
-- BIG: **約336枚**
-- REG: **約104枚クラス**（106枚超払出し終了。実獲得直接本文はQA継続）
-- ART/AT純増: **NOT_APPLICABLE**
+- タイプ: **5号機 / A+ART / ボーナス+ゲーム数上乗せART**
+- 機械割: **97.7 / 98.9 / 101.5 / 105.7 / 109.5 / 115.2%**
+- BIG: **1/399.6 / 399.6 / 385.5 / 385.5 / 368.2 / 368.2**
+- REG: **1/595.8 / 590.4 / 580.0 / 565.0 / 550.7 / 452.0**
+- ボーナス合算: **1/239.2 / 238.3 / 231.6 / 229.1 / 220.7 / 202.9**
+- ボーナス+ART初当り合算: **1/162.4 / 157.7 / 152.1 / 140.1 / 131.1 / 114.2**
+- baseGamesPer50: **32.94 / 32.94 / 32.95 / 32.96 / 32.97 / 33.01G**
+- BIG: **約210枚**
+- REG: **約60枚 / MAX60枚**
+- ART「秘宝RUSH」: **50G+α / 約+1.4枚/G**
 - coreStatus: **COMPLETE_CORE_RESET_BEHAVIOR_PARTIAL**
 
-### resetBehavior v0.7 — パチスロスーパー海物語IN沖縄
+### resetBehavior v0.7 — 秘宝伝 ～封じられた女神～
 
-- ノーマルA・ART非搭載で、通常ゲーム数天井、AT/ART/CZ、長期ゲーム数モード等の朝一持越し対象は確認されない。
-- `gameCounterReset`: **NOT_APPLICABLE_NO_CEILING_CONFIRMED**
-- `ceilingAfterReset`: **NOT_APPLICABLE_NO_CEILING_CONFIRMED**
-- `modeAfterReset`: **NOT_APPLICABLE_AS_GAME_COUNT_MODE**。海/マリン/シーサー/シークレットは遊技者選択の演出モードで、内部ゲーム数モードとは分離。
-- `advantageousSectionReset`: **NOT_APPLICABLE**（5号機・制度前）。
-- `resetBenefits` / `resetPenalties`: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- パチマガスロマガ保存インデックスに本機専用の「朝イチ・設定変更」項目が存在することは確認したが、取得可能本文では具体挙動まで展開できず。
-- 設定変更・据え置き・単純電源OFF→ON時のリール/表示等の低レベル挙動、ガックン/初期出目による変更判別は、表記揺れ・三洋・海スロ等へ検索語を展開後も直接確定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 当時2011-03-23攻略資料で、**設定変更時は天井ゲーム数がリセット**されることを直接確認。
+- 通常天井は、第1天井が **ボーナス or ART間最大900G → 無限高確率∞（ART確定）**、第2天井が **ボーナス間1500G → 無限高確率∞ + 伝説モードロング**。
+- 同資料で、設定変更後は**液晶上は昼スタートでも内部的には夕方**と報告。朝一に早く夕方へ移ることがある。
+- `gameCounterReset`: **RESET_ON_SETTING_CHANGE_CONFIRMED**。
+- `ceilingAfterReset`: **NORMAL_COUNTER_RESTART / RESET_SHORTENING_NONE_CONFIRMED**。
+- `stateAfterReset`: **INTERNAL_EVENING_START_REPORTED / NUMERIC_DISTRIBUTION_UNVERIFIED**。
+- `resetPenalties`: **CEILING_PROGRESS_LOST_ON_SETTING_CHANGE**。
+- 据え置き時の天井/状態/伝説モードの厳密な保持、単純電源OFF→ON、ガックン/初期出目等の変更判別は、検索語・資料系統を変更して再探索したが本機固有の直接根拠を確定できず **UNVERIFIED_AFTER_RESEARCH**。
+- 有利区間は5号機のため **NOT_APPLICABLE**。
 
-### 別スペック分離 — 30KD
+### CONFLICT / 除外
 
-- `パチスロ スーパー海物語IN沖縄30KD` が別スペックとして存在。
-- 30KDは機械割 **96.7 / 98.1 / 99.4 / 102.0 / 104.4 / 108.4%**、BIG **1/306.2 → 1/266.4**、REG **1/574.9 → 1/404.5**で、今回の標準版と明確に別系列。
-- 後年一覧の25Φ/30Φ混載値を標準版のCONFLICTへ混ぜず、**別機種/別レコード候補として分離**。導入具体日は次回監査する。
+- 後年5号機クロニクルに「疑似ボーナス+ART」「秘宝RUSH約2.2枚/G」とする記述があるが、K-Navi、P-WORLD、パチマガスロマガはリアルボーナス搭載A+ART・約1.4枚/Gで一致。
+- 後年値は **POSSIBLE_SERIES_CONTAMINATION / SOURCE_ERROR** として性能コアへ統合しない。
 
-### 主要出典 — 547（取得日 2026-09-04）
+### 主要出典 — 548（取得日 2026-09-04）
 
-- K-Navi: `https://p-kn.com/slot/1331/`
-- パチマガスロマガ 1000円G数: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sanyo_slot/12/c.php`
-- パチマガスロマガ index: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sanyo_slot/12/sanyo_slot_12.php`
-- pacnk 標準版: `https://pacnk.com/slot/tools/sh_umimonookinawa.html`
-- pacnk 30KD: `https://pacnk.com/slot/tools/sh_supaumistoryinokinawa30ked.html`
+- K-Navi: `https://p-kn.com/slot/1335/`
+- パチ＆スロ必勝本: `https://p.hisshobon.jp/machine/1727/1/27085`
+- パチマガスロマガ 基本: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/daitogiken_slot/48/a.php`
+- パチマガスロマガ 1000円G数: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/daitogiken_slot/48/c.php`
+- パチマガスロマガ index: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/daitogiken_slot/48/daitogiken_slot_48.php`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/6200`
+- 当時天井攻略: `https://macerate.seesaa.net/article/192175568.html`
+- 回顧照合: `https://plaza.rakuten.co.jp/surojiki/diary/201208290002/`
 
 ## 今回のGitHub更新
 
-- 547追加: `docs/real_machine_db/machines/2011-02-07_pachislot-super-umi-monogatari-in-okinawa.md`
-- machine record commit: `d6e68d54b51472980ba86a68f240cbc822e6c25e`
+- 548追加: `docs/real_machine_db/machines/2011-02-07_hihouden-fuujirareta-megami.md`
+- machine record commit: `79c8737f530f5c7f1bbc9bc90b4f4394b16ba296`
 - LATEST_HANDOFF: 本更新
 
 ## 遡及QA継続地点
@@ -74,9 +78,9 @@
 
 ## 次回再開地点
 
-1. **recordCount 547 / chronologicalFrontier 2011-02-07**。最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 547レコードを再取得。
-2. **2011-02-07同日群を継続**。`秘宝伝 ～封じられた女神～` はK-Naviで2011-02-07ホール導入開始を確認済み、今回のrepo code searchでは未登録だったため次の強い候補。開始時に再度main重複確認して処理する。
-3. `パチスロ スーパー海物語IN沖縄30KD` は別スペックで2011年2月導入まで確認済み。具体的ホール導入日を再探索し、2/7同日またはそれ以前なら秘宝伝より先に別レコード化する。
-4. 2/7候補（頑固一徹等）も実ホール導入日を別資料で照合し、同日群を閉じるまで後日へ進まない。
+1. **recordCount 548 / chronologicalFrontier 2011-02-07**。最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 548レコードを再取得。
+2. **2011-02-07同日群を継続**。`パチスロ スーパー海物語IN沖縄30KD` の具体的導入日を再探索し、2/7以前または2/7同日を確定できた場合は時系列優先で別レコード化する。月粒度しか取れなければ無理に日付を推定しない。
+3. **頑固一徹**は2011年の同時期候補。repo重複と実ホール導入日を複数資料で確認し、2/7同日なら次の新規候補として処理する。
+4. その他2/7同日候補を導入カレンダー/業界記事/当時解析で照合し、同日群を閉じてから後日へ進む。
 5. `残機尽きるまで私は戦うS` は2011-03-06納品開始予定のため2月へ誤繰上げしない。
 6. PARTIAL/UNVERIFIEDは表記揺れ・型式・メーカー・シリーズ・設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックン/有利区間を変えて横断後のみ維持。競合は平均せずCONFLICT。
