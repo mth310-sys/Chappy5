@@ -4,54 +4,49 @@
 
 ## 現在地点
 
-- recordCount: **620**
-- latestMachineAdded: **赤ドン雅**（エレコ）
-- latestRecord: `docs/real_machine_db/machines/2011-11-21_akadon-miyabi.md`
+- recordCount: **621**
+- latestMachineAdded: **ミラクルジャグラー**（北電子）
+- latestRecord: `docs/real_machine_db/machines/2011-11-21_miracle-juggler.md`
 - chronologicalFrontier: **2011-11-21**
-- frontierLatestExactDateMachine: **赤ドン雅**
+- frontierLatestExactDateMachine: **ミラクルジャグラー**
 - schema: **resetBehavior v0.7**
 - status: **CONTINUE_2011-11-21_SAME_DAY_GROUP**
 
-## 今回の本線追加 — 赤ドン雅
+## 今回の本線追加 — ミラクルジャグラー
 
-- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード「巨人の星V～汗と涙と根性編～」を再取得して開始。
-- 開始時正本は **recordCount 619 / chronologicalFrontier 2011-11-21**。INDEXは旧19件地点のためREADME規定どおりINDEXより新しいLATEST_HANDOFFを進捗正本として使用。
-- LATEST_HANDOFF指定どおり2011-11-21同日群を継続。repo code searchで「赤ドン雅」未検出を確認して620件目として追加。
-- 導入日はパチビー、HAZUSE DATA、アタリ7、解析ガイドで **2011-11-21** 一致。当時K-Navi発表記事の「11月下旬予定」とも整合。
+- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード「赤ドン雅」を再取得して開始。
+- 開始時正本は **recordCount 620 / chronologicalFrontier 2011-11-21**。INDEXは旧19件地点のためREADME規定どおりINDEXより新しいLATEST_HANDOFFを進捗正本として使用。
+- LATEST_HANDOFF指定どおり2011-11-21同日群を継続。repo code searchで「ミラクルジャグラー」未検出を確認して621件目として追加。
+- 北電子公式検定ページで型式名 **ミラクルジャグラーK** を確認。アタリ7で導入日 **2011-11-21** を確認し、2011-09-20の業界発表とも時系列整合。
 
 ### 性能コア
 
-- 5号機 / ボーナス+ART / セットストック型ART。
-- メーカー: **エレコ**。
-- 機械割: **98.2 / 99.1 / 101.7 / 104.9 / 109.5 / 115.8%**。
-- BIG: **全設定共通1/1260.3**。
-- ART初当り: **1/271.9 / 1/262.5 / 1/256.8 / 1/229.3 / 1/209.7 / 1/202.6**。
-- BIG+ART合算: **1/253.9 / 1/246.1 / 1/241.1 / 1/217.7 / 1/200.4 / 1/194.0**。
-- 50枚ベース（パチマガスロマガ解析値）: **31.54 / 31.61 / 31.67 / 31.75 / 31.81 / 31.88G**。同サイト実戦値31.83Gは定義分離。
-- BIG: **約416枚**。
-- ART「雅RUSH」: **1セット50G・約+1.8枚/G**。
-- 祇園モード: 雅RUSHと同基本性能、ドン揃い確率が雅RUSH中の約200倍。
-- 通常天井: **ボーナス・ARTともに引かず約1400G**。
-- 天井恩恵（当時解析）: **雅RUSH 3セット以上 + 50%で祇園モード**。
+- 5号機 / ノーマルA / 完全告知。
+- メーカー: **北電子**。
+- 北電子公式・工場データ予測出玉率: **95.7 / 97.5 / 99.0 / 101.2 / 103.9 / 107.9%**。
+- BIG: **1/292.6 / 1/282.5 / 1/273.1 / 1/268.6 / 1/256.0 / 1/230.8**。
+- REG: **1/468.1 / 1/431.2 / 1/399.6 / 1/341.3 / 1/309.1 / 1/356.2**。
+- 合算: **1/180.1 / 1/170.7 / 1/162.2 / 1/150.3 / 1/140.0 / 1/140.0**。
+- BIG約**312枚**、REG約**104枚**。
+- 50枚ベースは定義別保持。後年整理の1000円目安 **35.47～36.68G**、チェリー狙い **36.14～37.39G**、完全小役獲得 **36.32～37.58G**。平均化しない。
+- 技術介入条件別出玉率に **96.16～109.42%** 等の系列があるが、北電子公式値と条件が異なるため **DEFINITION_DIFFERENCE_PLAY_METHOD** として分離。
 - coreStatus: **COMPLETE_CORE**。
 
 ### resetBehavior v0.7
 
-- 2011-11-22公開・2012-01-08更新の当時攻略記事で **「設定変更しても天井までのゲーム数は引き継ぐ」** と明記され、本文は当時のパチスロ必勝ガイド天井狙い資料を参照している。
-- `gameCounterReset`: **RETAIN_ON_SETTING_CHANGE_PERIOD_ANALYSIS**。
-- `ceilingAfterReset`: **NO_RESET_SPECIFIC_SHORTENING_CONFIRMED / NORMAL_1400G_PROGRESS_RETAINED**。
-- 天井進捗は設定変更でも保持されるため、前日ハマリを設定変更で消せない性質が朝一客の主要な狙い要素になり得る。ただし新規付与される「リセット恩恵」とは区別。
-- 別系統の現存解析（セブンピース）は設定変更項目を「調査中」としており、天井引継ぎは **ANALYSIS_SINGLE_PERIOD_SOURCE_WITH_PRINT_REFERENCE** として保存。一般則から信頼度を上げない。
-- 据え置き時は天井進捗の保持が強く示唆されるが、低確/通常/高確等の状態・ARTストック等の全保持は直接確定せずUNVERIFIED_AFTER_RESEARCH。
-- 単純電源OFF→ON、設定変更時のモード/状態振り分け、ガックン/初期出目/液晶等の変更判別は検索語・資料系統を変えて再探索後も **UNVERIFIED_AFTER_RESEARCH**。
+- 本機固有の設定判別資料で、**設定変更後に店側が回していなければ朝一1G目にリールがガクッと震えてスタートする**と明記。
+- 同資料自身が、毎ゲームガックンする個体や微妙なガックンもあり過信禁物と注意。店側の事前回転でも条件が崩れるため、確定判別ではなく変更推測材料として保存。
+- `resetDetection`: **GAKKUN_CHECK_SUPPORTED_MACHINE_SPECIFIC_ANALYSIS_WITH_CAVEATS**。
+- 通常ゲーム数天井・規定G数当選・AT/ART長期モードは確認されず、`gameCounterReset` / `ceilingAfterReset` は **NOT_APPLICABLE_NO_GAME_COUNT_CEILING_CONFIRMED_AFTER_RESEARCH**。
 - 設定変更専用短縮天井、朝一高確保証、朝一特定G以内当選率は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 単純電源OFF→ONのみで設定変更時と同じガックンになるかは本機固有の直接資料を確定できず **UNVERIFIED_AFTER_RESEARCH**。後継機/他ジャグラー一般則を流用しない。
 - 有利区間: **NOT_APPLICABLE**。
-- resetQaStatus: **PARTIAL_RESET_BEHAVIOR_WITH_COUNTER_CARRYOVER_PERIOD_ANALYSIS**。
+- resetQaStatus: **PARTIAL_RESET_BEHAVIOR_WITH_DIRECT_GAKKUN_DETECTION**。
 
-### CONFLICT / 注意
+### CONFLICT / 定義差
 
-1. 後年5号機クロニクルの赤ドン雅欄に「BIG約204枚/REG約48枚」「ART約+1.4枚/G」等、本機の当時公式・業界・複数解析資料（BIG416枚、REG非搭載、ART約+1.8枚/G）と合わない記述があり、別機種情報の混線疑いとして不採用。機械割98.2～115.8%のみ他資料と一致。
-2. 設定変更天井引継ぎは当時更新攻略記事に直接記述がある一方、別現存解析は設定変更「調査中」。数値競合ではないが直接確定度差を保持。
+1. 北電子公式出玉率95.7～107.9%は工場データ予測値。後年攻略ではチェリー狙い96.16～109.42%等があり、遊技条件差として分離し平均化しない。
+2. 50枚ベースも1000円目安、チェリー狙い、完全小役獲得で系列が異なるため定義別保持。
 
 ## 遡及resetBehavior QA 次回再開地点
 
@@ -62,38 +57,29 @@
 
 ## 本線の次回再開地点
 
-1. **recordCount 620 / chronologicalFrontier 2011-11-21**から開始。
-2. **2011-11-21同日群を閉じずに継続**する。
-3. 次候補 **ミラクルジャグラー（北電子）** をrepo重複確認し、未登録なら621件目として性能コア＋resetBehavior v0.7を処理する。
-4. 先行確認済み: 北電子公式/K-Naviで設定別BB・RB・合算・出玉率を取得可能。北電子公式値は出玉率 **95.7 / 97.5 / 99.0 / 101.2 / 103.9 / 107.9%**（工場データ予測値）。後年攻略資料には別の出玉率 **96.16 / 98.07 / 99.95 / 102.04 / 105.02 / 109.42%** があるため、次回はメーカー公表値と攻略条件差を混ぜずCONFLICT/定義差を精査する。
-5. 型式名候補は **ミラクルジャグラーK**。導入具体日は11/21系資料を再照合して確定する。
-6. ミラクルジャグラー処理後も11/21同日群をK-Navi、HAZUSE、メーカー別一覧、当時業界記事で最終監査してから次の日付へ進む。
-7. 後継「スーパーミラクルジャグラー」「ウルトラミラクルジャグラー」の朝一情報を2011年機へ流用しない。
-8. PARTIAL/UNVERIFIEDは機種名/型式/メーカー/シリーズ名と設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間を組み替えて再探索。
-9. 競合値は平均せずCONFLICT。一般則による補完は禁止。
+1. **recordCount 621 / chronologicalFrontier 2011-11-21**から開始。
+2. **2011-11-21同日群をまだ閉じずに継続**する。
+3. 次候補 **ストリートファイターIV（エンターライズ）** をrepo重複確認する。HAZUSE DATAで型式 **ストリートファイターIVX**、検定番号 **1S0375**、導入開始日 **2011-11-21** を先行確認済み。未登録なら622件目として性能コア＋resetBehavior v0.7を処理する。
+4. ストリートファイターIV処理後も11/21同日群をK-Navi、HAZUSE、メーカー別一覧、当時業界記事で最終監査してから次の日付へ進む。
+5. PARTIAL/UNVERIFIEDは機種名/型式/メーカー/シリーズ名と設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間を組み替えて再探索。
+6. 競合値は平均せずCONFLICT。一般則による補完は禁止。
 
 ## 主要出典 — 今回取得日 2026-09-05
 
-### 赤ドン雅
-- ユニバーサルエンターテインメント公式アプリ告知: `https://www.atpress.ne.jp/news/24080`
-- グリーンべると: `https://web-greenbelt.jp/00002282/`
-- K-Navi 発表会: `https://p-kn.com/topics/exhibition/858/`
-- K-Navi 機種: `https://p-kn.com/slot/1514/`
-- パチビー: `https://www.pachibee.jp/machines/index/211090007`
-- HAZUSE DATA: `https://data.hazuse.com/?genre=202&machine_code=1S0702`
-- アタリ7: `https://www.atari7.com/slot/date1320125354.php`
-- パチマガスロマガ 設定別1000円回転数: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/eleco_slot/87/c-1.php`
-- パチマガスロマガ 実戦値: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/eleco_slot/87/c.php`
-- パチスロ解析ガイド: `https://pachislot-guide.net/2011/akadon-miyabi/`
-- 当時天井解析記事: `https://mezase20.com/blog-entry-488.html`
-- セブンピース旧解析: `https://www.mb.ccnw.ne.jp/seven-peace.com/akadon/akadon.html`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/6501`
-- パチマガスロマガFREE回顧: `https://pachimaga.com/free/column/004b8961d880fd0b022d12122759f3433a9efd9f.php`
+### ミラクルジャグラー
+- 北電子公式「ミラクルジャグラー」: `https://www.kitadenshi.co.jp/slot/miraclejuggler/`
+- 北電子公式「ミラクルジャグラーK 検定情報」: `https://www.kitadenshi.co.jp/slot-kentei/miraclejuggler/`
+- P-WORLD業界ニュース（グリーンべると 2011-09-20）: `https://news.p-world.co.jp/articles/4910/greenbelt`
+- アタリ7: `https://www.atari7.com/slot/miracle-juggler.php`
+- K-Navi: `https://p-kn.com/slot/1507/`
+- P-WORLD機種DB: `https://www.p-world.co.jp/machine/database/6504`
+- ジャグラー7: `https://juggler7.com/miracle/`
+- 激アツ 設定判別: `https://gekiatsu7.com/slot-analyze/2058/`
+- パチナビ: `https://pachinavi.net/machines/miracle-juggler/`
+- ジャグラーアナリティクス: `https://akirameruna.com/juggler-spec`
 
 ### 次回候補先行確認
-- 北電子公式「ミラクルジャグラー」: `https://www.kitadenshi.co.jp/slot/miraclejuggler/`
-- K-Navi「ミラクルジャグラー」: `https://p-kn.com/slot/1507/`
-- パチナビ回顧整理: `https://pachinavi.net/machines/miracle-juggler/`
+- HAZUSE DATA「ストリートファイターIV」: `https://hazuse.com/machine/pachislot/1S0375/`
 
 ### 次回順序確認
-- **2011-11-21同日群を継続。第一候補はミラクルジャグラー。同日最終監査後に次の日付へ進む。**
+- **2011-11-21同日群を継続。第一候補はストリートファイターIV。同日最終監査後に次の日付へ進む。**
