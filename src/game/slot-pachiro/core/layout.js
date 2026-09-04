@@ -3,6 +3,7 @@ import { accessPorts, hardCells, projectToBasis, reservationCells } from './faci
 import { createLogicalMap, getCell, occupyCells, reserveCells, setPortal } from './map.js';
 import { floodReachable } from './navigation.js';
 import { buildServiceNetwork } from './service-network.js';
+import { analyzeCirculation } from './circulation.js';
 import { applyBuildingShell, createBuildingShell } from './structure.js';
 
 export const SPEC = Object.freeze({
@@ -180,8 +181,12 @@ export function validateLayout(candidate = layout) {
   if (serviceNetwork.connectedFacilities !== expectedConnectedFacilities) {
     throw new Error(`Service network incomplete: ${serviceNetwork.connectedFacilities}/${expectedConnectedFacilities}`);
   }
+  const circulation = analyzeCirculation(map, serviceNetwork, ports);
+  if (!circulation.valid) {
+    throw new Error(`Circulation invalid: deadEnds=${circulation.deadEnds.length}, chokes=${circulation.criticalChokes.length}, narrowMain=${circulation.narrowMainCells.length}, narrowAisle=${circulation.narrowIslandAisleCells.length}`);
+  }
   return {
-    map, ports, reachable, occupied, facilities, serviceNetwork,
+    map, ports, reachable, occupied, facilities, serviceNetwork, circulation,
     itemCount: all.length,
     operationalCount: facilities.filter((facility) => facility.operational).length,
     reachableCells: reachable.size,
