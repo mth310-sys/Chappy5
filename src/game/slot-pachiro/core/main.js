@@ -73,6 +73,11 @@ function runFoundationSelfChecks() {
   assert((baseReport.serviceNetwork.roleCounts['main-trunk'] ?? 0) > 0, 'service network requires shared trunk cells');
   assert((baseReport.serviceNetwork.roleCounts['island-aisle'] ?? 0) > 0, 'service network requires island aisle cells');
   assert((baseReport.serviceNetwork.roleCounts['service-front'] ?? 0) > 0, 'service network requires service-front cells');
+  assert(baseReport.circulation.valid, 'circulation analysis must pass');
+  assert(baseReport.circulation.deadEnds.length === 0, 'service network must not contain unintended dead ends');
+  assert(baseReport.circulation.criticalChokes.length === 0, 'service network must not contain one-cell critical chokepoints');
+  assert(baseReport.circulation.narrowMainCells.length === 0, 'main circulation must preserve at least two-cell clearance');
+  assert(baseReport.circulation.narrowIslandAisleCells.length === 0, 'island aisles must preserve at least two-cell clearance');
 }
 
 function debugEnabled() {
@@ -166,7 +171,7 @@ function boot() {
 
   if (status) {
     const scale = Number(frame.dataset.fitScale || 1);
-    status.textContent = `GRID OK / ${activeReport.itemCount} objects / ${activeReport.reachableCells} walk / NET ${activeReport.serviceNetwork.routeCount} / VIEW ${(scale * 100).toFixed(0)}%`;
+    status.textContent = `GRID OK / ${activeReport.itemCount} objects / ${activeReport.reachableCells} walk / NET ${activeReport.serviceNetwork.routeCount} / AISLE ${activeReport.circulation.minWidth}+ / VIEW ${(scale * 100).toFixed(0)}%`;
     status.dataset.state = 'ok';
   }
 }
