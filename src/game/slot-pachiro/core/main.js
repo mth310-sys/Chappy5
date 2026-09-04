@@ -1,11 +1,10 @@
 import { bindPlacementCursorControls, createPlacementCursor } from './cursor.js';
-import { advanceCustomer, createCustomer, CUSTOMER_STATES, planCustomerTo } from './customer.js';
 import { renderFoundationDebug } from './debug.js';
 import { ORIENTATIONS } from './facility.js';
 import { layout, validateLayout } from './layout.js';
 import { findPath } from './navigation.js';
 import { describePlacement, testPlacement } from './placement.js';
-import { renderCustomerActor, renderLayout, updateCustomerActor } from './renderer.js';
+import { renderLayout } from './renderer.js';
 
 function assertRejected(result, label) {
   if (result.ok) throw new Error(`Foundation self-check failed: ${label} should be rejected`);
@@ -14,15 +13,10 @@ function assert(condition, label) {
   if (!condition) throw new Error(`Foundation self-check failed: ${label}`);
 }
 
-function routeEndpoints(report) {
+function routeToFirstMachine(report) {
   const portal = report.ports.find((port) => port.portal);
   const goal = report.ports.find((port) => port.role === 'machine-seat');
   if (!portal || !goal) throw new Error('Foundation route endpoints missing');
-  return { portal, goal };
-}
-
-function routeToFirstMachine(report) {
-  const { portal, goal } = routeEndpoints(report);
   const route = findPath(portal, goal, report.map);
   if (!route) throw new Error(`Foundation route missing: ${portal.facilityId} -> ${goal.facilityId}.${goal.name}`);
   return route;
@@ -44,15 +38,6 @@ function runRotationSelfChecks() {
   assert(signatures.size === 4, 'four orientations must produce distinct anchored footprints');
 }
 
-function runCustomerSelfCheck(report) {
-  const { portal, goal } = routeEndpoints(report);
-  let customer = planCustomerTo(createCustomer('customer-probe', portal), goal, report.map);
-  assert(customer.state === CUSTOMER_STATES.WALKING, 'customer should begin walking to machine');
-  for (let i = 0; i < customer.route.length + 1; i++) customer = advanceCustomer(customer);
-  assert(customer.state === CUSTOMER_STATES.SEATED, 'customer must arrive seated');
-  assert(customer.x === goal.x && customer.y === goal.y, 'customer must finish on machine access cell');
-}
-
 function runFoundationSelfChecks() {
   const islandB = layout.islands.find((item) => item.id === 'island-b');
   const plant = layout.fixtures.find((item) => item.id === 'plant-1');
@@ -65,7 +50,6 @@ function runFoundationSelfChecks() {
   runRotationSelfChecks();
   const baseReport = validateLayout(layout);
   assert(routeToFirstMachine(baseReport).length > 1, 'entrance-to-machine route must exist');
-  runCustomerSelfCheck(baseReport);
 }
 
 function debugEnabled() {
@@ -83,19 +67,6 @@ function fitScene(viewport, frame, scene) {
   frame.style.height = `${Math.ceil(baseHeight * scale)}px`;
   frame.dataset.fitScale = scale.toFixed(4);
   return scale;
-}
-
-function startCustomerDemo(scene, report) {
-  const { portal, goal } = routeEndpoints(report);
-  let customer = planCustomerTo(createCustomer('customer-1', portal), goal, report.map);
-  const actor = renderCustomerActor(scene, customer);
-  updateCustomerActor(actor, customer);
-  const timer = window.setInterval(() => {
-    customer = advanceCustomer(customer);
-    updateCustomerActor(actor, customer);
-    if (customer.state === CUSTOMER_STATES.SEATED) window.clearInterval(timer);
-  }, 320);
-  return customer;
 }
 
 function makeCursorPanel(cursor, onCommit, onCancel) {
@@ -168,13 +139,11 @@ function boot() {
     redrawDebug(initial.result);
     panel.querySelector('[data-cursor-status]').textContent = `${initial.item.x},${initial.item.y} ${initial.item.orientation} / ${initial.result.ok ? 'OK' : 'NG'}`;
     scene.dataset.foundationDebug = 'on';
-  } else {
-    startCustomerDemo(scene, activeReport);
   }
 
   if (status) {
     const scale = Number(frame.dataset.fitScale || 1);
-    status.textContent = `GRID OK / ${activeReport.itemCount} objects / ${activeReport.reachableCells} walk / VIEW ${(scale * 100).toFixed(0)}% / ACTOR 1`;
+    status.textContent = `GRID OK / ${activeReport.itemCount} objects / ${activeReport.reachableCells} walk / VIEW ${(scale * 100).toFixed(0)}% / INTERIOR`;
     status.dataset.state = 'ok';
   }
 }
