@@ -4,9 +4,9 @@
 
 ## 現在地点
 
-- recordCount: **584**
-- latestMachineAdded: **大逆転**（ラスター / 2011-06-27導入）
-- latestRecord: `docs/real_machine_db/machines/2011-06-27_daigyakuten.md`
+- recordCount: **585**
+- latestMachineAdded: **パチスロエイリヤンビギンズ**（サミー / 2011-06-06導入 / BACKFILL）
+- latestRecord: `docs/real_machine_db/machines/2011-06-06_alien-begins.md`
 - chronologicalFrontier: **2011-06-27**
 - frontierLatestExactDateMachine: **大逆転**
 - schema: **resetBehavior v0.7**
@@ -14,62 +14,60 @@
 
 ## 今回の継続確認
 
-- 最新mainの `README.md`、正本ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、583件目「スカイラブ3」を再取得して開始。
-- `INDEX.md` は旧情報（19件/2006年時点）のため、README規約どおり最新 `LATEST_HANDOFF.md` とmachineレコードを進捗正本として使用。
-- 2011-06-27同日群を継続監査し、直前HANDOFF最優先候補 **大逆転** を未登録確認後、584件目として追加。
-- K-Navi当時展示会資料が **2011-06-27からホール導入予定**を明記。後年DBの2011-06-27とも一致。
-- 直前HANDOFFで要確認だった **パチスロ 笑ゥせぇるすまん** は、pacnk等で2011年6月導入までは再確認したが、今回も6月27日以前/同日と確定できる具体日を回収できず。日付を推測して大逆転より先へ挿入しない。
+- 最新mainの `README.md`、正本ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、584件目「大逆転」を再取得して開始。
+- `INDEX.md` は旧情報（19件/2006年時点）のためREADME規約どおり最新 `LATEST_HANDOFF.md` とmachineレコードを進捗正本として使用。
+- mainは開始時 **recordCount 584 / chronologicalFrontier 2011-06-27**。
+- 直前HANDOFFの6月漏れ監査指示を実行し、repo検索で **エイリヤンビギンズ / 蝶々乱舞 / 鬼浜外伝 / リオスパ** が未登録候補であることを確認。
+- 最古の具体日が確定した **パチスロエイリヤンビギンズ（2011-06-06）** を585件目としてBACKFILL。
+- 遡及追加のため chronologicalFrontier は **2011-06-27** のまま維持。
 
-## 今回追加 — 584 大逆転
+## 今回追加 — 585 パチスロエイリヤンビギンズ
 
-- メーカー表記: **ラスター**。当時プレス発表は **ウィンネットテクノロジー**。
-- 5号機 / **ボーナス非搭載・押し順ART特化 + CZ**。
-- 設定構成: **1 / 3 / 4 / 6 の4段階**。
-- 機械割: **92.0 / 96.0 / 100.0 / 106.6%**。
-- ART555G確率: **1/937 / 1/807 / 1/699 / 1/553**。
-- ART1300G確率: **1/2175 / 1/1876 / 1/1625 / 1/1289**。
-- ART基本性能: 順押し **555G・約1000枚** / 逆押し **1300G・約2500枚**。上乗せなし。
-- 50枚ベース: 後年DB直接値 **約32G/50枚**。別系統照合は今回未回収のため `ANALYSIS_SINGLE`。
-- 純増は資料差: P-WORLD/パチマガスロマガ **約+1.9枚/G**、みんスロ **約+1.8枚/G**、当時実践資料 **1.8〜1.9枚/G**。平均せず `CONFLICT_MINOR_NET_INCREASE_RANGE`。
-- 天井: **非搭載確認**。
-- 後年みんスロは同じ4スペックを設定1/2/3/4と連番表示するため設定番号に資料差があるが、P-WORLD・パチマガスロマガ・当時資料が1/3/4/6で一致。DB主値は1/3/4/6。
+- メーカー: **サミー**。
+- 導入日: **2011-06-06**。K-Navi・パチビーで一致。
+- 5号機 / **ノーマルAタイプ + 天井RT**。
+- BIG: **1/249.2 / 1/248.2 / 1/244.5 / 1/239.2 / 1/226.0 / 1/210.1**。
+- MID: **1/374.5 / 1/343.1 / 1/324.4 / 1/281.3 / 1/265.3 / 1/237.5**。
+- 合算: **1/149.6 / 1/144.0 / 1/139.4 / 1/129.3 / 1/122.0 / 1/111.5**。
+- 機械割: **97.0 / 98.7 / 100.7 / 104.3 / 108.2 / 113.2%**。旧解析直接値、K-Navi専用機械割ページ存在確認。今回本文キャッシュ取得不可のため `ANALYSIS_SINGLE`。
+- BIG最大 **311枚**、MID約 **91枚**。
+- 天井: **BIG後777G / MID(REG)後555G**で次回ボーナスまで継続するRT。
+- 天井RT純増: **約+0.3枚/G**。
+- 50枚ベース: **UNVERIFIED_AFTER_RESEARCH**。
 
-### resetBehavior v0.7 — 584
+### resetBehavior v0.7 — 585
 
-- `settingChangeBehavior`: **UNVERIFIED_AFTER_RESEARCH**。CZ/超CZ/RT状態の設定変更時処理を本機固有資料で確定できず。
-- `carryOverBehavior`: **UNVERIFIED_AFTER_RESEARCH**。据え置き時のCZ/RT状態保持を直接確定できず。
-- `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH**。単純電源OFF→ON時のCZ/RT状態処理を直接確定できず。
-- `gameCounterReset`: **NOT_APPLICABLE_NO_GAME_COUNT_CEILING**。ゲーム数天井非搭載。
-- `ceilingAfterReset`: **NOT_APPLICABLE_NO_CEILING**。通常天井もリセット短縮天井も非該当。
-- `modeAfterReset`: **NO_LONG_TERM_GAME_COUNT_MODE_CONFIRMED; CZ/RT_STATE_UNVERIFIED**。
+- `settingChangeBehavior`: **UNVERIFIED_AFTER_RESEARCH**。K-Naviに本機専用「設定変更後の挙動」ページ `https://p-kn.com/slot/1428/31677/` が存在することまでは確認したが、本文取得不能。内容を推測しない。
+- `carryOverBehavior`: **UNVERIFIED_AFTER_RESEARCH**。据え置き時の777G/555G進捗・RT状態保持を本機固有資料で確定できず。
+- `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH**。単純電源OFF→ON時の天井進捗/RT状態を確定できず。
+- `gameCounterReset`: **UNVERIFIED_AFTER_RESEARCH**。通常天井カウンタは存在するが設定変更時CLEAR/RETAINを直接確定できず。
+- `ceilingAfterReset`: **UNVERIFIED_AFTER_RESEARCH**。通常天井はBIG後777G / MID後555G。変更専用短縮値は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- `modeAfterReset`: **NOT_APPLICABLE_NO_LONG_TERM_GAME_COUNT_MODE_CONFIRMED; RT_STATE_UNVERIFIED**。
 - `stateAfterReset`: **UNVERIFIED_AFTER_RESEARCH**。
 - `advantageousSectionReset`: **NOT_APPLICABLE**。
-- `resetBenefits`: **NONE_CONFIRMED_AFTER_RESEARCH**。朝一専用数値・短縮等は確認できず。
-- `resetPenalties`: **NONE_CONFIRMED_AFTER_RESEARCH**。前日天井進捗消失は天井非搭載のため非該当。
-- `resetDetection`: **UNVERIFIED_AFTER_RESEARCH**。ガックン/初期出目/ランプ等の本機固有判別要素を確認できず。
+- `resetBenefits`: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- `resetPenalties`: **UNVERIFIED_AFTER_RESEARCH**。天井進捗消失自体を確定できないため断定しない。
+- `resetDetection`: **UNVERIFIED_AFTER_RESEARCH**。ガックン/初期出目/ランプ等を確定できず。
+- 公開朝一数値: **NONE_CONFIRMED_AFTER_RESEARCH**。
 
-## 主要出典 — 584（取得日 2026-09-04）
+## 主要出典 — 585（取得日 2026-09-04）
 
-- K-Navi「パチスロ新機種『大逆転』プレス発表会」
-  - `https://p-kn.com/topics/exhibition/792/image/`
-  - 2011-06-27からホール導入予定、CZ構造、555G/1300G ART。
-- K-Navi「大逆転 チャンスゾーン(CZ)」
-  - `https://p-kn.com/slot/1424/31652/`
-  - CZ/超CZ、順押し約20% / 逆押し約8%のART期待度。
-- P-WORLD「大逆転」
-  - `https://www.p-world.co.jp/machine/database/6372`
-  - 5号機ART・ボーナス非搭載、約+1.9枚/G、555G/1300G、設定1/3/4/6の確率・機械割。
-- パチマガスロマガ「大逆転 ボーナス抽選確率」
-  - `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/winnet_slot/12/h.php`
-  - 設定1/3/4/6のART確率、PAYOUT。
-- パチマガスロマガ「大逆転 基本システム」
-  - `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/winnet_slot/12/a.php`
-  - 約+1.9枚/G、約1000/2500枚、CZ構造、上乗せなし。
-- 娯楽産業 2011-05-10 / グリーンべると 2011-05-11
-  - ウィンネット発表、555G/1300G、約1000/2500枚、ボーナス非搭載ART特化。
-- みんスロ「大逆転」
-  - `https://minslo.com/%E5%A4%A7%E9%80%86%E8%BB%A2/`
-  - 2011-06-27、50枚32G、純増1.8枚/G、天井非搭載。設定番号連番表記は主値に採用せず。
+- K-Navi「パチスロエイリヤンビギンズ」
+  - `https://p-kn.com/slot/1428/`
+  - 2011-06-06導入、BIG/MID/合算、ノーマルタイプ、天井・技術介入、本機専用設定変更ページの存在。
+- K-Navi「設定変更後の挙動」現存リンク
+  - `https://p-kn.com/slot/1428/31677/`
+  - 専用解析ページURL確認。今回本文取得不能のため具体挙動には使用せず。
+- P-WORLD「パチスロエイリヤンビギンズ」
+  - `https://www.p-world.co.jp/machine/database/6363`
+  - 5号機ノーマル、BIG最大311枚、MID約91枚、BIG後777G / MID後555G天井RT、約+0.3枚/G。
+- パチビー
+  - `https://www.pachibee.jp/machines/about/211040007`
+  - `https://www.pachibee.jp/machines/index/211040007`
+  - 導入日2011-06-06、ノーマルタイプ、天井RT条件、獲得枚数。
+- 旧解析
+  - `https://ab01.seesaa.net/article/275489928.html`
+  - BIG/MID/合算、機械割97.0〜113.2%、天井RT条件・約+0.3枚/G。
 
 ## 遡及QA継続地点
 
@@ -79,8 +77,8 @@
 
 ## 次回再開地点
 
-1. **recordCount 584 / chronologicalFrontier 2011-06-27**。最新main README / mission / INDEX / LATEST_HANDOFF / 583・584レコードを再取得。
-2. **2011-06-27同日群を引き続き最終監査**。スカイラブ3・大逆転は登録済みとして重複しない。
-3. **パチスロ 笑ゥせぇるすまん（三洋物産）**の具体日探索を継続。2011年6月導入までは確認済み。6/27以前または同日が直接確認できた場合は時系列BACKFILL/同日追加する。
-4. 6月後半候補はメーカー名・型式名・地域納品日も含め再監査する。既知の6月機（リオスパ、蝶々乱舞、鬼浜外伝、エイリヤンビギンズ等）は古い具体日資料が存在するため、repo既登録かを必ず突合し、未登録なら漏れとしてBACKFILLする。今回のWeb再確認ではリオスパ=6/20、蝶々乱舞=6/10または納品6/19資料、鬼浜外伝=6/17、エイリヤンビギンズ=6/6の資料が見つかっており、**既登録前提で飛ばさないこと**。
-5. 同日群と6月漏れを閉じてから **6/28以降**へ前進。PARTIAL/UNVERIFIEDは検索語・資料系統を変えた後だけ残し、CONFLICTは平均しない。
+1. **recordCount 585 / chronologicalFrontier 2011-06-27**。最新main README / mission / INDEX / LATEST_HANDOFF / 584・585レコードを再取得。
+2. **2011年6月の漏れBACKFILLを継続**。現main検索で未登録候補だった **蝶々乱舞 → 鬼浜外伝 → リオスパ** を具体導入日順に再照合し、最古の確定未登録機から追加する。
+3. 現時点の再探索メモ: **蝶々乱舞は6/10説と6/19納品資料、鬼浜外伝は6/17、リオスパは6/20**の具体日候補あり。日付定義・メーカー/型式・実導入を複数系統照合し、競合はCONFLICT。既登録前提で飛ばさない。
+4. **パチスロ 笑ゥせぇるすまん（三洋物産）**は2011年6月導入までは確認済みだが具体日未確定。検索語・資料系統を変えて継続し、6/27以前/同日が確定した場合はBACKFILL。
+5. 6月漏れと6/27同日群を閉じた後に **6/28以降**へ前進。PARTIAL/UNVERIFIEDは公式・業界・当時解析・古いDB・アーカイブ・回顧資料まで十分再探索した後だけ残す。
