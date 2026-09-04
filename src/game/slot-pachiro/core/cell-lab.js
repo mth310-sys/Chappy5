@@ -102,6 +102,16 @@ function applyWallMatrixPreset() {
   status.textContent = 'WALL MATRIX';
 }
 
+function applyGamecenterPreset() {
+  setFloorType(mapForCell(), 0, 0, 'tile');
+  setCellWall(mapForCell(), 0, 0, 'N', makeWall('wall'), { mirror: false });
+  setCellWall(mapForCell(), 0, 0, 'E', makeWall('wall'), { mirror: false });
+  setCellFurniture(mapForCell(), 0, 0, Object.freeze({ kind: 'counter', orientation: 'N' }), { slot: 'floor' });
+  setCellFurniture(mapForCell(), 0, 0, Object.freeze({ kind: 'poster', orientation: 'N' }), { slot: 'N' });
+  wallTarget = 'N';
+  status.textContent = 'GAMECENTER SCALE';
+}
+
 document.querySelectorAll('[data-floor-type]').forEach((button) => button.addEventListener('click', () => {
   setFloorType(mapForCell(), 0, 0, button.dataset.floorType);
   status.textContent = `FLOOR ${button.dataset.floorType.toUpperCase()}`;
@@ -169,4 +179,5 @@ document.querySelector('[data-clone]').addEventListener('click', () => {
 const demo = new URLSearchParams(location.search).get('cellDemo');
 if (demo === 'alignment') applyAlignmentPreset();
 if (demo === 'wallmatrix') applyWallMatrixPreset();
+if (demo === 'gamecenter') applyGamecenterPreset();
 render();
