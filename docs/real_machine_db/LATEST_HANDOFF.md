@@ -4,113 +4,82 @@
 
 ## 現在地点
 
-- recordCount: **545**
-- latestMachineAdded: **楽々温泉記**（アイウィル / 2011-01-31）
-- latestRecord: `docs/real_machine_db/machines/2011-01-31_rakuraku-onsenki.md`
+- recordCount: **546**
+- latestMachineAdded: **サムライチャンプルー極**（ニューギン / 2011-01-31）
+- latestRecord: `docs/real_machine_db/machines/2011-01-31_samurai-champloo-kiwami.md`
 - chronologicalFrontier: **2011-01-31**
-- frontierLatestMachine: **楽々温泉記**
+- frontierLatestMachine: **サムライチャンプルー極**
 - schema: **resetBehavior v0.7**
 - status: **READY_TO_CONTINUE**
 
 ## 今回の継続確認
 
-- 最新mainの `README.md`、正本ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、前線レコードを再取得して開始。
-- 開始時正本は **recordCount 543 / chronologicalFrontier 2011-01-24**。
-- 2011-01-24同日群と前方漏れを再監査。
-- `ハーレムエース2` は初回code searchで未登録候補に見えたが、候補パス `docs/real_machine_db/machines/2011-01-11_harem-ace-2.md` を直接取得すると**既存登録済み**と確定。重複作成はしていない。
-- `残機尽きるまで私は戦うS` は当時グリーンべるとで**2011-03-06納品開始予定**を確認し、1月候補から除外。
-- `シスタークエスト2～魔剣の騎士と白銀の巫女～` はK-Naviで**2011-01-11導入**、repo未登録を確認したためchronologicalFrontier以前の漏れとしてBACKFILL。
-- 1/24以降の次の確定節点として、当時Pマンズ/プレイグラフ転載が `楽々温泉記` の**2011-01-31ホール導入予定**を明記。repo未登録を確認し新規追加。
-- 以上2件追加により recordCount **545**、chronologicalFrontier **2011-01-31**。
+- 最新mainの `README.md`、正本ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、前線レコード `2011-01-31_rakuraku-onsenki.md` を再取得して開始。
+- 開始時正本は **recordCount 545 / chronologicalFrontier 2011-01-31**。
+- 指示どおり2011-01-31同日群を再監査。
+- K-Naviで `サムライチャンプルー極` の**2011-01-31ホール導入開始**を確認。当時グリーンべるとは**2011-01-30納品開始予定**で、納品/ホール導入の定義を分離。
+- repo code searchで未登録を確認したため同日漏れとして追加。
+- 追加後 recordCount **546**、chronologicalFrontierは**2011-01-31維持**。
 
-## 今回追加 — シスタークエスト2～魔剣の騎士と白銀の巫女～（BACKFILL）
+## 今回追加 — サムライチャンプルー極
 
-- メーカー: **SNKプレイモア**
-- 導入: **2011-01-11**
-- タイプ: **5号機 / ノーマルAタイプ / 天井RT**
-- 機械割: **96.7 / 98.3 / 100.2 / 104.5 / 108.4 / 112.2%**
-- BIG: **1/268.6 → 1/228.3**
-- REG: **1/455.1 → 1/291.3**
-- 合算: **1/168.9 → 1/128.0**
-- BIG約**312枚** / REG約**104枚**
-- BIG後**999G**、REG後**777G**で次回ボーナスまでの天井RT。
-- baseGamesPer50: **UNVERIFIED_AFTER_RESEARCH**
-- coreStatus: **COMPLETE_CORE_RESET_BEHAVIOR_PARTIAL**
-
-### resetBehavior v0.7 — シスタークエスト2
-
-- **設定変更しても天井までの消化ゲーム数はリセットされない**ことをP-WORLDが直接記載。
-- gameCounterReset: **RETAIN**
-- carryOverBehavior: **CEILING_COUNTER_RETAIN_CONFIRMED**
-- 朝一は前日ハマリG数を利用した**宵越し天井狙いが可能**。
-- 設定変更専用短縮天井ではなく、通常のBIG後999G / REG後777Gまでの進捗を継承。
-- 単純電源OFF→ON、天井RT突入中の設定変更後状態、ガックン/初期出目等の変更判別は **UNVERIFIED_AFTER_RESEARCH**。
-- advantageousSectionReset: **NOT_APPLICABLE**。
-
-### 主要出典 — シスタークエスト2（取得日 2026-09-04）
-
-- K-Navi: `https://p-kn.com/slot/1321/`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/6169`
-- Pマンズ/プレイグラフ転載: `https://p-mans.blogspot.com/2010/11/`
-- パチ7回顧: `https://pachiseven.jp/articles/detail/5164`
-- 中一商事: `https://www.nakaiti.com/html/sSNK078.html`
-
-## 今回追加 — 楽々温泉記
-
-- メーカー: **アイウィル**
+- メーカー: **ニューギン**
 - 導入: **2011-01-31**
-- タイプ: **5号機 / ノーマルAタイプ / ボーナス主体**
-- 機械割: **96.2 / 98.8 / 101.2 / 105.3 / 108.4 / 110.6%**
-- BIG: **1/221.4 → 1/160.2**
-- REG: **1/442.8 → 1/319.7**
-- 合算: **1/147.6 → 1/106.7**
-- BIG **221枚** / REG **104枚**
-- P-WORLDはRT/ARTを搭載しない純粋なノーマルタイプと明記。
-- 天井: **非搭載**
-- baseGamesPer50: **UNVERIFIED_AFTER_RESEARCH**（パチマガ保存ページも「現在調査中」）
+- タイプ: **5号機 / A+ART / ゲーム数上乗せ+セットストック / CZ**
+- 機械割: **96.2 / 98.8 / 101.5 / 104.6 / 110.2 / 119.1%**
+- BIG: **1/399.61 → 1/321.25**
+- REG: **1/655.36 → 1/520.13**
+- ボーナス合算: **1/248.24 → 1/198.59**
+- ART「斬モード」初当たり: **1/354 → 1/221**
+- baseGamesPer50: **32.24 / 32.27 / 32.29 / 32.33 / 32.37 / 32.43G**
+- BIG約**214枚** / REG約**48枚**
+- 斬モード: **50G+α / 約+1.2枚/G**
+- 天井: **ボーナス間1200G → 前兆後に斬モード**
+- 天井到達時ストック: **1個92% / 2個8%**
 - coreStatus: **COMPLETE_CORE_RESET_BEHAVIOR_PARTIAL**
 
-### resetBehavior v0.7 — 楽々温泉記
+### resetBehavior v0.7 — サムライチャンプルー極
 
-- 天井、AT/ART/CZ、通常/天国等の長期ゲーム数モードがなく、朝一客行動へ影響する主要reset対象は **NO_MATERIAL_GAMEPLAY_RESET_EFFECT_CONFIRMED_AFTER_RESEARCH**。
-- gameCounterReset / ceilingAfterReset: **NOT_APPLICABLE_NO_CEILING**。
+- K-Naviに本機専用の**「設定変更後の挙動」**および**「状態移行率(設定変更時)」**解析項目が存在することを確認。
+- パチマガスロマガにも**「朝イチ・設定変更」**専用項目が存在。
+- ただし取得できた検索キャッシュ/公開本文では個別の設定変更時数値まで展開できず、**天井1200G進捗のCLEAR/RETAIN、設定変更時状態振り分け、据え置き、電源OFF→ON、ガックン/初期出目**は推測せず `UNVERIFIED_AFTER_RESEARCH`。
+- ceilingAfterReset: **NONE_CONFIRMED_AFTER_RESEARCH**。通常天井1200Gは確定。
 - advantageousSectionReset: **NOT_APPLICABLE**。
-- 設定変更専用の朝一恩恵/不利は **NONE_CONFIRMED_AFTER_RESEARCH**。
-- ガックン、初期出目、単純電源OFF→ON時の低レベル挙動は **UNVERIFIED_AFTER_RESEARCH**。
+- 朝一専用の具体的短縮天井/優遇率/不利数値は今回確定できず。
 
-### CONFLICT — 楽々温泉記
+### CONFLICT / 定義分離 — サムライチャンプルー極
 
-- 後年5号機クロニクルは「Aタイプ(RT機能付き)」「BIG約312枚」と記載するが、P-WORLDは「RTやARTなどの付加機能を搭載しないノーマルタイプ」「BIG221枚」、パチマガの確率/機械割系列もP-WORLDと整合。
-- 後年回顧側に別仕様混入/記述誤りの疑いが強いため、**RT搭載・BIG312枚はCONFLICTとして不採用**。平均しない。
+- K-Navi機種概要の極モード「1ゲーム毎の期待値約2.4枚」と、P-WORLD/パチビー/当時業界記事のART純増**約1.2枚/G**は定義が同一と確認できないため平均せず分離。純増主値は約1.2枚/G。
+- 導入関連はグリーンべると**1/30納品開始予定**、K-Navi/パチビー**1/31ホール導入開始**。定義差として保持し主値は1/31。
 
-### 主要出典 — 楽々温泉記（取得日 2026-09-04）
+### 主要出典 — サムライチャンプルー極（取得日 2026-09-04）
 
-- Pマンズ/プレイグラフ転載: `https://p-mans.blogspot.com/2010/`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/6216`
-- パチマガスロマガ PAYOUT: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/iwill_slot/02/h.php`
-- パチマガスロマガ 1000円G数: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/iwill_slot/02/c.php`
-- pacnk: `https://pacnk.com/slot/tools/sh_rakurakuonsen.html`
-- 5号機クロニクル: `https://5goki.com/iwill`
+- K-Navi: `https://p-kn.com/slot/1341/`
+- パチマガスロマガ 基本: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/newgin_slot/17/a.php`
+- パチマガスロマガ PAYOUT: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/newgin_slot/17/h.php`
+- パチマガスロマガ 1000円G数: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/newgin_slot/17/c.php`
+- パチマガスロマガ index: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/newgin_slot/17/newgin_slot_17.php`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/6199`
+- パチビー: `https://www.pachibee.jp/machines/lecture/210120009`
+- pacnk: `https://pacnk.com/slot/tools/sh_samuraichamploo.html`
+- グリーンべると: `https://web-greenbelt.jp/00006687/`
+- 5号機クロニクル: `https://5goki.com/newgin-excite`
 
 ## 今回のGitHub更新
 
-- BACKFILL: `docs/real_machine_db/machines/2011-01-11_sister-quest-2.md`
-- FRONTIER: `docs/real_machine_db/machines/2011-01-31_rakuraku-onsenki.md`
+- SAME-DAY BACKFILL: `docs/real_machine_db/machines/2011-01-31_samurai-champloo-kiwami.md`
 - LATEST_HANDOFF: 本更新
-- `ハーレムエース2` は既存レコードを直接確認し**重複追加なし**。
 
 ## 遡及QA継続地点
 
 - **怪胴王 (`docs/real_machine_db/machines/2006-11_kaidouou.md`) まで補完済み**を維持。
 - `2006-11-27_thunder-v-special.md` は既にresetBehavior収集済みであるため重複QA対象外。
-- 今回もディレクトリ検索/コード検索だけでは怪胴王直後の「最初の実在resetBehavior欠損ファイル」を順序保証付きで一意確定できなかったため、推測でQA済み範囲を動かしていない。
-- 次回はmachine tree上で怪胴王以後の実レコードを日付/パス順に列挙し、resetBehavior有無を直接fetchして最初の欠損から再開する。
+- QA済み範囲は推測で動かさず、machine treeを日付/パス順に直接確認して最初のresetBehavior欠損から再開する。
 
 ## 次回再開地点
 
-1. **recordCount 545 / chronologicalFrontier 2011-01-31**。開始時は最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 今回2レコードを再取得。
-2. **2011-01-31同日群を最終監査**し、同日未登録機があれば先に追加。
-3. 同日群を閉じた後、**2011-02-01以降の最古未処理機**へ進む。
-4. `残機尽きるまで私は戦うS` は2011-03-06納品開始予定のため、2月監査中に誤って繰り上げない。
-5. 遡及QAは怪胴王までを既知完了地点として、**最初の実在resetBehavior欠損machine path**を直接確定してから補完。
-6. PARTIAL/UNVERIFIEDは表記・型式・メーカー・項目語を変え、公式/業界/当時解析/古いDB/アーカイブ/回顧を横断後のみ維持。競合は平均せずCONFLICT。
+1. **recordCount 546 / chronologicalFrontier 2011-01-31**。最新mainのREADME / mission / INDEX / LATEST_HANDOFF / `楽々温泉記` / `サムライチャンプルー極` を再取得。
+2. **2011-01-31同日群をもう一段最終監査**。同日未登録機があれば先に追加。
+3. 同日群が閉じたら**2011-02-01以降の最古未処理機**へ進む。日付不明候補を推測で2月前半へ置かず、当時資料の納品日/導入日を分離して確定する。
+4. `残機尽きるまで私は戦うS` は2011-03-06納品開始予定のため2月へ誤繰上げしない。
+5. PARTIAL/UNVERIFIEDは表記揺れ・型式・メーカー・シリーズ・設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックン/有利区間を変えて横断後のみ維持。競合は平均せずCONFLICT。
