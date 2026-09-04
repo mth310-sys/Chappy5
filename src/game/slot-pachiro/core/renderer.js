@@ -43,8 +43,8 @@ function renderLogicalGrid(scene) {
   scene.querySelector('.logicalGrid')?.remove();
   const svg = document.createElementNS(SVG_NS, 'svg');
   svg.setAttribute('class', 'logicalGrid');
-  svg.setAttribute('width', String(scene.clientWidth || 650));
-  svg.setAttribute('height', String(scene.clientHeight || 690));
+  svg.setAttribute('width', String(scene.clientWidth || 730));
+  svg.setAttribute('height', String(scene.clientHeight || 530));
   svg.setAttribute('aria-hidden', 'true');
 
   for (let x = FLOOR_BOUNDS.minX; x <= FLOOR_BOUNDS.maxX + 1; x++) {
@@ -76,17 +76,32 @@ function renderMapBase(scene) {
   const lot = scene.querySelector('.lot');
   const road = scene.querySelector('.road');
   if (!floor || !lot || !road) throw new Error('Map base elements are missing');
+
   floor.style.left = `${bounds.left}px`;
   floor.style.top = `${bounds.top}px`;
   floor.style.width = `${bounds.width}px`;
   floor.style.height = `${bounds.height}px`;
-  const marginX = 45, marginY = 30;
+
+  const marginX = 12, marginY = 20;
   lot.style.left = `${bounds.left - marginX}px`;
   lot.style.top = `${bounds.top - marginY}px`;
   lot.style.width = `${bounds.width + marginX * 2}px`;
   lot.style.height = `${bounds.height + marginY * 2}px`;
-  road.style.top = `${bounds.bottom + 70}px`;
-  scene.style.height = `${Math.max(690, bounds.bottom + 190)}px`;
+
+  const sceneWidth = Math.ceil(Math.max(730, bounds.right + marginX + 2));
+  const roadTop = Math.ceil(bounds.bottom + 40);
+  const roadHeight = 92;
+  const sceneHeight = roadTop + roadHeight;
+  scene.style.width = `${sceneWidth}px`;
+  scene.style.height = `${sceneHeight}px`;
+  scene.dataset.baseWidth = String(sceneWidth);
+  scene.dataset.baseHeight = String(sceneHeight);
+
+  road.style.left = '0px';
+  road.style.top = `${roadTop}px`;
+  road.style.width = `${sceneWidth}px`;
+  road.style.height = `${roadHeight}px`;
+
   renderLogicalGrid(scene);
   renderBuildingShell(scene);
 }
