@@ -1,7 +1,8 @@
 # 雀龍桜花
 
 machineName: 雀龍桜花
-manufacturer: KPEeleaseDate: 2011-05-29
+manufacturer: KPE
+releaseDate: 2011-05-29
 releaseDateStatus: DELIVERY_START_EXACT_DATE
 
 generation: 5号機
