@@ -4,53 +4,63 @@
 
 ## 現在地点
 
-- recordCount: **597**
-- latestMachineAdded: **ミリオンゴッド～神々の系譜～**（ミズホ / 2011-08-08）
-- latestRecord: `docs/real_machine_db/machines/2011-08-08_million-god-kamigami-no-keifu.md`
-- chronologicalFrontier: **2011-08-08**
-- frontierLatestExactDateMachine: **ミリオンゴッド～神々の系譜～**
+- recordCount: **598**
+- latestMachineAdded: **パチスロ銀と金**（タイヨーエレック / 2011-08-22）
+- latestRecord: `docs/real_machine_db/machines/2011-08-22_gin-to-kin.md`
+- chronologicalFrontier: **2011-08-22**
+- frontierLatestExactDateMachine: **パチスロ銀と金**
 - schema: **resetBehavior v0.7**
 - status: **READY_TO_CONTINUE**
 
-## 今回の本線追加 — ミリオンゴッド～神々の系譜～
+## 今回の本線追加 — パチスロ銀と金
 
 - 最新mainのREADME、正本ミッションv0.7、INDEX、LATEST_HANDOFF、直前frontierレコードを再取得して開始。
-- 開始時正本は recordCount **596** / chronologicalFrontier **2011-08-01**「旋風の用心棒～胡蝶の記憶～」。
-- 08-01同日群〜08-07境界を監査し、repo内重複検索で本機未登録を確認。
-- K-Navi / HAZUSEとも **2011-08-08導入開始**で一致したため597件目として追加。
-- 型式名 **ミリオンゴッド-神々の系譜-E**、検定番号 **1S0338**。
+- 開始時正本は recordCount **597** / chronologicalFrontier **2011-08-08**「ミリオンゴッド～神々の系譜～」。
+- 08-08同日群〜08-21境界を監査し、repo内重複検索で本機未登録を確認。
+- K-Navi / パチビーとも **2011-08-22導入開始**で一致したため598件目として追加。
+- 型式名は後年整理資料で **銀と金 M**。検定番号は今回未確定のため推測せずUNVERIFIED。
 
 ### 性能コア
 
-- 5号機 ART / セットストック / モード管理。
-- 機械割精密系列: **97.8 / 99.0 / 102.9 / 105.5 / 112.9 / 119.6%**。
-- HAZUSE掲載: **98 / 99 / 103 / 106 / 113 / 119%**。設定6差を含むため平均せずCONFLICT保持。
-- ART初当たり: **1/433.4 / 373.4 / 429.6 / 310.6 / 368.9 / 265.8**。
-- 50枚ベース: **約25G/50枚**（回顧資料。MEDIUM）。
-- GOD GAME: **1セット100G / 約+2.4枚/G / 約240枚**。
-- GOD揃い: **GG5セット以上**。
-- 通常天井: **ART終了後1400G**。
+- 5号機 A+ART / ゲーム数上乗せ。
+- 機械割: **96.5 / 99.5 / 101.4 / 103.6 / 107.8 / 110.8%**。
+- ボーナス合算: **1/249.2 / 241.8 / 234.9 / 226.8 / 220.7 / 212.1**。
+- 同色BIG / 異色BIG / REGの設定別詳細値も機種レコードへ保存。
+- 50枚ベース: **32.54〜32.63G/1000円**、平均表示約32.6G。
+- 欲BONUS約**220枚**、絶BONUS約**60枚**。
+- ART「愉悦の刻」: **1セット50G以上 / 約+1.4枚/G**。
+- ART終了後10G「ざわざわZONE」、引き戻し率約20%。
+- 通常天井: **ボーナス間1200Gで天井状態**。その後レア小役またはボーナス成立でART突入。
+- ART初当たり設定別はK-Navi解析項目の存在までは確認したが本文数値を安全に回収できず、後継「銀と金2」の値を混入せずUNVERIFIED_AFTER_RESEARCH。
 
 ### resetBehavior v0.7
 
-- **設定変更でART間1400G天井進捗CLEAR**を確認。
-- K-Naviの本機専用「モード移行率(設定変更)」から、設定変更時の表モード再抽選数値を保存。
-- 設定1〜3の天国以上（天国S/L/超天国）合計は各 **0.17%**、設定4〜6は各 **0.62%**。
-- 低確A/低確B/通常/天国準備を含む全設定別振り分けは機種レコード本文へ保存済み。
-- 設定変更専用短縮天井: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- 据え置き時の天井/モード完全引継ぎ、単純電源OFF→ON、GGストック/前兆中境界処理は **UNVERIFIED_AFTER_RESEARCH**。
+- K-Naviに本機専用 **「設定変更後の天井ゲーム数」** 解析項目が現存することを確認。
+- ただし具体本文を今回の取得経路で回収できず、通常天井1200Gに対する設定変更後のCLEAR/RETAIN・短縮値を推測しない。
+- 旧天井狙い資料に **「宵越し×」** の記録があるため前日進捗利用不可を示唆するが、単一二次根拠のため `UNVERIFIED_AFTER_RESEARCH_WITH_SECONDARY_NO_CARRYOVER_INDICATION` として保存。
+- 据え置き時の天井/内部状態/ART関連状態、単純電源OFF→ON、設定変更時モード/状態、ガックン等の変更判別は **UNVERIFIED_AFTER_RESEARCH**。
+- 設定変更専用の朝一短縮天井・朝一特定G以内当選率は **NONE_CONFIRMED_AFTER_RESEARCH**。
 - 有利区間は5号機のため **NOT_APPLICABLE**。
-- 液晶「3・2・4（ミズホ）」は電源ON時・設定変更時に出現し得るため通常時リーチ目の例外となる資料を確認。単独での設定変更確定判別・ガックン数値は未確認。
 
-## 主要出典 — ミリオンゴッド～神々の系譜～（取得日 2026-09-04）
+## 2011-08境界監査メモ
 
-- K-Navi: `https://p-kn.com/slot/1447/`
-- K-Navi 設定変更時モード: `https://p-kn.com/slot/1447/33976/`
-- HAZUSE: `https://hazuse.com/machine/pachislot/1S0338/`
-- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/mizuho_slot/34/a.php`
-- 2-9伝説: `https://29den.com/milliongod/`
-- GODシリーズ回顧: `https://blankky.com/slot/god-series-history/`
-- パチセブン回顧: `https://pachiseven.jp/articles/detail/256`
+- **未来少年コナン**は導入日が競合。
+  - K-Navi: **2011-08-16**
+  - 当時グリーンべると: **2011-09-05から納品開始予定**
+  - HAZUSE: **2011-09-05導入開始**
+  - P-WORLDも2011年9月導入表記。
+- 8月16日を本線日付として先行採用せず、**CONFLICT_DATE**として9月5日到達時に正式レコード化候補として再照合する。
+- 型式名はHAZUSEで **未来少年コナンV**、検定番号 **1S0277** まで先行確認済み。
+
+## 主要出典 — パチスロ銀と金（取得日 2026-09-04）
+
+- K-Navi: `https://p-kn.com/slot/1455/`
+- パチビー: `https://www.pachibee.jp/machines/index/211060007`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/6411`
+- パチマガスロマガ 基本仕様: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/taiyoelec_slot/10/a.php`
+- パチマガスロマガ 1000円あたりゲーム数: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/taiyoelec_slot/10/c-1.php`
+- 後年整理資料（型式名）: `https://pachinko.hatenablog.jp/entry/2011/08/gin-to-kin`
+- 旧天井狙い資料（宵越し可否補助）: `https://macerate.seesaa.net/article/226196713.html`
 
 ## 遡及resetBehavior QA継続地点
 
@@ -61,8 +71,9 @@
 
 ## 本線の次回再開地点
 
-1. **recordCount 597 / chronologicalFrontier 2011-08-08**から開始。
-2. **2011-08-08同日群を最終監査**し、ミリオンゴッド～神々の系譜～を重複追加しない。
-3. 08-09以降の境界を外部導入カレンダー/当時業界記事/K-Navi/HAZUSE/P-WORLDで確認し、最古未登録機を優先。
-4. PARTIAL/UNVERIFIEDは機種名表記揺れ・型式・メーカー・シリーズ名と設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックンを組み替えて再探索する。
-5. 競合値は平均せずCONFLICT。後継機値・一般則による補完は禁止。
+1. **recordCount 598 / chronologicalFrontier 2011-08-22**から開始。
+2. **2011-08-22同日群を最終監査**し、パチスロ銀と金を重複追加しない。
+3. 08-23以降の境界を外部導入カレンダー/当時業界記事/K-Navi/HAZUSE/P-WORLDで確認し、最古未登録機を優先。
+4. 「未来少年コナン」は08-16説を理由に遡及固定せず、09-05到達時にCONFLICT_DATEを保持した上で登録判断する。
+5. PARTIAL/UNVERIFIEDは機種名表記揺れ・型式・メーカー・シリーズ名と設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックンを組み替えて再探索する。
+6. 競合値は平均せずCONFLICT。後継機値・一般則による補完は禁止。
