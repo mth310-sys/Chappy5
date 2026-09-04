@@ -21,6 +21,32 @@ export function toScreen(x, y, rise = 0) {
   };
 }
 
+// Inverse of toScreen() for pointer/placement work. Keep logical grid
+// coordinates separate from screen pixels; callers choose when to snap.
+export function fromScreen(screenX, screenY, rise = 0) {
+  if (!Number.isFinite(screenX) || !Number.isFinite(screenY) || !Number.isFinite(rise)) {
+    throw new Error(`screen coordinates and rise must be finite: ${screenX}, ${screenY}, ${rise}`);
+  }
+  const isoX = (screenX - GRID.originX) / GRID.halfW;
+  const isoY = (screenY + rise - GRID.originY) / GRID.halfH;
+  return {
+    x: (isoX + isoY) / 2,
+    y: (isoY - isoX) / 2,
+  };
+}
+
+export function snapScreenToGrid(screenX, screenY, rise = 0) {
+  const logical = fromScreen(screenX, screenY, rise);
+  const x = Math.round(logical.x);
+  const y = Math.round(logical.y);
+  return {
+    x,
+    y,
+    screen: toScreen(x, y, rise),
+    fractional: logical,
+  };
+}
+
 export function orientationScreenAngle(orientation) {
   switch (orientation) {
     case 'E': return Math.atan2(GRID.halfH, GRID.halfW) * 180 / Math.PI;
