@@ -4,80 +4,74 @@
 
 ## 現在地点
 
-- recordCount: **586**
-- latestMachineAdded: **蝶々乱舞**（オリンピア / releaseDate主値2011-06-10 / BACKFILL / 日付CONFLICT）
-- latestRecord: `docs/real_machine_db/machines/2011-06-10_chouchou-ranbu.md`
+- recordCount: **587**
+- latestMachineAdded: **パチスロ笑ゥせぇるすまん**（三洋物産 / releaseDate 2011-06 月粒度 / BACKFILL）
+- latestRecord: `docs/real_machine_db/machines/2011-06_warau-salesman.md`
 - chronologicalFrontier: **2011-06-27**
 - frontierLatestExactDateMachine: **大逆転**
 - schema: **resetBehavior v0.7**
 - status: **READY_TO_CONTINUE**
 
-## 今回の継続確認
+## 今回の本線継続 — パチスロ笑ゥせぇるすまん
 
 - 最新mainの `README.md`、正本ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、既存machine treeを再取得して開始。
 - `INDEX.md` は旧情報のためREADME規約どおり最新handoffと実machineレコードを進捗正本として使用。
-- **重要修正**: 直前handoffでは「鬼浜外伝 ハヤト疾風伝」「リオスパ Rioの大温泉」をrepo未登録としていたが、recursive machine treeと実ファイル直取得で既存登録を確認した。GitHub code searchの未ヒットを未登録根拠にしてはいけない。
-- 既存確認済み:
-  - `docs/real_machine_db/machines/2011-06-17_onihama-gaiden-hayato-shippuden.md`
-  - `docs/real_machine_db/machines/2011-06-20_riospa-rio-no-dai-onsen.md`
-  - `docs/real_machine_db/machines/2011-06-20_progolfer-saru.md`
-  - `docs/real_machine_db/machines/2011-06-27_daigyakuten.md`
-  - その他6月後半レコードもtree上に存在するため、以後は**tree実パス確認→fetch_file**を重複判定の優先手順とする。
-- このため本線では既存レコードを587件目として重複作成せず、recordCount 586 / frontier 2011-06-27を維持した。
+- 直前handoffで6月漏れ候補だった初代 **パチスロ笑ゥせぇるすまん** を、machine tree/code searchで未登録確認後に587件目としてBACKFILL追加。
+- 導入時期は複数の初代専用旧DBで **2011年6月**まで確定。SANYO旧公式系、当時解析、旧新台カレンダー、候補日別検索を追加で行ったが、具体日を安全に確定できなかったため `releaseDate: 2011-06` とし、6/27以前・同日・以後を推測で固定しない。
+- 月粒度BACKFILLのため **chronologicalFrontier 2011-06-27は維持**。
 
-## 今回の遡及QA — めぞん一刻（2006）
+### 性能コア
 
-対象: `docs/real_machine_db/machines/2006-11_mezon-ikkoku.md`
+- 設定別機械割: **97.7 / 99.5 / 100.6 / 104.0 / 107.3 / 112.0%**。
+- BIG系: 黒GIG **1/1985（全設定）**、赤GIG **1/993 → 1/829**。
+- ART初当たり: **1/260 → 1/197**。
+- 笑ゥBIG約**204枚**、モグロBIG約**102枚**。
+- ART「フクゾーラッシュ」: **1セット40G+α / 約+1.8枚/G**。
+- 50枚ベースは「初代/三洋物産/50枚/1000円/ベース/コイン持ち」等を組み替えて旧解析・旧DB・回顧資料を横断したが、初代固有の直接値を確定できず **UNVERIFIED_AFTER_RESEARCH**。後継機値や小役から逆算していない。
 
-- 長く未確定だった「怪胴王直後の最初の実在resetBehavior欠損path」をrecursive machine tree順で確定。
-- tree順は `2006-11_kaidouou.md` → **`2006-11_mezon-ikkoku.md`** → `2006-11_mikawa-sasoriza-no-salaryman.md`。
-- `めぞん一刻` にはresetBehaviorが存在しなかったため、v0.7を追加してQA前線を**めぞん一刻まで補完済み**へ進めた。
-- 既存性能コアのPARTIAL要素（機械割CONFLICT、50枚ベース、RT純増等）はreset QAと混同せず維持。
+### resetBehavior v0.7
 
-### 性能再監査で補強した点
-
-- HAZUSE当時解析で初代2006年機を再確認。
-- 赤7スーパーBIG: **平均約265枚 / 終了後159G RT（一刻タイム）**。
-- 白7ノーマルBIG: **平均約200枚 / 終了後51G RT（五代タイム）**。
-- REG: **平均約100枚**。
-- 後年まとめ資料のSBB/NBB別仕様と整合。一方、5号機クロニクルの「BIG約260枚+50G RT」は表現差が大きいためCONFLICTを維持し、平均化しない。
-
-### resetBehavior v0.7 — めぞん一刻
-
-- `settingChangeBehavior`: **UNVERIFIED_AFTER_RESEARCH**。設定変更時のRT、キャラクター増加状態、出目等の本機固有処理を直接確定できず。
-- `carryOverBehavior`: **NO_GAME_COUNT_OR_LONG_TERM_HIT_MODE_FEATURE_CONFIRMED; OTHER_STATE_UNVERIFIED**。
+- `settingChangeBehavior`: **VERIFIED_PARTIAL**。設定変更で**天井ゲーム数再セット**、**内部モード再抽選**、ステージはランダム。
+- `gameCounterReset`: **CLEAR_ON_SETTING_CHANGE_VERIFIED**。
+- `modeAfterReset`: 公開数値あり。
+  - 通常A: 設定1〜3 **75.0%** / 設定4・5 **80.0%** / 設定6 **85.0%**
+  - 通常B: **20.0% / 15.0% / 10.0%**
+  - 天国: **全設定5.0%**
+- 通常時最大天井: **999G**。天国滞在時は**99G以内**に天井到達。
+- `resetBenefits`: **設定変更時天国5.0%**。
+- `resetPenalties`: **前日までの天井進捗消失**。
+- `carryOverBehavior`: **UNVERIFIED_AFTER_RESEARCH**。
 - `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH**。
-- `gameCounterReset`: **NOT_APPLICABLE_TO_CEILING_AFTER_RESEARCH**。通常時に蓄積するゲーム数天井/規定G数当選は確認なし。
-- `ceilingAfterReset`: **NOT_APPLICABLE; NO_STANDARD_GAME_COUNT_CEILING_CONFIRMED_AFTER_RESEARCH**。
-- `modeAfterReset`: **NOT_APPLICABLE_TO_LONG_TERM_HIT_MODE_AFTER_RESEARCH**。
-- `stateAfterReset`: **UNVERIFIED_FOR_ACTIVE_RT_AND_DISPLAY_STATE**。
+- `resetDetection`: **UNVERIFIED_AFTER_RESEARCH**。ガックン/初期出目等を本機固有資料で確定できず。
 - `advantageousSectionReset`: **NOT_APPLICABLE**。
-- `resetBenefits`: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- `resetPenalties`: **NONE_CONFIRMED_AFTER_RESEARCH**。ただしRT/表示状態の変更処理は未確認なので不利なしと一般化しない。
-- `resetDetection`: **UNVERIFIED_AFTER_RESEARCH**。
-- 公開朝一数値として確定できるreset専用値はなし。通常仕様の固定RT値 **159G / 51G** をnumericResetDataの比較基準として保存。
-- reset QA状態: **PARTIAL_AFTER_MULTI_SOURCE_RESEARCH**。
 
-## 主要出典 — めぞん一刻 QA（取得日 2026-09-04）
+## 主要出典 — パチスロ笑ゥせぇるすまん（取得日 2026-09-04）
 
-- グリーンべると / P-WORLD業界ニュース: `https://news.p-world.co.jp/articles/1916/greenbelt`
-- HAZUSE初代解析: `https://hazuse.com/i/data/maisonikkoku/top.htm`
-- pacnk設定判別DB: `https://pacnk.com/slot/tools/sh_mezonikkoku.html`
-- 5号機クロニクル: `https://5goki.com/heiwa-olympia`
-- めぞん一刻シリーズ回顧: `https://www.marimo0925.net/pachislot-kikaiwariranking-mezonikkoku-ban/`
+- パチ＆スロ必勝本「設定変更&天井情報」: `https://p.hisshobon.jp/machine/1822/1/29694`
+- パチ＆スロ必勝本「通常時のモード」: `https://p.hisshobon.jp/machine/1822/1/29945`
+- pacnk初代設定判別DB: `https://pacnk.com/slot/2011/warausalesman/top.php`
+- P-WORLD初代機種ページ: `https://www.p-world.co.jp/machine/database/6350`
+- パチマガスロマガ初代基本システム: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sanyo_slot/13/a.php`
+- 歴代シリーズ回顧: `https://www.marimo0925.net/pachislot-kikaiwariranking-warausealsman-ban/`
+
+## 直前までの重要重複監査情報
+
+- `docs/real_machine_db/machines/2011-06-17_onihama-gaiden-hayato-shippuden.md`
+- `docs/real_machine_db/machines/2011-06-20_riospa-rio-no-dai-onsen.md`
+- `docs/real_machine_db/machines/2011-06-20_progolfer-saru.md`
+- `docs/real_machine_db/machines/2011-06-27_daigyakuten.md`
+- その他6月後半レコードもtree上に存在するため、以後は**tree実パス確認→fetch_file**を重複判定の優先手順とする。GitHub code searchの未ヒットだけを未登録根拠にしない。
 
 ## 遡及QA継続地点
 
-- **めぞん一刻 (`docs/real_machine_db/machines/2006-11_mezon-ikkoku.md`) まで補完済み**。
+- **めぞん一刻 (`docs/real_machine_db/machines/2006-11_mezon-ikkoku.md`) までresetBehavior v0.7補完済み**。
 - 次のtree実パスは **`docs/real_machine_db/machines/2006-11_mikawa-sasoriza-no-salaryman.md`**。
-- 次回はまず同ファイルをfetchし、resetBehavior欠損ならそこから補完。既に収集済みならtree順で次の欠損へ進む。
 - `2006-11-27_thunder-v-special.md` は既にresetBehavior収集済みのため重複QA対象外。
 
 ## 本線の次回再開地点
 
-1. **recordCount 586 / chronologicalFrontier 2011-06-27**から開始。
-2. 6月漏れ候補はcode searchだけで未登録判定せず、recursive tree / contents実パスを先に確認する。
-3. 既存確認済みの鬼浜外伝・リオスパ・プロゴルファー猿・大逆転等は重複作成しない。
-4. **パチスロ 笑ゥせぇるすまん（三洋物産）**はP-WORLDで初代2011年機・A+ART（約+1.8枚/G）まで再確認したが、具体的な2011年6月導入日を今回の検索では安全に確定できなかった。次回はSANYO旧公式、K-Navi初代ページ、当時業界記事、旧新台スケジュール/アーカイブへ検索系統を変えて6/27以前・同日・以後を決める。
-5. 6/27以前の漏れが閉じたら6/27同日群を再監査し、その後6/28以降の最古未処理機へ前進。
-6. PARTIAL/UNVERIFIEDとreset欠損は公式・業界・当時解析・古いDB・アーカイブ・回顧資料まで十分再探索し、競合はCONFLICTとして分離する。
+1. **recordCount 587 / chronologicalFrontier 2011-06-27**から開始。
+2. 2011年6月の残存漏れをrecursive tree / contents実パス優先で最終監査する。初代「笑ゥせぇるすまん」は月粒度BACKFILL済みなので重複作成しない。
+3. 6/27同日群を最終監査し、既存レコードを飛ばさず重複も作らない。
+4. 6月内の漏れが閉じたら **2011-06-28以降の最古未処理機**へ前進する。
+5. PARTIAL/UNVERIFIEDとreset欠損は公式・業界・当時解析・古いDB・アーカイブ・回顧資料まで十分再探索し、競合は平均せずCONFLICTとして分離する。
