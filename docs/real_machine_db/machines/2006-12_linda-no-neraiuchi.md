@@ -76,9 +76,39 @@ reliability: INDUSTRY + ANALYSIS_HIGH
 - 通常時も約100P周期でチャンスゾーンが巡る仕様。
 - ボーナスとRTのダブル同時抽選を特徴とする。
 
+## resetBehavior
+
+schemaVersion: v0.7
+resetQaStatus: PARTIAL_RESET_QA_AFTER_RESEARCH
+resetQaLastUpdated: 2026-09-05
+
+settingChangeBehavior: UNVERIFIED_AFTER_RESEARCH
+carryOverBehavior: UNVERIFIED_AFTER_RESEARCH
+powerCycleBehavior: UNVERIFIED_AFTER_RESEARCH
+
+gameCounterReset: UNVERIFIED_AFTER_RESEARCH
+ceilingAfterReset: NO_CONVENTIONAL_GAME_COUNT_CEILING_CONFIRMED_AFTER_RESEARCH; PERIODIC_CZ_PROGRESS_RESET_UNVERIFIED
+modeAfterReset: UNVERIFIED_AFTER_RESEARCH
+stateAfterReset: UNVERIFIED_AFTER_RESEARCH
+advantageousSectionReset: NOT_APPLICABLE_5TH_GEN
+
+resetBenefits: NONE_CONFIRMED_AFTER_RESEARCH
+resetPenalties: NONE_CONFIRMED_AFTER_RESEARCH
+resetDetection: UNVERIFIED_AFTER_RESEARCH
+publicMorningNumbers: NONE_CONFIRMED_AFTER_RESEARCH
+
+notes:
+- 通常時にも約100P周期でチャンスゾーンが巡るため、ゲーム数要素を一律NOT_APPLICABLEにはしない。
+- 設定変更時に周期CZ進捗がクリア/引継ぎされるか、CZ/RT状態がどう処理されるかは本機固有の直接資料を確定できず未確認。
+- 据え置き時、単純電源OFF→ON時の周期/CZ/RT状態保持も直接根拠未取得。
+- 朝一専用短縮天井、確定恩恵/不利、ガックン・初期出目・ランプ等の変更判別数値は再探索後も確認できず、他機種・一般論から補完しない。
+
+resetQaReliability: PARTIAL_ANALYSIS_AFTER_MULTI_QUERY_RESEARCH
+
 ## sources
 
 取得日: 2026-08-31
+resetBehavior再調査日: 2026-09-05
 
 1. グリーンべると — ダブル同時抽選搭載、『リンダの狙いうち』登場
    - https://web-greenbelt.jp/00004952/
@@ -100,10 +130,17 @@ reliability: INDUSTRY + ANALYSIS_HIGH
    - https://5goki.com/igt
    - 2006/12導入、設定別確率・機械割の照合
    - reliability: ANALYSIS_SINGLE
+6. resetBehavior再探索（2026-09-05）
+   - 「リンダの狙いうち 設定変更/設定変更後/朝一/据え置き/電源/天井/チャンスゾーン」を複数系統で再検索。
+   - 周期CZの存在は既存解析と整合するが、設定変更・据え置き・電源OFF→ON時の直接処理を確定できる資料は未取得。
+   - reliability: RESEARCH_NEGATIVE_RESULT
 
 ## missingFields
 
 - RT 1Gあたり純増の確定値
+- 設定変更時の周期CZ進捗処理
+- 据え置き/電源OFF→ON時のCZ・RT状態処理
+- 変更判別の直接根拠
 
 ## conflicts
 
