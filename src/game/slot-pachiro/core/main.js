@@ -1,7 +1,7 @@
 import { bindPlacementCursorControls, createPlacementCursor } from './cursor.js';
 import { renderFoundationDebug } from './debug.js';
 import { ORIENTATIONS } from './facility.js';
-import { layout, validateLayout } from './layout.js';
+import { layout, validateIslandRows, validateLayout } from './layout.js';
 import { findPath } from './navigation.js';
 import { describePlacement, testPlacement } from './placement.js';
 import { renderLayout } from './renderer.js';
@@ -36,6 +36,24 @@ function runRotationSelfChecks() {
     signatures.add(preview.hard.map((cell) => `${cell.x},${cell.y}`).sort().join('|'));
   }
   assert(signatures.size === 4, 'four orientations must produce distinct anchored footprints');
+
+  const parallelPairs = {
+    E: [{ x: 0, y: 0 }, { x: 0, y: 4 }],
+    S: [{ x: 0, y: 0 }, { x: -4, y: 0 }],
+    W: [{ x: 0, y: 0 }, { x: 0, y: -4 }],
+    N: [{ x: 0, y: 0 }, { x: 4, y: 0 }],
+  };
+  for (const orientation of ORIENTATIONS) {
+    validateIslandRows(parallelPairs[orientation].map((point, index) => ({
+      id: `row-${orientation}-${index}`,
+      type: 'island',
+      orientation,
+      x: point.x,
+      y: point.y,
+      w: 9,
+      d: 1,
+    })));
+  }
 }
 
 function runFoundationSelfChecks() {
@@ -143,7 +161,7 @@ function boot() {
 
   if (status) {
     const scale = Number(frame.dataset.fitScale || 1);
-    status.textContent = `GRID OK / ${activeReport.itemCount} objects / ${activeReport.reachableCells} walk / VIEW ${(scale * 100).toFixed(0)}% / INTERIOR`;
+    status.textContent = `GRID OK / ${activeReport.itemCount} objects / ${activeReport.reachableCells} walk / VIEW ${(scale * 100).toFixed(0)}% / ORIENT 4`;
     status.dataset.state = 'ok';
   }
 }
