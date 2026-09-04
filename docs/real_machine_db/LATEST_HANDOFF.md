@@ -4,73 +4,63 @@
 
 ## 現在地点
 
-- recordCount: **575**
-- latestMachineAdded: **パチスロ エイリヤンビギンズ**（サミー / 2011-06-06ホール導入）
-- latestRecord: `docs/real_machine_db/machines/2011-06-06_pachislot-alien-begins.md`
+- recordCount: **576**
+- latestMachineAdded: **スターマン バイキング**（SANKO / 2011-06-06ホール導入）
+- latestRecord: `docs/real_machine_db/machines/2011-06-06_starman-viking.md`
 - chronologicalFrontier: **2011-06-06**
-- frontierLatestExactDateMachine: **パチスロ エイリヤンビギンズ**
+- frontierLatestExactDateMachine: **スターマン バイキング**
 - schema: **resetBehavior v0.7**
 - status: **READY_TO_CONTINUE**
 
 ## 今回の継続確認
 
-- 最新mainの `README.md`、正本ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、574前線レコード「キングハイビ-30」を再取得して開始。
+- 最新mainの `README.md`、正本ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、575前線レコード「パチスロ エイリヤンビギンズ」を再取得して開始。
 - `INDEX.md` は19件地点の旧情報のため、README規約どおり最新 `LATEST_HANDOFF.md` とmachineレコードを進捗正本として使用。
-- 574件地点の2011-06-05同日群を再監査後、06-06群へ前進。repo検索で「パチスロ エイリヤンビギンズ」「スターマン バイキング」が未登録であることを確認し、先にエイリヤンビギンズを575件目として追加。
+- handoff指定の2011-06-06同日群を継続し、repo検索で「スターマン バイキング」が未登録であることを再確認して576件目として追加。
 
-## 今回追加 — 575 パチスロ エイリヤンビギンズ
+## 今回追加 — 576 スターマン バイキング
 
-- メーカー: **サミー**
-- 型式名: **エイリヤンビギンズA**
-- 検定番号: **1S0002**
+- メーカー: **SANKO**
 - 時系列キー: **2011-06-06（ホール導入）**
 - 5号機 / **ノーマルAタイプ + 天井RT / 技術介入**
-- 機械割: **97.0 / 98.7 / 100.7 / 104.3 / 108.2 / 113.2%**
-- BIG: **1/249.2 / 1/248.2 / 1/244.5 / 1/239.2 / 1/226.0 / 1/210.1**
-- MID: **1/374.5 / 1/343.1 / 1/324.4 / 1/281.3 / 1/265.3 / 1/237.5**
-- 合算: **1/149.6 / 1/144.0 / 1/139.4 / 1/129.3 / 1/122.0 / 1/111.5**
-- 獲得枚数: **BIG最大311枚 / MID約91枚**
-- 天井: **BIG後777G / MID後555G → 次回ボーナスまでRT**
+- 市場掲載PAYOUT: **96.96 / 98.84 / 100.81 / 102.10 / 103.77 / 108.31%**
+- パチマガスロマガPAYOUT: **98 / 100 / 102 / 103 / 105 / 109%** → 定義/丸め差の可能性があるため `CONFLICT` 保持
+- BIG: **1/630.2 / 1/585.1 / 1/546.1 / 1/528.5 / 1/512.0 / 1/468.1**
+- MID: **1/1260.3 / 1/1170.3 / 1/1092.3 / 1/1057.0 / 1/1024.0 / 1/936.2**
+- REG: MIDと同値
+- 合算: **1/315.1 / 1/292.6 / 1/273.1 / 1/264.3 / 1/256.0 / 1/234.1**
+- 獲得枚数: **BIG最大402枚 / MID最大246枚 / REG最大116枚**
+- 天井: **ボーナス終了後666G → 次回ボーナスまでRT**
 - 天井RT純増: **約+0.3枚/G**
 - 50枚ベース: **UNVERIFIED_AFTER_RESEARCH**
+- 型式名/検定番号: **UNVERIFIED_AFTER_RESEARCH**
 
-### chronology / numerical notes
+### resetBehavior v0.7 — 576
 
-- K-Navi・パチビー: **2011-06-06**ホール導入/導入日。
-- P-WORLD末尾: **2011年05月**の月粒度。具体日を持つ複数当時DBの06-06を時系列キーに採用し、日付差は保持。
-- 設定6 BIGは **1/210.1** と **1/210.0**、MIDは **1/237.5** と **1/237.4** の丸め差あり。平均せず記録。
+- 通常天井 **ボーナス終了後666G** と天井RT純増 **約+0.3枚/G** はP-WORLD・パチマガスロマガ・当時業界記事で照合。
+- 設定変更時の666G天井カウンタCLEAR/RETAIN、据え置き時の天井進捗、単純電源OFF→ON、天井RT中の変更/電断処理、ガックン/初期出目/ランプ等の変更判別は、表記揺れ・SANKO・スターマンアイズ・宵越し等へ検索語を広げ、当時解析/旧DB/回顧資料を横断しても本機固有の直接本文を確定できず **UNVERIFIED_AFTER_RESEARCH**。
+- 設定変更専用短縮天井、朝一高確、特定G数優遇、変更時専用当選率などは **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 長期モード、AT/ART/CZは非搭載。有利区間は **NOT_APPLICABLE**。
 
-### resetBehavior v0.7 — 575
+## 主要出典 — 576（取得日 2026-09-04）
 
-- 通常天井 **BIG後777G / MID後555G** と天井RT純増約 **+0.3枚/G** は複数資料で確定。
-- K-Navi本機ページに専用項目 **「設定変更後の挙動」**、パチマガスロマガ保存ページに **「朝イチ・設定変更」** が存在することまで直接確認。
-- ただし現存取得可能本文から、設定変更時の777/555G天井カウンタCLEAR/RETAINを回収できず、`gameCounterReset` は **UNVERIFIED_AFTER_RESEARCH**。
-- 据え置き時の天井進捗、単純電源OFF→ON、天井RT中の電源/変更処理、ガックン/初期出目/LED等の変更判別も、表記揺れ・型式・メーカー・宵越し等を組み替えて再探索後も直接確定できず **UNVERIFIED_AFTER_RESEARCH**。
-- 設定変更専用短縮天井、高確スタート、朝一特定G数優遇等は **NONE_CONFIRMED_AFTER_RESEARCH**。
-- 長期モードは非搭載、AT/ART/CZ非搭載。有利区間は **NOT_APPLICABLE**。
-- 2017年「A-SLOTエイリヤンエボリューション」のreset/base値は別機種のため流用していない。
-
-## 主要出典 — 575（取得日 2026-09-04）
-
-- K-Navi: `https://p-kn.com/slot/1428/`
-  - 2011-06-06、BIG/MID/合算、専用「設定変更後の挙動」項目の存在
-- P-WORLD: `https://www.p-world.co.jp/machine/database/6363`
-  - 型式名/検定番号、BIG最大311枚/MID約91枚、777G/555G天井RT、約+0.3枚/G
-- パチビー: `https://www.pachibee.jp/machines/about/211040007`
-  - 2011-06-06導入、ノーマルタイプ、天井RT
-- パチビー基本スペック: `https://www.pachibee.jp/machines/index/211040007`
-  - 獲得枚数、天井、合算値
-- パチマガスロマガ保存ページ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sammy_slot/129/sammy_slot_129.php`
-  - 「天井」「朝イチ・設定変更」解析項目の存在
-- pacnk: `https://pacnk.com/slot/tools/sh_alien.html`
-  - 機械割97.0〜113.2%、BIG/MID全設定照合
-- 旧攻略資料: `https://ab01.seesaa.net/article/275489928.html`
-  - 機械割、BIG/MID、777/555G天井、RT純増0.3枚/G照合
+- K-Navi: `https://p-kn.com/slot/1411/`
+  - 2011-06-06ホール導入開始、SANKO、A-400、ボーナス規定払い出し、天井RT概要
+- P-WORLD: `https://www.p-world.co.jp/machine/database/6313`
+  - BIG/MID/REG全設定、PAYOUT96.96〜108.31%、最大402/246/116枚、666G天井RT、約+0.3枚/G
+- パチマガスロマガ基本システム: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sanko_slot/02/a.php`
+  - ノーマル+天井RT、666G、約+0.3枚/G、最大獲得枚数
+- パチマガスロマガ確率/PAYOUT: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sanko_slot/02/h.php`
+  - BIG/MID/REG/合算、PAYOUT98〜109%
+- pacnk: `https://pacnk.com/slot/tools/sh_starmanbyking.html`
+  - 合算、PAYOUT96.96〜108.31%、完全攻略PAYOUT98.03〜109.17%
+- Pマンズ / プレイグラフ転載（2011-04-19）: `https://p-mans.blogspot.com/2011/04/`
+  - BB約400枚、666G天井RT、約+0.3枚/G、6月上旬導入予定
 
 ## 今回のGitHub更新
 
-- 575: `docs/real_machine_db/machines/2011-06-06_pachislot-alien-begins.md`
-  - create commit: `7bd991aeba06e1e84fbe8ed4801393f75956842e`
+- 576: `docs/real_machine_db/machines/2011-06-06_starman-viking.md`
+  - create commit: `5a7efc39f9cc71b7b0809896ba4f539774074c91`
 - LATEST_HANDOFF: 本更新
 
 ## 遡及QA継続地点
@@ -81,8 +71,7 @@
 
 ## 次回再開地点
 
-1. **recordCount 575 / chronologicalFrontier 2011-06-06**。最新main README / mission / INDEX / LATEST_HANDOFF / 574・575レコードを再取得。
-2. **2011-06-06同日群の残存未登録を継続監査**。最優先候補は **「スターマン バイキング」（SANKO）**。repo重複を再確認し、未登録なら576件目として調査・保存。
-3. 06-06群を閉じる前に、同日の他機種がないか当時新台DB/業界記事を再監査する。
-4. **スカイラブ3は2011-06-27ホール導入開始**。06-06以降の途中機種を飛ばさない。
-5. PARTIAL/UNVERIFIEDは表記揺れ・型式・メーカー・シリーズ・reset検索語を変え、資料系統を横断した後だけ残す。CONFLICTは平均しない。
+1. **recordCount 576 / chronologicalFrontier 2011-06-06**。最新main README / mission / INDEX / LATEST_HANDOFF / 575・576レコードを再取得。
+2. **2011-06-06同日群の残存監査を継続**。SANKO **「レッツドラゴーン」**は2011年6月リリース、当時資料で「スターマン バイキング」とともに6月上旬導入予定まで確認済み。具体導入日を最終照合し、06-06またはそれ以前なら優先して577件目候補とする。
+3. 06-06群を閉じた後も、6月中旬〜下旬を時系列で監査する。既知アンカーは **プロゴルファー猿 2011-06-20（必勝本）/ 2011-06-27（K-Navi）CONFLICT候補**、**ハネスロ林家一家 2011-06-26納品開始予定**、**スカイラブ3 2011-06-27ホール導入**。途中機種を飛ばさない。
+4. PARTIAL/UNVERIFIEDは表記揺れ・型式・メーカー・シリーズ・reset検索語を変え、資料系統を横断した後だけ残す。CONFLICTは平均しない。
