@@ -1,0 +1,61 @@
+name: Generic Autonomous Playtest
+
+on:
+  workflow_dispatch:
+    inputs:
+      target_path:
+        description: 'Repository-served path to test, e.g. /visual_test/index.html'
+        required: false
+        default: '/visual_test/index.html'
+      max_actions:
+        description: 'Maximum visible actions to tap in generic smoke mode'
+        required: false
+        default: '5'
+  push:
+    paths:
+      - 'playtest/**'
+      - 'playwright.config.js'
+      - '.github/workflows/generic-playtest.yml'
+      - 'visual_test/**'
+      - 'prototypes/**'
+
+permissions:
+  contents: read
+
+jobs:
+  playtest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install Playwright test + WebKit
+        run: |
+          npm install --no-save @playwright/test@1.52.0
+          npx playwright install --with-deps webkit
+      - name: Start local server
+        run: |
+          python3 -m http.server 4173 > /tmp/chappy5-playtest-server.log 2>&1 &
+          sleep 2
+      - name: Run generic iPhone interaction test
+        env:
+          PLAYTEST_PATH: ${{ github.event.inputs.target_path || '/visual_test/index.html' }}
+          PLAYTEST_MAX_ACTIONS: ${{ github.event.inputs.max_actions || '5' }}
+        run: npx playwright test playtest/generic-interaction.spec.js --project=webkit-iphone12 --reporter=line
+      - name: Run dual prototype repeated-play QA
+        run: npx playwright test playtest/dual-prototype-qa.spec.js --project=webkit-iphone12 --reporter=line
+      - name: Run dual prototype submission readiness QA
+        run: npx playwright test playtest/submission-readiness.spec.js --project=webkit-iphone12 --reporter=line
+      - name: Run Nocturne product integrated QA
+        run: npx playwright test playtest/nocturne-product-qa.spec.js --project=webkit-iphone12 --reporter=line
+      - name: Run Nocturne STOP semantic regression QA
+        run: npx playwright test playtest/nocturne-stop-semantics.spec.js --project=webkit-iphone12 --reporter=line
+      - name: Upload interaction evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: generic-playtest-evidence
+          path: playtest/evidence/**
+          if-no-files-found: warn
+          retention-days: 7
