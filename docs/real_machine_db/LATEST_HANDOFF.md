@@ -4,52 +4,52 @@
 
 ## 現在地点
 
-- recordCount: **605**
-- latestMachineAdded: **エージェント・クライシス**（エレコ）
-- latestRecord: `docs/real_machine_db/machines/2011-10-02_agent-crisis.md`
+- recordCount: **606**
+- latestMachineAdded: **パチスロ X JAPAN～強行突破～**（SANKYO）
+- latestRecord: `docs/real_machine_db/machines/2011-10-02_x-japan-kyoko-toppa.md`
 - chronologicalFrontier: **2011-10-02**
-- frontierLatestExactDateMachine: **エージェント・クライシス**（10-02納品予定 / 10-03ホール導入開始の定義差）
+- frontierLatestExactDateMachine: **パチスロ X JAPAN～強行突破～**（10-02納品開始 / 10-03導入開始の定義差）
 - schema: **resetBehavior v0.7**
 - status: **READY_TO_CONTINUE**
 
-## 今回の本線追加 — エージェント・クライシス
+## 今回の本線追加 — パチスロ X JAPAN～強行突破～
 
-- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード、recursive machine treeを再取得して開始。
-- 実行途中でmainが600件地点から604件まで先行更新されていることを検知。600件時点の候補作業を破棄し、**recordCount 604 / chronologicalFrontier 2011-09-19 / マジカルハロウィン3**を正本としてリベースした。
-- 09-19納品 / 09-20導入群と09-26境界を監査し、次の具体的なパチスロ市場投入群として10-02納品 / 10-03導入群を確認。
-- repo上で本機未登録を確認し、605件目として追加。
-- グリーンべると: **2011-10-02納品開始予定**。K-Navi: **2011-10-03ホール導入開始**。`DATE_DEFINITION_DIFFERENCE`として両方保持し、時系列キーは最古の具体的市場投入日10-02。
-- 型式名 **エージェントクライシス**、検定番号 **1S0597**。
+- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード「エージェント・クライシス」、machine treeを再取得して開始。
+- 開始時正本は **recordCount 605 / chronologicalFrontier 2011-10-02**。
+- 10-02納品 / 10-03導入群を監査。ケロット2はグリーンべるとで **10-10納品開始予定**を確認したため、最古市場投入日基準では本機より後ろへ回した。
+- X JAPANはグリーンべるとで **2011-10-02納品開始**、HAZUSEで **2011-10-03導入開始**。`DATE_DEFINITION_DIFFERENCE`として両方保持し、時系列キーは10-02。
+- 型式名 **X JAPAN・強行突破F**、検定番号 **1S0652**。
 
 ### 性能コア
 
-- 5号機 / 高純増ART + AT + CZ / ゼロボーナス系構造。
-- 機械割: **98.5 / 99.6 / 101.9 / 105.2 / 109.4 / 115.8%**。
-- ART初当り: **1/291 / 1/263 / 1/274 / 1/232 / 1/248 / 1/193**。
-- CZ: **1/631 / 1/613 / 1/581 / 1/564 / 1/514 / 1/493**。
-- ART「エージェントラッシュ」: **基本30G+α / 約+3.0枚/G**。
-- AT「エージェントタイム」: **30G固定 / 約+1.8枚/G**。
-- 「バーニングバレット」: **23G**、毎G最低5G上乗せのため最低**115G**上乗せ。
-- ART終了後「クライシスミッション」: **23G**。
-- 通常天井: **クライシスミッション失敗後の最終CZ終了後から1200G**。到達時はエージェントミッション経由でART。
-- 50枚ベースは表記揺れ・略称・メーカー・型式名と50枚/1000円/千円/ベース/コイン持ち/回転数を組み替えて再探索したが直接値を確定できず **UNVERIFIED_AFTER_RESEARCH**。
-- coreStatus: **COMPLETE_CORE_WITH_BASE_GAMES_UNVERIFIED**。
+- 5号機 / A+ART / ボーナス+セットストック&ゲーム数上乗せART。
+- 機械割: **96.1 / 98.3 / 100.5 / 104.6 / 108.5 / 112.1%**。
+- ART初当り: **1/388 / 1/347 / 1/339 / 1/301 / 1/281 / 1/241**。
+- BIG: **1/397 / 1/392 / 1/387 / 1/378 / 1/368 / 1/356**。
+- REG: **1/668 / 1/648 / 1/630 / 1/612 / 1/555 / 1/492**。
+- X BONUS: **全設定共通1/16384**。
+- 50枚ベース: **31.44 / 31.64 / 31.80 / 32.01 / 32.20 / 32.43G**。
+- ART「無敵な夜」: **1セット40G+α / 約+1.4枚/G**。
+- 上乗せゾーン「強行突破」: **1セット4G、最大7セット**、毎G5〜100G上乗せ。
+- X BONUS/BIG: **約204枚**、REG: **約60〜61枚**。
+- 通常天井: **ボーナス間1199G → ART5セット以上**。
+- coreStatus: **COMPLETE_CORE**。
 
 ### resetBehavior v0.7
 
-- K-Naviに本機専用の **「設定変更後の挙動」**解析項目が現存することまで直接確認。
-- ただし現在の取得経路では具体本文を回収できず、検索語・資料系統を変更して再探索しても、設定変更時の1200G天井カウンタCLEAR/RETAINを別本文で直接確定できなかった。
-- したがって `settingChangeBehavior` / `gameCounterReset` / `modeAfterReset` / `stateAfterReset` は **UNVERIFIED_AFTER_RESEARCH**。項目名だけから内容を推測しない。
-- 据え置き時の天井・モード・前兆/CZ/AT/ART状態の保持、単純電源OFF→ON、ガックン/初期出目/液晶/ランプによる変更判別も **UNVERIFIED_AFTER_RESEARCH**。
-- 通常天井の構造と1200G数値自体は **CONFIRMED**。
-- 設定変更専用短縮天井、高確スタート保証、ART付与、朝一特定G以内の公開優遇率は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 本機専用解析で **「天井RT数は設定変更でリセット」**を直接確認。
+- `gameCounterReset`: **RESET_ON_SETTING_CHANGE_CONFIRMED**。
+- 通常1199G天井までの前日進捗は設定変更で消えるため、`resetPenalties`に明示。
+- 設定変更専用の短縮天井、高確保証、ART付与、朝一特定G以内当選率等は再探索後も **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 据え置き時の天井進捗/内部状態保持、単純電源OFF→ON、設定変更時の開始モード/状態振り分け、ガックン/初期出目/液晶等の変更判別は **UNVERIFIED_AFTER_RESEARCH**。
 - 有利区間は制度導入前の5号機なので **NOT_APPLICABLE**。
 - resetQaStatus: **PARTIAL_RESET_QA_AFTER_DEEP_RESEARCH**。
 
 ### CONFLICT / 資料品質
 
-- releaseDate: **10-02納品開始予定** vs **10-03ホール導入開始**。定義差として保持し平均化しない。
-- 5号機クロニクルは機械割系列がP-WORLDと一致する一方、本機セクション周辺の基本スペック・ゲーム性本文に別機種由来とみられる混線があるため `SOURCE_CONTENT_INCONSISTENCY`。主根拠には使用しない。
+- releaseDate: **10-02納品開始** vs **10-03導入開始**。定義差として保持。
+- 純増はグリーンべると/P-WORLD/HAZUSE/パチマガスロマガが **約+1.4枚/G**で一致。後年回顧1資料のみ約+1.3枚/Gのため `MINOR_RETROSPECTIVE_DIFFERENCE`。
+- HAZUSE機械割は整数丸め（96/98/101/105/109/112%）。詳細解析値96.1〜112.1%と丸め整合するためCONFLICT扱いしない。
 
 ## 遡及resetBehavior QA 次回再開地点
 
@@ -60,19 +60,26 @@
 
 ## 本線の次回再開地点
 
-1. **recordCount 605 / chronologicalFrontier 2011-10-02**から開始。
-2. エージェント・クライシスを重複追加しない。
-3. **2011-10-02納品 / 10-03導入群**を同日市場群として最終監査。
-4. K-Navi 10/03群で確認済みの候補、特に **パチスロ「ケロット2」**、**快盗天使ツインエンジェル3**、**パチスロ X JAPAN**、**サムライスピリッツ鬼**、**REVO**を、各機種の納品日定義も含め最古順にrepo重複確認して次の未処理機を確定する。
-5. tree実パス → 既存ファイル直接fetch → 未登録確認後に新規作成。code search未ヒットだけで未登録判定しない。
-6. PARTIAL/UNVERIFIEDは表記揺れ・型式・メーカー・シリーズ名と設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックン/有利区間を組み替えて再探索。
-7. 競合値は平均せずCONFLICT。後継機値・一般則による補完は禁止。
+1. **recordCount 606 / chronologicalFrontier 2011-10-02**から開始。
+2. エージェント・クライシス、パチスロ X JAPAN～強行突破～を重複追加しない。
+3. **2011-10-02納品 / 10-03全国導入群**の残存を最終監査。
+4. K-Navi 10/03群の未処理候補 **快盗天使ツインエンジェル3 / サムライスピリッツ鬼 / REVO / ケロット2**について、それぞれ納品開始日・市場投入日の定義を再確認し、最古の未登録から処理する。
+5. **ケロット2はグリーンべるとで10-10納品開始予定**を確認済み。K-Naviの10-03全国導入表記と時系列定義が競合するため、先に決め打ちせず再照合する。
+6. tree実パス → 既存ファイル直接fetch → 未登録確認後に新規作成。code search未ヒットだけで未登録判定しない。
+7. PARTIAL/UNVERIFIEDは表記揺れ・型式・メーカー・シリーズ名と設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックン/有利区間を組み替えて再探索。
+8. 競合値は平均せずCONFLICT。後継機値・一般則による補完は禁止。
 
 ## 主要出典 — 今回取得日 2026-09-04
 
-### エージェント・クライシス
-- グリーンべると: `https://web-greenbelt.jp/00002258/`
-- K-Navi: `https://p-kn.com/slot/1478/`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/6453`
-- グリーンべると 5号機史回顧: `https://web-greenbelt.jp/post-49774/`
-- 5号機クロニクル: `https://5goki.com/universal`（当該周辺に本文混線があるため照合補助のみ）
+### パチスロ X JAPAN～強行突破～
+- SANKYOオンライン博物館: `https://www.sankyo-fever.jp/collection/540/`
+- グリーンべると: `https://web-greenbelt.jp/00002211/`
+- HAZUSE: `https://hazuse.com/machine/pachislot/1S0652/`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/6473`
+- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sankyo_slot/26/sankyo_slot_26.php`
+- パチマガスロマガ 1000円あたりG数: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sankyo_slot/26/c.php`
+- パチスロ救急車: `https://www.eightbeat.com/slot99/kishu/a_gyou/e/Xjapan/page_menu.html`
+
+### 次回候補確認
+- K-Navi 2011年10月導入カレンダー: `https://p-kn.com/calendar/201110/`
+- ケロット2 グリーンべると: `https://web-greenbelt.jp/00002298/`
