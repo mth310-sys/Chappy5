@@ -103,18 +103,35 @@ function renderLogicalGrid(scene) {
   scene.appendChild(svg);
 }
 
+function wallEdge(wall) {
+  if (wall.y === FLOOR_BOUNDS.minY) return { a: { x: wall.x, y: wall.y }, b: { x: wall.x + 1, y: wall.y }, back: true };
+  if (wall.x === FLOOR_BOUNDS.minX) return { a: { x: wall.x, y: wall.y }, b: { x: wall.x, y: wall.y + 1 }, back: true };
+  if (wall.y === FLOOR_BOUNDS.maxY) return { a: { x: wall.x, y: wall.y + 1 }, b: { x: wall.x + 1, y: wall.y + 1 }, back: false };
+  if (wall.x === FLOOR_BOUNDS.maxX) return { a: { x: wall.x + 1, y: wall.y }, b: { x: wall.x + 1, y: wall.y + 1 }, back: false };
+  return null;
+}
+
 function renderBuildingShell(scene) {
+  scene.querySelector('.wallFaces')?.remove();
   scene.querySelectorAll('.structureNode').forEach((node) => node.remove());
+  const svg = document.createElementNS(SVG_NS, 'svg');
+  svg.setAttribute('class', 'wallFaces');
+  svg.setAttribute('width', String(scene.clientWidth || 730));
+  svg.setAttribute('height', String(scene.clientHeight || 530));
+  svg.setAttribute('aria-hidden', 'true');
+
   for (const wall of BUILDING_SHELL.walls) {
-    const node = makeNode('structureNode wallCell');
-    const point = toScreen(wall.x, wall.y, 2);
-    node.style.left = `${point.x}px`;
-    node.style.top = `${point.y}px`;
-    node.style.zIndex = String(70 + wall.x + wall.y);
-    node.dataset.gridX = wall.x;
-    node.dataset.gridY = wall.y;
-    scene.appendChild(node);
+    const edge = wallEdge(wall);
+    if (!edge) continue;
+    const rise = edge.back ? 34 : 8;
+    const a = toScreen(edge.a.x, edge.a.y);
+    const b = toScreen(edge.b.x, edge.b.y);
+    const ar = toScreen(edge.a.x, edge.a.y, rise);
+    const br = toScreen(edge.b.x, edge.b.y, rise);
+    polygon(svg, [a, b, br, ar], edge.back ? 'wallFace wallFaceBack' : 'wallFace wallFaceFront');
+    line(svg, ar, br, edge.back ? 'wallCap wallCapBack' : 'wallCap wallCapFront');
   }
+  scene.appendChild(svg);
 }
 
 function renderMapBase(scene, layout) {
