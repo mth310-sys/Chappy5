@@ -1,5 +1,7 @@
 import { cellKey } from './grid.js';
 
+const SHAREABLE_RESERVATION_ROLES = new Set(['walk-zone']);
+
 export function createLogicalMap(bounds) {
   const cells = new Map();
   for (let y = bounds.minY; y <= bounds.maxY; y++) {
@@ -31,11 +33,25 @@ export function occupyCells(map, facilityId, cells) {
   }
 }
 
+function assertReservationCompatibility(cell, facilityId, role) {
+  for (const [ownerId, roles] of cell.reservations) {
+    if (ownerId === facilityId) continue;
+    for (const existingRole of roles) {
+      const shareable = SHAREABLE_RESERVATION_ROLES.has(role) && SHAREABLE_RESERVATION_ROLES.has(existingRole);
+      if (!shareable) {
+        throw new Error(`reservation conflict at ${cell.x},${cell.y}: ${ownerId}.${existingRole} / ${facilityId}.${role}`);
+      }
+    }
+  }
+}
+
 export function reserveCells(map, facilityId, cells) {
   for (const point of cells) {
     const cell = requireCell(map, point.x, point.y, `${facilityId} reservation`);
+    if (cell.blocked) throw new Error(`${facilityId} reservation on blocked cell ${point.x},${point.y}`);
     if (cell.occupiedBy && cell.occupiedBy !== facilityId) throw new Error(`reservation collision at ${point.x},${point.y}: ${cell.occupiedBy} / ${facilityId}`);
     const role = point.role ?? 'clearance';
+    assertReservationCompatibility(cell, facilityId, role);
     const existing = cell.reservations.get(facilityId) ?? new Set();
     existing.add(role);
     cell.reservations.set(facilityId, existing);
