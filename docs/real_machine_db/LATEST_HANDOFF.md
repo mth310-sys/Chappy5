@@ -4,70 +4,69 @@
 
 ## 現在地点
 
-- recordCount: **581**
-- latestMachineAdded: **プロゴルファー猿**（スパイキー / primary 2011-06-20、K-Navi 2011-06-27との具体日競合あり）
-- latestRecord: `docs/real_machine_db/machines/2011-06-20_progolfer-saru.md`
-- chronologicalFrontier: **2011-06-20**
-- frontierLatestExactDateMachine: **プロゴルファー猿**
+- recordCount: **582**
+- latestMachineAdded: **ハネスロ林家一家**（オーイズミ / 2011-06-26納品開始予定）
+- latestRecord: `docs/real_machine_db/machines/2011-06-26_haneslo-hayashiya-ikka.md`
+- chronologicalFrontier: **2011-06-26**
+- frontierLatestExactDateMachine: **ハネスロ林家一家**
 - schema: **resetBehavior v0.7**
 - status: **READY_TO_CONTINUE**
 
 ## 今回の継続確認
 
-- 最新mainの `README.md`、正本ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、580件目「リオスパ Rioの大温泉」を再取得して開始。
+- 最新mainの `README.md`、正本ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、581件目「プロゴルファー猿」を再取得して開始。
 - `INDEX.md` は旧情報（19件/2006年時点）を含むため、README規約どおり最新 `LATEST_HANDOFF.md` とmachineレコードを進捗正本として使用。
-- 2011-06-20同日群の最優先候補 **プロゴルファー猿** を監査し、machine一覧に既存レコードがないことを確認して581件目として追加。
-- 導入日はパチ＆スロ必勝本 **2011-06-20導入** / K-Navi **2011-06-27ホール導入開始** / P-WORLD **2011年06月導入開始**。06-20と06-27を納品/全国導入等の定義差と断定できる一次資料は今回回収できなかったため **CONFLICT_EXACT_DATE** とし、漏れ防止の主releaseDateは最古具体日の2011-06-20を採用。
+- 2011-06-20同日群および2011-06-21〜06-25境界を再監査。直前HANDOFFの次候補 **ハネスロ林家一家** をrepo検索して未登録と確認し、582件目として追加。
+- 当時グリーンべると/P-WORLD業界ニュースが **2011-06-26から納品開始予定**と明記。後年中古実機DBの「2011年6月導入開始」とも月単位で整合。
 
-## 今回追加 — 581 プロゴルファー猿
+## 今回追加 — 582 ハネスロ林家一家
 
-- メーカー: **スパイキー**
-- 型式名: **プロゴルファー猿B**
-- 検定番号: **1S0198**
-- 5号機 / **ART特化・ゲーム数上乗せART + CZ + 規定ゲーム数ART発動**
-- 機械割: **96.9 / 98.2 / 99.5 / 104.2 / 107.3 / 113.3%**。P-WORLDはレンジ下限を96.96%とするため設定1は小数精度差を注記。
-- ART初当たり: **1/196 / 1/191 / 1/186 / 1/159 / 1/146 / 1/128**。
-- 1000円あたりゲーム数: **34.28 / 34.29 / 34.31 / 34.32 / 34.54 / 35.46G**。
-- ART「雷電BONUS」純増: **約+2.0枚/G**。
-- VICTORY BONUS: **48枚**。全設定共通合算 **1/32768**。
-- ART突入時初期ゲーム数は最大360G/平均約60G、ビクトリーロードは最大3G・最大600G上乗せ。
-- 規定G数テーブル上限: **ドリーム108 / 天国216 / 準備540 / 通常A1080 / 通常B1188G**。
+- メーカー: **オーイズミ**
+- 5号機 / **A+ART・ボーナス高確率型 + 押し順ART + 天井無限ART**
+- 機械割: **96.9 / 98.3 / 100.0 / 103.1 / 106.8 / 110.2%**。
+- ボーナス合成: **1/98.55 / 1/96.80 / 1/95.12 / 1/93.09 / 1/91.15 / 1/89.29**。
+- 大ボーナス: 全設定共通 **1/689.85**。
+- 中ボーナス: 全設定共通 **1/397.19**。
+- 小ボーナス: **1/161.82 / 1/157.16 / 1/152.76 / 1/147.60 / 1/142.78 / 1/138.26**。
+- 1000円あたりゲーム数: **34.75 / 34.85 / 34.95 / 35.00 / 35.00 / 34.95G**。
+- ART「ブンブンモード」: **約+1.2枚/G、1セット最低50G**。
+- ボーナス純増: **大約150枚 / 中約100枚 / 小約50枚**。
+- 通常救済天井: **596Gハマリで無限ART**。
+- 連続スルー救済: **9回連続ART未突入で次回ボーナス時に無限ART保証**。
+- ボーナス中フリーズ: 無限ART確定、その次回ボーナス時は **85%**で無限ART継続。
 
-### resetBehavior v0.7 — 581
+### resetBehavior v0.7 — 582
 
-- `settingChangeBehavior`: **天井/規定G数カウンタRESET + モード再セット**を二次資料で確認。K-Naviにも本機専用の設定変更後挙動・設定変更時モード移行率項目が存在する。
-- `carryOverBehavior`: 純粋な据え置き時のゲーム数・モード保持を直接明記した本機固有本文は回収できず **UNVERIFIED_AFTER_RESEARCH**。一般則で補完しない。
+- `settingChangeBehavior`: パチマガスロマガに本機専用「朝イチ・設定変更」解析項目の存在までは確認したが、本文値を回収できず **UNVERIFIED_AFTER_RESEARCH**。
+- `carryOverBehavior`: 据え置き時の596G進捗、ART非突入連続回数等の保持を直接示す本機固有本文は回収できず **UNVERIFIED_AFTER_RESEARCH**。
 - `powerCycleBehavior`: 単純電源OFF→ON時は **UNVERIFIED_AFTER_RESEARCH**。
-- `gameCounterReset`: **CLEAR_ON_SETTING_CHANGE**。
-- `ceilingAfterReset`: 固定のリセット専用短縮天井は確認なし。ただし設定変更後の再セット先により108/216/540/1080/1188Gの規定G数テーブルがあり得る。
-- `modeAfterReset`: **RESELECT_ON_SETTING_CHANGE**。具体的な設定変更時モード振り分け数値は専用解析項目の存在まで確認したが本文数値を回収できず **UNVERIFIED_AFTER_RESEARCH**。
+- `gameCounterReset`: 596G天井は確認済みだが、設定変更時のCLEAR/RETAINは **UNVERIFIED_AFTER_RESEARCH**。
+- `ceilingAfterReset`: 設定変更専用の短縮天井/朝一天井は本文値を確定できず **UNVERIFIED_AFTER_RESEARCH**。NONEと断定しない。
+- `modeAfterReset`: 朝一客行動に影響する長期通常モードは確認できず。設定変更時処理も **UNVERIFIED_AFTER_RESEARCH**。
 - `stateAfterReset`: **UNVERIFIED_AFTER_RESEARCH**。
 - `advantageousSectionReset`: **NOT_APPLICABLE**。
-- `resetBenefits`: 108/216/540G等の短いテーブルへ再セットされる可能性あり。ただし発生率不明のため数値恩恵は付与しない。
-- `resetPenalties`: 設定変更で前日までの規定G数進捗を失う。
-- `resetDetection`: ガックン/初期出目/液晶カウンター/ステージ等の本機固有変更判別は **UNVERIFIED_AFTER_RESEARCH**。
-- 公開朝一数値: 規定G数テーブル値以外の設定変更時振り分け/朝一当選率は **UNVERIFIED_AFTER_RESEARCH**。
+- `resetBenefits`: 設定変更時限定の高確・短縮・ART優遇等は **UNVERIFIED_AFTER_RESEARCH**。
+- `resetPenalties`: 前日596G進捗/ARTスルー回数消失の可能性を一般則で補完せず **UNVERIFIED_AFTER_RESEARCH**。
+- `resetDetection`: ガックン/初期出目/液晶表示等は **UNVERIFIED_AFTER_RESEARCH**。
+- 公開朝一数値: 設定変更専用当選率/期待度は **UNVERIFIED_AFTER_RESEARCH**。
 
-## 主要出典 — 581（取得日 2026-09-04）
+## 主要出典 — 582（取得日 2026-09-04）
 
-- K-Navi「プロゴルファー猿」
-  - `https://p-kn.com/slot/1421/`
-  - 2011-06-27ホール導入開始、ART初当たり、純増約2枚/G、ART/CZ概要、設定変更後・設定変更時モード移行率の解析項目
-- P-WORLD「プロゴルファー猿」
-  - `https://www.p-world.co.jp/machine/database/6361`
-  - スパイキー、5号機ART/CZ/天井、純増約2.0枚/G、VICTORY BONUS 48枚、規定G数108/216/540/1080/1188G、型式名「プロゴルファー猿B」、検定番号1S0198、2011年06月、機械割レンジ96.96〜113.3%
-- パチ＆スロ必勝本「基本スペック [プロゴルファー猿]」
-  - `https://p.hisshobon.jp/machine/1835/1/29617`
-  - 2011-06-20導入、ART初当たり、VICTORY BONUS 1/32768、純増2.0枚/G、初期ART最大360G/平均60G、ビクトリーロード最大600G
-- パチマガスロマガ旧解析「小役確率」
-  - `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/spiky_slot/03/c.php`
-  - 1000円あたり34.28/34.29/34.31/34.32/34.54/35.46G
-- 2-9伝説「プロゴルファー猿」
-  - `https://29den.com/progolfer-saru/`
-  - 機械割、ART初当たり、規定G数、設定変更で天井G数リセット
-- 天井ハイエナ生活「天井ハイエナ期待値リスト は行」
-  - `https://macerate.seesaa.net/article/226312110.html`
-  - 宵越し×、設定変更時モード再セット
+- P-WORLD業界ニュース / グリーンべると「シリーズ初のART機『ハネスロ林家一家』登場」
+  - `https://news.p-world.co.jp/articles/4666/greenbelt`
+  - 2011-06-26納品開始予定、ART約+1.2枚/G・最低50G、ボーナス50/100/150枚、ボーナス約1/98〜1/89、596G無限ART、9回連続ART未突入救済
+- パチマガスロマガ「ボーナス抽選確率」
+  - `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/oizumi_slot/26/h-1.php`
+  - 設定別PAYOUT、ボーナス合成、大/中/小個別確率
+- パチマガスロマガ「小役確率」
+  - `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/oizumi_slot/26/c.php`
+  - 1000円あたり34.75/34.85/34.95/35.00/35.00/34.95G
+- パチマガスロマガ「基本システム」
+  - `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/oizumi_slot/26/a.php`
+  - ART約+1.2枚/G・50G、596G/ART9回救済、フリーズ時無限ART、次回85%継続
+- パチマガスロマガ 機種トップ
+  - `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/oizumi_slot/26/oizumi_slot_26.php`
+  - 本機専用「朝イチ・設定変更」項目の存在
 
 ## 遡及QA継続地点
 
@@ -77,9 +76,10 @@
 
 ## 次回再開地点
 
-1. **recordCount 581 / chronologicalFrontier 2011-06-20**。最新main README / mission / INDEX / LATEST_HANDOFF / 580・581レコードを再取得。
-2. **2011-06-20同日群をもう一度最終監査して閉じる**。プロゴルファー猿は登録済みなので重複しない。
-3. 同日群に未登録がなければ **2011-06-21〜06-25** の最古未登録機を導入日順に監査する。
-4. 後続アンカーは **ハネスロ林家一家（2011-06-26納品開始予定候補）**、**スカイラブ3（2011-06-27ホール導入候補）**。途中機種を飛ばさない。
-5. プロゴルファー猿の06-20/06-27は **CONFLICT_EXACT_DATE** のまま保持し、後続で一次/当時業界資料から日付定義が確定した場合のみ修正する。
-6. PARTIAL/UNVERIFIEDは表記揺れ・型式・メーカー・シリーズ・reset検索語を変え、公式/業界/当時解析/旧DB/アーカイブ/回顧資料を横断した後だけ残す。CONFLICTは平均しない。
+1. **recordCount 582 / chronologicalFrontier 2011-06-26**。最新main README / mission / INDEX / LATEST_HANDOFF / 581・582レコードを再取得。
+2. **2011-06-26同日群を最終監査して閉じる**。ハネスロ林家一家は登録済みなので重複しない。
+3. 同日群に未登録がなければ **2011-06-27同日群**へ進む。
+4. 最優先候補は **スカイラブ3（SNKプレイモア）**。パチビーに **2011-06-27導入日**の具体日あり。repo未登録を確認してから583件目候補とする。
+5. **プロゴルファー猿**はK-Navi側が2011-06-27ホール導入開始だが、既に581件目として登録済みなので重複追加しない。06-20/06-27はCONFLICT_EXACT_DATEのまま維持。
+6. 2011年6月機として「パチスロ 笑ゥせぇるすまん」等も存在するため、6/27周辺の具体日を再探索してスカイラブ3より前/同日の機種を飛ばさない。
+7. PARTIAL/UNVERIFIEDは表記揺れ・型式・メーカー・シリーズ・reset検索語を変え、公式/業界/当時解析/旧DB/アーカイブ/回顧資料を横断した後だけ残す。CONFLICTは平均しない。
