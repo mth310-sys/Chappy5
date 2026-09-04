@@ -4,64 +4,60 @@
 
 ## 現在地点
 
-- recordCount: **636**
-- latestMachineAdded: **新・ドロンジョにおまかせ**（オリンピア）
-- latestRecord: `docs/real_machine_db/machines/2012-02-13_shin-doronjo-ni-omakase.md`
+- recordCount: **637**
+- latestMachineAdded: **世界で叩け！モグモグ風林火山**（ネット）
+- latestRecord: `docs/real_machine_db/machines/2012-02-13_sekai-de-tatake-mogumogu-furinkazan.md`
 - chronologicalFrontier: **2012-02-13**
-- frontierLatestExactDateMachine: **新・ドロンジョにおまかせ**
+- frontierLatestExactDateMachine: **世界で叩け！モグモグ風林火山**
 - schema: **resetBehavior v0.7**
-- status: **2012-02-13_SAME_DAY_GROUP_IN_PROGRESS__NEXT_MOGUMOGU_FURINKAZAN**
+- status: **2012-02-13_SAME_DAY_GROUP_AUDITED__NEXT_EARLIEST_UNPROCESSED_AFTER_2012-02-13**
 
-## 今回の本線追加 — 新・ドロンジョにおまかせ
+## 今回の本線追加 — 世界で叩け！モグモグ風林火山
 
-- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード「コンチネンタルV」を確認して開始。
+- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード「新・ドロンジョにおまかせ」を確認して開始。
 - INDEXは旧19件地点のためREADME規定どおりLATEST_HANDOFFを進捗正本として使用。
-- 開始時正本は **recordCount 635 / chronologicalFrontier 2012-02-06 / latestMachineAdded コンチネンタルV**。
-- 2012-02-07〜02-12境界をK-Navi/P-WORLD/パチビー系検索で再確認し、今回新たに具体日付き未登録5号機を確定できなかったため02-13群へ前進。
-- 想定実パス `docs/real_machine_db/machines/2012-02-13_shin-doronjo-ni-omakase.md` を直接fetchし未登録を確認後、636件目として追加。
-- K-Navi、パチビー、当時解析資料で導入 **2012-02-13** を確認。
-- P-WORLDで型式名 **新・ドロンジョにおまかせC**、検定番号 **1S1155** を確認。
+- 開始時正本は **recordCount 636 / chronologicalFrontier 2012-02-13 / latestMachineAdded 新・ドロンジョにおまかせ**。
+- 想定実パスを直接fetchし404を確認してから637件目として追加。
+- K-Navi、パチビーでホール導入 **2012-02-13** を確認。グリーンべるとの2011-12-22業界記事では2012年2月中旬納品予定。
 
 ### 性能コア
 
 - systemType: **A+ART**。
-- 設定別機械割: **97.2 / 98.8 / 100.3 / 104.5 / 108.1 / 113.6%**。
-- 同色ボーナス/BIG: 全設定 **1/183.1**（パチマガ精密値1/183.06）。
-- REG: **1/436.9 / 414.8 / 394.8 / 376.6 / 360.1 / 344.9**。
-- ボーナス合算: **1/129.0 / 127.0 / 125.1 / 123.2 / 121.4 / 119.6**。
-- ART初当たり: **1/458.6 / 417.4 / 410.0 / 352.9 / 321.2 / 263.7**。
-- 50枚ベース: **32.13 / 32.11 / 32.09 / 32.08 / 32.06 / 32.04G**。パチマガの直接設定別表を採用。必勝本実戦値32.0G、当時解析約32Gと整合。
-- ART「ギガパーRUSH」: **1セット30G、約+1.9枚/G（ボーナス込み）**。
-- 基本獲得: **ART中BIG約180枚 / 通常時おしおきチャンス約60枚 / REG約30枚**。
-- 通常天井: **通常時777Gで特殊無限ART「最終決戦モード」**。
+- 設定別機械割: **96.5 / 98.5 / 101.0 / 104.0 / 107.0 / 110.5%**。
+- 合戦BONUS合算: **1/439.84 / 434.01 / 428.34 / 422.81 / 417.43 / 412.18**。
+- 戦BONUS: **1/873.81 / 862.32 / 851.12 / 840.21 / 829.57 / 819.20**。
+- ART初当たり: **1/353 / 327 / 298 / 277 / 252 / 217**。
+- 50枚ベース: **30.10 / 30.13 / 30.17 / 30.20 / 30.24 / 30.27G**。パチマガスロマガの設定別1000円あたりゲーム数を直接採用。
+- ART「世覇の刻」: **1セット30〜200G+α、約+1.5枚/G**。
+- 基本獲得: **超・大合戦約300枚 / 大合戦約225枚 / 合戦約150枚 / 戦約42枚**。
+- 通常天井: ボーナス間 **888G=ART1〜3セット / 1111G=1〜5セット / 1333G=2〜15セット** の3段階。
 
 ### resetBehavior v0.7
 
-- `settingChangeBehavior`: **SETTING_CHANGE_GAME_COUNTER_RESET_REPORTED_IN_PERIOD_SOURCE__OTHER_INTERNAL_BEHAVIOR_UNVERIFIED**。
+- `settingChangeBehavior`: **GAME_COUNTER_RESET_AND_INTERNAL_MODE_RESELECTION_REPORTED**。
 - `carryOverBehavior`: **UNVERIFIED_AFTER_RESEARCH**。
 - `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH**。
-- `gameCounterReset`: **CLEAR_ON_SETTING_CHANGE_REPORTED_IN_PERIOD_KNAVI_LOG**。K-Navi機種ページ内の2012-06-28当時パチログに「設定変更時ゲーム数リセット」の直接記述あり。ただし編集部正式解析本文ではないため信頼度を限定。
-- `ceilingAfterReset`: 通常777G。設定変更専用の777G未満短縮天井は **NONE_CONFIRMED_AFTER_RESEARCH**。
-- `modeAfterReset`: **UNVERIFIED_AFTER_RESEARCH**。
+- `gameCounterReset`: **CLEAR_ON_SETTING_CHANGE**。pacnkが設定変更後はゲーム数天井リセットと明記。
+- `ceilingAfterReset`: 通常888/1111/1333G段階天井。設定変更専用短縮天井は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- `modeAfterReset`: **INTERNAL_MODE_RESELECTED_ON_SETTING_CHANGE__DISTRIBUTION_UNVERIFIED_AFTER_RESEARCH**。
 - `stateAfterReset`: **UNVERIFIED_AFTER_RESEARCH**。
 - `advantageousSectionReset`: **NOT_APPLICABLE_5TH_GEN**。
-- `resetBenefits`: 設定変更専用恩恵は **NONE_CONFIRMED_AFTER_RESEARCH**。
-- `resetPenalties`: 設定変更で天井G数がリセットされる当時記述があり、宵越しハマリ利用には不利となる可能性。具体的据え置き比較は未確定。
-- `resetDetection`: K-Naviに「設定変更判別」項目の存在は確認したが具体本文を安全に回収できず **UNVERIFIED_AFTER_RESEARCH**。
-- `publicMorningNumbers`: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- `resetBenefits`: 設定変更時に内部モード再抽選とする当時攻略系記録あり。
+- `resetPenalties`: 設定変更でボーナス間天井G数がクリアされ、前日ハマリの宵越し狙いには不利。
+- `resetDetection`: 当時攻略系資料で **朝一にレア役無しで流鏑馬/座禅ステージへ移行すれば設定変更濃厚**。ガックンは未確定。
+- `publicMorningNumbers`: 設定変更時モード振り分け、朝一特定G以内当選率、リセット専用短縮天井の具体公開値は **NONE_CONFIRMED_AFTER_RESEARCH**。
 
 ### 競合・注意
 
-- 性能コアの主要値はK-Navi/パチマガ/当時解析で一致し、今回CORE CONFLICTなし。
-- 旧作「ドロンジョにおまかせ」の1400G天井・設定変更挙動は別機種のため流用していない。
-- reset game counterは時代近接の直接記述だがユーザー投稿由来なので、正式解析と同等扱いにはしていない。
+- 性能コアはP-WORLD、パチビー、pacnk、パチマガスロマガで整合し、今回CORE CONFLICTなし。
+- 設定変更時モード再抽選と流鏑馬/座禅による変更推測は回顧型の当時攻略資料に依存するため、正式解析と同等の信頼度にはしていない。
+- 据え置き時の天井進捗/モード保持、単純電源OFF→ON、設定変更時モード具体振り分け、ガックンは十分再探索後も本機固有の直接根拠を確定できずUNVERIFIED_AFTER_RESEARCH。
 
 ## 時系列監査
 
-- 2012-02-06同日群はコンチネンタルVまで処理済み。
-- 2012-02-07〜02-12は今回の境界再監査で新たな具体日付き未登録候補を確定できず。
-- 2012-02-13群へ前進し「新・ドロンジョにおまかせ」を処理済み。
-- 同日未処理の既知候補として **「世界で叩け！モグモグ風林火山」（ネット）** をK-Naviで2012-02-13導入と確認済み。
+- 2012-02-13同日群は、既知の「新・ドロンジョにおまかせ」「世界で叩け！モグモグ風林火山」を処理済み。
+- K-Navi/P-WORLD/パチビー系の2012-02-13検索を再監査し、今回この2機種以外の具体日付き未登録5号機は確定できなかった。
+- 次回は **2012-02-14以降**を日付順に監査し、最古の未処理機を確定してから追加する。既登録の2012-02-06 BLACK LAGOON等へ逆戻りしない。
 
 ## 遡及resetBehavior QA 次回再開地点
 
@@ -72,25 +68,21 @@
 
 ## 本線の次回再開地点
 
-1. **recordCount 636 / chronologicalFrontier 2012-02-13**から開始。
-2. 最優先は **2012-02-13「世界で叩け！モグモグ風林火山」**。
-3. 想定実パスを直接fetch→重複確認→性能コア+resetBehavior v0.7を収集。
-4. 02-13同日群をK-Navi/P-WORLD/パチビー/HAZUSE/業界記事で最終監査し、残候補を処理してから次の具体日へ進む。
-5. PARTIAL/UNVERIFIEDは表記揺れ・型式名・メーカー名と設定変更/リセット/朝一/据え置き/宵越し/電源OFF ON/天井短縮/モード/状態/ガックンを組み替えて再探索。競合値は平均せずCONFLICT。
+1. **recordCount 637 / chronologicalFrontier 2012-02-13**から開始。
+2. **2012-02-14以降の最古未処理5号機**を、K-Navi/P-WORLD/パチビー/HAZUSE/業界記事で日付順に確定する。
+3. 候補を確定したら想定実パスを直接fetch→重複確認→性能コア+resetBehavior v0.7を収集。
+4. PARTIAL/UNVERIFIEDは表記揺れ・型式名・メーカー名と設定変更/リセット/朝一/据え置き/宵越し/電源OFF ON/天井短縮/モード/状態/ガックンを組み替えて再探索。競合値は平均せずCONFLICT。
 
 ## 主要出典 — 今回取得日 2026-09-05
 
-- オリンピア公式 新・ドロンジョにおまかせ: `https://www.olympia.co.jp/newmachine/dr2/index.html`
-- K-Navi 新・ドロンジョにおまかせ: `https://p-kn.com/slot/1565/`
-- パチビー 新ドロンジョにおまかせ: `https://www.pachibee.jp/machines/lecture/211120013`
-- P-WORLD 新・ドロンジョにおまかせ: `https://www.p-world.co.jp/machine/database/6610`
-- パチマガスロマガ スペック: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/olympia_slot/102/a.php`
-- パチマガスロマガ ボーナス確率: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/olympia_slot/102/h.php`
-- パチマガスロマガ 小役確率/1000円あたりG数: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/olympia_slot/102/c.php`
-- パチスロ必勝本 打ち方説明: `https://p.hisshobon.jp/machine/1970/1/33098`
-- 当時解析記事: `https://ameblo.jp/ex-tencho/entry-11159738166.html`
+- グリーンべると: `https://web-greenbelt.jp/00002436/`
 - K-Navi 世界で叩け！モグモグ風林火山: `https://p-kn.com/slot/1561/`
+- パチビー: `https://www.pachibee.jp/machines/index/211120012`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/6601`
+- パチマガスロマガ 小役確率/1000円あたりG数: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/net_slot/152/c.php`
+- pacnk: `https://pacnk.com/slot/tools/sh_sekamog.html`
+- 天井ハイエナ生活 回顧資料: `https://macerate.seesaa.net/article/372758539.html`
 
 ## GitHub commits
 
-- machine record: `3c86b17747b80457478ec4d82e660c8349afa7ee`
+- machine record: `d8a8a2ce38f581af91b4a3a1005ee74f1928a7f8`
