@@ -4,63 +4,101 @@
 
 ## 現在地点
 
-- recordCount: **568**
-- latestMachineAdded: **メーメーパラダイス**（ラスター / 2011-04-24納品開始予定）
-- latestRecord: `docs/real_machine_db/machines/2011-04-24_me-me-paradise.md`
-- chronologicalFrontier: **2011-04-24**
-- frontierLatestExactDateMachine: **メーメーパラダイス**
+- recordCount: **570**
+- latestMachineAdded: **ハネスロ リラックマ**（オーイズミ / 2011-05-08納品開始、2011-05-09ホール導入）
+- latestRecord: `docs/real_machine_db/machines/2011-05-08_haneslo-rilakkuma.md`
+- chronologicalFrontier: **2011-05-08**
+- frontierLatestExactDateMachine: **ハネスロ リラックマ**
 - schema: **resetBehavior v0.7**
 - status: **READY_TO_CONTINUE**
 
 ## 今回の継続確認
 
-- 最新mainの `README.md`、正本ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、567前線レコード「パチスロ装甲騎兵ボトムズ」を再取得して開始。
-- `INDEX.md` は旧19件地点のため、最新 `LATEST_HANDOFF.md` と実machineレコードを進捗正本として使用。
-- 2011-04-18同日群と4/19〜23境界を再監査し、直前handoff既知候補「メーメーパラダイス」をrepo検索。未登録を確認。
-- グリーンべると2011-04-11記事で「納品は4月24日開始予定」を再確認。P-WORLD現行機種DBは導入開始日空欄のため、業界記事の具体的納品開始予定日を時系列キーに採用。
-- P-WORLDと業界記事でBIG/REG端値・獲得枚数を照合し、568件目として追加。
+- 最新mainの `README.md`、正本ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、568前線レコード「メーメーパラダイス」を再取得して開始。
+- `INDEX.md` は旧19件地点のため、README規約どおり最新 `LATEST_HANDOFF.md` と実machineレコードを進捗正本として使用。
+- 2011-04-24同日群と4/25〜5/5境界を当時業界記事・解析DB・旧資料で再監査。最初の具体的未登録日として2011-05-06「ドラゴンギャル ～ルーと伝説の黄金龍～」を確認し569件目へ追加。
+- 続けて5/7〜5/8境界を監査。震災で納品が4/17から5/8へ延期された「ハネスロ リラックマ」を未登録確認し570件目へ追加。K-Navi/パチビーのホール導入5/9とは日付定義を分離保存。
 
-## 今回追加 — 568 メーメーパラダイス
+## 今回追加 — 569 ドラゴンギャル ～ルーと伝説の黄金龍～
 
-- メーカー: **ラスター / ウィンネットテクノロジー発表**
-- 型式: **ザコクチシリーズ** / 検定番号 **0S0846**
-- 5号機 / **ノーマル / 完全告知 / BIG+REG**
-- 納品開始予定: **2011-04-24（グリーンべると）**
-- 機械割: **96.32 / 97.78 / 100.42 / 103.04 / 105.48 / 110.21%**
-- BIG: **1/287.44 / 1/282.48 / 1/282.48 / 1/273.07 / 1/273.07 / 1/249.19**
-- REG: **1/455.11 / 1/442.81 / 1/348.60 / 1/321.25 / 1/268.59 / 1/249.19**
-- 合算: **1/176.17 / 1/172.46 / 1/156.04 / 1/147.60 / 1/135.40 / 1/124.59**
-- BIG約**312枚** / REG約**104枚**
-- 完全告知。「ME～ME～!ランプ」点灯でボーナス確定。
-- 50枚ベースは検索語・資料系統を変えて再探索後も比較可能な直接値を確定できず `UNVERIFIED_AFTER_RESEARCH`。
+- メーカー: **SNKプレイモア**
+- 型式: **ドラゴンギャル2C** / 検定番号 **0S1373**
+- 導入開始: **2011-05-06（HAZUSE）**
+- 5号機 / **ART特化・ボーナス非搭載**
+- ART初当たり: **1/215.2 / 1/206.2 / 1/197.6 / 1/186.4 / 1/176.2 / 1/127.9**
+- パチマガ機械割: **96.8 / 98.6 / 100.2 / 105.3 / 110.0 / 113.1%**
+- 純増: **約+2.0枚/G**
+- 闘BONUS: **30G** / 天BONUS: **50G+α**
+- 第1天井: **ART間1000G**以降チャンス役1/2でART抽選
+- 第2天井: **ART間1100G**でART確定。闘なら95%ループ、天なら5セット以上。
+- 50枚ベースは本機専用パチマガページも「調査中」で、検索語・資料系統変更後も直接値を確定できず `UNVERIFIED_AFTER_RESEARCH`。
+- HAZUSEの設定6機械割110% / ART初当たり1/176.2は、パチマガ113.1% / 1/127.9および業界記事端値約1/127と競合。平均せず `CONFLICT`。
 
-### resetBehavior v0.7 — メーメーパラダイス
+### resetBehavior v0.7 — 569
 
-- `settingChangeBehavior`: **UNVERIFIED_AFTER_RESEARCH_FOR_LOW_LEVEL_BEHAVIOR**
-- `carryOverBehavior`: **NOT_APPLICABLE_FOR_CEILING_MODE / LOW_LEVEL_STATE_UNVERIFIED**
-- `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH_FOR_LOW_LEVEL_BEHAVIOR**
-- `gameCounterReset`: **NOT_APPLICABLE_NO_CEILING_CONFIRMED**
-- `ceilingAfterReset`: **NOT_APPLICABLE_NO_CEILING_CONFIRMED**
-- `modeAfterReset`: **NOT_APPLICABLE_NO_LONG_TERM_MODE_CONFIRMED**
-- `stateAfterReset`: **NOT_APPLICABLE_FOR_HALL_AI_RELEVANT_STATE / LOW_LEVEL_UNVERIFIED**
-- `advantageousSectionReset`: **NOT_APPLICABLE**
-- `resetBenefits`: **NONE_CONFIRMED_AFTER_RESEARCH**
-- `resetPenalties`: **NONE_CONFIRMED_AFTER_RESEARCH**
-- `resetDetection`: **UNVERIFIED_AFTER_RESEARCH**
-- `numericResetData`: **設定変更専用短縮天井NOT_APPLICABLE / 朝一特定G以内当選率・恩恵率NONE_CONFIRMED_AFTER_RESEARCH**
+- 設定変更時: **天井ゲーム数CLEAR / 通常・高確・超高確を再抽選**とする本機名指定の現存二次資料あり。
+- 設定変更時状態振り分け（通常/高確/超高確）:
+  - 設定1: 70.00 / 25.00 / 5.00%
+  - 設定2: 62.50 / 30.00 / 7.50%
+  - 設定3: 55.00 / 35.00 / 10.00%
+  - 設定4: 47.50 / 40.00 / 12.50%
+  - 設定5: 40.00 / 45.00 / 15.00%
+  - 設定6: 32.50 / 50.00 / 17.50%
+- 高確以上スタート率: **30.0 / 37.5 / 45.0 / 52.5 / 60.0 / 67.5%**。
+- 朝一恩恵: 高確/超高確スタート可能性。朝一不利: 前日ART間天井進捗消失。
+- 液晶背景/同行者は設定変更でも変化しないとの同資料あり。
+- 据え置き全状態、単純電源OFF→ON、ガックン/初期出目は十分再探索後も直接確定できず PARTIAL/UNVERIFIED。
+- 数値reset情報は現存コミュニティ転載の単一二次資料なので `ANALYSIS_SINGLE_LOW` として過信せず保存。
 
-本機はボーナスのみで出玉を構成するノーマル完全告知機。天井・ART/AT/CZ・長期通常モードは確認されず、ホール経営/朝一客AIに関わるゲーム数持越し・短縮天井・朝一モードは実質対象外。一方、ガックン・初期出目・単純電源OFF→ON等の低レベル挙動は本機固有の直接資料を確定できないため一般論で補完していない。
+## 今回追加 — 570 ハネスロ リラックマ
 
-## 主要出典 — 568（取得日 2026-09-04）
+- メーカー: **オーイズミ** / 型式 **ハネスロRK**
+- 納品開始: **2011-05-08**（震災で4/17から延期）
+- ホール導入: **2011-05-09**（K-Navi / パチビー）
+- 5号機 / **ボーナス主体+天井無限RT / 2リール+倍倍リール**
+- 機械割: **95.6 / 97.8 / 100.0 / 104.2 / 108.3 / 113.0%**
+- ボーナス合算: **1/96 / 1/93 / 1/89 / 1/82 / 1/77 / 1/72**
+- 1000円ベース: **32.30G〜35.87G**
+- 1倍/2倍/3倍/4倍BONUS: **60 / 120 / 180 / 240枚**
+- 天井: **通常222G** → 無限RT「リラックマタイム」
+- RT純増: **約+0.4枚/G**、次回ボーナスまで継続。4倍BONUS後もRT。
+- 液晶に天井までの残りGを表示する天井カウンタあり。
 
-- グリーンべると: `https://web-greenbelt.jp/00002007/`
-- P-WORLD業界ニュース転載: `https://news.p-world.co.jp/articles/4590/greenbelt`
-- P-WORLD機種DB: `https://www.p-world.co.jp/machine/database/6336`
+### resetBehavior v0.7 — 570
+
+- 222G天井の構造自体は業界記事・P-WORLD等で高信頼確認。
+- ただし設定変更 / 据え置き / 単純電源OFF→ON別に、222G内部天井・液晶天井カウンタ・閉店時RT状態がCLEAR/RETAINのどちらかを本機固有の直接本文で確定できず、検索語・型式名・メーカー・シリーズ名と朝一/宵越し/ガックン等を変えた後も `UNVERIFIED_AFTER_RESEARCH`。
+- 設定変更専用短縮天井、高確スタート、朝一専用モード等は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 有利区間: **NOT_APPLICABLE**。
+- 222Gと極端に浅い天井のためreset判定は朝一客AI上重要。一般論でCLEAR/RETAINを補完せず後続QA対象に残す。
+
+## 主要出典 — 569（取得日 2026-09-04）
+
+- グリーンべると: `https://web-greenbelt.jp/00001976/`
+- HAZUSE: `https://hazuse.com/machine/pachislot/0S1373/`
+- HAZUSE DATA: `https://data.hazuse.com/?genre=202&machine_code=0S1373`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/6344`
+- パチマガ ART/PAYOUT: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/snk_slot/34/h.php`
+- パチマガ ベース: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/snk_slot/34/c.php`
+- mixi現存二次資料: `https://mixi.jp/view_bbs.pl?comm_id=5988268&id=69535193`
+
+## 主要出典 — 570（取得日 2026-09-04）
+
+- グリーンべると納品延期: `https://web-greenbelt.jp/00001917/`
+- P-WORLD業界ニュース転載: `https://news.p-world.co.jp/articles/4538/greenbelt`
+- グリーンべると/P-WORLD発表記事: `https://news.p-world.co.jp/articles/4417/greenbelt`
+- P-WORLD機種DB: `https://www.p-world.co.jp/machine/database/6288`
+- K-Navi: `https://p-kn.com/slot/1389/`
+- パチビー: `https://www.pachibee.jp/machines/index/211020007`
+- パチマガベース: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/oizumi_slot/25/c.php`
+- 娯楽産業 ハネスロRK発表: `https://www.goraku-sangyo.com/%E3%82%AA%E3%83%BC%E3%82%A4%E3%82%BA%E3%83%9F%E3%80%80%E3%83%91%E3%83%81%E3%82%B9%E3%83%AD%E6%96%B0%E6%A9%9F%E7%A8%AE%E3%80%8C%E3%83%8F%E3%83%8D%E3%82%B9%E3%83%ADrk%E3%80%8D%E3%83%97%E3%83%AC%E3%82%B9/`
 
 ## 今回のGitHub更新
 
-- 568追加: `docs/real_machine_db/machines/2011-04-24_me-me-paradise.md`
-- 568 machine record commit: `fb89ea26395c7dab0bb44d1f5cbbe4589e8d60f2`
+- 569: `docs/real_machine_db/machines/2011-05-06_dragon-gal-ruu-to-densetsu-no-ougondragon.md`
+  - machine commit: `d830068190c36a69d1a90802a1a6e44073f1735b`
+- 570: `docs/real_machine_db/machines/2011-05-08_haneslo-rilakkuma.md`
+  - machine commit: `b8704f844a5619cacd98bc64f38eab2d5de8097d`
 - LATEST_HANDOFF: 本更新
 
 ## 遡及QA継続地点
@@ -71,8 +109,9 @@
 
 ## 次回再開地点
 
-1. **recordCount 568 / chronologicalFrontier 2011-04-24**。最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 568レコードを再取得。
-2. **2011-04-24同日群を最終監査**。同日未登録5号機があれば最古から569件目として追加。
-3. 同日群が閉じたら **4/25〜5/1境界**を監査し、具体的ホール導入/納品日を確認できる最古未登録機へ進む。
-4. 先行候補としてP-WORLD近接掲載の「ドラゴノーツ～ザ・レゾナンス～」「雀龍桜花」等があるが、`雀龍桜花`はKPE公式が2011年5月稼働、グリーンべるとが5/29納品開始予定とするため、4月キューへ前倒ししない。各候補は必ず実導入/納品日の具体日を再確認してから採用する。
-5. PARTIAL/UNVERIFIEDは検索語・資料系統を変えて十分に再探索し、競合は平均せずCONFLICT。
+1. **recordCount 570 / chronologicalFrontier 2011-05-08**。最新main README / mission / INDEX / LATEST_HANDOFF / 569・570レコードを再取得。
+2. 2011-05-09は「ハネスロ リラックマ」のホール導入日であり同一機種なので重複登録しない。同日群に別の未登録5号機がないか最終監査。
+3. 次に **5/10〜5/21境界**を監査。具体的導入/納品日を確認できる最古未登録機を追加する。
+4. 現時点の後続具体日アンカーは **2011-05-22「ドラゴノーツ －ザ・レゾナンス－」納品開始予定**（グリーンべると）。ただし5/10〜21の未処理機を飛ばさない。
+5. さらに後続候補として **雀龍桜花 5/29納品開始予定**、**バリスタゴルフ 5/30ホール導入予定**を確認済み。順番を固定せず、境界監査後の最古具体日を採用。
+6. PARTIAL/UNVERIFIEDは表記揺れ・型式・メーカー・シリーズ・reset検索語を変え、資料系統を横断した後だけ残す。CONFLICTは平均しない。
