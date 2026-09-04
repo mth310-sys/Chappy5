@@ -4,69 +4,62 @@
 
 ## 現在地点
 
-- recordCount: **641**
-- latestMachineAdded: **天誅～Deadly Blow～**（ニューギン）
-- latestRecord: `docs/real_machine_db/machines/2012-03-05_tenchu-deadly-blow.md`
+- recordCount: **642**
+- latestMachineAdded: **シスタークエスト3～黄金の大地と東の勇者～**（SNKプレイモア）
+- latestRecord: `docs/real_machine_db/machines/2012-03-05_sister-quest3.md`
 - chronologicalFrontier: **2012-03-05**
-- frontierLatestExactDateMachine: **天誅～Deadly Blow～**
+- frontierLatestExactDateMachine: **シスタークエスト3～黄金の大地と東の勇者～**
 - schema: **resetBehavior v0.7**
-- status: **2012-03-05_SAME_DAY_GROUP_AUDIT_REQUIRED__TENCHU_RESET_BODY_UNAVAILABLE_AFTER_EXTENDED_RESEARCH__NEXT_SISTER_QUEST3_OR_ON_2012-03-05**
+- status: **2012-03-05_SAME_DAY_GROUP_AUDIT_REQUIRED__NEXT_SUKeban_ON_2012-03-05**
 
-## 今回の本線追加 — 天誅～Deadly Blow～
+## 今回の本線追加 — シスタークエスト3～黄金の大地と東の勇者～
 
-- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード「ヱヴァンゲリヲン～生命の鼓動～」を確認して開始。
+- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード「天誅～Deadly Blow～」を確認して開始。
 - INDEXは旧地点のためREADME規定どおりLATEST_HANDOFFを進捗正本として使用。
-- 開始時正本は **recordCount 640 / chronologicalFrontier 2012-02-27**。
-- 2012年2月のP-WORLD月別掲載9機種と既存レコードを突合し、02-27以降の2月残存候補を監査。3月候補をK-Navi/P-WORLD/パチビー/HAZUSE/業界記事で照合し、最古の具体的ホール導入日として2012-03-05群へ前進。
-- main再確認で同名/想定パスの既存レコードなしを確認後、641件目として追加。
+- 開始時正本は **recordCount 641 / chronologicalFrontier 2012-03-05**。
+- 直前handoff指定の最優先候補「シスタークエスト3」をrepo検索し未登録を確認後、642件目として追加。
 
 ### 導入日・型式
 
 - 時系列キー: **2012-03-05**。
-- K-Navi / パチビーはホール導入開始を2012-03-05と記録。
-- グリーンべるとは納品開始予定を2012-03-04と記録。日付定義差として分離し、時系列キーはホール導入日を採用。
-- 型式名: **天誅DeadlyBlow-Z**。
-- 検定番号: **1S1124**。
+- K-Navi / HAZUSEは2012-03-05導入開始で一致。
+- SNK公式は2012年3月稼働と記録。
+- 型式名: **シスタークエスト3E**。
+- 検定番号: **1S1072**。
 
 ### 性能コア
 
 - systemType: **A+ART / ボーナス+ART**。
-- 5号機クロニクル機械割: **96.8 / 98.7 / 101.2 / 104.4 / 108.0 / 112.1%**。
-- 別回顧解析: **96.8 / 98.7 / 101.2 / 104.3 / 107.9 / 111.9%**。設定4～6は平均せずCONFLICT_OR_ROUNDING_SOURCE_DIFFERENCEとして双方保持。
-- P-WORLD一覧下部の「14.4%～112.1%」は下限が他資料と著しく不整合のためSOURCE_DISPLAY_CORRUPTIONとして採用除外。
-- ボーナス合算: **1/268.6 / 260.1 / 252.1 / 244.5 / 232.4 / 219.9**。
-- 天誅BIG: 全設定 **1/16384.0**。
-- NBIG（各2種とも）: **1/897.8 / 873.8 / 851.1 / 829.6 / 780.2 / 728.2**。
-- REG（各2種とも）: **1/1394.4 / 1337.5 / 1285.0 / 1236.5 / 1191.6 / 1149.8**。
-- ART「天誅RUSH」: **1セット40G+α / 純増約+1.5枚/G**。
-- 基本獲得: 天誅BIG約204枚 / BIG約204枚 / 忍BONUS約54枚。
-- 通常天井: **ボーナス間1400G**。到達後のレア役/BIGはART40G・90%ループ、忍BONUSはART200G・90%ループ。
-- ART設定別初当たり、50枚ベースは検索語・資料系統を変えても直接値を確定できずUNVERIFIED_AFTER_RESEARCH。
+- 機械割: **96.9 / 98.5 / 99.9 / 105.3 / 109.7 / 114.1%**（P-WORLD / 5号機クロニクル一致）。
+- BIG合算: **1/439.8 / 434.0 / 428.3 / 422.8 / 417.2 / 402.1**。
+- REG合算: **1/574.9 / 565.0 / 555.4 / 546.1 / 537.2 / 512.0**。
+- ボーナス合算: **1/249.2 / 245.5 / 241.8 / 238.3 / 234.9 / 225.2**。
+- ART初当たり: **1/612.9 / 581.5 / 545.2 / 429.5 / 350.9 / 306.5**。
+- 50枚ベース: **約32G/50枚**（旧解析単一ソース。ANALYSIS_SINGLE）。
+- ART「冒険RUSH」: **1セット44Gまたは304G / 純増約+1.6枚/G**。
+- 基本獲得: 十勇士伝説約204枚 / BIG約204枚 / 錬金チャンス約42枚。
+- 通常天井: **ボーナス後1000GでARTストック確定**。
 
 ### resetBehavior v0.7
 
-- K-Navi本機専用ページに **「狙い目・天井・朝一 > 設定変更後の挙動」** の個別解析ページが存在することは確認。
-- ただし取得可能なインデックスにはリンク見出しのみで、個別ページ本文の設定変更時具体値/挙動は今回回収不能。
-- `settingChangeBehavior`: **UNVERIFIED_AFTER_RESEARCH**。
+- 本機固有の旧解析で **設定変更時に1000G天井までのゲーム数クリア**を直接確認。
+- 設定変更後は内部状態を再振り分けし、**高確以上スタート約10%～20%**。高設定ほど高確以上スタート率が高い。
+- `gameCounterReset`: **CLEAR_ON_SETTING_CHANGE**。
+- `ceilingAfterReset`: 通常1000G天井を0Gから再スタート。リセット専用短縮天井は確認なし。
+- `stateAfterReset`: **RESELECTED_ON_SETTING_CHANGE__HIGH_OR_ABOVE_APPROX_10_TO_20_PERCENT_BY_SETTING**。
+- `resetBenefits`: 設定変更後、高確以上約10%～20%。
+- `resetPenalties`: 前日1000G天井進捗を設定変更で失う。
 - `carryOverBehavior`: **UNVERIFIED_AFTER_RESEARCH**。
 - `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH**。
-- `gameCounterReset`: 1400G天井自体は確定するが設定変更時CLEAR/RETAINは **UNVERIFIED_AFTER_RESEARCH**。
-- `ceilingAfterReset`: **UNVERIFIED_AFTER_RESEARCH**。
-- `modeAfterReset`: 通常時/ART中に内部モードが存在するが設定変更時再抽選/初期モードは **UNVERIFIED_AFTER_RESEARCH**。
-- `stateAfterReset`: **UNVERIFIED_AFTER_RESEARCH**。
+- `resetDetection`: ガックン/初期出目/液晶等は **UNVERIFIED_AFTER_RESEARCH**。
 - `advantageousSectionReset`: **NOT_APPLICABLE_5TH_GEN**。
-- `resetBenefits`: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- `resetPenalties`: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- `resetDetection`: ガックン/初期出目/液晶・ステージ等の本機固有判別は **UNVERIFIED_AFTER_RESEARCH**。
-- `publicMorningNumbers`: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- 検索は「天誅～Deadly Blow～ / 天誅 Deadly Blow / 天誅DeadlyBlow-Z / 1S1124 / ニューギン」×「設定変更 / 設定変更後 / リセット / 朝一 / 据え置き / 宵越し / 電源OFF ON / 天井リセット / 天井短縮 / モード / 高確 / 低確 / ガックン」を組み替えて横断。一般的な5号機ART機からの推定転記はしていない。
+- 後継2025年スマスロ「Sister Quest」のリセット仕様は流用していない。
 
 ## 時系列監査
 
-- 2012年2月P-WORLD月別パチスロ9機種と既存進捗を突合し、640件地点までで2月主要候補が収録済みであることを確認。
-- HAZUSEの3月アンカーは03/02・03/05等だが、03/02の具体的ホール導入機を今回確定できず、K-Navi/パチビーで具体日一致する03/05群を最古の次候補とした。
-- 2012-03-05同日群には少なくとも **シスタークエスト3～黄金の大地と東の勇者～** と **女番長** が残存候補として確認済み。
-- 同日群を閉じるまでは後日へ進まない。
+- 2012-03-05同日群は未閉鎖。
+- 次の既知未処理候補 **女番長（TAKASAGO / 高砂電器産業）** はK-Naviで2012-03-05ホール導入開始、KONAMI機種アーカイブで2012年3月稼働を確認済み。
+- 同日群を閉じるまでは03/06以降へ進まない。
 
 ## 遡及resetBehavior QA 次回再開地点
 
@@ -77,20 +70,23 @@
 
 ## 本線の次回再開地点
 
-1. **recordCount 641 / chronologicalFrontier 2012-03-05**から開始。
-2. **2012-03-05同日群**を継続し、最優先で **シスタークエスト3～黄金の大地と東の勇者～** のrepo重複確認→未登録なら性能コア+resetBehavior v0.7を収集。
-3. 次候補 **女番長**。同日群の残存をK-Navi/P-WORLD/パチビー/HAZUSE/当時業界記事で再監査。
+1. **recordCount 642 / chronologicalFrontier 2012-03-05**から開始。
+2. **2012-03-05同日群**を継続し、最優先で **女番長** のrepo重複確認→未登録なら性能コア+resetBehavior v0.7を収集。
+3. 女番長追加後もK-Navi/P-WORLD/HAZUSE/当時業界記事/メーカーアーカイブで03/05同日残存を再監査。
 4. 03/05群を閉じた後のみ03/06以降の最古未処理機へ前進。
 5. PARTIAL/UNVERIFIEDは表記揺れ・型式名・メーカー名・シリーズ名と設定変更/リセット/朝一/据え置き/宵越し/電源OFF ON/天井短縮/モード/状態/ガックンを組み替えて再探索。競合値は平均せずCONFLICT。
 
 ## 主要出典 — 今回取得日 2026-09-05
 
-- K-Navi: `https://p-kn.com/slot/1568/`
-- パチビー: `https://www.pachibee.jp/machines/index/212010001`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/6616`
-- グリーンべると: `https://web-greenbelt.jp/00001285/`
-- 5号機クロニクル: `https://5goki.com/newgin-excite`
+- SNK公式: `https://slot.snk-corp.co.jp/official/sister-quest3/`
+- K-Navi: `https://p-kn.com/slot/1573/`
+- HAZUSE: `https://hazuse.com/machine/pachislot/1S1072/`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/6620`
+- 5号機クロニクル: `https://5goki.com/snkplaymore`
+- CrankySeven: `https://crankyseven.com/sisterquest3-pc.htm`
+- 次候補女番長K-Navi: `https://p-kn.com/slot/1571/`
+- 次候補女番長KONAMIアーカイブ: `https://www.konami.com/amusement/psm/archive/ps/2012/sukeban/`
 
 ## GitHub commits
 
-- machine record: `d3fa4654e5733b504b614f1122545f6ef47b4081`
+- machine record: `f16e63294e2677af5a0dcafff8a70083f67d2f6f`
