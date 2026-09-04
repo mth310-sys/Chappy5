@@ -3,7 +3,7 @@ import { materializeCells } from './facility.js';
 import { BUILDING_SHELL, FLOOR_BOUNDS, SPEC } from './layout.js';
 
 const SVG_NS = 'http://www.w3.org/2000/svg';
-const machineInner = '<div class="unit9"><div class="shadow"></div><div class="backboard"></div><div class="header9"></div><div class="data9"></div><div class="mount9"></div><div class="rail-left"></div><div class="rail-right"></div><div class="sand9"></div><div class="divider"></div><div class="box-side"><div class="box-stack"><div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div></div></div><div class="counter9"></div><div class="fascia9"></div><div class="foot"></div></div>';
+const machineInner = '<div class="unit9"><div class="shadow"></div><div class="backboard"></div><div class="header9"></div><div class="data9"></div><div class="mount9"></div><div class="rail-left"></div><div class="rail-right"></div><div class="sand9"><span class="screen"></span><span class="slot"></span><span class="button"></span><span class="indicator"></span><span class="medal"></span></div><div class="divider"></div><div class="box-side"><div class="box-stack"><div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div></div></div><div class="counter9"></div><div class="fascia9"></div><div class="foot"></div><div class="wear"></div></div>';
 
 function place(scene, element, item, extraRise = 0) {
   const point = toScreen(item.x, item.y, (item.rise ?? 0) + extraRise);
