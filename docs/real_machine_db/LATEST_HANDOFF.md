@@ -4,63 +4,47 @@
 
 ## 現在地点
 
-- recordCount: **608**
-- latestMachineAdded: **サムライスピリッツ鬼**（SNKプレイモア）
-- latestRecord: `docs/real_machine_db/machines/2011-10-03_samurai-spirits-oni.md`
+- recordCount: **609**
+- latestMachineAdded: **REVO**（スター）
+- latestRecord: `docs/real_machine_db/machines/2011-10-03_revo.md`
 - chronologicalFrontier: **2011-10-03**
-- frontierLatestExactDateMachine: **サムライスピリッツ鬼**
+- frontierLatestExactDateMachine: **REVO**
 - schema: **resetBehavior v0.7**
 - status: **READY_TO_CONTINUE**
 
-## 今回の本線追加 — サムライスピリッツ鬼
+## 今回の本線追加 — REVO
 
-- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード「パチスロ快盗天使ツインエンジェル3」を再取得して開始。
-- 開始時正本は **recordCount 607 / chronologicalFrontier 2011-10-03**。
-- 2011-10-03全国導入群を継続監査。repo code searchで機種名ヒットなし、想定実パスを直接fetchして404確認後、本機を608件目として追加。
-- K-Naviで **2011-10-03ホール導入開始**、同月カレンダーでも10-03全国一斉導入群に掲載。
-- SNK旧公式で型式名 **サムライスピリッツ鬼C** を確認。
+- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード「サムライスピリッツ鬼」を再取得して開始。
+- 開始時正本は **recordCount 608 / chronologicalFrontier 2011-10-03**。
+- LATEST_HANDOFF指定の最優先候補REVOをrepo検索＋実パス直接fetchで未登録確認後、609件目として追加。
+- K-Navi 2011年10月導入カレンダーでは **2011-10-03全国一斉導入群**。グリーンべるとは2011-08-12時点で「納品は10月上旬開始予定」、P-WORLD/5号機クロニクルは2011年10月粒度。日付定義は平均しない。
+- 型式名 **レヴォVI**、検定番号 **1S0570**。
 
 ### 性能コア
 
-- 5号機 / ボーナス+ART / ゲーム数管理+自力継続複合ART。
-- 機械割: **96.8 / 98.5 / 100.2 / 104.8 / 109.2 / 113.4%**。
-- ART初当たり: **1/647.7 / 1/519.5 / 1/644.3 / 1/423.1 / 1/600.1 / 1/336.6**。
-- ボーナス合算: **1/399.61 / 1/399.61 / 1/372.36 / 1/372.36 / 1/348.60 / 1/348.60**。
-- BIG: **1/595.78 / 1/595.78 / 1/574.88 / 1/574.88 / 1/555.39 / 1/555.39**。
-- REG: **1/1213.63 / 1/1213.63 / 1/1057.03 / 1/1057.03 / 1/936.23 / 1/936.23**。
-- ボーナス+ART初当たり合算: **1/247.1 / 1/225.8 / 1/235.9 / 1/198.0 / 1/220.5 / 1/171.2**。
-- 1000円あたりゲーム数: **31.50 / 31.64 / 31.80 / 31.94 / 32.10 / 32.24G**。
-- ART「斬撃RUSH」: **約+1.7枚/G**。修羅は基本**30G+α**。
-- BIG約**204枚**、REG最大**48枚**。
-- coreStatus: **COMPLETE_CORE**。
-
-### 天井 / モード
-
-- P-WORLDの規定Gテーブル表示: **約200 / 約450 / 約700 / 約980 / 約1280G**（ボーナスorART間）。規定到達でART。
-- 2011-10-20付当時解析記事は最大天井を **1248G** と実数記載。
-- 約1280Gと1248Gは平均せず、概算テーブル表示と解析実数の `CONFLICT_OR_DEFINITION_DIFFERENCE` として双方保持。
-- 通常時内部モードは **通常 / 高確 / 超高確 / SPモード**。
+- 5号機 / ノーマル / Aタイプ / 技術介入。
+- 市場/DB掲載機械割: **97.0 / 99.0 / 101.9 / 105.8 / 109.0 / 114.0%**。
+- パチマガスロマガPAYOUT（シミュレート値）: **97.04 / 99.17 / 102.18 / 106.33 / 109.74 / 115.07%**。
+- 両系列は平均せず `CONFLICT_OR_DEFINITION_DIFFERENCE_MARKET_RATE_VS_SIMULATED_PAYOUT`。
+- BIG合成: **1/278.88 / 1/274.21 / 1/263.20 / 1/247.31 / 1/234.90 / 1/219.18**。
+- REG合成: **1/478.36 / 1/428.34 / 1/402.06 / 1/366.12 / 1/339.56 / 1/299.25**。
+- ボーナス合算: **1/176.17 / 1/167.18 / 1/159.07 / 1/147.60 / 1/138.85 / 1/126.52**。
+- BIG最大 **335枚**、REG最大 **116枚**。
+- 50枚ベースは表記揺れ・型式・メーカーと50枚/1000円/ベース/コイン持ちを変えて横断後も直接値を確定できず **UNVERIFIED_AFTER_RESEARCH**。小役確率から逆算しない。
+- coreStatus: **COMPLETE_CORE_EXCEPT_BASE**。
 
 ### resetBehavior v0.7
 
-- 当時解析記事に **「設定変更で天井までのG数はリセット」**との直接記述あり。
-- `gameCounterReset`: **CLEAR_ON_SETTING_CHANGE_CONFIRMED_BY_PERIOD_ANALYSIS**。
-- `ceilingAfterReset`: **RESET_CONFIRMED / SHORTENING_NOT_CONFIRMED**。設定変更専用の短縮天井は再探索後も確認できず。
-- 据え置き時の天井進捗/内部モード/ARTストック等の保持は **UNVERIFIED_AFTER_RESEARCH**。
-- 単純電源OFF→ONは **UNVERIFIED_AFTER_RESEARCH**。
-- 設定変更時の通常/高確/超高確/SPモード振り分け・状態再抽選は **UNVERIFIED_AFTER_RESEARCH**。
-- リールガックン/初期出目/液晶等による変更判別も **UNVERIFIED_AFTER_RESEARCH**。
-- 有利区間は制度導入前の5号機なので **NOT_APPLICABLE**。
-- 公開朝一数値として設定変更専用の当選率・短縮G数は **NONE_CONFIRMED_AFTER_RESEARCH**。
-- 設定変更で前日ハマリの天井進捗を失うため、客側には宵越し期待を失う不利があり得る。
+- ノーマル機で、通常ゲーム数天井・規定G数当選・ART/AT長期状態は確認されない。
+- `gameCounterReset`: **NOT_APPLICABLE_TO_GAME_COUNT_CEILING_AFTER_RESEARCH**。
+- `ceilingAfterReset`: **NOT_APPLICABLE_NO_GAME_COUNT_CEILING_CONFIRMED_AFTER_RESEARCH**。
+- `modeAfterReset`: 長期当選モードは非該当。BIG中チャレンジ/PVモードは朝一内部モードではない。
+- `advantageousSectionReset`: **NOT_APPLICABLE**。
+- `resetBenefits` / `resetPenalties`: 朝一専用当選率・短縮天井等は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 据え置き/単純電源OFF→ON/設定変更時の液晶カスタマイズ・一時表示状態は本機固有の直接資料を確定できず **UNVERIFIED_AFTER_RESEARCH**。
+- 回顧資料には、ホール側タイマーでパネル/LED・告知音・**リールガックン**等を発動できる機能の記録がある。これは設定変更ガックンとは別機能なので、朝一ガックンを変更判別根拠へ流用しない。
+- `resetDetection`: **UNVERIFIED_AFTER_RESEARCH / TIMER_GACKUN_FUNCTION_NOT_SETTING_CHANGE_EVIDENCE**。
 - resetQaStatus: **PARTIAL_RESET_QA_AFTER_DEEP_RESEARCH**。
-
-### 資料品質
-
-- 機械割/ART初当たり/BIG/REG/ベースはパチマガスロマガの直接値を主値に採用。
-- P-WORLD/K-Naviでボーナス+ART合算、ART純増、基本獲得枚数を照合。
-- SNK旧公式で型式名とART公式ページを確認。
-- 設定変更時天井リセットは現時点で当時解析単一系統の直接記述なので、一般則を上乗せせず信頼度を明示。
 
 ## 遡及resetBehavior QA 次回再開地点
 
@@ -71,33 +55,27 @@
 
 ## 本線の次回再開地点
 
-1. **recordCount 608 / chronologicalFrontier 2011-10-03**から開始。
-2. エージェント・クライシス、X JAPAN～強行突破～、快盗天使ツインエンジェル3、サムライスピリッツ鬼を重複追加しない。
-3. **2011-10-03全国導入群**の残存を継続監査。
-4. 最優先候補は **REVO（スター）**。K-Navi 10-03群に掲載。グリーンべるとは2011-08-12記事で「納品は10月上旬開始予定」と記録、5号機クロニクルも2011/10導入。repo実パスを直接確認し、未登録なら次レコードとする。
-5. REVOの既知コア候補: 機械割 **97.0 / 99.0 / 101.9 / 105.8 / 109.0 / 114.0%**（5号機クロニクル）。P-WORLDでは5号機ノーマル/技術介入、BIG最大335枚、REG最大116枚。次回は設定別ボーナス確率・50枚ベース・技術介入時機械割・resetBehaviorを深掘りしてから保存する。
-6. **ケロット2はグリーンべるとで10-10納品開始予定**。K-Naviの10-03全国導入表記と日付定義が競合するため、10-03群を閉じる際に再照合するが、現時点では10-10側を強い市場投入根拠として後ろへ回す。
-7. 10-03群を閉じた後、K-Naviでは10-10にキングハナハナ-30、10-17にラーゼフォン、10-24にバツ＆テリー/押忍！番長2が続く。
-8. tree実パス → 既存ファイル直接fetch → 未登録確認後に新規作成。code search未ヒットだけで未登録判定しない。
-9. PARTIAL/UNVERIFIEDは表記揺れ・型式・メーカー・シリーズ名と設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックン/有利区間を組み替えて再探索。
-10. 競合値は平均せずCONFLICT。後継機値・一般則による補完は禁止。
+1. **recordCount 609 / chronologicalFrontier 2011-10-03**から開始。
+2. K-Naviの2011-10-03全国導入群は、エージェント・クライシス、ケロット2、快盗天使ツインエンジェル3、X JAPAN、サムライスピリッツ鬼、REVOの6機種。
+3. このうち **ケロット2だけ日付定義を再監査**する。K-Naviは全国一斉導入開始を2011-10-03とする一方、グリーンべると系の納品開始予定が **2011-10-10** とされているため、既存登録有無→市場投入日の定義を確認し、未登録ならどちらをchronology keyにするか根拠を分離して保存する。
+4. 10-03群を閉じたら次の明確な全国導入日は **2011-10-10「キングハナハナ-30」**（K-Navi）。パイオニア公式も2011年10月発売を確認できる。
+5. その後 **10-17「ラーゼフォン」→10-24「バツ＆テリー」「押忍！番長2」**へ進む。
+6. tree実パス → 既存ファイル直接fetch → 未登録確認後に新規作成。code search未ヒットだけで未登録判定しない。
+7. PARTIAL/UNVERIFIEDは表記揺れ・型式・メーカー・シリーズ名と設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックン/有利区間を組み替えて再探索。
+8. 競合値は平均せずCONFLICT。後継機値・一般則による補完は禁止。
 
 ## 主要出典 — 今回取得日 2026-09-04
 
-### サムライスピリッツ鬼
-- SNK旧公式 ART: `https://slot.snk-corp.co.jp/official/samurai_oni/art/index.html`
-- SNK旧公式 ゲームフロー: `https://slot.snk-corp.co.jp/official/samurai_oni/game/index.html`
-- K-Navi: `https://p-kn.com/slot/1482/`
-- K-Navi 2011年10月導入カレンダー: `https://p-kn.com/calendar/201110/`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/6472`
-- パチマガスロマガ ボーナス確率/PAYOUT: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/snk_slot/36/h-1.php`
-- パチマガスロマガ 小役/1000円G数: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/snk_slot/36/c.php`
-- 娯楽産業: `https://www.goraku-sangyo.com/snk%E3%83%97%E3%83%AC%E3%82%A4%E3%83%A2%E3%82%A2%E3%80%80%E3%83%91%E3%83%81%E3%82%B9%E3%83%AD%E6%96%B0%E6%A9%9F%E7%A8%AE%E3%80%8C%E3%82%B5%E3%83%A0%E3%83%A9%E3%82%A4%E3%82%B9%E3%83%94%E3%83%AA/`
-- 当時天井解析: `https://mezase20.com/blog-entry-477.html`
-- 回顧機械割照合: `https://www.marimo0925.net/pachislot-kikaiwari-ranking-samusupi-ban/`
-
-### 次回候補確認 — REVO
+### REVO
+- P-WORLD: `https://www.p-world.co.jp/machine/database/6469`
+- パチマガスロマガ ボーナス確率/PAYOUT: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/star_slot/01/h.php`
+- パチマガスロマガ 基本/解析: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/star_slot/01/star_slot_01.php`
+- K-Navi REVO: `https://p-kn.com/slot/1481/`
 - K-Navi 2011年10月導入カレンダー: `https://p-kn.com/calendar/201110/`
 - グリーンべると: `https://web-greenbelt.jp/00002244/`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/6469`
 - 5号機クロニクル（スター）: `https://5goki.com/star`
+- パチスロ業界初まとめ: `https://slothistory.com/k_all_2spec.html`
+
+### 次回順序確認
+- K-Navi 2011年10月導入カレンダー: `https://p-kn.com/calendar/201110/`
+- パイオニア2011年製品一覧: `https://www.slot-pioneer.co.jp/products/2011.html`
