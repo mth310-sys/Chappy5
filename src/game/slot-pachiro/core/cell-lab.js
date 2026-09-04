@@ -8,7 +8,6 @@ import {
   setFloorType,
 } from './map.js';
 
-const OPPOSITE = Object.freeze({ N: 'S', E: 'W', S: 'N', W: 'E' });
 let cell = createBaseCell(0, 0);
 let wallKind = 'wall';
 let wallTarget = 'N';
@@ -16,10 +15,14 @@ let wallTarget = 'N';
 const scene = document.getElementById('cell-scene');
 const status = document.getElementById('cell-status');
 const state = document.getElementById('cell-state');
+if (!scene || !status || !state) throw new Error('Cell lab root elements are missing');
+
+function mapForCell() {
+  return { cells: new Map([['0,0', cell]]) };
+}
 
 function wallLabel(value) {
-  if (!value) return null;
-  return typeof value === 'string' ? value : value.kind ?? 'wall';
+  return value?.kind ?? null;
 }
 
 function snapshot(cellValue) {
@@ -33,7 +36,7 @@ function snapshot(cellValue) {
     buildable: cellValue.buildable,
     blocked: cellValue.blocked,
     walls: Object.fromEntries(Object.entries(cellValue.walls).map(([direction, wall]) => [direction, wallLabel(wall)])),
-    furniture: Object.fromEntries(Object.entries(cellValue.furnitureSlots).map(([slot, value]) => [slot, value?.kind ?? null])),
+    furniture: Object.fromEntries(Object.entries(cellValue.furniture).map(([slot, value]) => [slot, value?.kind ?? null])),
     tags: [...cellValue.tags].sort(),
   };
 }
@@ -55,13 +58,13 @@ function render() {
   }
 
   const floorFurniture = scene.querySelector('[data-furniture-floor]');
-  const floorValue = cell.furnitureSlots.floor;
+  const floorValue = cell.furniture.floor;
   if (floorValue) floorFurniture.dataset.kind = floorValue.kind;
   else floorFurniture.removeAttribute('data-kind');
 
   for (const direction of ['N', 'E', 'S', 'W']) {
     const el = scene.querySelector(`[data-furniture-wall="${direction}"]`);
-    const value = cell.furnitureSlots[direction];
+    const value = cell.furniture[direction];
     if (value) el.dataset.kind = value.kind;
     else el.removeAttribute('data-kind');
   }
@@ -71,11 +74,15 @@ function render() {
 }
 
 function makeWall(kind) {
-  return Object.freeze({ kind, material: kind === 'window' ? 'glass' : kind === 'door' ? 'wood' : 'plaster', blocksMovement: kind !== 'door' });
+  return Object.freeze({
+    kind,
+    material: kind === 'window' ? 'glass' : kind === 'door' ? 'wood' : 'plaster',
+    blocking: kind !== 'door' && kind !== 'window',
+  });
 }
 
 document.querySelectorAll('[data-floor-type]').forEach((button) => button.addEventListener('click', () => {
-  setFloorType({ cells: new Map([['0,0', cell]]) }, 0, 0, button.dataset.floorType);
+  setFloorType(mapForCell(), 0, 0, button.dataset.floorType);
   status.textContent = `FLOOR ${button.dataset.floorType.toUpperCase()}`;
   render();
 }));
@@ -94,32 +101,27 @@ document.querySelectorAll('[data-wall-target]').forEach((button) => button.addEv
 
 document.querySelectorAll('[data-wall-toggle]').forEach((button) => button.addEventListener('click', () => {
   const direction = button.dataset.wallToggle;
-  const map = { cells: new Map([['0,0', cell]]) };
-  if (cell.walls[direction]) clearCellWall(map, 0, 0, direction, { mirror: false });
-  else setCellWall(map, 0, 0, direction, makeWall(wallKind), { mirror: false });
+  if (cell.walls[direction]) clearCellWall(mapForCell(), 0, 0, direction, { mirror: false });
+  else setCellWall(mapForCell(), 0, 0, direction, makeWall(wallKind), { mirror: false });
   wallTarget = direction;
-  status.textContent = `${direction} ${cell.walls[direction] ? wallKind.toUpperCase() : 'OPEN'}`;
+  status.textContent = `${direction} ${cell.walls[direction] ? cell.walls[direction].kind.toUpperCase() : 'OPEN'}`;
   render();
 }));
 
 document.querySelectorAll('[data-floor-furniture]').forEach((button) => button.addEventListener('click', () => {
   const kind = button.dataset.floorFurniture;
-  const map = { cells: new Map([['0,0', cell]]) };
-  clearCellFurniture(map, 0, 0, 'floor');
-  if (kind !== 'none') setCellFurniture(map, 0, 0, Object.freeze({ kind, orientation: 'N' }), 'floor');
+  clearCellFurniture(mapForCell(), 0, 0, { slot: 'floor' });
+  if (kind !== 'none') setCellFurniture(mapForCell(), 0, 0, Object.freeze({ kind, orientation: 'N' }), { slot: 'floor' });
   status.textContent = `FLOOR ITEM ${kind.toUpperCase()}`;
   render();
 }));
 
 document.querySelectorAll('[data-wall-furniture]').forEach((button) => button.addEventListener('click', () => {
   const kind = button.dataset.wallFurniture;
-  const map = { cells: new Map([['0,0', cell]]) };
-  clearCellFurniture(map, 0, 0, wallTarget);
+  clearCellFurniture(mapForCell(), 0, 0, { slot: wallTarget });
   if (kind !== 'none') {
-    if (!cell.walls[wallTarget]) {
-      setCellWall(map, 0, 0, wallTarget, makeWall('wall'), { mirror: false });
-    }
-    setCellFurniture(map, 0, 0, Object.freeze({ kind, orientation: wallTarget }), wallTarget);
+    if (!cell.walls[wallTarget]) setCellWall(mapForCell(), 0, 0, wallTarget, makeWall('wall'), { mirror: false });
+    setCellFurniture(mapForCell(), 0, 0, Object.freeze({ kind, orientation: wallTarget }), { slot: wallTarget });
   }
   status.textContent = `${wallTarget} ITEM ${kind.toUpperCase()}`;
   render();
@@ -135,11 +137,12 @@ document.querySelector('[data-reset]').addEventListener('click', () => {
 
 document.querySelector('[data-clone]').addEventListener('click', () => {
   const clone = cloneBaseCell(cell, 1, 1);
-  const same = JSON.stringify(snapshot(cell)) === JSON.stringify({ ...snapshot(clone), x: 0, y: 0 });
+  const sourceSnapshot = snapshot(cell);
+  const cloneSnapshot = { ...snapshot(clone), x: sourceSnapshot.x, y: sourceSnapshot.y };
+  const same = JSON.stringify(sourceSnapshot) === JSON.stringify(cloneSnapshot);
   status.textContent = same ? 'CLONE OK' : 'CLONE ERROR';
   if (!same) throw new Error('Base cell clone mismatch');
   render();
 });
 
-if (!scene || !status || !state) throw new Error('Cell lab root elements are missing');
 render();
