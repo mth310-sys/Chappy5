@@ -1,15 +1,35 @@
 import { cellKey } from './grid.js';
 
 const SHAREABLE_RESERVATION_ROLES = new Set(['walk-zone']);
+export const CELL_DIRECTIONS = Object.freeze(['N', 'E', 'S', 'W']);
+
+function createWalls() {
+  return { N: null, E: null, S: null, W: null };
+}
+
+export function createBaseCell(x, y) {
+  return {
+    x, y,
+    floor: true,
+    floorType: 'default',
+    buildable: true,
+    blocked: false,
+    occupiedBy: null,
+    furniture: null,
+    walls: createWalls(),
+    reservations: new Map(),
+    portal: null,
+    structure: null,
+    tags: new Set(),
+    metadata: Object.create(null),
+  };
+}
 
 export function createLogicalMap(bounds) {
   const cells = new Map();
   for (let y = bounds.minY; y <= bounds.maxY; y++) {
     for (let x = bounds.minX; x <= bounds.maxX; x++) {
-      cells.set(cellKey(x, y), {
-        x, y, floor: true, buildable: true, occupiedBy: null,
-        reservations: new Map(), portal: null, blocked: false, structure: null,
-      });
+      cells.set(cellKey(x, y), createBaseCell(x, y));
     }
   }
   return { bounds, cells };
@@ -20,6 +40,40 @@ export function getCell(map, x, y) { return map.cells.get(cellKey(x, y)) ?? null
 export function requireCell(map, x, y, label = 'cell') {
   const cell = getCell(map, x, y);
   if (!cell) throw new Error(`${label} outside floor: ${x},${y}`);
+  return cell;
+}
+
+export function setFloorType(map, x, y, floorType, options = {}) {
+  const cell = requireCell(map, x, y, 'floor');
+  cell.floor = options.floor ?? true;
+  cell.floorType = floorType;
+  if (typeof options.buildable === 'boolean') cell.buildable = options.buildable;
+  if (typeof options.blocked === 'boolean') cell.blocked = options.blocked;
+  return cell;
+}
+
+export function setCellWall(map, x, y, direction, wall = 'wall') {
+  if (!CELL_DIRECTIONS.includes(direction)) throw new Error(`invalid wall direction: ${direction}`);
+  const cell = requireCell(map, x, y, 'wall');
+  cell.walls[direction] = wall;
+  return cell;
+}
+
+export function clearCellWall(map, x, y, direction) {
+  return setCellWall(map, x, y, direction, null);
+}
+
+export function setCellFurniture(map, x, y, furniture) {
+  const cell = requireCell(map, x, y, 'furniture');
+  if (!cell.buildable) throw new Error(`furniture on non-buildable cell ${x},${y}`);
+  if (cell.furniture) throw new Error(`furniture collision at ${x},${y}`);
+  cell.furniture = furniture;
+  return cell;
+}
+
+export function clearCellFurniture(map, x, y) {
+  const cell = requireCell(map, x, y, 'furniture');
+  cell.furniture = null;
   return cell;
 }
 
