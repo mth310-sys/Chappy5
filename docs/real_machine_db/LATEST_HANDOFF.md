@@ -4,84 +4,88 @@
 
 ## 現在地点
 
-- recordCount: **595**
-- latestMachineAdded: **ぱちすろ黄門ちゃま 光れ!正義の印籠編!**（オリンピア / releaseDate key 2011-07-31）
-- latestRecord: `docs/real_machine_db/machines/2011-07-31_pachislot-koumonchama-hikare-seigi-no-inrouhen.md`
-- chronologicalFrontier: **2011-07-31**
-- frontierLatestExactDateMachine: **ぱちすろ黄門ちゃま 光れ!正義の印籠編!**
+- recordCount: **596**
+- latestMachineAdded: **旋風の用心棒～胡蝶の記憶～**（ロデオ / 2011-08-01）
+- latestRecord: `docs/real_machine_db/machines/2011-08-01_kaze-no-youjinbou-kochou-no-kioku.md`
+- chronologicalFrontier: **2011-08-01**
+- frontierLatestExactDateMachine: **旋風の用心棒～胡蝶の記憶～**
 - schema: **resetBehavior v0.7**
 - status: **READY_TO_CONTINUE**
 
-## 今回の本線追加 — ぱちすろ黄門ちゃま 光れ!正義の印籠編!
+## 今回の本線追加 — 旋風の用心棒～胡蝶の記憶～
 
-- 最新mainのREADME、正本ミッションv0.7、INDEX、LATEST_HANDOFF、直前frontierレコード「GRADIUS THE SLOT」を再取得して開始。
-- 開始時main正本は recordCount 594 / chronologicalFrontier 2011-07-22。
-- INDEXは古いためREADME規定どおりLATEST_HANDOFFとmain実レコードを優先。
-- 2011-07-22同日群および07-23〜07-30境界を外部導入カレンダー/当時業界記事で再監査。GRADIUSの07-24納品/07-25導入は同一機の定義差として重複追加しない。
-- repo内「黄門ちゃま」重複検索後、次の具体日付き未登録5号機として595件目を追加。
-
-### 導入日 / 型式
-
-- グリーンべると/P-WORLD業界ニュース: **2011-07-31から納品開始予定**。
-- パチビー: **2011-08-01導入日**。
-- 平均化せず `DATE_DEFINITION_DIFFERENCE` として分離。時系列キーは現存する最古の具体的市場投入日2011-07-31を採用。
-- 当時業界記事の型式表記: **ぱちすろ黄門ちゃまA**。
+- 最新mainのREADME、正本ミッション、INDEX、LATEST_HANDOFF、直前frontierレコードを再取得して開始。
+- 開始時正本は recordCount **595** / chronologicalFrontier **2011-07-31**「ぱちすろ黄門ちゃま 光れ!正義の印籠編!」。
+- repo内重複検索で本機未登録を確認し、K-Navi/HAZUSEとも **2011-08-01導入開始**で一致したため596件目として追加。
+- 型式名 **旋風の用心棒 胡蝶の記憶R**、検定番号 **1S0382**。
 
 ### 性能コア
 
-- 5号機 A+ART / CZ（ぱちんこゾーン）/ ストック+ループART。
-- 機械割: **97.7 / 98.8 / 101.3 / 104.7 / 108.5 / 112.2%**。
-- BIG: **1/387.8 / 387.8 / 356.2 / 350.5 / 318.1 / 310.6**。
-- REG: **1/412.2 / 412.2 / 402.1 / 381.0 / 376.6 / 339.6**。
-- ボーナス合算: **1/199.8 / 199.8 / 188.9 / 182.6 / 172.5 / 162.2**。
-- ART初当たり: **1/345.7 / 292.6 / 325.1 / 242.0 / 271.7 / 195.7**。
-- 1000円あたりゲーム数: **36.73 / 36.75 / 36.79 / 36.83 / 36.87 / 36.92G**。
-- 天下泰平BONUS/BIG約 **204枚**、REG約 **48枚**。
-- ART「黄門ちゃんす」: **1セット30G / 約+1.2枚/G**。
-- P-WORLD、パチビー、パチマガスロマガ、pacnk、グリーンべるとで主要値を複数照合。
+- 5号機 A+ART / CZ / ストック+継続率+ゲーム数上乗せART。
+- 機械割: **97.1 / 98.9 / 100.8 / 105.2 / 110.1 / 115.1%**。
+- BIG: **1/331.0 / 303.4 / 316.6 / 282.5 / 297.9 / 265.3**。
+- REG: **1/504.1 / 461.5 / 474.9 / 425.6 / 448.9 / 399.6**。
+- ボーナス合算: **1/199.8 / 183.1 / 190.0 / 169.8 / 179.1 / 159.4**。
+- ART初当たり: **1/493.1 / 494.0 / 413.6 / 391.2 / 323.6 / 290.7**。
+- 1000円あたり: **30.08 / 30.23 / 30.36 / 30.51 / 30.64 / 30.79G**。
+- ART「旋風チャンス」: **約+1.2枚/G、1セット30G + 継続バトル6G = 36G+α、継続率50〜90%**。
+- BIG約200枚、REG約54枚。
+- 通常天井: **ボーナス間1000G**、到達後は**次回ボーナスまで継続する無限ART**。
 
-### 天井 / resetBehavior v0.7
+### resetBehavior v0.7
 
-- 通常天井: **ボーナス間1280G**。潜伏を経てARTへ。
-- 天井恩恵: **ART5ストック + 継続率MAX82%**。
-- pacnk当時機種ページに **「天井は設定変更でリセットされる」**との直接記述を回収。
-- `settingChangeBehavior`: **PARTIAL_CONFIRMED**。少なくとも1280G天井進捗CLEARを確定。ARTストック/ループモード/ぱちんこゾーン状態の処理はUNVERIFIED_AFTER_RESEARCH。
+- K-Naviに本機専用「設定変更後の挙動」「状態移行率(設定変更後)」解析項目が存在。
+- 別系統天井資料から、**設定変更時はボーナス間1000G天井進捗がCLEAR**することを直接確認。
+- `settingChangeBehavior`: **PARTIAL_CONFIRMED**。
 - `gameCounterReset`: **CLEAR_ON_SETTING_CHANGE_CONFIRMED**。
-- `ceilingAfterReset`: 通常1280G。設定変更後専用短縮天井は **NONE_CONFIRMED_AFTER_RESEARCH**。
-- `carryOverBehavior`: **UNVERIFIED_AFTER_RESEARCH**。据え置き時の保持を一般則で推測しない。
+- `ceilingAfterReset`: 通常1000G。設定変更後専用短縮天井は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- `modeAfterReset`: **PARTIAL_EXISTENCE_CONFIRMED_VALUE_UNVERIFIED**。低確/高確/超高確の具体振り分け本文は安全に回収できず。
+- `stateAfterReset`: **UNVERIFIED_AFTER_RESEARCH**。CZ前兆・ARTストック・残G等の処理は未確認。
+- `carryOverBehavior`: **UNVERIFIED_AFTER_RESEARCH**。
 - `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH**。
-- `modeAfterReset` / `stateAfterReset`: **UNVERIFIED_AFTER_RESEARCH**。
 - `advantageousSectionReset`: **NOT_APPLICABLE**。
 - `resetBenefits`: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- `resetPenalties`: **CEILING_PROGRESS_LOSS_CONFIRMED_IF_SETTING_CHANGED**。前日ハマリがあれば変更で消える。
-- `resetDetection`: **UNVERIFIED_AFTER_RESEARCH**。ガックン/初期出目/ステージ等の本機固有根拠を確定できず。
-- 公開朝一数値: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- `resetPenalties`: **CEILING_PROGRESS_LOSS_CONFIRMED_IF_SETTING_CHANGED**。
+- `resetDetection`: **UNVERIFIED_AFTER_RESEARCH**。
+- 公開朝一数値: 通常天井1000G以外、設定変更専用短縮天井/朝一当選率/変更判別数値は **NONE_CONFIRMED_AFTER_RESEARCH**。
 
 ### 資料QA
 
-- 後年の一部回顧DBに、本機欄へ後年「黄門ちゃま喝」系の仕様（純増2.0枚/G、印籠RUSH等）が混入した記述を確認。
-- 当時グリーンべると、P-WORLD、パチビー、パチマガ、pacnkの一致系列と矛盾するため採用せず、資料混同として切り離した。
+- 設定6ボーナス合算は資料により1/159.4と1/159.5の丸め差。HAZUSE精密値1/159.4を主値とし、実質CONFLICTにはしない。
+- 性能コア/天井は複数資料照合済み。resetBehaviorは設定変更時天井CLEARのみ直接確定、その他は推測で埋めない。
 
-## 主要出典 — ぱちすろ黄門ちゃま 光れ!正義の印籠編!（取得日 2026-09-04）
+## 主要出典 — 旋風の用心棒～胡蝶の記憶～（取得日 2026-09-04）
 
-- オリンピア 2011年発売機種: `https://www.olympia.co.jp/official/products/2011.html`
-- グリーンべると/P-WORLD業界ニュース: `https://news.p-world.co.jp/articles/4742/greenbelt`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/6406`
-- パチビー: `https://www.pachibee.jp/machines/index/211060008`
-- パチマガスロマガ TOP: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/heiwa_slot/40/heiwa_slot_40.php`
-- パチマガスロマガ 1000円G数: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/heiwa_slot/40/c.php`
-- pacnk: `https://pacnk.com/slot/2011/koumon3/top.php`
+- K-Navi: `https://p-kn.com/slot/1458/`
+- HAZUSE: `https://hazuse.com/machine/pachislot/1S0382/`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/6427`
+- パチマガスロマガ 基本: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/rodeo_slot/57/a.php`
+- パチマガスロマガ 1000円G数: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/rodeo_slot/57/c.php`
+- 天井/設定変更: `https://crankyseven.com/sp/tenjo-5ka.htm`
+- 回顧照合: `https://ab01.seesaa.net/article/275471329.html`
+
+## 今回の遡及resetBehavior QA — 小野真弓のかわいい日本昔話
+
+- recursive tree / 実パスを確認し、既にQA済みの **美川〜さそり座のサラリーマン〜** の次の実在欠損として `docs/real_machine_db/machines/2006-11_ono-mayumi-kawaii-nihon-mukashibanashi.md` を直接fetchしてresetBehavior欠損を確認。
+- 既存 `COMPLETE_CORE` 相当の性能情報は崩さず、`coreStatus: COMPLETE_CORE` / `resetQaStatus: PARTIAL_RESET_QA` として分離管理。
+- 当時HAZUSEでBIG/MIDDLE後 **10G「花咲かGAME」**を再確認。
+- 本機名・型式「日本昔話5」＋設定変更/朝一/リセット/天井/花咲かGAME等へ検索語を変えて再探索。
+- 通常ゲーム数天井・設定変更後短縮天井・朝一専用恩恵は **NONE_CONFIRMED_AFTER_RESEARCH**。仕様書による非存在断定まではできないため、天井関連を不用意にNOT_APPLICABLEへ強制していない。
+- 設定変更時、据え置き、電源OFF→ON時の内部状態/花咲かGAME残G、ガックン・出目・液晶による変更判別は **UNVERIFIED_AFTER_RESEARCH**。
+- 有利区間は5号機初期のため **NOT_APPLICABLE**。
+- resetBehavior QA取得日: **2026-09-04**。
 
 ## 遡及QA継続地点
 
-- **美川〜さそり座のサラリーマン〜 (`docs/real_machine_db/machines/2006-11_mikawa-sasoriza-no-salaryman.md`) までresetBehavior v0.7補完済み**。
-- `docs/real_machine_db/machines/2006-11-27_thunder-v-special.md` は既にresetBehavior収集済みなので重複更新せずスキップする。
-- その後は recursive tree / contentsの実パス順に進み、Thunder V SPECIALの次に存在する最初のresetBehavior欠損レコードを直接fetchして確定してから遡及QA再開。code search未ヒットだけでQA前線を動かさない。
+- **小野真弓のかわいい日本昔話 (`2006-11_ono-mayumi-kawaii-nihon-mukashibanashi.md`) までresetBehavior v0.7補完済み**。
+- `2006-11-27_thunder-v-special.md` は既にresetBehavior収集済みで重複更新しない。
+- tree実パス順で次の候補は **`docs/real_machine_db/machines/2006-11_rocky-balboa-g.md`**。直接fetchしてresetBehavior欠損有無を確認し、欠損なら次のQA対象とする。
+- その後 `2006-11_thunder-v-special.md`（月のみ別path）の重複/別レコード性とresetBehavior有無を必ず実ファイルで確認する。
 
 ## 本線の次回再開地点
 
-1. **recordCount 595 / chronologicalFrontier 2011-07-31**から開始。
-2. **2011-07-31同日群〜2011-08-01境界**を最優先監査。本機の08-01導入表記は重複追加しない。
-3. 次の強い具体日付き未登録候補はロデオ **「旋風の用心棒～胡蝶の記憶～」**。K-Navi/HAZUSEとも **2011-08-01導入開始**、HAZUSE型式「旋風の用心棒 胡蝶の記憶R」/検定番号1S0382を確認済み。repo重複を再確認して未登録なら596件目の最優先候補とする。
-4. 08-01同日群には他機種が存在する可能性があるため、旋風だけで日付群を閉じず、P-WORLD月間カレンダー/K-Navi/HAZUSE/当時業界記事を照合する。
-5. PARTIAL/UNVERIFIEDは表記揺れ・型式名・メーカー・シリーズ名・設定変更/朝一/据え置き/電源OFF ON/天井/モード/状態/ガックン等へ検索語を変え、公式・業界・当時解析・古いDB・アーカイブ・回顧資料まで横断してから確定する。
+1. **recordCount 596 / chronologicalFrontier 2011-08-01**から開始。
+2. **2011-08-01同日群を最終監査**。旋風の用心棒を重複追加しない。
+3. 08-02〜08-07境界を外部導入カレンダー/当時業界記事/K-Navi/HAZUSE/P-WORLDで確認し、最古未登録機を優先。
+4. 境界に未登録がなければ **2011-08-08群**へ進む。ミリオンゴッド～神々の系譜～等の同日候補はrepo実パスで重複確認してから処理する。
+5. PARTIAL/UNVERIFIEDは公式・業界・当時解析・古いDB・アーカイブ・回顧資料へ資料系統を変え、複数ソースを優先。競合はCONFLICT、一般論による補完は禁止。
