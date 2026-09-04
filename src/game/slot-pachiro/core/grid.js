@@ -1,6 +1,6 @@
 export const GRID = Object.freeze({
-  originX: 325,
-  originY: 78,
+  originX: 365,
+  originY: 190,
   halfW: 13,
   halfH: 6.5,
   tileW: 26,
