@@ -81,6 +81,17 @@ function makeWall(kind) {
   });
 }
 
+function applyAlignmentPreset() {
+  setFloorType(mapForCell(), 0, 0, 'tile');
+  setCellWall(mapForCell(), 0, 0, 'N', makeWall('wall'), { mirror: false });
+  setCellWall(mapForCell(), 0, 0, 'E', makeWall('window'), { mirror: false });
+  setCellFurniture(mapForCell(), 0, 0, Object.freeze({ kind: 'counter', orientation: 'N' }), { slot: 'floor' });
+  setCellFurniture(mapForCell(), 0, 0, Object.freeze({ kind: 'poster', orientation: 'N' }), { slot: 'N' });
+  setCellFurniture(mapForCell(), 0, 0, Object.freeze({ kind: 'display', orientation: 'E' }), { slot: 'E' });
+  wallTarget = 'N';
+  status.textContent = 'ALIGNMENT PRESET';
+}
+
 document.querySelectorAll('[data-floor-type]').forEach((button) => button.addEventListener('click', () => {
   setFloorType(mapForCell(), 0, 0, button.dataset.floorType);
   status.textContent = `FLOOR ${button.dataset.floorType.toUpperCase()}`;
@@ -145,4 +156,5 @@ document.querySelector('[data-clone]').addEventListener('click', () => {
   render();
 });
 
+if (new URLSearchParams(location.search).get('cellDemo') === 'alignment') applyAlignmentPreset();
 render();
