@@ -4,68 +4,63 @@
 
 ## 現在地点
 
-- recordCount: **567**
-- latestMachineAdded: **パチスロ装甲騎兵ボトムズ**（サミー / 2011-04-18〔P-WORLD DB metadata 2011-03とCONFLICT〕）
-- latestRecord: `docs/real_machine_db/machines/2011-04-18_soukou-kihei-votoms.md`
-- chronologicalFrontier: **2011-04-18**
-- frontierLatestExactDateMachine: **パチスロ装甲騎兵ボトムズ**
+- recordCount: **568**
+- latestMachineAdded: **メーメーパラダイス**（ラスター / 2011-04-24納品開始予定）
+- latestRecord: `docs/real_machine_db/machines/2011-04-24_me-me-paradise.md`
+- chronologicalFrontier: **2011-04-24**
+- frontierLatestExactDateMachine: **メーメーパラダイス**
 - schema: **resetBehavior v0.7**
 - status: **READY_TO_CONTINUE**
 
 ## 今回の継続確認
 
-- 最新mainの `README.md`、正本ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、566前線レコードを再取得して開始。
+- 最新mainの `README.md`、正本ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、567前線レコード「パチスロ装甲騎兵ボトムズ」を再取得して開始。
 - `INDEX.md` は旧19件地点のため、最新 `LATEST_HANDOFF.md` と実machineレコードを進捗正本として使用。
-- 566件目「天下布武2」の次候補「パチスロ装甲騎兵ボトムズ」をrepo検索し、未登録を確認。
-- K-Naviはホール導入開始2011-04-18。P-WORLDのDB metadataは2011年03月のため、平均化せずCONFLICT保持し、具体的ホール導入日の2011-04-18を時系列キーに採用。
-- 2011-04-15同日群および4/16〜17境界を再監査し、今回確認できた未登録の最古具体日として567件目を追加。
+- 2011-04-18同日群と4/19〜23境界を再監査し、直前handoff既知候補「メーメーパラダイス」をrepo検索。未登録を確認。
+- グリーンべると2011-04-11記事で「納品は4月24日開始予定」を再確認。P-WORLD現行機種DBは導入開始日空欄のため、業界記事の具体的納品開始予定日を時系列キーに採用。
+- P-WORLDと業界記事でBIG/REG端値・獲得枚数を照合し、568件目として追加。
 
-## 今回追加 — 567 パチスロ装甲騎兵ボトムズ
+## 今回追加 — 568 メーメーパラダイス
 
-- メーカー: **サミー**
-- 型式: **装甲騎兵ボトムズS** / 検定番号 **0S1260**
-- 5号機 / **ボーナス + ART / CZ / 内部状態 / 天井あり**
-- 導入: **2011-04-18（K-Navi） / P-WORLD DB metadata 2011-03 CONFLICT**
-- 機械割: **97.1 / 99.0 / 101.5 / 104.3 / 108.4 / 112.0%**
-- ボーナス+ART初当り合算: **1/246.8 / 1/236.1 / 1/227.5 / 1/214.8 / 1/196.7 / 1/182.2**
-- ART「バトリングタイム」: **初回50G+α / 約+1.8枚/G**
-- BATTLING BONUS: **約300枚** / BATTLING CHANCE: **約200枚**
-- 通常時内部状態: **低 / 通常 / 天国 / 前兆**
-- AT-MODE: **32G**
-- 天井: **ボーナスorART間1200G → 前兆経由ART**
-- 50枚ベースと設定別ART単独初当りは検索語・資料系統を変えて再探索後も比較可能値を直接確定できず `UNVERIFIED_AFTER_RESEARCH`。
+- メーカー: **ラスター / ウィンネットテクノロジー発表**
+- 型式: **ザコクチシリーズ** / 検定番号 **0S0846**
+- 5号機 / **ノーマル / 完全告知 / BIG+REG**
+- 納品開始予定: **2011-04-24（グリーンべると）**
+- 機械割: **96.32 / 97.78 / 100.42 / 103.04 / 105.48 / 110.21%**
+- BIG: **1/287.44 / 1/282.48 / 1/282.48 / 1/273.07 / 1/273.07 / 1/249.19**
+- REG: **1/455.11 / 1/442.81 / 1/348.60 / 1/321.25 / 1/268.59 / 1/249.19**
+- 合算: **1/176.17 / 1/172.46 / 1/156.04 / 1/147.60 / 1/135.40 / 1/124.59**
+- BIG約**312枚** / REG約**104枚**
+- 完全告知。「ME～ME～!ランプ」点灯でボーナス確定。
+- 50枚ベースは検索語・資料系統を変えて再探索後も比較可能な直接値を確定できず `UNVERIFIED_AFTER_RESEARCH`。
 
-### resetBehavior v0.7 — パチスロ装甲騎兵ボトムズ
+### resetBehavior v0.7 — メーメーパラダイス
 
-- `settingChangeBehavior`: **INTERNAL_STATE_TRANSITION_ON_SETTING_CHANGE_CONFIRMED / GAME_COUNTER_AND_OTHER_INTERNAL_HANDLING_UNVERIFIED**
-- `carryOverBehavior`: **UNVERIFIED_AFTER_RESEARCH**
-- `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH**
-- `gameCounterReset`: **UNVERIFIED_AFTER_RESEARCH**
-- `ceilingAfterReset`: **NORMAL_1200G_KNOWN / RESET_SHORTENING_NONE_CONFIRMED_AFTER_RESEARCH**
-- `modeAfterReset`: **STATE_RESELECTION_OR_TRANSITION_CONFIRMED_NUMERIC_DISTRIBUTION_UNVERIFIED**
-- `stateAfterReset`: **SETTING_CHANGE_STATE_TRANSITION_CONFIRMED_DETAILS_UNVERIFIED**
+- `settingChangeBehavior`: **UNVERIFIED_AFTER_RESEARCH_FOR_LOW_LEVEL_BEHAVIOR**
+- `carryOverBehavior`: **NOT_APPLICABLE_FOR_CEILING_MODE / LOW_LEVEL_STATE_UNVERIFIED**
+- `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH_FOR_LOW_LEVEL_BEHAVIOR**
+- `gameCounterReset`: **NOT_APPLICABLE_NO_CEILING_CONFIRMED**
+- `ceilingAfterReset`: **NOT_APPLICABLE_NO_CEILING_CONFIRMED**
+- `modeAfterReset`: **NOT_APPLICABLE_NO_LONG_TERM_MODE_CONFIRMED**
+- `stateAfterReset`: **NOT_APPLICABLE_FOR_HALL_AI_RELEVANT_STATE / LOW_LEVEL_UNVERIFIED**
 - `advantageousSectionReset`: **NOT_APPLICABLE**
-- `resetBenefits`: **NONE_NUMERIC_CONFIRMED_AFTER_RESEARCH**
-- `resetPenalties`: **UNVERIFIED_AFTER_RESEARCH**
+- `resetBenefits`: **NONE_CONFIRMED_AFTER_RESEARCH**
+- `resetPenalties`: **NONE_CONFIRMED_AFTER_RESEARCH**
 - `resetDetection`: **UNVERIFIED_AFTER_RESEARCH**
-- `numericResetData`: **通常天井1200G / 設定変更後状態移行率の解析項目存在確認、具体値未回収**
+- `numericResetData`: **設定変更専用短縮天井NOT_APPLICABLE / 朝一特定G以内当選率・恩恵率NONE_CONFIRMED_AFTER_RESEARCH**
 
-K-Naviに本機専用「状態移行率(設定変更後)」、パチマガスロマガに「朝イチ・設定変更」解析項目が存在することを確認。設定変更が内部状態に作用すること自体は根拠あり。ただし今回の取得経路では具体的な変更後状態振り分け、1200GカウンタCLEAR/RETAIN、据え置き、単純電源OFF→ON、ガックン等を安全に直接回収できなかったため推測補完していない。
+本機はボーナスのみで出玉を構成するノーマル完全告知機。天井・ART/AT/CZ・長期通常モードは確認されず、ホール経営/朝一客AIに関わるゲーム数持越し・短縮天井・朝一モードは実質対象外。一方、ガックン・初期出目・単純電源OFF→ON等の低レベル挙動は本機固有の直接資料を確定できないため一般論で補完していない。
 
-## 主要出典 — 567（取得日 2026-09-04）
+## 主要出典 — 568（取得日 2026-09-04）
 
-- K-Navi: `https://p-kn.com/slot/1378/`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/6272`
-- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sammy_slot/128/sammy_slot_128.php`
-- パチマガスロマガ基本システム: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sammy_slot/128/a.php`
-- pacnk: `https://pacnk.com/slot/tools/sh_votoms.html`
-- Sammy Networks公式系リリース: `https://www.sammy-net.jp/news/votoms0422.pdf`
-- 5号機クロニクル: `https://5goki.com/sammy`
+- グリーンべると: `https://web-greenbelt.jp/00002007/`
+- P-WORLD業界ニュース転載: `https://news.p-world.co.jp/articles/4590/greenbelt`
+- P-WORLD機種DB: `https://www.p-world.co.jp/machine/database/6336`
 
 ## 今回のGitHub更新
 
-- 567追加: `docs/real_machine_db/machines/2011-04-18_soukou-kihei-votoms.md`
-- 567 machine record commit: `9500d28071256bd7698c7697eba89e7fd542a441`
+- 568追加: `docs/real_machine_db/machines/2011-04-24_me-me-paradise.md`
+- 568 machine record commit: `fb89ea26395c7dab0bb44d1f5cbbe4589e8d60f2`
 - LATEST_HANDOFF: 本更新
 
 ## 遡及QA継続地点
@@ -76,8 +71,8 @@ K-Naviに本機専用「状態移行率(設定変更後)」、パチマガスロ
 
 ## 次回再開地点
 
-1. **recordCount 567 / chronologicalFrontier 2011-04-18**。最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 567レコードを再取得。
-2. **2011-04-18同日群を継続監査**。同日未登録5号機があれば最古から568件目として追加。
-3. 同日群が閉じたら **4/19〜23境界**を監査。直前handoff既知候補の **4/24納品予定「メーメーパラダイス」**は実導入/納品日を複数資料で再確認して採用判断する。
-4. P-WORLDのボトムズ「2011年03月」はK-Naviの具体的2011-04-18とCONFLICT保持。後続作業で当時業界一次資料から納品/販売月の定義を追加回収できればQAする。
+1. **recordCount 568 / chronologicalFrontier 2011-04-24**。最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 568レコードを再取得。
+2. **2011-04-24同日群を最終監査**。同日未登録5号機があれば最古から569件目として追加。
+3. 同日群が閉じたら **4/25〜5/1境界**を監査し、具体的ホール導入/納品日を確認できる最古未登録機へ進む。
+4. 先行候補としてP-WORLD近接掲載の「ドラゴノーツ～ザ・レゾナンス～」「雀龍桜花」等があるが、`雀龍桜花`はKPE公式が2011年5月稼働、グリーンべるとが5/29納品開始予定とするため、4月キューへ前倒ししない。各候補は必ず実導入/納品日の具体日を再確認してから採用する。
 5. PARTIAL/UNVERIFIEDは検索語・資料系統を変えて十分に再探索し、競合は平均せずCONFLICT。
