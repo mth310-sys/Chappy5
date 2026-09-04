@@ -6,14 +6,28 @@ export function assertOrientation(value, label = 'orientation') {
   if (!ORIENTATIONS.includes(value)) throw new Error(`${label} must be one of ${ORIENTATIONS.join(', ')}: ${value}`);
 }
 
-function rotateOffset(x, y, orientation) {
+export function orientationBasis(orientation) {
+  assertOrientation(orientation);
   switch (orientation) {
-    case 'E': return { x, y };
-    case 'S': return { x: -y, y: x };
-    case 'W': return { x: -x, y: -y };
-    case 'N': return { x: y, y: -x };
+    case 'E': return Object.freeze({ forward: Object.freeze({ x: 1, y: 0 }), normal: Object.freeze({ x: 0, y: 1 }) });
+    case 'S': return Object.freeze({ forward: Object.freeze({ x: 0, y: 1 }), normal: Object.freeze({ x: -1, y: 0 }) });
+    case 'W': return Object.freeze({ forward: Object.freeze({ x: -1, y: 0 }), normal: Object.freeze({ x: 0, y: -1 }) });
+    case 'N': return Object.freeze({ forward: Object.freeze({ x: 0, y: -1 }), normal: Object.freeze({ x: 1, y: 0 }) });
     default: throw new Error(`Unknown orientation: ${orientation}`);
   }
+}
+
+export function projectToBasis(point, orientation) {
+  const { forward, normal } = orientationBasis(orientation);
+  return {
+    longitudinal: point.x * forward.x + point.y * forward.y,
+    lateral: point.x * normal.x + point.y * normal.y,
+  };
+}
+
+function rotateOffset(x, y, orientation) {
+  const { forward, normal } = orientationBasis(orientation);
+  return { x: x * forward.x + y * normal.x, y: x * forward.y + y * normal.y };
 }
 
 export function transformOffsets(offsets, orientation) {
