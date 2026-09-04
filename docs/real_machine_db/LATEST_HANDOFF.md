@@ -4,75 +4,69 @@
 
 ## 現在地点
 
-- recordCount: **640**
-- latestMachineAdded: **ヱヴァンゲリヲン～生命の鼓動～**（ビスティ）
-- latestRecord: `docs/real_machine_db/machines/2012-02-27_evangelion-seimei-no-kodo.md`
-- chronologicalFrontier: **2012-02-27**
-- frontierLatestExactDateMachine: **ヱヴァンゲリヲン～生命の鼓動～**
+- recordCount: **641**
+- latestMachineAdded: **天誅～Deadly Blow～**（ニューギン）
+- latestRecord: `docs/real_machine_db/machines/2012-03-05_tenchu-deadly-blow.md`
+- chronologicalFrontier: **2012-03-05**
+- frontierLatestExactDateMachine: **天誅～Deadly Blow～**
 - schema: **resetBehavior v0.7**
-- status: **2012-02-27_SAME_DAY_GROUP_AUDIT_REQUIRED__DATE_AND_PAYOUT_CONFLICTS_PRESERVED__NEXT_EARLIEST_UNPROCESSED_AFTER_OR_ON_2012-02-27**
+- status: **2012-03-05_SAME_DAY_GROUP_AUDIT_REQUIRED__TENCHU_RESET_BODY_UNAVAILABLE_AFTER_EXTENDED_RESEARCH__NEXT_SISTER_QUEST3_OR_ON_2012-03-05**
 
-## 今回の本線追加 — ヱヴァンゲリヲン～生命の鼓動～
+## 今回の本線追加 — 天誅～Deadly Blow～
 
-- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード「チェリーパラダイス」を確認して開始。
-- INDEXは旧19件地点のためREADME規定どおりLATEST_HANDOFFを進捗正本として使用。
-- 開始時正本は **recordCount 639 / chronologicalFrontier 2012-02-20 / latestMachineAdded チェリーパラダイス**。
-- 2012-02-20同日群を再監査し、HANDOFFで保留されていた「ヱヴァンゲリヲン～生命の鼓動～」はK-Navi/4Gamer/GAME Watchの2012-02-27導入根拠を優先し、2月27日到達時に処理。
-- GitHubコード検索で同名レコードなしを確認後、640件目として追加。
+- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード「ヱヴァンゲリヲン～生命の鼓動～」を確認して開始。
+- INDEXは旧地点のためREADME規定どおりLATEST_HANDOFFを進捗正本として使用。
+- 開始時正本は **recordCount 640 / chronologicalFrontier 2012-02-27**。
+- 2012年2月のP-WORLD月別掲載9機種と既存レコードを突合し、02-27以降の2月残存候補を監査。3月候補をK-Navi/P-WORLD/パチビー/HAZUSE/業界記事で照合し、最古の具体的ホール導入日として2012-03-05群へ前進。
+- main再確認で同名/想定パスの既存レコードなしを確認後、641件目として追加。
 
 ### 導入日・型式
 
-- 時系列キー: **2012-02-27**。
-- K-Naviはホール導入開始2012-02-27。2012-02-20付のK-Navi導入前記事も「2月27日（最速導入）」と記載。
-- フューチャースコープ発表を掲載した4Gamer、およびGAME Watchも2012-02-27より順次全国ホール導入開始と記録。
-- HAZUSEは2012-02-20導入開始とするため **CONFLICT_DATE**。平均せず双方保持。
-- 型式名: **ヱヴァンゲリヲン・生命の鼓動**。
-- 検定番号: **1S1168**。
+- 時系列キー: **2012-03-05**。
+- K-Navi / パチビーはホール導入開始を2012-03-05と記録。
+- グリーンべるとは納品開始予定を2012-03-04と記録。日付定義差として分離し、時系列キーはホール導入日を採用。
+- 型式名: **天誅DeadlyBlow-Z**。
+- 検定番号: **1S1124**。
 
 ### 性能コア
 
-- systemType: **ノーマル+RT / ボーナス主体 / 無限RT搭載**。
-- 設定別機械割は **CONFLICT**。
-  - P-WORLD / けんのスロットシミュレーション: **97.7 / 99.6 / 102.1 / 103.9 / 107.6 / 112.5%**。
-  - HAZUSE: **97.2 / 98.5 / 100.2 / 104.5 / 107.5 / 112.9%**。
-- BIG合算: **1/321.3 / 312.0 / 313.5 / 296.5 / 288.6 / 257.0**。
-- REG: **1/504.1 / 452.0 / 464.8 / 420.1 / 422.8 / 354.3**。
-- ボーナス合算: **1/196.2 / 184.6 / 187.3 / 173.8 / 171.6 / 148.9**。
-- 50枚ベース: **39.59 / 40.42 / 41.71 / 43.08 / 44.56 / 46.85G/50枚**。直接掲載値だが単一解析資料のためANALYSIS_SINGLE。
-- 基本獲得: SPECIAL BIG最大448枚 / SUPER BIG最大311枚 / NORMAL BIG最大207枚 / REG最大104枚。
-- 覚醒モード: 次回ボーナスまで継続するRT、純増約**+0.3枚/G**。
-- REG後は覚醒リプレイ高確「覚醒チャンス」。通常時チャンスリプレイ成立で最大7GのプチRT/CZ。
-- 通常ゲーム数天井: **非搭載**。
+- systemType: **A+ART / ボーナス+ART**。
+- 5号機クロニクル機械割: **96.8 / 98.7 / 101.2 / 104.4 / 108.0 / 112.1%**。
+- 別回顧解析: **96.8 / 98.7 / 101.2 / 104.3 / 107.9 / 111.9%**。設定4～6は平均せずCONFLICT_OR_ROUNDING_SOURCE_DIFFERENCEとして双方保持。
+- P-WORLD一覧下部の「14.4%～112.1%」は下限が他資料と著しく不整合のためSOURCE_DISPLAY_CORRUPTIONとして採用除外。
+- ボーナス合算: **1/268.6 / 260.1 / 252.1 / 244.5 / 232.4 / 219.9**。
+- 天誅BIG: 全設定 **1/16384.0**。
+- NBIG（各2種とも）: **1/897.8 / 873.8 / 851.1 / 829.6 / 780.2 / 728.2**。
+- REG（各2種とも）: **1/1394.4 / 1337.5 / 1285.0 / 1236.5 / 1191.6 / 1149.8**。
+- ART「天誅RUSH」: **1セット40G+α / 純増約+1.5枚/G**。
+- 基本獲得: 天誅BIG約204枚 / BIG約204枚 / 忍BONUS約54枚。
+- 通常天井: **ボーナス間1400G**。到達後のレア役/BIGはART40G・90%ループ、忍BONUSはART200G・90%ループ。
+- ART設定別初当たり、50枚ベースは検索語・資料系統を変えても直接値を確定できずUNVERIFIED_AFTER_RESEARCH。
 
 ### resetBehavior v0.7
 
-- `settingChangeBehavior`: **NO_GAME_COUNT_CEILING_APPLICABLE__RT_CZ_TRANSIENT_STATE_BEHAVIOR_UNVERIFIED_AFTER_RESEARCH**。
-- `carryOverBehavior`: 覚醒チャンス/覚醒モード/プチRT等の一時状態について **UNVERIFIED_AFTER_RESEARCH**。
-- `powerCycleBehavior`: 同上、単純電源OFF→ONの本機固有処理は **UNVERIFIED_AFTER_RESEARCH**。
-- `gameCounterReset`: **NOT_APPLICABLE_NO_GAME_COUNT_CEILING**。
-- `ceilingAfterReset`: **NOT_APPLICABLE_NO_CEILING**。
-- `modeAfterReset`: 永続ゲーム数/AT/ARTモードは非該当。一時RT/CZ状態の処理は **UNVERIFIED_AFTER_RESEARCH**。
-- `stateAfterReset`: 覚醒チャンス/覚醒モード/7GプチRT等の途中状態は **UNVERIFIED_AFTER_RESEARCH**。
+- K-Navi本機専用ページに **「狙い目・天井・朝一 > 設定変更後の挙動」** の個別解析ページが存在することは確認。
+- ただし取得可能なインデックスにはリンク見出しのみで、個別ページ本文の設定変更時具体値/挙動は今回回収不能。
+- `settingChangeBehavior`: **UNVERIFIED_AFTER_RESEARCH**。
+- `carryOverBehavior`: **UNVERIFIED_AFTER_RESEARCH**。
+- `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH**。
+- `gameCounterReset`: 1400G天井自体は確定するが設定変更時CLEAR/RETAINは **UNVERIFIED_AFTER_RESEARCH**。
+- `ceilingAfterReset`: **UNVERIFIED_AFTER_RESEARCH**。
+- `modeAfterReset`: 通常時/ART中に内部モードが存在するが設定変更時再抽選/初期モードは **UNVERIFIED_AFTER_RESEARCH**。
+- `stateAfterReset`: **UNVERIFIED_AFTER_RESEARCH**。
 - `advantageousSectionReset`: **NOT_APPLICABLE_5TH_GEN**。
 - `resetBenefits`: **NONE_CONFIRMED_AFTER_RESEARCH**。
 - `resetPenalties`: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- `resetDetection`: ガックン、初期出目、液晶/パネル、MAGI等による本機固有の変更判別は **UNVERIFIED_AFTER_RESEARCH**。
+- `resetDetection`: ガックン/初期出目/液晶・ステージ等の本機固有判別は **UNVERIFIED_AFTER_RESEARCH**。
 - `publicMorningNumbers`: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- 一般的な5号機ノーマル+RTの挙動から推定転記していない。
-
-### 競合・注意
-
-- 導入日はHAZUSE=2012-02-20 vs K-Navi/4Gamer掲載メーカー発表/GAME Watch=2012-02-27。時系列キーは複数当時資料が一致する02-27、HAZUSE値はCONFLICT保持。
-- 機械割はP-WORLD系97.7〜112.5% vs HAZUSE 97.2〜112.9%。単純丸めではないためCONFLICT。
-- 50枚ベースは設定別直接値を取得できたが、別系統直接表による照合は今回未確定。
-- 設定変更/据え置き/電源OFF→ON時のRT/CZ一時状態、ガックン等は表記・型式・検索語・資料系統を変えて再探索後も確定せずUNVERIFIED_AFTER_RESEARCH。
+- 検索は「天誅～Deadly Blow～ / 天誅 Deadly Blow / 天誅DeadlyBlow-Z / 1S1124 / ニューギン」×「設定変更 / 設定変更後 / リセット / 朝一 / 据え置き / 宵越し / 電源OFF ON / 天井リセット / 天井短縮 / モード / 高確 / 低確 / ガックン」を組み替えて横断。一般的な5号機ART機からの推定転記はしていない。
 
 ## 時系列監査
 
-- 2012-02-20同日群はチェリーパラダイス追加後に再監査し、生命の鼓動は02-27へ日付保留していた。
-- 2012-02-21〜02-26の新規5号機について「ホール導入開始」「導入開始日」等で日付別再探索したが、今回新たな確定候補は得られなかった。
-- 生命の鼓動を02-27として追加し、chronologicalFrontierを2012-02-27へ進めた。
-- 次回は **2012-02-27同日群の残存未登録5号機を最終監査**。追加がなければ2012-02-28以降の最古未処理5号機へ進む。
+- 2012年2月P-WORLD月別パチスロ9機種と既存進捗を突合し、640件地点までで2月主要候補が収録済みであることを確認。
+- HAZUSEの3月アンカーは03/02・03/05等だが、03/02の具体的ホール導入機を今回確定できず、K-Navi/パチビーで具体日一致する03/05群を最古の次候補とした。
+- 2012-03-05同日群には少なくとも **シスタークエスト3～黄金の大地と東の勇者～** と **女番長** が残存候補として確認済み。
+- 同日群を閉じるまでは後日へ進まない。
 
 ## 遡及resetBehavior QA 次回再開地点
 
@@ -83,24 +77,20 @@
 
 ## 本線の次回再開地点
 
-1. **recordCount 640 / chronologicalFrontier 2012-02-27**から開始。
-2. **2012-02-27同日群の未登録5号機**をK-Navi/P-WORLD/パチビー/HAZUSE/当時業界記事/メーカー資料で最終監査。
-3. 同日群に漏れがなければ **2012-02-28以降の最古未処理5号機**を日付順に確定する。
-4. 候補確定後、GitHubコード検索と想定実パス直接fetchで重複確認→性能コア+resetBehavior v0.7を収集。
-5. PARTIAL/UNVERIFIEDは表記揺れ・型式名・メーカー名と設定変更/リセット/朝一/据え置き/宵越し/電源OFF ON/天井短縮/モード/状態/ガックンを組み替えて再探索。競合値は平均せずCONFLICT。
+1. **recordCount 641 / chronologicalFrontier 2012-03-05**から開始。
+2. **2012-03-05同日群**を継続し、最優先で **シスタークエスト3～黄金の大地と東の勇者～** のrepo重複確認→未登録なら性能コア+resetBehavior v0.7を収集。
+3. 次候補 **女番長**。同日群の残存をK-Navi/P-WORLD/パチビー/HAZUSE/当時業界記事で再監査。
+4. 03/05群を閉じた後のみ03/06以降の最古未処理機へ前進。
+5. PARTIAL/UNVERIFIEDは表記揺れ・型式名・メーカー名・シリーズ名と設定変更/リセット/朝一/据え置き/宵越し/電源OFF ON/天井短縮/モード/状態/ガックンを組み替えて再探索。競合値は平均せずCONFLICT。
 
 ## 主要出典 — 今回取得日 2026-09-05
 
-- SANKYOオンライン博物館: `https://www.sankyo-fever.jp/collection/875/`
-- K-Navi: `https://p-kn.com/slot/1576/`
-- 4Gamer / フューチャースコープ発表: `https://www.4gamer.net/games/148/G014838/20120227009/`
-- GAME Watch: `https://game.watch.impress.co.jp/docs/news/515021.html`
-- HAZUSE: `https://hazuse.com/machine/pachislot/1S1168/`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/6602`
-- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/bisty_slot/20/a.php`
-- けんのスロットシミュレーション: `https://kenslo65536.com/kaiseki/eva-seimei.html`
-- 当時天井攻略記事: `https://mezase20.com/blog-entry-522.html`
+- K-Navi: `https://p-kn.com/slot/1568/`
+- パチビー: `https://www.pachibee.jp/machines/index/212010001`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/6616`
+- グリーンべると: `https://web-greenbelt.jp/00001285/`
+- 5号機クロニクル: `https://5goki.com/newgin-excite`
 
 ## GitHub commits
 
-- machine record: `a35fdcfdada47093de7af7ea0a822b5e14d3d8c6`
+- machine record: `d3fa4654e5733b504b614f1122545f6ef47b4081`
