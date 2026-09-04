@@ -1,5 +1,5 @@
 import { cellKey } from './grid.js';
-import { accessPorts, hardCells, reservationCells } from './facility.js';
+import { accessPorts, hardCells, projectToBasis, reservationCells } from './facility.js';
 import { createLogicalMap, getCell, occupyCells, reserveCells, setPortal } from './map.js';
 import { floodReachable } from './navigation.js';
 import { applyBuildingShell, createBuildingShell } from './structure.js';
@@ -67,14 +67,22 @@ function definitionFor(item) {
   return definition;
 }
 
-function validateIslandRows(islands) {
+export function validateIslandRows(islands) {
   if (!islands.length) return;
-  const rows = [...islands].sort((a, b) => a.y - b.y);
+  const orientation = islands[0].orientation ?? 'E';
+  const rows = islands.map((item) => ({ item, basis: projectToBasis(item, item.orientation ?? 'E') }));
+  for (const row of rows) {
+    if ((row.item.orientation ?? 'E') !== orientation) throw new Error('Foundation island rows must share orientation');
+  }
+  const anchor = rows[0].basis.longitudinal;
+  for (const row of rows) {
+    if (row.basis.longitudinal !== anchor) throw new Error('Foundation island rows must share longitudinal anchor');
+  }
+  rows.sort((a, b) => a.basis.lateral - b.basis.lateral);
+  const minimumPitch = SPEC.island.d + SPEC.island.chairDepth + SPEC.minWalkAisle;
   for (let i = 1; i < rows.length; i++) {
-    if (rows[i].orientation !== rows[0].orientation) throw new Error('Foundation island rows must share orientation');
-    if (rows[i].x !== rows[0].x) throw new Error('Foundation island rows must share longitudinal anchor');
-    const gap = rows[i].y - (rows[i - 1].y + 1);
-    if (gap < SPEC.minWalkAisle + SPEC.island.chairDepth) throw new Error(`${rows[i - 1].id} -> ${rows[i].id}: row gap ${gap} is below chair+walk standard`);
+    const pitch = rows[i].basis.lateral - rows[i - 1].basis.lateral;
+    if (pitch < minimumPitch) throw new Error(`${rows[i - 1].item.id} -> ${rows[i].item.id}: row pitch ${pitch} is below ${minimumPitch}`);
   }
 }
 
