@@ -56,6 +56,19 @@ function debugEnabled() {
   return new URLSearchParams(location.search).get('foundationDebug') === '1';
 }
 
+function fitScene(viewport, frame, scene) {
+  const baseWidth = Number(scene.dataset.baseWidth || scene.offsetWidth || 730);
+  const baseHeight = Number(scene.dataset.baseHeight || scene.offsetHeight || 530);
+  const availableWidth = Math.max(1, viewport.clientWidth - 4);
+  const availableHeight = Math.max(1, viewport.clientHeight - 4);
+  const scale = Math.min(1, availableWidth / baseWidth, availableHeight / baseHeight);
+  scene.style.setProperty('--scene-fit', String(scale));
+  frame.style.width = `${Math.ceil(baseWidth * scale)}px`;
+  frame.style.height = `${Math.ceil(baseHeight * scale)}px`;
+  frame.dataset.fitScale = scale.toFixed(4);
+  return scale;
+}
+
 function makeCursorPanel(cursor, onCommit, onCancel) {
   const panel = document.createElement('div');
   panel.className = 'placementPanel';
@@ -73,14 +86,20 @@ function makeCursorPanel(cursor, onCommit, onCancel) {
 
 function boot() {
   const scene = document.getElementById('scene');
+  const frame = document.getElementById('scene-frame');
   const viewport = document.getElementById('vp');
   const status = document.getElementById('foundation-status');
-  if (!scene || !viewport) throw new Error('Slot Pachiro root elements are missing');
+  if (!scene || !frame || !viewport) throw new Error('Slot Pachiro root elements are missing');
 
   runFoundationSelfChecks();
   let activeLayout = layout;
   let activeReport = validateLayout(activeLayout);
   renderLayout(scene, activeLayout);
+  fitScene(viewport, frame, scene);
+
+  const observer = new ResizeObserver(() => fitScene(viewport, frame, scene));
+  observer.observe(viewport);
+  window.addEventListener('orientationchange', () => requestAnimationFrame(() => fitScene(viewport, frame, scene)));
 
   if (debugEnabled()) {
     const islandB = activeLayout.islands.find((item) => item.id === 'island-b');
@@ -103,6 +122,7 @@ function boot() {
         activeLayout = cursor.commit();
         activeReport = validateLayout(activeLayout);
         renderLayout(scene, activeLayout);
+        fitScene(viewport, frame, scene);
         redrawDebug(cursor.snapshot().result);
       } catch (error) {
         panel.dataset.state = 'error';
@@ -111,6 +131,7 @@ function boot() {
     }, () => {
       cursor.cancel();
       renderLayout(scene, activeLayout);
+      fitScene(viewport, frame, scene);
       redrawDebug(cursor.snapshot().result);
     });
     bindPlacementCursorControls(cursor);
@@ -121,11 +142,10 @@ function boot() {
   }
 
   if (status) {
-    status.textContent = `GRID OK / ${activeReport.itemCount} objects / ${activeReport.reachableCells} walk / ROT 4 / PATH OK`;
+    const scale = Number(frame.dataset.fitScale || 1);
+    status.textContent = `GRID OK / ${activeReport.itemCount} objects / ${activeReport.reachableCells} walk / VIEW ${(scale * 100).toFixed(0)}%`;
     status.dataset.state = 'ok';
   }
-  viewport.scrollLeft = Math.max(0, (scene.clientWidth - viewport.clientWidth) / 2);
-  viewport.scrollTop = 4;
 }
 
 try { boot(); }
