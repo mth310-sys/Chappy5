@@ -14,70 +14,70 @@
 
 ## 今回の継続確認
 
-- 最新mainの `README.md`、正本ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、585件目「パチスロエイリヤンビギンズ」を再取得して開始。
-- `INDEX.md` は旧情報（19件/2006年時点）のためREADME規約どおり最新 `LATEST_HANDOFF.md` とmachineレコードを進捗正本として使用。
-- 開始時は **recordCount 585 / chronologicalFrontier 2011-06-27**。
-- 直前HANDOFFの2011年6月漏れ監査を継続し、repo検索で **蝶々乱舞 / 鬼浜外伝 ハヤト疾風伝 / リオスパ Rioの大温泉** が未登録であることを再確認。
-- 最古候補「蝶々乱舞」は HAZUSE 2011-06-10導入開始、K-Navi 2011-06-13ホール導入開始、当時グリーンべると 2011-06-19納品開始予定で日付差。平均せずCONFLICTとして保持し、586件目としてBACKFILL。
-- 遡及追加のため chronologicalFrontier は **2011-06-27** のまま維持。
+- 最新mainの `README.md`、正本ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、既存machine treeを再取得して開始。
+- `INDEX.md` は旧情報のためREADME規約どおり最新handoffと実machineレコードを進捗正本として使用。
+- **重要修正**: 直前handoffでは「鬼浜外伝 ハヤト疾風伝」「リオスパ Rioの大温泉」をrepo未登録としていたが、recursive machine treeと実ファイル直取得で既存登録を確認した。GitHub code searchの未ヒットを未登録根拠にしてはいけない。
+- 既存確認済み:
+  - `docs/real_machine_db/machines/2011-06-17_onihama-gaiden-hayato-shippuden.md`
+  - `docs/real_machine_db/machines/2011-06-20_riospa-rio-no-dai-onsen.md`
+  - `docs/real_machine_db/machines/2011-06-20_progolfer-saru.md`
+  - `docs/real_machine_db/machines/2011-06-27_daigyakuten.md`
+  - その他6月後半レコードもtree上に存在するため、以後は**tree実パス確認→fetch_file**を重複判定の優先手順とする。
+- このため本線では既存レコードを587件目として重複作成せず、recordCount 586 / frontier 2011-06-27を維持した。
 
-## 今回追加 — 586 蝶々乱舞
+## 今回の遡及QA — めぞん一刻（2006）
 
-- メーカー: **オリンピア**。
-- 型式/検定番号: **蝶々乱舞 / 1S0080**。
-- 5号機 / **A+ART・周期CZ**。
-- 機械割: **96.9 / 98.5 / 100.1 / 104.1 / 108.1 / 112.2%**。
-- BIG: **1/434.0 / 1/422.8 / 1/412.2 / 1/385.5 / 1/362.1 / 1/341.3**。
-- REG: **1/532.8 / 1/520.1 / 1/504.1 / 1/485.5 / 1/468.1 / 1/445.8**。
-- ボーナス合算: **1/239.2 / 1/233.2 / 1/226.8 / 1/214.9 / 1/204.2 / 1/193.3**。
-- ART初当たり: **1/372.7 / 1/336.0 / 1/332.1 / 1/277.8 / 1/255.1 / 1/167.1**。
-- 50枚ベース: **全設定共通30.49G**（パチマガスロマガ直接値）。
-- BIG約 **204枚**、REG約 **30枚**。
-- ART「乱舞チャンス」: **約+1.5枚/G、1セット33〜333G**。
-- 周期: **33G**。21周期目（661G以降）のREGで蝶々ゾーン、30周期目（957〜990G）は超高確、**990G+前兆5GでART確定**。
+対象: `docs/real_machine_db/machines/2006-11_mezon-ikkoku.md`
 
-### resetBehavior v0.7 — 586
+- 長く未確定だった「怪胴王直後の最初の実在resetBehavior欠損path」をrecursive machine tree順で確定。
+- tree順は `2006-11_kaidouou.md` → **`2006-11_mezon-ikkoku.md`** → `2006-11_mikawa-sasoriza-no-salaryman.md`。
+- `めぞん一刻` にはresetBehaviorが存在しなかったため、v0.7を追加してQA前線を**めぞん一刻まで補完済み**へ進めた。
+- 既存性能コアのPARTIAL要素（機械割CONFLICT、50枚ベース、RT純増等）はreset QAと混同せず維持。
 
-- `settingChangeBehavior`: **PARTIAL_CONFIRMED**。解析DBで「設定変更後も周期G数はクリアされず、ボーナス後の状態からスタート」を回収。K-Naviにも本機専用「設定変更後の挙動」「モード移行率(設定変更時)」項目の存在を確認。
-- `carryOverBehavior`: **UNVERIFIED_AFTER_RESEARCH**。据え置き時の周期G数/内部モード/引き戻し状態を本機固有の直接記述で確定できず。
-- `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH**。単純電源OFF→ON時の周期/モード処理を確定できず。
-- `gameCounterReset`: **RETAIN_ON_SETTING_CHANGE_CONFIRMED_BY_ANALYSIS_SOURCE**。設定変更でも周期G数非クリア。
-- `ceilingAfterReset`: **NO_SHORTENING_CONFIRMED; COUNTER_RETAINED**。
-- `modeAfterReset`: **PARTIAL**。設定変更時専用モード移行解析項目は存在。具体的な設定別振り分け本文は今回取得不能のためUNVERIFIED。
-- `stateAfterReset`: **BONUS-END_EQUIVALENT_START_REPORTED; DETAILS_UNVERIFIED**。
+### 性能再監査で補強した点
+
+- HAZUSE当時解析で初代2006年機を再確認。
+- 赤7スーパーBIG: **平均約265枚 / 終了後159G RT（一刻タイム）**。
+- 白7ノーマルBIG: **平均約200枚 / 終了後51G RT（五代タイム）**。
+- REG: **平均約100枚**。
+- 後年まとめ資料のSBB/NBB別仕様と整合。一方、5号機クロニクルの「BIG約260枚+50G RT」は表現差が大きいためCONFLICTを維持し、平均化しない。
+
+### resetBehavior v0.7 — めぞん一刻
+
+- `settingChangeBehavior`: **UNVERIFIED_AFTER_RESEARCH**。設定変更時のRT、キャラクター増加状態、出目等の本機固有処理を直接確定できず。
+- `carryOverBehavior`: **NO_GAME_COUNT_OR_LONG_TERM_HIT_MODE_FEATURE_CONFIRMED; OTHER_STATE_UNVERIFIED**。
+- `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH**。
+- `gameCounterReset`: **NOT_APPLICABLE_TO_CEILING_AFTER_RESEARCH**。通常時に蓄積するゲーム数天井/規定G数当選は確認なし。
+- `ceilingAfterReset`: **NOT_APPLICABLE; NO_STANDARD_GAME_COUNT_CEILING_CONFIRMED_AFTER_RESEARCH**。
+- `modeAfterReset`: **NOT_APPLICABLE_TO_LONG_TERM_HIT_MODE_AFTER_RESEARCH**。
+- `stateAfterReset`: **UNVERIFIED_FOR_ACTIVE_RT_AND_DISPLAY_STATE**。
 - `advantageousSectionReset`: **NOT_APPLICABLE**。
-- `resetBenefits`: **BONUS-END_EQUIVALENT_START_REPORTED; SEPARATE_NUMERIC_BENEFIT_NONE_CONFIRMED**。
-- `resetPenalties`: **NONE_CONFIRMED_AFTER_RESEARCH**。周期進捗消失は回収資料上否定。
-- `resetDetection`: **UNVERIFIED_AFTER_RESEARCH**。ガックン/初期出目/ランプ/7セグによる変更判別を直接確定できず。
-- 公開朝一数値: 設定変更専用モード振り分け等の**具体値はUNVERIFIED_AFTER_RESEARCH**。
+- `resetBenefits`: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- `resetPenalties`: **NONE_CONFIRMED_AFTER_RESEARCH**。ただしRT/表示状態の変更処理は未確認なので不利なしと一般化しない。
+- `resetDetection`: **UNVERIFIED_AFTER_RESEARCH**。
+- 公開朝一数値として確定できるreset専用値はなし。通常仕様の固定RT値 **159G / 51G** をnumericResetDataの比較基準として保存。
+- reset QA状態: **PARTIAL_AFTER_MULTI_SOURCE_RESEARCH**。
 
-## releaseDate CONFLICT — 586
+## 主要出典 — めぞん一刻 QA（取得日 2026-09-04）
 
-- HAZUSE: **2011-06-10 導入開始**。
-- K-Navi: **2011-06-13 ホール導入開始**。
-- グリーンべると（2011-05-12記事）: **2011-06-19 納品開始予定**。
-- 日付定義が異なるため平均化しない。BACKFILL時系列キーはHAZUSEの「導入開始」2011-06-10を採用し、他値をCONFLICTとして保存。
-
-## 主要出典 — 586（取得日 2026-09-04）
-
-- K-Navi: `https://p-kn.com/slot/1427/`
-- HAZUSE: `https://hazuse.com/machine/pachislot/1S0080/`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/6357`
-- グリーンべると: `https://web-greenbelt.jp/00002092/`
-- パチマガスロマガ小役確率: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/olympia_slot/97/c.php`
-- pacnk設定判別DB: `https://pacnk.com/slot/tools/sh_chouchouranbu.html`
-- 当時スペック転載: `https://plaza.rakuten.co.jp/x3esibm1/`
+- グリーンべると / P-WORLD業界ニュース: `https://news.p-world.co.jp/articles/1916/greenbelt`
+- HAZUSE初代解析: `https://hazuse.com/i/data/maisonikkoku/top.htm`
+- pacnk設定判別DB: `https://pacnk.com/slot/tools/sh_mezonikkoku.html`
+- 5号機クロニクル: `https://5goki.com/heiwa-olympia`
+- めぞん一刻シリーズ回顧: `https://www.marimo0925.net/pachislot-kikaiwariranking-mezonikkoku-ban/`
 
 ## 遡及QA継続地点
 
-- **怪胴王 (`docs/real_machine_db/machines/2006-11_kaidouou.md`) まで補完済み**を維持。
+- **めぞん一刻 (`docs/real_machine_db/machines/2006-11_mezon-ikkoku.md`) まで補完済み**。
+- 次のtree実パスは **`docs/real_machine_db/machines/2006-11_mikawa-sasoriza-no-salaryman.md`**。
+- 次回はまず同ファイルをfetchし、resetBehavior欠損ならそこから補完。既に収集済みならtree順で次の欠損へ進む。
 - `2006-11-27_thunder-v-special.md` は既にresetBehavior収集済みのため重複QA対象外。
-- QA済み範囲は推測で動かさず、怪胴王直後の実machine pathをtree順に確認し、最初のresetBehavior欠損から再開する。
 
-## 次回再開地点
+## 本線の次回再開地点
 
-1. **recordCount 586 / chronologicalFrontier 2011-06-27**。最新main README / mission / INDEX / LATEST_HANDOFF / 585・586レコードを再取得。
-2. **2011年6月漏れBACKFILLを継続**。次の最優先は **鬼浜外伝 ハヤト疾風伝**。HAZUSEは **2011-06-17導入開始**、当時グリーンべるとは **2011-06-19納品開始**。日付定義を分離し、repo未登録を再確認してから587件目候補として処理する。
-3. その次に **リオスパ Rioの大温泉**。当時グリーンべるとは **2011-06-19納品開始予定**。K-Navi/P-WORLD/HAZUSE等で実導入日を再照合し、鬼浜外伝との順序を確定する。
-4. **パチスロ 笑ゥせぇるすまん（三洋物産）**は2011年6月導入までは確認済みだが具体日未確定。検索語・資料系統を変えて6/27以前/同日か継続確認する。
-5. 6月漏れと6/27同日群を閉じた後に **6/28以降**へ前進。PARTIAL/UNVERIFIEDは公式・業界・当時解析・古いDB・アーカイブ・回顧資料まで十分再探索した後だけ残す。
+1. **recordCount 586 / chronologicalFrontier 2011-06-27**から開始。
+2. 6月漏れ候補はcode searchだけで未登録判定せず、recursive tree / contents実パスを先に確認する。
+3. 既存確認済みの鬼浜外伝・リオスパ・プロゴルファー猿・大逆転等は重複作成しない。
+4. **パチスロ 笑ゥせぇるすまん（三洋物産）**はP-WORLDで初代2011年機・A+ART（約+1.8枚/G）まで再確認したが、具体的な2011年6月導入日を今回の検索では安全に確定できなかった。次回はSANYO旧公式、K-Navi初代ページ、当時業界記事、旧新台スケジュール/アーカイブへ検索系統を変えて6/27以前・同日・以後を決める。
+5. 6/27以前の漏れが閉じたら6/27同日群を再監査し、その後6/28以降の最古未処理機へ前進。
+6. PARTIAL/UNVERIFIEDとreset欠損は公式・業界・当時解析・古いDB・アーカイブ・回顧資料まで十分再探索し、競合はCONFLICTとして分離する。
