@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>スロットパチ朗 / 1マス研究所</title>
+  <link rel="stylesheet" href="./cell-lab.css">
+</head>
+<body>
+  <main class="lab">
+    <header class="labHead">
+      <div><small>箱庭基盤 / 基準セル</small><h1>1マス研究所</h1></div>
+      <output id="cell-status">CELL READY</output>
+    </header>
+
+    <section class="preview" aria-label="基準セルプレビュー">
+      <div class="cellScene" id="cell-scene">
+        <div class="cellFloor" data-floor></div>
+        <div class="cellWall wallN" data-wall="N"></div>
+        <div class="cellWall wallE" data-wall="E"></div>
+        <div class="cellWall wallS" data-wall="S"></div>
+        <div class="cellWall wallW" data-wall="W"></div>
+        <div class="floorFurniture" data-furniture-floor></div>
+        <div class="wallFurniture wallFurnitureN" data-furniture-wall="N"></div>
+        <div class="wallFurniture wallFurnitureE" data-furniture-wall="E"></div>
+        <div class="wallFurniture wallFurnitureS" data-furniture-wall="S"></div>
+        <div class="wallFurniture wallFurnitureW" data-furniture-wall="W"></div>
+        <div class="cellOverlay" data-overlay></div>
+      </div>
+    </section>
+
+    <section class="controls" aria-label="基準セル編集">
+      <div class="group">
+        <b>床</b>
+        <button data-floor-type="default">標準</button>
+        <button data-floor-type="tile">タイル</button>
+        <button data-floor-type="carpet">カーペット</button>
+      </div>
+      <div class="group">
+        <b>壁</b>
+        <button data-wall-toggle="N">北</button>
+        <button data-wall-toggle="E">東</button>
+        <button data-wall-toggle="S">南</button>
+        <button data-wall-toggle="W">西</button>
+      </div>
+      <div class="group">
+        <b>壁種</b>
+        <button data-wall-kind="wall">壁</button>
+        <button data-wall-kind="door">ドア</button>
+        <button data-wall-kind="window">窓</button>
+        <button data-wall-kind="divider">仕切り</button>
+      </div>
+      <div class="group">
+        <b>床置き</b>
+        <button data-floor-furniture="shelf">棚</button>
+        <button data-floor-furniture="counter">カウンター</button>
+        <button data-floor-furniture="plant">植栽</button>
+        <button data-floor-furniture="none">撤去</button>
+      </div>
+      <div class="group">
+        <b>壁付け</b>
+        <button data-wall-furniture="poster">ポスター</button>
+        <button data-wall-furniture="display">壁面棚</button>
+        <button data-wall-furniture="none">撤去</button>
+      </div>
+      <div class="group">
+        <b>対象壁</b>
+        <button data-wall-target="N">北</button>
+        <button data-wall-target="E">東</button>
+        <button data-wall-target="S">南</button>
+        <button data-wall-target="W">西</button>
+      </div>
+      <div class="group wide">
+        <b>操作</b>
+        <button data-reset>初期化</button>
+        <button data-clone>複製確認</button>
+      </div>
+    </section>
+
+    <pre class="state" id="cell-state"></pre>
+  </main>
+  <script type="module" src="./core/cell-lab.js"></script>
+</body>
+</html>
