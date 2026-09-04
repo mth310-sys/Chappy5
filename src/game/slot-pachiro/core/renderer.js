@@ -1,6 +1,6 @@
 import { depthKey, orientationScreenAngle, projectedBounds, toScreen } from './grid.js';
-import { materializeCells } from './facility.js';
-import { BUILDING_SHELL, FLOOR_BOUNDS, SPEC } from './layout.js';
+import { materializeCells, reservationCells } from './facility.js';
+import { BUILDING_SHELL, FACILITY_DEFS, FLOOR_BOUNDS, SPEC } from './layout.js';
 
 const SVG_NS = 'http://www.w3.org/2000/svg';
 const machineInner = '<div class="unit9"><div class="shadow"></div><div class="backboard"></div><div class="header9"></div><div class="data9"></div><div class="mount9"></div><div class="rail-left"></div><div class="rail-right"></div><div class="sand9"><span class="screen"></span><span class="slot"></span><span class="button"></span><span class="indicator"></span><span class="medal"></span></div><div class="divider"></div><div class="box-side"><div class="box-stack"><div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div></div></div><div class="counter9"></div><div class="fascia9"></div><div class="foot"></div><div class="wear"></div></div>';
@@ -39,6 +39,53 @@ function line(svg, a, b, className) {
   svg.appendChild(node);
 }
 
+function polygon(svg, points, className) {
+  const node = document.createElementNS(SVG_NS, 'polygon');
+  node.setAttribute('points', points.map((p) => `${p.x},${p.y}`).join(' '));
+  node.setAttribute('class', className);
+  svg.appendChild(node);
+  return node;
+}
+
+function cellCorners(x, y) {
+  return [toScreen(x, y), toScreen(x + 1, y), toScreen(x + 1, y + 1), toScreen(x, y + 1)];
+}
+
+function renderInteriorZones(scene, layout) {
+  scene.querySelector('.interiorZones')?.remove();
+  const svg = document.createElementNS(SVG_NS, 'svg');
+  svg.setAttribute('class', 'interiorZones');
+  svg.setAttribute('width', String(scene.clientWidth || 730));
+  svg.setAttribute('height', String(scene.clientHeight || 530));
+  svg.setAttribute('aria-hidden', 'true');
+
+  const painted = new Set();
+  const paintCell = (cell, className) => {
+    const key = `${className}:${cell.x},${cell.y}`;
+    if (painted.has(key)) return;
+    painted.add(key);
+    polygon(svg, cellCorners(cell.x, cell.y), className);
+  };
+
+  for (const island of layout.islands) {
+    for (const cell of reservationCells(island, FACILITY_DEFS.island)) {
+      if (cell.role === 'chair-zone') paintCell(cell, 'zoneCell zoneChair');
+      if (cell.role === 'walk-zone') paintCell(cell, 'zoneCell zoneWalk');
+    }
+  }
+
+  for (const fixture of layout.fixtures) {
+    const definition = FACILITY_DEFS[fixture.type];
+    if (!definition) continue;
+    for (const cell of reservationCells(fixture, definition)) {
+      if (cell.role === 'customer-front') paintCell(cell, 'zoneCell zoneService');
+      if (cell.role === 'entrance-clearance') paintCell(cell, 'zoneCell zoneEntrance');
+    }
+  }
+
+  scene.appendChild(svg);
+}
+
 function renderLogicalGrid(scene) {
   scene.querySelector('.logicalGrid')?.remove();
   const svg = document.createElementNS(SVG_NS, 'svg');
@@ -70,7 +117,7 @@ function renderBuildingShell(scene) {
   }
 }
 
-function renderMapBase(scene) {
+function renderMapBase(scene, layout) {
   const bounds = projectedBounds(FLOOR_BOUNDS);
   const floor = scene.querySelector('.floor');
   const lot = scene.querySelector('.lot');
@@ -102,6 +149,7 @@ function renderMapBase(scene) {
   road.style.width = `${sceneWidth}px`;
   road.style.height = `${roadHeight}px`;
 
+  renderInteriorZones(scene, layout);
   renderLogicalGrid(scene);
   renderBuildingShell(scene);
 }
@@ -158,7 +206,7 @@ export function updateCustomerActor(actor, customer) {
 
 export function renderLayout(scene, layout) {
   scene.querySelectorAll('.gridNode').forEach((node) => node.remove());
-  renderMapBase(scene);
+  renderMapBase(scene, layout);
   layout.islands.forEach((item) => renderIsland(scene, item));
   layout.fixtures.forEach((item) => renderFixture(scene, item));
 }
