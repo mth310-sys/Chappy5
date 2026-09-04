@@ -4,71 +4,73 @@
 
 ## 現在地点
 
-- recordCount: **549**
-- latestMachineAdded: **頑固一徹**（アリストクラートテクノロジーズ / 2011-02-07）
-- latestRecord: `docs/real_machine_db/machines/2011-02-07_ganko-ittetsu.md`
+- recordCount: **551**
+- latestMachineAdded: **パチスロスーパー海物語IN沖縄30KD**（三洋物産 / 2011-02・具体日未確定）
+- latestRecord: `docs/real_machine_db/machines/2011-02_pachislot-super-umi-monogatari-in-okinawa-30kd.md`
 - chronologicalFrontier: **2011-02-07**
-- frontierLatestMachine: **頑固一徹**（同日群継続中）
+- frontierLatestExactDateMachine: **幕末維新龍馬烈伝**（DAXEL / 2011-02-07）
 - schema: **resetBehavior v0.7**
 - status: **READY_TO_CONTINUE**
 
 ## 今回の継続確認
 
-- 最新mainの `README.md`、正本ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、前線548レコード `秘宝伝 ～封じられた女神～` を再取得して開始。
-- 開始時正本は **recordCount 548 / chronologicalFrontier 2011-02-07**。
-- 前HANDOFF候補の `頑固一徹` を再探索。パチビーが **2011-02-07導入**を直接掲載し、P-WORLD・K-Navi・パチマガスロマガ・CrankySevenで同一機種の性能を照合。
-- repo code searchで未登録を確認し549件目として追加。
-- chronologicalFrontierは **2011-02-07** のまま。同日群は未完了。
-- 同日候補としてDAXEL `幕末維新龍馬烈伝` がパチビーで **2011-02-07導入**と確認でき、repo code searchでも未登録。次回最優先候補。
-- `パチスロ スーパー海物語IN沖縄30KD` は別スペックとして2011年2月導入まで確認済みだが、具体日未確定のため2/7以前・同日を推定しない。
+- 最新mainの `README.md`、正本ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、前線549レコード `頑固一徹` を再取得して開始。
+- 開始時正本は **recordCount 549 / chronologicalFrontier 2011-02-07**。
+- 前HANDOFF最優先候補DAXEL `幕末維新龍馬烈伝` を性能コア+resetBehaviorまで再探索して保存しようとした際、同時進行の別リレーが先に同一パスをmainへ追加。競合上書きを避けて対象ファイルを再取得し、**550件目として既存正本を採用**。
+- `幕末維新龍馬烈伝` は2011-02-07導入、機械割97.9〜112.2%、BIG/REG/BC、36.40G/50枚、ART約+1.4枚/G、ボーナス間999G+最大32G天井を収録済み。resetBehaviorでは**設定変更で999G天井進捗リセット**まで直接確認済み。
+- 標準25Φ `パチスロスーパー海物語IN沖縄` もmainに既存（547件目）であることを対象パス再取得で確認。コード検索インデックスの遅延により一時未登録に見えたため、重複作成を回避した。
+- 前HANDOFFで未確定だった30Φ別スペック `パチスロスーパー海物語IN沖縄30KD` を再探索。P-WORLDで独立30Φ機、pacnk/5号機クロニクルで**2011年2月導入**と別性能系列を確認。
+- `30KD` / `IN沖縄-30` / `2011年2月7日` / `2月6日` / `導入日` / `三洋物産` 等で具体日を再探索したが、30KD固有のホール導入日は月粒度より細かく確定できず。日付を推定せず**2011-02月粒度**で551件目として追加。
+- chronologicalFrontierは、具体日が確定している本線として **2011-02-07** を維持。30KDの月粒度レコードを理由に前後関係を捏造しない。
 
-## 今回追加 — 頑固一徹
+## 今回追加 — 550 幕末維新龍馬烈伝（同時進行リレー追加を正本採用）
 
-- メーカー: **アリストクラートテクノロジーズ**
+- メーカー: **DAXEL**
 - 導入: **2011-02-07**
-- タイプ: **5号機 / ノーマルタイプ / ボーナス主体 / 技術介入 / 4G演出用プチRT**
-- 機械割: **96.8 / 98.7 / 101.3 / 105.2 / 110.0 / 119.9%**
-- BIG: **1/280.1 / 273.1 / 264.3 / 251.1 / 237.4 / 213.5**
-- REG: **1/368.2 / 348.6 / 326.0 / 302.0 / 276.5 / 213.5**
-- ボーナス合算: **1/159.1 / 153.1 / 146.0 / 137.1 / 127.7～127.8 / 106.7**
-- baseGamesPer50: **33.49 / 33.95 / 34.59 / 35.68 / 37.12 / 39.38G**
-- BIG: **最大311枚**
-- REG: **最大103枚**
-- 特殊リプレイ後: **4G演出用プチRT**
-- 通常ゲーム数天井: **なし**
-- coreStatus: **COMPLETE_CORE_RESET_BEHAVIOR_PARTIAL**
+- タイプ: **A+ART / 自力型BC / ナビストック式ART**
+- 機械割: **97.9 / 98.9 / 100.4 / 105.6 / 108.4 / 112.2%**
+- BIG: **1/390.1 → 1/327.7**
+- REG: **1/399.6 → 1/496.5**
+- BC: **1/168.9 → 1/101.2**
+- baseGamesPer50: **36.40G**
+- 開国RUSH: **約+1.4枚/G**
+- 天井: **ボーナス間999G+α（最大32G）→ BC、以後約32G周期BC**
+- reset: **設定変更で天井ゲーム数リセット確認**。据え置き詳細、単純電源OFF→ON、状態/ナビストック、変更判別は未確定。
+- record: `docs/real_machine_db/machines/2011-02-07_bakumatsu-ishin-ryoma-retsuden.md`
 
-### resetBehavior v0.7 — 頑固一徹
+## 今回追加 — 551 パチスロスーパー海物語IN沖縄30KD
 
-- ボーナス主体ノーマルタイプで、通常ゲーム数天井・ART/AT/CZ・長期ゲーム数モードを持たないことを確認。
-- `gameCounterReset`: **NOT_APPLICABLE_NO_CEILING_CONFIRMED**。
-- `ceilingAfterReset`: **NOT_APPLICABLE_NO_CEILING_CONFIRMED**。
-- `modeAfterReset`: **NOT_APPLICABLE_AS_LONG_TERM_GAME_COUNT_MODE**。
-- `advantageousSectionReset`: **NOT_APPLICABLE**（5号機）。
+- メーカー: **三洋物産**
+- 導入: **2011-02（具体日UNVERIFIED_AFTER_RESEARCH）**
+- タイプ: **5号機 / ノーマル / 完全告知 / 30Φ沖スロ / ART非搭載**
+- 機械割: **96.7 / 98.1 / 99.4 / 102.0 / 104.4 / 108.4%**
+- BIG: **1/306.2 / 299.3 / 295.2 / 287.4 / 278.9 / 266.4**
+- REG: **1/574.9 / 560.1 / 546.1 / 496.5 / 452.0 / 404.5**
+- BIG: **約336枚**
+- REG: **104枚**
+- baseGamesPer50: **UNVERIFIED_AFTER_RESEARCH**。30KD/IN沖縄-30/30Φ/50枚/1000円/ベース/コイン持ちで再探索後も直接値を確定できず。
+- 標準25Φは97.5〜110.0%系列・別BIG/REG系列のため、CONFLICT平均化せず**別スペック**として分離。
+
+### resetBehavior v0.7 — 30KD
+
+- ART/AT/CZ非搭載のボーナス主体ノーマルで、主要な朝一持越し対象は確認されない。
+- `advantageousSectionReset`: **NOT_APPLICABLE**。
 - `resetBenefits` / `resetPenalties`: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- 天井進捗、ARTストック、CZ等の主要な朝一持越し対象は確認されないため、設定変更/据え置き/単純電源OFF→ONによるホール経営上の主要差は **NO_MATERIAL_GAMEPLAY_EFFECT_CONFIRMED** と整理。
-- 一方、4G演出RT・初期出目・ボーナス成立状態等の低レベル処理、ガックン/表示等の変更判別は本機固有の直接根拠を確定できず **UNVERIFIED_AFTER_RESEARCH**。
-- パチマガスロマガ保存インデックスには本機専用「朝イチ・設定変更」項目の存在を確認したが、具体本文は取得できず推測で補完しない。
+- 通常天井G数、設定変更時の天井CLEAR/RETAIN、単純電源OFF→ON、ガックン/初期出目は、30KD固有資料として直接確定できず **UNVERIFIED_AFTER_RESEARCH**。
+- 標準25ΦのresetBehaviorを自動転記していない。
 
-### CONFLICT / 丸め差
+### 主要出典 — 551（取得日 2026-09-04）
 
-- 性能コアに実質的CONFLICTなし。
-- 設定5のボーナス合算のみ **1/127.7 / 1/127.8** の掲載差があるが、BIG/REG基礎確率系列は一致しており丸め差として保持。平均化しない。
-
-### 主要出典 — 549（取得日 2026-09-04）
-
-- パチビー: `https://www.pachibee.jp/machines/index/210110002`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/6181`
-- K-Navi 機械割: `https://p-kn.com/slot/1333/29256/`
-- パチマガスロマガ 1000円G数: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/arist_slot/44/c.php`
-- パチマガスロマガ index: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/arist_slot/44/l.php`
-- CrankySeven: `https://crankyseven.com/gankoittetu-pc.htm`
-- ドラス/ValuePress: `https://www.value-press.com/pressrelease/76922`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/6276`
+- pacnk 30KD: `https://pacnk.com/slot/tools/sh_supaumistoryinokinawa30ked.html`
+- 5号機クロニクル 三洋一覧: `https://5goki.com/sanyo`
+- PAPIMO機種一覧: `https://papimo.jp/installed/search_50/S/33`
 
 ## 今回のGitHub更新
 
-- 549追加: `docs/real_machine_db/machines/2011-02-07_ganko-ittetsu.md`
-- machine record commit: `d0f305d6972d3ccc78e49138a421cb7574115930`
+- 550: 同時進行リレーが `docs/real_machine_db/machines/2011-02-07_bakumatsu-ishin-ryoma-retsuden.md` を追加済み。競合上書きせず正本採用。
+- 551追加: `docs/real_machine_db/machines/2011-02_pachislot-super-umi-monogatari-in-okinawa-30kd.md`
+- 551 machine record commit: `a4055e7c565483de3445a865a943cc01948f1a2f`
 - LATEST_HANDOFF: 本更新
 
 ## 遡及QA継続地点
@@ -79,9 +81,9 @@
 
 ## 次回再開地点
 
-1. **recordCount 549 / chronologicalFrontier 2011-02-07**。最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 549レコードを再取得。
-2. **2011-02-07同日群を継続**。DAXEL `幕末維新龍馬烈伝` はパチビーで2011-02-07導入、repo未登録を確認済み。まずこれを次の新規候補として性能コア+resetBehavior v0.7を収集する。
-3. `パチスロ スーパー海物語IN沖縄30KD` の具体的ホール導入日を引き続き再探索し、2/7以前または同日を確定できた場合は時系列優先で別レコード化する。月粒度しか取れなければ無理に日付を推定しない。
-4. その他2/7同日候補を導入カレンダー/業界記事/当時解析で照合し、同日群を閉じてから後日へ進む。
+1. **recordCount 551 / chronologicalFrontier 2011-02-07**。最新mainのREADME / mission / INDEX / LATEST_HANDOFF / 550・551レコードを再取得。
+2. **2011-02-07同日群を最終監査**。コード検索インデックス遅延が発生したため、候補名検索だけでなくmachine tree/対象パスの存在確認も併用して重複を防ぐ。
+3. 30KDの具体日は引き続きQA候補だが、十分な再探索後も2011-02月粒度のみのため、日付確定まで本線時系列を止めない。より強い当時資料が出た場合のみreleaseDateを更新。
+4. 2/7同日群が閉じたら **2011-02-08以降の最古未処理機**を導入カレンダー、業界記事、当時解析サイト、古いDBで境界監査して前進する。
 5. `残機尽きるまで私は戦うS` は2011-03-06納品開始予定のため2月へ誤繰上げしない。
 6. PARTIAL/UNVERIFIEDは表記揺れ・型式・メーカー・シリーズ・設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックン/有利区間を変えて横断後のみ維持。競合は平均せずCONFLICT。
