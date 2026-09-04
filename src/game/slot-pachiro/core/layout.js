@@ -2,6 +2,7 @@ import { cellKey } from './grid.js';
 import { accessPorts, hardCells, projectToBasis, reservationCells } from './facility.js';
 import { createLogicalMap, getCell, occupyCells, reserveCells, setPortal } from './map.js';
 import { floodReachable } from './navigation.js';
+import { buildServiceNetwork } from './service-network.js';
 import { applyBuildingShell, createBuildingShell } from './structure.js';
 
 export const SPEC = Object.freeze({
@@ -174,8 +175,13 @@ export function validateLayout(candidate = layout) {
     const failed = facilities.filter((facility) => !facility.operational).map((facility) => facility.id).join(', ');
     throw new Error(`Non-operational facilities: ${failed}`);
   }
+  const serviceNetwork = buildServiceNetwork(map, ports, facilities);
+  const expectedConnectedFacilities = facilities.filter((facility) => facility.servicePorts > 0 && facility.category !== 'portal').length;
+  if (serviceNetwork.connectedFacilities !== expectedConnectedFacilities) {
+    throw new Error(`Service network incomplete: ${serviceNetwork.connectedFacilities}/${expectedConnectedFacilities}`);
+  }
   return {
-    map, ports, reachable, occupied, facilities,
+    map, ports, reachable, occupied, facilities, serviceNetwork,
     itemCount: all.length,
     operationalCount: facilities.filter((facility) => facility.operational).length,
     reachableCells: reachable.size,
