@@ -26,18 +26,29 @@ const islandPorts = Object.freeze([
   Object.freeze({ name: 'aisle-center', x: 4, y: 2, role: 'aisle-access', required: true }),
 ]);
 
+function operation(category, serviceRoles = []) {
+  return Object.freeze({ category, serviceRoles: Object.freeze([...serviceRoles]) });
+}
+
 export const FACILITY_DEFS = Object.freeze({
-  island: Object.freeze({ w: 9, d: 1, reservationOffsets: islandReservation, accessPorts: islandPorts }),
+  island: Object.freeze({
+    w: 9, d: 1,
+    operation: operation('gaming', ['machine-seat', 'aisle-access']),
+    reservationOffsets: islandReservation,
+    accessPorts: islandPorts,
+  }),
   counter: Object.freeze({
     w: 4, d: 2,
+    operation: operation('service', ['customer-front']),
     reservationOffsets: Object.freeze(Array.from({ length: 4 }, (_, x) => Object.freeze({ x, y: 2, role: 'customer-front' }))),
     accessPorts: Object.freeze([
       Object.freeze({ name: 'counter-front-a', x: 1, y: 2, role: 'customer-front', required: true }),
       Object.freeze({ name: 'counter-front-b', x: 2, y: 2, role: 'customer-front', required: true }),
     ]),
   }),
-  plant: Object.freeze({ w: 1, d: 1 }),
+  plant: Object.freeze({ w: 1, d: 1, operation: operation('decor') }),
   entrance: Object.freeze({
+    operation: operation('portal', ['portal']),
     hardOffsets: Object.freeze([]),
     reservationOffsets: Object.freeze([
       Object.freeze({ x: 0, y: -1, role: 'entrance-clearance' }),
@@ -47,7 +58,7 @@ export const FACILITY_DEFS = Object.freeze({
       Object.freeze({ name: 'inside', x: 0, y: 0, role: 'portal', required: true, portal: true }),
     ]),
   }),
-  staff: Object.freeze({ hardOffsets: Object.freeze([]) }),
+  staff: Object.freeze({ hardOffsets: Object.freeze([]), operation: operation('staff') }),
 });
 
 export const layout = Object.freeze({
@@ -130,11 +141,43 @@ function validateRequiredAccess(map, ports) {
   return reachable;
 }
 
+function buildFacilityOperations(all, ports, reachable) {
+  return all.map((item) => {
+    const definition = definitionFor(item);
+    const operationMeta = definition.operation ?? operation('generic');
+    const itemPorts = ports.filter((port) => port.facilityId === item.id);
+    const requiredPorts = itemPorts.filter((port) => port.required);
+    const reachablePorts = requiredPorts.filter((port) => reachable.has(cellKey(port.x, port.y)));
+    const servicePorts = itemPorts.filter((port) => operationMeta.serviceRoles.includes(port.role));
+    const reachableServicePorts = servicePorts.filter((port) => reachable.has(cellKey(port.x, port.y)));
+    return Object.freeze({
+      id: item.id,
+      type: item.type,
+      category: operationMeta.category,
+      requiredPorts: requiredPorts.length,
+      reachablePorts: reachablePorts.length,
+      servicePorts: servicePorts.length,
+      reachableServicePorts: reachableServicePorts.length,
+      operational: requiredPorts.length === reachablePorts.length && servicePorts.length === reachableServicePorts.length,
+    });
+  });
+}
+
 export function validateLayout(candidate = layout) {
   validateIslandRows(candidate.islands);
   const { map, ports, all } = buildLogicalLayout(candidate);
   const reachable = validateRequiredAccess(map, ports);
   const occupied = new Map();
   for (const cell of map.cells.values()) if (cell.occupiedBy) occupied.set(cellKey(cell.x, cell.y), cell.occupiedBy);
-  return { map, ports, reachable, occupied, itemCount: all.length, reachableCells: reachable.size };
+  const facilities = buildFacilityOperations(all, ports, reachable);
+  if (facilities.some((facility) => !facility.operational)) {
+    const failed = facilities.filter((facility) => !facility.operational).map((facility) => facility.id).join(', ');
+    throw new Error(`Non-operational facilities: ${failed}`);
+  }
+  return {
+    map, ports, reachable, occupied, facilities,
+    itemCount: all.length,
+    operationalCount: facilities.filter((facility) => facility.operational).length,
+    reachableCells: reachable.size,
+  };
 }
