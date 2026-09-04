@@ -4,74 +4,65 @@
 
 ## 現在地点
 
-- recordCount: **599**
-- latestMachineAdded: **未来少年コナン**（ニューギン / 時系列キー2011-09-05 / CONFLICT_DATE）
-- latestRecord: `docs/real_machine_db/machines/2011-09-05_future-boy-conan.md`
+- recordCount: **600**
+- latestMachineAdded: **探偵物語TURBO**（オリンピア / 2011-09-05）
+- latestRecord: `docs/real_machine_db/machines/2011-09-05_detective-story-turbo.md`
 - chronologicalFrontier: **2011-09-05**
-- frontierLatestExactDateMachine: **未来少年コナン**
+- frontierLatestExactDateMachine: **探偵物語TURBO**
 - schema: **resetBehavior v0.7**
 - status: **READY_TO_CONTINUE**
 
-## 今回の本線追加 — 未来少年コナン
+## 今回の本線追加 — 探偵物語TURBO
 
-- 最新mainのREADME、正本ミッションv0.7、INDEX、LATEST_HANDOFF、直前frontierレコードを再取得して開始。
-- 開始時正本は recordCount **598** / chronologicalFrontier **2011-08-22**「パチスロ銀と金」。
-- HAZUSE 2011年8月カレンダーは08-22で終了。09-02掲載はパチンコ「CR聖闘士星矢-青銅-」で、パチスロ本線の次候補ではないことを確認。
-- repo検索で本機未登録を確認。
-- 前回保留していた導入日競合を再監査し、K-Navi 2011-08-16に対し、当時グリーンべると・HAZUSE・パチビーは2011-09-05、P-WORLDも2011年9月表記。競合を平均せず保持し、複数一致＋当時業界記事を重視して2011-09-05を時系列キーとして599件目に追加。
-- 型式名 **未来少年コナンV**、検定番号 **1S0277** をHAZUSE/P-WORLDで確認。
+- 最新mainのREADME、正本ミッションv0.7、INDEX、LATEST_HANDOFF、直前frontierレコード「未来少年コナン」を再取得して開始。
+- 開始時正本は recordCount **599** / chronologicalFrontier **2011-09-05**。
+- repo検索で「探偵物語TURBO」未登録を確認し600件目として追加。
+- 導入時期は、当時グリーンべると/P-WORLD業界ニュースが**2011-09-04納品開始予定**、パチビー/DMMぱちタウンが**2011-09-05ホール導入開始**。定義を分け、時系列キーはホール導入日の09-05。
+- オリンピア公式2011年製品一覧でも本機存在を確認。
 
 ### 性能コア
 
-- 5号機 A+ART / ゲーム数上乗せ / ステップアップART。
-- 機械割: **96.1 / 98.7 / 100.4 / 104.3 / 107.3 / 111.3%**。
-- ボーナス合算: **1/224.4 / 219.9 / 215.6 / 211.4 / 207.4 / 202.3**。
-- ART初当り: **1/696.0 / 457.3 / 623.1 / 378.7 / 530.5 / 305.9**。
-- 50枚ベース（パチマガスロマガ）: **33.97 / 34.05 / 34.12 / 34.19 / 34.27 / 34.34G/1000円**。当時業界記事の約34Gと整合。
-- BIG約**207枚**、REG約**48枚**。
-- ART「ギガントモード」: **約+1.5枚/G、初回30/50/100G**。
-- 上位「ギガント大炎上モード」、超高確率上乗せ「太陽エネルギーチャンス」1セット10G、1回最大300G上乗せ。
-- 通常天井: **ボーナス間999G消化以降に成立したボーナス終了後ART確定**。P-WORLD/パチビーは恩恵を**50G or 300Gのギガントモード**と記載。
+- 5号機 A+ART / ゲーム数管理ART / 継続率自力加算。
+- 機械割: **97.7 / 99.3 / 101.1 / 104.4 / 109.0 / 113.2%**。
+- ボーナス合算: **1/199.8 / 196.8 / 193.3 / 188.3 / 180.0 / 172.5**。
+- ART初当り: **1/378.6 / 355.9 / 346.1 / 311.7 / 295.8 / 274.8**。
+- BIG: **1/445.8 → 1/354.2**、REG: **1/642.5 → 1/565.0**、工藤ミッション: **全設定1/829.6**。
+- 50枚ベース: **34.94G/1000円（全設定共通）**。パチマガスロマガで直接確認。
+- BIG約**204枚**、REG約**48枚**、工藤ミッション約**18枚**。
+- ART「工藤チャンス」: **32G / 約+1.4枚/G**。上位「工藤チャンスTURBO」も同基本性能。
+- 最深天井: **ART間1280G**。内部モードは**6種類**、レア役/ボーナスで規定ゲーム数短縮抽選あり。
 
 ### resetBehavior v0.7
 
-- K-Naviに本機専用 **「設定変更後の挙動」** 解析項目が現存。
-- ただし本文URL `https://p-kn.com/slot/1466/33185/` は今回の取得経路でcache missとなり、設定変更時の具体的な天井CLEAR/RETAIN・内部状態振り分けを安全に回収できなかった。
-- 表記揺れと「設定変更/リセット/朝一/据え置き/電源OFF ON/宵越し/天井/高確/ガックン」を組み替えて再探索したが、据え置き・単純電断・変更判別の直接根拠も確定できず **UNVERIFIED_AFTER_RESEARCH**。
-- 設定変更専用短縮天井、朝一ART優遇、朝一特定G以内当選率は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- K-Naviに本機専用 **「設定変更後の挙動」**、パチマガスロマガに **「朝イチ・設定変更」** 解析項目が現存することを確認。
+- ただし検索結果/現取得経路では具体本文値を安全に回収できず、設定変更時のART間規定G数CLEAR/RETAIN、内部6モード再抽選/引継ぎ、状態移行を確定できなかった。
+- 「探偵物語TURBO / 探偵物語 TURBO / オリンピア」と「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / 規定ゲーム数 / モード / ガックン」を組み替えて再探索した後のみ **UNVERIFIED_AFTER_RESEARCH** とした。
+- 据え置き、単純電源OFF→ON、ガックン/初期出目等の変更判別も本機固有の直接根拠を確定できず。
+- 設定変更専用短縮天井、朝一特定G以内ART優遇、設定変更専用モード振り分けの具体公開値は **NONE_CONFIRMED_AFTER_RESEARCH**。
 - 有利区間は5号機のため **NOT_APPLICABLE**。
-
-## 日付競合
-
-- **未来少年コナン**
-  - K-Navi: **2011-08-16** ホール導入開始
-  - 当時グリーンべると: **2011-09-05** 納品開始予定
-  - HAZUSE: **2011-09-05** 導入開始
-  - パチビー: **2011-09-05** 導入日
-  - P-WORLD: **2011年09月**
-- 平均せず `CONFLICT_DATE`。DB時系列キーは2011-09-05。
 
 ## 2011-09-05同日群の次候補
 
-外部検索で少なくとも以下を2011-09-05導入機として確認済み。次回はrepo重複を突合し、未登録の最古候補から処理する。
+同日群はまだ未クローズ。前回調査で以下を2011-09-05候補として確認済み。
 
-1. **探偵物語TURBO**（オリンピア）— パチビー 2011-09-05。
-2. **夢夢ワールドDXII / 夢夢ワールドDX2**（SANKYO）— K-Navi/HAZUSE 2011-09-05。型式 `夢夢ワールドDXIIZ`、検定番号 `1S0513`。
-3. **魔法少女隊アルス**（藤商事）— パチビー 2011-09-05。
+1. **夢夢ワールドDXII / 夢夢ワールドDX2**（SANKYO）— K-Navi/HAZUSE 2011-09-05。型式 `夢夢ワールドDXIIZ`、検定番号 `1S0513`。
+2. **魔法少女隊アルス**（藤商事）— パチビー 2011-09-05。
 
-同日群は未クローズ。**次回最優先は「探偵物語TURBO」のrepo重複確認**。登録済みなら夢夢ワールドDXII、次いで魔法少女隊アルスへ進む。
+**次回最優先は「夢夢ワールドDXII」のrepo重複確認**。未登録なら性能コア＋resetBehavior v0.7で601件目として処理。登録済みなら「魔法少女隊アルス」へ進む。同日群を閉じた後、2011-09-06以降の最古未処理機を監査する。
 
-## 主要出典 — 未来少年コナン（取得日 2026-09-04）
+## 主要出典 — 探偵物語TURBO（取得日 2026-09-04）
 
-- 当時グリーンべると / P-WORLD業界ニュース: `https://news.p-world.co.jp/articles/4779/greenbelt`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/6443`
-- パチビー: `https://www.pachibee.jp/machines/index/211070003`
-- K-Navi: `https://p-kn.com/slot/1466/`
-- K-Navi 設定変更後本文URL（cache miss）: `https://p-kn.com/slot/1466/33185/`
-- HAZUSE: `https://hazuse.com/machine/pachislot/1S0277/`
-- パチマガスロマガ 1000円あたりゲーム数: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/newgin_slot/19/c.php`
-- パチマガスロマガ 基本仕様: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/newgin_slot/19/a.php`
-- 後年設定判別DB: `https://pacnk.com/slot/tools/sh_konan.html`
+- オリンピア公式2011年発売機種一覧: `https://www.olympia.co.jp/official/products/2011.html`
+- 当時グリーンべると / P-WORLD業界ニュース: `https://news.p-world.co.jp/articles/4777/greenbelt`
+- グリーンべると現行アーカイブ: `https://web-greenbelt.jp/00002179/`
+- 娯楽産業: `https://www.goraku-sangyo.com/%E5%B9%B3%E5%92%8C%E3%80%80%E3%83%91%E3%83%81%E3%83%B3%E3%82%B3%EF%BC%86%E3%83%91%E3%83%81%E3%82%B9%E3%83%AD2%E6%A9%9F%E7%A8%AE%E5%90%8C%E6%99%82%E7%99%BA%E8%A1%A8/`
+- パチビー: `https://www.pachibee.jp/machines/index/211070004`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/6439`
+- K-Navi: `https://p-kn.com/slot/1472/`
+- パチマガスロマガ 基本仕様: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/olympia_slot/98/a.php`
+- パチマガスロマガ 1000円あたりゲーム数: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/olympia_slot/98/c.php`
+- パチマガスロマガ 総合: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/olympia_slot/98/olympia_slot_98.php`
+- DMMぱちタウン: `https://p-town.dmm.com/machines/1379`
 
 ## 遡及resetBehavior QA継続地点
 
@@ -82,9 +73,9 @@
 
 ## 本線の次回再開地点
 
-1. **recordCount 599 / chronologicalFrontier 2011-09-05**から開始。
-2. 未来少年コナンを重複追加しない。
-3. **2011-09-05同日群を継続監査**。最優先は「探偵物語TURBO」のrepo重複確認。
-4. 未登録なら性能コア＋resetBehavior v0.7で600件目として処理。登録済みなら「夢夢ワールドDXII」→「魔法少女隊アルス」の順に突合。
-5. PARTIAL/UNVERIFIEDは機種名表記揺れ・型式・メーカー・シリーズ名と設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックンを組み替えて再探索する。
+1. **recordCount 600 / chronologicalFrontier 2011-09-05**から開始。
+2. 未来少年コナン、探偵物語TURBOを重複追加しない。
+3. **2011-09-05同日群を継続監査**。最優先は「夢夢ワールドDXII / 夢夢ワールドDX2」のrepo重複確認。
+4. 未登録なら性能コア＋resetBehavior v0.7で601件目として処理。登録済みなら「魔法少女隊アルス」へ進む。
+5. PARTIAL/UNVERIFIEDは表記揺れ・型式・メーカー・シリーズ名と設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックンを組み替えて再探索する。
 6. 競合値は平均せずCONFLICT。後継機値・一般則による補完は禁止。
