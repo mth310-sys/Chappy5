@@ -20,6 +20,10 @@
         <div class="cellWall wallE" data-wall="E"></div>
         <div class="cellWall wallS" data-wall="S"></div>
         <div class="cellWall wallW" data-wall="W"></div>
+        <div class="cabinetPair" aria-label="背中合わせ筐体スケール確認">
+          <div class="slotCabinet slotCabinetBack"><i class="cabTop"></i><i class="cabScreen"></i><i class="cabReels"></i><i class="cabPanel"></i><i class="cabBase"></i></div>
+          <div class="slotCabinet slotCabinetFront"><i class="cabTop"></i><i class="cabScreen"></i><i class="cabReels"></i><i class="cabPanel"></i><i class="cabBase"></i><i class="cabSand"></i></div>
+        </div>
         <div class="floorFurniture" data-furniture-floor></div>
         <div class="wallFurniture wallFurnitureN" data-furniture-wall="N"></div>
         <div class="wallFurniture wallFurnitureE" data-furniture-wall="E"></div>
@@ -30,51 +34,13 @@
     </section>
 
     <section class="controls" aria-label="基準セル編集">
-      <div class="group">
-        <b>床</b>
-        <button data-floor-type="default">標準</button>
-        <button data-floor-type="tile">タイル</button>
-        <button data-floor-type="carpet">カーペット</button>
-      </div>
-      <div class="group">
-        <b>壁</b>
-        <button data-wall-toggle="N">北</button>
-        <button data-wall-toggle="E">東</button>
-        <button data-wall-toggle="S">南</button>
-        <button data-wall-toggle="W">西</button>
-      </div>
-      <div class="group">
-        <b>壁種</b>
-        <button data-wall-kind="wall">壁</button>
-        <button data-wall-kind="door">ドア</button>
-        <button data-wall-kind="window">窓</button>
-        <button data-wall-kind="divider">仕切り</button>
-      </div>
-      <div class="group">
-        <b>床置き</b>
-        <button data-floor-furniture="shelf">棚</button>
-        <button data-floor-furniture="counter">カウンター</button>
-        <button data-floor-furniture="plant">植栽</button>
-        <button data-floor-furniture="none">撤去</button>
-      </div>
-      <div class="group">
-        <b>壁付け</b>
-        <button data-wall-furniture="poster">ポスター</button>
-        <button data-wall-furniture="display">壁面棚</button>
-        <button data-wall-furniture="none">撤去</button>
-      </div>
-      <div class="group">
-        <b>対象壁</b>
-        <button data-wall-target="N">北</button>
-        <button data-wall-target="E">東</button>
-        <button data-wall-target="S">南</button>
-        <button data-wall-target="W">西</button>
-      </div>
-      <div class="group wide">
-        <b>操作</b>
-        <button data-reset>初期化</button>
-        <button data-clone>複製確認</button>
-      </div>
+      <div class="group"><b>床</b><button data-floor-type="default">標準</button><button data-floor-type="tile">タイル</button><button data-floor-type="carpet">カーペット</button></div>
+      <div class="group"><b>壁</b><button data-wall-toggle="N">北</button><button data-wall-toggle="E">東</button><button data-wall-toggle="S">南</button><button data-wall-toggle="W">西</button></div>
+      <div class="group"><b>壁種</b><button data-wall-kind="wall">壁</button><button data-wall-kind="door">ドア</button><button data-wall-kind="window">窓</button><button data-wall-kind="divider">仕切り</button></div>
+      <div class="group"><b>床置き</b><button data-floor-furniture="shelf">棚</button><button data-floor-furniture="counter">カウンター</button><button data-floor-furniture="plant">植栽</button><button data-floor-furniture="none">撤去</button></div>
+      <div class="group"><b>壁付け</b><button data-wall-furniture="poster">ポスター</button><button data-wall-furniture="display">壁面棚</button><button data-wall-furniture="none">撤去</button></div>
+      <div class="group"><b>対象壁</b><button data-wall-target="N">北</button><button data-wall-target="E">東</button><button data-wall-target="S">南</button><button data-wall-target="W">西</button></div>
+      <div class="group wide"><b>操作</b><button data-reset>初期化</button><button data-clone>複製確認</button></div>
     </section>
 
     <pre class="state" id="cell-state"></pre>
