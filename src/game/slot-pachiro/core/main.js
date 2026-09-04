@@ -68,6 +68,11 @@ function runFoundationSelfChecks() {
   runRotationSelfChecks();
   const baseReport = validateLayout(layout);
   assert(routeToFirstMachine(baseReport).length > 1, 'entrance-to-machine route must exist');
+  assert(baseReport.serviceNetwork.routeCount === 42, 'service network should include 40 island ports + 2 counter ports');
+  assert(baseReport.serviceNetwork.connectedFacilities === 5, 'four islands and counter must connect to service network');
+  assert((baseReport.serviceNetwork.roleCounts['main-trunk'] ?? 0) > 0, 'service network requires shared trunk cells');
+  assert((baseReport.serviceNetwork.roleCounts['island-aisle'] ?? 0) > 0, 'service network requires island aisle cells');
+  assert((baseReport.serviceNetwork.roleCounts['service-front'] ?? 0) > 0, 'service network requires service-front cells');
 }
 
 function debugEnabled() {
@@ -161,7 +166,7 @@ function boot() {
 
   if (status) {
     const scale = Number(frame.dataset.fitScale || 1);
-    status.textContent = `GRID OK / ${activeReport.itemCount} objects / ${activeReport.reachableCells} walk / VIEW ${(scale * 100).toFixed(0)}% / ORIENT 4`;
+    status.textContent = `GRID OK / ${activeReport.itemCount} objects / ${activeReport.reachableCells} walk / NET ${activeReport.serviceNetwork.routeCount} / VIEW ${(scale * 100).toFixed(0)}%`;
     status.dataset.state = 'ok';
   }
 }
