@@ -4,96 +4,86 @@
 
 ## 現在地点
 
-- recordCount: **644**
-- latestMachineAdded: **チャレンジマン**（岡崎産業）
-- latestRecord: `docs/real_machine_db/machines/2012-03-05_challenge-man.md`
-- chronologicalFrontier: **2012-03-05**
-- frontierLatestExactDateMachine: **チャレンジマン**
+- recordCount: **645**
+- latestMachineAdded: **パチスロ銀河鉄道999**（山佐）
+- latestRecord: `docs/real_machine_db/machines/2012-03-12_ginga-tetsudo-999.md`
+- chronologicalFrontier: **2012-03-12**
+- frontierLatestExactDateMachine: **パチスロ銀河鉄道999**
 - schema: **resetBehavior v0.7**
-- status: **2012-03-05_SAME_DAY_GROUP_AUDIT_REQUIRED__NEXT_TENCHU_DEADLY_BLOW_ON_2012-03-05**
+- status: **2012-03-12_SAME_DAY_GROUP_AUDIT_REQUIRED**
 
-## 今回の本線追加 — チャレンジマン
+## 今回の同期修正
 
-- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード「女番長（スケバン）」を確認して開始。
-- INDEXは旧地点（19件）のためREADME規定どおりLATEST_HANDOFFを進捗正本として使用。
-- 開始時正本は **recordCount 643 / chronologicalFrontier 2012-03-05**。
-- 直前handoff指定の最優先候補「チャレンジマン」をrepo検索し未登録を確認後、644件目として追加。
+- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、既存03/05レコードを確認して開始。
+- INDEXは旧地点19件のままなので、README規定どおりLATEST_HANDOFFを進捗正本として使用。
+- 開始時handoffはrecordCount 644 / frontier 2012-03-05で「天誅～Deadly Blow～を次候補」としていたが、GitHubの最新コミット履歴とファイル直接fetchで、天誅は既に641件目として `d3fa4654e5733b504b614f1122545f6ef47b4081` で登録済みと判明。コード検索の索引遅延によるhandoff後退だったため重複追加しなかった。
+- 天誅既存レコードの未取得だった設定別ART初当たりをパチビー直接表から補完し、recordStatusを `COMPLETE_CORE_RESET_RESEARCHED_PARTIAL` へ更新。commit `58dee5960a8008d83f7d9d84c020aadc4f9d1853`。
+- 03/05同日群は天誅、シスタークエスト3、女番長、チャレンジマンまで登録済みとして閉鎖監査。03/09について具体的な未登録パチスロを確定できず、次の具体日付き候補へ前進した。
+
+## 今回の本線追加 — パチスロ銀河鉄道999
 
 ### 導入日・型式
 
-- 時系列キー: **2012-03-05**。
-- K-Navi・パチビーが2012-03-05導入開始で一致。
-- 2012-02-20付グリーンべるとは3月4日から納品開始予定。納品日/ホール導入日の定義差として保持。
-- P-WORLD・5号機クロニクル表記から formalModelName は **チャレンジマンA**。
-- 検定番号は **UNVERIFIED_AFTER_RESEARCH**。
+- 時系列キー: **2012-03-12**（K-Naviホール導入開始）。
+- 山佐公式は2012年3月稼働。
+- 2012-02-07付グリーンべるとは「3月下旬納品開始予定」としており、予定変更または日付定義差の可能性があるため平均せず記録。
+- formalModelName: **パチスロギンガテツドウ999S**。
+- approvalNumber: **1S1242**。
 
 ### 性能コア
 
-- systemType: **ボーナス+ART / CZ搭載 / 天井ポイント型**。
-- 機械割: **97.4 / 99.0 / 100.6 / 102.4 / 105.0 / 110.0%**。
-- 赤7BIG: **全設定1/1285**。
-- 青7BIG: **1/630 / 618 / 612 / 596 / 570 / 570**（P-WORLD丸め値）。
-- BAR: **1/655 / 636 / 618 / 596 / 568 / 512**（P-WORLD丸め値）。
-- ART初当たり: **1/697.5 / 689.7 / 676.3 / 676.4 / 676.3 / 662.1**。
-- 50枚ベース: 表記・資料系統を変えて再探索後も **UNVERIFIED_AFTER_RESEARCH**。
-- ART「チャレンジゲーム」: **1セット30G+α / 純増約+1.3枚/G / 約50～90%ループ**。
-- 赤BIG約300枚、青BIG約195枚、BAR約53枚。
-- 天井は固定G数ではなくポイント制。ボーナスorART終了時に **50 / 200 / 230ポイント**から規定値を決定し、到達で「スーパーチャレンジタイム」。
+- systemType: **A+ART / ボーナス+ART / 天井あり**。
+- 機械割: **96.8 / 98.9 / 100.9 / 104.1 / 108.9 / 115.2%**。
+- BIG合算: **1/394.8 / 390.1 / 385.5 / 381.0 / 376.6 / 372.3**。
+- CHALLENGE BONUS: **1/606.8 / 585.1 / 564.9 / 537.1 / 520.1 / 492.7**。
+- ART初当たり: **1/368.6 / 299.2 / 328.0 / 261.7 / 287.7 / 230.7**。
+- 50枚ベース相当（パチマガスロマガ1000円あたり）: **35.00 / 35.04 / 35.09 / 35.14 / 35.20 / 35.28G**。
+- ART純増: 約**+1.5枚/G**。
+- ギャラクシーモード: **1セット30G**。
+- ギャラクシーエクスプレス: **1セット30G+α**。
+- PREMIUM約24枚 / BIG約203枚 / CHALLENGE約49枚。
+- 通常天井: **999G**で「命の火解放モード」。
 
 ### resetBehavior v0.7
 
-- pacnk本機整理資料で **設定変更後は天井ポイント・CZポイントがリセットされ、状態は必ず通常へ移行**と記録。
-- 当時一次/攻略本文での直接クロスチェックは未取得のため、`ANALYSIS_SINGLE_RETROSPECTIVE`として過剰に確度を上げない。
-- `gameCounterReset`: **RESET_TENJO_POINT_AND_CZ_POINT_ON_SETTING_CHANGE__ANALYSIS_SINGLE_RETROSPECTIVE**。
-- `modeAfterReset` / `stateAfterReset`: **通常状態へ移行**との整理解析あり。朝一専用モードは確認なし。
-- `carryOverBehavior`: 据え置き時の天井/CZポイント保持を直接明記した本機固有資料は **UNVERIFIED_AFTER_RESEARCH**。通常仕様から推定転記しない。
-- `powerCycleBehavior`: 単純電源OFF→ON時の天井/CZポイント・内部状態は **UNVERIFIED_AFTER_RESEARCH**。
-- `resetDetection`: BET前の右停止ボタンで天井ポイント **0～230**、中停止ボタンでCZ連続非当選回数 **1～5**を7セグ確認可能。ただしガックン/初期出目や、朝一表示からの設定変更確定判別は **UNVERIFIED_AFTER_RESEARCH**。
-- 設定変更専用短縮天井、朝一ART/CZ確定、高確保証等は **NONE_CONFIRMED_AFTER_RESEARCH**。
-- `advantageousSectionReset`: **NOT_APPLICABLE_5TH_GEN**。
+- パチ＆スロ必勝本の本機固有解析で、通常時は複数の高確状態を持ち、**設定変更時にも高確移行抽選が行われる**ことを確認。設定変更が内部状態へ作用する点はCONFIRMED。
+- 設定変更時だけの具体的な高確移行率/振り分けは今回取得本文では確定できず、全通常モード移行表はミッション範囲外なので収集しない。
+- `gameCounterReset`: 999G天井カウンタの設定変更時CLEAR/RETAINは、表記揺れ・型式・メーカーとリセット/朝一/据え置き/宵越し/電源OFF ON/999G/ガックンを組み替えて再探索後も本機固有仕様の直接根拠を確定できずUNVERIFIED_AFTER_RESEARCH。
+- `carryOverBehavior`: 実戦記録には宵越し天井狙い例があるが、仕様資料ではないため引継ぎ確定根拠に格上げせずUNVERIFIED_AFTER_RESEARCH。
+- `powerCycleBehavior`: UNVERIFIED_AFTER_RESEARCH。
+- `ceilingAfterReset`: 通常999G。設定変更専用短縮天井はNONE_CONFIRMED_AFTER_RESEARCH。
+- `modeAfterReset/stateAfterReset`: 設定変更時の高確移行抽選あり。具体振り分けはUNVERIFIED_AFTER_RESEARCH。
+- `resetDetection`: ガックン/初期出目/液晶による判別はUNVERIFIED_AFTER_RESEARCH。
+- `advantageousSectionReset`: NOT_APPLICABLE_5TH_GEN。
 
-## CONFLICT / 定義差
+## 時系列監査 / 次回再開地点
 
-- 今回、確定した数値CONFLICTなし。
-- P-WORLDの青7BIG/BARは整数丸め、pacnkは精密値（例: 設定1 青BIG1/630.20、REG1/655.40）。丸め精度差のためCONFLICTにはしない。
-- グリーンべるとの「3月4日納品開始予定」とK-Navi/パチビーの「3月5日導入」は日付定義差として平均しない。
-
-## 時系列監査
-
-- **2012-03-05同日群は未閉鎖**。
-- 再探索でK-Navi・パチビーから **天誅～Deadly Blow～（ニューギン）** が2012-03-05導入と確認できた。
-- repo検索では「天誅 Deadly Blow」/`tenchu`とも該当なし。
-- したがって次回は03/05群を継続し、天誅～Deadly Blow～を645件目候補として最優先処理する。
-- シスタークエスト3、女番長、チャレンジマンは03/05群で登録済み。天誅追加後もK-Navi/P-WORLD/HAZUSE/パチビー/当時業界記事で同日残存を再監査し、閉鎖確認後のみ03/09以降へ進む。
+1. **recordCount 645 / chronologicalFrontier 2012-03-12**から開始。
+2. 2012-03-12同日群の残存未登録5号機をK-Navi/P-WORLD/HAZUSE/パチビー/当時業界記事で再監査。
+3. 03/12群を閉鎖できた場合のみ、その次の具体日付き未処理5号機へ前進。
+4. GitHubコード検索は新規ファイルの索引反映が遅れることがあるため、候補名検索だけで未登録と断定しない。handoff、コミット履歴、想定pathの直接fetchも併用して重複を避ける。
+5. PARTIAL/UNVERIFIEDは表記揺れ・型式名・メーカー名と設定変更/リセット/朝一/据え置き/宵越し/電源OFF ON/天井/モード/状態/ガックンを組み替えて再探索。競合値は平均せずCONFLICT。
 
 ## 遡及resetBehavior QA 次回再開地点
 
-1. 既存の遡及QA到達地点 **ドカベンDまで補完済み**を維持。
-2. 次候補 `docs/real_machine_db/machines/2006-12_linda-no-neraiuchi.md` を直接fetch。
-3. 既にresetBehavior節があれば飛ばし、次の実在欠損へ進む。
-4. 既存性能コアやCONFLICTを無駄に再調査・改変しない。
+- 既存遡及QA到達地点 **ドカベンDまで補完済み**を維持。
+- 次候補 `docs/real_machine_db/machines/2006-12_linda-no-neraiuchi.md`。
+- 既にresetBehavior節があれば飛ばし、次の実在欠損へ進む。
+- 既存性能コアやCONFLICTを無駄に再調査・改変しない。
 
-## 本線の次回再開地点
+## 主要出典 — 取得日 2026-09-05
 
-1. **recordCount 644 / chronologicalFrontier 2012-03-05**から開始。
-2. **天誅～Deadly Blow～（ニューギン）** のrepo重複最終確認 → 性能コア+resetBehavior v0.7収集。
-3. 天誅追加後、2012-03-05同日群の残存未登録5号機を再監査。
-4. 03/05群閉鎖後のみHAZUSEカレンダー次枠 **2012-03-09** 以降へ前進。
-5. PARTIAL/UNVERIFIEDは表記揺れ・型式名・メーカー名と設定変更/リセット/朝一/据え置き/宵越し/電源OFF ON/天井/モード/状態/ガックンを組み替えて再探索。競合値は平均せずCONFLICT。
-
-## 主要出典 — 今回取得日 2026-09-05
-
-- K-Navi チャレンジマン: `https://p-kn.com/slot/1597/`
-- K-Navi チャレンジゲーム: `https://p-kn.com/slot/1597/36281/`
-- P-WORLD チャレンジマンA: `https://www.p-world.co.jp/machine/database/6653`
-- パチビー チャレンジマン: `https://www.pachibee.jp/machines/index/212020002`
-- グリーンべると: `https://web-greenbelt.jp/00001315/`
-- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/okazaki_slot/65/a.php`
-- 5号機クロニクル 岡崎産業: `https://5goki.com/okazaki`
-- pacnk チャレンジマン: `https://pacnk.com/slot/tools/sh_challengeman.html`
-- 次候補 K-Navi 天誅～Deadly Blow～: `https://p-kn.com/slot/1568/`
-- 次候補 パチビー 天誅～Deadly Blow～: `https://www.pachibee.jp/machines/about/212010001`
+- 山佐公式: `https://yamasa-next.co.jp/model_gt9/`
+- K-Navi 銀河鉄道999: `https://p-kn.com/slot/1589/`
+- K-Navi GE: `https://p-kn.com/slot/1589/36483/`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/6637`
+- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/185/a.php`
+- パチ＆スロ必勝本 通常時のモード: `https://p.hisshobon.jp/machine/1987/1/34031`
+- グリーンべると: `https://web-greenbelt.jp/00001347/`
+- 天誅 K-Navi: `https://p-kn.com/slot/1568/`
+- 天誅 パチビー: `https://www.pachibee.jp/machines/index/212010001`
 
 ## GitHub commits
 
-- machine record: `b947ffdadd7a662fdf201fe64ff7ac867556896a`
+- 天誅 performance QA update: `58dee5960a8008d83f7d9d84c020aadc4f9d1853`
+- 銀河鉄道999 machine record: `88c9733636a20240e9c39736d7f24257a02a9bfb`
