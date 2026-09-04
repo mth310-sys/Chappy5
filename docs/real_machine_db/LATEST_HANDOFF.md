@@ -4,73 +4,76 @@
 
 ## 現在地点
 
-- recordCount: **630**
-- latestMachineAdded: **不二子～100億$の女神～**（オリンピア）
-- latestRecord: `docs/real_machine_db/machines/2012-01-03_fujiko-100oku-dollar-no-megami.md`
-- chronologicalFrontier: **2012-01-03**
-- frontierLatestExactDateMachine: **不二子～100億$の女神～**
+- recordCount: **631**
+- latestMachineAdded: **パチスロ鉄拳2nd**（山佐）
+- latestRecord: `docs/real_machine_db/machines/2012-01-10_pachislot-tekken-2nd.md`
+- chronologicalFrontier: **2012-01-10**
+- frontierLatestExactDateMachine: **パチスロ鉄拳2nd**
 - schema: **resetBehavior v0.7**
-- status: **2012-01-03_SAME_DAY_AUDIT**
+- status: **2012-01-10_SAME_DAY_AUDIT**
 
-## 今回の本線追加 — 不二子～100億$の女神～
+## 今回の本線追加 — パチスロ鉄拳2nd
 
-- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード「トリプルチャンスV-30」を再取得して開始。
-- 開始時正本は **recordCount 629 / chronologicalFrontier 2011-12-19**。INDEXは旧19件地点のためREADME規定どおりLATEST_HANDOFFを進捗正本として使用。
-- 2011年12月末境界を再監査し、前handoffで既知の2011年12月BACKFILL「トリプルチャンスV-30」以降に具体日が古い未処理機を追加確認できなかったため、2012年1月へ前進。
-- 2012年回顧一覧で1月機として「不二子～100億$の女神～」「パチスロ鉄拳2nd」「パチスロ サクラ大戦3 ～Loop ver.～」を確認。
-- K-Naviで不二子のホール導入開始 **2012-01-03**、当時グリーンべるとで **2012-01-02から納品予定**を確認。日付定義差として分離し、本線時系列キーはホール導入日の2012-01-03を採用。
-- GitHub code searchと想定実パス直接fetchで開始時未登録を確認して630件目として追加。
+- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード「不二子～100億$の女神～」を再取得して開始。
+- 開始時正本は **recordCount 630 / chronologicalFrontier 2012-01-03**。INDEXは旧19件地点のためREADME規定どおりLATEST_HANDOFFを進捗正本として使用。
+- 2012-01-03同日群と01/06群をメーカー別一覧、旧カレンダー、P-WORLD系、当時資料で再監査。今回、01/10より前へ差し込む具体日付き未登録5号機を追加確定できなかったため01/10へ前進。
+- GitHub code searchと想定実パス直接fetchで「パチスロ鉄拳2nd」が未登録であることを確認し631件目として追加。
+- 山佐公式は稼働時期2012年1月、K-Navi・ハズセ・パチビーは導入開始 **2012-01-10** で一致。
 
 ### 性能コア
 
-- systemType: **ノーマル / A+RT**。
-- 設定別主機械割: **97.7 / 98.7 / 100.0 / 105.1 / 107.7 / 113.0%**。
-- BIG合算: **1/331.0 / 1/331.0 / 1/331.0 / 1/318.1 / 1/295.2 / 1/258.0**。
-- REG: **1/504.0～504.1 / 1/496.5 / 1/489.1 / 1/481.9 / 1/474.9 / 1/455.1**。
-- ボーナス合算: **1/199.8 / 1/198.6 / 1/197.4 / 1/191.6 / 1/182.0 / 1/164.7**。
-- 50枚ベース: **37.41 / 38.31 / 39.51 / 43.54 / 43.67 / 43.95G/50枚**。単一解析値のため `ANALYSIS_SINGLE`。
-- SBB最大**402枚**、NBB最大**259枚**、SEXY BONUS最大**51枚**。
-- SEXY BONUS後は50G RT、RT中の特殊リプレイで次回ボーナスまでの無限RTへ昇格。両RTとも約**+0.4枚/G**。
-- 型式名: **不二子100億$の女神Y**（中古実機DBで確認）。検定番号は今回直接確定できずUNVERIFIED。
+- systemType: **A+ART**。
+- 型式名: **パチスロ鉄拳2ZX**。
+- 検定番号: **1S0918**。
+- 設定別機械割: **96.7 / 98.9 / 101.3 / 104.0 / 107.1 / 112.2%**。
+- BIG合算: **1/425.6 / 1/392.4 / 1/402.1 / 1/362.1 / 1/368.2 / 1/341.3**。
+- REG: **1/642.5 / 1/595.8 / 1/606.8 / 1/546.1 / 1/555.4 / 1/512.0**。
+- ボーナス合算: **1/256.0 / 1/236.6 / 1/241.8 / 1/217.7 / 1/221.4 / 1/204.8**。
+- ART初当たり: **1/566.5 / 1/493.7 / 1/540.4 / 1/460.0 / 1/510.2 / 1/441.3**。
+- 50枚ベース: **約31.4～31.7G/50枚**。
+- S-BIG約**300枚**、N-BIG約**200枚**、鉄拳BONUS約**40枚**。
+- ART純増: **約+1.7枚/G**。
+- 鉄拳RUSH基本G数はメーカー公式・パチマガスロマガ・必勝本が **1セット40G**。P-WORLD/パチビーは **50G+α** とするため `CONFLICT_ART_BASE_GAME_DEFINITION` として双方を保持。
+- 通常天井は **ボーナス間1400G → デビルRUSH**。ART当選では天井ゲーム数をリセットしない。
 
 ### resetBehavior v0.7
 
-- `settingChangeBehavior`: **NORMAL_STATE_AFTER_SETTING_CHANGE_ANALYSIS_SINGLE**。
+- `settingChangeBehavior`: **INTERNAL_STATE_RESELECTION_CONFIRMED**。
 - `carryOverBehavior`: **UNVERIFIED_AFTER_RESEARCH**。
 - `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH**。
-- `gameCounterReset`: **NOT_APPLICABLE_NO_GAME_COUNT_CEILING**。
-- `ceilingAfterReset`: **NOT_APPLICABLE_NO_CEILING**。
-- `modeAfterReset`: **NONE_CONFIRMED_NO_GAME_COUNT_MODE_SYSTEM**。
-- `stateAfterReset`: **NORMAL_STATE_AFTER_SETTING_CHANGE_ANALYSIS_SINGLE**。
+- `gameCounterReset`: **UNVERIFIED_AFTER_RESEARCH**。
+- `ceilingAfterReset`: **UNVERIFIED_AFTER_RESEARCH_NO_RESET_SHORTENING_CONFIRMED**。
+- `modeAfterReset`: **NO_SEPARATE_GAME_COUNT_RESET_MODE_CONFIRMED**。
+- `stateAfterReset`: **CONFIRMED_SETTING_CHANGE_STATE_RESELECTION**。
 - `advantageousSectionReset`: **NOT_APPLICABLE_5TH_GEN**。
-- `resetBenefits` / `resetPenalties`: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- `resetBenefits`: **OTHER_SETTING_CHANGE_CAN_START_HIGH_OR_SUPERHIGH_OR_PRECURSOR_STATE_CONFIRMED**。
+- `resetPenalties`: **SAME_SETTING_REWRITE_STARTS_LOW_STATE_100_PERCENT_CONFIRMED**。
 - `resetDetection`: **UNVERIFIED_AFTER_RESEARCH**。
-- `publicMorningNumbers`: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- 本機固有解析で「天井なし」「設定変更時は通常状態」を直接確認。K-Naviにも「設定変更後の挙動」専用解析項目が存在するが、具体本文は現存キャッシュから回収できなかったため、それ以上は推測しない。
-- 据え置き・単純電源OFF→ON・ガックン/初期出目/液晶等は、機種名・型式名・メーカー名と「設定変更/リセット/朝一/据え置き/電源OFF ON/ガックン/RT」を組み替えて再探索したが本機固有の直接根拠を確定できずUNVERIFIED。
+- `publicMorningNumbers`: **CONFIRMED_SETTING_CHANGE_STATE_DISTRIBUTION**。
+
+### 公開朝一/設定変更数値
+
+- 同一設定打ち直し: **低確100%**。
+- 他設定変更時: **低確50.00%、通常16.67%**。
+- 高確: 設定1/3/5 **30.83%**、設定2/4/6 **29.83%**。
+- 超高確: **0.50%**。
+- 前兆: 設定1/3/5 **2.00%**、設定2/4/6 **3.00%**。
+- 設定変更時の1400G天井カウンタCLEAR/RETAINは、検索語・資料系統を変えて再探索しても本機固有の直接根拠を確定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 据え置き、単純電源OFF→ON、ガックン/初期出目/液晶等の変更判別も本機固有直接根拠を確定できず `UNVERIFIED_AFTER_RESEARCH`。
 
 ## conflicts
 
-1. `CONFLICT_PAYOUT_RATE_SIMULATION_OR_CONDITION_DIFFERENCE`
-   - K-Navi / P-WORLD / 当時業界系: **97.7 / 98.7 / 100.0 / 105.1 / 107.7 / 113.0%**。
-   - けんのスロットシミュレーション: **98.0 / 99.1 / 100.3 / 104.9 / 107.5 / 112.8%**。
-   - 平均せず双方を保持。
-2. `CONFLICT_BASIC_PAYOUT_RETROSPECTIVE_DATABASE`
-   - 当時業界記事/P-WORLD: SBB最大402枚 / NBB最大259枚 / SEXY BONUS最大51枚。
-   - 後年回顧DBの一部には異なる概算獲得枚数表記があるため主値へ混ぜない。
-3. `DATE_DEFINITION_DIFFERENCE`
-   - 2012-01-02: 納品予定開始（当時業界記事）。
-   - 2012-01-03: ホール導入開始（K-Navi等）。
+1. `CONFLICT_ART_BASE_GAME_DEFINITION`
+   - 山佐公式 / パチマガスロマガ / 必勝本: 鉄拳RUSH **1セット40G**。
+   - P-WORLD / パチビー: **1セット50G+α**。
+   - メーカー公式を主値としつつ、平均化せず差を保持。
 
 ## 時系列監査
 
-- 2011年12月末境界から2012年1月へ前進。
-- HAZUSE系カレンダー上の2012年1月日付ブロックは **01/03, 01/06, 01/10, 01/13, 01/16, 01/20, 01/23, 01/27**。
-- 2012年1月の独立一覧で確認できる主要本線候補は **不二子～100億$の女神～ / パチスロ鉄拳2nd / パチスロ サクラ大戦3 ～Loop ver.～**。
-- 不二子は01/03で登録済み。
-- 鉄拳2ndはHAZUSE系で **2012-01-10**を確認済み。
-- サクラ大戦3 Loop Ver.はパチビーで **2012-01-23**を確認済み。
-- 次回は01/03同日群の残存を最終監査し、追加がなければ **01/06 → 01/10**へ進む。01/10では鉄拳2ndの既登録有無を実パスまで確認して未登録なら収集する。
+- 2012-01-03同日群および01/06群を再監査し、今回01/10より前に差し込む具体日付き未登録5号機は追加確定できず。
+- 01/10の「パチスロ鉄拳2nd」を登録。
+- 前handoffで確認済みの後続日付ブロックは **01/13 → 01/16 → 01/20 → 01/23 → 01/27**。
+- 既知候補「パチスロ サクラ大戦3 ～Loop ver.～」はパチビーで **2012-01-23** を確認済み。
 
 ## 遡及resetBehavior QA 次回再開地点
 
@@ -81,25 +84,24 @@
 
 ## 本線の次回再開地点
 
-1. **recordCount 630 / chronologicalFrontier 2012-01-03**から開始。
-2. 2012-01-03同日群の残存漏れをメーカー別一覧/P-WORLD/HAZUSE/当時業界で最終監査。
-3. 01/03に追加がなければ **01/06群**を監査。
-4. 次に **01/10群**へ進み、既知候補「パチスロ鉄拳2nd」（2012-01-10）のGitHub実レコードを直接確認。未登録なら次の本線レコードとして収集。
-5. 以降 **01/13 → 01/16 → 01/20 → 01/23（サクラ大戦3 Loop Ver.）→ 01/27** の順を維持。
-6. PARTIAL/UNVERIFIEDは表記揺れ・型式名・メーカー名と設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/状態/ガックンを組み替えて再探索。競合値は平均せずCONFLICT。
+1. **recordCount 631 / chronologicalFrontier 2012-01-10**から開始。
+2. **2012-01-10同日群**の残存漏れをメーカー別一覧/P-WORLD/HAZUSE/当時業界で最終監査。
+3. 追加がなければ **01/13 → 01/16 → 01/20** の順に監査。
+4. **01/23**では既知候補「パチスロ サクラ大戦3 ～Loop ver.～」のGitHub実レコードを直接確認し、未登録なら性能コア+resetBehavior v0.7を収集。
+5. 以降 **01/27**へ進む。
+6. PARTIAL/UNVERIFIEDは表記揺れ・型式名・メーカー名と設定変更/リセット/朝一/据え置き/宵越し/電源OFF ON/天井短縮/モード/状態/ガックンを組み替えて再探索。競合値は平均せずCONFLICT。
 
 ## 主要出典 — 今回取得日 2026-09-05
 
-### 不二子～100億$の女神～
-- K-Navi: `https://p-kn.com/slot/1535/`
-- グリーンべると: `https://web-greenbelt.jp/00002407/`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/6542`
-- けんのスロットシミュレーション: `https://kenslo65536.com/sp/kaiseki/fujiko100.html`
-- 中一商事 型式情報: `https://www.nakaiti.com/html/sOlympia004.html`
-
-### 2012年1月境界
-- 2012年回顧一覧: `https://www.dorubako.biz/year/2012.html`
-- パチビー サクラ大戦3 Loop Ver.: `https://www.pachibee.jp/machines/lecture/211120004`
+### パチスロ鉄拳2nd
+- 山佐公式: `https://yamasa-next.co.jp/model_tk2/`
+- ハズセ: `https://hazuse.com/machine/pachislot/1S0918/`
+- K-Navi: `https://p-kn.com/slot/1537/`
+- パチビー: `https://www.pachibee.jp/machines/index/211110004`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/6560`
+- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/184/a.php`
+- パチ＆スロ必勝本: `https://p.hisshobon.jp/machine/1952/1/32654`
+- パチスロ解析ガイド: `https://pachislot-guide.net/2012/tekken2/`
 
 ### 次回順序確認
-- **2012-01-03同日群最終監査 → 01/06 → 01/10（鉄拳2nd）→ 01/13 → 01/16 → 01/20 → 01/23（サクラ大戦3 Loop Ver.）→ 01/27。**
+- **2012-01-10同日群最終監査 → 01/13 → 01/16 → 01/20 → 01/23（サクラ大戦3 Loop Ver.）→ 01/27。**
