@@ -4,66 +4,65 @@
 
 ## 現在地点
 
-- recordCount: **572**
-- latestMachineAdded: **雀龍桜花**（KPE / 2011-05-29納品開始予定）
-- latestRecord: `docs/real_machine_db/machines/2011-05-29_janryu-ouka.md`
-- chronologicalFrontier: **2011-05-29**
-- frontierLatestExactDateMachine: **雀龍桜花**
+- recordCount: **573**
+- latestMachineAdded: **バリスタゴルフ**（アイウィル / 2011-05-30ホール導入予定）
+- latestRecord: `docs/real_machine_db/machines/2011-05-30_barista-golf.md`
+- chronologicalFrontier: **2011-05-30**
+- frontierLatestExactDateMachine: **バリスタゴルフ**
 - schema: **resetBehavior v0.7**
 - status: **READY_TO_CONTINUE**
 
 ## 今回の継続確認
 
-- 最新mainの `README.md`、正本ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、571前線レコード「ドラゴノーツ －ザ・レゾナンス－」を再取得して開始。
-- `INDEX.md` は旧19件地点のため、README規約どおり最新 `LATEST_HANDOFF.md` と実machineレコードを進捗正本として使用。
-- 571件地点から5/23〜5/28を境界監査し、具体日を確認できた最古未登録として2011-05-29納品開始予定「雀龍桜花」を572件目へ追加。
-- KONAMI公式アーカイブは稼働開始2011年5月、グリーンべると当時記事は5月29日納品開始予定。日付定義は整合。
+- 最新mainの `README.md`、正本ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、572前線レコード「雀龍桜花」を再取得して開始。
+- `INDEX.md` は旧19件地点のため、README規約どおり最新 `LATEST_HANDOFF.md` とmachineレコードを進捗正本として使用。
+- 572件地点の次候補としてHANDOFF指定されていた「バリスタゴルフ」をrepo検索し未登録確認。2011-05-30ホール導入予定を当時プレイグラフ転載で確認して573件目へ追加。
 
-## 今回追加 — 572 雀龍桜花
+## 今回追加 — 573 バリスタゴルフ
 
-- メーカー: **KPE**
-- 導入キー: **2011-05-29（納品開始予定）**
-- 5号機 / **A+ART / CZ / 天井ART**
-- 機械割: **96.9 / 98.7 / 101.0 / 103.9 / 107.2 / 110.5%**
-- BIG合成: **1/368.2 / 1/362.1 / 1/348.6 / 1/334.4 / 1/316.6 / 1/297.9**
-- REG: **1/840.2 / 1/771.0 / 1/728.2 / 1/682.7 / 1/630.2 / 1/574.9**
-- ボーナス合算: **1/256.0 / 1/246.4 / 1/235.7 / 1/224.4 / 1/210.7 / 1/196.2**
-- ボーナス+ART合算: **1/169.4 / 1/154.4 / 1/154.6 / 1/136.1 / 1/131.4 / 1/119.9**
-- ART「DRAGON RUSH」: **約+1.2枚/G**、初回 **40〜最大500G**
-- BIG: **最大216枚** / REG: **約72枚**
-- 通常天井: **ボーナス間1480G → 次回対局勝利確定でARTゲーム数獲得**
-- 50枚ベース: **UNVERIFIED_AFTER_RESEARCH**
-- ART単独初当たり全表: **UNVERIFIED_AFTER_RESEARCH**（ボーナス+ART合算から逆算しない）
+- メーカー: **アイウィル**
+- 導入キー: **2011-05-30（ホール導入予定）**
+- 5号機 / **A+ART / CZ / ストック+ループ+ゲーム数型ART**
+- 機械割: **96.1 / 98.1 / 101.9 / 104.0 / 109.3 / 112.0%**
+- BIG: **1/436.9 / 1/422.8 / 1/409.6 / 1/397.2 / 1/385.5 / 1/352.3**
+- REG: **1/565.0 / 1/541.6 / 1/524.3 / 1/504.1 / 1/478.4 / 1/461.5**
+- ボーナス合算: **1/246.4 / 1/237.4 / 1/230.0 / 1/222.2 / 1/213.5 / 1/199.8**
+- ART初当たり: **1/449.1 / 1/382.6 / 1/410.4 / 1/343.4 / 1/365.7 / 1/287.6**
+- 50枚ベース（1000円あたり）: **32.7 / 32.8 / 32.8 / 32.9 / 32.9 / 33.0G**
+- ART「バリスタモード」: **約+1.3枚/G / 基本約30G / ループ率33〜95% / 上乗せ25〜300G**
+- 基本獲得: 主値 **BIG約210枚 / REG約56枚**
+- 獲得枚数CONFLICT: 5号機クロニクル **BIG約204枚 / REG約48枚**。平均せず保持。
 
-### resetBehavior v0.7 — 572
+### resetBehavior v0.7 — 573
 
-- 旧解析資料と後年整理DBの双方で **設定変更後も1480G天井ゲーム数を引き継ぐ / クリアされない** と一致。
-- `gameCounterReset`: **RETAIN_ON_SETTING_CHANGE_CONFIRMED**。
-- `ceilingAfterReset`: **NO_SHORTENING_CONFIRMED / BASE_CEILING_1480G_RETAINED**。
-- 朝一の主要要素は、設定変更でも前日天井進捗が失われないこと。専用高確・短縮天井等の追加恩恵は確認できず。
-- 据え置き時のCZ/ART関連状態の厳密な保持、単純電源OFF→ON、変更時モード/状態、ガックン等の変更判別は表記揺れ・メーカー/シリーズ・reset系検索語を変え、公式、P-WORLD、パチマガ、旧解析、後年DBまで横断しても直接確定できず `UNVERIFIED_AFTER_RESEARCH`。
+- パチマガスロマガに本機専用 **「天井」「朝イチ・設定変更」**解析項目の存在を確認。
+- P-WORLDで通常時にART期待度の異なる内部モードが存在することも確認。
+- ただし今回取得可能な本文・検索スニペットから、通常天井の正確なゲーム数/恩恵、設定変更時CLEAR/RETAIN、据え置き、単純電源OFF→ON、モード/状態の変更時処理、ガックン等の判別を安全に直接確定できず。
+- 表記揺れ・メーカー・天井・宵越し・reset系検索語を変え、P-WORLD、パチマガ、当時業界転載、5号機クロニクル、旧ブログ/回顧資料を横断後に該当項目を `UNVERIFIED_AFTER_RESEARCH` とした。
+- 設定変更専用短縮天井、高確確定、ART優遇等の公開朝一数値: **NONE_CONFIRMED_AFTER_RESEARCH**。
 - 有利区間: **NOT_APPLICABLE**。
 
-## 主要出典 — 572（取得日 2026-09-04）
+## 主要出典 — 573（取得日 2026-09-04）
 
-- KONAMI AMUSEMENT 機種アーカイブ: `https://www.konami.com/amusement/psm/archive/ps/2011/jyanryu_ouka/`
-  - 稼働開始2011年5月、5号機ART
-- グリーンべると/P-WORLD: `https://news.p-world.co.jp/articles/4587/greenbelt`
-  - 2011-05-29納品開始予定、ART約+1.2枚/G、初回40〜500G
-- P-WORLD機種DB: `https://www.p-world.co.jp/machine/database/6333`
-  - BIG216枚、REG72枚、ART約+1.2枚/G、1480G天井
-- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/kpe_slot/25/h-1.php`
-  - BIG/REG/ボーナス合算/ボーナス+ART合算/PAYOUT全設定
-- crankyseven: `https://crankyseven.com/sp/janryuouka-pc.htm`
-  - 1480G天井、設定変更時に天井ゲーム数はクリアされない
-- pacnk: `https://pacnk.com/slot/tools/sh_janryuouka.html`
-  - 性能全表、設定変更後も天井ゲーム数を引き継ぐ
+- P-WORLD: `https://www.p-world.co.jp/machine/database/6341`
+  - BIG/REG/ART初当たり/機械割、BIG約210枚、REG約56枚、ART約+1.3枚/G、内部モード/CZ
+- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/iwill_slot/03/h.php`
+  - BIG/REG/ボーナス合算/PAYOUT全設定
+- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/iwill_slot/03/c.php`
+  - 1000円あたり32.7〜33.0G
+- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/iwill_slot/03/a.php`
+  - ART30G、純増1.3枚/G、ループ率33〜95%、BIG約210枚/REG約56枚
+- パチマガスロマガ機種トップ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/iwill_slot/03/iwill_slot_03.php`
+  - 「天井」「朝イチ・設定変更」専用項目の存在
+- Pマンズ/プレイグラフ転載: `https://p-mans.blogspot.com/2011/04/`
+  - 2011-05-30ホール導入予定、ART約+1.3枚/G
+- 5号機クロニクル: `https://5goki.com/iwill`
+  - 2011年5月導入、確率照合、獲得枚数204/48枚の競合値
 
 ## 今回のGitHub更新
 
-- 572: `docs/real_machine_db/machines/2011-05-29_janryu-ouka.md`
-  - create commit: `9553f1527ba2f6540108a17519efb3f7d22624b9`
-  - metadata correction commit: `3c71cc131db1a9e7e06578d19d30a14076ec518d`
+- 573: `docs/real_machine_db/machines/2011-05-30_barista-golf.md`
+  - create commit: `b9ae214f8d4a174e1cb5f9b0170416d5ae61e8fb`
 - LATEST_HANDOFF: 本更新
 
 ## 遡及QA継続地点
@@ -74,8 +73,8 @@
 
 ## 次回再開地点
 
-1. **recordCount 572 / chronologicalFrontier 2011-05-29**。最新main README / mission / INDEX / LATEST_HANDOFF / 571・572レコードを再取得。
-2. 2011-05-29同日群の残存と5/30境界を監査する。
-3. 現時点の強い次候補は **2011-05-30「バリスタゴルフ」ホール導入予定**。P-WORLDで5号機ART・純増約+1.3枚/G・BIG約210枚・REG約56枚を確認済み。当時プレイグラフ転載にはホール導入予定5月30日とある。repo重複確認後、未登録なら573件目へ進める。
-4. 6月群へ進む前に5月末の未登録機を閉じる。2011-05-25発表「スカイラブ3」は6月導入群なので5月へ誤混入しない。
+1. **recordCount 573 / chronologicalFrontier 2011-05-30**。最新main README / mission / INDEX / LATEST_HANDOFF / 572・573レコードを再取得。
+2. **2011-05-31〜06-05境界を最終監査**し、5月末の未登録機を閉じる。
+3. 漏れがなければ **2011-06-06同日群**へ進む。現時点で具体日を確認済みの強い候補は **「パチスロ エイリヤンビギンズ」（サミー）、「スターマン バイキング」（SANKO）、「キングハイビ-30」（パイオニア）**。いずれも2011-06-06導入情報あり。repo重複を確認して最古未登録から574件目とする。
+4. **スカイラブ3は2011-06-27ホール導入開始**をK-Navi/パチビーで確認済み。6/6群より先へ誤ジャンプしない。
 5. PARTIAL/UNVERIFIEDは表記揺れ・型式・メーカー・シリーズ・reset検索語を変え、資料系統を横断した後だけ残す。CONFLICTは平均しない。
