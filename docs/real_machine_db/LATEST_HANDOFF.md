@@ -4,55 +4,56 @@
 
 ## 現在地点
 
-- recordCount: **628**
-- latestMachineAdded: **Piaキャロットへようこそ!!G.O.**（タイヨー）
-- latestRecord: `docs/real_machine_db/machines/2011-12-19_pia-carrot-go.md`
+- recordCount: **629**
+- latestMachineAdded: **トリプルチャンスV-30**（ウィザード）
+- latestRecord: `docs/real_machine_db/machines/2011-12_triple-chance-v-30.md`
 - chronologicalFrontier: **2011-12-19**
 - frontierLatestExactDateMachine: **Piaキャロットへようこそ!!G.O.**
 - schema: **resetBehavior v0.7**
-- status: **2011-12-19_GROUP_IN_PROGRESS**
+- status: **2011-12_MONTH_END_AUDIT**
 
-## 今回の本線追加 — Piaキャロットへようこそ!!G.O.
+## 今回の本線追加 — トリプルチャンスV-30
 
-- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード「ハイパー娘」を再取得して開始。
-- 開始時正本は **recordCount 627 / chronologicalFrontier 2011-12-19**。INDEXは旧19件地点のためREADME規定どおりLATEST_HANDOFFを進捗正本として使用。
-- GitHub code searchで「PiaキャロットへようこそG.O.」未検出を確認し628件目として追加。
-- パチビーが導入日 **2011-12-19**。当時グリーンべるとは **2011-12-18から納品予定**。時系列キーはホール導入日の12/19を採用。
-- 2011-11-07東京都公安委員会検定通過情報で型式名 **PiaキャロットへようこそGO-S** を確認。検定番号は再探索後も直接確定できずUNVERIFIED_AFTER_RESEARCH。
+- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード「Piaキャロットへようこそ!!G.O.」を再取得して開始。
+- 開始時正本は **recordCount 628 / chronologicalFrontier 2011-12-19**。INDEXは旧19件地点のためREADME規定どおりLATEST_HANDOFFを進捗正本として使用。
+- GitHub code searchで開始時未登録を確認。調査中に同名レコード `docs/real_machine_db/machines/2011-12_triple-chance-v-30.md` がmainへ出現したため、重複作成せず既存レコードを採用してhandoffのみ前進。
+- 5号機クロニクル、スロリスクタイムの独立一覧で **ウィザード / ノーマル / 2011年12月導入**を確認。
+- 具体導入日は表記揺れ・メーカー名・型式/検定・P-WORLD/K-Navi/パチビー/HAZUSE相当語・導入/納品を組み替えて再探索したが直接確定できず、releaseDate=2011-12の月粒度で保持。
+- 日付未確定のためchronologicalFrontierは後退させず **2011-12-19**を維持し、本機は2011年12月BACKFILLとして扱う。
 
 ### 性能コア
 
-- 機械割: 設定1は **CONFLICT 95.5%（パチマガスロマガ/p-ken） vs 95.6%（P-WORLD）**。設定2〜6は **96.9 / 99.9 / 102.6 / 105.9 / 109.7%**で一致。
-- BIG: **1/399.6 → 1/334.4**、REG: **1/697.2 → 1/512.0**、ART初当たり: **1/521.5 / 453.5 / 470.3 / 419.0 / 451.6 / 383.4**。
-- 50枚ベース: **33.34 / 33.34 / 33.35 / 33.36 / 33.37 / 33.38G/50枚**。K-Navi直接表。
-- ART「Piaキャロットタイム」: **1セット50G+α、純増約+1.4枚/G**。
-- BIG約**200枚**、REG約**60枚**。
-- 通常天井: **ボーナス間1400G**。ART3ストック以上確定、P-WORLDでは平均5セット表記。
+- systemType: **ノーマル / 30Φ**。
+- 設定別機械割: **UNVERIFIED_AFTER_RESEARCH**。5号機クロニクル自体も本機欄を不明としている。
+- 設定別BIG/REG/合算: **UNVERIFIED_AFTER_RESEARCH**。同じく現存直接表を確定できず、近縁機から流用しない。
+- 50枚ベース: **UNVERIFIED_AFTER_RESEARCH**。
+- BIG/REG獲得枚数: **UNVERIFIED_AFTER_RESEARCH**。
+- ART/AT純増: **NOT_APPLICABLE_NORMAL_TYPE**。
 
 ### resetBehavior v0.7
 
-- `settingChangeBehavior`: **PARTIAL_CONFIRMED**。P-WORLDで設定変更後に高確移行抽選、当時解析で具体状態振り分けを確認。
-- `carryOverBehavior`: **PARTIAL_OPERATIONAL_SOURCE_ONLY**。当時天井狙い資料で「宵越し×」。ただし据え置き時の直接解析文は未確定。
+- `settingChangeBehavior`: **UNVERIFIED_AFTER_RESEARCH**。
+- `carryOverBehavior`: **UNVERIFIED_AFTER_RESEARCH**。
 - `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH**。
-- `gameCounterReset`: **PARTIAL_CONFIRMED_OPERATIONAL_SETTING_CHANGE_RESET**。当時資料の「宵越し×」を運用根拠として保持。0Gクリアと直接明記する別系統資料は未確定。
-- `ceilingAfterReset`: **NO_SHORTENED_RESET_CEILING_CONFIRMED_AFTER_RESEARCH**。通常1400G。リセット専用短縮値なし。
-- `modeAfterReset` / `stateAfterReset`: **CONFIRMED_NUMERIC**。設定変更後 **低確91.5% / 高確6.1% / 超高確2.3%**。
-- `advantageousSectionReset`: **NOT_APPLICABLE**。
-- `resetBenefits`: **CONFIRMED_SMALL_HIGH_STATE_CHANCE**。低確以外開始は合計 **8.4%**。
-- `resetPenalties`: **PARTIAL_CONFIRMED_CEILING_CARRYOVER_NOT_USABLE_AFTER_CHANGE**。
+- `gameCounterReset`: **NOT_APPLICABLE_NO_GAME_COUNT_CEILING_CONFIRMED_AFTER_RESEARCH**。
+- `ceilingAfterReset`: **NOT_APPLICABLE_NO_GAME_COUNT_CEILING_CONFIRMED_AFTER_RESEARCH**。
+- `modeAfterReset`: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- `stateAfterReset`: **UNVERIFIED_AFTER_RESEARCH**。
+- `advantageousSectionReset`: **NOT_APPLICABLE_5TH_GEN**。
+- `resetBenefits` / `resetPenalties`: **NONE_CONFIRMED_AFTER_RESEARCH**。
 - `resetDetection`: **UNVERIFIED_AFTER_RESEARCH**。
-- 一般的な5号機挙動や他タイヨー機からの補完はしていない。
+- ガックン、初期出目、告知ランプ、朝一専用数値は本機固有根拠を確認できず、一般的な30Φノーマル機から補完しない。
 
 ## conflicts
 
-- 設定1機械割: パチマガスロマガ/p-ken **95.5%**、P-WORLD **95.6%**。平均せずCONFLICTとして保存。
+- 今回は競合値ではなく主要性能値が未取得。類似機「トリプルチャンス-30」（2011/7）や同社他機種の値は同一性能確認がないため転記禁止。
 
 ## 時系列監査
 
-- 2011-12-19群で「ハイパー娘」に続き「Piaキャロットへようこそ!!G.O.」を追加。
-- P-WORLD 2011年12月一覧で残る未処理候補は **トリプルチャンスV-30**（ウィザード）。
-- 5号機クロニクル、スロリスクタイム等で **2011/12** 導入までは確認できるが、今回の検索では具体日を確定できていない。
-- 具体日が12/19以前と判明した場合はchronologicalFrontierを後退させず、BACKFILLとして時系列位置を明記して登録する。
+- HAZUSE新台カレンダー上、2011年12月の掲載日ブロックは **12/02, 12/05, 12/09, 12/16, 12/19**。既存本線は12/19まで到達済み。
+- トリプルチャンスV-30は具体日未確定の2011-12月BACKFILLとして629件目に取り込んだ。
+- 次回は2011年12月末残存候補をメーカー別一覧/P-WORLD/HAZUSE/当時業界で最終監査し、漏れがなければ2012年1月へ進む。
+- HAZUSEの2012年1月日付ブロックは **01/03, 01/06, 01/10, 01/13, 01/16, 01/20, 01/23, 01/27**。最初は01/03群から実在パチスロ機を同定する。
 
 ## 遡及resetBehavior QA 次回再開地点
 
@@ -63,34 +64,21 @@
 
 ## 本線の次回再開地点
 
-1. **recordCount 628 / chronologicalFrontier 2011-12-19**から開始。
-2. 最優先候補 **トリプルチャンスV-30** をGitHub未登録確認。
-3. 型式名・メーカー名・HAZUSE/K-Navi/P-WORLD/当時業界/検定公示/旧DBを横断し、まず2011年12月の具体導入日を再探索。
-4. 具体日が12/19以前ならBACKFILL、12/19以後ならその日付で登録。月単位しか確定できない場合も対象外にせず、releaseDate=2011-12と日付UNVERIFIEDを明示したうえで性能コア+resetBehavior v0.7を収集する。
-5. トリプルチャンスV-30後、2011年12月末残存を再監査して2012年1月へ進む。
-6. PARTIAL/UNVERIFIEDは表記揺れ・型式名・メーカー名と設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/状態/ガックンを組み替えて再探索。競合値は平均せずCONFLICT。
+1. **recordCount 629 / chronologicalFrontier 2011-12-19**から開始。
+2. 2011年12月末の残存漏れを最終監査。トリプルチャンスV-30は再調査し直さず、既存PARTIALとしてQAへ回す。
+3. 12月を閉じられた場合、HAZUSE 2012年1月カレンダーの **01/03群**から最古未処理機を同定して収集する。
+4. 以降 **01/06 → 01/10 → 01/13 → 01/16 → 01/20 → 01/23 → 01/27** の順で監査する。
+5. PARTIAL/UNVERIFIEDは表記揺れ・型式名・メーカー名と設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/状態/ガックンを組み替えて再探索。競合値は平均せずCONFLICT。
 
 ## 主要出典 — 今回取得日 2026-09-05
 
-### Piaキャロットへようこそ!!G.O.
-- パチビー: `https://www.pachibee.jp/machines/about/211100003`
-- グリーンべると/P-WORLD業界ニュース: `https://news.p-world.co.jp/articles/5013/greenbelt`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/6541`
-- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/taiyo_slot/74/h.php`
-- K-Navi 1000円平均G: `https://p-kn.com/slot/1532/34687/`
-- K-Navi ART: `https://p-kn.com/slot/1532/34663/`
-- crankyseven: `https://crankyseven.com/piacarrot-pc.htm`
-- 天井ハイエナ生活: `https://macerate.seesaa.net/article/226312110.html`
-- 中一商事旧実機情報: `https://www.nakaiti.com/html/sTaiyo009.html`
-- Pマンズ/検定情報: `https://p-mans.blogspot.com/2011/11/`
-- p-ken: `https://p-ken.jp/model/detail2?id=619`
-
-### 次候補確認
+### トリプルチャンスV-30
 - 5号機クロニクル「ウィザード」: `https://5goki.com/wizard`
 - スロリスクタイム5号機一覧: `https://pachisuro100.com/itiran/`
+- スロリスクタイム ノーマルタイプ一覧: `https://pachisuro100.com/normal/`
 
-### 今回のGitHub commit
-- 628番レコード追加: `d07651a69472b6b819897139bca2a27127684340`
+### 時系列
+- HAZUSE 新台カレンダー: `https://hazuse.com/new-machine-calendar/newmachine-calendar/`
 
 ### 次回順序確認
-- **トリプルチャンスV-30具体日再探索 → 未登録なら629件目 → 2011年12月末最終監査 → 2012年1月へ。**
+- **2011年12月末最終監査 → 2012-01-03群 → 01/06 → 01/10 → 01/13 → 01/16 → 01/20 → 01/23 → 01/27。**
