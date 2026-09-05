@@ -4,90 +4,83 @@
 
 ## 現在地点
 
-- recordCount: **740**
-- latestMachineAdded: **パチスロアタックNo.1 ～開幕！世界選手権～**（三洋物産）
-- latestRecord: `docs/real_machine_db/machines/2013-06-10_attack-no1-kaimaku-sekai-senshuken.md`
-- chronologicalFrontier: **2013-06-10**
-- frontierLatestExactDateMachine: **パチスロアタックNo.1 ～開幕！世界選手権～**
+- recordCount: **741**
+- latestMachineAdded: **スナイパイ72**（ネット）
+- latestRecord: `docs/real_machine_db/machines/2013-06-17_snipai72.md`
+- chronologicalFrontier: **2013-06-17**
+- frontierLatestExactDateMachine: **スナイパイ72**
 - schema: **resetBehavior v0.7**
-- status: **CLOSED_2013-06-10_GROUP__NEXT_2013-06-17_SNIPAI72_THEN_SAME_DAY_GROUP**
+- status: **OPEN_2013-06-17_GROUP__NEXT_HELLO_SANTA_ULTIMATE_MACHINEGUN_THEN_SORA_NO_KISEKI**
 
 ## 今回の同期
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前レコード `2013-06-03_hokuto-no-ken-tensei-no-sho.md` を確認。
-- INDEXは19件地点の旧集約状態なので、README規定どおり最新HANDOFFと実レコードを正本として優先。
-- 開始時main正本は recordCount **739** / chronologicalFrontier **2013-06-03** / 06-03群CLOSED。
-- K-Naviの2013年6月全国一斉導入カレンダーで06-04～06-09にパチスロ追加がなく、次の導入日アンカーを **2013-06-10** と確定。
-- K-Naviでは06-10のパチスロは **パチスロアタックNo.1 ～開幕！世界選手権～**のみ。ALL7の2013年6月導入予定一覧でも06-10は同機を確認。
-- repo未登録を確認後、740件目として追加。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前レコード `2013-06-10_attack-no1-kaimaku-sekai-senshuken.md` を再読。
+- INDEXは旧集約状態のため、README規定どおり最新HANDOFFと実レコードを正本として優先。
+- 開始時main正本は recordCount **740** / chronologicalFrontier **2013-06-10** / 06-10群CLOSED。
+- K-Navi 2013年6月全国導入カレンダーで06-11～06-16に全国一斉導入のパチスロ追加がなく、次のアンカーを **2013-06-17** と再確認。
+- 06-17群は **スナイパイ72 / ハローサンタ アルティメットマシンガンバージョン / パチスロ英雄伝説 空の軌跡 THE ANIMATION** の3機を確認。
+- repo未登録確認後、**スナイパイ72**を741件目として追加。同日群は残り2機があるためOPEN。
 
-## 今回追加 — パチスロアタックNo.1 ～開幕！世界選手権～
+## 今回追加 — スナイパイ72
 
 ### identity / 性能コア
 
-- manufacturer: **三洋物産**。
-- releaseDate: **2013-06-10**。K-Naviカレンダー/K-Navi機種ページ/HAZUSE/ALL7で一致。
-- 型式名: **パチスロアタックNo.1世界編KJ** / 検定番号 **3S0019**。
-- systemType: **5号機 A+ART（リアルBIG + 擬似ボーナス + ART）**。
-- 機械割本線: **96.81 / 98.18 / 100.71 / 103.64 / 107.25 / 111.23%**。
-- ART「アタックタイム」初当たり: **1/503.8 / 485.5 / 466.9 / 431.4 / 396.1 / 362.4**。
-- ボーナス合成: **1/233.1 / 225.5 / 217.6 / 203.9 / 189.6 / 176.5**。
-- 50枚ベース: **約31G/50枚**。2013年当時スペック紹介の単一直接値なので `ANALYSIS_SINGLE_PERIOD`。
-- ART「アタックタイム」: **1セット50G+α / 純増約1.7枚/G**。
-- BIG: **約200枚**。VICTORY BONUS: **25G or 50G / 約43枚 or 約85枚**。
-- ボーナス・ART間 **1200G**で天井ART。当時K-Naviパチログでは天井ART開始が **チェコ80% / ソ連20%**。
+- manufacturer: **ネット**。
+- releaseDate: **2013-06-17**。K-Navi機種ページ、K-Naviカレンダー、HAZUSEで一致。
+- systemType: **5号機 AT（ゲーム数上乗せ型）**。
+- 機械割: **97.7 / 98.6 / 101.4 / 104.8 / 108.2 / 114.2%**。
+- AT初当たり: **1/238 / 224 / 209 / 189 / 172 / 141**。
+- AT「激走タイム」: **純増約2.9枚/G**。初期ゲーム数はパチマガ系で **平均40G（30G保障）**、P-WORLDの30G+α表記と整合する形で固定40Gとは扱わない。
+- 通常時天井: **999G**。到達時は **継続率98%以上のOPT** 発動系。
+- 50枚ベースは今回の高信頼直接値を固定できず `UNVERIFIED_AFTER_RESEARCH`。
 
 ### resetBehavior v0.7
 
-- 2013年機へ限定するため `開幕！世界選手権` / `世界編KJ` / `3S0019` を併用し、2009年RT版の情報を遮断。
-- 「設定変更 / リセット / 朝一 / 据え置き / 宵越し / 電源OFF ON / 電断 / ガックン / 高確 / 天井」を組み替え、K-Navi、HAZUSE、P-WORLD、パチマガスロマガ、当時スペック記事、旧天井攻略系を横断。
-- 一般天井 **ボーナス・ART間1200G** は確認。
-- ただし **設定変更時の天井G RESET/KEEP、通常時内部状態の再抽選、純据え置き時の天井進捗/状態保持、単純電源OFF→ON時のゲーム数/状態/表示契約**は本機固有の直接資料を固定できず `UNVERIFIED_AFTER_RESEARCH`。
-- 設定変更専用の短縮天井、朝一専用モード振り分け、高確/CZ優遇などは `NONE_CONFIRMED_AFTER_RESEARCH`。
-- ガックン/初期出目/液晶/ランプ等の本機固有変更判別も `UNVERIFIED_AFTER_RESEARCH`。
+- パチ＆スロ必勝本の本機専用「天井&設定変更」で、設定変更時に **天井G数リセット / モード再抽選 / CZ抽選状態再抽選 / 液晶アジトor屋上=1:1 / ボーナス回数履歴リセット**を直接確認。
+- gameCounterReset.settingChange: **CLEAR_CONFIRMED**。
+- modeAfterReset: **RESELECT_CONFIRMED**。
+- stateAfterReset: **CZ_STATE_RESELECT_CONFIRMED**。
+- publicMorningNumbers: **アジト50% / 屋上50%**。
+- 2013年当時別資料に設定変更時モード **通常A13 / 通常B76 / 天国10 / 超天国1%** があるが、他解析の通常A/通常B/スナイプ/バズーカという名称体系と一致しないため `CONFLICT_NAMING_OR_SOURCE_MODEL` として参考保持し、名称変換しない。
+- 純据え置き時の999G進捗・モード/CZ状態、および設定変更を伴わない純電源OFF→ON契約は、語・資料系統を変えて再探索後も直接固定できず `UNVERIFIED_AFTER_RESEARCH`。
 - advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN**。
-- 天井ARTのチェコ80%/ソ連20%は一般天井恩恵であり、朝一/設定変更専用値として扱わない。
-- resetQaStatus: **RESEARCHED__GENERAL_1200G_CEILING_CONFIRMED__SETTING_CHANGE_CARRYOVER_POWER_CYCLE_CONTRACT_UNVERIFIED_AFTER_RESEARCH**。
+- ガックン等の確定変更判別は `UNVERIFIED_AFTER_RESEARCH`。液晶初期ステージは `CHANGE_HINT_ONLY_NOT_DETERMINISTIC`。
+- resetQaStatus: **RESEARCHED__SETTING_CHANGE_COUNTER_RESET_MODE_AND_CZ_STATE_RESELECT_CONFIRMED__CARRYOVER_POWER_CYCLE_UNVERIFIED_AFTER_RESEARCH**。
 
-### 数値表記差
+## 2013-06-17同日群 / 次境界
 
-- パチマガスロマガ: **96.81 / 98.18 / 100.71 / 103.64 / 107.25 / 111.23%**。
-- HAZUSE: **97 / 98 / 101 / 104 / 107 / 111%**。
-- pacnk: **96.80 / 98.10 / 100.70 / 103.60 / 107.20 / 111.20%**。
-- 同一系列の丸め/表示精度差と扱い、平均せず最も精密なパチマガスロマガ値を比較本線に保持。
-
-## 2013-06-10同日群 / 次境界
-
-- K-Navi 2013年6月導入カレンダー上、06-10のパチスロは **パチスロアタックNo.1 ～開幕！世界選手権～**のみ。
-- ALL7 2013年6月導入予定一覧でも06-10は同機のみ確認できるため、06-10群は **CLOSED**。
-- 同2系統では次の具体パチスロ導入日は **2013-06-17**。
-- 06-17群の既知候補は **スナイパイ72（ネット） / ハローサンタ アルティメットマシンガンバージョン（タイヨー） / パチスロ英雄伝説 空の軌跡 THE ANIMATION（ニューギン）**。
-- 次リレーでは06-11～06-16境界を再確認後、06-17群を上記3機から順次処理し、全メーカー横断監査後にCLOSED判定する。
+- K-Navi 2013年6月導入カレンダー上、06-17のパチスロは以下3機。
+  - **スナイパイ72**（ネット）— 今回追加済み。
+  - **ハローサンタ アルティメットマシンガンバージョン**（タイヨー）— 次対象。
+  - **パチスロ英雄伝説 空の軌跡 THE ANIMATION**（ニューギン）— その次。
+- よって06-17群は **OPEN**。残り2機を処理し、別系統でも同日漏れ監査後にCLOSED判定する。
 
 ## 遡及resetBehavior QA 進捗
 
-- 本線と別のQA再開地点は引き続き `docs/real_machine_db/machines/2007-01_karate-baka-ichidai.md`。
-- 本線収集を優先し、既存性能値の無駄な再調査はしていない。
+- QA再開地点 `docs/real_machine_db/machines/2007-01_karate-baka-ichidai.md` は既にv0.7 `resetBehavior`収集済みであることを維持確認。既存性能側の状態は変更していない。
+- 今回は本線741件目の確定・保存を優先し、空手バカ一代直後の「最初の実在resetBehavior欠損機」を安全に一意確定できていないため、QAカーソルは **空手バカ一代直後の実ファイル順**に維持。
+- 次回はtree/実ファイル順で空手バカ一代の次から走査し、resetBehavior既収集機はスキップ、最初の欠損機のみ性能完了判定を崩さず補完する。
 
 ## 次回再開地点
 
-1. **recordCount 740 / chronologicalFrontier 2013-06-10 / 06-10群CLOSED** から開始。
-2. **2013-06-11～06-16**をK-Navi/ALL7に加えて別系統資料でも境界監査する。
-3. 追加候補がなければ **2013-06-17「スナイパイ72」**（ネット）を741件目候補としてrepo重複確認 → 性能コア + resetBehavior v0.7を収集して保存。
-4. 続けて **ハローサンタ アルティメットマシンガンバージョン**、**パチスロ英雄伝説 空の軌跡 THE ANIMATION**を処理し、06-17同日群を全メーカー横断監査する。
-5. アタックNo.1の設定変更/据え置き/純電断契約は、後続QAで直接資料が見つかった場合のみ補完する。
+1. **recordCount 741 / chronologicalFrontier 2013-06-17 / 06-17群OPEN** から開始。
+2. **ハローサンタ アルティメットマシンガンバージョン**を742件目候補としてrepo重複確認 → 性能コア + resetBehavior v0.7を収集・保存。
+3. 続けて **パチスロ英雄伝説 空の軌跡 THE ANIMATION**を処理し、06-17同日群を全メーカー横断監査してCLOSED判定。
+4. 遡及QAは **空手バカ一代直後の実ファイル順**から再開。最初のresetBehavior欠損機を特定して補完。
+5. スナイパイ72の据え置き/純電断契約、50枚ベースは後続QAで本機固有の直接資料が見つかった場合のみ補完。
 
 ## 主要出典 — 取得日 2026-09-06
 
-### パチスロアタックNo.1 ～開幕！世界選手権～
+### スナイパイ72
 
-- K-Navi 機種トップ: `https://p-kn.com/slot/1857/`
+- K-Navi 機種トップ: `https://p-kn.com/slot/1855/`
 - K-Navi 2013年6月全国導入カレンダー: `https://p-kn.com/calendar/201306/`
-- HAZUSE: `https://hazuse.com/machine/pachislot/3S0019/`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/7079`
-- パチマガスロマガ 基本情報: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sanyo_slot/18/a.php`
-- パチマガスロマガ ボーナス確率・ART初当たり・機械割: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sanyo_slot/18/h.php`
-- パチマガスロマガ ARTフロー: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sanyo_slot/18/l.php`
-- ALL7 2013年6月導入予定一覧: `https://www.all7.jp/plans/index/2013/06`
-- 2013年当時スペック紹介（約31G/千円）: `https://ameblo.jp/slostar/entry-11512591758.html`
-- pacnk 後年設定判別整理: `https://pacnk.com/slot/tools/sh_attackno12013.html`
+- HAZUSE: `https://data.hazuse.com/?genre=202&machine_code=3S0161`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/7080`
+- パチマガスロマガ 基本情報: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/net_slot/156/a.php`
+- パチマガスロマガ ATフロー: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/net_slot/156/l.php`
+- パチマガスロマガ 設定別AT初当たり・機械割: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/net_slot/156/h.php`
+- パチ＆スロ必勝本 天井&設定変更: `https://p.hisshobon.jp/machine/2214/1/40426`
+- 2013年当時スペック解析（設定変更時モード振分参考）: `https://ameblo.jp/kky-group/entry-11569216256.html`
+- 2013年導入直前解析: `https://fiveslot777.com/archives/29285366.html`
+- pacnk 後年設定判別整理: `https://pacnk.com/slot/tools/sh_snipai72.html`
