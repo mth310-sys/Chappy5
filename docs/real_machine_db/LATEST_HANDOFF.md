@@ -4,75 +4,74 @@
 
 ## 現在地点
 
-- recordCount: **662**
-- latestMachineAdded: **オアシス**（パイオニア）
-- latestRecord: `docs/real_machine_db/machines/2012-06-04_oasis.md`
+- recordCount: **663**
+- latestMachineAdded: **パチスロ 熱血！華成学園ヒーロー部**（ディ・ライト）
+- latestRecord: `docs/real_machine_db/machines/2012-06-04_nekketsu-kasei-gakuen-hero-bu.md`
 - chronologicalFrontier: **2012-06-04**
-- frontierLatestExactDateMachine: **オアシス**
+- frontierLatestExactDateMachine: **パチスロ 熱血！華成学園ヒーロー部**
 - schema: **resetBehavior v0.7**
-- status: **OPEN_2012-06-04_SAME_DAY_GROUP**
+- status: **CLOSED_2012-06-04_GROUP__NEXT_EXACT_DATE_AUDIT_FROM_2012-06-05**
 
 ## 今回の同期・時系列監査
 
-- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード「ニューパルサーSP」を確認して開始。
-- INDEXは旧地点19件のままなので、README規定どおりLATEST_HANDOFFと実レコードを優先。開始時正本は recordCount 661 / frontier 2012-06-04。
-- 前回HANDOFF指定のパイオニア「オアシス」をrepo検索で重複監査し、未登録確認後662件目として追加。
-- 導入日はK-Navi、2012-03-28当時業界記事、2012-06-04当時新台一覧が2012-06-04で一致。パイオニア公式は2012年6月発売。時系列キーは2012-06-04。
-- パイオニア公式PDFから型式名「オアシスA」を直接確認。検定番号は検索語・資料系統を変えて再探索したが確定できずUNVERIFIED_AFTER_RESEARCH。
-- 性能コアはパイオニア公式、K-Navi、P-WORLD、パチマガスロマガ、pacnk、当時新台一覧、当時業界記事、中古実機DBを横断照合。
-- BIG/REG/合算/機械割は複数系統で一致。パチマガスロマガ検索取得本文のみPAYOUT設定1=197%、設定2=199%と明白な表示異常があるため主値に採用せずCONFLICT_NOTE。
-- 50枚ベースは「50枚/1000円/ベース/コイン持ち/小役確率」を組み替え、前後シリーズの値を排除して再探索したが2012年版の直接値を確定できずUNVERIFIED_AFTER_RESEARCH。
-- resetBehaviorはノーマル/AT・ART・CZ非搭載、有利区間非該当を保存。設定変更/据え置き/単純電源OFF→ONの停止出目・告知状態等は十分な再探索後も直接契約を確定できずUNVERIFIED_AFTER_RESEARCH。
-- K-Naviの2012-04-05展示会実戦記に、前作「スペシャルオアシス」で使えた設定変更判別ネタを今作でも試したが「ダメでした」とする当時観察があるため、旧変判手法非機能を限定的に保存。手法自体や全変更判別不能へ一般化しない。
+- 最新mainのREADME全文、ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード「オアシス」を確認して開始。
+- INDEXは旧地点19件のままなのでREADME規定どおりLATEST_HANDOFFと実レコードを正本化。開始時は recordCount 662 / frontier 2012-06-04。
+- HANDOFF指定のディ・ライト「パチスロ 熱血！華成学園ヒーロー部」をrepo検索し、未登録を確認して663件目として追加。
+- 導入日は2012-06-05公開の当時新台一覧が2012-06-04を明記。P-WORLDは2012年05月の月単位表示を持つため精度差として保持し、日付キーは2012-06-04。
+- 性能コアはP-WORLD、当時パチマガスロマガ、2012-06-05当時新台一覧、A-SLOT、後年検定回顧資料を横断。機械割、BIG/REG/ART、獲得枚数、ART純増は複数系統で一致。
+- 50枚ベースは表記揺れ・型式名・メーカー名と50枚/1000円/ベース/コイン持ちを組み替えて再探索したが直接値を確定できずUNVERIFIED_AFTER_RESEARCH。
+- resetBehaviorは「設定変更/リセット/朝一/据え置き/宵越し/電源OFF ON/天井/1200G/高確/モード/状態/ガックン」を組み替えて再探索。パチマガスロマガに本機専用「朝イチ・設定変更」項目が存在することは確認したが具体本文は取得不能。設定変更時の天井カウンタ、据え置き、電断、内部状態、変更判別は推測せずUNVERIFIED_AFTER_RESEARCH。
+- 当時2012-06-04新台一覧で、同日候補のパイレーツワールド、ニューパルサーSP、オアシス、熱血！華成学園ヒーロー部、天 天和通りの快男児を再照合。GTOも既登録。現HANDOFFまでで既知の2012-06-04候補を処理済みとし同日群を閉鎖。
 
-## 今回の本線追加 — オアシス
+## 今回の本線追加 — パチスロ 熱血！華成学園ヒーロー部
 
 ### 導入・分類
 
-- manufacturer: **パイオニア**。
-- releaseDate: **2012-06-04**。
-- generation: **5号機**。
-- systemType: **ノーマル / 完全告知 / BIG+REG / 25φ**。
-- formalModelName: **オアシスA**。
-- approvalNumber: **UNVERIFIED_AFTER_RESEARCH**。
+- manufacturer: **ディ・ライト / D-light**
+- releaseDate: **2012-06-04**（当時新台一覧基準）
+- generation: **5号機**
+- systemType: **A+ART / ゲーム数上乗せ+セットストックART**
+- formalModelName: **熱血！華成学園～正義参上～XF**
+- approvalNumber: **1S1274**
 
 ### 性能コア
 
-- 機械割: **97 / 99 / 101 / 103 / 106 / 110%**。
-- BIG: **1/296 / 287 / 277 / 266 / 253 / 239**。
-- REG: **1/455 / 425 / 392 / 360 / 329 / 299**。
-- 合算: **1/179 / 171 / 162 / 153 / 143 / 132**。
-- 50枚ベース: **UNVERIFIED_AFTER_RESEARCH**。
-- BIG: **約312枚**。
-- REG: **約104枚**。
-- AT/ART/CZ: **非搭載**。
+- 機械割: **95.91 / 98.63 / 100.58 / 104.29 / 106.61 / 111.79%**
+- BIG合算: **1/434.0 / 420.1 / 407.1 / 394.8 / 370.3 / 374.5**
+- REG合算: **1/618.3 / 595.8 / 574.9 / 555.4 / 546.1 / 512.0**
+- ART初当り: **1/490.8 / 450.8 / 444.3 / 389.5 / 382.1 / 290.0**
+- ボーナス+ART合算: **1/185.6 / 175.7 / 171.2 / 159.3 / 153.8 / 134.7**
+- 50枚ベース: **UNVERIFIED_AFTER_RESEARCH**
+- ART「バーニングダッシュ」: **1セット50G+α / 約+1.4枚/G**
+- 青7BIG: **約301枚**、赤7BIG: **約203枚**、REG/PB: **約56枚**
+- 通常天井: **ボーナス間1200G後、約30G前兆を経由しART 5or7セット**
 
 ### resetBehavior v0.7
 
-- `settingChangeBehavior`: **UNVERIFIED_AFTER_RESEARCH**。停止出目/一時告知状態等の本機固有設定変更契約を確定できず。
-- `carryOverBehavior`: **PERFORMANCE_RELEVANT_CARRYOVER_NOT_APPLICABLE; PRESENTATION_STATE_UNVERIFIED**。
-- `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH**。
-- `gameCounterReset`: **NOT_APPLICABLE_NO_GAME_COUNT_CEILING**。
-- `ceilingAfterReset`: **NOT_APPLICABLE_NO_CEILING**。
-- `modeAfterReset`: **INTERNAL_PERFORMANCE_MODE_NOT_APPLICABLE**。
-- `stateAfterReset`: **NOT_APPLICABLE_NO_AT_ART_CZ_STATE**。
-- `advantageousSectionReset`: **NOT_APPLICABLE_5TH_GEN**。
-- `resetBenefits`: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- `resetPenalties`: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- `resetDetection`: **PREVIOUS_MODEL_CHANGE_DETECTION_TRICK_REPORTED_NOT_WORKING_ON_THIS_MODEL_SINGLE_PERIOD_OBSERVATION; SPECIFIC_METHOD_UNVERIFIED**。K-Navi当時展示会実戦記の限定観察。
-- `publicMorningNumbers`: **NONE_CONFIRMED**。
+- `settingChangeBehavior`: **UNVERIFIED_AFTER_RESEARCH**
+- `carryOverBehavior`: **UNVERIFIED_AFTER_RESEARCH**
+- `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH**
+- `gameCounterReset`: **UNVERIFIED_AFTER_RESEARCH**
+- `ceilingAfterReset`: **UNVERIFIED_AFTER_RESEARCH**
+- `modeAfterReset`: **UNVERIFIED_AFTER_RESEARCH**
+- `stateAfterReset`: **UNVERIFIED_AFTER_RESEARCH**
+- `advantageousSectionReset`: **NOT_APPLICABLE_5TH_GEN**
+- `resetBenefits`: **NONE_CONFIRMED_AFTER_RESEARCH**
+- `resetPenalties`: **NONE_CONFIRMED_AFTER_RESEARCH**
+- `resetDetection`: **UNVERIFIED_AFTER_RESEARCH**
+- `publicMorningNumbers`: **NONE_CONFIRMED_AFTER_RESEARCH**
 
 ## CONFLICT / 品質メモ
 
-- パチマガスロマガ本機専用ページの検索取得本文でPAYOUT設定1=197%、設定2=199%と表示。K-Navi/pacnk/当時新台一覧は97%/99%、かつ同ページ設定3〜6は101/103/106/110%なので明白な表示/転記異常として主値不採用。
-- 50枚ベースは兄弟機/前後シリーズの約37G等を本機へ流用しない。
-- 前作の変判ネタが今作では機能しなかったという当時観察は、具体手法や全変更判別不能の証明ではない。
+- releaseDate: 当時新台一覧=2012-06-04、P-WORLD=2012年05月。平均せず資料差を保持し、具体日を持つ当時資料を時系列キーに採用。
+- パチマガスロマガに「朝イチ・設定変更」項目は存在するが、本文未取得のため内容を推定しない。
+- 機械割はパチマガ精密値と当時一覧丸め値が実質一致。
 
 ## 次回再開地点
 
-1. **recordCount 662 / chronologicalFrontier 2012-06-04**から開始。
-2. **2012-06-04同日群を継続**。最優先候補は **ディ・ライト「パチスロ 熱血！華成学園ヒーロー部」**。repo検索時点では未登録。一次/当時資料で導入日再照合後、未登録なら663件目候補として性能コア+resetBehavior v0.7を処理。
-3. その後、2012-06-04同日群をメーカー別・当時新台一覧・K-Navi/P-WORLD/HAZUSE等で最終監査し、漏れがなければ閉じて2012-06-05以降へ前進。
+1. **recordCount 663 / chronologicalFrontier 2012-06-04**から開始。
+2. **2012-06-04同日群は閉鎖済み**。2012-06-05以降の具体日付き未処理5号機を時系列で監査する。
+3. 2012年6月の未処理候補として **「バジリスク～甲賀忍法帖～II」「鉄のラインバレル」「それいけ！こすみっくヒーローズ」「セブンバー30」** が残る。各機の具体導入日をK-Navi/P-WORLD/HAZUSE/当時業界記事で再照合し、最古の未登録機を664件目候補にする。月順や知名度で飛ばさない。
 4. 欠損は表記揺れ・型式名・メーカー名・シリーズ名と、設定変更/リセット/朝一/据え置き/宵越し/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間/50枚を組み替えて再探索。競合は平均せずCONFLICT。
 
 ## 遡及resetBehavior QA 次回再開地点
@@ -84,18 +83,14 @@
 
 ## 主要出典 — 取得日 2026-09-05
 
-- パイオニア公式発売PDF: `https://www.slot-pioneer.co.jp/information/pdf/pioneer_oasis_120326.pdf`
-- パイオニア公式2012製品一覧: `https://www.slot-pioneer.co.jp/products/2012.html`
-- K-Navi: `https://p-kn.com/slot/1616/`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/6688`
-- パチマガスロマガ スペック: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/pioneer_slot/102/a.php`
-- パチマガスロマガ ボーナス確率: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/pioneer_slot/102/h.php`
-- pacnk: `https://pacnk.com/slot/2012/oasis/top.php`
-- 2012-06-04当時新台一覧: `https://macerate.seesaa.net/article/273495238.html`
-- Pマンズ 2012-03-28業界記事: `https://p-mans.blogspot.com/2012/03/`
-- A-SLOT: `https://www.a-slot.com/SHOP/pioneer17.html`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/6714`
+- パチマガスロマガ ボーナス確率/PAYOUT: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/d-light_slot/01/h.php`
+- パチマガスロマガ 機種トップ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/d-light_slot/01/d-light_slot_01.php`
+- 2012-06-05当時新台一覧: `https://macerate.seesaa.net/article/273495238.html`
+- A-SLOT: `https://www.a-slot.com/SHOP/dlight_2.html`
+- パチ7検定回顧: `https://pachiseven.jp/articles/detail/5424`
 
 ## GitHub commits
 
-- ニューパルサーSP machine record: `e082c85711a19689c546612afa6e1f78e331b3bb`
 - オアシス machine record: `3c7877eb20c01089cbd6adfeb215ebe42bfcf93f`
+- 熱血！華成学園ヒーロー部 machine record: `33d883651f2638d93be70942ef315fe2a346d04b`
