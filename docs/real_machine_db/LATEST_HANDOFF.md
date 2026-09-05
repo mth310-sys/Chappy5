@@ -4,73 +4,76 @@
 
 ## 現在地点
 
-- recordCount: **680**
-- latestMachineAdded: **パチスロ海物語ミラクルマリン**（三洋物産）
-- latestRecord: `docs/real_machine_db/machines/2012-08-06_pachislo-umimonogatari-miracle-marine.md`
+- recordCount: **681**
+- latestMachineAdded: **押忍!!豪炎高校應援團**（山佐）
+- latestRecord: `docs/real_machine_db/machines/2012-08-06_ossu-gouen-koukou-ouendan.md`
 - chronologicalFrontier: **2012-08-06**
-- frontierLatestExactDateMachine: **パチスロ海物語ミラクルマリン**
+- frontierLatestExactDateMachine: **押忍!!豪炎高校應援團**
 - schema: **resetBehavior v0.7**
-- status: **OPEN_2012-08-06__SAME_DAY_RESIDUAL_AUDIT_THEN_NEXT_DATE_BOUNDARY**
+- status: **CLOSED_2012-08-06__NEXT_BOUNDARY_AUDIT_TO_2012-08-20_DONCHAN_MATSURI**
 
 ## 今回の同期・時系列監査
 
-- 最新mainのREADME全文、正本ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード「兎-野性の闘牌-」を確認して開始。
-- INDEXは旧地点19件のまま。README規定どおり、より新しいLATEST_HANDOFFと実レコードを進捗正本として使用。開始時は recordCount 679 / frontier 2012-08-06 / 08-06群OPEN。
-- LATEST_HANDOFF指定の三洋物産「パチスロ海物語ミラクルマリン」をrepo検索し未登録を確認して680件目として追加。
-- K-Naviがホール導入開始2012-08-06と明記。当時紹介資料でも8月5日納品予定、8月導入として整合。
-- 08-06群の検索では既登録の「夜王」「兎-野性の闘牌-」と今回の「ミラクルマリン」を再確認。単一カレンダーだけで閉じず、次回もメーカー/業界/旧DB側の残存監査を継続する。
+- 最新mainのREADME全文、正本ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード「パチスロ海物語ミラクルマリン」を確認して開始。
+- INDEXは旧地点19件のまま。README規定どおり、より新しいLATEST_HANDOFFと実レコードを進捗正本として使用。開始時は recordCount 680 / frontier 2012-08-06 / 08-06群OPEN。
+- 08-06残存監査で山佐「押忍!!豪炎高校應援團」を発見。repo検索で未登録を確認し681件目として追加。
+- 導入日はパチビーが2012-08-06と明記。山佐公式/P-WORLDは2012年8月で整合。
+- 2012年8月の機種一覧・メーカー資料・業界/旧DBを再監査し、08-06群は既登録「夜王」「兎-野性の闘牌-」「パチスロ海物語ミラクルマリン」と今回の「押忍!!豪炎高校應援團」を確認。追加の具体日付き未登録機を確認できなかったため08-06群をCLOSED。
+- 次の具体導入日候補は「ドンちゃん祭」。メーカー発表転載で2012-08-20より全国ホール導入開始を確認し、repo検索では未登録。
 
-## 今回の本線追加 — パチスロ海物語ミラクルマリン
+## 今回の本線追加 — 押忍!!豪炎高校應援團
 
 ### 識別
 
-- manufacturer: **三洋物産**
+- manufacturer: **山佐**
 - releaseDate key: **2012-08-06**
 - generation: **5号機**
-- systemType: **ノーマルA+天井ART**
-- modelName: **UNVERIFIED_AFTER_RESEARCH**
-- approvalNumber: **UNVERIFIED_AFTER_RESEARCH**
+- systemType: **擬似ボーナス+ゲーム数管理型ART**
+- modelName: **ゴウエンコウコウオウエンダンZ**
+- approvalNumber: **2S0398**
 
 ### 性能コア
 
-- 機械割 主系列: **98.0 / 99.1 / 100.6 / 102.6 / 105.0 / 108.1%**
-- 機械割 別系列: **97.82 / 98.98 / 100.59 / 102.61 / 105.35 / 108.60%** → `CONFLICT`
-- BIG: **1/392.43 / 1/383.25 / 1/372.36 / 1/358.12 / 1/346.75 / 1/334.37**
-- REG: **1/407.06 / 1/397.19 / 1/383.25 / 1/366.12 / 1/352.34 / 1/334.37**
-- ボーナス合成: **1/199.80 / 1/195.05 / 1/188.86 / 1/181.04 / 1/174.76 / 1/167.18**
-- 50枚ベース: **39.5〜44.2G**
-- BIG: **最大402枚**、REG: **約60枚**
-- 天井ART「ミラクルタイム」: **次回ボーナスまで継続、純増約+0.6枚/G**
-- 通常天井: **BIG後1000G / REG後800G**で天井状態へ移行し、ART突入リプレイ確率が大幅上昇。
+- 機械割: **96.8 / 98.1 / 100.6 / 104.5 / 108.6 / 114.3%**
+- 擬似BIG: **1/443 / 1/410 / 1/390 / 1/368 / 1/347 / 1/293**
+- 擬似REG: **1/520 / 1/485 / 1/471 / 1/458 / 1/437 / 1/374**
+- 擬似ボーナス合算: **1/239 / 1/222 / 1/213 / 1/204 / 1/193 / 1/164**
+- メインART初当り: **1/780 / 1/731 / 1/705 / 1/676 / 1/640 / 1/554**
+- ボーナス+ART合算: **1/182.9 / 1/170.5 / 1/164.1 / 1/156.8 / 1/148.2 / 1/126.6**
+- 50枚ベース: **約31G/1000円（2012年当時の実戦値、ANALYSIS_SINGLE_PERIOD_PRACTICAL）**
+- ART「團旗道」: **1セット40G+α、純増約+2.5枚/G、継続率50〜80%**
+- 熱血ボーナス: **平均約150枚**
+- 百折不撓ボーナス: **平均約42枚、ART期待度約33%**
+- モード別最大G: **通常A 1280G+前兆 / 通常B 768G+前兆 / 天国128G+前兆**
 
 ### resetBehavior v0.7
 
-- `settingChangeBehavior`: **CONFIRMED_PARTIAL**。K-Navi当時記事と当時攻略資料で、設定変更後も天井までのゲーム数を引き継ぐことを確認。
-- `carryOverBehavior`: **CONFIRMED_PARTIAL**。当時資料に宵越し可の明示あり。天井進捗の翌日持越しを確認。
-- `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH**。単純電源OFF→ONだけの本機固有契約を直接確定できず。
-- `gameCounterReset`: **RETAIN_ON_SETTING_CHANGE_CONFIRMED**
-- `ceilingAfterReset`: **NO_RESET_SHORTENING; NORMAL_CEILING_PROGRESS_RETAINED**
-- `modeAfterReset`: **NOT_APPLICABLE_OR_NO_MACHINE_SPECIFIC_INTERNAL_MODE_SYSTEM_CONFIRMED**
-- `stateAfterReset`: **CONFIRMED_PARTIAL_ART_RETAINED_ON_SETTING_CHANGE**。当時攻略資料ではART中に設定変更しても朝一ARTスタート。
+- `settingChangeBehavior`: **CONFIRMED**。設定変更で天井ゲーム数リセット、心&体メーター引継ぎ、校内or商店街ステージをランダム選択、モード再抽選。
+- `carryOverBehavior`: **CONFIRMED_PARTIAL**。設定変更を伴わない朝一では天井ゲーム数・心&体メーターを保持することを電源OFF/ON契約から確認。
+- `powerCycleBehavior`: **CONFIRMED**。電源OFF→ONのみなら天井ゲーム数・心&体メーター引継ぎ、開始ステージのみ校内or商店街からランダム。
+- `gameCounterReset`: **CLEAR_ON_SETTING_CHANGE__RETAIN_ON_POWER_CYCLE**
+- `ceilingAfterReset`: **MODE_DEPENDENT_AFTER_RESET**。変更後のモードで最大1280/768/128G+前兆。
+- `modeAfterReset`: **奇数設定 A45% / B25% / 天国30%、偶数設定 A25% / B45% / 天国30%**（2012年当時解析）。
+- `stateAfterReset`: **CONFIRMED_PARTIAL**。心&体メーターは設定変更でも引継ぎ。JAC成立Gで設定変更すると内部通常へ移行する本機固有挙動あり。
 - `advantageousSectionReset`: **NOT_APPLICABLE_5TH_GEN**
-- `resetBenefits`: **CEILING_CARRYOVER_AND_ART_RETAINMENT**
-- `resetPenalties`: **NONE_MACHINE_SPECIFIC_CONFIRMED_AFTER_RESEARCH**
-- `resetDetection`: **UNVERIFIED_AFTER_RESEARCH**。ガックン/初期出目/液晶/ランプ等の本機固有変更判別は確定できず。
-- `publicMorningNumbers`: **NONE_CONFIRMED_AFTER_RESEARCH**
+- `resetBenefits`: **設定変更時天国30% + 心&体メーター蓄積引継ぎ**
+- `resetPenalties`: **設定変更で前日天井進捗消失**
+- `resetDetection`: **JAC据え置き判別法CONFIRMED / ガックンUNVERIFIED_AFTER_RESEARCH**。閉店時JAC成立状態を残し翌日1G目のJAC中ベルで据え置き推測が可能とする本機専用資料あり。
+- `publicMorningNumbers`: **変更時モード振分を保存**。後年整理には設定1朝一天国28% / 設定6 30%との別記述があり、当時解析の全設定30%と平均せずCONFLICT_NOTE。
 
 ### 品質メモ
 
-- 50枚ベース39.5〜44.2Gはパチマガスロマガと当時紹介資料で一致。
-- 機械割は98.0〜108.1%系列とpacnk精密系列が設定5・6で単純丸めを超えて差があるため平均せずCONFLICT。
-- パチマガスロマガ取得本文の設定1 BIG=1/329.43は、他資料1/392.43および同ページ合成1/199.80と整合しないため表示/転記異常候補としてCONFLICT_NOTE。
-- 設定変更でも天井進捗引継ぎはK-Navi当時記事＋当時攻略資料で複数系統照合済み。
-- ART中設定変更でもART継続は当時攻略資料の直接記述を採用。ただし単純電源OFF→ONとは混同しない。
+- 純増/セットG/擬似ボーナス平均枚数は山佐公式とP-WORLDで照合。
+- 機械割・ART初当り・合算系列はP-WORLDと当時攻略資料で照合。
+- 一部二次資料が「ボーナス+ART」系列をART初当りと表記するため定義競合を記録し、メインART初当り1/780〜1/554と混ぜていない。
+- 50枚ベースは解析公表表を発見できず、2012年当時の実戦値約31G/1000円のみ低信頼度で保存。2021年「豪炎高校應援團 檄」の約51G/50枚等は別機種として排除。
+- 設定変更/電源OFF→ON契約はパチ＆スロ必勝本の本機専用記事で明確に分離されている。
 
 ## 次回再開地点
 
-1. **recordCount 680 / chronologicalFrontier 2012-08-06 / 08-06 group OPEN**から開始。
-2. 08-06同日群をメーカー製品一覧、当時業界新台記事、旧DB、アーカイブで残存監査する。既登録「夜王」「兎-野性の闘牌-」「パチスロ海物語ミラクルマリン」は重複追加しない。
-3. 同日群に未登録機がなければ **2012-08-07〜次の具体導入日までの境界監査**へ進み、最古の未処理機種を確定して次レコード化する。
+1. **recordCount 681 / chronologicalFrontier 2012-08-06 / 08-06 group CLOSED**から開始。
+2. **2012-08-07〜2012-08-19の境界監査**をメーカー製品一覧、当時業界記事、旧DB、アーカイブで実施し、具体日付き未登録機がないことを確認する。
+3. 現時点の次候補はエレコ/ユニバーサル系 **「ドンちゃん祭」2012-08-20**。メーカー発表転載で2012-08-20全国ホール導入開始を確認、repo検索では未登録。境界により古い機種がなければ682件目として性能コア+resetBehavior v0.7を収集する。
 4. 欠損は表記揺れ・型式名・メーカー名・シリーズ名と設定変更/リセット/朝一/据え置き/宵越し/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間/50枚を組み替えて十分再探索してからUNVERIFIED。競合は平均せずCONFLICT。
 
 ## 遡及resetBehavior QA 次回再開地点
@@ -82,19 +85,15 @@
 
 ## 主要出典 — 取得日 2026-09-05
 
-- K-Navi パチスロ海物語ミラクルマリン: `https://p-kn.com/slot/1667/`
-- パチマガスロマガ 機種TOP: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sanyo_slot/14/sanyo_slot_14.php`
-- パチマガスロマガ スペック: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sanyo_slot/14/a.php`
-- パチマガスロマガ ボーナス確率/PAYOUT: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sanyo_slot/14/h.php`
-- パチマガスロマガ 小役確率/1000円あたりG数: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sanyo_slot/14/c.php`
-- pacnk: `https://pacnk.com/slot/tools/sh_miraclemarine.html`
-- 5号機クロニクル 三洋物産: `https://5goki.com/sanyo`
-- 天井ハイエナ生活 2012年当時資料: `https://macerate.seesaa.net/article/297010442.html`
-- 天井ハイエナ生活 更新版: `https://macerate.seesaa.net/article/305411305.html`
-- モゲスロ回顧資料: `https://moge-site.com/archives/6673`
-- ★スロスター★ブログ当時紹介: `https://ameblo.jp/slostar/entry-11280617505.html`
-- パチンコ業界!?ブログ当時スペック: `https://ameblo.jp/ita-13-5/entry-11281976399.html`
+- 山佐ネクスト公式: `https://yamasa-next.co.jp/model_oed/`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/6778`
+- パチビー: `https://www.pachibee.jp/machines/reach/212070003`
+- パチ＆スロ必勝本 天井&設定変更: `https://p.hisshobon.jp/machine/2057/1/35878`
+- パチ速 2012年当時解析: `https://patisoku.blog14.fc2.com/blog-entry-761.html`
+- 天井ハイエナ生活 2012年当時資料: `https://macerate.seesaa.net/article/288333617.html`
+- 2-9伝説 朝一の立ち回りとダブルメーター: `https://2-9densetsu.com/blog-entry-1049-html/`
+- 4Gamer ドンちゃん祭メーカー発表転載: `https://www.4gamer.net/games/180/G018057/20120820046/`
 
 ## GitHub commits
 
-- パチスロ海物語ミラクルマリン machine record: `68b77bf29c903972c3fc47c3cb2d6a1667d87e96`
+- 押忍!!豪炎高校應援團 machine record: `02a6870529159a39e22e571129512d4ffd5ab724`
