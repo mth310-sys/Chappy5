@@ -4,75 +4,79 @@
 
 ## 現在地点
 
-- recordCount: **656**
-- latestMachineAdded: **スカイラブ4**（SNKプレイモア）
-- latestRecord: `docs/real_machine_db/machines/2012-05-21_sky-love-4.md`
+- recordCount: **657**
+- latestMachineAdded: **スパイガール2**（KPE）
+- latestRecord: `docs/real_machine_db/machines/2012-05-21_spy-girl-2.md`
 - chronologicalFrontier: **2012-05-21**
-- frontierLatestExactDateMachine: **スカイラブ4**
+- frontierLatestExactDateMachine: **スパイガール2**
 - schema: **resetBehavior v0.7**
-- status: **CONTINUE_2012-05-21_SAME_DAY_GROUP**
+- status: **FINAL_AUDIT_2012-05-21_SAME_DAY_GROUP**
 
 ## 今回の同期・時系列監査
 
-- 最新mainのREADME全文、ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード「真田純勇士すぺしゃる」を確認して開始。
-- INDEXは旧地点19件のままなので、README規定どおり最新LATEST_HANDOFFと実レコードを優先。開始時正本は recordCount 655 / frontier 2012-05-14。
-- 2012-05-14同日群と05-15〜05-20を、導入日/納品日/記事日を分離して境界再検索。今回、真田純勇士すぺしゃる以外に05-14〜05-20の具体日付付き未登録5号機を確定できず、05-20まで閉じた。
-- 既知アンカー2012-05-21「スカイラブ4」をK-Navi、パチ＆スロ必勝本、SNKプレイモア公式で再確認。
-- `docs/real_machine_db/machines/2012-05-21_sky-love-4.md` をmainで404確認後、656件目として追加。
-- 追加後の2012-05-21同日群再検索で **KPE「スパイガール2」** がK-Navi上2012-05-21ホール導入開始と判明。よって同日群は未閉鎖。
+- 最新mainのREADME全文、ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード「スカイラブ4」を確認して開始。
+- INDEXは旧地点19件のままなので、README規定どおり最新LATEST_HANDOFFと実レコードを優先。開始時正本は recordCount 656 / frontier 2012-05-21。
+- LATEST_HANDOFFで次の未登録確定候補だったKPE「スパイガール2」を実パス404で未登録確認。
+- K-Naviで2012-05-21ホール導入開始、グリーンべるとで2012-05-20納品開始予定を確認。納品日とホール導入日は定義を分離。
+- 性能コアはK-Navi、P-WORLD、パチマガスロマガ、pacnk、当時業界記事で横断照合。
+- resetBehaviorは「スパイガール2 / スパイガール2P / KPE」と設定変更/リセット/朝一/据え置き/宵越し/電源OFF ON/天井/1282G/モード/高確/ガックン等を組み替えて再探索。当時2012年の機種別天井解析から、設定変更でも天井ゲーム数をリセットせず内部モードを再セットする本機固有挙動を回収。
+- 657件目として `docs/real_machine_db/machines/2012-05-21_spy-girl-2.md` を追加。
+- 2012-05-21同日群を追加検索した範囲では、スカイラブ4/スパイガール2以外の具体日2012-05-21未登録5号機を今回確定できず。ただし同日群は次回冒頭で最終監査してから閉じる。
+- 次の具体日アンカーとして藤商事「パチスロ 天 天和通りの快男児」がK-Navi上2012-06-04ホール導入開始であることを確認。05-22〜06-03の未処理機種を飛ばさず境界監査してから進む。
 
-## 今回の本線追加 — スカイラブ4
+## 今回の本線追加 — スパイガール2
 
 ### 導入・分類
 
-- manufacturer: **SNKプレイモア**。
-- releaseDate: **2012-05-21**。K-Naviとパチ＆スロ必勝本で一致。SNK公式は稼働日2012年5月。
+- manufacturer: **KPE**。
+- releaseDate: **2012-05-21**。K-Naviと後年整理DBで一致。当時グリーンべるとは5/20納品開始予定。
 - generation: **5号機**。
-- systemType: **A+ART / ゲーム数管理CZ / セット数+ゲーム数上乗せART**。
-- formalModelName: **スカイラブ4A**（SNK公式）。
-- approvalNumber: **UNVERIFIED_AFTER_RESEARCH**。
+- systemType: **A+ART / CZ / セットストック+ゲーム数上乗せART**。
+- formalModelName: **スパイガール2P**。
+- approvalNumber: **2S0029**。
+- 型式/検定番号は後年整理DB1系統のため `ANALYSIS_SINGLE_RETROSPECTIVE` 扱い。
 
 ### 性能コア
 
-- BIG: **1/496.5 / 481.9 / 468.1 / 455.1 / 442.8 / 431.2**。
-- REG: **1/585.1 / 565.0 / 546.1 / 528.5 / 512.0 / 496.5**。
-- ART初当り: **1/544.1 / 524.7 / 522.8 / 464.3 / 431.1 / 383.0**。
-- ボーナス合算: **1/268.6 / 260.1 / 252.1 / 244.5 / 237.4 / 230.8**。
-- 機械割はCONFLICT。系列A（P-WORLD / 5号機クロニクル）= **96.9 / 98.7 / 99.9 / 104.2 / 109.3 / 114.3%**。系列B（パチ＆スロ必勝本 / pacnk）= **97.2 / 99.0 / 100.3 / 104.6 / 109.8 / 114.8%**。平均せず両系列保存。
-- 50枚ベース: **UNVERIFIED_AFTER_RESEARCH**。2024年スマスロ版の値は別機種なので不採用。
-- BIG約**203枚**、REG約**36枚**。
-- ART「スカイラッシュ」: **1セット50G、約+1.7枚/G**。
-- 通常モード: **通常A / 通常B / 天国**。無限SC到達ゲーム数は通常A **999G** / 通常B **768G** / 天国 **256G**。
+- 機械割: **97.7 / 99.6 / 100.7 / 105.2 / 108.5 / 113.0%**。
+- BIG: **1/399.6 / 390.1 / 376.6 / 372.4 / 360.1 / 352.3**。
+- REG: **1/771.0 / 744.7 / 720.2 / 662.0 / 642.5 / 624.2**。
+- ボーナス合算: **1/263.2 / 256.0 / 247.3 / 238.3 / 230.8 / 225.2**。
+- ボーナス+ART合算: **1/178.6 / 166.5 / 166.0 / 147.6 / 146.3 / 130.0**。
+- ART単独初当り: **UNVERIFIED_AFTER_RESEARCH**。合算からの逆算推定は採用しない。
+- 50枚ベース: **約31G/1000円**。パチマガスロマガ直接値、現時点単一系統。
+- BIG約**204枚**、REG約**60枚**。
+- ART「大作戦タイム」: **1セット50G+α、約+1.4枚/G**。
+- 通常天井: **ボーナス間1282Gで最低3セットART**。
 
 ### resetBehavior v0.7
 
-- `settingChangeBehavior`: **CONFIRMED_GAME_COUNT_CLEAR_AND_MODE_RESELECT**。
-- `gameCounterReset`: **CONFIRMED_CLEAR_ON_SETTING_CHANGE**。
-- `modeAfterReset`: **CONFIRMED_RESELECT_WITH_PUBLIC_DISTRIBUTION**。
-  - 設定1〜3: 通常A **37.50%** / 通常B **37.50%** / 天国 **25.00%**。
-  - 設定4〜6: 通常A **33.33%** / 通常B **33.33%** / 天国 **33.33%**。
-- `ceilingAfterReset`: **MODE_DEPENDENT_AFTER_RESET**。変更専用固定短縮天井ではなく、再抽選モードにより999/768/256G。朝一天国25〜33.33%が主要恩恵。
-- `stateAfterReset`: **PARTIAL_CONFIRMED_MODE_RESELECT_ONLY**。モード再抽選は確認。その他ART/CZ内部状態処理は直接資料不足。
-- `carryOverBehavior`: **UNVERIFIED_AFTER_RESEARCH**。純据え置き時の本機固有保持契約を直接確定できず。
-- `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH**。単純電源OFF→ONの直接根拠を確定できず。
-- `resetBenefits`: **CONFIRMED_CHANCE_OF_HEAVEN_START**。天国開始25.00〜33.33%。
-- `resetPenalties`: 前日ゲーム数進捗の消失。
-- `resetDetection`: **PARTIAL_PUBLIC_COUNTER_INFORMATION**。通常ゲーム数は液晶右下で確認可能。ただしガックン/初期出目/初期ステージ等の変更判別条件は再探索後も未確定。
+- `settingChangeBehavior`: **PARTIAL_CONFIRMED_CEILING_COUNTER_PRESERVED_AND_INTERNAL_MODE_RESELECTED**。
+- `gameCounterReset`: **CONFIRMED_NOT_RESET_ON_SETTING_CHANGE_ANALYSIS_SINGLE**。設定変更でもボーナス間1282G天井ゲーム数をリセットしない当時解析を確認。
+- `ceilingAfterReset`: **NO_RESET_SPECIFIC_SHORTENING_CONFIRMED**。変更専用短縮ではなく天井進捗を保持。
+- `modeAfterReset`: **CONFIRMED_RESELECT_WITHOUT_PUBLIC_DISTRIBUTION**。内部モード再セットを確認。具体振り分け率は未確認。
+- `stateAfterReset`: **UNVERIFIED_AFTER_RESEARCH**。低確/高確/超高確は存在するが、変更直後の状態振り分けは未確定。
+- `carryOverBehavior`: **PARTIAL_CONFIRMED_FOR_CEILING_COUNTER**。変更操作でも天井進捗が消えない。純据え置き時のモード/状態/ARTストック等の詳細保持契約は未確定。
+- `powerCycleBehavior`: **PARTIAL_CONFIRMED_INITIAL_STAGE_ONLY**。電源ON/OFF時もカフェorプールからランダム開始。カウンタ/モード/状態の電源断処理は未確定。
+- `resetBenefits`: **CONFIRMED_CEILING_PROGRESS_PRESERVATION_ON_SETTING_CHANGE**。朝一宵越し天井狙いが成立し得る。
+- `resetPenalties`: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- `resetDetection`: 初期ステージは設定変更/電源ONOFF双方で同様のランダム開始となるため判別材料として弱い。ガックン等は未確定。
+- `publicMorningNumbers`: **NONE_CONFIRMED_AFTER_RESEARCH**。
 - `advantageousSectionReset`: **NOT_APPLICABLE_5TH_GEN**。
 
 ### 品質メモ
 
-- 機械割2系列は差が丸め範囲を超えるためCONFLICT。旧解析ページの設定1「69.9%」は、設定2〜6が系列Aと一致し他資料とも大幅乖離するため明白な誤記候補として採用しない。
-- 天井を単純に999Gとする回顧資料もあるが、モード別直接解析の通常A999G / 通常B768G / 天国256Gを保持。
-- 2024年カルミナ「スマスロ Sky Love」の設定変更/電源OFF→ON/天井短縮/50枚情報は別機種のため一切流用していない。
-- baseGamesPer50、approvalNumber、純据え置き、単純電源OFF→ON、ガックン等は検索語・資料系統変更後も直接根拠不足のためUNVERIFIED。
+- 1282G天井と性能コアは複数系統で照合。
+- 「設定変更でも天井ゲーム数をリセットしない」「内部モード再セット」は2012年当時資料で直接確認したが、同一本文を独立2系統で再照合できていないためreset項目はANALYSIS_SINGLE相当として保存。
+- K-Naviには本機専用「設定変更後の挙動」解析項目が現存するが、検索インデックスから本文詳細までは取得できなかった。
+- 初代スパイガールや名称の近いスカイガールズ等の別機種仕様は流用していない。
 
 ## 次回再開地点
 
-1. **recordCount 656 / chronologicalFrontier 2012-05-21**から開始。
-2. **2012-05-21同日群を継続**。次の未登録確定候補は **KPE「スパイガール2」**。K-Naviで2012-05-21ホール導入開始を確認済み。
-3. repo重複確認後、未登録なら657件目候補として性能コア+resetBehavior v0.7を収集する。
-4. スパイガール2処理後も2012-05-21同日群を最終監査し、漏れがなければ05-22以降へ前進する。
+1. **recordCount 657 / chronologicalFrontier 2012-05-21**から開始。
+2. **2012-05-21同日群を最終監査**。既登録のスカイラブ4 / スパイガール2以外に具体日付き未登録5号機がないか、メーカー別・当時導入一覧・K-Navi等で最後に確認。
+3. 同日群に追加がなければ **2012-05-21を閉じ、05-22〜06-03を日付順に境界監査**。途中の未処理機種を飛ばさない。
+4. 次の既知具体日アンカーは **藤商事「パチスロ 天 天和通りの快男児」= 2012-06-04**（K-Navi）。境界監査で先行機がなければ次候補としてrepo重複確認後に処理。
 5. 欠損は表記揺れ・型式名・メーカー名・シリーズ名と、設定変更/リセット/朝一/据え置き/宵越し/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間/50枚を組み替えて再探索。競合は平均せずCONFLICT。
 
 ## 遡及resetBehavior QA 次回再開地点
@@ -84,20 +88,19 @@
 
 ## 主要出典 — 取得日 2026-09-05
 
-- SNKプレイモア公式 スカイラブ4: `https://slot.snk-corp.co.jp/official/skylove4/index.html`
-- SNKプレイモア公式 ゲームフロー&ボーナス: `https://slot.snk-corp.co.jp/official/skylove4/game/index.html`
-- K-Navi スカイラブ4: `https://p-kn.com/slot/1624/`
-- P-WORLD スカイラブ4: `https://www.p-world.co.jp/machine/database/6699`
-- パチ＆スロ必勝本 基本スペック: `https://p.hisshobon.jp/machine/2016/1/34455`
-- パチ＆スロ必勝本 通常時のモード: `https://p.hisshobon.jp/machine/2016/1/34537`
-- パチ＆スロ必勝本 通常時のSC抽選: `https://p.hisshobon.jp/machine/2016/1/35065`
-- パチ＆スロ必勝本 ART概要: `https://p.hisshobon.jp/machine/2016/1/34461`
-- 5号機クロニクル SNKプレイモア: `https://5goki.com/snkplaymore`
-- pacnk スカイラブ4: `https://pacnk.com/slot/tools/sh_skylove4.html`
-- 当時記事 スロ速VIP: `https://slosoku.com/archives/5283885.html`
-- K-Navi スパイガール2（次候補）: `https://p-kn.com/slot/1622/`
+- K-Navi スパイガール2: `https://p-kn.com/slot/1622/`
+- グリーンべると KPE『スパイガール』後継機発表: `https://web-greenbelt.jp/00001443/`
+- P-WORLD スパイガール2: `https://www.p-world.co.jp/machine/database/6691`
+- パチマガスロマガ スペック: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/kpe_slot/29/a.php`
+- パチマガスロマガ ボーナス確率: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/kpe_slot/29/h.php`
+- パチマガスロマガ 小役確率/1000円ベース: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/kpe_slot/29/c.php`
+- pacnk スパイガール2: `https://pacnk.com/slot/2012/spygirl2/top.php`
+- 2012年当時 天井ハイエナ生活: `https://macerate.seesaa.net/article/288333617.html`
+- パチナビ 型式/検定番号整理: `https://pachinavi.net/machines/spy-girl-2/`
+- 藤商事公式 パチスロ 天 天和通りの快男児: `https://www.fujimarukun.co.jp/products/tenho/`
+- K-Navi パチスロ 天 天和通りの快男児（次アンカー）: `https://p-kn.com/slot/1642/`
 
 ## GitHub commits
 
-- 真田純勇士すぺしゃる machine record: `5af5e51f1d31eb8561330da2efe27f93de650100`
 - スカイラブ4 machine record: `aa9dec461adee380df5563578d55c860e9f80936`
+- スパイガール2 machine record: `03438bb8c14e52555eb8fb3ebc64b6cf48855d2a`
