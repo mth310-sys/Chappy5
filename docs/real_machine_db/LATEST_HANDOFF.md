@@ -4,61 +4,57 @@
 
 ## 現在地点
 
-- recordCount: **683**
-- latestMachineAdded: **クレアの秘宝伝 ～はじまりの扉と太陽の石～**（大都技研）
-- latestRecord: `docs/real_machine_db/machines/2012-09-03_kurea-no-hihouden-hajimari-no-tobira-to-taiyou-no-ishi.md`
-- chronologicalFrontier: **2012-09-03**
-- frontierLatestExactDateMachine: **クレアの秘宝伝 ～はじまりの扉と太陽の石～**
+- recordCount: **684**
+- latestMachineAdded: **パチスロ聖闘士星矢**（三洋物産）
+- latestRecord: `docs/real_machine_db/machines/2012-09-10_pachislot-saint-seiya.md`
+- chronologicalFrontier: **2012-09-10**
+- frontierLatestExactDateMachine: **パチスロ聖闘士星矢**
 - schema: **resetBehavior v0.7**
-- status: **CLOSED_2012-09-03_PACHISLOT_GROUP__NEXT_BOUNDARY_TO_2012-09-10**
+- status: **OPEN_2012-09-10_GROUP__NEXT_REACH_RUSH**
 
 ## 今回の同期・時系列監査
 
 - 最新mainのREADME、正本ミッションv0.7、INDEX、LATEST_HANDOFF、最新レコードを確認して開始。
-- 開始時正本は recordCount 682 / chronologicalFrontier 2012-08-20 / 08-20同日群OPEN。
-- 2012年8月のパチスロ一覧を再監査し、押忍!! 豪炎高校應援團、ドンちゃん祭、海物語ミラクルマリン、夜王の4機種系統を確認。最新mainではこれらが既収録のため、08-20同日群と08-21〜09-02境界を閉鎖方向で処理。
-- 2012-09-03候補としてhandoffに記載されていた「おそ松くん」（サンスリー）は、K-Navi/業界資料で **CRおそ松くん＝パチンコ** と確認。パチスロ本線候補から除外した。
-- 同じ2012-09-03の大都技研「クレアの秘宝伝 ～はじまりの扉と太陽の石～」はmain未登録を確認し、683件目として追加。
-- 2012年9月パチスロ一覧ではクレアのほか、リングにかけろ1 ギリシア十二神編、聖闘士星矢、キュインぱちすろ南国育ち 1st vacation、戦人、覇王伝 零、兎－野生の闘牌－、トロピカーナ、マハロ-30、ニューワンバー-30を確認。次回は具体導入日を古い順に確定して進む。
+- INDEXは初期19件時点の古い集計だが、README規則どおりより新しい `LATEST_HANDOFF.md` を進捗正本として採用。
+- 開始時正本は recordCount 683 / chronologicalFrontier 2012-09-03 / 09-03パチスロ群CLOSED。
+- 2012-09-04〜09-09境界を監査。ALL7.jp 9月導入予定一覧上、次の具体日付きパチスロは2012-09-10の「パチスロ聖闘士星矢」「リーチラッシュ」。
+- repo検索で「パチスロ聖闘士星矢」は未登録を確認し、684件目として追加。
+- repo検索で「リーチラッシュ」も未登録を確認。09-10同日群は未閉鎖。
 
-## 今回の本線追加 — クレアの秘宝伝 ～はじまりの扉と太陽の石～
+## 今回の本線追加 — パチスロ聖闘士星矢
 
 ### 識別
 
-- manufacturer: **大都技研**
-- releaseDate key: **2012-09-03**
+- manufacturer: **三洋物産**
+- releaseDate key: **2012-09-10**
 - generation: **5号機**
-- systemType: **ノーマルタイプ / ボーナス主体 / プチRT演出**
-- modelName: **クレアの秘宝伝K**
-- approvalNumber: **1S1039**
-- releaseDate conflict: K-Navi/パチ＆スロ必勝本 **2012-09-03** vs HAZUSE **2012-09-10**。平均せず保持。
+- systemType: **AT / 規定ゲーム数解除 + CZ / セット継続**
+- modelName / approvalNumber: 今回の再探索では直接確定できず `UNVERIFIED_AFTER_RESEARCH`
 
 ### 性能コア
 
-- 市場掲載/解析機械割: **97.50 / 98.90 / 101.30 / 105.10 / 108.70 / 115.30%**
-- 完全技術介入シミュレート: **98.06 / 99.63 / 101.80 / 105.40 / 109.39 / 114.46%**
-- BIG: **1/287.44 / 282.48 / 273.07 / 256.00 / 237.45 / 221.41**
-- REG: **1/321.25 / 303.41 / 295.21 / 277.69 / 260.06 / 227.56**
-- ボーナス合算: **1/151.7 / 146.3 / 141.9 / 133.2 / 124.1 / 112.1**
-- 50枚ベース: **34.6G（設定1）～37.3G（設定6）**
-- BIG: **約311枚** / REG: **約104枚**
-- ART/AT非搭載。ゲーム数天井/規定G天井は確認されず。
+- 機械割: **96.7 / 98.0 / 100.0 / 103.1 / 106.1 / 110.0%**
+- AT初当たり: **1/272.1 / 267.7 / 264.1 / 229.3 / 208.5 / 177.3**
+- CZ「火時計ミッション」: **1/186.1 / 178.0 / 178.2 / 161.3 / 144.6 / 124.1**
+- 50枚ベース: **約30G**（後年単一整理資料のためANALYSIS_SINGLE_RETROSPECTIVE）
+- AT「聖闘士RUSH」: **約+2.8枚/G**
+- K-Navi表記は **30/50/100G + バトル10G+α**。2012年業界記事の **40/60/110G** はバトル込み総ゲーム数と判断できるため定義差として保持。
+- 通常モード別天井: **A 1400G / B 1000G / C 700G / 天国100G / 超天国100G**。
 
 ### resetBehavior v0.7
 
-- `settingChangeBehavior`: **UNVERIFIED_AFTER_RESEARCH_FOR_MACHINE_SPECIFIC_STATE_TRANSITION**。初代固有の設定変更時RT/液晶初期状態は確定できず、後継クレア2/3の仕様を流用しない。
-- `carryOverBehavior`: **NO_GAME_COUNT_CEILING_TO_CARRY_OVER_CONFIRMED**。天井進捗の据え置き/宵越しはNOT_APPLICABLE。RT/液晶状態の保持は未確定。
-- `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH**。電源OFF→ONのみの初代固有挙動は高信頼資料で未確定。
-- `gameCounterReset`: **NOT_APPLICABLE_NO_GAME_COUNT_CEILING**。
-- `ceilingAfterReset`: **NOT_APPLICABLE_NO_CEILING**。リセット専用短縮天井なし。
-- `modeAfterReset`: 規定GモードはNOT_APPLICABLE。プチRT/高確率演出状態の変更時処理は未確定。
-- `stateAfterReset`: **UNVERIFIED_AFTER_RESEARCH**。
+- `settingChangeBehavior`: **GAME_COUNT_CLEARED_CONFIRMED**。本機名明示の当時系資料で設定変更時に天井到達までのゲーム数をクリアすると確認。
+- `gameCounterReset`: **RESET_ON_SETTING_CHANGE_CONFIRMED**。前日ハマリの天井進捗は設定変更で失う。
+- `ceilingAfterReset`: 設定変更専用の短縮天井は **NONE_CONFIRMED**。通常のモード別天井と混同しない。
+- `modeAfterReset`: **UNVERIFIED_AFTER_RESEARCH**。設定変更直後のA/B/C/天国/超天国振り分け率は確定できず。
+- `stateAfterReset`: **UNVERIFIED_AFTER_RESEARCH**。高確/超高確の変更時振り分けを確定できず。
+- `carryOverBehavior`: **UNVERIFIED_AFTER_RESEARCH**。据え置き時の天井・モード・状態保持を本機固有直接資料で確定できず。
+- `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH**。単純電源OFF→ONのみの挙動は直接根拠未確定。
 - `advantageousSectionReset`: **NOT_APPLICABLE_5TH_GEN**。
-- `resetBenefits`: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- `resetPenalties`: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- `resetDetection`: 初代固有ガックン/初期ステージ等は **UNVERIFIED_AFTER_RESEARCH**。
-- `publicMorningNumbers`: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- resetQaStatus: **PARTIAL_RESET_QA_AFTER_RESEARCH**。性能コアはCOMPLETE_CORE相当。
+- `resetBenefits`: 確定的な短縮天井等はなし。K-Navi当時実戦では新台初日12台で朝一100G以内の前兆「聖域への道」が複数台に発生したがATに繋がったのは1台で、解析値ではないため恩恵数値に採用しない。
+- `resetPenalties`: **PREVIOUS_DAY_CEILING_PROGRESS_LOST**。
+- `resetDetection`: 朝一100G以内前兆は当時実戦者が変更推測材料にした程度で確定判別ではない。ガックン等は `UNVERIFIED_AFTER_RESEARCH`。
+- `publicMorningNumbers`: **NONE_CONFIRMED_AS_ANALYSIS_VALUE**。
 
 ## 遡及resetBehavior QA 進捗
 
@@ -68,25 +64,22 @@
 
 ## 次回再開地点
 
-1. **recordCount 683 / chronologicalFrontier 2012-09-03 / 09-03パチスロ群CLOSED**から開始。
-2. **2012-09-04〜09-09境界監査**を行い、より古い具体日付き未登録機を確認する。
-3. 次の既知具体日アンカーは **2012-09-10**。少なくとも「パチスロ聖闘士星矢」（三洋）と「リーチラッシュ」（ベルコ）がALL7.jpの09-10導入予定一覧にある。重複確認後、古い順に処理する。
-4. 9月月間候補として「リングにかけろ1 ギリシア十二神編」「キュインぱちすろ南国育ち 1st vacation」「戦人」「覇王伝 零」「兎－野生の闘牌－」「トロピカーナ」「マハロ-30」「ニューワンバー-30」を保持。必ず具体日を照合して時系列順に挿入する。
-5. `おそ松くん`（サンスリー/2012-09-03）はCR機のためパチスロ本線から除外。旧handoff記述を再利用しない。
-6. PARTIAL/UNVERIFIED/reset欠損は検索語・資料系統を変えて十分再探索。競合は平均せずCONFLICT。
+1. **recordCount 684 / chronologicalFrontier 2012-09-10 / 09-10同日群OPEN**から開始。
+2. 最優先はベルコ **「リーチラッシュ」**。ALL7.jpで2012-09-10導入予定、repo未登録を確認済み。
+3. リーチラッシュ処理後、09-10同日群の漏れを再監査して閉鎖する。
+4. 次の既知具体日アンカーは **2012-09-18「パチスロ リングにかけろ1 ギリシア十二神編」**（サミー）。09-11〜09-17境界を監査してから進む。
+5. 9月後半候補として「キュインぱちすろ南国育ち 1st vacation」「戦人」「覇王伝 零」「トロピカーナ」「マハロ-30」「ニューワンバー-30」を保持し、必ず具体日を照合して古い順に挿入する。
+6. 「兎－野生の闘牌－」は2012-08-06に既登録済みのため9月候補一覧に現れても重複追加しない。
+7. PARTIAL/UNVERIFIED/reset欠損は表記揺れ・型式名・メーカー・シリーズ名と検索語を変え、公式・業界・当時解析・古いDB・アーカイブ・回顧資料を横断後に判定。競合は平均せずCONFLICT。
 
 ## 主要出典 — 取得日 2026-09-05
 
-- K-Navi クレアの秘宝伝: `https://p-kn.com/slot/1694/`
-- P-WORLD クレアの秘宝伝: `https://www.p-world.co.jp/machine/database/6820`
-- HAZUSE クレアの秘宝伝: `https://hazuse.com/machine/pachislot/1S1039/`
-- パチ＆スロ必勝本 基本スペック: `https://p.hisshobon.jp/machine/2062/1/35798`
-- パチ＆スロ必勝本 打ち方説明: `https://p.hisshobon.jp/machine/2062/1/36020`
-- パチ＆スロ必勝本 シミュレート: `https://p.hisshobon.jp/machine/2062/1/36021`
-- K-Navi CRおそ松くん（除外根拠）: `https://p-kn.com/pachinko/1693/spec/2119/`
+- K-Navi パチスロ聖闘士星矢: `https://p-kn.com/slot/1692/`
 - ALL7.jp 2012年9月導入予定一覧: `https://www.all7.jp/plans/index/2012/09`
-- 2012年パチスロ機種一覧: `https://www.nikuziru.com/slot/2012slot-list`
+- 娯楽産業 三洋物産 新機種発表: `https://www.goraku-sangyo.com/%E4%B8%89%E6%B4%8B%E7%89%A9%E7%94%A3%E3%80%80%E3%83%91%E3%83%81%E3%83%B3%E3%82%B3%E3%83%BB%E3%83%91%E3%83%81%E3%82%B9%E3%83%AD2%E6%A9%9F%E7%A8%AE%E5%90%8C%E6%99%82%E7%99%BA%E8%A1%A8/`
+- D'STATION安中店 当時新台紹介: `https://ameblo.jp/d-annaka/entry-11438867168.html`
+- みんスロ 聖闘士星矢: `https://minslo.com/%E8%81%96%E9%97%98%E5%A3%AB%E6%98%9F%E7%9F%A2/`
 
 ## GitHub commits
 
-- クレアの秘宝伝 machine record: `d157b41a6d24f01c422e9d2aacf2351cd1949adb`
+- パチスロ聖闘士星矢 machine record: `9bef3d2432cc50fb27a3f324b7cf0786530b027e`
