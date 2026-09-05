@@ -4,89 +4,66 @@
 
 ## 現在地点
 
-- recordCount: **720**
-- latestMachineAdded: **絶対衝激II**（アリストクラートテクノロジーズ）
-- latestRecord: `docs/real_machine_db/machines/2013-03-04_zettai-shogeki-ii.md`
+- recordCount: **721**
+- latestMachineAdded: **パチスロ天才バカボン 人類ウナギイヌ化計画を阻止するのだ！**（D-light）
+- latestRecord: `docs/real_machine_db/machines/2013-03-04_tensai-bakabon-unagiinu.md`
 - chronologicalFrontier: **2013-03-04**
-- frontierLatestExactDateMachine: **絶対衝激II**
+- frontierLatestExactDateMachine: **パチスロ天才バカボン 人類ウナギイヌ化計画を阻止するのだ！**
 - schema: **resetBehavior v0.7**
-- status: **OPEN_2013-03-04_GROUP__NEXT_TENSAI_BAKABON_UNAGIINU**
+- status: **CLOSED_2013-03-04_GROUP__NEXT_AUDIT_2013-03-05_TO_03-10__KNOWN_ANCHOR_2013-03-11_CRANKY_COLLECTION**
 
 ## 今回の同期
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前最新レコード `2013-02-25_haisai-cho-tokkyu-2.md` を確認。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前最新レコード `2013-03-04_zettai-shogeki-ii.md` を確認。
 - `INDEX.md` は19件地点の旧集約状態のため、README規定どおり最新 `LATEST_HANDOFF.md` と実レコードを直近進捗の正本として優先。
-- 開始時main正本は recordCount **719** / chronologicalFrontier **2013-02-25** / 02-25群CLOSED / 次候補「絶対衝激II」。
-- repoコード検索で「絶対衝激II」既存レコードなしを確認後、**720件目として追加**。
+- 開始時main正本は recordCount **720** / chronologicalFrontier **2013-03-04** / 03-04群OPEN / 次候補「パチスロ天才バカボン 人類ウナギイヌ化計画を阻止するのだ！」。
+- repo検索で候補の既存レコードなしを再確認後、**721件目として追加**。
 
-## 今回追加 — 絶対衝激II
+## 今回追加 — パチスロ天才バカボン 人類ウナギイヌ化計画を阻止するのだ！
 
 ### 性能コア
 
-- releaseDate: **2013-03-04**。K-Navi、パチ＆スロ必勝本、ドラス2013-03-04発表で一致。
-- manufacturer: **アリストクラートテクノロジーズ**。
-- systemType: **5号機 / AT / 擬似ボーナス+規定ゲーム数管理+自力CZ / セット数・ゲーム数上乗せ**。
-- 機械割: **97.1 / 98.5 / 100.5 / 104.2 / 107.5 / 111.8%**。P-WORLD、pacnk、CrankySeven等で一致。
-- PLATONIC BONUS初当たり: **1/314.9 / 286.7 / 292.2 / 251.0 / 263.0 / 215.5**。
-- 衝激RUSH初当たり: **1/624.4 / 609.3 / 585.3 / 532.1 / 511.2 / 451.4**。
-- BONUS+AT合算: **1/208.9 / 194.2 / 194.4 / 170.8 / 170.9 / 148.3**。
-- 50枚ベース: **約34G/50枚**。現存する2013年版直接比較値は単一回顧資料のため `ANALYSIS_SINGLE_RETROSPECTIVE`。2025年スマスロ版36.7Gは別機種として除外。
-- AT「衝激RUSH」: **純増約+2.9枚/G**。
-- 基本1セット: **40G+α**（必勝本/K-Navi）。P-WORLDの50G+αとは競合するため平均せずCONFLICT保持。
-- PLATONIC BONUS: **約75枚**（P-WORLD実獲得目安）。必勝本/K-Naviの「116枚超払い出し終了」は定義を分けて保持。
-- 通常モード: **通常 / 準備 / 天国 / 超天国**。
-- 最大規定G: **通常992G / 準備800G / 天国128G / 超天国128G**。
-- 通常時状態: **低確 / 高確**の2状態。
+- releaseDate: **2013-03-04**。パチビーが具体日を直接掲載。
+- manufacturer: **D-light**。
+- systemType: **5号機 / ボーナス+ART / 自力CZ / ゲーム数上乗せ+セットストック**。
+- 機械割: **96.4 / 98.1 / 100.0 / 103.0 / 108.4 / 112.0%**。P-WORLD、5号機クロニクル等で一致。
+- BIG: **1/399.6 / 385.5 / 372.4 / 356.2 / 341.4 / 327.7**。
+- REG: **1/712.4 / 712.4 / 712.4 / 655.4 / 655.4 / 655.4**。
+- ART初当たり: **1/485.3 / 454.2 / 440.7 / 400.5 / 349.6 / 319.0**。
+- ボーナス合算: **1/256.0 / 250.1 / 244.5 / 230.8 / 224.4 / 218.5**。
+- 50枚ベース: 表記揺れ・1K/1000円/コイン持ち等で再探索後も **UNVERIFIED_AFTER_RESEARCH**。
+- ART「ハチャメチャRUSH」: **1セット41G+α / 純増約+1.5枚/G**。
+- BIG約**204枚**、REG約**48枚**。
+- 天井: **ボーナスまたはART終了後888G**でART、当時資料では**2セット以上**。
 
 ### resetBehavior v0.7
 
-- **設定変更時**:
-  - 天井までのゲーム数: **再抽選**
-  - モード: **再抽選**
-  - 状態: **再抽選**
-  - 液晶ステージ: **学校ステージ**
-- **電源OFF→ONのみ**:
-  - 天井までのゲーム数: **引継ぎ**
-  - モード: **引継ぎ**
-  - 状態: **引継ぎ**
-  - 液晶ステージ: **学校ステージ**
-- 据え置き+通常電断は上記直接仕様から内部G/モード/状態保持として保存。
-- 設定変更時モード振り分け（通常 / 準備 / 天国 / 超天国）:
-  - 設定1: **77.5 / 10.0 / 12.2 / 0.3%**
-  - 設定2: **72.5 / 15.0 / 12.2 / 0.3%**
-  - 設定3: **75.7 / 10.0 / 13.8 / 0.4%**
-  - 設定4: **65.7 / 20.0 / 13.8 / 0.4%**
-  - 設定5: **73.3 / 10.0 / 16.1 / 0.6%**
-  - 設定6: **58.3 / 25.0 / 16.1 / 0.6%**
-- 設定変更後の天国以上: **12.5 / 12.5 / 14.2 / 14.2 / 16.7 / 16.7%**。
-- 設定変更専用の固定短縮天井: **NONE_CONFIRMED**。ただしモード再抽選で準備800G/天国系128Gが選択されるため朝一短縮可能性あり。
-- 設定変更時に低確/高確を再抽選することは直接確認済みだが、具体振り分けは再探索後も **UNVERIFIED_AFTER_RESEARCH**。
+- **設定変更時**: 天井ゲーム数進捗を **CLEAR_CONFIRMED**。当時攻略資料2系統で確認。
+- **据え置き時**: 天井G/内部状態/天才モードの保持契約は **UNVERIFIED_AFTER_RESEARCH**。
+- **電源OFF→ONのみ**: 天井G/内部モード・状態/液晶ステージの保持・再抽選は **UNVERIFIED_AFTER_RESEARCH**。
+- 当時資料の「宵越し不可」は「設定変更で天井Gがリセットされるため」と説明されているため、これを単純電断仕様へ拡張していない。
+- 設定変更後の通常最大天井は通常天井値の **888G**。設定変更専用の固定短縮天井は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 設定変更専用のモード振り分け、状態振り分け、朝一専用モード/恩恵率は再探索後も **UNVERIFIED_AFTER_RESEARCH**。
+- 設定変更により前日天井進捗を失うことを主要な朝一不利要素として保存。
+- ガックン/初期出目/液晶等の本機固有変更判別は **UNVERIFIED_AFTER_RESEARCH**。
 - `advantageousSectionReset`: **NOT_APPLICABLE_5TH_GEN**。
 
-### 朝一/変更判別
+### CONFLICT / 品質注記
 
-- 設定変更で前日天井進捗は失われる。
-- 前日が天国/超天国や高確でも設定変更で再抽選される。
-- 設定変更時も電源OFF→ON時も**学校ステージ開始**なので、朝一液晶ステージ単独では変更判別不可。
-- 本機固有のガックン/初期出目等は検索語・資料系統変更後も **UNVERIFIED_AFTER_RESEARCH**。
-- 朝一128G以内当選は天国系選択の可能性を示すが、設定変更確定要素にはしない。
-
-### CONFLICT
-
-- 衝激RUSH基本セットG数: 必勝本/K-Navi **40G+α** vs P-WORLD **50G+α**。平均せず `CONFLICT_40G_VS_50G`。
-- PLATONIC BONUS: P-WORLD **約75枚** vs 必勝本/K-Navi **116枚超払い出し終了**。実獲得と払い出し終了条件の定義差として分離。
+- 導入時期: パチビー **2013-03-04** vs 5号機クロニクル **2013/2**。平均せず `CONFLICT_RELEASE_PERIOD_2013_02_VS_2013_03_04`。本線時系列キーは具体日資料を優先。
+- パチマガスロマガ旧ページの検索表示に設定1/2機械割 `196.4 / 198.1%` と出る箇所があるが、P-WORLD・5号機クロニクル等の **96.4 / 98.1%** と後続設定系列が一致するため、`SOURCE_TEXT_LEADING_DIGIT_CORRUPTION` として性能CONFLICTとは分離。
 
 ## 2013-03-04同日群
 
-- **絶対衝激II**（アリストクラートテクノロジーズ） — **720件目 / 今回登録**。
-- 前HANDOFFで同日候補として確認済みの **「パチスロ天才バカボン 人類ウナギイヌ化計画を阻止するのだ！」（D-light）** は未処理。
-- 03-04群は **OPEN** のまま。
+- **絶対衝激II**（アリストクラートテクノロジーズ） — 720件目 / 登録済み。
+- **パチスロ天才バカボン 人類ウナギイヌ化計画を阻止するのだ！**（D-light） — **721件目 / 今回登録**。
+- 具体日検索、当時系一覧・解析サイトを再監査し、今回この2機種以外の2013-03-04導入パチスロを追加確認できなかったため、**03-04群をCLOSED**。
 
 ## 次回再開地点
 
-1. **recordCount 720 / chronologicalFrontier 2013-03-04 / 03-04群OPEN** から開始。
-2. **「パチスロ天才バカボン 人類ウナギイヌ化計画を阻止するのだ！」（D-light）** を721件目候補として、最新mainで重複再確認後、性能コア+resetBehavior v0.7を収集。
-3. 03-04同日群をK-Navi、メーカー/業界記事、当時解析一覧で残存監査し、漏れがなければCLOSED。
+1. **recordCount 721 / chronologicalFrontier 2013-03-04 / 03-04群CLOSED** から開始。
+2. **2013-03-05〜03-10境界を最終監査**し、具体日付き未登録パチスロがあれば古い順に追加。
+3. 境界に未登録機がなければ、次の具体日付き既知アンカー **2013-03-11「クランキーコレクション」（アクロス）**へ進む。HAZUSE/解析ガイドで2013-03-11導入を確認済み。
 4. 欠損は表記揺れ・型式名・メーカー・シリーズ名と「設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間」を組み替え、公式・業界・当時解析・古いDB・アーカイブ・回顧資料を横断後のみUNVERIFIED。競合は平均せずCONFLICT。
 
 ## 遡及resetBehavior QA 進捗
@@ -96,18 +73,16 @@
 
 ## 主要出典 — 取得日 2026-09-06
 
-### 絶対衝激II
-- ドラス / ValuePress 2013-03-04: `https://www.value-press.com/pressrelease/108120`
-- K-Navi: `https://p-kn.com/slot/1803/`
-- パチ＆スロ必勝本 基本スペック: `https://p.hisshobon.jp/machine/2162/1/38716`
-- パチ＆スロ必勝本 AT概要: `https://p.hisshobon.jp/machine/2162/1/38882`
-- パチ＆スロ必勝本 天井&設定変更: `https://p.hisshobon.jp/machine/2162/1/38881`
-- パチ＆スロ必勝本 モード移行率: `https://p.hisshobon.jp/machine/2162/1/39632`
-- パチ＆スロ必勝本 状態移行率: `https://p.hisshobon.jp/machine/2162/1/39130`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/6991`
-- pacnk: `https://pacnk.com/slot/2013/zettaishougeki2/top.php`
-- CrankySeven: `https://crankyseven.com/zettaisyougeki-two-pc.htm`
-- みんスロ: `https://minslo.com/%E7%B5%B6%E5%AF%BE%E8%A1%9D%E6%BF%80ii/`
+### パチスロ天才バカボン
+- パチビー: `https://www.pachibee.jp/movies/index/9095`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/6982`
+- パチマガスロマガ旧ページ 基本: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/d-light_slot/02/a.php`
+- パチマガスロマガ旧ページ ARTフロー: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/d-light_slot/02/l.php`
+- 5号機クロニクル D-light: `https://5goki.com/daiichi`
+- 当時攻略資料 天井/設定変更: `https://macerate.seesaa.net/article/342837505.html`
+- 当時攻略資料 天井/設定変更照合: `https://mezase20.com/blog-entry-790.html`
+- A-SLOT スペック照合: `https://www.a-slot.com/SHOP/dlight_3.html`
 
 ### 次候補/境界
-- K-Navi 2013年3月新台カレンダー: `https://p-kn.com/calendar/201303/`
+- クランキーコレクション HAZUSE: `https://hazuse.com/machine/pachislot/2S1341/genre/201/`
+- クランキーコレクション 解析ガイド: `https://pachislot-guide.net/2013/cranky-collection/`
