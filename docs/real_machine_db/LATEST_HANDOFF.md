@@ -4,73 +4,72 @@
 
 ## 現在地点
 
-- recordCount: **715**
-- latestMachineAdded: **スカイガールズ～よろしく！ゼロ～**（TAKASAGO）
-- latestRecord: `docs/real_machine_db/machines/2013-02-18_sky-girls-yoroshiku-zero.md`
+- recordCount: **716**
+- latestMachineAdded: **メタルスラッグ3**（SNKプレイモア）
+- latestRecord: `docs/real_machine_db/machines/2013-02-18_metal-slug-3.md`
 - chronologicalFrontier: **2013-02-18**
-- frontierLatestExactDateMachine: **スカイガールズ～よろしく！ゼロ～**
+- frontierLatestExactDateMachine: **メタルスラッグ3**
 - schema: **resetBehavior v0.7**
-- status: **OPEN_2013-02-18_GROUP__NEXT_METAL_SLUG_3**
+- status: **OPEN_2013-02-18_GROUP__NEXT_VAN_HELSING_HUNTING_RUSH**
 
 ## 今回の同期
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前最新レコード `2013-02-04_mega-millionaire-venus-version.md` を確認。
-- `INDEX.md` は19件地点の旧集約状態。README規定どおり、より新しい `LATEST_HANDOFF.md` と実レコードを直近進捗の正本として優先。
-- 開始時main正本は recordCount **714** / chronologicalFrontier **2013-02-04** / 02-04群CLOSED。
-- 会話上の711件地点よりmainが先行し、らんま1/2・魁!!男塾・メガミリオネア ヴィーナスヴァージョンまで既登録だったため重複追加しなかった。
-- 2013-02-05～02-17境界を再監査。K-Navi 2013年2月全国一斉導入カレンダーでは02-04の次の具体日付きパチスロが02-18で、途中の具体日付きパチスロはなし。別検索でも本線へ割り込む具体日付き未登録5号機を今回確認できなかった。
-- repo検索で未登録を確認後、**715件目: スカイガールズ～よろしく！ゼロ～（TAKASAGO）** を追加。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前最新レコード `2013-02-18_sky-girls-yoroshiku-zero.md` を確認。
+- `INDEX.md` は19件地点の旧集約状態のため、README規定どおり最新 `LATEST_HANDOFF.md` と実レコードを直近進捗の正本として優先。
+- 開始時main正本は recordCount **715** / chronologicalFrontier **2013-02-18** / 02-18群OPEN / 次候補メタルスラッグ3。
+- repo検索でメタルスラッグ3未登録を確認し、**716件目: メタルスラッグ3（SNKプレイモア）** を追加。
 
-## 今回追加 — スカイガールズ～よろしく！ゼロ～
+## 今回追加 — メタルスラッグ3
 
 ### 性能コア
 
-- releaseDate: **2013-02-18**。K-Navi全国一斉導入開始日とHAZUSE導入開始日が一致。コナミアミューズメント公式アーカイブは2013年2月稼働開始。
-- 型式名: **スカイガールズFU** / 検定番号 **2S1107**。
-- systemType: **5号機 / A+ART / ボーナス+ゲーム数上乗せ・セットストック・継続抽選ART**。
-- 機械割: **96.8 / 97.5 / 99.4 / 104.1 / 107.0 / 118.7%**。
-- ART初当たり: **1/538.3 / 1/488.0 / 1/509.1 / 1/389.2 / 1/414.1 / 1/297.1**。
-- BIG合算: **1/394.8 / 1/383.3 / 1/368.2 / 1/378.8 / 1/368.2 / 1/327.7**。
-- REG: **1/840.2 / 1/675.6 / 1/728.2 / 1/580.0 / 1/606.8 / 1/512.0**。
-- 50枚ベース: **約31G**。
-- ART「ソニックダイブゾーン」: **1セット30G+α / 純増約+1.5枚/G**。
-- SKY BIG / BIG: **210枚**、REG: **最大56枚**。
-- 通常天井: **ボーナス間1500G**。恩恵は次回ボーナスまでのV-1モード（無限ART）+ SONICモード + LOCKストック。
+- releaseDate: **2013-02-18**。K-Navi、パチビー、HAZUSEで一致。グリーンべるとは2013-02-06記事で2月17日から納品と報道。
+- 型式名: **メタルスラッグ3C** / 検定番号 **2S1023**。
+- systemType: **5号機 / ボーナス非搭載ART / 規定ゲーム数管理+自力契機 / G数上乗せ+セットストック**。
+- 機械割主系列: **96.7 / 98.3 / 99.9 / 104.2 / 108.5 / 113.1%**（P-WORLD、パチマガスロマガ、5号機クロニクル一致）。
+- ART初当たり: **1/278.89 / 1/270.61 / 1/256.64 / 1/218.25 / 1/206.48 / 1/187.34**。
+- ART合成（1G連込み）: **1/129.41 / 1/127.42 / 1/119.76 / 1/105.54 / 1/95.21 / 1/84.79**。
+- 50枚ベース: パチマガスロマガの **30.02～31.38G/1000円**。当時別解析は約30.0G/1000円で整合。
+- ART「メタスラッシュ」: **1セット40G+α / 純増約+2.3枚/G**。
+- 通常モード: **通常A最大999G / 通常B最大768G / 天国最大128G**。最大999G到達はART+1G連5個。
 
 ### resetBehavior v0.7
 
-- 設定変更時: **天井Gリセット / モード再抽選 / 規定Gリセット / RT状態は設定変更後状態へ**。
-- 液晶ステージ: 横須賀・追浜ステージ中は引継ぎ、それ以外はリセット。
-- 電源OFF→ONのみ: 必勝本が **「全て引き継ぐ」** と直接記載。天井G・モード・規定G・RT状態等を保持。
-- 据え置き: 電源OFF→ON契約に基づき内部値を引継ぎ。
-- 設定変更後の規定ゲーム数ART直撃公開値: **23G 2.5% / 93G 10.0% / 193G 7.5% / 振り分けなし80.0%**。193G以内合計 **20.0%**。
-- 設定変更後も1500Gボーナス間天井自体は新規カウントで有効。専用短縮天井ではなく、別系統の早い規定G ART抽選として保存。
-- 変更判別: 設定変更時は次回BIGの告知タイプカーソルが「音羽BIG」に戻り、設定変更なしでは前日の最後のBIG選択カーソルを保持するという資料あり。前日選択状況を把握できる場合に変更/据え置きを推測可能。
-- 設定変更時の低確A/B・高確A/B・超高確の個別振り分け、通常内部モード具体振り分け、ガックン固有挙動は資料系統を変えて再探索後も **UNVERIFIED_AFTER_RESEARCH**。
+- 設定変更時: **天井消化Gクリア / 内部モード再抽選 / 規定G再セット**。内部状態も設定変更時に移行抽選ありとの当時解析。
+- 設定変更後モード公開値:
+  - 設定1～3: **通常A30% / 通常B50% / 天国20%**。
+  - 設定4～6: **通常A20% / 通常B50% / 天国30%**。
+- 固定短縮天井ではないが、全設定で通常B50%のため最大768Gとなる朝一比率が高く、設定4～6は天国30%。
+- 設定変更時も電源OFF→ONのみでも液晶は **ジャングルステージ開始**との当時資料があり、表示単独では変更判別に不向き。
+- 電源OFF→ONについて **ART中は引継ぎ**の記載を確認。ただし通常時天井G・通常モード・通常内部状態の保持契約は直接確定できず **UNVERIFIED_AFTER_RESEARCH**。
+- 純据え置き時の通常時天井G・モード・状態保持も、資料系統を変えた再探索後も直接確定できず **UNVERIFIED_AFTER_RESEARCH**。
+- 本機固有のガックン等変更判別は **UNVERIFIED_AFTER_RESEARCH**。
 - `advantageousSectionReset`: **NOT_APPLICABLE_5TH_GEN**。
 
 ### CONFLICT / 品質注記
 
-- 設定変更後193G規定ゲーム数振り分けは、必勝本・CrankySevenが **7.5%** で一致。HAZUSE本文は **75.0%** 表示だが、同表の23G 2.5% + 93G 10% + なし80%と合計すると167.5%になるため成立しない。主値7.5%を採用し、HAZUSE表示を `CONFLICT_APPARENT_TRANSCRIPTION_OR_DISPLAY_ERROR` としてレコードに保持。
-- 2015年「スカイガールズ～ゼロ、ふたたび～」、2020年「スカイガールズ～ゼロノツバサ～」のリセット天井・有利区間仕様は初代へ転記していない。
+- 機械割はP-WORLD / パチマガスロマガ / 5号機クロニクルの **96.7 / 98.3 / 99.9 / 104.2 / 108.5 / 113.1%** に対し、2013年当時の天井ハイエナ生活が **97.0 / 98.6 / 100.3 / 104.6 / 109.0 / 113.6%**。平均せず `CONFLICT_PAYOUT_SERIES` として両系列保持。
+- LackLuckLifeのART基本50G表記は、グリーンべると・K-Navi・P-WORLD・パチビー・パチマガスロマガの40G+αと競合。多数一致の40G+αを主値、50Gを `CONFLICT_SINGLE_SECONDARY_APPARENT_SPEC_ERROR` として保持。
+- パチマガスロマガ検索インデックスの一部には先頭桁崩れがあるため、同サイト詳細ページと複数別資料で補正確認した。
 
 ## 2013-02-18同日群監査
 
-K-Navi 2013年2月新台カレンダーの全国一斉導入開始日ベースで、2013-02-18パチスロは以下3機種:
+K-Navi 2013年2月新台カレンダーの全国一斉導入開始日ベースで2013-02-18パチスロは以下3機種:
 
-1. スカイガールズ～よろしく！ゼロ～（TAKASAGO） — **715件目 / 今回登録**。
-2. メタルスラッグ3（SNKプレイモア） — **次回処理**。
-3. ヴァン・ヘルシング ハンティングラッシュ（藤商事） — **その次**。
+1. スカイガールズ～よろしく！ゼロ～（TAKASAGO） — **715件目 / 登録済み**。
+2. メタルスラッグ3（SNKプレイモア） — **716件目 / 今回登録**。
+3. ヴァン・ヘルシング ハンティングラッシュ（藤商事） — **次回処理**。
 
 - 02-18群は **OPEN**。
-- K-Navi上の次の具体日境界は **2013-02-25**（パチスロ「EVANGELION」、ハイサイ蝶特急2）。02-18群を閉じてから進む。
+- repo検索で「ヴァン・ヘルシング ハンティングラッシュ」は現時点未登録。
+- その後02-18群残存監査を行いCLOSED判定し、02-19～02-24境界監査 → 02-25群へ進む。
 
 ## 次回再開地点
 
-1. **recordCount 715 / chronologicalFrontier 2013-02-18 / 02-18群OPEN** から開始。
-2. **2013-02-18「メタルスラッグ3」（SNKプレイモア）** を性能コア+resetBehavior v0.7で収集。repo重複を最新mainで再確認してから追加。
-3. 続いて同日群 **「ヴァン・ヘルシング ハンティングラッシュ」（藤商事）**。
-4. 02-18群残存監査後にCLOSEDとし、02-19～02-24境界監査 → 02-25群へ進む。
+1. **recordCount 716 / chronologicalFrontier 2013-02-18 / 02-18群OPEN** から開始。
+2. **2013-02-18「ヴァン・ヘルシング ハンティングラッシュ」（藤商事）** を性能コア+resetBehavior v0.7で収集。最新mainで重複再確認してから追加。
+3. 02-18群残存監査後にCLOSED。
+4. 02-19～02-24境界監査後、未登録がなければ02-25群へ進む。
 5. 欠損は表記揺れ・型式名・メーカー・シリーズ名と「設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間」を組み替え、公式・業界・当時解析・古いDB・アーカイブ・回顧資料を横断後のみUNVERIFIED。競合は平均せずCONFLICT。
 
 ## 遡及resetBehavior QA 進捗
@@ -80,16 +79,17 @@ K-Navi 2013年2月新台カレンダーの全国一斉導入開始日ベース�
 
 ## 主要出典 — 取得日 2026-09-06
 
-### スカイガールズ～よろしく！ゼロ～
-- コナミアミューズメント公式: `https://www.konami.com/amusement/psm/archive/ps/2013/skygirls/index.html`
-- K-Navi: `https://p-kn.com/slot/1783/`
-- K-Navi 2013年2月カレンダー: `https://p-kn.com/calendar/201302/`
-- HAZUSE: `https://hazuse.com/machine/pachislot/2S1107/`
-- HAZUSE ART/規定G: `https://hazuse.com/machine/pachislot/2S1107/genre/209/`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/6963`
-- パチ＆スロ必勝本 天井&設定変更: `https://p.hisshobon.jp/machine/2150/1/38561`
-- パチ＆スロ必勝本 規定ゲーム数振り分け: `https://p.hisshobon.jp/machine/2150/1/38600`
-- CrankySeven: `https://crankyseven.com/skygirls-pc.htm`
-- pacnk: `https://pacnk.com/slot/2013/skygirls/top.php`
-- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/takasago_slot/05/l.php`
-- 天井ハイエナ生活: `https://macerate.seesaa.net/article/344017004.html`
+### メタルスラッグ3
+- グリーンべると: `https://web-greenbelt.jp/00000778/`
+- K-Navi: `https://p-kn.com/slot/1796/`
+- パチビー: `https://www.pachibee.jp/machines/index/213010008`
+- HAZUSE: `https://hazuse.com/machine/pachislot/2S1023/`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/6981`
+- パチマガスロマガ スペック: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/snk_slot/43/a.php`
+- パチマガスロマガ ボーナス確率/PAYOUT詳細: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/snk_slot/43/h-1.php`
+- パチマガスロマガ 小役/1000円あたりゲーム数: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/snk_slot/43/c.php`
+- パチマガスロマガ ARTフロー: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/snk_slot/43/l.php`
+- 天井ハイエナ生活 解析/朝一設定変更: `https://macerate.seesaa.net/article/323688647.html`
+- 天井ハイエナ生活 設定変更後モード/期待値: `https://macerate.seesaa.net/article/351532215.html`
+- 5号機クロニクル: `https://5goki.com/snkplaymore`
+- LackLuckLife（競合確認のみ）: `https://l-l-life.com/33120286/`
