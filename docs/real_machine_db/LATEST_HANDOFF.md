@@ -4,64 +4,74 @@
 
 ## 現在地点
 
-- recordCount: **722**
-- latestMachineAdded: **クランキーコレクション**（アクロス）
-- latestRecord: `docs/real_machine_db/machines/2013-03-11_cranky-collection.md`
-- chronologicalFrontier: **2013-03-11**
-- frontierLatestExactDateMachine: **クランキーコレクション**
+- recordCount: **723**
+- latestMachineAdded: **新鬼武者 再臨**（ロデオ）
+- latestRecord: `docs/real_machine_db/machines/2013-03-18_shin-onimusha-sairin.md`
+- chronologicalFrontier: **2013-03-18**
+- frontierLatestExactDateMachine: **新鬼武者 再臨**
 - schema: **resetBehavior v0.7**
-- status: **CLOSED_2013-03-11_GROUP__NEXT_AUDIT_2013-03-12_TO_03-17__KNOWN_ANCHOR_2013-03-18_SHIN_ONIMUSHA_SAIRIN**
+- status: **OPEN_2013-03-18_GROUP__NEXT_SAME_DAY_AUDIT_THEN_NEXT_EXACT_DATE**
 
 ## 今回の同期
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前最新レコード `2013-03-04_tensai-bakabon-unagiinu.md` を確認。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前最新レコード `2013-03-11_cranky-collection.md` を確認。
 - `INDEX.md` は19件地点の旧集約状態のため、README規定どおり最新 `LATEST_HANDOFF.md` と実レコードを直近進捗の正本として優先。
-- 開始時main正本は recordCount **721** / chronologicalFrontier **2013-03-04** / 03-04群CLOSED / 次工程「03-05〜03-10境界監査 → 03-11クランキーコレクション」。
-- 2013-03-05〜03-10を具体日検索・当時系一覧・解析資料で再監査し、今回この境界に追加すべき具体日付き未登録5号機を確認できなかった。
-- repo検索で「クランキーコレクション」の既存レコードなしを再確認後、**722件目として追加**。
+- 開始時main正本は recordCount **722** / chronologicalFrontier **2013-03-11** / 03-11群CLOSED / 次工程「03-12〜03-17境界監査 → 03-18 新鬼武者 再臨」。
+- 2013-03-12〜03-17を具体日検索、当時系導入情報・解析DBで監査し、今回この境界に追加すべき具体日付き未登録5号機を確認できなかった。
+- **723件目として「新鬼武者 再臨」**を追加。
 
-## 今回追加 — クランキーコレクション
+## 今回追加 — 新鬼武者 再臨
 
 ### 性能コア
 
-- releaseDate: **2013-03-11**。K-Navi、HAZUSE、パチスロ解析ガイドで一致。ユニバーサル公式は2013年3月発売。
-- manufacturer: **アクロス**。A PROJECT第1弾。
-- formalModelName: **クランキーコレクションCL** / inspectionNumber: **2S1341**。
-- systemType: **5号機 / ノーマル / ボーナス主体 / 高技術介入**。
-- 通常機械割: **98.5 / 99.9 / 101.3 / 103.8 / 106.7 / 109.5%**。
-- 完全攻略機械割: **100.5 / 102.0 / 103.4 / 106.0 / 109.0 / 111.9%**。
-- BIG: **1/303.4 / 297.9 / 292.6 / 282.5 / 273.1 / 260.1**。
-- REG: **1/385.5 / 372.4 / 364.1 / 360.1 / 331.0 / 315.1**。
-- 合算: **1/169.8 / 165.5 / 162.2 / 158.3 / 149.6 / 142.5**。
-- 50枚ベース: **約35〜38G/50枚**。後年整理/クランキー系整理で一致。
-- BIG最大**335枚**、REG最大**129枚**。
-- **天井機能非搭載**。
+- releaseDate: **2013-03-18**。K-Navi、HAZUSEで一致。
+- manufacturer: **ロデオ**。
+- formalModelName: **新鬼武者AW** / inspectionNumber: **2S1419**。
+- systemType: **5号機 / AT / ゲーム数解除+CZ+直撃**。
+- 機械割: **97.0 / 98.7 / 100.2 / 104.4 / 107.3 / 114.4%**。
+- AT初当たり: **1/416.2 / 394.6 / 384.6 / 334.7 / 313.8 / 288.8**。
+- 50枚ベース: **約31.1G**。
+- AT「蒼剣ラッシュ」: **1セット約50G+α / 純増約+2.8枚/G / 最大89%ループ**。
+- 通常時最大天井: **1280G**。
+- モード別最大: **通常A 1248G / 通常B 1280G / 天国128G**。
 
 ### resetBehavior v0.7
 
-- ノーマルタイプでゲーム数天井・規定G解除・AT/ART通常モードを持たないため、`gameCounterReset` / `ceilingAfterReset` / `modeAfterReset` / `stateAfterReset` は朝一狙い用の持続要素として **NOT_APPLICABLE**。
-- 設定変更専用の短縮天井・朝一専用モード・恩恵率は **NONE / NOT_APPLICABLE**。
-- 純据え置き・電源OFF→ONでも、天井G・AT/ART状態の持越しという概念は **NOT_APPLICABLE_NORMAL_TYPE**。
-- 一方、本機固有の**リールガックン、初期出目、ランプ、電断後リール挙動等による変更判別**は、「クランキーコレクション/クラコレ」「クランキーコレクションCL」「アクロス/ユニバーサル」「クランキー/A PROJECT」と「設定変更/リセット/朝一/据え置き/電源OFF ON/ガックン」を組み替えて再探索したが直接根拠を確定できず **UNVERIFIED_AFTER_RESEARCH**。
-- 後継アクロス機のガックン仕様は流用していない。
+- 必勝本の機種固有「天井&設定変更」で直接確認:
+  - **設定変更**: 天井ゲーム数再抽選 / モード再抽選 / 状態再抽選。
+  - 鬼モード・AT中なら蒼鬼ステージへ、それ以外はステージ引継ぎ。
+  - **電源OFF→ONのみ**: 天井ゲーム数 / モード / 状態 / ステージをすべて引継ぎ。
+- `gameCounterReset`: 設定変更でRESET_AND_RESELECT、電源OFF→ONでCARRY_OVER。
+- `ceilingAfterReset`: 設定変更専用の固定短縮天井は確認できず。通常A/B/天国の天井体系を再抽選後に使用。
+- `modeAfterReset`: RESELECT。設定変更時の通常A/B/天国の具体振り分けは、検索語・資料系統を変更して再探索後も **UNVERIFIED_AFTER_RESEARCH**。
+- `stateAfterReset`: RESELECT。設定変更時の低確/通常/高確/超高確等の具体振り分けは **UNVERIFIED_AFTER_RESEARCH**。
+- `carryOverBehavior`: 独立据え置き表は未確認だが、電源OFF→ON契約で天井G・モード・状態引継ぎを直接確認済み。`SUPPORTED_BY_POWER_CYCLE_CONTRACT`。
 - `advantageousSectionReset`: **NOT_APPLICABLE_5TH_GEN**。
+- 朝一恩恵: モード・状態・規定Gの再抽選。K-Naviには「リセット台は220G付近までが狙い目」という当時攻略記事見出しが残るが、具体的な当選率本文を安全に回収できないため公開数値としては不採用。
+- 朝一不利: 設定変更で前日天井進捗が消失し、当時攻略資料でも宵越し天井狙い不可。
+- 変更判別: 本機固有ガックン/初期出目の確定仕様は、型式名・メーカー・「設定変更/朝一/据え置き/電源OFF ON/ガックン」を組み替え、当時攻略・古いDB・回顧資料まで再探索したが **UNVERIFIED_AFTER_RESEARCH**。実戦回顧のガックン使用例は仕様確定根拠に採用していない。
 
-### CONFLICT / 品質注記
+### 品質注記
 
-- 完全攻略機械割は、パチマガスロマガ旧ページ・HAZUSE・P-WORLD・当時攻略資料が **100.5 / 102.0 / 103.4 / 106.0 / 109.0 / 111.9%** で一致。
-- 一部後年整理資料に **100.2 / 101.7 / 103.1 / 105.7 / 108.7 / 111.6%** があるため `CONFLICT_FULL攻略_PAYOUT_RETROSPECTIVE` として平均せず保持。主表は複数当時系資料一致値を採用。
+- 「新鬼武者」（2010）、「パチスロ 新鬼武者2」（2022）、「スマスロ 新鬼武者3」等の設定変更・有利区間仕様は別機種のため流用していない。
+- 主性能値と設定変更/電源OFF→ON契約について今回確認した主要資料間のCONFLICTはなし。
 
-## 2013-03-11同日群
+## 2013-03-12〜03-17境界監査
 
-- **クランキーコレクション**（アクロス） — **722件目 / 今回登録**。
-- 具体日検索、当時系一覧・解析サイトを追加監査し、今回同日導入として確定できる別の未登録5号機を確認できなかったため、**03-11群をCLOSED**。
+- 03-11「クランキーコレクション」後から03-18「新鬼武者 再臨」前までを具体日検索・当時系資料で再監査。
+- 今回、追加すべき具体日付き未登録パチスロを確定できなかったため、この境界は **CLOSED_FOR_CURRENT_RESEARCH**。
+
+## 2013-03-18同日群
+
+- **新鬼武者 再臨**（ロデオ） — **723件目 / 今回登録**。
+- 同日群全メーカー横断の最終監査は次リレーへ残すため、**03-18群はOPEN**。
 
 ## 次回再開地点
 
-1. **recordCount 722 / chronologicalFrontier 2013-03-11 / 03-11群CLOSED** から開始。
-2. **2013-03-12〜03-17境界を最終監査**し、具体日付き未登録パチスロがあれば古い順に追加。
-3. 境界に未登録機がなければ、次の具体日付き既知アンカー **2013-03-18「新鬼武者 再臨」（ロデオ）**へ進む。K-Naviで2013-03-18導入を確認済み。
-4. 03-18同日群は「新鬼武者 再臨」だけと決め打ちせず、他メーカー・表記揺れを含め同日候補を監査してからCLOSED判定する。
+1. **recordCount 723 / chronologicalFrontier 2013-03-18 / 03-18群OPEN** から開始。
+2. まず **2013-03-18同日群の残存監査**。表記揺れ、メーカー別一覧、当時導入カレンダー、HAZUSE/K-Navi等で同日未登録機がないか確認し、あれば古い順に追加。
+3. 同日群に漏れがなければ **03-18群をCLOSED** とし、2013-03-19以降の次の具体日境界へ進む。
+4. 次の具体日候補は当時カレンダー/業界資料で再確定してから採用し、推測で日付を固定しない。
 5. 欠損は表記揺れ・型式名・メーカー・シリーズ名と「設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間」を組み替え、公式・業界・当時解析・古いDB・アーカイブ・回顧資料を横断後のみUNVERIFIED。競合は平均せずCONFLICT。
 
 ## 遡及resetBehavior QA 進捗
@@ -71,20 +81,15 @@
 
 ## 主要出典 — 取得日 2026-09-06
 
-### クランキーコレクション
-- ユニバーサル公式: `https://www.universal-777.com/product/slot/cranky_collection/`
-- K-Navi: `https://p-kn.com/slot/1829/`
-- HAZUSE: `https://hazuse.com/machine/pachislot/2S1341/`
-- HAZUSE 基本: `https://hazuse.com/machine/pachislot/2S1341/genre/201/`
-- パチマガスロマガ旧ページ ボーナス/機械割: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/across_slot/01/h.php`
-- パチマガスロマガ旧ページ 小役/1000円項目: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/across_slot/01/c.php`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/7031`
-- パチスロ解析ガイド: `https://pachislot-guide.net/2013/cranky-collection/`
-- crankyseven: `https://crankyseven.com/crankycollection-pc.htm`
-- 当時攻略資料 基本: `https://macerate.seesaa.net/article/343833222.html`
-- 当時攻略資料 完全攻略: `https://macerate.seesaa.net/article/347254550.html`
-- 後年A PROJECT整理資料: `https://www.pachislotblog.tokyo/across-series-setteihanbetsu/`
-- pacnk: `https://pacnk.com/slot/2013/crankycollection/top.php`
-
-### 次候補/境界
-- 新鬼武者 再臨 K-Navi: `https://p-kn.com/slot/1822/`
+### 新鬼武者 再臨
+- K-Navi: `https://p-kn.com/slot/1822/`
+- HAZUSE: `https://hazuse.com/machine/pachislot/2S1419/`
+- HAZUSE 基本: `https://hazuse.com/machine/pachislot/2S1419/genre/201/`
+- HAZUSE AT/ART: `https://hazuse.com/machine/pachislot/2S1419/genre/209/`
+- パチ＆スロ必勝本 天井&設定変更: `https://p.hisshobon.jp/machine/2172/1/39091`
+- パチ＆スロ必勝本 AT概要: `https://p.hisshobon.jp/machine/2172/1/39093`
+- パチ＆スロ必勝本 規定ゲーム数振り分け: `https://p.hisshobon.jp/machine/2172/1/40408`
+- スロパチクエスト: `https://www.slopachi-quest.com/article/%E6%96%B0%E9%AC%BC%E6%AD%A6%E8%80%85%E5%86%8D%E8%87%A8/`
+- 天井ハイエナ生活（当時）: `https://macerate.seesaa.net/article/347710880.html`
+- 天井ハイエナ生活 インデックス: `https://macerate.seesaa.net/article/265748860.html`
+- 真パチスロ備忘録（ガックン実戦回顧・仕様根拠には不採用）: `https://sin-surobi.com/etc/12904/`
