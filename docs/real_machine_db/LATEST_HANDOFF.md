@@ -4,64 +4,67 @@
 
 ## 現在地点
 
-- recordCount: **648**
-- latestMachineAdded: **フルメタル・パニック！TSR**（タイヨーエレック）
-- latestRecord: `docs/real_machine_db/machines/2012-04-02_full-metal-panic-tsr.md`
-- chronologicalFrontier: **2012-04-02**
-- frontierLatestExactDateMachine: **フルメタル・パニック！TSR**
+- recordCount: **649**
+- latestMachineAdded: **パチスロ クイーンズブレイド 流浪の戦士**（JPS）
+- latestRecord: `docs/real_machine_db/machines/2012-04-16_queens-blade-rurou-no-senshi.md`
+- chronologicalFrontier: **2012-04-16**
+- frontierLatestExactDateMachine: **パチスロ クイーンズブレイド 流浪の戦士**
 - schema: **resetBehavior v0.7**
-- status: **2012-04-02_GROUP_OPEN__CONTINUE_SAME_DAY_AUDIT**
+- status: **2012-04-16_GROUP_OPEN__CONTINUE_SAME_DAY_AUDIT**
 
 ## 今回の同期・時系列監査
 
 - 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコードを確認して開始。
 - INDEXは旧地点19件のままなので、README規定どおりLATEST_HANDOFFを進捗正本として使用。
-- 開始時はrecordCount 647 / frontier 2012-03-26 / パチスロ「モンスターハンター」。
-- 2012-03-26同日群を複数表記で再監査し、モンスターハンター以外の具体日付き未登録5号機を今回確認できなかったため03/26群を閉鎖。
-- 次の04/02候補を監査。ニューアイムジャグラーEXは既登録、モンスターハンターは既存レコード内に03/26 vs HAZUSE 04/02のCONFLICTを保持済みのため重複登録しない。
-- K-Naviで2012-04-02導入を確認したタイヨーエレック「フルメタル・パニック！TSR」を未登録確認し648件目に追加。
-- 04/02同日群はまだ閉じていない。次回は同日候補をK-Navi/HAZUSE/P-WORLD/パチビー/当時業界記事で再監査してから次日へ進む。
+- 開始時はrecordCount 648 / frontier 2012-04-02 / フルメタル・パニック！TSR。
+- 04/02同日群を再監査。当時DK-SIS 2012年4月カレンダーは4/2パチスロとしてニューアイムジャグラーEXを掲載、HAZUSEはモンスターハンターを4/2導入と掲載。両機は既登録。K-Navi由来で既登録のフルメタル・パニック！TSR以外に、新たな具体日付き04/02未登録5号機を確定できなかったため04/02群を閉鎖。
+- 04/09は複数日付検索で具体日付き新規5号機を確定できず、次の具体日付き群2012-04-16へ前進。
+- 04/16候補を横断し、JPS「パチスロ クイーンズブレイド 流浪の戦士」をrepo想定path直接fetchで未登録確認して649件目に追加。
+- 04/16同日群には少なくとも「一騎当千3 Valiant Venus」「パチスロ マクロスフロンティア はじまりの歌、銀河に響け！」が存在するため、同日群は閉じない。
 
-## 今回の本線追加 — フルメタル・パニック！TSR
+## 今回の本線追加 — パチスロ クイーンズブレイド 流浪の戦士
 
 ### 導入日・型式
 
-- 時系列キー: **2012-04-02**。
-- K-Navi: 2012-04-02ホール導入開始。
-- P-WORLD: 2012年04月導入。
-- formalModelName: **フルメタル・パニック！TSR M**。
-- approvalNumber: **1S0797**。
+- 時系列キー: **2012-04-16**。
+- K-Navi、パチビー、HAZUSE、当時系新機種一覧で2012-04-16を照合。
+- formalModelName: **クイーンズブレイドR2**。
+- approvalNumber: **2S0037**。
+- manufacturerはJPS（株式会社ジェイピーエス）を採用。HAZUSE日本語ページの「ジェイビーエス」は同一型式ページ内の表示誤り候補としてレコード内conflict注記のみ残した。
 
 ### 性能コア
 
-- systemType: **5号機 A+ART / ボーナス+ゲーム数上乗せART**。
-- 機械割: **96.5 / 98.5 / 100.6 / 104.3 / 108.4 / 111.6%**。P-WORLDと5号機クロニクルで一致。
-- BIG: **1/414.8 / 404.5 / 394.8 / 385.5 / 376.6 / 368.2**。
-- REG: **1/574.9 / 555.4 / 537.2 / 520.1 / 504.1 / 489.1**。
-- ボーナス合算: **1/240.9 / 234.1 / 227.6 / 221.4 / 215.6 / 210.1**。
-- ボーナス+ART合算: **1/155.8 / 144.3 / 144.2 / 130.1 / 125.3 / 112.5**。
-- 50枚ベース: **約32G**。
-- ART「AS-MODE」: **1セット50G+α / 約+1.5枚/G**。
-- BIG純増 **207枚**、REG純増 **50枚**。
-- 通常天井: **ボーナス間1200G**。P-WORLDと当時天井狙い資料で1200Gを照合。ただし「ARTへ突入」対「天井状態へ移行」の表現差は平均・統合せずレコード内CONFLICTとして保持。
+- systemType: **5号機 ボーナス+無限RT / SRT（ストックリプレイタイム）**。
+- 機械割: **97.46 / 99.06 / 100.61 / 103.32 / 105.91 / 110.73%**。
+- BIG: **1/329.3 / 319.7 / 310.6 / 302.0 / 293.9 / 283.7**。
+- REG: **1/508.0 / 461.5 / 422.8 / 390.1 / 362.1 / 334.4**。
+- 合算: **1/199.8 / 188.9 / 179.1 / 170.2 / 162.2 / 153.5**。
+- 50枚ベース: **34.6〜36.2G/50枚**（パチマガスロマガの1000円あたりレンジ）。
+- BIG最大 **311枚**、REG最大 **103枚**。
+- 無限RT「ガイノスモード」: **次回ボーナスまで / 約+0.6枚/G**。
+- 救済はゲーム数ではなくチャンス目回数型。BIG後 **1〜12回**、REG後 **1〜9回**の規定チャンス目成立でRTへ。
+- 「天井あり」（チャンス目回数型救済）と「天井なし」（ゲーム数天井なし）の資料差は数値競合ではなく `DEFINITION_DIFFERENCE` として保持。
 
 ### resetBehavior v0.7
 
-- K-Navi本機ページに**「朝イチはココに注目」**専用解析項目が存在することは確認。
-- ただし当該本文URLは現環境でキャッシュ取得不能。機種名表記揺れ、型式名、メーカー名と「設定変更 / リセット / 朝一 / 据え置き / 宵越し / 電源OFF ON / 天井 / 高確 / モード / ガックン」を組み替え、P-WORLD、K-Navi、パチマガスロマガ、旧天井狙い資料、5号機回顧DBを横断したが具体処理を確定できず。
-- 設定変更時の天井カウンタCLEAR/RETAIN、据え置き、単純電源OFF→ON、設定変更時の内部高確再抽選/引継ぎ、ガックン等は **UNVERIFIED_AFTER_RESEARCH**。
-- 当時天井狙い資料自体も本機の宵越しを「？」としているため、設定変更時リセットを一般則から推測しない。
-- 設定変更専用短縮天井・朝一ART確定・高確保証等は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- **設定変更時にチャンス目規定回数を再セット**することを本機固有資料で確認。
+- 当時系天井資料では、再セット値が変更前より多くなる場合は書き換えないとされ、変更によって救済到達が不利方向へ遠ざからない処理を確認。
+- 別解析資料では**設定変更時は規定回数1回が選択されやすい**。具体割合は再探索後も確定できないため率はUNVERIFIED。
+- **設定変更後はRT状態からスタート**し、朝一にチャンス目成立前の転落リプレイ「ベル・リプレイ・リプレイ」入賞が設定変更推測材料になるとの機種固有解析あり。確定判別ではなく「可能性が高い」として保存。
+- 当時系資料は**宵越し〇**。設定変更時の不利方向書換えなし記述と合わせてcarryOverBehaviorへ保存。
+- 単純電源OFF→ONのみの規定回数/RT状態処理は本機固有直接資料を確定できず `UNVERIFIED_AFTER_RESEARCH`。
+- gameCounterResetは通常ゲーム数天井がないため `NOT_APPLICABLE_NO_GAME_COUNT_CEILING`。チャンス目規定回数の処理は別項目で保持。
 - 有利区間は `NOT_APPLICABLE_5TH_GEN`。
 
 ## 時系列監査 / 次回再開地点
 
-1. **recordCount 648 / chronologicalFrontier 2012-04-02**から開始。
-2. **2012-04-02同日群を継続監査**する。既登録のニューアイムジャグラーEX、モンスターハンターを重複させず、その他の具体日付き未登録5号機がないかK-Navi/HAZUSE/P-WORLD/パチビー/当時業界記事を横断する。
-3. 04/02群を閉じるまでは次日へ飛ばさない。
-4. 次候補として見つかる機種は必ずrepo重複確認してから649件目候補とする。
-5. 参考: オリンピア「ねぇ～ねぇ～島娘」はK-Naviで2012-04-23導入のため04/02群には含めない。
-6. PARTIAL/UNVERIFIEDは表記揺れ・型式名・メーカー名と設定変更/リセット/朝一/据え置き/宵越し/電源OFF ON/天井/モード/状態/ガックンを組み替えて再探索し、競合は平均せずCONFLICT。
+1. **recordCount 649 / chronologicalFrontier 2012-04-16**から開始。
+2. **2012-04-16同日群を継続監査**する。
+3. 最優先候補: **一騎当千3 Valiant Venus**（タイヨー）。K-Naviで2012-04-16導入を確認済み。必ずrepo重複確認後、未登録なら650件目候補。
+4. 同日候補: **パチスロ マクロスフロンティア はじまりの歌、銀河に響け！**（SANKYO）。K-NaviとDK-SISで2012-04-16を確認済み。
+5. **ねぇ～ねぇ～島娘**はDK-SISで4/16導入開始扱い、前handoff確認のK-Naviでは4/23表記があるため、到達時は具体日CONFLICT/日付定義差を再確認し、最古具体日で漏れ防止しつつ両根拠を保持する。
+6. 04/16群を閉じるまでは次日へ飛ばさない。
+7. PARTIAL/UNVERIFIEDは表記揺れ・型式名・メーカー名と設定変更/リセット/朝一/据え置き/宵越し/電源OFF ON/天井/モード/状態/ガックンを組み替えて再探索し、競合は平均せずCONFLICT。
 
 ## 遡及resetBehavior QA 次回再開地点
 
@@ -72,13 +75,18 @@
 
 ## 主要出典 — 取得日 2026-09-05
 
-- K-Navi フルメタル・パニック！TSR: `https://p-kn.com/slot/1598/`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/6656`
-- パチマガスロマガ 小役確率/1000円ベース: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/taiyoelec_slot/12/c.php`
-- 5号機クロニクル タイヨーエレック: `https://5goki.com/yaiyoelec`
-- 天井ハイエナ生活（当時系二次資料）: `https://macerate.seesaa.net/article/226312110.html`
-- K-Navi ねぇ～ねぇ～島娘（次日監査用日付確認）: `https://p-kn.com/slot/1609/`
+- DK-SIS白書2012 4月カレンダー: `https://www.daikoku.co.jp/wp-content/uploads/siswp/2012/dkwp/files/siswp/2012/HTML/index139.html`
+- K-Navi クイーンズブレイド: `https://p-kn.com/slot/1605/`
+- パチビー クイーンズブレイド: `https://www.pachibee.jp/machines/index/212020008`
+- HAZUSE クイーンズブレイド: `https://hazuse.com/machine/pachislot/2S0037/`
+- パチマガスロマガ スペック: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/jps_slot/26/a.php`
+- パチマガスロマガ 小役/1000円ベース: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/jps_slot/26/c.php`
+- パチスロ解析ガイド クイーンズブレイド: `https://www.pachislot-guide.net/2012/queens-blade/`
+- 天井ハイエナ生活 2012-05-31更新: `https://macerate.seesaa.net/article/272914282.html`
+- 当時系新機種一覧: `https://macerate.seesaa.net/article/263152916.html`
+- K-Navi 一騎当千3 Valiant Venus: `https://p-kn.com/slot/1603/`
+- K-Navi マクロスフロンティア: `https://p-kn.com/slot/1610/`
 
 ## GitHub commits
 
-- フルメタル・パニック！TSR machine record: `db367cec5a56ab7b7b15431eb5a715edf51e7bd5`
+- クイーンズブレイド machine record: `33cb5af7e27444ffd421fa046c31dc9711ec8ff7`
