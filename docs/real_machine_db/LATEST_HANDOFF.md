@@ -4,72 +4,68 @@
 
 ## 現在地点
 
-- recordCount: **693**
-- latestMachineAdded: **2027 Revise**（スター）
-- latestRecord: `docs/real_machine_db/machines/2012-10-22_2027-revise.md`
+- recordCount: **694**
+- latestMachineAdded: **KOF3**（SNKプレイモア）
+- latestRecord: `docs/real_machine_db/machines/2012-10-22_kof3.md`
 - chronologicalFrontier: **2012-10-22**
-- frontierLatestExactDateMachine: **2027 Revise**
+- frontierLatestExactDateMachine: **KOF3**
 - schema: **resetBehavior v0.7**
-- status: **OPEN_2012-10-22_WORKING_GROUP__NEXT_KOF3**
+- status: **OPEN_2012-10-22_WORKING_GROUP__NEXT_DOKABEN**
 
 ## 今回の同期
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前最新レコード `2012-10-15_nangoku-sodachi-1st-vacation.md` を確認。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前最新レコード `2012-10-22_2027-revise.md` を確認。
 - `INDEX.md` は19件地点の古い集約状態。README規定どおり、より新しい `LATEST_HANDOFF.md` を直近進捗の正本として優先。
-- 開始時main正本は recordCount **692** / chronologicalFrontier **2012-10-15** / 10-15群暫定CLOSED。
-- 2012-10-16〜10-21境界を「パチスロ 新台」「導入」「メーカー・業界発表」等で再監査。10/17発表・10/18記事のSLOT牙狼は納品開始予定が12/16であり、この境界の導入機ではない。今回、10/16〜10/21に具体導入日を持つ未登録5号機は確定できず、10/22群へ進んだ。
-- repo内を `2027 Revise` で検索し既存レコードなしを確認後、693件目として追加。
+- 開始時main正本は recordCount **693** / chronologicalFrontier **2012-10-22** / 10-22群OPEN / 次機種KOF3。
+- repoを `KOF3` で検索し既存レコードなしを確認後、694件目として追加。
 
-## 今回追加 — 2027 Revise
+## 今回追加 — KOF3
 
 ### 識別
 
-- manufacturer: **スター**
-- releaseDate: **2012-10-22**（K-Naviホール導入開始）
+- manufacturer: **SNKプレイモア**
+- releaseDate: **2012-10-22**（パチビー導入日。グリーンべるとは納品10/21～、メーカー公式は2012年10月稼働予定）
 - generation: **5号機**
-- systemType: **ART / CZ / BR非搭載 / 天井あり**
-- modelName / approvalNumber: **UNVERIFIED_AFTER_RESEARCH**
+- systemType: **ART / CZ / BR非搭載 / ゲーム数管理 / 天井あり**
+- modelName: **KOF3D**（メーカー公式）
+- approvalNumber: **UNVERIFIED_AFTER_RESEARCH**
 
 ### 性能コア
 
-- 機械割: **97.7 / 98.4 / 99.8 / 103.2 / 106.5 / 112.4%**
-- ART初当り: **1/271.2 / 265.3 / 251.3 / 232.6 / 214.1 / 195.1**
-- 50枚ベース: **約30G/1000円**
-- ART「BATTLE MODE」: **1セット20G（初回40G） / 約+2.1枚/G / 継続率70〜95%**
-- CZ「追跡MODE」: **10G**
-- CZ「急襲MODE」: **20G**
-- 通常ART天井: **ART終了後999G**
-- CZ間天井: **最大510G**
+- 機械割: **96.8 / 98.6 / 99.9 / 104.0 / 109.1 / 114.2%**
+- KING RUSH: **1/350.4 / 340.7 / 320.0 / 289.7 / 254.8 / 214.6**
+- REG BONUS: **1/673.9 / 611.9 / 619.1 / 525.3 / 495.2 / 395.1**
+- ART合算: **1/230.5 / 218.8 / 210.9 / 186.7 / 168.2 / 139.0**
+- 50枚ベース: **30.01～30.17G/1000円**
+- ART純増: **約+2.0枚/G**
+- KING RUSH: **50G+α**
+- 超KING RUSH: **100G+α**
+- REG BONUS: **30G固定ART**
+- CZ「超必ATTACK」: **10G / ART期待度33%以上**
+- ゲーム数モード最大: **通常A 1280G / 通常B 896G / 天国 128G / 超天国 128G**
 
 ### resetBehavior v0.7
 
-- `settingChangeBehavior`: **CONFIRMED_CLEAR_GAME_COUNTER_RELOT_INTERNAL_MODE_INITIAL_STAGE_FAR_DISTANCE**
-- `gameCounterReset`: **設定変更で天井消化GをCLEAR**
-- `modeAfterReset`: **設定変更で内部モード移行抽選**。具体振り分けはUNVERIFIED_AFTER_RESEARCH。
-- `settingChangeInitialStage`: **遠距離ステージ**
-- `powerCycleBehavior`: **液晶ステージ引継ぎを確認**。ゲーム数/CZ間カウンタ/内部モードの電断時完全契約はUNVERIFIED_AFTER_RESEARCH。
-- `carryOverBehavior`: 電断時ステージ引継ぎ以外の据え置き契約は、一般論で補完せずPARTIAL。
-- `ceilingAfterReset`: 通常ART天井999G。設定変更専用固定短縮天井はUNVERIFIED_AFTER_RESEARCH。
+- `settingChangeBehavior`: **CONFIRMED_CLEAR_GAME_COUNTER_RELOT_GAME_NUMBER_MODE__DISPLAY_STAGE_RESELECTED**
+- `gameCounterReset`: **設定変更で天井/規定ゲーム数進捗CLEAR**。2012年当時資料を複数照合。
+- `modeAfterReset`: **設定変更で内部ゲーム数モード移行抽選**。具体振り分けは専用資料参照の存在までは確認したが、取得可能本文から安全に回収できず `UNVERIFIED_AFTER_RESEARCH`。
+- `ceilingAfterReset`: 設定変更後は新モードテーブルを再セット。設定変更専用の固定短縮天井は `UNVERIFIED_AFTER_RESEARCH`。
+- `powerCycleBehavior`: **液晶ステージは電源ON/OFF時も再選択**。規定Gカウンタ/モード/内部状態の電断時完全契約は `UNVERIFIED_AFTER_RESEARCH`。
+- `carryOverBehavior`: 純据え置き時の規定G進捗・モード・状態の完全な本機固有直接契約は `UNVERIFIED_AFTER_RESEARCH`。
 - `stateAfterReset`: **UNVERIFIED_AFTER_RESEARCH**。
-- `resetBenefits`: モード再抽選は確認したが、朝一優遇率等の公開数値はUNVERIFIED_AFTER_RESEARCH。
-- `resetPenalties`: **前日のART天井進捗消失**。
-- `resetDetection`: 設定変更後は遠距離ステージ、電源ON/OFFのみはステージ引継ぎ。前日ステージ把握時は判別材料になり得る。本機固有ガックンはUNVERIFIED_AFTER_RESEARCH。
+- `resetBenefits`: モード再抽選は確認。天国/超天国は最大128Gだが、設定変更時の天国以上選択率を回収できないため朝一優遇率は数値化しない。
+- `resetPenalties`: **前日の規定ゲーム数進捗消失**。
+- `resetDetection`: 設定変更時も電源ON/OFF時も液晶ステージ再選択のため、開始液晶ステージ単独では変更判別不可。本機固有ガックン等は `UNVERIFIED_AFTER_RESEARCH`。
 - `advantageousSectionReset`: **NOT_APPLICABLE_5TH_GEN**。
+- `publicMorningNumbers`: **UNVERIFIED_AFTER_RESEARCH**。
 
-## 10-16〜10-21境界監査
-
-- 検索語を日付別「2012年10月16日〜21日 パチスロ 新台/導入」とメーカー・業界記事へ展開。
-- SLOT牙狼は2012-10-17発表 / 10-18業界記事だが納品開始予定12/16のため、この境界の導入候補から除外。
-- 10/16〜10/21に今回具体導入日付き未登録5号機を確定できず、境界は暫定CLOSED。
-
-## 2012-10-22同日群
+## 10-22同日群
 
 - **登録済み: 2027 Revise（スター）**
+- **登録済み: KOF3（SNKプレイモア）**
 - 次の既知未処理候補:
-  1. **KOF3**（SNKプレイモア）
-  2. **ドカベン**（タイヨーエレック）
-  3. **パチスロ一騎当千XX**（バルテック）
-- `キュインぱちすろ南国育ち 1st vacation` はDATE_CONFLICTを保持し2012-10-15キーで既登録。重複追加しない。
+  1. **ドカベン**（タイヨーエレック）
+  2. **パチスロ一騎当千XX**（バルテック）
 - 同日群は上記だけと決め打ちせず、K-Navi / HAZUSE / パチビー / ALL7 / メーカー・業界記事で残存候補を再監査してから閉じる。
 
 ## 遡及resetBehavior QA 進捗
@@ -79,22 +75,26 @@
 
 ## 次回再開地点
 
-1. **recordCount 693 / chronologicalFrontier 2012-10-22 / 10-22群OPEN** から開始。
-2. repo重複・導入日を確認して、最優先 **KOF3（SNKプレイモア）** を処理。
-3. 続いて **ドカベン → パチスロ一騎当千XX**。
-4. その後、10/22同日群の漏れをALL7ページング・K-Navi・HAZUSE・パチビー等で再監査してCLOSE判定。
+1. **recordCount 694 / chronologicalFrontier 2012-10-22 / 10-22群OPEN** から開始。
+2. repo重複・導入日を確認して、最優先 **ドカベン（タイヨーエレック）** を処理。
+3. 続いて **パチスロ一騎当千XX（バルテック）**。
+4. その後、10/22同日群の漏れをALL7ページング・K-Navi・HAZUSE・パチビー・メーカー/業界資料で再監査してCLOSE判定。
 5. 欠損は表記揺れ・型式名・メーカー・シリーズ名と「設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間」を組み替え、公式・業界・当時解析・古いDB・アーカイブ・回顧資料を横断後のみUNVERIFIED。競合は平均せずCONFLICT。
 
 ## 主要出典 — 取得日 2026-09-05
 
-### 2027 Revise
-- K-Navi機種トップ: `https://p-kn.com/slot/1712/`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/6850`
-- パチマガスロマガ 小役確率/ベース: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/star_slot/02/c.php`
-- パチマガスロマガ ART突入フロー: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/star_slot/02/l.php`
-- パチマガスロマガ ボーナス確率/PAYOUT: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/star_slot/02/h.php`
-- 天井ハイエナ生活 2012-11-06記事: `https://macerate.seesaa.net/article/300741744.html`
+### KOF3
+- SNKプレイモア公式: `https://slot.snk-corp.co.jp/official/kof3/`
+- グリーンべると 2012-09-06: `https://web-greenbelt.jp/00001640/`
+- パチビー: `https://www.pachibee.jp/machines/lecture/212090005`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/6856`
+- パチマガスロマガ 小役確率/ベース: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/snk_slot/41/c.php`
+- パチマガスロマガ ART突入フロー: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/snk_slot/41/l.php`
+- 5号機クロニクル SNKプレイモア一覧: `https://5goki.com/snkplaymore`
 - 天井ハイエナ生活 2012-12-18一覧: `https://macerate.seesaa.net/article/308653872.html`
+- 目指せ月収20万！ KOF3天井解析 2012-10-16: `https://mezase20.com/blog-entry-676.html`
 
-### 境界監査
+### 前回までの主要境界資料
+- 2027 Revise K-Navi: `https://p-kn.com/slot/1712/`
+- 2027 Revise P-WORLD: `https://www.p-world.co.jp/machine/database/6850`
 - グリーンべると SLOT牙狼 2012-10-18: `https://web-greenbelt.jp/00001671/`（納品開始予定12/16）
