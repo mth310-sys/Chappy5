@@ -4,76 +4,80 @@
 
 ## 現在地点
 
-- recordCount: **691**
-- latestMachineAdded: **パチスロ 喰霊－零－**（オーイズミ）
-- latestRecord: `docs/real_machine_db/machines/2012-10-09_garei-zero.md`
-- chronologicalFrontier: **2012-10-09**
-- frontierLatestExactDateMachine: **パチスロ 喰霊－零－**
+- recordCount: **692**
+- latestMachineAdded: **キュインぱちすろ南国育ち 1st vacation**（オリンピア）
+- latestRecord: `docs/real_machine_db/machines/2012-10-15_nangoku-sodachi-1st-vacation.md`
+- chronologicalFrontier: **2012-10-15**
+- frontierLatestExactDateMachine: **キュインぱちすろ南国育ち 1st vacation**
 - schema: **resetBehavior v0.7**
-- status: **CLOSED_2012-10-09_GROUP__NEXT_BOUNDARY_2012-10-10_TO_10-21**
+- status: **CLOSED_2012-10-15_WORKING_GROUP__NEXT_BOUNDARY_2012-10-16_TO_10-21**
 
 ## 今回の同期
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`INDEX.md`、`LATEST_HANDOFF.md`、直前最新レコードを確認。
-- 開始時main正本は recordCount 690 / chronologicalFrontier 2012-10-09 / 10-09群OPEN。会話上の以前の地点よりmainが先行していたためGitHub正本を優先。
-- 前handoff最優先候補「パチスロ 喰霊－零－」はrepo未登録を確認し、691件目として追加。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`INDEX.md`、`LATEST_HANDOFF.md`、直前最新レコード `2012-10-09_garei-zero.md` を確認。
+- `INDEX.md` は19件地点の古い集約状態で、READMEの規定どおり、INDEXより新しい `LATEST_HANDOFF.md` を直近進捗の正本として優先。
+- 開始時main正本は recordCount 691 / chronologicalFrontier 2012-10-09 / 10-09群CLOSED。
+- 前handoffは「南国育ち」を10/22候補としていたが、K-Naviに **2012-10-15ホール導入開始**の具体日が存在することを再発見。時系列漏れ防止のため10/22へ飛ばさず、導入日CONFLICTを保持して692件目として追加。
 
-## 今回追加 — パチスロ 喰霊－零－
+## 今回追加 — キュインぱちすろ南国育ち 1st vacation
 
 ### 識別
 
-- manufacturer: **オーイズミ**
-- releaseDate key: **2012-10-09**
+- manufacturer: **オリンピア**
+- releaseDate key: **2012-10-15**（DATE_CONFLICT保持）
 - generation: **5号機**
-- systemType: **A+ART / ボーナス+ART / 天井あり**
-- modelName: **パチスロガレイゼロC**
-- approvalNumber: **2S0497**
+- systemType: **ART / 疑似ボーナス / ゲーム数管理 / CZ / 天井あり**
+- modelName: **キュインぱちすろ南国育ちY**
+- approvalNumber: **2S0776**
+
+### 導入日CONFLICT
+
+- K-Navi: **2012-10-15 ホール導入開始**
+- グリーンべると2012-08-30当時記事: **2012-10-21から納品開始予定**
+- HAZUSE: **2012-10-22 導入開始**
+- パチビー: **2012-10-22 導入日**
+- ALL7.jp: **2012-10-22 導入予定**
+- 10/15単独値と、10/21納品予定→10/22導入の複数系列が競合。平均せず全根拠を保存。本線は漏れ防止優先で確認できる最早具体日10/15をキーにした。
 
 ### 性能コア
 
-- 機械割: **97.0 / 98.6 / 101.2 / 105.7 / 110.2 / 115.0%**
-- BIG: **1/431.1～431.2 / 414.8 / 404.5 / 385.5 / 372.4 / 348.6**
-- REG: **1/642.5 / 624.2 / 595.8 / 569.9 / 537.2 / 504.1**
-- ART初当り: **1/594.3 / 531.5 / 573.6 / 478.9 / 504.5 / 383.1**
-- ART「喰霊CHANCE」: **1セット50G+α / 約+1.5枚/G**
-- BIG約**204枚**、REG約**53枚**。
-- 天井: **ボーナス後1280G → 次回ボーナスまでの無限ART + ART1ストック**。
-- 50枚ベース: **UNVERIFIED_AFTER_RESEARCH**。2019/2026後継機の値は流用せず。
+- 機械割: **96.5 / 98.2 / 100.6 / 105.7 / 110.9 / 119.2%**
+- ART初当り: **1/279.2 / 267.2 / 250.3 / 221.9 / 190.5 / 149.8**
+- 資料掲載「合成確率」: **1/236.8 / 234.7 / 232.1 / 221.0 / 210.0 / 200.6**（Aタイプのボーナス合算とは定義を同一視しない）
+- 50枚ベース: **約30G/50枚（1000円）**。二次資料複数で確認、一次公表値未確認。
+- ART「南国RUSH」: **1セット50G+α / 約+2.0枚/G**。
+- 疑似BIG: **50G / 約100枚**、疑似REG: **20G / 約40枚**。
+- 通常A/B最大天井 **1280G**、天国/超天国最大 **128G**。
+- CZ「飛翔チャレンジ」: **8G / ART期待度約30%**。
 
 ### resetBehavior v0.7
 
-- `settingChangeBehavior`: **CONFIRMED_CLEAR_CEILING_COUNT_AND_INTERNAL_MODE_RELOTTERY**
-- `gameCounterReset`: **CONFIRMED_CLEAR_ON_SETTING_CHANGE**
-- `ceilingAfterReset`: **1280G_FROM_CLEARED_COUNT / RESET_SHORTENING_NONE_CONFIRMED**
-- `modeAfterReset`: **CONFIRMED_RELOTTERY_ON_SETTING_CHANGE**
-- 設定変更後モード選択率:
-  - 設定1: 低確76.9 / 通常1.6 / 高確20.0 / 超高確1.6%
-  - 設定2: 低確76.9 / 通常1.6 / 高確20.0 / 超高確1.6%
-  - 設定3: 低確72.9 / 通常1.6 / 高確25.0 / 超高確1.6%
-  - 設定4: 低確71.9 / 通常1.6 / 高確25.0 / 超高確1.6%
-  - 設定5: 低確63.5 / 通常1.6 / 高確33.3 / 超高確1.6%
-  - 設定6: 低確63.5 / 通常1.6 / 高確33.3 / 超高確1.6%
-- 朝一高確以上: 設定1/2 **21.6%**、設定3/4 **26.6%**、設定5/6 **34.9%**。
-- `powerCycleBehavior`: **PARTIAL_STAGE_ONLY**。設定変更時も単純電源ON/OFF時も液晶は「対策室」開始。天井カウンタ/内部モードの電断保持契約はUNVERIFIED_AFTER_RESEARCH。
-- `resetBenefits`: 高確/超高確スタートの可能性。
-- `resetPenalties`: 前日の1280G天井進捗を設定変更で喪失。
-- `resetDetection`: 初期対策室ステージは電源ON/OFFでも同じため単独判別不可。ガックン等はUNVERIFIED_AFTER_RESEARCH。
+- `settingChangeBehavior`: **CONFIRMED_CLEAR_GAME_COUNTER_RELOT_MODE_RELOT_STATE**
+- `gameCounterReset`: **設定変更でCLEAR / 電源OFF→ONのみはRETAIN**
+- `modeAfterReset`: **設定変更で再抽選**
+- `stateAfterReset`: **設定変更で再抽選**
+- `powerCycleBehavior`: **CONFIRMED_CARRYOVER_WITH_DISPLAY_EXCEPTIONS**
+  - ビーチ/プール滞在時は電断復帰で両ステージを1:1再振り分け。
+  - ART中キャラがジョディならまどかへ変化。
+  - **それ以外は全て引き継ぐ**と必勝本に直接記載。
+- 設定変更時モード振り分け:
+  - 設定1: 通常A75.00 / 通常B20.00 / 天国5.00%
+  - 設定2: 72.16 / 22.50 / 5.34%
+  - 設定3: 69.35 / 25.00 / 5.65%
+  - 設定4: 66.39 / 27.50 / 6.10%
+  - 設定5: 63.28 / 30.00 / 6.71%
+  - 設定6: 59.16 / 33.33 / 7.50%
+- 設定変更時内部状態: **低確94.90 / 高確5.00 / 超高確0.10%**。
+- 朝一高確以上: **5.10%**。
+- 設定変更時の天国選択で最大128Gとなる可能性: 設定1 **5.00%** ～設定6 **7.50%**。
+- `resetDetection`: 設定変更はビーチ/プール1:1開始。電断のみでは他ステージ等は引継ぐため、前日非基本ステージを把握して朝一も保持している場合は設定変更否定材料になり得る。ビーチ/プール開始だけでは変更/電断を判別不能。ガックンはUNVERIFIED_AFTER_RESEARCH。
 - `advantageousSectionReset`: **NOT_APPLICABLE_5TH_GEN**。
 
-### CONFLICT / 定義差
+## 10-10〜10-15境界監査
 
-- BIG設定1: 1/431.1 vs 1/431.2の丸め差。
-- REG獲得: 約53枚と「最大60枚」表記は平均/純増目安と最大値の定義差として分離。
-- 2012-07-24業界発表は「9月9日納品開始予定」、パチビー/K-Navi/HAZUSEは「2012-10-09導入」。予定日と実導入DBを混同せず、時系列キーは10-09。
-
-## 10-09群の再監査
-
-- **ドラゴンハナハナ-30**: 既登録（689）。
-- **キン肉マン ～キン肉星王位争奪編～**: 既登録（690）。10/08 vs 10/09は既存CONFLICT保持。
-- **パチスロ 喰霊－零－**: 今回登録（691）。
-- 旧handoff候補 **「大工の源さん～炎のいただき!編～」** は2012-10-09資料を再確認した結果、**CRパチンコ機**であり本パチスロDB対象外。
-- 旧handoff候補 **「キュインぱちすろ 南国育ち 1st vacation」** はHAZUSEが**2012-10-22導入**、グリーンべると当時発表が**10月21日納品開始予定**。10-09群から除外し、10/22候補へ移動。
-- 以上により **2012-10-09群はCLOSED**。
+- 10/10～10/14はK-Navi/HAZUSE/ALL7/旧DB/業界記事を検索し、今回この範囲の具体日付き未登録5号機を確定できず。
+- 10/15は「南国育ち 1st vacation」のK-Navi具体日を検出して今回登録。
+- 10/15同日について他の具体日付き未登録パチスロを複数検索したが、今回確定できず。10/15作業群は暫定CLOSEDとし、次回は10/16～10/21を先に監査する。
 
 ## 遡及resetBehavior QA 進捗
 
@@ -82,24 +86,28 @@
 
 ## 次回再開地点
 
-1. **recordCount 691 / chronologicalFrontier 2012-10-09 / 10-09群CLOSED** から開始。
-2. **2012-10-10〜10-21境界監査**を行い、具体日付きの未登録5号機がないか、K-Navi/HAZUSE/パチビー/メーカー・業界発表/旧DBで再確認する。
-3. 境界により古い未登録機がなければ、次の既知具体日候補は **「キュインぱちすろ 南国育ち 1st vacation」（オリンピア）2012-10-22**。repo重複確認→具体日再照合→性能コア→resetBehavior v0.7で692件目候補として処理。
-4. 「南国育ち」はグリーンべるとが10/21納品開始予定、HAZUSEが10/22導入開始。予定/導入定義を平均せず必要ならCONFLICT/DATE_NOTEで保持する。
-5. 欠損は表記揺れ・型式・メーカー・シリーズ名と設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/状態/ガックン等を組み替え、公式・業界・当時解析・古いDB・アーカイブ・回顧資料を横断後のみUNVERIFIED。競合は平均せずCONFLICT。
+1. **recordCount 692 / chronologicalFrontier 2012-10-15 / 10-15群暫定CLOSED** から開始。
+2. **2012-10-16〜10-21境界監査**を行い、K-Navi/HAZUSE/パチビー/ALL7/メーカー・業界発表/旧DBで具体日付き未登録5号機がないか確認。
+3. より古い候補がなければ **2012-10-22群**へ進む。
+4. ALL7.jpの10/22パチスロ候補として少なくとも以下を確認済み。repo重複と別ソース具体日を1機種ずつ確認して順番に処理する:
+   - **2027 Revise**（スター）
+   - **KOF3**（SNKプレイモア）
+   - **ドカベン**（タイヨーエレック）
+   - **パチスロ一騎当千XX**（バルテック）
+   - **キュインぱちすろ南国育ち 1st vacation**は今回692件目として登録済みなので重複追加しない。
+5. 10/22同日群は上記だけと決め打ちせず、ALL7のページング・K-Navi・HAZUSE・パチビー等で残存候補を再監査してから閉じる。
+6. 欠損は表記揺れ・型式・メーカー・シリーズ名と設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/状態/ガックン等を組み替え、公式・業界・当時解析・古いDB・アーカイブ・回顧資料を横断後のみUNVERIFIED。競合は平均せずCONFLICT。
 
 ## 主要出典 — 取得日 2026-09-05
 
-### パチスロ 喰霊－零－
-- パチビー: `https://www.pachibee.jp/machines/index/212090001`
-- K-Navi: `https://p-kn.com/slot/1697/`
-- HAZUSE: `https://hazuse.com/machine/pachislot/2S0497/`
-- グリーンべると: `https://web-greenbelt.jp/00001530/`
-- 当時朝一解析: `https://macerate.seesaa.net/article/300137056.html`
-- 当時天井解析: `https://macerate.seesaa.net/article/296508634.html`
-- パチ＆スロ必勝本 モード移行率: `https://p.hisshobon.jp/machine/2083/1/37203`
-
-### 次回アンカー
-- HAZUSE 南国育ち 1st vacation: `https://hazuse.com/machine/pachislot/2S0776/`
-- オリンピア公式 南国育ち 1st vacation: `https://www.olympia.co.jp/newmachine/nangoku_1st/`
-- グリーンべると 南国育ち発表: `https://web-greenbelt.jp/00001571/`
+### キュインぱちすろ南国育ち 1st vacation
+- K-Navi機種トップ: `https://p-kn.com/slot/1707/`
+- K-Navi設定変更時モード移行率: `https://p-kn.com/slot/1707/40876/`
+- パチ＆スロ必勝本 天井&設定変更: `https://p.hisshobon.jp/machine/2092/1/36622`
+- パチ＆スロ必勝本 状態移行率: `https://p.hisshobon.jp/machine/2092/1/36998`
+- HAZUSE: `https://hazuse.com/machine/pachislot/2S0776/`
+- パチビー: `https://www.pachibee.jp/machines/index/212090004`
+- グリーンべると: `https://web-greenbelt.jp/00001571/`
+- ALL7.jp 2012年10月: `https://www.all7.jp/plans/index/2012/10`
+- CrankySeven: `https://crankyseven.com/nangokusodati1st-pc.htm`
+- 当時系スペック紹介: `https://ameblo.jp/slostar/entry-11333929403.html`
