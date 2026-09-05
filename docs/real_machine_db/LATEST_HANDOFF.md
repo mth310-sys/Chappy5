@@ -4,72 +4,75 @@
 
 ## 現在地点
 
-- recordCount: **660**
-- latestMachineAdded: **パイレーツワールド**（大都技研）
-- latestRecord: `docs/real_machine_db/machines/2012-06-04_pirates-world.md`
+- recordCount: **661**
+- latestMachineAdded: **ニューパルサーSP**（山佐）
+- latestRecord: `docs/real_machine_db/machines/2012-06-04_new-pulsar-sp.md`
 - chronologicalFrontier: **2012-06-04**
-- frontierLatestExactDateMachine: **パイレーツワールド**
+- frontierLatestExactDateMachine: **ニューパルサーSP**
 - schema: **resetBehavior v0.7**
 - status: **OPEN_2012-06-04_SAME_DAY_GROUP**
 
 ## 今回の同期・時系列監査
 
-- 最新mainのREADME全文、ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード「GTO ～Limit Break～」を確認して開始。
-- INDEXは旧地点19件のままなので、README規定どおりLATEST_HANDOFFと実レコードを優先。開始時正本は recordCount 659 / frontier 2012-06-04。
-- 前回HANDOFF指定の大都技研「パイレーツワールド」をrepo検索し未登録確認後、660件目として追加。
-- 導入日はK-Navi/2012-06-04当時新台一覧=2012-06-04、HAZUSE=2012-06-03、大都技研公式=2012年6月。日付定義差を保持し、時系列キーは2012-06-04を採用。
-- 性能コアは大都技研公式、K-Navi、HAZUSE、パチマガスロマガ、当時新台一覧、当時天井資料、後年整理資料を横断照合。
-- resetBehaviorは本機専用の当時天井資料から、設定変更時の天井消化Gクリア/天井再セット、内部モード移行抽選、ART中設定変更時のART状態クリア、電源ON/OFF時の液晶ステージ引継ぎ、特定ステージを用いた変更推測まで回収。
-- 据え置き時の天井進捗・内部モード完全契約、単純電断時の天井/モード/ART契約、設定変更時の100/300/600/900G振り分け率、ガックンは検索語・表記揺れ・資料系統を変えても直接根拠未取得のため、その範囲だけUNVERIFIED_AFTER_RESEARCH。
+- 最新mainのREADME全文、ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード「パイレーツワールド」を確認して開始。
+- INDEXは旧地点19件のままなので、README規定どおりLATEST_HANDOFFと実レコードを優先。開始時正本は recordCount 660 / frontier 2012-06-04。
+- 前回HANDOFF指定の山佐「ニューパルサーSP」を実パス候補・repo検索で重複監査し、未登録確認後661件目として追加。
+- 導入日はK-Navi/2012-06-04当時新台一覧=2012-06-04、HAZUSE=2012-06-11、P-WORLD/A-SLOT=2012年6月。平均せず資料差を保持し、時系列キーは最古の明示的ホール導入日2012-06-04を採用。
+- 性能コアはP-WORLD、K-Navi、HAZUSE、パチマガスロマガ、当時新台一覧を横断照合。BIG/REG/合算はP-WORLDとパチマガスロマガが完全一致。
+- パチマガスロマガには通常PAYOUT 96.9〜110.0%と別表示97.27〜110.48%が併存。条件定義を確定できないため平均せずCONFLICTとして双方保存。
+- resetBehaviorは本機がノーマル機・天井非搭載である点と、本機固有後年資料の「設定変更後 特にありません」を根拠に、朝一固有恩恵なしを保存。電源OFF→ON、据え置き時の演出モード保持、ガックン/初期出目等は十分な再探索後も直接確定できないためUNVERIFIED_AFTER_RESEARCH。
+- 通常演出に「バウンドスタート/バウンドストップ」があるため、これを設定変更ガックンと誤認しない旨を明記。
 
-## 今回の本線追加 — パイレーツワールド
+## 今回の本線追加 — ニューパルサーSP
 
 ### 導入・分類
 
-- manufacturer: **大都技研**。
+- manufacturer: **山佐**。
 - releaseDate: **2012-06-04**（K-Navi/当時新台一覧基準）。
 - generation: **5号機**。
-- systemType: **A+ART / 押し順ART / 継続ポイント・ストック型ART**。
-- formalModelName: **パイレーツワールドU**。
-- approvalNumber: **2S0091**。
+- systemType: **ノーマル / BIG+REG / 2演出モード選択式**。
+- formalModelName: **ニューパルサーSP-B**。
+- approvalNumber: **2S0079**。
 
 ### 性能コア
 
-- 機械割: **97.67 / 99.11 / 101.91 / 105.78 / 110.89 / 117.40%**。
-- BIG: **1/799.2 / 789.6 / 780.2 / 771.0 / 762.1 / 744.7**。
-- ART初当り: **1/340.7 / 320.8 / 301.2 / 262.0 / 219.3 / 181.2**。
-- BIG+ART合算: **1/238.9 / 228.1 / 217.3 / 195.5 / 170.3 / 145.7**。
-- 50枚ベース: **約31G**。
-- BIG: **約203枚**（280枚超払い出し終了）。
-- ART「OCEAN DRIVE」: **1セット30G+α、約+2.0枚/G**。
-- 通常天井: **100G / 300G / 600G / 900Gのいずれか**、最大900Gで天井ART。
+- 通常機械割: **96.9 / 98.3 / 100.1 / 102.4 / 105.2 / 110.0%**。
+- パチマガ別PAYOUT: **97.27 / 98.33 / 100.14 / 103.12 / 106.23 / 110.48%**（定義未解決のためCONFLICT保持）。
+- BIG: **1/282.4 / 281.2 / 275.3 / 263.2 / 252.0 / 236.5**。
+- REG: **1/420.1 / 402.0 / 381.0 / 350.4 / 321.2 / 289.9**。
+- 合算: **1/168.9 / 165.4 / 159.8 / 150.3 / 141.2 / 130.2**。
+- 50枚ベース: **35.01〜36.98G**。
+- BIG: **約312枚**（360枚超払い出し終了）。
+- REG: **約104枚**（120枚超払い出し終了）。
+- AT/ART: **非搭載**。
 
 ### resetBehavior v0.7
 
-- `settingChangeBehavior`: **VERIFIED_PERIOD_SOURCE**。天井消化Gクリア、天井G再セット、内部モード移行抽選。ART中の設定変更はART状態クリア。
-- `carryOverBehavior`: **UNVERIFIED_AFTER_RESEARCH**。据え置き時の天井進捗/内部モード完全契約を直接確定できず。
-- `powerCycleBehavior`: **PARTIAL_VERIFIED**。単純電源OFF→ONで液晶ステージ引継ぎを確認。天井/モード/ART状態の電断契約は未確定。
-- `gameCounterReset`: **CLEAR_ON_SETTING_CHANGE_CONFIRMED**。
-- `ceilingAfterReset`: **RESELECT_CONFIRMED**。公開天井候補は100/300/600/900G。設定変更時専用の選択率は未取得。
-- `modeAfterReset`: **RESELECT_CONFIRMED_NUMERIC_DISTRIBUTION_UNVERIFIED**。
-- `stateAfterReset`: **UNVERIFIED_AFTER_RESEARCH**。
+- `settingChangeBehavior`: **NO_SPECIAL_RESET_BENEFIT_CONFIRMED_SINGLE_RETROSPECTIVE**。本機固有資料で「設定変更後 特にありません」。
+- `carryOverBehavior`: **PERFORMANCE_RELEVANT_CARRYOVER_NOT_APPLICABLE; PRESENTATION_MODE_PERSISTENCE_UNVERIFIED**。天井/AT・ART状態等は非該当。演出モード保持は未確認。
+- `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH**。単純電源OFF→ON時の演出モード/停止出目等の本機固有契約を確定できず。
+- `gameCounterReset`: **NOT_APPLICABLE_NO_GAME_COUNT_CEILING**。
+- `ceilingAfterReset`: **NOT_APPLICABLE_NO_CEILING**。
+- `modeAfterReset`: **INTERNAL_PERFORMANCE_MODE_NOT_APPLICABLE**。ノーマル/フラッシュはプレイヤー選択演出モード。
+- `stateAfterReset`: **NOT_APPLICABLE_NO_AT_ART_STATE_CONFIRMED**。
 - `advantageousSectionReset`: **NOT_APPLICABLE_5TH_GEN**。
-- `resetBenefits`: **POSSIBLE_EARLY_CEILING_VIA_RESELECTION_NOT_RESET_EXCLUSIVE**。設定変更専用保証とは断定しない。
-- `resetPenalties`: **PREVIOUS_CEILING_PROGRESS_LOST_ON_SETTING_CHANGE / ART_STATE_LOST_IF_CHANGED_DURING_ART**。
-- `resetDetection`: **STAGE_BASED_POSSIBLE_DETECTION_CONFIRMED_WITH_CAVEAT**。前日「栄光の大海原」閉店時は、電源ON/OFFならステージ引継ぎのため朝一ステージ差で設定変更を見抜ける可能性あり。確定判別ではない。
-- `publicMorningNumbers`: 天井候補 **100 / 300 / 600 / 900G**。設定変更専用振り分け率・朝一特定G以内当選率は未確認。
+- `resetBenefits`: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- `resetPenalties`: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- `resetDetection`: **UNVERIFIED_AFTER_RESEARCH**。本機固有ガックン/朝一出目/表示判別を未確認。通常演出バウンドスタートとは区別。
+- `publicMorningNumbers`: **NONE_CONFIRMED**。
 
 ## CONFLICT / 品質メモ
 
-- releaseDate: K-Navi/当時新台一覧=2012-06-04、HAZUSE=2012-06-03、大都技研公式=2012年6月。平均せず定義差として保持。
-- パチマガスロマガ別表示の設定1/2 PAY OUT「197.67 / 199.11%」は、同サイト精密表97.67 / 99.11%および設定3〜6の連続性と矛盾するため `SOURCE_DISPLAY_CORRUPTION` として性能値から除外。
+- releaseDate: K-Navi/当時新台一覧=2012-06-04、HAZUSE=2012-06-11、P-WORLD/A-SLOT=2012年6月。平均せず保持。
+- payoutRateBySetting: P-WORLD/パチマガ通常表示=96.9/98.3/100.1/102.4/105.2/110.0%。パチマガ別表示=97.27/98.33/100.14/103.12/106.23/110.48%。定義未解決のためCONFLICT。
+- 2012-06-04当時新台一覧はBIG/REG値が一致する一方、設定3以降の合算欄に転記ずれが見られるため合算照合には使用しない。
 
 ## 次回再開地点
 
-1. **recordCount 660 / chronologicalFrontier 2012-06-04**から開始。
-2. **2012-06-04同日群を継続**。最優先候補は **山佐「ニューパルサーSP」**。repo重複確認後、未登録なら661件目候補として性能コア+resetBehavior v0.7を処理。
-3. その後、同日候補 **パイオニア「オアシス」 → ディ・ライト「パチスロ 熱血！華成学園ヒーロー部」** を既存repoと照合し、未登録のみ順に収集。
-4. 同日群をメーカー別・当時新台一覧・K-Navi/P-WORLD/HAZUSE等で最終監査し、漏れがなければ閉じて2012-06-05以降へ前進。
+1. **recordCount 661 / chronologicalFrontier 2012-06-04**から開始。
+2. **2012-06-04同日群を継続**。最優先候補は **パイオニア「オアシス」**。repo重複確認後、未登録なら662件目候補として性能コア+resetBehavior v0.7を処理。
+3. その後、同日候補 **ディ・ライト「パチスロ 熱血！華成学園ヒーロー部」** を既存repoと照合し、未登録のみ収集。
+4. 2012-06-04同日群をメーカー別・当時新台一覧・K-Navi/P-WORLD/HAZUSE等で最終監査し、漏れがなければ閉じて2012-06-05以降へ前進。
 5. 欠損は表記揺れ・型式名・メーカー名・シリーズ名と、設定変更/リセット/朝一/据え置き/宵越し/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間/50枚を組み替えて再探索。競合は平均せずCONFLICT。
 
 ## 遡及resetBehavior QA 次回再開地点
@@ -81,18 +84,18 @@
 
 ## 主要出典 — 取得日 2026-09-05
 
-- 大都技研 公式製品一覧: `https://www.daitogiken.com/products/slot/`
-- K-Navi パイレーツワールド: `https://p-kn.com/slot/1636/`
-- HAZUSE: `https://hazuse.com/machine/pachislot/SX0043/`
-- パチマガスロマガ スペック: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/daitogiken_slot/51/h-1.php`
-- パチマガスロマガ スペック別表: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/daitogiken_slot/51/h.php`
-- パチマガスロマガ 小役/1000円G数: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/daitogiken_slot/51/c.php`
-- パチマガスロマガ 機種TOP: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/daitogiken_slot/51/daitogiken_slot_51.php`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/6724`
+- K-Navi: `https://p-kn.com/slot/1626/`
+- HAZUSE: `https://hazuse.com/machine/pachislot/2S0079/`
+- パチマガスロマガ スペック: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/187/a.php`
+- パチマガスロマガ ボーナス確率: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/187/h.php`
+- パチマガスロマガ ボーナス確率 別表示: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/187/h-1.php`
+- パチマガスロマガ 小役/1000円G数: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/187/c.php`
 - 2012-06-04当時新台一覧: `https://macerate.seesaa.net/article/273495238.html`
-- 当時天井・設定変更資料: `https://macerate.seesaa.net/article/288333617.html`
-- 2-9伝説: `https://29den.com/piratesworld/`
+- メタボ教授 本機立ち回り資料: `https://metabopro.com/newparutorimu/`
+- A-SLOT: `https://www.a-slot.com/SHOP/yamasa101.html`
 
 ## GitHub commits
 
-- GTO ～Limit Break～ machine record: `439ff5113afc1d6adc29a026f36d7a595855572b`
 - パイレーツワールド machine record: `8438f88fdb02f4d5b42146ddca8b661a75aaddd5`
+- ニューパルサーSP machine record: `e082c85711a19689c546612afa6e1f78e331b3bb`
