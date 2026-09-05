@@ -4,75 +4,79 @@
 
 ## 現在地点
 
-- recordCount: **664**
-- latestMachineAdded: **バジリスク～甲賀忍法帖～II**（メーシー）
-- latestRecord: `docs/real_machine_db/machines/2012-06-11_basilisk-kouga-ninpouchou-ii.md`
+- recordCount: **665**
+- latestMachineAdded: **それいけ！こすみっくヒーローズ**（オーイズミ）
+- latestRecord: `docs/real_machine_db/machines/2012-06-11_soreike-cosmic-heroes.md`
 - chronologicalFrontier: **2012-06-11**
-- frontierLatestExactDateMachine: **バジリスク～甲賀忍法帖～II**
+- frontierLatestExactDateMachine: **それいけ！こすみっくヒーローズ**
 - schema: **resetBehavior v0.7**
-- status: **OPEN_2012-06-11_SAME_DAY_GROUP**
+- status: **CLOSED_2012-06-11__NEXT_BOUNDARY_AUDIT_2012-06-12_TO_2012-06-17**
 
 ## 今回の同期・時系列監査
 
-- 最新mainのREADME全文、ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード「パチスロ 熱血！華成学園ヒーロー部」を確認して開始。
-- INDEXは旧地点19件のままなのでREADME規定どおりLATEST_HANDOFFと実レコード、直近コミットを正本化。開始時は recordCount 663 / frontier 2012-06-04。
-- 直近コミットも確認し、前回地点以降にニューパルサーSP、オアシス、熱血！華成学園ヒーロー部が別リレーで追加され、2012-06-04同日群が閉鎖済みであることを確認。重複調査せず2012-06-05以降へ前進。
-- 2012-06-05～06-10を具体日検索し、今回新規に確定できる未登録5号機はなし。HANDOFF候補を再照合すると、バジリスク～甲賀忍法帖～IIとそれいけ！こすみっくヒーローズが2012-06-11、鉄のラインバレルはK-Navi 2012-06-18 / パチビー 2012-06-25で後日、セブンバー30は2012-06-25。
-- ユニバーサル公式2012-06-08発表が「バジリスク～甲賀忍法帖～II」の2012-06-11全国ホール順次導入開始を明記。K-Navi、パチビー、HAZUSEも2012-06-11で一致するため664件目として追加。
-- 性能コアはユニバーサル公式、P-WORLD、K-Navi、HAZUSE、パチマガスロマガ、パチビー、当時/後年解析を横断。機械割、ART初当たり、合算、50枚ベース範囲、純増、BIG、天井を回収。
-- resetBehaviorは「バジリスクII / バジリスクⅡ / バジ2 / バジリスクII-NH / メーシー」と「設定変更 / リセット / 朝一 / 据え置き / 宵越し / 電源OFF ON / 電断 / 天井 / 1280G / 1200G / 高確 / モード / 状態 / ガックン / RAMクリア」を組み替えて再探索。
-- 本機は設定変更時に内部状態を再抽選する一方、**天井ゲーム数は設定変更だけでは前日から引き継ぐ**特殊挙動を機種固有資料で確認。RAMクリア時はゲーム数リセットとする資料も確認。
-- 設定変更時の内部状態公開値は、設定1/3/5=低確75.00%・高確25.00%、設定2/4/6=低確66.67%・高確33.33%。朝一客行動に直接効く公開数値として保存。
-- 純粋な電源OFF→ONのみの場合の内部状態再抽選/保持、およびガックン/初期出目等による確定的変更判別は、十分な再探索後も本機固有直接契約を確定できずUNVERIFIED_AFTER_RESEARCH。
+- 最新mainのREADME全文、ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード「バジリスク～甲賀忍法帖～II」を確認して開始。
+- INDEXは旧地点19件のままなのでREADME規定どおりLATEST_HANDOFFと実レコードを正本化。開始時は recordCount 664 / frontier 2012-06-11。
+- handoff指定の次候補「それいけ！こすみっくヒーローズ」をrepo重複確認し、未登録だったため665件目として追加。
+- 06/11同日群を再監査。HAZUSEでは「ニューパルサーSP」も2012-06-11表記だが、前リレーで既登録済みのため重複追加しない。導入日資料差として今後の監査メモに保持。
+- バジリスク～甲賀忍法帖～II、ニューパルサーSP、今回のそれいけ！こすみっくヒーローズまで確認し、現時点で追加すべき未登録の具体日2012-06-11機を新たに確定できなかったため06/11群を閉鎖。
 
-## 今回の本線追加 — バジリスク～甲賀忍法帖～II
+## 今回の本線追加 — それいけ！こすみっくヒーローズ
 
 ### 導入・分類
 
-- manufacturer: **メーシー / UNIVERSAL ENTERTAINMENT**
+- manufacturer: **オーイズミ**
 - releaseDate: **2012-06-11**
 - generation: **5号機**
-- systemType: **ART主体 / プレミアムBIG+継続率&セットストックART**
-- formalModelName: **バジリスクII-NH**
-- approvalNumber: **2S0260**
+- systemType: **ART主体 / ボーナス+セットストック&継続率ART**
+- formalModelName: **それいけ！こすみっくヒーローズE**
+- approvalNumber: **2S0164**
 
 ### 性能コア
 
-- 機械割: **97.4 / 99.0 / 103.3 / 107.2 / 112.9 / 119.5%**
-- ART初当たり: **1/294 / 262 / 252 / 218 / 210 / 178**
-- BIG+ART合算: **1/292 / 260 / 251 / 217 / 209 / 177**
-- BIG: **全設定1/32768、約336枚**
-- 50枚ベース: **約29.8～31.1G（設定1～6範囲）**
-- ART「バジリスクタイム」: **追想の刻10G+α + 争忍の刻20～50G / 純増約+2.7枚/G**
-- 通常天井: **ART終了後/通常時1280G**。別資料では内部通常時1200G+前兆、データ表示上1280G前後と説明されるため定義差として保持。
+- 機械割: **97.3 / 98.2 / 100.1 / 103.6 / 107.0 / 111.2%**
+- ART初当たり: **1/613.95 / 507.82 / 526.15 / 398.60 / 381.04 / 274.12**
+- ボーナス合成: **1/468.11 / 468.11 / 468.11 / 468.11 / 451.97 / 436.91**
+- 50枚ベース: **約36.3～36.8G / 1000円**
+- ボーナス: **約20枚（29枚払い出し終了）**
+- ART「バトルモード」: **1セット30G / 純増約+3.0枚/G / 最大96%ループ**
+- ART前準備・セット間「撃モード」: **平均約7.3G / 純増約+1.0枚/G**
+- 通常天井: **ART間1280G消化後、32G前兆を経由してART**
 
 ### resetBehavior v0.7
 
-- `settingChangeBehavior`: **INTERNAL_STATE_RESELECTED__CEILING_PROGRESS_RETAINED**
-- `carryOverBehavior`: **CEILING_PROGRESS_CARRIES_OVER**
+- `settingChangeBehavior`: **CEILING_PROGRESS_CLEARED_AND_POST_RESET_128G_ART_CHANCE_UP_CONFIRMED**
+- `carryOverBehavior`: **CEILING_PROGRESS_CARRIES_OVER_IF_NOT_SETTING_CHANGED__SUPPORTED_BY_YOIGOSHI_CLASSIFICATION**
 - `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH**
-- `gameCounterReset`: **RETAIN_ON_SETTING_CHANGE__CLEAR_ON_RAM_CLEAR**
-- `ceilingAfterReset`: **NO_SETTING_CHANGE_SHORTENING_CONFIRMED**
-- `modeAfterReset`: **INTERNAL_STATE_RESELECTED_ON_SETTING_CHANGE**
-- `stateAfterReset`: **SETTING_SPECIFIC_LOW/HIGH_DISTRIBUTION_CONFIRMED**
+- `gameCounterReset`: **CLEAR_ON_SETTING_CHANGE**
+- `ceilingAfterReset`: **NORMAL_CEILING_RESTARTS__NO_SHORTENED_CEILING_VALUE_CONFIRMED**
+- `modeAfterReset`: **SPECIAL_POST_RESET_128G_HIGHER_ART_HIT_RATE_CONFIRMED__UNDERLYING_MODE_DISTRIBUTION_UNVERIFIED**
+- `stateAfterReset`: **UNVERIFIED_AFTER_RESEARCH**
 - `advantageousSectionReset`: **NOT_APPLICABLE_5TH_GEN**
-- `resetBenefits`: **HIGH_STATE_START_CHANCE + CEILING_PROGRESS_NOT_LOST_BY_SETTING_CHANGE**
-- `resetPenalties`: **NONE_CONFIRMED_FOR_NORMAL_SETTING_CHANGE**
-- `resetDetection`: **INDIRECT_STATE_INFERENCE_ONLY / GAKKUN_UNVERIFIED_AFTER_RESEARCH**
-- `publicMorningNumbers`: **奇数設定 低確75.00%・高確25.00% / 偶数設定 低確66.67%・高確33.33%**
+- `resetBenefits`: **POST_RESET_128G_ART_HIT_RATE_UP**
+- `resetPenalties`: **PREVIOUS_DAY_CEILING_PROGRESS_LOST_ON_SETTING_CHANGE**
+- `resetDetection`: **INDIRECT_128G_BEHAVIOR_ONLY__GAKKUN_AND_DISPLAY_UNVERIFIED_AFTER_RESEARCH**
+- `publicMorningNumbers`: **設定変更後1～128GのART当選率上昇を確認 / 正確な当選率はUNVERIFIED_AFTER_RESEARCH**
+
+### resetBehavior品質メモ
+
+- 天井狙い資料の「宵×」を同ページ定義どおり**設定変更で天井G数リセット**として採用。
+- 同資料の「設定変更後330G」は**天井狙い開始目安**であり、設定変更後天井=330Gを意味しない。短縮天井値としては採用しない。
+- 設定変更後128G以内のART当選率アップは当時パチマガスロマガで確認。
+- 設定変更時の低確/高確振り分け、朝一専用モード振り分け、単純電源OFF→ON、ガックン/初期出目/液晶による確定変更判別は、表記揺れ・型式名・メーカー名を組み替えて再探索後も本機固有の直接数値を確定できずUNVERIFIED_AFTER_RESEARCH。
 
 ## CONFLICT / 品質メモ
 
-- 機械割設定6: P-WORLD=119.4%、HAZUSE系/複数解析=119.5%。平均せず丸め差として両方保持し、主表は複数一致の119.5%。
-- 天井表記: P-WORLD/HAZUSE=1280G、別攻略資料=内部通常時1200G+前兆・データ表示1280G前後。カウンタ定義/前兆込み差として保持。
-- 「設定変更でも天井ゲーム数引継ぎ」は一般則から推定せず、本機固有資料で確認した値のみ採用。シリーズ後継「絆」「III」のreset情報は混入させていない。
+- 機械割: HAZUSE=97/98/100/104/107/111%、パチマガスロマガ・5号機クロニクル・pacnk=97.3/98.2/100.1/103.6/107.0/111.2%。丸め差と判断し、主表は詳細値を採用。
+- ART初当たり: pacnkはHAZUSEの総合合成系列1/265.6～付近を「初当りART」と表記する一方、パチマガスロマガ専用解析は1/613.95～1/274.12。定義/ラベル競合のため平均せず、主表は専用解析値、pacnk側はCONFLICT_NOTEとして保持。
+- ニューパルサーSPの導入日: HAZUSEは2012-06-11。前リレー登録日との資料差は重複登録せず既存レコード側の将来DATE_QA候補として保持。
 
 ## 次回再開地点
 
-1. **recordCount 664 / chronologicalFrontier 2012-06-11**から開始。
-2. **2012-06-11同日群はOPEN**。同日未処理が確認済みの **「それいけ！こすみっくヒーローズ」（オーイズミ）** を最優先でrepo重複確認し、未登録なら665件目候補として性能コア+resetBehavior v0.7を収集する。
-3. 06-11群を閉じるまでは後日へ進まない。閉鎖後は鉄のラインバレルの導入日CONFLICT（K-Navi 06-18 / パチビー 06-25）を精査し、その前に具体日付き未処理機がないか監査する。セブンバー30は06-25候補。
-4. 欠損は表記揺れ・型式名・メーカー名・シリーズ名と、設定変更/リセット/朝一/据え置き/宵越し/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間/50枚を組み替えて再探索。競合は平均せずCONFLICT。
+1. **recordCount 665 / chronologicalFrontier 2012-06-11**から開始。
+2. **2012-06-11同日群はCLOSED**。次は **2012-06-12～06-17境界監査** を行い、具体日付き未登録機がないか先に確認する。
+3. その後、既知候補 **「鉄のラインバレル」** の導入日CONFLICT（K-Navi 2012-06-18 / パチビー 2012-06-25）を公式・業界・当時解析・古いDBで再照合し、採用日/CONFLICTを確定して未登録なら次レコード化する。
+4. **「セブンバー30」** は2012-06-25候補。鉄のラインバレルと06/25同日群の前後関係を監査してから処理。
+5. 欠損は表記揺れ・型式名・メーカー名・シリーズ名と、設定変更/リセット/朝一/据え置き/宵越し/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間/50枚を組み替えて再探索。競合は平均せずCONFLICT。
 
 ## 遡及resetBehavior QA 次回再開地点
 
@@ -83,18 +87,17 @@
 
 ## 主要出典 — 取得日 2026-09-05
 
-- ユニバーサル公式製品: `https://www.universal-777.com/product/slot/basilisk2/`
-- ユニバーサル公式2012-06-08発表: `https://www.atpress.ne.jp/news/27819`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/6690`
-- K-Navi: `https://p-kn.com/slot/1619/`
-- HAZUSE: `https://hazuse.com/machine/pachislot/2S0105/`
-- パチマガスロマガ基本情報: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/macy_slot/40/a.php`
-- パチマガスロマガ小役/1000円項目: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/macy_slot/40/c-1.php`
-- メタボ教授 2013-12-12: `https://metabopro.com/bajisecondtorimu/`
-- スロパチステーション「宵越し」: `https://777.slopachi-station.com/words/yoigosi/`
-- パチビー: `https://www.pachibee.jp/machines/lecture/212030005`
-- 次候補それいけ！こすみっくヒーローズ HAZUSE: `https://hazuse.com/machine/pachislot/2S0164/`
+- HAZUSE: `https://hazuse.com/machine/pachislot/2S0164/`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/6723`
+- パチマガスロマガ スペック: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/oizumi_slot/28/a.php`
+- パチマガスロマガ ボーナス確率: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/oizumi_slot/28/h.php`
+- パチマガスロマガ 小役/1000円: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/oizumi_slot/28/c.php`
+- pacnk: `https://pacnk.com/slot/2012/cosmicheros/top.php`
+- 5号機クロニクル: `https://5goki.com/oizumi`
+- 2-9伝説 天井狙い一覧: `https://2-9densetsu.com/blog-entry-311-html/`
+- パチ7回顧: `https://pachiseven.jp/columns/column_detail/17464`
+- ニューパルサーSP導入日再監査 HAZUSE: `https://hazuse.com/machine/pachislot/2S0079/`
 
 ## GitHub commits
 
-- バジリスク～甲賀忍法帖～II machine record: `9e642f056d5f3cf1cfa89cc2b83adf36b6f7ec11`
+- それいけ！こすみっくヒーローズ machine record: `030ee22986e3462a3b358ef1a87e6afe54ee3ce0`
