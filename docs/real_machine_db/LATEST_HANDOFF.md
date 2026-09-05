@@ -4,73 +4,72 @@
 
 ## 現在地点
 
-- recordCount: **676**
-- latestMachineAdded: **メガミリオネア**（ラスター製 / WIN NET TECHNOLOGY・メテオ系販売資料あり）
-- latestRecord: `docs/real_machine_db/machines/2012-07-30_mega-millionaire.md`
+- recordCount: **677**
+- latestMachineAdded: **マイジャグラーII**（北電子）
+- latestRecord: `docs/real_machine_db/machines/2012-07-30_my-juggler-ii.md`
 - chronologicalFrontier: **2012-07-30**
-- frontierLatestExactDateMachine: **メガミリオネア**
+- frontierLatestExactDateMachine: **マイジャグラーII**
 - schema: **resetBehavior v0.7**
-- status: **OPEN_2012-07-30__NEXT_MY_JUGGLER_II**
+- status: **CLOSED_2012-07-30__AUDIT_2012-07-31_TO_2012-08-05_THEN_Next_2012-08-06**
 
 ## 今回の同期・時系列監査
 
-- 最新mainのREADME全文、正本ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード「シオサイA-30」を確認して開始。
-- INDEXは旧地点19件のまま。README規定どおりLATEST_HANDOFFと実レコードを進捗正本として使用。開始時は recordCount 675 / frontier 2012-07-23。
-- LATEST_HANDOFF指定の次候補「メガミリオネア」をrepo検索し未登録を確認。
-- K-Navi機種ページはホール導入開始2012-07-30、2012-06-11発表会速報も7月30日導入予定とするため676件目として追加。
-- 2012-07-30同日群は未閉鎖。handoff既知の次候補「マイジャグラーII」（北電子）もrepo未登録を確認済み。
+- 最新mainのREADME全文、正本ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード「メガミリオネア」を確認して開始。
+- INDEXは旧地点19件のまま。README規定どおりLATEST_HANDOFFと実レコードを進捗正本として使用。開始時は recordCount 676 / frontier 2012-07-30。
+- LATEST_HANDOFF指定の次候補「マイジャグラーII」をrepo検索し未登録を確認。
+- K-Navi機種ページ・2012年7月導入カレンダーはホール導入開始2012-07-30。当時グリーンべるとは7月29日納品開始予定とするため677件目として追加。
+- K-Naviの2012-07-30全国導入一覧にあるパチスロは「メガミリオネア」「マイジャグラーII」の2機種で、両方登録済み。07-30同日群をCLOSEDとする。
 
-## 今回の本線追加 — メガミリオネア
+## 今回の本線追加 — マイジャグラーII
 
 ### 識別
 
-- manufacturer: **ラスター（製造）**。K-Naviはウィンネット表記、当時業界記事はメテオ発表・ラスター製とするため、WIN NET TECHNOLOGY / メテオ系の企画・販売表記を注記。
+- manufacturer: **北電子**
 - releaseDate key: **2012-07-30**
 - generation: **5号機**
-- systemType: **ART専用 / BR非搭載 / セットストック+ゲーム数上乗せ**
-- modelName: **UNVERIFIED_AFTER_RESEARCH**
+- systemType: **ノーマル / 完全告知 / ボーナス主体**
+- modelName: **マイジャグラーII K（2012年版）**
 - approvalNumber: **UNVERIFIED_AFTER_RESEARCH**
+- 型式はCONFLICT注意。2012-06-18東京都公安委員会検定情報転載は「マイジャグラーII K」、Juggler7も2012=K / 2013=KKと区別。一方HAZUSEは2012-07-30導入欄にKK/3S0218を併記。2013系KKを2012本線へ混同しない。
 
 ### 性能コア
 
-- 機械割はCONFLICT。
-  - P-WORLD / CrankySeven系列: **95.49 / 98.72 / 101.79 / 104.74 / 109.34 / 119.1%**（CrankySevenは丸め表示）
-  - K-Navi系列: **95.8 / 99.0 / 102.2 / 104.9 / 109.7 / 119.4%**
-- ART設定別初当たり: **UNVERIFIED_AFTER_RESEARCH**。K-Naviに専用ページ存在は確認したが本文取得不能、別系統でも直接値を回収できず。
-- MEGA揃い: **1/8192（全設定共通）**
-- 50枚ベース: **約20G/50枚（1000円あたり約20G）** — CrankySeven直接値。
-- ART「メガゲーム」: **1セット100G+α / 純増約+2.4枚/G**。
-- ボーナス: **非搭載**。
-- 通常天井: **ART間/通常状態1200G消化後、前兆を経てART**。
+- メーカー発表値系列の機械割: **95.7 / 97.9 / 99.9 / 102.8 / 105.3 / 109.4%**
+- BIG: **1/287.4 / 282.5 / 273.1 / 264.3 / 252.1 / 240.9**
+- REG: **1/431.2 / 364.1 / 341.3 / 292.6 / 277.7 / 240.9**
+- 合算: **1/172.5 / 159.1 / 151.7 / 138.9 / 132.1 / 120.5**
+- 50枚ベース: **約35.0 / 35.2 / 35.4 / 35.6 / 35.8 / 36.4G**。後年「マイジャグラー系」表で本機を対象にしたチェリー狙い時数値のためANALYSIS_SINGLE_RETROSPECTIVE_SERIES_TABLE。
+- BIG: **約312枚**、REG: **約104枚**。
+- ART/AT非搭載。天井非搭載。通常時モード非搭載。
 
 ### resetBehavior v0.7
 
-- `settingChangeBehavior`: **PARTIAL_CONFIRMED**。2013年の後継ヴィーナス版当時解析が前作比較として「前作メガミリオネアは設定変更後でもモード引継ぎ」と明記。モード以外は未確定。
-- `carryOverBehavior`: **PARTIAL / MODE_ONLY**。モード引継ぎ証拠はあるが、据え置き専用のゲーム数/ストック等の直接契約は未確認。
-- `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH**。K-Navi当時掲示板に電源ON/OFFとARTストック消滅を問う投稿は残るが回答取得不能。
-- `gameCounterReset`: **UNVERIFIED_AFTER_RESEARCH**。通常天井1200G自体は確定したが、設定変更時CLEAR/RETAINを直接確定できず。
-- `ceilingAfterReset`: **UNVERIFIED_AFTER_RESEARCH**。設定変更専用短縮天井なしとは断定しない。
-- `modeAfterReset`: **RETAIN_ON_SETTING_CHANGE_RETROSPECTIVE_ANALYSIS**。後継機当時解析の前作比較による単一系統証拠。
-- `stateAfterReset`: **UNVERIFIED_AFTER_RESEARCH**。モードと内部状態全般を同一視しない。
+- `settingChangeBehavior`: **PARTIAL_CONFIRMED**。本機固有解析で設定変更後1G目のリールブレ（ガックン）を確認。天井・通常モードは非搭載。
+- `carryOverBehavior`: **NO_CEILING_OR_MODE_TO_CARRY__OTHERWISE_UNVERIFIED_AFTER_RESEARCH**。天井G数/モード据え置きは構造上非該当。それ以外の純据え置き内部契約は一般化しない。
+- `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH**。機種名表記・K型式と電源OFF ON/電断/据え置き等を組み替えて再探索したが、本機固有の単純電断契約を確定できず。
+- `gameCounterReset`: **NOT_APPLICABLE_NO_GAME_COUNT_CEILING**
+- `ceilingAfterReset`: **NOT_APPLICABLE_NO_CEILING**
+- `modeAfterReset`: **NOT_APPLICABLE_NO_NORMAL_MODE**
+- `stateAfterReset`: **UNVERIFIED_AFTER_RESEARCH**。モード非搭載から全内部状態を推測しない。
 - `advantageousSectionReset`: **NOT_APPLICABLE_5TH_GEN**
-- `resetBenefits`: **NONE_CONFIRMED_AFTER_RESEARCH**
-- `resetPenalties`: **NONE_CONFIRMED_AFTER_RESEARCH**
-- `resetDetection`: **UNVERIFIED_AFTER_RESEARCH**。後継ヴィーナス版の「123スタート」は流用しない。
-- `publicMorningNumbers`: **NONE_CONFIRMED_AFTER_RESEARCH**
+- `resetBenefits`: **NONE_CONFIRMED**。短縮天井・朝一高確/CZ等なし。
+- `resetPenalties`: **NONE_CONFIRMED**
+- `resetDetection`: **GACKUN_CONFIRMED_MACHINE_SPECIFIC_RETROSPECTIVE**。設定変更後1G目にリールがブレる。停止位置で見分けにくい場合があるため単独確定判別とはしない。
+- `publicMorningNumbers`: **NONE_CONFIRMED**
 
 ### 主要CONFLICT / 品質メモ
 
-- 機械割はP-WORLD/CrankySeven系列とK-Navi系列で約0.2～0.4pt差。平均化せず双方保持。
-- メーカー表記はK-Navi「ウィンネット」、P-WORLD/CrankySeven/5号機クロニクル「ラスター」、当時業界記事「メテオ発表・ラスター製」。製造者ラスターを主値とし企画/販売系を注記。
-- 後継「メガミリオネア ヴィーナスヴァージョン」は別機種。前作について明示した比較記述のみ補助証拠として利用し、ヴィーナス版固有の800G天井、123出目、設定変更時天井リセットは初代へ流用していない。
-- 「メガミリオネア / MEGA MILLIONAIRE / ラスター / WIN NET」と「設定変更 / リセット / 朝一 / 据え置き / 宵越し / 電源OFF ON / 天井 / 1200G / モード / 状態 / ガックン / 50枚」を組み替え、K-Navi、P-WORLD、当時業界、旧解析、後継当時解析の前作比較、回顧資料まで再探索後に欠損判定。
+- 2012年本線型式Kと、2013年系KKの資料混在に注意。HAZUSEの2012導入日+KK/3S0218はそのまま主値にせずCONFLICT注記。
+- 通常のメーカー発表機械割とチェリー狙い/フル攻略時の機械割は定義差。平均化しない。
+- 50枚ベースは後年のシリーズ横断表のみ。対象機にマイジャグラーIIを明示しているが当時単独一次値ではないため信頼度を落として保存。
+- 「マイジャグラーII / Ⅱ / 2 / マイジャグラーII K」と「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 電断 / ガックン / 天井 / モード / 50枚」を組み替え、北電子、K-Navi、当時業界記事、公安委員会検定情報転載、HAZUSE、専門解析、旧解析、中古実機資料まで横断後に欠損判定。
 
 ## 次回再開地点
 
-1. **recordCount 676 / chronologicalFrontier 2012-07-30 / 07-30 group OPEN**から開始。
-2. 次は **2012-07-30「マイジャグラーII」（北電子）**をrepo重複再確認 → 導入日照合 → 性能コア＋resetBehavior v0.7収集。
-3. マイジャグラーII処理後も07-30同日群の残存候補を監査し、完全に閉じるまで08月へ進まない。
-4. 「夜王」は既存方針どおり2012年8月地点で再監査。
+1. **recordCount 677 / chronologicalFrontier 2012-07-30 / 07-30 group CLOSED**から開始。
+2. **2012-07-31〜2012-08-05境界**に具体日付き未登録5号機がないか、K-Navi導入カレンダーだけでなく業界/旧DBも併用して監査。
+3. 境界に未処理がなければ **2012-08-06群**へ進む。既知候補としてビスティ **「夜王」**は2012-08-06導入資料が存在するためrepo重複確認を最優先。
+4. 08-06同日群は夜王だけで閉じず、全国導入カレンダー・業界資料・メーカー別一覧で残存候補を監査してから次日へ進む。
 5. 欠損は表記揺れ・型式名・メーカー名・シリーズ名と設定変更/リセット/朝一/据え置き/宵越し/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間/50枚を組み替えて十分再探索してからUNVERIFIED。競合は平均せずCONFLICT。
 
 ## 遡及resetBehavior QA 次回再開地点
@@ -82,14 +81,19 @@
 
 ## 主要出典 — 取得日 2026-09-05
 
-- K-Navi 機種情報: `https://p-kn.com/slot/1675/`
-- K-Navi 発表会速報: `https://p-kn.com/topics/exhibition/953/`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/6766`
-- 遊技通信社提供の当時業界記事転載: `https://www.55hadama.com/new/2012-06-13-191541.html`
-- CrankySeven旧解析: `https://crankyseven.com/megamillionaire-pc.htm`
-- 5号機クロニクル ラスター一覧: `https://5goki.com/luster`
-- 後継ヴィーナス版の当時解析・前作比較: `https://macerate.seesaa.net/article/322077320.html`
+- 北電子 検定情報（現存KK地域情報）: `https://www.kitadenshi.co.jp/slot-kentei/myjuggler2kk/`
+- K-Navi 機種情報: `https://p-kn.com/slot/1686/`
+- K-Navi 2012年7月導入カレンダー: `https://p-kn.com/calendar/201207/`
+- グリーンべると当時記事: `https://web-greenbelt.jp/00001556/`
+- Pマンズ 2012-06-18東京都公安委員会検定情報転載: `https://p-mans.blogspot.com/2012/06/`
+- Juggler専門解析: `https://jugjug.net/myjuggler2`
+- Juggler7旧解析: `https://juggler7.com/my2/index.html`
+- SLOT HACK コイン持ち一覧: `https://slothack.net/matome/17149/`
+- A-SLOT 2012年K資料: `https://www.a-slot.com/SHOP/kitadenshi48.html`
+- パチマ中古実機資料: `https://www.pachima.com/c/slot/s_13juggler/S00012`
+- HAZUSE: `https://hazuse.com/machine/pachislot/2S0014/`
+- 夜王の2012-08-06導入確認資料: `https://w.atwiki.jp/pachikaisekidata/pages/237.html`
 
 ## GitHub commits
 
-- メガミリオネア machine record: `127a1b2804d93ea23ec157995043a51e9bd97b42`
+- マイジャグラーII machine record: `86794e392b35b8728ca456ba0200ddb1e159f716`
