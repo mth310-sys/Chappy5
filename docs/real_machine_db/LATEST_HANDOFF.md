@@ -4,48 +4,54 @@
 
 ## 現在地点
 
-- recordCount: **666**
-- latestMachineAdded: **鉄のラインバレル**（スパイキー）
-- latestRecord: `docs/real_machine_db/machines/2012-06-18_kurogane-no-linebarrels.md`
-- chronologicalFrontier: **2012-06-18**
-- frontierLatestExactDateMachine: **鉄のラインバレル**
+- recordCount: **667**
+- latestMachineAdded: **セブンバー30**（高砂電器産業 / TAKASAGO）
+- latestRecord: `docs/real_machine_db/machines/2012-06-25_sevenbar30.md`
+- chronologicalFrontier: **2012-06-25**
+- frontierLatestExactDateMachine: **セブンバー30**
 - schema: **resetBehavior v0.7**
-- status: **OPEN_2012-06-18__NEXT_SAME_DAY_AUDIT_THEN_2012-06-19_TO_2012-06-25**
+- status: **OPEN_2012-06-25__NEXT_SAME_DAY_AUDIT_THEN_2012-06-26_TO_2012-07-02**
 
 ## 今回の同期・時系列監査
 
-- 最新mainのREADME全文、ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード「それいけ！こすみっくヒーローズ」を確認して開始。
-- INDEXは旧地点19件のままなのでREADME規定どおりLATEST_HANDOFFと実レコードを正本化。開始時は recordCount 665 / frontier 2012-06-11。
-- 2012-06-12～06-17境界を検索したが、今回追加すべき具体日付き未登録5号機を確定できなかったため次候補へ前進。
-- 「鉄のラインバレル」はrepo未登録を確認して666件目として追加。
-- 導入日はK-Navi=2012-06-18、パチビー=2012-06-25でCONFLICT。平均せず双方保持し、時系列キーはK-Naviの具体的ホール導入開始日2012-06-18を採用。
+- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード「鉄のラインバレル」を確認して開始。
+- INDEXは旧地点19件のままなので、README規定どおりLATEST_HANDOFFと実レコードを正本化。開始時は recordCount 666 / frontier 2012-06-18。
+- 2012-06-18同日群と06-19～06-24境界を再監査。
+- 「夜王」は一度06-18候補に見えたが、パチ7の年月日は導入日として使える根拠ではなく、5号機クロニクルでは導入2012年8月。時系列誤登録を避けて今回追加しなかった。
+- 既知候補「セブンバー30」はrepo未登録を確認し、667件目として追加。
+- 導入日はK-Navi=2012-06-25、HAZUSE=2012-06-24、コナミアミューズメント公式アーカイブ=2012年7月でCONFLICT。平均せず全て保持し、時系列キーは「ホール導入開始」と明記するK-Naviの2012-06-25を採用。
 
-## 今回の本線追加 — 鉄のラインバレル
+## 今回の本線追加 — セブンバー30
+
+### 識別
+
+- manufacturer: **高砂電器産業 / TAKASAGO**
+- modelName: **セブンバーR30**
+- approvalNumber: **2S0272**
+- releaseDate: **2012-06-25**（HAZUSE 2012-06-24 / 公式アーカイブ2012年7月とCONFLICT）
+- generation: **5号機**
+- systemType: **ノーマル / 30Φ / 完全告知 / ボーナス単独成立**
 
 ### 性能コア
 
-- manufacturer: **スパイキー**
-- releaseDate: **2012-06-18**（パチビー2012-06-25とCONFLICT）
-- generation: **5号機**
-- systemType: **ボーナス+ART / CZ経由セットストック&ゲーム数上乗せART**
-- 機械割: **97.1 / 98.8 / 101.0 / 104.7 / 109.2 / 113.6%**（詳細後年整理値。別回顧は丸め値）
-- 鉄BONUS合成: **1/744.7 / 744.7 / 744.7 / 744.7 / 689.9 / 662.0**
-- 鉄RUSH初当たり: **1/306.7 / 279.8 / 287.6 / 250.1 / 252.5 / 206.7**
+- 機械割: **97.5 / 98.9 / 100.5 / 102.5 / 105.0 / 108.2%**
+- BIG: **1/299.3 / 288.7 / 277.7 / 268.6 / 268.6 / 256.0**
+- REG: **1/595.8 / 580.0 / 555.4 / 496.5 / 381.0 / 358.1**
+- ボーナス合算: **1/199.2 / 192.8 / 185.1 / 174.3 / 157.5 / 149.3**
 - 50枚ベース: **UNVERIFIED_AFTER_RESEARCH**
-- 赤7鉄BONUS: **約204枚**
-- 白7鉄BONUS: **約104枚**
-- ART「鉄RUSH」: **1セット40G+α / 純増約+1.9枚/G**
-- K-Naviは**ボーナス込み約+2.1枚/G**表記のため定義差としてCONFLICT NOTE。
-- 通常天井: **ボーナス+ART間499G or 999GでART3セット以上**。K-Navi当時記事は**3～15セット**と説明。
+- BIG: **約312枚**（規定払い出し345枚）
+- REG: **約117枚**（規定払い出し134枚）
+- ART/AT: **非搭載**
+- ゲーム数天井/規定G解除: **確認なし**
 
 ### resetBehavior v0.7
 
 - `settingChangeBehavior`: **UNVERIFIED_AFTER_RESEARCH**
-- `carryOverBehavior`: **UNVERIFIED_AFTER_RESEARCH**
+- `carryOverBehavior`: **NOT_APPLICABLE_NO_GAME_COUNT_CEILING_OR_MODE_CONFIRMED**
 - `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH**
-- `gameCounterReset`: **UNVERIFIED_AFTER_RESEARCH**
-- `ceilingAfterReset`: **UNVERIFIED_AFTER_RESEARCH**
-- `modeAfterReset`: **UNVERIFIED_AFTER_RESEARCH**
+- `gameCounterReset`: **NOT_APPLICABLE_NO_GAME_COUNT_CEILING_CONFIRMED_AFTER_RESEARCH**
+- `ceilingAfterReset`: **NOT_APPLICABLE_NO_GAME_COUNT_CEILING_CONFIRMED_AFTER_RESEARCH**
+- `modeAfterReset`: **NOT_APPLICABLE_NO_GAME_COUNT_MODE_CONFIRMED_AFTER_RESEARCH**
 - `stateAfterReset`: **UNVERIFIED_AFTER_RESEARCH**
 - `advantageousSectionReset`: **NOT_APPLICABLE_5TH_GEN**
 - `resetBenefits`: **NONE_CONFIRMED_AFTER_RESEARCH**
@@ -55,24 +61,29 @@
 
 ### resetBehavior品質メモ
 
-- 「鉄のラインバレル / パチスロ鉄のラインバレル / スパイキー」に「設定変更 / リセット / 朝一 / 朝イチ / 据え置き / 宵越し / 電源OFF ON / 電断 / 天井 / 499 / 999 / モード / 状態 / ガックン / 50枚」を組み替えて再探索。
-- K-Navi、P-WORLD、パチビー、パチマガスロマガ断片、旧攻略ページ、後年回顧/整理資料を横断。
-- 通常天井の499/999G仕様とボーナス/ART当選時の天井リセットは確認できるが、**設定変更時のCLEAR/RETAINは別契約**なので推測転記していない。
-- 据え置き、単純電源OFF→ON、設定変更時モード/状態、ガックン等の変更判別は十分な再探索後も本機固有の直接根拠を確定できずUNVERIFIED_AFTER_RESEARCH。
+- 「セブンバー30 / セブンバーR30 / TAKASAGO / 高砂電器産業」に「設定変更 / リセット / 朝一 / 朝イチ / 据え置き / 宵越し / 電源OFF ON / 電断 / 天井 / モード / 状態 / ガックン」を組み替えて再探索。
+- K-Navi、HAZUSE、パチマガスロマガ、P-WORLD、コナミアミューズメント公式機種アーカイブを横断。
+- 純ノーマル機でゲーム数天井・規定G解除・ART/ATを確認しないため該当項目はNOT_APPLICABLE。ただし設定変更時/単純電源OFF→ONの細かな出目・ランプ挙動は一般論で補完していない。
+- 本機資料にある**「カックン告知」**はボーナス成立時のプレミアム告知演出名。設定変更判別のリールガックンとは別概念なので、`resetDetection`の根拠には使わない。
 
 ## CONFLICT / 品質メモ
 
-- releaseDate: K-Navi **2012-06-18** / パチビー **2012-06-25**。平均せず保持。
-- ART純増: P-WORLD・パチビー・パチ7回顧 **約+1.9枚/G** / K-Navi **ボーナス込み約+2.1枚/G**。定義差。
-- 機械割: 詳細整理系列 **97.1/98.8/101.0/104.7/109.2/113.6%** / 別回顧一覧 **97.1/98.8/101.0/104/109/113%**。丸め差として保持。
+- releaseDate: K-Navi **2012-06-25** / HAZUSE **2012-06-24** / コナミアミューズメント公式アーカイブ **2012年7月**。平均せず保持。
+- manufacturerName: 当時資料は**高砂電器産業 / TAKASAGO**、現行P-WORLD・公式アーカイブは**コナミアミューズメント**表記。会社再編後の名称と当時メーカー名を区別。
+- BIG/REG/合算/機械割はK-Navi、パチマガスロマガ、HAZUSEで一致。
 
 ## 次回再開地点
 
-1. **recordCount 666 / chronologicalFrontier 2012-06-18**から開始。
-2. **2012-06-18同日群を最終監査**し、具体日付き未登録5号機があれば先に処理。
-3. 同日群を閉じたら **2012-06-19～06-24境界監査**へ進む。
-4. 既知候補 **「セブンバー30」** は2012-06-25候補。06/25同日群の他機種を監査してから次レコード化する。
-5. 「鉄のラインバレル」のパチビー2012-06-25表記は既存レコードにCONFLICT保存済みなので、06/25到達時に重複登録しない。
+1. **recordCount 667 / chronologicalFrontier 2012-06-25**から開始。
+2. **2012-06-25同日群を最終監査**し、具体日付き未登録5号機があれば先に処理。
+3. 同日群を閉じたら **2012-06-26～07-01境界監査**へ進む。
+4. K-Navi 2012年7月カレンダーで **2012-07-02** に以下のパチスロ群を確認済み。repo重複を順に確認して最古未処理から処理する。
+   - スーパー5（ウィンネット）
+   - 餓狼伝説☆双撃（SNKプレイモア）
+   - アイドルマスターライブインスロット（Sammy）
+   - めぞん一刻～夏色の風と～（オリンピア）
+   - 天空のシンフォニア ～光を求めて～（コルモ）
+5. 「夜王」は2012-06-18には登録しない。2012年8月地点で再監査する。
 6. 欠損は表記揺れ・型式名・メーカー名・シリーズ名と、設定変更/リセット/朝一/据え置き/宵越し/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間/50枚を組み替えて再探索。競合は平均せずCONFLICT。
 
 ## 遡及resetBehavior QA 次回再開地点
@@ -84,14 +95,14 @@
 
 ## 主要出典 — 取得日 2026-09-05
 
-- K-Navi: `https://p-kn.com/slot/1630/`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/6715`
-- パチビー: `https://www.pachibee.jp/machines/reach/212040015`
-- パチビー仕様解説: `https://www.pachibee.jp/machines/lecture/212040015`
-- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/spiky_slot/05/i.php`
-- 後年整理データ: `https://ameblo.jp/thundervsp5/entry-12882129131.html`
-- パチ7回顧: `https://pachiseven.jp/articles/detail/15609`
+- K-Navi セブンバー30: `https://p-kn.com/slot/1639/`
+- パチマガスロマガ スペック: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/takasago_slot/04/a.php`
+- パチマガスロマガ 確率表: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/takasago_slot/04/h.php`
+- HAZUSE: `https://hazuse.com/machine/pachislot/2S0272/`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/6727`
+- コナミアミューズメント公式アーカイブ: `https://www.konami.com/amusement/psm/archive/ps/2012/sevenbar30/`
+- K-Navi 2012年7月導入カレンダー: `https://p-kn.com/calendar/201207/`
 
 ## GitHub commits
 
-- 鉄のラインバレル machine record: `cccb3689c4fb860f0f8850a1cebcea8fc14ef144`
+- セブンバー30 machine record: `a2b8254874117e2815f23a603b2dd9521a4c6f04`
