@@ -4,84 +4,72 @@
 
 ## 現在地点
 
-- recordCount: **652**
-- latestMachineAdded: **ねぇ～ねぇ～島娘**（オリンピア）
-- latestRecord: `docs/real_machine_db/machines/2012-04-16_nee-nee-shimamusume.md`
-- chronologicalFrontier: **2012-04-16**
-- frontierLatestExactDateMachine: **ねぇ～ねぇ～島娘**
+- recordCount: **653**
+- latestMachineAdded: **パチスロ コードギアス 反逆のルルーシュ**（Sammy）
+- latestRecord: `docs/real_machine_db/machines/2012-05-07_code-geass-hangyaku-no-lelouch.md`
+- chronologicalFrontier: **2012-05-07**
+- frontierLatestExactDateMachine: **パチスロ コードギアス 反逆のルルーシュ**
 - schema: **resetBehavior v0.7**
-- status: **2012-04-16_GROUP_OPEN__CONTINUE_WITH_QUEENS_BLADE**
+- status: **2012-05-07_GROUP_OPEN__CONTINUE_WITH_TEKKEN_DEVIL_VER**
 
 ## 今回の同期・時系列監査
 
-- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード「パチスロ マクロスフロンティア はじまりの歌、銀河に響け！」を確認して開始。
-- INDEXは旧地点19件のままなのでREADME規定どおりLATEST_HANDOFFを進捗正本として使用。
-- 開始時はrecordCount 651 / frontier 2012-04-16。
-- handoff指定最優先候補「ねぇ～ねぇ～島娘」をrepo検索で未登録確認し、652件目として追加。
-- `ToHeart2 バカンスバージョン` はタイヨーエレックが2012-03-27に発表した**新パネル**で、ファミ通が「ゲーム性・液晶演出に変更なし」、グリーンべるとが同機の新パネルと明記。型式も既存ToHeart2と同じ「トゥハート2 / 1S0600」系なので、独立性能機種としては**重複扱い・新規レコード化しない**。
-- 追加監査でJPS「パチスロ クイーンズブレイド 流浪の戦士」が2012-04-16導入候補として確認され、repo検索では同名未登録。次の本線候補とする。
+- 最新mainのREADME全文、ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード「ねぇ～ねぇ～島娘」を確認して開始。
+- INDEXは旧地点19件のままなのでREADME規定どおりLATEST_HANDOFFと実レコード/コミット履歴を優先。
+- handoffはrecordCount 652 / frontier 2012-04-16で「クイーンズブレイド 流浪の戦士」を次候補としていたが、実際のmainには同レコードが既に存在し、machine commit `33cb5af7e27444ffd421fa046c31dc9711ec8ff7` も確認できたため重複追加しなかった。
+- 2012-04-16群は既存の「一騎当千3 Valiant Venus」「パチスロ クイーンズブレイド 流浪の戦士」「パチスロ マクロスフロンティア はじまりの歌、銀河に響け！」「ねぇ～ねぇ～島娘」を確認。`ToHeart2 バカンスバージョン` は既判定どおり既存ToHeart2の新パネルで独立性能機種にしない。
+- 4/16後から次の具体日付き候補を再探索。4/23として拾われる後発機の検定通過日とホール導入日を混同しないよう確認し、スカイラブ4=5/21、鉄のラインバレル=6/18、こすみっくヒーローズ=6/11、餓狼伝説☆双撃=7/2、めぞん一刻～夏色の風と～=7/2、バジリスクII=6/11であることを確認。次の強いホール導入日アンカーは2012-05-07。
+- 2012-05-07同日群で「パチスロ コードギアス 反逆のルルーシュ」と「パチスロ鉄拳デビルVer.」を確認。repo検索および直接パス確認で初代コードギアス未登録を確認し653件目として追加。
 
-## 今回の本線追加 — ねぇ～ねぇ～島娘
+## 今回の本線追加 — パチスロ コードギアス 反逆のルルーシュ
 
-### 導入日・型式
+### 導入・分類
 
-- 時系列キー: **2012-04-16**。
-- DK-SIS白書2012の4月カレンダーが4/16導入開始欄に「パチスロマクロスフロンティア」「ねぇ～ねぇ～島娘」を明記。
-- パチビーも導入日2012-04-16。
-- K-Naviは2012-04-23ホール導入開始としており日付CONFLICT。平均せず双方を保持し、実稼働カレンダーDK-SISの4/16を主キーに採用。
-- manufacturer: **オリンピア**。
-- formalModelName: **ねぇ～ねぇ～島娘2**。
-- approvalNumber: **2S0138**（P-WORLD）。
+- manufacturer: **Sammy（サミー）**。
+- releaseDate: **2012-05-07**。K-Navi本機ページと2012-04-26付K-Navi当時記事で照合。
+- generation: **5号機**。
+- systemType: **A+ART / ボーナス+セットストック・継続率ART**。
+- formalModelName / approvalNumber は機種名・Sammy・初代・型式/検定番号で再探索したが今回直接根拠を確定できず `UNVERIFIED_AFTER_RESEARCH`。R2/R2 C.C.ver./3/スマスロの型式は流用しない。
 
 ### 性能コア
 
-- systemType: **5号機 ART / 擬似ボーナスS-AT / ゲーム数テーブル+毎ゲーム抽選 / CZ搭載**。
-- 機械割: **96.4 / 98.0 / 100.1 / 104.7 / 107.8 / 113.3%**。K-Navi/P-WORLD/CrankySeven一致。
-- BIG平均出現率: **1/261.6 / 253.5 / 232.5 / 203.6 / 182.4 / 157.2**。
-- REG平均出現率: **1/245.1 / 204.6 / 245.0 / 202.6 / 241.5 / 197.3**。
-- 合成: **1/126.5 / 113.2 / 119.3 / 101.5 / 103.9 / 87.5**。
-- BIG初当り: **1/677.0 / 631.0 / 643.6 / 555.7 / 561.3 / 483.6**。
-- 50枚ベース: **約33.6G**（CrankySeven直接値、別解析約33Gで整合）。
-- S-AT純増: **約+2.7枚/G**。2012-03-26娯楽産業、K-Navi、P-WORLD、当時コムシード資料で照合。
-- BIG CHANCE: 20ナビ1セット、最低2～最大10セット、平均約300枚。REG: 8ナビ固定、約40枚。
-- CZ「ときめきゾーン」: ボーナス後5G。
-- 天井/規定G: P-WORLDは通常モード960G・高確1152GでBIG確定。パチマガスロマガ/CrankySevenは最大1152Gを掲載。定義差として保持。
+- 機械割: **97.0 / 98.5 / 101.4 / 106.1 / 110.0 / 116.4%**。
+- BIG合成: **1/394.1 / 390.1 / 385.5 / 370.3 / 360.1 / 344.9**。
+- REG合成: **1/819.2 / 789.6 / 771.0 / 697.2 / 675.6 / 655.4**。
+- ボーナス合算: **1/266.4 / 261.1 / 257.0 / 241.8 / 234.9 / 226.0**。
+- ART出現率: **1/126.4 / 118.7 / 109.2 / 95.5 / 90.7 / 82.4**。これは資料表記上の「出現率」で、純粋なART初当たり専用値とは断定しない。
+- 50枚ベース: **30.6 / 30.6 / 30.6 / 30.5 / 30.5 / 30.5G**。
+- ART「BLACK REBELLION」: **1セット40G・約+1.5枚/G**。
+- BIG約**214枚**、REG約**40枚**、ギアスラッシュ約**36〜40枚**資料帯。
+- 第1天井: ボーナス/ART間約960G。第2天井: ボーナス後1500G。第2天井は90%ループシステム当選。
 
 ### resetBehavior v0.7
 
-- **設定変更時モード再抽選を数値付きで確認**。
-  - 設定1: 通常24.5 / 高確70.0 / 天国A5.0 / 天国B0.5%
-  - 設定2・3: 通常19.5 / 高確70.0 / 天国A10.0 / 天国B0.5%
-  - 設定4～6: 通常9.5 / 高確80.0 / 天国A10.0 / 天国B0.5%
-- 高確以上スタート率は設定1 **75.5%**、設定2・3 **80.5%**、設定4～6 **90.5%**。
-- パチマガスロマガが規定ゲーム数項目で **設定変更後128Gまで**を独立チャンスゾーンとして明記。CrankySevenも設定変更後128Gまでがチャンスと記載。
-- `settingChangeBehavior`: **CONFIRMED_MODE_RELOTTERY_AND_POST_CHANGE_128G_CHANCE_ZONE**。
-- `gameCounterReset`: **PARTIAL_CONFIRMED_SETTING_CHANGE_USES_DEDICATED_POST_CHANGE_GAME_TABLE**。専用朝一テーブル/ゾーン開始は確認できるが、「前日G数を0Gクリア」と直接書いた別系統資料までは取得できずCLEAR断定を避けた。
-- `ceilingAfterReset`: **RESET_SPECIFIC_128G_CHANCE_ZONE_CONFIRMED__EXACT_RESET_CEILING_UNVERIFIED**。128Gは当選確定天井ではなくチャンスゾーン。
-- `modeAfterReset`: **CONFIRMED_WITH_PUBLIC_DISTRIBUTION**。
-- `stateAfterReset`: モードレベルはCONFIRMED。その他一時状態/前兆/BIG側状態はUNVERIFIED。
-- `carryOverBehavior`: **UNVERIFIED_AFTER_RESEARCH**。
-- `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH**。
+- `settingChangeBehavior`: **CONFIRMED_CEILING_COUNTER_RESET_AND_STATE_RELOTTERY**。設定変更時は天井ゲーム数リセット+内部状態振り分け抽選。
+- `gameCounterReset`: **CONFIRMED_CLEAR_ON_SETTING_CHANGE**。
+- `ceilingAfterReset`: **NO_RESET_SPECIFIC_SHORTENED_CEILING_CONFIRMED_AFTER_RESEARCH**。変更専用短縮天井は確認できず。
+- `stateAfterReset`: **CONFIRMED_WITH_PUBLIC_NUMBERS**。設定変更時の高確スタート率は設定1 **30%**〜設定6 **45%**、超高確スタート率は全設定 **1%**。設定2〜5の個別高確値は再探索後も確定できず。
+- `resetBenefits`: 高確/超高確スタート抽選。
+- `resetPenalties`: 設定変更で第1/第2天井進捗が消える。
+- `resetDetection`: 朝一、レア小役なしで**倉庫ステージ移行は設定変更濃厚**とする当時解析を確認。確定判別とは扱わない。
+- `carryOverBehavior`: **UNVERIFIED_AFTER_RESEARCH**。設定変更時宵越し不可は確定するが、純据え置き時の全カウンタ/状態保持を直接表で確定できず。
+- `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH**。単純電源OFF→ONのみの本機固有挙動を直接確定できず。
 - `advantageousSectionReset`: **NOT_APPLICABLE_5TH_GEN**。
-- `resetBenefits`: **CONFIRMED**（高確以上振り分け+128Gチャンス）。
-- `resetPenalties`: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- `resetDetection`: **UNVERIFIED_AFTER_RESEARCH**。
-- `publicMorningNumbers`: **CONFIRMED**（上記モード振り分け・128Gチャンス）。
 
 ### CONFLICT / 品質メモ
 
-- 導入日: DK-SIS/パチビー **4/16** vs K-Navi **4/23**。平均せずCONFLICT。
-- 機械割についてパチ＆スロ必勝本はシミュレート値 **95.53 / 97.38 / 99.16 / 104.12 / 106.76 / 112.36%**を掲載しており、市場スペック表の96.4～113.3%系列とは定義が異なる。今回の主値はK-Navi/P-WORLD等の公称・通常掲載系列とし、必勝本シミュレート値は定義違いとして平均しない。
-- 4号機版「ねぇ～ねぇ～島娘」、2025年「L島娘」は別機種であり流用禁止。
+- BIG設定1のみCrankySeven **1/394.1** vs K-Navi **1/394.8**。設定2〜6は一致。平均せずCONFLICTとして保持し、REG/合算との整合が取れるCrankySeven系列を主表に採用。
+- ギアスラッシュ純増はパチマガスロマガ約36枚 vs CrankySeven約40枚。近似/定義差候補として双方保持。
+- ART出現率は初当たり確率と同義とみなさず、資料ラベルのまま保存。
+- 2016年R2、2018年R2 C.C.ver.、2021年3、2024年スマスロのresetBehaviorは初代へ流用していない。
 
 ## 次回再開地点
 
-1. **recordCount 652 / chronologicalFrontier 2012-04-16**から開始。
-2. **2012-04-16同日群を継続**。
-3. 最優先候補: **パチスロ クイーンズブレイド 流浪の戦士（JPS）**。当時導入予定一覧で2012-04-16、repo検索では同名未登録。重複再確認→メーカー/業界/当時解析で導入日・型式・性能コア・resetBehavior v0.7を収集し、未登録なら653件目として追加。
-4. `ToHeart2 バカンスバージョン` は独立機種ではなく既存ToHeart2の新パネルと判定済み。新規レコード化しない。
-5. クイーンズブレイド処理後も4/16群をメーカー別/当時導入一覧で再監査し、漏れがなければ4/23以降へ進む。
-6. 欠損は表記揺れ・型式名・メーカー名と設定変更/リセット/朝一/据え置き/宵越し/電源OFF ON/天井/モード/状態/ガックン/50枚を組み替えて再探索し、競合は平均せずCONFLICT。
+1. **recordCount 653 / chronologicalFrontier 2012-05-07**から開始。
+2. **2012-05-07同日群を継続**。
+3. 最優先候補: **パチスロ鉄拳デビルVer.（山佐）**。K-Naviで2012-05-07ホール導入、当時記事でも5/7全国稼働を確認。repo検索では同名ヒットなしだが検索索引遅延があるため、次回は直接パス/コミット履歴も確認して重複防止。
+4. 鉄拳デビル処理後に5/7群を再監査し、同日漏れがなければ5/8以降の最古未処理機へ前進。
+5. 欠損は表記揺れ・型式名・メーカー名と設定変更/リセット/朝一/据え置き/宵越し/電源OFF ON/天井/モード/状態/ガックン/50枚を組み替えて再探索し、競合は平均せずCONFLICT。
 
 ## 遡及resetBehavior QA 次回再開地点
 
@@ -92,19 +80,16 @@
 
 ## 主要出典 — 取得日 2026-09-05
 
-- DK-SIS白書2012: `https://www.daikoku.co.jp/wp-content/uploads/siswp/2012/dkwp/files/siswp/2012/HTML/index139.html`
-- 娯楽産業: `https://www.goraku-sangyo.com/オリンピア／平和　パチスロ新機種「ねぇ〜ねぇ〜/`
-- K-Navi: `https://p-kn.com/slot/1609/`
-- K-Navi 設定変更モード: `https://p-kn.com/slot/1609/37635/`
-- K-Navi 内部モード: `https://p-kn.com/slot/1609/37631/`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/6685`
-- パチマガスロマガ REG当選契機: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/olympia_slot/103/i.php`
-- パチビー: `https://www.pachibee.jp/machines/lecture/212030003`
-- CrankySeven: `https://crankyseven.com/nenesimamusume-pc.htm`
-- コムシード: `https://www.commseed.net/news-old/120525_p1.html`
-- グリーンべると ToHeart2新パネル: `https://news.p-world.co.jp/articles/5220/greenbelt`
-- ファミ通 ToHeart2新パネル: `https://www.famitsu.com/news/201203/27012179.html`
+- K-Navi 初代コードギアス: `https://p-kn.com/slot/1613/`
+- K-Navi 2012-04-26当時記事: `https://p-kn.com/community/blog/BYR3LS0G3BA3C2PPRYBH/224709/`
+- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sammy_slot/133/a.php`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/6680`
+- CrankySeven: `https://crankyseven.com/codegeass-pc.htm`
+- 天井ハイエナ生活（2012年当時）: `https://macerate.seesaa.net/article/277896789.html`
+- サミーネットワークス2012-09-03 NEWS RELEASE: `https://www.sammy-net.jp/news/psko-dogiasu.pdf`
+- K-Navi 鉄拳デビルVer.: `https://p-kn.com/slot/1617/`
+- livedoorニュース 鉄拳デビル2012-05-10: `https://news.livedoor.com/article/detail/6546923/`
 
 ## GitHub commits
 
-- ねぇ～ねぇ～島娘 machine record: `19c95693ec50b732b622236195dae1431ae3ba8c`
+- パチスロ コードギアス 反逆のルルーシュ machine record: `c79b8a786df576e352625bf9220ba9c9ab3465cd`
