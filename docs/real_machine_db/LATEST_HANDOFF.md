@@ -4,85 +4,93 @@
 
 ## 現在地点
 
-- recordCount: **742**
-- latestMachineAdded: **ハローサンタ アルティメットマシンガンバージョン**（タイヨー）
-- latestRecord: `docs/real_machine_db/machines/2013-06-17_hello-santa-ultimate-machinegun-version.md`
+- recordCount: **743**
+- latestMachineAdded: **パチスロ英雄伝説 空の軌跡 THE ANIMATION**（ニューギン）
+- latestRecord: `docs/real_machine_db/machines/2013-06-17_eiyuu-densetsu-sora-no-kiseki-the-animation.md`
 - chronologicalFrontier: **2013-06-17**
-- frontierLatestExactDateMachine: **ハローサンタ アルティメットマシンガンバージョン**
+- frontierLatestExactDateMachine: **パチスロ英雄伝説 空の軌跡 THE ANIMATION**
 - schema: **resetBehavior v0.7**
-- status: **OPEN_2013-06-17_GROUP__NEXT_SORA_NO_KISEKI_THEN_FULL_SAME_DAY_AUDIT**
+- status: **CLOSED_2013-06-17_GROUP__NEXT_2013-07-01_TAIRYO_II_AFTER_06-18_TO_06-30_BOUNDARY_AUDIT**
 
 ## 今回の同期
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前レコード `2013-06-17_snipai72.md` を再読。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前レコード `2013-06-17_hello-santa-ultimate-machinegun-version.md` を再読。
 - INDEXは19件地点の旧集約状態なので、README規定どおり最新HANDOFFと実レコードを正本として優先。
-- 開始時main正本は recordCount **741** / chronologicalFrontier **2013-06-17** / 06-17群OPEN。
-- 06-17群の残対象 **ハローサンタ アルティメットマシンガンバージョン**をrepo重複確認後、742件目として追加。
-- K-Navi/ALL7で06-17群は **スナイパイ72 / ハローサンタ アルティメットマシンガンバージョン / パチスロ英雄伝説 空の軌跡 THE ANIMATION** を確認。残りは空の軌跡1機のため群はOPEN。
+- 開始時main正本は recordCount **742** / chronologicalFrontier **2013-06-17** / 06-17群OPEN。
+- 06-17群の残対象 **パチスロ英雄伝説 空の軌跡 THE ANIMATION**をrepo重複確認後、743件目として追加。
+- K-Navi/ALL7で06-17群のパチスロは **スナイパイ72 / ハローサンタ アルティメットマシンガンバージョン / パチスロ英雄伝説 空の軌跡 THE ANIMATION** の3機。全て登録済みとなったため **2013-06-17群CLOSED**。
+- K-Navi 2013年6月導入カレンダーでは06-17が同月最後のパチスロ導入日。ALL7 2013年6月一覧とも整合。次の具体日候補はK-Navi機種ページで **2013-07-01「大漁II」（北電子）**を確認。
 
-## 今回追加 — ハローサンタ アルティメットマシンガンバージョン
+## 今回追加 — パチスロ英雄伝説 空の軌跡 THE ANIMATION
 
 ### identity / 性能コア
 
-- manufacturer: **タイヨー**。
-- 型式名: **ハローサンタUMV-S**。
-- releaseDate: **2013-06-17**。K-Navi/ALL7/当時解析で一致。
-- systemType: **5号機 ART（ゲーム数上乗せ+セットストック型）**。
-- 機械割: **96.5 / 98.2 / 100.1 / 103.5 / 108.5 / 113.2%**。
-- ART初当たり: **1/279.1 / 268.3 / 254.5 / 242.3 / 225.2 / 190.2**。
-- 50枚ベース: **30.8 / 30.9 / 30.9 / 30.9 / 30.9 / 31.0G**（設定1～6）。
-- ART「マシンガンラッシュ」: **1セット50G+α / 純増約2.0枚/G**。
-- アルティメットフリーズボーナス: **約60枚 + ART**。
-- 通常A/Bのゲーム数天井は最大 **1280G**、天国は最大 **96G**。
-- 別系統のハズレ天井は通常A **11～20G**、通常B **9～20G**、天国 **3～16G**、マシンガン **1～5G**。
+- manufacturer: **ニューギン**。
+- releaseDate: **2013-06-17**。K-Navi、パチビーで一致。グリーンべると当時記事の6/16納品開始予定とも整合。
+- systemType: **5号機 A+ART（ボーナス+継続率/ゲーム数上乗せ型ART）**。
+- 正式型式名/検定番号は再探索後も今回安全に固定できず **UNVERIFIED_AFTER_RESEARCH**。
+- 機械割: **97.0 / 98.8 / 101.4 / 105.7 / 109.3 / 114.2%**。
+- ART初当たり: **1/389.1 / 378.0 / 367.9 / 348.6 / 338.4 / 264.6**。
+- ボーナス合算: **1/399.6 / 394.8 / 390.1 / 385.5 / 381.0 / 372.4**。
+- 50枚ベース: **平均約32G/1000円**（単一二次資料のため ANALYSIS_SINGLE）。
+- ART「運命の軌跡」: **1セット33G+α / 純増約1.4枚/G / 継続率50～90%**。
+- BIG: **約204枚**、REG: **約54枚**。
+- 天井: **ボーナス間1400G**。
+- ART当選/消化ではボーナス間天井G数はリセットされない。
 
 ### resetBehavior v0.7
 
-- 本機固有天井整理で **設定変更時にゲーム数天井G数リセット**を確認。gameCounterReset.settingChange = **CLEAR_CONFIRMED**。
-- パチマガスロマガには本機専用「朝イチ・設定変更」導線が現存するが、検索取得できた本文から設定変更時の内部モード/状態/初期液晶値までは安全に固定できなかった。
-- 機種名、型式 `ハローサンタUMV-S`、タイヨー、設定変更/リセット/朝一/据え置き/宵越し/電源OFF ON/電断/天井/モード/ガックンを組み替え、当時スペック記事・K-Navi・P-WORLD・パチマガスロマガ・2-9伝説・Re.design・旧解析系を横断。
-- 設定変更時の具体的モード振り分け/内部状態: **UNVERIFIED_AFTER_RESEARCH**。
-- 純据え置き時のゲーム数天井進捗・モード・連続ハズレ履歴: **UNVERIFIED_AFTER_RESEARCH**。
+- 2013-06-22当時の天井解析で **設定変更時にボーナス間天井G数リセット / 宵越し不可**を確認。`gameCounterReset.settingChange = CLEAR_CONFIRMED`。
+- K-Navi機種ページには本機専用「設定変更後の挙動」解析導線が現存するが、今回本文取得は403。検索結果から内容を推定せず、直接確認できた天井Gリセットのみ確定扱い。
+- 純据え置き時のボーナス間天井G・内部状態完全保持契約: **UNVERIFIED_AFTER_RESEARCH**。
 - 設定変更なしの純電源OFF→ON時契約: **UNVERIFIED_AFTER_RESEARCH**。
-- 設定変更専用の固定短縮天井/天国優遇/マシンガン優遇: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 設定変更時の内部モード/高確状態再抽選や公開振り分け: **UNVERIFIED_AFTER_RESEARCH**。
+- 設定変更専用の固定短縮天井/朝一ART優遇: **NONE_CONFIRMED_AFTER_RESEARCH**。
 - ガックン/初期出目/液晶等による本機固有の確定変更判別: **UNVERIFIED_AFTER_RESEARCH**。
 - advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN**。
-- 設定変更により前日のゲーム数天井進捗が消えることは朝一天井狙い上の不利要素として保持。
-- resetQaStatus: **RESEARCHED__SETTING_CHANGE_GAME_COUNT_CEILING_RESET_CONFIRMED__RESET_MODE_STATE_CARRYOVER_POWER_CYCLE_AND_DETECTION_UNVERIFIED_AFTER_RESEARCH**。
+- 設定変更で前日のボーナス間天井進捗が消えることは朝一天井狙い上の不利要素として保持。
+- resetQaStatus: **RESEARCHED__SETTING_CHANGE_BONUS_INTERVAL_CEILING_COUNTER_RESET_CONFIRMED__CARRYOVER_POWER_CYCLE_MODE_STATE_AND_DETECTION_UNVERIFIED_AFTER_RESEARCH**。
+
+### conflicts
+
+- ART基本1セット表記は、K-Navi/P-WORLD/グリーンべると当時記事が **33G+α**で一致。一方、pachislo-data基本情報欄に **40G+継続バトル**表記あり。平均化せず `CONFLICT_OR_DEFINITION_DIFFERENCE_33G_PLUS_ALPHA_VS_40G_PLUS_BATTLE` として保持し、本線は当時複数資料一致の33G+α。
 
 ## 2013-06-17同日群 / 次境界
 
 - **スナイパイ72**（ネット）— 登録済み741件目。
-- **ハローサンタ アルティメットマシンガンバージョン**（タイヨー）— 今回登録742件目。
-- **パチスロ英雄伝説 空の軌跡 THE ANIMATION**（ニューギン）— 次対象。
-- よって06-17群は **OPEN**。空の軌跡を処理後、K-Navi/ALL7に加えて別メーカー/当時導入一覧でも同日漏れ監査してCLOSED判定する。
+- **ハローサンタ アルティメットマシンガンバージョン**（タイヨー）— 登録済み742件目。
+- **パチスロ英雄伝説 空の軌跡 THE ANIMATION**（ニューギン）— 今回登録743件目。
+- K-Navi 2013年6月導入カレンダーとALL7 2013年6月一覧で他の06-17パチスロを確認できないため **06-17群CLOSED**。
+- 06-18～06-30はK-Navi月間カレンダー上、次のパチスロ全国一斉導入がない。次回は別系統資料でもこの境界を最終監査してから7月へ進む。
+- 次の具体日候補: **2013-07-01「大漁II」（北電子）**。K-Navi機種ページで導入日を確認済み。
 
 ## 遡及resetBehavior QA 進捗
 
 - 本線収集を優先。既存性能値は無駄に再調査していない。
-- QAカーソルは **空手バカ一代直後の実ファイル順**を維持し、resetBehavior既収集機をスキップして最初の欠損機を後続リレーで補完する。
+- QAカーソルは既存方針を維持し、本線キューとは分岐しない。
 
 ## 次回再開地点
 
-1. **recordCount 742 / chronologicalFrontier 2013-06-17 / 06-17群OPEN** から開始。
-2. **パチスロ英雄伝説 空の軌跡 THE ANIMATION**を743件目候補としてrepo重複確認 → 性能コア + resetBehavior v0.7を収集・保存。
-3. 06-17同日群を全メーカー横断監査し、漏れがなければCLOSED。
-4. 次の具体日境界を時系列監査して前進する。
-5. ハローサンタUMV-Sの設定変更時モード振り分け、据え置き/純電断契約、変更判別は後続QAで本機固有直接資料が見つかった場合のみ補完。
+1. **recordCount 743 / chronologicalFrontier 2013-06-17 / 06-17群CLOSED** から開始。
+2. **2013-06-18～06-30境界**を別系統の当時導入一覧/メーカー別一覧でも最終監査。
+3. 追加がなければ **2013-07-01「大漁II」（北電子）**を744件目候補としてrepo重複確認 → 性能コア + resetBehavior v0.7を収集・保存。
+4. 07-01同日群をK-Navi/ALL7/メーカー別資料で監査し、同日未処理機を順に継続。
+5. 英雄伝説 空の軌跡の正式型式名/検定番号、据え置き/純電断、設定変更時内部状態、変更判別は後続QAで本機固有直接資料が見つかった場合のみ補完。
 
 ## 主要出典 — 取得日 2026-09-06
 
-### ハローサンタ アルティメットマシンガンバージョン
+### パチスロ英雄伝説 空の軌跡 THE ANIMATION
 
-- K-Navi 機種トップ: `https://p-kn.com/slot/1844/`
+- K-Navi 機種トップ: `https://p-kn.com/slot/1867/`
+- K-Navi 天井情報（導線確認、本文は今回403）: `https://p-kn.com/slot/1867/44815/`
+- K-Navi 設定変更後の挙動（導線確認、本文は今回403）: `https://p-kn.com/slot/1867/45216/`
+- K-Navi Q&A / ボーナス間天井はARTではリセットされない: `https://p-kn.com/community/question/slot/1867/125909/`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/7098`
+- パチビー: `https://www.pachibee.jp/movies/index/9463`
+- グリーンべると当時業界記事: `https://news.p-world.co.jp/articles/5854/greenbelt`
+- 娯楽産業 2013-05-21内覧会記事: `https://www.goraku-sangyo.com/ニューギン%E3%80%80パチンコ＆パチスロ同時発表/`
+- pachislo-data: `https://pachislo-data.com/newgin/soranokiseki`
+- 目指せ月収20万 / 2013-06-22天井解析・設定変更: `https://mezase20.com/blog-entry-850.html`
 - ALL7 2013年6月導入予定一覧: `https://www.all7.jp/plans/index/2013/06`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/7060`
-- パチマガスロマガ 基本情報: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/taiyo_slot/77/a.php`
-- パチマガスロマガ ART突入フロー: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/taiyo_slot/77/l.php`
-- パチマガスロマガ 機種総合/朝イチ・設定変更導線: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/taiyo_slot/77/taiyo_slot_77.php`
-- K-Navi 内部モードの基本: `https://p-kn.com/slot/1844/44473/`
-- 2-9伝説 天井・設定変更: `https://29den.com/hellosanta-ultimate/`
-- 2013-04-07当時スペック記事: `https://slosoku.com/archives/26459761.html`
-- Re.design: `https://www.redesign777.tokyo/Spec/SlotView?flag=True&id=S2015030207501601`
-- 中一商事 型式/仕様: `https://www.nakaiti.com/html/sTaiyo013.html`
-- パチスロ解析ガイド: `https://pachislot-guide.net/2013/hello-santa-ultimate/`
+- K-Navi 2013年6月導入カレンダー: `https://p-kn.com/calendar/201306/`
+- K-Navi 大漁II / 次候補導入日: `https://p-kn.com/slot/1879/`
