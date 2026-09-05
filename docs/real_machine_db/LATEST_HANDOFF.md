@@ -4,50 +4,56 @@
 
 ## 現在地点
 
-- recordCount: **686**
-- latestMachineAdded: **トロピカーナ25φ**（エレコ）
-- latestRecord: `docs/real_machine_db/machines/2012-09-24_tropicana-25.md`
+- recordCount: **687**
+- latestMachineAdded: **トロピカーナ-30**（エレコ）
+- latestRecord: `docs/real_machine_db/machines/2012-09-24_tropicana-30.md`
 - chronologicalFrontier: **2012-09-24**
-- frontierLatestExactDateMachine: **トロピカーナ25φ**
+- frontierLatestExactDateMachine: **トロピカーナ-30**
 - schema: **resetBehavior v0.7**
-- status: **OPEN_2012-09-24_GROUP__NEXT_TROPICANA_30**
+- status: **CLOSED_2012-09-24_GROUP__NEXT_2012-10-01_NEW_ONE_BAR_30**
 
 ## 今回の同期・時系列監査
 
-- 最新mainの `README.md`、正本ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前最新レコード「パチスロ リングにかけろ1 ギリシア十二神編」を確認して開始。
-- `INDEX.md` は初期19件時点の古い集計であるため、README規則どおり、より新しい `LATEST_HANDOFF.md` の **recordCount 685 / chronologicalFrontier 2012-09-18** を進捗正本として採用。
-- 2012-09-19〜09-23境界をALL7.jp・メーカー資料・当時業界資料で監査。次の具体日付きパチスロアンカーは2012-09-24エレコ「トロピカーナ」。
-- ユニバーサル公式は同一製品ページに **25Φ / 30Φ** の両筐体を掲載。2012-07-27グリーンべると記事も25φ仕様・30φ仕様の2タイプ同時発売と明記。
-- 主要性能は現存する25φ/30φ資料で同一だが、30φは沖スロ市場仕様で **2012-08-09沖縄先行導入**の固有履歴がある。全機種方針および過去の30φ派生分離方針に合わせ、25φ/30φは独立レコードとして扱う。
-- 今回は全国導入日の明確な **トロピカーナ25φ** を686件目として追加。09-24同日群はまだOPEN。
+- 最新mainの `README.md`、正本ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前最新レコード `2012-09-24_tropicana-25.md` を確認して開始。
+- `INDEX.md` は初期19件時点で止まっているため、README規則どおり最新 `LATEST_HANDOFF.md` の recordCount 686 / chronologicalFrontier 2012-09-24 を進捗正本として採用。
+- repo検索で「トロピカーナ-30」は未登録を確認。
+- P-WORLD 30φ専用ページから型式名 **トロピカーナP-30**、検定番号 **2S0518**、設定別機械割・合算・純増・獲得枚数・1000G天井を確認。
+- ユニバーサル公式で25Φ/30Φ両筐体、2012年9月発売を確認。2012-07-27グリーンべると記事で25φ/30φ同時発売・9月23日納品開始を確認。
+- 2012-08-09グリーンべると記事で30φ仕様のみ沖縄県浦添市《ジャンボG1店》へ同日先行導入、全国導入は9月下旬開始予定と確認。みんスロは全国導入日を2012-09-24とする。
+- 30φは沖スロ仕様・沖縄先行導入履歴・専用型式/検定番号があるため、25φと主要性能が同一でも独立レコード化。
+- ALL7.jp 2012年9月一覧では09-24のパチスロは「トロピカーナ」のみ。25φ/30φを登録済みとし、09-24同日群をCLOSED。
+- 09-25〜09-30はALL7.jp月次一覧上で次の具体日付きパチスロを確認せず、次の既知具体日アンカーを2012-10-01へ前進。
+- ALL7.jp 2012年10月ページ2で、2012-10-01のパチスロ **「ニューワンバー-30」（ベルコ）** を確認。repo検索では未登録。
 
-## 今回の本線追加 — トロピカーナ25φ
+## 今回の本線追加 — トロピカーナ-30
 
 ### 識別
 
 - manufacturer: **エレコ / ユニバーサルエンターテインメント**
-- releaseDate key: **2012-09-24**
+- releaseDate key: **2012-09-24**（全国導入）
+- regionalEarlyLaunch: **2012-08-09 沖縄先行導入**
 - generation: **5号機**
-- systemType: **ART / BR非搭載 / 完全告知 / 擬似BIG・REG + CZループ**
-- medalDiameter: **25φ**
-- modelName: **トロピカーナ C**（後年筐体資料。25φ専用か25/30共通型式か一次確認待ち）
-- approvalNumber: `UNVERIFIED_AFTER_RESEARCH`
+- systemType: **ART / BR非搭載 / 完全告知 / 沖スロ / 擬似BIG・REG + CZループ**
+- medalDiameter: **30φ**
+- modelName: **トロピカーナP-30**
+- approvalNumber: **2S0518**
 
 ### 性能コア
 
 - 機械割: **97.3 / 98.8 / 101.4 / 106.2 / 110.0 / 115.1%**
 - 擬似ボーナス合算: **1/240.9 / 228.3 / 206.1 / 180.9 / 159.3 / 140.4**
-- BIG: **ART66G・平均約136枚**
-- REG: **ART22G・平均約45枚**
+- BIG: 平均約**136枚**
+- REG: 平均約**45枚**
 - ART純増: **約+2.1枚/G**
-- 50枚ベース: **UNVERIFIED_AFTER_RESEARCH**
-- 通常天井: **ボーナス間1000G**。到達後は擬似ボーナス + 80%ループ相当CZ。
-- CZループ: 初回約40%、2連目以降約80%、中段チェリー契機後約96%。
+- 50枚ベース: **UNVERIFIED_AFTER_RESEARCH**。当時記事に「約30G/1000円と思う」という筆者推測はあるが解析値として不採用。みんスロも「調査中」。
+- 通常天井: **ボーナス間1000G**。到達後は擬似ボーナス + 約80%ループ相当CZ。
+- CZ: 初回約40%、2連目以降約80%、中段チェリー契機後最大約96%。
 
-### CONFLICT
+### CONFLICT / 定義差
 
-- 設定5機械割はK-Navi 25φ、みんスロ30φ、中古実機25/30資料が **110.0%**で一致。一方crankysevenは **111.0%**。平均せず主値110.0%、111.0%を `CONFLICT_SINGLE_SECONDARY_SOURCE` としてレコードに保持。
-- 導入日は全国ホール導入 **2012-09-24**、納品開始 **2012-09-23**、メーカー公式 **2012年9月**。30φのみ **2012-08-09沖縄先行導入**。定義差を平均していない。
+- 設定5機械割: P-WORLD 30φ・みんスロ30φ・K-Navi 25φは **110.0%**、crankysevenは **111.0%**。平均せず110.0%を主値、111.0%を競合値として保持。
+- 導入日: 30φ沖縄先行 **2012-08-09** / 全国導入 **2012-09-24** / 納品開始 **2012-09-23** / メーカー公式 **2012年9月**。地域先行・全国導入・納品・発売月の定義差として併記。
+- REGゲーム数: 2012年当時天井攻略記事は33G、既存25φレコードは22G。P-WORLD/業界記事は平均約45枚を明示するため、本30φでは獲得約45枚を主値としゲーム数は `CONFLICT_OR_DEFINITION_DIFFERENCE` のまま保持。
 
 ### resetBehavior v0.7
 
@@ -55,7 +61,7 @@
 - `carryOverBehavior`: **UNVERIFIED_AFTER_RESEARCH**
 - `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH**
 - `gameCounterReset`: **UNVERIFIED_AFTER_RESEARCH**
-- `ceilingAfterReset`: **UNVERIFIED_AFTER_RESEARCH**（通常天井1000Gは確認済み、リセット専用短縮値なし）
+- `ceilingAfterReset`: **UNVERIFIED_AFTER_RESEARCH**（通常天井1000Gは確認済み、設定変更専用短縮値なし）
 - `modeAfterReset`: **UNVERIFIED_AFTER_RESEARCH**
 - `stateAfterReset`: **UNVERIFIED_AFTER_RESEARCH**
 - `advantageousSectionReset`: **NOT_APPLICABLE_5TH_GEN**
@@ -63,37 +69,36 @@
 - `resetPenalties`: **NONE_CONFIRMED_AFTER_RESEARCH**
 - `resetDetection`: **UNVERIFIED_AFTER_RESEARCH**
 - `publicMorningNumbers`: **NONE_CONFIRMED_AFTER_RESEARCH**
-- 2012年当時の天井攻略資料自体が「朝一設定変更後の挙動は現在調査中」と明記し、CZスタート説を噂扱いしている。表記・検索語・資料系統を変えた再探索後も直接契約を確定できなかったため、推測補完していない。
+- 2012-09-29当時天井攻略記事はタイトルに「トロピ30」を明示し、朝一設定変更後について「現在調査中」、CZスタート説を噂扱いしている。設定変更/リセット/朝一/据え置き/電源OFF ON/天井/CZ/ガックン等で再探索後も直接契約を確定できなかったため推測補完していない。
 
 ## 遡及resetBehavior QA 進捗
 
 - 前handoffから継続するQA再開地点は変更しない。
 - 遡及QA次回再開地点: **`docs/real_machine_db/machines/2007-01_karate-baka-ichidai.md`**。
-- 本線の時系列収集を止めず、QAは別リレーで既存レコードのresetBehavior欠損だけ補完する。
+- 本線時系列収集を止めず、QAは別リレーで既存レコードのresetBehavior欠損のみ補完する。
 
 ## 次回再開地点
 
-1. **recordCount 686 / chronologicalFrontier 2012-09-24 / 09-24同日群OPEN** から開始。
-2. 最優先は **エレコ「トロピカーナ-30」**。repo重複確認後、687件目候補として処理する。
-3. 30φは全国導入キーを2012-09-24としつつ、グリーンべるとで確認済みの **2012-08-09沖縄先行導入**を `releaseDateNotes` / CONFLICT定義差として必ず保持する。
-4. 25φと主要性能が同一でも、30φは沖スロ市場仕様・先行導入履歴が異なるため独立レコード化する。型式/検定番号が見つかれば25φとの関係を更新する。
-5. 30φ登録後、09-24同日群を再監査して未登録がなければCLOSED。次の具体日へ進む。
-6. 9月後半候補「キュインぱちすろ南国育ち 1st vacation」「覇王伝 零」「戦人」「マハロ-30」「ニューワンバー-30」等は、既登録・別日候補が混在するためrepo重複と具体日を再照合してから採用する。
-7. 欠損は機種名表記揺れ・型式・メーカー・シリーズ名と検索語を変え、公式・業界・当時解析・古いDB・アーカイブ・回顧資料を横断後のみUNVERIFIED。競合は平均せずCONFLICT。
+1. **recordCount 687 / chronologicalFrontier 2012-09-24 / 09-24群CLOSED** から開始。
+2. **2012-09-25〜09-30境界を追加資料でもう一度最終監査**し、漏れがなければ2012-10-01へ進む。
+3. 最優先は **ベルコ「ニューワンバー-30」**。ALL7.jpで2012-10-01導入予定、repo検索で未登録を確認済み。重複最終確認後、688件目候補として性能コア + resetBehavior v0.7を収集する。
+4. 2012-10-01同日群の他パチスロがないか、ALL7.jp以外の当時一覧・メーカー資料・古いDBでも監査してからCLOSEDにする。
+5. 次の既知具体日群は **2012-10-09**。ALL7.jpで「ドラゴンハナハナ-30」「パチスロキン肉マン キン肉星王位争奪編」「パチスロ喰霊-零-」「南国育ちinハワイ」「大工の源さん～炎のいただき!編」を確認。ただし10/01群を閉じるまで先行処理しない。
+6. 欠損は表記揺れ・型式・メーカー・シリーズ名と、設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックン/有利区間等を組み替え、公式・業界・当時解析・古いDB・アーカイブ・回顧資料を横断後のみUNVERIFIED。競合値は平均せずCONFLICT。
 
 ## 主要出典 — 取得日 2026-09-05
 
-### トロピカーナ25φ
+### トロピカーナ-30
 - ユニバーサル公式: `https://www.universal-777.com/product/slot/tropicana_2012/`
-- グリーンべると/P-WORLD業界ニュース: `https://news.p-world.co.jp/articles/5407/greenbelt`
-- K-Navi 25φ: `https://p-kn.com/slot/1695/`
-- ALL7.jp 2012年9月: `https://www.all7.jp/plans/index/2012/09`
-- P-WORLD 30φ照合: `https://www.p-world.co.jp/machine/database/6827`
-- みんスロ 30φ照合: `https://minslo.com/%E3%83%88%E3%83%AD%E3%83%94%E3%82%AB%E3%83%BC%E3%83%8A%E2%80%9030/`
-- 当時天井解析: `https://macerate.seesaa.net/article/294567586.html`
+- P-WORLD 30φ: `https://www.p-world.co.jp/machine/database/6827`
+- グリーンべると 沖縄先行導入: `https://web-greenbelt.jp/00001598/`
+- グリーンべると / P-WORLD 発表記事: `https://news.p-world.co.jp/articles/5407/greenbelt`
+- みんスロ 30φ: `https://minslo.com/%E3%83%88%E3%83%AD%E3%83%94%E3%82%AB%E3%83%BC%E3%83%8A%E2%80%9030/`
+- 当時天井解析（トロピ30）: `https://macerate.seesaa.net/article/294567586.html`
 - crankyseven: `https://crankyseven.com/tropicana-pc.htm`
-- グリーンべると 30φ沖縄先行導入: `https://web-greenbelt.jp/00001598/`
+- ALL7.jp 2012年9月: `https://www.all7.jp/plans/index/2012/09`
+- ALL7.jp 2012年10月 page2: `https://www.all7.jp/plans/index/2012/10/10`
 
 ## GitHub commits
 
-- トロピカーナ25φ machine record: `d48e3247e4375d2f717577667fc8365334603819`
+- トロピカーナ-30 machine record: `06555b40be1347b11300107e450ca71b7d2da7d5`
