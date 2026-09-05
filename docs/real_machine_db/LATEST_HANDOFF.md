@@ -4,74 +4,74 @@
 
 ## 現在地点
 
-- recordCount: **663**
-- latestMachineAdded: **パチスロ 熱血！華成学園ヒーロー部**（ディ・ライト）
-- latestRecord: `docs/real_machine_db/machines/2012-06-04_nekketsu-kasei-gakuen-hero-bu.md`
-- chronologicalFrontier: **2012-06-04**
-- frontierLatestExactDateMachine: **パチスロ 熱血！華成学園ヒーロー部**
+- recordCount: **664**
+- latestMachineAdded: **バジリスク～甲賀忍法帖～II**（メーシー）
+- latestRecord: `docs/real_machine_db/machines/2012-06-11_basilisk-kouga-ninpouchou-ii.md`
+- chronologicalFrontier: **2012-06-11**
+- frontierLatestExactDateMachine: **バジリスク～甲賀忍法帖～II**
 - schema: **resetBehavior v0.7**
-- status: **CLOSED_2012-06-04_GROUP__NEXT_EXACT_DATE_AUDIT_FROM_2012-06-05**
+- status: **OPEN_2012-06-11_SAME_DAY_GROUP**
 
 ## 今回の同期・時系列監査
 
-- 最新mainのREADME全文、ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード「オアシス」を確認して開始。
-- INDEXは旧地点19件のままなのでREADME規定どおりLATEST_HANDOFFと実レコードを正本化。開始時は recordCount 662 / frontier 2012-06-04。
-- HANDOFF指定のディ・ライト「パチスロ 熱血！華成学園ヒーロー部」をrepo検索し、未登録を確認して663件目として追加。
-- 導入日は2012-06-05公開の当時新台一覧が2012-06-04を明記。P-WORLDは2012年05月の月単位表示を持つため精度差として保持し、日付キーは2012-06-04。
-- 性能コアはP-WORLD、当時パチマガスロマガ、2012-06-05当時新台一覧、A-SLOT、後年検定回顧資料を横断。機械割、BIG/REG/ART、獲得枚数、ART純増は複数系統で一致。
-- 50枚ベースは表記揺れ・型式名・メーカー名と50枚/1000円/ベース/コイン持ちを組み替えて再探索したが直接値を確定できずUNVERIFIED_AFTER_RESEARCH。
-- resetBehaviorは「設定変更/リセット/朝一/据え置き/宵越し/電源OFF ON/天井/1200G/高確/モード/状態/ガックン」を組み替えて再探索。パチマガスロマガに本機専用「朝イチ・設定変更」項目が存在することは確認したが具体本文は取得不能。設定変更時の天井カウンタ、据え置き、電断、内部状態、変更判別は推測せずUNVERIFIED_AFTER_RESEARCH。
-- 当時2012-06-04新台一覧で、同日候補のパイレーツワールド、ニューパルサーSP、オアシス、熱血！華成学園ヒーロー部、天 天和通りの快男児を再照合。GTOも既登録。現HANDOFFまでで既知の2012-06-04候補を処理済みとし同日群を閉鎖。
+- 最新mainのREADME全文、ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード「パチスロ 熱血！華成学園ヒーロー部」を確認して開始。
+- INDEXは旧地点19件のままなのでREADME規定どおりLATEST_HANDOFFと実レコード、直近コミットを正本化。開始時は recordCount 663 / frontier 2012-06-04。
+- 直近コミットも確認し、前回地点以降にニューパルサーSP、オアシス、熱血！華成学園ヒーロー部が別リレーで追加され、2012-06-04同日群が閉鎖済みであることを確認。重複調査せず2012-06-05以降へ前進。
+- 2012-06-05～06-10を具体日検索し、今回新規に確定できる未登録5号機はなし。HANDOFF候補を再照合すると、バジリスク～甲賀忍法帖～IIとそれいけ！こすみっくヒーローズが2012-06-11、鉄のラインバレルはK-Navi 2012-06-18 / パチビー 2012-06-25で後日、セブンバー30は2012-06-25。
+- ユニバーサル公式2012-06-08発表が「バジリスク～甲賀忍法帖～II」の2012-06-11全国ホール順次導入開始を明記。K-Navi、パチビー、HAZUSEも2012-06-11で一致するため664件目として追加。
+- 性能コアはユニバーサル公式、P-WORLD、K-Navi、HAZUSE、パチマガスロマガ、パチビー、当時/後年解析を横断。機械割、ART初当たり、合算、50枚ベース範囲、純増、BIG、天井を回収。
+- resetBehaviorは「バジリスクII / バジリスクⅡ / バジ2 / バジリスクII-NH / メーシー」と「設定変更 / リセット / 朝一 / 据え置き / 宵越し / 電源OFF ON / 電断 / 天井 / 1280G / 1200G / 高確 / モード / 状態 / ガックン / RAMクリア」を組み替えて再探索。
+- 本機は設定変更時に内部状態を再抽選する一方、**天井ゲーム数は設定変更だけでは前日から引き継ぐ**特殊挙動を機種固有資料で確認。RAMクリア時はゲーム数リセットとする資料も確認。
+- 設定変更時の内部状態公開値は、設定1/3/5=低確75.00%・高確25.00%、設定2/4/6=低確66.67%・高確33.33%。朝一客行動に直接効く公開数値として保存。
+- 純粋な電源OFF→ONのみの場合の内部状態再抽選/保持、およびガックン/初期出目等による確定的変更判別は、十分な再探索後も本機固有直接契約を確定できずUNVERIFIED_AFTER_RESEARCH。
 
-## 今回の本線追加 — パチスロ 熱血！華成学園ヒーロー部
+## 今回の本線追加 — バジリスク～甲賀忍法帖～II
 
 ### 導入・分類
 
-- manufacturer: **ディ・ライト / D-light**
-- releaseDate: **2012-06-04**（当時新台一覧基準）
+- manufacturer: **メーシー / UNIVERSAL ENTERTAINMENT**
+- releaseDate: **2012-06-11**
 - generation: **5号機**
-- systemType: **A+ART / ゲーム数上乗せ+セットストックART**
-- formalModelName: **熱血！華成学園～正義参上～XF**
-- approvalNumber: **1S1274**
+- systemType: **ART主体 / プレミアムBIG+継続率&セットストックART**
+- formalModelName: **バジリスクII-NH**
+- approvalNumber: **2S0260**
 
 ### 性能コア
 
-- 機械割: **95.91 / 98.63 / 100.58 / 104.29 / 106.61 / 111.79%**
-- BIG合算: **1/434.0 / 420.1 / 407.1 / 394.8 / 370.3 / 374.5**
-- REG合算: **1/618.3 / 595.8 / 574.9 / 555.4 / 546.1 / 512.0**
-- ART初当り: **1/490.8 / 450.8 / 444.3 / 389.5 / 382.1 / 290.0**
-- ボーナス+ART合算: **1/185.6 / 175.7 / 171.2 / 159.3 / 153.8 / 134.7**
-- 50枚ベース: **UNVERIFIED_AFTER_RESEARCH**
-- ART「バーニングダッシュ」: **1セット50G+α / 約+1.4枚/G**
-- 青7BIG: **約301枚**、赤7BIG: **約203枚**、REG/PB: **約56枚**
-- 通常天井: **ボーナス間1200G後、約30G前兆を経由しART 5or7セット**
+- 機械割: **97.4 / 99.0 / 103.3 / 107.2 / 112.9 / 119.5%**
+- ART初当たり: **1/294 / 262 / 252 / 218 / 210 / 178**
+- BIG+ART合算: **1/292 / 260 / 251 / 217 / 209 / 177**
+- BIG: **全設定1/32768、約336枚**
+- 50枚ベース: **約29.8～31.1G（設定1～6範囲）**
+- ART「バジリスクタイム」: **追想の刻10G+α + 争忍の刻20～50G / 純増約+2.7枚/G**
+- 通常天井: **ART終了後/通常時1280G**。別資料では内部通常時1200G+前兆、データ表示上1280G前後と説明されるため定義差として保持。
 
 ### resetBehavior v0.7
 
-- `settingChangeBehavior`: **UNVERIFIED_AFTER_RESEARCH**
-- `carryOverBehavior`: **UNVERIFIED_AFTER_RESEARCH**
+- `settingChangeBehavior`: **INTERNAL_STATE_RESELECTED__CEILING_PROGRESS_RETAINED**
+- `carryOverBehavior`: **CEILING_PROGRESS_CARRIES_OVER**
 - `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH**
-- `gameCounterReset`: **UNVERIFIED_AFTER_RESEARCH**
-- `ceilingAfterReset`: **UNVERIFIED_AFTER_RESEARCH**
-- `modeAfterReset`: **UNVERIFIED_AFTER_RESEARCH**
-- `stateAfterReset`: **UNVERIFIED_AFTER_RESEARCH**
+- `gameCounterReset`: **RETAIN_ON_SETTING_CHANGE__CLEAR_ON_RAM_CLEAR**
+- `ceilingAfterReset`: **NO_SETTING_CHANGE_SHORTENING_CONFIRMED**
+- `modeAfterReset`: **INTERNAL_STATE_RESELECTED_ON_SETTING_CHANGE**
+- `stateAfterReset`: **SETTING_SPECIFIC_LOW/HIGH_DISTRIBUTION_CONFIRMED**
 - `advantageousSectionReset`: **NOT_APPLICABLE_5TH_GEN**
-- `resetBenefits`: **NONE_CONFIRMED_AFTER_RESEARCH**
-- `resetPenalties`: **NONE_CONFIRMED_AFTER_RESEARCH**
-- `resetDetection`: **UNVERIFIED_AFTER_RESEARCH**
-- `publicMorningNumbers`: **NONE_CONFIRMED_AFTER_RESEARCH**
+- `resetBenefits`: **HIGH_STATE_START_CHANCE + CEILING_PROGRESS_NOT_LOST_BY_SETTING_CHANGE**
+- `resetPenalties`: **NONE_CONFIRMED_FOR_NORMAL_SETTING_CHANGE**
+- `resetDetection`: **INDIRECT_STATE_INFERENCE_ONLY / GAKKUN_UNVERIFIED_AFTER_RESEARCH**
+- `publicMorningNumbers`: **奇数設定 低確75.00%・高確25.00% / 偶数設定 低確66.67%・高確33.33%**
 
 ## CONFLICT / 品質メモ
 
-- releaseDate: 当時新台一覧=2012-06-04、P-WORLD=2012年05月。平均せず資料差を保持し、具体日を持つ当時資料を時系列キーに採用。
-- パチマガスロマガに「朝イチ・設定変更」項目は存在するが、本文未取得のため内容を推定しない。
-- 機械割はパチマガ精密値と当時一覧丸め値が実質一致。
+- 機械割設定6: P-WORLD=119.4%、HAZUSE系/複数解析=119.5%。平均せず丸め差として両方保持し、主表は複数一致の119.5%。
+- 天井表記: P-WORLD/HAZUSE=1280G、別攻略資料=内部通常時1200G+前兆・データ表示1280G前後。カウンタ定義/前兆込み差として保持。
+- 「設定変更でも天井ゲーム数引継ぎ」は一般則から推定せず、本機固有資料で確認した値のみ採用。シリーズ後継「絆」「III」のreset情報は混入させていない。
 
 ## 次回再開地点
 
-1. **recordCount 663 / chronologicalFrontier 2012-06-04**から開始。
-2. **2012-06-04同日群は閉鎖済み**。2012-06-05以降の具体日付き未処理5号機を時系列で監査する。
-3. 2012年6月の未処理候補として **「バジリスク～甲賀忍法帖～II」「鉄のラインバレル」「それいけ！こすみっくヒーローズ」「セブンバー30」** が残る。各機の具体導入日をK-Navi/P-WORLD/HAZUSE/当時業界記事で再照合し、最古の未登録機を664件目候補にする。月順や知名度で飛ばさない。
+1. **recordCount 664 / chronologicalFrontier 2012-06-11**から開始。
+2. **2012-06-11同日群はOPEN**。同日未処理が確認済みの **「それいけ！こすみっくヒーローズ」（オーイズミ）** を最優先でrepo重複確認し、未登録なら665件目候補として性能コア+resetBehavior v0.7を収集する。
+3. 06-11群を閉じるまでは後日へ進まない。閉鎖後は鉄のラインバレルの導入日CONFLICT（K-Navi 06-18 / パチビー 06-25）を精査し、その前に具体日付き未処理機がないか監査する。セブンバー30は06-25候補。
 4. 欠損は表記揺れ・型式名・メーカー名・シリーズ名と、設定変更/リセット/朝一/据え置き/宵越し/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間/50枚を組み替えて再探索。競合は平均せずCONFLICT。
 
 ## 遡及resetBehavior QA 次回再開地点
@@ -83,14 +83,18 @@
 
 ## 主要出典 — 取得日 2026-09-05
 
-- P-WORLD: `https://www.p-world.co.jp/machine/database/6714`
-- パチマガスロマガ ボーナス確率/PAYOUT: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/d-light_slot/01/h.php`
-- パチマガスロマガ 機種トップ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/d-light_slot/01/d-light_slot_01.php`
-- 2012-06-05当時新台一覧: `https://macerate.seesaa.net/article/273495238.html`
-- A-SLOT: `https://www.a-slot.com/SHOP/dlight_2.html`
-- パチ7検定回顧: `https://pachiseven.jp/articles/detail/5424`
+- ユニバーサル公式製品: `https://www.universal-777.com/product/slot/basilisk2/`
+- ユニバーサル公式2012-06-08発表: `https://www.atpress.ne.jp/news/27819`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/6690`
+- K-Navi: `https://p-kn.com/slot/1619/`
+- HAZUSE: `https://hazuse.com/machine/pachislot/2S0105/`
+- パチマガスロマガ基本情報: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/macy_slot/40/a.php`
+- パチマガスロマガ小役/1000円項目: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/macy_slot/40/c-1.php`
+- メタボ教授 2013-12-12: `https://metabopro.com/bajisecondtorimu/`
+- スロパチステーション「宵越し」: `https://777.slopachi-station.com/words/yoigosi/`
+- パチビー: `https://www.pachibee.jp/machines/lecture/212030005`
+- 次候補それいけ！こすみっくヒーローズ HAZUSE: `https://hazuse.com/machine/pachislot/2S0164/`
 
 ## GitHub commits
 
-- オアシス machine record: `3c7877eb20c01089cbd6adfeb215ebe42bfcf93f`
-- 熱血！華成学園ヒーロー部 machine record: `33d883651f2638d93be70942ef315fe2a346d04b`
+- バジリスク～甲賀忍法帖～II machine record: `9e642f056d5f3cf1cfa89cc2b83adf36b6f7ec11`
