@@ -4,58 +4,64 @@
 
 ## 現在地点
 
-- recordCount: **701**
-- latestMachineAdded: **ビキニパイ2**（ネット）
-- latestRecord: `docs/real_machine_db/machines/2012-11-19_bikini-pai-2.md`
+- recordCount: **702**
+- latestMachineAdded: **ビガースペシャル**（エマ）
+- latestRecord: `docs/real_machine_db/machines/2012-11-19_vigor-special.md`
 - chronologicalFrontier: **2012-11-19**
-- frontierLatestExactDateMachine: **ビキニパイ2**
+- frontierLatestExactDateMachine: **ビガースペシャル**
 - schema: **resetBehavior v0.7**
-- status: **OPEN_2012-11-19_GROUP__NEXT_VIGOR_SPECIAL**
+- status: **OPEN_2012-11-19_GROUP__NEXT_QROGOS_2**
 
 ## 今回の同期
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前最新レコード `2012-11-15_dual-story.md` を確認。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前最新レコード `2012-11-19_bikini-pai-2.md` を確認。
 - `INDEX.md` は19件地点の古い集約状態。README規定どおり、より新しい `LATEST_HANDOFF.md` を直近進捗の正本として優先。
-- 開始時main正本は recordCount **700** / chronologicalFrontier **2012-11-15** / 11-15群CLOSED。
-- 2012-11-16～11-18境界を具体日・新台・HAZUSE等で短く再監査したが、11/15より後かつ11/19より前に導入された未登録パチスロを今回確定できず前進。
-- repo重複検索で「ビキニパイ2」既存レコードなしを確認後、**701件目: ビキニパイ2（ネット）** を登録。
+- 開始時main正本は recordCount **701** / chronologicalFrontier **2012-11-19** / 11-19群OPEN / 次候補ビガースペシャル。
+- repo重複検索で「ビガースペシャル」「ビガーSpecial」既存レコードなしを確認後、**702件目: ビガースペシャル（エマ）** を登録。
 
-## 今回追加 — ビキニパイ2
+## 今回追加 — ビガースペシャル
 
 ### 性能コア
 
-- releaseDate: **2012-11-19**。HAZUSEとパチビーで一致。グリーンべると当時記事は11月中旬納品予定。
-- modelName: **ビキニパイ2** / approvalNumber: **2S0869**。
-- 機械割: **96.0 / 98.2 / 100.2 / 104.2 / 108.1 / 113.3%**。HAZUSE・パチマガスロマガ一致。
-- ART初当たり: **1/320 / 295 / 272 / 249 / 226 / 206**。後年整理資料の精密系列 **1/317.3 / 292.8 / 270.2 / 246.0 / 226.7 / 206.0** は平均せず精度/定義差として保持。
-- ボーナス合成: **全設定1/299**、BIG合成 **1/579**、REG **1/618**。
+- releaseDate: **2012-11-19**。HAZUSEの具体日を採用。
+- modelName: **ビガーR** / approvalNumber: **2S0863**。
+- 機械割: **97.5 / 99.0 / 101.5 / 105.5 / 110.0 / 115.0%**。HAZUSE・パチマガスロマガ全設定一致。
+- BIG: **1/297.8 / 295.2 / 292.5 / 289.9 / 287.4 / 284.9**。
+- REG: **1/504.1 / 481.8 / 461.5 / 442.8 / 425.5 / 409.6**。
+- 合成: **1/187.2 / 183.0 / 179.0 / 175.2 / 171.5 / 168.0**。
 - 50枚ベース: **UNVERIFIED_AFTER_RESEARCH**。
-- ART「BIKINI RUSH」: **1セット30G+α・純増約+1.7枚/G**。
-- ギガパイBONUS約**280枚**、メガパイ約**200枚**、デカパイ約**200枚**、七変化BONUS約**50枚**。
-- 天井: **ボーナス間1200GでARTストック5セット**、以後ボーナス非成立のまま**300Gごとに5セット追加**とする当時/後年解析資料を保持。
+- ART: 次回BIG成立まで継続、REGでは終了しないセットストック型。**ボーナス込み約+5.8枚/G**。
+- BIG約**300枚**、REG約**105枚**。
+- ARTはボーナス成立時抽選と、通常時約**1/70**の爆弾揃いの規定回数成立等から突入。設定別ART初当たりは未確認。
+- 通常時内部状態: **低確 / 高確 / 超高確**。
+- HAZUSEは **天井機能非搭載** と明記。
 
 ### resetBehavior v0.7
 
-- `settingChangeBehavior`: **設定変更で天井Gリセット、内部モード再セット**。液晶ステージは設定変更でも引継ぎ。
-- `carryOverBehavior`: 純据え置き時の1200G天井進捗は、当時資料に「宵越し×」と「宵越し天井狙いは調査中」が併存するため **UNVERIFIED_AFTER_RESEARCH**。反対推定で埋めない。
-- `powerCycleBehavior`: **電源OFF→ONのみでも液晶ステージ引継ぎ**。天井G・モード・ストックの純電断契約は **UNVERIFIED_AFTER_RESEARCH**。
-- `gameCounterReset`: 設定変更時 **RESET_CONFIRMED**。据え置き/純電断は未確定。
-- `ceilingAfterReset`: 設定変更専用短縮天井は **NONE_CONFIRMED**。通常天井1200G。
-- `modeAfterReset`: **RESELECT_CONFIRMED**。公開モード振り分け数値は未確認。
-- `stateAfterReset`: 高確スタートの可能性を示す当時資料あり。ただし低確/高確の具体振り分けは未確認。
+- `settingChangeBehavior`: 本機固有の内部状態・爆弾規定回数カウント・ARTストック等の変更時契約は **UNVERIFIED_AFTER_RESEARCH**。ゲーム数天井は非搭載なので天井リセットは非該当。
+- `carryOverBehavior`: ゲーム数天井の宵越しは **NOT_APPLICABLE_NO_CEILING**。内部状態・爆弾規定回数・ARTストックの据え置き契約は未確認。
+- `powerCycleBehavior`: 電源OFF→ONのみの内部状態・爆弾規定回数・ARTストック・表示状態は **UNVERIFIED_AFTER_RESEARCH**。
+- `gameCounterReset`: ゲーム数天井カウンタは **NOT_APPLICABLE_NO_CEILING_FUNCTION**。爆弾規定回数の内部カウント処理は未確認。
+- `ceilingAfterReset`: **NOT_APPLICABLE_NO_CEILING_FUNCTION**。短縮天井/朝一専用天井なしを直接確定できる数値はなし。
+- `modeAfterReset` / `stateAfterReset`: 通常時3状態の存在は確認済みだが、変更時振り分け・引継ぎは **UNVERIFIED_AFTER_RESEARCH**。
 - `advantageousSectionReset`: **NOT_APPLICABLE_5TH_GEN**。
-- `resetBenefits`: 内部モード再セットに伴う高確スタート可能性。朝一レア小役なしで夕方ステージ移行は設定変更期待アップの当時攻略情報。
-- `resetPenalties`: 専用不利抽選は確認なし。設定変更で前日天井進捗が消える点はプレイヤー側不利だが、据え置き契約未確定のため宵越し可否を断定しない。
-- `resetDetection`: 液晶ステージは設定変更/電源ONOFFとも引継ぐため単独判別不可。朝一レア小役なし夕方移行は推測材料。ガックンは再探索後も未確認。
-- `publicMorningNumbers`: 設定変更時モード振り分け、高確開始率、朝一特定G内当選率等の比較可能数値は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- `resetBenefits`: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- `resetPenalties`: **NONE_CONFIRMED_AFTER_RESEARCH**。前日天井進捗消失は天井非搭載につき非該当。
+- `resetDetection`: ガックン・出目・ドット表示等による本機固有判別は **UNVERIFIED_AFTER_RESEARCH**。
+- `publicMorningNumbers`: **NONE_CONFIRMED_AFTER_RESEARCH**。
+
+## CONFLICT / 注意
+
+- P-WORLDのタイプ欄には「天井」表示がある一方、HAZUSEの天井本文は **「天井機能非搭載」** と明記。P-WORLD本文に具体的ゲーム数天井がないため、ゲーム数天井の本線値はHAZUSE直接記述を採用し、P-WORLD分類表示は `SOURCE_LABEL_CONFLICT_WITHOUT_NUMERIC_CEILING` としてレコード内保持。
+- ART純増約5.8枚/Gは **ボーナス込み**。一般的なナビART純増/Gと同列集計しない。
 
 ## 2012-11-19同日群・次境界
 
-- 2012-11-19導入の **ビキニパイ2** を登録。
-- 直前HANDOFFの同日候補 **ビガースペシャル（エマ） → キュロゴス2（山佐）** はまだ未処理。
+- 2012-11-19導入の **ビキニパイ2 → ビガースペシャル** まで登録。
+- 直前HANDOFFの残候補 **キュロゴス2（山佐）** は未処理。
 - よって11/19群は **OPEN** のまま維持。
-- 次リレーは **ビガースペシャル** を最優先でrepo重複確認し、導入日を再確認後、性能コア＋resetBehavior v0.7を調査する。
-- その後 **キュロゴス2** を処理し、11/19同日残存監査を行ってから群を閉じる。
+- 次リレーは **キュロゴス2** を最優先でrepo重複確認し、導入日再確認後、性能コア＋resetBehavior v0.7を調査して未登録なら703件目として登録。
+- その後11/19同日残存機をHAZUSE日付、メーカー/業界資料、当時新台一覧等で監査し、漏れがなければ11/19群をCLOSEDにする。
 
 ## 遡及resetBehavior QA 進捗
 
@@ -64,26 +70,21 @@
 
 ## 次回再開地点
 
-1. **recordCount 701 / chronologicalFrontier 2012-11-19 / 11-19群OPEN** から開始。
-2. **ビガースペシャル（エマ）** を最優先でrepo重複確認→導入日再確認→性能コア＋resetBehavior v0.7本調査→未登録なら702件目として登録。
-3. 次に **キュロゴス2（山佐）** を同様に処理。
-4. 11/19同日残存機をHAZUSE日付・メーカー/業界資料等で監査し、漏れがなければ11/19群をCLOSEDにする。
-5. 欠損は表記揺れ・型式名・メーカー・シリーズ名と「設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間」を組み替え、公式・業界・当時解析・古いDB・アーカイブ・回顧資料を横断後のみUNVERIFIED。競合は平均せずCONFLICT。
+1. **recordCount 702 / chronologicalFrontier 2012-11-19 / 11-19群OPEN** から開始。
+2. **キュロゴス2（山佐）** をrepo重複確認→導入日再確認→性能コア＋resetBehavior v0.7本調査→未登録なら703件目として登録。
+3. 11/19同日残存機を日付・メーカー・業界資料で監査し、漏れがなければ11/19群をCLOSED。
+4. 欠損は表記揺れ・型式名・メーカー・シリーズ名と「設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間」を組み替え、公式・業界・当時解析・古いDB・アーカイブ・回顧資料を横断後のみUNVERIFIED。競合は平均せずCONFLICT。
 
 ## 主要出典 — 取得日 2026-09-05
 
-### ビキニパイ2
-- HAZUSE: `https://hazuse.com/machine/pachislot/SX0045/`
-- HAZUSE 基本スペック: `https://hazuse.com/machine/pachislot/SX0045/genre/201/`
-- HAZUSE 演出/ゲーム性: `https://hazuse.com/machine/pachislot/SX0045/genre/202/`
-- パチマガスロマガ ボーナス確率: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/net_slot/154/h.php`
-- パチマガスロマガ 単独ボーナス: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/net_slot/154/k.php`
-- パチビー: `https://www.pachibee.jp/machines/about/212100005`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/6892`
-- グリーンべると/P-WORLD業界ニュース: `https://news.p-world.co.jp/articles/5486/greenbelt`
-- 天井ハイエナ生活（2012-11-17）: `https://macerate.seesaa.net/article/302223260.html`
-- 2-9伝説まとめ: `https://29den.com/binikipai2/`
+### ビガースペシャル
+- HAZUSE: `https://hazuse.com/machine/pachislot/2S0863/`
+- HAZUSE 基本スペック: `https://hazuse.com/machine/pachislot/2S0863/genre/201/`
+- HAZUSE 初打講座: `https://hazuse.com/machine/pachislot/2S0863/genre/203/`
+- パチマガスロマガ ボーナス確率: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/ema_slot/39/h.php`
+- パチマガスロマガ スペック: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/ema_slot/39/a.php`
+- パチマガスロマガ ART突入フロー: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/ema_slot/39/l.php`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/6891`
 
 ### 次候補
-- HAZUSE ビガースペシャル: `https://hazuse.com/machine/pachislot/2S0863/`
 - HAZUSE キュロゴス2: `https://hazuse.com/machine/pachislot/2S0984/`
