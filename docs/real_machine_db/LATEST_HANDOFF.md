@@ -4,86 +4,77 @@
 
 ## 現在地点
 
-- recordCount: **669**
-- latestMachineAdded: **餓狼伝説☆双撃**（SNKプレイモア）
-- latestRecord: `docs/real_machine_db/machines/2012-07-02_garou-densetsu-sougeki.md`
+- recordCount: **670**
+- latestMachineAdded: **アイドルマスターライブインスロット**（Sammy / サミー）
+- latestRecord: `docs/real_machine_db/machines/2012-07-02_idolmaster-live-in-slot.md`
 - chronologicalFrontier: **2012-07-02**
-- frontierLatestExactDateMachine: **餓狼伝説☆双撃**
+- frontierLatestExactDateMachine: **アイドルマスターライブインスロット**
 - schema: **resetBehavior v0.7**
-- status: **OPEN_2012-07-02__NEXT_SAME_DAY_IDOLMASTER_LIVE_IN_SLOT**
+- status: **OPEN_2012-07-02__NEXT_SAME_DAY_MAISON_IKKOKU_NATSU_IRO_NO_KAZE_TO**
 
 ## 今回の同期・時系列監査
 
-- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード「スーパー5」を確認して開始。
-- INDEXは旧地点19件のままなので、README規定どおりLATEST_HANDOFFと実レコードを正本化。開始時は recordCount 668 / frontier 2012-07-02。
-- LATEST_HANDOFF指定の最優先候補「餓狼伝説☆双撃」をrepo検索し未登録を確認。
-- K-Naviでホール導入開始2012-07-02を確認し、当時グリーンべるとの7月上旬納品予定とも整合。669件目として追加。
-- 2012-07-02同日群は未閉鎖。次候補は「アイドルマスターライブインスロット」。
+- 最新mainのREADME全文、正本ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード「餓狼伝説☆双撃」を確認して開始。
+- INDEXは旧地点19件のまま。README規定どおり、より新しいLATEST_HANDOFFと実レコードを現在進捗の正本として使用。開始時は recordCount 669 / frontier 2012-07-02。
+- LATEST_HANDOFF指定の最優先候補「アイドルマスターライブインスロット」をrepo検索し未登録を確認。
+- K-Naviの2012年7月カレンダーと機種ページで全国導入開始2012-07-02を確認。サミー公式2012-05-14発表の「2012年初夏より全国ホールで稼働予定」と整合。
+- 670件目として追加。2012-07-02同日群は未閉鎖。
 
-## 今回の本線追加 — 餓狼伝説☆双撃
+## 今回の本線追加 — アイドルマスターライブインスロット
 
 ### 識別
 
-- manufacturer: **SNKプレイモア**
+- manufacturer: **Sammy / サミー**
 - releaseDate: **2012-07-02**
-- modelName: **UNVERIFIED_AFTER_RESEARCH**
+- modelName: **アイドルマスターライブインスロットZ**（中古実機流通資料。一次検定資料未確認）
 - approvalNumber: **UNVERIFIED_AFTER_RESEARCH**
 - generation: **5号機**
-- systemType: **A+ART / CZ搭載 / ゲーム数上乗せ+セットストック**
+- systemType: **A+ART / 完走型押し順ART / セットストック**
 
 ### 性能コア
 
-- 主機械割: **97.1 / 99.0 / 100.3 / 106.2 / 110.3 / 115.1%**
-- 別系列: **96.8 / 98.7 / 99.9 / 105.8 / 109.8 / 114.6%** → 条件差未確定のため **CONFLICT**
-- BIG: **1/399.6 / 1/372.4 / 1/390.1 / 1/360.1 / 1/372.4 / 1/348.6**
-- REG: **1/728.2 / 1/668.7 / 1/682.7 / 1/606.8 / 1/606.8 / 1/546.1**
-- ボーナス合算: **1/258.0 / 1/239.2 / 1/248.2 / 1/226.0 / 1/230.8 / 1/212.8**
-- ART初当り: **1/513.7 / 1/497.5 / 1/490.1 / 1/434.4 / 1/415.5 / 1/369.9**
-- 50枚ベース: **UNVERIFIED_AFTER_RESEARCH**
-- BIG: **約204枚** / REG: **約36枚**
-- ART「餓狼チャンス」: **1セット50G+α / 純増約1.6枚/G**
-- 第1天井: **ボーナス+ART間864G → ART確定**
-- 第2天井: **ボーナス間1399G → ART3セット以上確定**
+- 当時パチマガ系列機械割: **96.88 / 98.41 / 102.04 / 105.11 / 109.10 / 111.54%**
+- 別系列: **97.2 / 98.4 / 99.9 / 104.3 / 110.6 / 114.6%** → 単純丸め差ではないため **CONFLICT**
+- BIG: **1/296.54 / 1/291.27 / 1/277.69 / 1/265.33 / 1/252.06 / 1/247.31**
+- REG: **1/303.41 / 1/296.54 / 1/281.27 / 1/270.81 / 1/261.10 / 1/252.06**
+- ボーナス合算: **1/149.97 / 1/146.94 / 1/139.74 / 1/134.02 / 1/128.25 / 1/124.83**
+- ART出現率: **1/137.86 / 1/129.84 / 1/122.82 / 1/113.00 / 1/115.96 / 1/104.68**
+- 50枚ベース: **31.03 / 31.15 / 31.26 / 31.38 / 31.49 / 31.60G**
+- H-BIG: **約270枚** / N-BIG: **約198枚** / REG: **約104枚**
+- ART「LIVE STAGE」: **1セット30G / 純増約0.8枚/G**
+- 天井: **ボーナス/ART終了後の転落リプレイ入賞を起点に通常時765G → 次回ボーナスまで無限ART**
 
 ### resetBehavior v0.7
 
-- `settingChangeBehavior`: **CONFIRMED_PARTIAL_ANALYSIS_SINGLE_PERIOD_SOURCE** — ART状況クリア、天井までのG数クリア、内部状態移行抽選あり。
-- `carryOverBehavior`: **UNVERIFIED_AFTER_RESEARCH**
+- `settingChangeBehavior`: **CONFIRMED_PARTIAL_RETROSPECTIVE_SOURCE** — 後年整理で設定変更時を高確/超高確状態ストック契機に含む。具体振り分けと天井カウンタ処理は未確定。
+- `carryOverBehavior`: **PERIOD_STRATEGY_SOURCE_SAYS_YOIGOSHI_X_BUT_EXACT_CONTRACT_UNVERIFIED** — 2012年当時天井攻略は「宵越し×」と明記。ただし据え置き時765Gカウンタの仕様契約までは分離できず。
 - `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH**
-- `gameCounterReset`: **CONFIRMED_CLEAR_ON_SETTING_CHANGE** — 864G/1399G両天井の進捗を設定変更でリセット。
-- `ceilingAfterReset`: **NO_SHORTENING_CONFIRMED; NORMAL_CEILINGS_RESTART_FROM_ZERO**
-- `modeAfterReset`: **UNVERIFIED_AFTER_RESEARCH**
-- `stateAfterReset`: **CONFIRMED_RELOTTERY_EXISTENCE_RATE_UNVERIFIED** — 内部状態移行抽選あり、具体振り分け未確認。
+- `gameCounterReset`: **UNVERIFIED_AFTER_RESEARCH** — 「宵越し×」だけから設定変更時CLEARを自動推定しない。
+- `ceilingAfterReset`: **NO_RESET_SPECIFIC_SHORTENING_CONFIRMED_AFTER_RESEARCH**
+- `modeAfterReset`: **NO_SEPARATE_GAME_COUNT_MODE_CONFIRMED; INTERNAL_STATE_TRIGGER_PARTIAL_ONLY**
+- `stateAfterReset`: **CONFIRMED_PARTIAL** — 通常/高確/超高確が存在し、設定変更時が高確系状態ストック契機の一つ。振り分け未確認。
 - `advantageousSectionReset`: **NOT_APPLICABLE_5TH_GEN**
-- `resetBenefits`: **NONE_CONFIRMED_AFTER_RESEARCH**
-- `resetPenalties`: **前日天井進捗は設定変更で失われるため宵越し天井狙いには不利**
-- `resetDetection`: **UNVERIFIED_AFTER_RESEARCH**
+- `resetBenefits`: **NONE_NUMERIC_CONFIRMED_AFTER_RESEARCH**
+- `resetPenalties`: **NONE_CONFIRMED_AFTER_RESEARCH**
+- `resetDetection`: **PERIOD_USER_REPORT_ONLY_NOT_PROMOTED_TO_CONFIRMED** — K-Navi利用者投稿に「朝イチ設定変更否定のチャンリプ」の記述はあるが、解析本文の条件を確定できず採用しない。ガックン等も未確認。
 - `publicMorningNumbers`: **NONE_CONFIRMED_AFTER_RESEARCH**
 
-### resetBehavior品質メモ
+### 品質メモ
 
-- 「餓狼伝説☆双撃 / 餓狼伝説 双撃 / SNK PLAYMORE」と「設定変更 / リセット / 朝一 / 据え置き / 宵越し / 電源OFF ON / 電断 / 天井 / 天井短縮 / 内部状態 / モード / ガックン / 50枚 / 1000円」を組み替えて再探索。
-- K-Navi、P-WORLD、パチマガスロマガ、pacnk、当時解析、天井回顧DB、実機販売資料、業界記事を横断。
-- 設定変更時のART状況クリア・天井G数クリア・内部状態移行抽選ありは当時本機専用解析で確認。天井G数リセットは後年別系統でも一致。
-- 据え置き・単純電源OFF→ONは設定変更の反対挙動を自動推定せずUNVERIFIED。
-- 50枚ベースは表記揺れと資料系統を変えて再探索したが直接値を確定できず、逆算していない。
-
-## CONFLICT / 品質メモ
-
-- payoutRate: **97.1/99.0/100.3/106.2/110.3/115.1%** と **96.8/98.7/99.9/105.8/109.8/114.6%** の2系列。単純丸め差ではないため平均せずCONFLICT。
-- P-WORLD現存ページの「ART初当り」欄にはボーナス合算値が表示されるラベル/転記異常がある。ART初当り主値はK-Navi等で一致する **1/513.7～1/369.9** を採用。
+- 「アイドルマスターライブインスロット / LIVE IN SLOT / スロマス / アイドルマスターライブインスロットZ / Sammy / サミー」と「設定変更 / リセット / 朝一 / 据え置き / 宵越し / 電源OFF ON / 電断 / 天井リセット / 765G / 高確 / 超高確 / モード / チャンスリプレイ / ガックン / 50枚」を組み替えて再探索。
+- サミー公式、K-Navi、P-WORLD、パチマガスロマガ、当時天井攻略、当時解析、5号機回顧DB、実機流通資料を横断。
+- 新しい「アイドルマスター ミリオンライブ！」各機種のreset情報は本機へ流用していない。
+- 機械割2系列は平均せずCONFLICT。BIG設定6も一部当時記事に1/243.31表記があるが、パチマガ精密表1/247.31とK-Navi合算値の整合を優先し、転記差候補としてレコードに保持。
 
 ## 次回再開地点
 
-1. **recordCount 669 / chronologicalFrontier 2012-07-02**から開始。
-2. **2012-07-02同日群を継続**。最優先は **アイドルマスターライブインスロット（Sammy）**。repo重複確認後、性能コア＋resetBehavior v0.7を収集。
-3. その後、同日群を飛ばさず以下を順に重複確認・未登録処理。
-   - めぞん一刻～夏色の風と～（オリンピア）
-   - 天空のシンフォニア ～光を求めて～（コルモ）
+1. **recordCount 670 / chronologicalFrontier 2012-07-02**から開始。
+2. **2012-07-02同日群を継続**。最優先は **めぞん一刻～夏色の風と～（オリンピア）**。repo重複確認後、性能コア＋resetBehavior v0.7を収集。
+3. その後 **天空のシンフォニア ～光を求めて～（コルモ）** を重複確認・未登録処理。
 4. 2012-07-02同日群を完全に閉じてから07-03以降へ進む。
 5. 次の既知K-Navi具体日アンカーは **2012-07-09 シンデレラブレイド（ネット）**。
-6. 「夜王」は既存handoff方針どおり2012年8月地点で再監査。
-7. 欠損は表記揺れ・型式名・メーカー名・シリーズ名と、設定変更/リセット/朝一/据え置き/宵越し/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間/50枚を組み替えて十分再探索してからUNVERIFIED。競合は平均せずCONFLICT。
+6. 「夜王」は既存方針どおり2012年8月地点で再監査。
+7. 欠損は表記揺れ・型式名・メーカー名・シリーズ名と設定変更/リセット/朝一/据え置き/宵越し/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間/50枚を組み替えて十分再探索してからUNVERIFIED。競合は平均せずCONFLICT。
 
 ## 遡及resetBehavior QA 次回再開地点
 
@@ -94,17 +85,17 @@
 
 ## 主要出典 — 取得日 2026-09-05
 
-- K-Navi: `https://p-kn.com/slot/1653/`
-- グリーンべると: `https://web-greenbelt.jp/00001465/`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/6742`
-- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/snk_slot/40/a.php`
-- 当時スペック記事: `https://ameblo.jp/samurai777net/entry-11258058953.html`
-- pacnk機種トップ: `https://pacnk.com/slot/2012/garousougeki/top.php`
-- pacnk設定判別: `https://pacnk.com/slot/tools/sh_garousougeki.html`
-- 2-9伝説: `https://29den.com/garoudensetsu/`
-- 当時設定変更解析: `https://ameblo.jp/urametalkids/entry-11431845524.html`
-- 中一商事: `https://www.nakaiti.com/html/sSNK088.html`
+- サミー公式: `https://www.sammy.co.jp/japanese/news/2012/113.html`
+- K-Navi機種: `https://p-kn.com/slot/1652/`
+- K-Navi小役/ベース: `https://p-kn.com/slot/1652/39372/`
+- K-Navi 2012年7月カレンダー: `https://p-kn.com/calendar/201207/`
+- パチマガスロマガ基本: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sammy_slot/134/a.php`
+- パチマガスロマガ精密確率: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sammy_slot/134/h-1.php`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/6737`
+- 5号機クロニクル: `https://5goki.com/sammy`
+- 当時天井攻略: `https://macerate.seesaa.net/article/281322900.html`
+- 当時天井一覧: `https://macerate.seesaa.net/article/300741744.html`
 
 ## GitHub commits
 
-- 餓狼伝説☆双撃 machine record: `e1960532d6bc2f3d718f1d83331eaf489bcb0563`
+- アイドルマスターライブインスロット machine record: `491e48993b402a6eb3c51603ae088038fe13a934`
