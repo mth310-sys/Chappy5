@@ -4,69 +4,75 @@
 
 ## 現在地点
 
-- recordCount: **710**
-- latestMachineAdded: **ミリオンゴッド-神々の系譜-ZEUS ver.**（エレコ / ユニバーサルエンターテインメント）
-- latestRecord: `docs/real_machine_db/machines/2013-01-28_million-god-keifu-zeus-ver.md`
-- chronologicalFrontier: **2013-01-28**
-- frontierLatestExactDateMachine: **ミリオンゴッド-神々の系譜-ZEUS ver.**
+- recordCount: **711**
+- latestMachineAdded: **パチスロ宇宙戦艦ヤマト2 ～テレサ、愛の導き～**（山佐）
+- latestRecord: `docs/real_machine_db/machines/2013-02-04_uchu-senkan-yamato2-teresa-ai-no-michibiki.md`
+- chronologicalFrontier: **2013-02-04**
+- frontierLatestExactDateMachine: **パチスロ宇宙戦艦ヤマト2 ～テレサ、愛の導き～**
 - schema: **resetBehavior v0.7**
-- status: **CLOSED_2013-01-28_GROUP__AUDITED_TO_2013-02-03__NEXT_2013-02-04_YAMATO2**
+- status: **OPEN_2013-02-04_GROUP__NEXT_RANMA12**
 
 ## 今回の同期
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前最新レコード `2013-01-21_jujika-2.md` を確認。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前最新レコード `2013-01-28_million-god-keifu-zeus-ver.md` を確認。
 - `INDEX.md` は19件地点の古い集約状態。README規定どおり、より新しい `LATEST_HANDOFF.md` と実レコードを直近進捗の正本として優先。
-- 開始時main正本は recordCount **709** / chronologicalFrontier **2013-01-21** / 01-21群CLOSED / 01-22〜01-27監査済み。
-- **710件目: ミリオンゴッド-神々の系譜-ZEUS ver.（エレコ）** を登録済み。
-- ユニバーサル公式発表、HAZUSE、K-Navi、パチビーで **2013-01-28導入**を照合。
-- 2013-01-28群を再監査し、今回ZEUS以外の具体日付き未登録5号機を確認できなかったため **01-28群CLOSED**。
-- 2013-01-29〜02-03境界も監査し、次の具体日付きアンカーはK-Naviカレンダー上 **2013-02-04**。
+- 開始時main正本は recordCount **710** / chronologicalFrontier **2013-01-28** / 01-28群CLOSED / 01-29〜02-03監査済み。
+- **711件目: パチスロ宇宙戦艦ヤマト2 ～テレサ、愛の導き～（山佐）** を登録済み。
+- K-Navi 2013年2月カレンダー、パチビー当時機種情報、山佐公式現行アーカイブで2013年2月導入を確認し、パチビーの具体日 **2013-02-04** を採用。
 
-## 今回追加 — ミリオンゴッド-神々の系譜-ZEUS ver.
+## 今回追加 — パチスロ宇宙戦艦ヤマト2 ～テレサ、愛の導き～
 
 ### 性能コア
 
-- releaseDate: **2013-01-28**。
-- 型式名: **ミリオンゴッド-神々の系譜-ゼウスUV** / 検定番号 **2S1080**。
-- systemType: **5号機 / ART / BR非搭載 / GOD GAME / G数上乗せ+セットストック**。
-- 機械割: **97.6 / 99.5 / 103.0 / 107.2 / 110.9 / 116.6%**。
-- GG初当たり: **1/439.7 / 1/394.1 / 1/396.4 / 1/314.6 / 1/337.1 / 1/254.0**。
-- GOD揃い: **1/8192**、通常時赤7: **1/4096**。
-- GOD GAME: **100G or 200G / 純増約+2.2枚/G**。
-- GOD揃い時: **GG500G+1セット以上**系列。
-- 50枚ベース: 信頼できる比較可能値を確定できず **UNVERIFIED_AFTER_RESEARCH**。口コミ体感値は不採用。
+- releaseDate: **2013-02-04**。
+- systemType: **5号機 / ART / BR非搭載 / ゲーム数上乗せ型**。
+- 機械割: **96.9 / 98.5 / 100.8 / 104.3 / 108.5 / 112.6%**。
+- ART初当たり: **1/259.6 / 1/251.5 / 1/251.0 / 1/224.9 / 1/217.2 / 1/196.0**。
+- ART「ヤマトボーナス」: **純増約+2.2枚/G**。
+- 50枚ベース: 表記揺れ・1000円/1K/コイン持ち等で再探索したが比較可能な直接値を確定できず **UNVERIFIED_AFTER_RESEARCH**。
+- 型式名 / 検定番号: 再探索後も高信頼に確定できず **UNVERIFIED_AFTER_RESEARCH**。
 
-### 天井 / 救済
+### 天井 / 主要状態
 
-- 通常天井: **ART間1400G**。
-- 天井ART: 50%以上ループ/50%以上継続率ストック系の解析情報あり。
-- **ART間1200〜1399GでGG当選→単発終了**時、**50%で次回天井300G**へ短縮する救済を確認。
-- 300G救済は設定変更専用恩恵ではなく、条件付き救済として分離して保存。
+- ART間 **1024G or 1280G** の2種類。
+- 天井到達でART当選。
+- **1280G天井時は愛波動砲チャンス確定**系列をP-WORLDと当時攻略資料で照合。
+- 「愛モード」はP-WORLDでARTを毎ゲーム約1/8抽選、平均継続約32G。
+- 当時攻略資料では本機はゲーム数テーブル管理型ではなく、通常時レア役からの当選が主軸と説明。
 
 ### resetBehavior v0.7
 
 - 設定変更時: **天井ゲーム数CLEAR_CONFIRMED**。
-- 設定変更時: **内部モードREROLL_CONFIRMED**。
-- 設定変更時の具体モード振り分け率: **UNVERIFIED_AFTER_RESEARCH**。
-- 設定変更専用短縮天井: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- 純据え置き時の天井G・モード・300G救済状態の完全契約: **UNVERIFIED_AFTER_RESEARCH**。
-- 単純電源OFF→ON時の天井G・モード・救済状態: **UNVERIFIED_AFTER_RESEARCH**。
-- ガックン/初期出目/液晶等による直接変更判別: **UNVERIFIED_AFTER_RESEARCH**。
-- resetPenalty: 前日ART間ゲーム数進捗は設定変更で消失。
+- 設定変更後の1024G/1280G選択率: **UNVERIFIED_AFTER_RESEARCH**。
+- 設定変更時の内部高確/愛モード等の状態・モード振り分け: **UNVERIFIED_AFTER_RESEARCH**。
+- 純据え置き時の天井G・状態の完全契約: **UNVERIFIED_AFTER_RESEARCH**。
+- 単純電源OFF→ON時の天井G・状態・液晶初期状態: **UNVERIFIED_AFTER_RESEARCH**。
+- 設定変更専用短縮天井: **NONE_CONFIRMED_AFTER_RESEARCH**。通常天井そのものが1024/1280Gの2種類であるため1024Gをリセット専用短縮と扱わない。
+- ガックン/初期出目/液晶による変更判別: **UNVERIFIED_AFTER_RESEARCH**。
+- resetPenalty: 設定変更で前日ART間ゲーム数進捗が消失。
 - `advantageousSectionReset`: **NOT_APPLICABLE_5TH_GEN**。
 
-### CONFLICT
+### CONFLICT / 注意
 
-- 純増は主系列 **約+2.2枚/G**。一部後年回顧に **約+2.0枚/G** があるため `CONFLICT_RETROSPECTIVE_ROUNDED_OR_MISSTATED_NET_INCREASE` として平均せず保持。
+- 5号機クロニクル山佐一覧は本機を **2013年7月 / AT / 純増約2.8枚/G / イスカンダルロード / コスモコンボ** と掲載するが、山佐公式、2013年2月当時のパチビー、P-WORLD、2012-12-17公開の業界試打資料は **2013年2月 / ART / 純増約2.2枚/G / ヤマトボーナス** で一致。後年回顧DBの別ヤマト系スペック混同候補として `CONFLICT_RETROSPECTIVE_WRONG_SPEC_OR_MIXED_MACHINE` を保存。
+- パチマガスロマガ取得本文は設定1/2のPAYOUTが196.9/198.5%と表示されるが、P-WORLD等および同ページ設定3以降との整合から表示異常としてCONFLICT noteを保存し、96.9/98.5%を主系列とした。
 
-## 2013-01-28同日群 / 次境界
+## 2013-02-04同日群
 
-- ミリオンゴッド-神々の系譜-ZEUS ver.: 登録済み（710件目）。
-- 2013-01-28群: **CLOSED**。
-- 2013-01-29〜02-03: 今回具体日監査済み。追加未登録を確認できず。
-- K-Navi 2013年2月カレンダーで次の **2013-02-04** 同日群を確認。
-- 02-04候補: **パチスロ宇宙戦艦ヤマト2 ～テレサ、愛の導き～（山佐） / パチスロ らんま1/2（SANKYO） / 魁!!男塾 ～天挑五輪大武會編～（ロデオ） / メガミリオネア ヴィーナスヴァージョン（ラスター）**。
-- 次回は上記をrepo重複確認し、未登録をキュー順に処理する。
+K-Navi 2013年2月新台カレンダー上のパチスロ4機種:
+
+1. パチスロ宇宙戦艦ヤマト2 ～テレサ、愛の導き～（山佐） — **登録済み / 711件目**。
+2. パチスロ らんま1/2（SANKYO） — repo検索で未登録。**次回最優先**。
+3. 魁!!男塾 ～天挑五輪大武會編～（ロデオ） — 未処理候補。
+4. メガミリオネア ヴィーナスヴァージョン（ラスター） — 未処理候補。
+
+### らんま1/2 次回用の確認済みアンカー
+
+- SANKYO公式オンライン博物館: **2013.02導入**、疑似BIG/REG、ART「闘校チャンス」。
+- K-Naviカレンダー: **2013-02-04**。
+- P-WORLD: ART「闘校チャンス」は **1セット120枚+α / 純増約2.0枚/G / 獲得枚数管理型**。
+- 2012年12月当時スロスター記事: **ベース約32G/千円**、通常A/B/天国の3モード、無差別バトル初当たり設定差を掲載。
+- 後年5号機クロニクルには導入月・ART名称/仕様・初当たりが公式/当時資料と食い違う記述があるため、次回は当時/公式資料優先でCONFLICT判定する。
 
 ## 遡及resetBehavior QA 進捗
 
@@ -75,27 +81,27 @@
 
 ## 次回再開地点
 
-1. **recordCount 710 / chronologicalFrontier 2013-01-28 / 01-28群CLOSED / 01-29〜02-03監査済み** から開始。
-2. **2013-02-04「パチスロ宇宙戦艦ヤマト2 ～テレサ、愛の導き～」（山佐）** を最優先にrepo重複確認。
-3. 未登録なら性能コア+resetBehavior v0.7を収集して711件目として登録。
-4. 続いて同日群の **らんま1/2 → 魁!!男塾 ～天挑五輪大武會編～ → メガミリオネア ヴィーナスヴァージョン** を重複監査し、未登録を順次処理。
+1. **recordCount 711 / chronologicalFrontier 2013-02-04 / 02-04群OPEN** から開始。
+2. **2013-02-04「パチスロ らんま1/2」（SANKYO）** を最優先で性能コア+resetBehavior v0.7収集し、未登録なら712件目として保存。
+3. 続いて **魁!!男塾 ～天挑五輪大武會編～ → メガミリオネア ヴィーナスヴァージョン** をrepo重複確認して処理。
+4. 4機種処理後、02-04同日群をメーカー/業界/当時DBで残存監査してCLOSED判定。
 5. 欠損は表記揺れ・型式名・メーカー・シリーズ名と「設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間」を組み替え、公式・業界・当時解析・古いDB・アーカイブ・回顧資料を横断後のみUNVERIFIED。競合は平均せずCONFLICT。
 
 ## 主要出典 — 取得日 2026-09-06
 
-### ZEUS
-- ユニバーサルエンターテインメント / @Press: `https://www.atpress.ne.jp/news/32832`
-- 4Gamer転載: `https://www.4gamer.net/games/200/G020087/20130122017/`
-- HAZUSE: `https://data.hazuse.com/?genre=201&machine_code=2S1080`
-- K-Navi: `https://p-kn.com/slot/1760/`
-- パチビー: `https://www.pachibee.jp/machines/about/213010001`
-- パチナビ: `https://pachinavi.net/machines/million-god-keifu-zeus/`
-- クランキーセブン天井/設定変更: `https://crankyseven.com/sp/milliongod-zeus10-pc.htm`
-- 天井ハイエナ生活: `https://macerate.seesaa.net/article/321978229.html`
-- 5号機クロニクル: `https://5goki.com/universal`
-- ユニバーサル大図鑑: `https://universalpachislot.blog.jp/archives/1028322752.html`
+### 宇宙戦艦ヤマト2
+- 山佐ネクスト公式: `https://yamasa-next.co.jp/model_ymt2/`
+- パチビー: `https://www.pachibee.jp/movies/index/9023`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/6961`
+- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/191/h.php`
+- 当時攻略 Slogora: `https://slogora.seesaa.net/`
+- 協会娯楽産業 試打動画: `https://www.youtube.com/watch?v=kSXSVu_jAwQ`
+- pacnk: `https://pacnk.com/slot/tools/sh_yamato2.html`
+- 5号機クロニクル（競合資料）: `https://5goki.com/yamasa`
 
 ### 次候補 / 境界
 - K-Navi 2013年2月新台カレンダー: `https://p-kn.com/calendar/201302/`
-- 4Gamer / 魁!!男塾 2013-02-04ホール導入同時配信: `https://www.4gamer.net/games/021/G002122/20130204056/`
-- HAZUSE 魁!!男塾: `https://hazuse.com/machine/pachislot/2S1180/`
+- SANKYO公式 らんま1/2: `https://www.sankyo-fever.jp/collection/548/`
+- P-WORLD らんま1/2: `https://www.p-world.co.jp/machine/database/6974`
+- パチマガスロマガ らんま1/2: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sankyo_slot/30/a.php`
+- 当時スロスター らんま1/2: `https://ameblo.jp/slostar/entry-11429044578.html`
