@@ -4,82 +4,80 @@
 
 ## 現在地点
 
-- recordCount: **732**
-- latestMachineAdded: **鬼浜爆走紅蓮隊～友情挽歌編～**（ベルコ）
-- latestRecord: `docs/real_machine_db/machines/2013-04-15_onihama-bakusou-gurentai-yuujou-banka.md`
-- chronologicalFrontier: **2013-04-15**
-- frontierLatestExactDateMachine: **鬼浜爆走紅蓮隊～友情挽歌編～**
+- recordCount: **733**
+- latestMachineAdded: **パチスロ 創聖のアクエリオンII**（SANKYO）
+- latestRecord: `docs/real_machine_db/machines/2013-05-07_sousei-no-aquarion-2.md`
+- chronologicalFrontier: **2013-05-07**
+- frontierLatestExactDateMachine: **パチスロ 創聖のアクエリオンII**
 - schema: **resetBehavior v0.7**
-- status: **OPEN_2013-04-15_GROUP__NEXT_RESIDUAL_AUDIT**
+- status: **OPEN_2013-05-07_GROUP__NEXT_RESIDUAL_AUDIT**
 
 ## 今回の同期
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前レコード `2013-04-15_nobunaga-no-yabou-tenka-sousei.md` を確認。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前レコード `2013-04-15_onihama-bakusou-gurentai-yuujou-banka.md` を確認。
 - INDEXは19件地点の旧集約状態なので、README規定どおり最新HANDOFFと実レコードを正本として優先。
-- 開始時main正本は recordCount **731** / chronologicalFrontier **2013-04-15** / 04-15群OPEN。
-- handoff指定の次機種 **鬼浜爆走紅蓮隊～友情挽歌編～** のrepo重複を検索し、未登録を確認して732件目として追加。
-- 導入日はK-Navi、HAZUSE、パチビーで **2013-04-15** 一致。ベルコ公式は2013年4月登場。
-- 04-15同日群はまだOPEN。戦国無双2・戦国パチスロ信長の野望‐天下創世‐・鬼浜爆走紅蓮隊～友情挽歌編～は登録済み。次回は別カレンダー/メーカー別一覧で残存監査を行う。
+- 開始時main正本は recordCount **732** / chronologicalFrontier **2013-04-15** / 04-15群OPEN。
+- 2013年4月の別カレンダーを再監査し、4/15の既登録3機（戦国無双2 / 戦国パチスロ 信長の野望‐天下創世‐ / 鬼浜爆走紅蓮隊～友情挽歌編～）より後の4月スロット新規導入を確認できなかったため、**04-15群をCLOSED**。
+- 2013-04-16以降を監査し、次の具体日付き候補として2013-05-07群を確認。
+- ALL7の5/7一覧には「キャッツ・アイ コレクション奪還作戦」も載るが、K-Navi / パチビー / HAZUSEの本機専用資料が導入開始を **2013-05-20** で一致させているため、5/7候補としては採用しない。
+- 同一覧の「ゲゲゲの鬼太郎 地獄からの使者」はパチンコ機なので本DB対象外。
+- **パチスロ 創聖のアクエリオンII** はK-Navi / HAZUSE / パチビーで **2013-05-07** 一致、repo未登録を確認し733件目として追加。
 
-## 今回追加 — 鬼浜爆走紅蓮隊～友情挽歌編～
+## 今回追加 — パチスロ 創聖のアクエリオンII
 
 ### identity / 性能コア
 
-- manufacturer: **ベルコ**。
-- releaseDate: **2013-04-15**。
-- formalModelName: **オニハマバクソウグレンタイ3S**。
-- inspectionNumber: **2S1380**。
-- systemType: **5号機 / AT / BR非搭載 / 擬似ボーナス + ゲーム数解除**。
-- 機械割: **97.3 / 98.8 / 100.4 / 104.2 / 108.2 / 113.0%**。
-- 擬似ボーナス初当たり: **1/224.5 / 214.2 / 204.4 / 186.8 / 173.8 / 155.8**。
-- AT単独設定別初当たり: 十分な再探索後も **UNVERIFIED_AFTER_RESEARCH**。
-- 50枚ベース: **約30G/50枚**（HAZUSE本機専用値）。
-- AT「狂乱麗舞」: **1セット40G+α、純増約2.8枚/G**。
-- 擬似ボーナス獲得目安: 特攻約140枚/50G、男約140枚/50G、成り上がり約84～420枚/30～150G、ボーナスゲーム約70枚/25G。
-- モード別最大: **通常A990G / 通常B768G / 天国準備384G / 天国128G / 超天国128G**。
+- manufacturer: **SANKYO**。
+- releaseDate: **2013-05-07**。
+- formalModelName: **パチスロ創聖のアクエリオンII G**。
+- inspectionNumber: **2S1348**。
+- systemType: **5号機 / ボーナス + ART**。
+- ART初当たり: **1/399.0 / 349.8 / 340.8 / 308.3 / 291.2 / 230.3**（SANKYO公式 / P-WORLD）。
+- ボーナス合算: **1/266 / 263 / 260 / 251 / 257 / 245**（SANKYO公式）。
+- ボーナス+ART合算: SANKYO公式で **1/159 / 150 / 147 / 138 / 136 / 118**、P-WORLDの小数付き値とも整合。
+- ART「創聖RUSH」: **1セット30～200G+α / 純増約1.5枚/G**。
+- SBB約216枚 / BIG約210枚 / REG約48枚。
+- 設定別機械割、50枚ベース、天井の具体的な複数条件/数値は、安全な直接表を今回固定できず `UNVERIFIED_AFTER_RESEARCH`。性能コアは推測補完せず `PARTIAL_CORE_RESET_RESEARCHED`。
 
 ### resetBehavior v0.7
 
-- 必勝本の直接資料で **設定変更時: 天井Gリセット / モード再抽選 / 状態再抽選 / 鬼メーターリセット / 通常時は屋上ステージ** を確認。
-- **電源OFF→ONのみ: 天井G / モード / 状態 / 鬼メーターを引継ぎ**。鬼メーターは液晶上のみリセット表示。
-- 設定変更時モード振り分け:
-  - 設定1: 通常A12.5 / 通常B50.0 / 天国準備18.8 / 天国18.8%
-  - 設定2: 9.4 / 38.5 / 33.3 / 18.8%
-  - 設定3: 9.4 / 50.0 / 20.3 / 20.3%
-  - 設定4: 7.8 / 38.5 / 33.3 / 20.3%
-  - 設定5: 6.3 / 50.0 / 21.9 / 21.9%
-  - 設定6: 3.1 / 38.5 / 33.3 / 25.0%
-- 天国準備以上は公開表単純合計で **37.6 / 52.1 / 40.6 / 53.6 / 43.8 / 58.3%**。必勝本本文の「約40～60%で天国準備以上」と整合。
-- 変更判別の直接契約: **コイン3枚投入→1G消化で点灯する左下コイン投入ランプ（3枚目）は設定変更で消灯、電断のみなら点灯したまま**。ただしコイン投入後1G回さず清算でも消灯するため確定ではなく「変更濃厚」要素。
-- 通常時は設定変更/電断とも屋上ステージ、鬼メーターも見た目はリセットされるので表示単独では判別困難。
-- 設定変更専用の状態4種具体振り分け、本機固有ガックン、純据え置きの独立契約は十分再探索後も `UNVERIFIED_AFTER_RESEARCH`。
+- 設定変更/リセット/朝一/据え置き/電源OFF ON/天井/状態/ガックンを組み替え、公式・業界・当時解析・古いDB・回顧資料を再探索。
+- 本機固有の設定変更時ゲーム数CLEAR/RETAIN、純据え置き、単純電源OFF→ON、状態/モード処理、変更判別、公開朝一数値を直接固定できる資料は今回確定できず、各項目を **UNVERIFIED_AFTER_RESEARCH** として保存。
+- 一般的な5号機挙動からの推測はしていない。
 - advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN**。
-
-## 次回再開地点
-
-1. **recordCount 732 / chronologicalFrontier 2013-04-15 / 04-15群OPEN** から開始。
-2. 2013-04-15同日群を別カレンダー、メーカー別一覧、当時新台記事で再監査。既登録の **戦国無双2 / 戦国パチスロ 信長の野望‐天下創世‐ / 鬼浜爆走紅蓮隊～友情挽歌編～** 以外に未処理機があればその最古候補を追加。
-3. 未処理機がなければ **04-15群をCLOSED** とし、2013-04-16以降の境界監査へ前進する。
-4. 欠損は表記揺れ・型式名・メーカー・シリーズ名と「設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間」を組み替え、公式・業界・当時解析・古いDB・アーカイブ・回顧資料を横断後のみUNVERIFIED。競合は平均せずCONFLICT。
+- resetQaStatus: **RESEARCHED__NO_MACHINE_SPECIFIC_DIRECT_RESET_CONTRACT_FIXED_AFTER_MULTI_ROUTE_SEARCH**。
 
 ## 遡及resetBehavior QA 進捗
 
-- 本線と別のQA再開地点: `docs/real_machine_db/machines/2007-01_karate-baka-ichidai.md`。
-- 新規本線を止めず、QAリレーで継続。
+- 本線と別のQA再開地点は引き続き `docs/real_machine_db/machines/2007-01_karate-baka-ichidai.md`。
+- 「空手バカ一代」自体は既にv0.7 `resetBehavior`収集済みのため重複更新しない。
+- 今回はその直後のtree実順で最初のresetBehavior欠損機を安全に一意確定できるところまで進まなかったため、QAカーソルを誤って前進させず維持。
+- 既存COMPLETE_CORE/PARTIAL等の性能完了判定は変更していない。
+
+## 次回再開地点
+
+1. **recordCount 733 / chronologicalFrontier 2013-05-07 / 05-07群OPEN** から開始。
+2. 2013-05-07同日群をメーカー別一覧・当時新台記事・別カレンダーで残存監査。創聖のアクエリオンII以外に対象スロットがあれば最古未登録を追加。
+3. 5/7群に残存がなければ **05-07群をCLOSED** とし、5/8以降へ前進。キャッツ・アイは専用資料に従い **2013-05-20候補**として扱う。
+4. 創聖のアクエリオンIIの未検証項目（設定別機械割、50枚ベース、天井複数契約、設定変更/電断処理）は検索語・資料系統を変えて再探索し、確定できれば既存PARTIALを補完。競合は平均せずCONFLICT。
+5. 遡及QAは `2007-01_karate-baka-ichidai.md` の直後の実ファイル順を再取得し、最初の `resetBehavior` 欠損レコードを補完する。
 
 ## 主要出典 — 取得日 2026-09-06
 
-### 鬼浜爆走紅蓮隊～友情挽歌編～
+### 境界監査
 
-- ベルコ公式（2013年4月登場、5号機AT）: `https://www.s-bellco.co.jp/products/slot/onihama_yb/`
-- K-Navi（2013-04-15、40G+α、純増約2.8枚/G）: `https://p-kn.com/slot/1812/`
-- HAZUSE基本スペック（型式名、検定番号、導入日、擬似ボーナス初当り、PAYOUT、50枚約30G）: `https://hazuse.com/machine/pachislot/2S1380/genre/201/`
-- パチビー（2013-04-15、5号機AT、約2.8枚/G）: `https://www.pachibee.jp/movies/index/9251`
-- P-WORLD（AT40G+α、約2.8枚/G、疑似ボーナスG数）: `https://www.p-world.co.jp/machine/database/7014`
-- パチ＆スロ必勝本 基本スペック: `https://p.hisshobon.jp/machine/2188/1/39441`
-- パチ＆スロ必勝本 天井&設定変更: `https://p.hisshobon.jp/machine/2188/1/39811`
-- パチ＆スロ必勝本 設定変更台狙い: `https://p.hisshobon.jp/machine/2188/1/40179`
-- パチ＆スロ必勝本 AT概要: `https://p.hisshobon.jp/machine/2188/1/39531`
-- パチ＆スロ必勝本 状態移行抽選: `https://p.hisshobon.jp/machine/2188/1/40886`
-- パチマガスロマガ ボーナス確率/PAYOUT: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/belco_slot/90/h.php`
-- パチマガスロマガ 基本情報/疑似ボーナス獲得目安: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/belco_slot/90/a.php`
+- ALL7 2013年4月一覧: `https://www.all7.jp/plans/index/2013/04`
+- ALL7 2013年5月一覧: `https://www.all7.jp/plans/index/2013/05`
+- キャッツ・アイ K-Navi（2013-05-20）: `https://p-kn.com/slot/1843/`
+- キャッツ・アイ パチビー（2013-05-20）: `https://www.pachibee.jp/movies/index/9419`
+- キャッツ・アイ HAZUSE（2013-05-20）: `https://hazuse.com/machine/pachislot/2S1464/`
+
+### パチスロ 創聖のアクエリオンII
+
+- SANKYOオンライン博物館（公式、導入年月、設定別ボーナス/ART確率、機種構造）: `https://www.sankyo-fever.jp/collection/547/`
+- K-Navi（2013-05-07、ART 30～200G、約1.5枚/G）: `https://p-kn.com/slot/1840/`
+- HAZUSE（型式名、検定番号、2013-05-07、ART/CZ/獲得枚数）: `https://hazuse.com/machine/pachislot/2S1348/`
+- P-WORLD（設定別ボーナス/ART初当り、ART構造）: `https://www.p-world.co.jp/machine/database/7048`
+- パチビー（2013-05-07、5号機ART、天井あり、約1.5枚/G）: `https://www.pachibee.jp/movies/index/9325`
+- パチマガスロマガ（ART純増約1.5枚/G、SBB/BIG/REG獲得目安）: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sankyo_slot/31/01.php`
+- パチ＆スロ必勝本 本機解析ページ: `https://p.hisshobon.jp/machine/2199/1/40499`
