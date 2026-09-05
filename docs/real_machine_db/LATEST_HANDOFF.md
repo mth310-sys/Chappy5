@@ -4,72 +4,71 @@
 
 ## 現在地点
 
-- recordCount: **705**
-- latestMachineAdded: **秘宝伝 ～太陽を求める者達～**（大都技研）
-- latestRecord: `docs/real_machine_db/machines/2012-12-03_hihouden-taiyo-wo-motomeru-monotachi.md`
-- chronologicalFrontier: **2012-12-03**
-- frontierLatestExactDateMachine: **秘宝伝 ～太陽を求める者達～**
+- recordCount: **706**
+- latestMachineAdded: **SLOT牙狼**（エレコ）
+- latestRecord: `docs/real_machine_db/machines/2012-12-17_slot-garo.md`
+- chronologicalFrontier: **2012-12-17**
+- frontierLatestExactDateMachine: **SLOT牙狼**
 - schema: **resetBehavior v0.7**
-- status: **OPEN_2012-12-03_GROUP__AUDIT_REMAINING_BEFORE_ADVANCE**
+- status: **OPEN_2012-12-17_GROUP__AUDIT_REMAINING_BEFORE_ADVANCE**
 
 ## 今回の同期
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前最新レコード `2012-12-03_biohazard-5.md` を確認。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前最新レコード `2012-12-03_hihouden-taiyo-wo-motomeru-monotachi.md` を確認。
 - `INDEX.md` は19件地点の古い集約状態。README規定どおり、より新しい `LATEST_HANDOFF.md` を直近進捗の正本として優先。
-- 開始時main正本は recordCount **704** / chronologicalFrontier **2012-12-03** / 12-03群OPEN / 次候補「秘宝伝 ～太陽を求める者達～」。
-- repo重複検索で「秘宝伝 ～太陽を求める者達～」既存レコードなしを確認。
-- **705件目: 秘宝伝 ～太陽を求める者達～（大都技研）** を登録。
+- 開始時main正本は recordCount **705** / chronologicalFrontier **2012-12-03** / 12-03群OPEN。
+- 12/03同日群を再検索し、既登録の「バイオハザード5」「秘宝伝 ～太陽を求める者達～」以外の具体的12/03導入候補を今回追加確認できなかったため、**2012-12-03群をCLOSED**。
+- 2012-12-04～12-16境界を具体日・導入日・ホール導入開始の語で監査。新規未登録機の具体的導入日を今回確認できず、既知アンカー2012-12-17へ前進。
+- repo重複検索で「SLOT牙狼」既存レコードなしを確認。
+- **706件目: SLOT牙狼（エレコ）** を登録。
 
-## 今回追加 — 秘宝伝 ～太陽を求める者達～
+## 今回追加 — SLOT牙狼
 
 ### 性能コア
 
-- releaseDate: **2012-12-03**。K-Navi・パチビー一致。グリーンべるとは12/02納品開始で、納品日とホール導入日の定義差として保持。
-- systemType: **5号機 / ART / 擬似ボーナス + CZ / ゲーム数上乗せ型**。
-- 秘宝RUSH: **1セット40G+α / 純増約+2.8枚/G**。
-- 秘宝RUSH初当たり: **1/537.4 / 1/495.1 / 1/452.8 / 1/388.8 / 1/353.0 / 1/313.0**。
-- 擬似ボーナス初当たり: **1/286.5 / 1/282.7 / 1/278.6 / 1/272.9 / 1/272.0 / 1/248.1**。
-- ボーナス+ART合算: **1/186.9 / 1/180.0 / 1/172.5 / 1/160.3 / 1/153.6 / 1/138.4**。
-- 擬似BIG: **約150 / 200 / 300枚**、REG: **約40～45枚**。
-- 天井: 第一 **ボーナスまたはART後999G→無限高確率**、第二 **ボーナス間1599G→ボーナス+超秘宝RUSH**。
-- 50枚ベースは名称/略称/メーカー×50枚/1000円/ベース/コイン持ち/回転数で再探索したが直接値を確定できず **UNVERIFIED_AFTER_RESEARCH**。2025年スマスロ版の約32G/50枚は流用しない。
-
-### 機械割CONFLICT
-
-- 系列A: **97.5 / 98.8 / 101.7 / 104.7 / 108.2 / 113.4%**。
-- 系列B: **96.5 / 98.1 / 100.1 / 104.7 / 108.2 / 113.3%**。
-- 設定1～3は丸め差では説明しにくいため平均せず `CONFLICT` として双方保存。
+- releaseDate: **2012-12-17**。ユニバーサルエンターテインメント公式系プレスリリース、K-Navi、パチビー、HAZUSEで一致。
+- 型式名: **SLOT牙狼XG** / 検定番号 **2S1032**（HAZUSE）。
+- systemType: **5号機 / ボーナス + ART / ART主体**。
+- 機械割: **97.6 / 99.2 / 101.4 / 105.5 / 110.8 / 116.7%**。HAZUSE・pacnk一致。
+- 呀CHANCE初当たり: **1/402.9 / 1/384.9 / 1/351.3 / 1/309.9 / 1/263.7 / 1/222.9**。
+- 魔戒BONUS初当たり: **1/1495.6 / 1/1453.6 / 1/1360.3 / 1/1252.3 / 1/1028.2 / 1/921.1**。
+- ART初当たり合算: **1/299.1 / 1/287.9 / 1/266.0 / 1/238.5 / 1/203.1 / 1/174.6**。
+- 牙狼BIG: 全設定 **1/16384.0**、約**300枚** + 牙狼RUSH確定。
+- 牙狼RUSH: **基本50G / 純増約+2.0枚/G / ループ率83～92%**。
+- 魔戒BONUS: **50G継続のARTボーナス**。
+- 50枚ベース: 当時資料 **約29G/1k**、後年整理 **約30G/50枚**。いずれも概数なので約29～30Gの丸め幅として保持。
+- 天井: **ボーナスまたはART終了後1280G消化で天井状態**。当時攻略資料では、その後の特定レア小役で牙狼RUSH当選確定・呀CHANCE非経由で直接牙狼RUSHと説明。
 
 ### resetBehavior v0.7
 
-- `settingChangeBehavior`: **設定変更で天井Gリセット**。朝一設定変更時は内部状態の公開再抽選表あり。
-- `gameCounterReset`: 設定変更 **CLEAR**。据え置きと純電断は高信頼の直接契約を確定できず `UNVERIFIED_AFTER_RESEARCH`。
-- `ceilingAfterReset`: 設定変更専用の固定短縮天井は **NONE_CONFIRMED_AFTER_RESEARCH**。
-- `stateAfterReset`:
-  - 設定1～3: **昼75.0% / 夕22.5% / 夜2.5%**
-  - 設定4～5: **昼60.0% / 夕30.0% / 夜10.0%**
-  - 設定6: **昼50.0% / 夕35.0% / 夜15.0%**
-- `resetBenefits`: 設定6は夕以上 **50.0%**、設定1～3は夕以上 **25.0%**。高設定ほど朝一高状態率が高い。
-- `resetPenalties`: 設定変更で前日天井進捗を失うため宵越し第一/第二天井狙いに不利。
-- `modeAfterReset`: 設定変更時のモード移行率が設定推測要素になる当時番組資料は確認したが、伝説モード等の具体的公開数値は今回確定できず `UNVERIFIED_AFTER_RESEARCH`。
-- `carryOverBehavior` / `powerCycleBehavior`: 天井・内部状態・伝説モードの完全な直接契約は今回未確定。朝一クレアランプ点灯を「据え置き確定」と扱った2013年実戦例はあるが、解析契約には昇格させず `PERIOD_USER_REPORT_ONLY`。
-- `resetDetection`: クレアランプが高確率/伝説モード示唆であること自体はK-Naviで確認。ガックン・初期出目等は再探索後も未確定。
+- 表記揺れ「SLOT牙狼 / SLOT 牙狼 / 牙狼-GARO- / SLOT牙狼XG / エレコ」と、設定変更/リセット/朝一/据え置き/宵越し/電源OFF ON/天井/モード/状態/ガックンを組み替え、公式・当時DB・当時攻略・後年整理を横断。
+- 2012年12月の当時天井攻略資料は **「宵越し×」** と明記。
+- ただし、この「宵越し不可」が設定変更・純据え置き・閉店電断・店側運用のどれに由来するかを分解できる直接解析表は今回確定できなかったため、設定変更時ゲーム数クリアを推測でCONFIRMEDにはしていない。
+- `settingChangeBehavior`: **UNVERIFIED_AFTER_RESEARCH_AS_DIRECT_CONTRACT_WITH_PERIOD_NO_CARRYOVER_REPORT**。
+- `carryOverBehavior`: 当時資料で宵越し不可扱い。ただし純据え置き契約は **UNVERIFIED_AFTER_RESEARCH**。
+- `powerCycleBehavior`: 単純電源OFF→ONのみの天井G・状態・液晶契約は **UNVERIFIED_AFTER_RESEARCH**。
+- `gameCounterReset`: 通常天井1280Gは確認。設定変更/据え置き/純電断それぞれの直接契約は未確定。
+- `ceilingAfterReset`: 設定変更専用短縮天井は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- `modeAfterReset` / `stateAfterReset`: 設定変更時専用の再抽選契約・公開振り分けは **UNVERIFIED_AFTER_RESEARCH**。
+- `resetDetection`: ガックン・初期出目・朝一液晶等の2012年版固有判別は **UNVERIFIED_AFTER_RESEARCH**。
+- `publicMorningNumbers`: 設定変更専用の比較可能な公開数値は **NONE_CONFIRMED_AFTER_RESEARCH**。
 - `advantageousSectionReset`: **NOT_APPLICABLE_5TH_GEN**。
+- 2017年「牙狼 守りし者」、2021年「S牙狼-黄金騎士-」のリセット短縮天井・ガックン・有利区間ランプ仕様は別機種として除外。
 
 ## CONFLICT / 注意
 
-- 機械割は97.5～113.4%系列と96.5～113.3%系列が競合。平均化しない。
-- REG純増は約40枚/約45枚。ベルナビ8回は一致しており、丸め/算出差候補として幅を保持。
-- 据え置き/電源OFF→ONは、設定変更の反対を推測で埋めていない。
-- 2025年スマスロ「秘宝伝」は別機種。ベースやリセット短縮天井を2012年版へ混入させない。
+- 今回、機械割・主要初当たりに重大なCONFLICTは確認せず。
+- 50枚ベースは約29Gと約30G。双方とも概数であり差が小さいため、現時点ではCONFLICTではなく概数幅として保持。
+- 当時資料の「宵越し×」を、設定変更で必ず天井Gクリアと自動解釈していない。
+- 後継牙狼シリーズの朝一仕様を2012年版へ混入させない。
 
-## 2012-12-03同日群
+## 2012-12-17同日群 / 次境界
 
-- **バイオハザード5** 登録済み。
-- **秘宝伝 ～太陽を求める者達～** 登録済み。
-- 「ホール導入開始 2012-12-03」「導入日 2012-12-03」を除外語付きで再検索した範囲では、今回この2機種以外の具体的同日候補を追加確認できなかった。
-- ただし全機種方針のため12/03群は即CLOSEDにせず、次回にHAZUSE新台カレンダー / P-WORLD 2012年12月一覧 / K-Navi / パチビー / 当時業界一覧をもう一段監査してから閉じる。
-- 12/03より後の既知アンカーとして **2012-12-17 SLOT牙狼（エレコ）** を確認済み。12/04～12/16に未登録機がないか境界監査してから進む。
+- **SLOT牙狼** 登録済み。
+- 「2012年12月17日」「導入日」「ホール導入開始」を組み替えた今回の検索では、SLOT牙狼以外の具体的な同日未登録候補を追加確認できなかった。
+- 全機種方針のため12/17群は次回もう一段、HAZUSE/P-WORLD/K-Navi/パチビー/メーカー一覧で監査してからCLOSED判定する。
+- 12/18～年末および2013-01-01～01-06の境界も監査する。
+- 次の既知アンカーとして **2013-01-07「パチスロ攻殻機動隊S.A.C.」（Sammy）** をK-Naviで確認済み。
 
 ## 遡及resetBehavior QA 進捗
 
@@ -78,29 +77,25 @@
 
 ## 次回再開地点
 
-1. **recordCount 705 / chronologicalFrontier 2012-12-03 / 12-03群OPEN** から開始。
-2. 12/03同日群をHAZUSE新台カレンダー、P-WORLD 2012年12月一覧、K-Navi、パチビー、当時業界/メーカー資料で最終監査。
-3. 未登録の12/03機がなければ12/03群をCLOSEDにし、**2012-12-04～12-16境界**を導入日順に監査。
-4. 境界に未登録機がなければ既知アンカー **2012-12-17「SLOT牙狼」（エレコ）** をrepo重複確認→性能コア＋resetBehavior v0.7調査→次レコードとして登録。
-5. 欠損は表記揺れ・型式名・メーカー・シリーズ名と「設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間」を組み替え、公式・業界・当時解析・古いDB・アーカイブ・回顧資料を横断後のみUNVERIFIED。競合は平均せずCONFLICT。
+1. **recordCount 706 / chronologicalFrontier 2012-12-17 / 12-17群OPEN** から開始。
+2. 12/17同日群をHAZUSE新台カレンダー、P-WORLD、K-Navi、パチビー、メーカー/業界資料で最終監査。
+3. 未登録12/17機がなければ12/17群をCLOSED。
+4. **2012-12-18～2013-01-06境界**を具体導入日順に監査し、未登録機があれば日付順に先に処理。
+5. 境界に未登録機がなければ既知アンカー **2013-01-07「パチスロ攻殻機動隊S.A.C.」（Sammy）** をrepo重複確認→性能コア＋resetBehavior v0.7調査→次レコードとして登録。
+6. 欠損は表記揺れ・型式名・メーカー・シリーズ名と「設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間」を組み替え、公式・業界・当時解析・古いDB・アーカイブ・回顧資料を横断後のみUNVERIFIED。競合は平均せずCONFLICT。
 
 ## 主要出典 — 取得日 2026-09-05
 
-### 秘宝伝 ～太陽を求める者達～
-- K-Navi: `https://p-kn.com/slot/1748/`
-- K-Navi ボーナス＆ART確率: `https://p-kn.com/slot/1748/41909/`
-- グリーンべると: `https://web-greenbelt.jp/00001670/`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/6901`
-- パチビー: `https://www.pachibee.jp/movies/index/8701`
-- 2-9伝説系整理: `https://29den.com/hihouden-taiyo/`
-- crankyseven: `https://crankyseven.com/hihouden-taiyo-pc.htm`
-- スロット動画TV 2013-02: `https://rinfinity777.livedoor.blog/archives/2013-02.html`
-- VideoMarket パチスロ最強伝説G #535: `https://www.videomarket.jp/title/082220/A082220003999H01`
-- K-Navi クレアランプ: `https://p-kn.com/slot/1748/41814/`
-- 2013年実戦記録: `https://ameblo.jp/s6tto/entry-11561818782.html`
-- スロパチクエスト: `https://www.slopachi-quest.com/article/hihouden-taiyo/`
+### SLOT牙狼
+- ユニバーサル公式製品: `https://www.universal-777.com/product/slot/slot_garo/`
+- ユニバーサル公式系プレスリリース: `https://www.atpress.ne.jp/news/32143`
+- K-Navi: `https://p-kn.com/slot/1752/`
+- HAZUSE: `https://hazuse.com/machine/pachislot/2S1032/`
+- パチビー: `https://www.pachibee.jp/machines/lecture/212110005`
+- パチスロ解析ガイド: `https://pachislot-guide.net/2012/garo/`
+- pacnk: `https://pacnk.com/slot/tools/sh_slotgaro.html`
+- 当時天井攻略: `https://macerate.seesaa.net/article/308170139.html`
+- みんスロ: `https://minslo.com/%E7%89%99%E7%8B%BC/`
 
-### 境界監査 / 次候補
-- HAZUSE 新台カレンダー: `https://hazuse.com/new-machine-calendar/newmachine-calendar/`
-- P-WORLD 新台スケジュール: `https://www.p-world.co.jp/database/machine/introduce_calendar.cgi/1000%3Ftype%3DPachi%26year_month%3D2026-01`
-- パチビー SLOT牙狼: `https://www.pachibee.jp/movies/index/8742`
+### 次候補 / 境界
+- K-Navi パチスロ攻殻機動隊S.A.C.: `https://p-kn.com/slot/1762/`
