@@ -4,64 +4,67 @@
 
 ## 現在地点
 
-- recordCount: **735**
-- latestMachineAdded: **鬼の城**（メーシー）
-- latestRecord: `docs/real_machine_db/machines/2013-05-07_oni-no-shiro.md`
-- chronologicalFrontier: **2013-05-07**
-- frontierLatestExactDateMachine: **鬼の城**
+- recordCount: **736**
+- latestMachineAdded: **キャッツ・アイ－コレクション奪還作戦**（オリンピア）
+- latestRecord: `docs/real_machine_db/machines/2013-05-20_cats-eye-collection-dakkan-sakusen.md`
+- chronologicalFrontier: **2013-05-20**
+- frontierLatestExactDateMachine: **キャッツ・アイ－コレクション奪還作戦**
 - schema: **resetBehavior v0.7**
-- status: **CLOSED_2013-05-07_GROUP__NEXT_BOUNDARY_2013-05-08_TO_05-19_THEN_05-20_GROUP**
+- status: **OPEN_2013-05-20_GROUP__NEXT_CAPTAIN_PULSAR_THEN_PRISM_NANA**
 
 ## 今回の同期
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前レコード `2013-05-07_ryuko-no-ken.md` を確認。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前レコード `2013-05-07_oni-no-shiro.md` を確認。
 - INDEXは19件地点の旧集約状態なので、README規定どおり最新HANDOFFと実レコードを正本として優先。
-- 開始時main正本は recordCount **734** / chronologicalFrontier **2013-05-07** / 05-07群OPEN / next **鬼の城**。
-- repo検索で鬼の城が未登録であることを確認し、735件目として追加。
+- 開始時main正本は recordCount **735** / chronologicalFrontier **2013-05-07** / 05-07群CLOSED。
+- 05-08～05-19境界を別系統資料で再監査した上で、次の具体導入日アンカー **2013-05-20** へ進行。
+- repo上でキャッツ・アイ－コレクション奪還作戦が未登録であることを確認し、736件目として追加。
 
-## 今回追加 — 鬼の城
+## 今回追加 — キャッツ・アイ－コレクション奪還作戦
 
 ### identity / 性能コア
 
-- manufacturer: **メーシー**。
-- releaseDate: **2013-05-07**。HAZUSE、K-Navi、パチビーで一致。ユニバーサル公式は発売月2013年5月。
-- formalModelName: **鬼の城T**。
-- inspectionNumber: **2S1145**。
+- manufacturer: **オリンピア**。
+- releaseDate: **2013-05-20**。K-Navi、HAZUSE、パチビー、パチスロ解析ガイドで一致。
+- formalModelName: **キャッツアイ-コレクション奪還作戦A2**。
+- inspectionNumber: **2S1464**。
 - systemType: **5号機 / ART**。
-- ART「殲鬼の刻」初当たり: **1/327.4 / 298.8 / 291.4 / 244.3 / 247.6 / 199.6**。
-- baseGamesPer50: **約31.7G/50枚**。
-- ART: 鬼狩RUSHで初期G数決定、赤7最低2回保証のため **最低60G**、純増 **約2.2枚/G**。
-- 通常時主要モード: **通常A / 通常B / 天国**。天国は99G以内ART濃厚。
-- 通常ART天井: ART終了後最大 **1299G**、最大40G前兆後ART。
-- 機械割は軽微競合のため平均せず `CONFLICT_MINOR_SOURCE_DIFFERENCE`:
-  - HAZUSE: **98.2 / 99.4 / 102.2 / 106.5 / 110.6 / 116.2%**
-  - P-WORLD: **98.2 / 99.4 / 102.4 / 106.5 / 110.6 / 116.1%**
+- ART「キャッツRUSH」初当たり: **1/282.2 / 268.0 / 257.0 / 219.0 / 186.0 / 159.2**。
+- 機械割: **97.4 / 99.0 / 100.3 / 105.2 / 110.2 / 115.1%**。
+- baseGamesPer50: **約32G/50枚**。現状は単一二次資料で、追加照合待ち。
+- ART「キャッツRUSH」: **50～250G+α / 純増約2.7枚/G**。
+- 擬似ボーナス「キャッツボーナス」: **20G固定 / 約54枚**。
+- スーパーキャッツRUSH: **20G**、スーパーキャッツボーナス抽選 **1/9.9**。
+- 通常時主要モード: **通常A / 通常B / 天国A / 天国B / 天国C / 超天国**。
+- 天井は資料定義差を保持:
+  - P-WORLD: 通常A/B **999G**、天国A/B/C・超天国 **100G**。
+  - 当時天井整理: 通常A **最大990G** / 通常B **999G** / 天国系 **100G**。
+  - `CONFLICT_DEFINITION_990_VS_999`。
 
 ### resetBehavior v0.7
 
-- HAZUSE、パチマガスロマガ、当時解析整理、公式/業界/機種DB、宵越し実戦資料を横断。
-- 設定変更時は **専用の規定Gテーブルから再抽選**、通常モードも **設定変更専用振り分けで再抽選**。
-- 設定変更時モード:
-  - 設定1/3/5: 通常A **90.80%** / 通常B **9.20%** / 天国 **0%**
-  - 設定2/4/6: 通常A **60.30%** / 通常B **9.20%** / 天国 **30.50%**
-- 設定変更時規定Gの主要値:
-  - 0～99G: **14.55%**（全設定）
-  - 100～199G: **12.21%**（全設定）
-  - 1000～1099 / 1100～1199 / 1200～1299G: 設定1～3 **0%**、設定4～6 **各3.01%**
-- よって **設定変更後にART間1000Gを超えれば設定4以上**という公開朝一判別材料をHAZUSE/パチマガスロマガで確認。
-- 宵越し天井到達の実戦・番組資料から据え置きG数が有効だった例は確認。ただし規定G・モード・鬼神界戦失敗回数・内部状態すべての純据え置き完全契約は直接資料不足のため `UNVERIFIED_AFTER_RESEARCH`。
-- 設定変更を伴わない単純電源OFF→ONのゲーム数/モード/内部状態/表示契約、ガックン・初期出目等の変更判別は検索語・資料系統変更後も `UNVERIFIED_AFTER_RESEARCH`。
+- パチスロ立ち回り講座の機種別天井資料で、**設定変更後は天井までのゲーム数をクリア**することを直接確認。
+- K-Navi機種ページに本機固有の **「モード移行率(設定変更時)」** 解析項目が存在し、設定変更時にモード移行/再抽選が行われる仕様自体は直接確認。
+- ただし現存検索インデックスから具体的な設定別モード振り分け表を安全に回収できなかったため、数値は **`UNVERIFIED_AFTER_RESEARCH`**。
+- 一律のリセット短縮天井は直接資料を確認できず **`NONE_CONFIRMED_AFTER_RESEARCH`**。
+- 古い天井狙い整理には「宵越し×」表記があるが、純据え置き時の全内部契約を列挙した直接資料ではないため、据え置きのゲーム数/モード/状態完全契約は **`UNVERIFIED_AFTER_RESEARCH`**。
+- 設定変更なしの単純電源OFF→ONのゲーム数/モード/内部状態/表示契約も再探索後 **`UNVERIFIED_AFTER_RESEARCH`**。
+- ガックン・初期出目・液晶等の本機固有変更判別は再探索後 **`UNVERIFIED_AFTER_RESEARCH`**。
 - advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN**。
-- resetQaStatus: **RESEARCHED__DIRECT_NUMERIC_RESET_TABLES_FIXED__CARRYOVER_POWER_CYCLE_PARTIAL**。
+- resetQaStatus: **RESEARCHED__SETTING_CHANGE_CEILING_RESET_CONFIRMED__MODE_RESELECT_EXISTENCE_CONFIRMED__CARRYOVER_POWER_CYCLE_UNVERIFIED**。
 
-## 2013-05-07同日群・境界監査
+## 2013-05-08～05-19境界監査
 
-- HAZUSE/K-Naviの具体日資料で **パチスロ創聖のアクエリオンII / 龍虎の拳 / 鬼の城** の2013-05-07導入を確認し、いずれも登録済み。
-- ALL7の5月一覧に混在する「ゲゲゲの鬼太郎 地獄からの使者」はCRパチンコ機であり本DB対象外。
-- ALL7が5/7表記する「キャッツ・アイ コレクション奪還作戦」は専用HAZUSE/K-Navi資料で **2013-05-20** が一致するため5/7群へ入れない。
-- 以上から **2013-05-07同日群をCLOSED**。
-- 05-08～05-19について「2013年5月13日」「導入開始」「ホール導入」等も再検索したが、今回の探索では具体日を複数資料で固定できる未登録パチスロ機を確認できず。次回冒頭で別系統カレンダー/メーカー一覧を使って境界最終監査する。
-- 次の既知具体日アンカーは **2013-05-20**。候補として専用資料で `キャッツ・アイ－コレクション奪還作戦`、`キャプテンパルサー`、`まじかるすいーとプリズム・ナナ` を確認済み。
+- 後年の撤去期限資料で **BADBOYS / 美らん娘-30 = 2013-05-13** という日付を一度検出。
+- ただし当時グリーンべると/P-WORLD業界記事では、両機は2013-06-04発表、**2013-08-04納品開始予定**。
+- よって後年資料の2013-05-13は **検定通過日** と判断し、ホール導入日の時系列キーへ使用しない。
+- 05-08～05-19について、今回の別系統監査ではこれ以外に具体導入日を固定できる未登録5号機を確認できず、**CLOSED_FOR_CURRENT_RESEARCH**。
+
+## 2013-05-20同日群
+
+- 登録済み: **キャッツ・アイ－コレクション奪還作戦**。
+- 次候補として専用資料で **キャプテンパルサー**（山佐）、**まじかるすいーとプリズム・ナナ**（DAXEL）の2013-05-20導入を確認済み。
+- 05-20群は **OPEN**。次リレーで同日群を継続し、全メーカー横断監査後にCLOSED判定する。
 
 ## 遡及resetBehavior QA 進捗
 
@@ -70,33 +73,33 @@
 
 ## 次回再開地点
 
-1. **recordCount 735 / chronologicalFrontier 2013-05-07 / 05-07群CLOSED** から開始。
-2. まず **2013-05-08～05-19境界を別系統の導入カレンダー・メーカー別一覧・HAZUSE/K-Navi/パチビーで最終監査**。具体日付き未登録5号機が見つかればそちらを時系列優先。
-3. 境界に追加がなければ **2013-05-20「キャッツ・アイ－コレクション奪還作戦」**（オリンピア）を最優先でrepo重複確認→本調査→追加。
-4. 同日既知候補として **キャプテンパルサー**（山佐）、**まじかるすいーとプリズム・ナナ**（DAXEL）を順次処理し、05-20同日群を全メーカー横断監査。
-5. 鬼の城の純据え置き完全契約・純電断・ガックン等は後続QAで別の直接資料が見つかった場合のみ補完し、設定変更仕様の反対推定で埋めない。
+1. **recordCount 736 / chronologicalFrontier 2013-05-20 / 05-20群OPEN** から開始。
+2. 最優先は **2013-05-20「キャプテンパルサー」**（山佐）。repo重複確認 → 性能コア + resetBehavior v0.7を本調査 → 保存。
+3. 続いて **2013-05-20「まじかるすいーとプリズム・ナナ」**（DAXEL）を処理。
+4. その後、05-20同日群をHAZUSE/K-Navi/パチビー/メーカー一覧/業界カレンダーで横断監査し、漏れがなければCLOSED。
+5. キャッツ・アイの設定変更時モード数値表、純据え置き完全契約、純電断、ガックン等は後続QAで直接資料が見つかった場合のみ補完し、設定変更仕様の反対推定で埋めない。
 
 ## 主要出典 — 取得日 2026-09-06
 
-### 鬼の城
+### キャッツ・アイ－コレクション奪還作戦
 
-- ユニバーサル公式（2013年5月、メーシー、ART、鬼狩RUSH）: `https://www.universal-777.com/product/slot/onino_shiro/`
-- HAZUSE（型式、検定番号、2013-05-07、ART初当たり、31.7G/50枚、機械割、1299G天井、設定変更時規定G/モード数値）: `https://hazuse.com/machine/pachislot/2S1145/`
-- P-WORLD（ART初当たり、機械割、ART最低60G級仕様、純増2.2枚/G）: `https://www.p-world.co.jp/machine/database/7039`
-- K-Navi（2013-05-07、最低60G保証、純増2.2枚/G）: `https://p-kn.com/slot/1837/`
-- K-Navi 展示会速報（2013-03-15、5月上旬導入予定）: `https://p-kn.com/topics/exhibition/1061/`
-- パチビー（2013-05-07、5号機ART、純増約2.2枚/G）: `https://www.pachibee.jp/movies/index/9329`
-- パチマガスロマガ（朝イチ/設定変更「リセット後1000G超は設定4以上」）: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/macy_slot/41/macy_slot_41.php`
-- パチマガスロマガ ゲーム性解説（最低2回赤7、最低60G、純増2.2枚/G）: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/macy_slot/41/01.php`
-- 当時スペック整理（約31.7G/千円、ART間1299G）: `https://ameblo.jp/slostar/entry-11486053077.html`
-- 当時解析整理（設定変更時規定Gテーブル別系統）: `https://www.slopachi-quest.com/article/368560214-html/`
-- 宵越し実戦例（据え置き側の補助証拠）: `https://moge-site.com/archives/5610`
-- 後年番組紹介（鬼の城の宵越し天井到達例、補助証拠）: `https://www.videomarket.jp/title/041358/A041358050999H01`
+- K-Navi: `https://p-kn.com/slot/1843/`
+- HAZUSE: `https://hazuse.com/machine/pachislot/2S1464/`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/7056`
+- パチビー: `https://www.pachibee.jp/movies/index/9419`
+- パチマガスロマガ 基本情報: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/olympia_slot/109/a.php`
+- パチマガスロマガ ART突入フロー: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/olympia_slot/109/l.php`
+- パチスロ解析ガイド: `https://pachislot-guide.net/2013/catseye-collection/`
+- パチスロ立ち回り講座 天井一覧: `https://crankyseven.com/sp/tenjo-5ka.htm`
+- 天井ハイエナ生活 当時整理: `https://macerate.seesaa.net/article/226196713.html`
+- 実機販売スペック整理: `https://slot-kakaku.com/%E3%82%AD%E3%83%A3%E3%83%83%E3%83%84%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E5%AE%9F%E6%A9%9F/`
 
-### 境界 / 次候補
+### 境界監査
 
-- ALL7 2013年5月一覧: `https://www.all7.jp/plans/index/2013/05`
-- キャッツ・アイ HAZUSE: `https://hazuse.com/machine/pachislot/2S1407/`
-- キャッツ・アイ K-Navi: `https://p-kn.com/slot/1845/`
+- 後年撤去期限記事（2013-05-13は検定通過日として扱う）: `https://pachiseven.jp/articles/detail/8842`
+- 当時グリーンべると/P-WORLD業界記事（BADBOYS・美らん娘-30、2013-08-04納品開始予定）: `https://news.p-world.co.jp/articles/5890/greenbelt`
+
+### 次候補
+
 - キャプテンパルサー K-Navi: `https://p-kn.com/slot/1844/`
 - まじかるすいーとプリズム・ナナ K-Navi: `https://p-kn.com/slot/1847/`
