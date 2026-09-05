@@ -4,59 +4,62 @@
 
 ## 現在地点
 
-- recordCount: **744**
-- latestMachineAdded: **大漁II**（北電子）
-- latestRecord: `docs/real_machine_db/machines/2013-07-01_tairyo-ii.md`
+- recordCount: **745**
+- latestMachineAdded: **みんなのジャグラー**（北電子）
+- latestRecord: `docs/real_machine_db/machines/2013-07-01_minnano-juggler.md`
 - chronologicalFrontier: **2013-07-01**
-- frontierLatestExactDateMachine: **大漁II**
+- frontierLatestExactDateMachine: **みんなのジャグラー**
 - schema: **resetBehavior v0.7**
-- status: **OPEN_2013-07-01_GROUP__NEXT_MINNANO_JUGGLER_THEN_NINJA_BLADE_AND_FULL_SAME_DAY_AUDIT**
+- status: **OPEN_2013-07-01_GROUP__NEXT_NINJA_BLADE__NINJADAMASHII_II_NEWLY_DETECTED__FULL_SAME_DAY_AUDIT_REQUIRED**
 
 ## 今回の同期
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前レコード `2013-06-17_eiyuu-densetsu-sora-no-kiseki-the-animation.md` を再読。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前レコード `2013-07-01_tairyo-ii.md` を再読。
 - INDEXは19件地点の旧集約状態なので、README規定どおり最新HANDOFFと実レコードを正本として優先。
-- 開始時main正本は recordCount **743** / chronologicalFrontier **2013-06-17** / 06-17群CLOSED。
-- 2013-06-18～06-30境界をALL7 2013年6月一覧で再監査し、06-17が同月最終パチスロ導入群である前リレー判断と整合。追加対象なし。
-- 次候補 **大漁II** をrepo重複確認後、744件目として追加。
-- 2013-07-01同日群はまだOPEN。K-Navi/パチビー/HAZUSE/ALL7系から少なくとも **みんなのジャグラー（北電子）**、**NINJA BLADE（マルホン）** が同日候補として確認できるため、次回この順を基準に重複確認・収集し、全メーカー横断で同日群を閉じる。
+- 開始時main正本は recordCount **744** / chronologicalFrontier **2013-07-01** / 07-01群OPEN。
+- HANDOFF指定の次候補 **みんなのジャグラー** をrepo重複確認後、745件目として追加。
+- 07-01同日監査で、前HANDOFF既知の **NINJA BLADE（マルホン）** に加え、2013年当時資料から **忍魂弐（大都技研）** も2013-07-01導入候補として検出。repo検索で未登録を確認。07-01群はOPEN維持。
 
-## 今回追加 — 大漁II
+## 今回追加 — みんなのジャグラー
 
 ### identity / 性能コア
 
 - manufacturer: **北電子**。
-- releaseDate: **2013-07-01**。K-Naviで具体日を確認。グリーンべると当時記事の **6月30日納品開始** と整合。
+- releaseDate: **2013-07-01**。パチビー、HAZUSEで具体日確認。グリーンべると当時記事の6月30日納品開始と整合。
+- 型式名: **みんなのジャグラーC** / 検定番号 **2S1401**。
 - systemType: **5号機ノーマルAタイプ / 完全告知**。
-- 正式型式名/検定番号は表記揺れ・型式名検索を繰り返したが、4号機「大漁2」と混同せず安全に固定できる2013年本機の一次/高信頼情報を今回確保できず **UNVERIFIED_AFTER_RESEARCH**。
-- 機械割: **96.3 / 97.7 / 99.3 / 101.3 / 103.5 / 106.2%**。
-- BIG: **1/287.4 / 277.7 / 268.6 / 260.1 / 248.2 / 237.4**。
-- REG: **1/455.1 / 442.8 / 420.1 / 399.6 / 381.0 / 364.1**。
-- 合算: **1/176.2 / 170.7 / 163.8 / 157.5 / 150.3 / 143.7**。
-- 50枚ベース: **約36G/50枚**（単一二次資料のため ANALYSIS_SINGLE）。
-- BIG: **約312枚**、REG: **約117枚**。
-- ART/AT/RT: **非搭載**。
+- メーカー公表機械割: **97.2 / 98.1 / 99.2 / 101.6 / 104.6 / 109.8%**。
+- BIG: **1/264.3 / 264.3 / 260.1 / 256.0 / 248.2 / 231.6**。
+- REG: **1/455.1 / 409.6 / 390.1 / 343.1 / 283.7 / 244.5**。
+- 合算: **1/167.2 / 160.6 / 156.0 / 146.6 / 132.4 / 118.9**。
+- 50枚ベース: チェリー狙い **34.81～36.30G**、完全小役獲得 **35.32～36.85G**。条件別に分離保持。
+- BIG: **約300枚**。
+- REG: **約108枚**を本線。HAZUSEに平均約112枚表記があるためCONFLICTとして保持。
 - 天井: **非搭載**。
+- ART/AT/RT: **非搭載**。
+
+### CONFLICT / 条件差
+
+- メーカー公表機械割 **97.2～109.8%** とフル攻略機械割 **98.26～112.11%** は攻略条件差。平均せず別系列保存。
+- REG実獲得: **約108枚**（当時業界/解析） vs **平均約112枚**（HAZUSE）。平均せずCONFLICT。
 
 ### resetBehavior v0.7
 
-- ノーマルAタイプでゲーム数解除・AT/ARTモード・CZ・天井を持たないため、`gameCounterReset`、`ceilingAfterReset`、`modeAfterReset` の該当部分は **NOT_APPLICABLE**。
-- 設定変更専用短縮天井/朝一CZ/AT優遇: **NONE / NOT_APPLICABLE**。
-- 設定変更専用の朝一当選率・モード振り分け: **NONE_CONFIRMED_AFTER_RESEARCH / NOT_APPLICABLE**。
-- 設定変更時のリール初動、初期出目、表示状態等の本機固有契約は、機種名表記揺れ＋「設定変更/リセット/朝一/ガックン/設定変更後」を組み替え、公式・K-Navi・P-WORLD・当時攻略・古いDBを再探索したが **UNVERIFIED_AFTER_RESEARCH**。
-- 純据え置き時の本機固有表示/リール挙動: **UNVERIFIED_AFTER_RESEARCH**。
-- 設定変更なしの純電源OFF→ON時の本機固有表示/リール挙動: **UNVERIFIED_AFTER_RESEARCH**。
-- ガックン/初期出目等の確定または高信頼変更判別: **UNVERIFIED_AFTER_RESEARCH**。ジャグラー等、北電子他機種の一般論は自動転記していない。
+- ゲーム数解除・AT/ARTモード・CZ・天井を持たないため、それらの設定変更/据え置き/電断契約は **NOT_APPLICABLE**。
+- 設定変更後、店側が1G回していなければ **朝一1G目にリールガックン**が発生するとする本機固有解析を複数系統で確認。ただし変更後1G回しで対策可能、個体差/停止位置の影響もあり確定判別ではない。
+- 当時解析では、設定変更なしの電源OFF→ONのみの場合、1G連/ゾロ目ゲーム連時のBGM変化判定に用いるゲーム数履歴が引き継がれる。朝一最初のBIGで条件該当BGMが流れれば据え置き判断材料。逆回転フリーズBIGは例外。
+- 設定変更時は上記BGM判定用ゲーム数履歴がクリアされるとする当時解析あり。
+- 設定変更専用短縮天井/朝一CZ/AT優遇/モード振り分け: **NOT_APPLICABLE**。
+- その他の本機固有内部状態、純電断時の物理リール挙動は、表記揺れ＋設定変更/リセット/朝一/ガックン/据え置き/電源OFF ON/電断/1G回しを組み替え、公式・業界・当時解析・古いDB・後年解析を再探索後も直接契約を固定できず **UNVERIFIED_AFTER_RESEARCH**。
 - advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN**。
-- resetQaStatus: **RESEARCHED__NORMAL_TYPE_NO_CEILING_OR_GAME_NUMBER_MODE__MACHINE_SPECIFIC_SETTING_CHANGE_POWER_CYCLE_AND_DETECTION_UNVERIFIED_AFTER_RESEARCH**。
 
-## 2013-06-18～06-30境界 / 2013-07-01同日群
+## 2013-07-01同日群
 
-- ALL7 2013年6月一覧では06-17が同月最後のパチスロ導入群。06-18～06-30に追加対象を確認できず、前回判断を維持。
-- 2013-07-01 **大漁II**（北電子）— 今回登録744件目。
-- 2013-07-01 **みんなのジャグラー**（北電子）— 未登録。パチビー/HAZUSE等で導入日確認済み。次回最優先。
-- 2013-07-01 **NINJA BLADE**（マルホン）— ALL7 2013年7月一覧で同日導入候補。未登録。
-- 07-01同日群はまだ **OPEN**。次回はK-Navi/ALL7/メーカー別一覧を横断し、他の同日パチスロがないか最終監査する。
+- 2013-07-01 **大漁II**（北電子）— 登録744件目。
+- 2013-07-01 **みんなのジャグラー**（北電子）— 今回登録745件目。
+- 2013-07-01 **NINJA BLADE**（マルホン）— 未登録。前HANDOFF確認済み。次回最優先。
+- 2013-07-01 **忍魂弐**（大都技研）— 今回、当時資料から新規漏れ候補として検出。repo検索で未登録。
+- 07-01群はまだ **OPEN**。K-Navi / ALL7 / メーカー別一覧 / 当時導入記事で他機種も最終監査すること。
 
 ## 遡及resetBehavior QA 進捗
 
@@ -65,30 +68,28 @@
 
 ## 次回再開地点
 
-1. **recordCount 744 / chronologicalFrontier 2013-07-01 / 07-01群OPEN** から開始。
-2. repo重複確認後、**2013-07-01「みんなのジャグラー」（北電子）**を次候補として性能コア + resetBehavior v0.7収集。
-3. 続いて **2013-07-01「NINJA BLADE」（マルホン）**を確認・収集。
-4. K-Navi / ALL7 / メーカー別一覧 / 当時導入情報で07-01同日群を全メーカー横断監査し、漏れがなければCLOSED。
-5. その後、次の具体導入日（ALL7では2013-07-08にドラゴンギャル～修羅の野望～等）へ時系列で進む。
-6. 大漁IIの正式型式名/検定番号、機種固有の設定変更リール初動・純電断・変更判別は後続QAで直接資料が見つかった場合のみ補完。
+1. **recordCount 745 / chronologicalFrontier 2013-07-01 / 07-01群OPEN** から開始。
+2. repo重複確認後、**2013-07-01「NINJA BLADE」（マルホン）**を746件目候補として性能コア + resetBehavior v0.7収集。
+3. 続いて今回新規検出した **2013-07-01「忍魂弐」（大都技研）**を確認・収集。
+4. K-Navi / ALL7 / メーカー別一覧 / 当時導入情報で07-01同日群を全メーカー横断監査し、他の未処理機種があれば時系列順に追加。
+5. 漏れがなければ07-01群をCLOSEDし、その後の具体導入日へ前進。
+6. みんなのジャグラーの未確定な本機固有内部状態/純電断物理リール挙動は後続QAで直接資料が見つかった場合のみ補完。
 
 ## 主要出典 — 取得日 2026-09-06
 
-### 大漁II
+### みんなのジャグラー
 
-- 北電子公式: `https://www.kitadenshi.co.jp/slot/tairyo2/`
-- K-Navi: `https://p-kn.com/slot/1879/`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/7113`
+- 北電子公式: `https://www.kitadenshi.co.jp/slot/minnanojuggler/`
 - グリーンべると当時業界記事: `https://web-greenbelt.jp/00000978/`
 - P-WORLD転載グリーンべると: `https://news.p-world.co.jp/articles/5892/greenbelt`
-- pacnk: `https://pacnk.com/slot/2013/tairyo2/top.php`
-- みんスロ: `https://minslo.com/%E5%A4%A7%E6%BC%81ii/`
-- 当時ホール機種解説 / RT・天井非搭載: `https://ameblo.jp/nadataiyo/entry-11669356583.html`
-- 2013-05-29当時スペック紹介: `https://ameblo.jp/slostar/entry-11540554289.html`
+- パチビー: `https://www.pachibee.jp/movies/index/9535`
+- HAZUSE: `https://hazuse.com/machine/pachislot/2S1401/`
+- パチスロ解析ガイド: `https://pachislot-guide.net/2013/minnano-juggler/`
+- 激アツ解析: `https://gekiatsu7.com/slot-analyze/2090/`
+- 元プロMGジャグラーシリーズ整理: `https://www.pachislotblog.tokyo/juggler-series-specmatome/`
+- 2013年当時 天井ハイエナ生活 / 天井非搭載・ガックン・電源ON/OFF時BGM履歴: `https://macerate.seesaa.net/article/367972105.html`
 
-### 境界 / 次候補
+### 同日群 / 次候補
 
-- ALL7 2013年6月導入予定一覧: `https://www.all7.jp/plans/index/2013/06`
-- ALL7 2013年7月導入予定一覧: `https://www.all7.jp/plans/index/2013/07`
-- パチビー みんなのジャグラー: `https://www.pachibee.jp/movies/index/9535`
-- HAZUSE みんなのジャグラー: `https://hazuse.com/machine/pachislot/2S1401/`
+- 前HANDOFFのALL7 2013年7月一覧: `https://www.all7.jp/plans/index/2013/07`
+- 2013年当時資料（7/1新台として忍魂弐・大漁II・みんなのジャグラーを記載）: `https://macerate.seesaa.net/article/367972105.html`
