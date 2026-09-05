@@ -4,99 +4,82 @@
 
 ## 現在地点
 
-- recordCount: **673**
-- latestMachineAdded: **シンデレラブレイド**（ネット）
-- latestRecord: `docs/real_machine_db/machines/2012-07-09_cinderella-blade.md`
-- chronologicalFrontier: **2012-07-09**
-- frontierLatestExactDateMachine: **シンデレラブレイド**
+- recordCount: **674**
+- latestMachineAdded: **パチスロ パトラッシュ**（SANKYO）
+- latestRecord: `docs/real_machine_db/machines/2012-07-16_pachislot-patrush.md`
+- chronologicalFrontier: **2012-07-16**
+- frontierLatestExactDateMachine: **パチスロ パトラッシュ**
 - schema: **resetBehavior v0.7**
-- status: **CLOSED_2012-07-09__NEXT_2012-07-16_PACHISLOT_PATRUSH**
+- status: **CLOSED_2012-07-16__NEXT_2012-07-23_SHIOSAI_A30**
 
 ## 今回の同期・時系列監査
 
-- 最新mainのREADME全文、正本ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード「天空のシンフォニア ～光を求めて～」を確認して開始。
-- INDEXは旧地点19件のまま。README規定どおり、より新しいLATEST_HANDOFFと実レコードを進捗正本として使用。開始時は recordCount 672 / frontier 2012-07-02。
-- LATEST_HANDOFF指定の最優先候補「シンデレラブレイド」をrepo検索し未登録を確認。
-- 2012-07-03～07-08境界をK-Navi 2012年7月導入カレンダーで監査し、具体日付きパチスロ追加なし。
-- K-Naviの2012-07-09パチスロ群はネット「シンデレラブレイド」のみ。673件目として追加したため2012-07-09同日群をCLOSED。
-- 次のK-Navi具体日アンカーは2012-07-16 SANKYO「パチスロ パトラッシュ」。
+- 最新mainのREADME全文、正本ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード「シンデレラブレイド」を確認して開始。
+- INDEXは旧地点19件のまま。README規定どおり、より新しいLATEST_HANDOFFと実レコードを進捗正本として使用。開始時は recordCount 673 / frontier 2012-07-09。
+- LATEST_HANDOFF指定の次候補「パチスロ パトラッシュ」をrepo検索し未登録を確認。
+- K-Navi 2012年7月導入カレンダーでは2012-07-10～07-15に具体日付きパチスロ追加なし、2012-07-16はSANKYO「パチスロ パトラッシュ」のみ。674件目として追加し07-16同日群をCLOSED。
+- 2012-07-17～07-22にはK-Navi上のパチスロ具体日追加なし。次の具体日アンカーは2012-07-23 パイオニア「シオサイA-30」。
 
-## 今回の本線追加 — シンデレラブレイド
+## 今回の本線追加 — パチスロ パトラッシュ
 
 ### 識別
 
-- manufacturer: **ネット**
-- releaseDate key: **2012-07-09**
+- manufacturer: **SANKYO**
+- releaseDate key: **2012-07-16**
 - generation: **5号機**
-- systemType: **ART専用系 / 32G周期CZ・ゲーム数上乗せ**
-- releaseDate: K-Naviとパチンコビレッジが2012-07-09で一致。
+- systemType: **ボーナス非搭載 / ゲーム数管理ART・セットストック型**
+- modelName: **パチスロ パトラッシュV**
+- approvalNumber: **2S0385**
+- releaseDate: K-Naviが全国一斉導入開始日2012-07-16、SANKYO公式が導入年月2012.07を確認。
 
 ### 性能コア
 
-- 機械割: **96.3 / 98.1 / 101.5 / 104.7 / 107.6 / 114.2%**
-- ART主系列（P-WORLD/pacnk）: **1/209 / 1/200 / 1/178 / 1/163 / 1/149 / 1/120**
-- 当時Wiki別定義「ART初当り」: **1/339 / 1/337 / 1/310 / 1/295 / 1/277 / 1/261**
+- 機械割: **96.8 / 98.6 / 100.8 / 104.3 / 108.1 / 113.4%**
+- ART初当り: **1/292 / 1/286 / 1/272 / 1/260 / 1/249 / 1/228**
 - 50枚ベース: **UNVERIFIED_AFTER_RESEARCH**
-- ART「武闘会」: **1セット40G+α / 約+2.2枚/G**
-- 通常周期: **32G+α**
-- 通常最大天井: **25周期**。当時Wiki換算で約900～950G、pacnkでは約900～975G。
-
-### 主要CONFLICT / 定義差
-
-- ART初当り: P-WORLD/pacnkは1/209～1/120をART初当りとして扱う。一方、2012年当時Wikiテンプレは1/339～1/261を「ART初当り」、1/209～1/120を「平均ART出現率」と別列で併記。平均せず定義差として双方保持。
-- 最大天井G換算: 25周期という本体仕様は一致するが、当時Wikiは900～950G、pacnkは900～975G。ゲーム数換算範囲のみ差異保持。
+- ART「パトラッシュ」: **20G / 70G / 140G、約+2.4枚/G**
+- ロングフリーズ7揃い: **1/8192**（SANKYO公式）
+- モード別ART間天井: **天国51G / ゾロ目999G / 通常1111G**
 
 ### resetBehavior v0.7
 
-- `settingChangeBehavior`: **CONFIRMED** — 設定変更後はゲーム数・剣レベル・周期・ステージがリセット。周期天井振り分けも通常時とは別。
-- `carryOverBehavior`: **UNVERIFIED_AFTER_RESEARCH** — 純据え置き時のゲーム数/周期/剣Lv/ステージ/余剰ポイント保持を本機固有の高信頼本文で直接確定できず。
-- `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH** — 設定変更なしの電源OFF→ONのみの処理を初代本機資料で確定できず。
+- `settingChangeBehavior`: **CONFIRMED_PERIOD_ANALYSIS** — 設定変更で天井G数/消化G数をリセット、ART当選状況をクリア、内部モード再セット。
+- `carryOverBehavior`: **UNVERIFIED_AFTER_RESEARCH** — 当時狙い目資料は「宵越し×」とするが、純据え置き時のゲーム数/モード/状態の保持契約を本機固有本文で直接確定できず。過剰一般化しない。
+- `powerCycleBehavior`: **UNVERIFIED_AFTER_RESEARCH** — 設定変更なしの電源OFF→ONのみの処理は直接確定できず。
 - `gameCounterReset`: **CONFIRMED_CLEAR_ON_SETTING_CHANGE**
-- `ceilingAfterReset`: **CONFIRMED_SPECIAL_RESET_CEILING_DISTRIBUTION**
-- `modeAfterReset`: **RESET_PERIODIC_TABLE_CONFIRMED** — A/B/天国型ではなく設定変更後専用の周期天井テーブル。
-- `stateAfterReset`: **CONFIRMED_PARTIAL** — 開始ステージは修行35% / 鍛冶30% / 古城30% / プリシラ5%。ただしステージと内部状態の完全リンクは当時資料自身が不明としているため、内部状態そのものとは断定しない。
+- `ceilingAfterReset`: **CONFIRMED_MODE_DEPENDENT_AFTER_RESET** — 再抽選モードに応じ51/999/1111G。
+- `modeAfterReset`: **CONFIRMED_RESELECT_WITH_NUMERIC_DISTRIBUTION**
+- `stateAfterReset`: **UNVERIFIED_AFTER_RESEARCH**
 - `advantageousSectionReset`: **NOT_APPLICABLE_5TH_GEN**
-- `resetBenefits`: **CONFIRMED_NUMERIC** — 5/10/15/20周期が朝一専用テーブルで優遇。
-- `resetPenalties`: **CONFIRMED_PARTIAL** — 前日ゲーム数・周期・剣Lv・ステージ進捗は設定変更で失われる。
-- `resetDetection`: **PARTIAL_LOW_CONFIDENCE** — 前日状態既知なら比較材料。ガックン/ランプ/初期出目など単独判別契約はUNVERIFIED。
+- `resetBenefits`: **CONFIRMED_NUMERIC** — 朝一設定変更後20%で天国モード→51G天井。
+- `resetPenalties`: **CONFIRMED_PARTIAL** — 前日天井進捗/消化G数は変更時に失われる。
+- `resetDetection`: **UNVERIFIED_AFTER_RESEARCH** — ガックン/ランプ/初期出目等の本機固有契約は確定できず。
 - `publicMorningNumbers`: **CONFIRMED**
 
 ### 設定変更後の公開朝一数値
 
-全設定共通の天井周期振り分け:
+全設定共通の内部モード選択率:
 
-- 1～4周期: **各1%**
-- 5周期: **10%**
-- 6～9周期: **各1%**
-- 10周期: **40%**
-- 11～14周期: **各1%**
-- 15周期: **15%**
-- 16～19周期: **各2%**
-- 20周期: **5%**
-- 21～25周期: **各2%**
+- 天国モード: **20%** → ART間天井 **51G**
+- ゾロ目モード: **30%** → ART間天井 **999G**
+- 通常モード: **50%** → ART間天井 **1111G**
 
-設定変更後/ART終了時の開始ステージ:
+### 主要CONFLICT / 品質メモ
 
-- 修行 **35%**
-- 鍛冶 **30%**
-- 古城 **30%**
-- プリシラ **5%**
-
-### 品質メモ
-
-- 「シンデレラブレイド / シンデレラブレード / シンブレ / 初代シンデレラブレイド / NET」と「設定変更 / リセット / 朝一 / 据え置き / 宵越し / 電源OFF ON / 電断 / 天井 / 周期 / 剣レベル / ステージ / ガックン / 50枚 / 1000円」を組み替えて再探索。
-- K-Navi、P-WORLD、パチンコビレッジ、ネット公式系プレス、pacnk、2012年更新のシンデレラブレイド@Wiki、当時攻略/プレイヤー回顧を横断。
-- 50枚ベース、純据え置き、単純電断、ガックン等の単独判別は十分再探索後も確定できず一般論で補完していない。
-- シンデレラブレイド2/3/4の50枚値・リセット仕様は別機種なので流用していない。
+- ART基本G数はSANKYO公式、P-WORLD、パチマガスロマガARTフローで **20/70/140G** が一致。一方、パチマガスロマガ別スペックページに **20/40/140G** 表記があるため、後者をSOURCE_TEXT_CONFLICT_OR_TYPOとして保持し平均・統合しない。
+- 「パチスロ パトラッシュ / パトラッシュV / PAT-RUSH / SANKYO / 三共」と「設定変更 / リセット / 朝一 / 据え置き / 宵越し / 電源OFF ON / 電断 / 天井 / 天井短縮 / モード / モード選択率 / ガックン / 50枚 / 1000円」を組み替えて再探索。
+- SANKYO公式、K-Navi、P-WORLD、パチマガスロマガ、5号機クロニクル、2012年当時の天井攻略資料を横断。
+- 50枚ベース、純据え置き、単純電断、内部状態、ガックン等は十分再探索後も確定できず一般論で補完していない。
 
 ## 次回再開地点
 
-1. **recordCount 673 / chronologicalFrontier 2012-07-09 / 07-09 group CLOSED**から開始。
-2. **2012-07-10～07-15境界監査**を行い、具体日漏れがなければ **2012-07-16「パチスロ パトラッシュ」（SANKYO）**を次の本線候補としてrepo重複確認 → 導入日照合 → 性能コア＋resetBehavior v0.7を収集。
-3. K-Navi 2012年7月導入カレンダーは2012-07-16にSANKYO「パチスロ パトラッシュ」を掲載。
-4. 07-16同日群を完全に閉じてから07-17以降へ進む。
-5. 「夜王」は既存方針どおり2012年8月地点で再監査。
-6. 欠損は表記揺れ・型式名・メーカー名・シリーズ名と設定変更/リセット/朝一/据え置き/宵越し/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間/50枚を組み替えて十分再探索してからUNVERIFIED。競合は平均せずCONFLICT。
+1. **recordCount 674 / chronologicalFrontier 2012-07-16 / 07-16 group CLOSED**から開始。
+2. **2012-07-17～07-22境界監査済み**。次は **2012-07-23「シオサイA-30」（パイオニア）**をrepo重複確認 → 導入日照合 → 性能コア＋resetBehavior v0.7を収集。
+3. K-Navi 2012年7月導入カレンダーは2012-07-23のパチスロとして「シオサイA-30」を掲載。
+4. 07-23同日群を完全に閉じてから07-24以降へ進む。
+5. 既知の後続アンカーは2012-07-30「メガミリオネア」（ウィンネット）、「マイジャグラーII」（北電子）。
+6. 「夜王」は既存方針どおり2012年8月地点で再監査。
+7. 欠損は表記揺れ・型式名・メーカー名・シリーズ名と設定変更/リセット/朝一/据え置き/宵越し/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間/50枚を組み替えて十分再探索してからUNVERIFIED。競合は平均せずCONFLICT。
 
 ## 遡及resetBehavior QA 次回再開地点
 
@@ -107,17 +90,14 @@
 
 ## 主要出典 — 取得日 2026-09-05
 
+- SANKYO公式オンライン博物館: `https://www.sankyo-fever.jp/collection/544/`
 - K-Navi 2012年7月導入カレンダー: `https://p-kn.com/calendar/201207/`
-- パチンコビレッジ 2012年導入カレンダー: `https://www.pachinkovillage.com/introduction/index.php?Y=2012&action=archive`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/6740`
-- ネット公式系プレス（初代シミュレーターiOS）: `https://www.dreamnews.jp/press/0000097980/`
-- ネット公式系プレス（初代シミュレーターAndroid/Kindle）: `https://www.dreamnews.jp/press/0000096413/`
-- pacnk 初代シンデレラブレイド: `https://pacnk.com/slot/tools/sh_cinderellablade.html`
-- シンデレラブレイド@Wiki 天井振り分け: `https://w.atwiki.jp/pipirurenyan/pages/42.html`
-- シンデレラブレイド@Wiki 通常時: `https://w.atwiki.jp/pipirurenyan/pages/39.html`
-- シンデレラブレイド@Wiki テンプレ: `https://w.atwiki.jp/pipirurenyan/pages/38.html`
-- 当時プレイヤーレビュー/回顧: `https://crankyseven.com/cinderellablade-pc-review.htm`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/6756`
+- パチマガスロマガ ART突入フロー: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sankyo_slot/28/l.php`
+- パチマガスロマガ スペック: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sankyo_slot/28/a.php`
+- 5号機クロニクル SANKYO全機種: `https://5goki.com/sankyo`
+- 2012年当時 天井ハイエナ期待値リスト: `https://macerate.seesaa.net/article/288333617.html`
 
 ## GitHub commits
 
-- シンデレラブレイド machine record: `7f04231049cb6c583fd9b1e1ac7c87d1633d25a5`
+- パチスロ パトラッシュ machine record: `1d9349fd8d1ed6eba7dd6c317aead46bec40bf3f`
