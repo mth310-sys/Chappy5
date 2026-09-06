@@ -1,123 +1,16 @@
-export const STUDENT_HD_SIZE=96;
-export const STUDENT_HD_VERSION='student-hd-v1';
-
+export const STUDENT_HD_SIZE=128;
+export const STUDENT_HD_VERSION='student-hd128-v1';
+const BASE_SIZE=96;
 const cache=new Map();
-
-const C={
-  outline:'#241b18',
-  hairShadow:'#35251d',hair:'#53392a',hairMid:'#6b4a36',hairLight:'#9a7455',
-  skinShadow:'#d8926f',skin:'#f2c69e',skinLight:'#ffe2bd',
-  eye:'#171514',mouth:'#965a52',
-  hoodieShadow:'#1c436f',hoodie:'#2e67a8',hoodieMid:'#3e79b8',hoodieLight:'#75a7dc',
-  shirt:'#f4f1ea',pantsShadow:'#26384b',pants:'#354c64',pantsLight:'#526f88',
-  shoe:'#24262b',shoeLight:'#72767d',lace:'#eef2f5'
-};
-
-function poly(ctx,pts,color){ctx.fillStyle=color;ctx.beginPath();ctx.moveTo(pts[0][0],pts[0][1]);for(let i=1;i<pts.length;i++)ctx.lineTo(pts[i][0],pts[i][1]);ctx.closePath();ctx.fill();}
-function rect(ctx,x,y,w,h,color){ctx.fillStyle=color;ctx.fillRect(Math.round(x),Math.round(y),Math.round(w),Math.round(h));}
-function ellipse(ctx,x,y,rx,ry,color){ctx.fillStyle=color;ctx.beginPath();ctx.ellipse(Math.round(x),Math.round(y),Math.round(rx),Math.round(ry),0,0,Math.PI*2);ctx.fill();}
-
-function drawLeg(ctx,x,y,front,phase,dir){
-  const stride=phase===1?8:phase===3?-7:0;
-  const dx=front?stride:-stride;
-  const shade=front?C.pants:C.pantsShadow;
-  poly(ctx,[[x-5,y],[x+4,y],[x+3+dx*.25,y+15],[x+dx,y+29],[x-5+dx,y+29],[x-3+dx*.25,y+14]],C.outline);
-  poly(ctx,[[x-3,y+2],[x+2,y+2],[x+1+dx*.2,y+14],[x-1+dx,y+25],[x-3+dx,y+25]],shade);
-  rect(ctx,x-5+dx,y+27,11,6,C.shoe);
-  rect(ctx,x-2+dx,y+27,5,2,C.shoeLight);
-  if(front)rect(ctx,x-1+dx,y+29,4,1,C.lace);
-}
-
-function drawArm(ctx,shoulderX,shoulderY,side,phase,dir,seated){
-  const swing=seated?0:(phase===1?5:phase===3?-5:0)*(side==='L'?1:-1);
-  const sx=shoulderX, sy=shoulderY;
-  const elbowX=sx+(side==='L'?-10:10)+swing*.35;
-  const elbowY=sy+14;
-  const handX=elbowX+(side==='L'?-4:4)+swing*.35;
-  const handY=elbowY+14;
-  const dark=(dir==='SE'&&side==='R')||(dir==='SW'&&side==='L');
-  poly(ctx,[[sx-4,sy],[sx+4,sy],[elbowX+4,elbowY],[handX+4,handY],[handX-4,handY+1],[elbowX-4,elbowY]],C.outline);
-  poly(ctx,[[sx-2,sy+2],[sx+2,sy+2],[elbowX+2,elbowY],[handX+2,handY-2],[handX-2,handY-1],[elbowX-2,elbowY]],dark?C.hoodieShadow:C.hoodieMid);
-  ellipse(ctx,handX,handY+1,4,4,dark?C.skinShadow:C.skinLight);
-}
-
-function drawHead(ctx,dir,bob){
-  const sw=dir==='SW';
-  const cx=48, cy=27+bob;
-  // neck
-  rect(ctx,43,42+bob,10,8,C.outline);rect(ctx,45,42+bob,7,8,C.skinShadow);
-  // ear / face silhouette
-  ellipse(ctx,cx+(sw?-1:1),cy+5,18,18,C.outline);
-  ellipse(ctx,cx+(sw?-1:1),cy+6,15,15,C.skin);
-  ellipse(ctx,cx+(sw?-14:14),cy+7,4,6,C.skinShadow);
-  // face lighting plane
-  poly(ctx,sw?[[34,28+bob],[47,20+bob],[61,25+bob],[59,39+bob],[44,43+bob],[36,38+bob]]:[[62,28+bob],[49,20+bob],[35,25+bob],[37,39+bob],[52,43+bob],[60,38+bob]],C.skinLight);
-  // hair mass
-  poly(ctx,sw?[[31,29+bob],[31,18+bob],[37,11+bob],[48,7+bob],[61,12+bob],[66,20+bob],[64,29+bob],[59,25+bob],[56,18+bob],[50,21+bob],[46,15+bob],[41,21+bob],[36,18+bob],[36,28+bob]]:[[65,29+bob],[65,18+bob],[59,11+bob],[48,7+bob],[35,12+bob],[30,20+bob],[32,29+bob],[37,25+bob],[40,18+bob],[46,21+bob],[50,15+bob],[55,21+bob],[60,18+bob],[60,28+bob]],C.outline);
-  poly(ctx,sw?[[34,27+bob],[34,19+bob],[39,13+bob],[48,10+bob],[58,14+bob],[63,20+bob],[61,26+bob],[56,23+bob],[54,17+bob],[49,20+bob],[45,14+bob],[41,20+bob],[37,18+bob],[37,27+bob]]:[[62,27+bob],[62,19+bob],[57,13+bob],[48,10+bob],[38,14+bob],[33,20+bob],[35,26+bob],[40,23+bob],[42,17+bob],[47,20+bob],[51,14+bob],[55,20+bob],[59,18+bob],[59,27+bob]],C.hair);
-  poly(ctx,sw?[[36,18+bob],[43,12+bob],[49,10+bob],[47,16+bob],[41,20+bob]]:[[60,18+bob],[53,12+bob],[47,10+bob],[49,16+bob],[55,20+bob]],C.hairLight);
-  rect(ctx,sw?35:56,22+bob,5,4,C.hairShadow);
-  // features
-  const nearEyeX=sw?42:54, farEyeX=sw?54:42;
-  rect(ctx,nearEyeX,31+bob,3,3,C.eye);rect(ctx,farEyeX,30+bob,2,2,C.eye);
-  rect(ctx,sw?39:55,36+bob,3,2,C.skinShadow);
-  rect(ctx,sw?44:49,39+bob,5,2,C.mouth);
-}
-
-function drawTorso(ctx,dir,phase,seated,bob){
-  const y=48+bob;
-  poly(ctx,[[36,y],[60,y],[66,y+8],[63,y+27],[58,y+35],[38,y+35],[33,y+27],[30,y+8]],C.outline);
-  poly(ctx,[[38,y+2],[58,y+2],[62,y+9],[59,y+27],[55,y+31],[41,y+31],[36,y+27],[34,y+9]],C.hoodie);
-  const lightSide=dir==='SW'?'R':'L';
-  if(lightSide==='L')poly(ctx,[[38,y+3],[46,y+3],[42,y+29],[37,y+25],[35,y+9]],C.hoodieLight);
-  else poly(ctx,[[58,y+3],[50,y+3],[54,y+29],[59,y+25],[61,y+9]],C.hoodieLight);
-  rect(ctx,43,y+3,10,14,C.shirt);
-  rect(ctx,46,y+4,2,12,'#ffffff');
-  // hood seam / drawstrings
-  rect(ctx,39,y+5,4,2,C.hoodieShadow);rect(ctx,53,y+5,4,2,C.hoodieShadow);
-  rect(ctx,45,y+15,2,7,C.lace);rect(ctx,51,y+15,2,7,C.lace);
-  drawArm(ctx,34,y+7,'L',phase,dir,seated);drawArm(ctx,62,y+7,'R',phase,dir,seated);
-}
-
-function drawSeatedLower(ctx,dir,bob){
-  const y=74+bob;
-  poly(ctx,[[35,y],[61,y],[65,y+8],[59,y+15],[43,y+15],[35,y+9]],C.outline);
-  poly(ctx,[[38,y+2],[58,y+2],[60,y+7],[56,y+11],[43,y+11],[38,y+7]],C.pants);
-  rect(ctx,53,y+10,13,6,C.shoe);rect(ctx,56,y+10,6,2,C.shoeLight);
-}
-
-function render(dir='SE',frame=0,seated=false){
-  const safeDir=dir==='SW'?'SW':'SE';
-  const phase=((Number(frame)||0)%4+4)%4;
-  const bob=seated?1:(phase===1||phase===3?-2:0);
-  const canvas=document.createElement('canvas');
-  canvas.width=STUDENT_HD_SIZE;canvas.height=STUDENT_HD_SIZE;
-  const ctx=canvas.getContext('2d');
-  ctx.imageSmoothingEnabled=false;
-  // soft footprint kept small so actor still reads in dense scenes
-  ellipse(ctx,48,91,17,4,'rgba(26,22,20,.18)');
-  if(!seated){
-    drawLeg(ctx,41,72+bob,true,phase,safeDir);
-    drawLeg(ctx,55,72+bob,false,phase,safeDir);
-  }else drawSeatedLower(ctx,safeDir,bob);
-  drawTorso(ctx,safeDir,phase,seated,bob);
-  drawHead(ctx,safeDir,bob);
-  return canvas.toDataURL('image/png');
-}
-
-export function studentSpriteHDDataURL(dir='SE',frame=0,seated=false){
-  const safeDir=dir==='SW'?'SW':'SE';
-  const f=seated?0:((Number(frame)||0)%4+4)%4;
-  const key=`${STUDENT_HD_VERSION}:${safeDir}:${f}:${!!seated}`;
-  if(cache.has(key))return cache.get(key);
-  const url=render(safeDir,f,seated);
-  cache.set(key,url);
-  return url;
-}
-
-export function directionFromDelta(dx,dy,fallback='SE'){
-  if(dx===0&&dy===0)return fallback==='SW'?'SW':'SE';
-  if(dx<0)return 'SW';
-  if(dx>0)return 'SE';
-  return dy<0?'SW':'SE';
-}
+const C={outline:'#241b18',hairShadow:'#35251d',hair:'#53392a',hairMid:'#6b4a36',hairLight:'#9a7455',skinShadow:'#d8926f',skin:'#f2c69e',skinLight:'#ffe2bd',eye:'#171514',mouth:'#965a52',hoodieShadow:'#1c436f',hoodie:'#2e67a8',hoodieMid:'#3e79b8',hoodieLight:'#75a7dc',shirt:'#f4f1ea',pantsShadow:'#26384b',pants:'#354c64',pantsLight:'#526f88',shoe:'#24262b',shoeLight:'#72767d',lace:'#eef2f5'};
+function poly(ctx,pts,color){ctx.fillStyle=color;ctx.beginPath();ctx.moveTo(pts[0][0],pts[0][1]);for(let i=1;i<pts.length;i++)ctx.lineTo(pts[i][0],pts[i][1]);ctx.closePath();ctx.fill()}
+function rect(ctx,x,y,w,h,color){ctx.fillStyle=color;ctx.fillRect(Math.round(x),Math.round(y),Math.round(w),Math.round(h))}
+function ellipse(ctx,x,y,rx,ry,color){ctx.fillStyle=color;ctx.beginPath();ctx.ellipse(Math.round(x),Math.round(y),Math.round(rx),Math.round(ry),0,0,Math.PI*2);ctx.fill()}
+function drawLeg(ctx,x,y,front,phase){const stride=phase===1?8:phase===3?-7:0,dx=front?stride:-stride,shade=front?C.pants:C.pantsShadow;poly(ctx,[[x-5,y],[x+4,y],[x+3+dx*.25,y+15],[x+dx,y+29],[x-5+dx,y+29],[x-3+dx*.25,y+14]],C.outline);poly(ctx,[[x-3,y+2],[x+2,y+2],[x+1+dx*.2,y+14],[x-1+dx,y+25],[x-3+dx,y+25]],shade);rect(ctx,x-5+dx,y+27,11,6,C.shoe);rect(ctx,x-2+dx,y+27,5,2,C.shoeLight);if(front)rect(ctx,x-1+dx,y+29,4,1,C.lace)}
+function drawArm(ctx,sx,sy,side,phase,dir,seated){const swing=seated?0:(phase===1?5:phase===3?-5:0)*(side==='L'?1:-1),ex=sx+(side==='L'?-10:10)+swing*.35,ey=sy+14,hx=ex+(side==='L'?-4:4)+swing*.35,hy=ey+14,dark=(dir==='SE'&&side==='R')||(dir==='SW'&&side==='L');poly(ctx,[[sx-4,sy],[sx+4,sy],[ex+4,ey],[hx+4,hy],[hx-4,hy+1],[ex-4,ey]],C.outline);poly(ctx,[[sx-2,sy+2],[sx+2,sy+2],[ex+2,ey],[hx+2,hy-2],[hx-2,hy-1],[ex-2,ey]],dark?C.hoodieShadow:C.hoodieMid);ellipse(ctx,hx,hy+1,4,4,dark?C.skinShadow:C.skinLight)}
+function drawHead(ctx,dir,bob){const sw=dir==='SW',cx=48,cy=27+bob;rect(ctx,43,42+bob,10,8,C.outline);rect(ctx,45,42+bob,7,8,C.skinShadow);ellipse(ctx,cx+(sw?-1:1),cy+5,18,18,C.outline);ellipse(ctx,cx+(sw?-1:1),cy+6,15,15,C.skin);ellipse(ctx,cx+(sw?-14:14),cy+7,4,6,C.skinShadow);poly(ctx,sw?[[34,28+bob],[47,20+bob],[61,25+bob],[59,39+bob],[44,43+bob],[36,38+bob]]:[[62,28+bob],[49,20+bob],[35,25+bob],[37,39+bob],[52,43+bob],[60,38+bob]],C.skinLight);poly(ctx,sw?[[31,29+bob],[31,18+bob],[37,11+bob],[48,7+bob],[61,12+bob],[66,20+bob],[64,29+bob],[59,25+bob],[56,18+bob],[50,21+bob],[46,15+bob],[41,21+bob],[36,18+bob],[36,28+bob]]:[[65,29+bob],[65,18+bob],[59,11+bob],[48,7+bob],[35,12+bob],[30,20+bob],[32,29+bob],[37,25+bob],[40,18+bob],[46,21+bob],[50,15+bob],[55,21+bob],[60,18+bob],[60,28+bob]],C.outline);poly(ctx,sw?[[34,27+bob],[34,19+bob],[39,13+bob],[48,10+bob],[58,14+bob],[63,20+bob],[61,26+bob],[56,23+bob],[54,17+bob],[49,20+bob],[45,14+bob],[41,20+bob],[37,18+bob],[37,27+bob]]:[[62,27+bob],[62,19+bob],[57,13+bob],[48,10+bob],[38,14+bob],[33,20+bob],[35,26+bob],[40,23+bob],[42,17+bob],[47,20+bob],[51,14+bob],[55,20+bob],[59,18+bob],[59,27+bob]],C.hair);poly(ctx,sw?[[36,18+bob],[43,12+bob],[49,10+bob],[47,16+bob],[41,20+bob]]:[[60,18+bob],[53,12+bob],[47,10+bob],[49,16+bob],[55,20+bob]],C.hairLight);rect(ctx,sw?35:56,22+bob,5,4,C.hairShadow);rect(ctx,sw?42:54,31+bob,3,3,C.eye);rect(ctx,sw?54:42,30+bob,2,2,C.eye);rect(ctx,sw?39:55,36+bob,3,2,C.skinShadow);rect(ctx,sw?44:49,39+bob,5,2,C.mouth)}
+function drawTorso(ctx,dir,phase,seated,bob){const y=48+bob;poly(ctx,[[36,y],[60,y],[66,y+8],[63,y+27],[58,y+35],[38,y+35],[33,y+27],[30,y+8]],C.outline);poly(ctx,[[38,y+2],[58,y+2],[62,y+9],[59,y+27],[55,y+31],[41,y+31],[36,y+27],[34,y+9]],C.hoodie);if(dir==='SE')poly(ctx,[[38,y+3],[46,y+3],[42,y+29],[37,y+25],[35,y+9]],C.hoodieLight);else poly(ctx,[[58,y+3],[50,y+3],[54,y+29],[59,y+25],[61,y+9]],C.hoodieLight);rect(ctx,43,y+3,10,14,C.shirt);rect(ctx,46,y+4,2,12,'#fff');rect(ctx,39,y+5,4,2,C.hoodieShadow);rect(ctx,53,y+5,4,2,C.hoodieShadow);rect(ctx,45,y+15,2,7,C.lace);rect(ctx,51,y+15,2,7,C.lace);drawArm(ctx,34,y+7,'L',phase,dir,seated);drawArm(ctx,62,y+7,'R',phase,dir,seated)}
+function drawSeatedLower(ctx,bob){const y=74+bob;poly(ctx,[[35,y],[61,y],[65,y+8],[59,y+15],[43,y+15],[35,y+9]],C.outline);poly(ctx,[[38,y+2],[58,y+2],[60,y+7],[56,y+11],[43,y+11],[38,y+7]],C.pants);rect(ctx,53,y+10,13,6,C.shoe);rect(ctx,56,y+10,6,2,C.shoeLight)}
+function render(dir='SE',frame=0,seated=false){const safeDir=dir==='SW'?'SW':'SE',phase=((Number(frame)||0)%4+4)%4,bob=seated?1:(phase===1||phase===3?-2:0);const master=document.createElement('canvas');master.width=BASE_SIZE;master.height=BASE_SIZE;const ctx=master.getContext('2d');ctx.imageSmoothingEnabled=false;ellipse(ctx,48,91,17,4,'rgba(26,22,20,.18)');if(!seated){drawLeg(ctx,41,72+bob,true,phase);drawLeg(ctx,55,72+bob,false,phase)}else drawSeatedLower(ctx,bob);drawTorso(ctx,safeDir,phase,seated,bob);drawHead(ctx,safeDir,bob);const canvas=document.createElement('canvas');canvas.width=STUDENT_HD_SIZE;canvas.height=STUDENT_HD_SIZE;const out=canvas.getContext('2d');out.imageSmoothingEnabled=false;out.drawImage(master,0,0,BASE_SIZE,BASE_SIZE,0,0,STUDENT_HD_SIZE,STUDENT_HD_SIZE);return canvas.toDataURL('image/png')}
+export function studentSpriteHDDataURL(dir='SE',frame=0,seated=false){const safeDir=dir==='SW'?'SW':'SE',f=seated?0:((Number(frame)||0)%4+4)%4,key=`${STUDENT_HD_VERSION}:${safeDir}:${f}:${!!seated}`;if(cache.has(key))return cache.get(key);const url=render(safeDir,f,seated);cache.set(key,url);return url}
+export function directionFromDelta(dx,dy,fallback='SE'){if(dx===0&&dy===0)return fallback==='SW'?'SW':'SE';if(dx<0)return'SW';if(dx>0)return'SE';return dy<0?'SW':'SE'}
