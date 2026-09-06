@@ -4,97 +4,96 @@
 
 ## 現在地点
 
-- recordCount: **830**
-- latestRecordAdded: **パチスロ サイボーグ009**（三洋物産）— 2014-07-07
-- latestRecord: `docs/real_machine_db/machines/2014-07-07_pachislot-cyborg009.md`
+- recordCount: **831**
+- latestRecordAdded: **娘娘娘**（岡崎産業）— 2014-07-07
+- latestRecord: `docs/real_machine_db/machines/2014-07-07_nyannyan-musume.md`
 - chronologicalFrontier: **2014-07-07**
-- frontierLatestMachine: **パチスロ サイボーグ009**
+- frontierLatestMachine: **娘娘娘**
 - schema: **resetBehavior v0.7**
-- status: **2014-07-07_GROUP_OPEN**
+- status: **2014-07-07_GROUP_CLOSED / 2014-07-08_TO_2014-07-21_BOUNDARY_CLOSED_FOR_CURRENT_RESEARCH**
 
 ## 今回の同期 / 正本確認
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、本handoff、829件目 `2014-07-07_tekken-3rd.md` を再読。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、本handoff、830件目 `2014-07-07_pachislot-cyborg009.md` を再読。
 - INDEXは19件表記の旧集約状態のため、README規定どおり **LATEST_HANDOFF + 実レコード** を進捗正本として使用。
-- 作業開始時の正本は **829件 / 2014-07-07 / 07-07_GROUP_OPEN**。指定どおり次の未処理「パチスロ サイボーグ009」から継続。
+- 作業開始時の正本は、チャット直前の826件ではなく **830件 / 2014-07-07 / 07-07_GROUP_OPEN**。指定どおり次の未処理「娘娘娘」から継続。
 
-## 今回追加 — パチスロ サイボーグ009
+## 今回追加 — 娘娘娘
 
 ### identity / 性能コア
 
-- manufacturer: **三洋物産**。
-- hall start: **2014-07-07**。業界記事は7/6納品予定、パチ7は7/7導入。
-- formalModelName: **パチスロサイボーグ009KE**。
-- inspectionNumber: **4S0006**。
-- generation/system: **5号機 / AT / 疑似ボーナス / CZ（加速ゾーン） / ゲーム数解除・スキップ / 天井**。
-- payoutRate: **97.00 / 98.60 / 100.05 / 105.00 / 107.63 / 112.49%**（メーカー発表系列）。
-- 疑似ボーナス初当たり: **1/220.9 → 1/176.5**。
-- AT初当たり: **1/549.0 → 1/351.4**。
-- baseGamesPer50: **約30G**。
-- 純増: **約2.5枚/G**。
-- B約50枚、BB約100枚、BBB 20G約50枚+AT確定、AT「サイボーグRUSH」初期50G+α。
-- 通常A/B最大天井 **1009G**、AT由来通常C **800G**、天国 **50G**。
+- machineName: **娘娘娘（にゃんにゃんむすめ）**。
+- manufacturer: **岡崎産業**。
+- hall start: **2014-07-07**。グリーンべるとは7/6納品開始予定、当時攻略は7/7導入日としているため、ホール導入開始キーは7/7。
+- formalModelName: **ニャンニャンムスメN1**。
+- inspectionNumber: **4S0172**。
+- generation/system: **5号機 / AT / 疑似ボーナス / CZ / ゲーム数解除 / 天井**。
+- payoutRate: **96.87 / 98.35 / 100.57 / 103.10 / 105.60 / 110.03%**（メーカー発表系列）。
+- 疑似ボーナス合成: **1/108.5 / 103.7 / 96.5 / 89.3 / 82.7 / 72.3**（メーカー発表値）。これは分離されたAT初当たりではなく疑似ボーナス合成として保持。
+- baseGamesPer50: **30.64G**。
+- netIncrease: **約2.8枚/G**。
+- 桃花ボーナス: ベルナビ20回・約100枚。
+- 桜花ボーナス: ベルナビ40回・約200枚。
+- 娘娘ボーナス: ベルナビ60〜222回・約300〜1110枚。
+- CZ「娘娘時間」: 5G・期待度約30%。「超娘娘時間」: 10G・期待度約51%。
+- 通常最大天井: **999G**。
 - coreStatus: **COMPLETE_CORE**。
 
-## パチスロ サイボーグ009 — resetBehavior v0.7
+## 娘娘娘 — resetBehavior v0.7
 
-- settingChangeBehavior: パチ7当時朝イチ表で **天井G数RESET / モードRESET / 状態RESET / 液晶は船内ステージ**。
-- powerCycleBehavior: 設定変更なし電源OFF→ONは **天井G数CARRYOVER / モードCARRYOVER / 状態CARRYOVER**。液晶は船内ステージ、AT中ならAT中復帰。
-- carryOverBehavior: 純据え置きを独立明記した本機固有高信頼資料は **UNVERIFIED_AFTER_RESEARCH**。電断表から自動転記しない。
-- gameCounterReset: 設定変更 **RESET_CONFIRMED** / 電断のみ **CARRYOVER_CONFIRMED** / 純据え置き **UNVERIFIED_AFTER_RESEARCH**。
-- ceilingAfterReset: 設定変更専用短縮天井は **NONE_CONFIRMED_AFTER_RESEARCH**。1009/800/50Gは通常モード仕様として分離。
-- modeAfterReset: 設定変更 **RESET_CONFIRMED** / 電断のみ **CARRYOVER_CONFIRMED**。設定変更時モード振り分け数値はUNVERIFIED。
-- stateAfterReset: 設定変更 **RESET_CONFIRMED** / 電断のみ **CARRYOVER_CONFIRMED**。具体状態振り分けはUNVERIFIED。
+- settingChangeBehavior: 当時解析で**設定変更後専用のモード振り分け**を確認。公開値として **モードC 28.13% / モードD 28.13%**。また設定変更後は **約35%で128G以内にゲーム数解除**。
+- gameCounterReset: 設定変更後の専用モード抽選は確認できたが、前日内部G数/天井Gを明示的にRESETとした独立表は今回固定できず **UNVERIFIED_AFTER_RESEARCH**。推測転記しない。
+- ceilingAfterReset: 設定変更専用の固定短縮天井は **NONE_CONFIRMED_AFTER_RESEARCH**。約35%で128G以内解除は専用モード配分由来の朝一優遇として分離。
+- modeAfterReset: **RESET/RESELECT_CONFIRMED**。モードC **28.13%**、モードD **28.13%**。残り43.74%のA/B内訳は安全な直接資料を固定できずUNVERIFIED。
+- stateAfterReset: モード以外のCZ高確等の内部状態処理は **UNVERIFIED_AFTER_RESEARCH**。
+- carryOverBehavior: 純据え置き時の内部G数・モード・状態の直接契約は **UNVERIFIED_AFTER_RESEARCH**。
+- powerCycleBehavior: 設定変更なし電源OFF→ONの内部G数・モード・状態の直接契約は **UNVERIFIED_AFTER_RESEARCH**。
 - advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
-- resetBenefits / resetPenalties: 設定変更固有の比較可能な主要恩恵・不利要素は **NONE_CONFIRMED_AFTER_RESEARCH**。
-- resetDetection: 船内ステージは変更・電断双方で出るため単独判別不可。ガックン等の本機固有高信頼契約は **NONE_CONFIRMED_AFTER_RESEARCH**。
-- publicMorningNumbers: 設定変更専用の比較可能な公開朝一数値は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- resetBenefits: 設定変更後約35%で128G以内解除。モードDは128G以内解除確定の天国系。リセット後は朝一狙いに実用的な優遇あり。
+- resetPenalties: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- resetDetection: ガックン、7セグ初期表示等の本機固有で高信頼な変更判別契約は **NONE_CONFIRMED_AFTER_RESEARCH**。128G以内当選だけで変更確定とは扱わない。
+- publicMorningNumbers: **約35%で128G以内解除 / モードC 28.13% / モードD 28.13%**。
 - resetBehaviorQA: **PARTIAL**。
 
 ## safeguard / 再探索
 
-- `パチスロ サイボーグ009 / サイボーグ009SP / パチスロサイボーグ009KE / 4S0006 / 三洋物産` と `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / 1009G / 800G / 50G / モード / 状態 / ガックン / 50枚` を組み合わせて再探索。
-- グリーンべると、P-WORLD、パチ7、パチマガスロマガ旧攻略、一撃、当時天井・ゾーン解析を横断。
-- 2004年アビリット4号機、2010年アビリット5号機「地上より永遠に」は別機種。リセット情報を流用していない。
-- 一部後年記事は1/220.9〜1/176.5を「AT初当たり」と誤ラベルするため、メーカー発表の疑似ボーナス初当たりとAT初当たり1/549.0〜1/351.4を分離保持。
+- `娘娘娘 / にゃんにゃんむすめ / ニャンニャンムスメN1 / 4S0172 / 岡崎産業` と `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / 999G / 128G / モード / モードC / モードD / ガックン / 変更判別 / 50枚 / 1000円` を組み合わせて再探索。
+- 岡崎産業関連開発資料、グリーンべると、P-WORLD、パチマガスロマガ旧攻略、当時天井解析、旧実機DBを横断。
+- 同名の飲食店等のノイズと後年別機種を除外。
+- 純据え置き/単純電断/前日内部G数処理は一般5号機仕様や他機種から流用していない。
+
+## 2014-07-07群 / 境界監査
+
+- K-Naviの全国一斉導入カレンダー上、07-07パチスロ群は **まじかる☆タルるートくん / 鉄拳3rd / パチスロ サイボーグ009 / 娘娘娘** の4機。
+- No.828〜831ですべて登録済みとなったため **2014-07-07_GROUP_CLOSED**。
+- K-Navi上、次の全国一斉導入パチスロ日は **2014-07-22**。07-08〜07-21の間に同カレンダー上の全国一斉導入パチスロ日はないため、現在の境界監査では **CLOSED_FOR_CURRENT_RESEARCH**。
+- 2014-07-22群は **パチスロ リング 呪いの7日間（藤商事） / みどりのマキバオー 届け!!日本一のゴールへ!!（オリンピア） / ぱちスロ 必殺仕事人（京楽産業.）** の3機を確認。
 
 ## 遡及 resetBehavior QA
 
-- `docs/real_machine_db/machines/2007-02-18_kagaku-ninjatai-gatchaman.md` をv0.7再QA。
-- `schemaVersion: v0.7`、`resetQaLastUpdated: 2026-09-07`、`publicMorningNumbers`を明示。
-- 1300G救済G-ZONEと通常GT/G-ZONE仕様は再確認したが、設定変更/据え置き/単純電断時の1300Gカウンタ・GT/G-ZONE内部状態処理は資料系統を変えても直接契約を固定できず **UNVERIFIED_AFTER_RESEARCH**。
-- 既存 `coreStatus: COMPLETE_CORE` は維持し、reset QAのみ **PARTIAL**。
-- Git履歴上、ガッチャマン追加直後の次の新規実機レコードは `docs/real_machine_db/machines/2007-02-12_tim-to-iu-na-no-pachislotki.md`。次QAカーソルは同機とする。
-
-## 2014-07-07群 / 次候補
-
-- 07-07群は **まじかる☆タルるートくん / 鉄拳3rd / パチスロ サイボーグ009 / 娘娘娘** の4機。
-- No.828 まじかる☆タルるートくん、No.829 鉄拳3rd、No.830 パチスロ サイボーグ009まで処理済み。
-- 07-07群はまだ **OPEN**。
-- 次の明確な未処理は岡崎産業 **「娘娘娘」**。これを処理後、他メーカー/資料系統で07-07群漏れ監査を行いCLOSED判定する。
+- 既存QAカーソルは `docs/real_machine_db/machines/2007-02-12_tim-to-iu-na-no-pachislotki.md` のまま維持。
+- 新規時系列収集を止めず、別QAリレーで順次補完する。
+- 2015-06-08到達時の **吉宗～極～（ヨシムネH2A4 / 3S1093）** 正式量産版処理注意は維持。
 
 ## 次回再開地点
 
-1. **recordCount 830 / chronologicalFrontier 2014-07-07 / 07-07_GROUP_OPEN** から開始。
-2. 最新mainで README / mission / INDEX / LATEST_HANDOFF / 830件目を再確認。
-3. 最初の未処理は **娘娘娘（岡崎産業）**。
-4. 07-07群CLOSED後、07-08〜07-21境界監査を行い、漏れがなければK-Navi上の次の全国一斉導入アンカー **2014-07-22**へ進む。
+1. **recordCount 831 / chronologicalFrontier 2014-07-07 / 07-07_GROUP_CLOSED** から開始。
+2. 最新mainで README / mission / INDEX / LATEST_HANDOFF / 831件目を再確認。
+3. 07-08〜07-21境界は現在CLOSED。最初の未処理は **2014-07-22「パチスロ リング 呪いの7日間」（藤商事）**。
+4. 続いて同日群 **みどりのマキバオー 届け!!日本一のゴールへ!! → ぱちスロ 必殺仕事人** を処理し、他メーカー/資料系統で07-22群を再監査してCLOSED判定する。
 5. 遡及QAは `docs/real_machine_db/machines/2007-02-12_tim-to-iu-na-no-pachislotki.md` から再開。
-6. 2015-06-08到達時の **吉宗～極～（ヨシムネH2A4 / 3S1093）** 正式量産版処理注意は維持。
 
 ## 主要出典 — 取得日 2026-09-07
 
-### パチスロ サイボーグ009
-- グリーンべると / P-WORLD業界ニュース: `https://news.p-world.co.jp/articles/6539/greenbelt`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/7415`
-- パチマガスロマガ ボーナス確率/PAYOUT: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sanyo_slot/21/h-1.php`
-- パチマガスロマガ 1000円ゲーム数: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sanyo_slot/21/c.php`
-- パチマガスロマガ ボーナス: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sanyo_slot/21/bonus.php`
-- パチ7 天井: `https://pachiseven.jp/machines/4156/cutout/78`
-- パチ7 朝イチ: `https://pachiseven.jp/machines/4156/cutout/80`
-- 期待値見える化: `https://slotjin.com/zone/cyborg009/`
+### 娘娘娘
+- グリーンべると: `https://web-greenbelt.jp/00006990/`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/7437`
+- パチマガスロマガ ボーナス確率/PAYOUT: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/okazaki_slot/72/h.php`
+- パチマガスロマガ 小役確率/1000円G数: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/okazaki_slot/72/c.php`
+- パチマガスロマガ 機種トップ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/okazaki_slot/72/okazaki_slot_72.php`
+- すろぱちくえすと 設定変更恩恵/天井: `https://www.slopachi-quest.com/article/nyannyanmusume/`
+- 娯楽産業: `https://www.goraku-sangyo.com/%E5%B2%A1%E5%B4%8E%E7%94%A3%E6%A5%AD%E3%80%80%E6%96%B0%E6%A9%9F%E7%A8%AE%E3%80%8C%E5%A8%98%E5%A8%98%E5%A8%98%E3%83%8B%E3%83%A3%E3%83%B3%E3%83%8B%E3%83%A3%E3%83%B3%E3%83%A0%E3%82%B9%E3%83%A1%E3%80%8D/`
+- D-O: `https://www.d-o-inc.co.jp/2014/07/nyannyan_slot.html`
 
-### 科学忍者隊ガッチャマン QA
-- パチマガスロマガ G-ZONE: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/taiyo_slot/54/k.php`
-- K-Navi: `https://p-kn.com/slot/675/`
-- 既存レコード記載の業界/解析各資料も再確認。
+### 境界監査
+- K-Navi 2014年7月新台カレンダー: `https://p-kn.com/calendar/201407/`
