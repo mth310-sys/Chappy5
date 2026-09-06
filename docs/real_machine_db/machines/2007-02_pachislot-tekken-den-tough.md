@@ -107,28 +107,74 @@ systemType: ボーナス+完走型RT
 
 ## resetBehavior
 
-resetBehaviorQA: PARTIAL
+schemaVersion: v0.7
+resetQaStatus: PARTIAL
+resetQaLastUpdated: 2026-09-07
 
-- settingChangeBehavior: 設定変更時のRT内部状態やボーナス後RT残G数処理を明記した本機固有高信頼資料を確認できず UNVERIFIED
-- carryOverBehavior: 据え置き時のRT残G数/内部状態引継ぎを明記した本機固有高信頼資料を確認できず UNVERIFIED
-- powerCycleBehavior: 電源OFF→ONのみの場合のRT状態処理を明記した本機固有資料を確認できず UNVERIFIED
-- gameCounterReset: 通常時ゲーム数天井は確認できず。リセット対象となる天井カウンタも確認できず
-- ceilingAfterReset: リセット専用短縮天井は確認できず
-- modeAfterReset: 朝一専用モード/設定変更専用モードは確認できず
-- stateAfterReset: RT内部状態の設定変更時処理は未確定
-- advantageousSectionReset: 非該当（有利区間制度導入前）
-- resetBenefits: 設定変更・朝一固有の主要恩恵は確認できず
-- resetPenalties: 設定変更固有の主要不利要素は確認できず
-- resetDetection: 本機固有のガックン・表示等による設定変更判別を高信頼で確定できず
-- numericResetData: 設定変更時専用の比較可能な公開数値は確認できず
+### settingChangeBehavior
+
+- 設定変更時のRT内部状態やボーナス後RT残G数処理を明記した本機固有高信頼資料を再探索したが確認できず `UNVERIFIED_AFTER_RESEARCH`。
+
+### carryOverBehavior
+
+- 据え置き時のRT残G数/内部状態引継ぎを明記した本機固有高信頼資料を再探索したが確認できず `UNVERIFIED_AFTER_RESEARCH`。
+
+### powerCycleBehavior
+
+- 電源OFF→ONのみの場合のRT状態処理を明記した本機固有資料を確認できず `UNVERIFIED_AFTER_RESEARCH`。
+
+### gameCounterReset
+
+- 通常時ゲーム数天井は確認できず。リセット対象となる天井カウンタも確認できず。
+- ボーナス後RT残G数はゲーム数管理要素だが、設定変更/据え置き/純電断での処理契約は未固定。
+
+### ceilingAfterReset
+
+- 通常時天井自体を確認できず、リセット専用短縮天井は `NONE_CONFIRMED_AFTER_RESEARCH`。
+
+### modeAfterReset
+
+- 朝一専用モード/設定変更専用モードは `NONE_CONFIRMED_AFTER_RESEARCH`。
+
+### stateAfterReset
+
+- RT内部状態の設定変更時処理は `UNVERIFIED_AFTER_RESEARCH`。
+
+### advantageousSectionReset
+
+- `NOT_APPLICABLE_5TH_GEN_PRE_5_9`。
+
+### resetBenefits
+
+- 設定変更・朝一固有の主要恩恵は `NONE_CONFIRMED_AFTER_RESEARCH`。
+
+### resetPenalties
+
+- 設定変更固有の主要不利要素は `NONE_CONFIRMED_AFTER_RESEARCH`。
+
+### resetDetection
+
+- 本機固有のガックン・表示等による設定変更判別を、旧攻略・設定判別DB・回顧資料を変えて再探索したが高信頼固定できず `UNVERIFIED_AFTER_RESEARCH`。
+
+### numericResetData
+
+- 設定変更時専用の比較可能な公開数値は `NONE_CONFIRMED_AFTER_RESEARCH`。
+
+### publicMorningNumbers
+
+- `NONE_CONFIRMED_AFTER_RESEARCH`。
 
 ### resetBehavior 再探索メモ
 
-「パチスロ鉄拳伝タフ / 鉄拳伝タフ / オーイズミ / オーイズミネオ」に「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / RT引継ぎ / ガックン」を組み合わせ、旧攻略・設定判別DB・P-WORLD系検索・後年回顧を横断した。通常時天井なし相当の情報とボーナス後RT仕様は確認できたが、設定変更/据え置き/電断時のRT残G数や内部状態処理は高信頼資料で確定できなかったため推測しない。
+- 表記揺れ: `パチスロ鉄拳伝タフ / 鉄拳伝タフ / 鉄拳伝TOUGH / オーイズミ / オーイズミネオ`。
+- 検索語: `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 電源オフ / RT引継ぎ / RT残り / 天井 / ガックン / 初期出目 / 状態`。
+- 資料系統: パチマガスロマガ旧攻略、pacnk、P-WORLD系、2008年回顧解析、中古実機情報、検索残存ページ。
+- 通常時天井なし相当のゲーム性とボーナス後RT仕様は再確認できたが、設定変更/据え置き/電断時のRT残G数や内部状態処理は直接資料で確定できなかった。
+- 2011年「鉄拳伝タフ2nd ROUND」は別機種のため混入させない。
 
 ## sources
 
-取得日: 2026-08-31
+取得日: 2026-09-07
 
 1. パチマガスロマガ旧攻略 — 基本システム
    - https://cs62.cs-plaza.com/g/pachi/pla/s_conq/oizumineo_slot/02/a.php
