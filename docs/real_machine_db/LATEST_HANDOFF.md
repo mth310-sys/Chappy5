@@ -4,103 +4,107 @@
 
 ## 現在地点
 
-- recordCount: **791**
-- latestMachineAddedByChronology: **パチスロうみねこのなく頃に**（オーイズミ）
-- latestRecord: `docs/real_machine_db/machines/2014-01-20_umineko-no-naku-koro-ni.md`
-- chronologicalFrontier: **2014-01-20**
+- recordCount: **792**
+- latestMachineAddedByChronology: **バジリスク～甲賀忍法帖～絆**（エレコ）
+- latestRecord: `docs/real_machine_db/machines/2014-01-27_basilisk-kizuna.md`
+- chronologicalFrontier: **2014-01-27**
 - schema: **resetBehavior v0.7**
-- status: **2014-01-20_GROUP_CLOSED**
+- status: **2014-01-27_GROUP_CLOSED**
 
 ## 今回の同期 / 重要事項
 
-- 最新mainの `README.md`、ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前レコード `2014-01-06_mobile-suit-gundam-bisty.md` を再読。
+- 最新mainの `README.md`、ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前レコード `2014-01-20_umineko-no-naku-koro-ni.md` を再読。
 - INDEXは旧集約状態（19件）のためREADME規定どおり **LATEST_HANDOFF + 実レコード**を正本扱い。
-- 作業開始時正本は recordCount 790 / chronologicalFrontier 2014-01-06 / 01-06群CLOSED。
-- 前handoffどおり2014-01-07～01-19境界を監査。2014-01-14「ダービースタリオン」は `CRダービースタリオン` のパチンコ機として除外済みで、他に具体日付き未登録パチスロを今回確認できず。
-- 次の未処理候補 **「パチスロうみねこのなく頃に」（オーイズミ）**を791件目として追加。
-- 2014-01-20同日一覧の「ゲゲゲの鬼太郎 墓場からの招待状」は藤商事の **CRパチンコ**。同時期に発表されたパチスロは別機種「ゲゲゲの鬼太郎～ブラック鬼太郎の野望～」で、納品は2014年2月上旬予定。よって01-20パチスロ群は今回うみねこ以外の確定未登録機を確認できず **CLOSED**。
-- 次の具体日付きパチスロ候補は **2014-01-27「バジリスク～甲賀忍法帖～絆」（エレコ）**。次回は01-21～01-26境界をもう一度監査してから同機へ進む。
+- 作業開始時正本は recordCount 791 / chronologicalFrontier 2014-01-20 / 01-20群CLOSED。
+- 前handoffどおり **2014-01-21～01-26** を再監査。ALL7 2014年1月導入一覧では01-20の次の具体日付きパチスロは01-27「バジリスク～甲賀忍法帖～絆」で、01-21～26に具体日付き未登録パチスロを今回固定できなかったため境界を `CLOSED_FOR_CURRENT_RESEARCH` とした。
+- **2014-01-27「バジリスク～甲賀忍法帖～絆」（エレコ）**を792件目として追加。
+- ALL7の01-27同日一覧にはパチンコ「ぱちんこCR世紀末銀狼伝サガ」と本機が掲載される。今回の横断監査では本機以外の具体日付き未登録パチスロを確認できず **2014-01-27群CLOSED**。
 
-## 今回追加 — パチスロうみねこのなく頃に
+## 今回追加 — バジリスク～甲賀忍法帖～絆
 
 ### identity / 性能コア
 
-- manufacturer: **オーイズミ**。
-- modelName: **パチスロうみねこのなく頃にHX**。
-- approvalNumber: **3S0831**。
-- hall start: K-Navi / ALL7 **2014-01-20**、HAZUSE **2014-01-27**。`CONFLICT_RELEASE_DATE_2014_01_20_VS_2014_01_27` として保持し、複数資料一致の01-20を時系列キーに採用。
-- generation/system: **5号機 / ボーナス + 完走型RT / 周期CZ / 技術介入**。
-- 通常PAYOUT: **96.1 / 98.7 / 100.2 / 103.4 / 106.2 / 108.5%**。
-- フル攻略PAYOUT: **102.2 / 104.1 / 106.6 / 109.0 / 112.7 / 114.7%**。
-- BIG合成: **1/390.1 / 381.0 / 372.4 / 364.1 / 352.3 / 348.6**。
-- REG: **1/399.6 / 394.8 / 381.0 / 372.4 / 356.2 / 364.1**。
-- ボーナス合成: **1/197.4 / 193.9 / 188.3 / 184.1 / 177.1 / 178.1**。
-- baseGamesPer50: HAZUSE **約36.3～39.6G/50枚**、CrankySeven約36～40G/1000円で整合。
-- RT純増: **約+0.75枚/G**。
-- BIG: バトラ/ベアトリーチェBIG **最大314枚**、通常BIG **最大216枚**、REG **最大48枚**。
-- 周期CZ「運命分岐モード」: **250G / 500G**。CZ中技術介入成功で次回250G、失敗で500G。
-- RT「真相究明モード」: **30G / 50G / 90G**が基本。
+- manufacturer: **エレコ**。
+- modelName: **バジリスク絆MK**。
+- approvalNumber: **3S0950**。
+- hall start: K-Navi / HAZUSE / ALL7 / 一撃 **2014-01-27**。グリーンべるとの2013-11-29記事も2014年1月下旬納品開始予定として整合。
+- generation/system: **5号機 / 擬似ボーナス + AT**。
+- payout: **97.3 / 98.6 / 102.0 / 106.6 / 112.1 / 119.2%**を複数解析一致値として採用。一部二次資料の精密系列 **97.46 / 98.43 / 102.07 / 106.46 / 111.90 / 118.82%**は `CONFLICT_MINOR_PAYOUT_DECIMAL_SERIES` として保持。
+- 通常時BC初当たり: **1/139.4 / 138.7 / 137.9 / 130.6 / 130.1 / 118.6**。
+- AT初当たり: **1/441.3 / 377.9 / 403.4 / 303.9 / 343.1 / 245.1**。
+- baseGamesPer50: **約31G/50枚**。
+- AT純増: **約2.8枚/G**。
+- BC: **ベルナビ8回・約40枚**。PBC: **ベルナビ20回・約100枚 + AT確定**。
+- AT「バジリスクタイム」: **1セット約40G**、追想の刻+争忍の刻、ループ率25/33/50/66/80%系。
+- 天井: **BC間500GでBC** / **最大10スルー後11回目BCでAT**。
 - recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_RESEARCHED**。
 
 ### resetBehavior v0.7
 
-- 本機専用解析で、設定変更時も **「天井到達までのゲーム数はクリアされない」**ことを直接確認。CZ周期天井Gは `KEEP_CONFIRMED`。
-- 設定変更専用の天井短縮・CZ/RT確定・朝一専用モード振り分けは **NONE_CONFIRMED_AFTER_RESEARCH**。
-- 250G/500G周期はCZ技術介入結果による通常仕様であり、設定変更恩恵ではない。
-- 純据え置き時について、周期進捗以外のRT状態・内部状態まで含む完全保持契約は **UNVERIFIED_AFTER_RESEARCH**。
-- 設定変更なしの電源OFF→ON時の周期G / RT状態 / 内部状態は、本機専用直接資料を固定できず **UNVERIFIED_AFTER_RESEARCH**。
-- 設定変更時の内部高確状態・液晶状態の再抽選/引継ぎは **UNVERIFIED_AFTER_RESEARCH**。
-- 本機固有のガックン / 初期出目 / 表示等による確定的変更判別は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 設定変更時は **BC間500G天井をリセット**。
+- **BCスルー回数天井もリセットして再抽選**。
+- 内部モードを再抽選。設定変更時モード振り分けはA約40～43%、B約25%、C約25%、**D 7%、E 1%**。D/Eなら次回BCでAT確定。
+- 設定変更時のBC回数天井は **1/3/5/7/9/10/11回**へ再抽選。**1回天井8.0%（全設定共通）**。
+- 設定変更時は全設定共通で **高確以上29.4%**。公開G数内訳もレコードへ保存。
+- 据え置き時は攻略資料で **BC間G数・スルー回数引継ぎ**を確認。内部モード/状態まで含む完全契約は `UNVERIFIED_AFTER_RESEARCH`。
+- 純電源OFF→ONは本機専用朝一表で **天井・内部状態引継ぎ**を確認。モード/テーブルの完全直接契約は `UNVERIFIED_AFTER_RESEARCH`。
+- ガックンは **変更判別に使えない**とする本機専用解析を確認。実用上は前日込み天井/スルー挙動が主要判別材料。
+- 設定変更専用のBC間500Gより短い固定短縮天井は **NONE_CONFIRMED_AFTER_RESEARCH**。
 - advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN**。
-- 2026年スマスロ「Lパチスロうみねこのなく頃に2」のリセット/電源挙動は別機種のため流用禁止。
+- 後継「絆2」「天膳BLACK EDITION」の有利区間/電源仕様は別機種のため流用禁止。
 
 ## conflicts / safeguards
 
-- 導入日: **2014-01-20 vs 2014-01-27**。平均化せずCONFLICT保持。
-- 通常PAYOUTとフル攻略PAYOUTは定義が異なるため別系列。
-- 周期250/500Gを朝一専用モードとして扱わない。
-- 2026年後継機「うみねこ2」の朝一仕様を2014年初代へ混入しない。
+- 機械割の標準系列と一部精密系列は平均化せず `CONFLICT_MINOR` 保持。
+- BC間500G天井とBC回数天井を混同しない。設定変更で双方リセットされるが、BC間天井自体が短縮されるわけではない。
+- 設定変更時29.4%は高確以上スタート総率。高確G数別表の条件付き内訳と全体比を混在させない。
+- 2020年「バジリスク絆2」、2023年「Lバジリスク絆2 天膳 BLACK EDITION」の情報は初代へ流用しない。
 
-## 2014-01-20同日群 — CLOSED
+## 2014-01-27同日群 — CLOSED
 
 処理済み:
-- **パチスロうみねこのなく頃に**（オーイズミ） — 791件目。
+- **バジリスク～甲賀忍法帖～絆**（エレコ） — 792件目。
 
 除外確認:
-- **ゲゲゲの鬼太郎 墓場からの招待状**（藤商事） — `CRゲゲゲの鬼太郎 墓場からの招待状` のパチンコ機。
-- 藤商事の同時期パチスロ **「ゲゲゲの鬼太郎～ブラック鬼太郎の野望～」**は別機種で、2014年2月上旬納品予定。
+- **ぱちんこCR世紀末銀狼伝サガ**（サミー） — パチンコ機。
 
-## 2014-01-21以降の境界
+## 2014-01-28以降の境界
 
-- ALL7の2014年1月導入一覧では次の具体日付きパチスロは **2014-01-27「バジリスク～甲賀忍法帖～絆」（エレコ）**。
-- 01-27にはパチンコ「ぱちんこCR世紀末銀狼伝サガ」も掲載されるため、パチンコ/パチスロ分類を分離して監査する。
+- 次の具体日付き候補として **2014-02-03「パチスロ輪廻のラグランジェ」（Sammy）**、**2014-02-03「主役は銭形2」（オリンピア）**を先行確認。
+- 次回は **2014-01-28～02-02** をメーカー公式 / 業界導入一覧 / 当時解析DB / 古い新台カレンダーで境界監査してから、02-03同日群を処理する。
+- 02-03群の先頭順は導入一覧・メーカー横断監査で再確定し、同日未処理を飛ばさない。
 
 ## 遡及resetBehavior QA 進捗
 
 - QAカーソルは `2007-01_karate-baka-ichidai.md` の次の実ファイル順を維持。
-- 今回は本線791件目を優先。既存性能coreStatusは変更なし。reset QAは性能完了判定とは別管理を維持。
+- 今回は本線792件目を優先。既存性能coreStatusは変更なし。reset QAは性能完了判定とは別管理を維持。
 
 ## 次回再開地点
 
-1. **recordCount 791 / chronologicalFrontier 2014-01-20 / 01-20群CLOSED** から開始。
-2. **2014-01-21～01-26** をメーカー公式 / 業界導入一覧 / 当時解析DB / 古い新台カレンダーで境界監査する。
-3. 未登録パチスロがなければ **2014-01-27「バジリスク～甲賀忍法帖～絆」（エレコ）**を792件目候補として性能コア + resetBehavior v0.7を収集。
-4. 01-27同日群を全メーカー横断監査してOPEN/CLOSEDを判定する。
+1. **recordCount 792 / chronologicalFrontier 2014-01-27 / 01-27群CLOSED** から開始。
+2. **2014-01-28～02-02** をメーカー公式 / 業界導入一覧 / 当時解析DB / 古い新台カレンダーで境界監査する。
+3. 未登録パチスロがなければ **2014-02-03同日群**へ進む。先行確認済み候補は「パチスロ輪廻のラグランジェ」（Sammy）、「主役は銭形2」（オリンピア）。
+4. 02-03同日群は全メーカー横断で再監査し、時系列順/同日順を確定してから登録する。
 5. 遡及QAは `2007-01_karate-baka-ichidai.md` 直後の実ファイル順で継続。
 6. PARTIAL / UNVERIFIEDは公式・業界・当時解析・古いDB・アーカイブ・回顧資料まで系統を変えて再探索し、競合は平均せずCONFLICT保持。
 
 ## 主要出典 — 取得日 2026-09-06
 
-### パチスロうみねこのなく頃に
-- K-Navi: `https://p-kn.com/slot/1971/`
+### バジリスク～甲賀忍法帖～絆
+- グリーンべると / P-WORLD業界ニュース: `https://news.p-world.co.jp/articles/6230/greenbelt`
+- K-Navi: `https://p-kn.com/slot/1983/`
 - ALL7 2014年1月導入一覧: `https://www.all7.jp/plans/index/2014/01`
-- パチマガスロマガ 概要: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/oizumi_slot/31/a.php`
-- パチマガスロマガ 機種TOP / 朝イチ・設定変更項目: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/oizumi_slot/31/oizumi_slot_31.php`
-- HAZUSE: `https://hazuse.com/machine/pachislot/3S0831/`
-- pacnk: `https://pacnk.com/slot/2014/umineko/top.php`
-- CrankySeven: `https://crankyseven.com/umineko-pc.htm`
-- CrankySeven CZ: `https://crankyseven.com/sp/umineko8-pc.htm`
+- HAZUSE: `https://hazuse.com/machine/pachislot/SX0055/`
+- 一撃: `https://1geki.jp/slot/basilisk3/`
+- 一撃 BC概要: `https://1geki.jp/slot/basilisk3/71/`
+- パチマガスロマガ 朝イチ・設定変更: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/eleco_slot/93znmiulk/rs.php`
+- ちょんぼりすた: `https://chonborista.com/slot/universal-slot/bajirisk-kizuna/19817/`
+- CrankySeven: `https://crankyseven.com/sp/basilisk-kizuna-pc.htm`
+- モゲスロ 朝一判別: `https://moge-site.com/archives/18250`
+- 期待値見える化 朝一リセット: `https://slotjin.com/slot/basilisk3kizuna-reset/`
+- 公安委員会告示転載資料: `https://manualzilla.com/doc/6595483/h25.12.26%EF%BC%8825%E5%B9%B412%E6%9C%88%E4%B8%AD%EF%BC%89`
 
-### 境界監査
-- グリーンべると 2013-12-17（藤商事PS同時発表）: `https://news.p-world.co.jp/articles/6259/greenbelt`
-- パチマガスロマガ CRゲゲゲの鬼太郎 墓場からの招待状: `https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/fujishoji_pachi/281/p_dai.php`
+### 境界監査 / 次候補
+- ALL7 2014年1月導入一覧: `https://www.all7.jp/plans/index/2014/01`
+- HAZUSE パチスロ輪廻のラグランジェ: `https://hazuse.com/machine/pachislot/3S0984/`
+- HAZUSE 主役は銭形2: `https://hazuse.com/machine/pachislot/3S1017/`
