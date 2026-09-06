@@ -4,156 +4,113 @@
 
 ## 現在地点
 
-- recordCount: **847**
-- latestRecordAdded: **バビロン(with桜丘ショコラ)**（タイヨー）— 2014-09-29主値 / 2014-10-06代替日CONFLICT
-- latestRecord: `docs/real_machine_db/machines/2014-09-29_babylon-with-sakuragaoka-chocola.md`
-- chronologicalFrontier: **2014-09-29**
-- frontierLatestMachine: **バビロン(with桜丘ショコラ)**
+- recordCount: **848**
+- latestRecordAdded: **シンデレラブレイド2**（ネット）— 2014-10-06
+- latestRecord: `docs/real_machine_db/machines/2014-10-06_cinderella-blade-2.md`
+- chronologicalFrontier: **2014-10-06**
+- frontierLatestMachine: **シンデレラブレイド2**
 - schema: **resetBehavior v0.7**
-- status: **2014-09-29_GROUP_CLOSED_FOR_CURRENT_RESEARCH_WITH_BABYLON_DATE_CONFLICT**
+- status: **2014-10-06_GROUP_OPEN**
 
 ## 今回の同期 / 正本確認
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`、`docs/real_machine_db/INDEX.md`、`docs/real_machine_db/LATEST_HANDOFF.md`、845件目 `2014-09-29_dream-jumbo.md` を再読。
-- INDEXは19件表記の旧集約状態のため、README規定どおり **LATEST_HANDOFF + 実レコード** を進捗正本として使用。
-- 作業開始時の正本は **845件 / 2014-09-29 / 09-29_GROUP_OPEN**。
-- No.846 **戦律のストラタス**、No.847 **バビロン(with桜丘ショコラ)** を追加し、09-29境界を再監査。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`、`docs/real_machine_db/INDEX.md`、`docs/real_machine_db/LATEST_HANDOFF.md`、No.847 `2014-09-29_babylon-with-sakuragaoka-chocola.md` を再読。
+- INDEXは旧集約状態のため、README規定どおり **LATEST_HANDOFF + 実レコード** を進捗正本として使用。
+- 作業開始時の正本は **847件 / 2014-09-29 / 09-29_GROUP_CLOSED_FOR_CURRENT_RESEARCH_WITH_BABYLON_DATE_CONFLICT**。
+- 2014-09-30〜10-05を導入カレンダー/当時記事で再監査し、今回安全に固定できる具体日付き未登録パチスロ機は確認できず `CLOSED_FOR_CURRENT_RESEARCH`。
+- 2014-10-06群へ進み、No.848 **シンデレラブレイド2**を追加。
+- machine record commit: `63df8f25046f1d7918b2cc722cc02a74b728d92b`。
 
-## No.846 — 戦律のストラタス
+## No.848 — シンデレラブレイド2
 
-- record: `docs/real_machine_db/machines/2014-09-29_senritsu-no-stratus.md`
-- commit: `8acfcce9918c7b36930a5a1355caa9964aec19d1`
-- manufacturer: **TAKASAGO / 高砂電器産業**。
-- 型式 **戦律のストラタスJW** / 検定番号 **4S0609**。
-- KONAMI公式により **2014-09-29新潟県のみ先行稼働 / 2014-10-06全国稼働**を分離。releaseDate主値は最初の実ホール稼働9/29、`releaseDatePrecision: regional_early_hall_start_niigata`。
-- 機械割メーカー発表: **96.8 / 97.8 / 99.9 / 103.4 / 108.4 / 115.2%**。一部二次資料の最大0.1pt差は平均せずSOURCE_ROUNDING_VARIATION。
-- BIG: **1/357.08 → 1/274.46**、REG: **1/447.43 → 1/330.17**、AT初当たり: **1/654.87 → 1/414.37**、ボーナス+AT合算: **1/152.4 → 1/110.1**。
-- base: **約30G/50枚**、AT純増 **約3.0枚/G**、戦律RUSH **1セット100枚+α**、BIG約200枚/REG約50枚。
-- モード天井: 通常A999 / 通常B777 / 天国111 / 帝特六機333G。
+- record: `docs/real_machine_db/machines/2014-10-06_cinderella-blade-2.md`
+- manufacturer: **ネット**。
+- hall start: **2014-10-06**。K-Navi/アタリ7/ALL7で一致。NET公式プレスリリースは2014年10月上旬全国導入予定と告知。
+- 型式名: **シンデレラ×ブレイド2ND**。数字形式検定番号は再探索後も `UNVERIFIED_AFTER_RESEARCH`。
+- system: **5号機 AT / 32G周期抽選**。
+- 機械割: **97.0 / 98.2 / 100.0 / 103.5 / 107.3 / 115.4%**。
+- AT初当たり: **1/265 / 243 / 238 / 205 / 192 / 147**。
+- base: **30.73G/50枚**。
+- AT純増: **約2.3枚/G**。
+- 武闘会: **30G以上**、初期G数はOPTで決定。
+- 最大天井: **25周期**。ゲーム数換算は資料間で約875G〜約925Gの定義差があるため、固定Gへ平均せず25周期をcanonicalにした。
 
-### resetBehavior v0.7
+## resetBehavior v0.7 — シンデレラブレイド2
 
-- 設定変更時は**表示G数RESET + 通常モード再抽選**。
-- 奇数設定: A15 / B70 / 天国15%。偶数設定: A10 / B65 / 天国25%。
-- 朝一通常B以上: **奇数85% / 偶数90%**。
-- 据え置き時は**液晶表示G数が前日値を引継ぎ**。ゲーム数管理カウンタCARRYOVERを支持。
-- 設定変更なし単純電源OFF→ON、設定変更時の通常/高確A/高確B/超高確開始状態は直接契約を固定できず `UNVERIFIED_AFTER_RESEARCH`。
-- 固定777Gリセット天井ではなく、モード再抽選で777/111G側が選ばれやすい構造として保存。
+- 設定変更時は**天井周期進捗RESET + 設定変更専用の天井周期振り分けを再抽選**。
+- リセット専用振り分け（全設定共通解析値）:
+  - 1〜4周期 各1%
+  - 5周期 15%
+  - 6〜9周期 各1%
+  - 10周期 25%
+  - 11〜14周期 各2%
+  - 15周期 25%
+  - 16〜19周期 各1%
+  - 20周期 10%
+  - 21〜25周期 各1%
+- 累積天井到達率: **5周期まで19% / 10周期まで48% / 15周期まで81% / 20周期まで95%**。
+- 天井周期到達時は**レイラOPT**。解析では最低30G保証、継続率95〜99%。
+- 2014年の朝一設定変更実践値300件でも5・10・15・20周期への当選集中が観測され、解析公開前の実戦観測と方向性が一致。ただし実践値と解析値は平均しない。
+- 据え置き時の周期/剣ポイント/内部クリアポイント全契約、設定変更なし単純電源OFF→ON、設定変更時の内部状態/初期ステージ、本機2固有のガックン等確定判別は、表記揺れ・型式名・シリーズ名と検索語を変えて再探索後も直接固定できず `UNVERIFIED_AFTER_RESEARCH / NONE_CONFIRMED_AFTER_RESEARCH`。
+- 初代シンデレラブレイドの「電源切入は前日のまま」情報は別機種のため転記していない。
+- 有利区間: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
 - resetBehaviorQA: **COMPLETE_WITH_SOURCE_LIMITS**。
 
-## No.847 — バビロン(with桜丘ショコラ)
+## 2014-10-06群 — OPEN
 
-- record: `docs/real_machine_db/machines/2014-09-29_babylon-with-sakuragaoka-chocola.md`
-- commit: `e624fda0e63b1c065f958415e7a8a8efdde78539`
-- manufacturer: **タイヨー**。
-- 型式 **バビロンA** / 検定番号 **4S0663**。
-- 導入日は **CONFLICT**:
-  - HAZUSE: **2014-09-29導入開始**。
-  - P-MEDIAの2014-11-07「9月29日〜リリース機種」集計にも本機を掲載。
-  - グリーンべると2014-08-25: **10月5日より納品開始**。
-  - ニッカンアミューズメント/PiDEA 2014-08-27: **10月5日納品予定**。
-  - P-Summa: **10月6日導入開始**、同記事が引用する2014-08-25販売会社投稿は**9/28納品予定**。
-- 地域先行/予定変更/DB誤差を直接説明するメーカー一次資料は固定できず、`DATE_CONFLICT_2014-09-29_VS_2014-10-06_WITH_DELIVERY_09-28_VS_10-05`を保持。漏れ防止の時系列主値は最古掲載の9/29。
-- 市場掲載PAYOUT: **96.4 / 98.4 / 99.3 / 101.5 / 103.4 / 106.1%**。
-- パチマガシミュレート: **95.71 / 97.66 / 98.52 / 100.68 / 102.65 / 105.16%**。定義差として分離。
-- BIG: **1/292.6 → 1/267.5**、REG: **1/439.8 → 1/271.9**、合算: **1/175.7 → 1/134.8**。
-- base: **約33.9〜35.2G/50枚**。
-- BIG最大**335枚**、REG最大**103枚**。天井・RT/ART/AT/CZなし。
+### 登録済み/重複禁止
 
-### resetBehavior v0.7
+- No.848 シンデレラブレイド2（ネット）
+- 戦律のストラタス: 2014-09-29新潟先行としてNo.846登録済み。10/06全国稼働日はメタデータであり重複作成しない。
+- バビロン(with桜丘ショコラ): No.847で09-29/10-06日付CONFLICT管理済み。10/06に重複作成しない。
 
-- 天井、規定Gモード、AT/ART/RT/CZ、有利区間は非該当。
-- 設定変更/据え置き/単純電断時の本機固有リール初期化や変更判別は再探索後も `UNVERIFIED_AFTER_RESEARCH / NONE_CONFIRMED_AFTER_RESEARCH`。
-- 一般的ノーマル機・他タイヨー機のガックン情報は流用しない。
-- 公開朝一専用数値: `NONE_CONFIRMED_AFTER_RESEARCH`。
-- resetBehaviorQA: **COMPLETE_WITH_SOURCE_LIMITS**。
+### 同日未処理の強い候補
 
-## 2014-09-29群
+1. **パチスロ三國志**（ニューギン）
+2. **パチスロ大海物語with T-ARA**（三洋物産）
 
-### 登録済み
+- ALL7の2014年10月導入一覧は上記2機とシンデレラブレイド2を10/06群として掲載。
+- 大海物語with T-ARAはK-Navi/パチビーでも2014-10-06導入、2014-08-04グリーンべると記事は10月6日より納品開始予定とする。
+- 10/06群はまだ **OPEN**。上記2機処理後に全メーカー横断で再監査してCLOSED判定する。
 
-- No.845 ドリームジャンボ ～幸福のチケットを君に～（JPS）
-- No.846 戦律のストラタス（TAKASAGO、高砂電器産業）
-- No.847 バビロン(with桜丘ショコラ)（タイヨー、導入日CONFLICT保持）
+## 遡及 resetBehavior QA カーソル
 
-### 判定
-
-- **2014-09-29_GROUP_CLOSED_FOR_CURRENT_RESEARCH_WITH_BABYLON_DATE_CONFLICT**。
-- 戦律のストラタスは10/6全国稼働時に重複レコードを作らない。
-- バビロンも10/6代替日があるが同一レコードで日付競合を管理し、10/6到達時に重複作成しない。
-
-## 遡及 resetBehavior QA
-
-### ニューハナハナ-30
-
-- handoff旧カーソルは `2007-02_new-hanahana-30.md` だったが、最新mainではすでに2026-09-07にv0.7再QA済み（commit `e8d55e7f8637cb7eaff5505cfd59b3b6a87f0dd0`）。
-- 二重QAを避け、Git履歴上の次の実レコードへ前進。
-
-### パチスロあっぱれ応援団
-
-- record: `docs/real_machine_db/machines/2007-02-25_appare-ouendan.md`
-- QA commit: `5b49d988989a69d1386a9ca8969cf2f984512f80`
-- 既存 `coreStatus: COMPLETE_CORE` は維持。
-- reset欄をschema v0.7へ正規化。
-- 通常時天井/規定Gモード/有利区間は非該当。
-- 設定変更・据え置き・単純電断時の**稼働中RT状態/残G数処理**、ガックン等の本機固有変更判別は、公式・当時業界・旧攻略・古いDB・回顧資料を再探索しても直接固定できず `UNVERIFIED_AFTER_RESEARCH`。
-- 後年KPE別機種の設定変更/CZ情報を本機へ流用しない。
-- resetBehaviorQA: **PARTIAL**。
-
-### 次の遡及QAカーソル
-
-- `docs/real_machine_db/machines/2007-03-11_treasure-pirates.md`（トレジャーパイレーツ）。
-
-## 次回本線 — 2014-10-06群
-
-- 09-30〜10-05境界をメーカー/業界/古いカレンダーで最終監査した上で10/06群へ進む。
-- 現時点の具体候補:
-  - **シンデレラブレイド2**（ネット）
-  - **パチスロ三國志**（ニューギン）
-  - **パチスロ大海物語with T-ARA**（三洋物産）
-- ALL7 2014年10月導入一覧は上記3機を10/06パチスロ候補として掲載。必ずK-Navi/P-WORLD/メーカー系統で再照合して順序・漏れを確定する。
-- 戦律のストラタスの10/06は全国稼働日メタデータ、バビロン10/06は日付CONFLICTの代替値であり、どちらも新規重複レコードを作らない。
+- 次: `docs/real_machine_db/machines/2007-03-11_treasure-pirates.md`（トレジャーパイレーツ）。
+- 新規本線を止めず、後続リレーで既存PARTIAL/COMPLETE_COREを1件ずつ再QAする。
 
 ## safeguard
 
-- INDEXは旧19件表記なので進捗正本にしない。README規定どおりLATEST_HANDOFF + 実レコードを優先。
-- 戦律のストラタスの新潟9/29先行と全国10/6を混同しない。
-- バビロンの日付競合を一方的に解消しない。納品予定とホール導入を同義扱いしない。
-- バビロンの市場PAYOUTとシミュレートPAYOUTを平均しない。
-- あっぱれ応援団の `COMPLETE_CORE` をreset情報不足だけで崩さない。
-- 純電断契約を据え置き情報や一般論から自動推定しない。
-- P-WORLD等の最終更新日を導入日に使用しない。
+- INDEXは旧集約状態なので進捗正本にしない。LATEST_HANDOFF + 実レコードを優先。
+- 戦律のストラタス10/06全国稼働、バビロン10/06代替日で重複レコードを作らない。
+- シンデレラブレイド2の最大天井を約875G/約925Gの平均値へ変換しない。canonicalは25周期。
+- 初代シンデレラブレイドの据え置き/電断情報を2へ流用しない。
+- 純電断契約を据え置き一般論から推定しない。
+- P-WORLD等の最終更新日を導入日に使わない。
 - 2015-06-08到達時の **吉宗～極～（ヨシムネH2A4 / 3S1093）** 正式量産版処理注意を維持。
 
 ## 次回再開地点
 
-1. **recordCount 847 / chronologicalFrontier 2014-09-29 / 09-29_GROUP_CLOSED_FOR_CURRENT_RESEARCH_WITH_BABYLON_DATE_CONFLICT** から開始。
-2. 最新mainで README / mission / INDEX / LATEST_HANDOFF / No.847を再確認。
-3. **2014-09-30〜10-05境界監査 → 2014-10-06群**へ進む。
-4. 10/06群はシンデレラブレイド2 / パチスロ三國志 / パチスロ大海物語with T-ARAを起点に、全メーカー横断で漏れ監査してから追加順を確定。
-5. 戦律のストラタス/バビロンの10/06表記では重複レコードを作らない。
-6. 遡及QAは **`2007-03-11_treasure-pirates.md`** から再開。
+1. **recordCount 848 / chronologicalFrontier 2014-10-06 / 10-06_GROUP_OPEN** から開始。
+2. 最新mainで README / mission / INDEX / LATEST_HANDOFF / No.848を再確認。
+3. 次の未処理は **パチスロ三國志（ニューギン）**。
+4. 続いて **パチスロ大海物語with T-ARA（三洋物産）**。
+5. 2機処理後、2014-10-06同日群をメーカー/業界/古いDBで最終監査してCLOSED判定し、10-07以降へ前進。
+6. 遡及QAは `2007-03-11_treasure-pirates.md` から再開。
 
 ## 主要出典 — 取得日 2026-09-07
 
-### 戦律のストラタス
-- KONAMI公式 新潟先行/全国稼働: `https://www.konami.com/amusement/psm/portal/magihallo/blog_mh/2014/mhs_blog_140922.html`
-- KONAMI公式アーカイブ: `https://www.konami.com/amusement/psm/archive/ps/2014/stratus/`
-- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/takasago_slot/06/`
-- K-Navi: `https://p-kn.com/slot/2127/`
-- HAZUSE: `https://hazuse.com/machine/pachislot/4S0609/`
-- スロパチクエスト reset: `https://www.slopachi-quest.com/article/stratas-reset/`
-- ちょんぼりすた: `https://chonborista.com/slot/takasago-slot/3734/`
-
-### バビロン(with桜丘ショコラ)
-- グリーンべると: `https://web-greenbelt.jp/00007176/`
-- ニッカンアミューズメント/PiDEA: `https://www.nikkansports.com/amusement/pachinko/news/f-pp-tp0-20140827-1357347.html`
-- HAZUSE: `https://hazuse.com/machine/pachislot/4S0663/`
-- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/taiyo_slot/81/h.php`
-- pacnk: `https://pacnk.com/slot/2014/babiron/top.php`
-- P-Summa: `https://psumma.jp/pachislo/3711/`
-- P-MEDIA 9/29〜リリース定点観測: `https://p-media.info/9%E6%9C%8829%E6%97%A5%E3%80%9C%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E6%A9%9F%E7%A8%AE%E4%B8%AD%E5%8F%A4%E4%BE%A1%E6%A0%BC%E5%AE%9A%E7%82%B9%E8%A6%B3%E6%B8%AC%EF%BC%8F%E3%82%B9%E3%83%BC%E3%83%91/`
-
-### 10/06境界候補
+### シンデレラブレイド2
+- NET公式プレスリリース（DreamNews転載）: `https://www.dreamnews.jp/press/0000097453/`
+- K-Navi: `https://p-kn.com/slot/2116/`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/7403`
+- パチマガスロマガ 50枚ベース: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/net_slot/159/c-1.php`
+- ちょんぼりすた: `https://chonborista.com/slot/net-slot/3448/`
+- アタリ7: `https://www.atari7.com/slot/date1426485017.php`
+- スロパチクエスト reset: `https://www.slopachi-quest.com/article/cinderella-blade2-reset/`
+- スロパチクエスト zone/reset解析: `https://www.slopachi-quest.com/article/cinderella-blade2-zone2/`
 - ALL7 2014年10月: `https://www.all7.jp/plans/index/2014/10`
-- K-Navi パチスロ大海物語withT-ARA: `https://p-kn.com/slot/2109/`
+
+### 10/06境界/次候補
+- パチビー 大海物語with T-ARA: `https://www.pachibee.jp/machines/index/214090006`
+- K-Navi 大海物語with T-ARA: `https://p-kn.com/slot/2109/`
+- グリーンべると 大海物語with T-ARA発表: `https://news.p-world.co.jp/articles/6730/greenbelt`
