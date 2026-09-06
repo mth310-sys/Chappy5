@@ -14,6 +14,15 @@ export const START_HALL = Object.freeze({
   width: 9,
   height: 9,
   entrance: Object.freeze({ x: 4, y: 8 }),
+  entranceRoute: Object.freeze([
+    Object.freeze({ x: 4, y: 8 }),
+    Object.freeze({ x: 4, y: 7 }),
+    Object.freeze({ x: 4, y: 6 }),
+    Object.freeze({ x: 5, y: 6 }),
+    Object.freeze({ x: 6, y: 6 }),
+    Object.freeze({ x: 6, y: 5 }),
+    Object.freeze({ x: 6, y: 4 }),
+  ]),
   fixtures: Object.freeze([
     Object.freeze({ id: 'slot-01', x: 2, y: 2, orientation: 'S' }),
     Object.freeze({ id: 'slot-02', x: 3, y: 2, orientation: 'S' }),
@@ -34,8 +43,6 @@ const MOVES = Object.freeze([
 ]);
 
 export function fixtureAccessCell(fixture) {
-  // Stage 1 fixtures all face south. Keep access derivation explicit so the
-  // renderer and future placement transaction never invent screen-space ports.
   if (fixture.orientation === 'S') return { x: fixture.x, y: fixture.y + 1, role: 'service-port' };
   if (fixture.orientation === 'N') return { x: fixture.x, y: fixture.y - 1, role: 'service-port' };
   if (fixture.orientation === 'E') return { x: fixture.x + 1, y: fixture.y, role: 'service-port' };
@@ -46,7 +53,6 @@ export function fixtureAccessCell(fixture) {
 export function buildStartHallMap() {
   const map = createLogicalMap({ minX: 0, minY: 0, maxX: START_HALL.width - 1, maxY: START_HALL.height - 1 });
 
-  // Floor semantics used by the view. Aisles are gameplay cells, not paint-only decoration.
   for (let y = 0; y < START_HALL.height; y++) {
     for (let x = 0; x < START_HALL.width; x++) setFloorType(map, x, y, 'hall-floor');
   }
@@ -54,12 +60,13 @@ export function buildStartHallMap() {
     setFloorType(map, x, 3, 'main-aisle', { buildable: false });
     setFloorType(map, x, 4, 'main-aisle', { buildable: false });
   }
-  for (let y = 4; y <= 8; y++) setFloorType(map, 4, y, 'entrance-route', { buildable: false });
+  for (const point of START_HALL.entranceRoute) {
+    setFloorType(map, point.x, point.y, 'entrance-route', { buildable: false });
+  }
 
   for (const fixture of START_HALL.fixtures) {
     occupyCells(map, fixture.id, [{ x: fixture.x, y: fixture.y }]);
-    const access = fixtureAccessCell(fixture);
-    reserveCells(map, fixture.id, [access]);
+    reserveCells(map, fixture.id, [fixtureAccessCell(fixture)]);
   }
 
   setPortal(map, { facilityId: 'hall-entrance', x: START_HALL.entrance.x, y: START_HALL.entrance.y, kind: 'entrance' });
