@@ -94,28 +94,34 @@ P-WORLD・グリーンべるとの丸め値とも整合する。
 
 ## resetBehavior
 
+schemaVersion: v0.7
 resetBehaviorQA: PARTIAL
+resetQaLastUpdated: 2026-09-07
 
-- settingChangeBehavior: 設定変更時にライダータイム内部状態・残ナビ回数・RT継続状態をどう処理するか、本機固有の高信頼公開資料を確認できず UNVERIFIED
-- carryOverBehavior: 据え置き時のRT内部状態/残ナビ回数の引継ぎを明示した高信頼資料を確認できず UNVERIFIED
-- powerCycleBehavior: 電源OFF→ONのみの場合のRT内部状態/残ナビ回数の処理を明示した本機固有資料を確認できず UNVERIFIED
-- gameCounterReset: 通常時のボーナス当選天井は確認されず。RTの最大継続2000Gは天井ではなくRT規定ゲーム数
-- ceilingAfterReset: 非該当（通常時ボーナス天井を確認せず）
-- modeAfterReset: 朝一専用モード/設定変更専用モードを確認できず
-- stateAfterReset: 設定変更時のRT状態処理を高信頼で確定できず
-- advantageousSectionReset: 非該当（有利区間制度導入前）
-- resetBenefits: 設定変更・朝一固有の主要恩恵を確認できず
-- resetPenalties: 設定変更固有の主要不利要素を確認できず
-- resetDetection: 本機固有のガックン・表示・RT挙動等による設定変更判別を高信頼で確定できず
-- numericResetData: 公開された設定変更時専用の比較可能数値は確認できず
+- settingChangeBehavior: 設定変更時にライダータイム内部状態・残ナビ回数・RT継続状態をどう処理するか、本機固有の高信頼公開資料を再探索したが固定できず **UNVERIFIED_AFTER_RESEARCH**
+- carryOverBehavior: 据え置き時のRT内部状態/残ナビ回数の引継ぎを明示した高信頼資料を再探索したが固定できず **UNVERIFIED_AFTER_RESEARCH**
+- powerCycleBehavior: 電源OFF→ONのみの場合のRT内部状態/残ナビ回数の処理を明示した本機固有資料を再探索したが固定できず **UNVERIFIED_AFTER_RESEARCH**
+- gameCounterReset: 通常時のボーナス当選天井は確認されず。RTの最大継続2000Gは天井ではなくRT規定ゲーム数。設定変更時の「通常時天井G」リセット項目は **NOT_APPLICABLE_NO_NORMAL_CEILING_CONFIRMED**
+- ceilingAfterReset: **NOT_APPLICABLE_NO_NORMAL_CEILING_CONFIRMED**。リセット専用短縮天井も **NONE_CONFIRMED_AFTER_RESEARCH**
+- modeAfterReset: 朝一専用モード/設定変更専用モードは **NONE_CONFIRMED_AFTER_RESEARCH**
+- stateAfterReset: 設定変更時のRT状態・残ナビ処理を高信頼で確定できず **UNVERIFIED_AFTER_RESEARCH**
+- advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**
+- resetBenefits: 設定変更・朝一固有の主要恩恵は **NONE_CONFIRMED_AFTER_RESEARCH**
+- resetPenalties: 設定変更固有の主要不利要素は **NONE_CONFIRMED_AFTER_RESEARCH**
+- resetDetection: 本機固有のガックン・表示・RT挙動等による設定変更判別は **NONE_CONFIRMED_AFTER_RESEARCH**
+- numericResetData: 設定変更時専用の比較可能な公開数値は **NONE_CONFIRMED_AFTER_RESEARCH**
+- publicMorningNumbers: **NONE_CONFIRMED_AFTER_RESEARCH**
 
-### resetBehavior 再探索メモ
+### resetBehavior QA補足
 
-「仮面ライダーDX / 仮面ライダーDX走れスーパーバイク編 / カメンライダーDX8 / サミー」に「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / RT引継ぎ / ライダータイム / ナビ回数 / 天井 / ガックン」を組み合わせ、当時業界記事、P-WORLD、HAZUSE、パチマガスロマガ旧攻略、K-Navi、古い解析サイト、後年回顧を横断した。通常時・RT中の基本仕様とナビ振り分けは確認できたが、設定変更・据え置き・電断時の内部RT/残ナビ状態処理を明記した高信頼資料は得られなかったため推測しない。
+- 2026-09-07に表記揺れと資料系統を変えて再QA。`仮面ライダーDX / 仮面ライダーDX走れスーパーバイク編 / カメンライダーDX8 / サミー` に `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / RT引継ぎ / ライダータイム / ナビ回数 / 天井 / ガックン` を組み合わせて再探索した。
+- パチ7回顧では、ライダータイムの残りナビ回数自体は外見から直接分からず、液晶右端ライダーの点滅速度が残ナビ回数を示唆する通常仕様を再確認。ただしこれは**設定変更判別ではない**ためresetDetectionへ転用しない。
+- 当時業界記事、P-WORLD、HAZUSE、パチマガスロマガ旧攻略、K-Navi、古い解析/回顧資料を横断しても、設定変更・据え置き・純電断時の内部RT/残ナビ状態処理を明記した高信頼資料は得られなかった。
+- 既存性能コアの `COMPLETE_CORE` は維持し、resetBehavior QAのみ `PARTIAL` として別管理する。
 
 ## sources
 
-取得日: 2026-08-31
+取得日: 2026-08-31（resetBehavior再QA: 2026-09-07）
 
 1. グリーンべると — パチスロ界に正義のライダー参上！（2007-01-19）
    - https://web-greenbelt.jp/00003982/
@@ -153,7 +159,7 @@ resetBehaviorQA: PARTIAL
    - reliability: ANALYSIS_SINGLE
 9. パチ7回顧 — 『ボッタ店で117％』～5号機新時代～
    - https://pachiseven.jp/articles/detail/9576
-   - 2007年2月、全ボーナス後RT、最大2000G、チェリーパンク回避、ナビ回数・上乗せ概要
+   - 2007年2月、全ボーナス後RT、最大2000G、チェリーパンク回避、ナビ回数・上乗せ概要、液晶点滅速度による残ナビ示唆
    - reliability: ANALYSIS_HIGH
 10. 道外れの人生(改) — 1万枚出る5号機爆裂RT！初代『仮面ライダーDX』
    - https://mitihazure.blog.fc2.com/blog-entry-1490.html
