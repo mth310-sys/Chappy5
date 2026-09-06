@@ -4,63 +4,73 @@
 
 ## 現在地点
 
-- recordCount: **771**
-- latestMachineAddedByChronology: **猛虎花形**（スパイキー）
-- latestRecord: `docs/real_machine_db/machines/2013-10-21_mouko-hanagata.md`
+- recordCount: **772**
+- latestMachineAddedByChronology: **パチスロ ラブ嬢**（オリンピア）
+- latestRecord: `docs/real_machine_db/machines/2013-10-21_pachislo-lovejo.md`
 - chronologicalFrontier: **2013-10-21**
-- frontierLatestExactDateMachine: **猛虎花形**
+- frontierLatestExactDateMachine: **パチスロ ラブ嬢**
 - schema: **resetBehavior v0.7**
-- status: **OPEN_2013-10-21_GROUP__MOUKO_HANAGATA_DONE__NEXT_LOVEJO**
+- status: **CLOSED_2013-10-21_GROUP__NEXT_BOUNDARY_AUDIT_2013-10-22_TO_2013-11-04__KNOWN_2013-11-05_ANCHOR_EUREKA_SEVEN_2**
 
 ## 今回の同期 / 重要事項
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、既存2013-10-07レコードを再読してから継続。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前レコード `2013-10-21_mouko-hanagata.md` を再読してから継続。
 - INDEXは旧集約状態（19件表記）のためREADME規定どおり **LATEST_HANDOFF + 実レコード** を正とした。
-- 作業開始時の最新正本は **recordCount 770 / chronologicalFrontier 2013-10-07 / 10-07群CLOSED**。直前チャットの766件地点は採用しない。
-- **2013-10-08〜2013-10-20** を、導入日/納品日/検定日を分離しつつ、HAZUSE・K-Navi・業界DB・一般検索で再監査。今回追加すべき確定日付き未登録パチスロを確認できなかったため、既知の次具体日 **2013-10-21** へ前進。
-- 2013-10-21候補のうち、まず **猛虎花形** の既存レコード不在をmainで確認して771件目として登録。
+- 作業開始時の最新正本は **recordCount 771 / chronologicalFrontier 2013-10-21 / 10-21群OPEN**。旧チャット地点ではなくmainを採用。
+- 前handoff最優先候補 **「パチスロ ラブ嬢」** の既存レコード不在をmainで確認し、772件目として新規登録。
+- 2013-10-21群をHAZUSE / K-Navi / 当時業界記事 / 一般検索で再監査。今回確認できた確定日付き本線候補は **猛虎花形 / パチスロ ラブ嬢**で、双方登録済みのため同日群をCLOSED。
 
-## 今回追加 — 猛虎花形
+## 今回追加 — パチスロ ラブ嬢
 
 ### identity / 性能コア
 
-- manufacturer: **スパイキー / Spiky**。
-- modelName: **猛虎花形CC**。
-- inspectionNumber: **3S0448**。
-- releaseDate: **2013-10-21**。HAZUSE / K-Naviで一致。
-- generation/system: **5号機 / AT / 疑似ボーナス / CZ / ゲーム数管理**。
-- 機械割: **97.4 / 98.7 / 100.6 / 104.4 / 107.7 / 110.8%**。
-- AT初当たり: **1/546.7 / 537.0 / 504.1 / 498.7 / 467.6 / 414.9**。
-- 対決BONUS: **1/497.2 / 485.3 / 482.9 / 463.5 / 455.2 / 379.3**。
-- REG: **1/749.4 / 743.8 / 727.3 / 729.3 / 691.3 / 603.5**。
-- 擬似ボーナス+AT合算: **1/193.2 / 189.9 / 184.2 / 180.7 / 172.9 / 149.2**。
-- baseGamesPer50: **約31G/1000円**。後年単一整理資料のため `ANALYSIS_SINGLE_RETROSPECTIVE`。
-- AT「猛虎RUSH」: **1セット50G+α / 純増約2.8枚/G**。
-- 対決BONUS: **20G / 50〜88%継続 / 純増約2.8枚/G**。REG BONUSは20G固定。
-- モード別天井: 通常A/B **999G**、準備 **1032G**、天国/超天国 **128G**。
-- recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_RESEARCHED_PARTIAL_RESET_CONTRACT**。
+- manufacturer: **オリンピア / OLYMPIA**。
+- modelName: **パチスロラブ嬢A1**。
+- inspectionNumber: **3S0656**。
+- releaseDate: **2013-10-21**。HAZUSE / K-Naviで一致。グリーンべると当時記事の納品開始2013-10-20予定とは定義を分離。
+- generation/system: **5号機 / AT / CZ / 枚数管理 / ゲーム数・ポイント管理**。
+- 機械割: **97.7 / 98.8 / 100.4 / 104.3 / 109.4 / 113.6%**。
+- AT「LOVE RUSH」初当たり: **1/259.7 / 250.8 / 240.5 / 215.0 / 187.2 / 164.9**。
+- baseGamesPer50: **UNVERIFIED_AFTER_RESEARCH**。初代とラブ嬢2/IIプラス/3を分離して探索したが比較可能な初代固有値を固定できず。
+- AT「LOVE RUSH」: **差枚数管理 / 純増約2.7枚/G**。
+- OPENING ATTACK: **5G or 10G**で初期枚数を決定。
+- 通常最大天井: **750G + 最大16G前兆**。モード別は通常A/B750G、通常C500G、天国A/B100G。
+- recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_RESEARCHED_BASE_UNVERIFIED**。
 
 ### resetBehavior v0.7
 
-- 「猛虎花形 / 巨人の星 猛虎花形 / 猛虎花形CC / スパイキー」と「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / モード / ガックン」を組み替え、当時解析・古いDB・後年資料を横断。
-- 設定変更時の天井G、モード、内部状態: **UNVERIFIED_AFTER_RESEARCH**。
-- 純据え置き時の天井進捗・モード・状態: **UNVERIFIED_AFTER_RESEARCH**。
-- 電源OFF→ONのみの内部挙動: **UNVERIFIED_AFTER_RESEARCH**。
-- 設定変更専用短縮天井 / 固定朝一天井: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- 設定変更後モード振り分け / 朝一専用モード: **UNVERIFIED_AFTER_RESEARCH / NONE_CONFIRMED_AFTER_RESEARCH**。
-- 本機固有ガックン・初期出目・ランプ等の変更判別: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 設定変更時の天井ゲーム数: **RESET_CONFIRMED**。
+- 設定変更時のキャバクラポイント: **RESET_CONFIRMED**。
+- 設定変更後は**500G以内のモード**が選択される当時解析を確認。通常時最大750Gに対する明確な朝一短縮。
+- 通常Cの天井振り分けは **250G 25.00% / 500G 75.00%**。天国A/Bは **100G 100%**。
+- HAZUSEに設定変更時モード移行率あり。現存抽出で安全に明示確認できる値は、設定1: 通常C87.50% / 天国A1.56% / 天国B1.56%、設定4: 81.25 / 15.63 / 3.13%、設定5: 78.13 / 18.75 / 3.13%、設定6: 75.00 / 21.88 / 3.13%。設定2/3は抽出セル省略のため推測補完しない。
+- 設定変更時内部状態は**通常以上スタート**とする当時解析あり。HAZUSEにも設定変更時専用状態移行表が存在するが、全設定完全表は今回安全に復元できず `PARTIAL_PUBLIC_TABLE`。
+- 据え置き時は**キャバクラポイントを内部引継ぎ**とする当時資料を確認。朝一10000pt未満でキャバクラチャンス発動なら据え置き推測材料。
+- 据え置き時の天井G・モード・内部状態の完全保持契約: **UNVERIFIED_AFTER_RESEARCH**。
+- 設定変更なしの純電源OFF→ON: **UNVERIFIED_AFTER_RESEARCH**。
+- 本機固有ガックン/初期出目/ランプ判別: **NONE_CONFIRMED_AFTER_RESEARCH**。
 - 有利区間: **NOT_APPLICABLE_5TH_GEN**。
-- 通常時の天国/超天国128Gを、根拠なく「リセット後128G」に転用していない。
 
-## 2013-10-08〜10-20境界監査
+### conflict / safeguard
 
-- 10/07群CLOSED後の空白期間を再検索。
-- 今回の横断では、**2013-10-08〜10-20に新規登録すべき確定日付き未登録パチスロを確認できず**。
-- 次の複数系統一致アンカーは **2013-10-21**。
-- 10/21は少なくとも以下を確認済み:
-  - **猛虎花形**（スパイキー） — 今回771件目として処理済み。
-  - **パチスロ ラブ嬢**（オリンピア） — 型式 `パチスロラブ嬢A1` / 検定 `3S0656`、2013-10-21導入。
-- 10/21群はまだ **OPEN**。ラブ嬢処理後に同日群を別メーカー/導入カレンダーで再監査する。
+- 設定変更後最大500Gは当時解析で複数確認できる一方、2013-12-15回顧記事に「リセットしても750Gハマるという噂」の追記あり。確定反証ではないため本線を500Gに置きつつ **CONFLICT_RUMOR_RESET_500_VS_REPORTED_750_HAMARI** を保持。
+- HAZUSEの設定変更時モード表は現存抽出で設定2/3のセルが省略されるため、行結合の意味を推測して埋めない。
+- 2019年ラブ嬢2、2021年ラブ嬢IIプラス、2023年ラブ嬢3の電断/有利区間/50枚ベース/リセット数値を初代へ混入させない。
+
+## 2013-10-21同日群 — CLOSED
+
+処理済み:
+- **猛虎花形**（スパイキー） — record 771。
+- **パチスロ ラブ嬢**（オリンピア） — record 772。
+
+HAZUSE / K-Navi / 当時業界記事 / 導入日検索を再横断し、今回追加すべき別の2013-10-21確定パチスロ候補を確認できなかったため同日群をCLOSED。
+
+## 次境界
+
+- **2013-10-22〜2013-11-04** を導入日・納品日・検定日を分離して監査する。
+- Sammyの2013-10-28「パチスロ獣王 王者の帰還」ニュースは**発売告知日**であり、その日をホール導入日として扱わない。
+- 次の強い具体日アンカーとして、サミーネットワークスの当時プレスリリースで **2013-11-05「パチスロ交響詩篇エウレカセブン2」ホール導入**を確認済み。
+- 境界監査で10/22〜11/04の未登録確定機がなければ、エウレカセブン2を次候補として処理する。
 
 ## 遡及resetBehavior QA 進捗
 
@@ -69,29 +79,31 @@
 
 ## 次回再開地点
 
-1. **recordCount 771 / chronologicalFrontier 2013-10-21 / 10-21群OPEN** から開始。
-2. 最優先: **パチスロ ラブ嬢**（オリンピア）の既存重複確認 → 未登録なら性能コア + resetBehavior v0.7を収集。
-3. ラブ嬢処理後、**2013-10-21同日群**をHAZUSE / K-Navi / 業界記事 / メーカー系資料で再監査し、漏れがなければCLOSED。
-4. 次の日付へ進む前に、導入日・納品日・検定日を混同しない。
+1. **recordCount 772 / chronologicalFrontier 2013-10-21 / 10-21群CLOSED** から開始。
+2. **2013-10-22〜2013-11-04境界監査**をHAZUSE / K-Navi / 当時業界記事 / メーカー系資料で実施。
+3. 漏れがなければ **2013-11-05「パチスロ交響詩篇エウレカセブン2」（Sammy）**の既存重複確認 → 未登録なら性能コア + resetBehavior v0.7を収集。
+4. 導入日・納品日・発売告知日・検定日を混同しない。
 5. 遡及QAは `2007-01_karate-baka-ichidai.md` 直後の実ファイル順から継続可能。
 
 ## 主要出典 — 取得日 2026-09-06
 
-### 猛虎花形
+### パチスロ ラブ嬢
 
-- HAZUSE: `https://hazuse.com/machine/pachislot/3S0448/` — 5号機 / スパイキー / 型式猛虎花形CC / 検定3S0448 / 2013-10-21導入。
-- K-Navi: `https://p-kn.com/slot/1935/` — 導入日 / 対決BONUS・REG・AT初当たり / 合算 / AT 50G+α・純増約2.8枚/G。
-- K-Navi 内部モード: `https://p-kn.com/slot/1935/46199/` — 通常A/B999G、準備1032G、天国/超天国128G。
-- P-WORLD: `https://www.p-world.co.jp/machine/database/7190` — AT・疑似ボーナス構造 / 設定別確率。
-- CrankySeven: `https://crankyseven.com/kyojin-mouko-pc.htm` — 機械割97.4〜110.8%。
-- ななぱちWiki: `https://wikiwiki.jp/hanpachi/%E3%81%AA%E3%81%AA%E3%81%B1%E3%81%A1%20%E3%83%91%E3%83%81%E3%82%B9%E3%83%AD/%E5%B7%A8%E4%BA%BA%E3%81%AE%E6%98%9F%20%E7%8C%9B%E8%99%8E%E8%8A%B1%E5%BD%A2` — 機械割別照合 / 約31G/1000円 / AT・最大天井整理。
-- ドラス実機アプリ紹介: `https://www.value-press.com/pressrelease/119740` — 猛虎RUSH 50G / 開眼CHANCE等の基本構造を補助確認。
+- HAZUSE: `https://hazuse.com/machine/pachislot/3S0656/` — 型式/検定/導入日/AT初当たり/機械割/天井/モード別天井/設定変更時モード・状態。
+- K-Navi: `https://p-kn.com/slot/1940/` — 2013-10-21導入 / AT初当たり / 機械割 / 純増約2.7枚/G / 基本構造。
+- P-WORLD / グリーンべると: `https://news.p-world.co.jp/articles/6066/greenbelt` — 2013-09-13当時記事 / 納品2013-10-20予定 / LOVE RUSH純増2.7枚/G / 枚数管理型。
+- 娯楽産業: `https://www.goraku-sangyo.com/オリンピア-平和　「パチスロラブ嬢」発表/` — 2013-09-11 / OPENING ATTACK 5Gor10G / 純増2.7枚/G。
+- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/olympia_slot/111/a.php` — 2013年10月機 / AT概要。
+- すろぱちくえすと: `https://www.slopachi-quest.com/article/378170397-html/` — 設定変更後500G以内 / 状態通常以上 / 天井G・ポイントリセット / 据え置きポイント引継ぎ。
+- すろぱちくえすと: `https://www.slopachi-quest.com/article/378049390-html/` — 通常750G天井 / 設定変更で天井Gリセット。
+- メタボ教授: `https://metabopro.com/rabujyoutorimu/` — リセット500G整理 + 750Gハマリ噂の競合シグナル。
 
-### 次候補
+### 次候補 / 境界
 
-- HAZUSE パチスロ ラブ嬢: `https://hazuse.com/machine/pachislot/3S0656/` — 2013-10-21。
+- Sammy 2013-10-28ニュース: `https://www.sammy.co.jp/japanese/news/2013/95.html` — 獣王 王者の帰還の発売告知日。導入日ではないため注意。
+- Sammy Networks / PR TIMES: `https://prtimes.jp/main/html/rd/p/000000147.000002703.html` — **2013-11-05 エウレカセブン2ホール導入**と明記。
 
 ## commits
 
-- 771st record add: `b1e3deea96df89b87dc26b4367ece3cedb247d7a` (`db: add Mouko Hanagata with resetBehavior v0.7`)
-- handoff update: current run (`db: advance relay through Mouko Hanagata`)
+- 772nd record add: `91a5b25021cbaf186d1bf4999c94fe276c66d1ef` (`db: add Pachislo Lovejo with resetBehavior v0.7`)
+- handoff update: current run (`db: advance relay through Pachislo Lovejo`)
