@@ -5,6 +5,7 @@ manufacturer: KPE
 releaseDate: 2007-03-11（当時業界記事で納品開始予定）
 generation: 5号機初期
 systemType: ボーナス + 完走型RT
+recordStatus: COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7_SOURCE_LIMITS
 
 ## payoutRateBySetting
 
@@ -104,28 +105,82 @@ systemType: ボーナス + 完走型RT
 
 ## resetBehavior
 
-resetBehaviorQA: PARTIAL
+schemaVersion: v0.7
+resetQaStatus: PARTIAL
+resetQaLastUpdated: 2026-09-07
 
-- settingChangeBehavior: 本機固有の設定変更時内部処理を明記した高信頼資料を確認できず UNVERIFIED
-- carryOverBehavior: 通常時に天井/ゲーム数解除/モード管理を確認できない。RT中の据え置き時処理について本機固有の高信頼資料は未確認
-- powerCycleBehavior: 電源OFF→ONのみの本機固有挙動を明記した資料を確認できず UNVERIFIED
-- gameCounterReset: 通常時天井/ゲーム数解除を確認できず、天井用ゲーム数カウンタは物差し上非該当
-- ceilingAfterReset: リセット天井/天井短縮は確認できず
-- modeAfterReset: 通常時モード/朝一専用モードは確認できず
-- stateAfterReset: 通常時状態管理の設定変更時再抽選情報は確認できず。RT中設定変更/電断処理は UNVERIFIED
-- advantageousSectionReset: 非該当（有利区間制度導入前）
-- resetBenefits: 朝一/設定変更固有の主要出玉恩恵は確認できず
-- resetPenalties: 設定変更固有の主要不利要素は確認できず
-- resetDetection: 「設定変更 / リセット / 朝一 / 据え置き / ガックン」まで再探索したが、本機固有の高信頼な変更判別情報を確定できず UNVERIFIED
-- numericResetData: 公開朝一専用数値は確認できず
+### settingChangeBehavior
 
-### resetBehavior 再探索メモ
+- 本機固有の設定変更時内部処理を直接明記した資料は、再探索後も固定できず **UNVERIFIED_AFTER_RESEARCH**。
+- 通常時の天井/ゲーム数解除/モード管理は確認できないため、それらのリセット処理は物差し上非該当。
+- RT中に設定変更した場合の残りRTゲーム数/内部RT状態処理は **UNVERIFIED_AFTER_RESEARCH**。
 
-「トレジャーパイレーツ」「トレジャーパイレーツJA」「KPE」に「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / ガックン / 天井 / モード / RT」を組み合わせ、当時業界記事、P-WORLD、旧パチマガスロマガ、古い機種DB、後年整理資料を横断。通常時天井/モードは確認できなかったが、RT中の設定変更・電断処理やガックン判別を直接示す高信頼資料は発見できなかったため推測で埋めない。
+### carryOverBehavior
+
+- 通常時に天井/ゲーム数解除/モード管理を確認できず、それらの据え置き引継ぎは非該当。
+- RT中の純据え置き時に残りRTゲーム数/内部RT状態をどのように扱うか、本機固有の直接資料は **UNVERIFIED_AFTER_RESEARCH**。
+
+### powerCycleBehavior
+
+- 設定変更なしの純電源OFF→ONで、RT残G数/内部RT状態がどうなるかを直接示す本機固有資料は **UNVERIFIED_AFTER_RESEARCH**。
+- 一般的な5号機RT仕様から推測補完しない。
+
+### gameCounterReset
+
+- 通常時天井/ゲーム数解除: **NOT_APPLICABLE_NO_CEILING_CONFIRMED**。
+- RT残G数の設定変更/据え置き/電断処理: **UNVERIFIED_AFTER_RESEARCH**。
+
+### ceilingAfterReset
+
+- 通常時天井およびリセット専用短縮天井: **NONE_CONFIRMED_AFTER_RESEARCH**。
+
+### modeAfterReset
+
+- 通常時のゲーム数解除モード/朝一専用モード: **NONE_CONFIRMED_AFTER_RESEARCH**。
+
+### stateAfterReset
+
+- 通常時のホール経営上主要な内部状態再抽選情報は確認できず。
+- RT中の設定変更/据え置き/純電断時処理は **UNVERIFIED_AFTER_RESEARCH**。
+
+### advantageousSectionReset
+
+- `NOT_APPLICABLE_5TH_GEN_PRE_5_9`。
+
+### resetBenefits
+
+- 朝一/設定変更固有の主要出玉恩恵は **NONE_CONFIRMED_AFTER_RESEARCH**。
+
+### resetPenalties
+
+- 設定変更固有の主要不利要素は **NONE_CONFIRMED_AFTER_RESEARCH**。
+
+### resetDetection
+
+- `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 電断 / ガックン / RT`まで資料系統を変えて再探索したが、本機固有の確度ある変更判別情報は固定できず **UNVERIFIED_AFTER_RESEARCH**。
+
+### numericResetData
+
+- 公開された設定変更時専用の比較可能な数値は **NONE_CONFIRMED_AFTER_RESEARCH**。
+
+### publicMorningNumbers
+
+- 公開朝一専用数値は **NONE_CONFIRMED_AFTER_RESEARCH**。
+
+## resetBehavior 再探索メモ
+
+2026-09-07に遡及QAを再実施。
+
+- 表記揺れ: `トレジャーパイレーツ / トレジャーパイレーツJA / KPE / treasure pirates`。
+- 検索語: `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 電断 / ガックン / 天井 / モード / RT / 100G / 50G / 残りゲーム数`。
+- 資料系統: 2007年グリーンべると/P-WORLD業界記事、P-WORLD機種DB、旧パチマガスロマガ、5号機クロニクル、古い機種DB、回顧資料。
+- 通常時天井/モードは今回も確認できず。
+- 赤7後100G/青7後50Gの完走型RTは複数系統で再確認したが、設定変更/据え置き/純電断時のRT残G数処理を直接示す本機固有資料は発見できなかった。
+- `COMPLETE_CORE`は維持し、reset QAのみ `PARTIAL` として分離管理する。
 
 ## sources
 
-取得日: 2026-08-31
+取得日: 2026-09-07
 
 1. グリーンべると / P-WORLD業界ニュース — KPEがパチスロ2機種を同時発表
    - https://web-greenbelt.jp/00004042/
@@ -155,10 +210,11 @@ resetBehaviorQA: PARTIAL
 
 ## missingFields
 
-- 設定変更時の本機固有内部処理
-- RT中の設定変更/据え置き/電源OFF→ON処理
-- 本機固有の変更判別
-- 公開朝一専用数値
+- setting-change RT remainder/internal-state contract: UNVERIFIED_AFTER_RESEARCH
+- carry-over RT remainder/internal-state contract: UNVERIFIED_AFTER_RESEARCH
+- pure power-cycle RT remainder/internal-state contract: UNVERIFIED_AFTER_RESEARCH
+- machine-specific reset detection: UNVERIFIED_AFTER_RESEARCH
+- public morning numeric values: NONE_CONFIRMED_AFTER_RESEARCH
 
 ## conflicts
 
