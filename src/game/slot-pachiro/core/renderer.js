@@ -1,6 +1,6 @@
 import { depthKey, projectedBounds, toScreen } from './grid.js';
 import { BUILDING_SHELL, FLOOR_BOUNDS } from './layout.js';
-import { directionFromDelta, pixelCharacterDataURL } from './pixel-characters.js';
+import { directionFromDelta, pixelCharacterDataURL } from './pixel-characters.js?v=student-master-v6';
 
 const SVG_NS='http://www.w3.org/2000/svg';
 function place(scene,element,item,extraRise=0){const point=toScreen(item.x,item.y,(item.rise??0)+extraRise);element.style.left=`${point.x}px`;element.style.top=`${point.y}px`;element.style.zIndex=String(100+Math.round(depthKey(item)));element.dataset.gridX=item.x;element.dataset.gridY=item.y;element.dataset.id=item.id;scene.appendChild(element);return element}
