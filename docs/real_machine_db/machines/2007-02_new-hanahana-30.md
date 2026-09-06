@@ -64,11 +64,11 @@ P-WORLDの丸め値（BIG 1/327→1/277、REG 1/555→1/399、合算1/206→1/16
 
 ## baseGamesPer50
 
-UNVERIFIED
+UNVERIFIED_AFTER_RESEARCH
 
-「ニューハナハナ-30 / ニューハナハナ30 / P5NHD-30 / パイオニア」に「50枚 / 1000円 / 千円 / ベース / コイン持ち / ゲーム数 / 1k」を組み合わせ、P-WORLD、旧パチマガスロマガ、pacnk、ハナハナ系後年回顧、業界記事を横断したが、本機固有の比較可能な公表値を今回確定できなかった。後継・別機種の37〜40G台の値は混入させない。
+「ニューハナハナ-30 / ニューハナハナ30 / P5NHD-30 / パイオニア」に「50枚 / 1000円 / 千円 / ベース / コイン持ち / ゲーム数 / 1k」を組み合わせ、P-WORLD、旧パチマガスロマガ、pacnk、ハナハナ系後年回顧、業界記事を横断したが、本機固有の比較可能な公表値を確定できなかった。後継・別機種の37〜40G台の値は混入させない。
 
-信頼度: UNVERIFIED
+信頼度: UNVERIFIED_AFTER_RESEARCH
 
 ## netIncrease
 
@@ -99,28 +99,35 @@ P-WORLDと旧パチマガスロマガで一致。
 
 ## resetBehavior
 
-resetBehaviorQA: PARTIAL
+schemaVersion: v0.7
+resetQaStatus: COMPLETE_WITH_SOURCE_LIMITS
+resetQaLastUpdated: 2026-09-07
 
-- settingChangeBehavior: ボーナスのみのノーマル機で、設定変更時に再抽選される天井・モード・AT/RT状態は確認なし。本機固有の電断/設定変更内部処理の一次資料は未確認
-- carryOverBehavior: 据え置き時に引き継ぐ天井・モード・有利区間は非該当/確認なし。本機固有のリール初期位置処理は一次資料未確認
-- powerCycleBehavior: 電源OFF→ONのみの固有挙動を高信頼資料で確定できず UNVERIFIED
-- gameCounterReset: 天井ゲーム数カウンタは確認なし
-- ceilingAfterReset: リセット短縮天井なし/非該当相当。少なくとも公開ゲーム性上、天井機能は確認できず
-- modeAfterReset: 朝一専用モード・通常モード移行系は確認なし
-- stateAfterReset: 朝一に再抽選対象となるRT/AT等の内部状態は非該当
-- advantageousSectionReset: 非該当（有利区間制度導入前）
-- resetBenefits: 朝一/設定変更固有の出玉恩恵は確認できず
-- resetPenalties: 設定変更固有の主要不利要素は確認できず
-- resetDetection: 後年ハナハナ専門資料ではニューハナハナ30の朝一設定変更判別としてガックンチェックが紹介されている。ただしメーカー一次資料ではないため ANALYSIS_SINGLE として保持
-- numericResetData: 設定変更時専用の比較可能な公開数値は今回確認できず
+- settingChangeBehavior: ボーナスのみのノーマル機で、設定変更時に再抽選される天井・規定Gモード・AT/ART/RT状態は確認なし。本機固有のリール初期化契約は当時一次資料で固定できず `UNVERIFIED_AFTER_RESEARCH`
+- carryOverBehavior: 据え置き時に引き継ぐ天井・規定Gモード・有利区間は `NOT_APPLICABLE`。リール初期位置・告知用内部処理の据え置き契約は `UNVERIFIED_AFTER_RESEARCH`
+- powerCycleBehavior: 設定変更なしの電源OFF→ONについて、本機固有のリール初期位置、告知用内部状態、ボーナス成立状態の処理を直接比較する高信頼資料を確定できず `UNVERIFIED_AFTER_RESEARCH`
+- gameCounterReset: `NOT_APPLICABLE_NO_CEILING_OR_GAME_NUMBER_RELEASE`
+- ceilingAfterReset: `NOT_APPLICABLE_NO_CEILING`
+- modeAfterReset: `NOT_APPLICABLE_NO_GAME_NUMBER_MODE`
+- stateAfterReset: 朝一に再抽選対象となるAT/ART/RTの内部状態は `NOT_APPLICABLE`
+- advantageousSectionReset: `NOT_APPLICABLE_5TH_GEN_PRE_5_9`
+- resetBenefits: 朝一/設定変更固有の出玉恩恵は `NONE_CONFIRMED_AFTER_RESEARCH`
+- resetPenalties: 設定変更固有の主要不利要素は `NONE_CONFIRMED_AFTER_RESEARCH`
+- resetDetection: 後年ハナハナ専門回顧には本機の朝一ガックンチェックへの言及があるが、2007年当時のメーカー一次・業界一次・直接比較資料を固定できず `UNVERIFIED_AFTER_RESEARCH / PERIOD_PRIMARY_NOT_CONFIRMED`。後継ハナハナのガックン仕様を本機へ流用しない
+- numericResetData: 設定変更時専用の比較可能な公開朝一数値は `NONE_CONFIRMED_AFTER_RESEARCH`
+- publicMorningNumbers: `NONE_CONFIRMED_AFTER_RESEARCH`
 
 ### resetBehavior 再探索メモ
 
-「ニューハナハナ-30 / ニューハナハナ30 / P5NHD-30 / ハナハナ / パイオニア」に「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / 天井短縮 / モード / ガックン / リール / 状態」を組み合わせ、メーカー公式、P-WORLD、旧攻略、設定判別DB、ハナハナ専門回顧資料を横断した。純ノーマル機ゆえ天井・モード・RT/AT状態は確認できない一方、ガックン判別は後年専門資料に本機向け情報として残る。電源OFF→ONとの厳密な差や対策時挙動は高信頼で確定できないため推測しない。
+2026-09-07に再監査。
+
+「ニューハナハナ-30 / ニューハナハナ30 / P5NHD-30 / ハナハナ / パイオニア」に「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 電断 / 電源入切 / 天井 / モード / ガックン / リール / 初期出目 / 状態」を組み合わせ、メーカー公式、P-WORLD、旧攻略、設定判別DB、ハナハナ専門回顧資料まで再探索した。
+
+純ノーマル機ゆえゲーム数天井・規定Gモード・AT/ART/RT状態は非該当。一方、純電源OFF→ONと設定変更時のリール初期化差、およびガックン判別については、後年の別ハナハナ機種情報が検索結果に大量混入する。2007年本機固有の高信頼な直接契約を固定できないため推測せず `UNVERIFIED_AFTER_RESEARCH` とした。
 
 ## sources
 
-取得日: 2026-08-31
+取得日: 2026-09-07（性能コア初回取得 2026-08-31、resetBehavior再監査 2026-09-07）
 
 1. パイオニア公式 — パチスロ機種情報2001年〜2009年 / ニューハナハナ-30
    - https://www.slot-pioneer.co.jp/products/2009.html
@@ -146,7 +153,7 @@ resetBehaviorQA: PARTIAL
 6. ハナハナ専門回顧資料 — ハナハナ機種情報
    - https://hanahana-blog.com/category/model-information
    - ニューハナハナ30の設定差整理と朝一ガックンチェックへの言及
-   - reliability: ANALYSIS_SINGLE
+   - reliability: ANALYSIS_SINGLE_RETROSPECTIVE
 
 ## missingFields
 
@@ -159,5 +166,5 @@ resetBehaviorQA: PARTIAL
 
 - 機械割はP-WORLD/pacnkの市場掲載値95/98/100/103/105/107%と、旧パチマガスロマガのシミュレート値96.80/98.99/101.16/103.39/105.10/106.87%がある。定義が異なるため平均せず別系列として保持。
 
-coreStatus: PARTIAL
-resetBehaviorQA: PARTIAL
+coreStatus: PARTIAL_WITH_RESEARCHED_MISSING_BASE
+resetBehaviorQA: COMPLETE_WITH_SOURCE_LIMITS
