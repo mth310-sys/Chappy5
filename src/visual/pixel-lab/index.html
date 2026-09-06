@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<title>Yusosha Pixel Lab</title>
+<link rel="stylesheet" href="./styles.css?v=1">
+</head>
+<body>
+<main class="app">
+<header class="topbar">
+  <div><b>Yusosha Pixel Lab</b><small>32×32 Character Sprite Editor</small></div>
+  <div class="topActions">
+    <button id="undoBtn">↶ Undo</button><button id="redoBtn">↷ Redo</button>
+    <button id="importBtn">JSON読込</button><button id="exportBtn">JSON保存</button>
+    <button id="pngBtn">PNG</button><button id="sheetBtn">Sprite Sheet</button>
+    <input id="fileInput" type="file" accept="application/json" hidden>
+  </div>
+</header>
+<section class="workspace">
+  <aside class="tools">
+    <button data-tool="pen" class="active">✏️<span>Pen</span></button>
+    <button data-tool="eraser">⌫<span>Eraser</span></button>
+    <button data-tool="fill">▣<span>Fill</span></button>
+    <button data-tool="picker">◉<span>Picker</span></button>
+    <button data-tool="select">▢<span>Select</span></button>
+    <button data-tool="move">✥<span>Move</span></button>
+    <button id="mirrorBtn">⇆<span>Mirror</span></button>
+    <button id="clearBtn">×<span>Clear</span></button>
+  </aside>
+  <section class="editor">
+    <div class="editorToolbar">
+      <label>Zoom <input id="zoom" type="range" min="8" max="32" step="1" value="18"><output id="zoomOut">18×</output></label>
+      <label><input id="gridToggle" type="checkbox" checked> Grid</label>
+      <label><input id="onionToggle" type="checkbox"> Onion</label>
+      <label><input id="silhouetteToggle" type="checkbox"> Silhouette</label>
+      <span id="cursorInfo">x:-- y:--</span>
+    </div>
+    <div class="canvasStage" id="canvasStage">
+      <canvas id="pixelCanvas" width="32" height="32"></canvas>
+      <canvas id="overlayCanvas" width="32" height="32"></canvas>
+    </div>
+    <div class="previewRow">
+      <div><b>1×</b><canvas id="preview1" width="32" height="32"></canvas></div>
+      <div><b>4×</b><canvas id="preview4" width="128" height="128"></canvas></div>
+      <div><b>Animation</b><canvas id="animPreview" width="128" height="128"></canvas></div>
+    </div>
+  </section>
+  <aside class="rightbar">
+    <section class="panel"><h2>Palette</h2><div id="palette" class="palette"></div><div class="colorEdit"><input id="colorPicker" type="color" value="#2e67a8"><input id="hexInput" value="#2e67a8" maxlength="7"></div></section>
+    <section class="panel"><h2>Layers</h2><div id="layers"></div><div class="row"><button id="addLayerBtn">＋</button><button id="dupLayerBtn">複製</button><button id="delLayerBtn">削除</button></div></section>
+    <section class="panel"><h2>Frame</h2><div class="row"><label>方向 <select id="direction"><option>SE</option><option>SW</option></select></label><label>状態 <select id="state"><option value="idle">Idle</option><option value="walk1">Walk 1</option><option value="walk2">Walk 2</option><option value="walk3">Walk 3</option><option value="walk4">Walk 4</option><option value="seated">Seated</option></select></label></div><div class="row"><button id="copyFrameBtn">Frame複製</button><button id="pasteFrameBtn">貼付</button></div></section>
+  </aside>
+</section>
+<footer class="timeline" id="timeline"></footer>
+</main>
+<script type="module" src="./app.js?v=1"></script>
+</body>
+</html>
