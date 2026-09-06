@@ -1,117 +1,100 @@
 # 実機DB 最新リレー引継ぎ
 
-更新日: 2026-09-06
+更新日: 2026-09-07
 
 ## 現在地点
 
-- recordCount: **814**
-- latestRecordAdded: **ニューペガサス**（エマ）— 2014-04-21
-- latestRecord: `docs/real_machine_db/machines/2014-04-21_new-pegasus.md`
-- chronologicalFrontier: **2014-04-21**
-- frontierLatestMachine: **ニューペガサス**
+- recordCount: **815**
+- latestRecordAdded: **パチスロ ロストアイランド**（Sammy）— 2014-05-07
+- latestRecord: `docs/real_machine_db/machines/2014-05-07_lost-island.md`
+- chronologicalFrontier: **2014-05-07**
+- frontierLatestMachine: **パチスロ ロストアイランド**
 - schema: **resetBehavior v0.7**
-- status: **2014-04-21_GROUP_CLOSED_FOR_CURRENT_RESEARCH / NEW_PEGASUS_ADDED**
+- status: **2014-05-07_GROUP_OPEN / LOST_ISLAND_ADDED**
 
 ## 今回の同期 / 正本確認
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前レコード `2014-04-21_midoridon-viva2.md` を再読して正本化。
-- 作業開始時の正本は **813件 / 2014-04-21 緑ドンVIVA2 / 04-21_GROUP_OPEN**。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前レコード `2014-04-21_new-pegasus.md` を再読して正本化。
+- 作業開始時の正本は **814件 / 2014-04-21 ニューペガサス / 04-21_GROUP_CLOSED_FOR_CURRENT_RESEARCH**。
 - INDEXは旧19件集約のままなのでREADME規定に従い、より新しい `LATEST_HANDOFF.md` と実レコードを進捗正本として継続。
-- 04/21群最後の未処理機 **ニューペガサス（エマ）** を814件目として追加。
+- 2014-04-22〜05-06境界を再監査し、K-Naviの4月・5月全国一斉導入カレンダーおよび2014年機種一覧系で、この期間に追加すべき具体日付き未登録パチスロを固定できず **CLOSED_FOR_CURRENT_RESEARCH**。
+- 次の具体日 **2014-05-07** へ進み、同日群1機目 **パチスロ ロストアイランド** を815件目として追加。
 
-## 今回追加 — ニューペガサス
+## 今回追加 — パチスロ ロストアイランド
 
 ### identity / 性能コア
 
-- manufacturer: **エマ**。
-- hall start: **2014-04-21**。K-NaviとHAZUSEで一致。
-- formalModelName: **ニューペガサス**、検定番号 **3S1253**（HAZUSE）。
-- generation/system: **5号機 / ノーマル / 完全告知 / BIG+REG**。
-- BIG: **1/239.18 / 237.45 / 235.74 / 234.06 / 232.40 / 230.76**。
-- REG: **1/481.88 / 409.60 / 360.09 / 318.14 / 287.44 / 260.06**。
-- 合算: **1/159.84 / 150.31 / 142.47 / 134.85 / 128.50 / 122.27**。
-- baseGamesPer50: **31.51 / 31.70 / 31.90 / 32.10 / 32.30 / 32.51G**（単一解析資料値）。
-- BIG約 **311枚**、REG約 **111枚**。当時業界記事と解析資料で一致。
-- 天井: **非搭載**。
+- manufacturer: **Sammy / サミー**。
+- hall start: **2014-05-07**。K-Naviと複数解析資料で一致。
+- generation/system: **5号機 / AT / BR非搭載 / ゲーム数解除+自力解除**。
+- payoutRateBySetting: **97.0 / 98.3 / 100.9 / 103.6 / 107.3 / 117.1%**。
+- AT初当たり: **1/198.8 / 192.3 / 185.0 / 171.9 / 158.9 / 124.5**。
+- baseGamesPer50: **約23G**（当時スペック速報の単一系統値、別系統照合待ち）。
+- AT純増: **約3.0枚/G**。
+- 基本AT: 赤ハイビスカス1ライン **30G**、金ハイビスカス1ライン **100G**、最大8ライン。
+- 通常最大天井: **777G**、到達で **200G以上AT**。
 - coreStatus: **COMPLETE_CORE**。
-
-### payout CONFLICT
-
-- source family A: **96 / 98 / 100 / 103 / 105 / 108%**（2-9伝説）。
-- pacnk: **98 / 98 / 100 / 103 / 105 / 108%**。
-- source family B: **97.6 / 99.5 / 101.2 / 103.0 / 104.7 / 106.5%**（けんのスロットシミュレーション）。
-- 単なる丸めでは説明できないため平均せず **CONFLICT_PAYOUT_RATE** として全系列を保持。
 
 ### resetBehavior v0.7
 
-- settingChangeBehavior: 本機固有RAM処理は十分再探索後も **UNVERIFIED_AFTER_RESEARCH**。
-- carryOverBehavior: 据え置きで引き継ぐゲーム数天井・AT/ART/CZモードは **NOT_APPLICABLE_CONFIRMED**。その他内部状態は **UNVERIFIED_AFTER_RESEARCH**。
-- powerCycleBehavior: 本機固有の電源OFF→ON時RAM/告知状態処理は **UNVERIFIED_AFTER_RESEARCH**。
-- gameCounterReset: **NOT_APPLICABLE_NO_GAME_COUNT_CEILING**。
-- ceilingAfterReset: **NOT_APPLICABLE_NO_CEILING**。専用短縮天井 **NONE_CONFIRMED_AFTER_RESEARCH**。
-- modeAfterReset: ゲーム数解除/AT/ART/CZモードは **NOT_APPLICABLE**。朝一専用モード **NONE_CONFIRMED_AFTER_RESEARCH**。
-- stateAfterReset: 朝一狙いへ影響する内部高確/状態は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- settingChangeBehavior: **モーニングモード確定**。
+- gameCounterReset: 設定変更時は通常G数契約からモーニング専用契約へ再設定。據え置きでは **内部ゲーム数の宵越し機能を確認**。
+- ceilingAfterReset: **99%が555G以内 / 777G 1%**。旧資料の「555G固定天井」は訂正後解析と競合するため不採用。
+- modeAfterReset: **モーニングモード**。
+- numericResetData: モーニングのゲーム数直当たり **1/283.79**、直当たり時 **金ハイビスカス2ライン以上**。
+- carryOverBehavior: 宵越しゲーム数が機能する実戦/当時解析記録あり。ただしガセ前兆は設定変更/据え置きに関係なく **当日ゲーム数依存**。
+- powerCycleBehavior: 純電源OFF→ON時の天井G・モード・内部状態は **UNVERIFIED_AFTER_RESEARCH**。
+- stateAfterReset: 低確/高確等の設定変更時初期振り分けは **UNVERIFIED_AFTER_RESEARCH**。
 - advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
-- resetBenefits: 短縮天井/CZ/モード優遇等 **NONE_CONFIRMED_AFTER_RESEARCH**。
-- resetPenalties: 天井進捗消失は **NOT_APPLICABLE**。その他 **NONE_CONFIRMED_AFTER_RESEARCH**。
-- resetDetection: ガックン/初期ランプ等は **UNVERIFIED_AFTER_RESEARCH**。
-- publicMorningNumbers: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- resetBehaviorQA: **PARTIAL_NO_PERSISTENT_CEILING_OR_MODE_CONFIRMED**。
+- resetDetection: 通常ゾーンのガセ前兆では変更判別不可。上部リールのガックン言及は単一実戦系のため **POSSIBLE / NOT_CONFIRMED**。
+- publicMorningNumbers: **99%が555G以内 / 777G 1% / 直当たり1/283.79**。
+- resetBehaviorQA: **PARTIAL_WITH_STRONG_MORNING_MODE_DATA**。
 
-## 2014-04-21群監査
+## 2014-04-22〜05-06境界監査
 
-- K-Navi 2014年4月全国一斉導入カレンダー掲載の同日パチスロ4機:
-  - 喧嘩祭
-  - マジックモンスター3 ぶっちぎり!魔界グランプリ
-  - 緑ドンVIVA2
-  - ニューペガサス
-- 4機すべて処理済み。
-- K-Navi同月カレンダー上、04/22〜04/30に追加パチスロ導入掲載なし。
-- status: **2014-04-21_GROUP_CLOSED_FOR_CURRENT_RESEARCH**。
-- 次の具体日境界は **2014-05-07**。K-Naviでは **パチスロ ロストアイランド（Sammy） / パチスロ マクロスフロンティア2（SANKYO）** を確認。
+- K-Navi 2014年4月カレンダーでは04-21群以降、月末まで追加パチスロ掲載なし。
+- K-Navi 2014年5月カレンダーの最初のパチスロ具体日は **05-07**。
+- 2014年機種一覧系でも4月対象は既処理のマタドール-30、サムライスピリッツ、モンキーターンII、喧嘩祭、緑ドンVIVA2、Magic Monster3、ハッピージャグラーVII等の既登録群で整合。
+- status: **2014-04-22_TO_2014-05-06_CLOSED_FOR_CURRENT_RESEARCH**。
 
-## 遡及 resetBehavior QA — PSアドリブ王子
+## 2014-05-07群
 
-- 対象: `docs/real_machine_db/machines/2007-02_ps-adlib-ouji.md`。
-- 既存 `coreStatus: COMPLETE_CORE / resetBehaviorQA: PARTIAL` を維持。
-- 「PSアドリブ王子 / アドリブ王子 / PSアドリブ王子VB / 三洋物産」×「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 昇格チャンス / 1111G / 天井 / ガックン」を再探索。
-- P-WORLD、グリーンべると当時記事、旧パチマガスロマガ等では通常の昇格チャンス仕様は再確認できたが、**設定変更・据え置き・電断時の昇格チャンス/1111G救済カウンタ処理を直接固定する新規根拠なし**。
-- したがって性能側COMPLETE_COREを崩さず、resetBehaviorQAは **PARTIAL / UNVERIFIED_AFTER_RESEARCH相当**を維持。推測補完なし。
-- Git履歴上、PSアドリブ王子追加コミット直後の次機種追加は **`docs/real_machine_db/machines/2007-03-04_pachislot-abarenbo-shogun.md`（パチスロ暴れん坊将軍）**。次回QAカーソルとして固定。
+K-Navi全国一斉導入カレンダーでパチスロは2機:
+1. **パチスロ ロストアイランド**（Sammy）— 処理済み / No.815
+2. **パチスロ マクロスフロンティア2**（SANKYO）— **次の未処理機種**
+
+status: **2014-05-07_GROUP_OPEN**。
 
 ## safeguards / definitions
 
-- ニューペガサスの機械割競合は平均しない。
-- 2016年「ニューペガサスR」、旧「ニューペガサスブラック」等の別仕様の機械割・設定示唆・リセット情報を2014年3S1253へ混入しない。
-- ノーマル機で天井・AT/ART/CZが非該当でも、本機固有の設定変更/電断RAM挙動を一般論から自動推定しない。
-- 既存 `COMPLETE_CORE` は性能コア完了として維持し、resetBehavior QA状態を別管理する。
+- ロストアイランドのリセット後は「555G固定」とせず、訂正後解析に従い **777G 1%を残す**。
+- 通常777G天井の200G以上AT恩恵をリセット555G側へ根拠なく転記しない。
+- 据え置き宵越し内部G数と、当日G依存ガセ前兆を別契約として扱う。
+- 2016年「ビッグドリーム in ロストアイランド2」等の後継別機種情報を混入しない。
+- formalModelName / 検定番号は再探索後も今回固定できずUNVERIFIED。
 
 ## 次回再開地点
 
-1. **recordCount 814 / chronologicalFrontier 2014-04-21 / 04-21_GROUP_CLOSED_FOR_CURRENT_RESEARCH** から開始。
-2. **2014-04-22〜05-06境界をメーカー/業界系でも再監査**。
-3. 漏れがなければ次の具体日 **2014-05-07** へ進み、候補は **パチスロ ロストアイランド → パチスロ マクロスフロンティア2**。
-4. 05/07群追加後、同日群をメーカー横断再監査してCLOSED判定。
-5. 遡及resetBehavior QAは **`docs/real_machine_db/machines/2007-03-04_pachislot-abarenbo-shogun.md`** から継続。
+1. **recordCount 815 / chronologicalFrontier 2014-05-07 / 05-07_GROUP_OPEN** から開始。
+2. 次の未処理機種は **パチスロ マクロスフロンティア2（SANKYO）**。
+3. 性能コア＋resetBehavior v0.7を収集し、05/07同日群を全メーカー横断再監査してCLOSED判定。
+4. その後は **2014-05-08〜05-11境界監査 → 2014-05-12「パチスロ サムライチャンプルー 流転輪廻」** へ進む。
+5. 遡及resetBehavior QAカーソルは `docs/real_machine_db/machines/2007-03-04_pachislot-abarenbo-shogun.md` を維持。
 6. 2015-06-08到達時の **吉宗～極～（ヨシムネH2A4 / 3S1093）** 正式量産版処理注意は維持。
 
-## 主要出典 — 取得日 2026-09-06
+## 主要出典 — 取得日 2026-09-07
 
-### ニューペガサス
-- HAZUSE: `https://hazuse.com/machine/pachislot/3S1253/`
-- K-Navi: `https://p-kn.com/slot/2037/`
+### 境界 / 導入日
 - K-Navi 2014年4月カレンダー: `https://p-kn.com/calendar/201404/`
-- 娯楽産業: `https://www.goraku-sangyo.com/%E3%82%A8%E3%83%9E%EF%BC%8F%E3%83%9A%E3%82%AC%E3%82%B5%E3%82%B9%E3%82%B8%E3%83%A3%E3%83%91%E3%83%B3%E3%80%80%E6%96%B0%E6%A9%9F%E7%A8%AE%E3%80%8C%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%9A%E3%82%AC%E3%82%B5/`
-- pacnk: `https://pacnk.com/slot/2010/pegasusw/top.php`
-- けんのスロットシミュレーション: `https://kenslo65536.com/kaiseki/new-pegasus.html`
-- 2-9伝説: `https://29den.com/newpegasus/`
-- 中一商事: `https://www.nakaiti.com/html/Ema001.html`
-
-### 次境界
 - K-Navi 2014年5月カレンダー: `https://p-kn.com/calendar/201405/`
+- 2014年スロット機種一覧: `https://www.nikuziru.com/slot/2014slot-list`
 
-### PSアドリブ王子 QA
-- P-WORLD: `https://www.p-world.co.jp/machine/database/4565`
-- グリーンべると/P-WORLD業界ニュース: `https://news.p-world.co.jp/articles/2027/greenbelt`
-- パチマガスロマガ旧攻略: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sanyo_slot/04/a.php`
-- Git history: PSアドリブ王子追加 `acf77175cba962d5077b3c657f0e306c4eb876d5` → relay advance `104453f651835a50390704e0cb12773ec5a40e0c` → 次機種追加 `ccb7b789371cf566adf9a77c461efca8d2239cf3`。
+### ロストアイランド
+- P-WORLD: `https://www.p-world.co.jp/machine/database/7354`
+- パチマガスロマガ旧攻略: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sammy_slot/142/a.php`
+- パチスロ解析ガイド: `https://pachislot-guide.net/2014/lost-island/`
+- man-soft解析: `https://smaslo.man-soft.com/slot-kaiseki/lostisland.html`
+- すろぱちくえすと（2014-06-22/24）: `https://www.slopachi-quest.com/article/lostisland-zone/`
+- 真パチスロ備忘録（2014-08-16）: `https://sin-surobi.com/lostiland/5320/`
+- 当時スペック速報（2014-03-15）: `https://pachinkopachisro.com/archives/36967059.html`
+- P-Summa朝一回顧: `https://psumma.jp/trend/17593/`
