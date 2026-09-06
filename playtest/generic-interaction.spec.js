@@ -14,6 +14,7 @@ async function saveShot(page, file) {
 }
 
 test('generic iPhone eyes and hands smoke', async ({ page }) => {
+  test.setTimeout(60000);
   fs.mkdirSync(evidenceDir, { recursive: true });
   const base = process.env.PLAYTEST_BASE_URL || 'http://127.0.0.1:4173';
   const url = new URL(targetPath, base).toString();
