@@ -3,18 +3,22 @@
 machineName: パチスロ カウボーイビバップ
 manufacturer: オリンピア
 releaseDate: 2014-10-20
-releaseDatePrecision: nationwide_hall_start
+releaseDatePrecision: CONFLICT_EARLIEST_CONCRETE_2014_10_20_VS_2014_10_27
 generation: 5号機
 systemType: AT / ゲーム数上乗せ / CZ / チャンス役ゲーム数管理
-recordStatus: PARTIAL_CORE_WITH_RESET_BEHAVIOR_V0_7_AND_AT_SETTING3_CONFLICT
+recordStatus: PARTIAL_CORE_WITH_RESET_BEHAVIOR_V0_7_AT_SETTING3_CONFLICT_AND_RELEASE_DATE_CONFLICT
 
 ## identity
 
 - メーカー: **オリンピア**。
-- ホール導入開始: **2014-10-20**。K-Naviおよび当時新台情報で一致。
+- 導入日: **CONFLICT 2014-10-20 vs 2014-10-27**。
+  - K-Naviは **2014-10-20** をホール導入開始として掲載。
+  - 2014-10-27公開の当時新台記事は **「本日（10月27日）導入予定」** と記載。
+  - 2014-11-17公開のホール向け集計記事も **10/27 カウボーイビバップ** と整理。
+- 本DBの時系列キーは、具体日として確認できる最古の **2014-10-20** を維持するが、全国導入日を一意に正規化せず `CONFLICT_RELEASE_DATE_2014_10_20_VS_2014_10_27` を保持する。
 - 型式名: **パチスロカウボーイビバップC1**。中古実機DB複数系統で一致。
 - 数字形式の検定番号: **UNVERIFIED_AFTER_RESEARCH**。
-- confidence: ANALYSIS_HIGH_MULTI_SOURCE_FOR_RELEASE / SECONDARY_MULTI_SOURCE_FOR_MODEL_NAME
+- confidence: CONFLICT_FOR_RELEASE / SECONDARY_MULTI_SOURCE_FOR_MODEL_NAME
 
 ## payoutRateBySetting
 
@@ -49,8 +53,9 @@ recordStatus: PARTIAL_CORE_WITH_RESET_BEHAVIOR_V0_7_AND_AT_SETTING3_CONFLICT
 
 ## baseGamesPer50
 
-- **UNVERIFIED_AFTER_RESEARCH**。
-- `50枚 / 50枚あたり / ベース / コイン持ち / 千円 / 回転` と機種名・型式名・オリンピアを組み替え、K-Navi、P-WORLD、旧パチマガスロマガ、当時解析、後年DBを横断したが、比較可能な確定値を今回固定できなかった。
+- **約31G/1000円（≒50枚）**。
+- 2014-10-27公開の当時新台記事で直接確認。
+- confidence: PERIOD_ANALYSIS_SINGLE
 
 ## netIncrease
 
@@ -174,7 +179,7 @@ resetQaLastUpdated: 2026-09-07
 
 - 表記揺れ: `パチスロ カウボーイビバップ / カウボーイビバップ / COWBOY BEBOP / パチスロカウボーイビバップC1 / オリンピア / OLYMPIA`。
 - 検索語: `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 電断 / 天井 / 天井短縮 / 減算 / モード / 状態 / ガックン / コンボカウンター / COMBO CHANCE / 50枚 / ベース / コイン持ち / 型式 / 検定`。
-- 資料系統: K-Navi、P-WORLD、旧パチマガスロマガ、当時攻略ブログ、後年機種DB、中古実機型式DB。
+- 資料系統: K-Navi、P-WORLD、旧パチマガスロマガ、当時攻略ブログ、後年機種DB、中古実機型式DB、当時導入一覧。
 - 重要: 2014-12-20公開の「400G以内81.25%」情報は、2014-12-29の同サイト訂正版で**誤報**と明記。旧値は性能値として採用しない。
 
 ## sources
@@ -213,15 +218,24 @@ resetQaLastUpdated: 2026-09-07
    - https://initialp.cart.fc2.com/ca18/2136/
    - 型式名 パチスロ カウボーイビバップC1、5号機AT
    - reliability: SECONDARY_MACHINE_DATABASE
+9. Slot-board RUSH — パチスロ「カウボーイビバップ」新台導入開始！
+   - 2014-10-27公開。本日10月27日導入予定、千円ベース約31G、設定別性能を掲載。
+   - reliability: PERIOD_ANALYSIS
+10. パチ7 — ホールが考える甘い機種ランキング：2014年11月
+   - 2014-11-17公開。10/20群をバーストエンジェル/スーパービンゴネオ、カウボーイビバップを10/27として整理。
+   - reliability: PERIOD_INDUSTRY_MEDIA
 
 ## missingFields
 
-- baseGamesPer50: UNVERIFIED_AFTER_RESEARCH
 - numeric inspection approval number: UNVERIFIED_AFTER_RESEARCH
 - setting-change internal-state table numeric values: UNVERIFIED_AFTER_RESEARCH
 
 ## conflicts
 
+- `CONFLICT_RELEASE_DATE_2014_10_20_VS_2014_10_27`
+  - K-Navi: 2014-10-20。
+  - 当時10/27新台記事・11/17ホール集計: 2014-10-27。
+  - 全国一律導入/地域差/予定日の可能性があるため、一方を消さず保持。
 - `CONFLICT_AT_INITIAL_SETTING3_1_312_1_VS_1_321_2`
   - K-Navi: 1/312.1
   - P-WORLD: 1/321.2
