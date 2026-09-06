@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="./interior.css">
   <link rel="stylesheet" href="./responsive-fit.css">
   <link rel="stylesheet" href="./foundation-debug.css">
+  <style>
+    html,body,.sidebtn,.menu button,.speedBar button,.placementPanel button,.gamePanel button{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",Meiryo,sans-serif}
+  </style>
 </head>
 <body>
   <main class="game">
@@ -42,5 +45,20 @@
     <section class="gamePanel" id="gamePanel" hidden><button class="panelClose" id="panelClose">×</button><h2 id="panelTitle"></h2><div id="panelBody"></div></section>
   </main>
   <script type="module" src="./core/main.js"></script>
+  <script type="module">
+    const panel=document.getElementById('gamePanel');
+    let resumeSpeed=1;
+    const speedButton=(value)=>document.querySelector(`[data-speed="${value}"]`);
+    document.querySelectorAll('[data-action]').forEach((button)=>button.addEventListener('click',()=>{
+      if(button.dataset.action==='build'||button.dataset.action==='replace')return;
+      const state=window.__CHAPPY_PLAYTEST_STATE__?.();
+      if(state&&!state.settled){resumeSpeed=state.speed||1;speedButton(0)?.click();}
+    }));
+    new MutationObserver(()=>{
+      if(!panel.hidden)return;
+      const state=window.__CHAPPY_PLAYTEST_STATE__?.();
+      if(state&&!state.settled&&!document.querySelector('.placementPanel'))speedButton(resumeSpeed)?.click();
+    }).observe(panel,{attributes:true,attributeFilter:['hidden']});
+  </script>
 </body>
 </html>
