@@ -4,107 +4,109 @@
 
 ## 現在地点
 
-- recordCount: **792**
-- latestMachineAddedByChronology: **バジリスク～甲賀忍法帖～絆**（エレコ）
-- latestRecord: `docs/real_machine_db/machines/2014-01-27_basilisk-kizuna.md`
-- chronologicalFrontier: **2014-01-27**
+- recordCount: **793**
+- latestMachineAddedByChronology: **パチスロ輪廻のラグランジェ**（Sammy / サミー）
+- latestRecord: `docs/real_machine_db/machines/2014-02-03_rinne-no-lagrange.md`
+- chronologicalFrontier: **2014-02-03**
 - schema: **resetBehavior v0.7**
-- status: **2014-01-27_GROUP_CLOSED**
+- status: **2014-02-03_GROUP_OPEN**
 
 ## 今回の同期 / 重要事項
 
-- 最新mainの `README.md`、ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前レコード `2014-01-20_umineko-no-naku-koro-ni.md` を再読。
+- 最新mainの `README.md`、ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前レコード `2014-01-27_basilisk-kizuna.md` を再読。
 - INDEXは旧集約状態（19件）のためREADME規定どおり **LATEST_HANDOFF + 実レコード**を正本扱い。
-- 作業開始時正本は recordCount 791 / chronologicalFrontier 2014-01-20 / 01-20群CLOSED。
-- 前handoffどおり **2014-01-21～01-26** を再監査。ALL7 2014年1月導入一覧では01-20の次の具体日付きパチスロは01-27「バジリスク～甲賀忍法帖～絆」で、01-21～26に具体日付き未登録パチスロを今回固定できなかったため境界を `CLOSED_FOR_CURRENT_RESEARCH` とした。
-- **2014-01-27「バジリスク～甲賀忍法帖～絆」（エレコ）**を792件目として追加。
-- ALL7の01-27同日一覧にはパチンコ「ぱちんこCR世紀末銀狼伝サガ」と本機が掲載される。今回の横断監査では本機以外の具体日付き未登録パチスロを確認できず **2014-01-27群CLOSED**。
+- 作業開始時正本は **recordCount 792 / chronologicalFrontier 2014-01-27 / 01-27群CLOSED**。
+- 前handoffどおり **2014-01-28～02-02** を境界監査。ALL7 2014年2月導入一覧と既存候補を照合し、今回この期間に具体日付き未登録パチスロを固定できなかったため `CLOSED_FOR_CURRENT_RESEARCH`。
+- ALL7 2014年2月一覧の02-03パチスロ群は **「パチスロ輪廻のラグランジェ」「主役は銭形2」** を確認。
+- **2014-02-03「パチスロ輪廻のラグランジェ」（Sammy）**を793件目として追加。02-03群はまだOPEN。
 
-## 今回追加 — バジリスク～甲賀忍法帖～絆
+## 今回追加 — パチスロ輪廻のラグランジェ
 
 ### identity / 性能コア
 
-- manufacturer: **エレコ**。
-- modelName: **バジリスク絆MK**。
-- approvalNumber: **3S0950**。
-- hall start: K-Navi / HAZUSE / ALL7 / 一撃 **2014-01-27**。グリーンべるとの2013-11-29記事も2014年1月下旬納品開始予定として整合。
-- generation/system: **5号機 / 擬似ボーナス + AT**。
-- payout: **97.3 / 98.6 / 102.0 / 106.6 / 112.1 / 119.2%**を複数解析一致値として採用。一部二次資料の精密系列 **97.46 / 98.43 / 102.07 / 106.46 / 111.90 / 118.82%**は `CONFLICT_MINOR_PAYOUT_DECIMAL_SERIES` として保持。
-- 通常時BC初当たり: **1/139.4 / 138.7 / 137.9 / 130.6 / 130.1 / 118.6**。
-- AT初当たり: **1/441.3 / 377.9 / 403.4 / 303.9 / 343.1 / 245.1**。
-- baseGamesPer50: **約31G/50枚**。
-- AT純増: **約2.8枚/G**。
-- BC: **ベルナビ8回・約40枚**。PBC: **ベルナビ20回・約100枚 + AT確定**。
-- AT「バジリスクタイム」: **1セット約40G**、追想の刻+争忍の刻、ループ率25/33/50/66/80%系。
-- 天井: **BC間500GでBC** / **最大10スルー後11回目BCでAT**。
+- manufacturer: **Sammy / サミー**。
+- modelName: **ラグランジェZR**。
+- approvalNumber: **3S0984**。
+- hall start: ALL7 / K-Navi / HAZUSE **2014-02-03**。グリーンべるとの2013-12-18発表も2月上旬納品予定として整合。
+- generation/system: **5号機 / 差枚数管理型AT・擬似ボーナスAT**。
+- payout: **97.4 / 98.6 / 101.2 / 105.1 / 110.3 / 115.6%**。精密系列97.44 / 98.56 / 101.19 / 105.05 / 110.34 / 115.63%は丸め整合として注記し平均化しない。
+- LB: **1/298.2 / 290.1 / 275.6 / 248.0 / 223.9 / 197.3**。
+- REG: **1/596.7 / 586.1 / 584.3 / 555.0 / 537.0 / 495.4**。
+- AT/擬似ボーナス合算: **1/198.8 / 194.1 / 187.3 / 171.4 / 158.0 / 141.1**。
+- baseGamesPer50: **約31G/50枚**（後年整理単一値のためANALYSIS_SINGLE）。
+- netIncrease: **約2.5枚/G**。
+- REG: **50枚**。LBはウォクスドライブで初期差枚数を決める可変型。
+- ceiling: 通常モード **900/950/1000/1050/1100G**の段階天井、最大1100G。天国A/Bは**116G**。
 - recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_RESEARCHED**。
 
 ### resetBehavior v0.7
 
-- 設定変更時は **BC間500G天井をリセット**。
-- **BCスルー回数天井もリセットして再抽選**。
-- 内部モードを再抽選。設定変更時モード振り分けはA約40～43%、B約25%、C約25%、**D 7%、E 1%**。D/Eなら次回BCでAT確定。
-- 設定変更時のBC回数天井は **1/3/5/7/9/10/11回**へ再抽選。**1回天井8.0%（全設定共通）**。
-- 設定変更時は全設定共通で **高確以上29.4%**。公開G数内訳もレコードへ保存。
-- 据え置き時は攻略資料で **BC間G数・スルー回数引継ぎ**を確認。内部モード/状態まで含む完全契約は `UNVERIFIED_AFTER_RESEARCH`。
-- 純電源OFF→ONは本機専用朝一表で **天井・内部状態引継ぎ**を確認。モード/テーブルの完全直接契約は `UNVERIFIED_AFTER_RESEARCH`。
-- ガックンは **変更判別に使えない**とする本機専用解析を確認。実用上は前日込み天井/スルー挙動が主要判別材料。
-- 設定変更専用のBC間500Gより短い固定短縮天井は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 設定変更時は **モード・状態を再抽選**。
+- 前日天井Gを単純に0へ戻すだけでなく、**内部開始G数（ハマリG数）を再抽選**する本機固有仕様を2014年当時記事で確認。
+- 後年整理では **0G 25% / 変則G数75%**。変則時は100/10/1の位を個別抽選し、100の位は100G 84.4%、200G 12.5%、300G 1.6%、400G 1.2%、800G 0.4%。10の位は10G 50%、20G 25%、30G 12.5%、40G 6.3%、50G 6.3%。1の位0～9各10%。当時記事の「大半が110～140G」と整合。
+- 設定変更時は専用の **設定変更モード**へ移行するとする解析を確認。ただし現存する詳細移行率表は画像中心で安全に数値抽出できず `EXACT_TABLE_UNVERIFIED_AFTER_RESEARCH`。
+- 設定変更時状態: 高確 **全設定12.5%**、超高確は設定1～3 **0.8%** / 設定4 **1.6%** / 設定5・6 **3.1%**。残り通常。
+- 朝一に何も引かず夜背景（超高確）へ移行した場合は高設定期待が上がる判別材料。
+- 純据え置き時の天井G・モード・状態の完全直接契約は、表記揺れ/型式/メーカーと据え置き・宵越し・朝一等を組み替えて再探索後も固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 純電源OFF→ONについても電源OFF/ON・電断・据え置き等で再探索したが本機専用直接契約を固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- ガックンは実戦事例に判別材料としての言及があるが、高信頼な本機専用契約は固定できず `UNVERIFIED_FOR_GACKUN_CONTRACT`。
 - advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN**。
-- 後継「絆2」「天膳BLACK EDITION」の有利区間/電源仕様は別機種のため流用禁止。
 
 ## conflicts / safeguards
 
-- 機械割の標準系列と一部精密系列は平均化せず `CONFLICT_MINOR` 保持。
-- BC間500G天井とBC回数天井を混同しない。設定変更で双方リセットされるが、BC間天井自体が短縮されるわけではない。
-- 設定変更時29.4%は高確以上スタート総率。高確G数別表の条件付き内訳と全体比を混在させない。
-- 2020年「バジリスク絆2」、2023年「Lバジリスク絆2 天膳 BLACK EDITION」の情報は初代へ流用しない。
+- 「設定変更で天井Gリセット」という簡略表記と「内部開始G数再抽選」は矛盾させず、**前日進捗消失 + 新たな内部開始G数再抽選**として定義を分離。
+- 「設定変更後500G」は攻略上の狙い目であり固定短縮天井500Gではない。
+- 116Gは天国モード天井であり、設定変更後固定天井ではない。
+- 通常時モード移行表を設定変更時の朝一モード値へ流用しない。
 
-## 2014-01-27同日群 — CLOSED
+## 2014-01-28～02-02境界 — CLOSED_FOR_CURRENT_RESEARCH
+
+- ALL7 2014年2月導入一覧と既存handoff候補を照合し、この期間に具体日付き未登録パチスロを今回固定できず。
+
+## 2014-02-03同日群 — OPEN
 
 処理済み:
-- **バジリスク～甲賀忍法帖～絆**（エレコ） — 792件目。
+- **パチスロ輪廻のラグランジェ**（Sammy） — 793件目。
 
-除外確認:
-- **ぱちんこCR世紀末銀狼伝サガ**（サミー） — パチンコ機。
+未処理:
+- **主役は銭形2**（オリンピア / ゴールドオリンピア） — ALL7 / HAZUSEで2014-02-03。
 
-## 2014-01-28以降の境界
-
-- 次の具体日付き候補として **2014-02-03「パチスロ輪廻のラグランジェ」（Sammy）**、**2014-02-03「主役は銭形2」（オリンピア）**を先行確認。
-- 次回は **2014-01-28～02-02** をメーカー公式 / 業界導入一覧 / 当時解析DB / 古い新台カレンダーで境界監査してから、02-03同日群を処理する。
-- 02-03群の先頭順は導入一覧・メーカー横断監査で再確定し、同日未処理を飛ばさない。
+ALL7同日一覧にある「交響詩篇エウレカセブン～真の約束の地～」「氷川きよし2」「海物語アクア」「魔神英雄伝ワタル」等はパチンコ側掲載であり、本線へ混入させない。
 
 ## 遡及resetBehavior QA 進捗
 
 - QAカーソルは `2007-01_karate-baka-ichidai.md` の次の実ファイル順を維持。
-- 今回は本線792件目を優先。既存性能coreStatusは変更なし。reset QAは性能完了判定とは別管理を維持。
+- 今回は本線793件目を優先。既存性能coreStatusは変更なし。reset QAは性能完了判定とは別管理を維持。
 
 ## 次回再開地点
 
-1. **recordCount 792 / chronologicalFrontier 2014-01-27 / 01-27群CLOSED** から開始。
-2. **2014-01-28～02-02** をメーカー公式 / 業界導入一覧 / 当時解析DB / 古い新台カレンダーで境界監査する。
-3. 未登録パチスロがなければ **2014-02-03同日群**へ進む。先行確認済み候補は「パチスロ輪廻のラグランジェ」（Sammy）、「主役は銭形2」（オリンピア）。
-4. 02-03同日群は全メーカー横断で再監査し、時系列順/同日順を確定してから登録する。
+1. **recordCount 793 / chronologicalFrontier 2014-02-03 / 02-03群OPEN** から開始。
+2. 次の未処理は **2014-02-03「主役は銭形2」（オリンピア / ゴールドオリンピア）**。
+3. 「主役は銭形2」処理後、02-03同日群を全メーカー横断で再監査し、未登録パチスロがなければCLOSED。
+4. その後 **2014-02-04～02-09** を境界監査し、先行候補 **2014-02-10「ヱヴァンゲリヲン 決意の刻」**へ進む。
 5. 遡及QAは `2007-01_karate-baka-ichidai.md` 直後の実ファイル順で継続。
 6. PARTIAL / UNVERIFIEDは公式・業界・当時解析・古いDB・アーカイブ・回顧資料まで系統を変えて再探索し、競合は平均せずCONFLICT保持。
 
 ## 主要出典 — 取得日 2026-09-06
 
-### バジリスク～甲賀忍法帖～絆
-- グリーンべると / P-WORLD業界ニュース: `https://news.p-world.co.jp/articles/6230/greenbelt`
-- K-Navi: `https://p-kn.com/slot/1983/`
-- ALL7 2014年1月導入一覧: `https://www.all7.jp/plans/index/2014/01`
-- HAZUSE: `https://hazuse.com/machine/pachislot/SX0055/`
-- 一撃: `https://1geki.jp/slot/basilisk3/`
-- 一撃 BC概要: `https://1geki.jp/slot/basilisk3/71/`
-- パチマガスロマガ 朝イチ・設定変更: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/eleco_slot/93znmiulk/rs.php`
-- ちょんぼりすた: `https://chonborista.com/slot/universal-slot/bajirisk-kizuna/19817/`
-- CrankySeven: `https://crankyseven.com/sp/basilisk-kizuna-pc.htm`
-- モゲスロ 朝一判別: `https://moge-site.com/archives/18250`
-- 期待値見える化 朝一リセット: `https://slotjin.com/slot/basilisk3kizuna-reset/`
-- 公安委員会告示転載資料: `https://manualzilla.com/doc/6595483/h25.12.26%EF%BC%8825%E5%B9%B412%E6%9C%88%E4%B8%AD%EF%BC%89`
+### パチスロ輪廻のラグランジェ
+- グリーンべると: `https://web-greenbelt.jp/00006859/`
+- ALL7 2014年2月導入一覧: `https://www.all7.jp/plans/index/2014/02/10`
+- K-Navi: `https://p-kn.com/slot/1989/`
+- HAZUSE: `https://hazuse.com/machine/pachislot/3S0984/`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/7275`
+- CrankySeven: `https://crankyseven.com/rinnenolagrange-pc.htm`
+- みんスロ: `https://minslo.com/%E8%BC%AA%E5%BB%BB%E3%81%AE%E3%83%A9%E3%82%B0%E3%83%A9%E3%83%B3%E3%82%B8%E3%82%A7/`
+- スロパチクエスト: `https://www.slopachi-quest.com/rinnenoraguranzye/`
+- スロパチクエスト 天井: `https://www.slopachi-quest.com/article/reincarnation-lagrangian/`
+- 必勝本 ボーナス概要: `https://p.hisshobon.jp/machine/2330/1/44210`
+- 必勝本 狙いドコロ: `https://p.hisshobon.jp/machine/2330/1/46642`
+- 完全告知 設定変更時状態: `https://kanzenkokuchi.jp/78/set.php`
+- メタボ教授 2014-02-09設定変更解析: `https://metabopro.com/raguranjyetorimu/`
+- 楽スロ 設定変更時内部開始G数: `https://rakuslo.com/blog-entry-237.html`
+- 期待値見える化 モード: `https://slotjin.com/slot/rinnenolagrange-mode/`
+- LackLuckLife 設定変更専用モード: `https://l-l-life.com/36851466/`
+- ビデオマーケット パチスロ最強伝説G #602: `https://www.videomarket.jp/title/082220/A082220070999H01`
 
-### 境界監査 / 次候補
-- ALL7 2014年1月導入一覧: `https://www.all7.jp/plans/index/2014/01`
-- HAZUSE パチスロ輪廻のラグランジェ: `https://hazuse.com/machine/pachislot/3S0984/`
+### 次候補
 - HAZUSE 主役は銭形2: `https://hazuse.com/machine/pachislot/3S1017/`
