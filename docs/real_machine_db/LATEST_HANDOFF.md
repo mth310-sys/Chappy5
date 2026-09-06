@@ -4,93 +4,96 @@
 
 ## 現在地点
 
-- recordCount: **807**
-- latestRecordAdded: **マタドール-30**（北電子）— 2014-04-07
-- latestRecord: `docs/real_machine_db/machines/2014-04-07_matador-30.md`
+- recordCount: **808**
+- latestRecordAdded: **ハッピージャグラーVII**（北電子）— 2014-04-07
+- latestRecord: `docs/real_machine_db/machines/2014-04-07_happy-juggler-vii.md`
 - chronologicalFrontier: **2014-04-07**
-- frontierLatestMachine: **マタドール-30**
+- frontierLatestMachine: **ハッピージャグラーVII**
 - schema: **resetBehavior v0.7**
-- status: **2014-04-07_GROUP_OPEN / MATADOR_30_ADDED**
+- status: **2014-04-07_GROUP_OPEN / HAPPY_JUGGLER_VII_ADDED**
 
 ## 今回の同期 / 重要事項
 
-- 最新mainの `README.md`、ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前実レコード `2014-03-31_haihai-haibi-30.md` を再読。
+- 最新mainの `README.md`、ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前実レコード `2014-04-07_matador-30.md` を再読。
 - INDEXは旧集約（19件表示）のため、README規定どおり **LATEST_HANDOFF + main実レコード** を現在の正本として継続。
-- 作業開始時正本は **recordCount 806 / chronologicalFrontier 2014-03-31 / 03-31_GROUP_CLOSED_FOR_CURRENT_RESEARCH**。
-- K-Navi 2014年4月全国新台導入カレンダーでは03/31後の次のパチスロ具体日が **2014-04-07**。04/01〜04/06に掲載される全国一斉導入パチスロ日付はなく、今回の追加候補検索でも具体日付き未登録5号機を固定できなかったため **04-01_TO_04-06_BOUNDARY_CLOSED_FOR_CURRENT_RESEARCH**。
-- 04/07群は **マタドール-30 → ハッピージャグラーVII → サムライスピリッツ～剣豪八番勝負～ → パチスロ モンキーターンII** の4機をK-Naviで確認。
-- GitHub main検索で「マタドール-30」未登録を確認し、807件目として追加。
-- 「ハッピージャグラーVII」もmain未登録を確認済み。04/07群はまだOPEN。
+- 作業開始時正本は **recordCount 807 / chronologicalFrontier 2014-04-07 / 04-07_GROUP_OPEN**。
+- 04/07群の次の未処理 **ハッピージャグラーVII** がmain未登録であることを確認し、808件目として追加。
+- 04/07群は **マタドール-30 / ハッピージャグラーVII** まで処理済み。未処理は **サムライスピリッツ～剣豪八番勝負～ → パチスロ モンキーターンII**。
 
-## 今回追加 — マタドール-30
+## 今回追加 — ハッピージャグラーVII
 
 ### identity / 性能コア
 
 - manufacturer: **北電子**。
-- hall start: **2014-04-07**（K-Navi全国一斉導入開始日）。
-- formalModelName: **マタドールKA-30**（北電子公式/P-WORLD）。
-- inspection number: **3S0533**（P-WORLD）。
-- generation/system: **5号機 / ノーマル / リアルボーナス / 完全告知 / 30φ沖スロ**。
-- payout: **97.0 / 98.6 / 100.7 / 103.6 / 106.6 / 110.1%**（pacnk、P-WORLDはレンジ97〜110.1%を照合）。
-- BIG: **1/291 / 281 / 270 / 256 / 245 / 232**。
-- REG: **1/486 / 458 / 428 / 392 / 360 / 331**。
-- baseGamesPer50: **UNVERIFIED_AFTER_RESEARCH**。
+- hall start: **2014-04-07**（HAZUSE）。
+- formalModelName: **ハッピージャグラーV II KK**。
+- inspection number: **3S0869**。
+- generation/system: **5号機 / ノーマル / リアルボーナス / 完全告知**。
+- payout: **96.1 / 97.9 / 99.9 / 102.9 / 105.8 / 108.4%**。北電子公式・複数解析で一致。
+- BIG: **1/287.4 / 282.5 / 273.1 / 264.3 / 252.1 / 240.9**。
+- REG: **1/409.6 / 364.1 / 341.3 / 315.1 / 287.4 / 273.1**。
+- 合成: **1/168.9 / 159.1 / 151.7 / 143.7 / 134.3 / 128.0**。
+- baseGamesPer50（通常打ち1000円あたり）: **34.13 / 34.33 / 34.53 / 35.26 / 35.47 / 35.69G**。完全小役獲得時は34.92〜36.55G。
 - netIncrease: **NOT_APPLICABLE_REAL_BONUS_TYPE**。
-- BIG: **312枚**。
-- REG/BONUS GAME: **グリーンべると当時記事 最大104枚 vs P-WORLD 最大117枚**で `CONFLICT_REG_PAYOUT_104_VS_117`。平均せず双方保持。
+- BIG: **約312枚**、REG: **約104枚**。
+- ceiling: **NOT_APPLICABLE / 天井機能非搭載**。
 - recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7_PARTIAL_RESET_CONTRACT**。
 
 ### resetBehavior v0.7
 
-- settingChangeBehavior: **UNVERIFIED_AFTER_RESEARCH**。
-- carryOverBehavior: 天井/AT/ART/CZ/出玉管理モードは **NOT_APPLICABLE / NONE_CONFIRMED**、その他の本機固有物理状態は **UNVERIFIED_AFTER_RESEARCH**。
-- powerCycleBehavior: **UNVERIFIED_AFTER_RESEARCH**。
-- gameCounterReset: **NOT_APPLICABLE_NO_CONFIRMED_GAME_COUNT_CEILING**。
-- ceilingAfterReset: **NOT_APPLICABLE_NO_CONFIRMED_CEILING**。朝一短縮天井もNONE_CONFIRMED。
-- modeAfterReset: AT/ART/CZ/天井用出玉モードは **NOT_APPLICABLE / NONE_CONFIRMED**。
+- settingChangeBehavior: 朝一1G目の**リールガックンは設定変更濃厚**として機種固有解析で確認。
+- carryOverBehavior: 天井/AT/ART/CZ/出玉管理モードは **NOT_APPLICABLE**。据え置き時の本機固有リール初動・物理状態契約は **UNVERIFIED_AFTER_RESEARCH**。
+- powerCycleBehavior: 設定変更なしの純電源OFF→ONのみでガックンが発生するかは **UNVERIFIED_AFTER_RESEARCH**。一般ジャグラー仕様から補完しない。
+- gameCounterReset: **NOT_APPLICABLE_NO_GAME_COUNT_CEILING**。
+- ceilingAfterReset: **NOT_APPLICABLE_NO_CEILING**。設定変更専用短縮天井NONE_CONFIRMED。
+- modeAfterReset: AT/ART/CZ/天井用内部モード **NOT_APPLICABLE**。朝一専用出玉モードNONE_CONFIRMED。
 - stateAfterReset: **NOT_APPLICABLE_OR_NONE_CONFIRMED_FOR_NORMAL_TYPE**。
 - advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
 - resetBenefits / resetPenalties / publicMorningNumbers: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- resetDetection: 型式名・メーカー名・シリーズ名と、設定変更/リセット/朝一/据え置き/電源OFF ON/ガックン/初期出目を組み替えて再探索したが **UNVERIFIED_AFTER_RESEARCH**。
-- 「リール・クラッシュフリーズ」は通常のBIG確定プレミアムであり、設定変更ガックンとして混同しない。
+- resetDetection: **CONFIRMED_PROBABILISTIC_GAKKUN_SIGNAL**。後年解析は「朝一1回転目でガックン→設定変更濃厚」、2014年当時企画の回顧掲載でも前日出目を保持するホールでガックンを設定変更判別に使用。リール停止位置等で判定困難なケースがあるため100%確定契約にはしない。
 
-## 2014-04-01〜04-07境界監査
+## safeguards / definitions
 
-- K-Navi月間カレンダーは04/07を次のパチスロ導入日として掲載。
-- 04/01〜04/06は **CLOSED_FOR_CURRENT_RESEARCH**。
-- 04/07群は4機あり、今回1機目「マタドール-30」を処理したため **GROUP_OPEN**。
+- `ハッピージャグラーVII / ハッピージャグラーVⅡ / V2` は2014年同一機の表記揺れとして扱う。
+- 2022年「ハッピージャグラーVⅢ」のスペック・朝一仕様を混入させない。
+- ノーマル機で天井非搭載でも、純電源OFF→ON時のリール挙動は推定しない。
+- ガックンは朝一判別シグナルであり、出玉上のリセット恩恵としては扱わない。
+
+## 2014-04-07群
+
+- 処理済み: **マタドール-30 / ハッピージャグラーVII**。
+- 未処理: **サムライスピリッツ～剣豪八番勝負～ / パチスロ モンキーターンII**。
+- status: **GROUP_OPEN**。
 
 ## 遡及 resetBehavior QA
 
 - 次の遡及QAカーソルは従来どおり **`docs/real_machine_db/machines/2007-02_skylove.md`**。
 - 新規時系列キューを止めず、QAリレー時に継続する。
 
-## safeguards / definitions
-
-- COMPLETE_CORE等の性能側ステータスとresetBehavior QA状態を分離して管理。
-- REG獲得枚数104 vs 117は平均せずCONFLICT。
-- 2018年「マタドールII-30」や後継機の数値・リセット仕様を混入させない。
-- ノーマル機・天井非確認を理由に、設定変更/据え置き/電源OFF→ONの本機固有契約を推定しない。
-
 ## 次回再開地点
 
-1. **recordCount 807 / chronologicalFrontier 2014-04-07 / 04-07_GROUP_OPEN** から開始。
-2. 次の未処理機種は **ハッピージャグラーVII（北電子）**。main未登録確認済み。
-3. その後 **サムライスピリッツ～剣豪八番勝負～（SNKプレイモア） → パチスロ モンキーターンII（山佐）** の順で処理。
-4. 4機処理後、04/07同日群をメーカー横断再監査し、漏れがなければGROUP_CLOSED。
-5. K-Navi上の次の具体日アンカーは **2014-04-21**。04/08〜04/20境界は04/07群CLOSED後に別資料も含めて監査する。
-6. 遡及resetBehavior QAは **`docs/real_machine_db/machines/2007-02_skylove.md`** から継続。
+1. **recordCount 808 / chronologicalFrontier 2014-04-07 / 04-07_GROUP_OPEN** から開始。
+2. 次の未処理機種は **サムライスピリッツ～剣豪八番勝負～（SNKプレイモア）**。
+3. 続いて **パチスロ モンキーターンII（山佐）** を処理。
+4. 2機処理後、04/07同日群をメーカー横断再監査し、漏れがなければGROUP_CLOSED。
+5. その後 **2014-04-08〜04-20境界監査**へ進む。K-Navi上の次の具体日アンカーは **2014-04-21**。
+6. 遡及resetBehavior QAは `docs/real_machine_db/machines/2007-02_skylove.md` から継続。
 7. 2015-06-08到達時に **吉宗～極～（ヨシムネH2A4 / 3S1093）** を正式量産版として処理し、2014-02-17限定試験導入履歴とスペック差をidentity/conflictへ記録する。
 
 ## 主要出典 — 取得日 2026-09-06
 
-### マタドール-30 / 04-07群
+### ハッピージャグラーVII
+- 北電子公式: `https://www.kitadenshi.co.jp/slot/happyjugglerv2/`
+- HAZUSE基本: `https://hazuse.com/machine/pachislot/3S0869/`
+- HAZUSE天井: `https://hazuse.com/machine/pachislot/3S0869/genre/207/`
+- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/kitac_slot/89/a.php`
+- すろぱちくえすと: `https://www.slopachi-quest.com/article/happy-juggler-v2/`
+- パチマガスロマガFREE回顧: `https://pachimaga.com/free/playback/2500f2839c7f281330480623b049efdf636beae9.php`
+- P-WORLD/遊技通信 後継機記事: `https://news.p-world.co.jp/articles/21515/yugitsushin`
+- P-WORLD/グリーンべると 後継機記事: `https://news.p-world.co.jp/articles/21503/greenbelt`
+
+### 04-07群
 - K-Navi 2014年4月新台導入カレンダー: `https://p-kn.com/calendar/201404/`
-- 北電子公式 マタドールKA-30検定情報: `https://www.kitadenshi.co.jp/slot-kentei/matador-30/`
-- P-WORLD マタドール-30: `https://www.p-world.co.jp/machine/database/7311`
-- グリーンべると 2014-02-10: `https://web-greenbelt.jp/00000085/`
-- pacnk 設定判別: `https://pacnk.com/slot/tools/sh_matadoru.html`
-- 北電子公式アプリ: `https://www.kitadenshi.co.jp/fun/apps/mtd30/`
 
 ### 遡及QA
 - 次対象: `docs/real_machine_db/machines/2007-02_skylove.md`
