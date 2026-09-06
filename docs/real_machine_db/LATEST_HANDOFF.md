@@ -4,109 +4,106 @@
 
 ## 現在地点
 
-- recordCount: **822**
-- latestRecordAdded: **パチスロ御伽屋HANZO**（タイヨーエレック）— 2014-05-26
-- latestRecord: `docs/real_machine_db/machines/2014-05-26_otogiya-hanzo.md`
-- chronologicalFrontier: **2014-05-26**
-- frontierLatestMachine: **パチスロ御伽屋HANZO**
+- recordCount: **823**
+- latestRecordAdded: **ケロット3**（山佐）— 2014-06-02
+- latestRecord: `docs/real_machine_db/machines/2014-06-02_kerot3.md`
+- chronologicalFrontier: **2014-06-02**
+- frontierLatestMachine: **ケロット3**
 - schema: **resetBehavior v0.7**
-- status: **2014-05-26_GROUP_CLOSED**
+- status: **2014-06-02_GROUP_OPEN**
 
 ## 今回の同期 / 正本確認
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`docs/real_machine_db/LATEST_HANDOFF.md`、直前レコード `docs/real_machine_db/machines/2014-05-26_mahjong-fight-club.md` を再読。
-- INDEXは旧集約状態のため、README規定に従いLATEST_HANDOFFと実レコードを進捗正本として継続。
-- 作業開始時の正本は **821件 / 2014-05-26 / 05-26_GROUP_OPEN**。
-- handoff指定の次の未処理 **パチスロ御伽屋HANZO（タイヨーエレック）— 2014-05-26** が未登録であることをmain検索で再確認し、822件目として追加。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`docs/real_machine_db/LATEST_HANDOFF.md`、既存レコードを再読。
+- INDEXは旧集約状態のため、README規定どおりLATEST_HANDOFFと実レコードを進捗正本として継続。
+- 作業開始時の正本は **822件 / 2014-05-26 / 05-26_GROUP_CLOSED**。
+- **2014-05-27〜06-01境界**をメーカー横断・導入日表記揺れで監査。今回、安全な具体日付き未登録5号機は固定できず **CLOSED_FOR_CURRENT_RESEARCH** として06-02へ前進。
+- 2014-06-02同日群は少なくとも **ケロット3（山佐） / 戦国乙女～剣戟に舞う白き剣聖～西国参戦編（オリンピア） / 餓狼伝説PREMIUM（SNKプレイモア）** を具体日資料で確認。群全体はまだOPEN。
+- ケロット3が未登録であることを確認し、823件目として追加。
 
-## 今回追加 — パチスロ御伽屋HANZO
+## 今回追加 — ケロット3
 
 ### identity / 性能コア
 
-- manufacturer: **タイヨーエレック**。
-- formalModelName: **御伽屋HANZO ZZ**（流通系実機資料）。
-- inspectionNumber: **UNVERIFIED_AFTER_RESEARCH**。型式名・メーカー・シリーズ名・検定通過語を組み替えて再探索したが、公的検定番号を今回安全に固定できず。
-- hall start: **2014-05-26**。K-Navi全国一斉導入カレンダーを時系列キーに採用。グリーンべるとは2014-05-12記事で最速5月25日納品開始と報道。
-- generation/system: **5号機 / ART / 擬似ボーナス / CZ**。
-- payout: **96.9 / 98.2 / 100.5 / 102.9 / 106.0 / 111.2%**。
-- ART「月闘之刻」初当たり: **1/332.9 / 304.4 / 278.7 / 251.4 / 225.8 / 188.4**。
-- ボーナス+ART合算: **1/227.7 / 215.9 / 199.6 / 178.7 / 163.6 / 135.2**。設定2のみP-WORLD等に1/214.9がありCONFLICT保持。
-- baseGamesPer50: **UNVERIFIED_AFTER_RESEARCH**。パチマガスロマガ現存ページも1000円あたりG数を「現在調査中」としている。
-- ART/擬似ボーナス純増: **約2.0枚/G**。
-- ART「月闘之刻」: **初期50G + バトル8G = 58G+α**。
-- BIG: **約100枚前後**、御伽屋BONUS: **約30〜31枚**。
-- ceiling: **ボーナス/ART間999G + 最大41G前兆 / BIG2〜4セット + ART確定**。
+- manufacturer: **山佐**。
+- formalModelName: **ケロット3EE**。
+- inspectionNumber: **4S0119**。
+- hall start: **2014-06-02**。
+- generation/system: **5号機 / ノーマルAタイプ / ボーナス主体 / プチRT**。
+- payout: **97.6 / 98.9 / 101.2 / 105.0 / 108.8 / 115.4%**。
+- BIG: **1/282.4 / 282.4 / 273.0 / 263.2 / 243.6 / 225.9**。
+- REG: **1/360.0 / 354.2 / 326.0 / 286.1 / 260.0 / 225.9**。
+- ボーナス合算: **1/158.3 / 157.1 / 148.6 / 137.1 / 約125.7〜125.8 / 約112.9〜113.0**。設定5/6の差は元BIG/REGが一致するため丸め差扱い。
+- baseGamesPer50: **UNVERIFIED_AFTER_RESEARCH**。
+- basicPayout: **BIG 312枚 / REG 104枚**。
+- プチRT「ケロットタイム」: 最大8G、ボーナス期待度約75%とする解析あり。RT純増枚数/Gは安全な直接値を固定できずUNVERIFIED。
+- ceiling: **非搭載**。
 - coreStatus: **COMPLETE_CORE_WITH_BASE_UNVERIFIED**。
 
 ### resetBehavior v0.7
 
-- settingChangeBehavior: **設定変更で天井G数リセット CONFIRMED**。2-9伝説機種別解析と天井一覧の「宵×＝設定変更で天井G数リセット」定義+HANZO掲載で確認。
-- carryOverBehavior: **UNVERIFIED_AFTER_RESEARCH**。純据え置き時の天井/モード/状態保持を本機固有の直接比較表で固定できず、一般論から補完しない。
-- powerCycleBehavior: **UNVERIFIED_AFTER_RESEARCH**。設定変更なしの電源OFF→ONについて本機固有の直接契約を固定できず。
-- gameCounterReset: 設定変更はRESET。據え置き/純電断はUNVERIFIED。
-- ceilingAfterReset: 設定変更専用の短縮天井は **NONE_CONFIRMED_AFTER_RESEARCH**。通常999G天井へ戻る扱い。
-- modeAfterReset: ボーナス/ART解除モード・CZ抽選モードは存在するが、設定変更時振り分け/朝一専用モード数値は **UNVERIFIED_AFTER_RESEARCH**。
-- stateAfterReset: **UNVERIFIED_AFTER_RESEARCH**。
+- settingChangeBehavior: ゲーム数天井・規定G解除がないため天井進捗処理は **NOT_APPLICABLE**。短時間RT/液晶内部状態の設定変更時契約は **UNVERIFIED_AFTER_RESEARCH**。
+- carryOverBehavior: 天井/規定Gの引継ぎは **NOT_APPLICABLE**。短時間RT/液晶状態の営業日跨ぎ契約は **UNVERIFIED_AFTER_RESEARCH**。
+- powerCycleBehavior: 設定変更なし電源OFF→ON時の短時間RT/液晶状態は **UNVERIFIED_AFTER_RESEARCH**。
+- gameCounterReset: **NOT_APPLICABLE / NO_CEILING**。
+- ceilingAfterReset: 天井非搭載。設定変更専用短縮天井・救済G数は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- modeAfterReset: 天国/通常A/B等の規定G解除モードは **NOT_APPLICABLE**。設定変更専用モードは **NONE_CONFIRMED_AFTER_RESEARCH**。
+- stateAfterReset: 長期高確/低確・AT/ART状態は主要構造ではない。短時間RT契約は **UNVERIFIED_AFTER_RESEARCH**。
 - advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
-- resetBenefits: 専用短縮天井・朝一高確率/CZ優遇はNONE_CONFIRMED。前日天井進捗消去が主な店側効果。
-- resetPenalties: 前日999G天井進捗消去。
-- resetDetection: 本機固有ガックン/初期出目/液晶判別契約は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- resetBenefits: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- resetPenalties: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- resetDetection: 本機固有ガックン/初期出目/液晶表示による変更判別は **NONE_CONFIRMED_AFTER_RESEARCH**。
 - publicMorningNumbers: **NONE_CONFIRMED_AFTER_RESEARCH**。
 - resetBehaviorQA: **PARTIAL**。
 
-## conflicts / safeguards
+## 再探索 / safeguards
 
-- ART初当たり設定1: **1/332.9**（当日解析/2-9伝説） vs **1/332.2**（スロパチクエスト）。複数一致の1/332.9を本表採用、競合注記保持。
-- ボーナス合算設定1: **1/722.0**（2014-05-26当日解析） vs **1/772.0**（2-9伝説後年整理）。CONFLICT。
-- ボーナス+ART合算設定2: **1/215.9**（当日解析） vs **1/214.9**（P-WORLD/流通資料）。CONFLICT。
-- パチンコ「CR御伽屋HANZO」の数値を本パチスロ機へ混入しない。
-- 中古流通資料のSammy表記は販売系統表記を含むため、manufacturerは当時業界記事・攻略資料に従いタイヨーエレック。
+- `ケロット3 / ケロット３ / ケロット3EE / 4S0119 / 山佐` に `設定変更 / リセット / 朝一 / 据え置き / 宵越し / 電源OFF ON / ガックン / RT / 天井 / 50枚 / 1000円 / コイン持ち` を組み合わせ、HAZUSE、パチマガスロマガ、2-9伝説、当時解析、後年5号機資料を横断。
+- 天井非搭載、基本スペックは複数系統で照合。baseGamesPer50および設定変更/据え置き/純電断時の短時間RT状態契約は安全に固定できず推測しない。
+- 高設定確定/示唆演出は設定推測情報であり、朝一のresetDetectionへ混入しない。
+- 「ケロット」「ケロット2」「ケロット4」「ケロット～スウィートVer.～」の値を本機へ混入しない。
 
-## 2014-05-26群 / 境界
+## 2014-06-02群 / 次候補
 
-K-Navi全国一斉導入カレンダー掲載パチスロ:
-1. **B-MAX**（アクロス）— No.820 / 処理済み
-2. **麻雀格闘倶楽部**（KPE）— No.821 / 処理済み
-3. **パチスロ御伽屋HANZO**（タイヨーエレック）— No.822 / 処理済み
+具体日確認済み:
+1. **ケロット3**（山佐）— No.823 / 処理済み
+2. **戦国乙女～剣戟に舞う白き剣聖～西国参戦編**（オリンピア）— 未処理
+3. **餓狼伝説PREMIUM**（SNKプレイモア）— 未処理
 
-- 2014-05-26掲載パチスロ3機を全件処理したため **2014-05-26_GROUP_CLOSED**。
-
-## 次の境界 / 候補
-
-- 次回は **2014-05-27〜2014-06-01境界監査**を先に実施し、未処理5号機がないかメーカー横断確認。
-- 現時点の次の強い具体日アンカーは **2014-06-02「ケロット3」（山佐）**。当時解析資料で導入日2014-06-02、A+プチRT、天井非搭載を確認済み。
-- ただし2014-06-02同日群の他メーカー機を先に全件洗い出し、時系列で最初の未処理から登録する。ケロット3を即No.823と固定しない。
-- 2014年6月候補には戦国乙女西国参戦編、蒼天の拳2、餓狼伝説PREMIUM等があるため、月単位資料を具体日へ解像して漏れなく前進する。
+- 2014-06-02群は **OPEN**。上記3機だけと断定せず、次回はまず全メーカー横断で同日群を再監査する。
+- **蒼天の拳2は2014-06-16**の具体日資料を確認しており、06-02群には混ぜない。
 
 ## 遡及 resetBehavior QA
 
-- 直前handoffのQAカーソルを維持。
+- QAカーソルは維持。
 - 次QAカーソル: `docs/real_machine_db/machines/2007-02-18_kamen-rider-dx-super-bike.md`。
 
 ## 次回再開地点
 
-1. **recordCount 822 / chronologicalFrontier 2014-05-26 / 05-26_GROUP_CLOSED** から開始。
-2. 最新mainで既存登録を再確認。
-3. **2014-05-27〜06-01境界監査**。
-4. その後 **2014-06-02同日群を全メーカー横断で列挙し、最初の未処理機種**をNo.823候補として処理。強いアンカーはケロット3（山佐）。
-5. 遡及resetBehavior QAは `docs/real_machine_db/machines/2007-02-18_kamen-rider-dx-super-bike.md` から再開。
-6. 2015-06-08到達時の **吉宗～極～（ヨシムネH2A4 / 3S1093）** 正式量産版処理注意は維持。
+1. **recordCount 823 / chronologicalFrontier 2014-06-02 / 06-02_GROUP_OPEN** から開始。
+2. 最新mainでREADME / mission / INDEX / LATEST_HANDOFF / 823件目レコードを再確認。
+3. **2014-06-02同日群を全メーカー横断再監査**し、未処理機種を漏れなく列挙。
+4. 現時点の次の明確な未処理候補は **戦国乙女～剣戟に舞う白き剣聖～西国参戦編（オリンピア）**。同日群にそれより先に処理すべき未登録がないことを確認してからNo.824候補として処理。
+5. 続いて **餓狼伝説PREMIUM（SNKプレイモア）**。
+6. 06-02群全処理後にCLOSED判定し、06-03以降へ時系列前進。
+7. 遡及resetBehavior QAは `docs/real_machine_db/machines/2007-02-18_kamen-rider-dx-super-bike.md` から再開。
+8. 2015-06-08到達時の **吉宗～極～（ヨシムネH2A4 / 3S1093）** 正式量産版処理注意は維持。
 
 ## 主要出典 — 取得日 2026-09-07
 
-### 境界 / 導入日
-- K-Navi 2014年5月全国一斉導入カレンダー: `https://p-kn.com/calendar/201405/`
-- ケロット3 当時スペック/導入日整理: `https://pachinkolist.com/archives/38785712.html`
+### ケロット3
+- ぱちんこドキュメント: `https://pachinkolist.com/archives/38785712.html`
+- HAZUSE: `https://hazuse.com/machine/pachislot/4S0119/`
+- パチマガスロマガ基本仕様: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/197/a.php`
+- パチマガスロマガ小役: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/197/c.php`
+- 2-9伝説: `https://29den.com/kelot3/`
+- けんのスロットシミュレーション: `https://kenslo65536.com/kaiseki/kelot3.html`
+- パチ7: `https://pachiseven.jp/articles/detail/349`
 
-### パチスロ御伽屋HANZO
-- グリーンべると 2014-05-12: `https://web-greenbelt.jp/00006230/`
-- パチマガスロマガ機種トップ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/taiyoelec_slot/17/taiyoelec_slot_17.php`
-- パチマガスロマガ小役/1000円G: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/taiyoelec_slot/17/c.php`
-- パチマガスロマガCZ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/taiyoelec_slot/17/01-1.php`
-- スロ板-RUSH 2014-05-26: `https://fiveslot777.com/archives/39029013.html`
-- 2-9伝説機種別: `https://29den.com/otogiyahanzo/`
-- 2-9伝説天井一覧: `https://2-9densetsu.com/blog-entry-311-html/`
-- スロパチクエスト天井: `https://www.slopachi-quest.com/article/otogiya-hanzo/`
-- スロパチクエストゾーン: `https://www.slopachi-quest.com/article/hanzone/`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/7405`
-- 中一商事 Yahoo!ショッピング中古実機: `https://store.shopping.yahoo.co.jp/nakaiticom/126.html`
+### 2014-06-02同日群
+- K-Navi 戦国乙女 西国参戦編: `https://p-kn.com/slot/2059/`
+- K-Navi 餓狼伝説PREMIUM: `https://p-kn.com/slot/2049/`
+- HAZUSE 餓狼伝説PREMIUM: `https://data.hazuse.com/?genre=209&machine_code=4S0203`
+
+### 日付分離
+- K-Navi 蒼天の拳2: `https://p-kn.com/slot/2064/`
