@@ -4,93 +4,95 @@
 
 ## 現在地点
 
-- recordCount: **746**
-- latestMachineAdded: **忍魂弐 ～烈火ノ章～**（大都技研）
-- latestRecord: `docs/real_machine_db/machines/2013-07-01_shinobidamashii-ii-rekka-no-sho.md`
-- chronologicalFrontier: **2013-07-01**
-- frontierLatestExactDateMachine: **忍魂弐 ～烈火ノ章～**
+- recordCount: **747**
+- latestMachineAdded: **ドラゴンギャル～修羅の野望～**（SNKプレイモア）
+- latestRecord: `docs/real_machine_db/machines/2013-07-08_dragon-gal-shura-no-yabou.md`
+- chronologicalFrontier: **2013-07-08**
+- frontierLatestExactDateMachine: **ドラゴンギャル～修羅の野望～**
 - schema: **resetBehavior v0.7**
-- status: **CLOSED_2013-07-01_GROUP__NEXT_2013-07-08_DRAGON_GAL_SHURA_NO_YABOU_CANDIDATE__FULL_BOUNDARY_AUDIT_REQUIRED**
+- status: **CLOSED_2013-07-08_GROUP__NEXT_BOUNDARY_AUDIT_2013-07-09_TO_07-15__KNOWN_2013-07-16_PACHISLO_AKB48_ANCHOR**
 
 ## 今回の同期
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、旧集約状態の `docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前レコード `2013-07-01_minnano-juggler.md` を再読。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、旧集約状態の `docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前レコード `2013-07-01_shinobidamashii-ii-rekka-no-sho.md` を再読。
 - INDEXは19件地点の旧集約状態なのでREADME規定どおり最新HANDOFFと実レコードを正本として優先。
-- 開始時main正本は recordCount **745** / chronologicalFrontier **2013-07-01** / 07-01群OPEN。
-- 前HANDOFFの次候補 **NINJA BLADE（マルホン）** を再検証したところ、これは **CR NINJA BLADE（パチンコ）**。マルホン公式旧更新情報、グリーンべると/P-WORLD業界記事でパチンコ機と確認したため、本パチスロDBの本線対象から除外。誤って746件目へ登録していない。
-- 2013年当時資料で7/1新台として確認された **忍魂弐 ～烈火ノ章～** はrepo重複なし。性能コア+resetBehavior v0.7を収集し746件目として追加。
-- 07-01の既知パチスロは **大漁II / みんなのジャグラー / 忍魂弐 ～烈火ノ章～**。当時資料の新台列と照合し、NINJA BLADEはパチンコ除外と確定したため、07-01群を **CLOSED** とした。
-- 次の具体日アンカーとしてHAZUSEで **2013-07-08「ドラゴンギャル～修羅の野望～」（SNKプレイモア）**を確認。次回は7/2～7/7境界監査を先に行い、より古い未登録がなければ747件目候補とする。
+- 開始時main正本は recordCount **746** / chronologicalFrontier **2013-07-01** / 07-01群CLOSED。
+- 2013-07-02～07-07境界を導入一覧・当時記事・機種DBで監査。07-08より前の新たな未登録パチスロは今回確認できず。
+- 前HANDOFFの次候補 **ドラゴンギャル～修羅の野望～** はrepoの同名レコード未登録を確認し、性能コア+resetBehavior v0.7を収集して747件目として追加。
+- 2013-07-08導入列で同時に現れる「スーパー海物語IN沖縄3」「ラブ嬢プラス 今夜も、ご延長の方はいかがですか？」等はパチンコ機。特にラブ嬢プラスはK-Navi/グリーンべるとで `CRラブ嬢プラス` のパチンコ新機種と再確認し、本パチスロDBから除外。
+- 07-08パチスロ同日群は今回の導入一覧横断で **ドラゴンギャル～修羅の野望～** 以外の未登録を確認できなかったため **CLOSED**。
+- 次の具体日アンカーは **2013-07-16「ぱちスロAKB48」**。京楽の当時告知転載、後年機種DBとも7/16全国導入で一致。次回は先に07-09～07-15境界を全メーカー横断監査する。
 
-## 今回追加 — 忍魂弐 ～烈火ノ章～
+## 今回追加 — ドラゴンギャル～修羅の野望～
 
 ### identity / 性能コア
 
-- manufacturer: **大都技研**。
-- releaseDate: **2013-07-01**。パチビーで具体日、2013年当時業界資料で6/30納品開始を確認。
-- generation/system: **5号機 A+ART**。
-- 機械割: **97.7 / 99.7 / 101.7 / 105.5 / 110.9 / 116.3%**。Cranky Sevenと5号機クロニクルで一致。
-- BIG: **1/399.6 / 387.8 / 376.6 / 366.1 / 358.1 / 343.1**。
-- REG（烈BONUS）: **1/655.4 / 642.5 / 630.2 / 618.3 / 595.8 / 574.9**。
-- ボーナス合算: **1/248.2 / 241.8 / 235.7 / 230.0 / 223.7 / 214.9**。
-- ART初当たり: **1/486.2 / 427.7 / 456.3 / 364.2 / 355.2 / 254.1**。設定3が設定2より重い非単調系列を原値のまま保持。
-- baseGamesPer50: **約30～31G/50枚**。約30G/1000円と約31G/千円の概算資料差を精密値へ変換せず範囲保持。
-- ART「月光ノ刻」: **1セット50G+α / 約+1.7枚/G**。
-- BIG約**204枚**、烈BONUS約**48枚**。
-- 第1天井: **ボーナス+ART間990G+前兆 → ART**。
-- 第2天井: **ボーナス間1490G+前兆 → ART+傑束ノ刻SUPER**。
+- manufacturer: **SNKプレイモア**。
+- 型式名: **ドラゴンギャル3D** / 検定番号 **3S0201**。
+- releaseDate: **2013-07-08**。HAZUSE、後年SNK実機アプリ紹介で具体日一致。当時業界記事は7/7納品予定。
+- generation/system: **5号機 AT / ゲーム数解除+自力CZ / ダブルAT**。
+- 機械割: **97.2 / 98.9 / 100.3 / 104.8 / 109.3 / 113.8%**。パチマガスロマガとP-WORLDで一致。HAZUSE整数値は丸め差。
+- 闘BONUS: **1/269.4 / 258.4 / 252.5 / 227.7 / 225.8 / 203.6**。
+- 天RUSH: **1/561.1 / 539.8 / 492.1 / 429.3 / 371.4 / 342.5**。
+- AT合成: **1/182.0 / 174.7 / 166.9 / 148.8 / 140.4 / 127.7**。
+- baseGamesPer50: **約31G/50枚**。2013年導入前試打レポート系の「31G/千円」。別高信頼精密系列は未取得のため `PERIOD_ANALYSIS_SINGLE_APPROXIMATE`。
+- 闘BONUS: **30G / 約+2.8枚/G / 継続率50～90%**。
+- 天RUSH: **40G+α / 約+2.8枚/G**。
+- CZドラゴンチャンス: **10G+開門 / AT期待度約35%**（P-WORLD）。
+- 通常時最大天井: **1280G**。2013年試打情報と後年天井DBで照合。
 - coreStatus: **COMPLETE_CORE**。
 
 ### resetBehavior v0.7
 
-- **設定変更で第1/第2天井のゲーム数進捗CLEAR**。当時解析複数系統で一致。
-- 設定変更後、**20～33%で高確率状態スタート**とする解析あり。高設定ほど優遇。詳細な設定別振分表は今回固定できずレンジのみ保存。
-- 通常時内部状態は低確/高確/超高確の3状態。
-- 設定変更専用の短縮天井/CZ確定/ART確定: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- 設定据え置き時の第1/第2天井進捗と内部状態の引継ぎは、本機固有の直接契約を完全には固定できず **UNVERIFIED_AFTER_RESEARCH**。一般的5号機挙動から推測しない。
-- 単純電源OFF→ONのみの挙動は、2013年当時資料自体が「調査中」としており、今回も資料系統を変えて再探索したが直接固定できず **UNVERIFIED_AFTER_RESEARCH**。
+- HAZUSE本機専用解析で **設定変更時に内部モード・ゲーム数テーブル再抽選**。
+- 設定変更後の液晶は **繁華街ステージ（昼）**から開始。
+- HAZUSEは **通常時の単純電源ON/OFF時も同じ繁華街（昼）から開始**と明記。よって朝一開始ステージ単独では設定変更と電源再投入のみを判別できない。
+- 2-9伝説の天井狙い一覧で本機は **「闘ボーナス間590 宵×」**。590Gは天井ではなく狙い目。`宵×`分類を設定変更時の天井G進捗CLEARの支持資料として使用。
+- 設定変更専用の固定短縮天井、CZ/AT確定、公開された具体モード振り分け率: **NONE_CONFIRMED / UNVERIFIED_AFTER_RESEARCH**。
+- 設定据え置き時のゲーム数テーブル・モード・天井進捗をどの粒度で保持するかは、本機固有の直接契約を完全固定できず **UNVERIFIED_AFTER_RESEARCH**。設定変更CLEARから自動推定しない。
+- 単純電源OFF→ONについて、**液晶表示ステージの再設定は確認済み**だが、内部モード・ゲーム数テーブル・天井進捗までどう扱うかは直接固定できず **UNVERIFIED_AFTER_RESEARCH**。
+- ガックン/リール出目/ランプ等の本機固有変更判別: **UNVERIFIED_AFTER_RESEARCH**。
 - advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN**。
-- resetBehaviorQA: **RESEARCHED_WITH_POWER_CYCLE_GAPS**。
+- resetBehaviorQA: **RESEARCHED_WITH_HIDDEN_POWER_CYCLE_AND_EXACT_CARRYOVER_GAPS**。
 
-## NINJA BLADE候補の訂正
+## 境界監査 2013-07-02～07-08
 
-- 前HANDOFFでは「NINJA BLADE（マルホン）」を2013-07-01の未登録パチスロ候補としていたが、再検証で **CR NINJA BLADE LMX/A** のパチンコ機と確認。
-- マルホン公式旧更新情報は2013-05-21に「CR NINJA BLADE LMX&A」を機種情報へ追加。
-- グリーンべると2013-05-22記事もマルホンの「パチンコ新機種」と明記し、7/7納品開始予定を記載。
-- よってパチスロ本線から除外し、recordCountには加算しない。
+- 07-02～07-07: 今回の導入一覧・当時記事横断で新規未登録パチスロを確認せず。
+- 07-08: **ドラゴンギャル～修羅の野望～**を追加。
+- 同日候補の「ラブ嬢プラス」は `CRラブ嬢プラス` のパチンコ機と確認し除外。
+- 「スーパー海物語IN沖縄3」もパチンコ機のため除外。
+- よって **2013-07-08群CLOSED**。
 
 ## 遡及resetBehavior QA 進捗
 
-- `docs/real_machine_db/machines/2007-01_karate-baka-ichidai.md` をmain実ファイルで再確認。既にresetBehaviorは存在し、性能側 `coreStatus: PARTIAL` と resetBehavior側 `PARTIAL` は分離管理されている。
-- 今回も「空手バカ一代 / 設定変更 / 朝一 / 据え置き / 電源OFF ON / RT百人組手 / ガックン」を資料系統変更で再探索したが、既存レコードを上書きできる本機固有の直接契約は新規発見できず。既存PARTIALを不用意に崩していない。
-- QAカーソル: **空手バカ一代の次の実ファイル順**。次回、tree/ディレクトリ実順を取得して最初のresetBehavior欠損またはPARTIAL再探索対象を一意に確定する。
+- 前HANDOFFのQAカーソルは `2007-01_karate-baka-ichidai.md` の次の実ファイル順。
+- 今回は時系列本線の747件目追加と07-08群閉鎖を優先し、QAカーソル自体は進めていない。
+- 次回も本線を止めず、余力があれば実ディレクトリ順で最初のresetBehavior欠損/PARTIAL再探索対象を一意に確定する。
 
 ## 次回再開地点
 
-1. **recordCount 746 / chronologicalFrontier 2013-07-01 / 07-01群CLOSED** から開始。
-2. 2013-07-02～07-07をK-Navi / ALL7 / HAZUSE / パチビー / メーカー別一覧 / 当時業界記事で境界監査。
-3. より古い未登録がなければ **2013-07-08「ドラゴンギャル～修羅の野望～」（SNKプレイモア）**を747件目候補として性能コア + resetBehavior v0.7収集。
-4. 07-08同日群を全メーカー横断監査し、漏れがあれば同日内で追加。
-5. 遡及QAは `2007-01_karate-baka-ichidai.md` の直後の実ファイル順を一意に確定し、最初のresetBehavior欠損/PARTIAL再探索対象を補完。既存COMPLETE_COREの性能完了判定は維持。
+1. **recordCount 747 / chronologicalFrontier 2013-07-08 / 07-08群CLOSED** から開始。
+2. **2013-07-09～07-15**をK-Navi / ALL7 / HAZUSE / パチビー / メーカー別一覧 / 当時業界記事で境界監査。
+3. より古い未登録がなければ **2013-07-16「ぱちスロAKB48」（京楽産業.）**を748件目候補として性能コア + resetBehavior v0.7収集。
+4. 07-16同日群はAKB48だけと決め打ちせず全メーカー横断監査し、同日未登録があれば時系列内で追加。
+5. 遡及QAは `2007-01_karate-baka-ichidai.md` 直後の実ファイル順から継続。既存性能コアを無駄に再調査しない。
 
 ## 主要出典 — 取得日 2026-09-06
 
-### 忍魂弐 ～烈火ノ章～
+### ドラゴンギャル～修羅の野望～
 
-- パチビー: `https://www.pachibee.jp/machines/about/213050004`
-- 娯楽産業 2013-05-17: `https://www.goraku-sangyo.com/%E3%80%90%E5%8B%95%E7%94%BB%E3%81%82%E3%82%8A%E3%80%91%E5%A4%A7%E9%83%BD%E6%8A%80%E7%A0%94%E3%80%80%E3%80%8C%E5%BF%8D%E9%AD%82%E5%BC%90-%E3%80%9C%E7%83%88%E7%81%AB%E3%83%8E%E7%AB%A0%E3%80%9C%E3%80%8D/`
-- Pマンズ / 当時業界NEWS: `https://p-mans.blogspot.com/2013/05/5.html`
-- Cranky Seven: `https://crankyseven.com/shinobidamashii-two-pc.htm`
-- 5号機クロニクル: `https://5goki.com/daito`
-- スロスター 2013年導入前資料: `https://ameblo.jp/slostar/entry-11527030431.html`
-- 天井ハイエナ生活 2013年当時解析: `https://macerate.seesaa.net/article/367893631.html`
-
-### NINJA BLADE除外
-
-- マルホン公式旧更新情報: `https://maruhon-kogyo.co.jp/oldarchive`
-- グリーンべると2013-05-22: `https://web-greenbelt.jp/00000901/`
-- P-WORLD転載: `https://news.p-world.co.jp/articles/5861/greenbelt`
+- HAZUSE: `https://hazuse.com/machine/pachislot/3S0201/`
+- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/snk_slot/45/h-1.php`
+- P-WORLD機種DB: `https://www.p-world.co.jp/machine/database/7099`
+- グリーンべると（P-WORLD転載）2013-05-17: `https://news.p-world.co.jp/articles/5855/greenbelt`
+- vsmedia: `https://vsmedia.info/2013/07/11/dragongal/`
+- スロ速VIP 2013年試打レポート転載: `https://slosoku.com/archives/28079508.html`
+- 2-9伝説 天井狙い目一覧: `https://2-9densetsu.com/blog-entry-311-html/`
+- 天井一覧: `https://smaslo.man-soft.com/slot-tenzyou-itiran/`
+- ドラゴンギャルシリーズ回顧: `https://www.marimo0925.net/pachisuro-rekidai-ranking-2/`
 
 ### 次候補
 
-- HAZUSE ドラゴンギャル～修羅の野望～: `https://hazuse.com/machine/pachislot/3S0201/`
+- 京楽/グリーンべると当時告知転載: `https://p-mans.blogspot.com/2013/06/`
+- グリーンべると 2013-07-25（7/16全国導入済みと明記）: `https://web-greenbelt.jp/00000998/`
+- 後年機種DB: `https://pachinavi.net/machines/akb48-1/`
