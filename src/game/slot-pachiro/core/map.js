@@ -81,7 +81,14 @@ export function createLogicalMap(bounds) {
       cells.set(cellKey(x, y), createBaseCell(x, y));
     }
   }
-  return { bounds, cells };
+  return { bounds: { ...bounds }, cells };
+}
+
+export function cloneLogicalMap(map) {
+  return {
+    bounds: { ...map.bounds },
+    cells: new Map([...map.cells].map(([key, cell]) => [key, cloneBaseCell(cell)])),
+  };
 }
 
 export function getCell(map, x, y) { return map.cells.get(cellKey(x, y)) ?? null; }
