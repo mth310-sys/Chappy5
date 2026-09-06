@@ -4,88 +4,84 @@
 
 ## 現在地点
 
-- recordCount: **777**
-- latestMachineAddedByChronology: **パチスロ タイガーマスク**（SANKYO）
-- latestRecord: `docs/real_machine_db/machines/2013-11-18_tiger-mask.md`
+- recordCount: **778**
+- latestMachineAddedByChronology: **マジカルハロウィン4**（KPE）
+- latestRecord: `docs/real_machine_db/machines/2013-11-18_magical-halloween-4.md`
 - chronologicalFrontier: **2013-11-18**
-- frontierLatestExactDateMachine: **パチスロ タイガーマスク**
+- frontierLatestExactDateMachine: **マジカルハロウィン4**
 - schema: **resetBehavior v0.7**
-- status: **OPEN_2013-11-18_GROUP__TIGER_MASK_DONE__NEXT_MAGICAL_HALLOWEEN_4**
+- status: **OPEN_2013-11-18_GROUP__MAGICAL_HALLOWEEN_4_DONE__NEXT_STAR_DRIVER**
 
 ## 今回の同期 / 重要事項
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前レコード `2013-11-18_tales-of-destiny.md` を再読してから継続。
-- INDEXは旧集約状態のため、README規定どおり **LATEST_HANDOFF + 実レコード** を正本扱い。
-- 作業開始時正本は **recordCount 776 / chronologicalFrontier 2013-11-18 / 11-18群OPEN / テイルズ オブ デスティニー済み / 次タイガーマスク**。
-- GitHub検索で既存レコード不在を確認した **「パチスロ タイガーマスク」** を777件目として追加。
-- 11-18群はまだOPEN。既知残存候補は **マジカルハロウィン4 / パチスロ スタードライバー**。次はマジカルハロウィン4から処理する。
+- 最新mainの README、ミッションv0.7、INDEX、LATEST_HANDOFF、直前レコード `2013-11-18_tiger-mask.md` を再読。
+- INDEXは旧集約状態のため README 規定どおり **LATEST_HANDOFF + 実レコード** を正本扱い。
+- 作業開始時正本は recordCount 777 / 2013-11-18群OPEN / タイガーマスク済み / 次マジカルハロウィン4。
+- GitHub検索で既存レコード不在を確認し、**マジカルハロウィン4** を778件目として追加。
+- 11/18群はまだOPEN。次の既知未処理候補は **パチスロ スタードライバー**。
 
-## 今回追加 — パチスロ タイガーマスク
+## 今回追加 — マジカルハロウィン4
 
-### identity / 性能コア
+### 性能コア
 
-- manufacturer: **SANKYO**。
-- modelName / official sales name: **パチスロ タイガーマスク**。
-- releaseDate: DB本線 **2013-11-18**。HAZUSE / ALL7 / パチビーでexact day一致。一方SANKYO公式オンライン博物館は「導入年月 2013.10」とするため、月差をCONFLICT注記として保持。
-- generation/system: **5号機 / ART / CZ / ゲーム数管理 / 天井**。
-- 機械割: **96.5 / 98.3 / 100.1 / 105.0 / 107.7 / 112.8%**。HAZUSE / パチマガスロマガ / すろぱちくえすとで一致。
-- ART初当たり: **1/276.9 / 261.6 / 245.3 / 234.1 / 212.8 / 178.0**。SANKYO公式 + 複数解析で一致。
-- baseGamesPer50: 検索語・資料系統を変えても比較可能な直接値を固定できず **UNVERIFIED_AFTER_RESEARCH**。
-- ART「タイガーRUSH」: **1セット30G+α / 純増約2.4枚/G**。赤7は30G以上、白7は100G以上、初期30〜300G。
-- モード別最大規定G: 通常A **1000G** / 通常B **700G** / 天国 **100G**。
-- ART間最大天井: **1000G**。
+- manufacturer: **KPE**。
+- releaseDate: **2013-11-18**。K-Navi / ALL7 / パチビーで一致。KONAMI公式後年回顧でも2013年作品。
+- system: **5号機 / ART / 擬似ボーナス / CZ / ゲーム数管理 / 天井**。
+- 機械割: **97.4 / 98.6 / 100.5 / 104.2 / 108.1 / 113.2%**。パチマガスロマガ / CrankySeven / 2-9伝説で一致。
+- 擬似ボーナス合算: **1/249.7 / 241.5 / 242.4 / 234.1 / 237.1 / 219.4**。
+- ART初当たり: **1/499.9 / 490.8 / 489.0 / 423.3 / 409.3 / 335.6**。
+- ART「マジカルラッシュ」: **1セット40G+α / 純増約2.0枚/G**。
+- BIG 60G / REG 30G。
+- 通常モード: **通常A / 通常B / 天国A / 天国B**。
+- 最大規定G: 通常A/B **777G**、天国A/B **96G**。
+- baseGamesPer50: パチマガスロマガに1000円あたりG数項目の存在は確認したが数値本文を安全に回収できず、後年約33G記述は照合不足のため **UNVERIFIED_AFTER_RESEARCH**。
 - recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_RESEARCHED_PARTIAL**。
 
 ### resetBehavior v0.7
 
-- HAZUSEで **ART終了時・設定変更時にモード移行抽選**を確認。
-- 設定変更時モードは全設定共通 **通常A 75.0% / 通常B 25.0% / 天国0%**。
-- HAZUSEで設定変更時の高確A移行率 **25.0%（全設定共通）**を確認。
-- すろぱちくえすとで **設定変更時は天井までのゲーム数リセット**を確認。
-- setting change game counter: **CLEAR_CONFIRMED_ANALYSIS_SINGLE**。
-- ceilingAfterReset: 朝一専用短縮天井は **NONE_CONFIRMED_AFTER_RESEARCH**。設定変更時モードから最大1000G。
-- carry-over: 据え置き時のゲーム数 / モード / 状態完全保持契約は **UNVERIFIED_AFTER_RESEARCH**。設定変更時リセットの反対を自動推定しない。
-- power OFF→ON only: **UNVERIFIED_AFTER_RESEARCH**。据え置きと同義扱いしない。
-- stateAfterReset: 高確A 25%は確定。高確Bを含む完全初期状態契約はPARTIAL。
+- 設定変更時: CrankySeven / 2-9伝説で **天井ゲーム数クリア**を複数確認。
+- 据え置き: 2014年当時の真パチスロ備忘録で **当日G数+前日G数でフェイクまたは本前兆発生**。宵越しゲーム数が機能する当時資料として保存。
+- power OFF→ON only: 機種固有のゲーム数・モード・状態保持契約を直接固定できず **UNVERIFIED_AFTER_RESEARCH**。
+- ceilingAfterReset: 設定変更専用短縮天井は **NONE_CONFIRMED_AFTER_RESEARCH**。通常A/Bの777G、天国A/Bの96Gは通常仕様でありリセット専用扱いしない。
+- modeAfterReset: 設定変更後にも解除モードが存在することはパチマガスロマガの設定変更時フェイク前兆テーブル記述から確認。ただし設定変更専用モード振り分け値は **UNVERIFIED_AFTER_RESEARCH**。
+- stateAfterReset: 通常時の低確/高確は確認。設定変更時初期振り分けは **UNVERIFIED_AFTER_RESEARCH**。
 - advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN**。
-- reset benefit: 高確A 25%。ただし設定変更時天国は0%で、天国/短縮天井型リセット恩恵ではない。
-- reset penalty / caution: 設定変更時天国0%。通常時ART終了後には天国移行が存在するため、前日状態次第では変更が必ず有利とは限らない。期待値への推定拡張はしない。
-- resetDetection: ガックン / 初期出目 / 液晶 / ランプ等を再探索したが、本機固有の高信頼判別契約は **NONE_CONFIRMED_AFTER_RESEARCH**。
-- publicMorningNumbers: **通常A75% / 通常B25% / 天国0% / 高確A25%**。
+- resetBenefits: リセット専用短縮天井/CZ・ART確定等は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- resetPenalties: 設定変更で前日の天井進捗を消すため、深い宵越しGを失う点を朝一客AI用の不利要素として保持。期待値は推計しない。
+- resetDetection: PUSH等でボーナス間G数を確認できる当時資料があり、据え置き時の前日+当日Gによる前兆が判別材料になり得る。ガックン等は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- publicMorningNumbers: 設定変更後天井Gは0から再スタート / 通常モード最大777G。設定変更専用モード振り分けはUNVERIFIED。
 
-### conflicts / safeguards
+## safeguards
 
-- SANKYO公式の導入年月2013.10と、複数当時資料のホール導入2013-11-18を平均化しない。DB時系列はexact-day複数一致の11/18を採用し、公式月差を保持。
-- 後年AI生成系ページに本機を6号機とする誤記があるため除外。本機は2013年の5号機ART。
-- 通常時天国100Gを設定変更後天国扱いしない。設定変更時天国は0%。
-- ART終了後の通常モード移行表を設定変更時テーブルへ流用しない。
+- 後年整理資料に天井恩恵をART当選とする記述があるが、当時解析は777Gで擬似ボーナス当選。後年誤記は本線に採用しない。
+- 通常A/B=777G、天国A/B=96Gをリセット専用短縮天井と混同しない。
+- G数クリアからモード・内部状態まで全リセットとは推定しない。
 
 ## 遡及resetBehavior QA 進捗
 
 - QAカーソルは引き続き `2007-01_karate-baka-ichidai.md` の次の実ファイル順。
-- 今回は本線のタイガーマスク追加を優先し、QAカーソルは進めていない。
-- 既存COMPLETE_CORE/PARTIAL等の性能側判定は変更していない。
+- 今回は本線追加を優先しQAカーソルは進めていない。
 
 ## 次回再開地点
 
-1. **recordCount 777 / chronologicalFrontier 2013-11-18 / 11-18群OPEN** から開始。
-2. 次の未処理候補は **「マジカルハロウィン4」**。既存レコード不在確認後、性能コア + resetBehavior v0.7を収集。
-3. 続いて **「パチスロ スタードライバー」**。
-4. 2013-11-18同日全メーカー監査を行い、追加候補があれば日付内で処理してからCLOSED。
-5. 遡及QAは `2007-01_karate-baka-ichidai.md` 直後の実ファイル順から継続。
-6. PARTIAL / UNVERIFIED / reset欠損は公式・業界・当時解析・古いDB・アーカイブ・回顧資料へ検索系統を変えて再探索し、競合はCONFLICTのまま保持。
+1. **recordCount 778 / chronologicalFrontier 2013-11-18 / 11-18群OPEN** から開始。
+2. 次の未処理候補 **「パチスロ スタードライバー」** を既存レコード不在確認後、性能コア + resetBehavior v0.7で収集。
+3. その後2013-11-18同日全メーカー監査を行い、漏れがなければCLOSED。
+4. 次の日付境界へ時系列で前進。
+5. PARTIAL / UNVERIFIEDは公式・業界・当時解析・古いDB・アーカイブ・回顧資料まで系統を変えて再探索し、競合はCONFLICT保持。
 
 ## 主要出典 — 取得日 2026-09-06
 
-### パチスロ タイガーマスク
-
-- SANKYOオンライン博物館: `https://www.sankyo-fever.jp/collection/549/` — 2013年機、公式販売名/型式名、ARTゲーム性、公式初当たり確率、導入年月2013.10。
-- ALL7 2013年11月導入一覧: `https://www.all7.jp/plans/index/2013/11` — 2013-11-18導入予定。
-- パチビー: `https://www.pachibee.jp/movies/index/10037` — 2013-11-18、5号機ART、純増約2.4枚/G。
-- HAZUSE基本スペック: `https://data.hazuse.com/?genre=201&machine_code=3S0671` — 2013-11-18、ART初当たり、機械割。
-- HAZUSE天井: `https://data.hazuse.com/?genre=207&machine_code=3S0671` — ART間最大1000G。
-- HAZUSE解析: `https://data.hazuse.com/?genre=209&machine_code=3S0671` — 設定変更時モード通常A75%/通常B25%、設定変更時高確A25%、モード別規定G。
-- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sankyo_slot/33/a.php` — 30G+α、純増約2.4枚/G、ゲーム数解除/CZ。
-- パチマガスロマガ確率: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sankyo_slot/33/h-1.php` — ART初当たり、PAYOUT。
-- パチマガスロマガART: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sankyo_slot/33/l.php` — 初期30〜300G、赤7 30G以上、白7 100G以上。
-- すろぱちくえすと: `https://www.slopachi-quest.com/kisyubetsu/tiger-mask/` — モード別天井1000/700/100G、設定変更時天井Gリセット、スペック照合。
+- KONAMI公式: `https://www.konami.com/amusement/psm/portal/magihallo/magiotsu_23/20200403.html`
+- ALL7: `https://www.all7.jp/plans/index/2013/11`
+- パチビー: `https://www.pachibee.jp/machines/index/213100006`
+- K-Navi: `https://p-kn.com/slot/1945/`
+- パチマガスロマガ確率: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/kpe_slot/34/h-1.php`
+- パチマガスロマガ小役: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/kpe_slot/34/c.php`
+- パチマガスロマガ前兆: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/kpe_slot/34/ens02.php`
+- CrankySevenスペック: `https://www.crankyseven.com/sp/magicalhalloween4-3-pc.htm`
+- CrankySeven天井: `https://www.crankyseven.com/sp/magicalhalloween4-12-pc.htm`
+- CrankySevenモード: `https://www.crankyseven.com/sp/magicalhalloween4-6-pc.htm`
+- CrankySeven状態: `https://www.crankyseven.com/sp/magicalhalloween4-7-pc.htm`
+- 2-9伝説: `https://29den.com/magicalhalloween4/`
+- 真パチスロ備忘録: `https://sin-surobi.com/notebook/3111/`
