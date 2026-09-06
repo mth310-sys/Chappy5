@@ -2,8 +2,8 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <title>スロットパチ朗 / 箱庭基盤22</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+  <title>スロットパチ朗</title>
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./island-canonical.css">
   <link rel="stylesheet" href="./interior.css">
@@ -13,32 +13,33 @@
 <body>
   <main class="game">
     <header class="hud">
-      <div class="h"><small>1年目 4月 1週</small><b>10:20　晴れ</b></div>
-      <div class="h"><small>ホール人気 / 来店</small><b>★13　48人</b></div>
-      <div class="h money"><small>所持金</small><b>3,226,400G</b></div>
+      <div class="h"><small id="dateLabel">1年目 4月 1週</small><b><span id="timeLabel">10:00</span>　晴れ</b></div>
+      <div class="h"><small>ホール人気 / 来店</small><b>★<span id="popularityLabel">13</span>　<span id="visitorLabel">0</span>人</b></div>
+      <div class="h money"><small>所持金</small><b id="cashLabel">3,000,000G</b></div>
     </header>
     <div class="sub">
-      <span>稼働 55%</span>
-      <span>本日 +226,400G</span>
-      <span id="foundation-status">FOUNDATION CHECK</span>
+      <span>稼働 <b id="occupancyLabel">0%</b></span>
+      <span>本日 <b id="salesLabel">+0G</b></span>
+      <span id="gameStatus">営業中</span>
     </div>
-    <div class="viewport" id="vp" data-playtest-scroll>
+    <div class="viewport" id="vp" data-playtest-scroll aria-label="ホール。ドラッグで移動、二本指で拡大縮小">
       <div class="sceneFrame" id="scene-frame">
         <div class="scene" id="scene">
-          <div class="lot"></div>
-          <div class="floor"></div>
-          <div class="road"></div>
+          <div class="lot"></div><div class="floor"></div><div class="road"></div>
         </div>
       </div>
+      <div class="cameraHint" id="cameraHint">DRAG TO MOVE / PINCH TO ZOOM</div>
     </div>
+    <div class="speedBar"><button data-speed="0">Ⅱ</button><button data-speed="1" class="active">▶</button><button data-speed="2">▶▶</button><span id="eventText">OPEN 10:00</span></div>
     <footer class="bottom">
-      <button class="sidebtn">情報</button>
+      <button class="sidebtn" data-action="info">情報</button>
       <div class="menu">
-        <button>建設</button><button>台入替</button><button>経営</button>
-        <button>広告</button><button>研究</button><button>客層</button>
+        <button data-action="build">建設</button><button data-action="replace">台入替</button><button data-action="manage">経営</button>
+        <button data-action="ad">広告</button><button data-action="research">研究</button><button data-action="customer">客層</button>
       </div>
-      <button class="sidebtn">メニュー</button>
+      <button class="sidebtn" data-action="menu">メニュー</button>
     </footer>
+    <section class="gamePanel" id="gamePanel" hidden><button class="panelClose" id="panelClose">×</button><h2 id="panelTitle"></h2><div id="panelBody"></div></section>
   </main>
   <script type="module" src="./core/main.js"></script>
 </body>
