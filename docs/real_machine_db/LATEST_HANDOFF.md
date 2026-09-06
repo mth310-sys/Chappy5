@@ -4,97 +4,93 @@
 
 ## 現在地点
 
-- recordCount: **811**
-- latestRecordAdded: **喧嘩祭**（KPE）— 2014-04-21
-- latestRecord: `docs/real_machine_db/machines/2014-04-21_kenka-matsuri.md`
+- recordCount: **812**
+- latestRecordAdded: **マジックモンスター3 ぶっちぎり!魔界グランプリ**（オリンピア）— 2014-04-21
+- latestRecord: `docs/real_machine_db/machines/2014-04-21_magic-monster3-bucchigiri-makai-grand-prix.md`
 - chronologicalFrontier: **2014-04-21**
-- frontierLatestMachine: **喧嘩祭**
+- frontierLatestMachine: **マジックモンスター3 ぶっちぎり!魔界グランプリ**
 - schema: **resetBehavior v0.7**
-- status: **2014-04-21_GROUP_OPEN / KENKA_MATSURI_ADDED / SKYLOVE_RESET_QA_RECHECKED**
+- status: **2014-04-21_GROUP_OPEN / MAGIC_MONSTER3_ADDED**
 
 ## 今回の同期 / 重要事項
 
-- 最新mainの `README.md`、ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前実レコードを再読して正本化。
-- 作業開始時、会話直前申告よりmainが先行しており **809件 / 2014-04-07 サムライスピリッツ**。調査中にさらに **810件 / モンキーターンII** までmainが更新されたため、競合を避けて最新mainへ再同期した。
-- 810件時点で **04-07_GROUP_CLOSED_FOR_CURRENT_RESEARCH / 04-08〜04-20_BOUNDARY_CLOSED_FOR_CURRENT_RESEARCH** を維持。
-- K-Navi 2014年4月全国一斉導入カレンダーで04/21群は **喧嘩祭 / マジックモンスター3 ぶっちぎり!魔界グランプリ / 緑ドンVIVA2 / ニューペガサス** の4機。先頭の喧嘩祭を811件目として追加し、同日群はOPEN。
+- 最新mainの `README.md`、ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前実レコード `2014-04-21_kenka-matsuri.md` を再読して正本化。
+- 作業開始時の正本は **811件 / 2014-04-21 喧嘩祭 / 04-21_GROUP_OPEN**。
+- K-Navi 2014年4月全国一斉導入カレンダーで04/21群は **喧嘩祭 / マジックモンスター3 ぶっちぎり!魔界グランプリ / 緑ドンVIVA2 / ニューペガサス** の4機。
+- 2機目の **マジックモンスター3 ぶっちぎり!魔界グランプリ** を812件目として追加。同日群は引き続きOPEN。
 
-## 今回追加 — 喧嘩祭
+## 今回追加 — マジックモンスター3 ぶっちぎり!魔界グランプリ
 
 ### identity / 性能コア
 
-- manufacturer: **KPE**。
-- hall start: **2014-04-21**（K-Navi / パチビー）。コナミ公式アーカイブは2014年4月稼働。
-- formalModelName: **喧嘩祭KR**。
-- generation/system: **5号機 / AT / 擬似ボーナス / ゲーム数解除 / CZ**。
-- payout: **97.0 / 98.4 / 100.3 / 105.0 / 111.1 / 119.1%**。
-- AT擬似ボーナス初当たり: **1/248.8 / 240.2 / 230.1 / 205.8 / 178.3 / 147.4**。
-- CZ「ガチチャンス」: **1/328.2 / 325.0 / 316.7 / 301.0 / 241.1 / 202.9**。
-- baseGamesPer50: **約27G/50枚**（後年DB単独値のため `ANALYSIS_SINGLE`）。
-- netIncrease: **約3.0枚/G**。
-- 「神輿ボーナス」30G完走型、「喧嘩祭ボーナス」20G+JACゲーム（8G×α）。
-- 通常A/B/C・天国A/Bの5モード。
-- 最大天井: **ボーナス間999G**。
-- coreStatus: **COMPLETE_CORE**。
+- manufacturer: **オリンピア**。
+- hall start: **2014-04-21**（K-Navi全国一斉導入開始日）。グリーンべると当時記事は4/20納品開始予定。
+- formalModelName: **マジックモンスター3J2**。
+- generation/system: **5号機 / AT / CZ / セットストック+継続率**。
+- payout: **96.6 / 97.9 / 100.3 / 104.2 / 108.5 / 113.4%**。
+- AT「GP RUSH」初当たり: **1/128.9 / 123.4 / 117.1 / 108.5 / 101.2 / 93.1**。
+- baseGamesPer50: **UNVERIFIED_AFTER_RESEARCH**。表記揺れ・型式・50枚/1000円/ベース/コイン持ち/千円Gを変えて複数系統再探索済み。
+- netIncrease: **約2.6枚/G**。
+- GP RUSH: **1セット28G（20G+継続レース8G）**、セットストック+継続率、ループ率25〜95%。
+- 通常時は公開解析上 **状態の高低なし / 天井以外ゲーム数解除なし**。
+- AT間天井: **666G** → 「禁断の! AREA666」、75%以上AT継続率。
+- 別救済: **AT単発7回連続後、次回AT75%以上**。
+- coreStatus: **PARTIAL**（50枚ベース未確定）。
 
 ### resetBehavior v0.7
 
-- settingChangeBehavior: 天井G・5モード・内部状態の本機固有直接契約を固定できず **UNVERIFIED_AFTER_RESEARCH**。
-- carryOverBehavior: **UNVERIFIED_AFTER_RESEARCH**。
-- powerCycleBehavior: **UNVERIFIED_AFTER_RESEARCH**。
-- gameCounterReset: 通常天井999Gは確定しているが、設定変更時の処理は **UNVERIFIED_AFTER_RESEARCH**。
-- ceilingAfterReset: 設定変更専用短縮天井は **NONE_CONFIRMED_AFTER_RESEARCH**。通常999Gから推定しない。
-- modeAfterReset/stateAfterReset: **UNVERIFIED_AFTER_RESEARCH**。
+- settingChangeBehavior: **AT間666G天井カウンタ RESET_CONFIRMED**。朝一ステージはランダム選択。
+- carryOverBehavior: 据え置き専用の直接文言は未取得。AT間666Gは電源ON/OFFのみで保持する直接契約があるため保持が自然だが、DBでは **KEEP_INFERRED_FROM_DIRECT_POWER_CYCLE_CONTRACT_BUT_NO_SEPARATE_STAY_TEXT** と留保。
+- powerCycleBehavior: **電源OFF→ONのみならAT間666G天井 KEEP_CONFIRMED**。朝一ステージはランダム選択。
+- gameCounterReset: 設定変更 **RESET_CONFIRMED** / 電源OFF→ONのみ **KEEP_CONFIRMED**（AT間666G）。単発連続回数カウンタは **UNVERIFIED_AFTER_RESEARCH**。
+- ceilingAfterReset: 設定変更専用短縮天井 **NONE_CONFIRMED_AFTER_RESEARCH**。通常666Gをリセット専用値とは扱わない。
+- modeAfterReset: 通常A/B等のゲーム数モードは確認されず、天井除きゲーム数解除なし。朝一専用モード **NONE_CONFIRMED_AFTER_RESEARCH**。
+- stateAfterReset: 公開通常時モデルでは高低状態 **NOT_APPLICABLE_TO_PUBLISHED_NORMAL_STATE_MODEL**。特殊内部状態は未確認。
 - advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
-- resetBenefits/resetPenalties: 本機固有の主要公開情報 **NONE_CONFIRMED_AFTER_RESEARCH**。
-- resetDetection: ガックン・液晶ステージ・前兆等を当時攻略/古いDB/回顧資料まで再探索したが **UNVERIFIED_AFTER_RESEARCH**。
+- resetBenefits/resetPenalties: 本機固有の主要設定変更専用恩恵/不利 **NONE_CONFIRMED_AFTER_RESEARCH**。
+- resetDetection: 設定変更時も電源ON/OFFのみでも朝一ステージはランダムのため **ステージ単独判別不可**。ガックン等は **UNVERIFIED_AFTER_RESEARCH**。
 - publicMorningNumbers: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- resetBehaviorQA: **PARTIAL**。一般的5号機挙動による補完はしない。
+- resetBehaviorQA: **PARTIAL**。
 
 ## safeguards / definitions
 
-- 999Gは通常時最大天井であり、設定変更後専用天井を意味しない。
-- 現行KONAMI機や別KPE機のリセット表を喧嘩祭へ混入しない。
-- 性能コアはCOMPLETE_COREを維持し、resetBehaviorの未確定は別QA状態PARTIALで管理。
+- AT間666G天井とAT単発連続回数救済天井は別カウンタとして保持。
+- 666Gは通常仕様天井であり、設定変更専用短縮天井ではない。
+- 「状態の高低なし」は公開通常時モデルについての記述で、未公開内部フラグまで不存在と拡張しない。
+- 後継/別シリーズのリセット情報を混入しない。
 
 ## 2014-04-21群
 
-- 処理済み: **喧嘩祭**。
-- 未処理: **マジックモンスター3 ぶっちぎり!魔界グランプリ / 緑ドンVIVA2 / ニューペガサス**。
+- 処理済み: **喧嘩祭 / マジックモンスター3 ぶっちぎり!魔界グランプリ**。
+- 未処理: **緑ドンVIVA2 / ニューペガサス**。
 - status: **GROUP_OPEN**。
 
 ## 遡及 resetBehavior QA
 
-- **`docs/real_machine_db/machines/2007-02_skylove.md`** を再QA。
-- 既存 `coreStatus: COMPLETE_CORE` は変更なし。
-- v0.7の `schemaVersion`、`resetQaLastUpdated: 2026-09-06`、`publicMorningNumbers` を明示し、設定変更/据え置き/電源OFF→ON時のCZ・RT状態について資料系統と検索語を変更して再探索。
-- P-WORLD、旧パチマガ/スロマガ、パチ7回顧、古い機種DBまで再確認したが、直接契約を追加固定できなかったため **resetBehaviorQA: PARTIAL** を維持。
-- Git履歴でスカイラブ追加直後の次実レコードを追跡し、次のQAカーソルを **`docs/real_machine_db/machines/2007-02_ps-adlib-ouji.md`** と確定。
+- 直前リレーで **`docs/real_machine_db/machines/2007-02_skylove.md`** を再QA済み。
+- 次のQAカーソルは **`docs/real_machine_db/machines/2007-02_ps-adlib-ouji.md`**。
+- 今回は新規収集キューの継続を優先し、QAカーソルは変更なし。
 
 ## 次回再開地点
 
-1. **recordCount 811 / chronologicalFrontier 2014-04-21 / 04-21_GROUP_OPEN** から開始。
-2. 次の未処理機種は **マジックモンスター3 ぶっちぎり!魔界グランプリ（オリンピア）— 2014-04-21**。
-3. その後 **緑ドンVIVA2 → ニューペガサス**。
+1. **recordCount 812 / chronologicalFrontier 2014-04-21 / 04-21_GROUP_OPEN** から開始。
+2. 次の未処理機種は **緑ドンVIVA2（エレコ）— 2014-04-21**。
+3. その後 **ニューペガサス（エマ）**。
 4. 4機完了後に04/21群をメーカー横断再監査し、漏れがなければGROUP_CLOSED。
 5. 遡及resetBehavior QAは **`docs/real_machine_db/machines/2007-02_ps-adlib-ouji.md`** から継続。
 6. 2015-06-08到達時の **吉宗～極～（ヨシムネH2A4 / 3S1093）** の正式量産版処理注意は維持。
 
 ## 主要出典 — 取得日 2026-09-06
 
-### 喧嘩祭
-- コナミアミューズメント公式アーカイブ: `https://www.konami.com/amusement/psm/archive/ps/2014/kenka/`
-- 娯楽産業 当時記事: `https://www.goraku-sangyo.com/kpe%EF%BC%8Fkpe%E3%83%BB%E9%AB%98%E7%A0%82%E8%B2%A9%E5%A3%B2%E3%80%80%E6%96%B0%E6%A9%9F%E7%A8%AE%E3%80%8C%E5%96%A7%E5%98%A9%E7%A5%AD%E3%80%8D%E3%83%97%E3%83%AC%E3%82%B9%E8%AA%AC%E6%98%8E%E4%BC%9A/`
-- パチビー: `https://www.pachibee.jp/machines/about/214030001`
-- pacnk: `https://pacnk.com/slot/2014/kenkamatsuri/top.php`
-- すろぱちくえすと（2014-04-22）: `https://www.slopachi-quest.com/article/kanka-matsuri/`
-- すろぱちくえすと モード解析（2014-04-27）: `https://www.slopachi-quest.com/article/kenka-zone/`
-- みんスロ: `https://minslo.com/%E5%96%A7%E5%98%A9%E7%A5%AD/`
-- 中一商事: `https://www.nakaiti.com/html/sKpe080.html`
+### マジックモンスター3
+- K-Navi 2014年4月新台導入カレンダー: `https://p-kn.com/calendar/201404/`
+- グリーンべると 当時記事: `https://web-greenbelt.jp/00000150/`
+- パチマガスロマガ 機種概要: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/olympia_slot/114/a.php`
+- パチマガスロマガ AT突入フロー: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/olympia_slot/114/l.php`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/7337`
+- すろぱちくえすと 天井/設定変更: `https://www.slopachi-quest.com/article/magic-monster-tenzyou/`
+- すろぱちくえすと 単発救済: `https://www.slopachi-quest.com/article/magimon3-kyuusai/`
+- パチマ 型式資料: `https://www.pachima.com/c/slot/s_22olympiak/S00256`
 
 ### 04-21群
 - K-Navi 2014年4月新台導入カレンダー: `https://p-kn.com/calendar/201404/`
-
-### 遡及QA
-- 再QA済み: `docs/real_machine_db/machines/2007-02_skylove.md`
-- 次対象: `docs/real_machine_db/machines/2007-02_ps-adlib-ouji.md`
