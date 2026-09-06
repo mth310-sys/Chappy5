@@ -4,103 +4,106 @@
 
 ## 現在地点
 
-- recordCount: **755**
-- latestMachineAddedByChronology: **戦国乙女～剣戟に舞う白き剣聖～**（オリンピア）
-- latestRecord: `docs/real_machine_db/machines/2013-08-19_sengoku-otome-kengeni-mau-shiroki-kensei.md`
+- recordCount: **756**
+- latestMachineAddedByChronology: **パチスロ クイーンズブレイド2 玉座を継ぐ者**（JPS）
+- latestRecord: `docs/real_machine_db/machines/2013-08-19_queens-blade-2-gyokuza-wo-tsugu-mono.md`
 - chronologicalFrontier: **2013-08-19**
-- frontierLatestExactDateMachine: **戦国乙女～剣戟に舞う白き剣聖～**
+- frontierLatestExactDateMachine: **パチスロ クイーンズブレイド2 玉座を継ぐ者**
 - schema: **resetBehavior v0.7**
-- status: **OPEN_2013-08-19_GROUP__NEXT_QUEENS_BLADE2_THEN_ZEGAPAIN_THEN_CONTRA3D__AUDIT_BEFORE_CLOSE**
+- status: **OPEN_2013-08-19_GROUP__NEXT_ZEGAPAIN_THEN_CONTRA3D__AUDIT_BEFORE_CLOSE**
 
 ## 今回の同期
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、旧集約状態の `docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前レコード `2013-08-05_pachislo-badboys.md` を再読。
-- INDEXは19件地点の旧集約状態。README規定どおり、より新しい **LATEST_HANDOFF + 実レコード** を正として継続した。
-- 開始時main正本: recordCount **754** / chronologicalFrontier **2013-08-05** / 08-05群CLOSED_FOR_CURRENT_RESEARCH。
-- 2013-08-06～08-18境界を「新台 / 導入 / 納品 / 8月12日 / 8月18日」等の表記で当時記事・解析DB・導入日DBを再探索。今回の監査範囲では、08-05より後・08-19より前に具体日で固定すべき未登録5号機は検出せず、次の具体日アンカー **2013-08-19** へ進行。
-- 08-19群の先頭既知候補 **戦国乙女～剣戟に舞う白き剣聖～** はrepo未登録を確認し、性能コア + resetBehavior v0.7を755件目として追加。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、旧集約状態の `docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前レコード `2013-08-19_sengoku-otome-kengeni-mau-shiroki-kensei.md` を再読。
+- INDEXは旧集約状態のため、README規定どおり、より新しい **LATEST_HANDOFF + 実レコード** を正として継続。
+- 開始時main正本: recordCount **755** / chronologicalFrontier **2013-08-19** / 08-19群OPEN。
+- 同日未処理先頭 **パチスロ クイーンズブレイド2 玉座を継ぐ者** はrepo未登録を確認し、性能コア + resetBehavior v0.7を756件目として追加。
 
-## 今回追加 — 戦国乙女～剣戟に舞う白き剣聖～
+## 今回追加 — パチスロ クイーンズブレイド2 玉座を継ぐ者
 
 ### identity / 性能コア
 
-- manufacturer: **オリンピア**。
-- releaseDate: **2013-08-19**。K-Navi / HAZUSEが一致。当時資料の8/18納品予定とも整合。
-- 型式名: **戦国乙女 剣戟に舞う白き剣聖A1** / 検定番号 **3S0295**。
-- generation/system: **5号機 / 擬似ボーナス + ART**。
-- 機械割: **97.1 / 98.5 / 100.3 / 104.7 / 108.7 / 113.2%**。
-- ART「強カワRUSH」初当たり: **1/667.4 / 1/647.7 / 1/605.9 / 1/522.5 / 1/459.7 / 1/397.7**。
-- 純ボーナス合成: **1/244.4 / 1/240.1 / 1/234.6 / 1/219.8 / 1/210.0 / 1/194.3**。
-- ボーナス+ART初当たり合成: **1/178.9 / 1/175.2 / 1/169.1 / 1/154.7 / 1/144.1 / 1/130.5**。
-- baseGamesPer50: **約31G/50枚**（2013年当時資料、単一系統のため ANALYSIS_SINGLE_PERIOD）。
-- ART: **1セット50G+α / 純増約2.2枚/G**。
-- 基本獲得: 百花繚乱BONUS **約203枚** / 乙女BONUS **平均約146枚** / 希望の光ゾーン **平均約48枚**。
-- 通常モード: **通常A / 通常B / 通常C / 天国A / 天国B**。天国A/Bは **99G以内**。
-- 最大天井表現は **1056G / 1059G / 1060G** が資料間で存在。前兆・到達/消化カウント差を含む可能性があるため平均せずCONFLICT保持。
+- manufacturer: **JPS（ジェイピーエス）**。
+- releaseDate: **2013-08-19**。K-Navi / アタリ7 / 後年機種DBで照合。
+- generation/system: **5号機 / AT専用機**。
+- 型式名・検定番号は今回の確認可能資料で安全に固定できず **UNVERIFIED_AFTER_RESEARCH**。
+- 機械割: **96.8 / 98.2 / 98.7 / 101.3 / 104.1 / 108.2%**。96.79等の精密値との差は丸め差として扱う。
+- AT初当たり: **1/266 / 1/260 / 1/255 / 1/241 / 1/222 / 1/201**。
+- baseGamesPer50: **約29G/50枚**（後年機種DB単一数値のため ANALYSIS_SECONDARY_SINGLE_NUMERIC）。
+- AT「アルドラクエスト」: **1セット40G or 100G / 純増約2.5枚/G**。
+- 通常時内部状態: **通常 / 高確 / 超高確**。
+- モード別天井: **超天国32G / 天国A128G / 天国B384G / 通常A640G / 通常B960G / 通常C1088G**。最大はAT間1088GでAT当選。
 
 ### resetBehavior v0.7
 
-- **設定変更で天井までのゲーム数と内部モードをリセット**することを本機固有解析で確認。
-- 設定変更後モード振り分け:
-  - 設定1～3: **通常A 79.50% / 天国A 20.00% / 天国B 0.50%**。
-  - 設定4～6: **通常A 74.50% / 天国A 25.00% / 天国B 0.50%**。
-- よって設定変更後の天国A/B合計は **20.5%（設定1～3） / 25.5%（設定4～6）**。天国なら99G以内。固定短縮天井ではなく、リセット専用モード再抽選による朝一優遇として保存。
-- 設定変更時の内部状態専用振り分け: **UNVERIFIED_AFTER_RESEARCH**。
-- 純据え置き時の天井G数 / モード / 状態の直接保持契約: **UNVERIFIED_AFTER_RESEARCH**。
-- 単純電源OFF→ONでは **液晶ステージが変化する**ことを確認。ただし内部G数 / モード / 状態のKEEP/RESET直接契約は **UNVERIFIED_AFTER_RESEARCH**。
-- したがって朝一ステージ単独では変更判別材料として弱い。本機固有ガックン / 初期出目 / ランプ等は再探索後も **UNVERIFIED_AFTER_RESEARCH**。
+- **設定変更で天井までのゲーム数をリセット**。
+- **モード / 内部状態 / 液晶ステージを再抽選**。液晶は **市場 / エリナ宿舎 / トモエ宿舎**から抽選。
+- 設定変更時モード移行率を公開数値で保存:
+  - 設定1: **通常A57.73 / 通常C6.25 / 天国A10.00 / 天国B25.52 / 超天国0.50%**。
+  - 設定2: **59.92 / 6.25 / 10.00 / 23.57 / 0.26%**。
+  - 設定3: **62.00 / 6.25 / 10.00 / 21.62 / 0.13%**。
+  - 設定4: **64.02 / 6.25 / 10.00 / 19.66 / 0.06%**。
+  - 設定5: **65.97 / 6.25 / 10.00 / 17.71 / 0.06%**。
+  - 設定6: **67.93 / 6.25 / 10.00 / 15.76 / 0.06%**。
+- 天国A/B/超天国合計は **36.02 / 33.83 / 31.75 / 29.72 / 27.77 / 25.82%**。ただし天国B天井は384Gなので「全て128G以内」とは扱わない。
+- 設定変更専用の状態別数値振り分け: **UNVERIFIED_AFTER_RESEARCH**。
+- **単純電源OFF→ONでは天井G数 / モード / 状態 / 液晶ステージをすべて引き継ぐ**ことを本機専用必勝本資料で直接確認。
+- 「据え置き」という単独ラベルでの別契約は今回 **UNVERIFIED_AFTER_RESEARCH**。電源サイクルの直接契約とは分離して記録。
 - advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN**。
 - resetPenalty: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 変更判別: 設定変更では液晶ステージ再抽選、単純電源OFF→ONではステージ引継ぎのため、前日最終ステージ既知時は朝一差分が推測材料。本機固有ガックン / 初期出目 / ランプ等は **UNVERIFIED_AFTER_RESEARCH**。
 
 ## conflicts / safeguards
 
-- 天井最大値表現: HAZUSE **1056G** / K-Navi系モード表 **1059G** / pacnk **1060G消化**。平均化しない。
-- K-Naviトップの「ボーナス合算」1/178.9～1/130.5は、詳細解析上の **ボーナス+ART初当たり合成** に相当。パチマガスロマガの純ボーナス合成 **1/244.4～1/194.3** と定義を分離。
-- 後継機 **西国参戦編（2014-06-02）** の周期・純増2.0枚/G・リセット情報は初代へ混入させない。
-- **レインボースリーセブンS1-30** の `CONFLICT_RELEASE_DATE_2013-08-05_VS_2014-09` は継続。2014-09到達時に再解決し、2013列へ勝手に戻さない。
+- ベース機の機械割はK-Navi / アタリ7等の **96.8～108.2%系列**を採用。後発・別仕様の「バトルバージョン」系数値を混入させない。
+- 96.79等の精密値と96.8等は丸め差でありCONFLICT扱いしない。
+- 設定変更時公開表に通常Bへの直接移行がないことと、通常時一般のモード集合に通常Bが存在することを混同しない。
+- 一般的な5号機の挙動から据え置き契約を推測補完しない。
 
 ## 境界監査 / 同日群
 
-- 2013-08-06～08-18: 今回の再探索では具体日付き未登録機を検出せず、**CLOSED_FOR_CURRENT_RESEARCH**。
-- 2013-08-19登録済み: **戦国乙女～剣戟に舞う白き剣聖～**。
+- 2013-08-19登録済み:
+  1. **戦国乙女～剣戟に舞う白き剣聖～**
+  2. **パチスロ クイーンズブレイド2 玉座を継ぐ者**
 - 同日未処理既知候補:
-  1. **パチスロ クイーンズブレイド2 玉座を継ぐ者**（JPS）
-  2. **パチスロ ゼーガペイン**（山佐）
-  3. **魂斗羅3D**（KPE）
-- 08-19群は **OPEN**。上記3機種処理と全メーカー横断監査後にCLOSED判定する。
+  1. **パチスロ ゼーガペイン**（山佐）
+  2. **魂斗羅3D**（KPE）
+- 08-19群は **OPEN**。上記2機種処理と全メーカー横断監査後にCLOSED判定する。
 
 ## 遡及resetBehavior QA 進捗
 
 - QAカーソルは `2007-01_karate-baka-ichidai.md` の次の実ファイル順。
-- 今回は時系列本線を優先し、QAカーソルは進めていない。
+- `空手バカ一代` 自体は既にresetBehaviorを保持しているため重複更新しない。
+- 今回は実ファイル順で次のresetBehavior欠損機を一意に固定できるところまで進められず、誤ったQA前進を避けてカーソルを維持。
+- 既存の `COMPLETE_CORE` / `PARTIAL` 等、性能側完了判定は変更していない。
 
 ## 次回再開地点
 
-1. **recordCount 755 / chronologicalFrontier 2013-08-19 / 08-19群OPEN** から開始。
-2. 最優先: **パチスロ クイーンズブレイド2 玉座を継ぐ者（JPS）**。repo既登録確認 → 性能コア + resetBehavior v0.7。
-3. 続いて **パチスロ ゼーガペイン（山佐）** → **魂斗羅3D（KPE）**。
+1. **recordCount 756 / chronologicalFrontier 2013-08-19 / 08-19群OPEN** から開始。
+2. 最優先: **パチスロ ゼーガペイン（山佐）**。repo既登録確認 → 性能コア + resetBehavior v0.7。
+3. 続いて **魂斗羅3D（KPE）**。
 4. 08-19同日をメーカー横断再監査し、他に未登録がなければ群をCLOSED。
 5. その後、次の導入日境界へ時系列前進。
-6. 遡及QAは `2007-01_karate-baka-ichidai.md` 直後の実ファイル順から継続。
+6. 遡及QAは `2007-01_karate-baka-ichidai.md` 直後の実ファイル順から、最初のresetBehavior欠損機を確定して補完。
 
 ## 主要出典 — 取得日 2026-09-06
 
-### 戦国乙女～剣戟に舞う白き剣聖～
+### パチスロ クイーンズブレイド2 玉座を継ぐ者
 
-- K-Navi 機種ページ: `https://p-kn.com/slot/1889/`
-- K-Navi モード移行率: `https://p-kn.com/slot/1889/45678/`
-- パチマガスロマガ ボーナス確率: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/olympia_slot/110/h-1.php`
-- HAZUSE: `https://hazuse.com/machine/pachislot/SX0049/`
-- HAZUSE 基本スペック: `https://hazuse.com/machine/pachislot/SX0049/genre/201/`
-- pacnk: `https://pacnk.com/slot/2013/sengokuotome/top.php`
-- 2013年当時新機種スペック: `https://ameblo.jp/slostar/entry-11554947959.html`
-- パチナビ後年整理: `https://pachinavi.net/machines/sengoku-otome-1/`
+- K-Navi: `https://p-kn.com/slot/1893/`
+- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/jps_slot/27/l.php`
+- パチ＆スロ必勝本「天井&設定変更」: `https://p.hisshobon.jp/machine/2251/1/41318`
+- アタリ7: `https://www.atari7.com/slot/date1431056481.php`
+- みんスロ: `https://minslo.com/クイーンズブレイド2-玉座を継ぐ者/`
+- pacnk: `https://pacnk.com/slot/tools/sh_queensblade2.html`
+- パチスロ立ち回り講座 5号機天井DB: `https://crankyseven.com/sp/tenjo-5ka.htm`
 
-### 2013-08-19同日候補
+### 2013-08-19次候補
 
 - ゼーガペイン K-Navi: `https://p-kn.com/slot/1883/`
 - 魂斗羅3D K-Navi: `https://p-kn.com/slot/1884/`
 
 ## commits
 
-- 755th record add: `feb1aa75fe474f7d65dff4f107fbab35bce58c99`
+- previous 755th record add: `feb1aa75fe474f7d65dff4f107fbab35bce58c99`
+- 756th record add: current run (`db: add Queens Blade 2 with resetBehavior v0.7`)
