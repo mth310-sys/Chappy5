@@ -4,123 +4,101 @@
 
 ## 現在地点
 
-- recordCount: **825**
-- latestRecordAdded: **餓狼伝説PREMIUM**（SNKプレイモア）— 2014-06-02
-- latestRecord: `docs/real_machine_db/machines/2014-06-02_garou-densetsu-premium.md`
-- chronologicalFrontier: **2014-06-02**
-- frontierLatestMachine: **餓狼伝説PREMIUM**
+- recordCount: **826**
+- latestRecordAdded: **パチスロ蒼天の拳2**（Sammy / サミー）— 2014-06-16
+- latestRecord: `docs/real_machine_db/machines/2014-06-16_souten-no-ken-2.md`
+- chronologicalFrontier: **2014-06-16**
+- frontierLatestMachine: **パチスロ蒼天の拳2**
 - schema: **resetBehavior v0.7**
-- status: **2014-06-02_GROUP_CLOSED_FOR_CURRENT_RESEARCH**
+- status: **2014-06-16_GROUP_OPEN**
 
 ## 今回の同期 / 正本確認
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`docs/real_machine_db/LATEST_HANDOFF.md`、824件目 `2014-06-02_sengoku-otome-saigoku-sansen.md` を再読。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`docs/real_machine_db/LATEST_HANDOFF.md`、825件目 `2014-06-02_garou-densetsu-premium.md` を再読。
 - INDEXは19件表記の旧集約状態。README規定どおり **LATEST_HANDOFF + 実レコード** を進捗正本として継続。
-- 作業開始時の正本は **824件 / 2014-06-02 / 06-02_GROUP_OPEN**。
-- 06-02同日群は、具体日を安全に固定済みの **ケロット3 / 戦国乙女～剣戟に舞う白き剣聖～西国参戦編 / 餓狼伝説PREMIUM** をすべて処理済み。
-- `2014年6月2日 / 2014-06-02 / パチスロ / 導入`、K-Navi、HAZUSE、当時業界資料、後年年表を再監査し、追加の安全な具体日付き未登録5号機を今回固定できなかったため **06-02群をCLOSED_FOR_CURRENT_RESEARCH** とした。
+- 作業開始時の正本は **825件 / 2014-06-02 / 06-02_GROUP_CLOSED_FOR_CURRENT_RESEARCH**。
+- `2014-06-03～06-15 / パチスロ / 導入 / 新台`、K-Navi、当時業界記事、導入前資料を横断し、安全な具体日付き未登録5号機を今回固定できなかったため **06-03～06-15境界をCLOSED_FOR_CURRENT_RESEARCH** とした。
+- 2014-06-09配信の蒼天の拳2体験アプリ資料は実機ホール導入前であり、06-09を導入日にしない。
 
-## 今回追加 — 餓狼伝説PREMIUM
+## 今回追加 — パチスロ蒼天の拳2
 
 ### identity / 性能コア
 
-- manufacturer: **SNKプレイモア**。
-- formalModelName: **ガロウデンセツプレミアムBB**。
-- inspectionNumber: **4S0203**。
-- hall start: **2014-06-02**。
-- generation/system: **5号機 / AT特化 / 規定ゲーム数 + CZ + レア役解除 / 継続率・セット数・ゲーム数上乗せ**。
-- AT初当たり: **1/298.9 / 1/290.0～290.1 / 1/273.4 / 1/255.4 / 1/226.8 / 1/205.5**。
-- baseGamesPer50: **約30G/50枚**（パチマガスロマガ）。
-- AT「餓狼RUSH」: **純増約2.8枚/G、1セット30/50/100G + 継続バトル、継続率50～90%**。
-- maximum ceiling: **AT間993G + 前兆**。333/555/777/990～993Gに規定ゲーム数振り分け、天国/超天国は90～93G。
+- manufacturer: **Sammy / サミー**。
+- formalModelName: **蒼天の拳2ZZ**。
+- inspectionNumber: **4S0287**。
+- hall start: **2014-06-16**。サミー2014-06-10プレスリリース、K-Navi、HAZUSEで一致。
+- generation/system: **5号機 / AT / 自力小役解除 + 規定ゲーム数 / 継続率AT + ゲーム数上乗せAT**。
+- payoutRate: **97.1 / 98.6 / 101.0 / 105.0 / 110.6 / 113.7%**。
+- AT初当たり（HAZUSE精密値）: **1/299.0 / 1/290.9 / 1/280.8 / 1/252.8 / 1/218.5 / 1/204.8**。K-Naviは丸め表示。
+- baseGamesPer50: **30.5G（設定1～4） / 30.6G（設定5～6）**。パチマガスロマガ・HAZUSE一致。
+- AT純増: **約2.7枚/G**。
+- 「宿命の刻」: **1セット約20G、継続率約70～89%**。
+- 「激闘乱舞in上海」: **1セット30～200G**。
+- maximum ceiling: **通常時777G + 最大32G前兆**。別に宿命の刻→激闘乱舞9連続非当選後、10回目で激闘乱舞確定の連続非当選天井あり。
 - coreStatus: **COMPLETE_CORE**。
 
-### payout CONFLICT
+## パチスロ蒼天の拳2 — resetBehavior v0.7
 
-- HAZUSE: **96.9 / 98.6 / 99.9 / 103.8 / 108.4 / 113.5%**。
-- パチ＆スロ必勝本: **97.2 / 98.9 / 100.3 / 104.2 / 108.9 / 114.0%**。
-- 全設定で差があり単純な小数表示丸めだけでは説明しきれないため、平均せず `CONFLICT_PAYOUT_RATE` として双方を保存。
-
-## 餓狼伝説PREMIUM — resetBehavior v0.7
-
-- settingChangeBehavior: **AT間天井G RESET**。設定変更時は通常Cまたは天国へ再抽選。
-- modeAfterReset 公開値:
-  - 設定1～3: 通常C **90.0%** / 天国 **10.0%**
-  - 設定4: 通常C **87.5%** / 天国 **12.5%**
-  - 設定5: 通常C **85.0%** / 天国 **15.0%**
-  - 設定6: 通常C **80.0%** / 天国 **20.0%**
-- 天国/超天国の規定G: **90～93G（各25%）**。
-- carryOverBehavior: 実戦資料で、前日G + 当日Gが994G付近となる当選を据え置き天井として扱う観測があり、天井進捗CARRYOVERを `PERIOD_OBSERVATIONAL_SUPPORT` として保持。
-- powerCycleBehavior: 設定変更なし電源OFF→ONのAT間G・モード・内部状態は本機固有の直接契約を固定できず `UNVERIFIED_AFTER_RESEARCH`。
-- stateAfterReset: 通常/高確/超高確等の開始状態振り分けは `UNVERIFIED_AFTER_RESEARCH`。
-- ceilingAfterReset: 固定のリセット専用短縮天井は `NONE_CONFIRMED_AFTER_RESEARCH`。天国選択時90～93Gはモード恩恵として別管理。
+- settingChangeBehavior: **天井G RESET / 規定ゲーム数モード再抽選 / 内部状態再抽選 / 朝一ステージ再抽選**。
+- settingChange mode: 通常AT後のテーブルA/B/Cとは別の **設定変更時専用テーブル**を参照。
+- carryOverBehavior / powerCycleBehavior: 当時攻略資料では設定変更なし電源OFF→ON（据え置き）で **天井・内部モード・内部状態を引き継ぎ、ステージのみ再抽選**。
+- gameCounterReset: 設定変更 **RESET** / 据え置き **CARRYOVER**。
+- ceilingAfterReset: 固定のリセット専用短縮天井は **NONE_CONFIRMED_AFTER_RESEARCH**。777G上限は基本維持し、専用テーブルによるゾーン優遇と区別。
+- modeAfterReset: リセット後の前兆込み強ゾーン目安 **115～132 / 240～257 / 440～457 / 640～657G**。
+- stateAfterReset 公開値:
+  - 設定1: 低確50.0 / 通常25.0 / 天国25.0%
+  - 設定2: 45.0 / 27.5 / 27.5%
+  - 設定3: 40.0 / 30.0 / 30.0%
+  - 設定4: 35.0 / 32.5 / 32.5%
+  - 設定5: 32.5 / 32.5 / 35.0%
+  - 設定6: 30.0 / 32.5 / 37.5%
+- resetBenefits: 設定1でも朝一 **25%天国**、設定6 **37.5%天国**。リセット専用規定Gテーブルで250/450/650G前後が通常より強い。
+- resetDetection: **ガックン判別可能**とする当時資料あり。ただし左リールは疑似リールなので **左以外のリールを見る**必要がある。ステージは設定変更/据え置き双方で再抽選のため単独判別不可。
 - advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
-- resetDetection: ガックン等の高信頼な本機固有変更判別は `NONE_CONFIRMED_AFTER_RESEARCH`。
-- publicMorningNumbers: **天国10/12.5/15/20%（設定帯別）、90～93G各25%**。
-- resetBehaviorQA: **PARTIAL**。
+- resetBehaviorQA: **PARTIAL**（固定短縮天井なしを確認。全専用テーブル振り分けは物差しDB対象外）。
 
-## 再探索 / safeguards — 餓狼伝説PREMIUM
+## 再探索 / safeguards — 蒼天の拳2
 
-- `餓狼伝説PREMIUM / 餓狼伝説プレミアム / ガロウデンセツプレミアムBB / 4S0203 / SNKプレイモア` に `設定変更 / リセット / 朝一 / 据え置き / 宵越し / 電源OFF ON / 天井 / モード / 天国 / 93G / ガックン / 50枚` を組み合わせて再探索。
-- HAZUSE、K-Navi、パチマガスロマガ、パチ＆スロ必勝本、グリーンべると、2014年当時のゾーン/朝一解析、後年実戦を横断。
-- 旧作「餓狼伝説」や別タイトル「牙狼」系を混入しない。
-- 純電断、据え置き時のモード/高確状態、ガックン判別は十分な再探索後も直接固定できず推測しない。
+- `パチスロ蒼天の拳2 / 蒼天の拳2 / 蒼天の拳2ZZ / 4S0287 / Sammy / サミー` に `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / 777G / モード / テーブル / 状態 / 天国 / ガックン / 50枚 / 1000円` を組み合わせて再探索。
+- サミー公式プレス、K-Navi、HAZUSE、パチマガスロマガ、2014年当時の期待値見える化、すろぱちくえすと、後年整理資料を横断。
+- 後年の「蒼天の拳 朋友」や2026年北斗系など別機種のリセット仕様を混入しない。
+- 新台初日1回目初当たり614件の実戦集計は、解析値と分離して補助根拠としてのみ保持。
 
-## 2014-06-02群 / 次境界
+## 2014-06-16群 / 次候補
 
-処理済み:
-1. **ケロット3**（山佐）— No.823
-2. **戦国乙女～剣戟に舞う白き剣聖～西国参戦編**（オリンピア）— No.824
-3. **餓狼伝説PREMIUM**（SNKプレイモア）— No.825
+- 2014-06-16の同日群監査で、**テンパイラッシュ**（パイオニア）も同日導入であることをパチ7から確認。
+- したがって06-16群は **OPEN** のまま。
+- 次回は **「テンパイラッシュ」（パイオニア）**を次の未処理候補として、型式・性能コア + v0.7 resetBehaviorを収集する。
+- テンパイラッシュ処理後、06-16同日群をK-Navi / パチ7 / HAZUSE / 当時業界資料で再監査し、漏れがなければCLOSEDへ進む。
 
-- 06-02群は **CLOSED_FOR_CURRENT_RESEARCH**。
-- 次回は **2014-06-03～06-15境界監査**から開始し、漏れがなければ既知アンカー **2014-06-16「パチスロ蒼天の拳2」**へ前進する。
-- 2014-06-09配信の「蒼天の拳2」体験アプリ資料は「ホール導入前」と明記しており、06-09を実機導入日へ誤転記しない。
+## 遡及 resetBehavior QA
 
-## 遡及 resetBehavior QA — 仮面ライダーDX〜走れ！スーパーバイク編
-
-- `docs/real_machine_db/machines/2007-02-18_kamen-rider-dx-super-bike.md` を再QA。
-- 既存 `coreStatus: COMPLETE_CORE` は維持し、性能完了判定を崩していない。
-- v0.7として `schemaVersion`、`resetQaLastUpdated`、`publicMorningNumbers` を明示。
-- 設定変更/据え置き/純電断時のライダータイム内部状態・残ナビ回数処理を、当時業界、旧攻略、K-Navi、古い解析、回顧で再探索したが直接固定できず `UNVERIFIED_AFTER_RESEARCH` を維持。
-- 通常時ボーナス天井は確認されず、RT最大2000GはRT規定ゲーム数のため、ゲーム数天井リセットは `NOT_APPLICABLE_NO_NORMAL_CEILING_CONFIRMED`。
-- ガックン等の設定変更判別・朝一専用公開数値は `NONE_CONFIRMED_AFTER_RESEARCH`。
-- パチ7回顧で液晶右端ライダーの点滅速度が残ナビ回数を示唆する通常仕様を再確認したが、これは設定変更判別ではないためresetDetectionへ誤転用しない。
-- resetBehaviorQA: **PARTIAL**。
-
-### 次QAカーソル
-
-- Git履歴上、仮面ライダーDX追加後の次の実機追加は `a72eac99...` の **科学忍者隊ガッチャマン**。
+- 直前handoffからQAカーソルを維持。
 - 次QAカーソル: `docs/real_machine_db/machines/2007-02-18_kagaku-ninjatai-gatchaman.md`。
+- 新規時系列収集を止めず、余力のあるリレーで既存PARTIALへv0.7を遡及する。
 
 ## 次回再開地点
 
-1. **recordCount 825 / chronologicalFrontier 2014-06-02 / 06-02_GROUP_CLOSED_FOR_CURRENT_RESEARCH** から開始。
-2. 最新mainで README / mission / INDEX / LATEST_HANDOFF / 825件目を再確認。
-3. **2014-06-03～06-15境界監査**を実施。
-4. 追加未処理機がなければ **2014-06-16「パチスロ蒼天の拳2」**を次候補として性能コア + v0.7 resetBehaviorを収集。
+1. **recordCount 826 / chronologicalFrontier 2014-06-16 / 06-16_GROUP_OPEN** から開始。
+2. 最新mainで README / mission / INDEX / LATEST_HANDOFF / 826件目を再確認。
+3. 次の未処理候補 **2014-06-16「テンパイラッシュ」（パイオニア）**を収集。
+4. その後06-16同日群を全メーカー横断で再監査し、追加未処理機がなければCLOSED。
 5. 遡及QAは `docs/real_machine_db/machines/2007-02-18_kagaku-ninjatai-gatchaman.md` から再開。
 6. 2015-06-08到達時の **吉宗～極～（ヨシムネH2A4 / 3S1093）** 正式量産版処理注意は維持。
 
 ## 主要出典 — 取得日 2026-09-07
 
-### 餓狼伝説PREMIUM
-- HAZUSE: `https://hazuse.com/machine/pachislot/4S0203/`
-- HAZUSE 基本スペック: `https://hazuse.com/machine/pachislot/4S0203/genre/201/`
-- HAZUSE AT/ART・モード移行: `https://hazuse.com/machine/pachislot/4S0203/genre/209/`
-- K-Navi: `https://p-kn.com/slot/2049/`
-- パチ＆スロ必勝本: `https://p.hisshobon.jp/machine/2406/1/46189`
-- パチマガスロマガ 基本: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/snk_slot/48/a.php`
-- パチマガスロマガ 小役/50枚: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/snk_slot/48/c.php`
-- パチマガスロマガ AT突入フロー: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/snk_slot/48/l.php`
-- グリーンべると: `https://web-greenbelt.jp/00006164/`
-- 期待値見える化 天井/ゾーン: `https://slotjin.com/zone/garoudensetsu-premium/`
-- 期待値見える化 朝一: `https://slotjin.com/zone/garoudensetsu-premium-morning/`
-
-### 仮面ライダーDX QA
-- パチ7回顧: `https://pachiseven.jp/articles/detail/9576`
-- グリーンべると: `https://web-greenbelt.jp/00003982/`
-- パチマガスロマガ旧攻略: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sammy_slot/102/a.php`
+### パチスロ蒼天の拳2
+- サミー PR TIMES: `https://prtimes.jp/main/html/rd/p/000000001.000010410.html`
+- K-Navi: `https://p-kn.com/slot/2070/`
+- HAZUSE: `https://hazuse.com/machine/pachislot/4S0287/`
+- HAZUSE 基本スペック: `https://hazuse.com/machine/pachislot/4S0287/genre/201/`
+- HAZUSE AT/ART: `https://hazuse.com/machine/pachislot/4S0287/genre/209/`
+- パチマガスロマガ 小役/1000円あたりG数: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sammy_slot/143/c.php`
+- 期待値見える化 朝一: `https://slotjin.com/slot/soutennoken2-reset/`
+- すろぱちくえすと 朝一: `https://www.slopachi-quest.com/article/souten2-resets/`
+- Pachinavi: `https://pachinavi.net/machines/souten-no-ken-2/`
 
 ### 次候補 / 境界
-- 4Gamer 蒼天の拳2体験アプリ（2014-06-09、ホール導入前と明記）: `https://www.4gamer.net/games/260/G026023/20140609052/`
+- パチ7 テンパイラッシュ（導入日2014-06-16）: `https://pachiseven.jp/machines/4141/cutout/92`
