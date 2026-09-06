@@ -4,104 +4,91 @@
 
 ## 現在地点
 
-- recordCount: **853**
-- latestRecordAdded: **パチスロ カウボーイビバップ**（オリンピア）— 2014-10-20
-- latestRecord: `docs/real_machine_db/machines/2014-10-20_pachislot-cowboy-bebop.md`
-- chronologicalFrontier: **2014-10-20**
-- frontierLatestMachine: **パチスロ カウボーイビバップ**
+- recordCount: **854**
+- latestRecordAdded: **パチスロひぐらしのなく頃に煌**（オーイズミ）— 2014-11-17
+- latestRecord: `docs/real_machine_db/machines/2014-11-17_pachislot-higurashi-no-naku-koro-ni-kira.md`
+- chronologicalFrontier: **2014-11-17**
+- frontierLatestMachine: **パチスロひぐらしのなく頃に煌**
 - schema: **resetBehavior v0.7**
-- status: **2014-10-20_GROUP_OPEN**
+- status: **2014-11-17_GROUP_OPEN**
 
 ## 今回の同期 / 正本確認
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`、`docs/real_machine_db/INDEX.md`、`docs/real_machine_db/LATEST_HANDOFF.md`、No.851 `2014-10-20_super-bingo-neo.md`、No.852 `2014-10-06_pachislot-burst-angel.md` を再読。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`、`docs/real_machine_db/INDEX.md`、`docs/real_machine_db/LATEST_HANDOFF.md`、No.853 `2014-10-20_pachislot-cowboy-bebop.md` を再読。
 - INDEXは旧集約状態（19件）のため、README規定どおり **LATEST_HANDOFF + 実レコード** を進捗正本として使用。
-- 作業開始時の正本は **852件 / frontier 2014-10-20 / 10-20_GROUP_OPEN**。
-- 次の未処理だった「パチスロ カウボーイビバップ」を処理した。
+- 作業開始時の正本は **853件 / frontier 2014-10-20 / 10-20_GROUP_OPEN**。
+- 2014-10-20同日群をK-Navi / ALL7 / パチ7当時導入一覧 / 当時新台記事系で再監査。
+- 10/20群の未登録パチスロは今回追加確認できなかったため **2014-10-20_GROUP_CLOSED_FOR_CURRENT_RESEARCH** とした。
+- 次の未処理具体日として **2014-11-17** を確認し、「パチスロひぐらしのなく頃に煌」をNo.854として登録した。
 
-## No.853 — パチスロ カウボーイビバップ
+## 境界QA — パチスロ カウボーイビバップ
 
-- record: `docs/real_machine_db/machines/2014-10-20_pachislot-cowboy-bebop.md`
-- manufacturer: **オリンピア**。
-- releaseDate: **2014-10-20**。K-Naviおよび当時新台情報で一致。
-- modelName: **パチスロカウボーイビバップC1**。中古実機DB複数系統で一致。
-- 数字形式検定番号: `UNVERIFIED_AFTER_RESEARCH`。
+- 既存No.853 `2014-10-20_pachislot-cowboy-bebop.md` を更新。
+- 導入日は **CONFLICT: 2014-10-20 vs 2014-10-27**。
+  - K-Navi: 2014-10-20。
+  - 2014-10-27公開の当時新台記事: 「本日10月27日導入予定」。
+  - 2014-11-17公開のパチ7ホール集計: 10/27扱い。
+- 時系列キーは最古の具体日2014-10-20を維持するが、全国導入日を一意化せず `CONFLICT_RELEASE_DATE_2014_10_20_VS_2014_10_27` を保存。
+- さらに当時10/27記事から **千円ベース約31G** を取得し、従来のbaseGamesPer50欠損を解消。
+- AT設定3 `1/312.1 vs 1/321.2` と旧リセット誤報のRETRACTED扱いは維持。
+
+## No.854 — パチスロひぐらしのなく頃に煌
+
+- record: `docs/real_machine_db/machines/2014-11-17_pachislot-higurashi-no-naku-koro-ni-kira.md`
+- manufacturer: **オーイズミ**。
+- releaseDate: **2014-11-17**。HAZUSE / パチビー一致。
+- modelName: **パチスロひぐらしのなく頃に煌WX**。
+- inspectionNumber: **4S0813**。
 
 ### 性能コア
 
-- 機械割: **96.5 / 97.9 / 100.9 / 106.3 / 110.2 / 115.3%**。K-Navi / P-WORLD一致。
-- AT初当たり:
-  - 設定1 **1/344.6**
-  - 設定2 **1/327.4**
-  - 設定3 **CONFLICT: K-Navi 1/312.1 vs P-WORLD 1/321.2**
-  - 設定4 **1/262.3**
-  - 設定5 **1/232.5**
-  - 設定6 **1/200.2**
-- AT「スパイクRUSH」純増: **約2.5枚/G**。
-- CZ「東風モード」AT期待度: **約35%**。
-- 前兆「堕天使たちのバラッド」AT期待度: **約50%**。
-- TANK! BONUS: **20G**、突入時点で初期100G AT確定。
-- 通常AT間最大天井: **999G**。
-- 50枚ベース: 検索語・資料系統変更後も比較可能値を固定できず `UNVERIFIED_AFTER_RESEARCH`。
-- coreStatus: **PARTIAL_CORE**（baseGamesPer50欠損 + AT設定3CONFLICT）。
+- 機械割: **98.2 / 99.3 / 100.5 / 102.2 / 104.7 / 109.1%**。
+- BIG: **1/253.4 / 1/245.8 / 1/228.9 / 1/223.8 / 1/214.0 / 1/216.6**。
+- REG: **1/375.7 / 1/333.2 / 1/358.4 / 1/302.4 / 1/336.5 / 1/276.2**。
+- 合算: **1/151.3 / 1/141.4 / 1/139.7 / 1/128.6 / 1/130.8 / 1/121.4**。
+- 50枚ベース: **約33.04G（設定1）〜33.13G（設定6）**。今回直接比較値を固定できたのは解析整理資料1系統のため `ANALYSIS_SINGLE`。
+- 擬似ボーナス純増: **約2.7枚/G**。
+- オヤシロBIG / BIG: **平均約340枚**、REG: **平均約90枚**。
+- 通常最大天井: **999G + 前兆**。天国/超天国系は **128G + 前兆**。
+- 機械割の数値系列は一致するが、技術介入前提が「ビタ押し成功率75%」とする資料と「ビタ押しなし・補助機能利用」とする資料があり、`CONFLICT_OR_DEFINITION_DIFFERENCE_PAYOUT_TECHNIQUE_CONDITION` として条件差を保持。
 
 ### resetBehavior v0.7
 
-- 設定変更時: **天井ゲーム数 RESET / COMBOカウンター RESET**。
-- 設定変更なしの電源OFF→ON: **天井ゲーム数・COMBOカウンター CARRYOVER** とする当時訂正版解析あり。
-- 据え置き: 同じ電源ON/OFF引継ぎ資料により **CARRYOVER_SUPPORTED**。
-- 通常天井999Gを基点に、設定変更後は**百・十・一の各桁で独立した減算抽選**。
-- 設定変更後モード: **モードA確定（最低モード）**とする当時訂正版解析。
-- 設定変更時AT当選では賞金首RUSHに一定優遇あり。
-- 本機固有ガックン: `NONE_CONFIRMED_AFTER_RESEARCH`。
+- **設定変更時に低確/高確の内部状態を再抽選**することをHAZUSE / 旧パチマガスロマガで直接確認。
+- 設定変更時の高確移行率:
+  - 設定1 **50.0%**
+  - 設定2 **55.0%**
+  - 設定3 **52.5%**
+  - 設定4 **60.0%**
+  - 設定5 **55.0%**
+  - 設定6 **66.6%**
+- 高確はCZ抽選へ影響するため、朝一客AI用の主要reset benefitとして保存。
+- ただしBIG終了後にも同一系列の高確移行抽選が存在するため、設定変更だけの専用状態ではない。
+- 設定変更時の天井ゲーム数RESET/CARRY、ゲーム数解除モード、据え置き、純電源OFF→ON時のゲーム数/モード/状態については、表記揺れ・型式・メーカー名と `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / 天井短縮 / モード / ガックン` を組み替えて複数資料系統を再探索したが、本機固有の直接契約を安全に固定できず **UNVERIFIED_AFTER_RESEARCH**。
+- 設定変更専用の固定短縮天井/短縮率: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 本機固有ガックン/表示等の確定変更判別: **NONE_CONFIRMED_AFTER_RESEARCH**。
 - 有利区間: `NOT_APPLICABLE_5TH_GEN_PRE_5_9`。
 
-### 朝一公開数値 — 訂正版
-
-設定変更後の天井減算抽選（百/十/一の位）:
-
-- 0: **37.50 / 37.50 / 37.50%**
-- 1: **25.00 / 25.00 / 25.00%**
-- 2: **12.50 / 12.50 / 12.50%**
-- 3: **6.25 / 6.25 / 6.25%**
-- 4: **1.56 / 3.13 / 3.13%**
-- 5: **1.56 / 3.13 / 3.13%**
-- 6: **6.25 / 3.13 / 3.13%**
-- 7: **1.56 / 3.13 / 3.13%**
-- 8: **1.56 / 3.13 / 3.13%**
-- 9: **6.25 / 3.13 / 3.13%**
-
-重要: 2014-12-20に流布した **「400G以内81.25%で天井当選」**は、2014-12-29の同サイト訂正版で**誤報**と明記された。DBでは `RETRACTED_RESET_400G_WITHIN_81_25_PERCENT` として履歴だけ残し、canonical値へ採用しない。
-
-### 変更判別
-
-- 前日G数が分かれば、宵越し天井到達位置のズレを変更推測に利用可能。
-- COMBO CHANCE周期は1〜64G。COMBOカウンターは変更でリセット、電源ON/OFFで引継ぎとする訂正版解析のため、前日周期を把握していれば朝一発生位置も判別材料になる。
-- 例: 前日COMBO間40Gなら据え置き時は残り最大24G相当。朝一でそれを超えてCOMBO CHANCE非発生なら変更を強く支持するという当時攻略ロジックあり。
-
-## 2014-10-20群 — OPEN継続
+## 2014-11-17群 — OPEN
 
 ### 登録済み
 
-- No.851 **スーパービンゴNEO**（ベルコ）— 2014-10-20。
-- No.853 **パチスロ カウボーイビバップ**（オリンピア）— 2014-10-20。
+- No.854 **パチスロひぐらしのなく頃に煌**（オーイズミ）— 2014-11-17。
 
-### 10/20候補から遡及バックフィルへ移したもの
+### 次の強い未処理候補
 
-- No.852 **パチスロ バーストエンジェル**（山佐）— 10/06 vs 10/20 CONFLICT。10/20重複作成禁止。
+- **トリプルクラウンZERO-ONE**（清龍ゲームジャパン）— **2014-11-17**。
+  - HAZUSEで導入開始日2014-11-17、型式 `トリプルクラウンZERO1-30`、検定番号 `4S0620` を確認済み。
+- 11/17同日群はまだ **CLOSEDにしない**。
+- 次回はトリプルクラウンZERO-ONEを先に処理し、その後11/17同日群をメーカー横断で再監査する。
 
-### 次回の境界監査
+## 2014-10-20群 — CLOSED_FOR_CURRENT_RESEARCH
 
-- 10/20同日群はまだ **CLOSEDにしない**。
-- K-Navi / P-WORLD / メーカー別一覧 / 当時新台記事 / ALL7以外のDBを横断し、未登録パチスロの有無を再監査する。
-- 同日群に未登録機が見つかればその機種を先に処理する。
-- 追加なしを複数系統で確認できたら10/20群をCLOSEDにし、次の具体的導入日へ進む。
-
-## 重要境界訂正 — バーストエンジェル
-
-- No.852 バーストエンジェルはK-Navi **2014-10-06**、2014-10-08実ホール導入済み、ALL7・複数当時解析 **2014-10-20**で日付競合。
-- 10/20だけに正規化せず、ファイルは最古具体日10/06で遡及登録済み。
-- 10/20に重複レコードを作らない。
+- 登録済み/関連:
+  - No.851 **スーパービンゴNEO**（ベルコ）— 2014-10-20。
+  - No.853 **パチスロ カウボーイビバップ**（オリンピア）— 10/20 vs 10/27 CONFLICT。
+  - No.852 **パチスロ バーストエンジェル**（山佐）— 10/06 vs 10/20 CONFLICT、最古具体日の10/06へ遡及登録済み。10/20重複禁止。
+- ALL7、パチ7当時一覧、K-Navi/当時新台資料を横断し、今回新規の10/20未登録パチスロは確認できずCLOSED_FOR_CURRENT_RESEARCH。
 
 ## 遡及 resetBehavior QA カーソル
 
@@ -113,33 +100,34 @@
 - INDEXは旧集約状態なので進捗正本にしない。LATEST_HANDOFF + 実レコードを優先。
 - exact release dateでは「導入予定」「全国導入」「地域先行」「実ホール導入済み」を区別する。
 - ALL7単独で同日群CLOSED判定しない。
-- カウボーイビバップのAT設定3は **1/312.1 vs 1/321.2 CONFLICT**。平均禁止。
+- カウボーイビバップは導入日 **10/20 vs 10/27 CONFLICT**、AT設定3 **1/312.1 vs 1/321.2 CONFLICT**。平均禁止。
 - カウボーイビバップの旧「400G以内81.25%」リセット解析は**誤報訂正済み**。canonical値として復活させない。
-- 一般的な5号機ATの電断挙動を本機固有契約として推定転記しない。
+- ひぐらし煌の機械割は数値が一致していても技術介入条件の定義差を保持する。
+- 一般的な5号機ATの設定変更/電断挙動を本機固有契約として推定転記しない。
 - 2015-06-08到達時の **吉宗～極～（ヨシムネH2A4 / 3S1093）** 正式量産版処理注意を維持。
 
 ## 次回再開地点
 
-1. **recordCount 853 / chronologicalFrontier 2014-10-20 / 10-20_GROUP_OPEN** から開始。
-2. 最新mainで README / mission / INDEX / LATEST_HANDOFF / No.851 / No.852 / No.853を再確認。
-3. **2014-10-20同日群を全メーカー横断で再監査**。
-4. 未登録同日機が見つかればその機種を次に処理。見つからなければ10/20群をCLOSEDにして次の具体日へ進む。
+1. **recordCount 854 / chronologicalFrontier 2014-11-17 / 11-17_GROUP_OPEN** から開始。
+2. 最新mainで README / mission / INDEX / LATEST_HANDOFF / No.854を再確認。
+3. 次の未処理候補 **2014-11-17「トリプルクラウンZERO-ONE」（清龍ゲームジャパン）** を処理。
+4. その後11/17同日群を全メーカー横断で再監査し、未登録がなければCLOSED判定して次の具体日へ進む。
 5. 遡及QAは `2007-03-19_kakumei-senshi-choshu-riki.md` から再開。
 
 ## 主要出典 — 取得日 2026-09-07
 
-### カウボーイビバップ
-- K-Navi: `https://p-kn.com/slot/2130/`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/7517`
-- 旧パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/olympia_slot/117/a.php`
-- すろぱちくえすと 訂正版: `https://www.slopachi-quest.com/article/cowboy-bebop-2/`
-- すろぱちくえすと 旧誤報: `https://www.slopachi-quest.com/article/cowboy-bebop-reset/`
-- 5号機天井一覧: `https://crankyseven.com/sp/tenjo-5ka.htm`
-- 中一商事型式DB: `https://www.nakaiti.com/html/sOlympia019.html`
-- イニシャルP型式DB: `https://initialp.cart.fc2.com/ca18/2136/`
+### ひぐらしのなく頃に煌
+- HAZUSE: `https://hazuse.com/machine/pachislot/4S0813/`
+- パチビー: `https://www.pachibee.jp/machines/index/214100000`
+- 旧パチマガスロマガ CZ抽選: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/oizumi_slot/33/cz0-3.php`
+- K-Navi リプレイハズシ: `https://p-kn.com/slot/2166/52064/`
+- ちょんぼりすた: `https://chonborista.com/slot/oizumi-slot/3810/`
 
-### バーストエンジェル（前回保持）
-- 山佐公式: `https://yamasa-next.co.jp/model_brt/`
-- K-Navi: `https://p-kn.com/slot/2126/`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/7514`
-- ALL7: `https://www.all7.jp/plans/index/2014/10`
+### 11/17次候補
+- HAZUSE トリプルクラウンZERO-ONE: `https://hazuse.com/machine/pachislot/4S0620/`
+
+### 10/20境界 / カウボーイビバップ
+- K-Navi: `https://p-kn.com/slot/2130/`
+- ALL7 2014/10: `https://www.all7.jp/plans/index/2014/10`
+- パチ7 2014年11月ホール集計: 10/20=バーストエンジェル/スーパービンゴネオ、10/27=カウボーイビバップ
+- Slot-board RUSH 2014-10-27新台記事: カウボーイビバップを10/27導入予定、千円ベース約31Gとして掲載
