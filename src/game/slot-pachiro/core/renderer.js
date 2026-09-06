@@ -1,229 +1,25 @@
 import { depthKey, orientationScreenAngle, projectedBounds, toScreen } from './grid.js';
 import { materializeCells, reservationCells } from './facility.js';
 import { BUILDING_SHELL, FACILITY_DEFS, FLOOR_BOUNDS, SPEC } from './layout.js';
+import { directionFromDelta, pixelCharacterDataURL } from './pixel-characters.js';
 
 const SVG_NS = 'http://www.w3.org/2000/svg';
 const machineInner = '<div class="unit9"><div class="shadow"></div><div class="backboard"></div><div class="header9"></div><div class="data9"></div><div class="mount9"></div><div class="rail-left"></div><div class="rail-right"></div><div class="sand9"><span class="screen"></span><span class="slot"></span><span class="button"></span><span class="indicator"></span><span class="medal"></span></div><div class="divider"></div><div class="box-side"><div class="box-stack"><div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div></div></div><div class="counter9"></div><div class="fascia9"></div><div class="foot"></div><div class="wear"></div></div>';
-
-function place(scene, element, item, extraRise = 0) {
-  const point = toScreen(item.x, item.y, (item.rise ?? 0) + extraRise);
-  element.style.left = `${point.x}px`;
-  element.style.top = `${point.y}px`;
-  element.style.zIndex = String(100 + Math.round(depthKey(item)));
-  element.dataset.gridX = item.x;
-  element.dataset.gridY = item.y;
-  element.dataset.orientation = item.orientation ?? 'E';
-  element.dataset.id = item.id;
-  scene.appendChild(element);
-  return element;
-}
-
-function makeNode(className, html = '') {
-  const node = document.createElement('div');
-  node.className = `gridNode ${className}`;
-  node.innerHTML = html;
-  return node;
-}
-
-function orientedPoint(item, offset) {
-  return materializeCells(item, [{ x: offset.x, y: offset.y }])[0];
-}
-
-function line(svg, a, b, className) {
-  const node = document.createElementNS(SVG_NS, 'line');
-  node.setAttribute('x1', String(a.x));
-  node.setAttribute('y1', String(a.y));
-  node.setAttribute('x2', String(b.x));
-  node.setAttribute('y2', String(b.y));
-  node.setAttribute('class', className);
-  svg.appendChild(node);
-}
-
-function polygon(svg, points, className) {
-  const node = document.createElementNS(SVG_NS, 'polygon');
-  node.setAttribute('points', points.map((p) => `${p.x},${p.y}`).join(' '));
-  node.setAttribute('class', className);
-  svg.appendChild(node);
-  return node;
-}
-
-function cellCorners(x, y) {
-  return [toScreen(x, y), toScreen(x + 1, y), toScreen(x + 1, y + 1), toScreen(x, y + 1)];
-}
-
-function renderInteriorZones(scene, layout) {
-  scene.querySelector('.interiorZones')?.remove();
-  const svg = document.createElementNS(SVG_NS, 'svg');
-  svg.setAttribute('class', 'interiorZones');
-  svg.setAttribute('width', String(scene.clientWidth || 730));
-  svg.setAttribute('height', String(scene.clientHeight || 530));
-  svg.setAttribute('aria-hidden', 'true');
-
-  const painted = new Set();
-  const paintCell = (cell, className) => {
-    const key = `${className}:${cell.x},${cell.y}`;
-    if (painted.has(key)) return;
-    painted.add(key);
-    polygon(svg, cellCorners(cell.x, cell.y), className);
-  };
-
-  for (const island of layout.islands) {
-    for (const cell of reservationCells(island, FACILITY_DEFS.island)) {
-      if (cell.role === 'chair-zone') paintCell(cell, 'zoneCell zoneChair');
-      if (cell.role === 'walk-zone') paintCell(cell, 'zoneCell zoneWalk');
-    }
-  }
-
-  for (const fixture of layout.fixtures) {
-    const definition = FACILITY_DEFS[fixture.type];
-    if (!definition) continue;
-    for (const cell of reservationCells(fixture, definition)) {
-      if (cell.role === 'customer-front') paintCell(cell, 'zoneCell zoneService');
-      if (cell.role === 'entrance-clearance') paintCell(cell, 'zoneCell zoneEntrance');
-    }
-  }
-
-  scene.appendChild(svg);
-}
-
-function renderLogicalGrid(scene) {
-  scene.querySelector('.logicalGrid')?.remove();
-  const svg = document.createElementNS(SVG_NS, 'svg');
-  svg.setAttribute('class', 'logicalGrid');
-  svg.setAttribute('width', String(scene.clientWidth || 730));
-  svg.setAttribute('height', String(scene.clientHeight || 530));
-  svg.setAttribute('aria-hidden', 'true');
-
-  for (let x = FLOOR_BOUNDS.minX; x <= FLOOR_BOUNDS.maxX + 1; x++) {
-    line(svg, toScreen(x, FLOOR_BOUNDS.minY), toScreen(x, FLOOR_BOUNDS.maxY + 1), 'gridLine');
-  }
-  for (let y = FLOOR_BOUNDS.minY; y <= FLOOR_BOUNDS.maxY + 1; y++) {
-    line(svg, toScreen(FLOOR_BOUNDS.minX, y), toScreen(FLOOR_BOUNDS.maxX + 1, y), 'gridLine');
-  }
-  scene.appendChild(svg);
-}
-
-function wallEdge(wall) {
-  if (wall.y === FLOOR_BOUNDS.minY) return { a: { x: wall.x, y: wall.y }, b: { x: wall.x + 1, y: wall.y }, back: true };
-  if (wall.x === FLOOR_BOUNDS.minX) return { a: { x: wall.x, y: wall.y }, b: { x: wall.x, y: wall.y + 1 }, back: true };
-  if (wall.y === FLOOR_BOUNDS.maxY) return { a: { x: wall.x, y: wall.y + 1 }, b: { x: wall.x + 1, y: wall.y + 1 }, back: false };
-  if (wall.x === FLOOR_BOUNDS.maxX) return { a: { x: wall.x + 1, y: wall.y }, b: { x: wall.x + 1, y: wall.y + 1 }, back: false };
-  return null;
-}
-
-function renderBuildingShell(scene) {
-  scene.querySelector('.wallFaces')?.remove();
-  scene.querySelectorAll('.structureNode').forEach((node) => node.remove());
-  const svg = document.createElementNS(SVG_NS, 'svg');
-  svg.setAttribute('class', 'wallFaces');
-  svg.setAttribute('width', String(scene.clientWidth || 730));
-  svg.setAttribute('height', String(scene.clientHeight || 530));
-  svg.setAttribute('aria-hidden', 'true');
-
-  for (const wall of BUILDING_SHELL.walls) {
-    const edge = wallEdge(wall);
-    if (!edge) continue;
-    const rise = edge.back ? 34 : 8;
-    const a = toScreen(edge.a.x, edge.a.y);
-    const b = toScreen(edge.b.x, edge.b.y);
-    const ar = toScreen(edge.a.x, edge.a.y, rise);
-    const br = toScreen(edge.b.x, edge.b.y, rise);
-    polygon(svg, [a, b, br, ar], edge.back ? 'wallFace wallFaceBack' : 'wallFace wallFaceFront');
-    line(svg, ar, br, edge.back ? 'wallCap wallCapBack' : 'wallCap wallCapFront');
-  }
-  scene.appendChild(svg);
-}
-
-function renderMapBase(scene, layout) {
-  const bounds = projectedBounds(FLOOR_BOUNDS);
-  const floor = scene.querySelector('.floor');
-  const lot = scene.querySelector('.lot');
-  const road = scene.querySelector('.road');
-  if (!floor || !lot || !road) throw new Error('Map base elements are missing');
-
-  floor.style.left = `${bounds.left}px`;
-  floor.style.top = `${bounds.top}px`;
-  floor.style.width = `${bounds.width}px`;
-  floor.style.height = `${bounds.height}px`;
-
-  const marginX = 12, marginY = 20;
-  lot.style.left = `${bounds.left - marginX}px`;
-  lot.style.top = `${bounds.top - marginY}px`;
-  lot.style.width = `${bounds.width + marginX * 2}px`;
-  lot.style.height = `${bounds.height + marginY * 2}px`;
-
-  const sceneWidth = Math.ceil(Math.max(730, bounds.right + marginX + 2));
-  const roadTop = Math.ceil(bounds.bottom + 40);
-  const roadHeight = 92;
-  const sceneHeight = roadTop + roadHeight;
-  scene.style.width = `${sceneWidth}px`;
-  scene.style.height = `${sceneHeight}px`;
-  scene.dataset.baseWidth = String(sceneWidth);
-  scene.dataset.baseHeight = String(sceneHeight);
-
-  road.style.left = '0px';
-  road.style.top = `${roadTop}px`;
-  road.style.width = `${sceneWidth}px`;
-  road.style.height = `${roadHeight}px`;
-
-  renderInteriorZones(scene, layout);
-  renderLogicalGrid(scene);
-  renderBuildingShell(scene);
-}
-
-function makeIsland(item) {
-  const wrapper = makeNode('asset');
-  wrapper.style.setProperty('--island-scale', SPEC.island.scale);
-  wrapper.style.setProperty('--island-rotation', `${orientationScreenAngle(item.orientation ?? 'E')}deg`);
-  const island = document.createElement('div');
-  island.className = 'island9';
-  wrapper.appendChild(island);
-  for (let i = 0; i < 9; i++) {
-    const bay = document.createElement('div');
-    bay.className = 'bay9';
-    bay.style.left = `${i * 344}px`;
-    bay.innerHTML = machineInner;
-    island.appendChild(bay);
-  }
-  return wrapper;
-}
-
-function renderIsland(scene, item) {
-  place(scene, makeIsland(item), item);
-  const chairCell = orientedPoint(item, SPEC.chairOffset);
-  const chairItem = { id: `${item.id}-chair`, x: chairCell.x, y: chairCell.y, w: 1, d: 1, rise: 8, orientation: item.orientation };
-  place(scene, makeNode('chair'), chairItem);
-}
-
-function renderFixture(scene, item) {
-  switch (item.type) {
-    case 'counter': place(scene, makeNode('counterdesk', '<div class="ctop"></div><div class="cface">景品交換</div>'), item); break;
-    case 'staff': place(scene, makeNode('staff', '<i class="hair"></i>'), item); break;
-    case 'plant': place(scene, makeNode('plant'), item); break;
-    case 'entrance': place(scene, makeNode('entrance', '<span>入口</span>'), item); break;
-    default: throw new Error(`Unknown fixture type: ${item.type}`);
-  }
-}
-
-export function renderCustomerActor(scene, customer) {
-  const actor = makeNode('person customerActor', '<i class="hair"></i>');
-  actor.style.background = '#d86670';
-  return place(scene, actor, { id: customer.id, x: customer.x, y: customer.y, w: 1, d: 1, rise: 22, orientation: 'E' });
-}
-
-export function updateCustomerActor(actor, customer) {
-  const point = toScreen(customer.x, customer.y, 22);
-  actor.style.left = `${point.x}px`;
-  actor.style.top = `${point.y}px`;
-  actor.style.zIndex = String(100 + Math.round(customer.x + customer.y));
-  actor.dataset.gridX = customer.x;
-  actor.dataset.gridY = customer.y;
-  actor.dataset.customerState = customer.state;
-}
-
-export function renderLayout(scene, layout) {
-  scene.querySelectorAll('.gridNode').forEach((node) => node.remove());
-  renderMapBase(scene, layout);
-  layout.islands.forEach((item) => renderIsland(scene, item));
-  layout.fixtures.forEach((item) => renderFixture(scene, item));
-}
+function place(scene, element, item, extraRise = 0) { const point=toScreen(item.x,item.y,(item.rise??0)+extraRise);element.style.left=`${point.x}px`;element.style.top=`${point.y}px`;element.style.zIndex=String(100+Math.round(depthKey(item)));element.dataset.gridX=item.x;element.dataset.gridY=item.y;element.dataset.orientation=item.orientation??'E';element.dataset.id=item.id;scene.appendChild(element);return element }
+function makeNode(className,html=''){const node=document.createElement('div');node.className=`gridNode ${className}`;node.innerHTML=html;return node}
+function orientedPoint(item,offset){return materializeCells(item,[{x:offset.x,y:offset.y}])[0]}
+function line(svg,a,b,className){const node=document.createElementNS(SVG_NS,'line');node.setAttribute('x1',String(a.x));node.setAttribute('y1',String(a.y));node.setAttribute('x2',String(b.x));node.setAttribute('y2',String(b.y));node.setAttribute('class',className);svg.appendChild(node)}
+function polygon(svg,points,className){const node=document.createElementNS(SVG_NS,'polygon');node.setAttribute('points',points.map(p=>`${p.x},${p.y}`).join(' '));node.setAttribute('class',className);svg.appendChild(node);return node}
+function cellCorners(x,y){return[toScreen(x,y),toScreen(x+1,y),toScreen(x+1,y+1),toScreen(x,y+1)]}
+function renderInteriorZones(scene,layout){scene.querySelector('.interiorZones')?.remove();const svg=document.createElementNS(SVG_NS,'svg');svg.setAttribute('class','interiorZones');svg.setAttribute('width',String(scene.clientWidth||730));svg.setAttribute('height',String(scene.clientHeight||530));svg.setAttribute('aria-hidden','true');const painted=new Set();const paintCell=(cell,className)=>{const key=`${className}:${cell.x},${cell.y}`;if(painted.has(key))return;painted.add(key);polygon(svg,cellCorners(cell.x,cell.y),className)};for(const island of layout.islands)for(const cell of reservationCells(island,FACILITY_DEFS.island)){if(cell.role==='chair-zone')paintCell(cell,'zoneCell zoneChair');if(cell.role==='walk-zone')paintCell(cell,'zoneCell zoneWalk')}for(const fixture of layout.fixtures){const definition=FACILITY_DEFS[fixture.type];if(!definition)continue;for(const cell of reservationCells(fixture,definition)){if(cell.role==='customer-front')paintCell(cell,'zoneCell zoneService');if(cell.role==='entrance-clearance')paintCell(cell,'zoneCell zoneEntrance')}}scene.appendChild(svg)}
+function renderLogicalGrid(scene){scene.querySelector('.logicalGrid')?.remove();const svg=document.createElementNS(SVG_NS,'svg');svg.setAttribute('class','logicalGrid');svg.setAttribute('width',String(scene.clientWidth||730));svg.setAttribute('height',String(scene.clientHeight||530));svg.setAttribute('aria-hidden','true');for(let x=FLOOR_BOUNDS.minX;x<=FLOOR_BOUNDS.maxX+1;x++)line(svg,toScreen(x,FLOOR_BOUNDS.minY),toScreen(x,FLOOR_BOUNDS.maxY+1),'gridLine');for(let y=FLOOR_BOUNDS.minY;y<=FLOOR_BOUNDS.maxY+1;y++)line(svg,toScreen(FLOOR_BOUNDS.minX,y),toScreen(FLOOR_BOUNDS.maxX+1,y),'gridLine');scene.appendChild(svg)}
+function wallEdge(wall){if(wall.y===FLOOR_BOUNDS.minY)return{a:{x:wall.x,y:wall.y},b:{x:wall.x+1,y:wall.y},back:true};if(wall.x===FLOOR_BOUNDS.minX)return{a:{x:wall.x,y:wall.y},b:{x:wall.x,y:wall.y+1},back:true};if(wall.y===FLOOR_BOUNDS.maxY)return{a:{x:wall.x,y:wall.y+1},b:{x:wall.x+1,y:wall.y+1},back:false};if(wall.x===FLOOR_BOUNDS.maxX)return{a:{x:wall.x+1,y:wall.y},b:{x:wall.x+1,y:wall.y+1},back:false};return null}
+function renderBuildingShell(scene){scene.querySelector('.wallFaces')?.remove();scene.querySelectorAll('.structureNode').forEach(node=>node.remove());const svg=document.createElementNS(SVG_NS,'svg');svg.setAttribute('class','wallFaces');svg.setAttribute('width',String(scene.clientWidth||730));svg.setAttribute('height',String(scene.clientHeight||530));svg.setAttribute('aria-hidden','true');for(const wall of BUILDING_SHELL.walls){const edge=wallEdge(wall);if(!edge)continue;const rise=edge.back?34:8,a=toScreen(edge.a.x,edge.a.y),b=toScreen(edge.b.x,edge.b.y),ar=toScreen(edge.a.x,edge.a.y,rise),br=toScreen(edge.b.x,edge.b.y,rise);polygon(svg,[a,b,br,ar],edge.back?'wallFace wallFaceBack':'wallFace wallFaceFront');line(svg,ar,br,edge.back?'wallCap wallCapBack':'wallCap wallCapFront')}scene.appendChild(svg)}
+function renderMapBase(scene,layout){const bounds=projectedBounds(FLOOR_BOUNDS),floor=scene.querySelector('.floor'),lot=scene.querySelector('.lot'),road=scene.querySelector('.road');if(!floor||!lot||!road)throw new Error('Map base elements are missing');floor.style.left=`${bounds.left}px`;floor.style.top=`${bounds.top}px`;floor.style.width=`${bounds.width}px`;floor.style.height=`${bounds.height}px`;const marginX=12,marginY=20;lot.style.left=`${bounds.left-marginX}px`;lot.style.top=`${bounds.top-marginY}px`;lot.style.width=`${bounds.width+marginX*2}px`;lot.style.height=`${bounds.height+marginY*2}px`;const sceneWidth=Math.ceil(Math.max(730,bounds.right+marginX+2)),roadTop=Math.ceil(bounds.bottom+40),roadHeight=92,sceneHeight=roadTop+roadHeight;scene.style.width=`${sceneWidth}px`;scene.style.height=`${sceneHeight}px`;scene.dataset.baseWidth=String(sceneWidth);scene.dataset.baseHeight=String(sceneHeight);road.style.left='0px';road.style.top=`${roadTop}px`;road.style.width=`${sceneWidth}px`;road.style.height=`${roadHeight}px`;renderInteriorZones(scene,layout);renderLogicalGrid(scene);renderBuildingShell(scene)}
+function makeIsland(item){const wrapper=makeNode('asset');wrapper.style.setProperty('--island-scale',SPEC.island.scale);wrapper.style.setProperty('--island-rotation',`${orientationScreenAngle(item.orientation??'E')}deg`);const island=document.createElement('div');island.className='island9';wrapper.appendChild(island);for(let i=0;i<9;i++){const bay=document.createElement('div');bay.className='bay9';bay.style.left=`${i*344}px`;bay.innerHTML=machineInner;island.appendChild(bay)}return wrapper}
+function renderIsland(scene,item){place(scene,makeIsland(item),item);const chairCell=orientedPoint(item,SPEC.chairOffset),chairItem={id:`${item.id}-chair`,x:chairCell.x,y:chairCell.y,w:1,d:1,rise:8,orientation:item.orientation};place(scene,makeNode('chair'),chairItem)}
+function renderFixture(scene,item){switch(item.type){case'counter':place(scene,makeNode('counterdesk','<div class="ctop"></div><div class="cface">景品交換</div>'),item);break;case'staff':place(scene,makeNode('staff','<i class="hair"></i>'),item);break;case'plant':place(scene,makeNode('plant'),item);break;case'entrance':place(scene,makeNode('entrance','<span>入口</span>'),item);break;default:throw new Error(`Unknown fixture type: ${item.type}`)}}
+function applyCustomerSprite(actor,customer,type){const oldX=Number(actor.dataset.gridX??customer.x),oldY=Number(actor.dataset.gridY??customer.y);const dir=directionFromDelta(customer.x-oldX,customer.y-oldY,actor.dataset.dir||'SE');actor.dataset.dir=dir;const seated=customer.state==='seated';const frame=seated?0:(Number(actor.dataset.walkFrame||0)+1)%4;actor.dataset.walkFrame=String(frame);actor.src=pixelCharacterDataURL(type||actor.dataset.customerType||'regular',dir,frame,seated)}
+export function renderCustomerActor(scene,customer,type='regular'){const actor=document.createElement('img');actor.className='gridNode customerActor pixelCustomer';actor.alt='';actor.draggable=false;actor.dataset.customerType=type;actor.dataset.dir='SE';actor.dataset.walkFrame='0';actor.src=pixelCharacterDataURL(type,'SE',0,false);return place(scene,actor,{id:customer.id,x:customer.x,y:customer.y,w:1,d:1,rise:22,orientation:'E'})}
+export function updateCustomerActor(actor,customer){const type=actor.dataset.customerType||'regular';applyCustomerSprite(actor,customer,type);const point=toScreen(customer.x,customer.y,22);actor.style.left=`${point.x}px`;actor.style.top=`${point.y}px`;actor.style.zIndex=String(100+Math.round(customer.x+customer.y));actor.dataset.gridX=customer.x;actor.dataset.gridY=customer.y;actor.dataset.customerState=customer.state}
+export function renderLayout(scene,layout){scene.querySelectorAll('.gridNode').forEach(node=>node.remove());renderMapBase(scene,layout);layout.islands.forEach(item=>renderIsland(scene,item));layout.fixtures.forEach(item=>renderFixture(scene,item))}
