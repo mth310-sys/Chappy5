@@ -95,28 +95,70 @@ CB実純増は約100枚と約110枚で定義/手順差または丸め差の可�
 
 ## resetBehavior
 
+schemaVersion: v0.7
+resetQaStatus: PARTIAL
+resetQaLastUpdated: 2026-09-07
 resetBehaviorQA: PARTIAL
 
-- settingChangeBehavior: 設定変更時にRT状態・チェリー起点3G RT・ボーナス後250G RTがどのように初期化されるか、本機固有の高信頼公開資料を確認できず UNVERIFIED
-- carryOverBehavior: 据え置き時のRT状態引継ぎについて、本機固有の高信頼資料で確定できず UNVERIFIED
-- powerCycleBehavior: 電源OFF→ONのみの場合のRT状態処理を高信頼資料で確定できず UNVERIFIED
-- gameCounterReset: 通常時のゲーム数到達型ボーナス天井は確認できず。天井用ゲーム数カウンタとして比較可能な公開情報なし
-- ceilingAfterReset: ゲーム数天井短縮の公開情報なし / 非該当とみられるが、設定変更専用の内部救済が存在しないことまで一次資料で断定できないため「公開確認なし」とする
-- modeAfterReset: 通常時モード管理型の公開情報を確認できず。設定変更専用モードも確認できず
-- stateAfterReset: RT状態の設定変更時処理はUNVERIFIED
-- advantageousSectionReset: 非該当（有利区間制度導入前）
-- resetBenefits: 設定変更・朝一固有の主要恩恵を確認できず
-- resetPenalties: 設定変更固有の主要不利要素を確認できず
-- resetDetection: 本機固有のガックン、出目、液晶表示等による設定変更判別を高信頼で確認できず
-- numericResetData: 公開された設定変更時専用の比較可能数値は確認できず
+### settingChangeBehavior
+
+- 設定変更時にRT状態・チェリー起点3G RT・ボーナス後250G RTがどのように初期化されるか、本機固有の高信頼公開資料を確認できず **UNVERIFIED_AFTER_RESEARCH**。
+
+### carryOverBehavior
+
+- 据え置き時のRT状態引継ぎについて、本機固有の高信頼資料で確定できず **UNVERIFIED_AFTER_RESEARCH**。
+
+### powerCycleBehavior
+
+- 電源OFF→ONのみの場合のRT状態処理を高信頼資料で確定できず **UNVERIFIED_AFTER_RESEARCH**。
+
+### gameCounterReset
+
+- 通常時のゲーム数到達型ボーナス天井は確認できず。天井用ゲーム数カウンタとして比較可能な公開情報なし。
+
+### ceilingAfterReset
+
+- ゲーム数天井短縮の公開情報なし / 非該当とみられるが、設定変更専用の内部救済が存在しないことまで一次資料で断定できないため **NONE_CONFIRMED_AFTER_RESEARCH** とする。
+
+### modeAfterReset
+
+- 通常時モード管理型の公開情報を確認できず。設定変更専用モードも **NONE_CONFIRMED_AFTER_RESEARCH**。
+
+### stateAfterReset
+
+- RT状態の設定変更/据え置き/純電断時処理は **UNVERIFIED_AFTER_RESEARCH**。
+
+### advantageousSectionReset
+
+- **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
+
+### resetBenefits
+
+- 設定変更・朝一固有の主要恩恵は **NONE_CONFIRMED_AFTER_RESEARCH**。
+
+### resetPenalties
+
+- 設定変更固有の主要不利要素は **NONE_CONFIRMED_AFTER_RESEARCH**。
+
+### resetDetection
+
+- 本機固有のガックン、出目、液晶表示等による設定変更判別を高信頼で確認できず **NONE_CONFIRMED_AFTER_RESEARCH**。
+
+### numericResetData
+
+- 公開された設定変更時専用の比較可能数値は **NONE_CONFIRMED_AFTER_RESEARCH**。
+
+### publicMorningNumbers
+
+- **NONE_CONFIRMED_AFTER_RESEARCH**。
 
 ### resetBehavior 再探索メモ
 
-「パチスロ暴れん坊将軍 / 暴れん坊将軍 / パチスロアバレンボウショウグンB / 藤商事」に「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / RT引継ぎ / 暴れん坊チャンス / スーパー暴れん坊チャンス / ガックン」を組み合わせて検索。メーカー公式、P-WORLD、当時グリーンべると、パチマガスロマガ旧攻略、5号機クロニクル、当時実戦記まで横断した。RT通常仕様は確認できたが、設定変更・据え置き・電断での内部RT状態処理を直接説明する高信頼資料は回収できなかったため推測しない。
+2026-09-07 QA再探索。「パチスロ暴れん坊将軍 / 暴れん坊将軍 / パチスロアバレンボウショウグンB / 藤商事」に「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / RT引継ぎ / 暴れん坊チャンス / スーパー暴れん坊チャンス / ガックン / 初期出目」を組み合わせ、メーカー公式、P-WORLD、当時グリーンべると、パチマガスロマガ旧攻略、5号機クロニクル、当時実戦記・回顧資料を再横断。RT通常仕様は再確認できたが、設定変更・据え置き・電断での内部RT状態処理を直接説明する高信頼資料は追加回収できなかったため推測しない。既存 `coreStatus: COMPLETE_CORE` は維持し、resetBehavior QAだけPARTIALで別管理する。
 
 ## sources
 
-取得日: 2026-08-31
+取得日: 2026-09-07（resetBehavior QA再探索。性能コア出典は継続確認）
 
 1. 藤商事公式 — パチスロ 暴れん坊将軍
    - https://www.fujimarukun.co.jp/products/abare_slot/
@@ -157,6 +199,7 @@ resetBehaviorQA: PARTIAL
 - RT純増枚数/G
 - 設定変更/据え置き/電源OFF→ON時のRT状態処理
 - 本機固有のresetDetection（ガックン等）
+- publicMorningNumbers
 
 coreStatus: COMPLETE_CORE
 resetBehaviorQA: PARTIAL
