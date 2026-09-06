@@ -4,102 +4,92 @@
 
 ## 現在地点
 
-- recordCount: **796**
-- latestMachineAddedByChronology: **クイーンオアシス**（パイオニア / PIONEER）
-- latestRecord: `docs/real_machine_db/machines/2014-02-17_queen-oasis.md`
+- recordCount: **797**
+- latestMachineAddedByChronology: **ジャックポット**（ヤーマ / yama）
+- latestRecord: `docs/real_machine_db/machines/2014-02-17_jackpot-yama.md`
 - chronologicalFrontier: **2014-02-17**
 - schema: **resetBehavior v0.7**
 - status: **2014-02-17_GROUP_OPEN**
 
 ## 今回の同期 / 重要事項
 
-- 最新mainの `README.md`、ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前レコード `2014-02-10_evangelion-ketsui-no-toki.md` を再読。
+- 最新mainの `README.md`、ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前レコード `2014-02-17_queen-oasis.md` を再読。
 - INDEXは旧集約状態（19件）のためREADME規定どおり **LATEST_HANDOFF + 実レコード**を正本扱い。
-- 作業開始時正本は **recordCount 795 / chronologicalFrontier 2014-02-10 / 02-10群CLOSED**。前のチャット想定よりmainが先行していたため、過去候補へ戻らず最新handoffから継続した。
-- HAZUSE新台カレンダーでは2014年2月の導入アンカーが02-10の次に02-17となる。2014-02-11～02-16を検索語・資料系統を変えて境界監査したが、今回この区間で具体日付き未登録パチスロを固定できず `CLOSED_FOR_CURRENT_RESEARCH`。
-- 前handoff候補 **2014-02-17「クイーンオアシス」**を796件目として追加。
-- 02-17同日候補として前handoffの **「ジャックポット」（ヤーマ）**に加え、Pachisevenで **「吉宗～極～」（大都技研）導入日2014-02-17** を検出。後者は当時資料に大都直営店向け先行/別スペックを示す文脈もあるため、全国導入扱いか直営限定段階かを次回必ず精査し、対象時系列を誤らない。
-- 02-17群はまだOPEN。HAZUSEカレンダーでは次の日付アンカーに02-18もあるため、同日群を閉じた後は02-18群へ進む。
+- 作業開始時正本は **recordCount 796 / chronologicalFrontier 2014-02-17 / 02-17群OPEN**。
+- 前handoffの最優先候補 **ヤーマ「ジャックポット」**を797件目として追加。
+- 2014年ヤーマ版を、2025年スマスロ「LBジャックポット」および岡崎産業の同名/近似ジャックポットシリーズと分離して調査した。
+- 次の02-17候補 **「吉宗～極～」**（大都技研）はPachisevenに2014-02-17導入日がある一方、当時資料に大都直営店向け先行/別スペック文脈があるため、次回は全国ホール導入としての独立時系列採用可否を公式・業界・当時解析で精査する。
+- 02-17群はまだOPEN。吉宗～極～の扱い決定後、全メーカー再監査してからCLOSED判定する。
 
-## 今回追加 — クイーンオアシス
+## 今回追加 — ジャックポット（2014年・ヤーマ）
 
 ### identity / 性能コア
 
-- manufacturer: **パイオニア / PIONEER**。
-- hall start: **2014-02-17**（パイオニア公式更新履歴で「導入開始」）。公式製品一覧は2014年2月発売、当時グリーンべるとは2月中旬納品予定。
-- generation/system: **5号機 / ノーマルAタイプ / 完全告知 / 25φ**。
-- パイオニア公式は **クイーンハナハナ-30の確率・配列・演出・告知タイミングを完全踏襲**と明記。
-- payout: **96 / 98 / 101 / 104 / 107 / 111%**。
-- BIG: **1/309 / 297 / 284 / 270 / 256 / 240**。
-- REG: **1/516 / 481 / 445 / 409 / 376 / 344**。
-- 合算: **1/193 / 184 / 173 / 163 / 152 / 141**。
-- basicPayout: **BIG最大312枚 / REG最大130枚**を業界・P-WORLD主値として採用。
-- パチマガスロマガ本機ページにはREG「約135枚（130枚払い出し）」という逆転表記があり、平均せず **CONFLICT_SOURCE_NOTATION** として保持。
-- baseGamesPer50: **UNVERIFIED_AFTER_RESEARCH**。完全踏襲元クイーンハナハナ-30には当時業界値 **平均37.5G/50枚** があるが、本機専用直接値として確認できないため自動転記しない。
-- 型式名 / 検定番号: **UNVERIFIED_AFTER_RESEARCH**。
+- manufacturer: **ヤーマ / yama**（販売協力ベルコ）。
+- hall start: **2014-02-17**（HAZUSE / Pachiseven）。当時グリーンべるとは **2014-02-16納品予定** と報道しており、納品予定日と導入開始日を分離。
+- 型式: **ジャックポットY6**。
+- 検定番号: **3S0992**。
+- generation/system: **5号機 / ノーマルAタイプ / 完全告知**。
+- payout: **96.5 / 98.0 / 100.0 / 102.0 / 104.5 / 107.0%**。
+- BIG: **1/287.0 / 277.0 / 273.0 / 268.0 / 260.0 / 252.0**。
+- REG: **1/356.0 / 348.0 / 334.0 / 315.0 / 303.0 / 292.0**。
+- 合算: **1/158.9 / 154.2 / 150.2 / 144.8 / 139.9 / 135.3**。ベルコ公式とHAZUSEで一致。
+- basicPayout: **BIG平均312枚 / REG平均104枚**。業界・HAZUSE・P-WORLDで一致。
+- baseGamesPer50: **UNVERIFIED_AFTER_RESEARCH**。本機名/型式/メーカー/シリーズ名と50枚・1000円・ベース・コイン持ち・回転数を組み替え、公式/当時記事/解析/回顧資料を再探索したが直接値を固定できず。2025年LB版の約40G/50枚は別機種として排除。
 - recordStatus: **PARTIAL_CORE_WITH_RESET_BEHAVIOR_RESEARCHED**。
 
 ### resetBehavior v0.7
 
-- ノーマルAタイプのためゲーム数天井、AT/ART/CZ通常モード、高確状態、リセット専用短縮天井は **NOT_APPLICABLE_NORMAL_TYPE**。
+- ノーマルAタイプのためゲーム数天井、AT/ART/CZ通常モード、内部高確、リセット専用短縮天井は **NOT_APPLICABLE_NORMAL_TYPE**。
 - advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN**。
 - 設定変更専用の朝一当選/CZ/モード恩恵・不利は **NONE / NOT_APPLICABLE_NORMAL_TYPE**。
-- 設定変更時の本機固有リール初動、ガックン、初期出目、BGM等の変更判別は、機種名/25φ/姉妹機名/設定変更/リセット/朝一/据え置き等で再探索したが **UNVERIFIED_AFTER_RESEARCH**。
+- 本機固有の設定変更時リール初動、初期出目、ガックン、7セグ表示等の変更判別は、機種名/型式名/ヤーマ/ベルコ/ジャックポットシリーズと設定変更・リセット・朝一・据え置き・ガックンを組み替えて再探索したが **UNVERIFIED_AFTER_RESEARCH**。
 - 単純電源OFF→ONで朝一価値を持つ天井・モード・状態は非搭載。その他の本機固有電断特殊挙動も **NONE_CONFIRMED_AFTER_RESEARCH**。
-- 姉妹機「クイーンハナハナ-30」には後年解析でガックン・87G以内BGM変更の観測情報があるが、25φ版へ1:1推測転記しない。
+- ボーナス終了後33G以内に成立したBIGでBGMが変化する仕様は公開されているが、設定変更/電断をまたいだ条件を示す直接資料がないためリセット判別要素へ拡張しない。
 
 ## conflicts / safeguards
 
-- 「クイーンハナハナ-30完全踏襲」は公式が明示した範囲（確率・配列・演出・告知タイミング）を優先し、記載のない **ベース / resetBehaviorを推測コピーしない**。
-- REG獲得はグリーンべると/P-WORLD最大130枚 vs パチマガスロマガ「約135枚（130枚）」の表記差を平均しない。
-- 2014-02-17はパイオニア公式の導入開始日。2月中旬納品予定とは定義を分離。
-
-## 2014-02-11～02-16境界 — CLOSED_FOR_CURRENT_RESEARCH
-
-- HAZUSE新台カレンダーでは02-10の次が02-17。
-- 表記揺れを含む導入日検索でも、この区間の具体日付き未登録パチスロを今回固定できずCLOSED。
+- **2014年ヤーマ版と2025年LBジャックポットを混同しない**。LB版のスマスロ/BT、4段階設定、約40G/50枚は本機へ転記しない。
+- 岡崎産業の「スロット ジャックポット」「ジャックポットドリーム」等も別機種。
+- 2014-02-16は当時業界記事の納品予定、2014-02-17はHAZUSE/Pachisevenの導入開始として定義を分離。
+- HAZUSEのBIG/REG分母は整数掲載値。精密値を推定生成しない。
 
 ## 2014-02-17同日群 — OPEN
 
 処理済み:
-- **クイーンオアシス**（パイオニア） — 796件目。
+1. **クイーンオアシス**（パイオニア） — 796件目。
+2. **ジャックポット**（ヤーマ） — 797件目。
 
 未処理/要確認:
-1. **ジャックポット**（ヤーマ） — HAZUSEで2014-02-17、型式 `ジャックポットY6` / 検定3S0992。次の本線候補。
-2. **吉宗～極～**（大都技研） — Pachisevenに2014-02-17導入日。ただし当時記事には大都直営店向け別スペック文脈があるため、全国ホール導入開始の定義・独立収集対象としての扱いを複数資料で精査する。
-3. 02-17をメーカー横断で再監査し、上記以外のパチスロ候補がないか確認してから群を閉じる。
+1. **吉宗～極～**（大都技研） — Pachisevenに2014-02-17導入日。ただし当時記事には大都直営店向け先行/別スペック文脈があるため、全国ホール導入開始の定義・独立収集対象としての扱いを複数資料で精査する。
+2. 02-17をメーカー横断で再監査し、上記以外のパチスロ候補がないか確認してから群を閉じる。
 
 ## 遡及resetBehavior QA 進捗
 
 - QAカーソルは `2007-01_karate-baka-ichidai.md` の次の実ファイル順を維持。
-- 今回は本線796件目を優先。既存性能coreStatusは変更なし。reset QAは性能完了判定とは別管理を維持。
+- 今回は本線797件目を優先。既存性能coreStatusは変更なし。reset QAは性能完了判定とは別管理を維持。
 
 ## 次回再開地点
 
-1. **recordCount 796 / chronologicalFrontier 2014-02-17 / 02-17群OPEN** から開始。
-2. 最優先で **ヤーマ「ジャックポット」**を797件目候補として、性能コア + v0.7 resetBehaviorを収集。
-3. 続いて **大都技研「吉宗～極～」**の2014-02-17導入定義を公式/業界/当時解析で確認。直営限定先行ならその事実を明記して時系列扱いを決める。独立全国機として適切なら次レコード候補。
-4. 02-17同日全メーカー監査を完了してからCLOSED判定。
-5. HAZUSEカレンダー上の次アンカー **2014-02-18** を監査する。
-6. **「サムライスピリッツ～剣豪八番勝負～」は2014-04-07候補**として保持し、2月には入れない。
-7. 遡及QAは `2007-01_karate-baka-ichidai.md` 直後の実ファイル順で継続。
-8. PARTIAL / UNVERIFIEDは公式・業界・当時解析・古いDB・アーカイブ・回顧資料まで系統を変えて再探索し、競合は平均せずCONFLICT保持。
+1. **recordCount 797 / chronologicalFrontier 2014-02-17 / 02-17群OPEN** から開始。
+2. 最優先で **大都技研「吉宗～極～」**の2014-02-17導入定義を公式/業界/当時解析で精査。直営限定先行・少数先行・全国導入のどれかを確定し、独立レコード対象として妥当なら798件目候補として性能コア + v0.7 resetBehaviorを収集。
+3. 02-17同日全メーカー監査を完了してからCLOSED判定。
+4. HAZUSEカレンダー上の次アンカー **2014-02-18** を監査する。
+5. **「サムライスピリッツ～剣豪八番勝負～」は2014-04-07候補**として保持し、2月には入れない。
+6. 遡及QAは `2007-01_karate-baka-ichidai.md` 直後の実ファイル順で継続。
+7. PARTIAL / UNVERIFIEDは公式・業界・当時解析・古いDB・アーカイブ・回顧資料まで系統を変えて再探索し、競合は平均せずCONFLICT保持。
 
 ## 主要出典 — 取得日 2026-09-06
 
-### クイーンオアシス
-- パイオニア公式 更新履歴: `https://www.slot-pioneer.co.jp/news.html`
-- パイオニア公式 2014年製品一覧: `https://www.slot-pioneer.co.jp/products/2014.html`
-- パイオニア公式 発売のお知らせ: `https://www.slot-pioneer.co.jp/information/qoasis.html`
-- グリーンべると / P-WORLD業界ニュース: `https://news.p-world.co.jp/articles/6267/greenbelt`
-- パチマガスロマガ 機種概要: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/pioneer_slot/108/a.php`
-- パチマガスロマガ ボーナス確率: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/pioneer_slot/108/h.php`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/7291`
-- 5号機クロニクル パイオニア: `https://5goki.com/pioneer`
-- 完全踏襲元ベース参照のみ / グリーンべると クイーンハナハナ-30: `https://web-greenbelt.jp/00001034/`
-
-### 境界 / 次候補
-- HAZUSE新台カレンダー: `https://hazuse.com/new-machine-calendar/newmachine-calendar/`
+### ジャックポット（2014年・ヤーマ）
+- ベルコ公式 / ヤーマ ジャックポット: `https://www.s-bellco.co.jp/products/slot/yama_jackpot/`
+- グリーンべると / P-WORLD業界ニュース「名機『ジャックポット』が復活」: `https://news.p-world.co.jp/articles/6202/greenbelt`
 - HAZUSE ジャックポット: `https://hazuse.com/machine/pachislot/3S0992/`
-- ベルコ公式（ヤーマ）ジャックポット: `https://www.s-bellco.co.jp/products/slot/yama_jackpot/`
+- P-WORLD ジャックポット「2014年」: `https://www.p-world.co.jp/machine/database/7270`
+- Pachiseven ジャックポット: `https://pachiseven.jp/machines/3256/cutout/70`
+- 当時ホールスタッフ記事: `https://pachinko-slot.blog.jp/archives/3500518.html`
+- 回顧資料: `https://www.marimo0925.net/pachislot-kikaiwari-ranking-jackpot-ban/`
+
+### 次候補 / 境界
 - Pachiseven 吉宗～極～: `https://pachiseven.jp/machines/4129/cutout/4`
+- HAZUSE新台カレンダー: `https://hazuse.com/new-machine-calendar/newmachine-calendar/`
