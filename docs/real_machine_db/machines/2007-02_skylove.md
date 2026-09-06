@@ -88,11 +88,13 @@ P-WORLDの型式ページはBIG 345枚超、異色7ボーナス145枚超の終�
 
 ## resetBehavior
 
+schemaVersion: v0.7
 resetBehaviorQA: PARTIAL
+resetQaLastUpdated: 2026-09-06
 
-- settingChangeBehavior: 本機固有の設定変更時にCZ/RT状態がどう扱われるかを高信頼資料で確定できず UNVERIFIED
-- carryOverBehavior: 据え置き時のCZ/RT内部状態引継ぎについて高信頼資料で確定できず UNVERIFIED
-- powerCycleBehavior: 電源OFF→ONのみのCZ/RT状態挙動を高信頼資料で確定できず UNVERIFIED
+- settingChangeBehavior: 本機固有の設定変更時にCZ/RT状態がどう扱われるかを高信頼資料で確定できず UNVERIFIED_AFTER_RESEARCH
+- carryOverBehavior: 据え置き時のCZ/RT内部状態引継ぎについて高信頼資料で確定できず UNVERIFIED_AFTER_RESEARCH
+- powerCycleBehavior: 電源OFF→ONのみのCZ/RT状態挙動を高信頼資料で確定できず UNVERIFIED_AFTER_RESEARCH
 - gameCounterReset: 天井非搭載のため天井ゲーム数管理は非該当
 - ceilingAfterReset: 非該当（天井非搭載）
 - modeAfterReset: 朝一専用モード/設定変更専用モードの公開情報を確認できず
@@ -101,15 +103,16 @@ resetBehaviorQA: PARTIAL
 - resetBenefits: 公開された主要な朝一/設定変更恩恵を確認できず
 - resetPenalties: 公開された主要な設定変更不利要素を確認できず
 - resetDetection: 本機固有のガックン等変更判別を、当時解析・後年回顧・機種DBを横断したが確定できず
-- numericResetData: 確認できる公開数値なし
+- publicMorningNumbers: 確認できる公開数値なし
 
 ### resetBehavior 再探索メモ
 
-「スカイラブ / スカイラブX / SNKプレイモア / 2007」に「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / RT引継ぎ / CZ / ガックン / 天井」を組み合わせ、P-WORLD、パチマガスロマガ旧攻略、パチマガインターネット、パチ7の当時解析担当者回顧、古い機種情報サイトを横断した。天井非搭載、通常時のCZ/RTシステムまでは高信頼で確認できたが、ホール電源断・設定変更時の内部CZ/RT状態処理は確定できなかったため推測しない。
+「スカイラブ / スカイラブX / SNKプレイモア / 2007」に「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / RT引継ぎ / CZ / ガックン / 天井」を組み合わせ、P-WORLD、パチマガスロマガ旧攻略、パチマガインターネット、パチ7の当時解析担当者回顧、古い機種情報サイトを再横断した。2026-09-06の遡及QAでも、天井非搭載、通常時のCZ/RTシステムまでは高信頼で確認できた一方、ホール電源断・設定変更時の内部CZ/RT状態処理を直接示す追加資料は固定できなかった。一般的な5号機挙動から補完せずPARTIALを維持する。
 
 ## sources
 
-取得日: 2026-08-31
+初回取得日: 2026-08-31
+resetBehavior再取得日: 2026-09-06
 
 1. P-WORLD — スカイラブ「2007年」
    - https://www.p-world.co.jp/machine/database/4529
