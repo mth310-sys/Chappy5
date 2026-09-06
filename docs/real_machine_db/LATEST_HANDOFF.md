@@ -4,114 +4,97 @@
 
 ## 現在地点
 
-- recordCount: **810**
-- latestRecordAdded: **パチスロ モンキーターンII**（山佐）— 2014-04-07
-- latestRecord: `docs/real_machine_db/machines/2014-04-07_monkey-turn-ii.md`
-- chronologicalFrontier: **2014-04-07**
-- frontierLatestMachine: **パチスロ モンキーターンII**
+- recordCount: **811**
+- latestRecordAdded: **喧嘩祭**（KPE）— 2014-04-21
+- latestRecord: `docs/real_machine_db/machines/2014-04-21_kenka-matsuri.md`
+- chronologicalFrontier: **2014-04-21**
+- frontierLatestMachine: **喧嘩祭**
 - schema: **resetBehavior v0.7**
-- status: **2014-04-07_GROUP_CLOSED_FOR_CURRENT_RESEARCH / 2014-04-08_TO_04-20_BOUNDARY_CLOSED_FOR_CURRENT_RESEARCH / MONKEY_TURN_II_ADDED**
+- status: **2014-04-21_GROUP_OPEN / KENKA_MATSURI_ADDED / SKYLOVE_RESET_QA_RECHECKED**
 
 ## 今回の同期 / 重要事項
 
-- 最新mainの `README.md`、ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前実レコード `2014-04-07_samurai-spirits-kengo-hachiban-shobu.md` を再読。
-- INDEXは旧集約（19件表示）のため、README規定どおり **LATEST_HANDOFF + main実レコード** を現在の正本として継続。
-- 作業開始時正本は **recordCount 809 / chronologicalFrontier 2014-04-07 / 04-07_GROUP_OPEN**。チャット直前値よりGitHub mainが先行していたためmainを優先。
-- 04/07群の残る既知未処理 **パチスロ モンキーターンII（山佐）** がmain未登録（候補パス404）であることを確認し、810件目として追加。
-- K-Navi 2014年4月全国一斉導入カレンダーは04/07群を **マタドール-30 / ハッピージャグラーVII / サムライスピリッツ～剣豪八番勝負～ / パチスロ モンキーターンII** の4機として掲載。4機すべて登録済みとなったため **04-07_GROUP_CLOSED_FOR_CURRENT_RESEARCH**。
-- 同カレンダー上の次の全国一斉導入日は **2014-04-21**。04/08〜04/20について日付を変えた追加検索も実施し、今回新たな具体日付き未登録5号機を固定できなかったため **04-08_TO_04-20_BOUNDARY_CLOSED_FOR_CURRENT_RESEARCH**。
+- 最新mainの `README.md`、ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前実レコードを再読して正本化。
+- 作業開始時、会話直前申告よりmainが先行しており **809件 / 2014-04-07 サムライスピリッツ**。調査中にさらに **810件 / モンキーターンII** までmainが更新されたため、競合を避けて最新mainへ再同期した。
+- 810件時点で **04-07_GROUP_CLOSED_FOR_CURRENT_RESEARCH / 04-08〜04-20_BOUNDARY_CLOSED_FOR_CURRENT_RESEARCH** を維持。
+- K-Navi 2014年4月全国一斉導入カレンダーで04/21群は **喧嘩祭 / マジックモンスター3 ぶっちぎり!魔界グランプリ / 緑ドンVIVA2 / ニューペガサス** の4機。先頭の喧嘩祭を811件目として追加し、同日群はOPEN。
 
-## 今回追加 — パチスロ モンキーターンII
+## 今回追加 — 喧嘩祭
 
 ### identity / 性能コア
 
-- manufacturer: **山佐**。
-- hall start: **2014-04-07**（K-Navi / HAZUSE / パチビー）。山佐公式は2014年4月稼働。
-- formalModelName: **モンキーターン2TT**。
-- inspection number: **4S0051**。
-- generation/system: **5号機 / AT / ゲーム数解除 / CZ / シナリオ継続**。
-- payout: **97.3 / 98.4 / 100.5 / 104.0 / 107.8 / 112.5%**。
-- AT「SG RUSH」初当たり: **1/294.1 / 284.9 / 266.4 / 254.6 / 237.2 / 223.5**。
-- CZ「超抜チャレンジ」出現率: **1/373.6 / 373.5 / 333.1 / 311.8 / 277.3 / 268.9**。
-- baseGamesPer50: **約31G/50枚**。
-- netIncrease: **約2.3枚/G**。
-- basic AT: **初回50G+α / 2セット目以降40G+α**。
-- ceiling: 通常A **999G+前兆（表示最大1024G）** / 通常B **704G** / 天国 **128G** / 設定変更リセット **512G**。
-- recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7_CONFIRMED_RESET_MODE_AND_CARRYOVER**。
+- manufacturer: **KPE**。
+- hall start: **2014-04-21**（K-Navi / パチビー）。コナミ公式アーカイブは2014年4月稼働。
+- formalModelName: **喧嘩祭KR**。
+- generation/system: **5号機 / AT / 擬似ボーナス / ゲーム数解除 / CZ**。
+- payout: **97.0 / 98.4 / 100.3 / 105.0 / 111.1 / 119.1%**。
+- AT擬似ボーナス初当たり: **1/248.8 / 240.2 / 230.1 / 205.8 / 178.3 / 147.4**。
+- CZ「ガチチャンス」: **1/328.2 / 325.0 / 316.7 / 301.0 / 241.1 / 202.9**。
+- baseGamesPer50: **約27G/50枚**（後年DB単独値のため `ANALYSIS_SINGLE`）。
+- netIncrease: **約3.0枚/G**。
+- 「神輿ボーナス」30G完走型、「喧嘩祭ボーナス」20G+JACゲーム（8G×α）。
+- 通常A/B/C・天国A/Bの5モード。
+- 最大天井: **ボーナス間999G**。
+- coreStatus: **COMPLETE_CORE**。
 
 ### resetBehavior v0.7
 
-- settingChangeBehavior: **設定変更時は専用リセットモードへ移行**。
-- modeAfterReset: HAZUSE解析で **全設定共通 リセットモード100%**。
-- gameCounterReset: **RESET_ON_SETTING_CHANGE**。前日通常モード進捗を継続せず専用規定G管理へ。
-- ceilingAfterReset: **512G**。通常A最大999G+前兆から大幅短縮。
-- carryOverBehavior: **据え置き時は天井G・モードを引き継ぐ**とする本機固有朝一解析を確認。
-- powerCycleBehavior: **設定変更を伴わない電源OFF→ONでは天井・モード引継ぎ**とする機種別比較表を確認。
-- stateAfterReset: リセットモードとは別レイヤーの低確/高確等の具体的初期状態振り分けは **UNVERIFIED_AFTER_RESEARCH**。
+- settingChangeBehavior: 天井G・5モード・内部状態の本機固有直接契約を固定できず **UNVERIFIED_AFTER_RESEARCH**。
+- carryOverBehavior: **UNVERIFIED_AFTER_RESEARCH**。
+- powerCycleBehavior: **UNVERIFIED_AFTER_RESEARCH**。
+- gameCounterReset: 通常天井999Gは確定しているが、設定変更時の処理は **UNVERIFIED_AFTER_RESEARCH**。
+- ceilingAfterReset: 設定変更専用短縮天井は **NONE_CONFIRMED_AFTER_RESEARCH**。通常999Gから推定しない。
+- modeAfterReset/stateAfterReset: **UNVERIFIED_AFTER_RESEARCH**。
 - advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
-- resetBenefits: **天井512G短縮**。
-- resetPenalties: 通常A最深部999G以降の「次回天国」恩恵をリセット512G最深部には付与しないとする実戦解析あり。メーカー公表ではないため `ANALYSIS_SINGLE_PERIOD_PRACTICAL`。
-- resetDetection: **朝一1G目ガックン / 126〜128Gでフェイク前兆終了 / 128G以内に優出モード2回**が設定変更推測シグナルとして当時資料に掲載。いずれも確定契約ではなく `PROBABILISTIC / OBSERVATIONAL_SIGNAL`。
-- 据え置き側では、前日128Gヤメ等の条件下で朝一70G付近からのガセ前兆が据え置き推測材料とする当時資料あり。
-- publicMorningNumbers: リセット天井 **512G**。実戦値A **1〜128G 37.5% / 129〜256G 0% / 257〜384G 25.0% / 385〜512G 37.5%**。パチマガスロマガ実戦値B **42.11 / 10.53 / 21.05 / 26.32%、平均232.92G**。同ページ本文には128G以内37.5%表記もあり、**CONFLICT_PRACTICAL_RESET_ZONE_SAMPLES**として平均せず保持。
+- resetBenefits/resetPenalties: 本機固有の主要公開情報 **NONE_CONFIRMED_AFTER_RESEARCH**。
+- resetDetection: ガックン・液晶ステージ・前兆等を当時攻略/古いDB/回顧資料まで再探索したが **UNVERIFIED_AFTER_RESEARCH**。
+- publicMorningNumbers: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- resetBehaviorQA: **PARTIAL**。一般的5号機挙動による補完はしない。
 
 ## safeguards / definitions
 
-- 通常天井「999G+前兆」と最大表示「1024G」は同一仕様の表現差。固定1024G解除と混同しない。
-- 512Gは設定変更時専用リセットモード天井であり、通常B704G・天国128Gとは別契約。
-- 朝一ゾーンの37.5%系列と42.11%系列は母集団/時点の異なる実戦サンプルで、解析上の真の振り分け率として平均しない。
-- ガックン/前兆挙動は設定変更推測材料であり、単独100%確定としない。
-- スマスロ「モンキーターンV」やモンキーターンIII/IVのリセット情報を本機へ混入しない。
+- 999Gは通常時最大天井であり、設定変更後専用天井を意味しない。
+- 現行KONAMI機や別KPE機のリセット表を喧嘩祭へ混入しない。
+- 性能コアはCOMPLETE_COREを維持し、resetBehaviorの未確定は別QA状態PARTIALで管理。
 
-## 2014-04-07群
+## 2014-04-21群
 
-- 処理済み: **マタドール-30 / ハッピージャグラーVII / サムライスピリッツ～剣豪八番勝負～ / パチスロ モンキーターンII**。
-- 未処理: **なし（current research）**。
-- status: **GROUP_CLOSED_FOR_CURRENT_RESEARCH**。
-
-## 2014-04-08〜04-20境界
-
-- K-Navi全国一斉導入カレンダーでは04/07の次のパチスロ掲載日は **04/21**。
-- 04/08、04/14、04/15、04/20等を含め導入/新台/パチスロで追加探索したが、今回この境界に具体日付き未登録5号機を固定できず。
-- status: **BOUNDARY_CLOSED_FOR_CURRENT_RESEARCH**。
-
-## 次の2014-04-21群（K-Navi確認済み）
-
-1. **喧嘩祭**（KPE）
-2. **マジックモンスター3 ぶっちぎり!魔界グランプリ**（オリンピア）
-3. **緑ドンVIVA2**（エレコ）
-4. **ニューペガサス**（エマ）
+- 処理済み: **喧嘩祭**。
+- 未処理: **マジックモンスター3 ぶっちぎり!魔界グランプリ / 緑ドンVIVA2 / ニューペガサス**。
+- status: **GROUP_OPEN**。
 
 ## 遡及 resetBehavior QA
 
-- 次の遡及QAカーソルは従来どおり **`docs/real_machine_db/machines/2007-02_skylove.md`**。
-- 新規時系列キューを止めず、QAリレー時に継続する。
+- **`docs/real_machine_db/machines/2007-02_skylove.md`** を再QA。
+- 既存 `coreStatus: COMPLETE_CORE` は変更なし。
+- v0.7の `schemaVersion`、`resetQaLastUpdated: 2026-09-06`、`publicMorningNumbers` を明示し、設定変更/据え置き/電源OFF→ON時のCZ・RT状態について資料系統と検索語を変更して再探索。
+- P-WORLD、旧パチマガ/スロマガ、パチ7回顧、古い機種DBまで再確認したが、直接契約を追加固定できなかったため **resetBehaviorQA: PARTIAL** を維持。
+- Git履歴でスカイラブ追加直後の次実レコードを追跡し、次のQAカーソルを **`docs/real_machine_db/machines/2007-02_ps-adlib-ouji.md`** と確定。
 
 ## 次回再開地点
 
-1. **recordCount 810 / chronologicalFrontier 2014-04-07 / 04-07_GROUP_CLOSED / 04-08〜04-20_BOUNDARY_CLOSED** から開始。
-2. 次の未処理機種は **喧嘩祭（KPE）— 2014-04-21**。
-3. その後、同日群を **マジックモンスター3 ぶっちぎり!魔界グランプリ → 緑ドンVIVA2 → ニューペガサス** の順で処理。
-4. 04/21群完了後にメーカー横断再監査し、漏れがなければGROUP_CLOSEDとして次の具体日へ進む。
-5. 遡及resetBehavior QAは `docs/real_machine_db/machines/2007-02_skylove.md` から継続。
-6. 2015-06-08到達時に **吉宗～極～（ヨシムネH2A4 / 3S1093）** を正式量産版として処理し、2014-02-17限定試験導入履歴とスペック差をidentity/conflictへ記録する。
+1. **recordCount 811 / chronologicalFrontier 2014-04-21 / 04-21_GROUP_OPEN** から開始。
+2. 次の未処理機種は **マジックモンスター3 ぶっちぎり!魔界グランプリ（オリンピア）— 2014-04-21**。
+3. その後 **緑ドンVIVA2 → ニューペガサス**。
+4. 4機完了後に04/21群をメーカー横断再監査し、漏れがなければGROUP_CLOSED。
+5. 遡及resetBehavior QAは **`docs/real_machine_db/machines/2007-02_ps-adlib-ouji.md`** から継続。
+6. 2015-06-08到達時の **吉宗～極～（ヨシムネH2A4 / 3S1093）** の正式量産版処理注意は維持。
 
 ## 主要出典 — 取得日 2026-09-06
 
-### パチスロ モンキーターンII
-- 山佐ネクスト公式: `https://yamasa-next.co.jp/model_mkt2/`
-- K-Navi機種: `https://p-kn.com/slot/2017/`
-- K-Navi AT初当たり: `https://p-kn.com/slot/2017/48875/`
-- HAZUSE: `https://hazuse.com/machine/pachislot/4S0051/`
-- パチマガスロマガ機種: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/196/a.php`
-- パチマガスロマガ朝一実戦値: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/196/10-1.php`
-- パチ&スロ必勝本: `https://p.hisshobon.jp/machine/2363/1/45281`
-- 期待値見える化: `https://slotjin.com/slot/monkeyturn2-morning/`
-- すろぱちくえすと: `https://www.slopachi-quest.com/article/monkita-reset/`
-- パチスロ最新解析@WIKI: `https://w.atwiki.jp/seruam/pages/19.html`
+### 喧嘩祭
+- コナミアミューズメント公式アーカイブ: `https://www.konami.com/amusement/psm/archive/ps/2014/kenka/`
+- 娯楽産業 当時記事: `https://www.goraku-sangyo.com/kpe%EF%BC%8Fkpe%E3%83%BB%E9%AB%98%E7%A0%82%E8%B2%A9%E5%A3%B2%E3%80%80%E6%96%B0%E6%A9%9F%E7%A8%AE%E3%80%8C%E5%96%A7%E5%98%A9%E7%A5%AD%E3%80%8D%E3%83%97%E3%83%AC%E3%82%B9%E8%AA%AC%E6%98%8E%E4%BC%9A/`
+- パチビー: `https://www.pachibee.jp/machines/about/214030001`
+- pacnk: `https://pacnk.com/slot/2014/kenkamatsuri/top.php`
+- すろぱちくえすと（2014-04-22）: `https://www.slopachi-quest.com/article/kanka-matsuri/`
+- すろぱちくえすと モード解析（2014-04-27）: `https://www.slopachi-quest.com/article/kenka-zone/`
+- みんスロ: `https://minslo.com/%E5%96%A7%E5%98%A9%E7%A5%AD/`
+- 中一商事: `https://www.nakaiti.com/html/sKpe080.html`
 
-### 04-07群 / 次回境界
+### 04-21群
 - K-Navi 2014年4月新台導入カレンダー: `https://p-kn.com/calendar/201404/`
 
 ### 遡及QA
-- 次対象: `docs/real_machine_db/machines/2007-02_skylove.md`
+- 再QA済み: `docs/real_machine_db/machines/2007-02_skylove.md`
+- 次対象: `docs/real_machine_db/machines/2007-02_ps-adlib-ouji.md`
