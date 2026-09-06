@@ -4,113 +4,117 @@
 
 ## 現在地点
 
-- recordCount: **838**
-- latestRecordAdded: **沖ドキ！**（アクロス）— 2014-08-18
-- latestRecord: `docs/real_machine_db/machines/2014-08-18_okidoki.md`
+- recordCount: **839**
+- latestRecordAdded: **沖ドキ！-30**（アクロス）— 2014-08-18
+- latestRecord: `docs/real_machine_db/machines/2014-08-18_okidoki-30.md`
 - chronologicalFrontier: **2014-08-18**
-- frontierLatestMachine: **沖ドキ！**
+- frontierLatestMachine: **沖ドキ！-30**
 - schema: **resetBehavior v0.7**
-- status: **2014-08-18_GROUP_OPEN**
+- status: **2014-08-18_GROUP_CLOSED_FOR_CURRENT_RESEARCH**
 
 ## 今回の同期 / 正本確認
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`docs/real_machine_db/LATEST_HANDOFF.md`、837件目 `2014-08-04_pachislot-hellsing.md` を再読。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`、`docs/real_machine_db/INDEX.md`、`docs/real_machine_db/LATEST_HANDOFF.md`、838件目 `2014-08-18_okidoki.md` を再読。
 - INDEXは19件表記の旧集約状態のため、README規定どおり **LATEST_HANDOFF + 実レコード** を進捗正本として使用。
-- 作業開始時の正本は **837件 / 2014-08-04 / 08-04_GROUP_CLOSED_FOR_CURRENT_RESEARCH**。
-- 前回handoff指定どおり **2014-08-05〜08-17境界監査**を行い、その後2014-08-18「沖ドキ！」をNo.838として処理した。
+- 作業開始時の正本は **838件 / 2014-08-18 / 08-18_GROUP_OPEN**。
+- 前回handoff指定の「沖ドキ！-30」独立性確認を完了し、No.839として登録。
+- 遡及QAは `2007-02_pachislot-tekken-den-tough.md` をv0.7再QA。
 
-## 2014-08-05〜08-17境界監査
+## 今回追加 — 沖ドキ！-30
 
-- `2014年8月5日〜17日` の日付表記揺れと `パチスロ / 導入 / 導入開始 / ホール導入 / 納品` を組み替え、業界記事・機種DB・導入日資料を横断。
-- 8/8ニューギン「花慶の日」等はイベント記事で新機種導入日ではない。
-- 8/11「回胴祭2014」はファンイベント日で導入アンカーではない。
-- 後年の撤去カレンダーに「押忍！サラリーマン番長」「アレジン」の2014-08-11表記があるが、これは当該ページ上 **検定通過日** の列でありホール導入開始日ではないため境界機として混入させない。
-- 今回の検索で、08-05〜08-17にホール導入開始日を具体日で固定できる未登録5号機は確認できなかったため **2014-08-05_TO_08-17_BOUNDARY_CLOSED_FOR_CURRENT_RESEARCH**。
+### 独立レコード判定
 
-## 今回追加 — 沖ドキ！
+- P-WORLDは **「沖ドキ!‐30」** を25Φ版とは別DBページとして掲載。
+- 1GAME/一撃系も **沖ドキ！-30専用解析ページ**を持つ。
+- 中古実機/業界報道で型式表記 **沖ドキ！LL-30** を確認。25Φ版の `沖ドキ！LL` と型式名が異なる。
+- 本DBにはCT5/CT30等の径違い独立レコード前例があるため、資料上の独立性を十分固定できたと判断。
+- 30Φ版検定番号は今回高信頼固定できず `UNVERIFIED_AFTER_RESEARCH`。
 
-### identity / 性能コア
+### 性能コア
 
 - manufacturer: **アクロス**。
-- hall start: **2014-08-18**。HAZUSEと2014-08-01グリーンべると業界記事で一致。業界記事は8/18から全国展開、約4000台規模の全国ロケテストと説明。
-- 型式: **沖ドキ！LL** / 検定 **4S0298**。
-- type: **5号機 / モード管理型AT / 疑似ボーナス / 完全告知**。
+- hall start: **2014-08-18**。
+- type: **5号機 / モード管理型AT / 疑似ボーナス / 完全告知 / 30Φ**。
+- 型式: **沖ドキ！LL-30**。
 - 機械割: **97.0 / 99.7 / 101.7 / 103.9 / 106.2 / 107.9%**。
-- 公開基本スペックのBIG: **1/394.1 / 377.0 / 362.4 / 347.6 / 334.7 / 322.6**。
-- REG: **1/632.1 / 584.8 / 546.2 / 510.5 / 479.6 / 452.1**。
-- 合成: **1/242.8 / 229.2 / 217.9 / 206.8 / 197.1 / 188.3**。
+- BIG: **1/394.1 → 1/322.6**。
+- REG: **1/632.1 → 1/452.1**。
+- 合成: **1/242.8 → 1/188.3**。
 - 50枚ベース: **約23G**。
-- 疑似ボーナス純増: **約3.0枚/G**。
-- BIG **70G / 平均約210枚**、REG **30G / 平均約90枚**。
-- 通常A/B最大天井999G、引き戻し/チャンス最大199G（一般表記200G以内）、天国以上/保証最大31G（32G以内）。
-- HAZUSE通常A/B滞在時解析には実質合成 **1/247.4→1/189.5** の別表があるが、全モード込み公開基本スペックとは定義が異なるため平均せず `DEFINITION_DIFFERENCE_NOT_AVERAGED` として保持。
+- 純増: **約3.0枚/G**。
+- BIG **70G / 約210枚**、REG **30G / 約90枚**。
+- 天井: 通常A/B **999G**、引き戻し/チャンス **199G**、天国以上/保証 **31G**。
 - coreStatus: **COMPLETE_CORE**。
 
-## resetBehavior v0.7 — 沖ドキ！
+## resetBehavior v0.7 — 沖ドキ！-30
 
-- settingChangeBehavior: HAZUSE当時解析で **設定変更時に天井G RESET・内部モード再抽選**を直接確認。
-- gameCounterReset:
-  - 設定変更: `RESET_CONFIRMED`
-  - 据え置き: `CARRYOVER_SUPPORTED_BY_ANALYSIS`
-  - 電源OFF→ONのみ: `CARRYOVER_SUPPORTED_BY_ANALYSIS`
-- modeAfterReset: **RESET_AND_REROLL_CONFIRMED**。
-- 設定変更時モード振り分け（全設定共通）:
+- 設定変更: **天井G RESET / 内部モード再抽選**。
+- 電源OFF→ONのみ: **天井G CARRYOVER / モード CARRYOVER**。
+- 据え置き: 電断契約と整合するCARRYOVER支持。純据え置き単独一次対照表は未取得。
+- 設定変更時モード振り分け:
   - 通常A **57.03%**
   - 通常B **9.77%**
   - チャンス **33.20%**
-- ceilingAfterReset: 固定短縮抽選ではなく、**33.20%でチャンスモード→最大199G**というモード再抽選由来の朝一短天井恩恵。
-- resetBenefits: チャンス33.20%、さらに通常B9.77%。チャンス初回当選後は通常B以上濃厚。
-- stateAfterReset: モード以外の独立した朝一高確/低確再抽選契約は `NONE_CONFIRMED_AFTER_RESEARCH`。
-- powerCycleBehavior: 後年の初代解析整理で天井G・内部モード引継ぎを確認。ただしメーカー/当時一次対照表ではないため信頼度を一段下げる。
-- advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
-- resetDetection: 初代解析整理で **ガックン判別不可**。ハイビスカス点灯は次回モード示唆であり、朝一設定変更確定表示ではない。
-- resetPenalties: 設定変更なら前日天井進捗・モードが消える。独立したリセット冷遇抽選は `NONE_CONFIRMED_AFTER_RESEARCH`。
-- publicMorningNumbers: **通常A57.03 / 通常B9.77 / チャンス33.20%**。
+- チャンス選択時最大天井 **199G（実質200G）**。
+- 有利区間: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
+- 朝一独立高確/低確状態: `NONE_CONFIRMED_AFTER_RESEARCH`。
+- 変更判別: 本機固有の確実なガックン判別は `UNVERIFIED_AFTER_RESEARCH`。
+- publicMorningNumbers: **57.03 / 9.77 / 33.20%**。
 - resetBehaviorQA: **COMPLETE_WITH_SOURCE_LIMITS**。
 
-## 2014-08-18群監査 — OPEN
+## 2014-08-18群監査 — CLOSED_FOR_CURRENT_RESEARCH
 
-- 「沖ドキ！」25Φ版はNo.838として登録。
-- HAZUSEは **25パイコイン使用機 / 30パイ用筐体も同時リリース**と記載。
-- 1GAME/一撃系のメーカー一覧は **「沖ドキ！」と「沖ドキ！-30」双方を2014-08-18導入の別掲載機種**として扱う。
-- 2021年業界8団体関連報道でも旧規則機を **「沖ドキ！」「沖ドキ-30」**と別名称で列挙している。
-- 本DBはCT5/CT30等の径違い派生も独立レコード化している前例があるため、次回はまず **沖ドキ！-30を独立レコード化すべき型式/仕様差・資料上の独立性を最終確認**する。
-- 30Φ版が独立機種として十分固定できればNo.839として登録。単なる同型式の筐体径違いで独立レコード不要と判断する場合も、根拠をHANDOFFへ明記する。
-- その後、2014-08-18同日群を全メーカー横断で再監査してCLOSED判定する。
+- No.838 **沖ドキ！ 25Φ** と No.839 **沖ドキ！-30** を処理。
+- `2014-08-18 / 8月18日 / パチスロ / 新台 / 導入開始 / ホール導入 / 納品` を組み替え、業界記事・K-Navi・P-WORLD・HAZUSE・メーカー系列/機種DBを横断。
+- パチンコ「CRぱちんこAKB48 バラの儀式」等は対象外。
+- P-WORLDの「最終更新日2014/08/25」を導入日と誤認しない。例として「不二子～100億$の女神～」は実導入2012-01-03。
+- 今回の検索範囲では、08-18同日群に上記2派生以外の未登録5号機を具体日で固定できなかったため **2014-08-18_GROUP_CLOSED_FOR_CURRENT_RESEARCH**。
+
+## 遡及 resetBehavior QA — パチスロ鉄拳伝タフ
+
+- `coreStatus: COMPLETE_CORE`は維持。
+- v0.7項目を明示し、resetQaLastUpdatedを2026-09-07へ更新。
+- 通常時ゲーム数天井なし相当、BIG後100P/REG後12Pの完走型RT仕様は再確認。
+- 設定変更/据え置き/純電断時の **RT残G数・RT内部状態処理**を、旧攻略、設定判別DB、P-WORLD系、2008年回顧、中古実機資料まで変えて再探索したが直接固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 本機固有ガックン/初期出目等も未固定。
+- publicMorningNumbers: `NONE_CONFIRMED_AFTER_RESEARCH`。
+- resetBehaviorQA: **PARTIAL** 維持。性能COMPLETE_COREは崩していない。
+- Git履歴上、鉄拳伝タフ直後に追加された次レコードは `docs/real_machine_db/machines/2007-02_new-hanahana-30.md`（ニューハナハナ-30）。
 
 ## 遡及 resetBehavior QA カーソル
 
-- 新規収集を止めない。
-- 次の遡及QAカーソルは `docs/real_machine_db/machines/2007-02_pachislot-tekken-den-tough.md`（パチスロ鉄拳伝タフ）を維持。
+- 次: `docs/real_machine_db/machines/2007-02_new-hanahana-30.md`（ニューハナハナ-30）。
+- 新規収集を止めず、本線と並行して1件ずつ前進する。
 
 ## safeguard
 
-- `沖ドキ！ / 沖ドキ / OKI DOKI / 沖ドキ！LL / アクロス / ユニバーサル` と `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / 999G / 199G / 200G / モード / チャンス / ガックン / 50枚 / ベース` を組み合わせて再探索。
-- `沖ドキ！トロピカル / DUO / GOLD / BLACK / ゴージャス`等の後継機リセット仕様を初代へ流用しない。特に後継機のチャンス39.8%、399G短縮は初代仕様ではない。
-- 199G/200G以内、31G/32G以内は内部最大規定Gと告知レンジの表記差として保持しCONFLICT化しない。
+- 初代沖ドキ系に `トロピカル / パラダイス / DUO / GOLD / BLACK / ゴージャス`の後継機reset値を流用しない。
+- 特に後継機のチャンス約39.8%、399G短縮等を初代へ混入させない。
+- `999G/1000G`, `199G/200G`, `31G/32G`は内部最大規定Gと告知レンジの定義差として保持しCONFLICT化しない。
+- P-WORLDの「最終更新日」はホール導入日ではない。必ず導入アンカーを別資料で確認する。
 - 2015-06-08到達時の **吉宗～極～（ヨシムネH2A4 / 3S1093）** 正式量産版処理注意を維持。
 
 ## 次回再開地点
 
-1. **recordCount 838 / chronologicalFrontier 2014-08-18 / 08-18_GROUP_OPEN** から開始。
-2. 最新mainで README / mission / INDEX / LATEST_HANDOFF / 838件目を再確認。
-3. **「沖ドキ！-30」**について、25Φ版とは独立した機種/型式としてDB登録すべきかを公式・業界・当時DBで最終確認。
-4. 独立性が固定できればNo.839として性能コア+resetBehavior v0.7を収集。性能同一でも25Φ値を無根拠コピーせず、同一仕様資料を明記する。
-5. 続いて08-18同日群を全メーカー横断監査し、追加未処理を順に処理してからCLOSED判定。
-6. 遡及QAは `2007-02_pachislot-tekken-den-tough.md` から再開。
+1. **recordCount 839 / chronologicalFrontier 2014-08-18 / 08-18_GROUP_CLOSED_FOR_CURRENT_RESEARCH** から開始。
+2. 最新mainで README / mission / INDEX / LATEST_HANDOFF / 839件目を再確認。
+3. **2014-08-19〜月末の境界監査**を行い、次の具体的ホール導入日を固定する。
+4. 発見した次の未処理5号機を性能コア+resetBehavior v0.7で登録する。
+5. 遡及QAは **`2007-02_new-hanahana-30.md`** から再開。
 
 ## 主要出典 — 取得日 2026-09-07
 
-### 沖ドキ！
-- グリーンべると（2014-08-01）: `https://web-greenbelt.jp/00007110/`
-- HAZUSE: `https://hazuse.com/machine/pachislot/4S0298/`
-- HAZUSE AT/ART: `https://hazuse.com/machine/pachislot/4S0298/genre/209/`
-- パチマガスロマガ ボーナス確率: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/across_slot/04/h.php`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/7494`
-- 期待値見える化 朝一/天井: `https://slotjin.com/zone/okidoki/`
-- PiDEA ロケテスト: `https://www.pidea.jp/articles/%E3%82%A2%E3%82%AF%E3%83%AD%E3%82%B9%E3%80%8C%E6%B2%96%E3%83%89%E3%82%AD%21%E3%80%8D%E3%81%8C%E3%80%8C%E6%B2%96%E3%82%B9%E3%83%AD%E6%96%B0%E6%99%82%E4%BB%A3%E3%80%8D%20%E3%82%92%E5%88%87%E3%82%8A%E6%8B%93%E3%81%8F`
+### 沖ドキ！-30
+- P-WORLD: `https://www.p-world.co.jp/machine/database/7495`
+- 一撃/1GAME系 30Φトップ: `https://1geki.jp/slot/okidoki30/`
+- 一撃/1GAME系 天井・設定変更・電源ON/OFF: `https://1geki.jp/slot/okidoki30/3/`
+- 一撃/1GAME系 モード移行: `https://1geki.jp/slot/okidoki30/62/`
+- 中一商事 型式表示: `https://www.nakaiti.com/html/sAcross088.html`
+- グリーンべると 旧規則機型式報道: `https://web-greenbelt.jp/post-47383/`
+- グリーンべると 2014-08-01全国展開: `https://web-greenbelt.jp/00007110/`
 
-### 境界 / 30Φ確認
-- 一撃 UNIVERSALメーカー一覧: `https://1geki.jp/maker/universal/`
-- グリーンべると / P-WORLD 2021撤去要請: `https://news.p-world.co.jp/articles/15585/greenbelt`
-- パチ7 撤去カレンダー（検定通過日との定義確認用）: `https://pachiseven.jp/articles/detail/11356`
+### 鉄拳伝タフ QA
+- パチマガスロマガ基本: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/oizumineo_slot/02/a.php`
+- パチマガスロマガRT: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/oizumineo_slot/02/k_1.php`
+- pacnk: `https://pacnk.com/slot/tools/sh_tekkendentafu.html`
+- 回顧解析: `https://plaza.rakuten.co.jp/slotlife777/`
