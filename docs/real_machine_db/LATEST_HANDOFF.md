@@ -4,68 +4,75 @@
 
 ## 現在地点
 
-- recordCount: **827**
-- latestRecordAdded: **テンパイラッシュ**（パイオニア）— 2014-06-16
-- latestRecord: `docs/real_machine_db/machines/2014-06-16_tenpai-rush.md`
-- chronologicalFrontier: **2014-06-16**
-- frontierLatestMachine: **テンパイラッシュ**
+- recordCount: **828**
+- latestRecordAdded: **パチスロ まじかる☆タルるートくん**（ニューギン）— 2014-07-07
+- latestRecord: `docs/real_machine_db/machines/2014-07-07_magical-taruruto-kun.md`
+- chronologicalFrontier: **2014-07-07**
+- frontierLatestMachine: **パチスロ まじかる☆タルるートくん**
 - schema: **resetBehavior v0.7**
-- status: **2014-06-16_GROUP_CLOSED_FOR_CURRENT_RESEARCH**
+- status: **2014-07-07_GROUP_OPEN**
 
 ## 今回の同期 / 正本確認
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`docs/real_machine_db/LATEST_HANDOFF.md`、826件目 `2014-06-16_souten-no-ken-2.md` を再読。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`docs/real_machine_db/LATEST_HANDOFF.md`、827件目 `2014-06-16_tenpai-rush.md` を再読。
 - INDEXは19件表記の旧集約状態。README規定どおり **LATEST_HANDOFF + 実レコード** を進捗正本として継続。
-- 作業開始時の正本は **826件 / 2014-06-16 / 06-16_GROUP_OPEN**。
-- handoff指定の次候補 **「テンパイラッシュ」（パイオニア）**を827件目として処理。
-- 06-16同日群を `2014-06-16 / パチスロ / 導入 / 新台`、パチ7、K-Navi系検索、当時記事で再監査。今回安全に具体日付きで固定できた未処理パチスロはテンパイラッシュ以外に見つからず、**06-16_GROUP_CLOSED_FOR_CURRENT_RESEARCH** とした。
-- 06-16検索では同日パチンコ機が多数混在するため、本DBへ混入しない。
+- 作業開始時の正本は **827件 / 2014-06-16 / 06-16_GROUP_CLOSED_FOR_CURRENT_RESEARCH**。
+- 2014-06-17以降をK-Navi導入カレンダー、ALL7月別一覧、当時業界記事、P-WORLD系検索で境界監査。
+- 6月末検索で混入する「嬢王」「ブラックラグーン2」は2014年6月末～7月の当該検索文脈ではCRパチンコ機であり、パチスロ本線へ混入させない。
+- 2014-06-17～07-06について、今回安全に具体的ホール導入日を固定できた未処理パチスロを確認できず **CLOSED_FOR_CURRENT_RESEARCH** とした。
+- 次の具体日アンカー **2014-07-07**へ進み、K-Navi導入カレンダーで確認した **「パチスロ まじかる☆タルるートくん」**を828件目として処理。
+- 07-07同日群には他の未処理候補が存在するため **GROUP_OPEN** のまま継続する。
 
-## 今回追加 — テンパイラッシュ
+## 今回追加 — パチスロ まじかる☆タルるートくん
 
 ### identity / 性能コア
 
-- manufacturer: **パイオニア**。
-- hall start: **2014-06-16**。パチ7で具体日、パイオニア公式で2014年6月発売、グリーンべるとで6月15日納品予定を確認。
-- generation/system: **5号機 / ノーマル / BIG+REG / 25Φ**。
-- payoutRate: **97 / 99 / 101 / 103 / 106 / 110%**。
-- BIG: **1/289 / 1/280 / 1/270 / 1/261 / 1/250 / 1/239**。
-- REG: **1/504 / 1/461 / 1/420 / 1/378 / 1/337 / 1/295**。
-- ボーナス合算: **1/184 / 1/174 / 1/164 / 1/154 / 1/143 / 1/132**。
-- baseGamesPer50: **約38～39G**。
-- BIG: **約300枚**（346枚超払い出し終了）。
-- REG: **約100枚**（109枚超払い出し終了）。
-- AT/ART非搭載、通常時ゲーム数天井は確認されず。
-- formalModelName / inspectionNumber: 表記揺れ・型式/検定検索を行ったが今回安全に固定できず **UNVERIFIED_AFTER_RESEARCH**。
+- manufacturer: **ニューギン**。
+- hall start: **2014-07-07**（K-Navi導入カレンダー）。
+- generation/system: **5号機 / ART / BR非搭載 / CZ / ゲーム数・MB回数天井**。
+- payoutRate: **97.0 / 98.4 / 100.2 / 103.3 / 107.1 / 111.7%**。
+- ART初当たり: **1/198.1 / 1/188.7 / 1/177.1 / 1/158.2 / 1/137.0 / 1/114.8**。
+- CZ: **1/253.86 / 1/248.22 / 1/237.36 / 1/204.39 / 1/174.54 / 1/144.25**。
+- baseGamesPer50: **約35G**。
+- ART「特訓RUSH」: **約2.0枚/G、初期40G以上**。
+- ゲーム数天井: **999G**。
+- MB回数天井: **12回**。
+- formalModelName / inspectionNumber: 表記揺れ・型式/検定検索後も安全に固定できず **UNVERIFIED_AFTER_RESEARCH**。
 - coreStatus: **COMPLETE_CORE**。
 
-## テンパイラッシュ — resetBehavior v0.7
+## パチスロ まじかる☆タルるートくん — resetBehavior v0.7
 
-- settingChangeBehavior: 本機固有のリール初期化・成立済みボーナス等を示す直接資料は **UNVERIFIED_AFTER_RESEARCH**。
-- carryOverBehavior / powerCycleBehavior: 天井・AT/ARTモードは非該当。本機固有の電断跨ぎリール/成立ボーナス契約は **UNVERIFIED_AFTER_RESEARCH**。
-- gameCounterReset: **NOT_APPLICABLE_NO_GAME_COUNT_CEILING**。
-- ceilingAfterReset: **NOT_APPLICABLE_NO_CEILING / NONE_CONFIRMED_AFTER_RESEARCH**。
-- modeAfterReset: **NOT_APPLICABLE_NO_AT_ART_CZ_GAME_MODE_CONFIRMED**。
-- stateAfterReset: 朝一高確等の本機固有状態振り分けは **NONE_CONFIRMED_AFTER_RESEARCH**。
+- settingChangeBehavior: 解析資料で **天井までのカウントリセット**を確認。
+- gameCounterReset: **999Gゲーム数天井はRESET_CONFIRMED_ON_SETTING_CHANGE**。
+- MB回数12回天井も同じ解析総括ではリセット対象として扱われるが、MBカウンタ単独の別系統直接照合は未取得のため **SUPPORTED_BY_ANALYSIS_SUMMARY / SECOND_SOURCE_UNVERIFIED** とした。
+- ceilingAfterReset: 設定変更専用の短縮天井は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- carryOverBehavior: 据え置き時のゲーム数・MB回数・モード・状態引継ぎを直接固定できる本機固有資料は **UNVERIFIED_AFTER_RESEARCH**。
+- powerCycleBehavior: 設定変更なし電源OFF→ON時の契約は **UNVERIFIED_AFTER_RESEARCH**。
+- modeAfterReset / stateAfterReset: 設定変更時の具体的モード・状態振り分けは **UNVERIFIED_AFTER_RESEARCH**。
 - advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
-- resetBenefits / resetPenalties: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- resetDetection: 朝一・設定変更・据え置き・電源OFF ON・ガックン・リールガックンまで再探索したが本機固有契約は **UNVERIFIED_AFTER_RESEARCH**。
-- 通常演出として搭載する「スロー / シェイク / リバース / アタック」等の特殊リールアクションを、設定変更ガックンと混同しない。
+- resetBenefits / resetPenalties: 設定変更専用の主要恩恵/不利は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- resetDetection: 朝一・設定変更・据え置き・ガックン等を再探索したが本機固有の高信頼判別契約は **UNVERIFIED_AFTER_RESEARCH**。
 - publicMorningNumbers: **NONE_CONFIRMED_AFTER_RESEARCH**。
 - resetBehaviorQA: **PARTIAL**。
 
-## 再探索 / safeguards — テンパイラッシュ
+## CONFLICT / safeguard
 
-- `テンパイラッシュ / パイオニア / 2014 / 型式名 / 検定番号` に `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / 短縮 / モード / 状態 / ガックン / リールガックン / 50枚 / 1000円` を組み合わせて再探索。
-- パイオニア公式、グリーンべると、P-WORLD、パチマガスロマガ旧攻略、パチ7、pacnk、中古実機資料を横断。
-- ノーマル機の非該当項目を、他機種の一般論で推測補完していない。
+- 999G天井到達時の恩恵について、CrankySevenは **ART当選**、スロパチクエストは **「ボーナス確定」**と表記。
+- P-WORLDでは本機はBR非搭載。用語差/転記差を今回解消できないため、`CONFLICT_CEILING_BENEFIT_TERMINOLOGY_ART_VS_BONUS` として平均・同一視せず保持。
+- 通常時の全モード移行テーブル、小役別抽選、CZ内部抽選は実機完全再現用の詳細解析となるため収集していない。
 
-## 2014-06-16群 / 次候補
+## 再探索 — パチスロ まじかる☆タルるートくん
 
-- 2014-06-16群は **パチスロ蒼天の拳2 / テンパイラッシュ**まで処理済み。
-- 同日群横断再監査で新たな具体日付き未処理パチスロを今回固定できなかったため **CLOSED_FOR_CURRENT_RESEARCH**。
-- 次回は **2014-06-17～06-22境界監査**を行い、漏れがなければ **2014-06-23同日群を全メーカー横断で洗い出す**。
-- 06-23は検索結果に記事公開日・検定日が混入しやすいため、必ず「ホール導入開始日」と区別する。
+- `パチスロ まじかる☆タルるートくん / まじかるタルるートくん / ニューギン / 型式 / 検定 / 4S` に `設定変更 / リセット / 朝一 / 据え置き / 宵越し / 電源OFF ON / 天井 / 999G / MB回数 / 短縮 / モード / 状態 / ガックン / 50枚 / 1000円` を組み合わせて再探索。
+- K-Navi、グリーンべると、P-WORLD、pacnk、スロパチクエスト、CrankySeven等の当時系/古い解析DB/後年整理資料を横断。
+- 一般的な5号機ART機の据え置き/電断挙動を推測転記していない。
+
+## 2014-07-07群 / 次候補
+
+- 07-07群は **パチスロ まじかる☆タルるートくん**まで処理済み。
+- 同日群はまだ **OPEN**。
+- 次の具体日付き未処理候補として **「パチスロ鉄拳3rd」（山佐）**を確認済み。HAZUSEでは2014-07-07、型式 `パチスロ鉄拳3EE`、検定番号 `4S0216`。
+- 次回は07-07同日群をK-Navi / パチ7 / HAZUSE / P-WORLD / 当時業界資料で全メーカー横断し、鉄拳3rdを含む未処理機種を導入日順・同日順に継続する。
 
 ## 遡及 resetBehavior QA
 
@@ -75,21 +82,26 @@
 
 ## 次回再開地点
 
-1. **recordCount 827 / chronologicalFrontier 2014-06-16 / 06-16_GROUP_CLOSED_FOR_CURRENT_RESEARCH** から開始。
-2. 最新mainで README / mission / INDEX / LATEST_HANDOFF / 827件目を再確認。
-3. **2014-06-17～06-22境界監査**。
-4. 漏れがなければ **2014-06-23同日群をK-Navi / パチ7 / HAZUSE / P-WORLD / 当時業界資料で全メーカー横断監査**し、最初の未処理機種を828件目として処理。
-5. 遡及QAは `docs/real_machine_db/machines/2007-02-18_kagaku-ninjatai-gatchaman.md` から再開。
-6. 2015-06-08到達時の **吉宗～極～（ヨシムネH2A4 / 3S1093）** 正式量産版処理注意は維持。
+1. **recordCount 828 / chronologicalFrontier 2014-07-07 / 07-07_GROUP_OPEN** から開始。
+2. 最新mainで README / mission / INDEX / LATEST_HANDOFF / 828件目を再確認。
+3. **2014-07-07同日群の全メーカー横断監査を継続**。
+4. 最初の明確な未処理候補は **パチスロ鉄拳3rd（山佐）**。他の07-07導入パチスロを同時に洗い出し、未処理を飛ばさない。
+5. 07-07群を閉じられるだけ監査後、次の日付境界へ進む。
+6. 遡及QAは `docs/real_machine_db/machines/2007-02-18_kagaku-ninjatai-gatchaman.md` から再開。
+7. 2015-06-08到達時の **吉宗～極～（ヨシムネH2A4 / 3S1093）** 正式量産版処理注意は維持。
 
 ## 主要出典 — 取得日 2026-09-07
 
-### テンパイラッシュ
-- パイオニア公式 2014年製品一覧: `https://www.slot-pioneer.co.jp/products/2014.html`
-- パイオニア公式: `https://www.slot-pioneer.co.jp/product/tenpairush/`
-- グリーンべると: `https://web-greenbelt.jp/00006883/`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/7413`
-- パチマガスロマガ 基本: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/pioneer_slot/110/a.php`
-- パチマガスロマガ 50枚ベース: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/pioneer_slot/110/c.php`
-- pacnk: `https://pacnk.com/slot/2014/tenpairush/top.php`
-- パチ7: `https://pachiseven.jp/machines/4141/cutout/92`
+### パチスロ まじかる☆タルるートくん
+- K-Navi 2014年7月新台導入カレンダー: `https://p-kn.com/calendar/201407/`
+- グリーンべると: `https://web-greenbelt.jp/00006933/`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/7426`
+- K-Navi ゲームフロー: `https://p-kn.com/slot/2078/50017/`
+- K-Navi モード情報: `https://p-kn.com/slot/2078/51086/`
+- pacnk: `https://pacnk.com/slot/tools/sh_taruruto.html`
+- スロパチクエスト 機種解析: `https://www.slopachi-quest.com/kisyubetsu/magical-tatutu-to/`
+- スロパチクエスト 天井解析: `https://www.slopachi-quest.com/article/magical-talroute/`
+- CrankySeven: `https://crankyseven.com/taruruto-pc.htm`
+
+### 次候補
+- HAZUSE パチスロ鉄拳3rd: `https://hazuse.com/i/det2/tekken3/index.htm`
