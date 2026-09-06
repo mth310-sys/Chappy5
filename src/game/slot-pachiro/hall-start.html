@@ -9,11 +9,11 @@
 <body>
 <main class="lab">
   <header class="labHead">
-    <div><small>FOUNDATION / STEP 11</small><h1>START HALL</h1></div>
-    <output id="hallState">GRID CHECK</output>
+    <div><small>FOUNDATION / STEP 12</small><h1>START HALL</h1></div>
+    <output id="hallState">PLACEMENT CHECK</output>
   </header>
-  <section class="preview"><svg id="hall" class="iso hallMap" viewBox="42 46 276 210" aria-label="9×9 startup hall driven by logical grid state"></svg></section>
-  <section class="note"><b>LOGICAL HALL PASS 01</b><span id="hallNote">loading logical occupancy / access / route validation</span></section>
+  <section class="preview"><svg id="hall" class="iso hallMap" viewBox="42 46 276 210" aria-label="9×9 startup hall driven by atomic logical placement"></svg></section>
+  <section class="note"><b>ATOMIC PLACEMENT PASS 01</b><span id="hallNote">loading placement / occupancy / access / route validation</span></section>
 </main>
 <script type="module">
 import { GRID } from './core/grid.js';
@@ -24,9 +24,10 @@ const map = buildStartHallMap();
 const validation = validateStartHall(map);
 const state = document.querySelector('#hallState');
 const note = document.querySelector('#hallNote');
-state.textContent = validation.ok ? 'GRID OK' : 'GRID ERROR';
-note.textContent = `${validation.fixtureCount} fixtures / ${validation.accessPortCount} access ports / ${validation.reachableCellCount} reachable cells / entrance route`;
+state.textContent = validation.ok ? 'PLACE TX OK' : 'PLACE TX ERROR';
+note.textContent = `${validation.transactionCount}/${validation.fixtureCount} atomic placements / ${validation.accessPortCount} access ports / ${validation.reachableCellCount} reachable cells`;
 document.documentElement.dataset.gridValidation = validation.ok ? 'ok' : 'error';
+document.documentElement.dataset.placementValidation = validation.ok ? 'ok' : 'error';
 
 const svg = document.querySelector('#hall');
 const NS = 'http://www.w3.org/2000/svg';
