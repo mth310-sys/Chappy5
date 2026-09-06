@@ -1,184 +1,212 @@
 import { bindPlacementCursorControls, createPlacementCursor } from './cursor.js';
-import { renderFoundationDebug } from './debug.js';
-import { ORIENTATIONS } from './facility.js';
-import { layout, validateIslandRows, validateLayout } from './layout.js';
+import { createCustomer, planCustomerTo, advanceCustomer, CUSTOMER_STATES } from './customer.js';
+import { layout, validateLayout } from './layout.js';
 import { findPath } from './navigation.js';
-import { describePlacement, testPlacement } from './placement.js';
-import { renderLayout } from './renderer.js';
+import { renderCustomerActor, renderLayout, updateCustomerActor } from './renderer.js';
 
-function assertRejected(result, label) {
-  if (result.ok) throw new Error(`Foundation self-check failed: ${label} should be rejected`);
+const fmt = new Intl.NumberFormat('ja-JP');
+const GAME_TICK_MS = 220;
+const OPEN_MINUTE = 10 * 60;
+const CLOSE_MINUTE = 21 * 60;
+
+const els = {
+  scene: document.getElementById('scene'), frame: document.getElementById('scene-frame'), vp: document.getElementById('vp'),
+  time: document.getElementById('timeLabel'), visitors: document.getElementById('visitorLabel'), cash: document.getElementById('cashLabel'),
+  sales: document.getElementById('salesLabel'), occ: document.getElementById('occupancyLabel'), status: document.getElementById('gameStatus'),
+  event: document.getElementById('eventText'), panel: document.getElementById('gamePanel'), panelTitle: document.getElementById('panelTitle'), panelBody: document.getElementById('panelBody'),
+};
+if (!els.scene || !els.frame || !els.vp) throw new Error('Slot Pachiro canonical roots are missing');
+
+let activeLayout = layout;
+let report = validateLayout(activeLayout);
+let gameMinute = OPEN_MINUTE;
+let cash = 3_000_000;
+let sales = 0;
+let totalVisitors = 0;
+let speed = 1;
+let zoom = 1;
+let customerSeq = 0;
+let spawnClock = 0;
+let buildCursor = null;
+let buildPanel = null;
+const customers = new Map();
+
+function formatTime(minute) {
+  const h = Math.floor(minute / 60) % 24, m = minute % 60;
+  return `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}`;
 }
-function assert(condition, label) {
-  if (!condition) throw new Error(`Foundation self-check failed: ${label}`);
-}
-
-function routeToFirstMachine(report) {
-  const portal = report.ports.find((port) => port.portal);
-  const goal = report.ports.find((port) => port.role === 'machine-seat');
-  if (!portal || !goal) throw new Error('Foundation route endpoints missing');
-  const route = findPath(portal, goal, report.map);
-  if (!route) throw new Error(`Foundation route missing: ${portal.facilityId} -> ${goal.facilityId}.${goal.name}`);
-  return route;
-}
-
-function runRotationSelfChecks() {
-  const base = { id: 'rotation-probe', type: 'island', x: 0, y: 0 };
-  const signatures = new Set();
-  for (const orientation of ORIENTATIONS) {
-    const preview = describePlacement({ ...base, orientation });
-    assert(preview.hard.length === 9, `${orientation} island footprint must be 9 cells`);
-    assert(preview.reserved.length === 27, `${orientation} reservation must be 27 cells`);
-    assert(preview.ports.length === 10, `${orientation} access ports must be 10 cells`);
-    const xs = preview.hard.map((cell) => cell.x), ys = preview.hard.map((cell) => cell.y);
-    const spanX = Math.max(...xs) - Math.min(...xs), spanY = Math.max(...ys) - Math.min(...ys);
-    assert((spanX === 8 && spanY === 0) || (spanX === 0 && spanY === 8), `${orientation} footprint axis invalid`);
-    signatures.add(preview.hard.map((cell) => `${cell.x},${cell.y}`).sort().join('|'));
-  }
-  assert(signatures.size === 4, 'four orientations must produce distinct anchored footprints');
-
-  const parallelPairs = {
-    E: [{ x: 0, y: 0 }, { x: 0, y: 4 }],
-    S: [{ x: 0, y: 0 }, { x: -4, y: 0 }],
-    W: [{ x: 0, y: 0 }, { x: 0, y: -4 }],
-    N: [{ x: 0, y: 0 }, { x: 4, y: 0 }],
-  };
-  for (const orientation of ORIENTATIONS) {
-    validateIslandRows(parallelPairs[orientation].map((point, index) => ({
-      id: `row-${orientation}-${index}`,
-      type: 'island',
-      orientation,
-      x: point.x,
-      y: point.y,
-      w: 9,
-      d: 1,
-    })));
-  }
+function setEvent(text) { els.event.textContent = text; }
+function updateHud() {
+  els.time.textContent = formatTime(gameMinute);
+  els.visitors.textContent = String(totalVisitors);
+  els.cash.textContent = `${fmt.format(cash)}G`;
+  els.sales.textContent = `+${fmt.format(sales)}G`;
+  const seated = [...customers.values()].filter((c) => c.model.state === CUSTOMER_STATES.SEATED && c.phase === 'play').length;
+  els.occ.textContent = `${Math.min(100, Math.round(seated / 36 * 100))}%`;
+  els.status.textContent = speed === 0 ? '一時停止' : gameMinute >= CLOSE_MINUTE ? '閉店' : '営業中';
 }
 
-function runFoundationSelfChecks() {
-  const islandB = layout.islands.find((item) => item.id === 'island-b');
-  const plant = layout.fixtures.find((item) => item.id === 'plant-1');
-  const entrance = layout.fixtures.find((item) => item.id === 'entrance');
-  if (!islandB || !plant || !entrance) throw new Error('Foundation self-check fixtures missing');
-  assertRejected(testPlacement(layout, { ...islandB, y: -5 }), 'insufficient island aisle');
-  assertRejected(testPlacement(layout, { ...plant, x: -4, y: -6 }), 'facility collision');
-  assertRejected(testPlacement(layout, { ...plant, x: -12, y: 0 }), 'building wall occupation');
-  assertRejected(testPlacement(layout, { ...entrance, x: 1 }), 'entrance moved away from opening');
-  runRotationSelfChecks();
-  const baseReport = validateLayout(layout);
-  assert(routeToFirstMachine(baseReport).length > 1, 'entrance-to-machine route must exist');
-  assert(baseReport.serviceNetwork.routeCount === 42, 'service network should include 40 island ports + 2 counter ports');
-  assert(baseReport.serviceNetwork.connectedFacilities === 5, 'four islands and counter must connect to service network');
-  assert((baseReport.serviceNetwork.roleCounts['main-trunk'] ?? 0) > 0, 'service network requires shared trunk cells');
-  assert((baseReport.serviceNetwork.roleCounts['island-aisle'] ?? 0) > 0, 'service network requires island aisle cells');
-  assert((baseReport.serviceNetwork.roleCounts['service-front'] ?? 0) > 0, 'service network requires service-front cells');
-  assert(baseReport.circulation.valid, 'circulation analysis must pass');
-  assert(baseReport.circulation.deadEnds.length === 0, 'service network must not contain unintended dead ends');
-  assert(baseReport.circulation.criticalChokes.length === 0, 'service network must not contain one-cell critical chokepoints');
-  assert(baseReport.circulation.narrowMainCells.length === 0, 'main circulation must preserve at least two-cell clearance');
-  assert(baseReport.circulation.narrowIslandAisleCells.length === 0, 'island aisles must preserve at least two-cell clearance');
+function applyZoom(nextZoom, anchorX = els.vp.clientWidth / 2, anchorY = els.vp.clientHeight / 2) {
+  nextZoom = Math.max(.72, Math.min(1.55, nextZoom));
+  const old = zoom;
+  const worldX = (els.vp.scrollLeft + anchorX) / old;
+  const worldY = (els.vp.scrollTop + anchorY) / old;
+  zoom = nextZoom;
+  const w = Number(els.scene.dataset.baseWidth || 730), h = Number(els.scene.dataset.baseHeight || 720);
+  els.scene.style.transform = `scale(${zoom})`;
+  els.frame.style.width = `${Math.ceil(w * zoom)}px`;
+  els.frame.style.height = `${Math.ceil(h * zoom)}px`;
+  els.vp.scrollLeft = worldX * zoom - anchorX;
+  els.vp.scrollTop = worldY * zoom - anchorY;
+}
+function centerCamera() {
+  requestAnimationFrame(() => {
+    applyZoom(1.08);
+    els.vp.scrollLeft = Math.max(0, (els.frame.scrollWidth - els.vp.clientWidth) / 2);
+    els.vp.scrollTop = Math.max(0, els.frame.scrollHeight * .17);
+  });
 }
 
-function debugEnabled() {
-  return new URLSearchParams(location.search).get('foundationDebug') === '1';
+function installCameraControls() {
+  let drag = null;
+  els.vp.addEventListener('pointerdown', (e) => {
+    if (e.target.closest('button')) return;
+    drag = { id: e.pointerId, x: e.clientX, y: e.clientY, left: els.vp.scrollLeft, top: els.vp.scrollTop };
+    els.vp.setPointerCapture(e.pointerId); els.vp.classList.add('dragging');
+    document.getElementById('cameraHint')?.classList.add('hide');
+  });
+  els.vp.addEventListener('pointermove', (e) => {
+    if (!drag || e.pointerId !== drag.id) return;
+    els.vp.scrollLeft = drag.left - (e.clientX - drag.x);
+    els.vp.scrollTop = drag.top - (e.clientY - drag.y);
+  });
+  const end = (e) => { if (drag && e.pointerId === drag.id) { drag = null; els.vp.classList.remove('dragging'); } };
+  els.vp.addEventListener('pointerup', end); els.vp.addEventListener('pointercancel', end);
+  els.vp.addEventListener('wheel', (e) => { if (!e.ctrlKey) return; e.preventDefault(); applyZoom(zoom * (e.deltaY > 0 ? .92 : 1.08), e.clientX, e.clientY); }, { passive: false });
+
+  let pinch = null;
+  els.vp.addEventListener('touchstart', (e) => {
+    if (e.touches.length === 2) {
+      const [a,b] = e.touches; pinch = { d: Math.hypot(a.clientX-b.clientX,a.clientY-b.clientY), z: zoom };
+    }
+  }, { passive: true });
+  els.vp.addEventListener('touchmove', (e) => {
+    if (e.touches.length !== 2 || !pinch) return;
+    e.preventDefault();
+    const [a,b] = e.touches, d = Math.hypot(a.clientX-b.clientX,a.clientY-b.clientY);
+    applyZoom(pinch.z * d / pinch.d, (a.clientX+b.clientX)/2, (a.clientY+b.clientY)/2);
+  }, { passive: false });
+  els.vp.addEventListener('touchend', (e) => { if (e.touches.length < 2) pinch = null; }, { passive: true });
 }
 
-function fitScene(viewport, frame, scene) {
-  const baseWidth = Number(scene.dataset.baseWidth || scene.offsetWidth || 730);
-  const baseHeight = Number(scene.dataset.baseHeight || scene.offsetHeight || 530);
-  const availableWidth = Math.max(1, viewport.clientWidth - 4);
-  const availableHeight = Math.max(1, viewport.clientHeight - 4);
-  const scale = Math.min(1, availableWidth / baseWidth, availableHeight / baseHeight);
-  scene.style.setProperty('--scene-fit', String(scale));
-  frame.style.width = `${Math.ceil(baseWidth * scale)}px`;
-  frame.style.height = `${Math.ceil(baseHeight * scale)}px`;
-  frame.dataset.fitScale = scale.toFixed(4);
-  return scale;
+function machinePorts() { return report.ports.filter((p) => p.role === 'machine-seat' && report.reachable.has(`${p.x},${p.y}`)); }
+function portal() { return report.ports.find((p) => p.portal); }
+function spawnCustomer() {
+  if (gameMinute >= CLOSE_MINUTE || customers.size >= 14) return;
+  const entry = portal(), ports = machinePorts();
+  if (!entry || !ports.length) return;
+  const target = ports[Math.floor(Math.random() * ports.length)];
+  let model = createCustomer(`guest-${++customerSeq}`, entry);
+  try { model = planCustomerTo(model, target, report.map); } catch { return; }
+  const actor = renderCustomerActor(els.scene, model);
+  customers.set(model.id, { model, actor, phase: 'toMachine', dwell: 8 + Math.floor(Math.random() * 14), spendClock: 0, target });
+  totalVisitors++;
+  setEvent(`来店 ${totalVisitors}人目 → ${target.facilityId}`);
 }
-
-function makeCursorPanel(cursor, onCommit, onCancel) {
-  const panel = document.createElement('div');
-  panel.className = 'placementPanel';
-  panel.innerHTML = '<b>配置カーソル</b><span data-cursor-status></span><div><button data-move="0,-1">↑</button></div><div><button data-move="-1,0">←</button><button data-rotate>回転</button><button data-move="1,0">→</button></div><div><button data-move="0,1">↓</button></div><div><button data-commit>確定</button><button data-cancel>取消</button></div>';
-  panel.querySelectorAll('[data-move]').forEach((button) => button.addEventListener('click', () => {
-    const [dx, dy] = button.dataset.move.split(',').map(Number);
-    cursor.move(dx, dy);
-  }));
-  panel.querySelector('[data-rotate]').addEventListener('click', () => cursor.rotate(1));
-  panel.querySelector('[data-commit]').addEventListener('click', onCommit);
-  panel.querySelector('[data-cancel]').addEventListener('click', onCancel);
-  document.body.appendChild(panel);
-  return panel;
+function beginExit(record) {
+  const exit = portal(); if (!exit) return;
+  const route = findPath(record.model, exit, report.map);
+  if (!route) { record.phase = 'leave'; return; }
+  record.model = Object.freeze({ ...record.model, state: CUSTOMER_STATES.WALKING, route: Object.freeze(route.map((p)=>Object.freeze({...p}))), routeIndex: 0, target: Object.freeze({x:exit.x,y:exit.y}) });
+  record.phase = 'toExit';
 }
-
-function boot() {
-  const scene = document.getElementById('scene');
-  const frame = document.getElementById('scene-frame');
-  const viewport = document.getElementById('vp');
-  const status = document.getElementById('foundation-status');
-  if (!scene || !frame || !viewport) throw new Error('Slot Pachiro root elements are missing');
-
-  runFoundationSelfChecks();
-  let activeLayout = layout;
-  let activeReport = validateLayout(activeLayout);
-  renderLayout(scene, activeLayout);
-  fitScene(viewport, frame, scene);
-
-  const observer = new ResizeObserver(() => fitScene(viewport, frame, scene));
-  observer.observe(viewport);
-  window.addEventListener('orientationchange', () => requestAnimationFrame(() => fitScene(viewport, frame, scene)));
-
-  if (debugEnabled()) {
-    const islandB = activeLayout.islands.find((item) => item.id === 'island-b');
-    let panel = null;
-    const redrawDebug = (result) => {
-      const report = result?.ok && result.report ? result.report : activeReport;
-      const route = routeToFirstMachine(report);
-      renderFoundationDebug(scene, report, result, route);
-    };
-    const cursor = createPlacementCursor(activeLayout, islandB, ({ item, result, event }) => {
-      redrawDebug(result);
-      if (panel) {
-        const label = panel.querySelector('[data-cursor-status]');
-        label.textContent = `${item.x},${item.y} ${item.orientation} / ${result.ok ? 'OK' : 'NG'}${event === 'commit' ? ' / 確定済' : event === 'cancel' ? ' / 取消' : ''}`;
-        panel.dataset.state = result.ok ? 'ok' : 'error';
+function advanceCustomers() {
+  for (const [id, record] of customers) {
+    if (record.phase === 'toMachine' || record.phase === 'toExit') {
+      record.model = advanceCustomer(record.model);
+      updateCustomerActor(record.actor, record.model);
+      if (record.model.state === CUSTOMER_STATES.SEATED) {
+        if (record.phase === 'toMachine') { record.phase = 'play'; setEvent(`${id} 遊技開始`); }
+        else record.phase = 'leave';
       }
-    });
-    panel = makeCursorPanel(cursor, () => {
-      try {
-        activeLayout = cursor.commit();
-        activeReport = validateLayout(activeLayout);
-        renderLayout(scene, activeLayout);
-        fitScene(viewport, frame, scene);
-        redrawDebug(cursor.snapshot().result);
-      } catch (error) {
-        panel.dataset.state = 'error';
-        panel.querySelector('[data-cursor-status]').textContent = `NG / ${error instanceof Error ? error.message : String(error)}`;
+    } else if (record.phase === 'play') {
+      record.dwell--;
+      record.spendClock++;
+      if (record.spendClock % 3 === 0) {
+        const gain = 70 + Math.floor(Math.random() * 181);
+        sales += gain; cash += gain;
+        setEvent(`${id} +${gain}G`);
       }
-    }, () => {
-      cursor.cancel();
-      renderLayout(scene, activeLayout);
-      fitScene(viewport, frame, scene);
-      redrawDebug(cursor.snapshot().result);
-    });
-    bindPlacementCursorControls(cursor);
-    const initial = cursor.snapshot();
-    redrawDebug(initial.result);
-    panel.querySelector('[data-cursor-status]').textContent = `${initial.item.x},${initial.item.y} ${initial.item.orientation} / ${initial.result.ok ? 'OK' : 'NG'}`;
-    scene.dataset.foundationDebug = 'on';
-  }
-
-  if (status) {
-    const scale = Number(frame.dataset.fitScale || 1);
-    status.textContent = `GRID OK / ${activeReport.itemCount} objects / ${activeReport.reachableCells} walk / NET ${activeReport.serviceNetwork.routeCount} / AISLE ${activeReport.circulation.minWidth}+ / VIEW ${(scale * 100).toFixed(0)}%`;
-    status.dataset.state = 'ok';
+      if (record.dwell <= 0 || gameMinute >= CLOSE_MINUTE) beginExit(record);
+    }
+    if (record.phase === 'leave') {
+      record.actor.remove(); customers.delete(id); setEvent(`${id} 退店`);
+    }
   }
 }
 
-try { boot(); }
-catch (error) {
-  console.error('[Slot Pachiro foundation]', error);
-  const status = document.getElementById('foundation-status');
-  if (status) { status.textContent = 'GRID ERROR'; status.dataset.state = 'error'; }
+function tick() {
+  if (speed === 0) return;
+  const minutes = speed === 2 ? 2 : 1;
+  for (let i=0;i<minutes;i++) {
+    if (gameMinute < CLOSE_MINUTE) gameMinute++;
+    spawnClock++;
+    if (spawnClock >= 5 + Math.floor(Math.random()*5)) { spawnClock = 0; spawnCustomer(); }
+    advanceCustomers();
+  }
+  updateHud();
+  if (gameMinute >= CLOSE_MINUTE && customers.size === 0) setEvent(`営業終了 / 本日売上 ${fmt.format(sales)}G`);
 }
+
+function openPanel(title, html) {
+  els.panelTitle.textContent = title; els.panelBody.innerHTML = html; els.panel.hidden = false;
+}
+function closePanel() { els.panel.hidden = true; }
+document.getElementById('panelClose')?.addEventListener('click', closePanel);
+
+function makeBuildPanel(cursor) {
+  const panel = document.createElement('div'); panel.className = 'placementPanel';
+  panel.innerHTML = '<b>建設モード</b><span data-cursor-status></span><div><button data-move="0,-1">↑</button></div><div><button data-move="-1,0">←</button><button data-rotate>回転</button><button data-move="1,0">→</button></div><div><button data-move="0,1">↓</button></div><div><button data-commit>確定</button><button data-cancel>終了</button></div>';
+  panel.querySelectorAll('[data-move]').forEach((b)=>b.addEventListener('click',()=>{const [dx,dy]=b.dataset.move.split(',').map(Number);cursor.move(dx,dy);}));
+  panel.querySelector('[data-rotate]').addEventListener('click',()=>cursor.rotate(1));
+  panel.querySelector('[data-commit]').addEventListener('click',()=>{
+    try { activeLayout = cursor.commit(); report = validateLayout(activeLayout); renderLayout(els.scene, activeLayout); rerenderCustomers(); applyZoom(zoom); panel.querySelector('[data-cursor-status]').textContent='配置確定'; setEvent('島設備の配置を変更'); }
+    catch(err){ panel.dataset.state='error'; panel.querySelector('[data-cursor-status]').textContent=`NG ${err.message}`; }
+  });
+  panel.querySelector('[data-cancel]').addEventListener('click',()=>exitBuildMode());
+  document.body.appendChild(panel); return panel;
+}
+function rerenderCustomers() {
+  for (const record of customers.values()) { record.actor.remove(); record.actor = renderCustomerActor(els.scene, record.model); }
+}
+function enterBuildMode() {
+  if (buildPanel) return;
+  const island = activeLayout.islands[0]; if (!island) return;
+  speed = 0; syncSpeedButtons();
+  buildCursor = createPlacementCursor(activeLayout, island, ({item,result})=>{
+    if (!buildPanel) return; buildPanel.dataset.state = result.ok ? 'ok':'error'; buildPanel.querySelector('[data-cursor-status]').textContent=`${item.x},${item.y} ${item.orientation} / ${result.ok?'OK':'NG'}`;
+  });
+  buildPanel = makeBuildPanel(buildCursor); bindPlacementCursorControls(buildCursor); buildCursor.move(0,0); setEvent('建設モード / 島設備を移動');
+}
+function exitBuildMode() { buildCursor?.cancel(); buildCursor=null; buildPanel?.remove(); buildPanel=null; speed=1; syncSpeedButtons(); setEvent('営業再開'); }
+
+function syncSpeedButtons(){ document.querySelectorAll('[data-speed]').forEach((b)=>b.classList.toggle('active', Number(b.dataset.speed)===speed)); updateHud(); }
+document.querySelectorAll('[data-speed]').forEach((b)=>b.addEventListener('click',()=>{ speed=Number(b.dataset.speed); syncSpeedButtons(); setEvent(speed===0?'PAUSE':speed===2?'FAST':'NORMAL'); }));
+document.querySelectorAll('[data-action]').forEach((b)=>b.addEventListener('click',()=>{
+  const action=b.dataset.action;
+  if(action==='build'||action==='replace'){ enterBuildMode(); return; }
+  if(action==='info') openPanel('ホール情報',`<p>来店 ${totalVisitors}人 / 店内 ${customers.size}人</p><p>本日売上 ${fmt.format(sales)}G / 所持金 ${fmt.format(cash)}G</p><p>島設備 ${activeLayout.islands.length}列 / 到達可能セル ${report.reachableCells}</p>`);
+  else if(action==='manage') openPanel('経営',`<p>本日の営業は自動進行中です。</p><ul><li>売上 ${fmt.format(sales)}G</li><li>来店 ${totalVisitors}人</li><li>現在稼働 ${els.occ.textContent}</li></ul>`);
+  else if(action==='ad') openPanel('広告',`<p>広告費 10,000G で人気を一時的に上げます。</p><button id="runAd">広告を出す</button>`);
+  else if(action==='research') openPanel('研究',`<p>設備研究は次段階で機種開放へ接続予定。現在は本編営業を優先実装しています。</p>`);
+  else if(action==='customer') openPanel('客層',`<p>現在の来店 ${totalVisitors}人。客は入口から台まで実経路で移動し、遊技後に退店します。</p>`);
+  else openPanel('メニュー',`<p>画面ドラッグで店内移動、ピンチでズーム。▶▶で高速営業。</p>`);
+  document.getElementById('runAd')?.addEventListener('click',()=>{if(cash>=10000){cash-=10000; totalVisitors+=2; updateHud(); setEvent('広告実施 -10,000G'); closePanel();}});
+}));
+
+renderLayout(els.scene, activeLayout);
+installCameraControls();
+centerCamera();
+updateHud();
+setInterval(tick, GAME_TICK_MS);
+setTimeout(()=>spawnCustomer(), 600);
