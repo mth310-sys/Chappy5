@@ -4,65 +4,71 @@
 
 ## 現在地点
 
-- recordCount: **808**
-- latestRecordAdded: **ハッピージャグラーVII**（北電子）— 2014-04-07
-- latestRecord: `docs/real_machine_db/machines/2014-04-07_happy-juggler-vii.md`
+- recordCount: **809**
+- latestRecordAdded: **サムライスピリッツ～剣豪八番勝負～**（SNKプレイモア）— 2014-04-07
+- latestRecord: `docs/real_machine_db/machines/2014-04-07_samurai-spirits-kengo-hachiban-shobu.md`
 - chronologicalFrontier: **2014-04-07**
-- frontierLatestMachine: **ハッピージャグラーVII**
+- frontierLatestMachine: **サムライスピリッツ～剣豪八番勝負～**
 - schema: **resetBehavior v0.7**
-- status: **2014-04-07_GROUP_OPEN / HAPPY_JUGGLER_VII_ADDED**
+- status: **2014-04-07_GROUP_OPEN / SAMURAI_SPIRITS_KENGO_HACHIBAN_SHOBU_ADDED**
 
 ## 今回の同期 / 重要事項
 
-- 最新mainの `README.md`、ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前実レコード `2014-04-07_matador-30.md` を再読。
+- 最新mainの `README.md`、ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前実レコード `2014-04-07_happy-juggler-vii.md` を再読。
 - INDEXは旧集約（19件表示）のため、README規定どおり **LATEST_HANDOFF + main実レコード** を現在の正本として継続。
-- 作業開始時正本は **recordCount 807 / chronologicalFrontier 2014-04-07 / 04-07_GROUP_OPEN**。
-- 04/07群の次の未処理 **ハッピージャグラーVII** がmain未登録であることを確認し、808件目として追加。
-- 04/07群は **マタドール-30 / ハッピージャグラーVII** まで処理済み。未処理は **サムライスピリッツ～剣豪八番勝負～ → パチスロ モンキーターンII**。
+- 作業開始時正本は **recordCount 808 / chronologicalFrontier 2014-04-07 / 04-07_GROUP_OPEN**。
+- 04/07群の次の未処理 **サムライスピリッツ～剣豪八番勝負～** がmain未登録であることを404で確認し、809件目として追加。
+- 04/07群は **マタドール-30 / ハッピージャグラーVII / サムライスピリッツ～剣豪八番勝負～** まで処理済み。
+- 残る既知未処理は **パチスロ モンキーターンII（山佐）**。
 
-## 今回追加 — ハッピージャグラーVII
+## 今回追加 — サムライスピリッツ～剣豪八番勝負～
 
 ### identity / 性能コア
 
-- manufacturer: **北電子**。
-- hall start: **2014-04-07**（HAZUSE）。
-- formalModelName: **ハッピージャグラーV II KK**。
-- inspection number: **3S0869**。
-- generation/system: **5号機 / ノーマル / リアルボーナス / 完全告知**。
-- payout: **96.1 / 97.9 / 99.9 / 102.9 / 105.8 / 108.4%**。北電子公式・複数解析で一致。
-- BIG: **1/287.4 / 282.5 / 273.1 / 264.3 / 252.1 / 240.9**。
-- REG: **1/409.6 / 364.1 / 341.3 / 315.1 / 287.4 / 273.1**。
-- 合成: **1/168.9 / 159.1 / 151.7 / 143.7 / 134.3 / 128.0**。
-- baseGamesPer50（通常打ち1000円あたり）: **34.13 / 34.33 / 34.53 / 35.26 / 35.47 / 35.69G**。完全小役獲得時は34.92〜36.55G。
-- netIncrease: **NOT_APPLICABLE_REAL_BONUS_TYPE**。
-- BIG: **約312枚**、REG: **約104枚**。
-- ceiling: **NOT_APPLICABLE / 天井機能非搭載**。
-- recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7_PARTIAL_RESET_CONTRACT**。
+- manufacturer: **SNKプレイモア**。
+- hall start: **2014-04-07**（K-Navi / HAZUSE）。グリーンべると当時記事も4/7納品予定。
+- formalModelName: **サムライスピリッツ剣豪八番勝負AC**。
+- inspection number: **3S1214**。
+- generation/system: **5号機 / AT / 擬似ボーナス / 差枚数管理 / CZ**。
+- payout series A: **96.9 / 98.6 / 99.9 / 104.0 / 108.3 / 113.6%**。
+- payout series B: **97.2 / 98.9 / 100.3 / 104.4 / 108.8 / 114.1%**。
+- 定義/算出条件を確定できないため **CONFLICT_PAYOUT_SERIES_A_VS_B** として双方保持。
+- 擬似ボーナス初当たり: **1/249.9 / 240.2 / 228.1 / 216.1 / 201.3 / 185.0**。
+- 1G連・剣豪八番勝負引き戻し込み出現率: **1/115.7 / 111.1 / 104.0 / 94.8 / 83.9 / 74.2**。初当たりと定義分離。
+- baseGamesPer50: **UNVERIFIED_AFTER_RESEARCH**。
+- netIncrease: **約2.8枚/G**。
+- REG: **約40枚 / ベルナビ8回**。
+- 剣豪ボーナス: **期待約200枚**、天下無双ボーナス: **期待約400枚**。
+- ceiling: **ボーナス間999G + 最大前兆約32G** → ボーナス確定CZ「練気モード」。
+- recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7_PARTIAL_RESET_CONTRACT_AND_PAYOUT_CONFLICT**。
 
 ### resetBehavior v0.7
 
-- settingChangeBehavior: 朝一1G目の**リールガックンは設定変更濃厚**として機種固有解析で確認。
-- carryOverBehavior: 天井/AT/ART/CZ/出玉管理モードは **NOT_APPLICABLE**。据え置き時の本機固有リール初動・物理状態契約は **UNVERIFIED_AFTER_RESEARCH**。
-- powerCycleBehavior: 設定変更なしの純電源OFF→ONのみでガックンが発生するかは **UNVERIFIED_AFTER_RESEARCH**。一般ジャグラー仕様から補完しない。
-- gameCounterReset: **NOT_APPLICABLE_NO_GAME_COUNT_CEILING**。
-- ceilingAfterReset: **NOT_APPLICABLE_NO_CEILING**。設定変更専用短縮天井NONE_CONFIRMED。
-- modeAfterReset: AT/ART/CZ/天井用内部モード **NOT_APPLICABLE**。朝一専用出玉モードNONE_CONFIRMED。
-- stateAfterReset: **NOT_APPLICABLE_OR_NONE_CONFIRMED_FOR_NORMAL_TYPE**。
+- settingChangeBehavior: **設定変更で天井G数リセット**を確認。設定変更後は練気モード規定Gの朝一優遇解析あり。
+- gameCounterReset: **RESET_CONFIRMED_ON_SETTING_CHANGE**。
+- ceilingAfterReset: 設定変更専用短縮天井は **NONE_CONFIRMED_AFTER_RESEARCH**。通常天井自体は999G+前兆。
+- publicMorningNumbers: **設定変更後128G以内の練気モード当選率25%**。
+- resetDetection: 朝一設定変更後 **96〜128G** に練気モード前兆（怒ノ道ステージ、桜役物開花、好機アイコン等）が出れば**設定変更濃厚**とする当時攻略資料あり。
+- modeAfterReset: 設定変更後に通常時とは異なる練気モード規定G挙動を確認。ただしモード名/全振り分けは **UNVERIFIED_AFTER_RESEARCH**。
+- stateAfterReset: 低確/高確等の具体的初期状態振り分け **UNVERIFIED_AFTER_RESEARCH**。
+- carryOverBehavior: 据え置き時の天井G/規定G/状態の本機固有契約は **UNVERIFIED_AFTER_RESEARCH**。変更時リセットから逆推定しない。
+- powerCycleBehavior: 純電源OFF→ONのみの天井G/規定G/状態契約は **UNVERIFIED_AFTER_RESEARCH**。
 - advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
-- resetBenefits / resetPenalties / publicMorningNumbers: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- resetDetection: **CONFIRMED_PROBABILISTIC_GAKKUN_SIGNAL**。後年解析は「朝一1回転目でガックン→設定変更濃厚」、2014年当時企画の回顧掲載でも前日出目を保持するホールでガックンを設定変更判別に使用。リール停止位置等で判定困難なケースがあるため100%確定契約にはしない。
+- resetPenalties: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- ガックン等の本機固有確定判別は **NONE_CONFIRMED_AFTER_RESEARCH**。
 
 ## safeguards / definitions
 
-- `ハッピージャグラーVII / ハッピージャグラーVⅡ / V2` は2014年同一機の表記揺れとして扱う。
-- 2022年「ハッピージャグラーVⅢ」のスペック・朝一仕様を混入させない。
-- ノーマル機で天井非搭載でも、純電源OFF→ON時のリール挙動は推定しない。
-- ガックンは朝一判別シグナルであり、出玉上のリセット恩恵としては扱わない。
+- 機械割2系列は平均せずCONFLICTとして保持。
+- 「初当たり」と「1G連/引き戻し込み出現率」を混同しない。
+- 設定変更後128G以内25%は**CZ練気モード当選率**で、AT/擬似ボーナスの128G以内総当選率ではない。
+- 一部後年DBの導入月「2014年3月」と具体日付き2014-04-07資料の差を保持し、時系列キーは具体日資料を優先。
+- すろぱちくえすと側のメーカー誤表記「KPE」はidentityに採用しない。
 
 ## 2014-04-07群
 
-- 処理済み: **マタドール-30 / ハッピージャグラーVII**。
-- 未処理: **サムライスピリッツ～剣豪八番勝負～ / パチスロ モンキーターンII**。
+- 処理済み: **マタドール-30 / ハッピージャグラーVII / サムライスピリッツ～剣豪八番勝負～**。
+- 未処理: **パチスロ モンキーターンII（山佐）**。
 - status: **GROUP_OPEN**。
 
 ## 遡及 resetBehavior QA
@@ -72,25 +78,25 @@
 
 ## 次回再開地点
 
-1. **recordCount 808 / chronologicalFrontier 2014-04-07 / 04-07_GROUP_OPEN** から開始。
-2. 次の未処理機種は **サムライスピリッツ～剣豪八番勝負～（SNKプレイモア）**。
-3. 続いて **パチスロ モンキーターンII（山佐）** を処理。
-4. 2機処理後、04/07同日群をメーカー横断再監査し、漏れがなければGROUP_CLOSED。
-5. その後 **2014-04-08〜04-20境界監査**へ進む。K-Navi上の次の具体日アンカーは **2014-04-21**。
-6. 遡及resetBehavior QAは `docs/real_machine_db/machines/2007-02_skylove.md` から継続。
-7. 2015-06-08到達時に **吉宗～極～（ヨシムネH2A4 / 3S1093）** を正式量産版として処理し、2014-02-17限定試験導入履歴とスペック差をidentity/conflictへ記録する。
+1. **recordCount 809 / chronologicalFrontier 2014-04-07 / 04-07_GROUP_OPEN** から開始。
+2. 次の未処理機種は **パチスロ モンキーターンII（山佐）**。
+3. 同機処理後、04/07同日群をメーカー横断再監査し、漏れがなければGROUP_CLOSED。
+4. その後 **2014-04-08〜04-20境界監査**へ進む。K-Navi上の次の具体日アンカーは **2014-04-21**。
+5. 遡及resetBehavior QAは `docs/real_machine_db/machines/2007-02_skylove.md` から継続。
+6. 2015-06-08到達時に **吉宗～極～（ヨシムネH2A4 / 3S1093）** を正式量産版として処理し、2014-02-17限定試験導入履歴とスペック差をidentity/conflictへ記録する。
 
 ## 主要出典 — 取得日 2026-09-06
 
-### ハッピージャグラーVII
-- 北電子公式: `https://www.kitadenshi.co.jp/slot/happyjugglerv2/`
-- HAZUSE基本: `https://hazuse.com/machine/pachislot/3S0869/`
-- HAZUSE天井: `https://hazuse.com/machine/pachislot/3S0869/genre/207/`
-- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/kitac_slot/89/a.php`
-- すろぱちくえすと: `https://www.slopachi-quest.com/article/happy-juggler-v2/`
-- パチマガスロマガFREE回顧: `https://pachimaga.com/free/playback/2500f2839c7f281330480623b049efdf636beae9.php`
-- P-WORLD/遊技通信 後継機記事: `https://news.p-world.co.jp/articles/21515/yugitsushin`
-- P-WORLD/グリーンべると 後継機記事: `https://news.p-world.co.jp/articles/21503/greenbelt`
+### サムライスピリッツ～剣豪八番勝負～
+- グリーンべると: `https://web-greenbelt.jp/00000083/`
+- K-Navi: `https://p-kn.com/slot/2013/`
+- HAZUSE: `https://hazuse.com/machine/pachislot/3S1214/`
+- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/snk_slot/47/a.php`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/7321`
+- 目指せ月収20万！パチスロ天井解析攻略ブログ: `https://mezase20.com/samuraispirits.html`
+- 2-9伝説まとめ: `https://29den.com/samuraispirits2/`
+- 5号機クロニクル: `https://5goki.com/snkplaymore`
+- すろぱちくえすと: `https://www.slopachi-quest.com/kisyubetsu/samurai-spirits/`
 
 ### 04-07群
 - K-Navi 2014年4月新台導入カレンダー: `https://p-kn.com/calendar/201404/`
