@@ -4,99 +4,95 @@
 
 ## 現在地点
 
-- recordCount: **769**
-- latestMachineAddedByChronology: **パチスロ 化物語**（Sammy）
-- latestRecord: `docs/real_machine_db/machines/2013-10-07_bakemonogatari.md`
+- recordCount: **770**
+- latestMachineAddedByChronology: **クイーンハナハナ-30**（パイオニア）
+- latestRecord: `docs/real_machine_db/machines/2013-10-07_queen-hanahana-30.md`
 - chronologicalFrontier: **2013-10-07**
-- frontierLatestExactDateMachine: **パチスロ 化物語**
+- frontierLatestExactDateMachine: **クイーンハナハナ-30**
 - schema: **resetBehavior v0.7**
-- status: **OPEN_2013-10-07_GROUP__NEXT_QUEEN_HANAHANA_30_THEN_FULL_SAME_DAY_AUDIT**
+- status: **CLOSED_2013-10-07_GROUP__NEXT_BOUNDARY_AUDIT_2013-10-08_TO_2013-10-20__KNOWN_2013-10-21_ANCHORS_MOUKO_HANAGATA_AND_LOVEJO**
 
 ## 今回の同期 / 重要事項
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前レコード `2013-10-07_persona4-the-slot.md` を再読してから継続。
-- INDEXは旧集約状態（19件表記）のため、README規定どおり **LATEST_HANDOFF + 実レコード** を正として扱う。
-- 作業開始時の正本は **recordCount 768 / chronologicalFrontier 2013-10-07 / 10-07群OPEN**。
-- 前handoffの最優先候補 **「パチスロ 化物語」** の既存レコード不在をGitHub mainで確認し、769件目として新規登録。
-- 2025年「スマスロ 化物語」と2020年「パチスロ〈物語〉シリーズ セカンドシーズン」が検索に大量混入するため、2013年 `化物語ZX / 3S0599` をidentity anchorとして別機種情報を遮断。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前レコード `2013-10-07_bakemonogatari.md` を再読してから継続。
+- INDEXは旧集約状態（19件表記）のためREADME規定どおり **LATEST_HANDOFF + 実レコード** を正とする。
+- 作業開始時の正本は **recordCount 769 / chronologicalFrontier 2013-10-07 / 10-07群OPEN**。
+- 前handoff最優先候補 **「クイーンハナハナ-30」** の既存レコード不在をmainで確認し、770件目として新規登録。
 
-## 今回追加 — パチスロ 化物語
+## 今回追加 — クイーンハナハナ-30
 
 ### identity / 性能コア
 
-- manufacturer: **Sammy / サミー**。
-- modelName / inspectionNumber: **化物語ZX / 3S0599**。
-- releaseDate: **2013-10-07**。HAZUSE / K-Navi / DMMで一致。
-- generation/system: **5号機 / 差枚数管理AT / CZ / 疑似ボーナス**。
-- 機械割: **97.4 / 98.6 / 100.8 / 103.5 / 107.1 / 112.4%**。
-- AT「倖時間」初当たり: **1/215.5 / 1/207.5 / 1/199.4 / 1/191.9 / 1/181.1 / 1/155.4**。
-- baseGamesPer50: **約30.5G**。
-- AT「倖時間」: **初期150枚 / 純増約2.7枚/G / 差枚数管理**。
-- AT中疑似ボーナス: **30G**。
-- 天井: **AT消化後の引き戻しゾーン終了後999G + 前兆**、恩恵 **AT + 倍倍CHANCE**。
+- manufacturer: **パイオニア / PIONEER**。
+- modelName: **クイーンハナハナEX-30**。
+- releaseDate: **2013-10-07**。パチビー / K-Naviで一致。グリーンべると当時記事は納品開始2013-10-06であり定義を分離。
+- generation/system: **5号機 / ノーマルAタイプ / 完全告知 / 30φ**。
+- 機械割: **96 / 98 / 101 / 104 / 107 / 111%**。
+- BIG: **1/309 / 297 / 284 / 270 / 256 / 240**。
+- REG: **1/516 / 481 / 445 / 409 / 376 / 344**。
+- 合算: **1/193 / 184 / 173 / 163 / 152 / 141**。
+- baseGamesPer50: **平均約37.5G**。
+- BIG **最大約312枚** / REG **最大約130枚**。
 - recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_RESEARCHED**。
 
 ### resetBehavior v0.7
 
-- **設定変更時: 天井Gリセット / AT抽選状態は高確の可能性あり / 液晶は市街地ステージ**。DMM本機専用リセット仕様で直接確認。
-- **電源OFF→ONのみ: 天井G・AT抽選状態・液晶ステージを引継ぎ**。同じく本機専用資料で直接確認。
-- 設定変更専用短縮天井: **NONE_CONFIRMED_AFTER_RESEARCH**。2025年スマスロ版の600G短縮は別機種なので流用禁止。
-- 解呪連モード等の設定変更時具体再抽選契約 / 朝一モード振り分け: **UNVERIFIED_AFTER_RESEARCH**。
-- 設定変更時の低確/高確/超高確具体振り分け率: **UNVERIFIED_AFTER_RESEARCH**。「高確の可能性あり」を100%へ拡張しない。
-- 有利区間: **NOT_APPLICABLE_5TH_GEN**。
-- 変更判別: 後年実戦回顧で **朝一1G目ガックンあり→変更濃厚 / なし→据え置き濃厚**。ただし朝一7揃い・手動リール操作等で無効化可能なため `ANALYSIS_SINGLE_OBSERVATIONAL` とし、確定判別にはしない。
-- publicMorningNumbers: 定量的なモード/状態振り分けは **UNVERIFIED_AFTER_RESEARCH**。天井進捗RESETのみ確定。
+- 純AタイプでART/AT/CZ、ゲーム数天井、朝一モード・高確状態、有利区間は **NOT_APPLICABLE**。
+- 設定変更専用の短縮天井・CZ/AT優遇・朝一専用モードは **NONE / NOT_APPLICABLE_NORMAL_TYPE**。
+- 電源OFF→ONのみでホール朝一価値を持つ天井進捗・AT/ART状態は **NOT_APPLICABLE_NORMAL_TYPE**。
+- 変更判別は後年解析で **ガックンすれば設定変更濃厚**。ただし停止出目・個体差・店側対策があるため確定判別にしない。
+- **朝一87G以内のボーナスでBGM変化が発生すれば据え置き濃厚** とする解析あり。発生率は低いので観測系として保持。
+- クイーンハナハナ以降はベットランプ判別不可とする解析あり。
+- publicMorningNumbers: **87G以内**のみ観測系の据え置き示唆ウィンドウとして保存。
 
-## conflicts / safeguards
-
-- 機械割は一般表記 **97.4～112.4%** と精密表記 **97.38～112.42%** があり、丸め精度差として保持。
-- AT初当たり設定4/5は主系列 **1/191.9 / 1/181.1** に対し一部二次資料 **1/191.4 / 1/181.0**。平均せず軽微CONFLICT注記。
-- **スマスロ 化物語（2025）**のリセット600G、有利区間、HIGHモード等は絶対に2013年機へ混入させない。
-- **物語シリーズ セカンドシーズン（2020）**も別機種。
-
-## 2013-10-07同日群 — OPEN
+## 2013-10-07同日群 — CLOSED
 
 処理済み:
 - **Persona4 The SLOT**（ニューギン） — record 768。
 - **パチスロ 化物語**（Sammy） — record 769。
+- **クイーンハナハナ-30**（パイオニア） — record 770。
 
-確認済み未処理候補:
-- **クイーンハナハナ-30（パイオニア）** — パチビーで2013-10-07導入。
+HAZUSE / K-Navi / パチビー / P-WORLD業界記事系を再横断し、今回追加すべき別の2013-10-07確定スロット候補は確認できなかったため同日群をCLOSED。
 
-同日群はまだ全メーカー横断CLOSED監査前。クイーンハナハナ-30処理後にHAZUSE / P-WORLD / K-Navi / パチビー / メーカー公式 / 当時業界資料で追加候補を再監査する。
+## 次境界
+
+- **2013-10-08〜2013-10-20** を導入日・納品日・検定日を分離して監査する。
+- 次の既知具体日アンカーは **2013-10-21**。
+- HAZUSEで同日導入を確認済み:
+  - **猛虎花形**（スパイキー） — 型式 猛虎花形CC / 3S0448。
+  - **パチスロ ラブ嬢**（オリンピア） — 型式 パチスロラブ嬢A1 / 3S0656。
+- 境界監査で10/08〜10/20の未処理が見つかった場合はそちらを優先し、10/21へ飛ばさない。
 
 ## 遡及resetBehavior QA 進捗
 
 - QAカーソルは `2007-01_karate-baka-ichidai.md` の次の実ファイル順を維持。
-- 今回は本線769件目を優先し、QAカーソルは前進させていない。
+- 今回もGitHubの巨大tree応答では直後ファイル名を安全に一意抽出できなかったため、誤ったQA前進を避けてカーソルを据え置いた。
+- `karate-baka-ichidai` 自体は既にresetBehavior v0.7収集済み。既存COMPLETE_CORE/PARTIAL等の性能側判定は変更しない。
 
 ## 次回再開地点
 
-1. **recordCount 769 / chronologicalFrontier 2013-10-07 / 10-07群OPEN** から開始。
-2. まず **「クイーンハナハナ-30」（パイオニア）** の重複確認 → 性能コア + resetBehavior v0.7を770件目候補として処理。
-3. 2013-10-07同日群をHAZUSE / P-WORLD / K-Navi / パチビー / メーカー・当時業界資料で全メーカー横断監査。
-4. 追加未処理がなければ10-07群をCLOSEDし、次の具体導入日へ前進。
-5. 導入予定日・納品開始日・実ホール導入日・検定日・記事日を分離して保持する。
-6. 遡及QAは `2007-01_karate-baka-ichidai.md` 直後の実ファイル順から再開。
+1. **recordCount 770 / chronologicalFrontier 2013-10-07 / 10-07群CLOSED** から開始。
+2. **2013-10-08〜10-20境界監査**を先に実施。
+3. 漏れがなければ2013-10-21群へ進み、最古の未登録候補から性能コア + resetBehavior v0.7を収集。
+4. 既知候補は **猛虎花形 / パチスロ ラブ嬢**。同日群の他メーカー候補も横断監査する。
+5. 遡及QAは `2007-01_karate-baka-ichidai.md` 直後の実ファイル順から再開し、resetBehavior欠損の最初の1機を特定する。
 
 ## 主要出典 — 取得日 2026-09-06
 
-### パチスロ 化物語
+### クイーンハナハナ-30
 
-- Sammy公式: `https://www.sammy.co.jp/japanese/product/pachislot/bakemonogatari/` — 初代製品identity。
-- HAZUSE: `https://hazuse.com/machine/pachislot/3S0599/` — 2013-10-07、型式/検定、機械割。
-- HAZUSE基本スペック: `https://hazuse.com/machine/pachislot/3S0599/genre/201/` — AT初当たり、30.5G/50枚、機械割。
-- K-Navi: `https://p-kn.com/slot/1930/` — 導入日、AT初当たり、初期150枚、純増2.7枚/G、CZ概要。
-- DMMぱちタウン: `https://p-town.dmm.com/machines/1037` — 型式/導入、天井、設定変更と電源OFF→ONのリセット契約。
-- パチスロ解析ガイド: `https://pachislot-guide.net/2013/bakemonogatari/` — 精密機械割、AT基本性能。
-- 当時天井解析: `https://www.slopachi-quest.com/article/376823545.html` — 999G天井、設定変更で天井Gリセット。
-- ガックン実戦回顧: `https://sin-surobi.com/bakemonogatari/12767/` — 朝一1Gガックン観測と注意条件。
+- パチビー: `https://www.pachibee.jp/machines/about/213080011` — 2013-10-07導入 / 5号機ノーマル / 完全告知 / 30φ。
+- K-Navi: `https://p-kn.com/slot/1926/` — 2013-10-07導入 / 設定別BIG・REG・合算 / 機械割 / BIG312枚・REG130枚。
+- P-WORLD / グリーンべると 2013-08-30: `https://news.p-world.co.jp/articles/6038/greenbelt` — 型式 / 平均37.5G/1000円 / 出玉率 / ボーナス枚数 / 納品10-06。
+- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/pioneer_slot/107/a.php` — ノーマル完全告知 / BIG約312枚・REG約130枚。
+- スロパチクエスト: `https://www.slopachi-quest.com/article/queen-hanahana/` — ガックン / 朝一87G以内BGM据え置き示唆 / ベットランプ判別不可。
 
-### 次候補
+### 次境界アンカー
 
-- パチビー クイーンハナハナ-30: `https://www.pachibee.jp/machines/about/213080011` — 2013-10-07導入。
+- HAZUSE 猛虎花形: `https://hazuse.com/machine/pachislot/3S0448/` — 2013-10-21。
+- HAZUSE パチスロ ラブ嬢: `https://hazuse.com/machine/pachislot/3S0656/` — 2013-10-21。
 
 ## commits
 
-- 769th record add: `95ce9538c1caa925683c7d570f8421681398232c` (`db: add Bakemonogatari with resetBehavior v0.7`)
-- handoff update: current run (`db: advance relay through Bakemonogatari`)
+- 770th record add: `0e063c0aafc74f9013e7102997c1070d4552c4ea` (`db: add Queen Hanahana-30 with resetBehavior v0.7`)
+- handoff update: current run (`db: advance relay through Queen Hanahana-30`)
