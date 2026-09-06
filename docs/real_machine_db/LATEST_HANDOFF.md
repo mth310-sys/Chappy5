@@ -4,110 +4,113 @@
 
 ## 現在地点
 
-- recordCount: **766**
-- latestMachineAddedByChronology: **リバティベルV**（アクロス）
-- latestRecord: `docs/real_machine_db/machines/2013-09-17_liberty-bell-v.md`
+- recordCount: **767**
+- latestMachineAddedByChronology: **2027III**（スター）
+- latestRecord: `docs/real_machine_db/machines/2013-09-17_2027-iii.md`
 - chronologicalFrontier: **2013-09-17**
-- frontierLatestExactDateMachine: **リバティベルV**
+- frontierLatestExactDateMachine: **2027III**
 - schema: **resetBehavior v0.7**
-- status: **OPEN_2013-09-17_GROUP__NEXT_2027_3**
+- status: **CLOSED_2013-09-17_GROUP__NEXT_2013-09-24_KING_OF_KEIBA**
 
 ## 今回の同期 / 重要事項
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前進捗を再読してから継続。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前レコードを再読してから継続。
 - INDEXは旧集約状態（19件表記）のため、README規定どおり **LATEST_HANDOFF + 実レコード** を正として扱う。
-- 作業開始時、過去チャット上の762件地点よりmainが先行しており、正本は **recordCount 765 / chronologicalFrontier 2013-09-17 / 09-17群OPEN** だったため、古い地点へ戻らず最新handoffを優先。
-- handoff先頭候補 **リバティベルV（アクロス）** は同名レコード不在を確認し、766件目として新規登録。
-- 09-17同日群を再監査したところ、ALL7の2013年9月一覧と天井DBで **2027 3（スター）** が2013-09-17導入候補として新たに確認できたため、群はCLOSEDにせずOPEN維持。
-- パチンコ同日候補（ぱちんこ必殺仕事人 お祭りわっしょい、わんわんパラダイスIN沖縄、百花繚乱サムライガールズ、銀河鉄道物語等）は本DBのパチスロ本線から除外。
+- 作業開始時の正本は **recordCount 766 / chronologicalFrontier 2013-09-17 / 09-17群OPEN**。古い会話地点へ戻らず最新handoffを優先。
+- handoff指定の未処理候補 **2027 3（スター）** は同名/正規表記 `2027III` の既存レコード不在を確認し、767件目として新規登録。
+- 表記はALL7/天井DBで `2027 3` / `2027 3 Evolve`、K-Navi/P-WORLD/当時業界記事で `2027III` / `2027Ⅲ` / `ニーマルニーナナサード`。正規レコード名は当時資料優先で `2027III` とした。
+- ALL7の2013年9月導入一覧を再監査すると、2013-09-17のパチスロは `2027 3 / デビル メイ クライ4 / ボンバーパワフル2 / リバティベル5` の4機。すべて登録済みとなったため **2013-09-17群をCLOSED**。
+- 同一覧では次のパチスロ具体導入予定日は **2013-09-24「KING of KEIBA」（藤商事）**。2013-09-18～09-23に追加候補は当該月一覧では確認できず、次回は境界を別系統でも監査してから09-24群へ進む。
 
-## 今回追加 — リバティベルV
+## 今回追加 — 2027III
 
 ### identity / 性能コア
 
-- manufacturer: **アクロス**。
-- releaseDate: **2013-09-17**。K-Naviでホール導入開始、グリーンべるとでは2013-09-16納品開始予定。
-- 型式: **リバティベルファイブT**。
-- generation/system: **5号機 / ART / 擬似ボーナス / ゲーム数上乗せ**。
-- 機械割: **97.6 / 99.5 / 102.2 / 106.1 / 110.3 / 115.3%**。
-- 擬似ボーナス合算: **1/152.8 / 145.7 / 132.1 / 117.7 / 103.0 / 87.9**。
-- BIG: **1/299.0 / 285.3 / 255.5 / 229.5 / 204.3 / 178.1**。
-- REG: **1/328.1 / 312.0 / 285.7 / 251.0 / 214.6 / 178.3**。
-- EXTRA BONUS: **全設定共通1/6553.6**（後年解析）。
-- baseGamesPer50: **約31G/1000円**。当時別系統で直接照合できず `ANALYSIS_SINGLE_RETROSPECTIVE`。
-- 擬似ボーナスART: **純増約2.0枚/G**。
-- EXTRA: **250G / 約500枚**、BIG: **100G / 約200枚**、REG: **50G / 約100枚**。
-- 天井: **擬似ボーナス間900G → 擬似ボーナス当選**。
+- manufacturer: **スター**。
+- releaseDate: **2013-09-17**。ALL7の月間導入一覧と当時試打回顧で一致し、K-Naviは9月中旬導入予定として報道。
+- generation/system: **5号機 / ART / CZ / ゲーム数上乗せ + 継続率管理**。
+- 機械割: **97.5 / 98.6 / 99.7 / 102.5 / 107.0 / 112.2%**。2-9伝説と5号機クロニクルで一致。
+- BATTLE MODE初当たり: **1/259.4 / 235.7 / 246.4 / 215.5 / 224.8 / 188.2**。後年単一整理値なので `ANALYSIS_SINGLE_RETROSPECTIVE`。
+- baseGamesPer50: **UNVERIFIED_AFTER_RESEARCH**。50枚/1000円/ベース/コイン持ち等と表記揺れを組み替えたが比較可能値を固定できず。
+- ART純増: **約2.3枚/G**。P-WORLD・K-Navi等で一致。
+- BATTLE MODE: **40G+α / 最大80%継続**。
+- STORY MODE: **20G+α / 75～95%継続**。
+- 天井: **ART間600 / 900 / 1200Gのいずれか**。1200G選択時は**80%継続BATTLE MODE**。
 - recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_RESEARCHED_PARTIAL**。
 
 ### resetBehavior v0.7
 
-- 設定変更時: **900G天井までのゲーム数をクリア**。
-- K-Naviには本機専用 **「モード移行率(設定変更後)」**、パチマガスロマガには **「朝イチ・設定変更」** 項目が存在することを確認。
-- ただし今回の現存検索取得系では設定変更後モードの具体率表を安全に回収できず、`UNVERIFIED_FOR_EXACT_TABLE_AFTER_RESEARCH`。通常時/ボーナス後のモード移行率を朝一へ転記しない。
-- 純据え置き時の天井G/モード/CZ状態: **UNVERIFIED_AFTER_RESEARCH**。
-- 設定変更なしの電源OFF→ON時の天井G/モード/CZ状態/表示: **UNVERIFIED_AFTER_RESEARCH**。
+- 設定変更時: **ART間天井G数リセット**を本機専用天井整理で直接確認。
+- 設定変更時の600/900/1200G選択率、スパイラルZERO規定回数、CZ間カウンタの具体的再抽選契約: **UNVERIFIED_AFTER_RESEARCH**。
+- 純据え置き時のART間G/周期/CZ間G/内部状態: **UNVERIFIED_AFTER_RESEARCH**。
+- 設定変更なしの電源OFF→ON時のART間G/周期/CZ間G/内部状態/表示: **UNVERIFIED_AFTER_RESEARCH**。
 - 設定変更専用短縮天井: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 設定変更後専用モード・朝一優遇率: **UNVERIFIED_AFTER_RESEARCH**。
 - 有利区間: **NOT_APPLICABLE_5TH_GEN**。
-- resetPenalty: 設定変更で前日900G天井進捗が消えるため、宵越し天井狙いには不利。
-- 本機固有ガックン/初期出目/ランプ等の変更判別: **UNVERIFIED_AFTER_RESEARCH**。
-- publicMorningNumbers: 設定変更時の具体的モード振り分け率は未回収。900G天井進捗CLEARのみ直接固定。
+- resetPenalty: 設定変更で前日ART間ハマリの天井進捗が消えるため、宵越し天井狙いには不利。
+- 本機固有ガックン/初期出目/液晶周期表示等による変更判別: **UNVERIFIED_AFTER_RESEARCH**。
+- publicMorningNumbers: 通常天井候補600/900/1200Gと1200G時80%BM、設定変更で天井Gリセットまで固定。リセット専用振り分け率は未確認。
 
 ### conflicts / safeguards
 
-- 5号機クロニクルには本機を「Aタイプ」「BIG約311枚/REG約104枚」とする整理があるが、2013年当時のグリーンべると、K-Navi、P-WORLD、パチマガスロマガは **ARTによる擬似ボーナス（250/100/50G、純増約2.0枚/G）** で一致。平均せず、当時複数資料を本線に採用。
-- pachislo-dataの同一ページ内に「純増1.5枚/G」と「純増2.0枚/G」が混在するため、孤立1.5枚値は `CONFLICT_ISOLATED_RETROSPECTIVE_1_5_VS_CONTEMPORARY_2_0` として保持し、本線は2.0枚/G。
-- 旧号機の「リバティベル」「リバティベルIII」等を混入させない。
+- `2027 3 Evolve` の「Evolve」は天井一覧上の名称として保持するが、当時一次寄り資料で正式型式名を固定できないため modelName へは転記しない。
+- 旧作 `2027 Revise / 2027II / 2027IINEO` の設定変更・天井仕様を混入させない。
+- BM初当たりは単一後年整理値なので複数一致確認前に信頼度を上げない。
 
 ## 境界監査
 
-### 2013-09-17同日群
+### 2013-09-17同日群 — CLOSED
 
 登録済み:
 - **パチスロ ボンバーパワフルII（SANKYO）** — #764。
 - **デビル メイ クライ 4（エンターライズ）** — #765。
-- **リバティベルV（アクロス）** — #766、今回追加。
+- **リバティベルV（アクロス）** — #766。
+- **2027III（スター）** — #767、今回追加。
 
-未処理候補:
-- **2027 3（スター）** — ALL7で2013-09-17導入予定、別天井DBでも2013-09-17導入として確認。次回最優先。
+- ALL7の2013年9月一覧では09-17のパチスロ候補は上記4機。パチンコ同日候補は本DBの本線対象外。
+- **2013-09-17群: CLOSED**。
 
-- その他09-17候補は次回、メーカー横断・当時導入カレンダー・業界記事で再監査。
-- **2013-09-17群: OPEN**。
+### 次の境界
+
+- 2013-09-18～09-23: ALL7月間一覧ではパチスロ具体導入候補なし。次回、別系統の当時導入カレンダー/メーカー資料でも最終監査する。
+- 次の具体日候補: **2013-09-24「KING of KEIBA」（藤商事）**。
+- その次: **2013-09-30「Persona4 The SLOT」（ニューギン）** がALL7月間一覧に掲載。
 
 ## 遡及resetBehavior QA 進捗
 
 - QAカーソルは `2007-01_karate-baka-ichidai.md` の次の実ファイル順を維持。
-- 今回は本線766件目を優先し、QAカーソルは前進させていない。
+- 今回は本線767件目を優先し、QAカーソルは前進させていない。
 - 既存性能コアを無駄に再調査していない。
 
 ## 次回再開地点
 
-1. **recordCount 766 / chronologicalFrontier 2013-09-17 / 09-17群OPEN** から開始。
-2. まず **2013-09-17「2027 3」（スター）** の重複確認 → 性能コア + resetBehavior v0.7を収集し、767件目候補として処理。
-3. その後09-17同日群をメーカー横断で再監査し、未登録がなければCLOSED判定。
-4. 次日群へ進む前に導入日・納品日・検定日・記事公開日を分離して保持。
-5. 遡及QAは `2007-01_karate-baka-ichidai.md` 直後の実ファイル順から再開。
+1. **recordCount 767 / chronologicalFrontier 2013-09-17 / 09-17群CLOSED** から開始。
+2. **2013-09-18～09-23境界**を別系統の当時導入カレンダー・メーカー横断資料で最終監査。
+3. 漏れがなければ **2013-09-24「KING of KEIBA」（藤商事）** の重複確認 → 性能コア + resetBehavior v0.7を768件目候補として処理。
+4. 09-24同日群をメーカー横断で監査し、未登録がなければCLOSED判定。
+5. 次日群へ進む前に導入日・納品日・検定日・記事公開日を分離して保持。
+6. 遡及QAは `2007-01_karate-baka-ichidai.md` 直後の実ファイル順から再開。
 
 ## 主要出典 — 取得日 2026-09-06
 
-### リバティベルV
+### 2027III
 
-- グリーンべると / P-WORLD業界ニュース: `https://news.p-world.co.jp/articles/5986/greenbelt` — 2013-09-16納品予定、ライトART、100/50/250G、純増2.0枚/G。
-- K-Navi: `https://p-kn.com/slot/1909/` — 導入2013-09-17、設定別合算/機械割、ART基本性能、設定変更後モード解析項目。
-- P-WORLD: `https://www.p-world.co.jp/machine/database/7158` — 5号機ART、純増2.0枚/G、EXTRA/BIG/REG基本G数、モード概要。
-- パチマガスロマガ 基本情報: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/across_slot/02/a.php` — ART基本性能、純増、基本獲得。
-- パチマガスロマガ インデックス: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/across_slot/02/across_slot_02.php` — モード移行率、天井・ヤメ時、朝イチ・設定変更項目の存在。
-- pachislo-data: `https://pachislo-data.com/across/libertybellv` — 31G/1000円、900G天井、設定変更で天井Gクリア。純増記述内競合あり。
-- pacnk: `https://pacnk.com/slot/tools/sh_libertybellv.html` — BIG/REG設定別、EXTRA 1/6553.6、900G天井、設定変更時天井リセット。
-- 中一商事: `https://www.nakaiti.com/html/sAcross085.html` — 型式リバティベルファイブT、機械割/合算、ART基本性能。
-- 5号機クロニクル: `https://5goki.com/universal` — 機械割/導入月照合。ゲーム性記述は当時資料と競合。
+- ALL7 2013年9月一覧: `https://www.all7.jp/plans/index/2013/09` — 2027 3、スター、2013-09-17導入予定。
+- K-Navi発表会: `https://p-kn.com/topics/exhibition/1114/` — シリーズ第6作、BM40G、SM20G、Wループ、9月中旬予定。
+- グリーンべると: `https://web-greenbelt.jp/00001015/` — 2013-07-10、ART特化、スパイラルZERO、上乗せ。
+- P-WORLD: `https://www.p-world.co.jp/machine/database/7144` — 5号機ART/CZ/天井、純増2.3枚/G、BM40G、SM20G、天井600/900/1200G、1200G時80%BM。
+- K-Navi STORY MODE: `https://p-kn.com/slot/1897/45769/` — 20G+α、純増2.3枚/G、継続率75～95%。
+- K-Navi スパイラルZERO: `https://p-kn.com/slot/1897/45758/` — 32G周期でレア役以上。
+- K-Navi 急襲MODE: `https://p-kn.com/slot/1897/46375/` — 20G CZ、設定別トータル突入率。
+- 2-9伝説: `https://29den.com/20273/` — 機械割、BM初当たり、ART間600/900/1200G、設定変更で天井Gリセット。
+- 5号機クロニクル: `https://5goki.com/star` — 2013/9、設定別機械割。
+- 天井一覧: `https://smaslo.man-soft.com/slot-tenzyou-itiran/` — 2027 3 Evolve、2013/09/17、ART後600/900/1200G。
 
-### 09-17群監査 / 次候補
+### 09-17群 / 次候補
 
-- ALL7 2013年9月一覧: `https://www.all7.jp/plans/index/2013/09` — 2027 3、DMC4、ボンバーパワフル2、リバティベル5を2013-09-17導入予定として掲載。
-- 天井一覧: `https://smaslo.man-soft.com/slot-tenzyou-itiran/` — `2027 3 Evolve[スター] 導入:2013/09/17`、天井ART後600/900/1200G。
+- ALL7 2013年9月一覧: `https://www.all7.jp/plans/index/2013/09` — 09-17のパチスロ4機を照合、次の掲載日は09-24 KING of KEIBA、09-30 Persona4 The SLOT。
 
 ## commits
 
-- 766th record add: `8aa7f2181d45b6081857e58e7d7271fb25781d23` (`db: add Liberty Bell V with resetBehavior v0.7`)
-- handoff update: current run (`db: advance relay to Liberty Bell V`)
+- 767th record add: `4cbf423e14e0bb83bb408c155ee840cec90312eb` (`db: add 2027III with resetBehavior v0.7`)
+- handoff update: current run (`db: advance relay through 2027III`)
