@@ -4,62 +4,63 @@
 
 ## 現在地点
 
-- recordCount: **759**
-- latestMachineAddedByChronology: **パチスロ PROJECT ARMS**（ニューギン）
-- latestRecord: `docs/real_machine_db/machines/2013-09-02_project-arms.md`
+- recordCount: **760**
+- latestMachineAddedByChronology: **回胴黙示録カイジ3**（ロデオ / 製造元: 株式会社銀座）
+- latestRecord: `docs/real_machine_db/machines/2013-09-02_kaidou-mokushiroku-kaiji3.md`
 - chronologicalFrontier: **2013-09-02**
-- frontierLatestExactDateMachine: **パチスロ PROJECT ARMS**
+- frontierLatestExactDateMachine: **回胴黙示録カイジ3**
 - schema: **resetBehavior v0.7**
-- status: **OPEN_2013-09-02_GROUP__NEXT_KAIDOU-MOKUSHIROKU-KAIJI3**
+- status: **CLOSED_2013-09-02_GROUP__NEXT_BOUNDARY_2013-09-03_TO_09-16__NEXT_CONFIRMED_2013-09-17_BOMBER_POWERFUL_II**
 
 ## 今回の同期
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、旧集約状態の `docs/real_machine_db/INDEX.md`、最新 `LATEST_HANDOFF.md`、直前レコード `2013-08-19_contra-3d.md` を再読。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、旧集約状態の `docs/real_machine_db/INDEX.md`、最新 `LATEST_HANDOFF.md`、直前レコード `2013-09-02_project-arms.md` を再読。
 - INDEXは19件時点の旧集約状態のため、README規定どおり、より新しい **LATEST_HANDOFF + 実レコード** を正として継続。
-- 開始時main正本は recordCount **758** / chronologicalFrontier **2013-08-19** / 08-19群CLOSED。
-- 2013-08-20以降を当時導入カレンダー・個別機種DB・業界資料で再監査。後年の撤去/認定・検定期限系資料に現れる8月下旬の日付をホール導入日へ混入させず、今回の検索範囲では **2013-08-20〜2013-09-01に具体的な新規ホール導入日を固定できる未登録5号機を確認できなかった**。
-- 次の具体導入日として複数資料で **2013-09-02** を確認。同日群の未処理先頭 **パチスロ PROJECT ARMS（ニューギン）** を759件目として追加。
-- 同日には **回胴黙示録カイジ3（ロデオ）** が未処理で残るため、2013-09-02群はOPENのまま。
+- 開始時main正本は recordCount **759** / chronologicalFrontier **2013-09-02** / 09-02群OPEN。
+- 前HANDOFFの未処理先頭 **回胴黙示録カイジ3（ロデオ）** を760件目として追加。
+- 2013-09-02同日候補について、K-Navi、当時業界記事、複数機種DBを再監査。今回の調査範囲では既登録の **パチスロ PROJECT ARMS / 回胴黙示録カイジ3** 以外に、同日ホール導入を具体日で固定できる未登録5号機を確認できなかったため **2013-09-02群をCLOSED_FOR_CURRENT_RESEARCH** とした。
+- 2013-09-03以降の次の具体導入日を再探索し、少なくとも **2013-09-17 パチスロ ボンバーパワフルII（SANKYO）** をK-Naviで確認。09-03〜09-16は次回先頭で再監査してから進む。
 
-## 今回追加 — パチスロ PROJECT ARMS
+## 今回追加 — 回胴黙示録カイジ3
 
 ### identity / 性能コア
 
-- manufacturer: **ニューギン**。
-- releaseDate: **2013-09-02**。K-Navi / パチビー / パチスロ解析DBで一致し、グリーンべると当時業界記事も9月2日納品開始予定とする。
-- 型式名: **プロジェクトアームズW**。
-- generation/system: **5号機 / A+ART / ボーナス+ART / CZ**。
-- 機械割: **96.6 / 99.5 / 100.3 / 104.2 / 109.8 / 116.6%**。
-- ART初当たり: **1/688 / 1/637 / 1/635 / 1/576 / 1/562 / 1/451**。
-- BIG: **1/442.8 / 442.8 / 442.8 / 439.8 / 439.8 / 439.8**。
-- REG: **1/565.0 / 555.4 / 520.2 / 504.1 / 489.1 / 474.9**。
-- ボーナス合算: **1/248.2 / 246.4 / 239.2 / 234.9 / 231.6 / 228.3**。
-- baseGamesPer50: **平均約33G/50枚**（単一解析資料値）。
-- ART「ARMS RUSH」: **30〜300G+α / 純増約1.5枚/G / 継続率50〜90%**。
-- BIG平均約**204枚**、REG平均約**60枚**。
+- manufacturer: **ロデオ（製造元: 株式会社銀座）**。
+- releaseDate: **2013-09-02**。K-Navi、2-9伝説、後年機種DBで一致。当時業界記事は9月1日納品開始予定とするため、納品日とホール導入日を定義分離。
+- 型式名: **カイジ3S**、検定番号 **3S0271**。
+- generation/system: **5号機 / AT / ゲーム数解除 + 自力CZ**。
+- 主機械割系列: **97.1 / 98.7 / 100.6 / 103.0 / 107.3 / 112.4%**。
+- AT初当たり: **1/299.1 / 285.7 / 270.3 / 256.0 / 227.0 / 197.1**。
+- baseGamesPer50: **約28G/50枚**を主値。別資料の約30GとCONFLICT保持。
+- AT「黙示録モード」: **初期30〜300G / 純増約2.6枚/G / 継続率50〜89%**。
+- 擬似ボーナス非搭載のAT特化タイプ。
 
 ### resetBehavior v0.7
 
-- パチスロ解析DBの本機ページに **設定変更時は天井到達までのゲーム数がクリア**されるとの直接記述あり。`gameCounterReset.settingChange = CLEAR_CONFIRMED_SINGLE_DIRECT_ANALYSIS_SOURCE`。
-- 同ページは通常天井を **ボーナス間1200G** とするが、天井節の見出しに別機種「RAVE エンドレスラッシュ」の名称が混入している編集誤記があるため、天井値と設定変更時クリアは **ANALYSIS_SINGLE_WITH_PAGE_TRANSCRIPTION_WARNING** として信頼度を抑えて保存。
-- 純据え置き時の天井G/内部状態引継ぎ、設定変更を伴わない電源OFF→ON、設定変更時の低確/高確/超高確初期状態、ガックン・初期出目・液晶等の変更判別は、機種名・型式名・メーカー名と検索語を変え、K-Navi、パチマガスロマガ、当時解析、旧DB、回顧資料を横断後も **UNVERIFIED_AFTER_RESEARCH**。
-- 設定変更専用の固定短縮天井、専用CZ/高確、朝一特定G以内当選率などの公開恩恵: **NONE_CONFIRMED_AFTER_RESEARCH / UNVERIFIED_AFTER_RESEARCH**。
+- 複数解析資料で **設定変更時はAT間天井までのゲーム数をクリア** と確認。
+- 設定変更時の公開朝一数値として、CrankySevenに **チャンスモード20% / 天国モード10〜15%** の直接記述を確認。
+- よって設定変更後は少なくとも **30〜35%がチャンス以上**。チャンスは規定G最大250G、天国は最大100G。固定短縮天井ではなく **モード再振り分けによる朝一優遇** として保存。
+- 通常時の規定Gモード: **通常A / 通常B / チャンス / 天国**。規定G最大は **900 / 850 / 250 / 100G**。最大前兆40Gを含む表現値は資料ごとに差があるため、規定G数と分離。
+- 通常テーブルモードとは別に **低確 / 高確 / 超高確** のサブ状態が存在。
+- 純据え置き時の天井G・モード・サブ状態の直接契約、設定変更を伴わない電源OFF→ON、設定変更時の低高確初期振り分け、本機固有ガックン/初期出目/液晶判別は、表記・型式・検索語・資料系統を変えて再探索後も **UNVERIFIED_AFTER_RESEARCH**。
 - advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN**。
 
-## CONFLICT / safeguard
+## CONFLICT / safeguards
 
-- releaseDateは、K-Navi / パチビー / パチスロ解析DBが **2013-09-02**、グリーンべるとも9月2日納品開始予定で一致。一方、後年の5号機クロニクルは **2013/8** と掲載。平均せず `CONFLICT_RELEASE_MONTH_RETROSPECTIVE_2013-08_VS_EXACT_MULTI_SOURCE_2013-09-02` とし、具体日一致を主値採用。
-- 天井節の別機種名混入は `SOURCE_TRANSCRIPTION_WARNING_CEILING_SECTION_OTHER_MACHINE_NAME_RAVE` として保存し、別機種の仕様を自動転記しない。
-- CR PROJECT ARMS（藤商事）等の同名別カテゴリを混入させない。
+- 機械割は主系列 **97.1〜112.4%** と、当時系資料が明記するシミュレート系列 **96.6 / 98.0 / 100.0 / 102.4 / 106.8 / 111.8%** が存在。平均せず `CONFLICT_PAYOUT_PUBLISHED_ANALYSIS_VS_SIMULATED_SERIES`。
+- baseは **約28G/50枚** と **約30G/50枚**。平均しない。
+- 天井は規定G数と前兆込み表示を分離。通常A 900G + 最大40G前兆、通常B 850Gだが前兆込み表示に865/890G差、チャンス250G、天国100G。
+- 2025年スマスロ「回胴黙示録カイジ 狂宴」、2018年「回胴黙示録カイジ4」、パチンコ「CR弾球黙示録カイジ3」を混入させない。
 
 ## 境界監査 / 同日群
 
-- **2013-08-20〜2013-09-01: CLOSED_FOR_CURRENT_RESEARCH**。今回、具体ホール導入日として固定できる未登録5号機を追加確認できなかった。
-- 2013-09-02登録済み（今回時点）:
+- 2013-09-02登録済み:
   1. **パチスロ PROJECT ARMS**（ニューギン）
-- 2013-09-02未処理確認済み:
-  - **回胴黙示録カイジ3**（ロデオ）
-- よって **2013-09-02群はOPEN**。
+  2. **回胴黙示録カイジ3**（ロデオ / 製造元銀座）
+- **2013-09-02群: CLOSED_FOR_CURRENT_RESEARCH**。
+- 次の具体導入日として確認済み:
+  - **2013-09-17 パチスロ ボンバーパワフルII**（SANKYO）
+- ただし **2013-09-03〜09-16境界は次回冒頭でメーカー横断・導入カレンダー再監査**してから09-17へ進む。検定日・撤去期限・アプリ配信日をホール導入日に混入させない。
 
 ## 遡及resetBehavior QA 進捗
 
@@ -68,30 +69,32 @@
 
 ## 次回再開地点
 
-1. **recordCount 759 / chronologicalFrontier 2013-09-02 / 09-02群OPEN** から開始。
-2. 同日未処理先頭 **回胴黙示録カイジ3（ロデオ）** を性能コア + resetBehavior v0.7で収集。
-3. カイジ3登録後、2013-09-02同日群をメーカー横断・導入カレンダーで再監査し、漏れがなければCLOSEDへ更新。
-4. その後、2013-09-03以降の次の具体導入日へ前進。検定日/認定期限/撤去期限を導入日へ混入させない。
+1. **recordCount 760 / chronologicalFrontier 2013-09-02 / 09-02群CLOSED** から開始。
+2. **2013-09-03〜09-16** を導入カレンダー・メーカー別一覧・業界記事で再監査し、具体導入日の未登録5号機があれば最古から処理。
+3. 境界に未処理がなければ、確認済み次候補 **2013-09-17「パチスロ ボンバーパワフルII」（SANKYO）** を761件目候補として性能コア + resetBehavior v0.7で収集。
+4. 09-17同日群をメーカー横断で監査してOPEN/CLOSEDを更新。
 5. 遡及QAは `2007-01_karate-baka-ichidai.md` 直後の実ファイル順から、最初のresetBehavior欠損機を確定して補完。
 
 ## 主要出典 — 取得日 2026-09-06
 
-### PROJECT ARMS
+### 回胴黙示録カイジ3
 
-- グリーンべると: `https://web-greenbelt.jp/00006797/`
-- K-Navi: `https://p-kn.com/slot/1900/`
-- パチビー: `https://www.pachibee.jp/machines/index/213080003`
-- パチスロ解析DB: `https://pachislo-data.com/newgin/projectarms`
-- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/newgin_slot/27/newgin_slot_27.php`
-- 5号機クロニクル: `https://5goki.com/newgin-excite`
-- pachinko’s blog 型式補助資料: `https://pachinko.hatenablog.jp/entry/2013/09/project-arms`
-- 中一商事 型式補助資料: `https://www.nakaiti.com/html/sNyugin010.html`
+- K-Navi: `https://p-kn.com/slot/1905/`
+- グリーンべると記事転載系: `https://p-mans.blogspot.com/2013/07/`
+- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/rodeo_slot/62/a.php`
+- 2-9伝説: `https://29den.com/kaiji3/`
+- CrankySeven: `https://crankyseven.com/kaiji-three-pc.htm`
+- pacnk: `https://pacnk.com/slot/2013/kaiji3/top.php`
+- Pachinavi: `https://pachinavi.net/machines/kaiji-3/`
+- スロット価格.com: `https://slot-kakaku.com/%E5%9B%9E%E8%83%B4%E9%BB%99%E7%A4%BA%E9%8C%B2%E3%82%AB%E3%82%A4%E3%82%B83/`
+- 当時系シミュレート資料: `https://dream777star.blog47.fc2.com/blog-entry-2508.html`
+- サミーネットワークス PR TIMES: `https://prtimes.jp/main/html/rd/p/000000104.000002703.html`
 
 ### 次候補 / 境界
 
-- K-Navi「回胴黙示録カイジ3」: `https://p-kn.com/slot/1901/`
+- K-Navi「パチスロ ボンバーパワフルII」: `https://p-kn.com/slot/1911/` — ホール導入開始2013-09-17
 
 ## commits
 
-- 759th record add: `d43c2bebcc31d5942881a537e59300a8cdb2b04a` (`db: add PROJECT ARMS with resetBehavior v0.7`)
-- handoff update: current run (`db: advance relay handoff after PROJECT ARMS`)
+- 760th record add: `ca6f6e60b7b38de4cd469bb84e7b8e36eb796273` (`db: add Kaidou Mokushiroku Kaiji 3 with resetBehavior v0.7`)
+- handoff update: current run (`db: advance relay handoff after Kaiji 3`)
