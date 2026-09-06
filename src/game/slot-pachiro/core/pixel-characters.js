@@ -8,31 +8,42 @@ function q(c,a,k){c.fillStyle=k;c.beginPath();c.moveTo(...a[0]);for(let i=1;i<a.
 function floorShadow(c,seated,lean=0){q(c,seated?[[8+lean,27],[13+lean,26],[23+lean,26],[26+lean,28],[22+lean,30],[11+lean,30]]:[[7+lean,28],[12+lean,27],[21+lean,27],[26+lean,29],[21+lean,31],[11+lean,31]],SHADOW)}
 
 function headSE(c,y,lean){const x=lean;
- q(c,[[7+x,7+y],[8+x,4+y],[11+x,2+y],[15+x,1+y],[20+x,2+y],[23+x,4+y],[25+x,7+y],[25+x,11+y],[23+x,13+y],[21+x,15+y],[17+x,16+y],[12+x,15+y],[9+x,13+y],[7+x,11+y],[6+x,8+y]],OUT);
- q(c,[[8+x,7+y],[9+x,4+y],[12+x,3+y],[15+x,2+y],[19+x,3+y],[22+x,4+y],[24+x,7+y],[23+x,9+y],[20+x,8+y],[19+x,6+y],[17+x,7+y],[15+x,5+y],[13+x,7+y],[11+x,6+y],[10+x,9+y],[8+x,9+y]],S.hair);
- q(c,[[10+x,4+y],[13+x,2+y],[17+x,2+y],[20+x,3+y],[18+x,4+y],[15+x,3+y],[13+x,5+y]],S.hairHi);
- r(c,9+x,6+y,2,2,S.hairMid);r(c,21+x,5+y,2,2,S.hairSh);
- q(c,[[11+x,8+y],[13+x,6+y],[18+x,6+y],[21+x,7+y],[23+x,9+y],[23+x,12+y],[21+x,14+y],[18+x,15+y],[14+x,15+y],[10+x,13+y],[9+x,10+y]],S.skin);
- q(c,[[10+x,9+y],[12+x,7+y],[15+x,7+y],[13+x,10+y],[11+x,11+y]],S.skinHi);
- q(c,[[10+x,12+y],[13+x,15+y],[18+x,15+y],[21+x,14+y],[22+x,12+y],[19+x,13+y],[16+x,14+y],[13+x,13+y]],S.skinSh);
- q(c,[[9+x,7+y],[12+x,5+y],[14+x,6+y],[16+x,4+y],[19+x,5+y],[21+x,7+y],[20+x,9+y],[18+x,7+y],[17+x,10+y],[15+x,7+y],[13+x,10+y],[11+x,8+y],[10+x,10+y],[8+x,9+y]],S.hair);
- p(c,12+x,5+y,S.hairHi);r(c,18+x,5+y,2,1,S.hairMid);
+ // silhouette first: taller crown, clear back-of-head mass, tapered jaw and one-pixel nose projection
+ q(c,[[7+x,8+y],[8+x,5+y],[10+x,3+y],[13+x,1+y],[17+x,0+y],[21+x,2+y],[24+x,4+y],[25+x,7+y],[25+x,10+y],[26+x,11+y],[24+x,12+y],[23+x,14+y],[20+x,16+y],[16+x,17+y],[12+x,16+y],[9+x,14+y],[7+x,12+y],[6+x,9+y]],OUT);
+ // main hair cap kept as large connected masses instead of rectangular locks
+ q(c,[[8+x,8+y],[9+x,5+y],[11+x,3+y],[14+x,2+y],[17+x,1+y],[20+x,2+y],[23+x,4+y],[24+x,7+y],[23+x,9+y],[21+x,8+y],[20+x,6+y],[18+x,7+y],[17+x,5+y],[15+x,7+y],[13+x,5+y],[11+x,8+y]],S.hair);
+ q(c,[[10+x,5+y],[12+x,3+y],[15+x,2+y],[18+x,2+y],[20+x,3+y],[18+x,4+y],[15+x,4+y],[13+x,6+y]],S.hairHi);
+ q(c,[[9+x,7+y],[10+x,5+y],[12+x,5+y],[11+x,8+y]],S.hairMid);
+ q(c,[[21+x,4+y],[23+x,5+y],[24+x,8+y],[22+x,8+y]],S.hairSh);
+ // face plane: cheek fuller near viewer, far side narrower, jaw steps inward toward chin
+ q(c,[[11+x,8+y],[13+x,7+y],[17+x,6+y],[20+x,7+y],[22+x,8+y],[23+x,10+y],[25+x,10+y],[25+x,12+y],[23+x,13+y],[22+x,15+y],[19+x,16+y],[15+x,16+y],[12+x,15+y],[9+x,13+y],[8+x,10+y]],S.skin);
+ q(c,[[10+x,9+y],[12+x,8+y],[15+x,7+y],[14+x,9+y],[12+x,11+y],[10+x,11+y]],S.skinHi);
+ q(c,[[9+x,12+y],[12+x,15+y],[15+x,16+y],[19+x,16+y],[22+x,14+y],[23+x,12+y],[20+x,13+y],[17+x,15+y],[13+x,14+y]],S.skinSh);
+ // fringe: three readable clumps sharing one flow direction
+ q(c,[[9+x,7+y],[12+x,5+y],[14+x,6+y],[16+x,4+y],[18+x,5+y],[21+x,7+y],[20+x,9+y],[18+x,7+y],[17+x,10+y],[15+x,7+y],[13+x,10+y],[11+x,8+y],[10+x,10+y],[8+x,9+y]],S.hair);
+ q(c,[[12+x,5+y],[14+x,4+y],[16+x,4+y],[15+x,6+y]],S.hairHi);
+ r(c,18+x,5+y,2,1,S.hairMid);
+ // face landmarks preserve quarter-view asymmetry
  p(c,13+x,10+y,EYE);r(c,18+x,10+y,2,2,EYE);p(c,19+x,9+y,INNER);
- p(c,22+x,10+y,S.skinHi);r(c,23+x,10+y,2,2,S.skinSh);p(c,13+x,12+y,S.cheek);p(c,20+x,12+y,S.cheek);p(c,18+x,13+y,'#9f5e55');
+ p(c,22+x,10+y,S.skinHi);p(c,24+x,11+y,S.skinHi);r(c,23+x,12+y,2,1,S.skinSh);
+ p(c,13+x,12+y,S.cheek);p(c,20+x,12+y,S.cheek);r(c,17+x,13+y,2,1,'#9f5e55');
 }
 
 function headSW(c,y,lean){const x=lean;
- q(c,[[25+x,7+y],[24+x,4+y],[21+x,2+y],[17+x,1+y],[12+x,2+y],[9+x,4+y],[7+x,7+y],[7+x,11+y],[9+x,13+y],[11+x,15+y],[15+x,16+y],[20+x,15+y],[23+x,13+y],[25+x,11+y],[26+x,8+y]],OUT);
- q(c,[[24+x,7+y],[23+x,4+y],[20+x,3+y],[17+x,2+y],[13+x,3+y],[10+x,4+y],[8+x,7+y],[9+x,9+y],[12+x,8+y],[13+x,6+y],[15+x,7+y],[17+x,5+y],[19+x,7+y],[21+x,6+y],[22+x,9+y],[24+x,9+y]],S.hair);
- q(c,[[22+x,4+y],[19+x,2+y],[15+x,2+y],[12+x,3+y],[14+x,4+y],[17+x,3+y],[19+x,5+y]],S.hairHi);
- r(c,21+x,6+y,2,2,S.hairMid);r(c,9+x,5+y,2,2,S.hairSh);
- q(c,[[21+x,8+y],[19+x,6+y],[14+x,6+y],[11+x,7+y],[9+x,9+y],[9+x,12+y],[11+x,14+y],[14+x,15+y],[18+x,15+y],[22+x,13+y],[23+x,10+y]],S.skin);
- q(c,[[22+x,9+y],[20+x,7+y],[17+x,7+y],[19+x,10+y],[21+x,11+y]],S.skinHi);
- q(c,[[22+x,12+y],[19+x,15+y],[14+x,15+y],[11+x,14+y],[10+x,12+y],[13+x,13+y],[16+x,14+y],[19+x,13+y]],S.skinSh);
- q(c,[[23+x,7+y],[20+x,5+y],[18+x,6+y],[16+x,4+y],[13+x,5+y],[11+x,7+y],[12+x,9+y],[14+x,7+y],[15+x,10+y],[17+x,7+y],[19+x,10+y],[21+x,8+y],[22+x,10+y],[24+x,9+y]],S.hair);
- p(c,20+x,5+y,S.hairHi);r(c,12+x,5+y,2,1,S.hairMid);
+ q(c,[[25+x,8+y],[24+x,5+y],[22+x,3+y],[19+x,1+y],[15+x,0+y],[11+x,2+y],[8+x,4+y],[7+x,7+y],[7+x,10+y],[6+x,11+y],[8+x,12+y],[9+x,14+y],[12+x,16+y],[16+x,17+y],[20+x,16+y],[23+x,14+y],[25+x,12+y],[26+x,9+y]],OUT);
+ q(c,[[24+x,8+y],[23+x,5+y],[21+x,3+y],[18+x,2+y],[15+x,1+y],[12+x,2+y],[9+x,4+y],[8+x,7+y],[9+x,9+y],[11+x,8+y],[12+x,6+y],[14+x,7+y],[15+x,5+y],[17+x,7+y],[19+x,5+y],[21+x,8+y]],S.hair);
+ q(c,[[22+x,5+y],[20+x,3+y],[17+x,2+y],[14+x,2+y],[12+x,3+y],[14+x,4+y],[17+x,4+y],[19+x,6+y]],S.hairHi);
+ q(c,[[23+x,7+y],[22+x,5+y],[20+x,5+y],[21+x,8+y]],S.hairMid);
+ q(c,[[11+x,4+y],[9+x,5+y],[8+x,8+y],[10+x,8+y]],S.hairSh);
+ q(c,[[21+x,8+y],[19+x,7+y],[15+x,6+y],[12+x,7+y],[10+x,8+y],[9+x,10+y],[7+x,10+y],[7+x,12+y],[9+x,13+y],[10+x,15+y],[13+x,16+y],[17+x,16+y],[20+x,15+y],[23+x,13+y],[24+x,10+y]],S.skin);
+ q(c,[[22+x,9+y],[20+x,8+y],[17+x,7+y],[18+x,9+y],[20+x,11+y],[22+x,11+y]],S.skinHi);
+ q(c,[[23+x,12+y],[20+x,15+y],[17+x,16+y],[13+x,16+y],[10+x,14+y],[9+x,12+y],[12+x,13+y],[15+x,15+y],[19+x,14+y]],S.skinSh);
+ q(c,[[23+x,7+y],[20+x,5+y],[18+x,6+y],[16+x,4+y],[14+x,5+y],[11+x,7+y],[12+x,9+y],[14+x,7+y],[15+x,10+y],[17+x,7+y],[19+x,10+y],[21+x,8+y],[22+x,10+y],[24+x,9+y]],S.hair);
+ q(c,[[20+x,5+y],[18+x,4+y],[16+x,4+y],[17+x,6+y]],S.hairHi);
+ r(c,12+x,5+y,2,1,S.hairMid);
  p(c,19+x,10+y,EYE);r(c,13+x,10+y,2,2,EYE);p(c,13+x,9+y,INNER);
- p(c,9+x,10+y,S.skinHi);r(c,7+x,10+y,2,2,S.skinSh);p(c,19+x,12+y,S.cheek);p(c,12+x,12+y,S.cheek);p(c,14+x,13+y,'#9f5e55');
+ p(c,10+x,10+y,S.skinHi);p(c,7+x,11+y,S.skinHi);r(c,8+x,12+y,2,1,S.skinSh);
+ p(c,19+x,12+y,S.cheek);p(c,12+x,12+y,S.cheek);r(c,13+x,13+y,2,1,'#9f5e55');
 }
 function head(c,y,lean,dir){if(dir==='SW')headSW(c,y,lean);else headSE(c,y,lean)}
 
@@ -58,5 +69,5 @@ function legs(c,y,f,seated,lean,dir){if(seated)return;const x=lean,sw=dir==='SW'
 }
 
 function draw(c,dir,frame,seated){const f=frame%4;c.clearRect(0,0,SIZE,SIZE);const lean=seated?0:(f===1?1:f===3?-1:0),bob=seated?0:(f===1||f===3?-1:0);floorShadow(c,seated,lean);head(c,bob,lean,dir);torso(c,bob,f,seated,lean,dir);legs(c,bob,f,seated,lean,dir)}
-export function pixelCharacterDataURL(type='regular',dir='SE',frame=0,seated=false,variant=0){const safeDir=dir==='SW'?'SW':'SE',key=`student-master-v4:${safeDir}:${frame%4}:${!!seated}`;if(cache.has(key))return cache.get(key);const cv=document.createElement('canvas');cv.width=SIZE;cv.height=SIZE;const c=cv.getContext('2d');c.imageSmoothingEnabled=false;draw(c,safeDir,frame,seated);const u=cv.toDataURL('image/png');cache.set(key,u);return u}
+export function pixelCharacterDataURL(type='regular',dir='SE',frame=0,seated=false,variant=0){const safeDir=dir==='SW'?'SW':'SE',key=`student-master-v5:${safeDir}:${frame%4}:${!!seated}`;if(cache.has(key))return cache.get(key);const cv=document.createElement('canvas');cv.width=SIZE;cv.height=SIZE;const c=cv.getContext('2d');c.imageSmoothingEnabled=false;draw(c,safeDir,frame,seated);const u=cv.toDataURL('image/png');cache.set(key,u);return u}
 export function directionFromDelta(dx,dy,fallback='SE'){if(dx===0&&dy===0)return fallback;return dx-dy>=0?'SE':'SW'}
