@@ -41,9 +41,8 @@ export function fixtureAccessCell(fixture) {
   return { x: port.x, y: port.y, role: port.role };
 }
 
-export function buildStartHallMap() {
-  let map = createLogicalMap({ minX: 0, minY: 0, maxX: START_HALL.width - 1, maxY: START_HALL.height - 1 });
-
+function buildBareStartHallMap() {
+  const map = createLogicalMap({ minX: 0, minY: 0, maxX: START_HALL.width - 1, maxY: START_HALL.height - 1 });
   for (let y = 0; y < START_HALL.height; y++) {
     for (let x = 0; x < START_HALL.width; x++) setFloorType(map, x, y, 'hall-floor');
   }
@@ -51,14 +50,15 @@ export function buildStartHallMap() {
     setFloorType(map, x, 3, 'main-aisle', { buildable: false });
     setFloorType(map, x, 4, 'main-aisle', { buildable: false });
   }
-  for (const point of START_HALL.entranceRoute) {
-    setFloorType(map, point.x, point.y, 'entrance-route', { buildable: false });
-  }
-
+  for (const point of START_HALL.entranceRoute) setFloorType(map, point.x, point.y, 'entrance-route', { buildable: false });
   setPortal(map, { facilityId: 'hall-entrance', x: START_HALL.entrance.x, y: START_HALL.entrance.y, kind: 'entrance' });
+  return map;
+}
 
+export function buildStartHallMap(fixtures = START_HALL.fixtures) {
+  let map = buildBareStartHallMap();
   const transactions = [];
-  for (const fixture of START_HALL.fixtures) {
+  for (const fixture of fixtures) {
     const transaction = placeStartSlotAtomic(map, fixture, { connectivityRoot: START_HALL.entrance });
     transactions.push(Object.freeze({ id: fixture.id, ok: transaction.ok, reason: transaction.reason }));
     if (!transaction.ok) throw new Error(`startup placement rejected: ${fixture.id}: ${transaction.reason}`);
@@ -68,16 +68,16 @@ export function buildStartHallMap() {
   return map;
 }
 
-export function validateStartHall(map = buildStartHallMap()) {
+export function validateStartHall(map = buildStartHallMap(), fixtures = START_HALL.fixtures) {
   const reachable = reachableCells(map, START_HALL.entrance);
-  const access = START_HALL.fixtures.map((fixture) => ({ fixture, cell: fixtureAccessCell(fixture) }));
+  const access = fixtures.map((fixture) => ({ fixture, cell: fixtureAccessCell(fixture) }));
   const unreachable = access.filter(({ cell }) => !reachable.has(cellKey(cell.x, cell.y)));
-  const collisions = START_HALL.fixtures.filter((fixture) => getCell(map, fixture.x, fixture.y)?.occupiedBy !== fixture.id);
+  const collisions = fixtures.filter((fixture) => getCell(map, fixture.x, fixture.y)?.occupiedBy !== fixture.id);
   const transactions = map.placementTransactions ?? [];
   const rejected = transactions.filter((transaction) => !transaction.ok);
   return Object.freeze({
-    ok: unreachable.length === 0 && collisions.length === 0 && rejected.length === 0 && transactions.length === START_HALL.fixtures.length,
-    fixtureCount: START_HALL.fixtures.length,
+    ok: unreachable.length === 0 && collisions.length === 0 && rejected.length === 0 && transactions.length === fixtures.length,
+    fixtureCount: fixtures.length,
     reachableCellCount: reachable.size,
     accessPortCount: access.length,
     transactionCount: transactions.length,
@@ -85,6 +85,19 @@ export function validateStartHall(map = buildStartHallMap()) {
     unreachableAccessIds: Object.freeze(unreachable.map(({ fixture }) => fixture.id)),
     collisionIds: Object.freeze(collisions.map((fixture) => fixture.id)),
   });
+}
+
+export function testStartHallMove(fixtures, fixtureId, x, y) {
+  const candidate = fixtures.map((fixture) => fixture.id === fixtureId ? { ...fixture, x, y } : { ...fixture });
+  if (!candidate.some((fixture) => fixture.id === fixtureId)) return Object.freeze({ ok: false, reason: `unknown fixture: ${fixtureId}` });
+  try {
+    const map = buildStartHallMap(candidate);
+    const validation = validateStartHall(map, candidate);
+    if (!validation.ok) return Object.freeze({ ok: false, reason: 'layout validation rejected move' });
+    return Object.freeze({ ok: true, fixtures: Object.freeze(candidate.map(Object.freeze)), map, validation, reason: null });
+  } catch (error) {
+    return Object.freeze({ ok: false, reason: error instanceof Error ? error.message : String(error) });
+  }
 }
 
 export const START_HALL_VALIDATION = validateStartHall();
