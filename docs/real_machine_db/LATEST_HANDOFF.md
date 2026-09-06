@@ -4,68 +4,64 @@
 
 ## 現在地点
 
-- recordCount: **835**
-- latestRecordAdded: **ニューアイムジャグラーEX-KT**（北電子）— 2014-08-04
-- latestRecord: `docs/real_machine_db/machines/2014-08-04_new-im-juggler-ex-kt.md`
+- recordCount: **836**
+- latestRecordAdded: **やじきた道中記乙**（メーシー）— 2014-08-04
+- latestRecord: `docs/real_machine_db/machines/2014-08-04_yajikita-dochuki-otsu.md`
 - chronologicalFrontier: **2014-08-04**
-- frontierLatestMachine: **ニューアイムジャグラーEX-KT**
+- frontierLatestMachine: **やじきた道中記乙**
 - schema: **resetBehavior v0.7**
 - status: **2014-08-04_GROUP_OPEN**
 
 ## 今回の同期 / 正本確認
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`docs/real_machine_db/LATEST_HANDOFF.md`、834件目 `2014-07-22_pachislot-hissatsu-shigotonin.md` を再読。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`docs/real_machine_db/LATEST_HANDOFF.md`、835件目 `2014-08-04_new-im-juggler-ex-kt.md` を再読。
 - INDEXは19件表記の旧集約状態のため、README規定どおり **LATEST_HANDOFF + 実レコード** を進捗正本として使用。
-- 作業開始時の正本は **834件 / 2014-07-22 / 07-22_GROUP_CLOSED_FOR_CURRENT_RESEARCH**。
-- 2014-08-01〜08-03は今回の具体日・導入カレンダー再探索で新たなパチスロ導入を固定できず、現調査では **BOUNDARY_CLOSED_FOR_CURRENT_RESEARCH**。
+- 作業開始時の正本は **835件 / 2014-08-04 / 08-04_GROUP_OPEN**。
+- 前回handoff指定どおり、同日群の次の未処理「やじきた道中記乙」をNo.836として処理した。
 
-## 今回追加 — ニューアイムジャグラーEX-KT
+## 今回追加 — やじきた道中記乙
 
 ### identity / 性能コア
 
-- manufacturer: **北電子**。
-- hall start: **2014-08-04**（K-Navi）。北電子公式は2014年8月製品として掲載。
-- generation/system: **5号機 / ノーマルAタイプ / 完全告知**。
-- 北電子公式は **ニューアイムジャグラーEX-Cと同一スペック** と明記。
-- メーカー公表出玉率（工場データ予測値）: **95.9 / 96.7 / 98.7 / 100.8 / 102.8 / 105.2%**。
-- BB: **1/287.4 / 282.5 / 282.5 / 273.1 / 273.1 / 268.6**。
-- RB: **1/455.1 / 442.8 / 348.6 / 321.3 / 268.6 / 268.6**。
-- 合成: **1/176.2 / 172.5 / 156.0 / 147.6 / 135.4 / 134.3**。
-- BB約**325枚**、RB約**104枚**。
-- 50枚ベース（チェリー狙い解析値）: 設定1〜5 **約35.00〜35.02G**、設定6 **36.38G**。
-- 天井: **なし**。
+- manufacturer: **メーシー**。
+- hall start: **2014-08-04**（K-Navi / パチビー）。ユニバーサル公式は発売2014年8月。
+- generation/system: **5号機 / 擬似ボーナス+AT / 周期抽選**。
+- 機械割: **97.5 / 98.6 / 101.6 / 106.6 / 111.3 / 116.6%**。
+- AT「やじきた祭」初当り: **1/397.9 / 391.4 / 378.2 / 343.2 / 303.1 / 268.0**。
+- やじきたボーナス: **1/875.1 / 827.8 / 801.2 / 779.6 / 725.1 / 681.4**。
+- AT+ボーナス合算: **1/273.5 / 265.7 / 256.9 / 238.3 / 213.8 / 192.3**。
+- AT/擬似ボーナス純増: **約2.5枚/G**。
+- 50枚ベース: **約30G/50枚**（後年単一二次資料系列。`ANALYSIS_SINGLE_RETROSPECTIVE`）。
+- やじきたボーナス平均約**150枚**、超やじきたボーナス平均約**200枚**。
+- 通常時は1周期最大180里、平均約105G。周期到達で関所チャレンジ。
+- 周期天井は主に **10周期到達でAT確定**と整理。資料の「関所チャレンジ11回目」はAT直後引き戻し関所を含む数え方があるため定義差注記。
 - coreStatus: **COMPLETE_CORE**。
-- 型式名/検定番号のEX-KT固有表記は、EX-C同一スペック情報と混同せず `UNVERIFIED_AFTER_RESEARCH`。
+- 2014年機固有の正式型式名/検定番号は十分な再探索後も `UNVERIFIED_AFTER_RESEARCH`。
 
-### 出玉率の定義分離
+## resetBehavior v0.7 — やじきた道中記乙
 
-- 北電子公式95.9〜105.2%をメーカー公表値として主値化。
-- 攻略資料にはチェリー等の取得条件を含む **約96.9〜106.6%**、別シミュレータ完全取得時 **97.37〜107.05%** などが存在。
-- これは同一定義の競合ではなく打ち方/取得条件差のため平均せず別系列保持。`CONFLICT`化しない。
-
-## resetBehavior v0.7 — ニューアイムジャグラーEX-KT
-
-- settingChangeBehavior: ノーマルAタイプのためAT/ART天井・モード・高確等は **NOT_APPLICABLE_NORMAL_TYPE**。
-- carryOverBehavior: 天井/モード/AT状態は非搭載。EX-KT固有の据え置き時リール初期挙動は **UNVERIFIED_AFTER_RESEARCH**。
-- powerCycleBehavior: 単純電源OFF→ONで保持/消去を比較すべき天井・モード・有利区間は非搭載。EX-KT固有のリール初期挙動は **UNVERIFIED_AFTER_RESEARCH**。
-- gameCounterReset: **NOT_APPLICABLE_NO_GAME_COUNT_CEILING**。
-- ceilingAfterReset: **NOT_APPLICABLE_NO_CEILING**。
-- modeAfterReset/stateAfterReset: **NOT_APPLICABLE_NORMAL_TYPE**。
+- settingChangeBehavior: **設定変更で周期天井進捗リセット**を2014年当時解析で確認。K-Naviでは周期モード選択MAP抽選が **設定変更時 / AT終了時 / 5周期目終了時**に実施されることを確認。
+- carryOverBehavior: 据え置き時の周期天井進捗・MAP・残り周期Gを直接明記した2014年機固有比較契約は `UNVERIFIED_AFTER_RESEARCH`。設定変更時リセットの反対命題だけで保持確定にしない。
+- powerCycleBehavior: 設定変更なし電源OFF→ON時の周期進捗・MAP・残り周期G・内部状態の直接契約は `UNVERIFIED_AFTER_RESEARCH`。2026年スマスロ後継機の電断仕様は混入させない。
+- gameCounterReset: 設定変更 **RESET_CONFIRMED** / 据え置き `UNVERIFIED_AFTER_RESEARCH` / 純電断 `UNVERIFIED_AFTER_RESEARCH`。
+- ceilingAfterReset: 固定短縮天井・周期数短縮は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- modeAfterReset: 周期モード選択MAPは設定変更時に再抽選。K-Navi公開MAP1〜39振り分けをレコードへ保存。ただしAT終了/5周期終了時にも共通するため朝一専用値ではない。
+- stateAfterReset: 周期MAP以外の通常時高確/低確状態を設定変更で再抽選する直接資料は `NONE_CONFIRMED_AFTER_RESEARCH`。
 - advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
-- resetBenefits: 固定短縮天井・朝一モード優遇・CZ優遇は該当なし。
-- resetPenalties: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- resetDetection: 同一系統「ニューアイムジャグラーEX」の攻略資料では、設定変更後に店側が回していなければ **朝一1G目のリールガックン**が変更推測に利用可能。ただし個体差・微ガックン等があり過信不可。EX-KT固有の直接資料ではないため `ANALYSIS_SINGLE_SAME_SPEC_SERIES_SUPPORT`。
-- publicMorningNumbers: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- resetBehaviorQA: **PARTIAL**。本機の構造上N/A項目は整理済みだが、EX-KT固有の設定変更/据え置き/純電断リール初期挙動を直接固定できていない。
+- resetBenefits: 設定変更時の周期MAP再抽選は確認。2014年機専用の短縮天井・初回関所勝率優遇・朝一高確は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- resetPenalties: 前日から進んだ周期天井進捗が設定変更で消えるため、宵越し狙い上は進捗消去が主要な不利要素。
+- resetDetection: 本機固有ガックン・朝一液晶/ステージ等による設定変更判別は `UNVERIFIED_AFTER_RESEARCH`。K-Naviに「設定変更時の右上ゲーム数」質問ログは残るが回答本文を安全に固定できず採用しない。
+- publicMorningNumbers: MAP1〜39振り分けは設定変更時にも使われる公開数値だが朝一専用ではないため **MORNING_RELEVANT_NOT_MORNING_EXCLUSIVE**。朝一専用当選率/優遇率はなし。
+- resetBehaviorQA: **PARTIAL**。設定変更側は直接根拠あり、据え置き/純電断/判別契約は未固定。
 
 ## 2014-08-04群監査
 
-- K-Navi等で同日パチスロとして少なくとも以下3機を確認:
+- 同日群の確認済み候補:
   1. **ニューアイムジャグラーEX-KT**（北電子）— 登録済み No.835
-  2. **やじきた道中記乙**（メーシー）— 未処理
-  3. **パチスロ ヘルシング**（北電子）— 未処理
+  2. **やじきた道中記乙**（メーシー）— 登録済み No.836
+  3. **パチスロ ヘルシング**（北電子）— **未処理**
 - よって **2014-08-04_GROUP_OPEN** を維持。
-- 次回は「やじきた道中記乙」を先に処理し、その後「パチスロ ヘルシング」。処理後に8/4同日群を再監査してCLOSED判定する。
+- 次回は「パチスロ ヘルシング」を処理し、その後に8/4同日群をメーカー横断再監査してCLOSED判定する。
 
 ## 遡及 resetBehavior QA カーソル
 
@@ -74,31 +70,34 @@
 
 ## safeguard
 
-- `ニューアイムジャグラーEX-KT / ニューアイムジャグラーEX KT / ニューアイム / ニューアイジャグ / ニューアイムジャグラーEX / EX-C / 北電子` と `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / ガックン / 1G目 / 天井 / モード / 型式 / 検定 / 50枚 / ベース` を組み合わせて再探索。
-- 6号機「SアイムジャグラーEX」、2025年「ネオアイムジャグラーEX」は別機種として除外。
-- EX-Cの型式名をEX-KT固有型式として自動転記していない。
+- `やじきた道中記乙 / やじきた乙 / やじきた / メーシー / MACY / やじきた道中記` と `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 電源オフ / 天井 / 周期 / 180 / MAP / モード / ガックン / 右上 / 表示 / 型式 / 検定 / 50枚 / 1000円 / ベース` を組み合わせて再探索。
+- 2026年スマスロ **「やじきた道中記参る！」** は別機種として完全除外。特殊A/399まいる、リセット後勝率優遇、有利区間仕様などを2014年機へ転記しない。
+- 天井の「10周期」と「関所チャレンジ11回目」は数え方定義差を保持し、平均化しない。
 - 2015-06-08到達時の **吉宗～極～（ヨシムネH2A4 / 3S1093）** 正式量産版処理注意を維持。
 
 ## 次回再開地点
 
-1. **recordCount 835 / chronologicalFrontier 2014-08-04 / 08-04_GROUP_OPEN** から開始。
-2. 最新mainで README / mission / INDEX / LATEST_HANDOFF / 835件目を再確認。
-3. 次の未処理は **2014-08-04「やじきた道中記乙」（メーシー）**。
-4. 続いて **2014-08-04「パチスロ ヘルシング」（北電子）**。
-5. 2機処理後に8/4同日群をメーカー横断再監査し、漏れがなければCLOSED → 次の具体日へ進む。
+1. **recordCount 836 / chronologicalFrontier 2014-08-04 / 08-04_GROUP_OPEN** から開始。
+2. 最新mainで README / mission / INDEX / LATEST_HANDOFF / 836件目を再確認。
+3. 次の未処理は **2014-08-04「パチスロ ヘルシング」（北電子）**。
+4. ヘルシング処理後、2014-08-04同日群を全メーカー横断で再監査し、漏れがなければCLOSED。
+5. その後08-05以降の境界監査へ進む。
 6. 遡及QAは `2007-02_pachislot-tekken-den-tough.md` から再開。
 
 ## 主要出典 — 取得日 2026-09-07
 
-### ニューアイムジャグラーEX-KT
-- 北電子公式: `https://www.kitadenshi.co.jp/slot/newimjugglerex-kt/`
-- 北電子公式 検定情報: `https://www.kitadenshi.co.jp/slot-kentei/newimjugglerex-kt/`
-- K-Navi: `https://p-kn.com/slot/2097/`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/7465`
-- HAZUSE（ニューアイムジャグラーEX）: `https://hazuse.com/machine/pachislot/SX0042/`
-- 激アツ（ニューアイムジャグラーEX解析）: `https://gekiatsu7.com/slot-analyze/1995/`
-- ジャグラー解析攻略: `https://juggler7.com/newaimex/index.html`
-- パチ7回顧: `https://pachiseven.jp/articles/detail/11292`
+### やじきた道中記乙
+- ユニバーサル公式: `https://www.universal-777.com/product/slot/yajikita_otsu/`
+- K-Navi: `https://p-kn.com/slot/2095/`
+- K-Navi 周期モード抽選: `https://p-kn.com/slot/2095/51145/`
+- K-Navi 周期短縮抽選: `https://p-kn.com/slot/2095/50367/`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/7455`
+- パチビー: `https://www.pachibee.jp/machines/index/214070001`
+- ぱぴこ ガチスロ速報: `https://gachisuro-jissen.blog.jp/archives/11456445.html`
+- 2-9伝説: `https://2-9densetsu.com/yajikitadoutyuki/`
+- スロパチクエスト: `https://www.slopachi-quest.com/kisyubetsu/yazikita/`
+- みんスロ: `https://minslo.com/やじきた道中記乙/`
+- 5号機クロニクル: `https://5goki.com/universal`
 
 ### 2014-08-04同日群
 - K-Navi ニューアイムジャグラーEX-KT: `https://p-kn.com/slot/2097/`
