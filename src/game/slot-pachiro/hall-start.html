@@ -14,10 +14,10 @@
   </header>
   <section class="preview"><svg id="hall" class="iso hallMap" viewBox="42 46 276 210" aria-label="9×9 startup hall with tap-to-move atomic placement"></svg></section>
   <section class="placementBar">
-    <strong id="selectionLabel">台をタップして選択</strong>
-    <button id="resetLayout" type="button">初期配置</button>
+    <strong id="selectionLabel">SELECT MACHINE</strong>
+    <button id="resetLayout" type="button">RESET</button>
   </section>
-  <section class="note"><b>INTERACTIVE PLACEMENT PASS 01</b><span id="hallNote">台を選択 → 空きセルをタップ。通路・衝突・到達判定を通過した時だけ移動。</span></section>
+  <section class="note"><b>INTERACTIVE PLACEMENT PASS 02</b><span id="hallNote">Tap a machine, then tap an empty cell. Move commits only after collision, aisle and reachability checks pass.</span></section>
 </main>
 <script type="module">
 import { GRID } from './core/grid.js';
@@ -78,10 +78,7 @@ function drawFixture(fixture,parent){
   line(p(cx+r*.55,sy,seatH*.85),p(cx+r*.55,sy,0),'stoolLeg',parent);
 }
 
-function setStatus(kind,message){
-  state.textContent=kind;
-  note.textContent=message;
-}
+function setStatus(kind,message){ state.textContent=kind; note.textContent=message; }
 
 function render(){
   svg.replaceChildren();
@@ -114,12 +111,12 @@ svg.addEventListener('click',(event)=>{
   const x=Number(hit.dataset.x), y=Number(hit.dataset.y), cell=map.cells.get(`${x},${y}`);
   if(cell?.occupiedBy){
     selectedId=cell.occupiedBy;
-    selectionLabel.textContent=`選択中: ${selectedId} → 移動先をタップ`;
-    setStatus('SELECTED',`${selectedId} を選択。空きセルをタップすると論理判定して移動します。`);
+    selectionLabel.textContent=`SELECTED: ${selectedId}`;
+    setStatus('SELECTED',`${selectedId} selected. Tap an empty cell to test an atomic move.`);
     render();
     return;
   }
-  if(!selectedId){ setStatus('SELECT FIRST','先に移動するスロット台をタップしてください。'); return; }
+  if(!selectedId){ setStatus('SELECT FIRST','Select a slot machine first.'); return; }
   const result=testStartHallMove(fixtures,selectedId,x,y);
   if(!result.ok){
     setStatus('PLACE NG',result.reason);
@@ -129,8 +126,8 @@ svg.addEventListener('click',(event)=>{
   fixtures=result.fixtures.map((fixture)=>({ ...fixture }));
   map=result.map; validation=result.validation;
   const movedId=selectedId; selectedId=null;
-  selectionLabel.textContent='台をタップして選択';
-  setStatus('MOVE OK',`${movedId} → (${x},${y}) / ${validation.fixtureCount} fixtures / ${validation.reachableCellCount} reachable`);
+  selectionLabel.textContent='SELECT MACHINE';
+  setStatus('MOVE OK',`${movedId} -> (${x},${y}) / ${validation.fixtureCount} fixtures / ${validation.reachableCellCount} reachable`);
   document.documentElement.dataset.lastPlacement='accepted';
   render();
 });
@@ -138,7 +135,7 @@ svg.addEventListener('click',(event)=>{
 resetButton.addEventListener('click',()=>{
   fixtures=START_HALL.fixtures.map((fixture)=>({ ...fixture }));
   map=buildStartHallMap(fixtures); validation=validateStartHall(map,fixtures); selectedId=null;
-  selectionLabel.textContent='台をタップして選択';
+  selectionLabel.textContent='SELECT MACHINE';
   setStatus('MOVE READY',`${validation.transactionCount}/${validation.fixtureCount} atomic placements / ${validation.accessPortCount} access ports / ${validation.reachableCellCount} reachable cells`);
   document.documentElement.dataset.lastPlacement='reset';
   render();
