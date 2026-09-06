@@ -4,112 +4,108 @@
 
 ## 現在地点
 
-- recordCount: **789**
-- latestMachineAddedByChronology: **激闘！西遊記**（KPE）
-- latestRecord: `docs/real_machine_db/machines/2014-01-06_gekitou-saiyuki.md`
+- recordCount: **790**
+- latestMachineAddedByChronology: **パチスロ 機動戦士ガンダム**（ビスティ）
+- latestRecord: `docs/real_machine_db/machines/2014-01-06_mobile-suit-gundam-bisty.md`
 - chronologicalFrontier: **2014-01-06**
 - schema: **resetBehavior v0.7**
-- status: **2014-01-06_GROUP_OPEN**
+- status: **2014-01-06_GROUP_CLOSED**
 
 ## 今回の同期 / 重要事項
 
-- 最新mainの `README.md`、ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前レコード `2014-01-06_kamen-rider-unlimited.md` を再読。
-- INDEXは旧集約状態（19件）なので、README規定どおり **LATEST_HANDOFF + 実レコード**を正本扱い。
-- 作業開始時正本は recordCount 788 / chronologicalFrontier 2014-01-06 / 01-06群OPEN。
-- 前handoffの次の未処理候補 **「激闘！西遊記」（KPE）**を789件目として追加。
-- 01-06同日群の横断監査中に、GitHub未登録の **「パチスロ 機動戦士ガンダム」（ビスティ）**を追加候補として検出。SANKYO公式機種アーカイブでは2014年1月・型式 `パチスロ 機動戦士ガンダムFW`、2014-01-06当日の導入報告資料も残るため、次回は具体日を最終照合してから790件目候補として優先処理する。
-- よって2014-01-06群は **CLOSEDにせずOPEN維持**。
+- 最新mainの `README.md`、ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前レコード `2014-01-06_gekitou-saiyuki.md` を再読。
+- INDEXは旧集約状態（19件）のためREADME規定どおり **LATEST_HANDOFF + 実レコード**を正本扱い。
+- 作業開始時正本は recordCount 789 / chronologicalFrontier 2014-01-06 / 01-06群OPEN。
+- 前handoffの未処理候補 **「パチスロ 機動戦士ガンダム」（ビスティ）**を790件目として追加。
+- 2014-01-06同日群を新台一覧、メーカー/版権公式、当時/後年機種DBで再監査。既処理3機種 + 今回ガンダム以外に、同日パチスロ本線へ追加すべき確定未登録機を今回確認できず、**2014-01-06_GROUP_CLOSED** とした。
+- 2014-01-14「ダービースタリオン」（サンセイR&D）は `CRダービースタリオン` のパチンコ機と確認しパチスロ本線から除外。
+- 次の具体日付き確定パチスロ候補は **2014-01-20「パチスロうみねこのなく頃に」（オーイズミ）**。次回は01-07～01-19境界をもう一度監査してから同機へ進む。
 
-## 今回追加 — 激闘！西遊記
+## 今回追加 — パチスロ 機動戦士ガンダム
 
 ### identity / 性能コア
 
-- manufacturer: **KPE**。
-- modelName: **激闘！西遊記KT**。
+- manufacturer: **ビスティ**。
+- modelName: **パチスロ 機動戦士ガンダムFW**。
 - approvalNumber: **UNVERIFIED_AFTER_RESEARCH**。
-- hall start: **2014-01-06**（K-Navi / アタリ7）。
-- industry delivery schedule: **2013-12-15納品開始予定**（グリーンべると / 娯楽産業）。納品予定日とホール導入日は分離。
-- generation/system: **5号機 / AT / 疑似ボーナス / CZ / 天井選択**。
-- 機械割: **97.0 / 98.5 / 100.3 / 104.8 / 110.2 / 115.0%**。
-- 激闘！ボーナス初当たり: **1/149.9 / 145.3 / 142.5 / 137.5 / 134.2 / 126.3**。
-- baseGamesPer50: 当時資料で **約26G/50枚** と **約25G/50枚**があり、平均せず `CONFLICT_BASE_APPROX_26_VS_25`。
-- AT純増: **約3.0枚/G**。
-- 激闘！ボーナス: **約50枚**。
-- 青7 BIG: メーカー発表 **平均約300枚**。一部二次資料に約200枚表記があるため `CONFLICT_SECONDARY_BLUE_BIG_200` を保持。
-- 赤7 BIG: **平均約200枚**。
-- REG: **平均約50枚**。
-- 通常時内部天井: **77G / 256G + 最大21G前兆**。
+- hall start: **2014-01-06**。SANKYO公式オンライン博物館は2014.01、GUNDAM.INFOは2014年1月全国導入予定、後年天井DBと当日初日実戦資料で01-06を照合。
+- generation/system: **5号機 / ART / CZ / 疑似ボーナス / 規定ゲーム数モード**。
+- 機械割: **97.2 / 98.3 / 100.6 / 103.4 / 107.6 / 113.3%**。
+- ART初当たり: **1/293.60 / 287.50 / 270.20 / 246.30 / 217.90 / 185.00**。
+- baseGamesPer50: **UNVERIFIED_AFTER_RESEARCH**。2014版を明示した比較可能な直接値を安全に固定できず、覚醒/ユニコーン/SEED等の後年値は流用しない。
+- ART「ニュータイプBONUS」: **33G+α + 継続バトル8G**。
+- 純増: P-WORLD等 **約2.3枚/G**、保存攻略資料 **約2.2枚/G**。平均せず `CONFLICT_NET_INCREASE_APPROX_2_2_VS_2_3`、比較本線は2.3枚/G。
+- BIG BONUS: **50～200G**の疑似ボーナス。
+- CZ「ガンダム索敵モード」: **最大10G、ART期待度約30%**。
+- 通常時モード別天井: **100 / 782 / 999 / 最大1035G**。保存資料に1030G表記もあるため `CONFLICT_ROUNDING_OR_DESCRIPTION_1030_VS_1035`。
 - recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_RESEARCHED**。
 
 ### resetBehavior v0.7
 
-- 設定変更時は **ハマリ/天井ゲーム数CLEAR**。
-- 当時解析では設定変更後に **77G天井が選択されやすくなる**。
-- ただし77Gは通常時にも存在する内部天井であり、リセット時の固定77G短縮ではない。
-- 設定変更時77G天井選択率の具体値は、機種名表記・型式名・「設定変更 / リセット / 朝一 / 77G / 天井振り分け / モード」等を組み替え、当時解析・古いDB・回顧資料まで再探索したが安全に復元できず **UNVERIFIED_AFTER_RESEARCH**。
-- 純据え置き時の天井G / 77G・256G選択 / 内部状態保持契約は **UNVERIFIED_AFTER_RESEARCH**。
-- 設定変更なしの電源OFF→ON時の天井G / 天井選択 / 状態保持契約も **UNVERIFIED_AFTER_RESEARCH**。
-- 設定変更時の通常内部状態初期契約は **UNVERIFIED_AFTER_RESEARCH**。
-- 本機固有ガックン / 初期出目 / 表示等の確定的変更判別は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- パチマガスロマガの2014年版専用ページに **「朝イチ・設定変更」**項目、および **「設定変更時の特典は有りますか?」**Q&Aが存在することを確認。
+- ただし現存検索キャッシュから具体本文を安全に復元できず、設定変更時のモード/状態/天井再選択の完全契約は **UNVERIFIED_AFTER_RESEARCH**。
+- 後年天井狙いDBでは本機を **「宵越し×」** と分類。設定変更を挟んだ前日天井進捗が利用できないことの間接支持として `RESET_SUPPORTED_INDIRECTLY_BY_YOIKOSHI_X` を保持。
+- 純据え置き時の規定G数 / モード / 状態保持: **UNVERIFIED_AFTER_RESEARCH**。
+- 設定変更なし電源OFF→ON時の規定G数 / モード / 状態保持: **UNVERIFIED_AFTER_RESEARCH**。
+- 設定変更専用の固定短縮天井 / CZ・ART確定 / 具体的朝一モード振り分け: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 通常時に100G天国系モードが存在しても「設定変更後100G固定」とは解釈しない。
+- 本機固有のガックン / 初期出目 / 表示等による確定的変更判別: **NONE_CONFIRMED_AFTER_RESEARCH**。
 - advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN**。
-- reset benefitとして、設定変更後は77G天井側の選択率上昇による朝一早期当選期待があるが、具体率は推測しない。
-- reset penaltyとして、設定変更で前日ハマリ進捗を失う。
+- reset penalty: 設定変更を挟むと前日ハマリ進捗を宵越し狙いに利用できない。
 
-## safeguards / conflicts
+## conflicts / safeguards
 
-- 導入時期: **2013-12-15納品開始予定** と **2014-01-06ホール導入開始**を混同しない。本DBの時系列キーは具体的ホール導入日2014-01-06。
-- baseGamesPer50: **約26G vs 約25G**。平均せずCONFLICT。
-- 青7BIG: メーカー発表平均300枚を主値。二次資料の約200枚は消さずCONFLICT保持。
-- 設定変更後の77G選択率UPを「必ず77G」と解釈しない。
-- 後年KONAMIスマスロや別の西遊記系機種のリセット仕様を混入しない。
+- ART純増: **約2.3枚/G vs 約2.2枚/G**。平均せずCONFLICT。
+- ニュータイプ系最大天井: **1035G**と同資料中の**1030G**表記差を保持。最大値本線は1035G。
+- 2014年版ビスティ機と、山佐旧作 / 2016覚醒 / 2023ユニコーン / 2025SEEDを混同しない。
+- 「宵越し×」は設定変更を挟んだ前日進捗不可の支持にのみ利用し、純据え置き・単純電源OFF→ONのCLEARを推定しない。
 
-## 2014-01-06同日群
+## 2014-01-06同日群 — CLOSED
 
 処理済み:
 - **シティーハンター**（オリンピア） — 787件目。
 - **パチスロ仮面ライダーUNLIMITED**（タイヨーエレック） — 788件目。
 - **激闘！西遊記**（KPE） — 789件目。
+- **パチスロ 機動戦士ガンダム**（ビスティ） — 790件目。
 
 除外確認:
-- **トラック野郎**（ニューギン） — 当時業界記事 / P-WORLDでパチンコ `CRトラック野郎` と確認。パチスロ本線から除外。
+- **トラック野郎**（ニューギン） — パチンコ `CRトラック野郎`。
+- **ぱちんこCR北斗の拳5 百裂**、**ぱちんこRio-Rainbow Road-** — パチンコ。
 
-未処理の追加候補:
-- **パチスロ 機動戦士ガンダム**（ビスティ） — SANKYO公式アーカイブで2014年1月、型式 `パチスロ 機動戦士ガンダムFW` を確認。2014-01-06当日の導入報告資料あり。GitHub検索では未登録。次回、具体的ホール導入日をもう一段照合してから790件目候補として処理。
+## 2014-01-07以降の境界
 
-群は **OPEN**。ガンダムを処理した後、メーカー公式 / 業界導入一覧 / 当時解析DB / 古い新台カレンダーを最終横断監査してCLOSED判定する。
+- 新台導入一覧に **2014-01-14「ダービースタリオン」（サンセイR&D）**があるが、P-WORLDで `CRダービースタリオン XX・Y` / メーカー サンセイR&D / デジパチと確認。パチスロ本線から除外。
+- 次の具体日付き確定パチスロ候補: **2014-01-20「パチスロうみねこのなく頃に」（オーイズミ）**。
+- 同日には「ゲゲゲの鬼太郎 墓場からの招待状」（藤商事）があるため、次回はパチンコ/パチスロ分類を確認した上で01-20群を開始する。
 
 ## 遡及resetBehavior QA 進捗
 
 - QAカーソルは `2007-01_karate-baka-ichidai.md` の次の実ファイル順を維持。
-- 今回は本線789件目を優先。既存性能coreStatusは変更なし。reset QAは性能完了判定とは別管理を維持。
+- 今回は本線790件目を優先。既存性能coreStatusは変更なし。reset QAは性能完了判定とは別管理を維持。
 
 ## 次回再開地点
 
-1. **recordCount 789 / chronologicalFrontier 2014-01-06 / 01-06群OPEN** から開始。
-2. 未登録候補 **「パチスロ 機動戦士ガンダム」（ビスティ）**について、2014-01-06の具体的ホール導入日を公式・業界・当時導入資料で最終照合する。
-3. 同機が01-06確定なら790件目として性能コア + resetBehavior v0.7を収集。2014年版・型式 `パチスロ 機動戦士ガンダムFW` を対象とし、後年のユニコーン / SEED等を混入しない。
-4. 01-06同日群を全メーカー横断で最終監査し、漏れがなければCLOSED。
-5. CLOSED後は2014-01-07以降を時系列監査し、次の具体日アンカーへ前進。
-6. 遡及QAは `2007-01_karate-baka-ichidai.md` 直後の実ファイル順で継続。
-7. PARTIAL / UNVERIFIEDは公式・業界・当時解析・古いDB・アーカイブ・回顧資料まで系統を変えて再探索し、競合は平均せずCONFLICT保持。
+1. **recordCount 790 / chronologicalFrontier 2014-01-06 / 01-06群CLOSED** から開始。
+2. **2014-01-07～01-19** をメーカー公式 / 業界導入一覧 / 当時解析DB / 古い新台カレンダーで境界監査する。
+3. 2014-01-14「ダービースタリオン」はCRパチンコとして除外済み。他に未登録パチスロがなければ **2014-01-20「パチスロうみねこのなく頃に」（オーイズミ）**を791件目候補として性能コア + resetBehavior v0.7を収集。
+4. 01-20同日群を全メーカー横断監査してOPEN/CLOSEDを判定する。
+5. 遡及QAは `2007-01_karate-baka-ichidai.md` 直後の実ファイル順で継続。
+6. PARTIAL / UNVERIFIEDは公式・業界・当時解析・古いDB・アーカイブ・回顧資料まで系統を変えて再探索し、競合は平均せずCONFLICT保持。
 
 ## 主要出典 — 取得日 2026-09-06
 
-### 激闘！西遊記
-- KONAMI公式 機種アーカイブ: `https://www.konami.com/amusement/psm/archive/ps/2014/gekitosaiyuki/`
-- グリーンべると 2013-10-15: `https://web-greenbelt.jp/00001157/`
-- 娯楽産業 2013-10-16: `https://www.goraku-sangyo.com/kpe%EF%BC%8Fkpe%E3%83%BB%E9%AB%98%E7%A0%82%E8%B2%A9%E5%A3%B2%E3%80%80%E3%80%8C%E6%BF%80%E9%97%98%EF%BC%81%E8%A5%BF%E9%81%8A%E8%A8%98%E3%80%8D%E7%99%BA%E8%A1%A8/`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/7237`
-- K-Navi: `https://p-kn.com/slot/1957/`
-- アタリ7: `https://www.atari7.com/slot/date1428988533.php`
-- パチマガスロマガ 機種TOP: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/kpe_slot/35/a.php`
-- パチマガスロマガ AT突入フロー: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/kpe_slot/35/l.php`
-- pacnk: `https://pacnk.com/slot/tools/sh_gekitosaiyuki.html`
-- スロパチクエスト: `https://www.slopachi-quest.com/kisyubetsu/saiyuki/`
-- 中一商事: `https://www.nakaiti.com/html/sKpe079.html`
-- 5号機クロニクル KPE一覧: `https://5goki.com/kpe`
-- 当時スペック整理（約26G/1000円）: `https://ameblo.jp/slostar/entry-11638010616.html`
+### パチスロ 機動戦士ガンダム
+- SANKYO公式オンライン博物館: `https://www.sankyo-fever.jp/collection/881/`
+- GUNDAM.INFO 2013-11-06: `https://www.gundam.info/news/hot-topics/news_hot-topics_20131106_9645p.html`
+- P-WORLD: `https://www.p-world.co.jp/machine/database/7266`
+- パチマガスロマガ 機種TOP: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/bisty_slot/25/bisty_slot_25.php`
+- pacnk 設定判別: `https://pacnk.com/slot/tools/sh_gundam2014.html`
+- スロパチクエスト: `https://www.slopachi-quest.com/kisyubetsu/gundam/`
+- 天井DB: `https://smaslo.man-soft.com/slot-tenzyou-itiran/`
+- 天井ハイエナ生活（宵越し×）: `https://macerate.seesaa.net/article/226196713.html`
+- 保存攻略PDF: `https://www.8tw.com.tw/rwd1540/store/F2/S0186%20%E6%A9%9F%E5%8B%95%E6%88%B0%E5%A3%AB%E9%8B%BC%E5%BD%88%20%E4%B8%AD%E6%96%87%E7%89%88%E6%94%BB%E7%95%A5.compressed.pdf`
+- 初日実戦報告: `https://pachinkopachisro.com/archives/35488849.html`
 
-### 01-06追加候補 — パチスロ 機動戦士ガンダム
-- SANKYO公式 機種アーカイブ: `https://www.sankyo-fever.jp/history/machine_detail/id_717.php`
-- ガンダム.info 2014年1月稼働告知: `https://www.gundam.info/news/games/news_games_20131119_9738p.html`
+### 境界監査
+- ALL7 2014年1月導入一覧: `https://www.all7.jp/plans/index/2014/01`
+- P-WORLD CRダービースタリオン XX・Y: `https://www.p-world.co.jp/machine/database/7274`
