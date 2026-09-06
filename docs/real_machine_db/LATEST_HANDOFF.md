@@ -4,83 +4,95 @@
 
 ## 現在地点
 
-- recordCount: **844**
-- latestRecordAdded: **スロット バットマン**（エレコ）— 2014-09-22
-- latestRecord: `docs/real_machine_db/machines/2014-09-22_slot-batman.md`
-- chronologicalFrontier: **2014-09-22**
-- frontierLatestMachine: **スロット バットマン**
+- recordCount: **845**
+- latestRecordAdded: **ドリームジャンボ ～幸福のチケットを君に～**（JPS）— 2014-09-29
+- latestRecord: `docs/real_machine_db/machines/2014-09-29_dream-jumbo.md`
+- chronologicalFrontier: **2014-09-29**
+- frontierLatestMachine: **ドリームジャンボ ～幸福のチケットを君に～**
 - schema: **resetBehavior v0.7**
-- status: **2014-09-22_GROUP_CLOSED / 2014-09-23_TO_2014-09-28_CLOSED_FOR_CURRENT_RESEARCH**
+- status: **2014-09-29_GROUP_OPEN**
 
 ## 今回の同期 / 正本確認
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`、`docs/real_machine_db/INDEX.md`、`docs/real_machine_db/LATEST_HANDOFF.md`、843件目 `2014-09-22_sasami-san-ganbaranai-slot.md` を再読。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`、`docs/real_machine_db/INDEX.md`、`docs/real_machine_db/LATEST_HANDOFF.md`、844件目 `2014-09-22_slot-batman.md` を再読。
 - INDEXは19件表記の旧集約状態のため、README規定どおり **LATEST_HANDOFF + 実レコード** を進捗正本として使用。
-- 作業開始時の正本は **843件 / 2014-09-22 / 09-22_GROUP_OPEN**。
-- handoff指定の未登録候補 **スロット バットマン** をNo.844として登録。
-- machine record commit: `d39beb1f875fc61ad9b7a66ca1a5fb9102916920`。
+- 作業開始時の正本は **844件 / 2014-09-22 / 09-22_GROUP_CLOSED / 09-23〜09-28_CLOSED**。
+- 09-29群を監査し、通常の次候補 **JPS「ドリームジャンボ ～幸福のチケットを君に～」** をNo.845として登録。
+- machine record commit: `33c7fd7db809e785decaf59768bb6ca80cf93df9`。
 
-## 今回追加 — スロット バットマン
+## 今回追加 — ドリームジャンボ ～幸福のチケットを君に～
 
 ### identity / 性能コア
 
-- canonical manufacturer: **エレコ**。
-- hall start: **2014-09-22**（K-Navi、パチ＆スロ必勝本）。
-- 型式: **SLOTバットマンBL**（東京都公安委員会検定通過状況を扱う遊技通信、実機資料）。
+- manufacturer: **JPS**。
+- hall start: **2014-09-29**（K-Navi、パチビー）。
+- PiDEA Xは納品日 **2014-09-28予定** としており、納品日とホール導入開始日を分離。
+- 型式: **ドリーム幸福のチケットを君にジャンボBB**。
 - 数字形式の検定番号: `UNVERIFIED_AFTER_RESEARCH`。
-- type: **5号機 / ART / CZ / 擬似ボーナス**。
-- 機械割: **97.6 / 99.1 / 101.3 / 106.0 / 110.8 / 115.7%**。
-- ART初当たり: **1/264.0 / 254.5 / 240.8 / 213.5 / 193.9 / 168.1**。
-- baseGamesPer50: **約30G/50枚**（Cranky Seven「1000円あたり約30G」）。
-- ART純増: **約2.3枚/G**。
-- ダークナイトラッシュ: **1セット50G+α**。
-- 擬似BIG: **30G固定**。
-- ART間天井: **999G**。CZ間最大天井: **600G**。
-- coreStatus: **COMPLETE_CORE_WITH_SOURCE_LIMITS**。
+- type: **5号機 / AT / 擬似ボーナス / 完全告知**。
+- 設定構成: **1 / 2 / J / 4 / 5 / 6**。設定3なし。
+- 機械割（メーカー発表値）: **97.19 / 98.66 / J非公表 / 99.86 / 108.89 / 112.95%**。
+- AT初当たり（メーカー発表値）: **1/297.65 / 276.03 / J非公表 / 263.60 / 178.45 / 145.87**。
+- baseGamesPer50: **約32G/50枚**。
+- AT純増: **約3.0枚/G**。
+- ジャンボーナス: **初期33G以上**。
+- 第1天井: **AT間767G+前兆 / 約60%でAT**。
+- 第2天井: **AT間1466G+前兆 / AT確定 + ファイアー高確率**。
+- 通常時は **モード/状態の概念なし**。毎ゲームAT抽選は一定とする当時解析を採用。
+- coreStatus: **COMPLETE_CORE_WITH_SOURCE_LIMITS_AND_SOURCE_CONFLICT**。
 
-### manufacturer CONFLICT
+### setting J / 数値定義
 
-- ユニバーサル公式: **エレコ**。
-- 東京都公安委員会検定通過状況: **SLOTバットマンBL / エレコ**。
-- P-WORLD: **エレコ**。
-- K-Navi: **メーシー**。
-- 平均/曖昧化せず `CONFLICT_METADATA_MANUFACTURER_KNAVI_MACY_VS_OFFICIAL_ELECO` として保存。高信頼3系統が一致するエレコをcanonicalに採用。
+- PiDEA Xの当時発表会記事は設定Jを開発担当者説明として **「期待度150%（出玉率は非公表）」** と記載。
+- パチマガスロマガのメーカー発表表でも設定JのPAYOUT/AT初当たりは **非公表**。
+- よって「150%」を機械割へ転記せず、定義を分離して保存。
 
-## resetBehavior v0.7 — スロット バットマン
+### initial-hit CONFLICT
 
-- 設定変更時: **天井到達までのゲーム数クリア + CZ抽選モード再抽選**。
-- 設定1朝一モード:
-  - 通常A **62.98%**
-  - 通常B **24.41%**
-  - 天国A **9.16%**
-  - 天国B **3.05%**
-  - 逆境A **0.31%**
-  - 逆境B **0.09%**
-- 天国以上合算: **設定1 約12% → 設定6 約28%**。
-- モード別CZ間最大G: **通常A 600 / 通常B 300 / 天国A 89 / 天国B 39 / 逆境A 39 / 逆境B 39G**。
-- 設定変更後だけの固定ART短縮天井: **NONE_CONFIRMED_AFTER_RESEARCH**。CZ側は再抽選モードにより39/89/300/600Gとなるため、固定短縮と混同しない。
-- 据え置き: 前日+当日CZ間600G超で変更確定扱い、宵越し600/300G付近CZ発動で据え置き濃厚とする解析から、**CZ間カウンタCARRYOVER**を支持。ART間999Gの持越しは当時実戦の観測支持に留める。
-- 設定変更なし電源OFF→ON: 直接対照表を再探索後も固定できず `UNVERIFIED_AFTER_RESEARCH`。据え置き観測から自動推定しない。
-- CZモード以外の高確/低確等の設定変更開始状態: `UNVERIFIED_AFTER_RESEARCH`。
+- パチマガスロマガのメーカー発表値: 設定1 **1/297.65**。
+- 複数資料も約1/297.6で一致。
+- スロパチクエスト機種まとめのみ設定1 **1/279.65** と掲載し、他設定はメーカー表と一致。
+- 平均せず `CONFLICT_SOURCE_TYPO_SETTING1_AT_279_65_VS_MANUFACTURER_297_65` として保持。canonicalはメーカー発表値1/297.65。
+
+## resetBehavior v0.7 — ドリームジャンボ
+
+- 設定変更時: **AT本前兆からスタートする可能性**あり。該当時は**AT初期ゲーム数が優遇**。
+- 設定変更後の初回AT初当たり時、**25%で「おはようございます」ボイス**。発生時は設定変更確定扱いの当時解析。
+- ショートフリーズ発生率: **通常1/419.45 → 設定変更時1/202.93**。
+- リセット本前兆スタート率: `UNVERIFIED_AFTER_RESEARCH`。
+- 設定変更時の767G/1466G内部天井カウンタ処理: `UNVERIFIED_AFTER_RESEARCH`。リセット恩恵の存在からRESETを推測しない。
+- 据え置き時の天井内部G/前兆等: `UNVERIFIED_AFTER_RESEARCH`。
+- 設定変更なし電源OFF→ON: `UNVERIFIED_AFTER_RESEARCH`。
+- 設定変更後だけの固定短縮天井: **NONE_CONFIRMED_AFTER_RESEARCH**。本前兆スタートと固定短縮天井を混同しない。
+- 通常時はモード/状態の概念なしのため、通常モード/高低状態の再抽選は `NOT_APPLICABLE_NO_NORMAL_MODE_STATE_CONCEPT`。設定変更時の本前兆スタートは例外的な朝一特殊挙動として分離。
 - 有利区間: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
-- 朝一恩恵: 天国/逆境選択ならCZ上限39/89G。低設定では振り分けが弱く、朝一実戦集計でも大きな狙い目ゾーンなし。
-- 固定的リセット不利: **NONE_CONFIRMED_AFTER_RESEARCH**。実戦集計の「通常時より引き戻し弱め」は内部仕様の確定ペナルティと分離。
-- 変更判別: 前日G数を使ったCZ間600G超/300・600G付近発動が主要材料。本機固有ガックン・初期出目・初期ステージ確定判別は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- 固定的リセット不利: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- ガックン/初期出目/初期ステージ確定判別: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 公開朝一数値: **ボイス25%、ショートフリーズ1/202.93（通常1/419.45）**。
 - resetBehaviorQA: **COMPLETE_WITH_SOURCE_LIMITS**。
 
-## 2014-09-22群 / 境界監査
+## 2014-09-29群 — 現在OPEN
 
-- 09-22登録済み:
-  - **ささみさん＠がんばらないすろっと**（DAXEL）No.843
-  - **スロット バットマン**（エレコ）No.844
-- `2014-09-22 / 9月22日 / パチスロ / 新台 / 導入 / 稼働開始 / メーカー別` を再監査し、今回この2機以外の具体日付き未登録5号機を固定できず **09-22_GROUP_CLOSED_FOR_CURRENT_RESEARCH**。
-- 09-23〜09-28も日付別・新台・導入開始・稼働開始・メーカー別に再探索し、今回具体日付き未登録5号機を固定できず **CLOSED_FOR_CURRENT_RESEARCH**。
+### 登録済み
 
-## 次の2014-09-29群 — 要監査
+- **ドリームジャンボ ～幸福のチケットを君に～**（JPS）No.845
 
-- **ドリームジャンボ ～幸福のチケットを君に～**（JPS）: K-Naviで **2014-09-29ホール導入開始**を確認。次回最優先の通常候補。
-- **戦律のストラタス**: KONAMI公式ブログで **新潟県のみ2014-09-29より先行稼働開始**を明記。全国導入日と地域先行日を混同せず、DBのreleaseDate主値を「最初の実ホール稼働」とするか「全国導入」とするか既存レコード基準を再確認して処理する。少なくとも09-29群候補から落とさない。
-- **バビロン(with桜丘ショコラ)**: 既存handoffで09-29/10-06の導入日競合が既知。到達時に公式・当時資料を再精査し、平均せずCONFLICT保持。
+### 同日未処理 — 戦律のストラタス
+
+- KONAMI公式ブログで **新潟県内のみ2014-09-29から先行稼働開始**、**全国稼働は2014-10-06から** と明記。
+- 本DBの時系列は「確認できた実ホール稼働開始」を漏らさないため、09-29群候補から落とさない。
+- 次回レコードでは日付を混同せず、少なくとも以下を明示する:
+  - `regionalEarlyHallStart: 2014-09-29 (Niigata only)`
+  - `nationwideHallStart: 2014-10-06`
+- releaseDate主値を地域先行の2014-09-29とする場合も、`releaseDatePrecision: regional_early_hall_start` 等で全国導入ではないことを必ず残す。
+- **No.846最優先候補**。
+
+### 同日/境界要監査 — バビロン(with桜丘ショコラ)
+
+- HAZUSEは **2014-09-29導入開始 / 型式バビロンA / 検定番号4S0663** と掲載。
+- 一方、2014-08-27の業界記事（日刊アミューズメント/PiDEA）は **納品日2014-10-05予定**、後年当時系記事は **2014-10-06導入開始** とする。
+- これは導入日競合として平均せず保持する必要がある。09-29群CLOSED前に公式/当時一次・地域先行・納品/全国導入の定義を再精査する。
+- 現時点では `DATE_CONFLICT_2014-09-29_VS_2014-10-06_WITH_2014-10-05_DELIVERY_PLAN` 候補。
 
 ## 遡及 resetBehavior QA カーソル
 
@@ -89,40 +101,39 @@
 
 ## safeguard
 
-- K-Naviのメーカー「メーシー」を、公式/検定公示/P-WORLDの「エレコ」より優先しない。ただし競合情報自体は消さない。
-- `SLOTバットマンBL` は型式表記。数字形式の検定番号を推測生成しない。
-- 据え置きCZカウンタの観測から単純電源OFF→ON契約を推定しない。
-- 朝一モード表はリセット時の客行動・ホール判断に必要な範囲だけ保存し、通常時全モード移行や詳細内部抽選へ拡張しない。
-- 09-29の戦律のストラタスは「新潟県先行稼働」と「全国稼働」を分離して扱う。
+- 設定Jの「期待度150%」を機械割150%として扱わない。
+- ドリームジャンボの設定1初当たり1/279.65表記を、メーカー発表1/297.65と平均しない。
+- リセット本前兆の存在から天井カウンタRESETを推定しない。
+- 据え置き観測が見つからない限り純電断/据え置き契約を一般論で埋めない。
+- 09-29の戦律のストラタスは「新潟県先行稼働」と「全国稼働」を分離する。
+- バビロンは09-29/10-06を平均・一方的上書きせず、納品日10-05も別定義で保持する。
 - P-WORLD等の最終更新日を導入日に使用しない。
 - 2015-06-08到達時の **吉宗～極～（ヨシムネH2A4 / 3S1093）** 正式量産版処理注意を維持。
 
 ## 次回再開地点
 
-1. **recordCount 844 / chronologicalFrontier 2014-09-22 / 09-22_GROUP_CLOSED / 09-23〜09-28_CLOSED** から開始。
-2. 最新mainで README / mission / INDEX / LATEST_HANDOFF / 844件目を再確認。
-3. **2014-09-29群を全メーカー横断監査**。
-4. 通常の次候補は **JPS「ドリームジャンボ ～幸福のチケットを君に～」**。ただし同日の **戦律のストラタス新潟先行稼働**の扱いを先に時系列基準で確定し、順序漏れを防ぐ。
-5. バビロン(with桜丘ショコラ)の09-29/10-06日付競合も同日群で再精査。
-6. 09-29群CLOSED後、09-30以降へ時系列前進。
-7. 遡及QAは **`2007-02_new-hanahana-30.md`** から再開。
+1. **recordCount 845 / chronologicalFrontier 2014-09-29 / 09-29_GROUP_OPEN** から開始。
+2. 最新mainで README / mission / INDEX / LATEST_HANDOFF / 845件目を再確認。
+3. **KONAMI「戦律のストラタス」**をNo.846最優先候補として、性能コア + resetBehavior v0.7を収集。新潟先行2014-09-29と全国2014-10-06を必ず分離。
+4. 続いて **バビロン(with桜丘ショコラ)** の09-29/10-06日付競合を公式・当時業界・古いDBで再精査し、09-29群に含めるか確定。
+5. 09-29群の全メーカー最終監査後にCLOSED判定し、09-30以降へ時系列前進。
+6. 遡及QAは **`2007-02_new-hanahana-30.md`** から再開。
 
 ## 主要出典 — 取得日 2026-09-07
 
-### スロット バットマン
-- Universal Entertainment公式: `https://www.universal-777.com/product/slot/slot_batman/`
-- Universal Entertainment 2014製品一覧: `https://www.universal-777.com/product/slot/2014/`
-- 遊技通信 東京都公安委員会検定通過状況: `https://www.yugitsushin.jp/news/%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%85%AC%E5%AE%89%E5%A7%94%E5%93%A1%E4%BC%9A%E6%A4%9C%E5%AE%9A%E9%80%9A%E9%81%8E%E7%8A%B6%E6%B3%81%EF%BC%888%E6%9C%8811%E6%97%A5%EF%BC%89/`
-- グリーンべると: `https://web-greenbelt.jp/00007109/`
-- K-Navi: `https://p-kn.com/slot/2110/`
-- P-WORLD: `https://www.p-world.co.jp/machine/database/7487`
-- パチ＆スロ必勝本: `https://p.hisshobon.jp/machine/list.php?c=1&d=48254&mid=2447&p=2`
-- パチマガスロマガ BIG: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/eleco_slot/95/06.php`
-- Cranky Seven: `https://crankyseven.com/batman-pc.htm`
-- 期待値見える化 朝一リセット: `https://slotjin.com/slot/batman-reset/`
-- 肉汁スロッター回顧: `https://www.nikuziru.com/archives/956`
-- 愛品館 実機資料: `https://www.aihin.co.jp/new/news-1030955/`
+### ドリームジャンボ
+- パチマガスロマガ 機種概要: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/jps_slot/29/a.php`
+- パチマガスロマガ AT初当たり/PAYOUTメーカー発表値: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/jps_slot/29/h-1.php`
+- パチマガスロマガ AT突入フロー/モード・状態なし: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/jps_slot/29/l.php`
+- K-Navi: `https://p-kn.com/slot/2112/`
+- パチビー: `https://www.pachibee.jp/machines/about/214090000`
+- PiDEA X 発表会記事: `https://www.pidea.jp/articles/JPS%E3%80%8C%E3%83%89%E3%83%AA%E3%83%BC%E3%83%A0%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%9C%E3%80%8D%E3%81%AF%E6%9C%80%E5%A4%A7AT%E3%82%B2%E3%83%BC%E3%83%A0%E6%95%B010000G%21%3F`
+- スロパチクエスト 朝一設定変更: `https://www.slopachi-quest.com/article/dream-jumbo-reset/`
+- スロパチクエスト 天井/スペック: `https://www.slopachi-quest.com/article/dream-jumbo-tenzyo/`
+- スロパチクエスト 機種まとめ（設定1初当たり表記競合）: `https://www.slopachi-quest.com/kisyubetsu/dream-jumbo/`
+- 楽スロ 天井/コイン持ち回顧: `https://rakuslo.com/dreamjabo-tenjyo.html`
 
 ### 次候補 / 境界
-- ドリームジャンボ K-Navi: `https://p-kn.com/slot/2112/`
 - KONAMI公式 戦律のストラタス新潟先行: `https://www.konami.com/amusement/psm/portal/magihallo/blog_mh/2014/mhs_blog_140922.html`
+- バビロン HAZUSE: `https://hazuse.com/machine/pachislot/4S0663/`
+- バビロン 日刊アミューズメント/PiDEA: `https://www.nikkansports.com/amusement/pachinko/news/f-pp-tp0-20140827-1357347.html`
