@@ -96,28 +96,74 @@ systemType: A+RT / ボーナス後CZ経由RT
 
 ## resetBehavior
 
-resetBehaviorQA: PARTIAL
+schemaVersion: v0.7
+resetQaStatus: PARTIAL
+resetQaLastUpdated: 2026-09-07
 
-- settingChangeBehavior: 設定変更時のCHANCE ZONE/RED ZONE内部状態を明記した高信頼資料を確認できず UNVERIFIED
-- carryOverBehavior: 据え置き時のRT/CZ内部状態の引継ぎを明記した本機固有高信頼資料を確認できず UNVERIFIED
-- powerCycleBehavior: 電源OFF→ONのみのCZ/RT状態処理を明記した公開資料を確認できず UNVERIFIED
-- gameCounterReset: 通常時ゲーム数天井を確認せず、天井カウンタは非該当と整理
-- ceilingAfterReset: 非該当（通常時天井を確認せず）
-- modeAfterReset: 朝一専用モード/設定変更専用モードを確認できず
-- stateAfterReset: 設定変更時のCZ/RT内部状態処理は未確定
-- advantageousSectionReset: 非該当
-- resetBenefits: 設定変更・朝一固有の主要恩恵を確認できず
-- resetPenalties: 設定変更固有の主要不利要素を確認できず
-- resetDetection: 本機固有のガックン・表示等による変更判別を高信頼で確定できず
-- numericResetData: 設定変更時専用の公開数値は確認できず
+### settingChangeBehavior
+
+- 設定変更時のCHANCE ZONE / RED ZONE内部状態および残G数の処理を本機固有で明記した高信頼資料は、再探索後も **UNVERIFIED_AFTER_RESEARCH**。
+- 一般的な5号機RT機の挙動から推定しない。
+
+### carryOverBehavior
+
+- 据え置き時のCZ/RT内部状態・残G数の引継ぎを本機固有で明記した高信頼資料は **UNVERIFIED_AFTER_RESEARCH**。
+
+### powerCycleBehavior
+
+- 設定変更なし電源OFF→ONのみの場合のCZ/RT状態・残G数処理を直接示す公開資料は **UNVERIFIED_AFTER_RESEARCH**。
+
+### gameCounterReset
+
+- 通常時ゲーム数天井は確認できず、通常時天井カウンタは **NOT_APPLICABLE_NO_NORMAL_GAME_CEILING_CONFIRMED**。
+- CZ50G / RT100Gはボーナス後状態の規定ゲーム数であり、通常時天井とは区別する。
+
+### ceilingAfterReset
+
+- 通常時天井を確認せず、設定変更専用短縮天井も **NONE_CONFIRMED_AFTER_RESEARCH**。
+
+### modeAfterReset
+
+- 朝一専用モード / 設定変更専用モードは **NONE_CONFIRMED_AFTER_RESEARCH**。
+
+### stateAfterReset
+
+- CHANCE ZONE / RED ZONE内部状態の設定変更・据え置き・純電断時処理は **UNVERIFIED_AFTER_RESEARCH**。
+
+### advantageousSectionReset
+
+- **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
+
+### resetBenefits
+
+- 設定変更・朝一固有の主要恩恵は **NONE_CONFIRMED_AFTER_RESEARCH**。
+
+### resetPenalties
+
+- 設定変更固有の主要不利要素は **NONE_CONFIRMED_AFTER_RESEARCH**。
+
+### resetDetection
+
+- 本機固有のガックン、初期出目、表示等による高信頼な変更判別は **NONE_CONFIRMED_AFTER_RESEARCH**。
+
+### numericResetData
+
+- 設定変更時専用の比較可能な公開数値は **NONE_CONFIRMED_AFTER_RESEARCH**。
+
+### publicMorningNumbers
+
+- **NONE_CONFIRMED_AFTER_RESEARCH**。
 
 ### resetBehavior 再探索メモ
 
-「TIMという名のパチスロ機 / HEIWABROS / 平和」に「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / RED ZONE / CHANCE ZONE / RT引継ぎ / 天井 / ガックン」を組み合わせ、当時業界記事、P-WORLD、パチマガスロマガ旧攻略、HAZUSE、5号機クロニクル、後年回顧を横断。通常時天井なし相当の資料構造までは確認できたが、設定変更・据え置き・電断時のCZ/RT処理を高信頼で確定できなかったため推測しない。
+- `TIMという名のパチスロ機 / TIM / HEIWABROS / 平和` と `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / RED ZONE / CHANCE ZONE / RT引継ぎ / 天井 / ガックン / 変更判別` を組み合わせて再探索。
+- グリーンべると当時業界記事、P-WORLD、パチマガスロマガ旧攻略、HAZUSE、5号機クロニクル、後年回顧を横断。
+- 通常時天井なし相当の資料構造、CZ50G、RT100G、RT純増約0.5枚/Gは再確認できたが、設定変更/据え置き/電断時のCZ/RT処理を直接固定できなかったためPARTIALを維持する。
+- 既存 `COMPLETE_CORE` は性能コア完了判定として維持し、resetBehavior QAのみ別管理する。
 
 ## sources
 
-取得日: 2026-08-31
+取得日: 2026-09-07（resetBehavior QA再取得）
 
 1. グリーンべると — 平和から遊パチと5号機が同時発表
    - https://web-greenbelt.jp/00003985/
@@ -156,6 +202,7 @@ resetBehaviorQA: PARTIAL
 
 - 設定変更/据え置き/電源OFF→ON時のCZ/RT内部状態処理
 - 本機固有のresetDetection
+- 設定変更専用の公開朝一数値
 
 ## conflicts
 
