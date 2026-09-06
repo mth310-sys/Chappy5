@@ -4,82 +4,76 @@
 
 ## 現在地点
 
-- recordCount: **839**
-- latestRecordAdded: **沖ドキ！-30**（アクロス）— 2014-08-18
-- latestRecord: `docs/real_machine_db/machines/2014-08-18_okidoki-30.md`
-- chronologicalFrontier: **2014-08-18**
-- frontierLatestMachine: **沖ドキ！-30**
+- recordCount: **840**
+- latestRecordAdded: **パチスロ 戦国BASARA3**（エンターライズ）— 2014-09-01
+- latestRecord: `docs/real_machine_db/machines/2014-09-01_sengoku-basara3.md`
+- chronologicalFrontier: **2014-09-01**
+- frontierLatestMachine: **パチスロ 戦国BASARA3**
 - schema: **resetBehavior v0.7**
-- status: **2014-08-18_GROUP_CLOSED_FOR_CURRENT_RESEARCH**
+- status: **2014-09-01_GROUP_OPEN**
 
 ## 今回の同期 / 正本確認
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`、`docs/real_machine_db/INDEX.md`、`docs/real_machine_db/LATEST_HANDOFF.md`、838件目 `2014-08-18_okidoki.md` を再読。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`、`docs/real_machine_db/INDEX.md`、`docs/real_machine_db/LATEST_HANDOFF.md`、839件目 `2014-08-18_okidoki-30.md` を再読。
 - INDEXは19件表記の旧集約状態のため、README規定どおり **LATEST_HANDOFF + 実レコード** を進捗正本として使用。
-- 作業開始時の正本は **838件 / 2014-08-18 / 08-18_GROUP_OPEN**。
-- 前回handoff指定の「沖ドキ！-30」独立性確認を完了し、No.839として登録。
-- 遡及QAは `2007-02_pachislot-tekken-den-tough.md` をv0.7再QA。
+- 作業開始時の正本は **839件 / 2014-08-18 / 08-18_GROUP_CLOSED_FOR_CURRENT_RESEARCH**。
+- 2014-08-19〜08-31を `パチスロ / 新台 / 導入 / ホール導入 / 納品 / 2014年8月` 等で再監査し、今回の探索範囲では具体日付き未登録5号機を固定できなかったため **CLOSED_FOR_CURRENT_RESEARCH**。
+- 次の強い具体日アンカーとして **2014-09-01「パチスロ 戦国BASARA3」**をK-Navi・パチセブン・解析DBで固定し、No.840として登録。
+- machine record commit: `d688d70580d457e7386f5f7cc84fa5bf77e8d18f`。
 
-## 今回追加 — 沖ドキ！-30
-
-### 独立レコード判定
-
-- P-WORLDは **「沖ドキ!‐30」** を25Φ版とは別DBページとして掲載。
-- 1GAME/一撃系も **沖ドキ！-30専用解析ページ**を持つ。
-- 中古実機/業界報道で型式表記 **沖ドキ！LL-30** を確認。25Φ版の `沖ドキ！LL` と型式名が異なる。
-- 本DBにはCT5/CT30等の径違い独立レコード前例があるため、資料上の独立性を十分固定できたと判断。
-- 30Φ版検定番号は今回高信頼固定できず `UNVERIFIED_AFTER_RESEARCH`。
+## 今回追加 — パチスロ 戦国BASARA3
 
 ### 性能コア
 
-- manufacturer: **アクロス**。
-- hall start: **2014-08-18**。
-- type: **5号機 / モード管理型AT / 疑似ボーナス / 完全告知 / 30Φ**。
-- 型式: **沖ドキ！LL-30**。
-- 機械割: **97.0 / 99.7 / 101.7 / 103.9 / 106.2 / 107.9%**。
-- BIG: **1/394.1 → 1/322.6**。
-- REG: **1/632.1 → 1/452.1**。
-- 合成: **1/242.8 → 1/188.3**。
-- 50枚ベース: **約23G**。
-- 純増: **約3.0枚/G**。
-- BIG **70G / 約210枚**、REG **30G / 約90枚**。
-- 天井: 通常A/B **999G**、引き戻し/チャンス **199G**、天国以上/保証 **31G**。
+- manufacturer: **エンターライズ**。
+- hall start: **2014-09-01**。
+- type: **5号機 / 疑似ボーナス+ART / CZ / 天井**。
+- 機械割主系列: **97.1 / 98.8 / 101.0 / 105.9 / 108.0 / 113.3%**。
+- BASARA BONUS: **1/523.7 → 1/372.2**。
+- 武将BONUS: **1/791.3 → 1/452.8**。
+- ボーナス合算: **1/315.1 → 1/204.3**。
+- ART初当たり: **1/355.2 → 1/208.5**。
+- 50枚ベース: **約30G**。
+- ART純増: **約2.2枚/G**。
+- BASARA FEVER: **40G+α**。
+- BASARA BONUS: ベルナビ20/30/50/100回、武将BONUS: ベルナビ8回。
+- 第一天井: ボーナスまたはART間 **996G+前兆**。
+- 第二天井: ボーナス間 **1598G+前兆**。
 - coreStatus: **COMPLETE_CORE**。
 
-## resetBehavior v0.7 — 沖ドキ！-30
+### CONFLICT
 
-- 設定変更: **天井G RESET / 内部モード再抽選**。
-- 電源OFF→ONのみ: **天井G CARRYOVER / モード CARRYOVER**。
-- 据え置き: 電断契約と整合するCARRYOVER支持。純据え置き単独一次対照表は未取得。
+- 機械割は複数整理資料の主系列 **97.1 / 98.8 / 101.0 / 105.9 / 108.0 / 113.3%** を採用。
+- Pachinavi現行再構築ページは設定1 **97.3%**、設定3 **102.3%** と異なるため平均せず `CONFLICT_PAYOUT_RATE_SETTINGS_1_3` をレコードに保持。
+
+## resetBehavior v0.7 — 戦国BASARA3
+
+- 設定変更: **天井G RESET / 内部モード再抽選 / 高確スタート**。
 - 設定変更時モード振り分け:
-  - 通常A **57.03%**
-  - 通常B **9.77%**
-  - チャンス **33.20%**
-- チャンス選択時最大天井 **199G（実質200G）**。
+  - 設定1・3・5: 通常A/B **92.5%** / 天国A/B **7.5%**
+  - 設定2・4: 通常A/B **90.0%** / 天国A/B **10.0%**
+  - 設定6: 通常A/B **87.5%** / 天国A/B **12.5%**
+- モード別第一天井: 通常A/B **996G+前兆** / 天国A **96G+前兆** / 天国B **32G+前兆**。
+- 据え置き: 当時実戦記録の宵越し第二天井到達例から、少なくとも **ボーナス間天井進捗CARRYOVER**を支持。
+- 純粋な電源OFF→ONのみ: 本機固有の直接契約を高信頼固定できず `UNVERIFIED_AFTER_RESEARCH`。据え置き実戦値から自動推定しない。
 - 有利区間: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
-- 朝一独立高確/低確状態: `NONE_CONFIRMED_AFTER_RESEARCH`。
-- 変更判別: 本機固有の確実なガックン判別は `UNVERIFIED_AFTER_RESEARCH`。
-- publicMorningNumbers: **57.03 / 9.77 / 33.20%**。
+- 朝一恩恵: **高確スタート + 天国A/B 7.5〜12.5%**。
+- 変更判別: 高確スタートでも朝一夕方ステージ固定ではない。本機固有の確実なガックン等は `UNVERIFIED_AFTER_RESEARCH`。
+- publicMorningNumbers: **天国A/B 7.5% / 10.0% / 12.5%（設定群別）**。
 - resetBehaviorQA: **COMPLETE_WITH_SOURCE_LIMITS**。
 
-## 2014-08-18群監査 — CLOSED_FOR_CURRENT_RESEARCH
+## 2014-08-19〜08-31境界監査
 
-- No.838 **沖ドキ！ 25Φ** と No.839 **沖ドキ！-30** を処理。
-- `2014-08-18 / 8月18日 / パチスロ / 新台 / 導入開始 / ホール導入 / 納品` を組み替え、業界記事・K-Navi・P-WORLD・HAZUSE・メーカー系列/機種DBを横断。
-- パチンコ「CRぱちんこAKB48 バラの儀式」等は対象外。
-- P-WORLDの「最終更新日2014/08/25」を導入日と誤認しない。例として「不二子～100億$の女神～」は実導入2012-01-03。
-- 今回の検索範囲では、08-18同日群に上記2派生以外の未登録5号機を具体日で固定できなかったため **2014-08-18_GROUP_CLOSED_FOR_CURRENT_RESEARCH**。
+- 検索語を日付・月表記・新台/導入開始/納品へ変え、P-WORLD、K-Navi、パチセブン、業界記事・解析DBを横断。
+- P-WORLDの「最終更新日」を導入日と誤認しない既存safeguardを維持。
+- 今回の検索範囲では08-19〜08-31に具体日で固定できる未登録5号機を確認できず **CLOSED_FOR_CURRENT_RESEARCH**。
+- 次の具体的ホール導入アンカーは **2014-09-01 戦国BASARA3**。
 
-## 遡及 resetBehavior QA — パチスロ鉄拳伝タフ
+## 2014-09-01群
 
-- `coreStatus: COMPLETE_CORE`は維持。
-- v0.7項目を明示し、resetQaLastUpdatedを2026-09-07へ更新。
-- 通常時ゲーム数天井なし相当、BIG後100P/REG後12Pの完走型RT仕様は再確認。
-- 設定変更/据え置き/純電断時の **RT残G数・RT内部状態処理**を、旧攻略、設定判別DB、P-WORLD系、2008年回顧、中古実機資料まで変えて再探索したが直接固定できず `UNVERIFIED_AFTER_RESEARCH`。
-- 本機固有ガックン/初期出目等も未固定。
-- publicMorningNumbers: `NONE_CONFIRMED_AFTER_RESEARCH`。
-- resetBehaviorQA: **PARTIAL** 維持。性能COMPLETE_COREは崩していない。
-- Git履歴上、鉄拳伝タフ直後に追加された次レコードは `docs/real_machine_db/machines/2007-02_new-hanahana-30.md`（ニューハナハナ-30）。
+- 戦国BASARA3を登録済み。
+- 同日群の網羅監査はまだ完了扱いにせず **OPEN** とする。
+- 次回、`2014-09-01 / 9月1日 / パチスロ / 新台 / 導入開始 / ホール導入 / 納品` とメーカー別一覧を再照合し、同日未登録機があれば先に処理する。
 
 ## 遡及 resetBehavior QA カーソル
 
@@ -88,33 +82,31 @@
 
 ## safeguard
 
-- 初代沖ドキ系に `トロピカル / パラダイス / DUO / GOLD / BLACK / ゴージャス`の後継機reset値を流用しない。
-- 特に後継機のチャンス約39.8%、399G短縮等を初代へ混入させない。
-- `999G/1000G`, `199G/200G`, `31G/32G`は内部最大規定Gと告知レンジの定義差として保持しCONFLICT化しない。
-- P-WORLDの「最終更新日」はホール導入日ではない。必ず導入アンカーを別資料で確認する。
+- 実機版「戦国BASARA3」とゲーム版・舞台版を混同しない。
+- 機械割競合値は平均しない。
+- 天国A/B合算の設定変更振り分けをA/B個別値へ推定分解しない。
+- 据え置き実戦による宵越し支持を、純電源OFF→ONの確定契約へ拡張しない。
+- P-WORLDの最終更新日を導入日に使用しない。
 - 2015-06-08到達時の **吉宗～極～（ヨシムネH2A4 / 3S1093）** 正式量産版処理注意を維持。
 
 ## 次回再開地点
 
-1. **recordCount 839 / chronologicalFrontier 2014-08-18 / 08-18_GROUP_CLOSED_FOR_CURRENT_RESEARCH** から開始。
-2. 最新mainで README / mission / INDEX / LATEST_HANDOFF / 839件目を再確認。
-3. **2014-08-19〜月末の境界監査**を行い、次の具体的ホール導入日を固定する。
-4. 発見した次の未処理5号機を性能コア+resetBehavior v0.7で登録する。
+1. **recordCount 840 / chronologicalFrontier 2014-09-01 / 09-01_GROUP_OPEN** から開始。
+2. 最新mainで README / mission / INDEX / LATEST_HANDOFF / 840件目を再確認。
+3. **2014-09-01同日群を再監査**し、未登録機があれば時系列同日群として処理。
+4. 同日群をCLOSEDにできたら09-02以降の境界監査を行い、次の具体的ホール導入日へ進む。
 5. 遡及QAは **`2007-02_new-hanahana-30.md`** から再開。
 
 ## 主要出典 — 取得日 2026-09-07
 
-### 沖ドキ！-30
-- P-WORLD: `https://www.p-world.co.jp/machine/database/7495`
-- 一撃/1GAME系 30Φトップ: `https://1geki.jp/slot/okidoki30/`
-- 一撃/1GAME系 天井・設定変更・電源ON/OFF: `https://1geki.jp/slot/okidoki30/3/`
-- 一撃/1GAME系 モード移行: `https://1geki.jp/slot/okidoki30/62/`
-- 中一商事 型式表示: `https://www.nakaiti.com/html/sAcross088.html`
-- グリーンべると 旧規則機型式報道: `https://web-greenbelt.jp/post-47383/`
-- グリーンべると 2014-08-01全国展開: `https://web-greenbelt.jp/00007110/`
-
-### 鉄拳伝タフ QA
-- パチマガスロマガ基本: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/oizumineo_slot/02/a.php`
-- パチマガスロマガRT: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/oizumineo_slot/02/k_1.php`
-- pacnk: `https://pacnk.com/slot/tools/sh_tekkendentafu.html`
-- 回顧解析: `https://plaza.rakuten.co.jp/slotlife777/`
+### 戦国BASARA3
+- P-WORLD: `https://www.p-world.co.jp/machine/database/7480`
+- K-Navi: `https://p-kn.com/slot/2107/`
+- パチセブン: `https://pachiseven.jp/machines/4243/cutout/3`
+- パチマガスロマガ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/enterrise_slot/09/01.php`
+- パチマガスロマガ CZ: `https://cs62.cs-plaza.com/g/pachi/pla/s_conq/enterrise_slot/09/03.php`
+- パチスロ解析ガイド: `https://pachislot-guide.net/2014/sengoku-basara3/`
+- すろぱちくえすと リセット: `https://www.slopachi-quest.com/article/basara3-reset/`
+- すろぱちくえすと 機種別: `https://www.slopachi-quest.com/kisyubetsu/sengoku-basara3/`
+- 当時解析整理: `https://ameblo.jp/mpkhb1311/entry-11902976739.html`
+- Pachinavi競合値: `https://pachinavi.net/machines/sengoku-basara-3/`
