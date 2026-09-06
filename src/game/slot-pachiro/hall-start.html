@@ -7,29 +7,33 @@
   <link rel="stylesheet" href="./cell-lab.css">
 </head>
 <body>
-<main class="lab">
+<main class="lab" data-playtest-scroll>
   <header class="labHead">
-    <div><small>FOUNDATION / STEP 12</small><h1>START HALL</h1></div>
-    <output id="hallState">PLACEMENT CHECK</output>
+    <div><small>FOUNDATION / STEP 13</small><h1>START HALL</h1></div>
+    <output id="hallState">MOVE READY</output>
   </header>
-  <section class="preview"><svg id="hall" class="iso hallMap" viewBox="42 46 276 210" aria-label="9×9 startup hall driven by atomic logical placement"></svg></section>
-  <section class="note"><b>ATOMIC PLACEMENT PASS 01</b><span id="hallNote">loading placement / occupancy / access / route validation</span></section>
+  <section class="preview"><svg id="hall" class="iso hallMap" viewBox="42 46 276 210" aria-label="9×9 startup hall with tap-to-move atomic placement"></svg></section>
+  <section class="placementBar">
+    <strong id="selectionLabel">台をタップして選択</strong>
+    <button id="resetLayout" type="button">初期配置</button>
+  </section>
+  <section class="note"><b>INTERACTIVE PLACEMENT PASS 01</b><span id="hallNote">台を選択 → 空きセルをタップ。通路・衝突・到達判定を通過した時だけ移動。</span></section>
 </main>
 <script type="module">
 import { GRID } from './core/grid.js';
 import { SLOT_FIXTURE } from './core/slot-fixture.js';
-import { START_HALL, buildStartHallMap, validateStartHall } from './core/start-hall-layout.js';
+import { START_HALL, buildStartHallMap, validateStartHall, testStartHallMove } from './core/start-hall-layout.js';
 
-const map = buildStartHallMap();
-const validation = validateStartHall(map);
-const state = document.querySelector('#hallState');
-const note = document.querySelector('#hallNote');
-state.textContent = validation.ok ? 'PLACE TX OK' : 'PLACE TX ERROR';
-note.textContent = `${validation.transactionCount}/${validation.fixtureCount} atomic placements / ${validation.accessPortCount} access ports / ${validation.reachableCellCount} reachable cells`;
-document.documentElement.dataset.gridValidation = validation.ok ? 'ok' : 'error';
-document.documentElement.dataset.placementValidation = validation.ok ? 'ok' : 'error';
+let fixtures = START_HALL.fixtures.map((fixture) => ({ ...fixture }));
+let map = buildStartHallMap(fixtures);
+let validation = validateStartHall(map, fixtures);
+let selectedId = null;
 
 const svg = document.querySelector('#hall');
+const state = document.querySelector('#hallState');
+const note = document.querySelector('#hallNote');
+const selectionLabel = document.querySelector('#selectionLabel');
+const resetButton = document.querySelector('#resetLayout');
 const NS = 'http://www.w3.org/2000/svg';
 const WALL_H = 100 / 64;
 const u = (v) => v / SLOT_FIXTURE.cell;
@@ -39,55 +43,112 @@ const minX=Math.min(...corners.map(v=>v.x)), maxX=Math.max(...corners.map(v=>v.x
 const minY=Math.min(...corners.map(v=>v.y)), maxY=Math.max(...corners.map(v=>v.y));
 const pad=14, scale=Math.min((360-pad*2)/(maxX-minX),(360-pad*2)/(maxY-minY));
 const p=(x,y,z=0)=>{const q=raw(x,y,z);return{x:pad+(q.x-minX)*scale,y:pad+(q.y-minY)*scale}};
-const poly=(pts,cls)=>{const e=document.createElementNS(NS,'polygon');e.setAttribute('points',pts.map(v=>`${v.x},${v.y}`).join(' '));e.setAttribute('class',cls);svg.appendChild(e);return e};
-const line=(a,b,cls)=>{const e=document.createElementNS(NS,'line');e.setAttribute('x1',a.x);e.setAttribute('y1',a.y);e.setAttribute('x2',b.x);e.setAttribute('y2',b.y);e.setAttribute('class',cls);svg.appendChild(e)};
-const prism=(x0,y0,x1,y1,z0,z1,base)=>{poly([p(x0,y0,z1),p(x1,y0,z1),p(x1,y1,z1),p(x0,y1,z1)],`${base} top`);poly([p(x0,y1,z0),p(x1,y1,z0),p(x1,y1,z1),p(x0,y1,z1)],`${base} front`);poly([p(x1,y0,z0),p(x1,y1,z0),p(x1,y1,z1),p(x1,y0,z1)],`${base} side`)};
-
-for(let y=0;y<START_HALL.height;y++) for(let x=0;x<START_HALL.width;x++) {
-  const cell=map.cells.get(`${x},${y}`);
-  let cls=`gridCell c${(x+y)&1}`;
-  if(cell.floorType==='main-aisle'||cell.floorType==='entrance-route') cls+=' aisleCell';
-  if(cell.occupiedBy) cls+=' fixtureCell';
-  if(cell.portal?.kind==='entrance') cls+=' entranceCell';
-  poly([p(x,y),p(x+1,y),p(x+1,y+1),p(x,y+1)],cls);
-}
-for(let x=0;x<9;x++) poly([p(x,0),p(x+1,0),p(x+1,0,WALL_H),p(x,0,WALL_H)],'roomWall wallA');
-for(let y=0;y<9;y++) poly([p(0,y),p(0,y+1),p(0,y+1,WALL_H),p(0,y,WALL_H)],'roomWall wallB');
+const poly=(pts,cls,parent=svg)=>{const e=document.createElementNS(NS,'polygon');e.setAttribute('points',pts.map(v=>`${v.x},${v.y}`).join(' '));e.setAttribute('class',cls);parent.appendChild(e);return e};
+const line=(a,b,cls,parent=svg)=>{const e=document.createElementNS(NS,'line');e.setAttribute('x1',a.x);e.setAttribute('y1',a.y);e.setAttribute('x2',b.x);e.setAttribute('y2',b.y);e.setAttribute('class',cls);parent.appendChild(e)};
+const prism=(x0,y0,x1,y1,z0,z1,base,parent=svg)=>{poly([p(x0,y0,z1),p(x1,y0,z1),p(x1,y1,z1),p(x0,y1,z1)],`${base} top`,parent);poly([p(x0,y1,z0),p(x1,y1,z0),p(x1,y1,z1),p(x0,y1,z1)],`${base} front`,parent);poly([p(x1,y0,z0),p(x1,y1,z0),p(x1,y1,z1),p(x1,y0,z1)],`${base} side`,parent)};
 
 const shelfDepth=u(SLOT_FIXTURE.shelf.depth), frame=u(SLOT_FIXTURE.shelf.frameThickness), baseH=u(SLOT_FIXTURE.shelf.baseHeight);
 const machineDepth=u(SLOT_FIXTURE.machineSand.depth), machineH=u(SLOT_FIXTURE.machineSand.height), graphDepth=u(SLOT_FIXTURE.slumpGraph.depth), graphH=u(SLOT_FIXTURE.slumpGraph.height), machineW=u(SLOT_FIXTURE.machineSand.machineWidth);
 const machineTop=baseH+machineH, fixtureTop=machineTop+graphH;
 
-function drawFixture(x,y){
-  prism(x,y,x+1,y+shelfDepth,0,baseH,'shelfBody');
-  prism(x,y,x+1,y+frame,baseH,machineTop,'shelfBack');
-  prism(x,y,x+frame,y+shelfDepth,baseH,machineTop,'shelfLeft');
-  prism(x+1-frame,y,x+1,y+shelfDepth,baseH,machineTop,'shelfRight');
-  prism(x,y,x+1,y+shelfDepth,machineTop-frame,machineTop,'shelfTop');
-  prism(x,y,x+machineW,y+machineDepth,baseH,machineTop,'machineBody');
-  prism(x+machineW,y,x+1,y+machineDepth,baseH,machineTop,'sideUnitBody');
+function drawFixture(fixture,parent){
+  const {x,y}=fixture;
+  prism(x,y,x+1,y+shelfDepth,0,baseH,'shelfBody',parent);
+  prism(x,y,x+1,y+frame,baseH,machineTop,'shelfBack',parent);
+  prism(x,y,x+frame,y+shelfDepth,baseH,machineTop,'shelfLeft',parent);
+  prism(x+1-frame,y,x+1,y+shelfDepth,baseH,machineTop,'shelfRight',parent);
+  prism(x,y,x+1,y+shelfDepth,machineTop-frame,machineTop,'shelfTop',parent);
+  prism(x,y,x+machineW,y+machineDepth,baseH,machineTop,'machineBody',parent);
+  prism(x+machineW,y,x+1,y+machineDepth,baseH,machineTop,'sideUnitBody',parent);
   const payY=y+machineDepth+.006,payZ0=baseH+u(8),payZ1=baseH+u(16);
-  poly([p(x+.24,payY,payZ0),p(x+.70,payY,payZ0),p(x+.70,payY,payZ1),p(x+.24,payY,payZ1)],'payout');
+  poly([p(x+.24,payY,payZ0),p(x+.70,payY,payZ0),p(x+.70,payY,payZ1),p(x+.24,payY,payZ1)],'payout',parent);
   const reelZ0=baseH+u(23),reelZ1=baseH+u(39);
-  poly([p(x+.12,payY,reelZ0),p(x+.74,payY,reelZ0),p(x+.74,payY,reelZ1),p(x+.12,payY,reelZ1)],'reelWindow');
-  for(const dx of [.25,.43,.61]) line(p(x+dx,payY+.001,reelZ0),p(x+dx,payY+.001,reelZ1),'reelDivider');
-  poly([p(x+.18,payY,baseH+u(18)),p(x+.68,payY,baseH+u(18)),p(x+.68,payY,baseH+u(22)),p(x+.18,payY,baseH+u(22))],'controlDeck');
-  prism(x+.08,y,x+.84,y+graphDepth,machineTop,fixtureTop,'graphBody');
+  poly([p(x+.12,payY,reelZ0),p(x+.74,payY,reelZ0),p(x+.74,payY,reelZ1),p(x+.12,payY,reelZ1)],'reelWindow',parent);
+  for(const dx of [.25,.43,.61]) line(p(x+dx,payY+.001,reelZ0),p(x+dx,payY+.001,reelZ1),'reelDivider',parent);
+  poly([p(x+.18,payY,baseH+u(18)),p(x+.68,payY,baseH+u(18)),p(x+.68,payY,baseH+u(22)),p(x+.18,payY,baseH+u(22))],'controlDeck',parent);
+  prism(x+.08,y,x+.84,y+graphDepth,machineTop,fixtureTop,'graphBody',parent);
   const gy=y+graphDepth+.006,g0=machineTop+u(2),g1=fixtureTop-u(2);
-  poly([p(x+.14,gy,g0),p(x+.78,gy,g0),p(x+.78,gy,g1),p(x+.14,gy,g1)],'graphScreen');
-  line(p(x+.18,gy+.001,g0+u(2)),p(x+.32,gy+.001,g0+u(4)),'graphLine');
-  line(p(x+.32,gy+.001,g0+u(4)),p(x+.48,gy+.001,g0+u(3)),'graphLine');
-  line(p(x+.48,gy+.001,g0+u(3)),p(x+.66,gy+.001,g0+u(6)),'graphLine');
+  poly([p(x+.14,gy,g0),p(x+.78,gy,g0),p(x+.78,gy,g1),p(x+.14,gy,g1)],'graphScreen',parent);
+  line(p(x+.18,gy+.001,g0+u(2)),p(x+.32,gy+.001,g0+u(4)),'graphLine',parent);
+  line(p(x+.32,gy+.001,g0+u(4)),p(x+.48,gy+.001,g0+u(3)),'graphLine',parent);
+  line(p(x+.48,gy+.001,g0+u(3)),p(x+.66,gy+.001,g0+u(6)),'graphLine',parent);
   const sy=y+machineDepth+u(30),cx=x+.5,r=u(SLOT_FIXTURE.stool.diameter)/2,seatH=u(SLOT_FIXTURE.stool.height),ellipse=document.createElementNS(NS,'ellipse'),sc=p(cx,sy,seatH);
-  ellipse.setAttribute('cx',sc.x);ellipse.setAttribute('cy',sc.y);ellipse.setAttribute('rx',r*GRID.tileW*scale);ellipse.setAttribute('ry',r*GRID.tileH*scale);ellipse.setAttribute('class','stoolSeat');svg.appendChild(ellipse);
-  line(p(cx-r*.55,sy,seatH*.85),p(cx-r*.55,sy,0),'stoolLeg');
-  line(p(cx+r*.55,sy,seatH*.85),p(cx+r*.55,sy,0),'stoolLeg');
+  ellipse.setAttribute('cx',sc.x);ellipse.setAttribute('cy',sc.y);ellipse.setAttribute('rx',r*GRID.tileW*scale);ellipse.setAttribute('ry',r*GRID.tileH*scale);ellipse.setAttribute('class','stoolSeat');parent.appendChild(ellipse);
+  line(p(cx-r*.55,sy,seatH*.85),p(cx-r*.55,sy,0),'stoolLeg',parent);
+  line(p(cx+r*.55,sy,seatH*.85),p(cx+r*.55,sy,0),'stoolLeg',parent);
 }
-START_HALL.fixtures.forEach(({x,y})=>drawFixture(x,y));
-poly([p(0,0),p(9,0),p(9,9),p(0,9)],'gridOutline');
+
+function setStatus(kind,message){
+  state.textContent=kind;
+  note.textContent=message;
+}
+
+function render(){
+  svg.replaceChildren();
+  for(let y=0;y<START_HALL.height;y++) for(let x=0;x<START_HALL.width;x++) {
+    const cell=map.cells.get(`${x},${y}`);
+    let cls=`gridCell c${(x+y)&1}`;
+    if(cell.floorType==='main-aisle'||cell.floorType==='entrance-route') cls+=' aisleCell';
+    if(cell.occupiedBy) cls+=' fixtureCell';
+    if(cell.portal?.kind==='entrance') cls+=' entranceCell';
+    if(cell.occupiedBy===selectedId) cls+=' selectedCell';
+    poly([p(x,y),p(x+1,y),p(x+1,y+1),p(x,y+1)],cls);
+  }
+  for(let x=0;x<9;x++) poly([p(x,0),p(x+1,0),p(x+1,0,WALL_H),p(x,0,WALL_H)],'roomWall wallA');
+  for(let y=0;y<9;y++) poly([p(0,y),p(0,y+1),p(0,y+1,WALL_H),p(0,y,WALL_H)],'roomWall wallB');
+  const fixtureLayer=document.createElementNS(NS,'g'); fixtureLayer.setAttribute('class','fixtureLayer'); svg.appendChild(fixtureLayer);
+  fixtures.forEach((fixture)=>drawFixture(fixture,fixtureLayer));
+  poly([p(0,0),p(9,0),p(9,9),p(0,9)],'gridOutline');
+  const hitLayer=document.createElementNS(NS,'g'); hitLayer.setAttribute('class','hitLayer'); svg.appendChild(hitLayer);
+  for(let y=0;y<9;y++) for(let x=0;x<9;x++) {
+    const hit=poly([p(x,y),p(x+1,y),p(x+1,y+1),p(x,y+1)],'cellHit',hitLayer);
+    hit.dataset.x=String(x); hit.dataset.y=String(y);
+  }
+  document.documentElement.dataset.gridValidation = validation.ok ? 'ok' : 'error';
+  document.documentElement.dataset.placementValidation = validation.ok ? 'ok' : 'error';
+}
+
+svg.addEventListener('click',(event)=>{
+  const hit=event.target.closest?.('.cellHit');
+  if(!hit) return;
+  const x=Number(hit.dataset.x), y=Number(hit.dataset.y), cell=map.cells.get(`${x},${y}`);
+  if(cell?.occupiedBy){
+    selectedId=cell.occupiedBy;
+    selectionLabel.textContent=`選択中: ${selectedId} → 移動先をタップ`;
+    setStatus('SELECTED',`${selectedId} を選択。空きセルをタップすると論理判定して移動します。`);
+    render();
+    return;
+  }
+  if(!selectedId){ setStatus('SELECT FIRST','先に移動するスロット台をタップしてください。'); return; }
+  const result=testStartHallMove(fixtures,selectedId,x,y);
+  if(!result.ok){
+    setStatus('PLACE NG',result.reason);
+    document.documentElement.dataset.lastPlacement='rejected';
+    return;
+  }
+  fixtures=result.fixtures.map((fixture)=>({ ...fixture }));
+  map=result.map; validation=result.validation;
+  const movedId=selectedId; selectedId=null;
+  selectionLabel.textContent='台をタップして選択';
+  setStatus('MOVE OK',`${movedId} → (${x},${y}) / ${validation.fixtureCount} fixtures / ${validation.reachableCellCount} reachable`);
+  document.documentElement.dataset.lastPlacement='accepted';
+  render();
+});
+
+resetButton.addEventListener('click',()=>{
+  fixtures=START_HALL.fixtures.map((fixture)=>({ ...fixture }));
+  map=buildStartHallMap(fixtures); validation=validateStartHall(map,fixtures); selectedId=null;
+  selectionLabel.textContent='台をタップして選択';
+  setStatus('MOVE READY',`${validation.transactionCount}/${validation.fixtureCount} atomic placements / ${validation.accessPortCount} access ports / ${validation.reachableCellCount} reachable cells`);
+  document.documentElement.dataset.lastPlacement='reset';
+  render();
+});
+
+setStatus(validation.ok?'MOVE READY':'PLACE TX ERROR',`${validation.transactionCount}/${validation.fixtureCount} atomic placements / ${validation.accessPortCount} access ports / ${validation.reachableCellCount} reachable cells`);
+render();
 </script>
 <style>
-.hallMap{width:118%;max-width:none}.aisleCell{fill:#f1e5c7}.fixtureCell{fill:#d9ef9d}.entranceCell{fill:#a9ddf0;stroke:#2b738d;stroke-width:2}
+.hallMap{width:118%;max-width:none;touch-action:manipulation}.aisleCell{fill:#f1e5c7}.fixtureCell{fill:#d9ef9d}.entranceCell{fill:#a9ddf0;stroke:#2b738d;stroke-width:2}.selectedCell{fill:#ffe36d;stroke:#9a6a00;stroke-width:2}.fixtureLayer{pointer-events:none}.cellHit{fill:transparent;stroke:transparent;cursor:pointer;pointer-events:all}.placementBar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 12px;background:#f7efdc;border:2px solid #4d3727;border-radius:8px;font-size:12px}.placementBar button{border:2px solid #4d3727;background:#fff8e8;border-radius:7px;padding:7px 10px;font-weight:700;color:#35261d}
 </style>
 </body>
 </html>
