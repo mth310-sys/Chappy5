@@ -4,87 +4,71 @@
 
 ## 現在地点
 
-- recordCount: **880**
-- latestRecordAdded: **ミリオンゴッド-神々の凱旋-**（ユニバーサルブロス）
-- latestRecord: `docs/real_machine_db/machines/2015-04-06_million-god-kamigami-no-gaisen.md`
+- recordCount: **881**
+- latestRecordAdded: **ゴーゴージャグラー**（北電子）
+- latestRecord: `docs/real_machine_db/machines/2015-04-06_gogo-juggler.md`
 - chronologicalFrontier: **2015-04-06**
-- frontierLatestMachine: **ミリオンゴッド-神々の凱旋-**
+- frontierLatestMachine: **ゴーゴージャグラー**
 - schema: **resetBehavior v0.7**
-- status: **2015-04-06_GROUP_OPEN**
+- status: **2015-04-06_GROUP_CLOSED_FOR_CURRENT_RESEARCH**
 
 ## 今回の同期 / 正本確認
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、本 `LATEST_HANDOFF.md`、No.879 `2015-03-16_kokucchi-masters.md` を再読。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、本 `LATEST_HANDOFF.md`、No.880 `2015-04-06_million-god-kamigami-no-gaisen.md` を再読。
 - INDEXは旧集約状態のためREADME規定どおり **LATEST_HANDOFF + 実レコード** を進捗正本として使用。
-- 作業開始時正本は **879件 / chronologicalFrontier 2015-03-16 / 03-16_GROUP_CLOSED_FOR_CURRENT_RESEARCH**。
-- 指示どおり2015-03-17〜03-22から境界監査を開始。
-- HAZUSE新台カレンダーは2015年3月について03/02・03/09・03/16のみを掲載し、次の掲載日は2015-04-06。別検索でも03/17〜04/05に具体的ホール導入日を固定できる未登録5号機を今回確認できなかったため、この境界を `CLOSED_FOR_CURRENT_RESEARCH` として前進。
-- 2015-04-06群では、ユニバーサルブロス **ミリオンゴッド-神々の凱旋-** と北電子 **ゴーゴージャグラー** を具体日付きパチスロとして確認。
-- 今回は時系列同日群の先頭処理として **ミリオンゴッド-神々の凱旋-** をNo.880へ追加。04-06群はまだOPEN。
+- 作業開始時正本は **880件 / chronologicalFrontier 2015-04-06 / 04-06_GROUP_OPEN**。
+- 直前handoff指定の北電子 **ゴーゴージャグラー** をNo.881として追加。
+- 04-06群を「2015年4月6日 / 2015/04/06 / 4月6日導入」+ パチスロ/スロット/新台、除外検索、HAZUSEカレンダーで再監査。具体日付きで強く固定できた新規5号機は既登録の **ミリオンゴッド-神々の凱旋-** と **ゴーゴージャグラー** の2機。追加未登録を今回固定できなかったため `04-06_GROUP_CLOSED_FOR_CURRENT_RESEARCH`。
 
-## No.880 — ミリオンゴッド-神々の凱旋-
+## No.881 — ゴーゴージャグラー
 
-- record: `docs/real_machine_db/machines/2015-04-06_million-god-kamigami-no-gaisen.md`
-- manufacturer: **ユニバーサルブロス**
+- record: `docs/real_machine_db/machines/2015-04-06_gogo-juggler.md`
+- manufacturer: **北電子**
 - releaseDate canonical: **2015-04-06**
-- modelName: **ミリオンゴッド-神々の凱旋-BD**
-- inspectionNumber: **4S0861**
-- systemType: **5号機 AT / セット数管理AT / CZ搭載**
+- modelName: **ゴーゴージャグラーKK**
+- inspectionNumber: **4S0942**
+- systemType: **5号機 ノーマル / Aタイプ / 完全告知**
 
 ### 性能コア
 
-- 主流解析機械割: **98.3 / 99.5 / 102.0 / 106.6 / 112.1 / 119.5%**。
-- GG初当たり（GOD/赤7除く）: **1/525.4 / 476.0 / 487.5 / 370.7 / 361.8 / 274.7**。
-- GG合算（GOD/赤7含む）: **1/452.8 / 415.6 / 424.4 / 333.0 / 325.9 / 253.5**。
-- 50枚ベース: **約25G/50枚**。
-- AT「GOD GAME」: **1セット100G / 純増約3.0枚/G**。
-- 通常天井: **GG後1480G + 前兆**。
-- 天井到達時ループストック: **1% / 80% = 各50%**。
-- GOD揃い: **1/8192**、赤7揃い: **1/5461**（全設定共通）。
+- メーカー発表/市場掲載機械割: **97.0 / 98.2 / 99.2 / 101.6 / 103.8 / 106.5%**。
+- BIG: **1/269.7 / 268.6 / 266.4 / 260.1 / 255.0 / 242.7**。
+- REG: **1/364.1 / 336.1 / 318.1 / 283.7 / 255.0 / 242.7**。
+- 合算: **1/154.9 / 149.3 / 145.0 / 135.7 / 127.5 / 121.4**。
+- 50枚ベース（チェリー狙い条件）: **33.3 / 33.5 / 33.7 / 33.9 / 34.0 / 34.3G**。
+- BIG: **純増約312枚**、REG: **純増約104枚**。
+- 天井: **非搭載**。
+- チェリー狙い攻略機械割 **97.96 / 99.20 / 100.36 / 102.91 / 105.33 / 108.34%** はメーカー発表値と条件が違うため、CONFLICTではなく定義別系列として保持。
 
 ### resetBehavior v0.7
 
-- 設定変更: **天井Gリセット / 内部モード再抽選 / 状態再抽選**。
-- 純電源OFF→ON: **天井G・モード・状態を引き継ぐ**。液晶は設定変更/電断とも **ペイレネの泉 / 012**。
-- 電断時にGG / SGG / G-STOP / G-ZONE中ならその状態を引き継ぐと一撃が明記。
-- 設定変更後天井振り分け:
-  - 設定1〜3: **510G 10.00% / 1000G 90.00% / 1480G 0%**
-  - 設定4: **10.00 / 89.61 / 0.39%**
-  - 設定5: **10.00 / 87.66 / 2.34%**
-  - 設定6: **10.00 / 85.32 / 4.69%**
-- 朝一表モードも設定別公開値を取得。低確1が設定1/2=60%、3/4=50%、5/6=40%で、固定高モード優遇ではない。
-- 最大の朝一恩恵は天井短縮。510G天井は全設定約10%。
+- 天井/AT・ARTモード/リセット天井: **NOT_APPLICABLE**。
+- 設定変更後は朝一1G目の **リールガックン**が変更推測材料。本機固有資料を複数確認。ただし開店前1G回し等で対策可能なので、ガックンなし=据え置き確定とはしない。
+- ボーナス後100G以内のゾロ目G BIGで発生するスペシャルBGM条件は **設定変更でリセット**。
+- 前日ヤメG数+当日G数がボーナス後100G以内のゾロ目G条件を満たし、BIGで「運命/魔王」等が流れれば **据え置き濃厚**という本機固有判別を保存。
+- 純電源OFF→ONだけを設定変更と独立比較する本機固有直接資料は、表記揺れ/型式/北電子 + 電源OFF ON/電断/据え置き/BGM/ガックンを変えて再探索しても固定できず `UNVERIFIED_AFTER_RESEARCH`。据え置き資料から純電断契約を推定転記しない。
 - 有利区間: `NOT_APPLICABLE_5TH_GEN_PRE_5_9`。
-- 変更判別: 設定変更/電断とも液晶が012・ペイレネとなるため表示単体では判別不可。本機固有ガックンの高信頼契約は再探索後も `NONE_CONFIRMED_AFTER_RESEARCH`。
+- 朝一専用当選率/モード振り分け/天井短縮: **NONE / NOT_APPLICABLE**。
 
-### CONFLICT / definition control
+### definition / conflict control
 
-- 機械割は主流 **98.3 / 99.5 / 102.0 / 106.6 / 112.1 / 119.5%** に対し、パチスロ解析ガイド **98.0 / 99.0 / 103.3 / 106.3 / 111.6 / 118.0%**、アタリ7設定6 **119.6%**。平均せずレコード内にCONFLICT保持。
-- 「GG初当たり」と「GG合算」を一部後年資料が同じAT初当たり名で扱うため、**確定役除外値とGOD/赤7込み値を別列保存**。定義差を平均しない。
-- 2026年スマスロ **ミリオンゴッド-神々の軌跡-** はリセット数値・有利区間仕様が別物。2015年凱旋へ一切転記しない。
+- 設定3 REGは当時系複数資料 **1/318.1** に対し一部後年ページ **1/318.6**。平均せず、1/318.1をcanonical、後年差をレコード内注記。
+- メーカー発表機械割とチェリー狙い攻略機械割は消化条件差なので `DEFINITION_DIFFERENCE_NOT_CONFLICT`。
 
-## 2015-03-17〜04-05境界
+## 2015-04-06群
 
-- HAZUSE新台カレンダー: 2015年3月は **03/02・03/09・03/16**、2015年4月は **04/06・04/13・04/20** を掲載。
-- `2015-03-17_TO_2015-04-05_CLOSED_FOR_CURRENT_RESEARCH`。
-- 発表日・検定日・記事投稿日・アプリ配信日をホール導入日へ転用しない。
-
-## 2015-04-06群 — OPEN
-
-確認済み具体日候補:
-
-- **ミリオンゴッド-神々の凱旋-** — ユニバーサルブロス — **No.880 処理済み**
-- **ゴーゴージャグラー** — 北電子 — **次候補**
-
-現時点の横断検索では04-06パチスロとしてこの2機を強く確認。ゴーゴージャグラー処理後に同日群をメーカー横断で最終監査し、追加がなければCLOSEDする。
+- **ミリオンゴッド-神々の凱旋-** — ユニバーサルブロス — No.880
+- **ゴーゴージャグラー** — 北電子 — No.881
+- HAZUSEは2015年4月掲載日を **04/06・04/13・04/20** とする。
+- 同日除外検索を含むメーカー横断監査で追加未登録5号機を今回固定できず、`2015-04-06_GROUP_CLOSED_FOR_CURRENT_RESEARCH`。
 
 ## 次回再開地点
 
-1. **recordCount 880 / chronologicalFrontier 2015-04-06 / 04-06_GROUP_OPEN** から開始。
-2. 最新mainの README / mission / INDEX / LATEST_HANDOFF / No.880を再確認。
-3. 北電子 **「ゴーゴージャグラー」** をNo.881候補として性能コア + resetBehavior v0.7まで処理する。
-4. その後04-06同日群を全メーカー横断で最終監査。未登録5号機がなければ `04-06_GROUP_CLOSED_FOR_CURRENT_RESEARCH`。
-5. 次は2015-04-07〜04-12境界を監査し、問題なければHAZUSE次掲載日の2015-04-13群へ進む。
+1. **recordCount 881 / chronologicalFrontier 2015-04-06 / 04-06_GROUP_CLOSED_FOR_CURRENT_RESEARCH** から開始。
+2. 最新mainの README / mission / INDEX / LATEST_HANDOFF / No.881を再確認。
+3. **2015-04-07〜04-12境界**を具体日ベースで監査。
+4. 未登録5号機がなければ `2015-04-07_TO_2015-04-12_CLOSED_FOR_CURRENT_RESEARCH` とし、HAZUSE次掲載日の **2015-04-13群**へ進む。
+5. 04-13群はメーカー横断で候補を確定してから、時系列先頭の未処理機を性能コア + resetBehavior v0.7まで収集。
 6. 欠損は表記揺れ・型式・メーカー名・設定変更/据え置き/純電断/天井/モード/ガックン等へ検索語を変え、公式・業界一次・当時解析・古いDB・アーカイブ・回顧資料を横断後だけ `UNVERIFIED_AFTER_RESEARCH`。
 7. 遡及resetBehavior QAカーソルは `docs/real_machine_db/machines/2007-03-19_kakumei-senshi-choshu-riki.md` を維持。新規本線を止めない。
 
@@ -101,21 +85,17 @@
 
 ### 境界 / 導入日
 - HAZUSE 新台カレンダー: https://hazuse.com/new-machine-calendar/newmachine-calendar/
-- ユニバーサル公式: https://www.universal-777.com/product/slot/milliongod_gaisen/
-- 4Gamer メーカー発表文転載: https://www.4gamer.net/games/157/G015795/20150330041/
 - K-Navi ゴーゴージャグラー: https://p-kn.com/slot/2216/
+- アタリ7 ゴーゴージャグラー: https://www.atari7.com/slot/date1426138692.php
+- グリーンべると: https://web-greenbelt.jp/00007527/
 
-### ミリオンゴッド-神々の凱旋-
-- HAZUSE: https://hazuse.com/machine/pachislot/4S0861/
-- K-Navi: https://p-kn.com/slot/2243/
-- K-Navi 簡単ワンポイント: https://p-kn.com/slot/2243/53746/
-- 一撃 ボーナス確率: https://1geki.jp/slot/milliongodgaisen/1/
-- 一撃 天井/設定変更: https://1geki.jp/slot/milliongodgaisen/3/
-- なな徹 ボーナス確率: https://nana-press.com/kaiseki/machine/49/846/
-- なな徹 朝イチ/設定変更: https://nana-press.com/kaiseki/machine/49/851/
-- なな徹 設定推測: https://nana-press.com/kaiseki/machine/49/849/
-- 2-9伝説 朝一モード: https://2-9densetsu.com/milliongodgaisen-asaichi/
-- スロ確: https://slotkaku.com/milliongodkamigaminogaisen
-- ちょんぼりすた: https://chonborista.com/%E6%9C%AA%E5%88%86%E9%A1%9E/6778/
-- パチスロ解析ガイド: https://pachislot-guide.net/2015/million-god-gaisen/
-- アタリ7: https://www.atari7.com/column/20171487765487.php
+### ゴーゴージャグラー
+- 北電子公式検定情報: https://www.kitadenshi.co.jp/slot-kentei/gogojuggler/
+- P-WORLD機種DB: https://www.p-world.co.jp/machine/database/7653/
+- P-WORLD / PiDEA業界記事: https://news.p-world.co.jp/articles/7143
+- パチスロ解析ガイド: https://pachislot-guide.net/2015/gogo-juggler/
+- 一撃: https://1geki.jp/slot/gogoj/01/
+- SLOT HACK: https://slothack.net/matome/17149/
+- juggler7: https://juggler7.com/gogo/
+- ジャグジャグBeats!: https://jugjug.net/gogojugglerkk
+- パチよみ: https://www.ps-channel.net/jugglersoundhenka/
