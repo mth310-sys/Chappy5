@@ -4,113 +4,104 @@
 
 ## 現在地点
 
-- recordCount: **891**
-- latestRecordAdded: **パチスロ大工の源さん～桜満開！源DREAM Ver.～**（三洋物産）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2015-06-08_daiku-no-gensan-sakura-mankai-gen-dream-ver.md`
+- recordCount: **892**
+- latestRecordAdded: **パチスロ ガン×ソード**（高砂電器産業 / TAKASAGO）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2015-06-08_gun-x-sword.md`
 - chronologicalFrontier: **2015-06-08**
-- frontierLatestMachine: **パチスロ大工の源さん～桜満開！源DREAM Ver.～**
-- frontierRecord: `docs/real_machine_db/machines/2015-06-08_daiku-no-gensan-sakura-mankai-gen-dream-ver.md`
+- frontierLatestMachine: **パチスロ ガン×ソード**
+- frontierRecord: `docs/real_machine_db/machines/2015-06-08_gun-x-sword.md`
 - schema: **resetBehavior v0.7**
-- status: **2015-06-08_GROUP_OPEN**
+- status: **2015-06-08_GROUP_CLOSED_FOR_CURRENT_RESEARCH**
 
 ## 今回の同期 / 正本確認
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、旧 `LATEST_HANDOFF.md`、直前No.890 `2015-06-08_otome-youkai-zakuro.md` を再読。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.891 `2015-06-08_daiku-no-gensan-sakura-mankai-gen-dream-ver.md` を再読。
 - INDEXは19件時点の旧集約状態のため、README規定どおり **LATEST_HANDOFF + 実レコード** を進捗正本として使用。
-- 作業開始時の正本は **890件 / 2015-06-08 / GROUP_OPEN**。
-- 旧会話上の進捗ではなく、main実体のLATEST_HANDOFFを優先した。
+- 作業開始時の正本は **891件 / 2015-06-08 / GROUP_OPEN**。
+- 既存性能値の再収集は行わず、次の未処理機種から継続した。
 
-## No.891 — パチスロ大工の源さん～桜満開！源DREAM Ver.～
+## No.892 — パチスロ ガン×ソード
 
-- record: `docs/real_machine_db/machines/2015-06-08_daiku-no-gensan-sakura-mankai-gen-dream-ver.md`
-- manufacturer: **三洋物産**
+- record: `docs/real_machine_db/machines/2015-06-08_gun-x-sword.md`
+- manufacturer: **高砂電器産業 / TAKASAGO**
 - releaseDate canonical: **2015-06-08**
-- modelName: **パチスロ大工の源さん桜満開KF**
-- inspectionNumber: **4S0800**
+- modelName: **ガンソードDT**
+- inspectionNumber: **4S1120**
 - generation: **5号機**
-- systemType: **AT / 100G周期管理 / CZ経由 + 直撃**
+- systemType: **AT / 周期融合抽選 / バトル継続型**
 
 ### 性能コア
 
-- パチマガスロマガ精密PAYOUT: **96.95 / 98.17 / 100.16 / 104.14 / 107.70 / 112.86%**。
-- AT初当たり: **1/347.7 / 341.2 / 333.9 / 319.1 / 299.9 / 279.9**。
-- 50枚ベース canonical: **約24G/50枚**。別資料に約25Gがあるため平均せず軽微CONFLICT保持。
-- AT「源DREAM」: **純増約3.0枚/G、1セット40G+α**。
-- 通常時は原則 **1周期100G**。9周期消化でAT非当選なら次遊技でAT、天井ATは山車演武3個ストック。
+- 機械割: **96.8 / 98.9 / 99.5 / 103.1 / 106.5 / 110.2%**。
+- AT「REVENGE BATTLE」初当たり: **1/248 / 240 / 222 / 216 / 198 / 185**。
+- 50枚ベース: **約32G/50枚**。
+- AT純増: **約2.8枚/G**。
+- AT基本: **1ラウンド18G**（前半10G + バトル8G）、継続率 **77～98%**。
+- 通常時は32 / 64 / 128 / 256Gの4周期を複合する周期融合抽選。
+- 周期モード別最大天井: **128 / 320 / 640 / 1024G**。
 
-### resetBehavior v0.7 — 重要
+### resetBehavior v0.7
 
-- 本機は例外的に、**設定変更しても内部の天井周期数・周期残りゲーム数を引き継ぐ**とする当時解析が複数一致。
-- 据え置きも内部周期進捗を引継ぎ。前日深いハマりを設定変更後も宵越し可能として当時攻略で扱われている。
-- 設定変更専用の固定短縮天井は **NONE_CONFIRMED**。むしろ前日天井進捗を消さないこと自体が朝一の主要価値。
-- 内部状態は設定変更時に再抽選とする後年整理資料があるが、当時高信頼資料で初期振り分け数値を固定できず **UNVERIFIED_AFTER_RESEARCH**。
-- 純電源OFF→ONは周期進捗・源魂・状態を引継ぐとする整理資料があるが、当時一次/当時解析で完全に独立した表を固定できないため **CARRYOVER_SUPPORTED_SECONDARY / PARTIAL**。
+- 機種名表記揺れ（ガン×ソード/ガンソード）、型式 `ガンソードDT`、高砂/TAKASAGO/KPE高砂と、設定変更/リセット/朝一/据え置き/電源OFF ON/周期/天井/モード/ガックンを組み替えて再探索。
+- HAZUSE、必勝本、P-WORLD、当時業界記事、当時攻略記事、後年DBを横断した。
+- 通常の周期モード・天井構造は高信頼で固定できたが、**設定変更時に周期進捗をRESET/CARRY_OVERのどちらにするか、設定変更時専用の周期モード振り分け**を直接示す本機固有資料は固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 据え置き時の周期進捗/モード/内部状態も `UNVERIFIED_AFTER_RESEARCH`。
+- 純粋な設定変更なし電源OFF→ONも `UNVERIFIED_AFTER_RESEARCH`。
+- 設定変更専用の固定短縮天井、朝一専用高確保証、AT/CZ当選率優遇など公開数値は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- 本機固有ガックン/液晶初期表示等の確定的変更判別も `NONE_CONFIRMED_AFTER_RESEARCH`。
 - 有利区間は **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
-
-### resetDetection / CONFLICT
-
-- **液晶表示だけは競合を保持**。
-- すろぱちくえすと本文・追記は「設定変更時は液晶0G/初期表示」とする一方、当時雑誌情報として「リセットでも液晶ゲーム数・周期数を引継ぐ」とされた痕跡があり、その後実戦報告で誤情報の可能性が指摘されている。
-- 後年整理資料は設定変更/電断で周期表示1になるが内部進捗は引継ぐとする。
-- したがって **内部天井進捗CARRYOVERは高信頼、液晶表示はCONFLICT** と分離。液晶0G/周期1を変更確定にはしない。
-- 本機固有ガックンは十分な再探索後も固定できず `NONE_CONFIRMED_AFTER_RESEARCH`。
+- HAZUSE掲載の32Gモード移行率 25 / 25 / 35 / 25 / 30 / 33% は通常解析であり、設定変更専用と明記されていないためreset専用値へ流用していない。
 
 ### definition control
 
-- パチマガスロマガ精密PAYOUTとP-WORLD等の丸め値は平均しない。
-- 50枚ベース24Gと約25Gも平均しない。
-- 「内部周期進捗」と「液晶表示周期/G」を混同しない。
-- 源魂5個到達時は100G到達前に昇格チャンスへ進むため、周期数と単純な実ゲーム数換算を完全同一視しない。
+- 全国ホール導入開始 **2015-06-08** と、PiDEA Xの納品日 **2015-06-07予定**は別イベントとして保持。
+- 通常時周期モードの移行率と設定変更時初期振り分けを混同しない。
+- 一般的な5号機AT挙動からresetBehaviorを推定しない。
+- 実機完全再現用のCZ内部抽選、AT中詳細継続振り分け等は収集対象外。
 
-## 2015-06-08群監査 — OPEN
+## 2015-06-08群監査 — CLOSED_FOR_CURRENT_RESEARCH
 
 処理済み:
 1. **吉宗～極～** — 大都技研 — No.888。
 2. **デビルサバイバー2 最後の7日間** — オリンピア — No.889。
 3. **パチスロ おとめ妖怪ざくろ** — 北電子 — No.890。
 4. **パチスロ大工の源さん～桜満開！源DREAM Ver.～** — 三洋物産 — No.891。
+5. **パチスロ ガン×ソード** — 高砂電器産業 / TAKASAGO — No.892。
 
-同日未処理の強い候補:
-1. **パチスロ ガン×ソード** — 高砂電器産業 / TAKASAGO。
-
-- KONAMI公式系「こちらマジハロ情報局」が **2015年6月8日より全国ホール稼働開始**と明記しており、実導入日の強い一次系根拠あり。
-- 型式候補は **ガン×ソードDT**。
-- 未処理機が残るため **`2015-06-08_GROUP_OPEN`** を維持。
+- 2015-06-08の導入一覧、当時スレッド、メーカー/解析DB系統を再監査し、上記5機以外の具体日付き未登録5号機を今回安全に固定できなかった。
+- よって **`2015-06-08_GROUP_CLOSED_FOR_CURRENT_RESEARCH`** とする。
+- 後続QAで新資料が見つかった場合は遡及追加可能。現在の本線は06/09以降へ進める。
 
 ## 次回再開地点
 
-1. **recordCount 891 / chronologicalFrontier 2015-06-08 / GROUP_OPEN** から開始。
-2. 最新mainの README / mission / INDEX / LATEST_HANDOFF / No.891を再確認。
-3. 次の未処理機種 **「パチスロ ガン×ソード」（高砂電器産業 / TAKASAGO）** をNo.892候補として性能コア + resetBehavior v0.7を収集する。
-4. ガン×ソード処理後、06/08群を全メーカー横断で最終監査し、追加がなければCLOSED判定して06/09以降へ進む。
-5. exact release dateでは検定告示 / 発表 / 納品予定 / テスト導入 / 全国実ホール導入を分離する。
-6. `UNVERIFIED_AFTER_RESEARCH` は表記揺れ・正式型式名・メーカー・シリーズ名とreset関連検索語を変え、公式・業界記事・当時解析・古いDB・アーカイブ/回顧資料を横断した後だけ使用。
-7. 遡及resetBehavior QAカーソルは `docs/real_machine_db/machines/2007-03-19_kakumei-senshi-choshu-riki.md` を維持。新規本線を止めない。
+1. **recordCount 892 / chronologicalFrontier 2015-06-08 / GROUP_CLOSED_FOR_CURRENT_RESEARCH** から開始。
+2. 最新mainの README / mission / INDEX / LATEST_HANDOFF / No.892を再確認。
+3. **2015-06-09～2015-06-21の境界監査**を行い、具体日付き未登録5号機があれば最古から処理する。
+4. 境界に追加がなければ **2015-06-22群**へ進む。
+5. 2015-06-22の強い候補: **ヱヴァンゲリヲン・希望の槍**（ビスティ）。一次/業界/解析で全国実ホール導入日を再確認してから登録する。型式候補 `ヱヴァンゲリヲン・希望の槍R`。
+6. **猛虎花形**も06/22周辺候補として存在するが、現時点ではP-WORLDページ更新日だけで導入日と断定せず、次回exact dateを再監査する。
+7. exact release dateでは検定告示 / 発表 / 納品予定 / テスト導入 / 全国実ホール導入を分離する。
+8. `UNVERIFIED_AFTER_RESEARCH` は表記揺れ・正式型式名・メーカー・シリーズ名とreset関連検索語を変え、公式・業界記事・当時解析・古いDB・アーカイブ/回顧資料を横断した後だけ使用。
+9. 遡及resetBehavior QAカーソルは `docs/real_machine_db/machines/2007-03-19_kakumei-senshi-choshu-riki.md` を維持。新規本線を止めない。
 
 ## safeguard
 
 - INDEXは旧集約状態なので進捗正本にしない。LATEST_HANDOFF + 実レコードを優先。
 - 設定変更・据え置き・純電断を自動で同義扱いしない。
-- 同名/近似名・後継スマスロ機のresetBehaviorを流用しない。
-- 内部周期/Gと液晶表示Gを分離する。
+- 同名/近似名・後継機のresetBehaviorを流用しない。
+- 通常モード移行率とreset専用振り分けを分離する。
 - 競合資料は平均・恣意的統合せずCONFLICT/制約として保持。
 
 ## 主要出典 — 取得日 2026-09-07
 
-### パチスロ大工の源さん～桜満開！源DREAM Ver.～
-- K-Navi: https://p-kn.com/slot/2263/
-- パチ7天井: https://pachiseven.jp/machines/4492/cutout/78
-- P-WORLD: https://www.p-world.co.jp/machine/database/7713
-- パチマガスロマガ概要: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sanyo_slot/24/a.php
-- パチマガスロマガ確率/PAYOUT: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sanyo_slot/24/h.php
-- パチマガスロマガゲーム性: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sanyo_slot/24/l.php
-- パチマガスロマガ源魂: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sanyo_slot/24/06.php
-- 期待値見える化: https://slotjin.com/zone/daikunogensan/
-- すろぱちくえすと: https://www.slopachi-quest.com/article/daikuno-gensan/
-- スロットガーデン: https://xn--mckza4ard4ttb2d.com/daikunogensan-sakuramankai
-- クランキーセブン: https://crankyseven.com/daikunogensan-sakura-pc.htm
-- 後年整理資料: https://the-onlinecasino.org/jp/queen-gensan-5gouki/
-
-### 次候補 ガン×ソード
+### パチスロ ガン×ソード
+- HAZUSE: https://hazuse.com/machine/pachislot/4S1120/
+- パチ&スロ必勝本: https://p.hisshobon.jp/machine/2579/1/52224
+- PiDEA X: https://www.pidea.jp/articles/KPE%E3%80%8C%E3%82%AC%E3%83%B3%C3%97%E3%82%BD%E3%83%BC%E3%83%89%E3%80%8D%E6%96%B0%E6%8A%80%E8%A1%93%E3%82%B9%E3%83%A9%E3%83%83%E3%82%B7%E3%83%A5AT%E6%90%AD%E8%BC%89
+- グリーンべると: https://web-greenbelt.jp/00007690/
+- P-WORLD: https://www.p-world.co.jp/machine/database/7709
 - KONAMI公式系 こちらマジハロ情報局: https://www.konami.com/amusement/psm/portal/magihallo/blog_mh/2015/mhs_blog_150623.html
-- 当時機種情報: https://pachinko.hatenablog.jp/entry/2015/06/gun-sword
+- 2015年導入機一覧回顧: https://slotnews777.blog.fc2.com/blog-entry-2348.html
+
+### 次候補 / 境界
+- ヱヴァンゲリヲン・希望の槍: 2015-06-22稼働開始を示すエヴァンゲリオン公式系年表/資料を次回再照合する。
