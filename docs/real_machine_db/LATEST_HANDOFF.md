@@ -4,91 +4,89 @@
 
 ## 現在地点
 
-- recordCount: **879**
-- latestRecordAdded: **コクッチーマスターズ**（タイヨー）
-- latestRecord: `docs/real_machine_db/machines/2015-03-16_kokucchi-masters.md`
-- chronologicalFrontier: **2015-03-16**
-- frontierLatestMachine: **コクッチーマスターズ**（タイヨー）
+- recordCount: **880**
+- latestRecordAdded: **ミリオンゴッド-神々の凱旋-**（ユニバーサルブロス）
+- latestRecord: `docs/real_machine_db/machines/2015-04-06_million-god-kamigami-no-gaisen.md`
+- chronologicalFrontier: **2015-04-06**
+- frontierLatestMachine: **ミリオンゴッド-神々の凱旋-**
 - schema: **resetBehavior v0.7**
-- status: **2015-03-16_GROUP_CLOSED_FOR_CURRENT_RESEARCH**
+- status: **2015-04-06_GROUP_OPEN**
 
 ## 今回の同期 / 正本確認
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、本 `LATEST_HANDOFF.md`、No.877 `2015-03-16_black-lagoon2.md` を再読。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、本 `LATEST_HANDOFF.md`、No.879 `2015-03-16_kokucchi-masters.md` を再読。
 - INDEXは旧集約状態のためREADME規定どおり **LATEST_HANDOFF + 実レコード** を進捗正本として使用。
-- 作業開始時正本は **877件 / chronologicalFrontier 2015-03-16 / 03-16_GROUP_OPEN**。
-- handoff指定の次未処理 **麻雀物語3 役満乱舞の究極大戦（オリンピア）** をNo.878として追加。
-- 同日群の横断監査で未登録 **コクッチーマスターズ（タイヨー）** を検出しNo.879として追加。
-- 03/16群は、パチスロコブラ / BLACK LAGOON2 / 麻雀物語3 / コクッチーマスターズを確認。K-Navi、HAZUSE、P-WORLD、業界記事、当時解析を横断し、今回これ以外の具体日付き未登録5号機を固定できなかったため `CLOSED_FOR_CURRENT_RESEARCH`。
+- 作業開始時正本は **879件 / chronologicalFrontier 2015-03-16 / 03-16_GROUP_CLOSED_FOR_CURRENT_RESEARCH**。
+- 指示どおり2015-03-17〜03-22から境界監査を開始。
+- HAZUSE新台カレンダーは2015年3月について03/02・03/09・03/16のみを掲載し、次の掲載日は2015-04-06。別検索でも03/17〜04/05に具体的ホール導入日を固定できる未登録5号機を今回確認できなかったため、この境界を `CLOSED_FOR_CURRENT_RESEARCH` として前進。
+- 2015-04-06群では、ユニバーサルブロス **ミリオンゴッド-神々の凱旋-** と北電子 **ゴーゴージャグラー** を具体日付きパチスロとして確認。
+- 今回は時系列同日群の先頭処理として **ミリオンゴッド-神々の凱旋-** をNo.880へ追加。04-06群はまだOPEN。
 
-## No.878 — 麻雀物語3 役満乱舞の究極大戦
+## No.880 — ミリオンゴッド-神々の凱旋-
 
-- record: `docs/real_machine_db/machines/2015-03-16_mahjong-monogatari3.md`
-- manufacturer: **オリンピア**
-- releaseDate canonical: **2015-03-16**
-- modelName: **麻雀物語3役満乱舞の究極大戦G1**
-- inspectionNumber: **4S1092**
-- systemType: **5号機 AT / 差枚数管理AT / CZ搭載**
+- record: `docs/real_machine_db/machines/2015-04-06_million-god-kamigami-no-gaisen.md`
+- manufacturer: **ユニバーサルブロス**
+- releaseDate canonical: **2015-04-06**
+- modelName: **ミリオンゴッド-神々の凱旋-BD**
+- inspectionNumber: **4S0861**
+- systemType: **5号機 AT / セット数管理AT / CZ搭載**
 
 ### 性能コア
 
-- 機械割: **96.5 / 98.0 / 99.9 / 103.9 / 107.7 / 113.3%**。
-- AT初当たり: **1/530.2 / 506.5 / 464.5 / 402.0 / 343.4 / 292.7**。
-- 50枚ベース: **約47.4G/50枚**。
-- AT純増: **約2.9枚/G**。
-- AT「麻雀GP」: 差枚数管理、開始時 **最低100枚保証**。
-- 通常天井: **1500G + 最大35G前兆**。
+- 主流解析機械割: **98.3 / 99.5 / 102.0 / 106.6 / 112.1 / 119.5%**。
+- GG初当たり（GOD/赤7除く）: **1/525.4 / 476.0 / 487.5 / 370.7 / 361.8 / 274.7**。
+- GG合算（GOD/赤7含む）: **1/452.8 / 415.6 / 424.4 / 333.0 / 325.9 / 253.5**。
+- 50枚ベース: **約25G/50枚**。
+- AT「GOD GAME」: **1セット100G / 純増約3.0枚/G**。
+- 通常天井: **GG後1480G + 前兆**。
+- 天井到達時ループストック: **1% / 80% = 各50%**。
+- GOD揃い: **1/8192**、赤7揃い: **1/5461**（全設定共通）。
 
 ### resetBehavior v0.7
 
-- 設定変更時は **天井Gリセット / 内部状態・モード・先走りパトランランptを再抽選**。
-- 据え置き / 純電源OFF→ONでは **天井G・内部状態・モード・パトランランptを引き継ぐ**。液晶Gは0G、ステージは再抽選。
-- 設定変更時モード振り分け: **通常A55.0 / 通常B25.0 / 通常C10.0 / 天国A9.5 / 天国B0.5%**。
-- 設定変更時高確以上: **奇数設定25.0% / 偶数設定40.0%**。
-- ガックン判別は当時解析で **不可**。朝一8G以内レア役判別説は要検証のため確定せず。
+- 設定変更: **天井Gリセット / 内部モード再抽選 / 状態再抽選**。
+- 純電源OFF→ON: **天井G・モード・状態を引き継ぐ**。液晶は設定変更/電断とも **ペイレネの泉 / 012**。
+- 電断時にGG / SGG / G-STOP / G-ZONE中ならその状態を引き継ぐと一撃が明記。
+- 設定変更後天井振り分け:
+  - 設定1〜3: **510G 10.00% / 1000G 90.00% / 1480G 0%**
+  - 設定4: **10.00 / 89.61 / 0.39%**
+  - 設定5: **10.00 / 87.66 / 2.34%**
+  - 設定6: **10.00 / 85.32 / 4.69%**
+- 朝一表モードも設定別公開値を取得。低確1が設定1/2=60%、3/4=50%、5/6=40%で、固定高モード優遇ではない。
+- 最大の朝一恩恵は天井短縮。510G天井は全設定約10%。
 - 有利区間: `NOT_APPLICABLE_5TH_GEN_PRE_5_9`。
+- 変更判別: 設定変更/電断とも液晶が012・ペイレネとなるため表示単体では判別不可。本機固有ガックンの高信頼契約は再探索後も `NONE_CONFIRMED_AFTER_RESEARCH`。
 
-## No.879 — コクッチーマスターズ
+### CONFLICT / definition control
 
-- record: `docs/real_machine_db/machines/2015-03-16_kokucchi-masters.md`
-- manufacturer: **タイヨー**
-- releaseDate canonical: **2015-03-16**
-- systemType: **5号機 ノーマル / 完全告知**
+- 機械割は主流 **98.3 / 99.5 / 102.0 / 106.6 / 112.1 / 119.5%** に対し、パチスロ解析ガイド **98.0 / 99.0 / 103.3 / 106.3 / 111.6 / 118.0%**、アタリ7設定6 **119.6%**。平均せずレコード内にCONFLICT保持。
+- 「GG初当たり」と「GG合算」を一部後年資料が同じAT初当たり名で扱うため、**確定役除外値とGOD/赤7込み値を別列保存**。定義差を平均しない。
+- 2026年スマスロ **ミリオンゴッド-神々の軌跡-** はリセット数値・有利区間仕様が別物。2015年凱旋へ一切転記しない。
 
-### 性能コア
+## 2015-03-17〜04-05境界
 
-- 機械割: **95.3 / 96.6 / 99.6 / 103.8 / 107.5 / 109.4%**。
-- BIG: **1/291.3 / 283.7 / 271.9 / 257.0 / 243.6 / 236.6**。
-- REG: **1/434.0 / 417.4 / 366.1 / 339.6 / 299.3 / 288.7**。
-- 合算: **1/174.3 / 168.9 / 156.0 / 146.3 / 134.3 / 130.0**。
-- 50枚ベース理論値: **34.98 / 34.98 / 34.99 / 35.72 / 35.74 / 35.89G**。
-- BIG最大約312枚 / REG最大約104枚。
-- 天井非搭載。
+- HAZUSE新台カレンダー: 2015年3月は **03/02・03/09・03/16**、2015年4月は **04/06・04/13・04/20** を掲載。
+- `2015-03-17_TO_2015-04-05_CLOSED_FOR_CURRENT_RESEARCH`。
+- 発表日・検定日・記事投稿日・アプリ配信日をホール導入日へ転用しない。
 
-### resetBehavior v0.7
+## 2015-04-06群 — OPEN
 
-- 天井・規定G数モード・AT/ART/CZは非該当。
-- 設定変更専用の朝一優遇/不利、比較可能な朝一数値は `NONE_CONFIRMED_AFTER_RESEARCH`。
-- 本機固有の純電源OFF→ON時リール/表示、ガックン等の変更判別は、表記揺れ・メーカー名・設定変更/据え置き/電断/出目等へ検索語を変え、旧解析・DB・回顧まで再探索したが直接契約を固定できず `UNVERIFIED_AFTER_RESEARCH`。
-- 後継/兄弟機の挙動は転記しない。
+確認済み具体日候補:
 
-## 2015-03-16群 — CLOSED_FOR_CURRENT_RESEARCH
+- **ミリオンゴッド-神々の凱旋-** — ユニバーサルブロス — **No.880 処理済み**
+- **ゴーゴージャグラー** — 北電子 — **次候補**
 
-処理済み:
-
-- パチスロコブラ — SNKプレイモア — **No.876**
-- BLACK LAGOON2 — スパイキー — **No.877**
-- 麻雀物語3 役満乱舞の究極大戦 — オリンピア — **No.878**
-- コクッチーマスターズ — タイヨー — **No.879**
+現時点の横断検索では04-06パチスロとしてこの2機を強く確認。ゴーゴージャグラー処理後に同日群をメーカー横断で最終監査し、追加がなければCLOSEDする。
 
 ## 次回再開地点
 
-1. **recordCount 879 / chronologicalFrontier 2015-03-16 / 03-16_GROUP_CLOSED_FOR_CURRENT_RESEARCH** から開始。
-2. 最新mainの README / mission / INDEX / LATEST_HANDOFF / No.879を再確認。
-3. **2015-03-17〜03-22境界**を、メーカー横断・当時新台一覧・具体導入日資料で監査する。
-4. 03/17〜03/22に具体日付き未処理5号機がなければ、03/23以降の次の具体日付き未処理機を時系列で固定して処理する。検索時は発表日・検定日・納品予定と実ホール導入を分離する。
-5. 欠損は表記揺れ・型式・メーカー名・設定変更/据え置き/純電断/天井/モード/ガックン等へ検索語を変え、公式・業界一次・当時解析・古いDB・アーカイブ・回顧資料を横断後だけ `UNVERIFIED_AFTER_RESEARCH`。
-6. 遡及resetBehavior QAカーソルは `docs/real_machine_db/machines/2007-03-19_kakumei-senshi-choshu-riki.md` を維持。新規本線を止めない。
+1. **recordCount 880 / chronologicalFrontier 2015-04-06 / 04-06_GROUP_OPEN** から開始。
+2. 最新mainの README / mission / INDEX / LATEST_HANDOFF / No.880を再確認。
+3. 北電子 **「ゴーゴージャグラー」** をNo.881候補として性能コア + resetBehavior v0.7まで処理する。
+4. その後04-06同日群を全メーカー横断で最終監査。未登録5号機がなければ `04-06_GROUP_CLOSED_FOR_CURRENT_RESEARCH`。
+5. 次は2015-04-07〜04-12境界を監査し、問題なければHAZUSE次掲載日の2015-04-13群へ進む。
+6. 欠損は表記揺れ・型式・メーカー名・設定変更/据え置き/純電断/天井/モード/ガックン等へ検索語を変え、公式・業界一次・当時解析・古いDB・アーカイブ・回顧資料を横断後だけ `UNVERIFIED_AFTER_RESEARCH`。
+7. 遡及resetBehavior QAカーソルは `docs/real_machine_db/machines/2007-03-19_kakumei-senshi-choshu-riki.md` を維持。新規本線を止めない。
 
 ## safeguard
 
@@ -101,24 +99,23 @@
 
 ## 主要出典 — 取得日 2026-09-07
 
-### 麻雀物語3 役満乱舞の究極大戦
-- オリンピア公式: https://www.olympia.co.jp/newmachine/mahjong3/
-- PiDEA/P-WORLD: https://news.p-world.co.jp/articles/7145
-- K-Navi: https://p-kn.com/slot/2214/
-- HAZUSE: https://hazuse.com/machine/pachislot/4S1092/
-- 必勝本 基本: https://p.hisshobon.jp/machine/2526/1/50346
-- 必勝本 天井&設定変更: https://p.hisshobon.jp/machine/2526/1/51248
-- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/olympia_slot/119/a.php
-- 期待値見える化: https://slotjin.com/slot/mahjong3-reset/
-- すろぱちくえすと: https://www.slopachi-quest.com/article/majang-story3-reset/
+### 境界 / 導入日
+- HAZUSE 新台カレンダー: https://hazuse.com/new-machine-calendar/newmachine-calendar/
+- ユニバーサル公式: https://www.universal-777.com/product/slot/milliongod_gaisen/
+- 4Gamer メーカー発表文転載: https://www.4gamer.net/games/157/G015795/20150330041/
+- K-Navi ゴーゴージャグラー: https://p-kn.com/slot/2216/
 
-### コクッチーマスターズ
-- K-Navi: https://p-kn.com/slot/2220/
-- K-Navi発表会: https://p-kn.com/topics/exhibition/1326/
-- PiDEA: https://www.pidea.jp/articles/%E3%82%BF%E3%82%A4%E3%83%A8%E3%83%BC%E3%80%8C%E3%82%B3%E3%82%AF%E3%83%83%E3%83%81%E3%83%BC%E3%80%8D%E3%81%AF%E5%91%8A%E7%9F%A5%E3%83%A9%E3%83%B3%E3%83%978%E7%A8%AE%E9%A1%9E
-- P-WORLD: https://www.p-world.co.jp/machine/database/7654
-- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/taiyo_slot/82/a.php
-- パチマガスロマガ 小役/ベース: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/taiyo_slot/82/c.php
-- 2-9伝説: https://2-9densetsu.com/kokucchi-masters/
-- すろぱちくえすと: https://www.slopachi-quest.com/article/kokutti/
-- pacnk: https://pacnk.com/slot/tools/sh_kokucchi.html
+### ミリオンゴッド-神々の凱旋-
+- HAZUSE: https://hazuse.com/machine/pachislot/4S0861/
+- K-Navi: https://p-kn.com/slot/2243/
+- K-Navi 簡単ワンポイント: https://p-kn.com/slot/2243/53746/
+- 一撃 ボーナス確率: https://1geki.jp/slot/milliongodgaisen/1/
+- 一撃 天井/設定変更: https://1geki.jp/slot/milliongodgaisen/3/
+- なな徹 ボーナス確率: https://nana-press.com/kaiseki/machine/49/846/
+- なな徹 朝イチ/設定変更: https://nana-press.com/kaiseki/machine/49/851/
+- なな徹 設定推測: https://nana-press.com/kaiseki/machine/49/849/
+- 2-9伝説 朝一モード: https://2-9densetsu.com/milliongodgaisen-asaichi/
+- スロ確: https://slotkaku.com/milliongodkamigaminogaisen
+- ちょんぼりすた: https://chonborista.com/%E6%9C%AA%E5%88%86%E9%A1%9E/6778/
+- パチスロ解析ガイド: https://pachislot-guide.net/2015/million-god-gaisen/
+- アタリ7: https://www.atari7.com/column/20171487765487.php
