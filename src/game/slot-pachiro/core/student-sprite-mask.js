@@ -1,20 +1,35 @@
-export const STUDENT_MASK_VERSION='student-mask-v2';
-const W=48,H=48,cache=new Map();
-const P={outline:'#211915',hairDeep:'#3a281f',hair:'#66452f',hairLight:'#9a6a45',skinShadow:'#d58d69',skin:'#f1bc91',skinLight:'#ffd6ac',hoodDeep:'#173c68',hood:'#2f67a5',hoodLight:'#5489c2',shirt:'#f3eee5',pantsDeep:'#202b38',pants:'#34495c',pantsLight:'#52697d',shoe:'#1a1b1d',sole:'#77716b',feature:'#211915',cheek:'#df8f78'};
+export const STUDENT_MASK_VERSION='student-mask-v3';
+const W=96,H=96,S=2,cache=new Map();
+const P={outline:'#201813',outlineSoft:'#34261f',hairDeep:'#34231b',hair:'#5d402e',hairMid:'#80583d',hairLight:'#a8754e',skinDeep:'#c97f60',skinShadow:'#df9975',skin:'#f1bb91',skinLight:'#ffd7ae',hoodDeep:'#183b66',hood:'#2f66a1',hoodMid:'#447bb5',hoodLight:'#6598cb',shirtShadow:'#d9d3c9',shirt:'#f5f0e8',pantsDeep:'#202c39',pants:'#34495d',pantsMid:'#465f75',pantsLight:'#62788b',shoe:'#17191c',shoeMid:'#414349',sole:'#858078',eye:'#201713',eyeSoft:'#45352d',white:'#fff8ee',mouth:'#8d5049',cheek:'#e3987f'};
 const mask=()=>Array.from({length:H},()=>new Uint8Array(W));
-function fill(m,x0,y0,x1,y1){for(let y=Math.max(0,y0);y<=Math.min(H-1,y1);y++)for(let x=Math.max(0,x0);x<=Math.min(W-1,x1);x++)m[y][x]=1}
-function px(m,pts){for(const [x,y] of pts)if(x>=0&&x<W&&y>=0&&y<H)m[y][x]=1}
-function layers(dir='SE',frame=0,seated=false){const sw=dir==='SW',p=((frame%4)+4)%4,o=mask(),hairD=mask(),hair=mask(),hairL=mask(),skinS=mask(),skin=mask(),skinL=mask(),hoodD=mask(),hood=mask(),hoodL=mask(),shirt=mask(),pantsD=mask(),pants=mask(),pantsL=mask(),shoe=mask(),sole=mask(),feat=mask(),cheek=mask();
-// ~2.4 head character based on the supplied design sheet: compact head, hoodie, chunky shoes
-fill(o,18,3,29,3);fill(o,15,5,32,10);fill(o,16,4,30,13);fill(o,18,14,29,15);fill(skin,18,7,29,13);fill(skinS,17,9,18,12);fill(skinS,29,9,30,12);
-// asymmetrical fluffy brown hair
-fill(hairD,17,4,30,8);fill(hairD,15,6,18,10);fill(hairD,29,5,32,10);fill(hair,18,4,28,7);fill(hair,16,7,20,10);fill(hair,27,6,30,9);px(hair,[[19,3],[20,3],[23,2],[24,2],[27,3],[30,4],[16,5],[31,7],[18,11],[29,10]]);px(hairL,sw?[[18,5],[19,5],[20,4],[21,4],[18,7],[19,7]]:[[26,4],[27,4],[28,5],[29,5],[28,7],[29,7]]);
-// quarter-view face, large readable eyes and tiny mouth
-const near=sw?20:27,far=sw?27:20;fill(feat,near,9,near,10);fill(feat,far,9,far,10);px(skinL,[[near,9],[far,9]]);px(feat,sw?[[23,12],[24,12],[25,11]]:[[22,11],[23,12],[24,12]]);px(cheek,sw?[[18,12],[28,12]]:[[19,12],[29,12]]);
-// neck + hoodie silhouette
-fill(skinS,22,14,25,16);fill(o,17,16,30,30);fill(o,15,18,18,28);fill(o,30,18,33,28);fill(hoodD,18,17,29,29);fill(hood,19,17,28,28);fill(hood,16,19,18,26);fill(hood,29,19,31,26);fill(hoodL,sw?25:19,18,sw?28:21,26);fill(shirt,22,17,25,25);px(hoodD,[[21,17],[26,17],[20,18],[27,18],[21,27],[26,27]]);px(shirt,[[22,26],[25,26]]);fill(skin,16,27,18,29);fill(skin,30,27,32,29);
-// legs and walk frames; seated pose folds legs forward like reference sheet
-if(seated){fill(o,18,29,29,35);fill(pantsD,19,30,28,33);fill(pants,20,30,27,32);fill(o,27,33,34,37);fill(shoe,28,34,33,36);fill(sole,29,37,34,37)}else{const l=p===1?2:p===3?-1:0,r=p===1?-1:p===3?2:0;fill(o,19,29,23,41);fill(o,25,29,29,41);fill(pantsD,20,30,22,39);fill(pants,26,30,28,39);fill(pantsL,20,30,20,37);fill(o,18+l,39,23+l,43);fill(o,25+r,39,30+r,43);fill(shoe,19+l,40,23+l,42);fill(shoe,26+r,40,30+r,42);fill(sole,18+l,43,23+l,43);fill(sole,25+r,43,30+r,43)}
-return [[o,P.outline],[hairD,P.hairDeep],[hair,P.hair],[hairL,P.hairLight],[skinS,P.skinShadow],[skin,P.skin],[skinL,P.skinLight],[hoodD,P.hoodDeep],[hood,P.hood],[hoodL,P.hoodLight],[shirt,P.shirt],[pantsD,P.pantsDeep],[pants,P.pants],[pantsL,P.pantsLight],[shoe,P.shoe],[sole,P.sole],[cheek,P.cheek],[feat,P.feature]]}
-function render(dir,frame,seated){const c=document.createElement('canvas');c.width=192;c.height=192;const x=c.getContext('2d');x.imageSmoothingEnabled=false;for(const [m,color] of layers(dir,frame,seated)){x.fillStyle=color;for(let y=0;y<H;y++)for(let xx=0;xx<W;xx++)if(m[y][xx])x.fillRect(xx*4,y*4,4,4)}return c.toDataURL('image/png')}
+function fill(m,x0,y0,x1,y1){for(let y=Math.max(0,Math.round(y0));y<=Math.min(H-1,Math.round(y1));y++)for(let x=Math.max(0,Math.round(x0));x<=Math.min(W-1,Math.round(x1));x++)m[y][x]=1}
+function px(m,pts){for(const [x,y] of pts){const xx=Math.round(x),yy=Math.round(y);if(xx>=0&&xx<W&&yy>=0&&yy<H)m[yy][xx]=1}}
+function ell(m,cx,cy,rx,ry){for(let y=Math.max(0,Math.floor(cy-ry));y<=Math.min(H-1,Math.ceil(cy+ry));y++)for(let x=Math.max(0,Math.floor(cx-rx));x<=Math.min(W-1,Math.ceil(cx+rx));x++)if(((x-cx)/rx)**2+((y-cy)/ry)**2<=1)m[y][x]=1}
+function poly(m,pts){let minY=Math.max(0,Math.floor(Math.min(...pts.map(p=>p[1])))),maxY=Math.min(H-1,Math.ceil(Math.max(...pts.map(p=>p[1]))));for(let y=minY;y<=maxY;y++)for(let x=0;x<W;x++){let inside=false;for(let i=0,j=pts.length-1;i<pts.length;j=i++){const a=pts[i],b=pts[j];if(((a[1]>y)!==(b[1]>y))&&(x<(b[0]-a[0])*(y-a[1])/(b[1]-a[1])+a[0]))inside=!inside}if(inside)m[y][x]=1}}
+function layers(dir='SE',frame=0,seated=false){const sw=dir==='SW',p=((frame%4)+4)%4,o=mask(),os=mask(),hairD=mask(),hair=mask(),hairM=mask(),hairL=mask(),skinD=mask(),skinS=mask(),skin=mask(),skinL=mask(),hoodD=mask(),hood=mask(),hoodM=mask(),hoodL=mask(),shirtS=mask(),shirt=mask(),pantsD=mask(),pants=mask(),pantsM=mask(),pantsL=mask(),shoe=mask(),shoeM=mask(),sole=mask(),eye=mask(),eyeSoft=mask(),white=mask(),mouth=mask(),cheek=mask();
+// head: supplied design sheet proportions, quarter-view and compact 2.4-head silhouette
+ell(o,48,19,15,15);ell(skin,48,21,11.5,11.5);ell(skinS,sw?45:51,22,10,10);fill(skin,40,17,56,28);ell(skinL,sw?43:53,19,5,5);
+// ears
+ell(o,sw?35:61,22,3.7,5.5);ell(skinS,sw?35:61,22,2.7,4.3);ell(skinL,sw?36:60,21,1.3,2.2);
+// hair mass + separated clusters
+poly(hairD,sw?[[32,18],[30,11],[35,7],[41,4],[48,3],[56,5],[62,9],[64,15],[61,21],[58,18],[55,13],[51,16],[47,11],[43,16],[39,12],[36,18]]:[[64,18],[66,11],[61,7],[55,4],[48,3],[40,5],[34,9],[32,15],[35,21],[38,18],[41,13],[45,16],[49,11],[53,16],[57,12],[60,18]]);
+poly(hair,sw?[[34,17],[33,12],[37,8],[42,6],[48,5],[54,7],[59,10],[61,15],[59,19],[56,16],[54,12],[50,15],[47,10],[43,14],[40,11],[38,17]]:[[62,17],[63,12],[59,8],[54,6],[48,5],[42,7],[37,10],[35,15],[37,19],[40,16],[42,12],[46,15],[49,10],[53,14],[56,11],[58,17]]);
+poly(hairM,sw?[[36,12],[42,7],[48,5],[47,9],[43,13],[40,15]]:[[60,12],[54,7],[48,5],[49,9],[53,13],[56,15]]);px(hairL,sw?[[38,10],[39,9],[40,9],[41,8],[42,8],[43,7],[44,7],[45,7],[35,14],[36,13]]:[[58,10],[57,9],[56,9],[55,8],[54,8],[53,7],[52,7],[51,7],[61,14],[60,13]]);
+// brows, eyes, nose, mouth, cheek: more readable facial construction
+const nx=sw?42:54,fx=sw?54:42;fill(eyeSoft,nx-3,18,nx+2,19);fill(eyeSoft,fx-2,18,fx+2,18);ell(eye,nx,22,2.2,2.8);ell(eye,fx,21.5,1.8,2.4);px(white,[[nx-1,21],[fx-1,21]]);px(skinD,sw?[[39,25],[40,25],[41,26]]:[[57,25],[56,25],[55,26]]);fill(mouth,sw?45:48,27,sw?49:52,27);px(cheek,sw?[[37,26],[38,26],[57,26],[58,26]]:[[38,26],[39,26],[58,26],[59,26]]);
+// neck
+fill(o,44,30,51,35);fill(skinS,45,30,50,35);fill(skin,46,30,50,33);
+// hoodie torso with narrower waist, reference-style proportions
+poly(o,[[37,33],[59,33],[66,40],[64,58],[58,63],[38,63],[32,58],[30,40]]);poly(hoodD,[[38,34],[58,34],[63,41],[61,57],[56,61],[40,61],[35,57],[33,41]]);poly(hood,[[40,35],[56,35],[60,42],[59,56],[54,59],[42,59],[37,56],[36,42]]);poly(hoodM,sw?[[49,36],[56,36],[59,43],[57,55],[53,57],[50,54]]:[[40,36],[47,36],[46,54],[43,57],[39,55],[37,43]]);px(hoodL,sw?[[53,37],[54,37],[55,38],[56,39],[56,40],[57,41],[57,42]]:[[43,37],[42,37],[41,38],[40,39],[40,40],[39,41],[39,42]]);
+// shirt opening, hood strings and pocket cues
+poly(shirt,[[44,35],[52,35],[51,49],[48,53],[45,49]]);fill(shirtS,45,48,51,50);fill(os,47,36,48,55);px(os,[[43,37],[42,39],[41,41],[53,37],[54,39],[55,41],[41,54],[42,55],[54,54],[53,55]]);
+// arms: compact, hands around upper thigh
+poly(o,[[31,39],[36,39],[37,53],[34,59],[29,57],[29,48]]);poly(o,[[60,39],[65,39],[67,48],[67,57],[62,59],[59,53]]);poly(hoodD,[[32,40],[35,40],[35,52],[33,56],[31,55],[31,48]]);poly(hood,[[61,40],[64,40],[65,48],[65,55],[63,56],[61,52]]);fill(skinS,30,55,34,59);fill(skin,31,55,34,58);fill(skinS,62,55,66,59);fill(skin,62,55,65,58);
+if(seated){poly(o,[[37,60],[59,60],[64,67],[61,72],[55,75],[43,73],[36,68]]);poly(pantsD,[[39,61],[57,61],[61,66],[58,70],[53,72],[44,71],[39,67]]);poly(pants,[[42,62],[56,62],[58,66],[55,69],[51,70],[44,69],[41,66]]);poly(o,[[54,69],[67,69],[71,74],[68,79],[55,78]]);poly(shoe,[[56,71],[66,71],[69,74],[67,77],[56,76]]);fill(sole,57,77,68,78)}else{const l=p===1?4:p===3?-3:0,r=p===1?-3:p===3?4:0;
+// legs
+poly(o,[[39,60],[47,60],[46+l*.15,77],[44+l,87],[36+l,87],[38+l*.2,75]]);poly(o,[[49,60],[57,60],[58+r*.15,75],[60+r,87],[52+r,87],[50+r*.2,77]]);poly(pantsD,[[40,61],[46,61],[44+l*.15,76],[42+l,84],[38+l,84],[40+l*.15,74]]);poly(pants,[[50,61],[56,61],[56+r*.15,74],[58+r,84],[53+r,84],[51+r*.15,76]]);poly(pantsM,[[41,62],[43,62],[42+l*.1,76],[40+l,82],[39+l,82]]);poly(pantsL,[[51,62],[52,62],[52+r*.1,73],[54+r,81],[53+r,81]]);
+// chunky shoes like design sheet
+poly(o,[[35+l,84],[44+l,84],[48+l,88],[46+l,91],[34+l,91],[32+l,89]]);poly(shoe,[[36+l,85],[43+l,85],[46+l,88],[44+l,89],[35+l,89],[33+l,88]]);fill(shoeM,38+l,85,43+l,86);fill(sole,34+l,90,46+l,91);poly(o,[[52+r,84],[61+r,84],[64+r,88],[63+r,91],[51+r,91],[49+r,89]]);poly(shoe,[[53+r,85],[60+r,85],[62+r,88],[61+r,89],[52+r,89],[50+r,88]]);fill(shoeM,54+r,85,59+r,86);fill(sole,51+r,90,63+r,91)}
+return [[o,P.outline],[os,P.outlineSoft],[hairD,P.hairDeep],[hair,P.hair],[hairM,P.hairMid],[hairL,P.hairLight],[skinD,P.skinDeep],[skinS,P.skinShadow],[skin,P.skin],[skinL,P.skinLight],[hoodD,P.hoodDeep],[hood,P.hood],[hoodM,P.hoodMid],[hoodL,P.hoodLight],[shirtS,P.shirtShadow],[shirt,P.shirt],[pantsD,P.pantsDeep],[pants,P.pants],[pantsM,P.pantsMid],[pantsL,P.pantsLight],[shoe,P.shoe],[shoeM,P.shoeMid],[sole,P.sole],[cheek,P.cheek],[eyeSoft,P.eyeSoft],[eye,P.eye],[white,P.white],[mouth,P.mouth]]}
+function render(dir,frame,seated){const c=document.createElement('canvas');c.width=192;c.height=192;const x=c.getContext('2d');x.imageSmoothingEnabled=false;for(const [m,color] of layers(dir,frame,seated)){x.fillStyle=color;for(let y=0;y<H;y++)for(let xx=0;xx<W;xx++)if(m[y][xx])x.fillRect(xx*S,y*S,S,S)}return c.toDataURL('image/png')}
 export function studentSpriteMaskDataURL(dir='SE',frame=0,seated=false){const d=dir==='SW'?'SW':'SE',f=seated?0:((Number(frame)||0)%4+4)%4,k=`${STUDENT_MASK_VERSION}:${d}:${f}:${!!seated}`;if(!cache.has(k))cache.set(k,render(d,f,seated));return cache.get(k)}
