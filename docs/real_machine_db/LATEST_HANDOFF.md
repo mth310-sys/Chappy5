@@ -4,100 +4,103 @@
 
 ## 現在地点
 
-- recordCount: **859**
-- latestRecordAdded: **シーマスター ～ララ、旅立ちのプレリュード～**（山佐）— 2014-12-15
-- latestRecord: `docs/real_machine_db/machines/2014-12-15_seamaster-lala-tabidachi-no-prelude.md`
+- recordCount: **860**
+- latestRecordAdded: **パチスロ機動新撰組 萌えよ剣～今宵、花散る～**（北電子）— 2014-12-08の遡及漏れ補完
+- latestRecord: `docs/real_machine_db/machines/2014-12-08_pachislot-kidou-shinsengumi-moeyo-ken-koyoi-hanachiru.md`
 - chronologicalFrontier: **2014-12-15**
-- frontierLatestMachine: **シーマスター ～ララ、旅立ちのプレリュード～**
+- frontierLatestMachine: **シーマスター ～ララ、旅立ちのプレリュード～**（山佐）
 - schema: **resetBehavior v0.7**
-- status: **2014-12-15_GROUP_AUDIT_PENDING / NEXT_BOUNDARY_2014-12-16_ONWARD**
+- status: **2014-12-15_GROUP_CLOSED_FOR_CURRENT_RESEARCH / NEXT_BOUNDARY_2014-12-16_ONWARD**
 
 ## 今回の同期 / 正本確認
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`docs/real_machine_db/LATEST_HANDOFF.md`、No.858 `2014-12-15_pachislot-soukyuu-no-fafner.md` を再読。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`docs/real_machine_db/LATEST_HANDOFF.md`、No.859 `2014-12-15_seamaster-lala-tabidachi-no-prelude.md` を再読。
 - INDEXは旧集約状態（19件）のため、README規定どおり **LATEST_HANDOFF + 実レコード** を進捗正本として使用。
-- 作業開始時正本は **858件 / chronologicalFrontier 2014-12-15 / 12-15_GROUP_OPEN / 次候補シーマスター**。
-- No.859として **シーマスター ～ララ、旅立ちのプレリュード～** を登録。
+- 作業開始時正本は **859件 / chronologicalFrontier 2014-12-15 / 12-15_GROUP_AUDIT_PENDING**。
+- 12月同日/年次横断監査で、北電子 **「パチスロ機動新撰組 萌えよ剣～今宵、花散る～」** が未登録であることを検出。
+- 同機は業界発表の納品予定 **2014-12-07** と、複数解析資料のホール導入 **2014-12-08** を分離し、No.860として遡及追加。chronologicalFrontierは2014-12-15のまま維持。
+- 2014-12-15本体としては既登録の **パチスロ 蒼穹のファフナー / シーマスター ～ララ、旅立ちのプレリュード～** 以外を今回の複数系統監査で固定できなかったため、**2014-12-15_GROUP_CLOSED_FOR_CURRENT_RESEARCH** とした。
 
-## No.859 — シーマスター ～ララ、旅立ちのプレリュード～
+## No.860 — パチスロ機動新撰組 萌えよ剣～今宵、花散る～
 
-- record: `docs/real_machine_db/machines/2014-12-15_seamaster-lala-tabidachi-no-prelude.md`
-- manufacturer: **山佐**
-- releaseDate: **2014-12-15**
-- modelName: **シーマスター2GG**
-- inspectionNumber: **3S1138**
-- systemType: **5号機 AT / CZ / レア役確変 / ゲーム数天井**
+- record: `docs/real_machine_db/machines/2014-12-08_pachislot-kidou-shinsengumi-moeyo-ken-koyoi-hanachiru.md`
+- manufacturer: **北電子**
+- releaseDate: **2014-12-08**
+- modelName: **萌えよ剣 今宵花散るTK**
+- systemType: **5号機 A+ART / ボーナス+ART / 継続バトル**
 
 ### 導入日 / 同定
 
-- HAZUSE DATA、パチビー、当時解析が **2014-12-15導入開始** で一致。
-- 山佐発表を報じたグリーンべると/娯楽産業は **12月14日納品予定 / 12月中旬ホールデビュー**。本DBでは納品日とホール導入開始日を分離し、12/15をcanonical。
-- 公安委員会告示転載で **シーマスター2GG / 第3S1138号** を確認。
+- 北電子公式製品ページで機種同定。
+- グリーンべると2014-10-14記事は **2014-12-07から納品予定**。
+- 複数の当時/後年解析資料は **2014-12-08ホール導入**。本DBでは納品日とホール導入開始日を分離し、12/08をcanonical。
+- 型式名 **萌えよ剣 今宵花散るTK** は当時機種整理資料で確認。検定番号は今回固定できず `UNVERIFIED_AFTER_RESEARCH`。
 
 ### 性能コア
 
-- AT初当たり: **1/237.1 / 226.3 / 210.8 / 195.8 / 171.6 / 146.8**。
-- 機械割: **96.9 / 98.4 / 101.6 / 104.8 / 108.5 / 113.5%**。
-- 50枚ベース: **約31G/50枚**（当時販売スペック系。独立高信頼直接値は未固定のため信頼度を分離）。
-- AT「シーマスターRUSH」: **1セット50G+α / 純増約2.2枚/G**。
-- 通常天井: **AT間931G+前兆 → AT確定**。
-- 複数当時解析で、天井到達時 **50%で引き戻しモード移行**。
+- 機械割: **97.7 / 98.7 / 100.2 / 102.5 / 105.0 / 109.4%**（旧パチマガスロマガ掲載のメーカー発表値）。
+- ART「誠剣RUSH」初当たり: **1/392.3 / 376.9 / 375.6 / 320.5 / 310.3 / 261.3**（当時独自調査値）。
+- 50枚ベース: **約31.74G/50枚**（旧パチマガスロマガ直接値）。
+- ART: **1セット30G+継続バトル / 純増約1.5枚/G**。
+- SPECIAL BIG **28枚** / BIG **203枚** / REG **42枚**。
+- 第1天井: **ボーナス間932G+前兆 → ART確定**。
+- 第2天井: **ボーナス間1432G+前兆 → ART + 妖撃乱舞確定**。
 
 ### resetBehavior v0.7
 
-- 当時解析で **設定変更時は天井までのゲーム数RESET** を確認。
-- 固定リセット短縮天井: `NONE_CONFIRMED_AFTER_RESEARCH`。
-- 後年回顧資料に **設定変更時は高確スタートの場合あり** とあるが、具体振り分け/当時一次値は今回固定できず `UNVERIFIED_PERCENTAGE_AFTER_RESEARCH`。
-- 据え置き時のAT間G数・状態の直接契約: `UNVERIFIED_AFTER_RESEARCH`。
-- 設定変更なし電源OFF→ON: `UNVERIFIED_AFTER_RESEARCH`。
-- 朝一専用ゲーム数モード/公開朝一当選率: `NONE_CONFIRMED_AFTER_RESEARCH`。
-- 本機固有ガックン/表示変更判別: `NONE_CONFIRMED_AFTER_RESEARCH`。
-- 有利区間: `NOT_APPLICABLE_5TH_GEN_PRE_5_9`。
+- 旧パチマガスロマガの本機専用メニューに **「朝イチ・設定変更」** ページが存在したことは確認。
+- ただし本文を現行検索キャッシュから安全に復元できず、設定変更時の天井内部G、据え置き、純電源OFF→ON、低確/高確/超高確の処理を推定しない。
+- settingChangeBehavior: `UNVERIFIED_AFTER_RESEARCH`。
+- carryOverBehavior: `UNVERIFIED_AFTER_RESEARCH`。
+- powerCycleBehavior: `UNVERIFIED_AFTER_RESEARCH`。
+- gameCounterReset: 設定変更/据え置き/power cycleとも `UNVERIFIED_AFTER_RESEARCH`。
+- ceilingAfterReset: リセット専用短縮天井 `NONE_CONFIRMED_AFTER_RESEARCH`。
+- mode/stateAfterReset: `UNVERIFIED_AFTER_RESEARCH`。
+- advantageousSectionReset: `NOT_APPLICABLE_5TH_GEN_PRE_5_9`。
+- resetDetection: `NONE_CONFIRMED_AFTER_RESEARCH`。
+- publicMorningNumbers: `NONE_CONFIRMED_AFTER_RESEARCH`。
 
-### 資料汚染 safeguard
+### CONFLICT
 
-- 5号機クロニクルの本機項目は機械割系列のみ一致する一方、**導入日2013年12月 / 純増2.8枚/G / 別ゲーム性** が混入しているため、その部分は採用しない。
-- canonicalは **2014-12-15 / 純増2.2枚/G / シーマスターRUSH**。
+- ボーナス合成・設定1: 当時詳細表 **1/278.9** vs 一部後年解析 **1/279.9**。平均せず保持。
+- ボーナス合成・設定4: 当時詳細表 **1/253.0** vs 一部後年解析 **1/253.1**。平均せず保持。
 
-## 2014-12-15群 — AUDIT_PENDING
+## 2014-12-15群 — CLOSED_FOR_CURRENT_RESEARCH
 
 - No.858 **パチスロ 蒼穹のファフナー**（SANKYO）— 処理済み。
 - No.859 **シーマスター ～ララ、旅立ちのプレリュード～**（山佐）— 処理済み。
-- HAZUSE日付検索・一般新台検索では今回これ以外の具体日付き12/15導入5号機本体を固定できなかったが、検索結果がパチンコ機を多く含み完全横断性を保証できないため、群CLOSEDは次リレーの最終監査後に判定する。
-- `スーパーラクラクビスカス` / `ゴーゴージャグラー` 等の12/15表記は検定期限・撤去期限由来の資料が混入し得るため、2014-12-15ホール導入機として自動採用しない。
+- 年次/12月監査で発見した北電子「萌えよ剣」は12/15機ではなく **12/08導入**としてNo.860へ遡及追加。
+- HAZUSE系導入日、P-WORLD、当時業界記事、年次機種一覧を横断し、今回12/15本体として追加固定できる5号機はなし。
 
 ## 次回再開地点
 
-1. **recordCount 859 / chronologicalFrontier 2014-12-15 / 12-15_GROUP_AUDIT_PENDING** から開始。
-2. 最新mainの README / mission / INDEX / LATEST_HANDOFF / No.859を再確認。
-3. 2014-12-15同日群を、HAZUSE導入日順、P-WORLD旧新台、当時業界月次、新台カレンダー、メーカー別一覧で最終横断監査。
-4. ファフナー/シーマスター以外の5号機本体がなければ **2014-12-15_GROUP_CLOSED_FOR_CURRENT_RESEARCH** とする。
-5. その後 **2014-12-16以降の境界監査**へ進み、次の具体日付き未処理機を導入日順に登録する。発表日・検定日・納品日だけの候補はホール導入日と分離する。
+1. **recordCount 860 / chronologicalFrontier 2014-12-15 / 12-15_GROUP_CLOSED_FOR_CURRENT_RESEARCH** から開始。
+2. 最新mainの README / mission / INDEX / LATEST_HANDOFF / No.860を再確認。
+3. **2014-12-16以降の境界監査**へ進み、次の具体日付き未処理5号機を導入日順に特定する。
+4. P-WORLD更新日・記事公開日・検定日・納品日だけを導入日と誤認しない。特に `トラッドザレジェンド` 等、12月中旬の検索結果に出る機種はホール導入日を別系統で固定してから登録する。
+5. 2014年末に新規本体導入がなければ2014年境界をCLOSEDにして2015年最初の具体日付き未処理機へ進む。
 6. 遡及resetBehavior QAカーソルは `docs/real_machine_db/machines/2007-03-19_kakumei-senshi-choshu-riki.md` を維持。新規本線を止めない。
 
 ## safeguard
 
 - INDEXは旧集約状態なので進捗正本にしない。LATEST_HANDOFF + 実レコードを優先。
 - exact release dateでは発表日・検定日・納品予定・全国導入・地域先行・実ホール導入を区別。
-- 据え置き・純電断挙動は一般的な5号機AT機の慣例から推定しない。
-- シーマスターの「設定変更時高確スタートの場合あり」は具体率未固定なので数値化しない。
-- シーマスターの5号機クロニクル記述は別機種情報混入があるため、機械割以外をcanonical化しない。
+- 据え置き・純電断挙動は一般的な5号機の慣例から推定しない。
+- 「朝イチ・設定変更」専用ページの見出しだけから、本文未復元の挙動を推測しない。
 - 新パネル・検定日・撤去期限由来の日付だけの候補は新規本体導入日と混同しない。
 - 2015-06-08到達時の **吉宗～極～（ヨシムネH2A4 / 3S1093）** 正式量産版処理注意を維持。
 
 ## 主要出典 — 取得日 2026-09-07
 
-### シーマスター ～ララ、旅立ちのプレリュード～
-- HAZUSE DATA: https://data.hazuse.com/?genre=202&machine_code=3S1138
-- P-WORLD: https://www.p-world.co.jp/machine/database/7579
-- グリーンべると: https://web-greenbelt.jp/00007409/
-- 娯楽産業: https://www.goraku-sangyo.com/%E5%B1%B1%E4%BD%90%E3%80%80%E3%80%8C%E3%82%B7%E3%83%BC%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC-%E3%80%9C%E3%83%A9%E3%83%A9%E3%80%81%E6%97%85%E7%AB%8B%E3%81%A1%E3%81%AE%E3%83%97%E3%83%AC%E3%83%AA%E3%83%A5/
-- 旧パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/200/a.php
-- 旧パチマガスロマガ 確率表: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/200/h.php
-- スロパチクエスト: https://www.slopachi-quest.com/article/sea-master2-slot/
-- 期待値見える化: https://slotjin.com/zone/seamaster/
-- パチビー: https://www.pachibee.jp/machines/index/214110000
-- 公安委員会告示転載: https://manualzilla.com/doc/6687088/h26.11.6%EF%BC%8826%E5%B9%B410%E6%9C%88%E4%B8%AD%EF%BC%89
-- 当時販売スペック整理: https://ameblo.jp/slostar/entry-11950908596.html
-- パチ7回顧: https://pachiseven.jp/articles/detail/10840
-- 山佐ネクスト楽曲公式: https://yamasa-next.co.jp/music-distribution/sm2/
+### パチスロ機動新撰組 萌えよ剣～今宵、花散る～
+- 北電子公式: https://www.kitadenshi.co.jp/slot/moeyoken/
+- グリーンべると: https://web-greenbelt.jp/00007309/
+- P-WORLD: https://www.p-world.co.jp/machine/database/7544
+- 旧パチマガスロマガ 基本: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/kitac_slot/93/a.php
+- 旧パチマガスロマガ 総合: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/kitac_slot/93/kitac_slot_93.php
+- 旧パチマガスロマガ ボーナス/ART/PAYOUT: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/kitac_slot/93/h-1.php
+- 旧パチマガスロマガ 小役/ベース: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/kitac_slot/93/c.php
+- 旧パチマガスロマガ ARTフロー: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/kitac_slot/93/l.php
+- スロパチクエスト: https://www.slopachi-quest.com/article/moeyo-ken2/
+- 後年機種回顧: https://www.nikuziru.com/archives/1705
+- 2014年機種資料/型式名: https://pachinko.hatenablog.jp/archive/2014
