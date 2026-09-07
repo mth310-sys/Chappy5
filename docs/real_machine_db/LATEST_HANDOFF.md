@@ -4,107 +4,119 @@
 
 ## 現在地点
 
-- recordCount: **902**
-- latestRecordAdded: **煩悩BREAKER禅**（山佐）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2015-08-03_bonnou-breaker-zen.md`
+- recordCount: **905**
+- latestRecordAdded: **パチスロ ストライクウィッチーズ**（オーイズミ）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2015-08-03_pachislot-strike-witches.md`
 - chronologicalFrontier: **2015-08-03**
-- frontierLatestMachine: **煩悩BREAKER禅**
-- frontierRecord: `docs/real_machine_db/machines/2015-08-03_bonnou-breaker-zen.md`
+- frontierLatestMachine: **パチスロ ストライクウィッチーズ**
+- frontierRecord: `docs/real_machine_db/machines/2015-08-03_pachislot-strike-witches.md`
 - schema: **resetBehavior v0.7**
-- status: **2015-08-03_GROUP_OPEN**
+- status: **2015-08-03_GROUP_CLOSED_FOR_CURRENT_RESEARCH**
 
 ## 今回の同期 / 正本確認
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.901 `2015-07-27_summer-jumbo.md` を再読。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、No.902 `2015-08-03_bonnou-breaker-zen.md` を再読。
 - INDEXは19件時点の旧集約状態なので、README規定どおり **LATEST_HANDOFF + 実レコード** を進捗正本として使用。
-- 作業開始時の正本は **901件 / 2015-07-27 / 07-27_GROUP_CLOSED_FOR_CURRENT_RESEARCH**。
-- handoff指定どおり2015-07-28〜08-02境界を再監査し、その後08-03同日群へ進んだ。
+- 作業開始時handoffは **902件 / 2015-08-03 / 08-03_GROUP_OPEN**。
+- 調査中、`2015-08-03_garinpo-30.md` がmainへ先行追加済みなのにhandoffだけ902件のままという同期ズレを検出。重複作成せず既存レコードを **No.903相当**として引き継いだ。
+- 続けてNo.904 `ジャッカスチーム`、No.905 `パチスロ ストライクウィッチーズ` を新規登録した。
 
-## 2015-07-28〜2015-08-02境界 — CLOSED_FOR_CURRENT_RESEARCH
+## No.903相当 — ガリンポ-30
 
-- 直前監査でK-Navi 2015年7月カレンダーは07/27までを確認済み。
-- ALL7の2015年8月新台予定を再確認し、次の具体日付きパチスロ群は **2015-08-03**。
-- 2015-07-28〜08-02にcanonical exact hall-start dayを置くべき未登録5号機を今回固定できなかったため、境界を **CLOSED_FOR_CURRENT_RESEARCH** とする。
-- 08/02表記がある煩悩BREAKER禅は当時資料上の納品開始日であり、全国実ホール導入開始2015-08-03と分離した。
-
-## No.902 — 煩悩BREAKER禅
-
-- record: `docs/real_machine_db/machines/2015-08-03_bonnou-breaker-zen.md`
-- manufacturer: **山佐**
-- formalModelName: **UNVERIFIED_AFTER_RESEARCH**
-- generation: **5号機**
-- systemType: **AT / 疑似ボーナス連打型 / 旧基準AT**
+- record: `docs/real_machine_db/machines/2015-08-03_garinpo-30.md`
+- manufacturer: **エマ**（パチマガスロマガ内にはZANN表記あり。レコード内で媒体分類/ブランド差として保持）
+- formalModelName: **ガリンポ-30**
+- inspectionNumber: **5S0228**
+- systemType: **ノーマル / 完全告知 / 30Φ**
 - canonical releaseDate: **2015-08-03**
+- ボーナス合算: **1/173 / 160 / 148 / 138 / 129 / 124**。
+- PAYOUT: **96 / 98 / 101 / 104 / 106 / 108%**。
+- BB **270枚** / MB **90枚**。
+- 天井非搭載。有利区間非該当。
+- 50枚ベース、純電断時の本機固有状態、ガックン等は十分な再探索後も `UNVERIFIED_AFTER_RESEARCH` / `NONE_CONFIRMED_AFTER_RESEARCH`。
 
-### identity / 導入日
+## No.904 — ジャッカスチーム
 
-- K-Naviはホール導入開始 **2015-08-03**。
-- 山佐発表文転載と2015-08-03当日媒体も同日稼働/ホールデビューで一致。
-- 当時資料の **2015-08-02**は納品開始日として分離し、canonicalは08-03。
-- 正式型式名/検定番号は表記揺れ・型式/検定検索を含む再探索でも安全に固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- record: `docs/real_machine_db/machines/2015-08-03_jackass-team.md`
+- manufacturer: **大都技研**
+- formalModelName: **JACKASSTEAM A7**
+- inspectionNumber: **5S0224**
+- systemType: **A+ART / 本物ボーナス+疑似ボーナス / 新基準機**
+- canonical releaseDate: **2015-08-03**。2015-08-02は最速納品予定として分離。
+- PAYOUT: **97.4 / 98.7 / 100.8 / 104.8 / 110.3 / 119.2%**。
+- ART初当たり: **1/591.7 / 578.8 / 555.8 / 529.9 / 482.9 / 409.6**。
+- 50枚ベース: **約35.5G**。純増: **約2.0枚/G**。
+- 本物BIG **108枚** / RB **36枚**、ブリッツボーナス30G+α、ART50G+α。
+- 通常天井 **800G+前兆** / 天国 **100G+前兆**。
+- 設定変更時: **天井Gリセット / モード再抽選 / 状態再抽選**。
+- 据え置き時: **天井G / モード / 状態を引継ぎ**。
+- 設定変更時専用モード: **リセットA 90% / リセットB 10%**。リセットBは **天国確定**。
+- 純電源OFF→ON時の正常機固有内部契約と本機固有ガックンは `UNVERIFIED_AFTER_RESEARCH` / `NONE_CONFIRMED_AFTER_RESEARCH`。
+- 有利区間: `NOT_APPLICABLE_5TH_GEN_PRE_5_9`。
 
-### 性能コア
+## No.905 — パチスロ ストライクウィッチーズ
 
-- ボーナス初当たり（設定1〜6）: **1/270.7 / 267.1 / 261.3 / 249.9 / 230.6 / 210.5**。
-- PAYOUT（設定1〜6）: **97.2 / 98.9 / 100.1 / 103.0 / 107.2 / 112.0%**。
-- 50枚ベース: **約30G**。
-- 純増: **約3.0枚/G**。
-- BIG: **約200枚** / REG: **約50枚**。
-- 煩悩BASH: **1セット20G+α**のST型連チャン区間。
-- 通常最大天井: **通常A 999G / 通常B 763G / 通常C・天国系 108G**。
-- 精密初当たりと整数丸め表記は定義競合ではなく丸め差として処理。
+- record: `docs/real_machine_db/machines/2015-08-03_pachislot-strike-witches.md`
+- manufacturer: **オーイズミ**
+- formalModelName: **パチスロストライクウィッチーズVX**
+- inspectionNumber: **5S0213**
+- systemType: **AT / 疑似ボーナス / 差枚数管理型AT**
+- canonical releaseDate: **2015-08-03**。2024年スマスロ続編とは分離。
+- PAYOUT: **97.6 / 99.0 / 101.0 / 103.9 / 107.0 / 111.2%**。
+- AT初当たり: **1/697.3 / 667.9 / 638.6 / 592.7 / 538.6 / 483.2**。
+- 疑似ボーナス合算: **1/307.5 / 298.7 / 289.6 / 274.9 / 255.7 / 235.3**。
+- CZ初当たり: **1/138.8 / 136.3 / 134.4 / 129.3 / 121.8 / 108.8**。
+- 50枚ベース **約46.8G** / 純増 **約2.2枚/G** / BIG **55G** / REG **30G**。
+- AT・ボーナス間天井 **1280G**、CZ間天井 **288G**、AT6スルー後は7回目以降ボーナスでAT期待度約80%。
 
 ### resetBehavior v0.7
 
-- 後年の本機別天井整理資料で **設定変更時「リセット」** を確認。前日天井/規定G進捗を設定変更後もそのまま保持する契約とはしない。
-- リセット専用の固定短縮天井、設定変更時モード振り分け、内部状態初期振り分けは十分な再探索後も固定できず `NONE_CONFIRMED_AFTER_RESEARCH` / `UNVERIFIED_AFTER_RESEARCH`。
-- 据え置き時の天井G/モード/状態の営業日跨ぎ契約: `UNVERIFIED_AFTER_RESEARCH`。
-- 純電源OFF→ON時の天井G/モード/状態: `UNVERIFIED_AFTER_RESEARCH`。
-- ただし朝一最初のCZキャラ選択法則について、解析資料は **電源OFFでも適用される**と明記。
-- 公開朝一CZキャラ振り分け:
-  - 設定1: 千手55 / 救斎33 / 天音8 / ジョブツ4%
-  - 設定2: 33 / 55 / 残り2欄 `UNVERIFIED_TABLE_RENDERING`
-  - 設定3: 55 / 33 / 残り2欄 `UNVERIFIED_TABLE_RENDERING`
-  - 設定4: 30 / 46 / 20 / 4%
-  - 設定5: 45 / 23 / 20 / 12%
-  - 設定6: 25 / 25 / 25 / 25%
-- 設定2/3の欠損は100%から逆算していない。
-- 本機固有のガックン/初期出目/ランプ等による変更判別: `NONE_CONFIRMED_AFTER_RESEARCH`。
-- 有利区間: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
+- 設定変更時: **天井リセット / 内部モード再抽選 / 滑走路ステージ**。
+- 純電源OFF→ON: **天井引継ぎ / 内部モード引継ぎ**。ステージは当時資料でも調査中。
+- 設定変更時モード振り分け:
+  - 通常A-D 各5.00%
+  - 通常E-F 各10.00%
+  - 通常G-H 各20.00%
+  - 天国A 17.50% / B 2.25% / C 0.20% / D 0.05%
+- 朝一リセット時 **天国合計20%**。天国なら **32G以内CZ確定**。
+- 通常G/H+天国で **60%が通常G以上**。
+- 朝一数Gの即前兆はリセット前提店舗では天国推測材料。ただし設定変更自体の確定判別とはしない。
+- 本機固有ガックン: `NONE_CONFIRMED_AFTER_RESEARCH`。
+- 有利区間: `NOT_APPLICABLE_5TH_GEN_PRE_5_9`。
 
-### 主なCONFLICT / 欠損
+## 2015-08-03群監査 — CLOSED_FOR_CURRENT_RESEARCH
 
-- `RELEASE_DATE_DEFINITION_2015_08_02_DELIVERY_VS_2015_08_03_HALL_START`。
-- 正式型式名/検定番号: `UNVERIFIED_AFTER_RESEARCH`。
-- 据え置き/純電断時の内部天井・モード・状態契約: `UNVERIFIED_AFTER_RESEARCH`。
-- 設定変更時のモード/状態具体振り分け: `UNVERIFIED_AFTER_RESEARCH`。
-- 朝一CZ設定2/3の一部キャラ値: `UNVERIFIED_TABLE_RENDERING`。
-
-## 2015-08-03群監査 — OPEN
-
-今回処理済み:
+今回までの処理済み:
 1. **煩悩BREAKER禅** — 山佐 — No.902。
+2. **ガリンポ-30** — エマ — No.903相当（main先行追加を同期）。
+3. **ジャッカスチーム** — 大都技研 — No.904。
+4. **パチスロ ストライクウィッチーズ** — オーイズミ — No.905。
 
-同日未処理候補として確認:
-1. **ガリンポ-30** — エマ。ALL7の08/03群に掲載。P-WORLDで5号機・ノーマル・30φの独立機種を確認済み。
-2. **ジャッカスチーム** — 大都技研。K-Naviがホール導入開始2015-08-03を明記。
-3. **パチスロストライクウィッチーズ** — オーイズミ。当時公式プロモ紹介/複数当時資料で2015-08-03全国導入開始を確認。
+- 直前handoffで固定されていた08/03残候補3機をすべて処理。
+- さらに `2015年8月3日 / 2015-08-03 / 2015/08/03 + パチスロ / 新台 / 導入`、メーカー名を組み替えて横断検索。
+- 追加でcanonical exact hall-startを2015-08-03に置くべき未登録5号機を今回固定できなかったため、**2015-08-03_GROUP_CLOSED_FOR_CURRENT_RESEARCH** とする。
 
-- ALL7の08/03欄にはパチンコも混在するため、種別を確認してパチスロのみ登録する。
-- **2015-08-03_GROUP_OPEN**を維持し、上記3機を処理後に全メーカー横断で最終閉鎖監査する。
+## 2015-08-04〜2015-08-16境界 — CLOSED_FOR_CURRENT_RESEARCH
+
+- 2015-08-10を含む期間を「導入/ホール導入開始/新台」で再監査したが、canonical exact hall-startを置くべき未登録5号機を今回固定できなかった。
+- 次の強い具体日付きパチスロ群は **2015-08-17**。
+- アクロス公式系資料は『サンダーVリボルト』を2015-08-17全国導入開始、グリーンべるとは納品2015-08-16予定としており、納品/実導入を分離できる。
+- 高砂電器産業『乙女魂』も2015-08-17導入を複数資料で確認。
 
 ## 次回再開地点
 
-1. **recordCount 902 / chronologicalFrontier 2015-08-03 / 08-03_GROUP_OPEN** から開始。
-2. 最新mainの README / mission / INDEX / LATEST_HANDOFF / No.902を再確認。
-3. 08/03同日群の次候補 **エマ「ガリンポ-30」** を正式導入日・型式・独立機種性から確認して処理する。
-4. 続いて **大都技研「ジャッカスチーム」**、**オーイズミ「パチスロストライクウィッチーズ」** を未登録確認後に処理する。
-5. その後08/03群をK-Navi / ALL7 / メーカー・業界資料で再監査し、漏れがなければ `2015-08-03_GROUP_CLOSED_FOR_CURRENT_RESEARCH` として次日へ進む。
-6. 遡及resetBehavior QAカーソルは `docs/real_machine_db/machines/2007-03-19_kakumei-senshi-choshu-riki.md` を維持。新規本線を止めない。
+1. **recordCount 905 / chronologicalFrontier 2015-08-03 / 08-03_GROUP_CLOSED_FOR_CURRENT_RESEARCH** から開始。
+2. README / mission v0.7 / INDEX / LATEST_HANDOFF / No.905を再確認。
+3. **2015-08-04〜08-16境界はCLOSED_FOR_CURRENT_RESEARCH**として引継ぎ、2015-08-17群へ進む。
+4. 先頭候補 **アクロス「サンダーVリボルト」** を未登録確認後、技術介入通常/完全攻略機械割を別定義で収集し、resetBehaviorも本機固有資料で調査する。
+5. 続いて **高砂電器産業「乙女魂」** を処理する。
+6. 08/17群は上記だけで閉じず、K-Navi / 当時新台カレンダー / メーカー・業界記事 / 旧DBで全メーカー横断再監査後のみCLOSEDにする。
+7. 遡及resetBehavior QAカーソルは `docs/real_machine_db/machines/2007-03-19_kakumei-senshi-choshu-riki.md` を維持。新規本線を止めない。
 
 ## safeguard
 
 - INDEXは旧集約状態なので進捗正本にしない。LATEST_HANDOFF + 実レコードを優先。
+- main先行レコードを発見した場合は重複作成せずhandoffを同期する。
 - 設定変更・据え置き・純電断を自動で同義扱いしない。
 - 通常遊技中の保持情報を営業日跨ぎ契約へ自動転記しない。
 - 前作/後継機のresetBehaviorを流用しない。
@@ -115,19 +127,29 @@
 
 ## 主要出典 — 取得日 2026-09-07
 
-### No.902 煩悩BREAKER禅
-- K-Navi: https://p-kn.com/slot/2288/
-- オタク産業通信（メーカー発表文転載）: https://otakuindustry.biz/archives/9863
-- Gamer 2015-08-03: https://www.gamer.ne.jp/news/201508030069/
-- パチスロガイド: https://pachislot-guide.net/2015/bonnou-breaker/
-- ちょんぼりすた: https://chonborista.com/slot/yamasa-slot/9602/
-- スロ速: https://slosoku.com/archives/45031099.html
-- パチマガスロマガ基本: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/204/a.php
-- パチマガスロマガフロー: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/204/l.php
-- 2ndsight天井一覧: https://2ndsight.xyz/1768
+### ガリンポ-30
+- P-WORLD: https://www.p-world.co.jp/machine/database/7791
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/zann_slot/01/h.php
+- pacnk: https://pacnk.com/slot/tools/sh_garinpo.html
 - ALL7 2015年8月: https://www.all7.jp/plans/index/2015/08/10
 
-### 08/03残候補
-- ガリンポ-30 P-WORLD: https://www.p-world.co.jp/machine/database/7791
-- ジャッカスチーム K-Navi: https://p-kn.com/slot/2299/
-- パチスロストライクウィッチーズ 当時公式プロモ紹介: https://p-media.info/%E3%83%91%E3%83%81%E3%82%B9%E3%83%AD%E3%82%B9%E3%83%88%E3%83%A9%E3%82%A4%E3%82%AF%E3%82%A6%E3%82%A3%E3%83%83%E3%83%81%E3%83%BC%E3%82%BA%EF%BC%88%E3%82%AA%E3%83%BC%E3%82%A4%E3%82%BA%E3%83%9F%EF%BC%89/
+### ジャッカスチーム
+- K-Navi: https://p-kn.com/slot/2299/
+- グリーンべると: https://web-greenbelt.jp/00007876/
+- P-WORLD: https://www.p-world.co.jp/machine/database/7770
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/daitogiken_slot/60/c.php
+- すろぱちくえすと reset: https://www.slopachi-quest.com/article/jackass-team-reset/
+- すろぱちくえすと reset mode: https://www.slopachi-quest.com/article/jackass-team-resetmode/
+
+### パチスロ ストライクウィッチーズ
+- HAZUSE: https://hazuse.com/machine/pachislot/5S0213/
+- グリーンべると: https://web-greenbelt.jp/00007898/
+- ちょんぼりすた: https://chonborista.com/slot/oizumi-slot/9825/
+- すろぱちくえすと reset: https://www.slopachi-quest.com/article/strike-witches-reset/
+- 5号機クロニクル: https://5goki.com/oizumi
+
+### 次群
+- サンダーVリボルト K-Navi: https://p-kn.com/slot/2323/
+- サンダーVリボルト グリーンべると: https://web-greenbelt.jp/00007962/
+- ユニバ公式全国導入告知: https://ameblo.jp/aruzefreaks/entry-12058430498.html
+- 乙女魂: https://chonborista.com/slot/takasago-slot/11303/
