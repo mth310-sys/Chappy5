@@ -1,8 +1,8 @@
-import { STUDENT_PIXEL_CONVERTER_SHEET } from './student-pixelartconverter-sprite.js?v=student-pac-v2';
+import { STUDENT_PIXEL_CONVERTER_SHEET } from './student-pixelartconverter-sprite.js?v=student-pac-v5';
 
-export const STUDENT_PIXEL_CANVAS_VERSION='student-pac-v3-canvas';
+export const STUDENT_PIXEL_CANVAS_VERSION='student-pac-v5-canvas';
 export const STUDENT_EXPRESSIONS=Object.freeze(['normal','smile','surprise','angry','troubled','wink']);
-const CELL=48,COLS=5;
+const OUT=48,COLS=5,ROWS=4;
 const CELL_INDEX=Object.freeze({
   SE_IDLE:0,SE_WALK1:1,SE_WALK2:2,SE_WALK3:3,SE_WALK4:4,
   SE_SEATED:5,SW_IDLE:6,SW_WALK1:7,SW_WALK2:8,SW_WALK3:9,
@@ -26,15 +26,20 @@ function indexFor(dir='SE',frame=0,seated=false,expression=null){
 }
 function drawRequested(canvas){
   if(!canvas||!ready)return;
-  const idx=Number(canvas.dataset.spriteCell||0),sx=(idx%COLS)*CELL,sy=Math.floor(idx/COLS)*CELL;
+  const idx=Number(canvas.dataset.spriteCell||0);
+  const sourceCellW=sheet.naturalWidth/COLS;
+  const sourceCellH=sheet.naturalHeight/ROWS;
+  const sx=(idx%COLS)*sourceCellW,sy=Math.floor(idx/COLS)*sourceCellH;
   const ctx=canvas.getContext('2d');
   ctx.imageSmoothingEnabled=false;
-  ctx.clearRect(0,0,CELL,CELL);
-  ctx.drawImage(sheet,sx,sy,CELL,CELL,0,0,CELL,CELL);
+  ctx.clearRect(0,0,OUT,OUT);
+  ctx.drawImage(sheet,sx,sy,sourceCellW,sourceCellH,0,0,OUT,OUT);
+  canvas.dataset.sheetSize=`${sheet.naturalWidth}x${sheet.naturalHeight}`;
+  canvas.dataset.sourceCell=`${sourceCellW}x${sourceCellH}`;
 }
 export function applyStudentPixelCanvas(canvas,dir='SE',frame=0,seated=false,expression=null){
   const idx=indexFor(dir,frame,seated,expression);
-  canvas.width=CELL;canvas.height=CELL;
+  canvas.width=OUT;canvas.height=OUT;
   canvas.dataset.spriteCell=String(idx);
   canvas.dataset.spriteDir=dir;
   canvas.dataset.spriteFrame=String(frame);
