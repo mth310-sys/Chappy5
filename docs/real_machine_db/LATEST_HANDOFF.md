@@ -4,85 +4,93 @@
 
 ## 現在地点
 
-- recordCount: **913**
-- latestRecordAdded: **ハナハナホウオウ-30**（パイオニア / PIONEER）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2015-09-14_hanahana-houou-30.md`
-- chronologicalFrontier: **2015-09-14**
-- frontierLatestMachine: **ハナハナホウオウ-30**
-- frontierRecord: `docs/real_machine_db/machines/2015-09-14_hanahana-houou-30.md`
+- recordCount: **914**
+- latestRecordAdded: **パチスロ無双OROCHI**（山佐）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2015-09-28_musou-orochi.md`
+- chronologicalFrontier: **2015-09-28**
+- frontierLatestMachine: **パチスロ無双OROCHI**
+- frontierRecord: `docs/real_machine_db/machines/2015-09-28_musou-orochi.md`
 - schema: **resetBehavior v0.7**
-- status: **2015-09-14_GROUP_CLOSED_FOR_CURRENT_RESEARCH**
+- status: **2015-09-28_GROUP_OPEN**
 
 ## 今回の同期 / 正本確認
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、No.912 `2015-09-14_king-jack.md` を再読。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、No.913 `2015-09-14_hanahana-houou-30.md` を再読。
 - INDEXは19件時点の旧集約状態のため、README規定どおり **LATEST_HANDOFF + 実レコード** を進捗正本として使用。
-- 作業開始時handoffは **912件 / 2015-09-14 / 09-14_GROUP_OPEN**。
-- 次の未処理候補だったパイオニア **「ハナハナホウオウ-30」** をNo.913として追加。
-- 09-14群を「2015年9月14日 / パチスロ / 導入 / 新台 / メーカー」等で再監査。既存No.911「パチスロ聖闘士星矢～女神聖戦～」には必勝本で09-14導入表記があるが既処理のため重複追加しない。今回、新たな未登録5号機を固定できず **CLOSED_FOR_CURRENT_RESEARCH** とした。
+- 作業開始時handoffは **913件 / 2015-09-14 / 09-14_GROUP_CLOSED_FOR_CURRENT_RESEARCH**。
+- 2015-09-15～09-27境界を日付別・全メーカー横断で監査。HAZUSE新台カレンダーでは2015年9月の導入日群が09-07 / 09-14 / 09-28で、別検索でも09-15～09-27の全国実ホール導入を具体日付きで固定できる未登録5号機を発見できず **BOUNDARY_CLOSED_FOR_CURRENT_RESEARCH** とした。
+- 次の未処理機種 **「パチスロ無双OROCHI」** をNo.914として追加。
 
-## No.913 — ハナハナホウオウ-30
+## No.914 — パチスロ無双OROCHI
 
-- record: `docs/real_machine_db/machines/2015-09-14_hanahana-houou-30.md`
-- manufacturer: **パイオニア / PIONEER**
-- formalModelName: **ハナハナホウオウEX-30**
-- inspectionNumber: **5S0623**
-- systemType: **5号機 ノーマル / Aタイプ / 30Φ / 完全告知**
-- canonical releaseDate: **2015-09-14**
-- exactReleaseDate conflict: **HAZUSE 2015-09-07 vs K-Navi/イチカツ 2015-09-14**。PiDEA当時記事の09-13納品予定が09-14実ホール導入と工程上整合するため09-14をcanonicalとし、09-07をCONFLICT保持。
+- record: `docs/real_machine_db/machines/2015-09-28_musou-orochi.md`
+- manufacturer: **山佐 / YAMASA**
+- systemType: **5号機 AT / 差枚数管理 / CZ**
+- canonical releaseDate: **2015-09-28**
+- releaseDate conflict: 必勝本・パチセブン・当時解析は2015-09-28で一致。山佐発表文転載の4Gamer/Gamerは「2015年10月にホールデビュー」と月単位で記載。具体日付き複数当時資料をcanonicalとし、公式発表文由来の月表現はCONFLICT保持。
 
 ### performanceCore
 
-- 機械割: **96 / 98 / 101 / 104 / 107 / 112%**。
-- BIG: **1/299 / 1/290 / 1/277 / 1/264 / 1/250 / 1/233**。
-- REG: **1/496 / 1/468 / 1/434 / 1/399 / 1/368 / 1/332**。
-- 合算: **1/186 / 1/179 / 1/169 / 1/159 / 1/148 / 1/137**。
-- 50枚ベース: **約36.5G**。
-- BIG: **最大312枚**、REG: **最大130枚**。
-- AT/ART/CZ: **非搭載**。
-- ゲーム数天井: **非搭載**。
+- 機械割: **96.9 / 98.7 / 101.4 / 106.9 / 111.8 / 119.1%**。
+- AT初当たり: **1/398.1 / 1/389.3 / 1/364.2 / 1/300.6 / 1/262.3 / 1/204.4**。
+- CZ突入率: 約 **1/213.4 / 1/209.1 / 1/184.7 / 1/160.1 / 1/128.1 / 1/115.2**。
+- 50枚ベース: **約47G**。
+- AT純増: **約2.5枚/G**。
+- AT「OROCHI CHAIN」: **100枚または250枚+α**。
+- 通常天井: **AT終了後1190G**でAT確定となる古志城の刻へ突入。
 
 ### resetBehavior v0.7
 
-- 設定変更: 天井・AT/ART/CZモードは非該当。**前日ボーナスからの87G以内連チャンBGM判定状態はリセット**。
-- 据え置き: 天井進捗は非該当。87G連チャンBGM条件は継続し、朝一条件成立時の連チャンBGMは据え置きの強い材料。
-- 純電源OFF→ON: 本機固有の直接比較資料を固定できず **UNVERIFIED_AFTER_RESEARCH**。据え置き契約を純電断へ自動転記しない。
-- gameCounterReset: **NOT_APPLICABLE_NO_GAME_CEILING**。
-- ceilingAfterReset: **NONE / NOT_APPLICABLE**。
-- modeAfterReset: **NOT_APPLICABLE / NONE_CONFIRMED_AFTER_RESEARCH**。
-- stateAfterReset: 87G連チャンBGM判定状態のリセットを確認。その他の設定変更専用状態は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- 設定変更:
+  - 天井までのG数 **RESET**。
+  - 高確A / 高確B移行抽選。
+  - 規定8枚斬回数を **56回 / 168回**へ再振り分け。
+- 据え置き:
+  - 直接の「据え置き」表記は限定的だが、電源OFF→ON時に天井G・状態・規定8枚斬回数を引き継ぐ直接比較資料あり。`CARRYOVER_SUPPORTED_BY_POWER_CYCLE_CONTRACT` として保持。
+- 純電源OFF→ON:
+  - 天井G **CARRYOVER**。
+  - 内部状態 **CARRYOVER**。
+  - 規定8枚斬回数 **CARRYOVER**。
+- ceilingAfterReset: 通常天井1190G。**リセット専用短縮天井はNONE_CONFIRMED_AFTER_RESEARCH**。
+- stateAfterReset:
+  - 高確A: **30 / 20 / 40 / 20 / 50 / 10%**（設定1～6）。
+  - 高確B: **20 / 30 / 20 / 50 / 20 / 20%**。
+  - A/B両方当選で超高確。
+- numericResetData:
+  - 8枚斬56回: **70.3 / 50.0 / 75.4 / 50.0 / 80.1 / 50.0%**。
+  - 8枚斬168回: **29.7 / 50.0 / 24.6 / 50.0 / 19.9 / 50.0%**。
+  - 規定回数到達時の中OROCHI高確移行率: **31.0%（全設定共通）**。
 - advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
-- resetBenefits: **設定変更後初回BIG時、全設定共通50%でパネルフラッシュ**という公開解析値あり（ANALYSIS_SINGLE）。短縮天井・保証CZ等は非該当。
-- resetPenalties: 出玉上の主要不利要素は `NONE_CONFIRMED_AFTER_RESEARCH`。87G BGM据え置き判別状態は変更で消失。
-- resetDetection:
-  - 87G以内連チャンBGM: 朝一に条件を満たして発生すれば据え置きの強い材料。非発生のみでは変更確定でない。
-  - リールガックン: 変更時に出やすいとする当時解析はあるが個体/出目差が大きく、1G回し対策可能。確定判別にしない。
-  - BETランプ: 本文旧情報と追記訂正が競合。クイーンハナハナ以降は判別不可とする追記を安全側で採用し `CONFLICT_DO_NOT_USE_AS_CONFIRMED_DETECTION`。
-- numericResetData: **設定変更後初回BIGパネルフラッシュ50%（全設定共通）**。朝一専用当選率/短縮天井/モード振り分けは非該当・未確認。
+- resetDetection: 本機固有のガックン確定契約・発生率は再探索後も固定できず **NONE_CONFIRMED_AFTER_RESEARCH**。液晶ステージだけでは変更/据え置きの確定判別にしない。
 
 ## conflicts / quality notes
 
-1. `CONFLICT_RELEASE_DATE_2015_09_07_VS_2015_09_14`。
-2. `CONFLICT_BET_LAMP_DETECTION`。
-3. すろぱちくえすとの設定1 REG「1/469」は、K-Navi・なな徹・イチカツ等の **1/496** と不一致で、同記事内合算とも整合しにくいため `SOURCE_ANOMALY_REG_SETTING1_1_469` としてcanonicalから除外。
-4. HAZUSEのメーカー欄「バイオニア」は明確な表記誤りとして、パイオニア公式/業界記事を優先。
-5. 2022年「ハナハナホウオウ～天翔～-30」の6号機情報を2015年機へ混入させない。
+1. `CONFLICT_RELEASE_DATE_EXACT_2015_09_28_VS_OFFICIAL_DERIVED_2015_10_MONTH_DESCRIPTION`。
+2. formalModelName / inspectionNumber は今回高信頼資料を固定できず `UNVERIFIED_AFTER_RESEARCH`。
+3. 設定変更時の引き戻しシナリオ/モード専用振り分けは `UNVERIFIED_AFTER_RESEARCH`。
+4. 通常時の全内部抽選テーブルはミッション対象外のため収集していない。
 
-## 2015-09-14群 — CLOSED_FOR_CURRENT_RESEARCH
+## 2015-09-15～09-27境界 — CLOSED_FOR_CURRENT_RESEARCH
+
+- HAZUSEの2015年9月導入日群は **09-07 / 09-14 / 09-28**。
+- 日付別検索・メーカー横断検索でもこの境界の全国実ホール導入を具体日付きで固定できる未登録5号機を発見できずCLOSED。
+
+## 2015-09-28群 — OPEN
 
 処理済み:
-1. **キングジャック** — アクロス — No.912。
-2. **ハナハナホウオウ-30** — パイオニア — No.913。
+1. **パチスロ無双OROCHI** — 山佐 — No.914。
 
-- 既存No.911「聖闘士星矢～女神聖戦～」には09-14表記資料もあるが既存レコードなので重複登録しない。
-- 今回の横断再監査で、09-14全国実ホール導入として固定できる新たな未登録5号機を発見できず、群をCLOSEDとする。
+次の既知未処理:
+2. **アスラズ ラース** — エンターライズ — HAZUSE/K-Naviとも2015-09-28導入。
+
+- 09-28群はまだ全メーカー最終監査前のためOPENを維持する。
 
 ## 次回再開地点
 
-1. **recordCount 913 / chronologicalFrontier 2015-09-14 / 09-14_GROUP_CLOSED_FOR_CURRENT_RESEARCH** から開始。
-2. README / mission v0.7 / INDEX / LATEST_HANDOFF / No.913を再確認。
-3. **2015-09-15～09-27境界**を日付別・全メーカー横断で監査し、具体日付き未処理5号機があれば最初の機種から処理する。
-4. 境界を閉じられる場合、次の強い既知群は **2015-09-28**。現時点で **「パチスロ無双OROCHI」（山佐）**、**「アスラズ ラース」（エンターライズ）** が09-28導入で確認できる。候補だけで群を閉じず、当日全メーカーを再監査する。
+1. **recordCount 914 / chronologicalFrontier 2015-09-28 / 09-28_GROUP_OPEN** から開始。
+2. README / mission v0.7 / INDEX / LATEST_HANDOFF / No.914を再確認。
+3. 次の未処理機種 **「アスラズ ラース」**（エンターライズ / 型式アスラズラースZS / 検定5S0457）を処理する。
+4. 同機処理後、2015-09-28群を全メーカー横断で再監査し、追加未登録機がなければCLOSED判定する。
 5. 遡及resetBehavior QAカーソルは `docs/real_machine_db/machines/2007-03-19_kakumei-senshi-choshu-riki.md` を維持。新規本線を止めない。
 
 ## safeguard
@@ -98,34 +106,32 @@
 
 ## 主要出典 — 取得日 2026-09-07
 
-### No.913 ハナハナホウオウ-30
-- パイオニア公式 更新履歴: https://www.slot-pioneer.co.jp/news.html
-- PiDEA X 2015-08-21: https://www.pidea.jp/articles/%E3%83%91%E3%82%A4%E3%82%AA%E3%83%8B%E3%82%A2%E3%80%8C%E3%83%8F%E3%83%8A%E3%83%8F%E3%83%8A%E3%80%8D%E3%82%AC%E3%83%BC%E3%82%B4%E3%82%A4%E3%83%AB%E3%81%A8%E3%82%B3%E3%83%A9%E3%83%9C
-- グリーンべると: https://web-greenbelt.jp/00008014/
-- K-Navi: https://p-kn.com/slot/2333/
-- HAZUSE: https://hazuse.com/machine/pachislot/5S0623/
-- なな徹 ボーナス確率/機械割: https://nana-press.com/kaiseki/machine/34/563/
-- なな徹 50枚ベース: https://nana-press.com/kaiseki/machine/34/570/
-- イチカツ: https://ichikatsu.com/hanahanahouoh/
-- すろぱちくえすと 設定判別: https://www.slopachi-quest.com/article/hanahana-houou-30-settei/
-- すろぱちくえすと ハナハナシリーズ朝一: https://www.slopachi-quest.com/article/hanahana-reset/
-- ジャグラーズネット: https://jugglersnet.com/analysis-hana/hanahana-hou
-- みんスロ: https://minslo.com/%E3%83%8F%E3%83%8A%E3%83%8F%E3%83%8A%E3%83%9B%E3%82%A6%E3%82%AA%E3%82%A6%E2%80%9030/
+### No.914 パチスロ無双OROCHI
+- パチ＆スロ必勝本 基本スペック: https://p.hisshobon.jp/machine/2635/1/54033
+- パチ＆スロ必勝本 天井&設定変更: https://p.hisshobon.jp/machine/2635/1/54714
+- パチ＆スロ必勝本 中OROCHI抽選: https://p.hisshobon.jp/machine/2635/1/54715
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/205/a.php
+- パチマガスロマガ ATフロー: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/205/l.php
+- ちょんぼりすた: https://chonborista.com/slot/yamasa-slot/11263/
+- pacnk: https://pacnk.com/slot/tools/sh_musouorochi.html
+- パチセブン: https://pachiseven.jp/machines/4611/cutout/4
+- 期待値見える化: https://slotjin.com/zone/musouorochi/
+- 4Gamer 2015-12-03: https://www.4gamer.net/games/326/G032647/20151203089/
+- Gamer 2015-12-03: https://www.gamer.ne.jp/news/201512030060/
+- HAZUSE 新台カレンダー: https://hazuse.com/new-machine-calendar/newmachine-calendar/
 
 ### 次の既知候補
-- パチスロ無双OROCHI（2015-09-28）: https://p.hisshobon.jp/machine/2635/1/54033
-- アスラズ ラース（2015-09-28）: https://hazuse.com/machine/pachislot/5S0457/
+- アスラズ ラース HAZUSE: https://hazuse.com/machine/pachislot/5S0457/
+- アスラズ ラース K-Navi: https://p-kn.com/slot/2351/
 
 ## confidence
 
-- identity/manufacturer: OFFICIAL_PLUS_INDUSTRY
-- formalModelName/inspectionNumber: ANALYSIS_HIGH
-- exactReleaseDate: CONFLICT_WITH_INDUSTRY_SCHEDULE_SUPPORT_FOR_2015_09_14
-- performanceCore: INDUSTRY_PLUS_ANALYSIS_HIGH_MULTI_SOURCE
+- identity/manufacturer: OFFICIAL_DERIVED_PLUS_ANALYSIS_HIGH
+- exactReleaseDate: ANALYSIS_HIGH_MULTI_SOURCE_WITH_OFFICIAL_DERIVED_MONTH_CONFLICT
+- performanceCore: ANALYSIS_HIGH_MULTI_SOURCE
 - baseGamesPer50: ANALYSIS_HIGH_MULTI_SOURCE
-- resetBehaviorApplicability: HIGH_BY_SYSTEM_TYPE_AND_NO_CEILING
-- reset87GBgmState: ANALYSIS_SINGLE_PLUS_SERIES_CROSSCHECK
-- resetInitialBigPanelFlash50Percent: ANALYSIS_SINGLE
-- purePowerCycleBehavior: UNVERIFIED_AFTER_RESEARCH
-- resetDetectionGakkun: ANALYSIS_SINGLE_NON_DETERMINISTIC
-- resetDetectionBetLamp: CONFLICT_DO_NOT_USE_AS_CONFIRMED
+- resetGameCounter: ANALYSIS_HIGH_DIRECT
+- purePowerCycleBehavior: ANALYSIS_HIGH_DIRECT_COMPARATIVE
+- resetStateNumeric: ANALYSIS_HIGH_DIRECT_NUMERIC
+- reset8MaiGiriNumeric: ANALYSIS_HIGH_DIRECT_NUMERIC
+- resetDetection: UNVERIFIED_AFTER_RESEARCH
