@@ -4,92 +4,97 @@
 
 ## 現在地点
 
-- recordCount: **862**
-- latestRecordAdded: **パチスロ黄門ちゃま 喝**（オリンピア）
-- latestRecord: `docs/real_machine_db/machines/2015-01-19_pachislot-koumonchama-katsu.md`
+- recordCount: **863**
+- latestRecordAdded: **テラシグマ**（JPS）
+- latestRecord: `docs/real_machine_db/machines/2015-01-19_terra-sigma.md`
 - chronologicalFrontier: **2015-01-19**
-- frontierLatestMachine: **パチスロ黄門ちゃま 喝**（オリンピア）
+- frontierLatestMachine: **テラシグマ**（JPS）
 - schema: **resetBehavior v0.7**
-- status: **2015-01-05_GROUP_CLOSED_FOR_CURRENT_RESEARCH / 2015-01-06_TO_2015-01-18_CLOSED_FOR_CURRENT_RESEARCH / 2015-01-19_GROUP_OPEN**
+- status: **2015-01-19_GROUP_CLOSED_FOR_CURRENT_RESEARCH / 2015-01-20_TO_2015-01-25_AUDIT_NEXT / NEXT_STRONG_ANCHOR_2015-01-26**
 
 ## 今回の同期 / 正本確認
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、本 `LATEST_HANDOFF.md`、No.861 `2015-01-05_salaryman-kintaro-shusse-kaido-hen.md` を再読。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、本 `LATEST_HANDOFF.md`、No.862 `2015-01-19_pachislot-koumonchama-katsu.md` を再読。
 - INDEXは旧集約状態（19件）のため、README規定どおり **LATEST_HANDOFF + 実レコード** を進捗正本として使用。
-- 作業開始時正本は **861件 / chronologicalFrontier 2015-01-05 / 01-05_GROUP_AUDIT_PENDING**。
-- 2015-01-05同日群をHAZUSE/K-Navi/P-WORLD系・当時記事検索で再監査し、サラリーマン金太郎 出世回胴編以外に具体的な同日未登録5号機を安全に固定できなかったため **01-05_GROUP_CLOSED_FOR_CURRENT_RESEARCH**。
-- 2015-01-06～01-18を再監査。01/13はパチンコ新台の具体日掲載が確認できた一方、今回パチスロの新規本体を安全に固定できず、次の強いパチスロ導入日は **2015-01-19**。
-- 2015-01-19群の先頭として **パチスロ黄門ちゃま 喝** をNo.862に追加。
+- 作業開始時正本は **862件 / chronologicalFrontier 2015-01-19 / 01-19_GROUP_OPEN**。
+- 前handoff指定の次機種 **テラシグマ（JPS）** をNo.863として追加。
 
-## No.862 — パチスロ黄門ちゃま 喝
+## No.863 — テラシグマ
 
-- record: `docs/real_machine_db/machines/2015-01-19_pachislot-koumonchama-katsu.md`
-- manufacturer: **オリンピア**
+- record: `docs/real_machine_db/machines/2015-01-19_terra-sigma.md`
+- manufacturer: **JPS**
 - releaseDate: **2015-01-19**
-- modelName: **パチスロ黄門ちゃま喝D1**
-- inspectionNumber: **4S0696**
-- systemType: **5号機 AT / 310カウンター+CZ+ゲーム数上乗せAT**
+- modelName: `UNVERIFIED_AFTER_RESEARCH`
+- inspectionNumber: `UNVERIFIED_AFTER_RESEARCH`
+- systemType: **5号機 AT / 擬似Aタイプ・擬似ボーナスストック型**
 
 ### 性能コア
 
-- 機械割: **96.5 / 97.9 / 100.2 / 104.6 / 108.5 / 113.3%**。
-- AT初当たり: **1/285.3 / 271.9 / 256.6 / 221.6 / 196.1 / 168.5**。
-- 50枚ベース: **約30.1G/50枚**。
-- AT純増: **約2.5枚/G**。
-- 通常天井: **AT間999G**。
+- 機械割: **97.9 / 99.5 / 101.5 / 103.6 / 106.5 / 110.2%**。
+- 擬似ボーナス初当たり: **1/153 / 146 / 138 / 131 / 121 / 107**。
+- 50枚ベース: **約36G/50枚**。
+- 純増: **約3.0枚/G**。
+- BIG: **平均約281枚 / ベルナビ46回**。
+- REG: **平均約97枚 / ベルナビ14回**。
+- 通常最大天井: **998G**（K-Navi概要は「最大999G」表記のためカウント表現差として注意保持）。
+- 当時資料ではボーナス後300G以内の当選割合 **94%**。
 
 ### resetBehavior v0.7
 
-- 設定変更時: **天井Gリセット / 左右310カウンター内部ポイント再抽選 / 高確状態再抽選**。
-- リセット後初回天井: **777G**（通常999Gから短縮）。
-- 設定変更時高確移行率: **25.0 / 27.5 / 30.0 / 35.0 / 40.0 / 50.0%**。
-- 設定変更時310カウンター初期平均ポイント: **51 / 55 / 59 / 63 / 67 / 71pt**。
-- 朝一10G到達時の喝ゾーン当選率: **設定1～3 25% / 設定4～6 40%** とする当時解析あり。
-- 据え置き: **310内部ポイント・内部状態を引き継ぐ**資料を確認。天井Gも宵越し資料でCARRYOVER_SUPPORTED。
-- 電源OFF→ONのみ: 河川敷ステージ開始、液晶310表示ゼロクリアは確認。内部天井G・全状態の完全対照は `UNVERIFIED_AFTER_RESEARCH`。
-- 変更判別: 朝一10G付近の喝ゾーン、見た目310未満での突然のルーレット等が推測材料。本機固有ガックン契約は `UNVERIFIED_AFTER_RESEARCH`。
+- 設定変更時の天井G、規定Gモード、ストック、内部状態の初期化/再抽選契約: `UNVERIFIED_AFTER_RESEARCH`。
+- 据え置き時の天井G・モード・ストック・内部状態引継ぎ契約: `UNVERIFIED_AFTER_RESEARCH`。
+- 純電源OFF→ON時の内部/表示復帰契約: `UNVERIFIED_AFTER_RESEARCH`。
+- 設定変更専用短縮天井・朝一専用モード・公開朝一当選率: `NONE_CONFIRMED_AFTER_RESEARCH`。
+- 本機固有ガックン/表示による変更判別: `UNVERIFIED_AFTER_RESEARCH`。
 - 有利区間: `NOT_APPLICABLE_5TH_GEN_PRE_5_9`。
-- 後継6号機「黄門ちゃま喝2」の350G朝一天井・有利区間仕様は混入除外。
+- 通常時には規定G数を管理するモードが存在し、当時解析ではモードA最大998G、モードB最大768Gだが、これを設定変更後のモード振り分けへ逆算しない。
 
-## 2015-01-19群 — OPEN
+## 2015-01-19群 — CLOSED_FOR_CURRENT_RESEARCH
 
-- No.862 **パチスロ黄門ちゃま 喝**（オリンピア）— 処理済み。
-- 同日未処理候補として **テラシグマ（JPS）** を確認。
-  - K-Navi: ホール導入開始 **2015-01-19**。
-  - PiDEA X: 2014-11-28発表記事で納品日 **2015-01-18予定**。
-  - パチマガスロマガ: JPS/2015年1月、純増約3.0枚/Gの擬似ボーナスAT。
-- 01/19群はまだCLOSEDにしない。テラシグマ処理後、同日群をメーカー別/導入一覧で再監査する。
+処理済み:
+- No.862 **パチスロ黄門ちゃま 喝**（オリンピア）
+- No.863 **テラシグマ**（JPS）
+
+再監査:
+- `2015年1月19日 パチスロ 新台`、`2015/1/19 スロット 導入`、メーカー別/当時解析/K-Navi/P-WORLD/業界記事系で横断。
+- 検索で **サイレントメビウス** に「2015-01-19」が出る資料があるが、これは検定告示日系データ。PiDEA/P-WORLD業界記事では2015-02-19発表、納品2015-04-12予定で、ホール導入は4月系統。したがって01/19導入群には混入させない。
+- 今回、黄門ちゃま喝・テラシグマ以外の具体的な2015-01-19ホール導入5号機を安全に固定できなかったため **CLOSED_FOR_CURRENT_RESEARCH**。
 
 ## 次回再開地点
 
-1. **recordCount 862 / chronologicalFrontier 2015-01-19 / 01-19_GROUP_OPEN** から開始。
-2. 最新mainの README / mission / INDEX / LATEST_HANDOFF / No.862 を再確認。
-3. 次の未処理機種 **テラシグマ（JPS）— 2015-01-19** をNo.863候補として性能コア+resetBehavior v0.7で処理。
-4. テラシグマ処理後、2015-01-19同日群をHAZUSE・P-WORLD・K-Navi・当時業界記事・メーカー別資料で横断監査し、漏れがなければCLOSED。
-5. その後01/20以降へ時系列で進む。先の候補へ飛ばさない。
-6. 遡及resetBehavior QAカーソルは `docs/real_machine_db/machines/2007-03-19_kakumei-senshi-choshu-riki.md` を維持。新規本線を止めない。
+1. **recordCount 863 / chronologicalFrontier 2015-01-19 / 01-19_GROUP_CLOSED_FOR_CURRENT_RESEARCH** から開始。
+2. 最新mainの README / mission / INDEX / LATEST_HANDOFF / No.863 を再確認。
+3. **2015-01-20～01-25境界**を導入一覧・メーカー別・当時業界記事で監査する。
+4. 漏れがなければ次の強いホール導入アンカー **2015-01-26「スーパージャックポット」（アクロス）** を性能コア+resetBehavior v0.7で処理する。
+5. 01/26群は同日候補を横断監査してからCLOSED判定する。
+6. `トラッド` は検索で01/26が出る資料がある一方、ベルコ公式は「2015年3月登場」としており、検定告示日/導入日の混同可能性があるため、01/26群へ機械的に入れず exact release date を別系統で照合してから扱う。
+7. 遡及resetBehavior QAカーソルは `docs/real_machine_db/machines/2007-03-19_kakumei-senshi-choshu-riki.md` を維持。新規本線を止めない。
 
 ## safeguard
 
 - INDEXは旧集約状態なので進捗正本にしない。LATEST_HANDOFF + 実レコードを優先。
-- exact release dateでは発表日・検定日・納品予定・全国導入・地域先行・実ホール導入を区別。
+- exact release dateでは **検定告示日 / 発表日 / 納品予定 / 全国導入 / 地域先行 / 実ホール導入** を区別する。
 - 据え置き・純電断挙動は一般的な5号機の慣例から推定しない。
 - `UNVERIFIED_AFTER_RESEARCH` は検索語・資料系統を変えた再探索後だけ使用する。
-- 同名後継機の6号機/スマスロ仕様を旧5号機へ混入させない。
+- 同名後継機や別スペックを混入させない。
 - 2015-06-08到達時の **吉宗～極～（ヨシムネH2A4 / 3S1093）** 正式量産版処理注意を維持。
 
 ## 主要出典 — 取得日 2026-09-07
 
-### パチスロ黄門ちゃま 喝
-- グリーンべると: https://web-greenbelt.jp/00007370/
-- HAZUSE: https://hazuse.com/machine/pachislot/4S0696/
-- パチ&スロ必勝本: https://p.hisshobon.jp/machine/2499/1/49299
-- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/olympia_slot/118/a.php
-- K-Navi: https://p-kn.com/slot/2165/52817/
-- スロパチクエスト朝一: https://www.slopachi-quest.com/article/koumon-chama-reset/
-- 期待値見える化朝一: https://slotjin.com/slot/koumonnchama-reset/
-
-### 次候補 テラシグマ
-- K-Navi: https://p-kn.com/slot/2178/
+### テラシグマ
 - PiDEA X: https://www.pidea.jp/articles/JPS%E3%80%8C%E3%83%86%E3%83%A9%E3%82%B7%E3%82%B0%E3%83%9E%E3%80%8D%E3%81%AF%E6%95%B0%E5%AD%97%E3%81%8C%E3%83%9C%E3%83%BC%E3%83%8A%E3%82%B9%E3%82%92%E4%BA%88%E8%A8%80%E3%81%99%E3%82%8B%21%3F
-- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/jps_slot/30/a.php
+- K-Navi: https://p-kn.com/slot/2178/
+- パチマガスロマガ 機種概要: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/jps_slot/30/a.php
+- パチマガスロマガ 50枚ベース: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/jps_slot/30/c.php
+- パチマガスロマガ ATフロー: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/jps_slot/30/l.php
+- P-WORLD: https://www.p-world.co.jp/machine/database/7598
+- スロパチクエスト: https://www.slopachi-quest.com/article/terra-sigma/
+- 5号機クロニクル JPS: https://5goki.com/jps
+
+### 次候補 スーパージャックポット
+- K-Navi: https://p-kn.com/slot/2182/
+- ぱちんこドキュメント: https://pachinkolist.com/archives/42855966.html
+
+### 日付混同 safeguard
+- サイレントメビウス業界記事: https://news.p-world.co.jp/articles/7227
+- ベルコ公式 トラッド: https://www.s-bellco.co.jp/products/slot/yama_trad/
