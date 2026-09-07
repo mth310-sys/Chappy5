@@ -2,7 +2,7 @@ import { bindPlacementCursorControls, createPlacementCursor } from './cursor.js'
 import { createCustomer, planCustomerTo, advanceCustomer, CUSTOMER_STATES } from './customer.js';
 import { layout, validateLayout } from './layout.js';
 import { findPath } from './navigation.js';
-import { renderCustomerActor, renderLayout, updateCustomerActor } from './renderer.js';
+import { renderCustomerActor, renderLayout, updateCustomerActor } from './renderer.js?v=student-pac-v3';
 
 const fmt = new Intl.NumberFormat('ja-JP');
 const GAME_TICK_MS = 220;
