@@ -4,82 +4,79 @@
 
 ## 現在地点
 
-- recordCount: **875**
-- latestRecordAdded: **TRAD480**（ヤーマ）
-- latestRecord: `docs/real_machine_db/machines/2015-03-09_trad480.md`
-- chronologicalFrontier: **2015-03-09**
-- frontierLatestMachine: **TRAD480**（ヤーマ）
+- recordCount: **876**
+- latestRecordAdded: **パチスロコブラ**（SNKプレイモア）
+- latestRecord: `docs/real_machine_db/machines/2015-03-16_pachislot-cobra.md`
+- chronologicalFrontier: **2015-03-16**
+- frontierLatestMachine: **パチスロコブラ**（SNKプレイモア）
 - schema: **resetBehavior v0.7**
-- status: **2015-03-09_GROUP_CLOSED_FOR_CURRENT_RESEARCH**
+- status: **2015-03-16_GROUP_OPEN**
 
 ## 今回の同期 / 正本確認
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、本 `LATEST_HANDOFF.md`、No.874 `2015-03-09_trad.md` を再読。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、本 `LATEST_HANDOFF.md`、No.875 `2015-03-09_trad480.md` を再読。
 - INDEXは旧集約状態のためREADME規定どおり **LATEST_HANDOFF + 実レコード** を進捗正本として使用。
-- 作業開始時正本は **874件 / chronologicalFrontier 2015-03-09 / 03-09_GROUP_OPEN**。
-- 次未処理のヤーマ **TRAD480（トラッド480R2 / 4S1081）** をNo.875として追加。
-- HAZUSE、パチマガスロマガ、P-WORLD、すろぱちくえすとを横断し、兄弟機TRADから性能・resetBehaviorを転記せず独立収集。
-- 03/09同日群を再検索し、実ホール導入の追加未処理5号機を今回固定できなかったため `CLOSED_FOR_CURRENT_RESEARCH`。
-- 検索に出るアナザーゴッドハーデスの2015-03-09は777TOWN配信日で、実ホール導入（2014-02）ではないため混入させない。
+- 作業開始時正本は **875件 / chronologicalFrontier 2015-03-09 / 03-09_GROUP_CLOSED_FOR_CURRENT_RESEARCH**。
+- 2015-03-10〜03-15境界を再探索し、今回具体日付きの未処理5号機を安全に固定できなかったため `CLOSED_FOR_CURRENT_RESEARCH`。
+- 次アンカー2015-03-16の **パチスロコブラ** をNo.876として追加。
+- SNK公式、HAZUSE、K-Navi、パチマガスロマガ、P-WORLD、パチビー、すろぱちくえすと、pacnkを横断。
 
-## No.875 — TRAD480
+## No.876 — パチスロコブラ
 
-- record: `docs/real_machine_db/machines/2015-03-09_trad480.md`
-- manufacturer: **ヤーマ**
-- releaseDate canonical: **2015-03-09**
-- modelName: **トラッド480R2**
-- inspectionNumber: **4S1081**
-- systemType: **5号機 ノーマル / ボーナス主体 / 完全告知系**
+- record: `docs/real_machine_db/machines/2015-03-16_pachislot-cobra.md`
+- manufacturer: **SNKプレイモア**
+- releaseDate canonical: **2015-03-16**
+- modelName: **パチスロコブラAB**
+- inspectionNumber: **3S0862**
+- systemType: **5号機 A+ART / CZ搭載**
 
 ### 性能コア
 
-- 市場掲載機械割: **96.5 / 98.5 / 100.0 / 102.5 / 105.0 / 107.5%**。
-- パチマガスロマガPAYOUTシミュレート値: **97.10 / 98.45 / 100.19 / 101.98 / 104.23 / 105.71%**。定義違いのため平均化しない。
-- S-BIG: **1/780.2 / 744.7 / 744.7 / 744.7 / 712.4 / 712.4**。
-- N-BIG: **1/819.2 / 819.2 / 780.2 / 780.2 / 780.2 / 780.2**。
-- REG: **1/468.1 / 431.2 / 399.6 / 381.0 / 364.1 / 334.4**。
-- 合算: **1/215.6 / 204.8 / 195.0 / 190.5 / 184.1 / 176.2**。
-- S-BIG **約416枚** / N-BIG **約312枚** / REG **約104枚**。
-- 50枚ベース: `UNVERIFIED_AFTER_RESEARCH`。
-- 天井: **非搭載**。
+- 機械割: **97.2 / 99.0 / 100.3 / 104.7 / 109.3 / 114.8%**。
+- BIG: **1/422.8 / 414.7 / 402.0 / 394.8 / 381.0 / 368.1**。
+- REG: **1/642.5 / 618.2 / 595.7 / 574.8 / 546.1 / 524.2**。
+- ART初当たり: **1/449.2 / 415.7 / 408.4 / 343.3 / 314.3 / 257.1**。
+- CZ初当たり: **1/690.83 / 632.68 / 635.86 / 556.10 / 555.34 / 468.34**。
+- 50枚ベース: **約31G**。
+- ART純増: **約1.6枚/G**。
+- BIG約204枚 / REG約36枚 / PREMIUM BONUS約36枚。
+- ART「BIG BANG RUSH」: **50G or 315G**。
+- 通常天井: **ボーナス間1315G**。ARTを挟んでもボーナス間天井Gはリセットされない。
 
 ### resetBehavior v0.7
 
-- 天井・規定Gモード・AT/ART/CZ状態はノーマル機のため `NOT_APPLICABLE`。
-- `gameCounterReset`: `NOT_APPLICABLE_NO_CEILING_OR_GAME_NUMBER_MODE`。
-- `ceilingAfterReset`: `NOT_APPLICABLE_NO_CEILING`。
-- `modeAfterReset`: `NOT_APPLICABLE_NO_GAME_NUMBER_MODE`。
+- 設定変更時は通常1315G天井進捗をリセットし、**100G / 500G / 1315G** のリセット専用天井を再選択。
+- 設定1・2: **100G 6.0% / 500G 20.0% / 1315G 74.0%**。
+- 設定3・4: **100G 7.5% / 500G 20.0% / 1315G 72.5%**。
+- 設定5・6: **100G 10.0% / 500G 20.0% / 1315G 70.0%**。
+- 設定変更後500G以内天井選択率: **26.0% / 27.5% / 30.0%**（設定1-2 / 3-4 / 5-6）。
 - 有利区間: `NOT_APPLICABLE_5TH_GEN_PRE_5_9`。
-- 設定変更専用の短縮天井・朝一モード・CZ/AT恩恵等: `NONE_CONFIRMED_AFTER_RESEARCH`。
-- 本機固有の純電源OFF→ON時のリール/WIN告知ランプ/表示契約: `UNVERIFIED_AFTER_RESEARCH`。
-- ガックン等の変更判別: 表記・型式・検索語・資料系統を変えて再探索したが `UNVERIFIED_AFTER_RESEARCH`。
-- 兄弟機TRADや他ヤーマ機の挙動は転記しない。
+- 据え置き跨ぎの天井G契約、純電源OFF→ON、設定変更時内部状態、ガックン等は検索語・資料系統を変えた再探索後も本機固有直接資料を固定できず `UNVERIFIED_AFTER_RESEARCH`。
 
 ## conflicts
 
-- 機械割は市場掲載 **96.5～107.5%** とパチマガスロマガの明示的なシミュレート値 **97.10～105.71%** が存在。`DEFINITION_DIFFERENCE_NOT_NUMERIC_AVERAGING` として分離保持。
+- 導入日はK-Navi・HAZUSE・パチ7・パチビーが **2015-03-16** で一致。SNK公式も2015年3月稼働予定。
+- 一部後年まとめに **2015-03-02** 表記があるが、多数の機種別資料と不一致のため低信頼競合としてレコード内に保持しcanonicalへ採用しない。
 
-## 2015-03-09群 — CLOSED_FOR_CURRENT_RESEARCH
+## 2015-03-16群 — OPEN
 
 処理済み:
 
-- TRAD — ヤーマ — **No.874**
-- TRAD480 — ヤーマ — **No.875**
+- パチスロコブラ — SNKプレイモア — **No.876**
 
-重複/日付注意:
+同日未処理の強い候補:
 
-- パチスロ ベルセルク — No.873。K-Naviのみ03/09表記だがcanonical 03/02 + CONFLICTとして既処理済み。
-- アナザーゴッドハーデス-奪われたZEUSver.- — 03/09検索ヒットは777TOWN配信。実ホール導入機として再登録しない。
+- **BLACK LAGOON2 / パチスロ ブラックラグーン2** — スパイキー — 2015-03-16。複数機種資料で一致。
+- **麻雀物語3 役満乱舞の究極大戦** — オリンピア — 2015-03-16候補。次回、具体日と既存登録有無をmainで再確認して重複回避する。
 
 ## 次回再開地点
 
-1. **recordCount 875 / chronologicalFrontier 2015-03-09 / 03-09_GROUP_CLOSED_FOR_CURRENT_RESEARCH** から開始。
-2. 最新mainの README / mission / INDEX / LATEST_HANDOFF / No.875を再確認。
-3. **2015-03-10～03-15境界監査**を行い、地域先行・小規模メーカー・別日導入を含む具体日付き未処理5号機を確認する。
-4. 境界追加がなければ次の強いアンカー **2015-03-16** へ進む。
-5. 03/16の既知候補 **コブラ（SNKプレイモア）** はK-Navi・パチ7・HAZUSEが2015-03-16で一致。未登録なら次候補として処理する。
-6. 欠損は表記揺れ・型式・メーカー名・設定変更/据え置き/純電断/天井/モード/ガックン等へ検索語を変え、公式・業界一次・当時解析・古いDB・アーカイブ・回顧資料を横断後だけ `UNVERIFIED_AFTER_RESEARCH`。
-7. 遡及resetBehavior QAカーソルは `docs/real_machine_db/machines/2007-03-19_kakumei-senshi-choshu-riki.md` を維持。新規本線を止めない。
+1. **recordCount 876 / chronologicalFrontier 2015-03-16 / 03-16_GROUP_OPEN** から開始。
+2. 最新mainの README / mission / INDEX / LATEST_HANDOFF / No.876を再確認。
+3. 03/16同日群の既存レコードを検索し、未登録なら **BLACK LAGOON2（スパイキー）** を次に処理する。
+4. 続いて麻雀物語3など03/16同日群を全メーカー横断で監査し、群をCLOSEDにしてから次日へ進む。
+5. 欠損は表記揺れ・型式・メーカー名・設定変更/据え置き/純電断/天井/モード/ガックン等へ検索語を変え、公式・業界一次・当時解析・古いDB・アーカイブ・回顧資料を横断後だけ `UNVERIFIED_AFTER_RESEARCH`。
+6. 遡及resetBehavior QAカーソルは `docs/real_machine_db/machines/2007-03-19_kakumei-senshi-choshu-riki.md` を維持。新規本線を止めない。
 
 ## safeguard
 
@@ -92,14 +89,15 @@
 
 ## 主要出典 — 取得日 2026-09-07
 
-### TRAD480
-- HAZUSE: https://hazuse.com/machine/pachislot/4S1081/
-- パチマガスロマガ 機種TOP: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yama_slot/17/a.php
-- パチマガスロマガ ボーナス確率・PAYOUT: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yama_slot/17/h.php
-- すろぱちくえすと: https://www.slopachi-quest.com/article/trad480/
-- P-WORLD: https://www.p-world.co.jp/machine/database/7643
+### パチスロコブラ
+- SNKプレイモア公式: https://slot.snk-corp.co.jp/official/cobra/
+- HAZUSE: https://hazuse.com/machine/pachislot/3S0862/
+- K-Navi: https://p-kn.com/slot/2207/
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/snk_slot/49/snk_slot_49.php
+- P-WORLD: https://www.p-world.co.jp/machine/database/7637
+- パチビー: https://www.pachibee.jp/machines/lecture/215020002
+- すろぱちくえすと: https://www.slopachi-quest.com/article/cobra/
+- pacnk: https://pacnk.com/slot/tools/sh_cobra2015.html
 
 ### 次候補 / 境界
-- K-Navi コブラ: https://p-kn.com/slot/2207/
-- パチ7 コブラ: https://pachiseven.jp/machines/4412/cutout/74
-- HAZUSE コブラ: https://hazuse.com/machine/pachislot/3S0862/
+- BLACK LAGOON2: https://pachinavi.net/machines/black-lagoon-2/
