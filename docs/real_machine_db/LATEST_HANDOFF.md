@@ -4,113 +4,85 @@
 
 ## 現在地点
 
-- recordCount: **905**
-- latestRecordAdded: **パチスロ ストライクウィッチーズ**（オーイズミ）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2015-08-03_pachislot-strike-witches.md`
-- chronologicalFrontier: **2015-08-03**
-- frontierLatestMachine: **パチスロ ストライクウィッチーズ**
-- frontierRecord: `docs/real_machine_db/machines/2015-08-03_pachislot-strike-witches.md`
+- recordCount: **906**
+- latestRecordAdded: **サンダーVリボルト**（アクロス）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2015-08-17_thunder-v-revolt.md`
+- chronologicalFrontier: **2015-08-17**
+- frontierLatestMachine: **サンダーVリボルト**
+- frontierRecord: `docs/real_machine_db/machines/2015-08-17_thunder-v-revolt.md`
 - schema: **resetBehavior v0.7**
-- status: **2015-08-03_GROUP_CLOSED_FOR_CURRENT_RESEARCH**
+- status: **2015-08-17_GROUP_OPEN**
 
 ## 今回の同期 / 正本確認
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、No.902 `2015-08-03_bonnou-breaker-zen.md` を再読。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、No.905 `2015-08-03_pachislot-strike-witches.md` を再読。
 - INDEXは19件時点の旧集約状態なので、README規定どおり **LATEST_HANDOFF + 実レコード** を進捗正本として使用。
-- 作業開始時handoffは **902件 / 2015-08-03 / 08-03_GROUP_OPEN**。
-- 調査中、`2015-08-03_garinpo-30.md` がmainへ先行追加済みなのにhandoffだけ902件のままという同期ズレを検出。重複作成せず既存レコードを **No.903相当**として引き継いだ。
-- 続けてNo.904 `ジャッカスチーム`、No.905 `パチスロ ストライクウィッチーズ` を新規登録した。
+- 作業開始時handoffは **905件 / 2015-08-03 / 08-03_GROUP_CLOSED_FOR_CURRENT_RESEARCH**。
+- `2015-08-04〜2015-08-16` 境界は直前handoffの `CLOSED_FOR_CURRENT_RESEARCH` を引き継いだ。
+- 2015-08-17群の先頭候補 **アクロス「サンダーVリボルト」** が未登録であることをmainで確認し、No.906として追加。
 
-## No.903相当 — ガリンポ-30
+## No.906 — サンダーVリボルト
 
-- record: `docs/real_machine_db/machines/2015-08-03_garinpo-30.md`
-- manufacturer: **エマ**（パチマガスロマガ内にはZANN表記あり。レコード内で媒体分類/ブランド差として保持）
-- formalModelName: **ガリンポ-30**
-- inspectionNumber: **5S0228**
-- systemType: **ノーマル / 完全告知 / 30Φ**
-- canonical releaseDate: **2015-08-03**
-- ボーナス合算: **1/173 / 160 / 148 / 138 / 129 / 124**。
-- PAYOUT: **96 / 98 / 101 / 104 / 106 / 108%**。
-- BB **270枚** / MB **90枚**。
-- 天井非搭載。有利区間非該当。
-- 50枚ベース、純電断時の本機固有状態、ガックン等は十分な再探索後も `UNVERIFIED_AFTER_RESEARCH` / `NONE_CONFIRMED_AFTER_RESEARCH`。
-
-## No.904 — ジャッカスチーム
-
-- record: `docs/real_machine_db/machines/2015-08-03_jackass-team.md`
-- manufacturer: **大都技研**
-- formalModelName: **JACKASSTEAM A7**
-- inspectionNumber: **5S0224**
-- systemType: **A+ART / 本物ボーナス+疑似ボーナス / 新基準機**
-- canonical releaseDate: **2015-08-03**。2015-08-02は最速納品予定として分離。
-- PAYOUT: **97.4 / 98.7 / 100.8 / 104.8 / 110.3 / 119.2%**。
-- ART初当たり: **1/591.7 / 578.8 / 555.8 / 529.9 / 482.9 / 409.6**。
-- 50枚ベース: **約35.5G**。純増: **約2.0枚/G**。
-- 本物BIG **108枚** / RB **36枚**、ブリッツボーナス30G+α、ART50G+α。
-- 通常天井 **800G+前兆** / 天国 **100G+前兆**。
-- 設定変更時: **天井Gリセット / モード再抽選 / 状態再抽選**。
-- 据え置き時: **天井G / モード / 状態を引継ぎ**。
-- 設定変更時専用モード: **リセットA 90% / リセットB 10%**。リセットBは **天国確定**。
-- 純電源OFF→ON時の正常機固有内部契約と本機固有ガックンは `UNVERIFIED_AFTER_RESEARCH` / `NONE_CONFIRMED_AFTER_RESEARCH`。
-- 有利区間: `NOT_APPLICABLE_5TH_GEN_PRE_5_9`。
-
-## No.905 — パチスロ ストライクウィッチーズ
-
-- record: `docs/real_machine_db/machines/2015-08-03_pachislot-strike-witches.md`
-- manufacturer: **オーイズミ**
-- formalModelName: **パチスロストライクウィッチーズVX**
-- inspectionNumber: **5S0213**
-- systemType: **AT / 疑似ボーナス / 差枚数管理型AT**
-- canonical releaseDate: **2015-08-03**。2024年スマスロ続編とは分離。
-- PAYOUT: **97.6 / 99.0 / 101.0 / 103.9 / 107.0 / 111.2%**。
-- AT初当たり: **1/697.3 / 667.9 / 638.6 / 592.7 / 538.6 / 483.2**。
-- 疑似ボーナス合算: **1/307.5 / 298.7 / 289.6 / 274.9 / 255.7 / 235.3**。
-- CZ初当たり: **1/138.8 / 136.3 / 134.4 / 129.3 / 121.8 / 108.8**。
-- 50枚ベース **約46.8G** / 純増 **約2.2枚/G** / BIG **55G** / REG **30G**。
-- AT・ボーナス間天井 **1280G**、CZ間天井 **288G**、AT6スルー後は7回目以降ボーナスでAT期待度約80%。
+- record: `docs/real_machine_db/machines/2015-08-17_thunder-v-revolt.md`
+- manufacturer: **アクロス**
+- formalModelName: **サンダーVリボルトUR**
+- inspectionNumber: **5S0424**
+- systemType: **ノーマル / 技術介入Aタイプ**
+- canonical releaseDate: **2015-08-17**
+- ユニバ公式ブログが2015-08-16時点で「明日8月17日全国導入開始」と明記。グリーンべるとの **08-16納品予定** は工程差として分離。
+- BIG: **1/277.7 / 270.8 / 264.3 / 258.0 / 252.1 / 248.2**。
+- REG: **1/420.1 / 381.0 / 348.6 / 321.3 / 292.6 / 264.3**。
+- 合算: **1/167.2 / 158.3 / 150.3 / 143.1 / 135.4 / 128.0**。
+- 通常掲載機械割: **97.3 / 99.7 / 101.9 / 106.3 / 108.8 / 111.2%**。
+- 完全攻略機械割: **99.1 / 101.4 / 103.7 / 106.3 / 108.8 / 111.2%**。通常値と別定義で保持。
+- 50枚ベース: **約34G**。再探索後も比較可能な複数独立ソース照合が弱いため `ANALYSIS_SINGLE`。
+- BIG **最大333枚** / REG **最大111枚**。
+- 天井非搭載。AT/ART/CZ・規定G解除モードなし。有利区間非該当。
 
 ### resetBehavior v0.7
 
-- 設定変更時: **天井リセット / 内部モード再抽選 / 滑走路ステージ**。
-- 純電源OFF→ON: **天井引継ぎ / 内部モード引継ぎ**。ステージは当時資料でも調査中。
-- 設定変更時モード振り分け:
-  - 通常A-D 各5.00%
-  - 通常E-F 各10.00%
-  - 通常G-H 各20.00%
-  - 天国A 17.50% / B 2.25% / C 0.20% / D 0.05%
-- 朝一リセット時 **天国合計20%**。天国なら **32G以内CZ確定**。
-- 通常G/H+天国で **60%が通常G以上**。
-- 朝一数Gの即前兆はリセット前提店舗では天国推測材料。ただし設定変更自体の確定判別とはしない。
-- 本機固有ガックン: `NONE_CONFIRMED_AFTER_RESEARCH`。
-- 有利区間: `NOT_APPLICABLE_5TH_GEN_PRE_5_9`。
+- 天井/規定Gモード/高確AT状態等がない純ノーマルのため、ゲーム数天井リセット・短縮天井・朝一モード優遇は `NOT_APPLICABLE`。
+- 一撃の2015-08-04当時ページは **設定変更時詳細「現在調査中」/ 電源OFF・ON「現在調査中」** と明記。
+- 機種名・型式・メーカー・A PROJECT・サンダーシリーズ名と `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 電断 / ガックン` を組み替えて再探索したが、本機固有のリール初動・表示・純電断契約・ガックンを安全に固定できず `UNVERIFIED_AFTER_RESEARCH` / `NONE_CONFIRMED_AFTER_RESEARCH`。
+- 他のアクロス機のガックン・朝一挙動は流用していない。
+- 公開朝一専用数値: `NONE_APPLICABLE_OR_CONFIRMED`。
 
-## 2015-08-03群監査 — CLOSED_FOR_CURRENT_RESEARCH
+## 2015-08-03群 — CLOSED_FOR_CURRENT_RESEARCH
 
-今回までの処理済み:
-1. **煩悩BREAKER禅** — 山佐 — No.902。
-2. **ガリンポ-30** — エマ — No.903相当（main先行追加を同期）。
-3. **ジャッカスチーム** — 大都技研 — No.904。
-4. **パチスロ ストライクウィッチーズ** — オーイズミ — No.905。
+処理済み最終群:
+1. 煩悩BREAKER禅 — 山佐 — No.902
+2. ガリンポ-30 — エマ — No.903相当
+3. ジャッカスチーム — 大都技研 — No.904
+4. パチスロ ストライクウィッチーズ — オーイズミ — No.905
 
-- 直前handoffで固定されていた08/03残候補3機をすべて処理。
-- さらに `2015年8月3日 / 2015-08-03 / 2015/08/03 + パチスロ / 新台 / 導入`、メーカー名を組み替えて横断検索。
-- 追加でcanonical exact hall-startを2015-08-03に置くべき未登録5号機を今回固定できなかったため、**2015-08-03_GROUP_CLOSED_FOR_CURRENT_RESEARCH** とする。
+- 直前handoffの監査結果をそのまま引き継ぐ。
 
 ## 2015-08-04〜2015-08-16境界 — CLOSED_FOR_CURRENT_RESEARCH
 
-- 2015-08-10を含む期間を「導入/ホール導入開始/新台」で再監査したが、canonical exact hall-startを置くべき未登録5号機を今回固定できなかった。
-- 次の強い具体日付きパチスロ群は **2015-08-17**。
-- アクロス公式系資料は『サンダーVリボルト』を2015-08-17全国導入開始、グリーンべるとは納品2015-08-16予定としており、納品/実導入を分離できる。
-- 高砂電器産業『乙女魂』も2015-08-17導入を複数資料で確認。
+- 直前handoffで全メーカー横断監査済み。
+- 2015-08-16は『サンダーVリボルト』の納品予定日として確認されるが、全国実ホール導入は08-17のため境界へ混入させない。
+
+## 2015-08-17群 — OPEN
+
+今回処理済み:
+1. **サンダーVリボルト** — アクロス — No.906。
+
+強い残候補:
+1. **乙女魂 ～光と無月～** — 高砂電器産業 — 2015-08-17。
+   - KONAMI公式系ブログが2015-08-17より全国ホール登場予定と明記。
+   - HAZUSEも導入開始2015-08-17、型式乙女魂JV / 検定3S0939。
+
+- 08/17群はまだCLOSEDにしない。
+- 『乙女魂』処理後、K-Navi / HAZUSE / 当時新台カレンダー / メーカー・業界記事 / 旧DBで **2015-08-17全メーカー横断再監査**を行ってからのみCLOSED判定する。
 
 ## 次回再開地点
 
-1. **recordCount 905 / chronologicalFrontier 2015-08-03 / 08-03_GROUP_CLOSED_FOR_CURRENT_RESEARCH** から開始。
-2. README / mission v0.7 / INDEX / LATEST_HANDOFF / No.905を再確認。
-3. **2015-08-04〜08-16境界はCLOSED_FOR_CURRENT_RESEARCH**として引継ぎ、2015-08-17群へ進む。
-4. 先頭候補 **アクロス「サンダーVリボルト」** を未登録確認後、技術介入通常/完全攻略機械割を別定義で収集し、resetBehaviorも本機固有資料で調査する。
-5. 続いて **高砂電器産業「乙女魂」** を処理する。
-6. 08/17群は上記だけで閉じず、K-Navi / 当時新台カレンダー / メーカー・業界記事 / 旧DBで全メーカー横断再監査後のみCLOSEDにする。
+1. **recordCount 906 / chronologicalFrontier 2015-08-17 / 08-17_GROUP_OPEN** から開始。
+2. README / mission v0.7 / INDEX / LATEST_HANDOFF / No.906 `2015-08-17_thunder-v-revolt.md` を再確認。
+3. 次の未処理機種は **高砂電器産業「乙女魂 ～光と無月～」**。未登録確認後、性能コア + resetBehavior v0.7を本機固有資料で収集する。
+4. 乙女魂では **ボーナス初当たり表記の資料差**（例: HAZUSE 1/254.2〜1/200.0 と、他資料の初当たり定義）を定義確認し、異なる指標を混ぜない。
+5. 天井は「スケバンバトル&ボーナス間777G」と「ボーナス間1200G」の二系統が当時解析にあるため、設定変更/据え置き/純電断で各カウンタがどう扱われるかを別々に探索する。
+6. 08/17群を全メーカー再監査し、追加未処理機がなければ `2015-08-17_GROUP_CLOSED_FOR_CURRENT_RESEARCH` として次の具体日へ進む。
 7. 遡及resetBehavior QAカーソルは `docs/real_machine_db/machines/2007-03-19_kakumei-senshi-choshu-riki.md` を維持。新規本線を止めない。
 
 ## safeguard
@@ -127,29 +99,21 @@
 
 ## 主要出典 — 取得日 2026-09-07
 
-### ガリンポ-30
-- P-WORLD: https://www.p-world.co.jp/machine/database/7791
-- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/zann_slot/01/h.php
-- pacnk: https://pacnk.com/slot/tools/sh_garinpo.html
-- ALL7 2015年8月: https://www.all7.jp/plans/index/2015/08/10
-
-### ジャッカスチーム
-- K-Navi: https://p-kn.com/slot/2299/
-- グリーンべると: https://web-greenbelt.jp/00007876/
-- P-WORLD: https://www.p-world.co.jp/machine/database/7770
-- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/daitogiken_slot/60/c.php
-- すろぱちくえすと reset: https://www.slopachi-quest.com/article/jackass-team-reset/
-- すろぱちくえすと reset mode: https://www.slopachi-quest.com/article/jackass-team-resetmode/
-
-### パチスロ ストライクウィッチーズ
-- HAZUSE: https://hazuse.com/machine/pachislot/5S0213/
-- グリーンべると: https://web-greenbelt.jp/00007898/
-- ちょんぼりすた: https://chonborista.com/slot/oizumi-slot/9825/
-- すろぱちくえすと reset: https://www.slopachi-quest.com/article/strike-witches-reset/
-- 5号機クロニクル: https://5goki.com/oizumi
-
-### 次群
-- サンダーVリボルト K-Navi: https://p-kn.com/slot/2323/
-- サンダーVリボルト グリーンべると: https://web-greenbelt.jp/00007962/
+### サンダーVリボルト
+- ユニバーサル公式製品一覧: https://www.universal-777.com/product/slot/2015/
 - ユニバ公式全国導入告知: https://ameblo.jp/aruzefreaks/entry-12058430498.html
-- 乙女魂: https://chonborista.com/slot/takasago-slot/11303/
+- グリーンべると: https://web-greenbelt.jp/00007962/
+- HAZUSE: https://hazuse.com/machine/pachislot/5S0424/
+- 一撃: https://1geki.jp/slot/thundervrevolt/
+- 一撃 天井/設定変更: https://1geki.jp/slot/thundervrevolt/3/
+- ちょんぼりすた: https://chonborista.com/slot/universal-slot/10786/
+- K-Navi: https://p-kn.com/slot/2323/
+- K-Navi REG技術介入: https://p-kn.com/slot/2323/55251/
+- 50枚ベース照合候補: https://www.pachislotblog.tokyo/across-series-setteihanbetsu/
+
+### 次候補 — 乙女魂 ～光と無月～
+- KONAMI公式系ブログ: https://www.konami.com/amusement/psm/portal/magihallo/blog_mh/2015/mhs_blog_150728.html
+- HAZUSE: https://hazuse.com/machine/pachislot/SX0054/
+- ちょんぼりすた: https://chonborista.com/slot/takasago-slot/11303/
+- すろぱちくえすと: https://www.slopachi-quest.com/article/otome-soul/
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/takasago_slot/08/a.php
