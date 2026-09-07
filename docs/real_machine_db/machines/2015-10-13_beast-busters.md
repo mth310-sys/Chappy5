@@ -4,7 +4,7 @@ machineName: ビーストバスターズ
 manufacturer: SNKプレイモア
 releaseDate: 2015-10-13
 releaseDatePrecision: exact_hall_start_day_multi_source_with_conflicting_secondary_10_05
- generation: 5号機
+generation: 5号機
 systemType: A+ART / 自力継続型ART + CZ
 formalModelName: ビーストバスターズAE
 inspectionNumber: 5S0596
