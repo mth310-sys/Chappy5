@@ -1,0 +1,46 @@
+name: Godot Slot Pachiro Web
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'godot/slot-pachiro/**'
+      - '.github/workflows/godot-slot-pachiro-web.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: godot-slot-pachiro-web
+  cancel-in-progress: true
+
+jobs:
+  export-web:
+    runs-on: ubuntu-latest
+    container:
+      image: barichello/godot-ci:4.5.1
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Prepare export templates
+        run: |
+          mkdir -p ~/.local/share/godot/export_templates
+          mv /root/.local/share/godot/export_templates/* ~/.local/share/godot/export_templates/ 2>/dev/null || true
+
+      - name: Export Slot Pachiro for Web
+        working-directory: godot/slot-pachiro
+        run: |
+          mkdir -p ../../dist/slot-pachiro-godot
+          godot --headless --path . --export-release Web ../../dist/slot-pachiro-godot/index.html
+
+      - name: Add no-Jekyll marker
+        run: touch dist/.nojekyll
+
+      - name: Publish Godot build to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          keep_files: true
