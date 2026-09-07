@@ -4,53 +4,60 @@
 
 ## 現在地点
 
-- recordCount: **921**
-- latestRecordAdded: **パチスロ クジラッキー**（三洋物産 / SANYO）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2015-10-05_kujilucky.md`
-- chronologicalFrontier: **2015-10-05**
-- frontierLatestMachine: **パチスロ クジラッキー**
-- frontierRecord: `docs/real_machine_db/machines/2015-10-05_kujilucky.md`
+- recordCount: **922**
+- latestRecordAdded: **ビーストバスターズ**（SNKプレイモア）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2015-10-13_beast-busters.md`
+- chronologicalFrontier: **2015-10-13**
+- frontierLatestMachine: **ビーストバスターズ**
+- frontierRecord: `docs/real_machine_db/machines/2015-10-13_beast-busters.md`
 - schema: **resetBehavior v0.7**
-- status: **2015-10-05_GROUP_OPEN_REAUDIT_PENDING**
+- status: **2015-10-13_GROUP_CLOSED_FOR_CURRENT_RESEARCH**
 
 ## 今回の同期 / 正本確認
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、No.920 `2015-10-05_silent-hill.md` を再読。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、No.921 `2015-10-05_kujilucky.md` を再読。
 - INDEXは19件時点の旧集約状態。README規定どおり **LATEST_HANDOFF + 実レコード** を進捗正本として使用。
-- 開始時正本は recordCount 920 / 2015-10-05_GROUP_OPEN。GitHub既存検索でクジラッキー未登録を確認してNo.921を追加。
+- 開始時正本は recordCount 921 / 2015-10-05_GROUP_OPEN_REAUDIT_PENDING。
+- 10/05群と10/06〜10/18境界を再監査したところ、前回handoffが次候補を10/19としていた一方で、**2015-10-13「ビーストバスターズ」**（SNKプレイモア）が未登録と判明。時系列漏れ防止のため10/19へ進まずNo.922として先に追加。
 
-## No.921 — パチスロ クジラッキー
+## No.922 — ビーストバスターズ
 
-- record: `docs/real_machine_db/machines/2015-10-05_kujilucky.md`
-- manufacturer: **三洋物産（SANYO）**
-- releaseDate: **2015-10-05**
-- generation/system: **5号機 AT / セットストック型AT + 周期CZ**
-- formalModelName: **パチスロクジラッキーKF**
-- inspectionNumber: **UNVERIFIED_AFTER_RESEARCH**
+- record: `docs/real_machine_db/machines/2015-10-13_beast-busters.md`
+- manufacturer: **SNKプレイモア**
+- releaseDate canonical: **2015-10-13**
+- generation/system: **5号機 A+ART / 自力継続型ART + CZ**
+- formalModelName: **ビーストバスターズAE**
+- inspectionNumber: **5S0596**
 
 ### performanceCore
 
-- 機械割: **97.38 / 98.54 / 100.07 / 103.38 / 106.64 / 110.82%**。
-- AT初当たり: **1/314.0 / 305.2 / 292.0 / 275.4 / 254.6 / 207.2**。
-- 50枚ベース: **約33G**。
-- AT純増: **約2.8枚/G**。
-- ノリノリラッシュ: **1セット55G**。
-- スーパーノリノリBONUS: **33G / 66G / 99G**。
-- パトチャレンジ: **10G、期待度約34%、最大256G周期**。
-- モード別天井: 通常A/B **1280G**、通常C **960G**、天国 **128G**。到達時AT。
+- 機械割: **97.5 / 99.2 / 100.9 / 105.8 / 110.6 / 114.8%**。
+- ART初当たり: **1/527.7 / 505.2 / 457.0 / 401.3 / 347.5 / 299.4**。
+- ボーナス合算: **1/249.1 / 234.9 / 239.1 / 211.4 / 213.4 / 199.2**。
+- 50枚ベース: **約30G**。
+- ART純増: **約1.4枚/G**。
+- ART「ビーストラッシュ」: **1セット7G+α、初回31G保証、継続率89〜99%**。
+- ボーナス純増: 青7 **304枚** / 赤7 **200枚** / EXTRA SHOCK **108枚** / REG **48枚**。
+- 実質天井: **バレット12個獲得でART確定**（解析上約1200G目安）。固定G数天井とは分離。
 
 ### resetBehavior v0.7
 
-- 設定変更: **天井G RESET / CZまでのG RESET / 内部モード再抽選 / RT状態引継ぎ**。
-- 純電源OFF→ON: **天井G CARRY / CZまでのG CARRY / 内部モードCARRY / RT状態CARRY**。
-- 設定変更後モード（全設定共通）: **通常A 40% / 通常B 20% / 通常C 35% / 天国 5%**。
-- 朝一は通常C比率がAT終了後より優遇されるため、固定短縮天井ではなく **MODE_RESELECTION_BASED_BENEFIT** として保存。
-- 据え置き: 天井/CZ進捗は純電断表と整合し `CARRYOVER_SUPPORTED`。その他内部状態は `UNVERIFIED_AFTER_RESEARCH`。
-- 設定変更判別: 本機固有の即時ガックン/初期出目/ランプ等は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 設定変更: 当時解析に **天井進捗RESET** の直接記載あり。
+- 据え置き: 2-9伝説の宵越し分類では本機は「宵×＝設定変更でリセット」。純電源OFFリセット機は別記号「宵××」のため、設定変更なしなら天井進捗の宵越しを `CARRYOVER_SUPPORTED_BY_YOI_CLASSIFICATION` とした。
+- 純電源OFF→ON: 本機固有の直接比較表は確認できず、上記分類から **CARRYOVER_SUPPORTED_INDIRECT_CLASSIFICATION**。DIRECT扱いにはしていない。
+- バレット個数 / 途中ビーストカウンター / 高確状態を設定変更時に個別にどう初期化するかは、表記揺れ・型式・SNK・設定変更/リセット/朝一/据え置き/電源OFF ON/バレット/ビーストカウンターを組み替えて再探索後も直接固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 設定変更専用の固定短縮天井、朝一専用モード振り分け、CZ/ART優遇率: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 本機固有ガックン/初期出目/ランプ等の変更判別: **NONE_CONFIRMED_AFTER_RESEARCH**。
 - 有利区間: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
 
-## 2015-10-05群 — OPEN_REAUDIT_PENDING
+### conflicts
 
+- 導入日は HAZUSE / パチビー / 2-9伝説等が **2015-10-13**、ちょんぼりすた/すろぱちくえすと旧記事に **2015-10-05**。SNK発表を扱う業界記事は「10月中旬納品予定」。平均せず `RELEASE_DATE_CONFLICT_SECONDARY` として10-05を保持し、具体日複数一致 + 中旬整合から10-13をcanonical。
+- ART継続率はPiDEA Xに89〜98%、グリーンべると/パチマガスロマガ等に89〜99%。多数資料側89〜99%を性能コア採用し98%表記を競合注記。
+
+## 時系列境界監査
+
+### 2015-10-05群
 処理済み:
 1. ルパン三世 ロイヤルロード — No.917
 2. ベヨネッタ — No.918
@@ -58,61 +65,75 @@
 4. サイレントヒル — No.920
 5. クジラッキー — No.921
 
-- 既知の未処理候補クジラッキーは解消。
-- 月間/メーカー系資料を再探索し、次の有力日付として **2015-10-19** の「パチスロ地獄少女」「パチスロ デッドマン・ワンダーランド」を確認。
-- ただし2015-10-05群の全メーカー横断再監査を今回完全には閉じ切っていないため、不用意にCLOSEDへせず `OPEN_REAUDIT_PENDING` を維持。
+- メーカー名・機種名・導入カレンダー系資料で再監査。
+- ビーストバスターズには10/05表記資料があるが、具体日高信頼資料では10/13が優勢のため10/05群には重複登録しない。
+- 追加未登録の10/05確定機を今回固定できず、**2015-10-05_GROUP_CLOSED_FOR_CURRENT_RESEARCH**。
+
+### 2015-10-06〜10-12
+- 日付別・月間新台・メーカー横断で再監査。
+- 未登録の具体日付き5号機を今回固定できず **BOUNDARY_CLOSED_FOR_CURRENT_RESEARCH**。
+
+### 2015-10-13群
+- **ビーストバスターズ**をNo.922として登録。
+- 10/13日付を機種名なし・メーカーなしでも再検索したが、他の未登録パチスロ5号機を今回固定できず **GROUP_CLOSED_FOR_CURRENT_RESEARCH**。
+
+### 2015-10-14〜10-18
+- 各日付・導入日・新台で再監査。
+- パチビーの10/14〜15掲載は既存機種の動画公開日等でありホール導入日と混同しない。
+- 未登録の具体日付き5号機を今回固定できず **BOUNDARY_CLOSED_FOR_CURRENT_RESEARCH**。
 
 ## 遡及 resetBehavior QA
 
-- 既存 `2007-03-19_kakumei-senshi-choshu-riki.md` はすでにv0.7相当のresetBehaviorを保持しているため重複更新しない。
-- 長州力直後の「最初の実resetBehavior未処理レコード」の機械的特定は今回完了できず、QAカーソルを推測で進めていない。
+- 今回は時系列漏れ修正を優先し、retroQaCursorは推測で前進させていない。
 - 既存 `COMPLETE_CORE` は変更なし。
 - retroQaStatus: **CURSOR_RESOLUTION_PENDING / NO_FALSE_PROGRESS**。
 
 ## 次回再開地点
 
-1. **recordCount 921 / chronologicalFrontier 2015-10-05 / 10-05_GROUP_OPEN_REAUDIT_PENDING** から開始。
-2. README / mission v0.7 / INDEX / LATEST_HANDOFF / No.921を再取得。
-3. 2015-10-05群をメーカー横断・当時導入カレンダー・業界資料で再監査し、追加がなければGROUP_CLOSED。
-4. 次時系列候補は **2015-10-19**。現時点確認候補: **パチスロ地獄少女 / パチスロ デッドマン・ワンダーランド**。10/05〜10/18境界を再監査してから先頭未処理へ進む。
-5. 遡及QAは長州力の次の実未処理resetBehaviorレコードをリポジトリ実体から特定して補完。カーソルを推測で飛ばさない。
-6. `COMPLETE_CORE` と `resetBehaviorQA` は別管理を継続。
+1. **recordCount 922 / chronologicalFrontier 2015-10-13 / 10-13_GROUP_CLOSED_FOR_CURRENT_RESEARCH** から開始。
+2. README / mission v0.7 / INDEX / LATEST_HANDOFF / No.922を再取得。
+3. 10/14〜10/18境界を短く再確認し、次の強い導入日 **2015-10-19** へ進む。
+4. 10/19先頭候補: **パチスロ地獄少女（藤商事）**。続いて **パチスロ デッドマン・ワンダーランド（北電子）**。候補だけに限定せず同日全メーカーを再監査。
+5. 10/19群を閉じる前にSTEINS;GATE、機甲戦記ドラグナー等の10月後半機との日付境界を確認し、導入日を発表日/記事日と混同しない。
+6. 遡及QAは長州力の次の実未処理resetBehaviorレコードをリポジトリ実体から特定して補完。カーソルを推測で飛ばさない。
 
 ## safeguard
 
 - INDEXは旧集約状態なので進捗正本にしない。LATEST_HANDOFF + 実レコードを優先。
 - main先行レコードを発見した場合は重複作成しない。
 - 設定変更・据え置き・純電断を自動で同義扱いしない。
+- 「宵×」分類から得られる純電断挙動はDIRECTではなくINDIRECT SUPPORTとして保持。
 - 前作/後継機・同メーカー他機のresetBehaviorを流用しない。
 - 競合値は平均せずCONFLICT/定義差として双方保持。
 - 検定告示 / 発表 / 納品 / 地域先行 / 全国導入を分離する。
 
 ## 主要出典 — 取得日 2026-09-08
 
-### No.921 クジラッキー
-- DMMぱちタウン: https://p-town.dmm.com/machines/2248
-- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sanyo_slot/27/h.php
-- すろぱちくえすと: https://www.slopachi-quest.com/article/kujilucky/
-- すろぱちくえすと reset: https://www.slopachi-quest.com/article/kujilucky-reset/
-- すろぱちくえすとまとめ: https://www.slopachi-quest.com/kisyubetsu/kujilucky/
-- P-WORLD: https://www.p-world.co.jp/machine/database/7813
-- パチビー: https://www.pachibee.jp/movies/index/12102
-- PiDEA X: https://www.pidea.jp/articles/SANYO%E3%80%8C%E6%98%9F%E7%9F%A2%E3%80%8D%E3%80%8C%E3%82%AF%E3%82%B8%E3%83%A9%E3%83%83%E3%82%AD%E3%83%BC%E3%80%8D%E5%90%8C%E6%99%82%E7%99%BA%E8%A1%A8
-- パチマ中古実機: https://www.pachima.com/c/slot/s_28sonota/S00310
+### No.922 ビーストバスターズ
+- SNKプレイモア公式: https://slot.snk-corp.co.jp/
+- PiDEA X: https://www.pidea.jp/articles/SNK%E3%80%8C%E3%83%93%E3%83%BC%E3%82%B9%E3%83%88%E3%83%90%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA%E3%80%8D%E5%B0%82%E7%94%A8%E7%AD%90%E4%BD%93%E3%81%A7%E7%99%BB%E5%A0%B4
+- グリーンべると/P-WORLD: https://news.p-world.co.jp/articles/7727/greenbelt
+- HAZUSE: https://hazuse.com/machine/pachislot/5S0596/
+- パチビー: https://www.pachibee.jp/movies/index/12113
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/snk_slot/51/a.php
+- P-WORLD: https://www.p-world.co.jp/machine/database/7821
+- ちょんぼりすた: https://chonborista.com/slot/snk/11910/
+- 2-9伝説 個別: https://2-9densetsu.com/beastbasters/
+- 2-9伝説 天井一覧: https://2-9densetsu.com/blog-entry-311-html/
+- 楽スロ: https://rakuslo.com/beastbusters-bonus.html
 
 ### 次時系列候補
-- K-Navi デッドマン・ワンダーランド: https://p-kn.com/slot/2345/
-- ちょんぼりすた 地獄少女: https://chonborista.com/slot/fuji-slot/11673/
+- 地獄少女: https://chonborista.com/slot/fuji-slot/11673/
+- デッドマン・ワンダーランド: https://p-kn.com/slot/2345/
 
 ## confidence
 
-- exactReleaseDate: ANALYSIS_HIGH_MULTI_SOURCE
+- exactReleaseDate: CONFLICT_WITH_CANONICAL_ANALYSIS_HIGH_MULTI_SOURCE_2015_10_13
 - performanceCore: ANALYSIS_HIGH_MULTI_SOURCE
-- normalCeiling: ANALYSIS_HIGH_MULTI_SOURCE
-- settingChangeGameCounterReset: ANALYSIS_HIGH_DIRECT
-- purePowerCycleBehavior: ANALYSIS_HIGH_DIRECT
-- settingChangeModeReselection: ANALYSIS_HIGH_DIRECT
-- resetModeNumericData: ANALYSIS_HIGH_PUBLISHED_NUMERIC
+- settingChangeCeilingProgressReset: ANALYSIS_HIGH_DIRECT_STATEMENT
+- carryOverBehavior: ANALYSIS_SUPPORTING_YOI_CLASSIFICATION
+- purePowerCycleBehavior: ANALYSIS_SUPPORTING_INDIRECT_NOT_DIRECT
+- resetModeNumericData: NONE_CONFIRMED_AFTER_RESEARCH
 - resetDetection: NONE_CONFIRMED_AFTER_RESEARCH
 - advantageousSectionReset: NOT_APPLICABLE
 - retroQaCursor: CURSOR_RESOLUTION_PENDING
