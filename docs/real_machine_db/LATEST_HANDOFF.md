@@ -4,77 +4,77 @@
 
 ## 現在地点
 
-- recordCount: **876**
-- latestRecordAdded: **パチスロコブラ**（SNKプレイモア）
-- latestRecord: `docs/real_machine_db/machines/2015-03-16_pachislot-cobra.md`
+- recordCount: **877**
+- latestRecordAdded: **BLACK LAGOON2**（スパイキー）
+- latestRecord: `docs/real_machine_db/machines/2015-03-16_black-lagoon2.md`
 - chronologicalFrontier: **2015-03-16**
-- frontierLatestMachine: **パチスロコブラ**（SNKプレイモア）
+- frontierLatestMachine: **BLACK LAGOON2**（スパイキー）
 - schema: **resetBehavior v0.7**
 - status: **2015-03-16_GROUP_OPEN**
 
 ## 今回の同期 / 正本確認
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、本 `LATEST_HANDOFF.md`、No.875 `2015-03-09_trad480.md` を再読。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、本 `LATEST_HANDOFF.md`、No.876 `2015-03-16_pachislot-cobra.md` を再読。
 - INDEXは旧集約状態のためREADME規定どおり **LATEST_HANDOFF + 実レコード** を進捗正本として使用。
-- 作業開始時正本は **875件 / chronologicalFrontier 2015-03-09 / 03-09_GROUP_CLOSED_FOR_CURRENT_RESEARCH**。
-- 2015-03-10〜03-15境界を再探索し、今回具体日付きの未処理5号機を安全に固定できなかったため `CLOSED_FOR_CURRENT_RESEARCH`。
-- 次アンカー2015-03-16の **パチスロコブラ** をNo.876として追加。
-- SNK公式、HAZUSE、K-Navi、パチマガスロマガ、P-WORLD、パチビー、すろぱちくえすと、pacnkを横断。
+- 作業開始時正本は **876件 / chronologicalFrontier 2015-03-16 / 03-16_GROUP_OPEN**。
+- handoff指定の次未処理 **BLACK LAGOON2（スパイキー）** をNo.877として追加。
+- グリーンべると、P-WORLD、K-Navi、必勝本、pachinavi、pacnk、CrankySeven、2-9伝説、サミーネットワークス等を横断。
 
-## No.876 — パチスロコブラ
+## No.877 — BLACK LAGOON2
 
-- record: `docs/real_machine_db/machines/2015-03-16_pachislot-cobra.md`
-- manufacturer: **SNKプレイモア**
+- record: `docs/real_machine_db/machines/2015-03-16_black-lagoon2.md`
+- manufacturer: **スパイキー**
 - releaseDate canonical: **2015-03-16**
-- modelName: **パチスロコブラAB**
-- inspectionNumber: **3S0862**
+- modelName: **ブラックラグーン2CC**
+- inspectionNumber: **4S0542**
 - systemType: **5号機 A+ART / CZ搭載**
 
 ### 性能コア
 
-- 機械割: **97.2 / 99.0 / 100.3 / 104.7 / 109.3 / 114.8%**。
-- BIG: **1/422.8 / 414.7 / 402.0 / 394.8 / 381.0 / 368.1**。
-- REG: **1/642.5 / 618.2 / 595.7 / 574.8 / 546.1 / 524.2**。
-- ART初当たり: **1/449.2 / 415.7 / 408.4 / 343.3 / 314.3 / 257.1**。
-- CZ初当たり: **1/690.83 / 632.68 / 635.86 / 556.10 / 555.34 / 468.34**。
-- 50枚ベース: **約31G**。
+- 機械割: **97.0 / 98.7 / 100.7 / 104.8 / 108.0 / 112.1%**。
+- BIG合成: **1/385.5 / 376.6 / 368.2 / 360.1 / 352.3 / 344.9**。
+- REG: **1/555.4 / 537.2 / 520.1 / 504.1 / 461.5 / 448.9**。
+- ART初当たり: **1/596.0 / 553.3 / 531.3 / 477.0 / 437.5 / 370.1**。
+- ボーナス合算: **1/227.6 / 221.4 / 215.6 / 210.1 / 199.8 / 195.1**。
+- 50枚ベース: `UNVERIFIED_AFTER_RESEARCH`。後継機値を転記しない。
 - ART純増: **約1.6枚/G**。
-- BIG約204枚 / REG約36枚 / PREMIUM BONUS約36枚。
-- ART「BIG BANG RUSH」: **50G or 315G**。
-- 通常天井: **ボーナス間1315G**。ARTを挟んでもボーナス間天井Gはリセットされない。
+- SUPER BIG/BIG約150枚、REG約50枚。
+- ART「LAGOON RUSH」: **50G+α**。
+- 通常天井: **ボーナス間1280G**。ART当選だけでは天井Gをリセットしない。
 
 ### resetBehavior v0.7
 
-- 設定変更時は通常1315G天井進捗をリセットし、**100G / 500G / 1315G** のリセット専用天井を再選択。
-- 設定1・2: **100G 6.0% / 500G 20.0% / 1315G 74.0%**。
-- 設定3・4: **100G 7.5% / 500G 20.0% / 1315G 72.5%**。
-- 設定5・6: **100G 10.0% / 500G 20.0% / 1315G 70.0%**。
-- 設定変更後500G以内天井選択率: **26.0% / 27.5% / 30.0%**（設定1-2 / 3-4 / 5-6）。
+- 設定変更時は **ボーナス間1280G天井Gをリセット**。
+- リセット後の天井短縮は `NONE_CONFIRMED_AFTER_RESEARCH`。通常1280Gのまま。
+- 必勝本解析で **Bullet BATTLE内部ランクがART終了時・BB失敗時・設定変更時に移行抽選**されることを確認。設定変更でBBランク再抽選。
+- 設定変更時の通常内部状態初期振り分け: `UNVERIFIED_AFTER_RESEARCH`。
+- 据え置き跨ぎの天井G/状態/BBランク保持契約: `UNVERIFIED_AFTER_RESEARCH`。
+- 純電源OFF→ON: `UNVERIFIED_AFTER_RESEARCH`。
 - 有利区間: `NOT_APPLICABLE_5TH_GEN_PRE_5_9`。
-- 据え置き跨ぎの天井G契約、純電源OFF→ON、設定変更時内部状態、ガックン等は検索語・資料系統を変えた再探索後も本機固有直接資料を固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- ガックン・初期出目・ステージ等の本機固有変更判別: `UNVERIFIED_AFTER_RESEARCH`。
+- 比較可能な公開朝一数値: `NONE_CONFIRMED_AFTER_RESEARCH`。
 
 ## conflicts
 
-- 導入日はK-Navi・HAZUSE・パチ7・パチビーが **2015-03-16** で一致。SNK公式も2015年3月稼働予定。
-- 一部後年まとめに **2015-03-02** 表記があるが、多数の機種別資料と不一致のため低信頼競合としてレコード内に保持しcanonicalへ採用しない。
+- **導入時期**: P-WORLD型式欄には **2014-09**、パチ7一部ページには **2014-10-06** が残る。一方、グリーンべるとは2015-01-20に「販売を延期していた」本機について **2015年3月中旬から納品開始予定**と当時報道し、複数機種DBが **2015-03-16**導入で一致。延期前販売計画と延期後実導入の差と判断し、canonicalは2015-03-16、旧日付は履歴競合として保持。
 
 ## 2015-03-16群 — OPEN
 
 処理済み:
 
 - パチスロコブラ — SNKプレイモア — **No.876**
+- BLACK LAGOON2 — スパイキー — **No.877**
 
 同日未処理の強い候補:
 
-- **BLACK LAGOON2 / パチスロ ブラックラグーン2** — スパイキー — 2015-03-16。複数機種資料で一致。
-- **麻雀物語3 役満乱舞の究極大戦** — オリンピア — 2015-03-16候補。次回、具体日と既存登録有無をmainで再確認して重複回避する。
+- **麻雀物語3 役満乱舞の究極大戦** — オリンピア — **2015-03-16**。K-NaviとHAZUSEが具体日一致、PiDEA/P-WORLD業界記事は3月15日納品予定。GitHub mainコード検索では既存レコード未確認。
 
 ## 次回再開地点
 
-1. **recordCount 876 / chronologicalFrontier 2015-03-16 / 03-16_GROUP_OPEN** から開始。
-2. 最新mainの README / mission / INDEX / LATEST_HANDOFF / No.876を再確認。
-3. 03/16同日群の既存レコードを検索し、未登録なら **BLACK LAGOON2（スパイキー）** を次に処理する。
-4. 続いて麻雀物語3など03/16同日群を全メーカー横断で監査し、群をCLOSEDにしてから次日へ進む。
+1. **recordCount 877 / chronologicalFrontier 2015-03-16 / 03-16_GROUP_OPEN** から開始。
+2. 最新mainの README / mission / INDEX / LATEST_HANDOFF / No.877を再確認。
+3. 03/16同日群の既存レコードを再検索し、未登録なら **麻雀物語3 役満乱舞の究極大戦（オリンピア）** を次に処理する。
+4. その後03/16同日群をメーカー横断で最終監査し、漏れがなければ `CLOSED_FOR_CURRENT_RESEARCH` として次日へ進む。
 5. 欠損は表記揺れ・型式・メーカー名・設定変更/据え置き/純電断/天井/モード/ガックン等へ検索語を変え、公式・業界一次・当時解析・古いDB・アーカイブ・回顧資料を横断後だけ `UNVERIFIED_AFTER_RESEARCH`。
 6. 遡及resetBehavior QAカーソルは `docs/real_machine_db/machines/2007-03-19_kakumei-senshi-choshu-riki.md` を維持。新規本線を止めない。
 
@@ -85,19 +85,23 @@
 - 据え置き・純電断挙動は一般的な5号機慣例から推定しない。
 - `UNVERIFIED_AFTER_RESEARCH` は検索語・資料系統を変えた再探索後だけ使用する。
 - 同名シリーズ・兄弟機・後継機のリセット契約を転記しない。
+- BLACK LAGOON3/4/ZEROのRT・有利区間・電断情報をBLACK LAGOON2へ混入させない。
 - 2015-06-08到達時の **吉宗～極～（ヨシムネH2A4 / 3S1093）** 正式量産版処理注意を維持。
 
 ## 主要出典 — 取得日 2026-09-07
 
-### パチスロコブラ
-- SNKプレイモア公式: https://slot.snk-corp.co.jp/official/cobra/
-- HAZUSE: https://hazuse.com/machine/pachislot/3S0862/
-- K-Navi: https://p-kn.com/slot/2207/
-- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/snk_slot/49/snk_slot_49.php
-- P-WORLD: https://www.p-world.co.jp/machine/database/7637
-- パチビー: https://www.pachibee.jp/machines/lecture/215020002
-- すろぱちくえすと: https://www.slopachi-quest.com/article/cobra/
-- pacnk: https://pacnk.com/slot/tools/sh_cobra2015.html
+### BLACK LAGOON2
+- グリーンべると: https://web-greenbelt.jp/00007515/
+- P-WORLD: https://www.p-world.co.jp/machine/database/7498
+- pachinavi: https://pachinavi.net/machines/black-lagoon-2/
+- K-Navi: https://p-kn.com/slot/2118/
+- 必勝本: https://p.hisshobon.jp/machine/2546/1/51940
+- CrankySeven: https://crankyseven.com/blacklagoon-two-pc.htm
+- 2-9伝説: https://29den.com/blacklagoon2/
+- pacnk: https://pacnk.com/slot/tools/sh_blacklagoon2.html
+- サミーネットワークス: https://www.sammy-net.jp/news/2015/11/black-lagoon2777townnet.html
 
 ### 次候補 / 境界
-- BLACK LAGOON2: https://pachinavi.net/machines/black-lagoon-2/
+- K-Navi 麻雀物語3: https://p-kn.com/slot/2214/
+- HAZUSE 麻雀物語3: https://hazuse.com/machine/pachislot/4S1092/
+- PiDEA/P-WORLD業界記事: https://news.p-world.co.jp/articles/7145
