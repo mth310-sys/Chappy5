@@ -17,30 +17,37 @@ concurrency:
 
 jobs:
   export-web:
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     container:
       image: barichello/godot-ci:4.5.1
     steps:
-      - name: Checkout
+      - name: Checkout main
         uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Prepare export templates
         run: |
           mkdir -p ~/.local/share/godot/export_templates
           mv /root/.local/share/godot/export_templates/* ~/.local/share/godot/export_templates/ 2>/dev/null || true
 
-      - name: Export Slot Pachiro for Web
+      - name: Export Slot Pachiro directly into main Pages tree
         working-directory: godot/slot-pachiro
         run: |
-          mkdir -p ../../dist/slot-pachiro-godot
-          godot --headless --path . --export-release Web ../../dist/slot-pachiro-godot/index.html
+          rm -rf ../../slot-pachiro-godot
+          mkdir -p ../../slot-pachiro-godot
+          godot --headless --path . --export-release Web ../../slot-pachiro-godot/index.html
 
-      - name: Add no-Jekyll marker
-        run: touch dist/.nojekyll
-
-      - name: Publish Godot build to gh-pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          keep_files: true
+      - name: Commit generated Web build to main
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f slot-pachiro-godot
+          if git diff --cached --quiet; then
+            echo "Godot Web build is already current."
+          else
+            git commit -m "build: publish Slot Pachiro Godot Web"
+            git push origin HEAD:main
+          fi
