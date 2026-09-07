@@ -4,81 +4,92 @@
 
 ## 現在地点
 
-- recordCount: **911**
-- latestRecordAdded: **パチスロ聖闘士星矢-女神聖戦-**（三洋物産 / SANYO）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2015-09-07_saint-seiya-megami-seisen.md`
-- chronologicalFrontier: **2015-09-07**
-- frontierLatestMachine: **パチスロ聖闘士星矢-女神聖戦-**
-- frontierRecord: `docs/real_machine_db/machines/2015-09-07_saint-seiya-megami-seisen.md`
+- recordCount: **912**
+- latestRecordAdded: **キングジャック**（アクロス / ACROSS）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2015-09-14_king-jack.md`
+- chronologicalFrontier: **2015-09-14**
+- frontierLatestMachine: **キングジャック**
+- frontierRecord: `docs/real_machine_db/machines/2015-09-14_king-jack.md`
 - schema: **resetBehavior v0.7**
-- status: **2015-09-07_GROUP_CLOSED_FOR_CURRENT_RESEARCH**
+- status: **2015-09-14_GROUP_OPEN**
 
 ## 今回の同期 / 正本確認
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、No.910 `2015-09-07_hokuto-no-ken-tomo.md` を再読。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、No.911 `2015-09-07_saint-seiya-megami-seisen.md` を再読。
 - INDEXは19件時点の旧集約状態のため、README規定どおり **LATEST_HANDOFF + 実レコード** を進捗正本として使用。
-- 作業開始時handoffは **910件 / 2015-09-07 / 09-07_GROUP_OPEN**。
-- 前リレーの次の未処理機種「パチスロ聖闘士星矢-女神聖戦-」を調査しNo.911として追加。
-- 2015-09-07同日群を導入日一覧、業界/当時解析、機種DBで再監査し、No.910「パチスロ北斗の拳 強敵」とNo.911以外に全国実ホール導入日を09-07として具体日固定できる未登録5号機を今回追加発見できなかったため、**2015-09-07_GROUP_CLOSED_FOR_CURRENT_RESEARCH** とした。
+- 作業開始時handoffは **911件 / 2015-09-07 / 09-07_GROUP_CLOSED_FOR_CURRENT_RESEARCH**。
+- **2015-09-08～09-13境界**を日付別に「パチスロ / 導入 / 新台」等で監査。業界記事・発表会等は確認したが、全国実ホール導入日をこの境界内の具体日として固定できる未登録5号機を今回追加発見できず、`2015-09-08_TO_09-13_CLOSED_FOR_CURRENT_RESEARCH` とした。
+- 次の強い既知候補だった2015-09-14 アクロス「キングジャック」をNo.912として追加。
+- 09-14群にはパイオニア **「ハナハナホウオウ-30」** が同日導入として複数資料で確認できるため、群は **OPEN** のまま。
 
-## No.911 — パチスロ聖闘士星矢-女神聖戦-
+## No.912 — キングジャック
 
-- record: `docs/real_machine_db/machines/2015-09-07_saint-seiya-megami-seisen.md`
-- manufacturer: **三洋物産 / SANYO**
-- formalModelName: **パチスロ聖闘士星矢女神聖戦KD**
-- inspectionNumber: **5S0239**
-- systemType: **5号機 A+ART / ボーナス+ART / 技術介入要素あり**
-- canonical releaseDate: **2015-09-07**
-- K-Navi当時内覧会記事、HAZUSE、パチビーで09-07導入を照合。
-- 市場/通常手順機械割 canonical: **97.0 / 98.8 / 100.0 / 102.8 / 105.2 / 109.0%**。
-- 別資料は **96.9 / 98.7 / 99.9 / 102.8 / 105.1 / 109.0%**。平均せず `STANDARD_PAYOUT_ROUNDING_CONFLICT` として保持。
-- 完全攻略時機械割は別定義として **102.8 / 105.7 / 107.9 / 110.3 / 111.4 / 115.4%**。
-- BIG: **1/407.1 → 1/372.4**、REG: **1/662.0 → 1/546.1**、ART初当たり: **1/593.3 → 1/360.5**。
-- 50枚ベース: **約32G**。
-- ART「女神聖戦」: **1セット50G+α / 約1.5枚/G**。
-- BIG約**204枚**、REG約**48枚**。
-- 通常天井: **ボーナス間1180G → ART当選**。ART当選だけではボーナス間天井カウンタをリセットしない。
+- record: `docs/real_machine_db/machines/2015-09-14_king-jack.md`
+- manufacturer: **アクロス / ACROSS**
+- formalModelName: **キングジャックGK**
+- inspectionNumber: **UNVERIFIED_AFTER_RESEARCH**
+- systemType: **5号機 ノーマル / Aタイプ**
+- canonical releaseDate: **2015-09-14**
+- ユニバーサル公式で2015年9月発売、当時解析・年次新台一覧で09-14導入を照合。
+- 1999年岡崎産業「キングジャック」と混同しない。2015年機は岡崎産業×アクロスのコラボ第2弾。
+
+### performanceCore
+
+- 機械割（パチマガスロマガ独自調査シミュレート）: **97.03 / 98.18 / 100.20 / 102.61 / 106.01 / 108.78%**。
+- BIG: **1/287.4 / 1/282.5 / 1/273.1 / 1/260.1 / 1/248.2 / 1/240.9**。
+- REG: **1/496.5 / 1/468.1 / 1/431.2 / 1/409.6 / 1/372.4 / 1/356.2**。
+- 合算: **1/182.0 / 1/176.2 / 1/167.2 / 1/159.1 / 1/148.9 / 1/143.7**。P-WORLDでも合算一致。
+- 50枚ベース: **約35G**。
+- BIG: **312枚**、REG: **130枚**。
+- AT/ART/CZ: **非搭載**。
+- ゲーム数天井: **非搭載**。
 
 ### resetBehavior v0.7
 
-- 設定変更: **ボーナス間1180G天井RESET / 内部モード再抽選**。
-- 据え置き: **ボーナス間天井進捗CARRYOVER**として宵越し対象。
-- 純電源OFF→ON: 当時の設定変更/電源ON-OFF対照表で **天井G数CARRYOVER / 内部モードCARRYOVER**。
-- 朝一ステージ: 設定変更・電源ON-OFFとも **星矢ステージ**。ステージ単独では変更判別不可。
-- リセット専用短縮天井: **NONE_CONFIRMED_AFTER_RESEARCH**。設定変更後も1180Gを0から再カウント。
-- 通常時ART抽選状態: **低確 / 高確 / 天国 / 超天国**。
-- 設定変更時専用の初期モード振り分け: **UNVERIFIED_AFTER_RESEARCH**。
-- RT状態等の設定変更/純電断別の独立契約: **UNVERIFIED_AFTER_RESEARCH**。通常時内部構造から推測転記しない。
-- 朝一専用の保証CZ・当選率・高モード率等: **NONE_CONFIRMED_AFTER_RESEARCH / UNVERIFIED_AFTER_RESEARCH**。
-- 朝一不利: 設定変更で前日のボーナス間天井ハマリ進捗を消失。
-- 本機固有ガックン: 表記・型式・設定変更/リセット/朝一/据え置き/電源ON-OFF等で再探索したが信頼できる直接資料を固定できず **NONE_CONFIRMED_AFTER_RESEARCH**。
-- 有利区間: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
+- 設定変更: ゲーム数天井・AT/ART/CZモード非搭載のため、天井短縮/モード再抽選は **NOT_APPLICABLE**。
+- 据え置き: 天井進捗の据え置き契約は **NOT_APPLICABLE_NO_GAME_CEILING**。
+- 純電源OFF→ON: 本機固有に保持/初期化される朝一要素を直接比較した公開資料は、表記揺れ・型式・メーカーと検索語を変えた再探索後も固定できず **UNVERIFIED_AFTER_RESEARCH**。
+- gameCounterReset: **NOT_APPLICABLE_NO_GAME_CEILING**。
+- ceilingAfterReset: **NONE / NOT_APPLICABLE**。
+- modeAfterReset: **NOT_APPLICABLE**。
+- stateAfterReset: 朝一客行動へ影響する設定変更専用内部状態は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
+- resetBenefits: 短縮天井・保証CZ・高確スタート等 **NONE_CONFIRMED_AFTER_RESEARCH / NOT_APPLICABLE**。
+- resetPenalties: 前日天井進捗消失等 **NOT_APPLICABLE**。
+- resetDetection: 本機固有の確定的ガックン・初期出目・ランプ等は信頼できる直接資料を固定できず **NONE_CONFIRMED_AFTER_RESEARCH**。他アクロス機の挙動を流用しない。
+- numericResetData: 公開朝一当選率・設定変更恩恵発生率 **NONE_CONFIRMED_AFTER_RESEARCH**。
 
-## conflicts / definition separation
+## conflicts / quality notes
 
-1. `STANDARD_PAYOUT_ROUNDING_CONFLICT`
-   - HAZUSE / 5号機クロニクル: **97.0 / 98.8 / 100.0 / 102.8 / 105.2 / 109.0%**。
-   - ちょんぼりすた系: **96.9 / 98.7 / 99.9 / 102.8 / 105.1 / 109.0%**。
-   - 平均せず双方保持。
-2. `FULL攻略_IS_SEPARATE_DEFINITION_NOT_CONFLICT`
-   - **102.8 / 105.7 / 107.9 / 110.3 / 111.4 / 115.4%**は技術介入前提の完全攻略値であり、通常手順機械割と統合しない。
+- 性能コアに平均化すべき数値CONFLICTは今回確認なし。後年資料の97.0 / 98.2 / 100.2 / 102.6 / 106.0 / 108.8%は精密値の丸め系列として扱う。
+- 5号機クロニクルの検索スニペットにはメーカー/ゲーム性/獲得枚数の明確な誤記混入が見られたため、その説明部分はcanonical根拠から除外。機械割の丸め照合用途に限定する。
+- 検定番号は「キングジャックGK / キングジャックＧＫ / アクロス / 検定番号 / 公安委員会 / 第5S」等で再探索したが安全に固定できず `UNVERIFIED_AFTER_RESEARCH`。
 
-## 2015-09-07群 — CLOSED_FOR_CURRENT_RESEARCH
+## 2015-09-08～09-13境界 — CLOSED_FOR_CURRENT_RESEARCH
+
+- 日付別に監査し、全国実ホール導入日を09-08～09-13の具体日として固定できる未登録5号機を今回追加発見できず。
+- 発表日・記事投稿日・プレス発表会日を実ホール導入日へ誤変換しない。
+
+## 2015-09-14群 — OPEN
 
 処理済み:
-1. **パチスロ北斗の拳 強敵** — サミー — No.910。
-2. **パチスロ聖闘士星矢-女神聖戦-** — 三洋物産 — No.911。
+1. **キングジャック** — アクロス — No.912。
 
-- 同日を全メーカー横断で再監査し、今回追加で全国実ホール導入日09-07を具体日固定できる未登録5号機を確認できなかったためCLOSED。
+強い未処理候補:
+1. **ハナハナホウオウ-30** — パイオニア。
+   - K-Navi: ホール導入開始 **2015-09-14**。
+   - 当時解析/年次新台一覧でも09-14一致。
+   - 次回は正式型式・検定、設定別BB/RB/合算/機械割、約36.5G/50枚、BIG/REG獲得、resetBehavior v0.7を30Φ本機固有資料で調査する。
+
+- 09-14群は候補だけで閉じず、ハナハナホウオウ-30処理後に全メーカー横断で再監査する。
 
 ## 次回再開地点
 
-1. **recordCount 911 / chronologicalFrontier 2015-09-07 / 09-07_GROUP_CLOSED_FOR_CURRENT_RESEARCH** から開始。
-2. README / mission v0.7 / INDEX / LATEST_HANDOFF / No.911を再確認。
-3. **2015-09-08～2015-09-13境界を飛ばさず監査**し、具体日付きの未登録5号機があれば先に処理する。
-4. 境界に追加がなければ、強い既知候補 **2015-09-14 アクロス「キングジャック」** の導入日を公式・業界・当時解析で再照合し、性能コア + resetBehavior v0.7を収集する。
-5. 09-14群も候補だけで閉じず、処理後に全メーカー横断監査する。
-6. 遡及resetBehavior QAカーソルは `docs/real_machine_db/machines/2007-03-19_kakumei-senshi-choshu-riki.md` を維持。新規本線を止めない。
+1. **recordCount 912 / chronologicalFrontier 2015-09-14 / 09-14_GROUP_OPEN** から開始。
+2. README / mission v0.7 / INDEX / LATEST_HANDOFF / No.912を再確認。
+3. 次の未処理機種 **2015-09-14 パイオニア「ハナハナホウオウ-30」** を処理。
+4. 同日群を全メーカー横断で再監査し、他の具体日付き未登録5号機があれば順に処理。追加なしを確認してから09-14群をCLOSEDにする。
+5. 遡及resetBehavior QAカーソルは `docs/real_machine_db/machines/2007-03-19_kakumei-senshi-choshu-riki.md` を維持。新規本線を止めない。
 
 ## safeguard
 
@@ -86,30 +97,36 @@
 - main先行レコードを発見した場合は重複作成せずhandoffを同期する。
 - 設定変更・据え置き・純電断を自動で同義扱いしない。
 - 通常遊技中の保持情報を営業日跨ぎ契約へ無条件転記しない。
-- 前作/後継機のresetBehaviorを流用しない。
+- 前作/後継機・同メーカー他機のresetBehaviorを流用しない。
 - 競合資料は平均・恣意的統合せずCONFLICTとして保持。
 - 検定告示 / 発表 / 納品 / 導入予定 / 地域先行 / 全国実ホール導入を分離する。
 - 朝一設定推測数値と設定変更判別を混同しない。
 
 ## 主要出典 — 取得日 2026-09-07
 
-### No.911 パチスロ聖闘士星矢-女神聖戦-
-- K-Navi 内覧会速報: https://p-kn.com/topics/exhibition/1381/
-- HAZUSE: https://hazuse.com/machine/pachislot/5S0239/
-- パチビー: https://www.pachibee.jp/machines/lecture/215070009
-- パチマガスロマガ 機種概要: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sanyo_slot/26/sanyo_slot_26.php
-- パチマガスロマガ 概要: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sanyo_slot/26/a.php
-- パチマガスロマガ ART「女神聖戦」: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sanyo_slot/26/03.php
-- ちょんぼりすた: https://chonborista.com/slot/sanyo-slot/10433/
-- すろぱちくえすと: https://www.slopachi-quest.com/article/seintoseiya-atenaseisen/
-- 5号機クロニクル 三洋物産: https://5goki.com/sanyo
+### No.912 キングジャック
+- ユニバーサルエンターテインメント公式: https://www.universal-777.com/product/slot/king_jack/
+- ユニバーサル2015年製品一覧: https://www.universal-777.com/product/slot/2015/
+- パチマガスロマガ ボーナス確率: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/across_slot/08/h-2.php
+- パチマガスロマガ 機種概要: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/across_slot/08/a.php
+- P-WORLD: https://www.p-world.co.jp/machine/database/7824
+- ちょんぼりすた: https://chonborista.com/slot/acros-slot/11784/
+- 中古実機 中一商事: https://item.rakuten.co.jp/auc-nakaiti/kigu/
+- 2015年導入スロット新台一覧: https://slotnews777.blog.fc2.com/blog-entry-2348.html
+
+### 次回候補 ハナハナホウオウ-30
+- K-Navi: https://p-kn.com/slot/2333/
+- イチカツ: https://ichikatsu.com/hanahanahouoh/
+- 2015年導入スロット新台一覧: https://slotnews777.blog.fc2.com/blog-entry-2348.html
 
 ## confidence
 
-- identity/release: INDUSTRY_ANALYSIS_HIGH_MULTI_SOURCE
-- performanceCore: ANALYSIS_HIGH_MULTI_SOURCE
-- standardPayout: CONFLICT_ROUNDING_WITH_MULTI_SOURCE_CANONICAL
-- full攻略Payout: ANALYSIS_HIGH_MULTI_SOURCE_SEPARATE_DEFINITION
-- resetBehavior ceiling/mode/powerCycle: ANALYSIS_HIGH
-- resetSpecificNumericBenefits: UNVERIFIED_AFTER_RESEARCH
+- identity/manufacturer/month: OFFICIAL
+- exactReleaseDate: ANALYSIS_HIGH_MULTI_SOURCE
+- formalModelName: MULTI_SOURCE_SECONDARY
+- inspectionNumber: UNVERIFIED_AFTER_RESEARCH
+- performanceCore: ANALYSIS_HIGH_WITH_MULTI_SOURCE_CROSSCHECK
+- baseGamesPer50: ANALYSIS_SINGLE
+- resetBehaviorApplicability: HIGH_BY_SYSTEM_TYPE_AND_NO_CEILING
+- resetSpecificBehavior: NONE_CONFIRMED_AFTER_RESEARCH / UNVERIFIED_AFTER_RESEARCH_FOR_POWER_CYCLE
 - resetDetectionGakkun: NONE_CONFIRMED_AFTER_RESEARCH
