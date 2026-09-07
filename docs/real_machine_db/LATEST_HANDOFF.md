@@ -3,128 +3,114 @@
 更新日: 2026-09-08
 
 ## 現在地点
-- recordCount: **940**
-- latestRecordAdded: **スーパーブラックジャック2**（ネット）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2015-11-16_super-blackjack2.md`
+- recordCount: **941**
+- latestRecordAdded: **パチスロ銀と金2**（タイヨーエレック）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2015-11-16_pachislot-gin-to-kin2.md`
 - chronologicalFrontier: **2015-11-16**
-- frontierLatestMachine: **スーパーブラックジャック2**
+- frontierLatestMachine: **パチスロ銀と金2**
 - schema: **resetBehavior v0.7**
-- status: **2015-11-16_GROUP_OPEN**
+- status: **2015-11-16_GROUP_CLOSED_FOR_CURRENT_RESEARCH**
 
 ## 今回の同期 / 正本確認
-- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、No.939 `2015-11-16_pachislot-aa-megamisama.md` を再取得。
+- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、No.940 `2015-11-16_super-blackjack2.md` を再取得。
 - INDEXは19件時点の旧集約なのでREADME規定どおり **LATEST_HANDOFF + 実レコード** を進捗正本として使用。
-- 開始時正本 recordCount **939** / chronologicalFrontier **2015-11-16** / 11-16群OPEN。
-- GitHub検索で既存レコードがないことを確認し、handoff指定の次未処理 **スーパーブラックジャック2** をNo.940として追加。
+- 開始時正本 recordCount **940** / chronologicalFrontier **2015-11-16** / 11-16群OPEN。
+- handoff指定の次未処理 **パチスロ銀と金2** を既存パス不存在確認後、No.941として追加。
 
-## No.940 — スーパーブラックジャック2
-- record: `docs/real_machine_db/machines/2015-11-16_super-blackjack2.md`
-- manufacturer: **ネット（NET CORPORATION）**
+## No.941 — パチスロ銀と金2
+- record: `docs/real_machine_db/machines/2015-11-16_pachislot-gin-to-kin2.md`
+- manufacturer: **タイヨーエレック**
 - releaseDate: **2015-11-16**
-- formalModelName: **スーパーブラックジャック2NG**
-- inspectionNumber: **5S0900**
-- generation/system: **5号機 / A+ART / リアルボーナス＋疑似ボーナスストック＋ART**
+- formalModelName: **パチスロ銀と金2ZA**
+- inspectionNumber: **5S0539**
+- generation/system: **5号機 / A+ART / 周期シナリオ管理**
 
 ### performanceCore
-- 機械割: **97.1 / 98.6 / 99.9 / 102.8 / 108.7 / 119.9%**。
-- ボーナス合算: **1/111 / 105 / 99 / 89 / 70 / 49**。
-- ART「ストックタイム」初当たり: **1/1585 / 1421 / 1270 / 1068 / 748 / 445**。
-- 50枚ベース: **約35.6G**（別資料約36Gは丸め差）。
-- ART純増: **約1.7枚/G**。
-- Real BIG約236枚 / Real REG約88枚 / Rio BIG約120枚 / Rio REG約60枚。
-- ARTストックタイム: **1セット50G**。
-- 通常ゲーム数天井: **ボーナス後777G → Rioボーナス**。
-- スイカ回数天井は「10回成立時100%」と「11回成立」の資料表現差があり **CONFLICT** として分離。
+- 機械割: **97.0 / 98.5 / 101.1 / 103.6 / 106.5 / 110.2%**。
+- BIG: **全設定1/809.1**。
+- ART初当たり: **1/412.1 / 381.9 / 332.9 / 295.1 / 266.2 / 242.8**。
+- 50枚ベース: **34.73〜35.03G**。約34.8G/約35.0G表記は丸め差。
+- ART「ヘルエッジロード」: **約1.6枚/G / 初期50G+α**。
+- BIG: **312枚**。
+- 通常天井: **12周期消化後の13周期目でART当選**。実ゲーム数目安約1060〜1100G。
+- BIG成立で周期天井がリセットされる実挙動報告を当時解析で確認。
 
 ### resetBehavior v0.7
-- 設定変更時: **抽選モードRESELECT / ゲーム数モードは専用モードC / 疑似ボーナスストックRESELECT**。
-- 設定変更時抽選モード: **通常1 58% / 通常2 25% / 高確15% / SP高確2%**。
-- 設定変更時ストック個数: **0個20% / 1個60% / 2個20%**。
-- 設定変更時ストック種別: **ST1.2 / 赤7 5.5 / 緑7 21.3 / 黄7 18.5 / 白7 9.5 / REG44.0%**。
-- 電源OFF→ONのみ: **抽選モードCARRYOVER / ゲーム数モードCARRYOVER / ストックCARRYOVER**。
-- 設定変更時/純電断時の **天井までのゲーム数、初期ステージは当時直接資料でも調査中**。RESET/CARRYOVERを推測せずUNVERIFIED_AFTER_RESEARCH。
-- 据え置きのみを純電断と独立比較した契約はUNVERIFIED_AFTER_RESEARCH。
+- 当時系解析DBに本機専用「リセット・設定変更」ページが存在することまでは確認。
+- ただし専用本文が現存キャッシュから復元できず、設定変更時の周期数・シナリオ・内部状態の具体契約を直接固定できなかった。
+- 機種名表記揺れ、型式`パチスロ銀と金2ZA`、タイヨーエレック、設定変更/リセット/朝一/据え置き/電源OFF ON/天井/周期/シナリオ/ガックンを組み替え、公式系・業界記事・当時解析・旧DB・後年回顧を横断後のみ `UNVERIFIED_AFTER_RESEARCH` とした。
+- settingChange game counter: **UNVERIFIED_AFTER_RESEARCH**。
+- carryOver game counter/scenario/state: **UNVERIFIED_AFTER_RESEARCH**。
+- purePowerCycle game counter/scenario/state: **UNVERIFIED_AFTER_RESEARCH**。
+- reset-specific shortened ceiling/mode distribution/benefit rate: **NONE_CONFIRMED_AFTER_RESEARCH**。
 - resetDetection: **NONE_CONFIRMED_AFTER_RESEARCH**。
 - advantageousSectionReset: `NOT_APPLICABLE_5TH_GEN_PRE_5_9`。
+- 一般的な5号機や同メーカー別機種の挙動は流用していない。
 
-### 朝一公開数値
-専用モードCの規定G数解除率:
-- 33G: 3.0〜12.0%
-- 77G: 20.0〜33.4%
-- 111G: 3.0〜12.0%
-- 222G: 6.0〜25.0%
-- 333G: 20.0〜33.4%
-- 444G: 3.0〜12.0%
-- 555G: 6.0〜25.0%
-- 666G: 3.0〜12.0%
-- 777G: 100% / ceiling
-
-## 2015-11-16群 — OPEN
+## 2015-11-16群 — CLOSED_FOR_CURRENT_RESEARCH
 処理済み:
 1. パチスロ鬼武者3 時空天翔 — No.937
 2. パチスロ ゴッドイーター 荒神Ver. — No.938
 3. パチスロ ああっ女神さまっ — No.939
 4. スーパーブラックジャック2 — No.940
+5. パチスロ銀と金2 — No.941
 
-次未処理強候補:
-1. **パチスロ銀と金2**（タイヨーエレック）
+同日監査:
+- スロパチクエストの2015年導入日順一覧は11/16群を上記5機種として掲載。
+- man-soft新台/天井一覧でも11/16導入として鬼武者3・銀と金2・ゴッドイーター荒神Ver.・SBJ2・ああっ女神さまっを確認。
+- K-Navi/PiDEA/P-WORLD等で銀と金2の2015-11-16を個別照合。
+- 今回の横断検索で11/16付の追加未登録5号機を具体的に固定できなかったため、現時点で群CLOSED。
 
-確認事項:
-- K-Navi/スロパチクエストは銀と金2のホール導入開始を **2015-11-16** としている。
-- PiDEAの2015-10-31機械選定記事は **納品11/16〜** と記載。一方、別PiDEA内覧会記事には納品11/1予定という事前予定情報もあるため、最終導入日は後発の実導入DBを優先しつつ、納品予定の変遷は定義差として扱う。
-- 銀と金2登録後も候補だけに限定せず、11/16同日を全メーカー横断で再監査してからCLOSED判定する。
+## 次の時系列境界
+- 次の強候補は **デビルマン3-悪魔ノ黙示録-**（エレコ）。
+- スロパチクエスト導入日順一覧は **2015-11-23**、man-soft天井一覧は **2015-11-24** とするため、次回は11/17〜11/22境界監査後、11/23・11/24の導入日定義を当時業界/メーカー/ホールDBで照合してから登録する。
+- 候補だけに限定せず11/23〜11/24同日帯を全メーカー横断で監査する。
 
 ## 遡及 resetBehavior QA
 - retroQaScanConfirmedThrough: **2005-12_haisai-shiohime.md**
 - retroQaNextInspection: **2005-12_dokonjo-gaeru-s.md**
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**
-
-### 今回QA — はいさい潮姫
-- レコード `2005-12_haisai-shiohime.md` を再探索・更新。
-- メーカー公式、P-WORLD旧DB/掲示板、後年回顧、2005-12-20当時実戦回顧まで資料系統を拡張。
-- 設定変更/据え置き/純電源OFF→ONの本機固有直接契約、ガックン等の変更判別は追加固定できず、`PARTIAL_RESEARCH_EXHAUSTED` として明示。
-- 通常時ゲーム数天井は確認されないため天井ゲーム数処理はNOT_APPLICABLE相当。
-- 既存 `coreStatus: PARTIAL` は性能コア欠損に由来するため変更していない。
+- 今回は本線No.941の調査と11/16群クローズを優先し、遡及QA地点は変更していない。
 
 ## 次回再開地点
-1. **recordCount 940 / chronologicalFrontier 2015-11-16 / 11/16群OPEN** から開始。
-2. README / mission v0.7 / INDEX / LATEST_HANDOFF / No.940を再取得。
-3. 本線は **2015-11-16 パチスロ銀と金2（タイヨーエレック）** を次未処理として、既存レコード重複を確認後、性能コア + resetBehavior v0.7で登録。
-4. 銀と金2登録後、11/16同日全メーカーを横断監査し、漏れがない場合のみCLOSED。
-5. 遡及QAは `2005-12_dokonjo-gaeru-s.md` から継続。既にPARTIAL resetBehaviorを持つため、当時業界/解析/旧DB/アーカイブを再探索し、追加直接根拠がなければ探索済み状態を記録して次へ進む。
-6. 欠損は表記揺れ・型式・メーカー・設定変更/据え置き/電源OFF ON/天井/モード/ガックン等へ検索語を変更し、公式・業界・当時解析・古DB・アーカイブ・回顧資料まで再探索後のみUNVERIFIED。
-7. 競合は平均せずCONFLICT/定義差として双方保存。
-8. 全変更後、mainから新規レコード・QAレコード・LATEST_HANDOFFを再取得して保存検証する。
+1. **recordCount 941 / chronologicalFrontier 2015-11-16 / 11/16群CLOSED** から開始。
+2. README / mission v0.7 / INDEX / LATEST_HANDOFF / No.941を再取得。
+3. **2015-11-17〜11-22** の未登録5号機境界監査。
+4. 次候補 **デビルマン3-悪魔ノ黙示録-** の11/23 vs 11/24導入日差を一次/当時資料で解消またはCONFLICT保持し、性能コア + resetBehavior v0.7で登録。
+5. 11/23〜11/24帯を全メーカー横断監査し、漏れがない場合のみ次境界へ進む。
+6. 遡及QAは `2005-12_dokonjo-gaeru-s.md` から継続。
+7. 欠損は表記揺れ・型式・メーカー・設定変更/据え置き/電源OFF ON/天井/モード/ガックン等へ検索語変更し、公式・業界・当時解析・古DB・アーカイブ・回顧資料まで再探索後のみUNVERIFIED。
+8. 競合は平均せずCONFLICT/定義差として双方保存。
+9. 全変更後、mainから新規レコード・LATEST_HANDOFFを再取得して保存検証する。
 
 ## safeguard
 - INDEXは旧集約状態なので進捗正本にしない。LATEST_HANDOFF + 実レコードを優先。
 - main先行レコードを発見した場合は重複作成しない。
 - 設定変更・据え置き・純電断を自動で同義扱いしない。
 - 前作/後継機・同メーカー他機のresetBehaviorを流用しない。
-- 専用ゲーム数モードと天井ゲーム数カウンタを混同しない。
-- 当時資料が「調査中」と明記するreset項目は推測で埋めない。
+- 周期シナリオ天井と実ゲーム数目安を混同しない。
+- 取得不能な専用リセットページの内容を推測復元しない。
 
 ## 主要出典 — 取得日 2026-09-08
-### No.940 スーパーブラックジャック2
-- NET公式: https://www.net-fun.co.jp/app/1439
-- ハズセ: https://hazuse.com/machine/pachislot/5S0900/genre/209/
-- man-soft: https://smaslo.man-soft.com/slot-kaiseki/superblackjack2.html
-- ちょんぼりすた: https://chonborista.com/slot/net-slot/12276/
-- スロパチクエスト: https://www.slopachi-quest.com/article/super-black-jack2/
-- アタリ7: https://www.atari7.com/slot/date1444095081.php
-
-### QA はいさい潮姫
-- ユニバーサル公式: https://www.universal-777.com/product/slot/shiohime/
-- P-WORLD: https://www.p-world.co.jp/machine/database/4059
-- 2005年当時実戦回顧: https://plaza.rakuten.co.jp/sukisukiyamasa/diary/200512200001/
+### No.941 パチスロ銀と金2
+- K-Navi: https://p-kn.com/slot/2359/
+- PiDEA: https://www.pidea.jp/articles/%E4%B8%89%E6%9C%A8%E6%B5%81%E3%80%8C%E3%83%91%E3%83%81%E3%82%B9%E3%83%AD%E9%8A%80%E3%81%A8%E9%87%912%E3%81%AE%E8%A9%95%E4%BE%A1%E3%81%AF%EF%BC%9F%E3%80%8D%20
+- P-WORLD: https://www.p-world.co.jp/machine/database/7850
+- p-media: https://p-media.info/%E3%82%BF%E3%82%A4%E3%83%A8%E3%83%BC%E3%82%A8%E3%83%AC%E3%83%83%E3%82%AF%E3%81%8B%E3%82%892%E6%A9%9F%E7%A8%AE%E6%A4%9C%E5%AE%9A%E9%80%9A%E9%81%8E%EF%BC%8F%E3%80%8C%E9%BE%8D%E3%81%8C%E5%A6%82%E3%81%8F/
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/taiyoelec_slot/20/a.php
+- パチマガスロマガ小役/50枚: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/taiyoelec_slot/20/c.php
+- スロパチクエスト: https://www.slopachi-quest.com/article/gin-kin2/
+- pacnk: https://pacnk.com/slot/tools/sh_kintogin2.html
+- man-softリセット一覧: https://smaslo.man-soft.com/slot-reset/
+- man-soft天井一覧: https://smaslo.man-soft.com/slot-tenzyou-itiran/
+- ちょんぼりすた: https://chonborista.com/slot/taiyo-slot/13285/
 
 ## confidence
-- No.940 exactReleaseDate: ANALYSIS_HIGH_MULTI_SOURCE_PLUS_MANUFACTURER_ANNOUNCEMENT
-- No.940 formalModelName/inspectionNumber: ANALYSIS_HIGH_PERIOD_DB
-- No.940 performanceCore: ANALYSIS_HIGH_MULTI_SOURCE
-- No.940 resetModeState: ANALYSIS_HIGH_DIRECT_NUMERIC_MULTI_SOURCE
-- No.940 resetStock: ANALYSIS_HIGH_DIRECT_NUMERIC_MULTI_SOURCE
-- No.940 purePowerCycleModeStock: ANALYSIS_HIGH_DIRECT_COMPARISON
-- No.940 resetGameCounter: UNVERIFIED_AFTER_RESEARCH_PERIOD_SOURCE_INVESTIGATION
-- No.940 resetDetection: NONE_CONFIRMED_AFTER_RESEARCH
-- Haisai resetBehavior: PARTIAL_RESEARCH_EXHAUSTED
+- No.941 exactReleaseDate: ANALYSIS_HIGH_MULTI_SOURCE_PLUS_PERIOD_INDUSTRY
+- No.941 formalModelName/inspectionNumber: INDUSTRY_DB_HIGH
+- No.941 performanceCore: ANALYSIS_HIGH_MULTI_SOURCE
+- No.941 normalCeiling: ANALYSIS_HIGH_MULTI_SOURCE
+- No.941 resetGameCounter: UNVERIFIED_AFTER_RESEARCH
+- No.941 resetModeState: UNVERIFIED_AFTER_RESEARCH
+- No.941 purePowerCycle: UNVERIFIED_AFTER_RESEARCH
+- No.941 resetDetection: NONE_CONFIRMED_AFTER_RESEARCH
