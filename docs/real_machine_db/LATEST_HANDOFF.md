@@ -4,136 +4,115 @@
 
 ## 現在地点
 
-- recordCount: **920**
-- latestRecordAdded: **サイレントヒル**（TAKASAGO / 高砂電器産業）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2015-10-05_silent-hill.md`
+- recordCount: **921**
+- latestRecordAdded: **パチスロ クジラッキー**（三洋物産 / SANYO）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2015-10-05_kujilucky.md`
 - chronologicalFrontier: **2015-10-05**
-- frontierLatestMachine: **サイレントヒル**
-- frontierRecord: `docs/real_machine_db/machines/2015-10-05_silent-hill.md`
+- frontierLatestMachine: **パチスロ クジラッキー**
+- frontierRecord: `docs/real_machine_db/machines/2015-10-05_kujilucky.md`
 - schema: **resetBehavior v0.7**
-- status: **2015-10-05_GROUP_OPEN**
+- status: **2015-10-05_GROUP_OPEN_REAUDIT_PENDING**
 
 ## 今回の同期 / 正本確認
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、No.919 `2015-10-05_z-gold-infinity.md` を再読。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、No.920 `2015-10-05_silent-hill.md` を再読。
 - INDEXは19件時点の旧集約状態。README規定どおり **LATEST_HANDOFF + 実レコード** を進捗正本として使用。
-- 開始時の正本は recordCount 919 / 2015-10-05_GROUP_OPEN。前チャットの915地点には戻らず、HANDOFF指定の次未処理「サイレントヒル」へ継続。
-- GitHub既存検索でサイレントヒルの未登録を確認。
-- 書き込み直前にLATEST_HANDOFFを再取得し、recordCount 919のままで同期競合がないことを確認してNo.920を追加。
+- 開始時正本は recordCount 920 / 2015-10-05_GROUP_OPEN。GitHub既存検索でクジラッキー未登録を確認してNo.921を追加。
 
-## No.920 — サイレントヒル
+## No.921 — パチスロ クジラッキー
 
-- record: `docs/real_machine_db/machines/2015-10-05_silent-hill.md`
-- manufacturer: **TAKASAGO（高砂電器産業） / KPE・高砂販売**
+- record: `docs/real_machine_db/machines/2015-10-05_kujilucky.md`
+- manufacturer: **三洋物産（SANYO）**
 - releaseDate: **2015-10-05**
-- generation/system: **5号機 AT / 擬似ボーナス+ゲーム数上乗せAT / スラッシュAT**
-- formalModelName: **サイレントヒルCP**
-- inspectionNumber: **5S0444**
+- generation/system: **5号機 AT / セットストック型AT + 周期CZ**
+- formalModelName: **パチスロクジラッキーKF**
+- inspectionNumber: **UNVERIFIED_AFTER_RESEARCH**
 
 ### performanceCore
 
-- 機械割: **96.5 / 97.5 / 99.1 / 101.8 / 105.0 / 110.7%**。
-- BIG: **1/433.9 / 409.7 / 392.5 / 385.2 / 363.1 / 355.4**。
-- REG: **1/750.2 / 700.3 / 672.3 / 652.8 / 612.5 / 595.0**。
-- 擬似ボーナス合算: **1/274.9 / 258.5 / 247.8 / 242.3 / 228.0 / 222.5**。
-- AT初当たり: **1/702.8 / 654.4 / 612.7 / 589.2 / 548.7 / 529.3**。
-- ボーナス+AT初当たり合成: **1/197.6 / 185.3 / 176.5 / 171.7 / 161.1 / 156.7**。
-- 50枚ベース: **約36.5G**（通常のBAR付近狙い前提）。
-- AT純増: **約3.0枚/G**。
-- NIGHTMARE RUSH: **50G+α**。
-- BIG/SUPER BIG: **約100枚**、REG: **約50枚**。
-- 通常天井: **ベルこぼし559回**（通常手順時、約1000G目安）で擬似ボーナス。
-- 天国/超天国: **ベルこぼし1〜54回**（通常手順時、約100G以内目安）。
-- スラッシュATのためBAR付近を狙わずベルを取得すると内部天井カウントが進まず、液晶/外部G数と内部進捗が乖離し得る点を性能上の重要注意として保存。
+- 機械割: **97.38 / 98.54 / 100.07 / 103.38 / 106.64 / 110.82%**。
+- AT初当たり: **1/314.0 / 305.2 / 292.0 / 275.4 / 254.6 / 207.2**。
+- 50枚ベース: **約33G**。
+- AT純増: **約2.8枚/G**。
+- ノリノリラッシュ: **1セット55G**。
+- スーパーノリノリBONUS: **33G / 66G / 99G**。
+- パトチャレンジ: **10G、期待度約34%、最大256G周期**。
+- モード別天井: 通常A/B **1280G**、通常C **960G**、天国 **128G**。到達時AT。
 
 ### resetBehavior v0.7
 
-- 設定変更時: **通常時モード再抽選あり**。
-- 設定変更時モード振り分けは資料競合。平均せず `CONFLICT_RESET_MODE_DISTRIBUTION` として保存。
-  - HAZUSE: 設定1 85/15、2 77.5/22.5、3 85/15、4 75/25、5 85/15、6 75/25%（通常/天国）。
-  - すろぱちくえすと: 設定1 87.5/12.5、2 75/25、3 87.5/12.5、4 75/25、5 87.5/12.5、6 66.7/33.3%。
-- 設定変更時ベルこぼし天井カウンタRESET/CARRY: **UNVERIFIED_AFTER_RESEARCH**。
-- 据え置き時の天井進捗・モード・内部状態: **UNVERIFIED_AFTER_RESEARCH**。
-- 純電源OFF→ON時の天井進捗・モード・状態・表示: **UNVERIFIED_AFTER_RESEARCH**。
-- 設定変更専用固定短縮天井: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- 朝一恩恵: モード再抽選で天国に入ればベルこぼし1〜54回の早いボーナス天井契約になる。固定短縮天井とは分離。
-- 本機固有ガックン/初期出目/ステージ等の高信頼変更判別: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 設定変更: **天井G RESET / CZまでのG RESET / 内部モード再抽選 / RT状態引継ぎ**。
+- 純電源OFF→ON: **天井G CARRY / CZまでのG CARRY / 内部モードCARRY / RT状態CARRY**。
+- 設定変更後モード（全設定共通）: **通常A 40% / 通常B 20% / 通常C 35% / 天国 5%**。
+- 朝一は通常C比率がAT終了後より優遇されるため、固定短縮天井ではなく **MODE_RESELECTION_BASED_BENEFIT** として保存。
+- 据え置き: 天井/CZ進捗は純電断表と整合し `CARRYOVER_SUPPORTED`。その他内部状態は `UNVERIFIED_AFTER_RESEARCH`。
+- 設定変更判別: 本機固有の即時ガックン/初期出目/ランプ等は **NONE_CONFIRMED_AFTER_RESEARCH**。
 - 有利区間: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
 
-### conflicts
-
-- `CONFLICT_RESET_MODE_DISTRIBUTION`: HAZUSE vs すろぱちくえすと。設定4のみ一致、他設定は数値差。平均化していない。
-- `INITIAL_HIT_DEFINITION_SEPARATION`: AT初当たりとボーナス+AT初当たり合成は別定義として分離。
-
-## 2015-10-05群 — OPEN
+## 2015-10-05群 — OPEN_REAUDIT_PENDING
 
 処理済み:
-1. **パチスロ ルパン三世 ロイヤルロード～金海に染まる黄金神殿～** — オリンピア / 平和 — No.917。
-2. **パチスロ ベヨネッタ** — Sammy — No.918。
-3. **Zゴールド・インフィニティ** — NET — No.919。
-4. **サイレントヒル** — TAKASAGO — No.920。
+1. ルパン三世 ロイヤルロード — No.917
+2. ベヨネッタ — No.918
+3. Zゴールド・インフィニティ — No.919
+4. サイレントヒル — No.920
+5. クジラッキー — No.921
 
-既知未処理候補:
-5. **パチスロ クジラッキー** — 三洋物産。
+- 既知の未処理候補クジラッキーは解消。
+- 月間/メーカー系資料を再探索し、次の有力日付として **2015-10-19** の「パチスロ地獄少女」「パチスロ デッドマン・ワンダーランド」を確認。
+- ただし2015-10-05群の全メーカー横断再監査を今回完全には閉じ切っていないため、不用意にCLOSEDへせず `OPEN_REAUDIT_PENDING` を維持。
 
-- クジラッキーはパチビー/DMMで **2015-10-05導入**を確認済み。
-- PiDEA Xの2015-08-10業界発表で三洋の新機種として存在確認済み。
-- 同日群は未処理候補が残るため **OPEN**。
+## 遡及 resetBehavior QA
+
+- 既存 `2007-03-19_kakumei-senshi-choshu-riki.md` はすでにv0.7相当のresetBehaviorを保持しているため重複更新しない。
+- 長州力直後の「最初の実resetBehavior未処理レコード」の機械的特定は今回完了できず、QAカーソルを推測で進めていない。
+- 既存 `COMPLETE_CORE` は変更なし。
+- retroQaStatus: **CURSOR_RESOLUTION_PENDING / NO_FALSE_PROGRESS**。
 
 ## 次回再開地点
 
-1. **recordCount 920 / chronologicalFrontier 2015-10-05 / 10-05_GROUP_OPEN** から開始。
-2. README / mission v0.7 / INDEX / LATEST_HANDOFF / No.920を再確認。
-3. 次の未処理候補 **「パチスロ クジラッキー」** を既存レコード検索後に処理する。
-4. クジラッキーは既に当時解析で、設定変更時「天井リセット・内部モード再抽選」、電源ON/OFF「天井引継ぎ・内部モード引継ぎ」、RT状態は双方引継ぎ、という直接比較テーブルの存在を確認済み。次回は性能コアと設定変更後モード数値まで複数ソース照合する。
-5. クジラッキー処理後、2015-10-05群を全メーカー横断で再監査し、追加がなければGROUP_CLOSEDへ進む。
-6. resetBehaviorは設定変更・据え置き・純電断を分離し、欠損は表記揺れ/型式/メーカー/シリーズ名と検索語・資料系統変更後のみUNVERIFIEDとする。
-7. 遡及resetBehavior QAカーソルは新規本線を止めず、既存未QAレコード探索を継続する。
+1. **recordCount 921 / chronologicalFrontier 2015-10-05 / 10-05_GROUP_OPEN_REAUDIT_PENDING** から開始。
+2. README / mission v0.7 / INDEX / LATEST_HANDOFF / No.921を再取得。
+3. 2015-10-05群をメーカー横断・当時導入カレンダー・業界資料で再監査し、追加がなければGROUP_CLOSED。
+4. 次時系列候補は **2015-10-19**。現時点確認候補: **パチスロ地獄少女 / パチスロ デッドマン・ワンダーランド**。10/05〜10/18境界を再監査してから先頭未処理へ進む。
+5. 遡及QAは長州力の次の実未処理resetBehaviorレコードをリポジトリ実体から特定して補完。カーソルを推測で飛ばさない。
+6. `COMPLETE_CORE` と `resetBehaviorQA` は別管理を継続。
 
 ## safeguard
 
 - INDEXは旧集約状態なので進捗正本にしない。LATEST_HANDOFF + 実レコードを優先。
 - main先行レコードを発見した場合は重複作成しない。
-- `COMPLETE_CORE` と `resetBehaviorQA` を別管理する。
 - 設定変更・据え置き・純電断を自動で同義扱いしない。
 - 前作/後継機・同メーカー他機のresetBehaviorを流用しない。
-- 競合値は平均せず `CONFLICT` / 定義差として双方保持。
+- 競合値は平均せずCONFLICT/定義差として双方保持。
 - 検定告示 / 発表 / 納品 / 地域先行 / 全国導入を分離する。
 
 ## 主要出典 — 取得日 2026-09-08
 
-### No.920 サイレントヒル
-- KONAMI機種アーカイブ: https://www.konami.com/amusement/psm/archive/ps/2015/silenthill/
-- KONAMI関連公式ブログ: https://www.konami.com/amusement/psm/portal/magihallo/blog_mh/2015/mhs_blog_150825.html
-- PiDEA X: https://www.pidea.jp/articles/%E9%AB%98%E7%A0%82%E3%80%8C%E3%82%B5%E3%82%A4%E3%83%AC%E3%83%B3%E3%83%88%E3%83%92%E3%83%AB%E3%80%8D%E9%83%BD%E5%86%85%E5%BB%83%E7%97%85%E9%99%A2%E3%81%A7%E7%99%BA%E8%A1%A8
-- K-Navi: https://p-kn.com/slot/2324/
-- HAZUSE: https://hazuse.com/machine/pachislot/5S0444/
-- パチトラ: https://p-tora.com/i4479a6/
-- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/takasago_slot/10/a.php
-- パチマガスロマガ ベース: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/takasago_slot/10/c.php
-- すろぱちくえすと: https://www.slopachi-quest.com/article/silenthill/
-- すろぱちくえすと モード: https://www.slopachi-quest.com/article/silenthill-mode/
-- 期待値見える化: https://slotjin.com/zone/silenthill/
-- ちょんぼりすた: https://chonborista.com/slot/kpe-slot/11554/comment-page-2/
-
-### 次候補 クジラッキー 事前固定
-- PiDEA X発表: https://www.pidea.jp/articles/SANYO%E3%80%8C%E6%98%9F%E7%9F%A2%E3%80%8D%E3%80%8C%E3%82%AF%E3%82%B8%E3%83%A9%E3%83%83%E3%82%AD%E3%83%BC%E3%80%8D%E5%90%8C%E6%99%82%E7%99%BA%E8%A1%A8
-- パチビー: https://www.pachibee.jp/movies/index/12102
+### No.921 クジラッキー
 - DMMぱちタウン: https://p-town.dmm.com/machines/2248
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sanyo_slot/27/h.php
+- すろぱちくえすと: https://www.slopachi-quest.com/article/kujilucky/
 - すろぱちくえすと reset: https://www.slopachi-quest.com/article/kujilucky-reset/
+- すろぱちくえすとまとめ: https://www.slopachi-quest.com/kisyubetsu/kujilucky/
+- P-WORLD: https://www.p-world.co.jp/machine/database/7813
+- パチビー: https://www.pachibee.jp/movies/index/12102
+- PiDEA X: https://www.pidea.jp/articles/SANYO%E3%80%8C%E6%98%9F%E7%9F%A2%E3%80%8D%E3%80%8C%E3%82%AF%E3%82%B8%E3%83%A9%E3%83%83%E3%82%AD%E3%83%BC%E3%80%8D%E5%90%8C%E6%99%82%E7%99%BA%E8%A1%A8
+- パチマ中古実機: https://www.pachima.com/c/slot/s_28sonota/S00310
+
+### 次時系列候補
+- K-Navi デッドマン・ワンダーランド: https://p-kn.com/slot/2345/
+- ちょんぼりすた 地獄少女: https://chonborista.com/slot/fuji-slot/11673/
 
 ## confidence
 
 - exactReleaseDate: ANALYSIS_HIGH_MULTI_SOURCE
-- manufacturer/system: OFFICIAL_INDUSTRY_HIGH
-- formalModelName/inspectionNumber: ANALYSIS_HIGH
 - performanceCore: ANALYSIS_HIGH_MULTI_SOURCE
-- baseGamesPer50: ANALYSIS_HIGH_MULTI_SOURCE
 - normalCeiling: ANALYSIS_HIGH_MULTI_SOURCE
-- settingChangeModeReselection: ANALYSIS_HIGH
-- resetModeNumericData: CONFLICT
-- settingChangeGameCounterReset: UNVERIFIED_AFTER_RESEARCH
-- carryOverBehavior: UNVERIFIED_AFTER_RESEARCH
-- purePowerCycleBehavior: UNVERIFIED_AFTER_RESEARCH
-- advantageousSectionReset: NOT_APPLICABLE
+- settingChangeGameCounterReset: ANALYSIS_HIGH_DIRECT
+- purePowerCycleBehavior: ANALYSIS_HIGH_DIRECT
+- settingChangeModeReselection: ANALYSIS_HIGH_DIRECT
+- resetModeNumericData: ANALYSIS_HIGH_PUBLISHED_NUMERIC
 - resetDetection: NONE_CONFIRMED_AFTER_RESEARCH
+- advantageousSectionReset: NOT_APPLICABLE
+- retroQaCursor: CURSOR_RESOLUTION_PENDING
