@@ -1,0 +1,22 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>1-bit Mask Character Test</title><style>body{margin:0;background:#ead7ad;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif;text-align:center;color:#33291f}h2{margin:18px 0 4px}.note{font-size:12px;margin-bottom:12px}.stage{display:flex;justify-content:center;gap:22px;align-items:end;padding:24px}.card{background:#fff7e7;border:2px solid #8b6a48;border-radius:10px;padding:12px}canvas{image-rendering:pixelated;width:192px;height:192px;background:#f2dfb7}.small{width:48px;height:48px}.buttons{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:8px 12px 24px}button{font-size:16px;padding:8px 14px}</style></head><body><h2>1-bitレイヤーマスク キャラクター試験</h2><div class="note">PNG不使用 / 0・1配列をCanvasへリアルタイム描画</div><div class="stage"><div class="card"><canvas id="big" width="192" height="192"></canvas><div>192px表示</div></div><div class="card"><canvas id="small" class="small" width="48" height="48"></canvas><div>48px表示</div></div></div><div class="buttons"><button data-face="normal">通常</button><button data-face="smile">笑顔</button><button data-face="surprise">驚き</button><button id="walk">歩行ON/OFF</button></div><script>
+const W=48,H=48,S=4;let face='normal',walk=false,t=0;
+const mask=()=>Array.from({length:H},()=>Array(W).fill(0));
+function fill(m,x0,y0,x1,y1){for(let y=Math.max(0,y0);y<=Math.min(H-1,y1);y++)for(let x=Math.max(0,x0);x<=Math.min(W-1,x1);x++)m[y][x]=1}
+function ellipse(m,cx,cy,rx,ry){for(let y=0;y<H;y++)for(let x=0;x<W;x++)if(((x-cx)/rx)**2+((y-cy)/ry)**2<=1)m[y][x]=1}
+function make(){const o=mask(),hair=mask(),skin=mask(),shirt=mask(),coat=mask(),pants=mask(),shoe=mask(),features=mask();
+// slim 4.5-head student silhouette
+ellipse(o,24,9,7,7);ellipse(skin,24,10,5,5);ellipse(hair,24,7,7,5);fill(hair,18,6,30,9);fill(hair,19,4,22,6);fill(hair,24,3,27,6);fill(hair,28,5,31,8);
+// neck + narrow torso
+fill(skin,23,15,25,17);fill(o,18,16,30,30);fill(coat,19,17,29,29);fill(shirt,23,17,25,27);
+// arms: hands end around upper thigh
+fill(o,16,18,18,29);fill(o,30,18,32,29);fill(coat,17,19,18,27);fill(coat,30,19,31,27);fill(skin,17,28,18,29);fill(skin,30,28,31,29);
+// long legs
+const step=walk?(t%2?2:-2):0;fill(o,20,29,24,43);fill(o,25,29,29,43);fill(pants,21,30,23,42);fill(pants,26,30,28,42);fill(shoe,19+step,42,23+step,44);fill(shoe,26-step,42,30-step,44);
+// face masks
+if(face==='normal'){fill(features,21,9,21,10);fill(features,27,9,27,10);fill(features,23,13,25,13)}
+if(face==='smile'){fill(features,21,9,21,10);fill(features,27,9,27,10);fill(features,22,12,22,12);fill(features,23,13,25,13);fill(features,26,12,26,12)}
+if(face==='surprise'){fill(features,21,9,22,10);fill(features,27,9,28,10);fill(features,24,12,24,14)}
+return [[o,'#201915'],[hair,'#573a2c'],[skin,'#efb68e'],[coat,'#9d3548'],[shirt,'#f4eee5'],[pants,'#263b50'],[shoe,'#17191c'],[features,'#211916']];}
+function draw(canvas,scale){const c=canvas.getContext('2d');c.clearRect(0,0,canvas.width,canvas.height);c.imageSmoothingEnabled=false;for(const [m,color] of make()){c.fillStyle=color;for(let y=0;y<H;y++)for(let x=0;x<W;x++)if(m[y][x])c.fillRect(x*scale,y*scale,scale,scale)}}
+function render(){draw(big,S);draw(small,1)}render();document.querySelectorAll('[data-face]').forEach(b=>b.onclick=()=>{face=b.dataset.face;render()});walkBtn=document.getElementById('walk');walkBtn.onclick=()=>{walk=!walk;render()};setInterval(()=>{if(walk){t++;render()}},220);
+</script></body></html>
