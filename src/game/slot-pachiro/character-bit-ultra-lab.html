@@ -1,50 +1,45 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>大学生風 Reference Rebuild</title><style>body{margin:0;background:#15202a;color:#eef4f8;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif}header{padding:16px;background:#223445}h1{font-size:19px;margin:0 0 4px}.sub{font-size:11px;color:#bdd0dc}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px;padding:12px}.card{background:#f6efe4;color:#29231e;border-radius:10px;padding:10px}.card h2{font-size:14px;margin:0 0 4px}.stage{height:260px;display:flex;align-items:center;justify-content:center;background:#efdbb4;border-radius:7px}.stage canvas{width:230px;height:230px;image-rendering:auto}.meta{font-size:11px;line-height:1.5;margin-top:7px}.badge{display:inline-block;background:#2d526f;color:#fff;padding:2px 6px;border-radius:8px;margin-right:4px}</style></head><body><header><h1>大学生風キャラ Reference Rebuild</h1><div class="sub">参考画像を再分解：大頭・極短首・毛束シルエット・丸いパーカー・短脚・大型スニーカー。768 native master。</div></header><main class="grid" id="grid"></main><script>
-const P={o:'#1d1715',od:'#30231e',hair0:'#3a261d',hair1:'#5a3828',hair2:'#75482f',hair3:'#925b39',hair4:'#b87949',hair5:'#d0955c',skin0:'#c9785e',skin1:'#e99573',skin2:'#f4b18a',skin3:'#ffd0a8',blue0:'#12345d',blue1:'#174b83',blue2:'#2366a7',blue3:'#3d82c3',blue4:'#69a6d8',white0:'#c9d1d8',white1:'#eef1ef',pants0:'#18222e',pants1:'#26384b',pants2:'#41586d',shoe0:'#15191e',shoe1:'#3b4652',shoe2:'#f2f3ef',eye:'#241a17',mouth:'#9c4e48',cheek:'#e88e7d'};
-function master(){const c=document.createElement('canvas');c.width=c.height=768;const x=c.getContext('2d');x.imageSmoothingEnabled=true;const path=(pts,col)=>{x.fillStyle=col;x.beginPath();pts.forEach((p,i)=>i?x.lineTo(...p):x.moveTo(...p));x.closePath();x.fill()},el=(cx,cy,rx,ry,col)=>{x.fillStyle=col;x.beginPath();x.ellipse(cx,cy,rx,ry,0,0,Math.PI*2);x.fill()},rr=(a,b,w,h,r,col)=>{x.fillStyle=col;x.beginPath();x.roundRect(a,b,w,h,r);x.fill()},ln=(a,b,c,d,w,col)=>{x.strokeStyle=col;x.lineWidth=w;x.lineCap='round';x.beginPath();x.moveTo(a,b);x.lineTo(c,d);x.stroke()};
-// floor shadow
-el(389,704,142,23,'#00000022');
-// back shoe + short back leg
-path([[401,552],[461,552],[477,641],[501,672],[468,688],[411,677],[414,625]],P.o);path([[413,558],[451,558],[461,631],[478,660],[455,670],[423,661],[426,621]],P.pants1);path([[445,651],[506,655],[540,683],[529,704],[442,704],[418,683]],P.shoe0);path([[454,666],[511,669],[521,682],[514,689],[452,688]],P.shoe2);rr(454,689,67,8,3,P.shoe1);
-// front leg + oversized sneaker
-path([[301,548],[377,548],[365,635],[342,677],[270,687],[277,626]],P.o);path([[314,557],[364,557],[351,628],[329,661],[289,669],[293,622]],P.pants2);path([[260,650],[330,650],[370,678],[352,705],[253,705],[228,681]],P.shoe0);path([[263,664],[327,664],[345,679],[334,689],[258,688]],P.shoe2);rr(257,689,79,8,3,P.shoe1);
-// hoodie silhouette: compact, rounded, no long neck
-path([[261,335],[310,306],[457,307],[505,337],[537,390],[526,522],[481,570],[300,570],[246,529],[229,398]],P.o);
-path([[276,345],[318,320],[448,321],[490,346],[515,397],[505,510],[467,550],[312,550],[264,516],[249,402]],P.blue1);
-path([[287,350],[335,326],[371,329],[357,522],[313,538],[276,505],[267,404]],P.blue3);
-path([[466,338],[490,357],[506,402],[496,482],[476,463],[471,380]],P.blue2);
-// hood volume tucked under head
-path([[300,329],[326,293],[375,309],[397,331],[421,306],[464,295],[488,335],[455,367],[322,365]],P.o);path([[313,329],[333,307],[374,322],[397,347],[422,321],[454,309],[475,334],[448,352],[326,351]],P.blue0);
-// white inner shirt narrow vertical accent
-path([[365,330],[407,330],[415,470],[389,510],[361,469]],P.white0);path([[375,332],[399,332],[402,468],[389,492],[373,467]],P.white1);ln(363,335,361,467,6,P.blue0);ln(408,335,412,466,6,P.blue0);
-// hoodie pocket and folds
-path([[304,477],[350,463],[389,479],[424,462],[473,478],[450,520],[329,520]],P.blue0);path([[303,382],[323,351],[342,360],[327,443],[298,459]],P.blue4);path([[476,372],[495,391],[503,442],[489,461],[476,423]],P.blue3);
-// sleeves thick and tapered, hands tiny
-path([[237,375],[291,353],[303,390],[292,492],[252,543],[213,527],[196,435]],P.o);path([[250,386],[282,371],[287,398],[279,480],[248,521],[226,511],[213,438]],P.blue2);path([[500,356],[538,380],[563,432],[561,523],[522,543],[493,492],[485,393]],P.o);path([[506,374],[528,389],[547,437],[546,509],[525,520],[508,480],[501,400]],P.blue2);el(232,532,18,17,P.o);el(232,532,11,11,P.skin2);el(539,531,18,17,P.o);el(539,531,11,11,P.skin2);
-// tiny neck only a few visible pixels
-rr(362,296,55,43,15,P.o);rr(372,299,37,34,12,P.skin1);
-// ears behind hair/head
-el(220,225,31,43,P.o);el(220,225,20,31,P.skin1);el(548,221,30,43,P.o);el(548,221,19,30,P.skin1);
-// face plane, slightly right-shifted quarter view
-path([[257,132],[302,88],[386,70],[467,92],[513,146],[518,232],[487,290],[424,321],[337,314],[278,278],[249,219]],P.o);
-path([[274,142],[309,105],[386,88],[455,105],[495,151],[499,224],[473,273],[416,299],[344,295],[294,265],[269,216]],P.skin1);
-path([[291,145],[322,113],[390,99],[449,115],[482,154],[485,216],[461,257],[414,279],[350,278],[309,254],[286,211]],P.skin3);
-// back hair mass: silhouette itself defines head, many spikes
-path([[241,207],[223,177],[228,139],[247,119],[239,92],[270,91],[278,64],[310,70],[326,42],[355,54],[380,27],[403,48],[432,31],[446,58],[478,50],[482,78],[515,76],[508,105],[539,116],[522,143],[550,163],[525,181],[536,211],[507,218],[500,174],[478,144],[459,126],[435,112],[404,102],[370,103],[335,113],[304,133],[281,160],[265,201]],P.hair0);
-// hair middle clusters
-path([[248,157],[258,117],[283,105],[284,78],[316,83],[332,58],[358,70],[382,45],[403,65],[430,51],[444,78],[474,68],[477,98],[505,96],[494,125],[518,139],[496,158],[503,183],[475,171],[457,139],[427,124],[397,116],[362,117],[329,128],[299,146],[275,177]],P.hair2);
-// many authored highlight/shadow clusters
-path([[270,117],[291,86],[319,82],[307,113],[286,137]],P.hair3);path([[318,82],[341,57],[366,66],[351,101],[328,119]],P.hair4);path([[368,64],[389,47],[410,66],[398,94],[374,101]],P.hair5);path([[416,68],[440,57],[456,81],[440,108],[414,99]],P.hair3);path([[462,83],[486,81],[491,106],[469,122],[448,111]],P.hair4);path([[249,139],[266,111],[282,120],[273,157]],P.hair4);path([[493,116],[512,127],[499,151],[480,137]],P.hair3);
-// front fringe: separate narrow locks, overlaps forehead heavily
-path([[260,160],[279,119],[302,108],[298,163],[279,194]],P.hair0);path([[282,151],[309,105],[330,103],[320,166],[299,191]],P.hair2);path([[311,145],[341,94],[363,102],[348,168],[326,192]],P.hair1);path([[341,142],[374,94],[397,105],[379,170],[355,194]],P.hair3);path([[376,140],[407,98],[430,111],[412,171],[389,191]],P.hair1);path([[409,142],[439,107],[461,125],[448,175],[424,193]],P.hair0);path([[442,151],[470,124],[487,151],[477,185],[456,198]],P.hair1);
-// tiny hair glints as clusters
-path([[292,91],[305,78],[316,80],[308,94]],P.hair5);path([[346,72],[359,60],[369,66],[360,79]],P.hair5);path([[405,74],[416,65],[427,70],[419,83]],P.hair4);path([[456,92],[467,86],[476,94],[465,103]],P.hair5);
-// eyebrows and quarter-view eyes: far eye slightly smaller
-ln(309,202,340,197,9,P.hair0);ln(421,197,448,202,8,P.hair0);
-rr(315,210,27,42,8,P.eye);rr(422,211,24,39,8,P.eye);rr(320,214,8,12,3,P.white1);rr(426,215,7,11,3,P.white1);rr(322,231,13,14,5,'#49352b');rr(428,231,11,13,5,'#49352b');
-// minimal nose, mouth, cheeks
-path([[388,242],[381,257],[394,257]],P.skin0);el(300,260,24,8,'#e88e7d55');el(458,260,21,7,'#e88e7d44');ln(366,275,408,275,7,P.mouth);ln(375,278,391,284,5,P.mouth);
-// outline correction / selected pixel-cluster-like accents
-path([[230,181],[242,166],[248,190],[241,207]],P.hair1);path([[510,168],[528,179],[515,196],[503,185]],P.hair1);path([[286,348],[302,331],[313,339],[299,363]],P.blue4);path([[488,344],[499,357],[491,374],[481,358]],P.blue3);
-return c}
-function render(mode){const src=master(),out=document.createElement('canvas');out.width=out.height=mode==='native'?768:192;const x=out.getContext('2d');if(mode==='native'){x.drawImage(src,0,0);return out}if(mode==='pixel'){const low=document.createElement('canvas');low.width=low.height=48;const l=low.getContext('2d');l.imageSmoothingEnabled=true;l.drawImage(src,0,0,48,48);x.imageSmoothingEnabled=false;x.drawImage(low,0,0,48,48,0,0,192,192);return out}x.imageSmoothingEnabled=true;x.drawImage(src,0,0,192,192);return out}
-const items=[['768×768 MASTER','native','30前後の意味レイヤー＋多数の毛束/色クラスタで再造形。'],['192px GAME PREVIEW','game','高密度マスターをゲーム用192pxへ縮小。'],['48px PIXEL TARGET','pixel','実際のホール表示を想定した48px情報量を4倍表示。髪・青パーカー・白T・短脚・白靴が残るか確認。']];const g=document.getElementById('grid');for(const [name,mode,desc] of items){const s=document.createElement('section');s.className='card';const h=document.createElement('h2');h.textContent=name;const st=document.createElement('div');st.className='stage';st.appendChild(render(mode));const p=document.createElement('div');p.className='meta';p.innerHTML=`<span class="badge">REFERENCE REBUILD</span>${desc}`;s.append(h,st,p);g.append(s)}</script></body></html>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>大学生風 48px Direct Pixel Lab</title><style>body{margin:0;background:#15202a;color:#eef4f8;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif}header{padding:16px;background:#223445}h1{font-size:19px;margin:0 0 4px}.sub{font-size:11px;color:#bdd0dc}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px;padding:12px}.card{background:#f6efe4;color:#29231e;border-radius:10px;padding:10px}.card h2{font-size:14px;margin:0 0 5px}.stage{height:285px;display:flex;align-items:center;justify-content:center;background:#efdbb4;border-radius:7px}.stage canvas{image-rendering:pixelated}.meta{font-size:11px;line-height:1.5;margin-top:7px}.badge{display:inline-block;background:#2d526f;color:#fff;padding:2px 6px;border-radius:8px;margin-right:4px}</style></head><body><header><h1>大学生風 48px Direct Pixel Lab</h1><div class="sub">縮小生成を廃止。48×48＝2304セルを完成データとして直接設計。参考：ふわっとした茶髪 / 小顔 / 青パーカー / 白T / 短脚 / 大型白スニーカー。</div></header><main class="grid" id="grid"></main><script>
+const PAL=['#00000000','#211915','#3a271f','#563626','#75482e','#98603b','#c17d4c','#e09b60','#d27c61','#f0a07c','#ffc39b','#ffe0bd','#12345d','#174d85','#2168ad','#3e87cb','#72addd','#d4dce1','#f6f5ef','#17212c','#293a4c','#455b70','#15191e','#3d4752','#f4f4ef','#3a2923','#9b514a','#e68f7d'];
+const W=48,H=48,A=Array.from({length:H},()=>new Uint8Array(W));
+const px=(x,y,c)=>{if(x>=0&&x<W&&y>=0&&y<H)A[y][x]=c};
+const run=(y,x0,x1,c)=>{for(let x=x0;x<=x1;x++)px(x,y,c)};
+const rows=(c,list)=>list.forEach(([y,x0,x1])=>run(y,x0,x1,c));
+// ground shadow
+rows(1,[[44,16,33],[45,18,31]]);
+// back leg / shoe
+rows(1,[[34,25,29],[35,25,29],[36,25,29],[37,25,30],[38,26,30],[39,26,31],[40,26,31],[41,27,32],[42,27,34],[43,27,35]]);rows(19,[[35,26,28],[36,26,28],[37,26,28],[38,27,29],[39,27,29],[40,27,30],[41,28,30]]);rows(20,[[35,27,28],[36,27,28],[37,27,29],[38,28,29],[39,28,30],[40,28,30]]);rows(22,[[42,27,35],[43,26,36],[44,26,36]]);rows(24,[[42,29,34],[43,28,35]]);
+// front leg / shoe
+rows(1,[[34,18,23],[35,18,23],[36,18,23],[37,18,23],[38,17,22],[39,17,22],[40,16,21],[41,15,21],[42,14,22],[43,13,23]]);rows(20,[[35,19,22],[36,19,22],[37,19,22],[38,18,21],[39,18,21],[40,17,20],[41,16,20]]);rows(21,[[35,20,22],[36,20,22],[37,20,22],[38,19,21],[39,19,21]]);rows(22,[[42,13,23],[43,12,24],[44,12,24]]);rows(24,[[42,15,22],[43,14,23]]);
+// hoodie outer silhouette, compact body
+rows(1,[[23,13,34],[24,12,35],[25,11,36],[26,10,37],[27,9,38],[28,9,38],[29,9,38],[30,9,38],[31,9,38],[32,9,38],[33,10,37],[34,11,36]]);
+rows(13,[[24,14,33],[25,13,34],[26,12,35],[27,11,36],[28,11,36],[29,11,36],[30,11,36],[31,11,36],[32,11,36],[33,12,35]]);rows(14,[[25,13,17],[26,12,17],[27,11,17],[28,11,17],[29,11,17],[30,11,17],[31,11,17],[32,12,18],[33,13,19]]);rows(15,[[25,14,16],[26,13,16],[27,12,16],[28,12,16],[29,12,16],[30,12,16]]);rows(12,[[24,30,33],[25,30,34],[26,31,35],[27,31,36],[28,31,36],[29,31,36],[30,31,36],[31,31,36],[32,30,35],[33,29,34]]);
+// inner white T vertical
+rows(17,[[24,22,25],[25,22,25],[26,22,25],[27,22,25],[28,22,25],[29,22,25],[30,22,25],[31,22,25],[32,22,25]]);rows(18,[[24,23,24],[25,23,24],[26,23,24],[27,23,24],[28,23,24],[29,23,24],[30,23,24],[31,23,24],[32,23,24]]);
+// hoodie center blue and pocket
+rows(14,[[24,18,21],[25,18,21],[26,18,21],[27,18,21],[28,18,21],[29,18,21],[30,18,21],[31,18,21],[32,18,21],[24,26,29],[25,26,29],[26,26,29],[27,26,29],[28,26,29],[29,26,29],[30,26,29],[31,26,29],[32,26,29]]);rows(12,[[32,18,29],[33,19,28]]);rows(16,[[25,17,18],[26,16,18],[27,15,18],[28,15,18],[29,15,18]]);
+// tiny hands
+rows(1,[[31,8,9],[32,8,9],[31,38,39],[32,38,39]]);px(31,9,10);px(31,38,10);px(32,9,9);px(32,38,9);
+// tiny neck
+rows(1,[[22,21,26],[23,21,26]]);rows(9,[[22,22,25],[23,22,25]]);
+// ears small, tucked into hair
+rows(1,[[12,8,10],[13,7,10],[14,7,10],[15,8,10],[12,37,39],[13,37,40],[14,37,40],[15,37,39]]);rows(8,[[13,8,9],[14,8,9],[13,38,39],[14,38,39]]);rows(9,[[13,9,10],[14,9,10],[13,37,38],[14,37,38]]);
+// face outline + skin, right-down quarter view
+rows(1,[[8,13,34],[9,11,36],[10,10,37],[11,9,38],[12,9,38],[13,9,38],[14,10,37],[15,10,37],[16,11,36],[17,12,35],[18,13,34],[19,15,32],[20,18,29],[21,20,27]]);rows(8,[[10,14,33],[11,12,35],[12,11,36],[13,11,36],[14,11,36],[15,12,35],[16,13,34],[17,14,33],[18,16,31],[19,18,29],[20,20,27]]);rows(10,[[11,15,32],[12,13,34],[13,13,34],[14,13,34],[15,14,33],[16,15,32],[17,16,31],[18,18,29],[19,20,27]]);rows(11,[[12,17,31],[13,15,32],[14,15,32],[15,16,31],[16,17,30]]);
+// back hair silhouette: irregular, fluffy, no circle
+rows(1,[[3,19,24],[4,16,28],[5,13,31],[6,11,34],[7,9,36],[8,8,38],[9,7,39],[10,7,40],[11,6,40],[12,6,40],[13,6,40],[14,7,39],[15,8,38]]);px(2,22,1);px(3,17,1);px(3,27,1);px(4,12,1);px(4,31,1);px(5,10,1);px(5,35,1);px(6,8,1);px(7,38,1);px(9,40,1);
+// hair base/mid masses
+rows(3,[[4,19,24],[5,16,28],[6,13,31],[7,11,34],[8,10,35],[9,9,36],[10,9,36],[11,8,36],[12,8,35],[13,8,34]]);rows(4,[[6,14,20],[7,12,20],[8,11,19],[9,10,18],[10,10,17],[11,9,16],[6,26,30],[7,26,32],[8,27,34],[9,28,35],[10,29,36]]);rows(5,[[4,20,24],[5,18,26],[6,17,24],[7,16,23],[8,15,22],[9,14,21],[10,13,20],[5,28,30],[6,27,31],[7,27,31]]);rows(6,[[5,20,22],[6,18,20],[7,17,19],[8,16,18],[6,25,27],[7,24,27]]);rows(7,[[4,22,23],[5,21,22],[6,19,20]]);
+// front fringe: explicit individual pixel locks over face
+rows(2,[[9,9,12],[10,9,13],[11,9,14],[12,9,14],[13,9,13],[14,10,12],[8,34,38],[9,34,39],[10,34,39],[11,34,38],[12,34,37]]);rows(3,[[8,12,16],[9,12,17],[10,12,17],[11,12,16],[12,12,15],[13,12,14],[7,30,34],[8,29,34],[9,29,34],[10,29,33],[11,29,32],[12,29,31]]);rows(4,[[7,16,20],[8,16,20],[9,16,20],[10,16,19],[11,16,18],[12,16,17],[7,25,29],[8,24,29],[9,24,28],[10,24,27],[11,24,26],[12,24,25]]);rows(5,[[7,20,24],[8,20,24],[9,20,23],[10,20,22],[11,20,21]]);
+// small hair highlights, not stripes
+rows(6,[[5,17,18],[6,16,18],[7,15,16],[5,25,26],[6,24,25],[7,23,24]]);px(6,30,6);px(7,29,6);px(8,28,5);px(8,13,5);px(9,12,5);
+// brows
+rows(2,[[14,17,20],[14,28,30]]);
+// eyes: visible vertical dark pixels, far eye narrower
+rows(25,[[15,18,19],[16,18,19],[17,18,19],[15,28,29],[16,28,29],[17,28,29]]);px(15,18,18);px(15,28,18);px(16,18,25);px(16,28,25);
+// nose, mouth, cheeks
+px(18,24,8);run(19,22,25,26);px(20,23,26);px(18,15,27);px(18,32,27);
+// final hoodie outline separations / strings
+rows(1,[[23,18,20],[23,27,29]]);px(24,20,18);px(24,27,18);px(25,20,18);px(25,27,18);
+function canvas(scale){const c=document.createElement('canvas');c.width=c.height=48*scale;const x=c.getContext('2d');x.imageSmoothingEnabled=false;for(let y=0;y<48;y++)for(let q=0;q<48;q++){const v=A[y][q];if(v){x.fillStyle=PAL[v];x.fillRect(q*scale,y*scale,scale,scale)}}return c}
+const items=[['48×48 DIRECT DATA',4,'48×48を直接設計した完成データ。縮小処理なし。'],['192px NEAREST PREVIEW',4,'48px完成データを4倍表示。1マスの配置をそのまま確認。'],['GAME SIZE 48px',1,'実際のゲーム表示サイズ。髪・目・青パーカー・白T・短脚・白靴の読みやすさを確認。']];const g=document.getElementById('grid');for(const [name,s,desc] of items){const sec=document.createElement('section');sec.className='card';const h=document.createElement('h2');h.textContent=name;const st=document.createElement('div');st.className='stage';const c=canvas(s);c.style.width=(s===1?48:230)+'px';c.style.height=(s===1?48:230)+'px';st.append(c);const p=document.createElement('div');p.className='meta';p.innerHTML='<span class="badge">HAND AUTHORED 48px</span>'+desc;sec.append(h,st,p);g.append(sec)}</script></body></html>
