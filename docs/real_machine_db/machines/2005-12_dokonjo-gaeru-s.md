@@ -1,7 +1,7 @@
 # ど根性ガエルS
 
 status: PARTIAL
-qaResetBehavior: PARTIAL
+qaResetBehavior: PARTIAL_RESEARCH_EXHAUSTED
 
 machineName: ど根性ガエルS
 manufacturer: ロデオ
@@ -52,56 +52,58 @@ UNVERIFIED
 
 ## resetBehavior
 
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
+resetQaLastUpdated: 2026-09-08
 
 settingChangeBehavior:
 - 「ど根性ガエルS / ド根性ガエルS / ロデオ / 設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / RT / ど根性タイム / ガックン / 天井」を組み合わせ、当時業界記事・P-WORLD・パチマガスロマガ・後年回顧資料を横断。
-- 設定変更時に、ど根性タイム/無限RTの内部状態・残りゲーム数をどう処理するか明記した高信頼資料は確認できずUNVERIFIED。
+- 2026-09-08の再QAでも「設定変更」「リセット」「据え置き」「電源」「RT」「ど根性タイム」の組み合わせで再検索し、グリーンべると、パチマガスロマガ、P-WORLD、旧機種一覧/回顧資料まで再確認した。
+- 設定変更時に、ど根性タイム/無限RTの内部状態・残りゲーム数をどう処理するか明記した本機固有の高信頼資料は追加発見できず `UNVERIFIED_AFTER_RESEARCH` を維持。
 
 carryOverBehavior:
 - 本機はボーナス後の有限DTから特殊リプレイ成立で次回ボーナスまで継続する無限RTへ入る仕様を複数資料で確認。
-- 据え置き時にDT/無限RT内部状態・残りゲーム数をそのまま引き継ぐかは本機固有資料で確定できずUNVERIFIED。
+- 据え置き時にDT/無限RT内部状態・残りゲーム数をそのまま引き継ぐかは本機固有資料で確定できず `UNVERIFIED_AFTER_RESEARCH`。
 
 powerCycleBehavior:
-- 電源OFF→ONのみの場合のDT/無限RT状態・残りゲーム数の扱いはUNVERIFIED。
+- 電源OFF→ONのみの場合のDT/無限RT状態・残りゲーム数の扱いは `UNVERIFIED_AFTER_RESEARCH`。
 
 gameCounterReset:
 - 通常時ゲーム数天井は確認できないため、通常時天井ゲーム数のリセット/引継ぎはNOT_APPLICABLE相当。
-- DT/RT残りゲーム数については設定変更・電断時処理がUNVERIFIED。
+- DT/RT残りゲーム数については設定変更・電断時処理が `UNVERIFIED_AFTER_RESEARCH`。
 
 ceilingAfterReset:
-- 通常時ゲーム数天井および設定変更後の短縮天井はNONE_CONFIRMED。
+- 通常時ゲーム数天井および設定変更後の短縮天井は `NONE_CONFIRMED_AFTER_RESEARCH`。
 
 modeAfterReset:
-- 通常時のゲーム数モード/朝一専用モードはNONE_CONFIRMED。
+- 通常時のゲーム数モード/朝一専用モードは `NONE_CONFIRMED_AFTER_RESEARCH`。
 - ボーナス後DT種別は直前ボーナス種別で決まる公開仕様だが、朝一設定変更時に特別なDTへ移行する根拠は確認できない。
 
 stateAfterReset:
 - DT/無限RTというRT関連状態が存在するためRESET_SENSITIVE候補。
-- 設定変更/据え置き/電断時に当該状態を再抽選・初期化・引継ぎするかはUNVERIFIED。
+- 設定変更/据え置き/電断時に当該状態を再抽選・初期化・引継ぎするかは `UNVERIFIED_AFTER_RESEARCH`。
 
 advantageousSectionReset:
 - NOT_APPLICABLE（5号機初期・有利区間制度導入前）。
 
 resetBenefits:
-- NONE_CONFIRMED。設定変更専用の天井短縮・朝一RT・優遇モードなどは確認できない。
+- `NONE_CONFIRMED_AFTER_RESEARCH`。設定変更専用の天井短縮・朝一RT・優遇モードなどは確認できない。
 
 resetPenalties:
-- NONE_CONFIRMED。
+- `NONE_CONFIRMED_AFTER_RESEARCH`。
 
 resetDetection:
-- UNVERIFIED。ガックン・表示・RT開始状態等を利用した本機固有の設定変更判別を高信頼資料で確認できない。
+- `UNVERIFIED_AFTER_RESEARCH`。ガックン・表示・RT開始状態等を利用した本機固有の設定変更判別を高信頼資料で確認できない。
 
 numericResetData:
-- 設定変更時DT/RT残りゲーム数処理: UNVERIFIED
-- 据え置き時DT/RT残りゲーム数処理: UNVERIFIED
-- 電源OFF→ON時DT/RT残りゲーム数処理: UNVERIFIED
-- リセット時短縮天井: NONE_CONFIRMED
-- 朝一専用モード数値: NONE_CONFIRMED
+- 設定変更時DT/RT残りゲーム数処理: UNVERIFIED_AFTER_RESEARCH
+- 据え置き時DT/RT残りゲーム数処理: UNVERIFIED_AFTER_RESEARCH
+- 電源OFF→ON時DT/RT残りゲーム数処理: UNVERIFIED_AFTER_RESEARCH
+- リセット時短縮天井: NONE_CONFIRMED_AFTER_RESEARCH
+- 朝一専用モード数値: NONE_CONFIRMED_AFTER_RESEARCH
 
 ## sources
 
-取得日: 2026-08-31
+取得日: 2026-09-08（resetBehavior QA再探索）
 
 1. グリーンべると — ロデオ5号機第1弾は『ど根性ガエルS』
    - https://web-greenbelt.jp/00005254/
@@ -151,4 +153,4 @@ numericResetData:
 - REG後ど根性タイム: グリーンべると発表記事は20G、パチマガスロマガ解析は18P。定義/実装差の可能性があるためCONFLICTとして保持。
 
 coreStatus: PARTIAL
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
