@@ -4,90 +4,92 @@
 
 ## 現在地点
 
-- recordCount: **857**
-- latestRecordAdded: **Dororonえん魔くん メ～ラめら**（KPE）— 2014-12-08
-- latestRecord: `docs/real_machine_db/machines/2014-12-08_dororon-enma-kun-mera-mera.md`
-- chronologicalFrontier: **2014-12-08**
-- frontierLatestMachine: **Dororonえん魔くん メ～ラめら**
+- recordCount: **858**
+- latestRecordAdded: **パチスロ 蒼穹のファフナー**（SANKYO）— 2014-12-15
+- latestRecord: `docs/real_machine_db/machines/2014-12-15_pachislot-soukyuu-no-fafner.md`
+- chronologicalFrontier: **2014-12-15**
+- frontierLatestMachine: **パチスロ 蒼穹のファフナー**
 - schema: **resetBehavior v0.7**
-- status: **2014-12-08_GROUP_CLOSED_FOR_CURRENT_RESEARCH / NEXT_BOUNDARY_2014-12-09_ONWARD**
+- status: **2014-12-15_GROUP_OPEN / NEXT_MACHINE_SEAMASTER_LALA**
 
 ## 今回の同期 / 正本確認
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`docs/real_machine_db/LATEST_HANDOFF.md`、No.856 `2014-12-01_pachislot-areddin.md` を再読。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`docs/real_machine_db/LATEST_HANDOFF.md`、No.857 `2014-12-08_dororon-enma-kun-mera-mera.md` を再読。
 - INDEXは旧集約状態（19件）のため、README規定どおり **LATEST_HANDOFF + 実レコード** を進捗正本として使用。
-- 作業開始時正本は **856件 / 2014-12-01群CLOSED / 2014-12-02〜12-07境界CLOSED / 2014-12-08群OPEN**。
-- No.857として **Dororonえん魔くん メ～ラめら** を登録。
-- 2014-12-08同日群を日付・メーカー・K-Navi/HAZUSE系で再監査。アナザーゴッドハーデスの「NO MORE DOG ver.」は新パネルであり新型式機種として重複登録しない。今回、えん魔くん以外の新規5号機本体を安全に固定できなかったため **2014-12-08_GROUP_CLOSED_FOR_CURRENT_RESEARCH**。
+- 作業開始時正本は **857件 / 2014-12-08群CLOSED / 2014-12-09以降境界監査待ち**。
+- 2014-12-09〜12-14を日付・新台・メーカー表記で境界監査。発売発表・検定情報とホール導入を分離し、今回この期間に新規登録すべき具体日付き5号機本体は安全に固定できなかったため **2014-12-09_TO_12-14_BOUNDARY_CLOSED_FOR_CURRENT_RESEARCH**。
+- 次の強い具体日 **2014-12-15** に進み、No.858として **パチスロ 蒼穹のファフナー** を登録。
 
-## No.857 — Dororonえん魔くん メ～ラめら
+## No.858 — パチスロ 蒼穹のファフナー
 
-- record: `docs/real_machine_db/machines/2014-12-08_dororon-enma-kun-mera-mera.md`
-- manufacturer: **KPE**
-- releaseDate: **2014-12-08**
-- modelName: **ドロロンえん魔くんKN**
-- inspectionNumber: **4S0753**
-- systemType: **5号機 ART / 疑似ボーナス / CZ / ゲーム数管理**
+- record: `docs/real_machine_db/machines/2014-12-15_pachislot-soukyuu-no-fafner.md`
+- manufacturer: **SANKYO**
+- releaseDate: **2014-12-15**
+- modelName: **パチスロ 蒼穹のファフナーA**
+- inspectionNumber: **4S0874**
+- systemType: **5号機 ART / CZ / ゲーム数管理 / 疑似ボーナス**
 
 ### 性能コア
 
-- ART初当たり: **1/251.8 / 236.9 / 226.4 / 195.0 / 168.7 / 127.7**。
-- 機械割 canonical: **97.1 / 98.5 / 100.2 / 104.2 / 109.6 / 112.8%**。
-- 設定5のみK-Navi/HAZUSEが **109.9%** のため `CONFLICT_PAYOUT_RATE_SETTING5_109_6_VS_109_9`。平均しない。
-- 50枚ベース: **約31G**（旧パチマガスロマガ）。
-- ART「ハルマゲどんタイム」: **40G+α / 純増約2.3枚/G**。
-- ドロロンボーナス: **30G**、ハ～トふるボーナス: **10G+α**。
+- ART初当たり: **1/258 / 243 / 232 / 212 / 199 / 194**。
+- 機械割 canonical: **97.8 / 98.7 / 99.9 / 103.9 / 106.8 / 110.2%**（K-Navi / HAZUSE / PachiNavi一致）。
+- 別二次資料に **97.6 / 98.7 / 100.1 / 102.7 / 106.6 / 110.7%** があるため `CONFLICT_PAYOUT_RATE_SECONDARY_SERIES`。平均しない。
+- 50枚ベースは **約32G**（HAZUSE）と **約31G**（二次資料）があり `CONFLICT_BASE_GAMES_PER_50_31_VS_32`。
+- ART「蒼穹作戦」: **純増約2.2枚/G**。
+- 通常最大天井: **ARTまたはVバトル間999G**。到達時はARTまたはVバトル当選。
 
 ### resetBehavior v0.7
 
-- 設定変更時は**天井ゲーム数リセット**、内部モード再抽選。
-- モード別天井: **通常A 996G / 通常B 696G / 天国96G / 超天国32G**。
-- 設定変更時モード振り分け:
-  - 設1: A27.4 / B50.0 / 天国22.5 / 超天国0.1%
-  - 設2: A18.9 / B60.0 / 天国21.0 / 超天国0.1%
-  - 設3: A22.4 / B52.0 / 天国25.5 / 超天国0.1%
-  - 設4: A14.9 / B62.5 / 天国22.5 / 超天国0.1%
-  - 設5: A19.4 / B55.0 / 天国25.5 / 超天国0.1%
-  - 設6: A9.9 / B65.0 / 天国25.0 / 超天国0.1%
-- 通常B以上合計は **設1 72.6% → 設6 90.1%**。設定1でも天国+超天国 **22.6%**。
-- 固定一律短縮天井ではなく、**モード再抽選による朝一天井優遇**として扱う。
-- 据え置き時の全項目直接契約、純粋な電源OFF→ON、設定変更後初期内部状態、ガックン等は検索語・型式名・メーカー名を変えて横断後も安全に固定できず `UNVERIFIED_AFTER_RESEARCH` / `NONE_CONFIRMED_AFTER_RESEARCH`。
+- HAZUSE本機固有ページで、設定変更時は **天井までのゲーム数RESET / 内部モード再抽選 / 内部状態再抽選 / 竜宮島ステージ開始** を確認。
+- 固定一律のリセット短縮天井は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- 二次解析整理に **設定変更時20%で天国 / 60%で高確** の公開朝一数値あり。ただし今回独立再照合未達のため `ANALYSIS_SINGLE_SECONDARY` として保存しcanonical化しない。
+- 据え置き時のゲーム数・モード・状態の直接契約、設定変更なしの純電源OFF→ONは、表記揺れ・型式名・メーカー名・関連語を変えて横断後も `UNVERIFIED_AFTER_RESEARCH`。
+- 本機固有ガックンも `NONE_CONFIRMED_AFTER_RESEARCH`。
 - 有利区間: `NOT_APPLICABLE_5TH_GEN_PRE_5_9`。
+- 2019年6号機「蒼穹のファフナーEXODUS」の電断・有利区間仕様は別機種として除外。
 
-## 2014-12-08群 — CLOSED_FOR_CURRENT_RESEARCH
+## 2014-12-15群 — OPEN
 
-- No.857 **Dororonえん魔くん メ～ラめら**（KPE）— 2014-12-08。
-- K-Navi / HAZUSE / 当時新台・メーカー系検索で同日群を再監査。
-- 2014-12-08導入の「アナザーゴッドハーデス NO MORE DOG ver.」は既存機の新パネルであり、性能物差しDBの新規機種レコードとしては追加しない。
-- パチンコ新台を混入させない。
+- No.858 **パチスロ 蒼穹のファフナー**（SANKYO）— 処理済み。
+- 強い未処理候補: **シーマスター ～ララ、旅立ちのプレリュード～**（山佐）。グリーンべるとは2014-11-17記事で **12月14日納品予定**、旧パチマガスロマガは2014年12月、複数資料で12月中旬ホールデビュー。次回、全国/ホール導入開始を **2014-12-15** と置けるか再照合してから登録する。
+- 同日群はまだCLOSEDにしない。ファフナーとシーマスター以外の5号機本体もメーカー横断で再監査する。
+- `スーパーラクラクビスカス` は検定日2014-12-15の資料が混入するが、パイオニア公式発表は2014-12-22、内覧会は2015-01-08であり、12/15ホール導入機としては扱わない。
 
 ## 次回再開地点
 
-1. **recordCount 857 / chronologicalFrontier 2014-12-08 / 12-08_GROUP_CLOSED_FOR_CURRENT_RESEARCH** から開始。
-2. 最新mainの README / mission / INDEX / LATEST_HANDOFF / No.857を再確認。
-3. **2014-12-09以降を日別・メーカー別・当時新台一覧で境界監査**し、最初の未登録5号機の具体的導入日を固定する。
-4. 次の強い候補日は **2014-12-15**。`パチスロ 蒼穹のファフナー`、`シーマスター～ララ、旅立ちのプレリュード～` 等を含め、導入日を一次/当時資料で照合してから処理順を確定する。
-5. 遡及resetBehavior QAカーソルは `docs/real_machine_db/machines/2007-03-19_kakumei-senshi-choshu-riki.md` を維持。新規本線を止めない。
+1. **recordCount 858 / chronologicalFrontier 2014-12-15 / 12-15_GROUP_OPEN** から開始。
+2. 最新mainの README / mission / INDEX / LATEST_HANDOFF / No.858を再確認。
+3. 最優先で **`シーマスター ～ララ、旅立ちのプレリュード～`（山佐）** の導入日を当時業界記事・山佐系資料・HAZUSE/K-Navi/旧解析で固定する。
+4. 具体日が2014-12-15で固定できればNo.859候補として性能コア + resetBehavior v0.7を収集。
+5. その後2014-12-15同日群を全メーカー横断で最終監査し、漏れがなければCLOSED判定して12-16以降へ進む。
+6. 遡及resetBehavior QAカーソルは `docs/real_machine_db/machines/2007-03-19_kakumei-senshi-choshu-riki.md` を維持。新規本線を止めない。
 
 ## safeguard
 
 - INDEXは旧集約状態なので進捗正本にしない。LATEST_HANDOFF + 実レコードを優先。
-- exact release dateでは発表日・納品予定・全国導入・地域先行・実ホール導入を区別。
-- 新パネルは新型式/性能差がない限り別機種として重複登録しない。
-- えん魔くん設定5機械割109.6/109.9は平均せずCONFLICT維持。
+- exact release dateでは発表日・検定日・納品予定・全国導入・地域先行・実ホール導入を区別。
+- 同名後継機 `蒼穹のファフナーEXODUS` の6号機仕様を2014年機へ混入させない。
+- ファフナー機械割と50枚ベースの競合は平均せずCONFLICT維持。
+- 20%天国 / 60%高確は単一二次系列として信頼度を落として保持し、再照合前に高信頼へ昇格しない。
 - 据え置き・電断挙動は一般論から推定しない。
+- 新パネル・検定日だけの候補はホール導入日と混同しない。
 - 2015-06-08到達時の **吉宗～極～（ヨシムネH2A4 / 3S1093）** 正式量産版処理注意を維持。
 
 ## 主要出典 — 取得日 2026-09-07
 
-- KONAMI公式アーカイブ: https://www.konami.com/amusement/psm/archive/ps/2014/de/
-- KONAMI公式ブログ: https://www.konami.com/amusement/psm/portal/magihallo/blog_mh/2014/mhs_blog_141125.html
-- K-Navi: https://p-kn.com/slot/2151/
-- K-Navi 設定変更モード: https://p-kn.com/slot/2151/52527/
-- HAZUSE: https://hazuse.com/machine/pachislot/4S0753/
-- 必勝本: https://p.hisshobon.jp/machine/2480/1/49270
-- 旧パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/kpe_slot/38/c.php
-- パチビー: https://www.pachibee.jp/machines/index/214100004
-- グリーンべると: https://news.p-world.co.jp/articles/6903/greenbelt
-- 朝一実戦値: https://slotjin.com/slot/dororonenma-reset/
-- パチ7回顧: https://pachiseven.jp/articles/detail/11377
+### パチスロ 蒼穹のファフナー
+- HAZUSE: https://hazuse.com/machine/pachislot/4S0874/
+- HAZUSE 基本スペック: https://hazuse.com/machine/pachislot/4S0874/genre/201/
+- K-Navi: https://p-kn.com/slot/2158/
+- パチ＆スロ必勝本: https://p.hisshobon.jp/machine/2498/1/50326
+- 当時天井解析: https://mezase20.com/fafner.html
+- 天井整理: https://www.slopachi-quest.com/article/fafner-in-the-azure-tenzyou/
+- 設定変更二次整理: https://rakuslo.com/fafner-setteisa.html
+- PachiNavi: https://pachinavi.net/machines/fafner-1/
+- みんスロ: https://minslo.com/%E8%92%BC%E7%A9%B9%E3%81%AE%E3%83%95%E3%82%A1%E3%83%95%E3%83%8A%E3%83%BC/
+
+### 次候補 / 境界
+- グリーンべると シーマスター発表: https://web-greenbelt.jp/00007409/
+- 娯楽産業 シーマスター発表: https://www.goraku-sangyo.com/%E5%B1%B1%E4%BD%90%E3%80%80%E3%80%8C%E3%82%B7%E3%83%BC%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC-%E3%80%9C%E3%83%A9%E3%83%A9%E3%80%81%E6%97%85%E7%AB%8B%E3%81%A1%E3%81%AE%E3%83%97%E3%83%AC%E3%83%AA%E3%83%A5/
+- 旧パチマガスロマガ シーマスター: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/200/a.php
+- パイオニア更新履歴: https://www.slot-pioneer.co.jp/news.html
