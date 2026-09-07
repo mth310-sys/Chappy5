@@ -1,7 +1,7 @@
 # クラッシュバンディクーS
 
 status: PARTIAL
-qaResetBehavior: PARTIAL
+qaResetBehavior: PARTIAL_RESEARCH_EXHAUSTED
 
 machineName: クラッシュバンディクーS
 manufacturer: サミー
@@ -87,19 +87,20 @@ UNVERIFIED
 
 ## resetBehavior
 
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
+resetQaLastUpdated: 2026-09-08
 
 settingChangeBehavior:
-- 「クラッシュバンディクーS / クラッシュ・バンディクーS / サミー」に「設定変更 / リセット / 朝一 / 据え置き」を組み合わせて再探索したが、本機固有の設定変更時にゲーム数・状態・ボーナス成立状態をどう処理するかを明記した高信頼資料は確認できずUNVERIFIED。
+- 「クラッシュバンディクーS / クラッシュ・バンディクーS / サミー」に「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / ガックン / 初期出目」を組み合わせ、当時業界記事、古いDB、解析資料、後年回顧まで再探索したが、本機固有の設定変更時にゲーム数・状態・ボーナス成立状態をどう処理するかを明記した直接資料は確認できずUNVERIFIED_AFTER_RESEARCH。
 - 当時一次資料/P-WORLDでは通常時ゲーム数天井や朝一専用モードを主要仕様として確認できない。
 
 carryOverBehavior:
 - 据え置き時に追う通常時ゲーム数天井・モード・AT/ARTストックはNONE_CONFIRMED。
-- ボーナス成立済み状態等の特殊ケースの持越しはUNVERIFIED。
+- ボーナス成立済み状態等の特殊ケースの持越しはUNVERIFIED_AFTER_RESEARCH。
 
 powerCycleBehavior:
-- 電源OFF→ONのみで朝一専用モード・短縮天井・当選優遇が生じる根拠はNONE_CONFIRMED。
-- 成立済みボーナス/表示状態の電断処理はUNVERIFIED。
+- 電源OFF→ONのみで朝一専用モード・短縮天井・当選優遇が生じる根拠はNONE_CONFIRMED_AFTER_RESEARCH。
+- 成立済みボーナス/表示状態の電断処理はUNVERIFIED_AFTER_RESEARCH。
 
 gameCounterReset:
 - 通常時ゲーム数天井はNONE_CONFIRMED / NOT_APPLICABLE相当。
@@ -113,19 +114,19 @@ modeAfterReset:
 
 stateAfterReset:
 - 出玉増加RT/ART/ATを当時一次資料で主要仕様として確認できず、朝一狙いに直結する状態再抽選はNONE_CONFIRMED。
-- 成立済みボーナス等の特殊状態処理はUNVERIFIED。
+- 成立済みボーナス等の特殊状態処理はUNVERIFIED_AFTER_RESEARCH。
 
 advantageousSectionReset:
 - NOT_APPLICABLE（5号機初期・有利区間制度導入前）。
 
 resetBenefits:
-- 朝一/設定変更専用の天井短縮・モード優遇・初当たり優遇はNONE_CONFIRMED。
+- 朝一/設定変更専用の天井短縮・モード優遇・初当たり優遇はNONE_CONFIRMED_AFTER_RESEARCH。
 
 resetPenalties:
-- NONE_CONFIRMED。
+- NONE_CONFIRMED_AFTER_RESEARCH。
 
 resetDetection:
-- 「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / ガックン」を表記揺れと組み合わせて再探索したが、本機固有のガックン・表示等による変更判別を高信頼資料で確認できずUNVERIFIED。
+- 「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / ガックン / 初期出目」を表記揺れと組み合わせて再探索したが、本機固有のガックン・表示等による変更判別を直接資料で確認できずUNVERIFIED_AFTER_RESEARCH。
 
 numericResetData:
 - 設定変更時モード振り分け: NONE_CONFIRMED
@@ -134,7 +135,7 @@ numericResetData:
 
 ## sources
 
-取得日: 2026-08-31
+取得日: 2026-08-31 / resetBehavior再QA: 2026-09-08
 
 1. グリーンべると — 人気ゲームがパチスロでも大暴れ！
    - https://web-greenbelt.jp/00004520/
@@ -165,5 +166,6 @@ numericResetData:
 
 ## QA note
 
-- v0.7 resetBehavior遡及QAとして、表記揺れと「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / ガックン」を組み替え、当時一次記事、P-WORLD、後年DBを横断。
-- 天井・朝一専用モード等はNONE_CONFIRMEDまで整理できたが、成立済みボーナス等の電断/設定変更時処理と変更判別は確定できずPARTIAL。
+- v0.7 resetBehavior遡及QAとして2026-09-08に再度、表記揺れと「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / ガックン / 初期出目」を組み替え、当時一次記事、古DB、解析、回顧資料を横断。
+- 天井・朝一専用モード等はNONE_CONFIRMEDまで整理できたが、成立済みボーナス等の電断/設定変更時処理と変更判別は直接根拠を固定できなかった。
+- 性能コアのPARTIALは変更せず、resetBehavior QAだけを **PARTIAL_RESEARCH_EXHAUSTED** として次カーソルへ進める。
