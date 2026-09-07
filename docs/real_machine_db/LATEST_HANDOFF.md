@@ -3,85 +3,81 @@
 更新日: 2026-09-08
 
 ## 現在地点
-- recordCount: **958**
-- latestRecordAdded: **パチスロ偽物語**（Sammy）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2016-02-22_nisemonogatari.md`
-- chronologicalFrontier: **2016-02-22**
-- frontierLatestMachine: **パチスロ偽物語**
+- recordCount: **959**
+- latestRecordAdded: **パチスロ鉄拳3rd エンジェルVer.**（山佐）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2016-03-07_tekken-3rd-angel-ver.md`
+- chronologicalFrontier: **2016-03-07**
+- frontierLatestMachine: **パチスロ鉄拳3rd エンジェルVer.**
 - schema: **resetBehavior v0.7**
-- status: **2016-02-22_GROUP_CLOSED_FOR_CURRENT_RESEARCH_WITH_2016-02-01_30PHI_VARIANT_DATE_AUDIT_PENDING**
+- status: **2016-03-07_GROUP_OPEN_WITH_YURUBISCUS_DATE_CONFLICT_AUDIT_NOTED**
 
 ## 今回の同期 / 正本確認
-- 最新mainの `README.md`、mission v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、No.957 `2016-02-22_higurashi-no-naku-koro-ni-kizuna.md` を再取得。
+- 最新mainの `README.md`、mission v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、No.958 `2016-02-22_nisemonogatari.md` を再取得。
 - INDEXは19件時点の旧集約なのでREADME規定どおり **LATEST_HANDOFF + 実レコード** を進捗正本として使用。
-- 開始時正本は recordCount **957** / chronologicalFrontier **2016-02-22** / 02-22群OPEN。
-- 次の未処理 **「パチスロ偽物語」** をNo.958として追加。
-- 02/22候補として後年の設置期限一覧に現れていた `ニューチバリヨ / ニューチバリヨ-30 / パチスロ ビッグドリームinロストアイランド2 / ミラクル` を再監査。メーカー・当時資料・機種DBでは全国導入がそれぞれ2016-04中旬 / 2016-06 / 2016-03-22等で、02/22導入とは一致しないため02/22群から除外。
-- 日付指定・当時資料・機種DB横断で、No.957/958以外の全国導入パチスロを今回具体的に固定できなかったため **2016-02-22_GROUP_CLOSED_FOR_CURRENT_RESEARCH** とした。
+- 開始時正本は recordCount **958** / chronologicalFrontier **2016-02-22** / 02-22群CLOSED。
+- 02/23以降を境界監査し、HAZUSE新台カレンダーでは次の全国導入日群が **2016-03-07**。
+- 03/07群の最初の未処理として **「パチスロ鉄拳3rd エンジェルVer.」** をNo.959で追加。
 
-## No.958 — パチスロ偽物語
-- record: `docs/real_machine_db/machines/2016-02-22_nisemonogatari.md`
-- manufacturer: **Sammy（サミー）**
-- releaseDate: **2016-02-22**
-- formalModelName: **偽物語／ZS**
-- certificationNumber: **5S1298**
-- generation/system: **5号機 / A+ART / CZ**
+## No.959 — パチスロ鉄拳3rd エンジェルVer.
+- record: `docs/real_machine_db/machines/2016-03-07_tekken-3rd-angel-ver.md`
+- manufacturer: **山佐（YAMASA）**
+- releaseDate: **2016-03-07**
+- formalModelName: **パチスロ鉄拳3エンジェルバージョン／EE**
+- certificationNumber: **5S0996**
+- generation/system: **5号機 / リアルボーナス + AT / CZ**
 
 ### performanceCore
-- 通常掲載機械割: **97.9 / 99.3 / 100.9 / 104.3 / 108.6 / 112.1%**。
-- 完全攻略時機械割: **98.5 / 100.1 / 101.7 / 105.2 / 109.5 / 113.1%**。定義を分離し平均しない。
-- ART初当たり: **1/567.0 / 569.5 / 545.0 / 465.0 / 409.1 / 359.8**。
-- ボーナス合算: **1/199.8 / 195.0〜195.1 / 190.5 / 186.2 / 182.0 / 178.1**。
-- 50枚ベース: canonical **約35G**（34.9〜35.9G表記あり）。
-- ART純増: **約1.2枚/G**。
-- BIG: **150枚**。
-- ART「倖時間」: **1セット20G**。
-- 通常天井: **BIGおよびART間999G+前兆でART**。
+- 機械割: **96.9 / 98.3 / 99.7 / 102.0 / 105.5 / 110.2%**。
+- 鉄拳CHALLENGE: **1/84.1 / 84.1 / 84.1 / 83.7 / 82.6 / 82.0**。
+- AT初当たり: **1/751.6 / 725.9 / 681.3 / 623.0 / 554.9 / 483.2**。
+- 50枚ベース: **約23G**（23.1G表記あり）。
+- AT純増: **約2.4枚/G**。ボーナス込み約2.7枚/G表記は定義分離。
+- 鉄拳CHALLENGE: **約85枚**。
+- AT「神鉄拳RUSH」: 次回ボーナスまで継続、ボーナス後デビルバトル勝利で継続。
+- ゲーム数天井: **非搭載**。
 
 ### resetBehavior v0.7
-- 設定変更: **天井RESET / 解呪抽選状態RESELECT / 家ステージ開始**。
-- 据え置き・純電源OFF→ON: **天井CARRYOVER / 状態CARRYOVER / 家ステージ開始**。
-- 設定変更専用固定短縮天井: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- 設定変更時解呪抽選状態:
-  - 設定1: 通常64.84% / 高確30.08% / 超高確5.08%
-  - 設定2: 通常59.77% / 高確35.16% / 超高確約5.08%
-  - 設定3: 通常54.69% / 高確40.23% / 超高確約5.08%
-  - 設定4〜6: 通常49.61% / 高確45.31% / 超高確5.08%
-- 朝一恩恵: 高確以上開始が設定1でも **35.16%**、設定4〜6では **50.39%**。
-- ガックン: 設定変更時あり / 電源ON-OFFなしとする解析あり。ただし7揃え等の対策で判別不能になり得るためメーカー保証の確定判別にはしない。
-- 朝一専用の忍モード/解呪連モード初期振り分けは再探索後も直接固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 設定変更: **内部モードRESET/再抽選、内部状態RESET/再抽選**。
+- 据え置き・純電源OFF→ON: **内部モードCARRYOVER / 内部状態CARRYOVER**。
+- 設定変更後内部状態: **低確75% / 高確25%（全設定共通）**。
+- 設定変更時モード振り分け:
+  - 設定1: A56.3 / B12.5 / C6.3 / D25.0%
+  - 設定2: A56.3 / B25.0 / C6.3 / D12.5%
+  - 設定3: A56.3 / B12.5 / C6.3 / D25.0%
+  - 設定4: A53.1 / B18.8 / C9.4 / D18.8%
+  - 設定5: A53.1 / B12.5 / C9.4 / D25.0%
+  - 設定6: A37.5 / B31.3 / C15.6 / D15.6%
+- 設定1でもモードC以上 **31.3%**、高確 **25%** で朝一恩恵あり。
+- 天井非搭載のため gameCounterReset / ceilingAfterReset は **NOT_APPLICABLE**。
+- ガックンは当時実戦情報で「ほぼしない?/判別困難」。メーカー保証の確定判別にはしない。
+- 演出モードは設定変更時エンジェルモード、電源入切では引継ぎとする解析あり。朝一エンジェルモード以外なら据え置き濃厚とする資料あり。
 - 有利区間: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
 
-## 2016-02-22群 — CLOSED_FOR_CURRENT_RESEARCH
+### conflicts
+- PiDEA 2016-01-29内覧会記事はボーナス確率「全設定共通1/184」と記載する一方、後続解析は約1/84で一致。推測修正せず `CONFLICT_EARLY_INDUSTRY_BONUS_RATE_1_184_VS_LATER_ANALYSIS_1_84` を保存。
+- パチビー/P-WORLDのカテゴリ表示に「天井あり」が残る一方、後続複数解析は天井非搭載で一致。canonicalは非搭載、`CONFLICT_DATABASE_CATEGORY_CEILING_FLAG` を保存。
+
+## 2016-02-23〜03-06境界
+- HAZUSE新台カレンダーでは2016年2月の本線導入日群は02/22まで、次は03/07。
+- 日付指定検索でも02/23〜03/06に全国初導入日を固定できる未登録本線を今回確認できず。
+- status: **CLOSED_FOR_CURRENT_RESEARCH**。
+
+## ユルビスカス-30 日付監査
+- パチビーには **2016-02-22導入** 表記があるため漏れ候補として再監査。
+- しかしパイオニア公式製品一覧は **2016年3月発売**。
+- グリーンべると2016-02-08当時記事は **3/13より納品（沖縄は2/21）** と明記。
+- パチ7後年整理は **2016-03-14導入**。
+- よって02/22全国本線には追加せず、**沖縄先行2/21 + 全国3/13納品/3/14導入系**をcanonical候補として保持。
+- 次回以降、3/14群到達時に正式レコード化する際、この02/22表記を `CONFLICT_RELEASE_DATE_DATABASE_0222_VS_OFFICIAL_INDUSTRY_MARCH` として保存する。
+
+## 2016-03-07群 — OPEN
 処理済み:
-1. **パチスロひぐらしのなく頃に絆** — D-light — No.957
-2. **パチスロ偽物語** — Sammy — No.958
+1. **パチスロ鉄拳3rd エンジェルVer.** — 山佐 — No.959
 
-監査で除外/後送り:
-- **ニューチバリヨ / ニューチバリヨ-30** — NET公式プレスは2016-03-01発表、2016年4月中旬全国導入予定。HAZUSEは30φを2016-04-11。
-- **パチスロ ビッグドリーム in ロストアイランド2** — 2016-04-14発表、6月導入系資料。02/22ではない。
-- **ミラクル** — HAZUSEは2016-03-22導入。
-- 後年の設置期限一覧に出る「2016-02-22」は、上記では実ホール導入日と一致しないため導入日根拠に採用しない。
+次候補:
+1. **十字架3** — NET — メーカー系プレス/パチビー/K-Naviで2016-03-07全国導入を確認済み。
 
-## 2016-02-01群監査
-全国本線処理済み:
-1. スーパーオアシス — No.950
-2. キュインハナチャン-25 — No.951
-3. キュインハナチャン-30 — No.952
-4. 沖ドキ！トロピカル（25φ） — No.953
-
-- 緋弾のアリアはNo.955で canonical 02/08 / regional-alternate 02/01 と分離済み。
-- **沖ドキ！トロピカル-30（HH-30 / アクロス）** は25φと別型式で、2016-02-01/2016年3月の資料差が残るためvariant時系列監査継続。
-- status: **2016-02-01_NATIONWIDE_MAINLINE_CONVERGED_VARIANT_DATE_AUDIT_PENDING**。
-
-## 2016-02-08群 — CLOSED_FOR_CURRENT_RESEARCH
-処理済み:
-1. **まつりば！** — 大都技研 — No.954
-2. **パチスロ 緋弾のアリア** — 藤商事 — No.955
-3. **PACHISLOT NINJA GAIDEN** — 七匠 — No.956
-
-## 2016-02-09〜02-21境界 — CLOSED_FOR_CURRENT_RESEARCH
-- 日付指定検索、当時新台記事、古DBを横断し、全国導入日をこの区間に固定できる未登録パチスロを確認できず。
+- 十字架3処理後、03/07群を全メーカー横断で再監査し、追加未処理機を拾ってからCLOSED判定する。
 
 ## 遡及 resetBehavior QA
 - retroQaScanConfirmedThrough: **2006-02_jinzo-ningen-kikaider-k.md**
@@ -90,14 +86,15 @@
 - 今回は新規時系列前進を優先し、遡及QA地点は変更していない。
 
 ## 次回再開地点
-1. **recordCount 958 / chronologicalFrontier 2016-02-22 / 02-22群CLOSED** から開始。
-2. README / mission v0.7 / INDEX / LATEST_HANDOFF / No.958をmainから再取得。
-3. **2016-02-23以降の次の実ホール全国導入日を境界監査**し、最初に導入日を公式・業界・当時解析・古DBで固定できる未処理機種からNo.959を追加する。
-4. 後年設置期限一覧の02/29等を導入日へ自動転記しない。今回、同一覧の複数機種で実導入月との差を確認済み。
-5. 02/01群は **沖ドキ！トロピカル-30** の25φ別variant・地域/時期差だけ継続監査。
-6. 遡及QAは `2006-02_crash-bandicoot-s.md` から継続。
-7. PARTIAL/UNVERIFIEDは表記揺れ・正式型式・メーカー・設定変更/据え置き/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間へ検索語を変え、公式・業界・当時解析・古DB・アーカイブ・回顧資料まで再探索後のみ付与。
-8. 競合は平均せずCONFLICT/定義差として双方保存。
+1. **recordCount 959 / chronologicalFrontier 2016-03-07 / 03-07群OPEN** から開始。
+2. README / mission v0.7 / INDEX / LATEST_HANDOFF / No.959をmainから再取得。
+3. 次の未処理 **「十字架3」（NET）** を性能コア + resetBehavior v0.7で収集する。
+4. 十字架3のメーカー系プレスは2016-03-07全国導入予定を明記。パチビー/K-Naviも03-07で一致。
+5. 十字架3処理後、2016-03-07群を全メーカー横断監査して追加機を確認する。
+6. **ユルビスカス-30** は02/22へ戻して登録しない。3/14群到達時に、沖縄2/21・全国3/13納品・3/14導入・パチビー2/22の競合を整理して登録する。
+7. 遡及QAは `2006-02_crash-bandicoot-s.md` から継続。
+8. PARTIAL/UNVERIFIEDは表記揺れ・正式型式・メーカー・設定変更/据え置き/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間へ検索語を変え、公式・業界・当時解析・古DB・アーカイブ・回顧資料まで再探索後のみ付与。
+9. 競合は平均せずCONFLICT/定義差として双方保存。
 
 ## safeguard
 - INDEXは旧集約状態なので進捗正本にしない。LATEST_HANDOFF + 実レコードを優先。
@@ -108,30 +105,34 @@
 - 前作/後継機・別variantのresetBehaviorを無条件流用しない。
 
 ## 主要出典 — 取得日 2026-09-08
-### No.958 パチスロ偽物語
-- Sammy公式: https://www.sammy.co.jp/japanese/news/2016/474.html
-- グリーンべると: https://web-greenbelt.jp/00008395/
-- HAZUSE: https://hazuse.com/machine/pachislot/5S1298/
-- パチ＆スロ必勝本: https://p.hisshobon.jp/machine/2700/1/56560
-- 一撃 天井/設定変更: https://1geki.jp/slot/nisemonogatari/3/
-- 一撃 状態移行: https://1geki.jp/slot/nisemonogatari/48/
-- 一撃 ART: https://1geki.jp/slot/nisemonogatari/81/
-- 期待値見える化: https://slotjin.com/zone/nisemonogatari/
-- ちょんぼりすた: https://chonborista.com/slot/sammy-slot/16232/
-- スロがち.COM: https://slogati.com/nisemonogatari/
-- パチ7: https://pachiseven.jp/machines/4755/cutout/2
+### No.959 パチスロ鉄拳3rd エンジェルVer.
+- HAZUSE: https://hazuse.com/machine/pachislot/5S0996/
+- HAZUSE AT/ART: https://hazuse.com/machine/pachislot/5S0996/genre/209/
+- PiDEA X: https://www.pidea.jp/articles/%E4%B8%89%E6%9C%A8%E6%B5%81%E3%80%8C%E9%89%84%E6%8B%B3%E3%82%A8%E3%83%B3%E3%82%B8%E3%82%A7%E3%83%ABVer%E3%80%8D%E3%81%AE%E8%A9%95%E4%BE%A1%E3%81%AF%EF%BC%9F
+- グリーンべると: https://web-greenbelt.jp/00008400/
+- P-WORLD: https://www.p-world.co.jp/machine/database/7966
+- すろぱちくえすと reset: https://www.slopachi-quest.com/article/tekken-angel-reset/
+- スロがち.COM: https://slogati.com/tekken-angel/
+- ちょんぼりすた: https://chonborista.com/slot/yamasa-slot/16561/
+- 必勝本: https://p.hisshobon.jp/machine/2701/1/56810
 
-### 02/22群境界監査
-- NET/ニューチバリヨ発表: https://www.dreamnews.jp/press/0000127776
-- HAZUSE ニューチバリヨ-30: https://hazuse.com/machine/pachislot/5S1398/
-- 娯楽産業 ビッグドリームinロストアイランド2: https://www.goraku-sangyo.com/%E3%82%BF%E3%82%A4%E3%83%A8%E3%83%BC%E3%82%A8%E3%83%AC%E3%83%83%E3%82%AF%E3%80%80%E6%96%B0%E6%A9%9F%E7%A8%AE%E3%80%8C%E3%83%91%E3%83%81%E3%82%B9%E3%83%AD-%E3%83%93%E3%83%83%E3%82%B0%E3%83%89%E3%83%AA/
-- HAZUSE ミラクル: https://hazuse.com/machine/pachislot/SX0126/
+### ユルビスカス-30日付監査
+- パイオニア公式製品一覧: https://www.slot-pioneer.co.jp/products/2016.html
+- パイオニア発売告知: https://www.slot-pioneer.co.jp/information/yurubiscus.html
+- グリーンべると: https://web-greenbelt.jp/00008412/
+- パチビー: https://www.pachibee.jp/movies/index/12453
+- パチ7: https://pachiseven.jp/articles/detail/11686
+
+### 03/07次候補 十字架3
+- NET系プレス: https://www.dreamnews.jp/press/0000127610/
+- K-Navi: https://p-kn.com/slot/2438/
 
 ## confidence
-- No.958 identity/releaseDate: **HIGH_OFFICIAL_PLUS_MULTI_SOURCE**
-- No.958 performanceCore: **ANALYSIS_HIGH_MULTI_SOURCE_WITH_PAYOUT_DEFINITION_SEPARATED**
-- No.958 resetSettingChange: **ANALYSIS_HIGH_DIRECT_MULTI_SOURCE**
-- No.958 resetNumericData: **ANALYSIS_HIGH_DIRECT_MULTI_SOURCE**
-- No.958 powerCycle: **ANALYSIS_HIGH_DIRECT_MULTI_SOURCE**
-- No.958 resetDetection: **ANALYSIS_MULTI_SOURCE_NOT_MANUFACTURER_GUARANTEED**
-- 2016-02-22 group completeness: **CLOSED_FOR_CURRENT_RESEARCH**
+- No.959 identity/releaseDate: **HIGH_MULTI_SOURCE_PERIOD**
+- No.959 performanceCore: **INDUSTRY_PLUS_ANALYSIS_HIGH_MULTI_SOURCE**
+- No.959 resetSettingChange: **ANALYSIS_HIGH_DIRECT_MULTI_SOURCE**
+- No.959 resetNumericData: **ANALYSIS_HIGH_PERIOD_DIRECT**
+- No.959 powerCycle: **ANALYSIS_HIGH_DIRECT_MULTI_SOURCE**
+- No.959 resetDetection: **ANALYSIS_PERIOD_NOT_MANUFACTURER_GUARANTEED**
+- 02/23〜03/06 boundary completeness: **CLOSED_FOR_CURRENT_RESEARCH**
+- yurubiscus release-date audit: **CONFLICT_WITH_OFFICIAL_INDUSTRY_MARCH_WEIGHTED_HIGHER_THAN_DATABASE_0222**
