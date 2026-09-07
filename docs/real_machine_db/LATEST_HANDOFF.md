@@ -4,113 +4,87 @@
 
 ## 現在地点
 
-- recordCount: **873**
-- latestRecordAdded: **パチスロ ベルセルク**（七匠 / NANASHOW）
-- latestRecord: `docs/real_machine_db/machines/2015-03-02_pachislot-berserk.md`
-- chronologicalFrontier: **2015-03-02**
-- frontierLatestMachine: **パチスロ ベルセルク**（七匠）
+- recordCount: **874**
+- latestRecordAdded: **TRAD**（ヤーマ）
+- latestRecord: `docs/real_machine_db/machines/2015-03-09_trad.md`
+- chronologicalFrontier: **2015-03-09**
+- frontierLatestMachine: **TRAD**（ヤーマ）
 - schema: **resetBehavior v0.7**
-- status: **2015-03-02_GROUP_CLOSED_FOR_CURRENT_RESEARCH**
+- status: **2015-03-09_GROUP_OPEN**
 
 ## 今回の同期 / 正本確認
 
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、本 `LATEST_HANDOFF.md`、No.872 `2015-03-02_pachislot-cyber-blue.md` を再読。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、本 `LATEST_HANDOFF.md`、No.873 `2015-03-02_pachislot-berserk.md` を再読。
 - INDEXは旧集約状態のためREADME規定どおり **LATEST_HANDOFF + 実レコード** を進捗正本として使用。
-- 作業開始時正本は **872件 / chronologicalFrontier 2015-03-02 / 03-02_GROUP_OPEN**。
-- 次未処理の **パチスロ ベルセルク（七匠）** をNo.873として追加。
-- 03/02同日群を再監査し、戦国コレクション2 / スーパーラクラクビスカス / パチスロサイバーブルー / パチスロ ベルセルクの4機を処理済みとして `CLOSED_FOR_CURRENT_RESEARCH`。
-- `コブラ（SNKプレイモア）` は一部後年一覧に03/02表記があるが、K-Navi・パチ7・HAZUSEが **2015-03-16** で一致し、当時事前資料も納品3/15予定。03/02へは入れず03/16候補を維持する。
+- 作業開始時正本は **873件 / chronologicalFrontier 2015-03-02 / 03-02_GROUP_CLOSED_FOR_CURRENT_RESEARCH**。
+- **2015-03-03～03-08境界監査**を実施。地域先行・小規模メーカー・別日導入を含め検索したが、今回具体日付き未処理5号機を固定できず `CLOSED_FOR_CURRENT_RESEARCH`。
+- 次の強いアンカー **2015-03-09** へ進み、ヤーマ **TRAD（トラッドT2 / 4S1127）** をNo.874として追加。
+- 同日候補 **TRAD480（トラッド480R2 / 4S1081）** は未処理のため03/09群はOPEN。
+- ベルセルクのK-Navi03/09表記はNo.873の導入日CONFLICTとして既保存のため重複登録しない。
 
-## No.873 — パチスロ ベルセルク
+## No.874 — TRAD
 
-- record: `docs/real_machine_db/machines/2015-03-02_pachislot-berserk.md`
-- manufacturer: **七匠（NANASHOW）**
-- releaseDate canonical: **2015-03-02**
-- releaseDate conflict: **K-Navi 2015-03-09**
-- modelName: **パチスロベルセルクS**（後年整理DB、公式/公的検定資料未固定）
-- inspectionNumber: `UNVERIFIED_AFTER_RESEARCH`
-- systemType: **5号機 ART / 擬似ボーナス / CZ / 1G連ストック**
+- record: `docs/real_machine_db/machines/2015-03-09_trad.md`
+- manufacturer: **ヤーマ**
+- releaseDate canonical: **2015-03-09**
+- modelName: **トラッドT2**
+- inspectionNumber: **4S1127**
+- systemType: **5号機 ノーマル / ボーナス主体**
 
 ### 性能コア
 
-- 機械割: **97.2 / 98.7 / 100.3 / 104.5 / 109.0 / 112.6%**。
-- ART / 擬似ボーナス初当たり: **1/221.8 / 210.6 / 198.9 / 183.7 / 173.1 / 160.8**。
-- 50枚ベース: **約32G**。
-- 純増: **約2.3枚/G**。
-- 斬魔BONUS: **40～200G**。
-- バーサーカーBONUS: **40～200G+α**。
-- ファルコンBONUS: **120～711枚**。
-- 蝕BONUS: 約50枚のリアルボーナス。
-- 狂戦士MODE(滅): **11G or 21G**。
+- 市場掲載機械割: **96.5 / 98.5 / 100.0 / 102.5 / 105.0 / 108.5%**。
+- パチマガスロマガPAYOUTシミュレート値: **97.05 / 98.51 / 100.34 / 102.09 / 104.51 / 107.36%**。定義違いのため平均化しない。
+- BIG: **1/287.4 / 277.7 / 273.1 / 268.6 / 260.1 / 252.1**。
+- REG: **1/356.2 / 348.6 / 334.4 / 315.1 / 303.4 / 292.6**。
+- 合算: **1/159.1 / 154.6 / 150.3 / 145.0 / 140.0 / 135.4**。
+- BIG: **約312枚（312枚固定）**。
+- REG: **約104枚（104枚固定）**。
+- 50枚ベース: `UNVERIFIED_AFTER_RESEARCH`。
+- 天井: **非搭載**。
 
 ### resetBehavior v0.7
 
-- 設定変更時:
-  - **天井Gリセット**
-  - **通常モード再抽選**
-  - **内部状態再抽選**
-  - ベヘリットポイント規定数再抽選 / 蓄積数リセット
-  - 液晶は森ステージ
-- 電源OFF→ONのみ:
-  - **天井G引継ぎ**
-  - **モード・状態引継ぎ**
-  - **ベヘリットポイント規定数・蓄積数とも引継ぎ**
-  - 液晶のみ森ステージ
-- 据え置きは上記電断契約と整合する `CARRY_OVER_CONFIRMED_VIA_POWER_CYCLE_CONTRACT`。
-- モード別最大天井（最大32G前兆込み）: **通常A 1000G / 通常B 333G / 天国 100G**。
-- 基礎到達G表記は **968 / 301 / 68G + 最大32G前兆**。定義差として保持。
-
-#### 設定変更時・通常モード
-
-- 設定1-3: 通常A75.0 / 通常B20.0 / 天国5.0%
-- 設定4: 75.0 / 18.8 / 6.3%
-- 設定5: 75.0 / 17.2 / 7.8%
-- 設定6: 75.0 / 15.0 / 10.0%
-
-#### 設定変更時・内部状態
-
-- 設定1-3: 低確75.0 / 高確21.9 / 超高確3.1%
-- 設定4: 66.7 / 30.2 / 3.1%
-- 設定5: 59.4 / 37.5 / 3.1%
-- 設定6: 50.0 / 46.9 / 3.1%
-
-#### 設定変更時・BPモード
-
-- 設定1-3: 通常A37.5 / 通常B25.0 / 通常C12.5 / 天国A18.8 / 天国B6.3%
-- 設定4-6: 通常A21.7 / 通常B25.0 / 通常C20.0 / 天国A22.2 / 天国B11.1%
-
-### 朝一変更判別
-
-- 設定変更時、ベルこぼし目（ベル大V字）が出るまで **斜めリプレイが揃う挙動**を利用した当時の変更判別情報あり。対策時は不可。
-- 設定変更 / 純電断とも液晶は森ステージのため、森ステージ単独では判別不可。
-- 本機固有の一般的なガックン確定契約は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- 天井・規定Gモード・AT/ART/CZ状態はノーマル機のため `NOT_APPLICABLE`。
+- `gameCounterReset`: `NOT_APPLICABLE_NO_CEILING_OR_GAME_NUMBER_MODE`。
+- `ceilingAfterReset`: `NOT_APPLICABLE_NO_CEILING`。
+- `modeAfterReset`: `NOT_APPLICABLE_NO_GAME_NUMBER_MODE`。
 - 有利区間: `NOT_APPLICABLE_5TH_GEN_PRE_5_9`。
+- 設定変更専用の短縮天井・朝一モード・CZ/AT恩恵等: `NONE_CONFIRMED_AFTER_RESEARCH`。
+- 本機固有の純電源OFF→ON時のリール/表示契約: `UNVERIFIED_AFTER_RESEARCH`。
+- ガックン等の設定変更判別: 検索語・資料系統を変えて再探索したが `UNVERIFIED_AFTER_RESEARCH`。
+- 同時期の他ヤーマ機や兄弟機TRAD480の挙動は転記しない。
 
-## 2015-03-02群 — CLOSED_FOR_CURRENT_RESEARCH
+## 2015-03-03～03-08境界 — CLOSED_FOR_CURRENT_RESEARCH
+
+- `2015-03-03 / 03-04 / 03-05 / 03-06 / 03-07 / 03-08` の導入表記、2015年3月第1週、新台一覧、メーカー/機種DBを横断。
+- 今回、03/02処理済み群と03/09候補群の間に具体日付き未処理5号機を固定できず。
+- 後続資料で地域先行・小規模導入が判明した場合は遡及追加可。
+
+## 2015-03-09群 — OPEN
 
 処理済み:
 
-- 戦国コレクション2 — KPE — **No.870**
-- スーパーラクラクビスカス — パイオニア — **No.871**
-- パチスロサイバーブルー — 三洋物産 — **No.872**
-- パチスロ ベルセルク — 七匠 — **No.873**
+- TRAD — ヤーマ — **No.874**
 
-監査メモ:
+未処理の強い候補:
 
-- ベルセルクは03/02 vs 03/09の導入日CONFLICTを保持したまま03/02 canonical。
-- コブラは03/16 canonicalを維持。孤立した03/02後年一覧値は現時点では採用しない。
+- **TRAD480 — ヤーマ — 型式トラッド480R2 / 検定4S1081 / HAZUSE導入開始2015-03-09**
+
+重複注意:
+
+- パチスロ ベルセルク — No.873。K-Naviのみ03/09表記だがcanonical 03/02 + CONFLICTとして既処理済み。
 
 ## 次回再開地点
 
-1. **recordCount 873 / chronologicalFrontier 2015-03-02 / 03-02_GROUP_CLOSED_FOR_CURRENT_RESEARCH** から開始。
-2. 最新mainの README / mission / INDEX / LATEST_HANDOFF / No.873を再確認。
-3. **2015-03-03～03-08境界監査**を行う。地域先行・別日導入・小規模メーカー機を落とさない。
-4. 境界に未処理がなければ **2015-03-09群**へ進む。
-5. 現時点で03/09の強い次候補はヤーマ **TRAD（型式トラッドT2 / 検定4S1127）** と **TRAD480（型式トラッド480R2 / 検定4S1081）**。HAZUSEで双方2015-03-09導入を確認済み。全メーカー同日群監査後、最初の未処理をNo.874として処理する。
-6. ベルセルクのK-Navi03/09表記は既処理CONFLICTなので重複登録しない。
-7. `コブラ（SNKプレイモア）` は2015-03-16候補を維持。
-8. 欠損は表記揺れ・型式・メーカー名・設定変更/据え置き/純電断/天井/モード/ガックン等へ検索語を変え、公式・業界一次・当時解析・古いDB・回顧資料を横断後だけ `UNVERIFIED_AFTER_RESEARCH`。
-9. 遡及resetBehavior QAカーソルは `docs/real_machine_db/machines/2007-03-19_kakumei-senshi-choshu-riki.md` を維持。新規本線を止めない。
+1. **recordCount 874 / chronologicalFrontier 2015-03-09 / 03-09_GROUP_OPEN** から開始。
+2. 最新mainの README / mission / INDEX / LATEST_HANDOFF / No.874を再確認。
+3. 次の未処理は **TRAD480（ヤーマ / トラッド480R2 / 4S1081）**。性能コア + resetBehavior v0.7を収集しNo.875として処理する。
+4. TRAD480処理後、**2015-03-09同日群を全メーカー横断で再監査**。追加がなければ `CLOSED_FOR_CURRENT_RESEARCH`。
+5. その後 **2015-03-10～03-15境界監査**へ進む。
+6. `コブラ（SNKプレイモア）` はK-Navi・パチ7・HAZUSEが **2015-03-16** で一致しているため03/16候補を維持。
+7. 欠損は表記揺れ・型式・メーカー名・設定変更/据え置き/純電断/天井/モード/ガックン等へ検索語を変え、公式・業界一次・当時解析・古いDB・アーカイブ・回顧資料を横断後だけ `UNVERIFIED_AFTER_RESEARCH`。
+8. 遡及resetBehavior QAカーソルは `docs/real_machine_db/machines/2007-03-19_kakumei-senshi-choshu-riki.md` を維持。新規本線を止めない。
 
 ## safeguard
 
@@ -118,29 +92,18 @@
 - exact release dateでは **検定告示日 / 発表日 / 納品予定 / 全国導入 / 地域先行 / 実ホール導入 / 派生導入 / アプリ配信** を区別する。
 - 据え置き・純電断挙動は一般的な5号機慣例から推定しない。
 - `UNVERIFIED_AFTER_RESEARCH` は検索語・資料系統を変えた再探索後だけ使用する。
-- 同名シリーズ・後継機のリセット契約を転記しない。
+- 同名シリーズ・兄弟機・後継機のリセット契約を転記しない。
 - 2015-06-08到達時の **吉宗～極～（ヨシムネH2A4 / 3S1093）** 正式量産版処理注意を維持。
 
 ## 主要出典 — 取得日 2026-09-07
 
-### パチスロ ベルセルク
-- PiDEA（発売発表 / 納品3/1予定）: https://www.pidea.jp/articles/%E4%B8%83%E5%8C%A0%E3%80%8C%E3%83%91%E3%83%81%E3%82%B9%E3%83%AD%20%E3%83%99%E3%83%AB%E3%82%BB%E3%83%AB%E3%82%AF%E3%80%8D%E6%96%B0%E8%A6%8F%E5%8F%82%E5%85%A5%E7%AC%AC1%E5%BC%BE
-- パチ&スロ必勝本 基本スペック: https://p.hisshobon.jp/machine/2525/1/50340
-- パチ&スロ必勝本 天井&設定変更: https://p.hisshobon.jp/machine/2525/1/51151
-- 一撃 TOP: https://1geki.jp/slot/berserk/
-- 一撃 天井/設定変更: https://1geki.jp/slot/berserk/3/
-- 一撃 モード移行: https://1geki.jp/slot/berserk/63/
-- 一撃 状態移行: https://1geki.jp/slot/berserk/64/
-- 一撃 BP: https://1geki.jp/slot/berserk/67/
-- P-WORLD: https://www.p-world.co.jp/machine/database/7640
-- K-Navi: https://p-kn.com/slot/2221/
-- パチ7: https://pachiseven.jp/machines/4419/cutout/74
-- パチマガスロマガ ベース: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/nanashow_slot/01/c.php
-- パチマガスロマガ 斬魔BONUS: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/nanashow_slot/01/03.php
-- すろぱちくえすと 朝一判別: https://www.slopachi-quest.com/article/berserk0-reset-check/
+### TRAD
+- HAZUSE: https://hazuse.com/machine/pachislot/4S1127/
+- パチマガスロマガ 機種TOP: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yama_slot/16/a.php
+- パチマガスロマガ ボーナス確率・PAYOUT: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yama_slot/16/h.php
+- すろぱちくえすと: https://www.slopachi-quest.com/article/trad/
 
 ### 次候補 / 境界
-- HAZUSE TRAD: https://hazuse.com/machine/pachislot/4S1127/
 - HAZUSE TRAD480: https://hazuse.com/machine/pachislot/4S1081/
 - K-Navi コブラ: https://p-kn.com/slot/2207/
 - パチ7 コブラ: https://pachiseven.jp/machines/4412/cutout/74
