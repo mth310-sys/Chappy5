@@ -1,5 +1,5 @@
 const TILE=24,MAP_W=48,MAP_H=32;
-const px=(gx)=>gx*TILE, py=(gy)=>gy*TILE;
+const px=g=>g*TILE,py=g=>g*TILE;
 
 const facilities=[
  {type:'counter',label:'カウンター',x:7,y:1,w:8,h:3,color:0x9a633f},
@@ -13,7 +13,15 @@ const islands=[{id:'I01',x:3,y:9},{id:'I02',x:13,y:9},{id:'I03',x:23,y:9},{id:'I
 
 class MainScene extends Phaser.Scene{
  constructor(){super('main')}
- create(){this.world=this.add.container(0,0);this.drawFloor();this.drawWalls();this.drawFacilities();this.machineData=this.drawIslands();this.createPlayer(24,27);this.keys=this.input.keyboard.createCursorKeys();this.keyWASD=this.input.keyboard.addKeys('W,A,S,D');this.setupTouch();this.cameras.main.setBounds(0,0,MAP_W*TILE,MAP_H*TILE);this.cameras.main.setZoom(1.15);this.cameras.main.startFollow(this.playerAnchor,true,.12,.12);this.cameras.main.setDeadzone(110,80);this.status=this.add.text(8,this.scale.height-26,'',{fontFamily:'sans-serif',fontSize:'11px',color:'#fff',backgroundColor:'rgba(0,0,0,.58)',padding:{x:5,y:3}}).setScrollFactor(0).setDepth(99999);this.scale.on('resize',s=>this.status.setY(s.height-26))}
+ create(){
+  this.world=this.add.container(0,0);this.drawFloor();this.drawWalls();this.drawFacilities();this.machineData=this.drawIslands();
+  this.seatedMachine=null;this.createPlayer(24,27);
+  this.keys=this.input.keyboard.createCursorKeys();this.keyWASD=this.input.keyboard.addKeys('W,A,S,D');
+  this.keyActionE=this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.E);this.keyActionSpace=this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
+  this.setupTouch();
+  this.cameras.main.setBounds(0,0,MAP_W*TILE,MAP_H*TILE);this.cameras.main.setZoom(1.15);this.cameras.main.startFollow(this.playerAnchor,true,.12,.12);this.cameras.main.setDeadzone(110,80);
+  this.status=this.add.text(8,this.scale.height-26,'',{fontFamily:'sans-serif',fontSize:'11px',color:'#fff',backgroundColor:'rgba(0,0,0,.58)',padding:{x:5,y:3}}).setScrollFactor(0).setDepth(99999);this.scale.on('resize',s=>this.status.setY(s.height-26));
+ }
  drawFloor(){const g=this.add.graphics();g.fillStyle(0xe7dfcf,1);g.fillRect(0,0,MAP_W*TILE,MAP_H*TILE);for(let y=0;y<MAP_H;y++)for(let x=0;x<MAP_W;x++)if((x+y)%2===0){g.fillStyle(0xf0e9dc,.22);g.fillRect(px(x),py(y),TILE,TILE)}g.lineStyle(1,0xcfc5b2,.42);for(let x=0;x<=MAP_W;x++)g.lineBetween(x*TILE,0,x*TILE,MAP_H*TILE);for(let y=0;y<=MAP_H;y++)g.lineBetween(0,y*TILE,MAP_W*TILE,y*TILE);this.world.add(g)}
  drawWalls(){const g=this.add.graphics(),w=MAP_W*TILE,h=MAP_H*TILE;g.fillStyle(0x30353b,1);g.fillRect(0,0,w,8);g.fillRect(0,0,8,h);g.fillRect(w-8,0,8,h);g.fillRect(0,h-8,w,8);g.fillStyle(0x626a73,1);g.fillRect(8,8,w-16,5);g.fillRect(8,8,5,h-16);g.fillRect(w-13,8,5,h-16);g.fillStyle(0x15191d,.45);g.fillRect(13,13,w-26,4);this.world.add(g)}
  drawSign(x,y,text){const w=Math.max(48,text.length*9+18);this.world.add([this.add.rectangle(x+2,y+3,w,20,0x000000,.22).setDepth(9000),this.add.rectangle(x,y,w,20,0x17191c,.96).setStrokeStyle(1,0x4c4f54).setDepth(9001),this.add.text(x,y,text,{fontFamily:'sans-serif',fontSize:'10px',fontStyle:'bold',color:'#fff'}).setOrigin(.5).setDepth(9002)])}
@@ -26,18 +34,22 @@ class MainScene extends Phaser.Scene{
  drawMachine(gx,gy,side,color,island){const y=py(gy),sc=px(island.x+2)+3,cx=sc+(side==='L'?-13:13),m=this.add.container(cx,y+12),a=Phaser.Display.Color.IntegerToColor(color).brighten(24).color,d=Phaser.Display.Color.IntegerToColor(color).darken(32).color,chx=side==='L'?-18:18;m.add([this.add.ellipse(side==='L'?-5:5,10,28,8,0x000000,.22),this.add.rectangle(0,8,20,5,0x23262a).setStrokeStyle(1,0x111315),this.add.rectangle(0,-2,20,22,d).setStrokeStyle(1,0x141619),this.add.rectangle(side==='L'?9:-9,-2,6,21,0x1b1e21).setStrokeStyle(1,0x101214),this.add.rectangle(side==='L'?-8:8,-2,3,20,a,.9),this.add.rectangle(0,-9,17,7,color).setStrokeStyle(1,0x1e2124),this.add.polygon(0,-16,[-10,5,0,0,10,5,0,9],a,1).setStrokeStyle(1,0x1d1f22),this.add.rectangle(0,-12,12,2,0xffe98d,.95),this.add.rectangle(0,-5,13,7,0x15191d).setStrokeStyle(1,0x080a0b),this.add.rectangle(0,-5,10,4,0x76d9ff).setStrokeStyle(1,0x285164),this.add.rectangle(0,1,14,7,0x2a2d31).setStrokeStyle(1,0x111315),this.add.rectangle(0,1,11,5,0xf5f1df),this.add.rectangle(-3,1,1,5,0xb9b7ae,.8),this.add.rectangle(3,1,1,5,0xb9b7ae,.8),this.add.rectangle(0,5,13,2,0x25292d),this.add.circle(-3,5,1.2,0xff4f4f),this.add.circle(0,5,1.2,0x58d16b),this.add.circle(3,5,1.2,0x4d8dff),this.add.rectangle(0,7,14,3,0x4a4e53).setStrokeStyle(1,0x1a1c1f)]);const ch=this.add.container(chx,6);ch.add([this.add.ellipse(0,8,12,5,0x000000,.18),this.add.rectangle(0,6,2,8,0x696c70),this.add.rectangle(0,10,9,2,0x34373a),this.add.rectangle(side==='L'?-2:2,-3,8,7,0xb13b3b).setStrokeStyle(1,0x321919),this.add.ellipse(0,1,11,8,0x9c2f2f).setStrokeStyle(1,0x2b1717)]);m.add(ch);m.setDepth(y+TILE);this.world.add(m);return m}
  drawIslandSpine(i){const center=px(i.x+2)+3,x=center-8,y=py(i.y)-4,h=15*TILE+8,g=this.add.graphics();g.fillStyle(0x000000,.18);g.fillRect(x+4,y+5,20,h);g.fillStyle(0x24282d,1);g.fillRect(x,y,16,h);g.fillStyle(0x40464d,1);g.fillRect(x+2,y,12,h);g.fillStyle(0x555c64,.72);g.fillRect(x+3,y+2,9,h-4);g.fillStyle(0x15181b,.75);g.fillRect(x+13,y,3,h);g.lineStyle(1,0x181b1e,1);g.strokeRect(x,y,16,h);this.world.add(g)}
  drawIslandEndCap(i,b=false){const gy=b?i.y+14:i.y,x=px(i.x+2)+3,y=py(gy)+(b?TILE+5:-5),c=this.add.container(x,y).setDepth(y+50);c.add([this.add.ellipse(0,5,42,8,0x000000,.15),this.add.rectangle(0,0,40,9,0x34393f).setStrokeStyle(1,0x1c1f22),this.add.rectangle(0,-4,34,8,0x515861).setStrokeStyle(1,0x24272a)]);this.world.add(c)}
- drawIslands(){const ms=[];islands.forEach((i,idx)=>{this.drawIslandSpine(i);this.drawIslandEndCap(i);this.drawIslandEndCap(i,true);this.drawSign(px(i.x+2)+3,py(i.y)-18,`島0${idx+1}`);this.drawPlant(i.x+2,i.y-1);this.drawPlant(i.x+2,i.y+15);for(let s=0;s<2;s++)for(let n=0;n<15;n++){const gx=i.x+s*4,gy=i.y+n,color=n%3===0?0xe84343:n%3===1?0x3478d4:0xd33bb0;this.drawMachine(gx,gy,s===0?'L':'R',color,i);ms.push({machineId:`I0${idx+1}-${s===0?'L':'R'}${String(n+1).padStart(2,'0')}`,islandId:`I0${idx+1}`,side:s===0?'L':'R',number:n+1,gridX:gx,gridY:gy,setting:1,occupied:false,totalGames:0,bonusCount:0,differenceCoins:0})}});return ms}
+ drawIslands(){const ms=[];islands.forEach((i,idx)=>{this.drawIslandSpine(i);this.drawIslandEndCap(i);this.drawIslandEndCap(i,true);this.drawSign(px(i.x+2)+3,py(i.y)-18,`島0${idx+1}`);this.drawPlant(i.x+2,i.y-1);this.drawPlant(i.x+2,i.y+15);for(let s=0;s<2;s++)for(let n=0;n<15;n++){const gx=i.x+s*4,gy=i.y+n,color=n%3===0?0xe84343:n%3===1?0x3478d4:0xd33bb0,side=s===0?'L':'R';const view=this.drawMachine(gx,gy,side,color,i);ms.push({machineId:`I0${idx+1}-${side}${String(n+1).padStart(2,'0')}`,islandId:`I0${idx+1}`,side,number:n+1,gridX:gx,gridY:gy,seatX:gx,seatY:gy,setting:1,occupied:false,occupantId:null,totalGames:0,bonusCount:0,differenceCoins:0,view})}});return ms}
  createPlayer(gx,gy){this.playerGrid={x:gx,y:gy};const c=this.add.container(px(gx)+12,py(gy)+12);c.add([this.add.ellipse(0,10,15,6,0x000000,.25),this.add.rectangle(0,8,8,7,0x27303b).setStrokeStyle(1,0x171b20),this.add.rectangle(0,0,12,17,0x2e6fbd).setStrokeStyle(1,0x16385e),this.add.rectangle(0,-2,8,5,0x4e8bd0),this.add.circle(0,-11,5,0xe6bb92).setStrokeStyle(1,0x6e503c),this.add.arc(0,-13,5,180,360,false,0x54392a).setStrokeStyle(1,0x3e2a20)]);c.setDepth(py(gy)+TILE+100);this.world.add(c);this.playerAnchor=c}
- setupTouch(){document.querySelectorAll('.mobile-pad button').forEach(b=>{const d=b.dataset.dir;b.addEventListener('pointerdown',e=>{e.preventDefault();this.touchDir=d});['pointerup','pointercancel','pointerleave'].forEach(ev=>b.addEventListener(ev,()=>this.touchDir=null))})}
- isBlocked(gx,gy){
-  if(gx<1||gy<1||gx>=MAP_W-1||gy>=MAP_H-1)return true;
-  for(const f of facilities){if(f.type==='entrance')continue;if(gx>=f.x&&gx<f.x+f.w&&gy>=f.y&&gy<f.y+f.h)return true}
-  // 椅子側は通行可能。筐体と中央島設備だけを進入不可にする。
-  // 現在の描画では島本体が中央3列（x+1 ～ x+3）に収まる。
-  for(const i of islands){if(gy>=i.y&&gy<i.y+15&&gx>=i.x+1&&gx<=i.x+3)return true}
-  return false;
+ setupTouch(){document.querySelectorAll('.mobile-pad button').forEach(b=>{const d=b.dataset.dir;b.addEventListener('pointerdown',e=>{e.preventDefault();this.touchDir=d});['pointerup','pointercancel','pointerleave'].forEach(ev=>b.addEventListener(ev,()=>this.touchDir=null))});const action=document.getElementById('action-button');if(action)action.addEventListener('pointerdown',e=>{e.preventDefault();this.handleAction()})}
+ getMachineAtPlayer(){return this.machineData.find(m=>m.seatX===this.playerGrid.x&&m.seatY===this.playerGrid.y)||null}
+ handleAction(){
+  if(this.seatedMachine){const m=this.seatedMachine;m.occupied=false;m.occupantId=null;this.seatedMachine=null;this.playerAnchor.x=px(this.playerGrid.x)+12;return}
+  const m=this.getMachineAtPlayer();if(!m||m.occupied)return;
+  m.occupied=true;m.occupantId='player';this.seatedMachine=m;this.playerAnchor.x=px(this.playerGrid.x)+12+(m.side==='L'?5:-5);
  }
- moveGrid(dx,dy){const nx=this.playerGrid.x+dx,ny=this.playerGrid.y+dy;if(this.isBlocked(nx,ny))return;this.playerGrid={x:nx,y:ny};this.playerAnchor.setDepth(py(ny)+TILE+100);this.tweens.add({targets:this.playerAnchor,x:px(nx)+12,y:py(ny)+12,duration:90,ease:'Linear'})}
- update(time){if(time<(this.nextMove||0))return;let d=this.touchDir;if(this.keys.left.isDown||this.keyWASD.A.isDown)d='left';else if(this.keys.right.isDown||this.keyWASD.D.isDown)d='right';else if(this.keys.up.isDown||this.keyWASD.W.isDown)d='up';else if(this.keys.down.isDown||this.keyWASD.S.isDown)d='down';if(d){const map={left:[-1,0],right:[1,0],up:[0,-1],down:[0,1]};this.moveGrid(...map[d]);this.nextMove=time+115}this.status.setText(`□グリッド ${this.playerGrid.x},${this.playerGrid.y} / 台数 ${this.machineData.length}`)}
+ isBlocked(gx,gy){if(gx<1||gy<1||gx>=MAP_W-1||gy>=MAP_H-1)return true;for(const f of facilities){if(f.type==='entrance')continue;if(gx>=f.x&&gx<f.x+f.w&&gy>=f.y&&gy<f.y+f.h)return true}for(const i of islands){if(gy>=i.y&&gy<i.y+15&&gx>=i.x+1&&gx<=i.x+3)return true}return false}
+ moveGrid(dx,dy){if(this.seatedMachine)return;const nx=this.playerGrid.x+dx,ny=this.playerGrid.y+dy;if(this.isBlocked(nx,ny))return;this.playerGrid={x:nx,y:ny};this.playerAnchor.setDepth(py(ny)+TILE+100);this.tweens.add({targets:this.playerAnchor,x:px(nx)+12,y:py(ny)+12,duration:90,ease:'Linear'})}
+ update(time){
+  if(Phaser.Input.Keyboard.JustDown(this.keyActionE)||Phaser.Input.Keyboard.JustDown(this.keyActionSpace))this.handleAction();
+  const near=this.getMachineAtPlayer();let extra='';if(this.seatedMachine)extra=` / 着席 ${this.seatedMachine.machineId}・決定で立つ`;else if(near)extra=near.occupied?` / ${near.machineId} 使用中`:` / ${near.machineId}・決定で着席`;
+  this.status.setText(`□グリッド ${this.playerGrid.x},${this.playerGrid.y} / 台数 ${this.machineData.length}${extra}`);
+  if(this.seatedMachine||time<(this.nextMove||0))return;let d=this.touchDir;if(this.keys.left.isDown||this.keyWASD.A.isDown)d='left';else if(this.keys.right.isDown||this.keyWASD.D.isDown)d='right';else if(this.keys.up.isDown||this.keyWASD.W.isDown)d='up';else if(this.keys.down.isDown||this.keyWASD.S.isDown)d='down';if(d){const map={left:[-1,0],right:[1,0],up:[0,-1],down:[0,1]};this.moveGrid(...map[d]);this.nextMove=time+115}
+ }
 }
 new Phaser.Game({type:Phaser.AUTO,parent:'game',backgroundColor:'#171a20',scale:{mode:Phaser.Scale.RESIZE,width:window.innerWidth,height:window.innerHeight},render:{pixelArt:true,antialias:false},scene:[MainScene]});
