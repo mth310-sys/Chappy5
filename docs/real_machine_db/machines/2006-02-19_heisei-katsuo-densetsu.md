@@ -1,7 +1,8 @@
 # 平成カツヲ伝説
 
 status: PARTIAL
-qaResetBehavior: PARTIAL
+qaResetBehavior: PARTIAL_RESEARCH_EXHAUSTED
+qaResetBehaviorLastUpdated: 2026-09-08
 
 machineName: 平成カツヲ伝説
 manufacturer: ヤーマ
@@ -71,52 +72,53 @@ UNVERIFIED
 
 ## resetBehavior
 
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
+resetBehaviorQALastUpdated: 2026-09-08
 
 settingChangeBehavior:
-- 「平成カツヲ伝説 / ヘイセイバクトデンA / ヤーマ」と「設定変更 / リセット / 朝一 / ガックン / 状態」を組み替え、公式・当時業界記事・HAZUSE・後年DBを再探索したが、本機固有の設定変更時挙動を明記した高信頼資料は確認できずUNVERIFIED。
+- 「平成カツヲ伝説 / ヘイセイバクトデンA / ヤーマ」と「設定変更 / リセット / 朝一 / ガックン / 状態 / 3G RT」を組み替え、公式・当時業界記事・HAZUSE・古いDB・後年回顧を再探索したが、本機固有の設定変更時挙動を明記した直接資料は確認できずUNVERIFIED_AFTER_RESEARCH。
 
 carryOverBehavior:
-- 通常時ゲーム数天井・長期モード管理・ART/ATストックはNONE_CONFIRMED。
-- 特殊リプレイ由来3G RT中の据え置き時残G処理はUNVERIFIED。
+- 通常時ゲーム数天井・長期モード管理・ART/ATストックはNONE_CONFIRMED / NOT_APPLICABLE相当。
+- 特殊リプレイ由来3G RT中の据え置き時残G処理はUNVERIFIED_AFTER_RESEARCH。
 
 powerCycleBehavior:
-- 電源OFF→ONのみで朝一専用モード・天井短縮・初当たり優遇が生じる根拠はNONE_CONFIRMED。
-- 3G RT中の電断時残G処理はUNVERIFIED。
+- 電源OFF→ONのみで朝一専用モード・天井短縮・初当たり優遇が生じる根拠はNONE_CONFIRMED_AFTER_RESEARCH。
+- 3G RT中の電断時残G処理はUNVERIFIED_AFTER_RESEARCH。
 
 gameCounterReset:
 - 通常時ゲーム数天井はNONE_CONFIRMED / NOT_APPLICABLE相当。
 
 ceilingAfterReset:
-- NONE_CONFIRMED。
+- NONE_CONFIRMED / NOT_APPLICABLE相当。
 
 modeAfterReset:
 - 朝一専用モードやゲーム数モード管理はNONE_CONFIRMED。
 
 stateAfterReset:
 - 通常時の主要内部状態再抽選はNONE_CONFIRMED。
-- 特殊リプレイ成立後3G RTの設定変更/据え置き/電断処理のみUNVERIFIED。
+- 特殊リプレイ成立後3G RTの設定変更/据え置き/電断処理のみUNVERIFIED_AFTER_RESEARCH。
 
 advantageousSectionReset:
 - NOT_APPLICABLE（5号機初期・有利区間制度導入前）。
 
 resetBenefits:
-- 設定変更時限定の天井短縮・モード優遇・初当たり優遇はNONE_CONFIRMED。
+- 設定変更時限定の天井短縮・モード優遇・初当たり優遇はNONE_CONFIRMED_AFTER_RESEARCH。
 
 resetPenalties:
-- NONE_CONFIRMED。
+- NONE_CONFIRMED_AFTER_RESEARCH。
 
 resetDetection:
-- 本機固有のガックン、液晶表示、ゲーム数挙動による変更判別は十分な再探索後もUNVERIFIED。
+- 本機固有のガックン、液晶表示、ゲーム数挙動による変更判別は十分な再探索後もUNVERIFIED_AFTER_RESEARCH。
 
 numericResetData:
 - 設定変更時モード振り分け: NONE_CONFIRMED
-- 短縮天井: NONE_CONFIRMED
+- 短縮天井: NONE_CONFIRMED / NOT_APPLICABLE相当
 - 朝一当選率/恩恵発生率: NONE_CONFIRMED
 
 ## sources
 
-取得日: 2026-08-31
+取得日: 2026-09-08
 
 1. グリーンべると — ヤーマが5号機「平成カツヲ伝説」を発表
    - https://web-greenbelt.jp/00004506/
@@ -154,4 +156,5 @@ numericResetData:
 ## QA note
 
 - HAZUSE追加照合により設定別BIG/CT確率はpacnk単一依存から複数資料一致へ改善。
-- resetBehaviorは通常時天井・朝一専用モード等はNONE_CONFIRMED、3G RTの変更/据え置き/電断処理とガックンのみUNVERIFIEDとして分離。
+- 2026-09-08再QAでは「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / ガックン / 3G RT / ヘイセイバクトデンA」まで検索語を拡張し、公式・業界・古DB・回顧資料を再探索したが、3G RT残G処理と変更判別の本機固有直接契約は追加固定できなかった。
+- 性能側status: PARTIALは維持し、resetBehaviorのみ PARTIAL_RESEARCH_EXHAUSTED として別管理する。
