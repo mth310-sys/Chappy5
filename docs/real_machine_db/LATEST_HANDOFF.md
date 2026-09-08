@@ -1,70 +1,69 @@
 更新日: 2026-09-09
 
 ## 現在地点
-- recordCount: **1040**
-- latestRecordAdded: **パチスロ エウレカセブンAO**（サミー / Sammy）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2017-01-16_eureka-seven-ao.md`
-- chronologicalFrontier: **2017-01-16**
-- frontierLatestMachine: **パチスロ エウレカセブンAO — No.1040**
+- recordCount: **1041**
+- latestRecordAdded: **SLOTスターオーシャン4**（ユニバーサルブロス）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2017-01-30_slot-star-ocean-4.md`
+- chronologicalFrontier: **2017-01-30**
+- frontierLatestMachine: **SLOTスターオーシャン4 — No.1041**
 - schema: **resetBehavior v0.7**
-- status: **2017-01-16_GROUP_CLOSED_FOR_CURRENT_RESEARCH / 2017-01-17_TO_2017-01-29_BOUNDARY_CLOSED_FOR_CURRENT_RESEARCH / 2017-01-30_GROUP_OPEN**
+- status: **2017-01-30_GROUP_OPEN**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、No.1039実レコードを再取得して開始。
-- main正本は **1039件 / chronologicalFrontier 2017-01-10 / 1/09〜10群CLOSED / 1/11〜15境界CLOSED / 1/16群OPEN**。旧INDEXの19件表示は進捗正本にせず、README規定どおりより新しい `LATEST_HANDOFF.md` と実レコードを優先した。
-- handoff指定の次未処理 **サミー「パチスロ エウレカセブンAO」** をNo.1040として登録。
-- サミー公式、公安委員会告示、P-WORLD/パチビー、HAZUSE、当時解析を横断し、性能コアとresetBehavior v0.7を同時収集。
-- 2017-01-16群を再監査。2-9伝説の導入カレンダーは同日を **エウレカセブンAO** のみ列挙し、登録済みのため **2017-01-16_GROUP_CLOSED_FOR_CURRENT_RESEARCH**。
-- 同カレンダーの次の掲載導入日は **2017-01-30**。1/17〜1/29について「新台/パチスロ/導入日/メーカー」等の検索語・資料系統を変えて再探索しても全国導入本線の未登録機を固定できなかったため **2017-01-17_TO_2017-01-29_BOUNDARY_CLOSED_FOR_CURRENT_RESEARCH**。
+- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、No.1040実レコードを再取得して開始。
+- 旧INDEXは19件表示のままのため進捗正本にせず、README規定どおり最新 `LATEST_HANDOFF.md` と実レコードを優先。
+- 開始時main正本は **1040件 / chronologicalFrontier 2017-01-16 / 1/16群CLOSED / 1/17〜29境界CLOSED / 1/30群OPEN**。
+- handoff指定の次未処理 **ユニバーサルブロス「SLOTスターオーシャン4」** をNo.1041として登録。
+- パチビー、K-Navi、P-WORLD、PiDEA、検定通過記事、ちょんぼりすた、期待値見える化等を横断し、性能コアとresetBehavior v0.7を同時収集。
+- 2017-01-30同日群の未処理候補を再確認し、次に **山佐「パチスロ ソウルキャリバー」** が2017-01-30ホールデビューであることをメーカー発表転載（4Gamer）と当時解析で先行固定。
+- 同日には **パイオニア「オアシスデイズ」** も2017-01-30導入をHAZUSE/2-9伝説で再確認。1/30群はまだCLOSEDにしない。
 
-## No.1040 — パチスロ エウレカセブンAO
-- manufacturer: **サミー（Sammy）**
-- releaseDate canonical: **2017-01-16**
-- formalModelName: **エウレカセブンAO/XS**
-- certificationNumber: **6S0834**
-- generation/system: **5号機 / 5.5号機期 / A+ART**
+## No.1041 — SLOTスターオーシャン4
+- manufacturer: **ユニバーサルブロス**
+- releaseDate canonical: **2017-01-30**
+- formalModelName: **SLOTスターオーシャン4TR**
+- certificationNumber: **UNVERIFIED_AFTER_RESEARCH**
+- generation/system: **5号機 / 5.5号機期 / A+ART / 周期管理CZ+HP管理型ART**
 - recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7**
 
 ### performanceCore
-- 機械割: **98.5 / 99.3 / 102.1 / 105.2 / 110.1 / 115.7%**。
-- ボーナス合算: **1/248.2 / 246.4 / 237.4 / 233.2 / 222.9 / 214.9**。
-- ART初当たり: **1/327.9 / 321.0 / 311.3 / 286.2 / 261.3 / 221.2**。
-- CZ「シークレットバトル」: **1/208.5 / 202.8 / 195.7 / 174.7 / 155.7 / 138.9**。
+- 機械割: **98.6 / 99.6 / 102.1 / 105.1 / 107.6 / 110.3%**。
+- BIG: **1/425.6 / 414.8 / 394.8 / 381.0 / 368.2 / 346.8**。
+- REG: **1/668.7 / 668.7 / 655.4 / 630.2 / 618.3 / 585.1**。
+- ART初当たり: **1/582.8 / 516.2 / 531.8 / 456.8 / 460.8 / 334.3**。
 - baseGamesPer50: **約32G/50枚**。
-- ART「アストラルオーシャン」純増: **約1.4枚/G**。ボーナス込み実効表記は約1.9枚/Gとして別定義保持。
-- BIG/EPISODE BONUS: **約204枚**。
-- REG/クォーツボーナス/BAR揃い: **約36枚**。
-- 通常天井: **ボーナス間900GでART**。途中ARTではボーナス間天井進捗をリセットしない。
+- ART純増canonical: **約1.4枚/G**。攻略資料の約1.5枚/G、ボーナス込み約2.0枚/Gは定義/丸め差として別記録。
+- BIG/EPISODE BB: **204枚**、REG/ウェルチボーナス: **54枚**。
+- 通常天井: **ボーナス間17周期（平均約1080G）でART**。途中ARTでは天井周期進捗をリセットしない。
 
 ### resetBehavior v0.7
-- settingChangeBehavior: **天井進捗RESET / 内部状態RESELECT / RT状態を非RTへRESET / 液晶は居住区**。
-- carryOverBehavior: **据え置きは天井進捗・内部状態・RT状態CARRYOVER**。液晶は居住区へ見た目上統一。
-- powerCycleBehavior: **純電源OFF→ONは天井進捗・内部状態・RT状態CARRYOVER**。一方、獲得枚数表示・解放楽曲・BIG中ストーリー紹介等の表示/履歴系はリセットされる資料があり、内部状態と分離保存。
+- settingChangeBehavior: **天井周期RESET / 内部状態RESELECT / 周期管理モードRESELECT / プライベートポイントRESELECT**。
+- carryOverBehavior: **据え置きは天井周期・内部状態・周期モード・プライベートポイントCARRYOVER**。
+- powerCycleBehavior: **純電源OFF→ONも上記内部値をCARRYOVER**。開始ステージの厳密な純電断契約のみ `DISPLAY_START_STAGE_UNVERIFIED_AFTER_RESEARCH`。
 - gameCounterReset: 設定変更RESET / 据え置きCARRYOVER / 純電断CARRYOVER。
-- ceilingAfterReset: 通常900G天井。設定変更専用固定短縮天井は **NONE_CONFIRMED_AFTER_RESEARCH**。
-- modeAfterReset: 朝一専用ゲーム数モード/短縮モード振り分けは **NONE_CONFIRMED_AFTER_RESEARCH**。
-- stateAfterReset: 設定変更時に通常/高確/超高確を再抽選。公開表では設定1〜3が通常75.0%・高確21.1%・超高確3.9%（高確以上25.0%）、設定4〜6が通常71.1%・高確21.1%・超高確7.8%（高確以上28.9%）。
+- ceilingAfterReset: 通常17周期。設定変更専用固定短縮天井は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- modeAfterReset: 設定変更時 **A 37.5% / B 37.5% / C 22.6% / D 1.6% / E 0.8%**。C以上合計25.0%。据え置き/純電断はCARRYOVER。
+- stateAfterReset: 設定変更で再抽選、据え置き/純電断で引継ぎ。具体的状態振り分けは再探索後も `UNVERIFIED_AFTER_RESEARCH`。
 - advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
-- resetBenefits: 上記の高確以上スタート率。固定短縮天井/CZ確定/ART確定は **NONE_CONFIRMED_AFTER_RESEARCH**。
-- resetPenalties: 前日のボーナス間天井進捗は設定変更で消失。
-- resetDetection: **1G目ガックンは設定変更濃厚（対策可能）**。さらに設定変更後は非RTから始まるため、朝一最初のベルこぼし目より前にRT固有リプレイが出れば据え置き濃厚。液晶居住区だけでは判別不可。
+- resetBenefits: 周期モードC以上25.0%。朝一に「おはよう」を含むプライベートアクション出現で設定変更濃厚とする当時解析あり。
+- resetPenalties: 前日17周期進捗、内部モード/状態、蓄積プライベートポイントを設定変更で失う可能性。
+- resetDetection: 「おはよう」アクションを主要材料として保存。本機固有のガックン確定契約は十分な再探索後も **UNVERIFIED_AFTER_RESEARCH**。
 
 ### data quality
-- 導入日: サミー公式マイスロが2017-01-16を「本日ホール導入日」と明記。パチビー、K-Navi、HAZUSEも一致。
-- 型式/検定: 鹿児島県公安委員会告示で **エウレカセブンAO/XS / 6S0834 / サミー株式会社** を確認。
-- 性能コア: P-WORLD/パチビー、ちょんぼりすた、すろぱちくえすと、PiDEA等を横断し主要値一致。
-- resetBehavior: 設定変更と電源OFF→ONの直接比較表が複数残っており、天井・内部状態・RT状態を分離できる。
-- ART初期G数は「20G+QAC獲得分」と「初期40G以上」の表記があるため、内部初期保証と実表示上の開始性能の定義差として分離。平均化・CONFLICT化していない。
-- material conflict: **NONE_CONFIRMED**。
+- 導入日はパチビー/K-Navi/複数解析で2017-01-30一致。
+- 型式 `SLOTスターオーシャン4TR` は検定通過記事で確認。
+- 検定番号は表記揺れ・型式・メーカー・6S・公安委員会等で再探索したが直接固定できず推測しない。
+- 性能コアはP-WORLDと複数解析で一致。
+- material conflict: **NONE_CONFIRMED**。ART純増1.4/1.5は現時点では丸め・定義差扱い。
 
 ## 境界監査
-- **2017-01-16_GROUP_CLOSED_FOR_CURRENT_RESEARCH**。
-- 2-9伝説2017-01-16列は **エウレカセブンAO** のみ。No.1040で登録済み。
-- **2017-01-17_TO_2017-01-29_BOUNDARY_CLOSED_FOR_CURRENT_RESEARCH**。
-- 次の強い日付境界は **2017-01-30**。
-- 2017-01-30群の既知候補: **ユニバーサルブロス「SLOTスターオーシャン4」 / 山佐系「ソウルキャリバー」 / パイオニア「オアシスデイズ」 / エマ「ニューペガサスREVIVAL」**。
-- 次回先頭候補は **ユニバーサルブロス「SLOTスターオーシャン4」**。パチビー、K-Navi、ちょんぼりすたで2017-01-30導入を先行確認済み。
-- chronologicalFrontier: **2017-01-16**（次機種登録後に1/30へ前進予定）。
+- **2017-01-30_GROUP_OPEN**。
+- 登録済み: SLOTスターオーシャン4 — No.1041。
+- 未処理確認済み候補:
+  - **パチスロ ソウルキャリバー**（山佐） — 2017-01-30。4Gamerのメーカー発表転載が「ホールデビューに合わせて」同日アプリ配信と明記、当時解析も1/30一致。
+  - **オアシスデイズ**（パイオニア） — 2017-01-30。HAZUSE/2-9伝説一致。型式 `オアシスデイズ/DX`、検定番号 `6S1149` をHAZUSEで先行確認。
+  - **ニューペガサスREVIVAL**（エマ） — handoff旧候補。導入日を再固定してから登録判断する。
+- 同日全メーカー監査を継続し、1/30群を閉じてから次境界へ進む。
 
 ## 遡及 resetBehavior QA
 - retroQaScanConfirmedThrough: **2006-03-27_golgo13-the-professional.md**
@@ -72,30 +71,26 @@
 - 新規本線を止めず、既存未QAレコードを最新main実体から順次補完する。
 
 ## 次回再開地点
-1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1040を再取得。
-2. **1040件 / chronologicalFrontier 2017-01-16 / 1/16群CLOSED / 1/17〜29境界CLOSED / 1/30群OPEN** を正本として継続。
-3. 次の未処理機種は **ユニバーサルブロス「SLOTスターオーシャン4」** をNo.1041候補として処理。
-4. 性能コア＋resetBehavior v0.7を同時収集。周期天井、設定変更/据え置き/純電断、HP/周期状態、朝一恩恵、変更判別を検索語・資料系統を変えて再探索する。
-5. スターオーシャン4登録後、2017-01-30群を同日全メーカー横断で継続監査し、ソウルキャリバー / オアシスデイズ / ニューペガサスREVIVAL等を未処理なら順に登録する。
-6. 既登録のエウレカセブンAO以前を重複追加しない。
+1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1041を再取得。
+2. **1041件 / chronologicalFrontier 2017-01-30 / 1/30群OPEN** を正本として継続。
+3. 次の未処理機種は **山佐「パチスロ ソウルキャリバー」** をNo.1042候補として処理。
+4. 性能コア＋resetBehavior v0.7を同時収集。設定変更/据え置き/純電断、天井、内部状態/モード、朝一恩恵、変更判別を検索語・資料系統を変えて再探索する。
+5. ソウルキャリバー後、**オアシスデイズ → ニューペガサスREVIVAL候補 → 1/30同日全メーカー監査** の順で未処理を確認。
+6. 既登録No.1041以前を重複追加しない。
 
 ## 主要出典 — 取得日 2026-09-09
-### No.1040 エウレカセブンAO
-- サミー公式製品一覧: https://www.sammy.co.jp/japanese/products/pachislot/
-- サミー公式製品サイト: https://www.sammy.co.jp/japanese/product/pachislot/2016/eurekaao/sp/feature/
-- サミーマイスロ導入日告知: https://www.sammy.co.jp/japanese/myslot/news/index_9.html
-- 鹿児島県公報（公安委員会告示）: https://www.pref.kagoshima.jp/ab04/kensei/jourei/kouhou/1609/documents/53970_20160905165545-1.pdf
-- P-WORLD: https://www.p-world.co.jp/machine/database/8216
-- パチビー: https://www.pachibee.jp/machines/index/216120000
-- HAZUSE DATA: https://data.hazuse.com/?detail_id=99229&genre=209&machine_code=6S0834
-- ちょんぼりすた: https://chonborista.com/slot/sammy-slot/27815/
-- すろぱちくえすと: https://www.slopachi-quest.com/kisyubetsu/eureka-seven-ao/
-- 期待値見える化: https://slotjin.com/slot-tool/eurekasevenao-settei/
-- スロがち: https://slogati.com/eureka-ao/
-- PiDEA: https://www.pidea.jp/articles/%E4%B8%89%E6%9C%A8%E6%B5%81%E3%80%81%E3%80%8C%E3%82%A8%E3%82%A6%E3%83%AC%E3%82%AB%E3%82%BB%E3%83%96%E3%83%B3AO%E3%80%8D%E3%81%AE%E8%A9%95%E4%BE%A1%E3%81%AF%EF%BC%9F
-- 2-9伝説導入カレンダー: https://29den.com/newslot/
-
-### 次回候補 SLOTスターオーシャン4
+### No.1041 SLOTスターオーシャン4
 - パチビー: https://www.pachibee.jp/machines/index/216120004
 - K-Navi: https://p-kn.com/slot/2681/
+- P-WORLD: https://www.p-world.co.jp/machine/database/8239
+- PiDEA: https://www.pidea.jp/articles/%E3%82%B9%E3%82%AF%E3%82%A8%E3%83%8B%E3%81%AE%E5%90%8DRPG%E3%80%8C%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%AA%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%B3%E3%80%8D%E3%82%92%E3%83%91%E3%83%81%E3%82%B9%E3%83%AD%E5%8C%96%EF%BC%8F%E3%83%A6%E3%83%8B%E3%83%90
+- P-MEDIA検定通過: https://p-media.info/%E3%83%A6%E3%83%8B%E3%83%90%E3%83%BC%E3%82%B5%E3%83%AB%E3%83%96%E3%83%AD%E3%82%B9%E3%80%8C%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%AA%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%B34%E3%80%8D%E6%A4%9C%E5%AE%9A%E9%80%9A/
 - ちょんぼりすた: https://chonborista.com/slot/universal-slot/29639/
+- 期待値見える化: https://slotjin.com/tenjoukitaichi/starocean4/
+- pacnk: https://pacnk.com/slot/tools/sh_sutaoshan4.html
+
+### 次回候補
+- 4Gamer / 山佐発表転載 ソウルキャリバー: https://www.4gamer.net/games/370/G037006/20170130057/
+- ちょんぼりすた / ソウルキャリバー: https://chonborista.com/slot/yamasa-slot/29992/
+- HAZUSE / オアシスデイズ: https://hazuse.com/machine/pachislot/6S1149/
+- 2-9伝説 / オアシスデイズ: https://29den.com/oasisdays/
