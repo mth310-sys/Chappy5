@@ -3,62 +3,72 @@
 更新日: 2026-09-08
 
 ## 現在地点
-- recordCount: **962**
-- latestRecordAdded: **沖ドキ！トロピカル-30**（アクロス）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2016-03-14_okidoki-tropical-30.md`
+- recordCount: **963**
+- latestRecordAdded: **パチスロ ウルトラマン**（七匠）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2016-03-14_ultraman-nanashow.md`
 - chronologicalFrontier: **2016-03-14**
-- frontierLatestMachine: **沖ドキ！トロピカル-30**
+- frontierLatestMachine: **パチスロ ウルトラマン**
 - schema: **resetBehavior v0.7**
-- status: **2016-03-14_GROUP_OPEN**
+- status: **2016-03-14_GROUP_CLOSED_FOR_CURRENT_RESEARCH**
 
 ## 今回の同期 / 正本確認
-- 最新mainの `README.md`、mission v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、No.961 `2016-03-14_yurubiscus-30.md` を再取得。
+- 最新mainの `README.md`、mission v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、No.962 `2016-03-14_okidoki-tropical-30.md` を再取得。
 - INDEXは19件時点の旧集約なのでREADME規定どおり **LATEST_HANDOFF + 実レコード** を進捗正本として使用。
-- 開始時正本は recordCount **961** / chronologicalFrontier **2016-03-14** / 03-14群OPEN。
-- handoff指定の次機種 **沖ドキ！トロピカル-30** を、既存25Φ版との型式・メーカー・導入時期差まで再調査しNo.962で追加。
+- 開始時正本は recordCount **962** / chronologicalFrontier **2016-03-14** / 03-14群OPEN。
+- handoff指定の次機種 **パチスロ ウルトラマン（七匠）** が未登録であることを確認し、性能コア + resetBehavior v0.7をNo.963として追加。
 
-## No.962 — 沖ドキ！トロピカル-30
-- record: `docs/real_machine_db/machines/2016-03-14_okidoki-tropical-30.md`
-- manufacturer: **アクロス**
+## No.963 — パチスロ ウルトラマン
+- record: `docs/real_machine_db/machines/2016-03-14_ultraman-nanashow.md`
+- manufacturer: **七匠**
 - releaseDate canonical: **2016-03-14**
-- formalModelName: **沖ドキ！トロピカルHH-30**
-- generation/system: **5号機 / AT / 擬似ボーナス / 完全告知 / 30Φ**
+- formalModelName: **パチスロウルトラマンM**（二次DB確認）
+- certificationNumber: **5S1500**（二次DB確認）
+- generation/system: **5号機 / ノーマル / Aタイプ / 完全告知**
 
-### identity / variant判定
-- 25Φ版は **ユニバーサルブロス / 沖ドキ！トロピカルHH**、30Φ版は **アクロス / 沖ドキ！トロピカルHH-30**。同名近似でも正式型式・メーカーが分かれるため独立レコード化。
-- ユニバーサル公式は25Φ/30Φを同一製品ページに掲載するが、グリーンべると2016-02-26当時記事は30Φ版を「好評稼働中機の30φバージョン」として後発発表し、3/6納品予定と報道。
-- 後年導入年表に3/14表記があるため30Φ全国導入canonicalを3/14とする。一撃30Φ個別ページの2/1表記は25Φ初販との混同可能性があるため削除せず `CONFLICT_RELEASE_DATE_30PHI_0314_VS_MERGED_0201` として保持。
+### identity / releaseDate
+- 七匠公式製品ページで「パチスロ ウルトラマン」を完全告知Aタイプとして確認。
+- P-WORLDもメーカー七匠、5号機・ノーマルタイプ・完全告知を確認。
+- 当時スペック記事、パチビー、2016年導入カレンダー、当時攻略記事は **2016-03-14** で一致。
+- 後年パチナビに **2016-03-22** 表記があるため、削除せず `CONFLICT_RELEASE_DATE_2016_03_14_VS_2016_03_22` として保持。当時複数資料を優先して3/14をcanonical。
 
 ### performanceCore
-- 機械割（30Φ個別canonical）: **97.0 / 99.7 / 101.7 / 103.9 / 106.3 / 108.4%**。
-- ボーナス初当り: **1/237.9 / 214.0 / 218.8 / 194.4 / 199.1 / 173.6**。
-- 50枚ベース: **約40G**（資料中心約39〜40G）。一部46.2G表記は平均せずCONFLICT保持。
-- AT純増: **約3.0枚/G**。
-- BIG: **70G / 約210枚**、REG: **20G / 約60枚**。
-- 25Φ/初期解析系に機械割設定1〜3 **96.7 / 99.0 / 101.4%** があり、30Φ個別2ソースとは平均せずvariant/source conflictとして保存。
+- 機械割: **97.59 / 98.69 / 99.94 / 102.64 / 104.93 / 107.49%**。
+- BIG: **1/299.3 / 295.2 / 290.0 / 282.5 / 275.4 / 268.6**。
+- REG: **1/468.1 / 448.9 / 431.2 / 390.1 / 358.1 / 334.4**。
+- 合算: **1/182.6 / 178.1 / 173.4 / 163.8 / 155.7 / 148.9**。
+- 50枚ベース canonical: **約34.1G/50枚**。後年資料に約33G表記があるため近似差として保持。
+- BIG: **336枚**、REG: **130枚**。
+- AT/ART純増: **NOT_APPLICABLE**。
+- 天井/ゲーム数ゾーン: **なし**。
 
 ### resetBehavior v0.7
-- 設定変更: **天井ゲーム数RESET/再抽選、モード再抽選**。
-- 設定変更時モード: **通常A 50.00% / 通常B 15.23% / 天国準備 1.17% / 引き戻し 33.59%**。
-- 純電源OFF→ON: **天井ゲーム数引継ぎ / モード引継ぎ**。
-- 据え置き: 前日ゲーム数/モードの継続扱い。
-- 天井: 通常A/B/天国準備 **1199G**、引き戻し **100〜199G**、保証/天国/ドキドキ/超ドキドキ **31G天井相当**。
-- 朝一主要恩恵: 設定変更時 **33.59%で引き戻し**となり200G以内の早当たり期待が上昇。
-- 朝一不利: 設定変更で前日の天井進捗・滞在モードを失うため宵越し狙い不可。
-- ガックン/初期出目/ランプ等の本機固有確定変更判別は検索語を変えて横断後も **NONE_CONFIRMED_AFTER_RESEARCH**。
-- REG後パネルフラッシュ等は滞在モード示唆であり設定変更確定サインとは分離。
+- ノーマルAタイプで天井・AT/ART/CZモード・有利区間を持たないため、設定変更に伴う天井短縮/モード再抽選/朝一専用CZ等は **NOT_APPLICABLE / NONE_CONFIRMED_AFTER_RESEARCH**。
+- 据え置きで持ち越し価値を持つ内部天井G数・AT/ARTモード・CZ周期は **NOT_APPLICABLE**。
+- 純電源OFF→ONで朝一期待値へ影響する天井・モード・有利区間も **NOT_APPLICABLE**。
+- 朝一専用の高確/低確振り分け、当選率、専用モード、恩恵発生率は検索語・資料系統を変えて横断後も **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 本機固有のガックン/リールガックン/初期出目/ランプ等の確定設定変更判別は **NONE_CONFIRMED_AFTER_RESEARCH**。
 - 有利区間: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
+- 通常のボーナス確率・小役による設定推測は朝一変更判別とは分離。
 
 ## 2016-03-14群監査
 処理済み:
 1. **ユルビスカス-30** — パイオニア — No.961
 2. **沖ドキ！トロピカル-30** — アクロス — No.962
+3. **パチスロ ウルトラマン** — 七匠 — No.963
 
-未処理として確認済み:
-3. **ウルトラマン** — 七匠 — 2016-03-14導入資料あり。
+- 2016年新台導入カレンダーでは03/14群は上記3機種で一致。
+- handoff既知候補もすべて処理済みとなり、現調査範囲で追加未登録03/14機を強く固定できなかったため **2016-03-14_GROUP_CLOSED_FOR_CURRENT_RESEARCH** とする。
+- 3/14〜次の具体日3/22の間は境界監査を残し、日付の後年誤記/納品日混入を確認してから次群へ進む。
 
-- よって03/14群は **OPEN** のまま。
-- 次はウルトラマンを性能コア + resetBehavior v0.7で収集し、その後03/14同日全メーカーを再監査してCLOSED判定する。
+## 次の具体日群候補 — 2016-03-22
+導入カレンダーで確認済みの候補:
+1. **ミラクル**
+2. **ゲッターマウス**
+3. **バガナックルー**
+
+- ただし候補名だけで追加せず、次回はまず **2016-03-15〜03-21境界監査** を行う。
+- 境界に未処理機が無ければ03/22群へ進み、公式/業界/当時資料で全国導入日とメーカー・型式を固定した最初の未処理機種からNo.964を継続する。
+- 03/22群についても候補外を含む全メーカー横断監査を行う。
 
 ## 遡及 resetBehavior QA
 - retroQaScanConfirmedThrough: **2006-02_crash-bandicoot-s.md**
@@ -67,44 +77,42 @@
 - 今回は前進リレーを優先し、既存retro QA地点は変更していない。
 
 ## 次回再開地点
-1. **recordCount 962 / chronologicalFrontier 2016-03-14 / 03-14群OPEN** から開始。
-2. README / mission v0.7 / INDEX / LATEST_HANDOFF / No.962をmainから再取得。
-3. **ウルトラマン（七匠）** が未登録か再確認し、性能コア + resetBehavior v0.7を収集して追加。
-4. 03/14群を全メーカー横断監査し、漏れがなければCLOSEDへ。
-5. 遡及QAは `2006-02_new-oasis.md` から継続。既存性能コアを無駄にやり直さない。
-6. PARTIAL/UNVERIFIEDは表記揺れ・正式型式・メーカー・設定変更/据え置き/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間へ検索語を変え、公式・業界・当時解析・古DB・アーカイブ・回顧資料まで再探索後のみ付与。
-7. 競合は平均せずCONFLICT/variant差/定義差として双方保存。
+1. **recordCount 963 / chronologicalFrontier 2016-03-14 / 03-14群CLOSED** から開始。
+2. README / mission v0.7 / INDEX / LATEST_HANDOFF / No.963をmainから再取得。
+3. **2016-03-15〜03-21境界監査**。未登録5号機が確認できれば日付順に先に処理。
+4. 境界が閉じれば **2016-03-22群**へ。現時点候補はミラクル / ゲッターマウス / バガナックルー。
+5. 最初の未処理機種を性能コア + resetBehavior v0.7で追加し、同日群を全メーカー監査。
+6. 遡及QAは `2006-02_new-oasis.md` から継続。既存性能コアを無駄にやり直さない。
+7. PARTIAL/UNVERIFIEDは表記揺れ・正式型式・メーカー・設定変更/据え置き/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間へ検索語を変え、公式・業界・当時解析・古DB・アーカイブ・回顧資料まで再探索後のみ付与。
+8. 競合は平均せずCONFLICT/variant差/定義差として双方保存。
 
 ## safeguard
 - INDEXは旧集約状態なので進捗正本にしない。LATEST_HANDOFF + 実レコードを優先。
 - 全国導入日と納品予定日・地域先行日を混同しない。
+- 後年設置期限・検定期限一覧の日付を導入日へ転記しない。
 - 25φ/30φや型式・メーカー・導入時期が分かれるvariantを同名だけで統合しない。
 - 設定変更・据え置き・純電断・RAMクリアを同義扱いしない。
-- 前作/後継機・別variantのresetBehaviorを無条件流用しない。
+- 前作/後継機・同名スマスロのresetBehaviorを旧5号機へ流用しない。
 
 ## 主要出典 — 取得日 2026-09-08
-### No.962 沖ドキ！トロピカル-30
-- ユニバーサル公式: https://www.universal-777.com/product/slot/okidoki_tropical/
-- グリーンべると（2016-02-26）: https://web-greenbelt.jp/00008457/
-- P-WORLD: https://opt.p-world.co.jp/machine/database/7996
-- 一撃 基本: https://1geki.jp/slot/s_okidoki_t30
-- 一撃 天井/設定変更: https://1geki.jp/slot/s_okidoki_t30/3/
-- 一撃 モード移行: https://1geki.jp/slot/s_okidoki_t30/42/
-- pacnk 30Φ設定判別: https://pacnk.com/slot/tools/sh_okidokitoropikaru2016b.html
-- 30Φ型式確認: https://store.shopping.yahoo.co.jp/nakaiticom/2020408.html
-- 25Φ型式比較: https://store.shopping.yahoo.co.jp/nakaiticom/634.html
-- 5号機一覧（variant分離）: https://pachisuro100.com/agyo/
-- 沖ドキ歴代整理（3/14）: https://ptro.live/p-okidoki.html
-- ちょんぼりすた: https://chonborista.com/slot/universal-slot/16618/
-
-### 03/14群境界
+### No.963 パチスロ ウルトラマン
+- 七匠公式: https://www.nanashow.co.jp/product/
+- P-WORLD: https://www.p-world.co.jp/machine/database/7998
+- 2016年当時スペック記事: https://pachinkopachisro.com/archives/46780361.html
+- パチビー: https://www.pachibee.jp/movies/index/12474
 - 2016年新台カレンダー: https://moge-site.com/new-slot2016
-- 当時解析記事（ウルトラマン3/14）: https://jikyu2000.com/2016/03/
+- 当時攻略記事一覧: https://jikyu2000.com/2016/03/
+- 回顧解析: https://xn--x9ja8p0go69l5jtgfm.com/ultraman-1463
+- パチナビ（型式/検定・3/22競合）: https://pachinavi.net/machines/ultraman-1/
+
+### 03/14群 / 次群境界
+- 2016年新台カレンダー: https://moge-site.com/new-slot2016
 
 ## confidence
-- No.962 identity/formalModelName: **HIGH_MULTI_SOURCE**
-- No.962 releaseDate: **CONFLICT_RESOLVED_CANONICAL_2016_03_14_WITH_0201_RETAINED**
-- No.962 performanceCore: **HIGH_MULTI_SOURCE_WITH_EARLY_VARIANT_CONFLICT**
-- No.962 resetBehavior: **HIGH_DIRECT_RESET_TABLE**
-- No.962 resetDetection: **NEGATIVE_FINDING_AFTER_MULTI_QUERY_RESEARCH**
-- 03/14 group completeness: **OPEN_ONE_CONFIRMED_MACHINE_PENDING**
+- No.963 identity/manufacturer/system: **OFFICIAL_PLUS_MULTI_SOURCE_HIGH**
+- No.963 formalModelName/certificationNumber: **SECONDARY_SINGLE_UNVERIFIED_PRIMARY**
+- No.963 releaseDate: **HIGH_MULTI_SOURCE_PERIOD_WITH_CONFLICT_RETAINED**
+- No.963 performanceCore: **HIGH_MULTI_SOURCE**
+- No.963 resetBehavior: **STRUCTURAL_NOT_APPLICABLE_PLUS_NEGATIVE_FINDINGS_AFTER_MULTI_QUERY_RESEARCH**
+- No.963 resetDetection: **NEGATIVE_FINDING_AFTER_MULTI_QUERY_RESEARCH**
+- 03/14 group completeness: **CLOSED_FOR_CURRENT_RESEARCH**
