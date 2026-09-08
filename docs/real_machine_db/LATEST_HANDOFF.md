@@ -1,71 +1,66 @@
 更新日: 2026-09-09
 
 ## 現在地点
-- recordCount: **1042**
-- latestRecordAdded: **パチスロ ソウルキャリバー**（山佐）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2017-01-30_soul-calibur.md`
+- recordCount: **1043**
+- latestRecordAdded: **オアシスデイズ**（パイオニア）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2017-01-30_oasis-days.md`
 - chronologicalFrontier: **2017-01-30**
-- frontierLatestMachine: **パチスロ ソウルキャリバー — No.1042**
+- frontierLatestMachine: **オアシスデイズ — No.1043**
 - schema: **resetBehavior v0.7**
 - status: **2017-01-30_GROUP_OPEN**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、No.1041実レコードを再取得して開始。
-- 旧INDEXは19件表示のままのため進捗正本にせず、README規定どおり最新 `LATEST_HANDOFF.md` と実レコードを優先。
-- 開始時main正本は **1041件 / chronologicalFrontier 2017-01-30 / 1/30群OPEN**。
-- handoff指定の次未処理 **山佐「パチスロ ソウルキャリバー」** をNo.1042として登録。
-- 山佐公式、4Gamerのメーカー発表転載、P-WORLD、ちょんぼりすた、期待値見える化、すろぱちくえすと、5号機クロニクル、当時解析、中古実機資料を横断し、性能コアとresetBehavior v0.7を同時収集。
-- 設定1機械割97.6% / 97.2%は平均せずCONFLICT。型式は市場実機資料の `パチスロソウルキャリバー/HH` をcanonicalとし、初期解析に残る `/FF` 表記差を注記。
-- 2017-01-30群はまだ未処理候補があるためCLOSEDにしない。
+- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、No.1042実レコードを再取得して開始。
+- 開始時main正本は **1042件 / chronologicalFrontier 2017-01-30 / 1/30群OPEN**。旧INDEXの19件表示は進捗正本にせず、README規定どおりLATEST_HANDOFFと実レコードを優先。
+- handoff指定の次未処理 **パイオニア「オアシスデイズ」** をNo.1043として登録。
+- パイオニア公式、グリーンべると業界記事、P-WORLD、HAZUSE、2-9伝説、すろぱちくえすとを横断し、性能コア＋resetBehavior v0.7を同時収集。
+- 2017-01-30群は **ニューペガサスREVIVAL** が未処理確認済みのためOPENを維持。
 
-## No.1042 — パチスロ ソウルキャリバー
-- manufacturer: **山佐**
+## No.1043 — オアシスデイズ
+- manufacturer: **パイオニア**
 - releaseDate canonical: **2017-01-30**
-- formalModelName: **パチスロソウルキャリバー/HH**
-- certificationNumber: **UNVERIFIED_AFTER_RESEARCH**
-- generation/system: **5号機 / 5.5号機期 / A+ART / CZ+ゲーム数上乗せART**
-- recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7**
+- formalModelName: **オアシスデイズ/DX**
+- certificationNumber: **6S1149**
+- generation/system: **5号機 / 5.5号機期 / ノーマル / 完全告知 / 25φ**
+- recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7_UNVERIFIED_MACHINE_SPECIFIC_POWER_STATE**
 
 ### performanceCore
-- 機械割: **設定1 CONFLICT 97.6% / 97.2%、設定2〜6 98.5 / 100.2 / 105.7 / 110.8 / 116.2%**。
-- BIG: **1/381.02 / 381.02 / 381.02 / 364.09 / 356.17 / 341.33**。
-- REG: **1/589.79 / 579.37 / 569.50 / 508.17 / 492.87 / 465.17**。
-- ART初当たり: **1/369.40 / 358.49 / 332.47 / 273.76 / 211.18 / 163.73**。
-- baseGamesPer50: **約34G/50枚**。
-- ART純増: **約1.5枚/G**。
-- ソウルボーナス: **約157枚**、REG/アルゴル: **約53枚**。
-- ART「ソウルディメンション」: **1セット50G+α**。
-- 通常天井: ボーナス間 **777 / 999 / 1111G**をほぼ1/3ずつ。途中ARTでは天井進捗をリセットしない。
+- 機械割: **97 / 99 / 101 / 104 / 107 / 110%**。
+- BIG: **1/299 / 288 / 278 / 268 / 256 / 244**。
+- REG: **1/496 / 468 / 436 / 407 / 376 / 348**。
+- 合算: **1/186 / 178 / 170 / 161 / 152 / 143**。
+- baseGamesPer50: **約37.0G/50枚**。
+- BIG最大純増 **312枚**、REG最大純増 **130枚**。
+- AT/ART/RT純増: **NOT_APPLICABLE_NORMAL_TYPE**。
+- 通常ゲーム数天井: **なし**。
 
 ### resetBehavior v0.7
-- settingChangeBehavior: **天井進捗RESET / 天井777G固定 / 内部状態RESELECT**。
-- carryOverBehavior: 本機固有の据え置き直接比較契約は十分な再探索後も **UNVERIFIED_DIRECT_CARRYOVER_AFTER_RESEARCH**。
-- powerCycleBehavior: 当時比較表でも電源ON・OFF側は調査中。後年資料まで再探索したが **UNVERIFIED_AFTER_RESEARCH**。
-- gameCounterReset: 設定変更RESET。据え置き/純電断は直接根拠不足のため推測しない。
-- ceilingAfterReset: **777G 100%**。通常最大1111Gから短縮。
-- modeAfterReset: リセット専用独立モードは **NONE_CONFIRMED_AFTER_RESEARCH**。
-- stateAfterReset: **低確50.00% / 高確A31.25% / 高確B12.50% / 高確C6.25%**、高確以上50.0%。高確G数は **20G 50.0% / 30G 31.25% / 50G 12.5% / 100G 6.25%、平均31.88G**。
+- settingChangeBehavior: 通常ゲーム数天井・AT/ART/CZ・長期モードは構造上NOT_APPLICABLE。本機固有の成立済みボーナス/リール/告知一時状態は **UNVERIFIED_AFTER_RESEARCH**。
+- carryOverBehavior: 引継ぎ対象となる天井/長期モードなし。一時状態の本機固有据え置き直接契約は **UNVERIFIED_DIRECT_CARRYOVER_AFTER_RESEARCH**。
+- powerCycleBehavior: 天井/AT・ARTモード差はNOT_APPLICABLE。一時状態の純電源OFF→ON契約は **UNVERIFIED_AFTER_RESEARCH**。
+- gameCounterReset: **NOT_APPLICABLE_NO_GAME_COUNT_CEILING**。
+- ceilingAfterReset: **NOT_APPLICABLE_NO_CEILING**。設定変更専用短縮天井はNONE_CONFIRMED。
+- modeAfterReset: **NOT_APPLICABLE_NORMAL_TYPE**。朝一専用モード/リセット専用高確率状態はNONE_CONFIRMED。
+- stateAfterReset: 設定変更専用高確/低確は **NONE_CONFIRMED_AFTER_RESEARCH**。成立済みボーナス等の一時状態はUNVERIFIED。
 - advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
-- resetBenefits: **777G固定短縮天井＋50%高確以上スタート**。
-- resetPenalties: 前日天井進捗は設定変更で消失。その他専用不利はNONE_CONFIRMED。
-- resetDetection: ボーナス非当選のまま777G超過なら設定変更後777G固定と矛盾するため据え置き判断材料。本機固有ガックン契約は **UNVERIFIED**。
+- resetBenefits: 短縮天井、CZ/ART優遇、朝一特定G以内当選率等は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- resetDetection: 本機固有の確定ガックン/初期出目/ランプ契約は十分な再探索後も **NONE_CONFIRMED_AFTER_RESEARCH**。ボーナス後パネルフラッシュ/REG中サイドランプは設定推測であり変更判別には混入しない。
 
-### data quality
-- 導入日は山佐公式の2017年1月と、4Gamer掲載山佐発表文の「ホールデビューに合わせて2017-01-30配信」、複数当時解析を合わせて2017-01-30に固定。
-- 型式HHは実機市場資料で確認。検定番号は表記揺れ・FF/HH・6S・検定通過等へ検索を変えても直接固定できず推測しない。
-- 設定1機械割のみ複数資料で97.6/97.2が割れるためCONFLICT保持。
-- リセット天井777G固定、状態振り分け、高確G数は複数解析で照合。
-- 据え置き/純電断の直接契約は一般論から補完しない。
+### data quality / CONFLICT
+- パイオニア公式は2017年1月発売。グリーンべると2016-12-02は一部地域除き2017-01-29納品開始予定、HAZUSEは2017-01-30導入。P-WORLDも2017年1月・型式/検定番号一致のため、ホール導入canonicalを **2017-01-30** とした。
+- すろぱちくえすとに **2017-01-16導入**表記が残るため、単一二次資料差として `CONFLICT_RELEASE_DATE_2017_01_30_VS_2017_01_16_SINGLE_SECONDARY` を保持。
+- 性能コアは業界一次資料と複数DBで一致。
+- resetBehaviorはノーマル機で構造上N/Aの項目と、本機固有資料不足の一時状態を分離し、一般論から電断/据え置きを補完していない。
 
 ## 境界監査
 - **2017-01-30_GROUP_OPEN**。
 - 登録済み:
   - SLOTスターオーシャン4 — No.1041
   - パチスロ ソウルキャリバー — No.1042
+  - オアシスデイズ — No.1043
 - 未処理確認済み候補:
-  - **オアシスデイズ**（パイオニア） — 2017-01-30。既handoffでHAZUSE/2-9伝説一致、型式 `オアシスデイズ/DX`、検定番号 `6S1149` を先行確認済み。
-  - **ニューペガサスREVIVAL**（エマ） — 導入日を複数系統で再固定してから登録判断する。
-- 上記後に1/30同日全メーカー監査を行い、漏れがなければCLOSEDへ進む。
+  - **ニューペガサスREVIVAL**（エマ） — 2-9伝説の2017-01-30新台一覧で同日機として確認。次回、機種単独の公式/業界/当時解析を再探索して導入日・型式・性能コア・resetBehaviorを固定する。
+- ニューペガサスREVIVAL処理後、1/30同日全メーカー監査を実施し、漏れがなければCLOSEDへ進む。
 
 ## 遡及 resetBehavior QA
 - retroQaScanConfirmedThrough: **2006-03-27_golgo13-the-professional.md**
@@ -73,26 +68,22 @@
 - 新規本線を止めず、既存未QAレコードを最新main実体から順次補完する。
 
 ## 次回再開地点
-1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1042を再取得。
-2. **1042件 / chronologicalFrontier 2017-01-30 / 1/30群OPEN** を正本として継続。
-3. 次の未処理機種は **パイオニア「オアシスデイズ」** をNo.1043候補として処理。
-4. 性能コア＋resetBehavior v0.7を同時収集。設定変更/据え置き/純電断、ゲーム数/天井、状態、朝一恩恵、ガックン/変更判別を表記揺れと資料系統を変えて再探索する。
-5. オアシスデイズ後、**ニューペガサスREVIVAL候補 → 1/30同日全メーカー監査** の順で確認。
-6. 既登録No.1042以前を重複追加しない。
+1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1043を再取得。
+2. **1043件 / chronologicalFrontier 2017-01-30 / 1/30群OPEN** を正本として継続。
+3. 次の未処理機種は **エマ「ニューペガサスREVIVAL」** をNo.1044候補として処理。
+4. 導入日を2-9伝説以外の別系統でも固定し、正式型式/検定番号、設定別機械割・BIG/REG・ベース・獲得枚数を収集。
+5. resetBehavior v0.7は設定変更/据え置き/純電断、天井/モード/状態、有利区間、朝一恩恵/不利、変更判別、公開朝一数値を表記揺れと資料系統を変えて再探索。
+6. その後、2017-01-30同日全メーカー監査 → CLOSED可否判定 → 次導入群へ前進。
+7. 既登録No.1043以前を重複追加しない。
 
 ## 主要出典 — 取得日 2026-09-09
-### No.1042 パチスロ ソウルキャリバー
-- 山佐ネクスト公式: https://yamasa-next.co.jp/model_sc/
-- 4Gamer / 山佐発表転載: https://www.4gamer.net/games/370/G037006/20170130057/
-- P-WORLD: https://www.p-world.co.jp/machine/database/8242
-- ちょんぼりすた: https://chonborista.com/slot/yamasa-slot/29992/
-- 期待値見える化: https://slotjin.com/zone/soulcalibur/
-- すろぱちくえすと機種解析: https://www.slopachi-quest.com/kisyubetsu/soul-calibur/
-- すろぱちくえすと設定解析: https://www.slopachi-quest.com/article/soul-calibur-settei/
-- 5号機クロニクル: https://5goki.com/yamasa
-- 中古実機資料 / 型式HH: https://item.rakuten.co.jp/auc-nakaiti/souru/
-- すろかい / FF-HH表記差: https://slotkaiseki.hatenablog.com/entry/soulcalibur
+### No.1043 オアシスデイズ
+- パイオニア公式2017年製品一覧: https://www.slot-pioneer.co.jp/products/2017.html
+- グリーンべると: https://web-greenbelt.jp/00009166/
+- P-WORLD: https://www.p-world.co.jp/machine/database/8233
+- HAZUSE: https://hazuse.com/machine/pachislot/6S1149/
+- 2-9伝説: https://29den.com/oasisdays/
+- すろぱちくえすと（導入日CONFLICT資料）: https://www.slopachi-quest.com/article/oasisdays/
 
 ### 次回候補
-- HAZUSE / オアシスデイズ: https://hazuse.com/machine/pachislot/6S1149/
-- 2-9伝説 / オアシスデイズ: https://29den.com/oasisdays/
+- 2-9伝説 2017年新台一覧 / 2017-01-30群: https://29den.com/newslot/
