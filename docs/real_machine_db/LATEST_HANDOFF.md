@@ -1,59 +1,56 @@
 更新日: 2026-09-09
 
 ## 現在地点
-- recordCount: **1047**
-- latestRecordAdded: **パチスロおそ松さん**（D-light）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2017-02-06_osomatsu-san.md`
+- recordCount: **1048**
+- latestRecordAdded: **ジャックポット トロピカルバージョン2**（岡崎産業）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2017-02-06_jackpot-tropical-version2.md`
 - chronologicalFrontier: **2017-02-06**
-- frontierLatestMachine: **パチスロおそ松さん — No.1047**
+- frontierLatestMachine: **ジャックポット トロピカルバージョン2 — No.1048**
 - schema: **resetBehavior v0.7**
-- status: **2017-02-06_GROUP_OPEN**
+- status: **2017-02-06_GROUP_OPEN_PENDING_FINAL_AUDIT**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、直前実レコードを再取得して開始。
-- 開始時mainは並行リレーにより **1044件 → 1046件**へ進行済み。JAWSはNo.1045、GⅠ優駿倶楽部はNo.1046として既登録だったため重複追加しなかった。
-- 次の未処理 **D-light「パチスロおそ松さん」** をNo.1047として新規登録し、性能コア＋resetBehavior v0.7を収集。
-- 同名検索に混入する2017-04-17「パチスロおそ松くん」と2019-03-04「パチスロおそ松さん～驚～」は別機種として明確に除外した。
+- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、直前No.1047実レコードを再取得して開始。
+- main正本は1047件 / 2017-02-06群OPEN、次カーソル「ジャックポットトロピカルバージョン2」。既存検索で未登録を確認後No.1048として追加。
+- 性能コア＋resetBehavior v0.7を収集。50枚ベースと本機固有の物理的変更判別は検索語・資料系統を変えて再探索後も直接固定できずUNVERIFIED/NONE_CONFIRMEDで保持。
+- 直前handoffの同日候補だった `パチスロ攻殻機動隊S.A.C. 2nd GIG` と `パチスロ機動戦士Zガンダム` は導入日を再照合し、2/6群候補から除外。前者は2017-03-21、後者は2017-04-03。
 
-## No.1045 — JAWS ～it's a SHARK PANIC～
-- オリンピア / 2017-02-06 / `JAWS/J5` / A+ART・周期CZ。
-- 機械割 **97.1 / 98.5 / 100.2 / 104.3 / 107.0 / 112.1%**、ART初当たり **1/445.3 → 1/247.7**、約31G/50枚、ボーナス込み約1.9枚/G。
-- 設定変更後モード **E 10.2% / F 89.8%**、最大スルー天井7回へ短縮。周期間G数は設定変更でも引継ぎ。純電断は各主要状態CARRYOVER。ガックン判別不可。
-
-## No.1046 — GⅠ優駿倶楽部
-- KPE / 2017-02-06 / ART・周期育成CZ。
-- 機械割 **97.8 / 98.4 / 99.6 / 103.4 / 105.5 / 110.2%**、ART初当たり **1/348.8 → 1/266.7**、代表約32G/50枚、約2.0枚/G。
-- 設定変更で天井/周期RESET、シナリオ・スケジュールモード・競走馬再抽選。据え置き/純電断は主要進捗CARRYOVER、競走馬のみ朝一再抽選。
-
-## No.1047 — パチスロおそ松さん
-- manufacturer: **D-light（ディ・ライト）**
+## No.1048 — ジャックポット トロピカルバージョン2
+- manufacturer: **岡崎産業**
 - releaseDate: **2017-02-06**
-- formalModelName canonical: **パチスロおそ松さんD**（2016-09-08山形県公安委員会検定通過記事転載）。後年流通資料では末尾D省略 `パチスロおそ松さん` 表記もある。
-- certificationNumber: **UNVERIFIED_AFTER_RESEARCH**
-- generation/system: **5号機 / 5.5号機期 / ノーマルAタイプ / MAX-A400**
-- recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7_RESEARCH_EXHAUSTED**
+- formalModelName: **ジャックポットTPV2／J1**
+- certificationNumber: **6S0723**
+- generation/system: **5号機 / 5.5号機期 / ノーマルAタイプ / 完全告知**
+- recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7_BASE_UNVERIFIED**
 
 ### performanceCore
-- 機械割: **98.8 / 99.8 / 101.5 / 103.0 / 104.5 / 107.5%**。
-- BIG: **1/368.18 / 364.09 / 360.09 / 356.17 / 348.60 / 327.68**。
-- REG: **1/436.91 / 417.43 / 397.19 / 370.26 / 350.46 / 327.68**。
-- 合算公開丸め値: **1/200 / 194 / 189 / 182 / 175 / 164**。
-- baseGamesPer50代表約**37G**。設定別解析は **36.8 / 37.1 / 38.0 / 38.6 / 38.9 / 39.1G**。
-- BIG最大約**403枚** / REG最大約**100枚**。
-- 5号機クロニクルの設定3=101.51%、設定4=103.03%は当時系資料101.5/103.0%との追加桁精度差として保持し、平均しない。
+- 機械割: **96.35 / 98.30 / 99.88 / 104.10 / 107.16 / 112.17%**。
+- BIG: **1/303.41 / 293.88 / 284.94 / 268.59 / 255.00 / 234.06**。
+- REG: **1/504.12 / 474.90 / 445.82 / 407.06 / 374.49 / 336.08**。
+- 合算: **1/189.41 / 181.54 / 173.84 / 161.82 / 151.70 / 137.97**。
+- BIG約**312枚** / REG約**130枚**。
+- baseGamesPer50: **UNVERIFIED_AFTER_RESEARCH**。小役確率から逆算せず直接値のみ採用する方針を維持。
+- HAZUSEの精密表をcanonical。後年楽スロ記事のBIG設定3以降に大きな不一致があり、平均せず `CONFLICT_SOURCE_TABLE_SUSPECTED_TRANSCRIPTION_ERROR` として保持。
 
 ### resetBehavior v0.7
-- ノーマルAタイプで通常ゲーム数天井、周期、AT/ART/CZ、通常時ゲーム数モードは非搭載のため、それらのRESET/CARRYOVERは **NOT_APPLICABLE**。
+- 天井機能非搭載。通常ゲーム数天井、周期、AT/ART/CZ、ゲーム数解除モードは **NOT_APPLICABLE**。
 - 設定変更専用の短縮天井、朝一高確、朝一専用モード、公開された主要恩恵/不利は **NONE_CONFIRMED_AFTER_RESEARCH**。
-- 据え置き/純電断でホール経営・朝一客AIへ影響する天井/モード進捗は非該当。
-- ボーナス成立中等の特殊局面の純電断復帰は本機固有の直接資料を固定できず **UNVERIFIED_AFTER_RESEARCH**。実機完全再現目的の推測はしない。
-- ガックン、初期出目、ランプ等による本機固有の変更判別は、機種名/正式型式/メーカーと設定変更・リセット・朝一・据え置き・電源OFF ON・ガックンを組み替えて再探索後も **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 据え置き/純電断で引き継ぐべき天井・周期・AT/ART/CZ進捗は非該当。
+- ボーナス成立中等の特殊局面の純電断復帰は本機固有資料を固定できず **UNVERIFIED_AFTER_RESEARCH**。
+- 本機固有のガックン、初期出目、ハイビスカス/7セグ表示による変更判別契約は再探索後も **NONE_CONFIRMED_AFTER_RESEARCH**。
 - 有利区間: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
 
-### data quality / identity
-- `パチスロおそ松さんD`（検定通過記事転載）と `パチスロおそ松さん`（流通資料）は末尾D省略の表記差として双方保持。
-- 検定番号は `おそ松さんD / おそ松さん / D-light / ディ・ライト / 6S / 検定番号 / 公安委員会` まで変えて横断したが直接固定できずUNVERIFIED。
-- 2017年4月「おそ松くん」、2019年「おそ松さん～驚～」のリセット/天井情報は本機へ混入させない。
+## 2017-02-06境界監査
+- status: **OPEN_PENDING_FINAL_AUDIT**。
+- 登録済み:
+  - パチスロ牙狼-守りし者- — No.1044
+  - JAWS ～it's a SHARK PANIC～ — No.1045
+  - GⅠ優駿倶楽部 — No.1046
+  - パチスロおそ松さん — No.1047
+  - ジャックポット トロピカルバージョン2 — No.1048
+- `パチスロ攻殻機動隊S.A.C. 2nd GIG`: **2017-03-21**。サミー公式は2017年3月中旬予定、HAZUSE/複数解析は3/21で一致。2/6群から除外し3月群で処理。
+- `パチスロ機動戦士Zガンダム`: **2017-04-03**。SANKYOオンライン博物館は2017.04、複数解析は4/3で一致。2/6群から除外し4月群で処理。
+- `マジンガーZ 新たな魔神の力`: 直前調査で2/20系列が優勢のため2/6群では早取りしない。
 
 ## 遡及 resetBehavior QA
 - retroQaScanConfirmedThrough: **2006-04-16_oniwa-de-don.md**
@@ -61,37 +58,23 @@
 - 次カーソル: `2006-04_bomberman-victory-f.md`。
 - 新規本線を止めず、既存性能statusを不用意に崩さずresetBehavior欠損だけを順次補完する。
 
-## 境界監査
-- **2017-02-06_GROUP_OPEN**。
-- 登録済み:
-  - パチスロ牙狼-守りし者- — No.1044
-  - JAWS ～it's a SHARK PANIC～ — No.1045
-  - GⅠ優駿倶楽部 — No.1046
-  - パチスロおそ松さん — No.1047
-- 同日未処理確認候補:
-  - **ジャックポットトロピカルバージョン2**
-  - **パチスロ攻殻機動隊S.A.C. 2nd GIG**（導入日要再照合）
-  - **パチスロ機動戦士Zガンダム**（導入日要再照合）
-- K-Naviに2/6掲載のマジンガーZは複数資料2/20と競合するため、2/6群では早取りせず2/20群で正式処理する。
-
 ## 次回再開地点
-1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1047を再取得。
-2. **1047件 / chronologicalFrontier 2017-02-06 / 2/6群OPEN** を正本として継続。
-3. 次の未処理機種 **「ジャックポットトロピカルバージョン2」** をNo.1048候補として、メーカー・正式型式・実導入日を再固定してから登録。
-4. その後 **攻殻機動隊S.A.C. 2nd GIG / 機動戦士Zガンダム** の2/6導入可否を公式・業界・当時解析・古いDBで照合し、2/6群CLOSED可否を判定。
+1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1048を再取得。
+2. **1048件 / chronologicalFrontier 2017-02-06 / 2/6群OPEN_PENDING_FINAL_AUDIT** を正本として継続。
+3. 2017-02-06同日について岡崎産業追加後の **全メーカー最終監査**を行い、未登録実機がなければ `2017-02-06_GROUP_CLOSED_FOR_CURRENT_RESEARCH` にする。
+4. 2/07以降を日付境界順に監査し、次の未処理全国導入機を確定してNo.1049候補へ進む。`攻殻機動隊S.A.C. 2nd GIG` は3/21、`機動戦士Zガンダム` は4/3なので時系列到達前に早取りしない。
 5. 遡及QAは `2006-04_bomberman-victory-f.md` から継続。
 
 ## 主要出典 — 取得日 2026-09-09
-### No.1047 おそ松さん
-- K-Navi: https://p-kn.com/slot/2687/
-- ちょんぼりすた: https://chonborista.com/slot/d-light/30168/
-- アタリ7: https://www.atari7.com/slot/date1481615670.php
-- 5号機クロニクル: https://5goki.com/daiichi
-- 中一商事Yahoo!流通資料: https://store.shopping.yahoo.co.jp/nakaiticom/60096.html
-- pachinko's blog: https://pachinko.hatenablog.jp/entry/2017/02/osomatsusan
-- 2016-09-08検定通過記事転載: https://newskenm.blog.2nt.com/blog-entry-53420.html
+### No.1048 ジャックポット トロピカルバージョン2
+- HAZUSE: https://hazuse.com/machine/pachislot/6S0723/
+- P-WORLD: https://www.p-world.co.jp/machine/database/8263
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/okazaki_slot/77/okazaki_slot_77.php
+- 5号機クロニクル 岡崎産業: https://5goki.com/okazaki
+- 楽スロ（BIG表CONFLICT確認用）: https://rakuslo.com/jackpot_tropical2-setteisamatome.html
 
-### 既登録2/6群の主要参照
-- JAWS P-WORLD: https://www.p-world.co.jp/machine/database/8237
-- JAWS reset: https://slotjin.com/zone/jaws/
-- GⅠ優駿倶楽部 K-Navi: https://p-kn.com/slot/2677/
+### 日付候補訂正
+- サミー公式 攻殻2発売告知: https://www.sammy.co.jp/japanese/news/2017/628.html
+- HAZUSE 攻殻2: https://hazuse.com/machine/pachislot/6S1408/
+- SANKYOオンライン博物館 Zガンダム: https://www.sankyo-fever.jp/collection/886/
+- 一撃 Zガンダム: https://1geki.jp/slot/s_zgundam/
