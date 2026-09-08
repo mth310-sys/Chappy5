@@ -1,7 +1,7 @@
 # お庭でドン
 
 status: PARTIAL
-qaResetBehavior: PARTIAL
+qaResetBehavior: PARTIAL_RESEARCH_EXHAUSTED
 
 machineName: お庭でドン
 manufacturer: バルテック
@@ -68,18 +68,20 @@ UNVERIFIED
 
 ## resetBehavior
 
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
+resetQaLastUpdated: 2026-09-09
 
 settingChangeBehavior:
-- 設定変更時に100G RT「お祭りタイム」の残りGや内部RT状態がどう処理されるかを確定できる高信頼公開資料は、機種名表記揺れ・型式名・RT名と「設定変更/リセット/朝一」を組み替えて再探索後もUNVERIFIED。
+- 設定変更時に100G RT「お祭りタイム」の残りGや内部RT状態がどう処理されるかを確定できる高信頼公開資料は、機種名表記揺れ・型式名・RT名と「設定変更/リセット/朝一」を組み替えて再探索後もUNVERIFIED_AFTER_RESEARCH。
+- 2026-09-09の遡及QAでは「お庭deドン 設定変更 RT 朝一」「オニワデドン リセット RT 電源」「お祭りタイム 設定変更 バルテック」「お庭でドン 据え置き 電源OFF」等へ検索語を変更し、当時業界記事、解析残存ページ、古いDB、後年回顧を再探索したが追加の本機固有契約は確認できなかった。
 - 通常時ゲーム数天井、朝一専用ゲーム数モード、設定変更専用の短縮天井/初当たり優遇はNONE_CONFIRMED。
 
 carryOverBehavior:
 - 通常時ゲーム数天井の据え置き引継ぎはNOT_APPLICABLE / NONE_CONFIRMED。
-- 前日RT中の据え置き時に残りG・内部RT状態を保持するかはUNVERIFIED。
+- 前日RT中の据え置き時に残りG・内部RT状態を保持するかはUNVERIFIED_AFTER_RESEARCH。
 
 powerCycleBehavior:
-- 電源OFF→ONのみでRT残りG・内部状態を維持するかはUNVERIFIED。
+- 電源OFF→ONのみでRT残りG・内部状態を維持するかはUNVERIFIED_AFTER_RESEARCH。
 - 電断で通常時ゲーム数天井が変化する構造はNONE_CONFIRMED。
 
 gameCounterReset:
@@ -92,7 +94,7 @@ modeAfterReset:
 - 通常時ゲーム数管理モード、朝一専用モード、設定変更時モード再抽選はNONE_CONFIRMED。
 
 stateAfterReset:
-- 姫BIG後100G RTの設定変更/据え置き/電断時処理はUNVERIFIED。
+- 姫BIG後100G RTの設定変更/据え置き/電断時処理はUNVERIFIED_AFTER_RESEARCH。
 
 advantageousSectionReset:
 - NOT_APPLICABLE（5号機初期・有利区間制度導入前）。
@@ -104,15 +106,15 @@ resetPenalties:
 - 設定変更固有の主要不利要素はNONE_CONFIRMED。
 
 resetDetection:
-- 本機固有のガックン、表示、RT挙動等による設定変更/据え置き判別は、「お庭でドン / お庭deドン / オニワデドン / バルテック」と「ガックン/設定変更/朝一/据え置き」を組み替えて十分再探索したがUNVERIFIED。
+- 本機固有のガックン、表示、RT挙動等による設定変更/据え置き判別は、「お庭でドン / お庭deドン / オニワデドン / バルテック」と「ガックン/設定変更/朝一/据え置き」を組み替えて十分再探索したがUNVERIFIED_AFTER_RESEARCH。
 
 numericResetData:
 - 短縮天井: NONE_CONFIRMED / NOT_APPLICABLE
-- 設定変更時モード振り分け/朝一当選率/リセット恩恵発生率: 比較可能な公開数値は今回未確認
+- 設定変更時モード振り分け/朝一当選率/リセット恩恵発生率: 比較可能な公開数値は十分再探索後も未確認
 
 ## sources
 
-取得日: 2026-08-31
+取得日: 2026-09-09
 
 1. グリーンべると — バルテックから5号機第2弾『お庭でドン』
    - https://web-greenbelt.jp/00004571/
@@ -146,13 +148,17 @@ numericResetData:
 - 50枚あたりゲーム数 / ベース
 - 設定別BIG振り分け詳細
 - RTの公式/解析上の1Gあたり純増値
-- 設定変更時のRT残G・内部状態処理
-- 据え置き時のRT残G・内部状態引継ぎ
-- 電源OFF→ONのみのRT状態処理
-- 本機固有のガックン/朝一変更判別
+- 設定変更時のRT残G・内部状態処理（PARTIAL_RESEARCH_EXHAUSTED）
+- 据え置き時のRT残G・内部状態引継ぎ（PARTIAL_RESEARCH_EXHAUSTED）
+- 電源OFF→ONのみのRT状態処理（PARTIAL_RESEARCH_EXHAUSTED）
+- 本機固有のガックン/朝一変更判別（PARTIAL_RESEARCH_EXHAUSTED）
 - 公開朝一専用数値
 
 ## conflicts
 
 - 現時点で主要性能値の数値競合は確認なし。
 - 表記は「お庭でドン」「お庭deドン」「オニワデドン」が混在するため、正式機種名表記として本レコードは「お庭でドン」、型式名は「オニワデドン」として区別する。
+
+## QA note
+- 性能側 `status: PARTIAL` は維持し、リセットQAだけを別管理で `PARTIAL_RESEARCH_EXHAUSTED` へ更新。
+- 2026-09-09に検索語・資料系統を再変更して遡及QAを実施。RT100G自体は業界/解析で再確認できたが、設定変更・据え置き・純電断時のRT残G/内部状態処理と変更判別の本機固有直接根拠は追加固定できなかった。
