@@ -1,71 +1,78 @@
 更新日: 2026-09-08
 
 ## 現在地点
-- recordCount: **1009**
-- latestRecordAdded: **天下布武3**（山佐）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2016-09-12_tenkahubu3.md`
-- chronologicalFrontier: **2016-09-12**
-- frontierLatestMachine: **天下布武3**（山佐）
+- recordCount: **1010**
+- latestRecordAdded: **SLOT魔法少女まどか☆マギカ2**（メーシー）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2016-09-20_slot-madoka-magica2.md`
+- chronologicalFrontier: **2016-09-20**
+- frontierLatestMachine: **SLOT魔法少女まどか☆マギカ2**（メーシー）
 - schema: **resetBehavior v0.7**
-- status: **2016-09-12_GROUP_CLOSED_FOR_CURRENT_RESEARCH / NEXT_BOUNDARY_2016-09-13_TO_09-19_THEN_2016-09-20**
+- status: **2016-09-13_TO_09-19_CLOSED_FOR_CURRENT_RESEARCH / 2016-09-20_GROUP_OPEN**
 
 ## 今回の同期 / 境界監査
-- 最新mainの `README.md`、mission v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前No.1008 `2016-09-12_3x3eyes-seima-kakusei.md` を再取得して開始。
-- `INDEX.md` は19件時点の旧集約のため、README規定に従い `LATEST_HANDOFF.md` + 実レコード + 最新mainを進捗正本として使用。
-- 開始時点は recordCount 1008 / 2016-09-12群OPEN / 次未処理 `天下布武3`。
-- 天下布武3をNo.1009として登録。性能コア、ART間999G天井、設定変更/据え置き/純電断、3武将モード再抽選、公開朝一モード振り分け、ガックン判別まで収集。
-- 09/12同日について日付別・新台・導入カレンダー・メーカー一覧を追加監査。既登録 `3×3EYES ～聖魔覚醒～` と今回の `天下布武3` 以外に、全国導入本線として日付を固定できる未登録パチスロを今回確認できなかったため **2016-09-12_GROUP_CLOSED_FOR_CURRENT_RESEARCH** とした。
-- 1gekiの2016年9月新台カレンダーは09/12に天下布武3のみを掲載するが、3×3EYESのような掲載漏れがあるため単独資料で完全性を主張せず、他検索と併用してCLOSED判定。
-- HAZUSEの2016年9月導入日境界は 09/05 → 09/12 → 09/20 → 09/26。次回は09/13〜09/19を漏れ防止監査してから09/20群へ進む。
+- 最新mainの `README.md`、mission v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前No.1009 `2016-09-12_tenkahubu3.md` を再取得して開始。
+- `INDEX.md` は19件時点の旧集約のため、README規定どおり `LATEST_HANDOFF.md` + 実レコード + 最新mainを進捗正本として使用。
+- 開始時点は recordCount 1009 / 2016-09-12群CLOSED / 次は09/13〜09/19境界監査→09/20群。
+- HAZUSEの2016年9月導入境界は 09/05 → 09/12 → 09/20 → 09/26。09/13〜09/19を日別・新台・導入・メーカー系で再探索したが、全国導入本線へ固定できる未登録パチスロを今回確認できず `2016-09-13_TO_09-19_CLOSED_FOR_CURRENT_RESEARCH` とした。
+- 09/20群の先頭として `SLOT魔法少女まどか☆マギカ2` をNo.1010登録。
+- 09/20同日にはK-Naviで `乱嵐エイサー-30`（オーイズミ）が2016-09-20導入と確認できたため、**09/20群はOPENのまま**。一撃月次カレンダーは09/20をまどマギ2のみ掲載しているが、同日機種漏れがあるため単独では完全性根拠にしない。
+- 月内未配置候補のうち `パチスロ スーパー海物語 IN 沖縄2` はK-Navi・当時/後年解析で **2016-09-05** 導入を確認。既過去群への遡及漏れ候補として要確認。
+- `ニューアイムジャグラーEX-KA` は北電子公式で検定情報、別資料で2016年9月リリースまでは確認したが、今回具体的ホール導入日を固定できていないため月表記のまま保留。
 
-## No.1009 — 天下布武3
-- manufacturer: **山佐**
-- releaseDate: **2016-09-12**
-- formalModelName: **天下布武3／ZZ**
-- certificationNumber: **6S0492**
+## No.1010 — SLOT魔法少女まどか☆マギカ2
+- manufacturer: **メーシー / UNIVERSAL ENTERTAINMENT**
+- releaseDate: **2016-09-20**
+- formalModelName: **SLOT魔法少女まどか☆マギカ2／MM**
+- certificationNumber: **6S0862**
 - generation/system: **5号機 / 5.5号機期 / A+ART / CZ搭載**
 - recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7**
 
 ### performanceCore
-- 機械割: **96.9 / 98.6 / 100.7 / 104.3 / 107.2 / 112.2%**。
-- ART初当たり: **1/356.8 / 351.7 / 298.4 / 284.6 / 224.4 / 213.1**。
-- ボーナス合算: **1/992.9 / 936.2 / 992.9 / 819.2 / 992.9 / 799.2**。
-- ベース: **約38G/50枚**（算出条件資料では38.1G）。
-- ART純増: **約1.7枚/G**。一部のボーナス込み約1.9枚/Gは別定義。
-- 天下ボーナス **200枚固定**、決戦 **30枚固定**。
-- 覚醒 **20G+α**、天雅モード **30G+α or 130G+α**、真・天雅モード **10G+α**。
-- 通常天井: **ART間999GでART「覚醒」**。天下ボーナス/決戦では天井G数をリセットしない。
+- 機械割: **98.5 / 99.6 / 101.1 / 104.4 / 107.4 / 111.0%**。
+- BIG: **1/297.9 / 297.9 / 290.0 / 280.1 / 265.3 / 250.1**。
+- ART初当たり: **1/424.4 / 401.5 / 376.4 / 333.8 / 299.7 / 267.4**。
+- BIG+ART合算: **1/175.0 / 171.0 / 163.8 / 152.3 / 140.7 / 129.3**。
+- ベース: canonical **約31G/50枚**。一部実戦/回顧32.6Gは条件差候補として別保持。
+- ART純増: **約1.5枚/G**。ボーナス込み約2.0枚/Gは別定義。
+- BIG: **約150枚**。
+- ART「マギカ☆ラッシュ」: **1セット50G+α**。
+- 通常天井: **ボーナス&ART間1000G**。
 
 ### resetBehavior v0.7
-- 設定変更: **ART間天井RESET / 3武将内部モードRESELECT**。
-- 据え置き: **ART間天井・内部モードCARRYOVER**。
-- 純電源OFF→ON: **ART間天井・内部モードCARRYOVER**。
-- 設定変更後は信長/秀吉/家康の3武将モードの抽選順を3パターン各1/3で選び、その順で状態抽選。**最低1武将は高確以上確定**。
-- 抽選1番目の高確/超高確は設定1-2 **25.0/75.0%**、設定3-4 **37.5/62.5%**、設定5-6 **50.0/50.0%**。
-- 抽選2番目は設定1-2 **通常B68.8 / 高確25.0 / 超高確6.3%**、3-4 **53.1 / 37.5 / 9.4%**、5-6 **37.5 / 50.0 / 12.5%**。
-- 抽選3番目は設定1-2 **通常A82.8 / 通常B12.5 / 高確3.1 / 超高確1.6%**、3-4 **71.9 / 18.8 / 6.3 / 3.1%**、5-6 **56.3 / 25.0 / 12.5 / 6.3%**。
-- 高確以上モードは対応CZ当選まで転落しないため、朝一0G〜最初のCZまでに設定変更恩恵が存在。
-- 設定変更専用の固定短縮天井は **NONE_CONFIRMED_AFTER_RESEARCH**。朝一恩恵は天井短縮ではなくモード再抽選。
-- ガックンは当時解析複数で **設定変更時あり / 電源ON-OFFのみなし**。ただし小さく判別難度が高く対策影響もあるため `GACKUN_REPORTED_USEFUL_NOT_MANUFACTURER_GUARANTEE`。
+- 設定変更: **天井RESET / 600Gへ短縮 / 内部状態RESELECT**。
+- 据え置き: **天井・内部状態CARRYOVER**。
+- 純電源OFF→ON: **天井・内部状態CARRYOVER**。
+- 設定変更後内部状態:
+  - 設定1〜3: **低確59.8 / 高確34.0 / 超高確6.3%**（高確以上40.3%）。
+  - 設定4〜6: **低確39.8 / 高確53.9 / 超高確6.3%**（高確以上60.2%）。
+- 朝一主要恩恵は **1000G→600Gの400G天井短縮** と内部高確再抽選。
+- ガックン: **無効/判別不可**とする解析複数一致。
+- 設定変更後の特殊RT状態を利用し、ベルこぼし前の逆押しリプレイ停止形から据え置き濃厚を取れる実用判別あり。ただしホールの数G回しで無効化され得るためメーカー保証契約ではない。
+- 液晶ステージ: 一撃は電断時引継ぎ、なな徹/スロパチクエスト系は鹿目家ステージと整理し `POWER_CYCLE_LCD_STAGE` CONFLICT。
+- 穢れポイントの設定変更時の正確契約は、初代との混同を避けて再探索したが本機固有の高信頼直接表を固定できず **UNVERIFIED_AFTER_RESEARCH**。
 - 有利区間: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
 
 ### data quality
-- 一撃2016-10-12時点では設定変更/電断後の状態が「調査中」だったが、後発当時解析で3武将モードの再抽選/引継ぎと詳細数値が公開。古い未確定表と後発解析を時系列分離し、後発複数一致をcanonicalとした。
-- 朝一表示ステージは「信長ステージ」「信長(夕方)ステージ」の表記差があるため `RESET_STAGE_PRESENTATION` として保持。内部数値には影響なし。
-- ART単体純増約1.7枚/Gとボーナス込み約1.9枚/Gは定義差でありCONFLICTではない。
+- ユニバーサル公式現行アーカイブでメーシー・5号機・ボーナス+ART・2016年9月発売を確認。
+- HAZUSEで導入2016-09-20、正式型式、検定番号を確認。一撃・K-Naviも09/20で一致。
+- 一撃 / なな徹 / スロパチクエストで設定変更600G天井、状態再抽選、電断時天井・状態引継ぎが一致。
+- 電断時の液晶表示だけ資料差があるためCONFLICT保持。内部契約は一致。
 
-## 2016-09-12群 — CLOSED FOR CURRENT RESEARCH
+## 2016-09-13〜09-19 — CLOSED FOR CURRENT RESEARCH
+- HAZUSE月間境界は09/12→09/20。
+- 日別検索・新台カレンダー・メーカー系再探索で、この区間に全国導入本線として固定できる未登録パチスロを今回確認できず。
+
+## 2016-09-20群 — OPEN
 登録済み:
-- **3×3EYES ～聖魔覚醒～**（大都技研） — No.1008
-- **天下布武3**（山佐） — No.1009
+- **SLOT魔法少女まどか☆マギカ2**（メーシー） — No.1010
 
-追加の日付別・メーカー横断検索で、09/12全国導入本線へ固定できる他の未登録パチスロは今回確認できず。
+次の強候補:
+- **乱嵐エイサー-30**（オーイズミ） — K-Naviでホール導入開始2016-09-20を確認。次回は型式/検定番号、機械割、BIG/REG、ベース、獲得枚数、設定変更/据え置き/電断、変更判別を収集しNo.1011候補とする。
 
-## 次の時系列候補
-- 境界監査: **2016-09-13〜2016-09-19**。月表記だけの機種を強制的に09/12/09/20へ置かない。
-- 次の強い具体日: **2016-09-20**。
-- 強候補: **SLOT魔法少女まどか☆マギカ2**（メーシー）。1geki月次カレンダーで09/20、HAZUSEも09/20境界を掲載。次回はメーカー公式/業界記事/当時解析で個別日付を再固定してからNo.1010候補とする。
-- 月内未配置候補として `パチスロスーパー海物語IN沖縄2 / ニューアイムジャグラーEX-KA / 乱嵐エイサー-30` 等は個別導入日を確認して時系列へ挿入する。月表記だけで日付確定しない。
+同日/近傍監査:
+- 一撃月次カレンダーは09/20をまどマギ2のみ掲載するが、乱嵐エイサー-30が別資料で同日確認できるため、掲載漏れ前提で全メーカー横断を継続。
+- `パチスロ スーパー海物語 IN 沖縄2` は09/05導入確認。No.100x以前の09/05群に既登録か検索し、未登録なら遡及漏れとして追加する。
+- `ニューアイムジャグラーEX-KA` は2016年9月リリース・検定情報まで確認。具体導入日を固定後に時系列へ配置。
 
 ## 遡及 resetBehavior QA
 - retroQaScanConfirmedThrough: **2006-03-27_kengou-musashi.md**
@@ -74,27 +81,31 @@
 - 今回は新規本線を優先し、遡及QA地点は変更なし。
 
 ## 次回再開地点
-1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1009を再取得。
-2. **1009件 / 2016-09-12群CLOSED** から再開し、09/13〜09/19境界をメーカー・当時カレンダー・古DBで漏れ防止監査。
-3. 未処理機がなければ **2016-09-20群**へ進み、`SLOT魔法少女まどか☆マギカ2` の導入日を公式/業界/解析で再固定してNo.1010候補として収集。
-4. 09/20同日群は1機種だけと決め打ちせず、全メーカー横断監査を継続。
-5. PARTIAL/UNVERIFIEDは最初の検索で確定せず、表記揺れ・型式・メーカー・シリーズ・設定変更/据え置き/電断/天井/モード/ガックン等へ検索語を変え、公式・業界・当時解析・古DB・回顧資料を横断した後のみ確定。競合は平均せずCONFLICT。
-6. 遡及QAは `2006-03-27_golgo13-the-professional.md` から順次継続。
+1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1010を再取得。
+2. **1010件 / 2016-09-20群OPEN** から再開。
+3. 最優先で **`乱嵐エイサー-30`（オーイズミ）**をNo.1011候補として性能コア+resetBehavior v0.7収集。
+4. 09/20同日群を全メーカー横断で監査し、1geki掲載機だけでCLOSEDにしない。
+5. `パチスロ スーパー海物語 IN 沖縄2` がDB既登録か最新main検索。未登録なら09/05群への遡及漏れとして追加し、chronologicalFrontierは09/20のまま保持。
+6. `ニューアイムジャグラーEX-KA` の具体導入日を公式/業界/当時解析/古DBで固定する。
+7. PARTIAL/UNVERIFIEDは検索語・資料系統を変えて再探索後のみ確定。競合は平均せずCONFLICT。
+8. 遡及QAは `2006-03-27_golgo13-the-professional.md` から順次継続。
 
 ## 主要出典 — 取得日 2026-09-08
-### No.1009 天下布武3
-- グリーンべると / P-WORLD業界ニュース: https://news.p-world.co.jp/articles/8602/greenbelt
-- 娯楽産業: https://www.goraku-sangyo.com/%E5%B1%B1%E4%BD%90%E3%80%80%E6%96%B0%E6%A9%9F%E7%A8%AE%E3%80%8C%E5%A4%A9%E4%B8%8B%E5%B8%83%E6%AD%A63%E3%80%8D%E7%99%BA%E8%A1%A8/
-- P-WORLD: https://www.p-world.co.jp/machine/database/8128
-- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/213/a.php
-- 一撃 機種: https://1geki.jp/slot/s_tenkahubu3/
-- 一撃 天井/設定変更: https://1geki.jp/slot/s_tenkahubu3/3/
-- 期待値見える化: https://slotjin.com/tenjou/tenkafubu3/
-- スロパチクエスト reset: https://www.slopachi-quest.com/article/tenkahubu3-reset/
-- スロパチクエスト summary: https://www.slopachi-quest.com/kisyubetsu/tenkahubu3/
-- ちょんぼりすた: https://chonborista.com/slot/yamasa-slot/23583/
-- パチスロ解析ガイド: https://pachislot-guide.net/2016/tenkafubu3/
+### No.1010 SLOT魔法少女まどか☆マギカ2
+- UNIVERSAL公式: https://www.universal-777.com/product/slot/slot_madoka_magica2/
+- HAZUSE: https://hazuse.com/machine/pachislot/SX0136/
+- 一撃 機種: https://1geki.jp/slot/s_madomagi2/
+- 一撃 天井/設定変更: https://1geki.jp/slot/s_madomagi2/3/
+- K-Navi: https://p-kn.com/slot/2590/
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/macy_slot/45/a.php
+- なな徹 朝一: https://nana-press.com/kaiseki/machine/50/904/
+- スロパチクエスト reset: https://www.slopachi-quest.com/article/madomagi2-reset/
+- SLOT HACK: https://slothack.net/matome/1563/
 
-### 境界
-- 一撃 2016年9月新台カレンダー: https://1geki.jp/newmachinecalender/201609/
-- HAZUSE 新台カレンダー: https://hazuse.com/new-machine-calendar/newmachine-calendar/
+### 境界 / 次候補
+- HAZUSE新台カレンダー: https://hazuse.com/new-machine-calendar/newmachine-calendar/
+- 一撃2016年9月: https://1geki.jp/newmachinecalender/201609/
+- 乱嵐エイサー-30 K-Navi: https://p-kn.com/slot/2571/
+- スーパー海物語IN沖縄2 K-Navi: https://p-kn.com/slot/2572/
+- スーパー海物語IN沖縄2 ちょんぼりすた: https://chonborista.com/slot/sanyo-slot/23038/
+- ニューアイムジャグラーEX-KA 北電子検定情報: https://www.kitadenshi.co.jp/slot-kentei/newimjugglerex-ka/
