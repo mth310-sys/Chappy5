@@ -1,71 +1,64 @@
 更新日: 2026-09-09
 
 ## 現在地点
-- recordCount: **1052**
-- latestRecordAdded: **パチスロ モンキーターンIII**（山佐）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2017-02-27_monkey-turn-iii.md`
-- chronologicalFrontier: **2017-02-27**
-- frontierLatestMachine: **パチスロ モンキーターンIII — No.1052**
+- recordCount: **1053**
+- latestRecordAdded: **ドリスタせかんど**（ネット）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2017-03-06_dresta-second.md`
+- chronologicalFrontier: **2017-03-06**
+- frontierLatestMachine: **ドリスタせかんど — No.1053**
 - schema: **resetBehavior v0.7**
-- status: **2017-02-27_GROUP_CLOSED_FOR_CURRENT_RESEARCH / 2017-02-28_TO_2017-03-05_BOUNDARY_CLOSED_FOR_CURRENT_RESEARCH**
+- status: **2017-03-06_GROUP_OPEN**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、直前No.1051実レコードを再取得して開始。
+- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、直前No.1052実レコードを再取得して開始。
 - INDEX本文は初期19件時点の旧スナップショットのため、README規定どおりINDEXより新しい `LATEST_HANDOFF.md` を直近進捗正本として採用。
-- 開始時mainは **1051件 / 2017-02-20群CLOSED / 2/21〜26境界CLOSED**。handoff指定の次カーソル `パチスロ モンキーターンIII` をNo.1052として登録。
-- 性能コア＋resetBehavior v0.7を収集。導入日は2017-02-27が当時/複数資料で一致する一方、ちょんぼりすたのみ2017-03-06のためCONFLICTを保持。
-- 2/27同日群を2-9伝説・HAZUSE・個別日付検索から再監査。全国導入パチスロ本線として追加固定できたのはモンキーターンIIIのみで、登録後にCLOSED。
-- 2/28〜3/5境界も日付別検索と2017導入一覧を横断し、全国導入パチスロ本線の追加候補を固定できなかったため現調査でCLOSED。次の明確な群は2017-03-06。
+- 開始時mainは **1052件 / 2017-02-27群CLOSED / 2/28〜3/5境界CLOSED**。
+- handoff指定の次カーソル、NET **「ドリスタせかんど」**をNo.1053として登録。
+- 性能コア＋resetBehavior v0.7を同時収集。設定変更後には通常時と異なる公開天井周期テーブルがあり、朝一客行動へ直接効くためnumericResetDataまで保存。
+- 2017-03-06群はまだOPEN。追加候補として **ビビッドレッド・オペレーション（三洋）**、**パチスロ ゼクスイグニッション（オリンピア/平和系）**を複数系統で確認しているため、全機処理前にCLOSEDにしない。
 
-## No.1052 — パチスロ モンキーターンIII
-- manufacturer: **山佐**
-- releaseDate canonical: **2017-02-27**
-- releaseDate conflict: **2017-03-06（ちょんぼりすた）**
-- formalModelName: **モンキーターン3／DD**
-- certificationNumber: **6S1436**
-- generation/system: **5号機 / 5.5号機期 / ART / ST型ART / 周期カレンダーCZ**
-- recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7_RELEASE_DATE_CONFLICT**
+## No.1053 — ドリスタせかんど
+- manufacturer: **ネット**
+- releaseDate canonical: **2017-03-06**
+- formalModelName: **ドリスタせかんど／NE**
+- certificationNumber: **6S1523**
+- generation/system: **5号機 / 5.5号機期 / ART / 擬似ボーナス / 周期抽選**
+- recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7**
 
 ### performanceCore
-- 機械割: **97.5 / 98.8 / 100.5 / 104.2 / 108.5 / 112.4%**。
-- ART初当たり: **1/395.2 / 380.1 / 361.5 / 311.7 / 282.9 / 254.7**。
-- CZ合算: **1/179.6 / 175.0 / 171.6 / 154.3 / 148.5 / 139.3**。
-- 50枚ベース代表: **約45G/50枚**。別資料の約45〜47G、設定別45.3〜47.1Gは定義/精度を分離して保持。
-- ART「SG RUSH」純増: **約2.0枚/G**。
-- ボーナス非搭載。ARTはフライングST20G以上 + ST30Gで初回基本50G以上。
+- 機械割: **96.9 / 98.3 / 100.7 / 104.0 / 106.7 / 110.4%**。
+- ART擬似ボーナス初当たり: **1/199 / 186 / 173 / 153 / 137 / 122**。
+- SPバトルボーナス: **1/2978 → 1/1683**。
+- バトルボーナス: **1/120 → 1/66**。
+- ライブボーナス: **1/205 → 1/116**。
+- 50枚ベース: **約46.3G/50枚**（別資料は約46G表記）。
+- ART純増: **約1.8枚/G**を業界記事・P-WORLD・当時解析で採用。後年まとめに2.0枚表記があるため、1.8をcanonical、2.0は定義/丸め差候補として注記。
+- SBB **50G+α**、BB **30G+α**、ライブボーナス **20G/1セット**。
 
 ### resetBehavior v0.7
-- 通常天井: **カレンダー6期5ヶ月消化+前兆（代表約1050G+α）でART**。6期6ヶ月目の前兆で告知。CZ中は周期進行停止。
-- 設定変更: **天井進捗RESET / カレンダー表示1期1ヶ月 / カレンダーマス30日分ランダム再生成 / 波多野家ステージ**。
-- 純電源OFF→ON: **天井進捗CARRYOVER / カレンダー表示1期1ヶ月 / カレンダーマスCARRYOVER / 波多野家ステージ**。
-- 据え置き: 純電断直接比較に準じ、天井進捗・カレンダーマスCARRYOVER。細かな内部高低状態の直接契約はUNVERIFIED。
-- 設定変更専用短縮天井: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- 設定変更専用カレンダーモード振り分け/高確初期率: **UNVERIFIED/NONE_CONFIRMED_AFTER_RESEARCH**。
+- 通常天井: **最大20周期で擬似ボーナス確定**。平均到達Gは約660〜680Gで周期長により変動。
+- 設定変更: **天井周期RESET**。
+- 純電源OFF→ON: **天井周期CARRYOVER**。
+- 据え置き: 純電断比較に準じ天井周期CARRYOVER。ドリームスター/周期内進捗/内部高低状態の全詳細は直接契約不足のためUNVERIFIED。
+- リセット専用天井周期振り分け: **1周期3.1 / 5周期25.0 / 10周期25.0 / 15周期3.1 / 20周期43.8%**。
+- 当時解析の天井のみ累積期待度表現: **5周期25.8%、10周期34.8%、15周期6.6%**。
+- 設定変更後は5・10周期天井が通常時より大幅優遇され、朝一の主要恩恵として採用。
+- 設定変更/電断時ステージ: 当時比較表でも**調査中**。内部状態初期振り分けも十分な再探索後 `UNVERIFIED_AFTER_RESEARCH`。
 - 有利区間: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
-- 変更判別: 前日最終カレンダーマスとの差は設定変更濃厚材料。ガックン報告ありだが難易度高め・対策なし条件のため確定契約にはしない。表示1期1ヶ月と波多野家ステージは設定変更/純電断共通で単独判別不可。
+- 本機固有のメーカー保証ガックン/初期出目/ランプ等の確定変更判別: **NONE_CONFIRMED_AFTER_RESEARCH**。
 
 ## dataQuality / conflicts
-- `CONFLICT_RELEASE_DATE_2017_02_27_VS_2017_03_06_CHONBORISTA`。
-  - 2017-02-27: HAZUSE / パチ7 / 一撃 / ぱちすろLIFE / パチスロ必勝ガイドMAX当時紹介 / 2-9伝説。
-  - 2017-03-06: ちょんぼりすた。
-- `CONFLICT_CHONBORISTA_RESET_EXPLANATORY_SENTENCE_VS_OWN_TABLE`。
-  - 同サイト説明文の「リセット時のカレンダーは引き継ぎ」は直前表の設定変更=30日ランダム / 電源OFF→ON=引継ぎと自己矛盾。別系統解析も設定変更=ランダム再生成で一致するため表側をcanonical。
+- exact導入日はHAZUSE・パチビー・期待値見える化・ちょんぼりすた等で2017-03-06が一致。NET公式は2017年3月上旬全国導入予定。
+- 天井Gは固定G数ではなく20周期がcanonical。約660G/約680Gは周期長変動・算出条件差として扱い、単純CONFLICTにはしない。
+- ART純増は業界発表/P-WORLD/期待値見える化で約1.8枚/G。後年まとめの2.0枚表記は残すがcanonicalは1.8枚/G。
 
-## 2017-02-27境界監査
-- status: **CLOSED_FOR_CURRENT_RESEARCH**。
-- 登録済み: パチスロ モンキーターンIII — No.1052。
-- 2-9伝説の2017-02-27欄もモンキーターン3のみ。HAZUSE・個別日付検索を追加したが、同日全国導入本線の追加パチスロを固定できず。
-
-## 2017-02-28〜2017-03-05境界監査
-- status: **CLOSED_FOR_CURRENT_RESEARCH**。
-- 2/28, 3/1, 3/2, 3/3, 3/4, 3/5を日付別に検索し、2017導入一覧とも照合。全国導入パチスロ本線を追加固定できず。
-- 次の明確な全国導入群は **2017-03-06**。
-
-## 次の2017-03-06群 — 未処理候補
-2-9伝説の導入一覧で少なくとも以下を確認。順序は次回、実導入日・既存登録有無・メーカー横断で再固定する。
-- **ドリスタせかんど**（NET）— HAZUSEでも2017-03-06、型式 `ドリスタせかんど／NE`、検定6S1523を確認済み。
-- **ビビッドレッド・オペレーション**（三洋）— 2017-03-06候補。
-- **ゼクスイグニッション** — 2017-03-06候補。
+## 2017-03-06群監査
+- status: **OPEN**。
+- 登録済み: ドリスタせかんど — No.1053。
+- 未処理確認済み候補:
+  - **ビビッドレッド・オペレーション**（三洋）— 業界記事でA+ART、複数解析で2017-03-06導入。
+  - **パチスロ ゼクスイグニッション**（オリンピア/平和系）— 2017年1月業界発表と当時解析を確認。3/06群候補として次々回以降処理。
+- 3/06群は少なくとも上記2機が未処理のためCLOSED禁止。
 
 ## 遡及 resetBehavior QA
 - retroQaScanConfirmedThrough: **2006-04-16_oniwa-de-don.md**
@@ -74,28 +67,24 @@
 - 新規本線を止めず、既存性能statusを不用意に崩さずresetBehavior欠損だけを順次補完する。
 
 ## 次回再開地点
-1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1052を再取得。
-2. **1052件 / chronologicalFrontier 2017-02-27 / 2/27群CLOSED / 2/28〜3/5境界CLOSED** を正本として継続。
-3. 次の未処理本線は **2017-03-06群**。まず同日候補を全メーカー横断で再固定し、先頭未登録機をNo.1053として性能コア＋resetBehavior v0.7収集。
-4. 現時点の先頭既知候補は **NET「ドリスタせかんど」**。ただし同日群の取りこぼし防止のため、追加前に導入カレンダー/メーカー資料を再監査する。
-5. 3/06同日群を全機処理するまでCLOSEDにしない。
+1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1053を再取得。
+2. **1053件 / chronologicalFrontier 2017-03-06 / 3/06群OPEN** を正本として継続。
+3. 次の未処理本線は **三洋「ビビッドレッド・オペレーション」**。No.1054候補として正式型式・検定番号・性能コア＋resetBehavior v0.7を収集する。
+4. 続いて **パチスロ ゼクスイグニッション**を処理。
+5. 3/06同日群を全メーカー横断監査し、追加機がなければCLOSED。その後次の導入境界へ前進。
 6. 遡及QAは `2006-04_bomberman-victory-f.md` から継続。
 
 ## 主要出典 — 取得日 2026-09-09
-### No.1052 モンキーターンIII
-- HAZUSE: https://hazuse.com/machine/pachislot/6S1436/
-- パチ7 天井: https://pachiseven.jp/machines/5056/cutout/78
-- パチ7 通常時: https://pachiseven.jp/machines/5056/cutout/4
-- 一撃: https://1geki.jp/slot/s_monkeyturn
-- 一撃 ART概要: https://1geki.jp/slot/s_monkeyturn/81/
-- ちょんぼりすた: https://chonborista.com/slot/yamasa-slot/30593/
-- 期待値見える化: https://slotjin.com/zone/monkeyturn3/
-- ぱちすろLIFE: https://pachislot-life.com/information/mkt3/
-- ぱちすろLIFE 天井/設定判別: https://pachislot-life.com/information/mkt3-capture/
-- スロがち: https://slogati.com/monkeyturn3/
-- 2-9伝説 2017導入一覧: https://29den.com/newslot/
-- Fujisan パチスロ必勝ガイドMAX 2017年2月号: https://www.fujisan.co.jp/product/1219887/b/1454477/
+### No.1053 ドリスタせかんど
+- NET公式プレスリリース（DreamNews）: https://www.dreamnews.jp/press/0000145470
+- PiDEA: https://www.pidea.jp/articles/%E3%83%8D%E3%83%83%E3%83%88%E3%80%8C%E3%83%89%E3%83%AA%E3%82%B9%E3%82%BF%E3%81%9B%E3%81%8B%E3%82%93%E3%81%A9%E3%80%8D%E3%81%AF%E3%82%AC%E3%83%81%E3%83%A3%E3%82%AC%E3%83%81%E3%83%A3%E6%90%AD%E8%BC%89
+- HAZUSE: https://hazuse.com/machine/pachislot/6S1523/
+- 期待値見える化: https://slotjin.com/zone/dresta2nd/
+- P-WORLD: https://www.p-world.co.jp/machine/database/8266
+- パチビー: https://www.pachibee.jp/machines/lecture/217020009
 
-### 次候補 / 境界
-- 2-9伝説 2017導入一覧: https://29den.com/newslot/
-- HAZUSE ドリスタせかんど: https://hazuse.com/machine/pachislot/6S1523/
+### 次候補 / 3月6日群
+- グリーンべると/P-WORLD ビビッドレッド・オペレーション: https://news.p-world.co.jp/articles/8983/greenbelt
+- ちょんぼりすた ビビッドレッド・オペレーション: https://chonborista.com/slot/sanyo-slot/31696/
+- グリーンべると/P-WORLD ゼクスイグニッション: https://news.p-world.co.jp/articles/8985/greenbelt
+- すろぱちくえすと ゼクスイグニッション: https://www.slopachi-quest.com/article/zxignition/
