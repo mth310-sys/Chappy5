@@ -7,7 +7,7 @@
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
   <title>パチ朗 - 店舗基盤 v0.1</title>
-  <link rel="stylesheet" href="./style.css?v=20260909-play1" />
+  <link rel="stylesheet" href="./style.css?v=20260909-reel1" />
 </head>
 <body>
   <main id="app">
@@ -25,9 +25,22 @@
       </div>
     </div>
     <button id="action-button" class="action-button" aria-label="決定">決定</button>
-    <button id="play-button" class="play-button" aria-label="1ゲーム回す" hidden>1G回す</button>
+    <section id="reel-panel" class="reel-panel" hidden aria-label="遊技パネル">
+      <div id="reel-machine-name" class="reel-machine-name">---</div>
+      <div class="reels" aria-label="リール">
+        <div id="reel-0" class="reel">7</div>
+        <div id="reel-1" class="reel">BAR</div>
+        <div id="reel-2" class="reel">🍒</div>
+      </div>
+      <div class="reel-controls">
+        <button id="play-button" class="play-button" aria-label="スタート">START</button>
+        <button class="stop-button" data-reel="0" aria-label="左リール停止">STOP</button>
+        <button class="stop-button" data-reel="1" aria-label="中リール停止">STOP</button>
+        <button class="stop-button" data-reel="2" aria-label="右リール停止">STOP</button>
+      </div>
+    </section>
   </main>
   <script src="https://cdn.jsdelivr.net/npm/phaser@3.90.0/dist/phaser.min.js"></script>
-  <script type="module" src="./main.js?v=20260909-play1"></script>
+  <script type="module" src="./main.js?v=20260909-reel1"></script>
 </body>
 </html>
