@@ -1,86 +1,13 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=2 format=3]
 
 [ext_resource type="Script" path="res://main.gd" id="1_main"]
-[ext_resource type="Script" path="res://student_body.gd" id="2_student"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_main")
 
 [node name="Background" type="ColorRect" parent="."]
+show_behind_parent = true
 offset_right = 390.0
 offset_bottom = 844.0
-color = Color(0.19, 0.31, 0.42, 1)
+color = Color(0.09, 0.13, 0.18, 1)
 mouse_filter = 2
-
-[node name="Floor" type="Polygon2D" parent="."]
-polygon = PackedVector2Array(40, 210, 195, 130, 350, 210, 350, 650, 195, 730, 40, 650)
-color = Color(0.91, 0.83, 0.67, 1)
-
-[node name="Student" type="Node2D" parent="."]
-position = Vector2(195, 430)
-script = ExtResource("2_student")
-
-[node name="UI" type="CanvasLayer" parent="."]
-
-[node name="Status" type="Label" parent="UI"]
-offset_left = 12.0
-offset_top = 18.0
-offset_right = 378.0
-offset_bottom = 58.0
-theme_override_font_sizes/font_size = 14
-text = "BODY DEV"
-
-[node name="Help" type="Label" parent="UI"]
-offset_left = 12.0
-offset_top = 62.0
-offset_right = 378.0
-offset_bottom = 92.0
-theme_override_font_sizes/font_size = 12
-text = "Drag anywhere above the bar to move the body"
-
-[node name="ControlBar" type="ColorRect" parent="UI"]
-offset_top = 720.0
-offset_right = 390.0
-offset_bottom = 844.0
-color = Color(0.08, 0.11, 0.15, 0.94)
-mouse_filter = 2
-
-[node name="Minus" type="Label" parent="UI"]
-offset_left = 10.0
-offset_top = 750.0
-offset_right = 90.0
-offset_bottom = 810.0
-theme_override_font_sizes/font_size = 18
-text = "SIZE -"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Plus" type="Label" parent="UI"]
-offset_left = 105.0
-offset_top = 750.0
-offset_right = 185.0
-offset_bottom = 810.0
-theme_override_font_sizes/font_size = 18
-text = "SIZE +"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Rotate" type="Label" parent="UI"]
-offset_left = 200.0
-offset_top = 750.0
-offset_right = 282.0
-offset_bottom = 810.0
-theme_override_font_sizes/font_size = 16
-text = "ROTATE"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Center" type="Label" parent="UI"]
-offset_left = 297.0
-offset_top = 750.0
-offset_right = 380.0
-offset_bottom = 810.0
-theme_override_font_sizes/font_size = 16
-text = "CENTER"
-horizontal_alignment = 1
-vertical_alignment = 1
