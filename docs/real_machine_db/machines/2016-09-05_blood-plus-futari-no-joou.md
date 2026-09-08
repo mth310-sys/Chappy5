@@ -3,16 +3,15 @@ manufacturer: タイヨーエレック
 releaseDate: 2016-09-05
 recordNumber: 1005
 generation: 5号機 / 5.5号機期
-systemType: A+ART
+systemType: A+ART / ボーナス+ゲーム数上乗せART
 formalModelName: パチスロBLOOD＋ 二人の女王／XA
 certificationNumber: 6S0606
-recordStatus: COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7_PARTIAL_RESET_QA
+recordStatus: COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7
 
 ## identity
 - HAZUSEで導入開始日2016-09-05、メーカー タイヨーエレック、型式名「パチスロBLOOD＋ 二人の女王／XA」、検定番号6S0606を確認。
-- 一撃でも導入予定日2016-09-05、TAIYO ELEC、A+ART機として照合。
-- PiDEAの2016-06-29当時業界記事でもタイヨーエレックのパチスロ新機種として発表を確認。
-reliability: INDUSTRY_ANALYSIS_HIGH_MULTI_SOURCE
+- 一撃、K-Navi、pachislo-data、ちょんぼりすたでも2016-09-05導入を照合。
+reliability: INDUSTRY_DB_ANALYSIS_HIGH_MULTI_SOURCE
 
 ## payoutRateBySetting
 | 設定 | 機械割 |
@@ -23,7 +22,7 @@ reliability: INDUSTRY_ANALYSIS_HIGH_MULTI_SOURCE
 | 4 | 104.5% |
 | 5 | 108.2% |
 | 6 | 112.2% |
-- HAZUSE、一撃、複数解析資料で一致。
+- HAZUSE、一撃、ちょんぼりすた、期待値見える化、pachislo-dataで一致。
 reliability: ANALYSIS_HIGH_MULTI_SOURCE
 
 ## initialHitBySetting
@@ -35,143 +34,141 @@ reliability: ANALYSIS_HIGH_MULTI_SOURCE
 | 4 | 1/420.1 | 1/315.3 | 1/180.1 |
 | 5 | 1/404.5 | 1/270.9 | 1/162.2 |
 | 6 | 1/381.0 | 1/231.1 | 1/143.9 |
-- HAZUSE設定推測ページと一撃で同系列を確認。
+- HAZUSE、一撃、ちょんぼりすた、pachislo-dataで同系列一致。
+- 期待値見える化の設定2ボーナスのみ1/448.9表記で、1/448.8との差は丸め精度差として原値を保持。
 reliability: ANALYSIS_HIGH_MULTI_SOURCE
 
 ## baseGamesPer50
 - 約34G/50枚。
-- 当時/後年解析資料で確認。
-reliability: ANALYSIS_SINGLE_SUPPORTED
+- 設定別整理値: 設定1 34.0G / 2 34.0G / 3 34.1G / 4 34.1G / 5 34.2G / 6 34.3G。
+- ちょんぼりすた、期待値見える化、pachislo-dataで照合。
+reliability: ANALYSIS_HIGH_MULTI_SOURCE
 
 ## netIncrease
 - ART「BLOOD CHANCE+」: 約1.5枚/G。
-- 1セット50G+α。
-- HAZUSE、一撃で一致。
+- ボーナス込み純増: 約1.8枚/G。
+- 初回基本ゲーム数: 50G+α。
+- 一撃、ちょんぼりすた、期待値見える化、パチビーで照合。
 reliability: ANALYSIS_HIGH_MULTI_SOURCE
 
 ## basicPayout
-- BLOOD BONUS / Secret Story Bonus: 204枚獲得（305枚超払い出し終了）。
-- 「二人の女王モード」ボーナス: 28枚獲得（35枚超払い出し終了）。
-- HAZUSEで確認。
-reliability: ANALYSIS_HIGH
+canonical:
+- BLOOD BONUS / Secret Story Bonus: 約204枚。
+- 二人の女王モード（プレミアボーナス）: 約28枚。
+- HAZUSE、一撃、期待値見える化で204枚/28枚を確認。
+conflict:
+- ちょんぼりすたはBIG / Secret Story Bonusを208枚と掲載。平均せず `CONFLICT_BIG_PAYOUT_204_VS_208` として保持。
+reliability: ANALYSIS_HIGH_MULTI_SOURCE / CONFLICT
 
 ## modeSpecificMinimumData
-- ボーナス+ART型。通常時はBLOOD EYE出現率に関わる4段階の内部状態（低確/通常/高確/超高確）と、DEAD or ALIVE当選率に関わる5段階モードA〜Eが存在。
-- DEAD or ALIVE側モードはボーナスまたはART当選まで転落せず、BLOOD EYE成立時に昇格抽選。最上位EではBLOOD EYE出現時の50%でDEAD or ALIVE当選。
-- ARTは50G+α、純増約1.5枚/G。DEAD or ALIVE成功時等に50Gまたは1000GのARTが選ばれる特徴を持つ。
-- 規定ゲーム数到達でARTに当選するゲーム数天井は非搭載。
+- A+ART機。ART「BLOOD CHANCE+」は初回50G+α、約1.5枚/G。
+- 通常時にはBLOOD EYE出現率に関わる4段階の内部状態（低確/通常/高確/超高確）と、DEAD or ALIVE当選率に関わる5段階DOAモードが存在。
+- DOAモードはBLOOD EYE揃いで昇格抽選し、ボーナスまたはART当選まで転落しない。最上位ではBLOOD EYE揃い時の50%でDEAD or ALIVE当選。
+- 規定ゲーム数到達型の天井は非搭載。
 - 有利区間制度導入前。
 
 ## resetBehavior
 schemaVersion: v0.7
-resetQaStatus: PARTIAL_RESEARCH_EXHAUSTED_FOR_SETTING_CHANGE_AND_POWER_CYCLE
+resetQaStatus: COMPLETE_PUBLIC_MACRO_BEHAVIOR
 resetQaLastUpdated: 2026-09-08
 
 ### settingChangeBehavior
-- 一撃の2016-09-14「天井/設定変更」では、設定変更時のモード・状態・液晶ステージはいずれも「現在調査中」。
-- 検索語を「設定変更/リセット/朝一/据え置き/モード/状態/電源OFF ON」に分け、HAZUSE・一撃・当時解析・回顧資料を再探索したが、設定変更時の5段階DOAモード、4段階BLOOD EYE状態の再抽選/引継ぎを直接固定できる複数高信頼資料は今回確認できず **UNVERIFIED_AFTER_RESEARCH**。
-- 設定変更専用のゲーム数天井短縮は、通常時ゲーム数天井自体が非搭載のため **NOT_APPLICABLE**。
+- 設定変更時はDOAモードを再抽選。
+- BLOOD EYE出現率に関わる内部状態も再抽選。
+- 朝一液晶ステージは沖縄ステージ。
+- 後年整理解析では設定変更時にリールガックン有り。
+- 規定G数天井は存在しないためゲーム数天井リセットという概念は非該当。
 
 ### carryOverBehavior
-- 据え置き時にDOAモード/BLOOD EYE内部状態をどこまで保持するかの本機固有直接資料は **UNVERIFIED_AFTER_RESEARCH**。
-- ゲーム数天井は非搭載のため、天井ゲーム数の宵越し比較は **NOT_APPLICABLE**。
+- 据え置きではDOAモード・内部状態を引き継ぐ。
+- 前日のハマリ中に蓄積したDOAモード昇格価値が残るため、ハマリ/BEスルー履歴が朝一価値を持ち得る。
 
 ### powerCycleBehavior
-- 一撃の2016-09-14資料では、電源OFF/ON時のモード・状態・液晶ステージはいずれも「現在調査中」。
-- 後続資料も再探索したが本機固有の確定契約を固定できず **UNVERIFIED_AFTER_RESEARCH**。設定変更時挙動から推定しない。
+- 純電源OFF→ONではDOAモードを引き継ぐ。
+- 内部状態も引き継ぐ。
+- 後年整理解析では純電源OFF→ONのみの場合リールガックン無し。
 
 ### gameCounterReset
-- 規定ゲーム数到達型の通常時天井は **NONE / NOT_APPLICABLE**。
-- DOAモードはゲーム数天井ではなくBLOOD EYE契機で段階アップし、ボーナス/ARTまで転落しない別系統の進捗として管理。
+- 規定ゲーム数型天井: **NONE / NOT_APPLICABLE**。
+- 本機の朝一価値はゲーム数天井ではなく、ボーナス/ARTまで転落しないDOAモード蓄積の保持/再抽選に由来する。
 
 ### ceilingAfterReset
-- 通常時の規定ゲーム数ART天井: **NONE**。
-- 設定変更専用短縮天井: **NOT_APPLICABLE**。
+- 規定ゲーム数天井: **NONE**。
+- 設定変更専用の短縮天井: **NOT_APPLICABLE**。
+- 一部解析の「800G〜狙い」は天井発動G数ではなく、ハマリに伴うDOAモード上昇期待を利用した立ち回り目安。天井値として混同しない。
 
 ### modeAfterReset
-- DOAモードA〜Eの設定変更時再抽選/引継ぎ: **UNVERIFIED_AFTER_RESEARCH**。
-- 朝一専用モード振り分け: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- DOAモード: **SETTING_CHANGE_RESELECT / POWER_CYCLE_CARRYOVER / CARRYOVER**。
+- 設定変更時の具体的な5段階振り分け数値は、表記揺れ・略称・メーカー名を含め再探索したが比較可能な公開表を固定できず **UNVERIFIED_AFTER_RESEARCH**。
 
 ### stateAfterReset
-- BLOOD EYE出現率に関わる低確/通常/高確/超高確の設定変更時処理: **UNVERIFIED_AFTER_RESEARCH**。
-- 純電源OFF→ON時処理: **UNVERIFIED_AFTER_RESEARCH**。
+- BLOOD EYE出現率に関わる低確/通常/高確/超高確の内部状態: **SETTING_CHANGE_RESELECT / POWER_CYCLE_CARRYOVER / CARRYOVER**。
+- 設定変更時の具体的状態振り分け数値は十分な再探索後も固定できず **UNVERIFIED_AFTER_RESEARCH**。
 
 ### advantageousSectionReset
 - **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
 
 ### resetBenefits
-- 設定変更専用の短縮天井・専用初当たり優遇・公開朝一当選率: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- DOAモードの設定変更時契約が未確定のため、前日高モード台の朝一価値を推定しない。
+- 設定変更専用の短縮天井・専用CZ当選率優遇・朝一専用高モード確率など、比較可能な公開数値を伴う明確な専用恩恵は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 据え置き/純電断時は前日のDOAモード蓄積を引き継ぐため、前日ハマリ台は朝一で価値が残り得る。これはリセット恩恵ではなくCARRYOVER特性。
 
 ### resetPenalties
-- 設定変更固有の主要不利要素: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 設定変更により、前日ハマリ中に昇格していた可能性のあるDOAモードが再抽選されるため、宵越しのDOAモード蓄積価値を失う可能性がある。
+- 規定G数天井はないため「天井までの消化G数を失う」という不利とは区別する。
 
 ### resetDetection
-- 本機固有のガックン、初期出目、液晶ステージ等で設定変更を確定判別できる直接資料: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- 一撃当時資料でも設定変更/電断時の液晶ステージは調査中であり、推測による判別ルールを作らない。
+- 後年整理解析: 設定変更時リールガックン有り / 純電源OFF→ON時ガックン無し。
+- 朝一ステージは設定変更時沖縄ステージとされる。
+- 一撃の2016-09-14時点ページは設定変更/電源OFF→ONのモード・状態・液晶ステージを「調査中」としており、後続解析で情報が確定した成熟時差を保持。
+- ガックンは実戦環境やリール停止条件の影響を受け得るため、客AIでは有力推測材料として扱い100%確定フラグとはしない。
 
 ### numericResetData
-- 設定変更時モード振り分け: UNVERIFIED_AFTER_RESEARCH
-- 設定変更時内部状態振り分け: UNVERIFIED_AFTER_RESEARCH
-- リセット短縮天井G数: NOT_APPLICABLE
-- 朝一専用一定G以内当選率/恩恵発生率: NONE_CONFIRMED_AFTER_RESEARCH
+- 設定変更時DOAモード具体振り分け: UNVERIFIED_AFTER_RESEARCH
+- 設定変更時内部状態具体振り分け: UNVERIFIED_AFTER_RESEARCH
+- 設定変更専用短縮天井: NONE / NOT_APPLICABLE
+- 最上位DOAモード時: BLOOD EYE揃いごとにDEAD or ALIVE当選率50%（通常ゲーム性のモード性能。リセット専用値ではない）
 
 ## dataQualityNotes
-- 導入日・型式/検定番号・機械割・ボーナス/ART初当たり・ART純増/基本G数・ボーナス獲得枚数は複数または高信頼解析で固定。
-- ベース約34G/50枚は解析資料で確認したが、今回の主要一次/業界資料では数値照合が弱いためANALYSIS_SINGLE_SUPPORTED。
-- 規定G数天井非搭載はHAZUSEと一撃で一致。
-- resetBehaviorは一撃の当時設定変更ページがモード/状態/液晶ステージを設定変更・電断とも調査中としており、十分再探索後も後続の直接確定資料を固定できなかったため推定せずUNVERIFIEDを残す。
+- identity、設定別機械割、ボーナス/ART初当たり、約34G/50枚、ART純増は複数解析系統で一致。
+- resetBehaviorは一撃の当時初期情報が「調査中」だが、ちょんぼりすたの後年整理で設定変更時DOA/状態再抽選、電源OFF→ON引継ぎ、沖縄ステージ、ガックン差を明示。DOAモードの通常時性質はHAZUSE/一撃/期待値見える化でも照合。
+- 設定変更時の具体モード/状態振り分け数値は十分な検索語変更後も固定できないためUNVERIFIED_AFTER_RESEARCH。
+- BIG獲得枚数は204枚と208枚で資料競合があるため平均せずCONFLICT。
 
 ## conflicts
-- 今回、canonical性能コアに採用した主要系列について重大な数値競合は確認なし。
+- `CONFLICT_BIG_PAYOUT_204_VS_208`: HAZUSEは305枚超払出終了・204枚獲得、一撃も204枚、期待値見える化も204枚。一方、ちょんぼりすたはBIG/Secret Story Bonusを208枚と掲載。canonicalは複数一致する204枚とし208枚を競合原値として保持。
+- `ROUNDING_SETTING2_BONUS_4488_VS_4489`: HAZUSE等1/448.8に対し期待値見える化1/448.9。丸め差として原値保持。
 
 ## sources
 取得日: 2026-09-08
 
 1. HAZUSE — パチスロBLOOD+ 二人の女王
    - https://hazuse.com/machine/pachislot/6S0606/
-   - 導入日、メーカー、型式、検定番号、機械割、基本仕様。
-   - reliability: ANALYSIS_HIGH_DB
-2. HAZUSE — 基本スペック
-   - https://hazuse.com/machine/pachislot/6S0606/genre/201/
-   - 機械割、ボーナス獲得枚数。
-   - reliability: ANALYSIS_HIGH
-3. HAZUSE — 設定推測
-   - https://hazuse.com/machine/pachislot/6S0606/genre/208/
-   - 設定別ボーナス合算、ART初当たり、合算。
-   - reliability: ANALYSIS_HIGH
-4. HAZUSE — 天井
-   - https://hazuse.com/machine/pachislot/6S0606/genre/207/
-   - 規定ゲーム数天井非搭載、DOAモード構造。
-   - reliability: ANALYSIS_HIGH
-5. HAZUSE — 初打講座 / AT・ART
-   - https://hazuse.com/machine/pachislot/6S0606/genre/203/
-   - https://hazuse.com/machine/pachislot/6S0606/genre/209/
-   - A+ART、内部状態/モード、ART50G+α・約1.5枚/G。
-   - reliability: ANALYSIS_HIGH
-6. 一撃 — パチスロBLOOD+ 二人の女王
+   - 型式、検定番号、導入日、ボーナス/ART確率、機械割、204枚/28枚、内部状態/DOAモード。
+2. 一撃 — パチスロBLOOD+ 二人の女王
    - https://1geki.jp/slot/s_bloodplus2/
-   - 導入日、機械割、ボーナス+ART合算、純増約1.5枚/G。
-   - reliability: ANALYSIS_HIGH
-7. 一撃 — 天井/設定変更
+   - 2016-09-05導入、機械割、ART仕様、204枚。
+3. 一撃 — 天井/設定変更
    - https://1geki.jp/slot/s_bloodplus2/3/
-   - 2016-09-14時点で規定G数天井なし、設定変更/電源OFF ONのモード・状態・液晶ステージは調査中。
-   - reliability: ANALYSIS_HIGH_CONTEMPORARY
-8. PiDEA — タイヨーエレック「BLOOD+」後継機を発表
-   - https://www.pidea.jp/articles/%E3%82%BF%E3%82%A4%E3%83%A8%E3%83%BC%E3%82%A8%E3%83%AC%E3%83%83%E3%82%AF%E3%80%8CBLOOD%2B%E3%80%8D%E5%BE%8C%E7%B6%99%E6%A9%9F%E3%82%92%E7%99%BA%E8%A1%A8
-   - 2016-06-29当時業界記事、タイヨーエレックの新パチスロとして発表。
-   - reliability: INDUSTRY
-9. 解析整理資料 — BLOOD+ 二人の女王
-   - https://piro-shiki.com/blood2-kaiseki/
-   - 約34G/50枚、機械割・ボーナス/ART系列の補助照合。
-   - reliability: ANALYSIS_SINGLE
+   - 規定G天井なし、DOAモード5段階、最上位BE時50%、2016-09-14時点の設定変更/電断項目「調査中」。
+4. ちょんぼりすた — BLOOD+ 二人の女王
+   - https://chonborista.com/slot/taiyo-slot/22564/
+   - 導入日、性能コア、設定別ベース、朝一リセット表（DOAモード/状態再抽選、電断引継ぎ、沖縄ステージ、ガックン）、208枚競合値。
+5. 期待値見える化 — ブラッドプラス 天井・朝一リセット解析
+   - https://slotjin.com/tenjou/bloodplus/
+   - 導入日、機械割、初当たり、約34G、204枚、ART約1.5枚/G、規定G天井なし。
+6. pachislo-data — BLOOD+二人の女王
+   - https://pachislo-data.com/taiyoelec/26437
+   - 2016-09-05、約34G、天井非搭載、設定別ART/ボーナス/出率。
+7. K-Navi — パチスロBLOOD＋ 二人の女王
+   - https://p-kn.com/slot/2565/
+8. パチビー — パチスロBLOOD+ 二人の女王
+   - https://www.pachibee.jp/machines/reach/216070003
 
 ## missingFields
-- 設定変更/据え置き/純電源OFF→ON時のDOAモードA〜E処理
-- 設定変更/据え置き/純電源OFF→ON時のBLOOD EYE内部状態処理
-- 本機固有の確定的な設定変更判別
+- 設定変更時DOAモード5段階の具体的再抽選振り分け。
+- 設定変更時低確/通常/高確/超高確の具体的再抽選振り分け。
 
 ## QA note
 - v0.7 resetBehaviorを新規収集時に適用。
-- ゲーム数天井非搭載と内部モードの「ボーナス/ARTまで転落なし」を混同せず分離。
-- 当時一撃が設定変更/電断を調査中としているため、一般論からCARRYOVER/RESETを推測していない。
+- 当時一撃の未確定情報だけで止めず、後年整理資料まで横断して設定変更/電源OFF→ON差を補完。
+- ゲーム数天井非搭載とDOAモードの蓄積進捗を混同しない。
