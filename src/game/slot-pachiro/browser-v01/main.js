@@ -32,8 +32,9 @@ class MainScene extends Phaser.Scene{
  isBlocked(gx,gy){
   if(gx<1||gy<1||gx>=MAP_W-1||gy>=MAP_H-1)return true;
   for(const f of facilities){if(f.type==='entrance')continue;if(gx>=f.x&&gx<f.x+f.w&&gy>=f.y&&gy<f.y+f.h)return true}
-  // 台・中央設備・椅子を含む島全体を進入不可にする。見た目の島幅は x-1 ～ x+5。
-  for(const i of islands){if(gy>=i.y&&gy<i.y+15&&gx>=i.x-1&&gx<=i.x+5)return true}
+  // 椅子側は通行可能。筐体と中央島設備だけを進入不可にする。
+  // 現在の描画では島本体が中央3列（x+1 ～ x+3）に収まる。
+  for(const i of islands){if(gy>=i.y&&gy<i.y+15&&gx>=i.x+1&&gx<=i.x+3)return true}
   return false;
  }
  moveGrid(dx,dy){const nx=this.playerGrid.x+dx,ny=this.playerGrid.y+dy;if(this.isBlocked(nx,ny))return;this.playerGrid={x:nx,y:ny};this.playerAnchor.setDepth(py(ny)+TILE+100);this.tweens.add({targets:this.playerAnchor,x:px(nx)+12,y:py(ny)+12,duration:90,ease:'Linear'})}
