@@ -1,85 +1,65 @@
 更新日: 2026-09-09
 
 ## 現在地点
-- recordCount: **1034**
-- latestRecordAdded: **パチスロ犬夜叉**（ロデオ）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2016-12-19_inuyasha.md`
+- recordCount: **1035**
+- latestRecordAdded: **麻雀格闘倶楽部2**（KPE）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2016-12-19_mahjong-fight-club-2.md`
 - chronologicalFrontier: **2016-12-19**
-- frontierLatestMachine: **パチスロ犬夜叉 — No.1034**
+- frontierLatestMachine: **麻雀格闘倶楽部2 — No.1035**
 - schema: **resetBehavior v0.7**
-- status: **2016-12-12_GROUP_CLOSED_FOR_CURRENT_RESEARCH / 2016-12-13_TO_2016-12-18_BOUNDARY_CLOSED_FOR_CURRENT_RESEARCH / 2016-12-19_GROUP_OPEN**
+- status: **2016-12-12_GROUP_CLOSED_FOR_CURRENT_RESEARCH / 2016-12-13_TO_2016-12-18_BOUNDARY_CLOSED_FOR_CURRENT_RESEARCH / 2016-12-19_GROUP_CLOSED_FOR_CURRENT_RESEARCH / 2016-12-20_TO_2017-01-02_BOUNDARY_AUDIT_NEXT**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、mission v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、No.1033実レコードを再取得して開始。
+- 最新mainの `README.md`、mission v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、No.1034実レコードを再取得して開始。
 - `INDEX.md` は19件時点の旧集約のため、README規定どおり最新 `LATEST_HANDOFF.md` + main実レコードを進捗正本として使用。
-- main正本は **1033件 / chronologicalFrontier 2016-12-19 / 12/19群OPEN**。過去チャットの古い地点へ戻らず、handoff指定の次未処理ロデオ `パチスロ犬夜叉` をNo.1034として追加。
-- 同名の2022年クロスアルファ製6.5号機が検索結果へ大量混入するため、メーカー・型式・年を明示して2016年ロデオ機のみを採用した。
-- 性能コアは当時解析複数、P-WORLD、K-Navi等を横断。機械割だけ二系列競合を確認し、平均せずCONFLICT保存。
-- resetBehavior v0.7は設定変更 / 据え置き / 純電源OFF→ONを分離。CZスルー天井短縮、内部状態再抽選、押割ポイント、ガックンを収録。
-- 12/19群はまだOPEN。次未処理は **KPE `麻雀格闘倶楽部2`**。
+- main正本は **1034件 / chronologicalFrontier 2016-12-19 / 12/19群OPEN**。過去チャットの古い地点へ戻らず、handoff指定の次未処理KPE `麻雀格闘倶楽部2` をNo.1035として追加。
+- 性能コアはKONAMI公式、HAZUSE、PiDEA X、ALL7、当時解析複数を横断。機械割/ART初当たり/ボーナス/純増は高一致。ベースのみ約37G/50枚と設定1約40G/50枚で資料差を保持。
+- resetBehavior v0.7は設定変更 / 据え置き / 純電源OFF→ONを分離。設定変更で天井・周期RESET→1周期目、純電源OFF→ONで天井・周期CARRYOVER、朝一液晶は双方基本富士山、ガックンは右リール微ブレ報告だが実用性低として保存。
+- 「据え置き」と明記した独立した本機固有比較表は再探索後も直接固定できず、純電源OFF→ON引継ぎから推測せず `UNVERIFIED_DIRECT_CARRYOVER_AFTER_RESEARCH` とした。
+- ALL7の12/19導入一覧と導入カレンダー/メーカー資料を再監査し、本線候補は既登録で埋まったため **2016-12-19_GROUP_CLOSED_FOR_CURRENT_RESEARCH**。次は12/20以降の境界監査へ進む。
 
-## No.1034 — パチスロ犬夜叉
-- manufacturer: **ロデオ**
+## No.1035 — 麻雀格闘倶楽部2
+- manufacturer: **KPE**
 - releaseDate canonical: **2016-12-19**
-- formalModelName: **犬夜叉／ZX**
-- certificationNumber: **6S1138**
-- generation/system: **5号機 / 5.5号機期 / A+ART / CZ / CZスルー回数天井**
+- formalModelName: **麻雀格闘倶楽部2／KA**
+- certificationNumber: **6S0920**
+- generation/system: **5号機 / 5.5号機期 / A+ART / 周期抽選 / CZ**
 - recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7**
 
 ### performanceCore
-- ART初当たり: **1/449.8 / 419.3 / 415.4 / 352.2 / 306.8 / 280.1**。
-- ボーナス合算: **1/295.2 / 295.2 / 282.5 / 268.6 / 262.1 / 250.1**。
-- baseGamesPer50: **約32.1〜32.6G/50枚**。
-- ART `四魂DASH`: **約1.4枚/G、1セット約50G**。
-- 大BONUS **204枚**、犬BONUS **54枚**。
-- CZ「挑戦ノ刻」: **10G+α、ART期待度約40%**。
-
-### payoutRate conflict
-- seriesA（当時解析複数）: **97.7 / 98.6 / 100.7 / 104.2 / 108.2 / 112.5%**。
-- seriesB（P-WORLD）: **98.7 / 99.6 / 101.7 / 105.2 / 109.2 / 113.5%**。
-- 当時解析側も両系列の流通を明記しており、平均せず `CONFLICT_PAYOUT_RATE_SERIES_97_7_TO_112_5_VS_98_7_TO_113_5` として保持。
+- 機械割: **97.3 / 98.4 / 100.2 / 103.1 / 106.2 / 110.1%**。
+- ART「格闘倶楽部RUSH」初当たり: **1/297.0 / 276.5 / 285.8 / 245.8 / 249.9 / 228.7**。
+- リアルボーナス「俺の強運」: **全設定1/213.0、9G、約54枚**。
+- baseGamesPer50: 当時解析複数 **約37.0G/50枚**、PiDEA X導入前資料 **設定1約40G/50枚**。平均せず条件差/CONFLICT候補として保持。
+- ART: **ボーナス込み約2.0枚/G、初期40〜480G**。
+- 通常時は周期管理、**1周期平均約40G**。通常天井はcanonical **最大33周期**（約1320〜1350Gは目安換算）、到達時ART確定。
+- CZ: 霊獣チャレンジ **10G・ART期待度約33%**、昇龍チャレンジ **8G・約43%**。
 
 ### resetBehavior v0.7
-- 通常天井: **ART間CZ5スルー後、6回目CZでART確定**。ボーナスではスルー回数をクリアしない。
-- settingChangeBehavior: **CZスルー天井を3回目CZへ短縮 / 内部状態RESELECT / 押割ポイントRESELECT**。
-- carryOverBehavior: **CZスルー天井進捗・内部状態CARRYOVER**。
-- powerCycleBehavior: **純電源OFF→ONはCZスルー天井進捗・内部状態CARRYOVER**。
+- settingChangeBehavior: **天井RESET / 周期RESET / 1周期目から開始**。朝一基本液晶は富士山。
+- carryOverBehavior: 「据え置き」と明記した本機固有の独立比較表は **UNVERIFIED_DIRECT_CARRYOVER_AFTER_RESEARCH**。純電源OFF→ONから推測補完しない。
+- powerCycleBehavior: **天井・周期状態CARRYOVER**。液晶は基本富士山。ただしART中/特殊ステージ滞在中の電断はステージ引継ぎ注記あり。
+- ceilingAfterReset: **設定変更専用短縮天井なし / NONE_CONFIRMED_AFTER_RESEARCH**。通常どおり1周期目から周期天井契約。
+- modeAfterReset: **リセット専用通常モード/チャンス周期振り分けなし / NONE_CONFIRMED_AFTER_RESEARCH**。
+- stateAfterReset: RT1/RT2/RT3は公開されるが、設定変更時のRT初期化詳細は **UNVERIFIED_AFTER_RESEARCH**。イベント/CZ状態の専用初期振り分けも未確認。
 - advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
-- 朝一実戦上の初期ステージ: **湖畔**。
-- ガックン: 当時のロデオ実機検証で明瞭なガックンを確認する資料あり。店舗側1G回し等で無効化可能なため確定要素ではなく変更推測要素として保存。
+- resetBenefits: 当時解析では **特に恩恵なし**。リセット専用初当たり優遇数値も未確認。
+- resetPenalties: 前日の周期進捗は設定変更で消え、1周期目へ戻る。
+- resetDetection: 設定変更/純電断とも基本富士山で液晶判別不可。2016-12-26公開の実機動画では右リールに僅かなガックン報告があるが、当時解析も「実用的ではない」評価。`GACKUN_REPORTED_BUT_PRACTICALLY_WEAK_NOT_RELIABLE`。
 
 ### public reset numeric data
-#### 設定変更時内部状態
-| 状態 | 振り分け |
-|---|---:|
-| 低確 | 79.69% |
-| 高確A | 13.28% |
-| 高確B | 6.25% |
-| 高確C | 0.78% |
-| 高確D | 0% |
-
-- 高確A以上合計: **20.31%**（公開値の単純合算）。
-
-#### 設定変更時押割ポイント
-| 初期pt | 振り分け |
-|---:|---:|
-| 0 | 48.44% |
-| 1 | 12.89% |
-| 2 | 12.89% |
-| 3 | 12.89% |
-| 4 | 12.89% |
-| MAX | 0% |
-
-- 設定変更後、0pt以外スタート合計 **51.56%**。
-- 朝一平均天井到達目安 **約645〜700G**という攻略側試算あり。ただし固定G数天井ではないため、天井値として扱わない。
+- リセット専用短縮天井: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- リセット専用モード振り分け: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 朝一特定G/周期以内の専用当選率: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 通常の周期天井振り分けは公開されるがリセット専用値ではないためnumericResetDataには転記しない。
 
 ## data quality
-- 2016ロデオ機と2022同名6.5号機を明示分離。2022年の有利区間、666G天井等はNo.1034へ混入させていない。
-- 型式・検定はP-WORLDおよび中古実機/筐体資料で照合。
-- 欠損判定前に `犬夜叉 / パチスロ犬夜叉 / 犬夜叉ZX / 犬夜叉／ZX / ロデオ` と `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / CZ天井 / 状態 / ガックン` を組み替え、当時解析・旧DB・P-WORLD・K-Navi・業界記事・中古実機資料を横断。
-- 設定変更時の独立した通常モード振り分けは `NONE_CONFIRMED_AFTER_RESEARCH`。内部状態/CZスルー天井を主要朝一契約として保存。
+- `麻雀格闘倶楽部2 / 麻雀格闘倶楽部2／KA / KPE / KONAMI` と `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / 周期 / 周期状態 / モード / RT / ガックン` を組み替え、公式動画・HAZUSE・ALL7・PiDEA X・当時解析・旧攻略記事・実機動画を横断。
+- 2023年スマスロ「麻雀格闘倶楽部 覚醒」の有利区間/160G+αリセット優遇等は別機種なので混入させていない。
+- PiDEA X 2016-10-14記事の「納品12/4〜」と、KONAMI公式12月稼働開始/HAZUSE・ALL7・当時解析のホール導入12/19を分離。本DBのreleaseDateは全国ホール導入基準で **2016-12-19** をcanonicalとする。
+- 通常天井の約1320〜1350Gは1周期平均約40Gからの目安であり、canonicalは **33周期**。
 
-## 2016-12-19群 — OPEN
+## 2016-12-19群 — CLOSED_FOR_CURRENT_RESEARCH
 登録済み:
 - **SHAKE III（シェイク3）**（大都技研）— No.1029
 - **スーパービンゴ リゾート**（ベルコ）— No.1030
@@ -87,18 +67,22 @@
 - **パチスロニュースモモチャンEX-30**（ニューギン / 30Φ）— No.1032
 - **パチスロ ロリポップチェーンソー**（藤商事）— No.1033
 - **パチスロ犬夜叉**（ロデオ）— No.1034
+- **麻雀格闘倶楽部2**（KPE）— No.1035
 
-未処理先行候補:
-1. **麻雀格闘倶楽部2**（KPE）
+監査結果:
+- ALL7 2016年12月の12/19一覧で確認できるパチスロ本線は上記系列で既登録。別導入カレンダーでもSHAKE III、スーパービンゴ リゾート、ニュースモモチャン、麻雀格闘倶楽部2、犬夜叉を照合。
+- ロリポップチェーンソーは資料によって12/12表記があるため、その導入日CONFLICTは既存No.1033側の扱いを維持し、12/19群監査では重複追加しない。
+- 現調査で新たな全国導入12/19未登録機を固定できなかったため群をCLOSED。
 
-先行確認:
-- 前handoffでHAZUSEにより `麻雀格闘倶楽部2` は **2016-12-19**、型式 **麻雀格闘倶楽部2／KA**、検定番号 **6S0920** を確認済み。次回、最新mainで重複を再確認後、性能コアとresetBehavior v0.7を再固定してNo.1035候補とする。
-- 同機処理後、12/19同日をALL7・メーカー別一覧・当時業界記事・小規模メーカー資料で再監査し、漏れがなければ12/19群CLOSED判定へ進む。
+## 次境界で注意する候補
+- **パチスロ モンスターハンター～狂竜戦線～**: 後年資料/当時情報に地域先行導入と全国導入日の差がある。中国・九州等で2016-12-19以降の先行導入記述がある一方、K-Navi等は全国ホール導入を2017-01-09/10系列としている。
+- 次回は12/20〜年末のHAZUSE日付ノード（特に12/26）とメーカー/業界一覧を横断し、**地域先行をcanonical releaseDateに採るか、全国導入日を採るかを既存DBルールと整合させてから登録**する。未確定のままNo.1036にしない。
 
 ## 境界監査
 - **2016-12-12_GROUP_CLOSED_FOR_CURRENT_RESEARCH**。
 - **2016-12-13_TO_2016-12-18_BOUNDARY_CLOSED_FOR_CURRENT_RESEARCH**。
-- chronologicalFrontierは **2016-12-19**、同日群はOPEN。
+- **2016-12-19_GROUP_CLOSED_FOR_CURRENT_RESEARCH**。
+- chronologicalFrontierは **2016-12-19**。次は **2016-12-20_TO_2017-01-02_BOUNDARY_AUDIT**。
 
 ## 遡及 resetBehavior QA
 - retroQaScanConfirmedThrough: **2006-03-27_golgo13-the-professional.md**
@@ -106,27 +90,27 @@
 - 新規本線を止めず、既存未QAレコードを最新main実体から順次補完する。
 
 ## 次回再開地点
-1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1034を再取得。
-2. **1034件 / chronologicalFrontier 2016-12-19 / 12/19群OPEN** を正本として継続。
-3. 次未処理の **KPE `麻雀格闘倶楽部2`** をNo.1035候補として処理。導入日・正式型式・検定番号・重複を再確認する。
-4. その後12/19同日全メーカー監査を継続し、漏れがなければ群をCLOSED。続いて12/20以降の境界監査へ進む。
-5. 性能コアに加え、設定変更/据え置き/純電源OFF→ON、ゲーム数/CZ/周期/ポイント、モード/状態、朝一恩恵/不利、変更判別、公開リセット数値を検索語・資料系統変更で徹底調査する。
-6. PARTIAL/UNVERIFIEDは機種名・型式名・メーカー・シリーズ名と設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックン等を組み替え、公式・業界・当時解析・古いDB・アーカイブ/回顧資料を横断後のみ確定。競合は平均せずCONFLICT。
+1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1035を再取得。
+2. **1035件 / chronologicalFrontier 2016-12-19 / 12/19群CLOSED** を正本として継続。
+3. **2016-12-20〜2017-01-02境界監査**。HAZUSEの12/26日付ノード、ALL7、メーカー別一覧、当時業界記事、小規模メーカー資料を横断する。
+4. `パチスロ モンスターハンター～狂竜戦線～` は地域先行導入2016-12-19/12月末系と全国導入2017-01-09/10系の差を公式/業界/当時解析で再固定し、既存DBのreleaseDate規則に従ってchronological queueへ置く。固定前に登録しない。
+5. 年末に全国導入未登録機がなければ2017年1月最初の全国導入群へ進み、次の未処理機をNo.1036候補とする。
+6. 性能コアに加え、設定変更/据え置き/純電源OFF→ON、ゲーム数/CZ/周期/ポイント、モード/状態、朝一恩恵/不利、変更判別、公開リセット数値を検索語・資料系統変更で徹底調査する。
+7. PARTIAL/UNVERIFIEDは機種名・型式名・メーカー・シリーズ名と設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックン等を組み替え、公式・業界・当時解析・古いDB・アーカイブ/回顧資料を横断後のみ確定。競合は平均せずCONFLICT。
 
 ## 主要出典 — 取得日 2026-09-09
-### No.1034 パチスロ犬夜叉
-- K-Navi: https://p-kn.com/slot/2643/
-- K-Navi 展示会速報: https://p-kn.com/topics/exhibition/1530/
+### No.1035 麻雀格闘倶楽部2
+- KONAMIアミューズメント公式YouTube: https://www.youtube.com/watch?v=qiRyQ87raNo
+- HAZUSE: https://hazuse.com/machine/pachislot/6S0920/
 - ALL7 2016年12月: https://www.all7.jp/plans/index/2016/12
-- P-WORLD: https://www.p-world.co.jp/machine/database/8198
-- ちょんぼりすた: https://chonborista.com/slot/rodeo/26742/
-- 期待値見える化 reset/天井: https://slotjin.com/zone/inuyasha/
-- 期待値見える化 機械割: https://slotjin.com/slot-tool/inuyasha-settei/
-- すろぱちくえすと reset: https://www.slopachi-quest.com/article/inuyasha-reset/
-- すろぱちくえすと 機種まとめ: https://www.slopachi-quest.com/kisyubetsu/inuyasha/
-- pachinko's blog 型式資料: https://pachinko.hatenablog.jp/entry/2016/12/inuyasha
-- 中一商事中古実機: https://store.shopping.yahoo.co.jp/nakaiticom/60017.html
-- pachinavi: https://pachinavi.net/machines/inuyasha-1/
+- PiDEA X: https://www.pidea.jp/articles/%E4%B8%89%E6%9C%A8%E6%B5%81%E3%80%81%E3%80%8C%E9%BA%BB%E9%9B%80%E6%A0%BC%E9%97%98%E5%80%B6%E6%A5%BD%E9%83%A82%E3%80%8D%E3%81%AE%E8%A9%95%E4%BE%A1%E3%81%AF%EF%BC%9F
+- 期待値見える化: https://slotjin.com/zone/mfc2/
+- ちょんぼりすた: https://chonborista.com/slot/kpe-slot/27152/
+- すろぱちくえすと: https://www.slopachi-quest.com/article/majang-fightclub2/
+- すろぱちくえすと（打ち方/ボーナス）: https://www.slopachi-quest.com/article/majanfight2-reel/
+- pachislo-data: https://pachislo-data.com/kpe/30227
+- ガックン実機動画（2016-12-26）: https://www.youtube.com/watch?v=XuyX-Uqxsuw
 
-### 次候補
-- HAZUSE 麻雀格闘倶楽部2: https://hazuse.com/machine/pachislot/6S0920/
+### 次境界監査
+- HAZUSE 導入日カレンダー: https://hazuse.com/machine/pachislot/
+- ALL7 2016年12月: https://www.all7.jp/plans/index/2016/12
