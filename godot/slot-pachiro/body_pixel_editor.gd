@@ -1,83 +1,40 @@
 extends Node2D
 
+const TraceData = preload("res://student_trace_data.gd")
 const GRID_SIZE := 48
 const CELL := 6.0
 const ORIGIN := Vector2(51.0, 132.0)
 const CANVAS_SIZE := GRID_SIZE * CELL
-
 const EMPTY := -1
-const PALETTE := [
-	Color8(21, 20, 22, 255),
-	Color8(252, 214, 183, 255),
-	Color8(232, 177, 145, 255),
-	Color8(205, 207, 214, 255),
-	Color8(153, 158, 169, 255),
-	Color8(185, 188, 196, 255),
-]
+const PALETTE = TraceData.PALETTE
+const SWATCH_COLS := 8
+const SWATCH_W := 46.0
+const SWATCH_H := 30.0
+const SWATCH_ORIGIN := Vector2(11.0, 454.0)
 
 var pixels: Array = []
 var undo_stack: Array = []
-var selected_color := 1
+var selected_color := 0
 var eraser := false
 var painting := false
 var last_cell := Vector2i(-1, -1)
 
 func _ready() -> void:
-	_reset_grid()
-	_seed_traced_body()
+	_load_converter_trace()
 	queue_redraw()
 
-func _reset_grid() -> void:
+func _load_converter_trace() -> void:
 	pixels.clear()
 	for y in range(GRID_SIZE):
 		var row: Array[int] = []
+		var encoded: String = TraceData.ROWS[y]
 		for x in range(GRID_SIZE):
-			row.append(EMPTY)
+			var token := encoded.substr(x, 1)
+			if token == ".":
+				row.append(EMPTY)
+			else:
+				row.append(TraceData.INDEX_ALPHABET.find(token))
 		pixels.append(row)
-
-func _seed_traced_body() -> void:
-	# Base-body trace derived from the approved 48x48 university-student design.
-	# Covered anatomy is intentionally neutral and editable.
-	_fill(15, 5, 16, 1, 0)
-	_fill(12, 6, 22, 2, 0)
-	_fill(10, 8, 25, 4, 0)
-	_fill(9, 12, 26, 8, 0)
-	_fill(10, 20, 24, 3, 0)
-	_fill(12, 23, 20, 2, 0)
-	_fill(14, 7, 16, 2, 2)
-	_fill(12, 9, 21, 4, 1)
-	_fill(11, 13, 22, 7, 1)
-	_fill(12, 20, 20, 3, 1)
-	_fill(14, 23, 16, 1, 2)
-	_fill(20, 24, 7, 3, 0)
-	_fill(21, 24, 5, 3, 1)
-	_fill(16, 27, 15, 2, 0)
-	_fill(14, 29, 18, 10, 0)
-	_fill(16, 28, 13, 10, 3)
-	_fill(16, 36, 13, 2, 4)
-	_fill(11, 29, 5, 10, 0)
-	_fill(12, 30, 3, 8, 3)
-	_fill(11, 38, 5, 4, 0)
-	_fill(12, 38, 3, 3, 1)
-	_fill(31, 29, 4, 10, 0)
-	_fill(31, 30, 3, 8, 4)
-	_fill(31, 38, 4, 4, 0)
-	_fill(31, 38, 3, 3, 2)
-	_fill(16, 38, 14, 3, 0)
-	_fill(17, 38, 12, 2, 4)
-	_fill(17, 40, 6, 6, 0)
-	_fill(18, 40, 4, 5, 3)
-	_fill(25, 40, 6, 6, 0)
-	_fill(26, 40, 4, 5, 4)
-	_fill(15, 45, 9, 3, 0)
-	_fill(16, 45, 7, 2, 5)
-	_fill(25, 45, 9, 3, 0)
-	_fill(26, 45, 7, 2, 5)
-
-func _fill(x0: int, y0: int, w: int, h: int, color_index: int) -> void:
-	for y in range(y0, min(y0 + h, GRID_SIZE)):
-		for x in range(x0, min(x0 + w, GRID_SIZE)):
-			pixels[y][x] = color_index
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventScreenTouch:
@@ -134,6 +91,11 @@ func _undo() -> void:
 	pixels = undo_stack.pop_back()
 	queue_redraw()
 
+func _reset_trace() -> void:
+	_push_undo()
+	_load_converter_trace()
+	queue_redraw()
+
 func _mirror() -> void:
 	_push_undo()
 	for y in range(GRID_SIZE):
@@ -149,59 +111,63 @@ func _handle_ui(pos: Vector2) -> void:
 		elif pos.x < 292.5:
 			_undo()
 		else:
-			_mirror()
+			_reset_trace()
 		queue_redraw()
 		return
-	if pos.y >= 452.0 and pos.y <= 500.0:
-		var index := int(pos.x / 65.0)
-		if index >= 0 and index < PALETTE.size():
-			selected_color = index
-			eraser = false
-			queue_redraw()
+	var palette_height := ceil(float(PALETTE.size()) / SWATCH_COLS) * SWATCH_H
+	if pos.y >= SWATCH_ORIGIN.y and pos.y < SWATCH_ORIGIN.y + palette_height:
+		var col := int((pos.x - SWATCH_ORIGIN.x) / SWATCH_W)
+		var row := int((pos.y - SWATCH_ORIGIN.y) / SWATCH_H)
+		if col >= 0 and col < SWATCH_COLS and row >= 0:
+			var index := row * SWATCH_COLS + col
+			if index >= 0 and index < PALETTE.size():
+				selected_color = index
+				eraser = false
+				queue_redraw()
+	if pos.y >= 760.0 and pos.x >= 280.0:
+		_mirror()
 
 func _draw() -> void:
-	# Header and tool bar.
-	draw_string(ThemeDB.fallback_font, Vector2(18, 34), "BODY PIXEL EDITOR 48x48", HORIZONTAL_ALIGNMENT_LEFT, -1, 20, Color.WHITE)
-	draw_string(ThemeDB.fallback_font, Vector2(18, 58), "Tap/drag pixels directly on iPhone", HORIZONTAL_ALIGNMENT_LEFT, -1, 13, Color(0.82, 0.86, 0.9))
+	draw_string(ThemeDB.fallback_font, Vector2(18, 32), "STUDENT TRACE EDITOR 48x48", HORIZONTAL_ALIGNMENT_LEFT, -1, 19, Color.WHITE)
+	draw_string(ThemeDB.fallback_font, Vector2(18, 55), "PixelArtConverter trace -> Godot editable data", HORIZONTAL_ALIGNMENT_LEFT, -1, 12, Color(0.82, 0.86, 0.9))
 	_draw_button(Rect2(8, 76, 89, 36), "PENCIL", not eraser)
 	_draw_button(Rect2(101, 76, 89, 36), "ERASER", eraser)
 	_draw_button(Rect2(194, 76, 89, 36), "UNDO", false)
-	_draw_button(Rect2(287, 76, 95, 36), "MIRROR", false)
+	_draw_button(Rect2(287, 76, 95, 36), "RESET", false)
 
-	# Checkerboard and grid.
 	for y in range(GRID_SIZE):
 		for x in range(GRID_SIZE):
 			var rect := Rect2(ORIGIN + Vector2(x * CELL, y * CELL), Vector2(CELL, CELL))
 			var bg := Color(0.83, 0.83, 0.83) if ((x + y) % 2 == 0) else Color(0.72, 0.72, 0.72)
 			draw_rect(rect, bg, true)
 			var idx: int = pixels[y][x]
-			if idx != EMPTY:
+			if idx != EMPTY and idx < PALETTE.size():
 				draw_rect(rect, PALETTE[idx], true)
-	# Major grid guides every 8 pixels.
 	for i in range(0, GRID_SIZE + 1, 8):
 		var p := i * CELL
-		draw_line(ORIGIN + Vector2(p, 0), ORIGIN + Vector2(p, CANVAS_SIZE), Color(0, 0, 0, 0.28), 1.0)
-		draw_line(ORIGIN + Vector2(0, p), ORIGIN + Vector2(CANVAS_SIZE, p), Color(0, 0, 0, 0.28), 1.0)
+		draw_line(ORIGIN + Vector2(p, 0), ORIGIN + Vector2(p, CANVAS_SIZE), Color(0, 0, 0, 0.25), 1.0)
+		draw_line(ORIGIN + Vector2(0, p), ORIGIN + Vector2(CANVAS_SIZE, p), Color(0, 0, 0, 0.25), 1.0)
 	draw_rect(Rect2(ORIGIN, Vector2(CANVAS_SIZE, CANVAS_SIZE)), Color(0.08, 0.1, 0.12), false, 2.0)
 
-	# Palette.
-	draw_string(ThemeDB.fallback_font, Vector2(18, 440), "PALETTE", HORIZONTAL_ALIGNMENT_LEFT, -1, 14, Color.WHITE)
+	draw_string(ThemeDB.fallback_font, Vector2(18, 444), "TRACE PALETTE (24)", HORIZONTAL_ALIGNMENT_LEFT, -1, 13, Color.WHITE)
 	for i in range(PALETTE.size()):
-		var r := Rect2(i * 65.0 + 6.0, 452.0, 53.0, 42.0)
+		var col := i % SWATCH_COLS
+		var row := i / SWATCH_COLS
+		var r := Rect2(SWATCH_ORIGIN + Vector2(col * SWATCH_W, row * SWATCH_H), Vector2(40, 24))
 		draw_rect(r, PALETTE[i], true)
-		draw_rect(r, Color.WHITE if i == selected_color and not eraser else Color(0.25, 0.28, 0.32), false, 3.0 if i == selected_color and not eraser else 1.0)
+		draw_rect(r, Color.WHITE if i == selected_color and not eraser else Color(0.25, 0.28, 0.32), false, 2.0 if i == selected_color and not eraser else 1.0)
 
-	# 2x preview of the edited data.
-	draw_string(ThemeDB.fallback_font, Vector2(18, 532), "PREVIEW x2", HORIZONTAL_ALIGNMENT_LEFT, -1, 14, Color.WHITE)
-	var preview_origin := Vector2(147, 548)
+	draw_string(ThemeDB.fallback_font, Vector2(18, 570), "PREVIEW x3", HORIZONTAL_ALIGNMENT_LEFT, -1, 13, Color.WHITE)
+	var preview_origin := Vector2(123, 586)
 	for y in range(GRID_SIZE):
 		for x in range(GRID_SIZE):
 			var idx: int = pixels[y][x]
-			if idx != EMPTY:
-				draw_rect(Rect2(preview_origin + Vector2(x * 2, y * 2), Vector2(2, 2)), PALETTE[idx], true)
-	draw_rect(Rect2(preview_origin, Vector2(96, 96)), Color(0.75, 0.78, 0.82), false, 1.0)
+			if idx != EMPTY and idx < PALETTE.size():
+				draw_rect(Rect2(preview_origin + Vector2(x * 3, y * 3), Vector2(3, 3)), PALETTE[idx], true)
+	draw_rect(Rect2(preview_origin, Vector2(144, 144)), Color(0.75, 0.78, 0.82), false, 1.0)
+	_draw_button(Rect2(280, 760, 102, 42), "MIRROR", false)
 
 func _draw_button(rect: Rect2, text: String, active: bool) -> void:
 	draw_rect(rect, Color(0.24, 0.42, 0.62) if active else Color(0.12, 0.16, 0.21), true)
 	draw_rect(rect, Color(0.62, 0.7, 0.8), false, 1.0)
-	draw_string(ThemeDB.fallback_font, rect.position + Vector2(10, 24), text, HORIZONTAL_ALIGNMENT_LEFT, -1, 13, Color.WHITE)
+	draw_string(ThemeDB.fallback_font, rect.position + Vector2(9, 24), text, HORIZONTAL_ALIGNMENT_LEFT, -1, 12, Color.WHITE)
