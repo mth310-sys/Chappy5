@@ -38,13 +38,14 @@ class MainScene extends Phaser.Scene{
  createPlayer(gx,gy){this.playerGrid={x:gx,y:gy};const c=this.add.container(px(gx)+12,py(gy)+12);c.add([this.add.ellipse(0,10,15,6,0x000000,.25),this.add.rectangle(0,8,8,7,0x27303b).setStrokeStyle(1,0x171b20),this.add.rectangle(0,0,12,17,0x2e6fbd).setStrokeStyle(1,0x16385e),this.add.rectangle(0,-2,8,5,0x4e8bd0),this.add.circle(0,-11,5,0xe6bb92).setStrokeStyle(1,0x6e503c),this.add.arc(0,-13,5,180,360,false,0x54392a).setStrokeStyle(1,0x3e2a20)]);c.setDepth(py(gy)+TILE+100);this.world.add(c);this.playerAnchor=c}
  setupTouch(){document.querySelectorAll('.mobile-pad button').forEach(b=>{const d=b.dataset.dir;b.addEventListener('pointerdown',e=>{e.preventDefault();this.touchDir=d});['pointerup','pointercancel','pointerleave'].forEach(ev=>b.addEventListener(ev,()=>this.touchDir=null))});const action=document.getElementById('action-button');if(action)action.addEventListener('pointerdown',e=>{e.preventDefault();this.handleAction()})}
  getMachineAtPlayer(){return this.machineData.find(m=>m.seatX===this.playerGrid.x&&m.seatY===this.playerGrid.y)||null}
+ getStandingX(gx,gy){const m=this.machineData.find(v=>v.seatX===gx&&v.seatY===gy&&v.side==='R');return px(gx)+12+(m?6:0)}
  handleAction(){
-  if(this.seatedMachine){const m=this.seatedMachine;m.occupied=false;m.occupantId=null;this.seatedMachine=null;this.playerAnchor.x=px(this.playerGrid.x)+12;this.playerAnchor.setScale(1,1);return}
+  if(this.seatedMachine){const m=this.seatedMachine;m.occupied=false;m.occupantId=null;this.seatedMachine=null;this.playerAnchor.setScale(1,1);this.playerAnchor.x=this.getStandingX(this.playerGrid.x,this.playerGrid.y);return}
   const m=this.getMachineAtPlayer();if(!m||m.occupied)return;
-  m.occupied=true;m.occupantId='player';this.seatedMachine=m;this.playerAnchor.setScale(m.side==='R'?-1:1,1);this.playerAnchor.x=px(this.playerGrid.x)+12+(m.side==='L'?5:1);
+  m.occupied=true;m.occupantId='player';this.seatedMachine=m;this.playerAnchor.setScale(m.side==='R'?-1:1,1);const standX=this.getStandingX(this.playerGrid.x,this.playerGrid.y);this.playerAnchor.x=standX+(m.side==='L'?5:-5);
  }
  isBlocked(gx,gy){if(gx<1||gy<1||gx>=MAP_W-1||gy>=MAP_H-1)return true;for(const f of facilities){if(f.type==='entrance')continue;if(gx>=f.x&&gx<f.x+f.w&&gy>=f.y&&gy<f.y+f.h)return true}for(const i of islands){if(gy>=i.y&&gy<i.y+15&&gx>=i.x+1&&gx<=i.x+2)return true}return false}
- moveGrid(dx,dy){if(this.seatedMachine)return;const nx=this.playerGrid.x+dx,ny=this.playerGrid.y+dy;if(this.isBlocked(nx,ny))return;this.playerGrid={x:nx,y:ny};this.playerAnchor.setDepth(py(ny)+TILE+100);this.tweens.add({targets:this.playerAnchor,x:px(nx)+12,y:py(ny)+12,duration:90,ease:'Linear'})}
+ moveGrid(dx,dy){if(this.seatedMachine)return;const nx=this.playerGrid.x+dx,ny=this.playerGrid.y+dy;if(this.isBlocked(nx,ny))return;this.playerGrid={x:nx,y:ny};this.playerAnchor.setDepth(py(ny)+TILE+100);this.tweens.add({targets:this.playerAnchor,x:this.getStandingX(nx,ny),y:py(ny)+12,duration:90,ease:'Linear'})}
  update(time){
   if(Phaser.Input.Keyboard.JustDown(this.keyActionE)||Phaser.Input.Keyboard.JustDown(this.keyActionSpace))this.handleAction();
   const near=this.getMachineAtPlayer();let extra='';if(this.seatedMachine)extra=` / 着席 ${this.seatedMachine.machineId}・決定で立つ`;else if(near)extra=near.occupied?` / ${near.machineId} 使用中`:` / ${near.machineId}・決定で着席`;
