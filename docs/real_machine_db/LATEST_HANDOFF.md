@@ -3,72 +3,65 @@
 更新日: 2026-09-08
 
 ## 現在地点
-- recordCount: **964**
-- latestRecordAdded: **ミラクル**（エレコ）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2016-03-22_miracle.md`
+- recordCount: **965**
+- latestRecordAdded: **ゲッターマウス**（アクロス）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2016-03-22_getter-mouse.md`
 - chronologicalFrontier: **2016-03-22**
-- frontierLatestMachine: **ミラクル**
+- frontierLatestMachine: **ゲッターマウス**
 - schema: **resetBehavior v0.7**
 - status: **2016-03-22_GROUP_OPEN**
 
 ## 今回の同期 / 正本確認
-- 最新mainの `README.md`、mission v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、No.963 `2016-03-14_ultraman-nanashow.md` を再取得。
+- 最新mainの `README.md`、mission v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、No.964 `2016-03-22_miracle.md` を再取得。
 - INDEXは19件時点の旧集約なのでREADME規定どおり **LATEST_HANDOFF + 実レコード** を進捗正本として使用。
-- 開始時正本は recordCount **963** / chronologicalFrontier **2016-03-14** / 03-14群CLOSED。
-- handoff指定どおり2016-03-15〜03-21境界を監査後、03/22群の最初の未処理機種 **ミラクル（エレコ）** をNo.964として追加。
+- 開始時正本は recordCount **964** / chronologicalFrontier **2016-03-22** / 03-22群OPEN。
+- handoff指定どおり次の未処理機種 **ゲッターマウス（アクロス）** をNo.965として追加。
 
-## 2016-03-15〜03-21境界監査
-- モゲスロ2016年新台カレンダーは03/14群の次を03/22群として掲載。
-- 一撃の2016年3月新台スケジュールでも03/15〜03/21のスロット新規導入掲載を確認できず、次の具体日を03/22としている。
-- 日別語句（3/15〜3/21 + パチスロ新台）でも全国初導入の未登録5号機を強く固定できなかった。
-- よって現調査範囲では **2016-03-15_TO_03-21_BOUNDARY_CLOSED_FOR_CURRENT_RESEARCH** とする。
-- 後年誤記・地域先行・納品日の混入が後続QAで見つかった場合は再OPEN可。
-
-## No.964 — ミラクル
-- record: `docs/real_machine_db/machines/2016-03-22_miracle.md`
-- manufacturer: **エレコ**
+## No.965 — ゲッターマウス
+- record: `docs/real_machine_db/machines/2016-03-22_getter-mouse.md`
+- manufacturer: **アクロス**
 - releaseDate canonical: **2016-03-22**
-- formalModelName: **ミラクルMC**
-- certificationNumber: **5S1217**
-- generation/system: **5号機 / AT / モード管理型疑似ボーナス**
+- formalModelName: **ゲッターマウスDG**
+- certificationNumber: **UNVERIFIED_AFTER_RESEARCH**
+- generation/system: **5号機 / ノーマル / Aタイプ / 技術介入**
 
 ### identity / releaseDate
-- P-WORLDでエレコ製5号機ATを確認。
-- HAZUSEで型式「ミラクルMC」/検定「5S1217」/導入開始日2016-03-22を確認。
-- グリーンべると2016-02-26当時記事はエレコ社製新機種として発表、3月下旬納品予定。
-- 当時解析複数も2016-03-22導入で一致しcanonicalを3/22とした。
+- 2016-02-26グリーンべるとでアクロス社製A PROJECT第5弾として確認、3月下旬納品予定。
+- 一撃/K-Navi/複数当時解析で2016-03-22導入一致。
+- DMM機種DB検索索引と中古実機DBで型式 **ゲッターマウスDG** を照合。
+- 検定番号は「ゲッターマウス / ゲッターマウスDG / アクロス / 検定 / 5S」を組み替え再探索したが直接固定できず `UNVERIFIED_AFTER_RESEARCH`。
 
 ### performanceCore
-- 機械割 canonical: **97.2 / 98.9 / 101.5 / 103.8 / 106.3 / 110.3%**。
-- BIG: **1/333.1 / 305.8 / 271.2 / 246.6 / 222.2 / 189.0**。
-- REG: **1/238.7 / 231.6 / 221.9 / 213.3 / 204.9 / 192.5**。
-- 合算: **1/139.0 / 131.8 / 122.0 / 114.4 / 106.6 / 95.3**。
-- 50枚ベース: **約49.5G/50枚**。
-- 純増: **約3.0枚/G**。
-- BIG: **150〜600枚以上**、REG: **50枚以上**。
-- 通常天井: **999Gで疑似ボーナス**。
-- 設定3機械割は101.5%と101.6%の資料差を `CONFLICT_PAYOUT_SETTING3_101_5_VS_101_6` として保持。
+- 市場掲載canonical機械割: **98.7 / 99.7 / 101.3 / 103.4 / 106.7 / 110.8%**。
+- 完全攻略時: **100.2 / 101.2 / 102.6 / 105.0 / 108.4 / 112.6%**。技術介入機のため通常値と別定義で保持。
+- BIG: **1/284.9 / 280.1 / 274.2 / 266.4 / 252.1 / 234.9**。
+- REG: **1/297.9 / 290.0 / 278.9 / 270.8 / 254.0 / 234.9**。
+- 合算: **1/145.6 / 142.5 / 138.3 / 134.3 / 126.5 / 117.5**。
+- 50枚ベース: **約34.1G/50枚**。
+- BIG最大 **310枚** / REG最大 **115枚**。
+- 純増: `NOT_APPLICABLE_NORMAL_TYPE`。
+- 天井: **非搭載**。
+- 通常掲載機械割は、ちょんぼりすたの非攻略時 **97.8 / 98.7 / 100.3 / 103.4 / 106.7 / 109.7%** と一部競合するため平均せず `CONFLICT_STANDARD_PAYOUT_SERIES` を保持。
 
 ### resetBehavior v0.7
-- 設定変更: **天井ゲーム数RESET / 内部モードRESET・再抽選**。
-- 据え置き: **天井・内部モードCARRYOVER_SUPPORTED**。
-- 純電源OFF→ON: **天井ゲーム数・内部モードCARRYOVER**。
-- 設定変更専用の固定短縮天井: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- 設定変更時の具体的モード振り分け: **UNVERIFIED_AFTER_RESEARCH**。
-- モードとは別の朝一低確/高確等の公開状態振り分け: **UNVERIFIED_AFTER_RESEARCH**。
+- 本機は天井・AT/ART・ゲーム数解除・通常時天国モード等を持たないノーマルタイプ。
+- 天井ゲーム数、設定変更後短縮天井、モード振り分けは **NOT_APPLICABLE**。
+- 当時一撃の専用「天井/設定変更」ページは天井非搭載を明記する一方、設定変更時詳細と純電源OFF/ONは双方 **現在調査中** のまま。
+- 本機固有の設定変更時内部状態再抽選、純電断時の初期出目/ランプ保持、朝一専用状態は、検索語・資料系統を変更して再探索しても直接固定できず **UNVERIFIED_AFTER_RESEARCH**。
+- リセット短縮天井、天国優遇、朝一CZ、保証ボーナス等の朝一恩恵/不利は **NOT_APPLICABLE / NONE_CONFIRMED_AFTER_RESEARCH**。
+- 本機固有のガックン・初期出目・ランプ等による確定設定変更判別は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- BIG終了時ボイス/GET表示等の設定示唆は存在するが「設定変更/据え置き判別」ではないためresetDetectionには混入させない。
 - 有利区間: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
-- 本機固有のガックン/初期出目/ランプによる確定変更判別: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- 直接の設定変更vs電断比較は後年回顧1系統で確認。検索語・資料系統を変更して再探索したが、同内容の独立直接表は固定できなかったため信頼度を `ANALYSIS_SINGLE_DIRECT_TABLE_AFTER_MULTI_QUERY_RESEARCH` として明示。
 
 ## 2016-03-22群監査 — OPEN
 現時点候補:
 1. **ミラクル** — エレコ — No.964 処理済み
-2. **ゲッターマウス** — アクロス — 未処理
-3. **バガナックルー** — 大都技研系/要正式メーカー確認 — 未処理
+2. **ゲッターマウス** — アクロス — No.965 処理済み
+3. **バガナックルー** — 大都技研系/要正式メーカー確認 — **次の未処理**
 
-- モゲスロでは03/22群として上記3機種を掲載。
-- 一撃の月間カレンダーはゲッターマウスのみ掲載で網羅性が低いため、同日群CLOSED判定には使わず補助扱い。
-- 次回はゲッターマウスから処理し、バガナックルーを続けた後、03/22群を全メーカー横断で再監査する。
+- モゲスロ2016年新台カレンダーでは03/22群として上記3機種を掲載。
+- 一撃月間カレンダーは網羅性が限定的なので、同日群CLOSED判定には単独使用しない。
+- 次回は **バガナックルー** を性能コア+resetBehavior v0.7で処理し、その後03/22群を全メーカー横断再監査する。
 
 ## 遡及 resetBehavior QA
 - retroQaScanConfirmedThrough: **2006-02_crash-bandicoot-s.md**
@@ -77,13 +70,14 @@
 - 今回は前進リレーを優先し、既存retro QA地点は変更していない。
 
 ## 次回再開地点
-1. **recordCount 964 / chronologicalFrontier 2016-03-22 / 03-22群OPEN** から開始。
-2. README / mission v0.7 / INDEX / LATEST_HANDOFF / No.964をmainから再取得。
-3. 次の未処理機種 **ゲッターマウス（アクロス）** を性能コア + resetBehavior v0.7で処理。
-4. 続いて **バガナックルー** を処理し、03/22群を全メーカー横断監査。
-5. PARTIAL/UNVERIFIEDは表記揺れ・正式型式・メーカー・設定変更/据え置き/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間へ検索語を変え、公式・業界・当時解析・古DB・アーカイブ・回顧資料まで再探索後のみ付与。
-6. 競合は平均せずCONFLICT/variant差/定義差として双方保存。
-7. 遡及QAは `2006-02_new-oasis.md` から継続。既存性能コアを無駄にやり直さない。
+1. **recordCount 965 / chronologicalFrontier 2016-03-22 / 03-22群OPEN** から開始。
+2. README / mission v0.7 / INDEX / LATEST_HANDOFF / No.965をmainから再取得。
+3. 次の未処理機種 **バガナックルー** を処理。正式メーカー・型式・導入日variantを最初に固定する。
+4. 性能コア + resetBehavior v0.7（設定変更/据え置き/純電断、ゲーム数・天井、モード・状態、有利区間、朝一恩恵/不利、変更判別、公開朝一数値）を収集。
+5. バガナックルー処理後、03/22群をメーカー別一覧・当時新台一覧・業界記事・古DBで横断再監査し、漏れがなければCLOSED判定。
+6. PARTIAL/UNVERIFIEDは表記揺れ・正式型式・メーカー・設定変更/据え置き/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間へ検索語を変え、公式・業界・当時解析・古DB・アーカイブ・回顧資料まで再探索後のみ付与。
+7. 競合は平均せずCONFLICT/variant差/定義差として双方保存。
+8. 遡及QAは `2006-02_new-oasis.md` から継続。既存性能コアを無駄にやり直さない。
 
 ## safeguard
 - INDEXは旧集約状態なので進捗正本にしない。LATEST_HANDOFF + 実レコードを優先。
@@ -92,28 +86,32 @@
 - 25φ/30φや型式・メーカー・導入時期が分かれるvariantを同名だけで統合しない。
 - 設定変更・据え置き・純電断・RAMクリアを同義扱いしない。
 - 前作/後継機・同名別機種のresetBehaviorを流用しない。
+- 技術介入機は市場掲載機械割と完全攻略時機械割を同一定義に混ぜない。
 
 ## 主要出典 — 取得日 2026-09-08
-### No.964 ミラクル
-- グリーンべると: https://web-greenbelt.jp/00008458/
-- P-WORLD: https://www.p-world.co.jp/machine/database/7995
-- HAZUSE: https://hazuse.com/machine/pachislot/SX0126/
-- 期待値見える化: https://slotjin.com/zone/miracle/
-- すろぱちくえすと: https://www.slopachi-quest.com/article/miracle/
-- pachislo-data: https://pachislo-data.com/eleco/23873
-- ゆうべる（reset直接比較表）: https://yuberu-777.com/mirakuru-tenzyou/
+### No.965 ゲッターマウス
+- グリーンべると: https://web-greenbelt.jp/00008457/
+- P-WORLD: https://www.p-world.co.jp/machine/database/7994
+- 一撃 本体: https://1geki.jp/slot/gettermouse/
+- 一撃 ボーナス確率: https://1geki.jp/slot/gettermouse/1/
+- 一撃 天井/設定変更: https://1geki.jp/slot/gettermouse/3/
+- K-Navi: https://p-kn.com/slot/2461/
+- ちょんぼりすた: https://chonborista.com/slot/universal-slot/17567/
+- すろかい当時解析: https://slotkaiseki.hatenablog.com/entry/2016/03/28/212125
+- DMMぱちタウン: https://p-town.dmm.com/machines/2451
+- 中一商事中古実機: https://item.rakuten.co.jp/auc-nakaiti/geta/
 
-### 境界 / 03-22群
+### 03-22群
 - モゲスロ2016年導入カレンダー: https://moge-site.com/new-slot2016
 - 一撃2016年3月新台スケジュール: https://1geki.jp/newmachinecalender/201603/
 
 ## confidence
-- No.964 identity/manufacturer/system: **INDUSTRY_PLUS_MULTI_SOURCE_HIGH**
-- No.964 formalModelName/certificationNumber: **ANALYSIS_DATABASE_HIGH**
-- No.964 releaseDate: **HIGH_MULTI_SOURCE_PERIOD**
-- No.964 performanceCore: **HIGH_MULTI_SOURCE_WITH_MINOR_PAYOUT_CONFLICT**
-- No.964 resetBehavior gameCounter/mode/powerCycle: **ANALYSIS_SINGLE_DIRECT_TABLE_AFTER_MULTI_QUERY_RESEARCH**
-- No.964 resetModeNumericDistribution: **UNVERIFIED_AFTER_RESEARCH**
-- No.964 resetDetection: **NEGATIVE_FINDING_AFTER_MULTI_QUERY_RESEARCH**
-- 2016-03-15〜03-21 boundary: **CLOSED_FOR_CURRENT_RESEARCH**
+- No.965 identity/manufacturer/system: **INDUSTRY_PLUS_MULTI_SOURCE_HIGH**
+- No.965 formalModelName: **ANALYSIS_DATABASE_PLUS_MACHINE_MARKET_CROSSCHECK**
+- No.965 certificationNumber: **UNVERIFIED_AFTER_RESEARCH**
+- No.965 releaseDate: **HIGH_MULTI_SOURCE_PERIOD**
+- No.965 performanceCore: **HIGH_MULTI_SOURCE_WITH_PAYOUT_DEFINITION_CONFLICT**
+- No.965 resetBehavior ceiling/mode relevance: **HIGH_NOT_APPLICABLE_NORMAL_TYPE_PLUS_PERIOD_SOURCE**
+- No.965 settingChange/powerCycle exact internal contract: **UNVERIFIED_AFTER_RESEARCH**
+- No.965 resetDetection: **NEGATIVE_FINDING_AFTER_MULTI_QUERY_RESEARCH**
 - 2016-03-22 group: **OPEN**
