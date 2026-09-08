@@ -74,37 +74,39 @@ RT機能あり。ボーナス後60PのRT、1枚役取りこぼしでRT目とな�
 
 ## resetBehavior
 
-resetBehaviorQA: PARTIAL
+schemaVersion: v0.7
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
+resetQaLastUpdated: 2026-09-08
 
-本機はボーナス後60PのRTを持つ初期5号機だが、設定変更・据え置き・電源OFF→ON時のRT残ゲーム数や成立済みボーナス状態を明記した本機固有の高信頼資料は、表記揺れ・型式名・リセット関連語を変えて再探索しても今回確認できなかった。不明部分を他機種の一般則から補完しない。
+本機はボーナス後60PのRTを持つ初期5号機だが、設定変更・据え置き・電源OFF→ON時のRT残ゲーム数や成立済みボーナス状態を明記した本機固有の高信頼資料は、表記揺れ・型式名・リセット関連語・資料系統を変えて2026-09-08に再度探索しても確認できなかった。不明部分を他機種の一般則から補完しない。
 
-- settingChangeBehavior: UNVERIFIED（設定変更時のRT/成立済みボーナス状態処理を確認できず）
-- carryOverBehavior: UNVERIFIED（据え置き時のRT残G数・内部状態引継ぎを確認できず）
-- powerCycleBehavior: UNVERIFIED（設定変更なしの電源OFF→ON時RT/内部状態処理を確認できず）
+- settingChangeBehavior: UNVERIFIED_AFTER_RESEARCH（設定変更時のRT/成立済みボーナス状態処理を確認できず）
+- carryOverBehavior: UNVERIFIED_AFTER_RESEARCH（据え置き時のRT残G数・内部状態引継ぎを確認できず）
+- powerCycleBehavior: UNVERIFIED_AFTER_RESEARCH（設定変更なしの電源OFF→ON時RT/内部状態処理を確認できず）
 - gameCounterReset: 通常時ゲーム数天井を主要仕様として確認できず、天井ゲーム数管理はNONE_CONFIRMED
-- ceilingAfterReset: NONE_CONFIRMED
-- modeAfterReset: 朝一専用モード、設定変更時モード再抽選はNONE_CONFIRMED
-- stateAfterReset: ボーナス後60P RTは存在するが、設定変更/電断時の残RT処理はUNVERIFIED
+- ceilingAfterReset: NONE_CONFIRMED_AFTER_RESEARCH
+- modeAfterReset: 朝一専用モード、設定変更時モード再抽選はNONE_CONFIRMED_AFTER_RESEARCH
+- stateAfterReset: ボーナス後60P RTは存在するが、設定変更/電断時の残RT処理はUNVERIFIED_AFTER_RESEARCH
 - advantageousSectionReset: NOT_APPLICABLE（5号機初期・有利区間制度導入前）
-- resetBenefits: 設定変更/朝一専用の短縮天井・当選優遇・専用RT恩恵はNONE_CONFIRMED
-- resetPenalties: NONE_CONFIRMED
-- resetDetection: ガックン、表示変化、RT挙動等による本機固有の変更判別はUNVERIFIED
-- numericResetData: NONE_CONFIRMED
+- resetBenefits: 設定変更/朝一専用の短縮天井・当選優遇・専用RT恩恵はNONE_CONFIRMED_AFTER_RESEARCH
+- resetPenalties: NONE_CONFIRMED_AFTER_RESEARCH
+- resetDetection: ガックン、表示変化、RT挙動等による本機固有の変更判別はUNVERIFIED_AFTER_RESEARCH
+- numericResetData: NONE_CONFIRMED_AFTER_RESEARCH
 
 ### resetBehavior 再探索メモ
 
-2026-08-31に以下を組み替えて再探索した。
+2026-08-31および2026-09-08に以下を組み替えて再探索した。
 
 - 「ナースウィッチ小麦ちゃんマジカルて 設定変更 / リセット / 朝一 / 据え置き」
-- 「コムギチャンSP 設定変更 / 電源OFF ON / ガックン / RT」
-- 「小麦ちゃん パチスロ 天井 / RT 設定変更」
+- 「コムギチャンSP 設定変更 / 電源OFF ON / 電源断 / ガックン / RT」
+- 「小麦ちゃん パチスロ 天井 / RT / 残りゲーム / 設定変更」
 - 当時解析、古いDB、業界記事、後年回顧資料
 
-当時系資料と後年回顧では、本機が2006年2月導入の5号機、ボーナス後60P RTと技術介入を持つことまでは確認できる。一方、ホール朝一挙動を定量化できる設定変更/据え置き/電断時の固有情報は確認できなかった。
+2026-09-08の追加探索でも検索結果はアニメ作品のノイズが多く、パチスロ本機に限定できる新たな朝一契約資料は得られなかった。当時系資料と後年回顧では、本機が2006年2月導入の5号機、ボーナス後60P RTと技術介入を持つことまでは確認できる。一方、ホール朝一挙動を定量化できる設定変更/据え置き/電断時の固有情報は固定できないため、性能側coreStatusは変更せず、reset QAのみ `PARTIAL_RESEARCH_EXHAUSTED` とする。
 
 ## sources
 
-取得日: 2026-08-31
+取得日: 2026-08-31 / reset QA再取得日: 2026-09-08
 
 1. P-WORLD業界ニュース（グリーンべると転載）— JPS第一弾機は“萌え系”アニメとのタイアップ
    - https://news.p-world.co.jp/articles/1558/greenbelt
@@ -135,8 +137,8 @@ resetBehaviorQA: PARTIAL
 
 - 50枚あたりゲーム数 / 1000円ベース
 - RTの1Gあたり純増比較値
-- 設定変更/据え置き/電源OFF→ON時のRT・内部状態処理
-- 本機固有の朝一変更判別
+- 設定変更/据え置き/電源OFF→ON時のRT・内部状態処理: UNVERIFIED_AFTER_RESEARCH
+- 本機固有の朝一変更判別: UNVERIFIED_AFTER_RESEARCH
 
 ## conflicts
 
@@ -145,5 +147,5 @@ resetBehaviorQA: PARTIAL
 ## QA status
 
 - coreStatus: PARTIAL
-- resetBehaviorQA: PARTIAL
-- resetRetroactiveQA: 2026-08-31実施
+- resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
+- resetRetroactiveQA: 2026-09-08再実施
