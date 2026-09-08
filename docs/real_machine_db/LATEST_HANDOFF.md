@@ -1,69 +1,78 @@
 更新日: 2026-09-08
 
 ## 現在地点
-- recordCount: **1005**
-- latestRecordAdded: **パチスロBLOOD+ 二人の女王**（タイヨーエレック）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2016-09-05_blood-plus-futari-no-joou.md`
+- recordCount: **1006**
+- latestRecordAdded: **パチスロ ロストプラネット2**（オリンピア）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2016-09-05_lost-planet2.md`
 - chronologicalFrontier: **2016-09-05**
-- frontierLatestMachine: **パチスロBLOOD+ 二人の女王**（タイヨーエレック）
+- frontierLatestMachine: **パチスロ ロストプラネット2**（オリンピア）
 - schema: **resetBehavior v0.7**
 - status: **2016-09-05_GROUP_OPEN**
 
 ## 今回の同期 / 境界監査
-- 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1004 `2016-08-22_senki-zesshou-symphogear.md` を再取得して開始。
+- 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1005 `2016-09-05_blood-plus-futari-no-joou.md` を再取得して開始。
 - INDEXは19件時点の旧集約なので、README規定どおり LATEST_HANDOFF + 実レコード + 最新main を進捗正本として使用。
-- handoff候補だった **仄暗い水の底から（藤商事）**は機種単独再監査で `CR仄暗い水の底からFPMZ`（パチンコ、検定6P0485、2016-08-22）と確定。本パチスロDB本線から除外。
-- 同日混入疑いの **鉄拳2**も `CR鉄拳2 -闘神ver-`（パチンコ）、**Aさくらももこ劇場 ミラくるずきんちゃん**も `CR/CRAさくらももこ劇場 ミラくるずきんちゃん`（パチンコ）と確認し本線除外。
-- 2016-08-22の実パチスロ登録済み5機（SLOTデッド オア アライブ5 / クイーンジャックネオ / クレアの秘宝伝～眠りの塔とめざめの石～ / スーパープラネットデラックス / パチスロ戦姫絶唱シンフォギア）で **2016-08-22_GROUP_CLOSED_FOR_CURRENT_RESEARCH**。
-- 2016-08-29 ALL7掲載の「ドラム黄門ちゃま またまたゴチでやんす!」はパチンコ側。今回の検索範囲で08/23〜09/04の全国導入パチスロを固定できず、次の確認済みパチスロ日付 **2016-09-05**へ前進。
+- 開始時点の正本は recordCount 1005 / 2016-09-05群OPEN。会話上の旧地点No.1003には戻らず、handoff指定の次未処理 **パチスロ ロストプラネット2** をNo.1006として処理。
+- 2016-08-22群は前リレーで `CLOSED_FOR_CURRENT_RESEARCH` 済み。08/23〜09/04の全国導入パチスロ未固定という境界判断を引き継ぎ、09/05群を継続。
 
-## No.1005 — パチスロBLOOD+ 二人の女王
-- manufacturer: **タイヨーエレック**
+## No.1006 — パチスロ ロストプラネット2
+- manufacturer: **オリンピア**
 - releaseDate: **2016-09-05**
-- formalModelName: **パチスロBLOOD＋ 二人の女王／XA**
-- certificationNumber: **6S0606**
-- generation/system: **5号機 / A+ART**
+- formalModelName: **パチスロロストプラネット2／E2**
+- certificationNumber: **6S0394**
+- generation/system: **5号機 / ART**
 - recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7**
 
 ### performanceCore
-- 機械割: **97.8 / 98.7 / 100.7 / 104.5 / 108.2 / 112.2%**。
-- ボーナス合算: **1/455.1 / 448.8 / 436.9 / 420.1 / 404.5 / 381.0**。
-- ART初当たり: **1/398.0 / 382.5 / 356.1 / 315.3 / 270.9 / 231.1**。
-- ボーナス+ART合算: **1/212.3 / 206.5 / 196.2 / 180.1 / 162.2 / 143.9**。
-- ベース: **約34G/50枚**（公開整理値33.97〜34.29G/50枚）。
-- ART「BLOOD CHANCE+」: **約1.5枚/G、1セット50G+α**。ボーナス込み参考約1.8枚/G。
-- BLOOD BONUS / Secret Story Bonus: canonical **約204枚**、二人の女王モード **約28枚**。
-- 一部資料のBIG 208枚表記は `CONFLICT_BIG_PAYOUT_204_VS_208` として平均せず保持。
-- 規定ゲーム数到達型のART天井は **非搭載**。
+- 機械割: **96.7 / 98.1 / 100.1 / 103.5 / 105.0 / 110.0%**。
+- ART初当たり: **1/314.8 / 305.9 / 284.5 / 251.1 / 239.0 / 197.9**。
+- CZ「GET READY」初当たり: **1/113.0 / 110.3 / 99.6 / 91.4 / 88.0 / 77.7**。成功率は設定1 36.0% → 設定6 44.3%。
+- ベース: **約47G/50枚**。
+- ART「エイクリッドバトル」: **約2.0枚/G**。固定セットG数/固定枚数ではなく、味方が全滅するまで継続する完全バトル型。
+- 通常天井: **ART間740G+前兆 → ART**。
+- 正式型式/検定番号は鹿児島県公安委員会告示で確認。純増2.0枚/Gは2016-07-08グリーンべると業界記事、P-WORLD、複数解析で照合。
 
 ### resetBehavior v0.7
-- 設定変更: **DOAモード再抽選 / 内部状態再抽選 / 朝一沖縄ステージ**。
-- 据え置き: **DOAモード・内部状態CARRYOVER**。
-- 純電源OFF→ON: **DOAモード・内部状態CARRYOVER**。
-- 規定G数天井は非搭載のため gameCounterReset / ceilingAfterReset は **NOT_APPLICABLE_NO_GAME_COUNT_CEILING**。
-- DOAモードは通常時5段階A〜Eで、ボーナス/ART当選まで転落しない。最上位EではBLOOD EYE出現時の約50%でDOA。
-- 設定変更時DOAモードA〜Eの具体振り分けは、検索語・資料系統変更後も **UNVERIFIED_AFTER_RESEARCH**。
-- 設定変更時内部状態振り分け（低確/通常/高確）は公開済み:
-  - 設定1: **89.0 / 9.4 / 1.6%**
-  - 設定2: **85.1 / 13.3 / 1.6%**
-  - 設定3: **81.2 / 17.2 / 1.6%**
-  - 設定4: **76.6 / 21.1 / 2.3%**
-  - 設定5: **71.1 / 25.0 / 3.9%**
-  - 設定6: **61.7 / 32.8 / 5.5%**
-- 通常以上開始率は **11.0 / 14.9 / 18.8 / 23.4 / 28.9 / 38.3%**。
+- 設定変更: **天井RESET / 惑星モード再抽選 / キャリアポイント初期再セット**。
+- 据え置き: **天井ゲーム数・惑星モードCARRYOVER**。キャリアポイントも設定変更時初期化契約に該当しないため蓄積価値を保持する扱い。
+- 純電源OFF→ON: **天井ゲーム数・惑星モードCARRYOVER**。キャリアポイントは設定変更時のみ初期セットという契約からCARRYOVER支持だが、電断単独のポイント比較表は直接固定できず注記。
+- 朝一液晶は設定変更/電断とも**ジャングルステージ**とする解析整理があり、ステージ単独の変更判別は困難。
+- 設定変更専用の固定短縮天井は再探索後も **NONE_CONFIRMED_AFTER_RESEARCH**。
 - 有利区間: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
-- 変更判別: 当時解析は **設定変更時ガックン有効 / 純電断のみ無効**と整理。ただしメーカー保証ではないため `GACKUN_REPORTED_USEFUL_NOT_MANUFACTURER_GUARANTEE`。
-- 一撃2016-09-14時点では設定変更/電断のモード・状態等が「調査中」で、後続解析で再抽選/引継ぎが公開。数値競合ではなく情報成熟時差として保持。
+
+### 公開朝一数値
+設定変更時・惑星モード振り分け:
+- 設定1: **A66.4 / B18.8 / C14.5 / D0.4%**
+- 設定2: **A62.5 / B20.7 / C16.4 / D0.4%**
+- 設定3: **A58.6 / B22.7 / C18.4 / D0.4%**
+- 設定4: **A54.7 / B24.6 / C20.3 / D0.4%**
+- 設定5: **A50.8 / B26.6 / C22.3 / D0.4%**
+- 設定6: **A46.9 / B28.5 / C24.2 / D0.4%**
+- 検索表示で設定2〜6のD列が省略される資料があるが、各行A+B+C=99.6%、同表設定1 D=0.4%のため同一表構造として0.4%保持。原表表示注意をレコードに明記。
+
+設定変更時・キャリアポイント初期振り分け:
+- **40pt 28.1 / 60pt 32.8 / 80pt 32.8 / 100pt 5.9 / 200pt 0.4%**。
+- 40〜80pt開始 **93.7%**、100pt以上 **6.3%**。
+
+### resetBenefits / penalties / detection
+- 恩恵: キャリアポイントが最低40pt以上から初期化され、惑星モードも再抽選。高設定ほどB/C比率が上がる。
+- 不利: 設定変更で前日天井進捗、上位惑星モード、蓄積キャリアポイントの宵越し価値を失う可能性。
+- 変更判別: 朝一ステージ単独は不可。前日MB出目を仕込めるホールでの出目変化を当時攻略が実用材料としているが、ホール運用依存でメーカー保証ではない。本機固有の確定ガックン/ランプは再探索後も **NONE_CONFIRMED_AFTER_RESEARCH**。
+
+### data quality / conflicts
+- `CONFLICT_RELEASE_DATE_2016_09_05_VS_2016_09_04_SINGLE_LATE_DB`: 主要当時解析は2016-09-05、一部後年中古実機DBのみ2016-09-04。canonicalは09-05。
+- 低確/高確等の別建て内部状態について設定変更/据え置き/純電断の直接契約は **UNVERIFIED_AFTER_RESEARCH**。
+- 純電断時キャリアポイントの独立した直接比較記述は **UNVERIFIED_DIRECT_WORDING_AFTER_RESEARCH**。設定変更時のみ初期値セット契約からCARRYOVER支持。
 
 ## 2016-09-05群 — OPEN
 登録済み:
 - **パチスロBLOOD+ 二人の女王**（タイヨーエレック）
+- **パチスロ ロストプラネット2**（オリンピア）
 
 次の確認済み候補:
-- **パチスロ ロストプラネット2**（オリンピア） — 2016-09-05を複数解析で確認。
-- **パチスロ未来日記**（EXCITE / ニューギン系） — 2016-09-05をK-Navi/解析で確認。
+- **パチスロ未来日記**（EXCITE / ニューギン系） — 2016-09-05をK-Navi/解析で先行確認済み。
 
-同日全メーカー監査は未完了。候補を上記2機だけで打ち切らず、当時導入一覧・メーカー別一覧・業界記事を横断して追加漏れを確認してからCLOSED判定する。
+同日全メーカー監査は未完了。未来日記を処理後、当時導入一覧・メーカー別一覧・業界記事を横断して追加漏れを確認してからCLOSED判定する。
 
 ## 遡及 resetBehavior QA
 - retroQaScanConfirmedThrough: **2006-03-27_kengou-musashi.md**
@@ -72,30 +81,25 @@
 - 今回は新規本線を優先し、遡及QA地点は変更なし。
 
 ## 次回再開地点
-1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1005を再取得。
-2. **1005件 / 2016-09-05群OPEN → パチスロ ロストプラネット2（オリンピア）**を次の未処理機としてNo.1006へ収集。
-3. 続いて **パチスロ未来日記**を処理候補とし、09/05同日全メーカー監査を実施。
+1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1006を再取得。
+2. **1006件 / 2016-09-05群OPEN → パチスロ未来日記（EXCITE / ニューギン系）**を次の未処理機としてNo.1007へ収集。
+3. 未来日記処理後、09/05同日全メーカー監査を実施。
 4. 09/05群に追加漏れがなければCLOSED → 次の導入日境界へ進む。
 5. 遡及QAは `2006-03-27_golgo13-the-professional.md` から順次継続。
 6. PARTIAL/UNVERIFIEDは表記揺れ・型式・メーカー・シリーズ・設定変更/据え置き/電断/天井/モード/ガックン等へ検索語を変え、公式・業界・当時解析・古DB・回顧資料を横断した後のみ確定。競合は平均せずCONFLICT。
 
 ## 主要出典 — 取得日 2026-09-08
-### 08/22混入候補監査
-- ALL7 2016年8月一覧: https://www.all7.jp/plans/index/2016/08
-- HAZUSE CR仄暗い水の底からFPMZ: https://hazuse.com/machine/pachinko/6P0485/
-- ちょんぼりすた CR鉄拳2: https://chonborista.com/pachinko/sankyo/21645/
-- P-Summa CRさくらももこ劇場ミラくるずきんちゃん: https://psumma.jp/pachinko/24054/
-
-### No.1005 パチスロBLOOD+ 二人の女王
-- HAZUSE: https://hazuse.com/machine/pachislot/6S0606/
-- HAZUSE 天井: https://hazuse.com/machine/pachislot/6S0606/genre/207/
-- 一撃: https://1geki.jp/slot/s_bloodplus2/
-- 一撃 ART概要: https://1geki.jp/slot/s_bloodplus2/81/
-- 一撃 天井/設定変更: https://1geki.jp/slot/s_bloodplus2/3/
-- すろぱちくえすと: https://www.slopachi-quest.com/blood-two-queens/
-- pachislo-data: https://pachislo-data.com/taiyoelec/26437
-- K-Navi: https://p-kn.com/slot/2565/
+### No.1006 パチスロ ロストプラネット2
+- オリンピア公式: https://www.olympia.co.jp/newmachine/ps_lostplanet2/
+- 鹿児島県公報（公安委員会告示第60号）: https://www.pref.kagoshima.jp/ab04/kensei/jourei/kouhou/1606/documents/52290_20160606115316-1.pdf
+- グリーンべると: https://web-greenbelt.jp/00008788/
+- P-WORLD: https://www.p-world.co.jp/machine/database/8105
+- pachislo-data: https://pachislo-data.com/olympia/26459
+- ちょんぼりすた: https://chonborista.com/slot/orinpia-slot/22503/
+- 期待値見える化: https://slotjin.com/zone/lostplanet2/
+- すろぱちくえすと解析まとめ: https://www.slopachi-quest.com/kisyubetsu/lost-planet2/
+- すろぱちくえすと リール/MB: https://www.slopachi-quest.com/article/lost-planet2-reel/
+- スロ安サーチ（09-04競合原値）: https://slot-price.com/slot_price_details/id/924
 
 ### 次候補確認
-- ロストプラネット2: https://pachislo-data.com/olympia/26459
 - パチスロ未来日記: https://p-kn.com/slot/2561/
