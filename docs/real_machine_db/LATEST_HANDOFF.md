@@ -1,64 +1,64 @@
 更新日: 2026-09-09
 
 ## 現在地点
-- recordCount: **1053**
-- latestRecordAdded: **ドリスタせかんど**（ネット）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2017-03-06_dresta-second.md`
+- recordCount: **1054**
+- latestRecordAdded: **パチスロ ビビッドレッド・オペレーション**（三洋物産）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2017-03-06_vividred-operation.md`
 - chronologicalFrontier: **2017-03-06**
-- frontierLatestMachine: **ドリスタせかんど — No.1053**
+- frontierLatestMachine: **パチスロ ビビッドレッド・オペレーション — No.1054**
 - schema: **resetBehavior v0.7**
 - status: **2017-03-06_GROUP_OPEN**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、直前No.1052実レコードを再取得して開始。
+- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、直前No.1053実レコードを再取得して開始。
 - INDEX本文は初期19件時点の旧スナップショットのため、README規定どおりINDEXより新しい `LATEST_HANDOFF.md` を直近進捗正本として採用。
-- 開始時mainは **1052件 / 2017-02-27群CLOSED / 2/28〜3/5境界CLOSED**。
-- handoff指定の次カーソル、NET **「ドリスタせかんど」**をNo.1053として登録。
-- 性能コア＋resetBehavior v0.7を同時収集。設定変更後には通常時と異なる公開天井周期テーブルがあり、朝一客行動へ直接効くためnumericResetDataまで保存。
-- 2017-03-06群はまだOPEN。追加候補として **ビビッドレッド・オペレーション（三洋）**、**パチスロ ゼクスイグニッション（オリンピア/平和系）**を複数系統で確認しているため、全機処理前にCLOSEDにしない。
+- 開始時mainは **1053件 / 2017-03-06群OPEN**。handoff指定の次カーソル、三洋物産 **「パチスロ ビビッドレッド・オペレーション」**をNo.1054として登録。
+- 性能コア＋resetBehavior v0.7を同時収集。設定変更時のSTORY末尾再抽選と公開振り分け、純電源OFF→ON時のSTORY表示据え置きを保存。
+- 当時の設定変更/電断比較資料でも天井・内部状態は「調査中」で、検索語・資料系統を変えた追加探索でも直接契約を固定できなかったため、一般論で埋めず `UNVERIFIED_AFTER_RESEARCH` を保持。
+- 2017-03-06群はまだOPEN。未処理確認済みの **パチスロ ゼクスイグニッション**を次のNo.1055候補として継続する。
 
-## No.1053 — ドリスタせかんど
-- manufacturer: **ネット**
+## No.1054 — パチスロ ビビッドレッド・オペレーション
+- manufacturer: **三洋物産**
 - releaseDate canonical: **2017-03-06**
-- formalModelName: **ドリスタせかんど／NE**
-- certificationNumber: **6S1523**
-- generation/system: **5号機 / 5.5号機期 / ART / 擬似ボーナス / 周期抽選**
-- recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7**
+- formalModelName: **ビビッドレッド・オペレーション／KE**
+- certificationNumber: **UNVERIFIED_AFTER_RESEARCH**
+- generation/system: **5号機 / 5.5号機期 / A+ART / セットストック型ART**
+- recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7_PARTIAL_RESET_CONTRACT_CERT_UNVERIFIED_PAYOUT_CONFLICT**
 
 ### performanceCore
-- 機械割: **96.9 / 98.3 / 100.7 / 104.0 / 106.7 / 110.4%**。
-- ART擬似ボーナス初当たり: **1/199 / 186 / 173 / 153 / 137 / 122**。
-- SPバトルボーナス: **1/2978 → 1/1683**。
-- バトルボーナス: **1/120 → 1/66**。
-- ライブボーナス: **1/205 → 1/116**。
-- 50枚ベース: **約46.3G/50枚**（別資料は約46G表記）。
-- ART純増: **約1.8枚/G**を業界記事・P-WORLD・当時解析で採用。後年まとめに2.0枚表記があるため、1.8をcanonical、2.0は定義/丸め差候補として注記。
-- SBB **50G+α**、BB **30G+α**、ライブボーナス **20G/1セット**。
+- 機械割: **97.3 / 98.6 / 100.2 / 103.9 / 107.6 / 110.5%**。
+- BIG: **1/336.1 / 331.0 / 326.1 / 321.3 / 316.6 / 312.1**。
+- REG: **1/337.8 / 332.7 / 327.7 / 322.8 / 318.1 / 313.6**。
+- ART初当たり: **1/420 / 415 / 396 / 357 / 308 / 283**。
+- 50枚ベース: **約32.0〜32.8G/50枚**。
+- ART純増: **約1.2枚/G**。ボーナス込み掲載値は **約1.7枚/G**として定義分離。
+- BIG約**154枚**、REG約**56枚**、ARTは**1セット30G**。
 
 ### resetBehavior v0.7
-- 通常天井: **最大20周期で擬似ボーナス確定**。平均到達Gは約660〜680Gで周期長により変動。
-- 設定変更: **天井周期RESET**。
-- 純電源OFF→ON: **天井周期CARRYOVER**。
-- 据え置き: 純電断比較に準じ天井周期CARRYOVER。ドリームスター/周期内進捗/内部高低状態の全詳細は直接契約不足のためUNVERIFIED。
-- リセット専用天井周期振り分け: **1周期3.1 / 5周期25.0 / 10周期25.0 / 15周期3.1 / 20周期43.8%**。
-- 当時解析の天井のみ累積期待度表現: **5周期25.8%、10周期34.8%、15周期6.6%**。
-- 設定変更後は5・10周期天井が通常時より大幅優遇され、朝一の主要恩恵として採用。
-- 設定変更/電断時ステージ: 当時比較表でも**調査中**。内部状態初期振り分けも十分な再探索後 `UNVERIFIED_AFTER_RESEARCH`。
+- 通常代表天井: **ボーナス間800G消化後、次回ボーナスでART**。
+- 設定変更: **STORY末尾RESELECT**。天井進捗・内部状態は直接契約不足で `UNVERIFIED_AFTER_RESEARCH`。
+- 純電源OFF→ON: **STORY表示CARRYOVER**。天井進捗・内部状態は `UNVERIFIED_AFTER_RESEARCH`。
+- 据え置き: 表示面は純電断比較を参考にできるが、天井進捗/内部状態の本機固有契約は `UNVERIFIED_AFTER_RESEARCH`。
+- 設定変更専用固定短縮天井/高確スタート率/ART直撃優遇: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 設定変更時STORY末尾振り分け: **STORY1 25.0% / STORY2 25.0% / STORY3 25.0% / STORY4 12.5% / STORY5 12.5%**。
+- STORY表示は内部LOW/HIGH/ULTRA HIGHと完全連動ではないため、上記数値を内部状態振り分けへ転用しない。
 - 有利区間: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
-- 本機固有のメーカー保証ガックン/初期出目/ランプ等の確定変更判別: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 変更判別: 前日STORY把握時の朝一STORY変化は変更推測材料。ただし非決定的。実機検証では朝一ガックンは効きにくい/効かないように見えるため確定材料にはしない。
 
 ## dataQuality / conflicts
-- exact導入日はHAZUSE・パチビー・期待値見える化・ちょんぼりすた等で2017-03-06が一致。NET公式は2017年3月上旬全国導入予定。
-- 天井Gは固定G数ではなく20周期がcanonical。約660G/約680Gは周期長変動・算出条件差として扱い、単純CONFLICTにはしない。
-- ART純増は業界発表/P-WORLD/期待値見える化で約1.8枚/G。後年まとめの2.0枚表記は残すがcanonicalは1.8枚/G。
+- exact導入日は複数解析で2017-03-06が一致。2017年1月の業界記事で三洋物産の新機種発表とA+ART構造を確認。
+- formalModelNameは複数二次資料でKE表記が一致。検定番号は型式/6S/メーカー/検定DB等へ再探索したが直接固定できずUNVERIFIED。
+- 機械割設定5は、ちょんぼりすた・すろぱちくえすとが **107.6%**で一致する一方、低品質転載集約に単独 **104.7%**があるため `CONFLICT_SETTING5_PAYOUT_107_6_MULTI_ANALYSIS_VS_104_7_LOW_QUALITY_AGGREGATION` を保持。平均せず107.6をcanonical。
+- ART終了時には別条件の0G/800G特殊天井テーブルが存在するが、設定変更専用ではないためresetBehavior数値へ混ぜない。
 
 ## 2017-03-06群監査
 - status: **OPEN**。
-- 登録済み: ドリスタせかんど — No.1053。
+- 登録済み:
+  - ドリスタせかんど — No.1053。
+  - パチスロ ビビッドレッド・オペレーション — No.1054。
 - 未処理確認済み候補:
-  - **ビビッドレッド・オペレーション**（三洋）— 業界記事でA+ART、複数解析で2017-03-06導入。
-  - **パチスロ ゼクスイグニッション**（オリンピア/平和系）— 2017年1月業界発表と当時解析を確認。3/06群候補として次々回以降処理。
-- 3/06群は少なくとも上記2機が未処理のためCLOSED禁止。
+  - **パチスロ ゼクスイグニッション**（オリンピア/平和系）— 2017年1月の業界発表と当時解析を確認済み。次回No.1055候補として処理。
+- 3/06群は少なくともゼクスイグニッションが未処理のためCLOSED禁止。
 
 ## 遡及 resetBehavior QA
 - retroQaScanConfirmedThrough: **2006-04-16_oniwa-de-don.md**
@@ -67,24 +67,21 @@
 - 新規本線を止めず、既存性能statusを不用意に崩さずresetBehavior欠損だけを順次補完する。
 
 ## 次回再開地点
-1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1053を再取得。
-2. **1053件 / chronologicalFrontier 2017-03-06 / 3/06群OPEN** を正本として継続。
-3. 次の未処理本線は **三洋「ビビッドレッド・オペレーション」**。No.1054候補として正式型式・検定番号・性能コア＋resetBehavior v0.7を収集する。
-4. 続いて **パチスロ ゼクスイグニッション**を処理。
-5. 3/06同日群を全メーカー横断監査し、追加機がなければCLOSED。その後次の導入境界へ前進。
-6. 遡及QAは `2006-04_bomberman-victory-f.md` から継続。
+1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1054を再取得。
+2. **1054件 / chronologicalFrontier 2017-03-06 / 3/06群OPEN** を正本として継続。
+3. 次の未処理本線は **オリンピア/平和系「パチスロ ゼクスイグニッション」**。No.1055候補として正式型式・検定番号・性能コア＋resetBehavior v0.7を収集する。
+4. 登録後、3/06同日群をメーカー横断で再監査し、追加機がなければCLOSED。その後次の導入境界へ前進。
+5. 遡及QAは `2006-04_bomberman-victory-f.md` から継続。
 
 ## 主要出典 — 取得日 2026-09-09
-### No.1053 ドリスタせかんど
-- NET公式プレスリリース（DreamNews）: https://www.dreamnews.jp/press/0000145470
-- PiDEA: https://www.pidea.jp/articles/%E3%83%8D%E3%83%83%E3%83%88%E3%80%8C%E3%83%89%E3%83%AA%E3%82%B9%E3%82%BF%E3%81%9B%E3%81%8B%E3%82%93%E3%81%A9%E3%80%8D%E3%81%AF%E3%82%AC%E3%83%81%E3%83%A3%E3%82%AC%E3%83%81%E3%83%A3%E6%90%AD%E8%BC%89
-- HAZUSE: https://hazuse.com/machine/pachislot/6S1523/
-- 期待値見える化: https://slotjin.com/zone/dresta2nd/
-- P-WORLD: https://www.p-world.co.jp/machine/database/8266
-- パチビー: https://www.pachibee.jp/machines/lecture/217020009
+### No.1054 パチスロ ビビッドレッド・オペレーション
+- グリーンべると/P-WORLD: https://news.p-world.co.jp/articles/8983/greenbelt
+- ちょんぼりすた: https://chonborista.com/slot/sanyo-slot/31696/
+- すろぱちくえすと: https://www.slopachi-quest.com/article/viviope/
+- P-WORLD: https://www.p-world.co.jp/machine/database/8279
+- ナカイチ: https://www.nakaiti.com/html/sSanyo097.html
+- InitialP: https://initialp.cart.fc2.com/ca45/2560/
 
 ### 次候補 / 3月6日群
-- グリーンべると/P-WORLD ビビッドレッド・オペレーション: https://news.p-world.co.jp/articles/8983/greenbelt
-- ちょんぼりすた ビビッドレッド・オペレーション: https://chonborista.com/slot/sanyo-slot/31696/
 - グリーンべると/P-WORLD ゼクスイグニッション: https://news.p-world.co.jp/articles/8985/greenbelt
 - すろぱちくえすと ゼクスイグニッション: https://www.slopachi-quest.com/article/zxignition/
