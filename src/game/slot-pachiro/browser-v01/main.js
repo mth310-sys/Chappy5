@@ -93,21 +93,21 @@ class MainScene extends Phaser.Scene{
 
  drawMachine(gx,gy,side,color,island){
   const y=py(gy),spineCenter=px(island.x+2)+3;
-  // 台背面を中央の島設備へ密着させ、椅子だけを通路側へ出す。
-  const cx=spineCenter+(side==='L'?-18:18),machine=this.add.container(cx,y+TILE/2);
+  // 台を中央島設備へ食い込ませる位置まで寄せ、隙間を完全に消す。
+  const cx=spineCenter+(side==='L'?-13:13),machine=this.add.container(cx,y+TILE/2);
   const accent=Phaser.Display.Color.IntegerToColor(color).brighten(24).color,dark=Phaser.Display.Color.IntegerToColor(color).darken(32).color;
-  const chairX=side==='L'?-15:15;
-  const floorShadow=this.add.ellipse(side==='L'?-4:4,10,26,8,0x000000,.22);
-  const pedestal=this.add.rectangle(0,8,18,5,0x23262a).setStrokeStyle(1,0x111315);
-  const cabinet=this.add.rectangle(0,-2,19,22,dark).setStrokeStyle(1,0x141619);
-  const backJoin=this.add.rectangle(side==='L'?9:-9,-2,3,21,0x1b1e21).setStrokeStyle(1,0x101214);
-  const sideRail=this.add.rectangle(side==='L'?-7:7,-2,3,20,accent,.9);
-  const upper=this.add.rectangle(0,-9,16,7,color).setStrokeStyle(1,0x1e2124);
-  const topCap=this.add.polygon(0,-16,[-9,5,0,0,9,5,0,9],accent,1).setStrokeStyle(1,0x1d1f22);
-  const topLamp=this.add.rectangle(0,-12,11,2,0xffe98d,.95);
-  const screenFrame=this.add.rectangle(0,-5,12,7,0x15191d).setStrokeStyle(1,0x080a0b),screen=this.add.rectangle(0,-5,9,4,0x76d9ff).setStrokeStyle(1,0x285164);
-  const reelFrame=this.add.rectangle(0,1,13,7,0x2a2d31).setStrokeStyle(1,0x111315),reel=this.add.rectangle(0,1,10,5,0xf5f1df),reelLine1=this.add.rectangle(-3,1,1,5,0xb9b7ae,.8),reelLine2=this.add.rectangle(3,1,1,5,0xb9b7ae,.8);
-  const controls=this.add.rectangle(0,5,12,2,0x25292d),button1=this.add.circle(-3,5,1.2,0xff4f4f),button2=this.add.circle(0,5,1.2,0x58d16b),button3=this.add.circle(3,5,1.2,0x4d8dff),tray=this.add.rectangle(0,7,13,3,0x4a4e53).setStrokeStyle(1,0x1a1c1f);
+  const chairX=side==='L'?-18:18;
+  const floorShadow=this.add.ellipse(side==='L'?-5:5,10,28,8,0x000000,.22);
+  const pedestal=this.add.rectangle(0,8,20,5,0x23262a).setStrokeStyle(1,0x111315);
+  const cabinet=this.add.rectangle(0,-2,20,22,dark).setStrokeStyle(1,0x141619);
+  const backJoin=this.add.rectangle(side==='L'?9:-9,-2,6,21,0x1b1e21).setStrokeStyle(1,0x101214);
+  const sideRail=this.add.rectangle(side==='L'?-8:8,-2,3,20,accent,.9);
+  const upper=this.add.rectangle(0,-9,17,7,color).setStrokeStyle(1,0x1e2124);
+  const topCap=this.add.polygon(0,-16,[-10,5,0,0,10,5,0,9],accent,1).setStrokeStyle(1,0x1d1f22);
+  const topLamp=this.add.rectangle(0,-12,12,2,0xffe98d,.95);
+  const screenFrame=this.add.rectangle(0,-5,13,7,0x15191d).setStrokeStyle(1,0x080a0b),screen=this.add.rectangle(0,-5,10,4,0x76d9ff).setStrokeStyle(1,0x285164);
+  const reelFrame=this.add.rectangle(0,1,14,7,0x2a2d31).setStrokeStyle(1,0x111315),reel=this.add.rectangle(0,1,11,5,0xf5f1df),reelLine1=this.add.rectangle(-3,1,1,5,0xb9b7ae,.8),reelLine2=this.add.rectangle(3,1,1,5,0xb9b7ae,.8);
+  const controls=this.add.rectangle(0,5,13,2,0x25292d),button1=this.add.circle(-3,5,1.2,0xff4f4f),button2=this.add.circle(0,5,1.2,0x58d16b),button3=this.add.circle(3,5,1.2,0x4d8dff),tray=this.add.rectangle(0,7,14,3,0x4a4e53).setStrokeStyle(1,0x1a1c1f);
   const chair=this.add.container(chairX,6);chair.add([this.add.ellipse(0,8,12,5,0x000000,.18),this.add.rectangle(0,6,2,8,0x696c70),this.add.rectangle(0,10,9,2,0x34373a),this.add.rectangle(side==='L'?-2:2,-3,8,7,0xb13b3b).setStrokeStyle(1,0x321919),this.add.ellipse(0,1,11,8,0x9c2f2f).setStrokeStyle(1,0x2b1717)]);
   machine.add([floorShadow,pedestal,cabinet,backJoin,sideRail,upper,topCap,topLamp,screenFrame,screen,reelFrame,reel,reelLine1,reelLine2,controls,button1,button2,button3,tray,chair]);machine.setDepth(y+TILE);this.world.add(machine);return machine;
  }
