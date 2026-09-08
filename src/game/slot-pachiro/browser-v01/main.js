@@ -39,9 +39,9 @@ class MainScene extends Phaser.Scene{
  setupTouch(){document.querySelectorAll('.mobile-pad button').forEach(b=>{const d=b.dataset.dir;b.addEventListener('pointerdown',e=>{e.preventDefault();this.touchDir=d});['pointerup','pointercancel','pointerleave'].forEach(ev=>b.addEventListener(ev,()=>this.touchDir=null))});const action=document.getElementById('action-button');if(action)action.addEventListener('pointerdown',e=>{e.preventDefault();this.handleAction()})}
  getMachineAtPlayer(){return this.machineData.find(m=>m.seatX===this.playerGrid.x&&m.seatY===this.playerGrid.y)||null}
  handleAction(){
-  if(this.seatedMachine){const m=this.seatedMachine;m.occupied=false;m.occupantId=null;this.seatedMachine=null;this.playerAnchor.x=px(this.playerGrid.x)+12;return}
+  if(this.seatedMachine){const m=this.seatedMachine;m.occupied=false;m.occupantId=null;this.seatedMachine=null;this.playerAnchor.x=px(this.playerGrid.x)+12;this.playerAnchor.setScale(1,1);return}
   const m=this.getMachineAtPlayer();if(!m||m.occupied)return;
-  m.occupied=true;m.occupantId='player';this.seatedMachine=m;this.playerAnchor.x=px(this.playerGrid.x)+12+(m.side==='L'?5:-5);
+  m.occupied=true;m.occupantId='player';this.seatedMachine=m;this.playerAnchor.setScale(m.side==='R'?-1:1,1);this.playerAnchor.x=px(this.playerGrid.x)+12+(m.side==='L'?5:-5);
  }
  isBlocked(gx,gy){if(gx<1||gy<1||gx>=MAP_W-1||gy>=MAP_H-1)return true;for(const f of facilities){if(f.type==='entrance')continue;if(gx>=f.x&&gx<f.x+f.w&&gy>=f.y&&gy<f.y+f.h)return true}for(const i of islands){if(gy>=i.y&&gy<i.y+15&&gx>=i.x+1&&gx<=i.x+2)return true}return false}
  moveGrid(dx,dy){if(this.seatedMachine)return;const nx=this.playerGrid.x+dx,ny=this.playerGrid.y+dy;if(this.isBlocked(nx,ny))return;this.playerGrid={x:nx,y:ny};this.playerAnchor.setDepth(py(ny)+TILE+100);this.tweens.add({targets:this.playerAnchor,x:px(nx)+12,y:py(ny)+12,duration:90,ease:'Linear'})}
