@@ -1,71 +1,71 @@
 更新日: 2026-09-09
 
 ## 現在地点
-- recordCount: **1051**
-- latestRecordAdded: **パチスロマジンガーZ 新たな魔神の力**（EXCITE / ニューギングループ）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2017-02-20_mazinger-z-aratana-majin-no-chikara.md`
-- chronologicalFrontier: **2017-02-20**
-- frontierLatestMachine: **パチスロマジンガーZ 新たな魔神の力 — No.1051**
+- recordCount: **1052**
+- latestRecordAdded: **パチスロ モンキーターンIII**（山佐）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2017-02-27_monkey-turn-iii.md`
+- chronologicalFrontier: **2017-02-27**
+- frontierLatestMachine: **パチスロ モンキーターンIII — No.1052**
 - schema: **resetBehavior v0.7**
-- status: **2017-02-20_GROUP_CLOSED_FOR_CURRENT_RESEARCH / 2017-02-21_TO_2017-02-26_BOUNDARY_CLOSED_FOR_CURRENT_RESEARCH**
+- status: **2017-02-27_GROUP_CLOSED_FOR_CURRENT_RESEARCH / 2017-02-28_TO_2017-03-05_BOUNDARY_CLOSED_FOR_CURRENT_RESEARCH**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、直前No.1050実レコードを再取得して開始。
-- INDEX本文は初期19件時点の旧スナップショットのため、README規定どおりINDEXより新しい `LATEST_HANDOFF.md` を直近進捗の正本として採用。
-- 開始時mainは1050件 / 2017-02-20群OPEN、次カーソル `パチスロマジンガーZ 新たな魔神の力`。
-- 調査中にmainへNo.1051レコードが並行追加されたことを検出。重複レコードは作成せず、追加済み実レコードを再取得して内容を監査し、そのまま正本として引き継いだ。
-- performance coreとresetBehavior v0.7は今回の独立再探索でも整合。導入日だけは複数資料の2017-02-20とK-Naviの2017-02-06が競合するため平均・消去せずCONFLICTを維持。
-- 2017-02-20群を全メーカー側から再監査。2-9伝説の同日パチスロ群は `ヱヴァンゲリヲン・勝利への願い / 宇宙戦艦ヤマト2199 / マジンガーZ 新たな魔神の力` で、3機とも登録済みとなったため現時点でCLOSED。
-- 2017-02-21〜02-26境界も導入一覧・日付検索で全国導入パチスロ本線の追加候補を固定できず、現時点でCLOSED。次の既知大群は2017-02-27。
+- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、直前No.1051実レコードを再取得して開始。
+- INDEX本文は初期19件時点の旧スナップショットのため、README規定どおりINDEXより新しい `LATEST_HANDOFF.md` を直近進捗正本として採用。
+- 開始時mainは **1051件 / 2017-02-20群CLOSED / 2/21〜26境界CLOSED**。handoff指定の次カーソル `パチスロ モンキーターンIII` をNo.1052として登録。
+- 性能コア＋resetBehavior v0.7を収集。導入日は2017-02-27が当時/複数資料で一致する一方、ちょんぼりすたのみ2017-03-06のためCONFLICTを保持。
+- 2/27同日群を2-9伝説・HAZUSE・個別日付検索から再監査。全国導入パチスロ本線として追加固定できたのはモンキーターンIIIのみで、登録後にCLOSED。
+- 2/28〜3/5境界も日付別検索と2017導入一覧を横断し、全国導入パチスロ本線の追加候補を固定できなかったため現調査でCLOSED。次の明確な群は2017-03-06。
 
-## No.1051 — パチスロマジンガーZ 新たな魔神の力
-- manufacturer: **EXCITE / ニューギングループ**
-- releaseDate canonical: **2017-02-20**
-- releaseDate conflict: **2017-02-06（K-Navi）**
-- formalModelName: **マジンガーZ新たな魔神の力Z**
-- certificationNumber: **6S1014**
-- generation/system: **5号機 / 5.5号機期 / A+ART**
-- recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7**
+## No.1052 — パチスロ モンキーターンIII
+- manufacturer: **山佐**
+- releaseDate canonical: **2017-02-27**
+- releaseDate conflict: **2017-03-06（ちょんぼりすた）**
+- formalModelName: **モンキーターン3／DD**
+- certificationNumber: **6S1436**
+- generation/system: **5号機 / 5.5号機期 / ART / ST型ART / 周期カレンダーCZ**
+- recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7_RELEASE_DATE_CONFLICT**
 
 ### performanceCore
-- 機械割: **97.7 / 99.6 / 102.4 / 104.8 / 108.0 / 110.0%**。
-- ボーナス合算: **1/362 / 340 / 317 / 294 / 299 / 286**。
-- ART初当たり: **1/513 / 480 / 484 / 449 / 374 / 368**。
-- Zボーナス: **1/1424.7 / 1191.6 / 1310.7 / 978.1 / 910.2 / 799.2**。
-- デフォルメカバトル: **1/485.5 / 474.9 / 417.4 / 420.1 / 445.8 / 445.8**。
-- 50枚ベース: **約31G/50枚**。
-- ART「マジンガーラッシュ」単体純増: **約1.6枚/G**。ボーナス込み約1.8枚/G表記は定義分離。
-- Zボーナス: **約246枚** / デフォルメカバトル: **約78枚** / ARTは1セット30G以上。
+- 機械割: **97.5 / 98.8 / 100.5 / 104.2 / 108.5 / 112.4%**。
+- ART初当たり: **1/395.2 / 380.1 / 361.5 / 311.7 / 282.9 / 254.7**。
+- CZ合算: **1/179.6 / 175.0 / 171.6 / 154.3 / 148.5 / 139.3**。
+- 50枚ベース代表: **約45G/50枚**。別資料の約45〜47G、設定別45.3〜47.1Gは定義/精度を分離して保持。
+- ART「SG RUSH」純増: **約2.0枚/G**。
+- ボーナス非搭載。ARTはフライングST20G以上 + ST30Gで初回基本50G以上。
 
 ### resetBehavior v0.7
-- 通常天井: **ボーナス&ART間999G**でART。最大32G前兆の解析あり。
-- 設定変更: **天井ゲーム数RESET / 内部状態RESELECT**。
-- 純電源OFF→ON: **天井ゲーム数CARRYOVER / 内部状態CARRYOVER**。
-- 据え置き: 上記純電断直接比較と整合する形で主要進捗をCARRYOVER扱い。
-- 設定変更時高確移行率: **設定1〜3 33.2% / 設定4〜6 50.0%**。
-- 設定変更専用固定短縮天井: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- 朝一専用ゲーム数モード/モード振り分け: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- 本機固有の確定的ガックン/初期出目/ランプ判別: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- 純電断時の液晶ステージ・ARTストック等特殊状態: **UNVERIFIED_AFTER_RESEARCH**。
+- 通常天井: **カレンダー6期5ヶ月消化+前兆（代表約1050G+α）でART**。6期6ヶ月目の前兆で告知。CZ中は周期進行停止。
+- 設定変更: **天井進捗RESET / カレンダー表示1期1ヶ月 / カレンダーマス30日分ランダム再生成 / 波多野家ステージ**。
+- 純電源OFF→ON: **天井進捗CARRYOVER / カレンダー表示1期1ヶ月 / カレンダーマスCARRYOVER / 波多野家ステージ**。
+- 据え置き: 純電断直接比較に準じ、天井進捗・カレンダーマスCARRYOVER。細かな内部高低状態の直接契約はUNVERIFIED。
+- 設定変更専用短縮天井: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 設定変更専用カレンダーモード振り分け/高確初期率: **UNVERIFIED/NONE_CONFIRMED_AFTER_RESEARCH**。
 - 有利区間: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
+- 変更判別: 前日最終カレンダーマスとの差は設定変更濃厚材料。ガックン報告ありだが難易度高め・対策なし条件のため確定契約にはしない。表示1期1ヶ月と波多野家ステージは設定変更/純電断共通で単独判別不可。
 
 ## dataQuality / conflicts
-- performance coreはちょんぼりすた、すろぱちくえすと、Pachinavi等で相互照合。
-- `CONFLICT_RELEASE_DATE_2017_02_20_VS_2017_02_06_KNAVI_OR_REGIONAL_EARLY` を保持。
-- `CONFLICT_PAYOUT_RATE_SETTING2_99_6_VS_96_6_CRANKYSEVEN` を既存No.1051レコードどおり保持。99.6%は複数資料一致、96.6%はCrankySeven単独だが削除しない。
+- `CONFLICT_RELEASE_DATE_2017_02_27_VS_2017_03_06_CHONBORISTA`。
+  - 2017-02-27: HAZUSE / パチ7 / 一撃 / ぱちすろLIFE / パチスロ必勝ガイドMAX当時紹介 / 2-9伝説。
+  - 2017-03-06: ちょんぼりすた。
+- `CONFLICT_CHONBORISTA_RESET_EXPLANATORY_SENTENCE_VS_OWN_TABLE`。
+  - 同サイト説明文の「リセット時のカレンダーは引き継ぎ」は直前表の設定変更=30日ランダム / 電源OFF→ON=引継ぎと自己矛盾。別系統解析も設定変更=ランダム再生成で一致するため表側をcanonical。
 
-## 2017-02-20境界監査
+## 2017-02-27境界監査
 - status: **CLOSED_FOR_CURRENT_RESEARCH**。
-- 登録済み:
-  - パチスロ 宇宙戦艦ヤマト2199 — No.1049
-  - ヱヴァンゲリヲン・勝利への願い — No.1050
-  - パチスロマジンガーZ 新たな魔神の力 — No.1051
-- 2-9伝説の2/20群も上記3機を列挙。追加全国導入パチスロ本線は今回の横断監査で固定できず。
+- 登録済み: パチスロ モンキーターンIII — No.1052。
+- 2-9伝説の2017-02-27欄もモンキーターン3のみ。HAZUSE・個別日付検索を追加したが、同日全国導入本線の追加パチスロを固定できず。
 
-## 2017-02-21〜02-26境界監査
+## 2017-02-28〜2017-03-05境界監査
 - status: **CLOSED_FOR_CURRENT_RESEARCH**。
-- 日付別検索と2017導入一覧を横断したが、2/21〜2/26に追加すべき全国導入パチスロ本線は今回固定できなかった。
-- 次の明確な全国導入群は **2017-02-27**。
+- 2/28, 3/1, 3/2, 3/3, 3/4, 3/5を日付別に検索し、2017導入一覧とも照合。全国導入パチスロ本線を追加固定できず。
+- 次の明確な全国導入群は **2017-03-06**。
+
+## 次の2017-03-06群 — 未処理候補
+2-9伝説の導入一覧で少なくとも以下を確認。順序は次回、実導入日・既存登録有無・メーカー横断で再固定する。
+- **ドリスタせかんど**（NET）— HAZUSEでも2017-03-06、型式 `ドリスタせかんど／NE`、検定6S1523を確認済み。
+- **ビビッドレッド・オペレーション**（三洋）— 2017-03-06候補。
+- **ゼクスイグニッション** — 2017-03-06候補。
 
 ## 遡及 resetBehavior QA
 - retroQaScanConfirmedThrough: **2006-04-16_oniwa-de-don.md**
@@ -74,23 +74,28 @@
 - 新規本線を止めず、既存性能statusを不用意に崩さずresetBehavior欠損だけを順次補完する。
 
 ## 次回再開地点
-1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1051を再取得。
-2. **1051件 / chronologicalFrontier 2017-02-20 / 2/20群CLOSED / 2/21〜26境界CLOSED** を正本として継続。
-3. 次の未処理本線は **2017-02-27群**。先頭既知候補 **No.1052候補 `パチスロ モンキーターンIII`（山佐）** の実導入日・型式を再固定して性能コア＋resetBehavior v0.7を収集。
-4. 2/27同日全メーカーを必ず監査し、一覧だけでCLOSEDにしない。
-5. 遡及QAは `2006-04_bomberman-victory-f.md` から継続。
+1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1052を再取得。
+2. **1052件 / chronologicalFrontier 2017-02-27 / 2/27群CLOSED / 2/28〜3/5境界CLOSED** を正本として継続。
+3. 次の未処理本線は **2017-03-06群**。まず同日候補を全メーカー横断で再固定し、先頭未登録機をNo.1053として性能コア＋resetBehavior v0.7収集。
+4. 現時点の先頭既知候補は **NET「ドリスタせかんど」**。ただし同日群の取りこぼし防止のため、追加前に導入カレンダー/メーカー資料を再監査する。
+5. 3/06同日群を全機処理するまでCLOSEDにしない。
+6. 遡及QAは `2006-04_bomberman-victory-f.md` から継続。
 
 ## 主要出典 — 取得日 2026-09-09
-### No.1051 マジンガーZ 新たな魔神の力
-- P-WORLD: https://www.p-world.co.jp/machine/database/8264
-- ちょんぼりすた: https://chonborista.com/slot/newgin-slot/30654/
-- すろぱちくえすと: https://www.slopachi-quest.com/article/mazingerz-majin/
-- すろぱちくえすと機種まとめ: https://www.slopachi-quest.com/kisyubetsu/mazingerz-majin/
-- Pachinavi: https://pachinavi.net/machines/mazinger-z/
-- K-Navi 2017年2月導入カレンダー: https://p-kn.com/calendar/201702/
+### No.1052 モンキーターンIII
+- HAZUSE: https://hazuse.com/machine/pachislot/6S1436/
+- パチ7 天井: https://pachiseven.jp/machines/5056/cutout/78
+- パチ7 通常時: https://pachiseven.jp/machines/5056/cutout/4
+- 一撃: https://1geki.jp/slot/s_monkeyturn
+- 一撃 ART概要: https://1geki.jp/slot/s_monkeyturn/81/
+- ちょんぼりすた: https://chonborista.com/slot/yamasa-slot/30593/
+- 期待値見える化: https://slotjin.com/zone/monkeyturn3/
+- ぱちすろLIFE: https://pachislot-life.com/information/mkt3/
+- ぱちすろLIFE 天井/設定判別: https://pachislot-life.com/information/mkt3-capture/
+- スロがち: https://slogati.com/monkeyturn3/
 - 2-9伝説 2017導入一覧: https://29den.com/newslot/
-- 楽スロ: https://rakuslo.com/mazingerz-tenjyo.html
+- Fujisan パチスロ必勝ガイドMAX 2017年2月号: https://www.fujisan.co.jp/product/1219887/b/1454477/
 
 ### 次候補 / 境界
 - 2-9伝説 2017導入一覧: https://29den.com/newslot/
-- K-Navi 2017年2月導入カレンダー: https://p-kn.com/calendar/201702/
+- HAZUSE ドリスタせかんど: https://hazuse.com/machine/pachislot/6S1523/
