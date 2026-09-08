@@ -1,7 +1,7 @@
 # 剣豪！武蔵
 
 status: COMPLETE_CORE
-qaResetBehavior: PARTIAL
+qaResetBehavior: PARTIAL_RESEARCH_EXHAUSTED
 
 machineName: 剣豪！武蔵
 manufacturer: エレコ
@@ -68,17 +68,19 @@ RT「巌流島GAME」:
 
 ## resetBehavior
 
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
+resetQaLastUpdated: 2026-09-08
 
 settingChangeBehavior:
-- 「剣豪！武蔵 / 剣豪武蔵 / 斬3 / エレコ」と「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 巌流島GAME / RT / ガックン」を組み替え、メーカー公式、P-WORLD、当時解析、古い機種DB、後年資料を再探索したが、本機固有の設定変更時RT処理を明記した高信頼資料は今回確認できずUNVERIFIED。
+- 「剣豪！武蔵 / 剣豪武蔵 / 斬3 / エレコ」と「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 巌流島GAME / RT / ガックン」を組み替え、メーカー公式、P-WORLD、当時解析、古い機種DB、後年資料を再探索したが、本機固有の設定変更時RT処理を明記した高信頼資料は確認できずUNVERIFIED。
+- 2026-09-08の追加QAでも「剣豪 武蔵 設定変更 RT」「斬3 朝一 電源」「巌流島GAME 据え置き」等へ検索語を再変更し、当時機種整理記事・回顧資料まで再探索したが追加固定できず、今回の遡及QAは研究枯渇扱いとする。
 
 carryOverBehavior:
 - 通常時ゲーム数天井はNONE_CONFIRMED / NOT_APPLICABLE相当。
-- 前日「巌流島GAME」中の据え置き時残G・内部状態引継ぎはUNVERIFIED。
+- 前日「巌流島GAME」中の据え置き時残G・内部状態引継ぎはUNVERIFIED_AFTER_RESEARCH。
 
 powerCycleBehavior:
-- 電源OFF→ONのみで「巌流島GAME」残G・内部状態が維持/消滅するかはUNVERIFIED。
+- 電源OFF→ONのみで「巌流島GAME」残G・内部状態が維持/消滅するかはUNVERIFIED_AFTER_RESEARCH。
 - 電源OFF→ONのみで朝一専用恩恵が発生する根拠はNONE_CONFIRMED。
 
 gameCounterReset:
@@ -92,7 +94,7 @@ modeAfterReset:
 
 stateAfterReset:
 - BIG後100G RT「巌流島GAME」は確認済み。
-- 設定変更/据え置き/電源OFF→ON時のRT残G・内部状態処理は十分再探索後もUNVERIFIED。
+- 設定変更/据え置き/電源OFF→ON時のRT残G・内部状態処理は十分再探索後もUNVERIFIED_AFTER_RESEARCH。
 
 advantageousSectionReset:
 - NOT_APPLICABLE（5号機初期・有利区間制度導入前）。
@@ -104,7 +106,7 @@ resetPenalties:
 - 設定変更固有の主要不利要素はNONE_CONFIRMED。
 
 resetDetection:
-- 本機固有のガックン、表示、RT挙動等による変更判別は十分再探索後もUNVERIFIED。
+- 本機固有のガックン、表示、RT挙動等による変更判別は十分再探索後もUNVERIFIED_AFTER_RESEARCH。
 
 numericResetData:
 - 設定変更時モード振り分け: NONE_CONFIRMED
@@ -113,7 +115,7 @@ numericResetData:
 
 ## sources
 
-取得日: 2026-08-31
+取得日: 2026-09-08
 
 1. ユニバーサルエンターテインメント公式 — 剣豪！武蔵
    - https://www.universal-777.com/product/slot/kengou_musashi/
@@ -135,11 +137,15 @@ numericResetData:
    - https://www.all7.jp/plans/index/2006/03
    - 導入予定2006-03-27
    - reliability: INDUSTRY
+6. pachinko’s blog — エレコ「剣豪！武蔵」の筺体＆スペック＆情報
+   - https://pachinko.hatenablog.jp/entry/2006/03/kengou-musashi
+   - 2006年3月・ボーナス+RT・巌流島GAME搭載の回顧整理。reset契約の追加根拠は無し。
+   - reliability: ANALYSIS_SINGLE
 
 ## missingFields
 
-- 設定変更/据え置き/電源OFF→ON時の「巌流島GAME」残G・内部状態処理
-- 本機固有の設定変更判別
+- 設定変更/据え置き/電源OFF→ON時の「巌流島GAME」残G・内部状態処理（PARTIAL_RESEARCH_EXHAUSTED）
+- 本機固有の設定変更判別（PARTIAL_RESEARCH_EXHAUSTED）
 - 設定構成が本当に1/6の2段階のみかは追加一次資料照合余地あり
 
 ## conflicts
@@ -149,4 +155,5 @@ numericResetData:
 ## QA note
 
 - 性能コアはCOMPLETE_COREを維持。
-- v0.7 resetBehaviorを遡及追加。天井/朝一専用モード/有利区間は非該当またはNONE_CONFIRMED。RTの変更・据え置き・電断時処理と変更判別のみ十分再探索後もUNVERIFIED。
+- v0.7 resetBehaviorを遡及追加済み。天井/朝一専用モード/有利区間は非該当またはNONE_CONFIRMED。
+- 2026-09-08に検索語・資料系統を再変更して追加QAを行ったが、RTの変更・据え置き・電断時処理と変更判別の本機固有直接根拠は追加固定できず、reset QAのみ `PARTIAL_RESEARCH_EXHAUSTED` とする。
