@@ -1,68 +1,69 @@
 更新日: 2026-09-09
 
 ## 現在地点
-- recordCount: **1065**
-- latestRecordAdded: **パチスロ恵比寿マスカッツ**（EXCITE / エキサイト）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2017-04-03_ebisu-muscats.md`
+- recordCount: **1066**
+- latestRecordAdded: **押忍！番長3**（大都技研）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2017-04-03_osu-bancho3.md`
 - chronologicalFrontier: **2017-04-03**
-- frontierLatestMachine: **パチスロ恵比寿マスカッツ — No.1065**
+- frontierLatestMachine: **押忍！番長3 — No.1066**
 - schema: **resetBehavior v0.7**
-- status: **2017-04-03_GROUP_OPEN**
+- status: **2017-04-03_GROUP_CLOSED_FOR_CURRENT_RESEARCH**
 
 ## 今回の同期 / 進捗
-- 最新mainの README、mission v0.7、旧INDEX、LATEST_HANDOFF、No.1064実レコードを取得して開始。
+- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、No.1065実レコードを取得して開始。
 - INDEX本文は初期19件時点の旧スナップショットのため、README規定どおり最新handoffと実レコードを直近進捗正本として採用。
-- 開始時mainは **1064件 / 2017-04-03 / 4/3群OPEN**。前回チャット上の1061件地点は並行リレーで進行済みだったため重複を避けた。
-- No.1065として **パチスロ恵比寿マスカッツ** を登録。
-- 2017-04-03導入をパチビー、K-Navi、パチ＆スロ必勝本、アタリ7で照合。グリーンべるとの納品4/2予定とも整合。
-- 検定通過記事から型式 `恵比寿マスカッツY`、メーカーEXCITEを固定。検定番号は十分な再探索後も直接固定できず `UNVERIFIED_AFTER_RESEARCH`。
-- 性能コアは機械割、疑似BONUS、ART初当たりが複数資料一致。設定1ベース46.7G/50枚、ART純増約2.0枚/Gを収録。
-- resetBehaviorは設定変更で通常最大999Gの天井をRESETし、**111/333/777G専用短縮テーブル**へ移行。純電源OFF→ONは天井CARRYOVER。
-- 設定変更後の内部状態、純電断時内部状態、1000ptポイント残量の契約は当時資料が未確定で、表記揺れ・型式・メーカー・朝一/据え置き/電断/高確/ポイントを再探索しても直接固定できず `UNVERIFIED_AFTER_RESEARCH`。一般論から補完していない。
-- 4/3同日監査で **押忍！番長3** と **キン肉マン3 夢の超人タッグ編** が同日未登録候補として明確化したため、群はOPENのまま。
+- 開始時mainは **1065件 / chronologicalFrontier 2017-04-03 / 4/3群OPEN**。直前handoffの次未処理 **「押忍！番長3」** をNo.1066として登録。
+- HAZUSEで2017-04-03、型式 `押忍！番長3／A5`、検定番号 `6S1594` を固定。一撃、パチ＆スロ必勝本、P-WORLDで性能コアを照合。
+- 性能コアは機械割 **98.2 / 99.4 / 101.6 / 106.7 / 116.0 / 119.3%**、初当たり **1/430.1 / 414.0 / 389.3 / 335.6 / 334.0 / 242.3**、約41G/50枚、ART純増約2.0枚/G、1セット40G+α。
+- 設定5初当たりのみ HAZUSE `1/334.2` vs 一撃/必勝本/P-WORLD `1/334.0` の差を確認。平均せず `CONFLICT_ART_INITIAL_SETTING5` として保持。
+- resetBehaviorは通常ART間天井ベル最大200回→**設定変更後128回**。対決モード＆規定ベル回数は設定変更時 **50%再抽選 / 50%引継ぎ**。再抽選時4モード各25%。内部状態・RT状態は設定変更でも引継ぎ。
+- 設定変更後は約10%で初回対決勝利確定。その特殊抽選当選時は25%/80%ループが1:1（50%で80%ループ）。
+- 純電源OFF→ONは天井・対決モード/規定ベル回数・内部状態・RT状態を引継ぎ。設定変更/純電断とも液晶は公園ステージ。
+- ガックンは設定変更有無にかかわらず基本発生しない仕様と複数解析で一致。朝一128ベル天井、前日MB仕込み等は判別材料だが確定判別とはしない。
 
-## No.1065 — パチスロ恵比寿マスカッツ
-- manufacturer: **EXCITE（エキサイト） / ニューギングループ**
+## No.1066 — 押忍！番長3
+- manufacturer: **大都技研**
 - releaseDate: **2017-04-03**
-- formalModelName: **恵比寿マスカッツY**
-- certificationNumber: **UNVERIFIED_AFTER_RESEARCH**
-- generation/system: **5号機 / 疑似ボーナス+ART / ART特化型**
+- formalModelName: **押忍！番長3／A5**
+- certificationNumber: **6S1594**
+- generation/system: **5号機 / ボーナス+ART / セット数管理型ART / 規定ベル回数管理**
 - recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7**
 
 ### performanceCore
-- 機械割: **97.5 / 98.7 / 100.6 / 103.1 / 106.1 / 110.1%**。
-- 疑似BONUS: **1/297.2 / 295.2 / 274.4 / 258.1 / 260.8 / 237.4**。
-- ART初当たり: **1/574.0 / 570.7 / 500.5 / 452.4 / 424.1 / 362.5**。
-- 50枚ベース: **設定1 約46.7G**。
-- ART/疑似BONUS純増: **約2.0枚/G**。
-- マスカッツCHANCE: バナナナビ5回/1セット、最大5セット。5セット完走でART確定。
+- 機械割: **98.2 / 99.4 / 101.6 / 106.7 / 116.0 / 119.3%**。
+- 初当たり: **1/430.1 / 414.0 / 389.3 / 335.6 / 334.0 / 242.3**。
+- 設定5のみ別資料 **1/334.2** → `CONFLICT`。
+- 50枚ベース: **約41G**。
+- ART「頂JOURNEY」: **純増約2.0枚/G、1セット40G+α**。
+- 番長ボーナス: 50G疑似ボーナス。
+- 超番長ボーナス: **全設定1/32768.0、最大245枚**。
 
 ### resetBehavior v0.7
-- 通常最大999G天井: **設定変更RESET / 据え置き・純電断CARRYOVER**。
-- 設定変更後最大天井: **777G**。
-- 設定変更時天井振り分け（111 / 333 / 777G）:
-  - 設定1: **0.4 / 18.8 / 80.9%**
-  - 設定2: **0.4 / 19.5 / 80.1%**
-  - 設定3: **0.8 / 20.3 / 78.9%**
-  - 設定4: **1.2 / 21.9 / 77.0%**
-  - 設定5: **1.6 / 23.4 / 75.0%**
-  - 設定6: **2.0 / 25.0 / 73.0%**
-- 内部状態: **UNVERIFIED_AFTER_RESEARCH**（当時資料も調査中）。
-- 1000ptポイント残量の設定変更/純電断契約: **UNVERIFIED_AFTER_RESEARCH**。
-- 有利区間: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
-- 本機固有の確定ガックン/朝一表示判別: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- ART間天井: **通常ベル最大200回 / 設定変更後128回**。
+- settingChange: 天井RESET、対決モード＆規定ベル回数 **50% RESELECT / 50% CARRYOVER**、内部状態CARRYOVER、RT状態CARRYOVER。
+- RESELECT時モード: **通常A / 通常B / チャンス / 対決連 各25%**。
+- powerCycle: 天井・モード/規定ベル・内部状態・RT状態 **CARRYOVER**。
+- settingChange/powerCycle共通の液晶開始: **公園ステージ**。
+- reset benefit: **約10%で初回対決勝利確定**。特殊抽選当選時は **25%ループ/80%ループ=1:1**。
+- 有利区間: `NOT_APPLICABLE_5TH_GEN_PRE_5_9`。
+- ガックン: **基本発生しないため変更判別不可**。
 
 ## 2017-04-03群監査
-- status: **OPEN**。
+- status: **CLOSED_FOR_CURRENT_RESEARCH**。
 - 登録済み:
   1. **ドキドキマンゴー-30 — No.1062**
   2. **ドキドキマンゴー-25 — No.1063**
   3. **パチスロ 機動戦士Zガンダム — No.1064**
   4. **パチスロ恵比寿マスカッツ — No.1065**
-- 未処理確認候補:
-  1. **押忍！番長3** — 大都技研。複数資料で2017-04-03導入、型式 `押忍!番長3/A5` を先行確認。
-  2. **キン肉マン3 夢の超人タッグ編** — 山佐。2017年導入一覧で4/3候補。次回はメーカー/当時資料で導入日を再固定してから登録する。
-- 上記処理後、4/3同日全メーカー監査を継続してCLOSED可否を判定する。
+  5. **押忍！番長3 — No.1066**
+- 一撃2017年4月カレンダーは4/3スロットをZガンダム/番長3とする。2-9伝説は番長3/Zガンダム/恵比寿マスカッツ、別2017導入一覧はドキドキマンゴー25/30も4/3としており、個別公式・解析で既登録済み。
+- 前handoff候補 **「キン肉マン3 夢の超人タッグ編」** は日付再監査で4/3から除外。当時/後年解析の複数資料が **2017-04-17導入**で一致し、一撃4月カレンダーも4/17群に置く。4/3表記の単一整理一覧はcanonicalに採用しない。
+- 現調査で4/3全国導入本線の追加未登録機を固定できなかったため群をCLOSED。
+
+## 次境界の注意
+- 2017-04-04〜04-16を次回境界監査する。
+- **パチスロ獣王 王者の覚醒** は資料に **2017-04-14** と **2017-04-17** の日付差があるため、メーカー/当時業界/解析を再照合して全国導入canonicalを固定するまで早取りしない。
+- 2017-04-17群の既知候補: **パチスロ キン肉マン ～夢の超人タッグ編～ / 鬼浜爆走紅蓮隊 愛情恋歌編 / パチスロ おそ松くん / 獣王 王者の覚醒（日付要再固定）**。
 
 ## 遡及 resetBehavior QA
 - retroQaScanConfirmedThrough: **2006-04_rock-you-queen-3.md**。
@@ -71,30 +72,29 @@
 - 今回は時系列本線を優先し、遡及QAカーソルは変更していない。
 
 ## 次回再開地点
-1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1065を再取得。
-2. **1065件 / chronologicalFrontier 2017-04-03 / 4/3群OPEN** を正本として継続。
-3. 次の未処理 **「押忍！番長3」**（大都技研）をNo.1066候補として性能コア＋resetBehavior v0.7で処理。
-4. 続いて **「キン肉マン3 夢の超人タッグ編」** を導入日再固定後に処理。
-5. 4/3同日全メーカー監査を続け、漏れがなければ群をCLOSED。
+1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1066を再取得。
+2. **1066件 / chronologicalFrontier 2017-04-03 / 4/3群CLOSED** を正本として継続。
+3. **2017-04-04〜04-16境界監査**を実施。特に「獣王 王者の覚醒」の4/14 vs 4/17を一次/当時資料で固定。
+4. 境界に未登録全国導入機がなければ4/17群へ進む。
+5. 4/17群では導入日再固定後の時系列順で、**キン肉マン3 / 鬼浜爆走紅蓮隊 愛情恋歌編 / おそ松くん / 獣王 王者の覚醒**等を処理し、全メーカー監査する。
 6. 遡及QAは `2006-05_gold-shio-30.md` から継続。
 
 ## 主要出典 — 取得日 2026-09-09
-### No.1065 パチスロ恵比寿マスカッツ
-- パチビー: https://www.pachibee.jp/machines/about/217030003
-- グリーンべると/P-WORLD: https://news.p-world.co.jp/articles/9048/greenbelt
-- 遊技日本: https://yugi-nippon.com/pachinko-news/post-11605/
-- パチ＆スロ必勝本 基本スペック: https://p.hisshobon.jp/machine/2930/1/62345
-- パチ＆スロ必勝本 狙いドコロ: https://p.hisshobon.jp/machine/2930/1/63156
-- K-Navi: https://p-kn.com/slot/2737/
-- アタリ7: https://www.atari7.com/slot/date1486973930.php
-- ちょんぼりすた: https://chonborista.com/slot/newgin-slot/34518/
-- 5号機クロニクル: https://5goki.com/newgin-excite
-- p-media 検定通過/型式: https://p-media.info/%E6%81%B5%E6%AF%94%E5%AF%BF%E3%83%9E%E3%82%B9%E3%82%AB%E3%83%83%E3%83%84%E3%81%8C%E3%82%A8%E3%82%AD%E3%82%B5%E3%82%A4%E3%83%88%E3%81%8B%E3%82%89%E3%83%91%E3%83%81%E3%82%B9%E3%83%AD%E5%8C%96%EF%BC%8Fav/
+### No.1066 押忍！番長3
+- HAZUSE: https://hazuse.com/machine/pachislot/6S1594/
+- 一撃 機種概要: https://1geki.jp/slot/s_osubancho3/
+- 一撃 天井/設定変更: https://1geki.jp/slot/s_osubancho3/3/
+- パチ＆スロ必勝本: https://hisshobon.news/uncategorized/2846/
+- P-WORLD: https://www.p-world.co.jp/machine/database/8215
+- すろぱちくえすと reset: https://www.slopachi-quest.com/article/banchou3-reset/
+- 期待値見える化: https://slotjin.com/zone/osubancho3/
 
-### 4/3同日監査
-- 2017導入日一覧: https://www.slopachi-quest.com/article/2017-sindai/
-- 押忍！番長3 一撃: https://1geki.jp/slot/s_osubancho3/
-- 押忍！番長3 パチ＆スロ必勝本: https://hisshobon.news/uncategorized/2846/
+### 4/3群・次境界監査
+- 一撃 2017年4月カレンダー: https://1geki.jp/newmachinecalender/201704/
+- 2-9伝説 新台一覧: https://29den.com/newslot/
+- 2017年導入機種まとめ: https://squid-and-ball.net/archives/776
+- キン肉マン3 すろぱちくえすと: https://www.slopachi-quest.com/article/kinnikuman3/
+- キン肉マン3 ちょんぼりすた: https://chonborista.com/slot/yamasa-slot/33436/
 
 ### 遡及QA 次カーソル
 - `docs/real_machine_db/machines/2006-05_gold-shio-30.md`
