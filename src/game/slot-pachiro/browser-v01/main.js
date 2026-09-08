@@ -2,7 +2,7 @@ const TILE=24,MAP_W=48,MAP_H=32;
 const px=(gx)=>gx*TILE, py=(gy)=>gy*TILE;
 
 const facilities=[
- {type:'counter',label:'カウンター',x:7,y:1,w:21,h:5,color:0x9a633f},
+ {type:'counter',label:'カウンター',x:7,y:1,w:8,h:3,color:0x9a633f},
  {type:'toiletM',label:'男子トイレ',x:32,y:1,w:4,h:5,color:0x4174bd},
  {type:'toiletF',label:'女子トイレ',x:37,y:1,w:4,h:5,color:0xc95883},
  {type:'smoking',label:'喫煙所',x:42,y:1,w:5,h:6,color:0x59636e},
