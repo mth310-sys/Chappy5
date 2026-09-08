@@ -1,70 +1,69 @@
 更新日: 2026-09-08
 
 ## 現在地点
-- recordCount: **1004**
-- latestRecordAdded: **パチスロ 戦姫絶唱シンフォギア**（SANKYO）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2016-08-22_senki-zesshou-symphogear.md`
-- chronologicalFrontier: **2016-08-22**
-- frontierLatestMachine: **パチスロ 戦姫絶唱シンフォギア**（SANKYO）
+- recordCount: **1005**
+- latestRecordAdded: **パチスロBLOOD+ 二人の女王**（タイヨーエレック）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2016-09-05_blood-plus-futari-no-joou.md`
+- chronologicalFrontier: **2016-09-05**
+- frontierLatestMachine: **パチスロBLOOD+ 二人の女王**（タイヨーエレック）
 - schema: **resetBehavior v0.7**
-- status: **2016-08-22_GROUP_OPEN**
+- status: **2016-09-05_GROUP_OPEN**
 
-## 今回の同期 / 正本確認
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.1003 `2016-08-22_super-planet-deluxe.md` を再取得して開始。
-- INDEXは19件時点の旧集約なので、README規定どおり **LATEST_HANDOFF + 実レコード + 最新main** を進捗正本として使用。
-- 開始時点の正本は recordCount **1003** / chronologicalFrontier **2016-08-22** / `2016-08-22_GROUP_OPEN`。
-- 既存性能値をやり直さず、handoff指定の次未処理 `パチスロ戦姫絶唱シンフォギア` をNo.1004として処理。
+## 今回の同期 / 境界監査
+- 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1004 `2016-08-22_senki-zesshou-symphogear.md` を再取得して開始。
+- INDEXは19件時点の旧集約なので、README規定どおり LATEST_HANDOFF + 実レコード + 最新main を進捗正本として使用。
+- handoff候補だった **仄暗い水の底から（藤商事）**は機種単独再監査で `CR仄暗い水の底からFPMZ`（パチンコ、検定6P0485、2016-08-22）と確定。本パチスロDB本線から除外。
+- 同日混入疑いの **鉄拳2**も `CR鉄拳2 -闘神ver-`（パチンコ）、**Aさくらももこ劇場 ミラくるずきんちゃん**も `CR/CRAさくらももこ劇場 ミラくるずきんちゃん`（パチンコ）と確認し本線除外。
+- 2016-08-22の実パチスロ登録済み5機（SLOTデッド オア アライブ5 / クイーンジャックネオ / クレアの秘宝伝～眠りの塔とめざめの石～ / スーパープラネットデラックス / パチスロ戦姫絶唱シンフォギア）で **2016-08-22_GROUP_CLOSED_FOR_CURRENT_RESEARCH**。
+- 2016-08-29 ALL7掲載の「ドラム黄門ちゃま またまたゴチでやんす!」はパチンコ側。今回の検索範囲で08/23〜09/04の全国導入パチスロを固定できず、次の確認済みパチスロ日付 **2016-09-05**へ前進。
 
-## No.1004 — パチスロ 戦姫絶唱シンフォギア
-- manufacturer: **SANKYO**
-- releaseDate: **2016-08-22**
-- formalModelName: **パチスロ戦姫絶唱シンフォギアS**
-- certificationNumber: **5S1161**
+## No.1005 — パチスロBLOOD+ 二人の女王
+- manufacturer: **タイヨーエレック**
+- releaseDate: **2016-09-05**
+- formalModelName: **パチスロBLOOD＋ 二人の女王／XA**
+- certificationNumber: **6S0606**
 - generation/system: **5号機 / A+ART**
 - recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7**
 
 ### performanceCore
-- 機械割: **97.4 / 99.1 / 100.9 / 103.6 / 106.3 / 110.1%**。
-- ボーナス合算: **1/489 / 471 / 458 / 428 / 409 / 399**。
-- ART初当り: **1/337 / 327 / 309 / 288 / 268 / 256**。
-- ボーナス+ART合算: **1/199 / 193 / 184 / 172 / 162 / 156**。
-- CZ TOTAL: **1/133 / 128 / 120 / 112 / 103 / 98**。
-- ベース: **約34G/50枚**。
-- ART「シンフォギアRUSH」: **約1.5枚/G、最低30G+α**。ボーナス込み約2.0枚/G。
-- 同色BIG/LIVE BONUS: **約290枚** / 異色: **約180枚** / ツヴァイウィングLIVE・限定解除: **約30枚**。
-- 天井: **ボーナス&ART間777GでCZ / 1000GでART**。
+- 機械割: **97.8 / 98.7 / 100.7 / 104.5 / 108.2 / 112.2%**。
+- ボーナス合算: **1/455.1 / 448.8 / 436.9 / 420.1 / 404.5 / 381.0**。
+- ART初当たり: **1/398.0 / 382.5 / 356.1 / 315.3 / 270.9 / 231.1**。
+- ボーナス+ART合算: **1/212.3 / 206.5 / 196.2 / 180.1 / 162.2 / 143.9**。
+- ベース: **約34G/50枚**（公開整理値33.97〜34.29G/50枚）。
+- ART「BLOOD CHANCE+」: **約1.5枚/G、1セット50G+α**。ボーナス込み参考約1.8枚/G。
+- BLOOD BONUS / Secret Story Bonus: canonical **約204枚**、二人の女王モード **約28枚**。
+- 一部資料のBIG 208枚表記は `CONFLICT_BIG_PAYOUT_204_VS_208` として平均せず保持。
+- 規定ゲーム数到達型のART天井は **非搭載**。
 
 ### resetBehavior v0.7
-- 本機の重要特性: **設定変更でも内部天井G数を引き継ぐ**。2016年当時すろぱちくえすと、pachislo-data、期待値見える化系、ちょんぼりすたで複数一致。
-- **音符メーターも設定変更/電源OFF→ONで内部前日値を引き継ぐ**が、朝一液晶上は1個点灯へ戻る。
-- 液晶G数は朝一0G、ステージは学校ステージ系。これらは設定変更と純電断双方で生じ得るため単独の変更判別には使えない。
-- **RAMクリアは別挙動**で、ゲーム数・音符メーターとも0から開始すると当時解析が報告。
-- 純電源OFF→ON: 天井CARRYOVER、音符内部CARRYOVER、通常/高確内部状態はCARRYOVER_SUPPORTED。
-- 設定変更時の通常/高確内部状態: 当時主要資料が調査中。後年単一整理資料に引継ぎ記述があるが複数高信頼照合できず **UNVERIFIED_AFTER_RESEARCH**。
-- 設定変更専用短縮天井/朝一専用モード/専用当選率優遇: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 設定変更: **DOAモード再抽選 / 内部状態再抽選 / 朝一沖縄ステージ**。
+- 据え置き: **DOAモード・内部状態CARRYOVER**。
+- 純電源OFF→ON: **DOAモード・内部状態CARRYOVER**。
+- 規定G数天井は非搭載のため gameCounterReset / ceilingAfterReset は **NOT_APPLICABLE_NO_GAME_COUNT_CEILING**。
+- DOAモードは通常時5段階A〜Eで、ボーナス/ART当選まで転落しない。最上位EではBLOOD EYE出現時の約50%でDOA。
+- 設定変更時DOAモードA〜Eの具体振り分けは、検索語・資料系統変更後も **UNVERIFIED_AFTER_RESEARCH**。
+- 設定変更時内部状態振り分け（低確/通常/高確）は公開済み:
+  - 設定1: **89.0 / 9.4 / 1.6%**
+  - 設定2: **85.1 / 13.3 / 1.6%**
+  - 設定3: **81.2 / 17.2 / 1.6%**
+  - 設定4: **76.6 / 21.1 / 2.3%**
+  - 設定5: **71.1 / 25.0 / 3.9%**
+  - 設定6: **61.7 / 32.8 / 5.5%**
+- 通常以上開始率は **11.0 / 14.9 / 18.8 / 23.4 / 28.9 / 38.3%**。
 - 有利区間: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
-- 変更判別: リールガックンの実戦報告あり。ただし停止形依存等が指摘されるため **POSSIBLE_GACKUN_NOT_DETERMINISTIC**。
-- 朝一の実質的狙い要素は、前日ハマリ/音符蓄積が設定変更を跨いでも残るCARRYOVER特性。設定変更専用の恩恵抽選ではない。
+- 変更判別: 当時解析は **設定変更時ガックン有効 / 純電断のみ無効**と整理。ただしメーカー保証ではないため `GACKUN_REPORTED_USEFUL_NOT_MANUFACTURER_GUARANTEE`。
+- 一撃2016-09-14時点では設定変更/電断のモード・状態等が「調査中」で、後続解析で再抽選/引継ぎが公開。数値競合ではなく情報成熟時差として保持。
 
-### conflicts / quality
-- 5号機クロニクルのBIG/REG別確率・ART初当たり系列は、P-WORLD/一撃/pachislo-dataのcanonical系列と大きく異なるため `CONFLICT_5GOKI_BONUS_ART_BREAKDOWN` として平均せず分離。
-- 5号機クロニクルのBIG約150枚/REG約50枚表記も、P-WORLD/HAZUSE/ちょんぼりすた/pachislo-dataで一致する290/180/30枚系列と整合せず `CONFLICT_5GOKI_BASIC_PAYOUT_LABELS` として保持。
-- 一撃の2016-10-03時点設定変更ページは各項目「調査中」のため、後続当時解析で確定した天井/音符CARRYOVERとの情報成熟差として保持。
-
-## 2016-08-22群 — OPEN
+## 2016-09-05群 — OPEN
 登録済み:
-- SLOTデッド オア アライブ5
-- クイーンジャックネオ
-- クレアの秘宝伝～眠りの塔とめざめの石～
-- スーパープラネットデラックス
-- パチスロ 戦姫絶唱シンフォギア
+- **パチスロBLOOD+ 二人の女王**（タイヨーエレック）
 
-未処理候補:
-- **仄暗い水の底から**（藤商事）
+次の確認済み候補:
+- **パチスロ ロストプラネット2**（オリンピア） — 2016-09-05を複数解析で確認。
+- **パチスロ未来日記**（EXCITE / ニューギン系） — 2016-09-05をK-Navi/解析で確認。
 
-注意:
-- ALL7同日一覧の「Aさくらももこ劇場 ミラくるずきんちゃん」「鉄拳2」はパチンコ側混入/表記混在の可能性があるため、パチスロ本線へ自動登録しない。機種単独で再監査する。
-- 同日群は未完了なので `GROUP_OPEN` を維持。
+同日全メーカー監査は未完了。候補を上記2機だけで打ち切らず、当時導入一覧・メーカー別一覧・業界記事を横断して追加漏れを確認してからCLOSED判定する。
 
 ## 遡及 resetBehavior QA
 - retroQaScanConfirmedThrough: **2006-03-27_kengou-musashi.md**
@@ -73,25 +72,30 @@
 - 今回は新規本線を優先し、遡及QA地点は変更なし。
 
 ## 次回再開地点
-1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1004を再取得。
-2. **1004件 / 2016-08-22群OPEN → 仄暗い水の底から（藤商事）**を次の未処理機として収集。
-3. その後08/22同日群をメーカー横断再監査しCLOSED可否判定。
-4. `Aさくらももこ劇場 ミラくるずきんちゃん` / `鉄拳2` はパチスロ機種単独で正体確認してから本線採否判定。
+1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1005を再取得。
+2. **1005件 / 2016-09-05群OPEN → パチスロ ロストプラネット2（オリンピア）**を次の未処理機としてNo.1006へ収集。
+3. 続いて **パチスロ未来日記**を処理候補とし、09/05同日全メーカー監査を実施。
+4. 09/05群に追加漏れがなければCLOSED → 次の導入日境界へ進む。
 5. 遡及QAは `2006-03-27_golgo13-the-professional.md` から順次継続。
-6. PARTIAL/UNVERIFIEDは表記・検索語・資料系統変更後のみ確定。競合は平均せずCONFLICT。
+6. PARTIAL/UNVERIFIEDは表記揺れ・型式・メーカー・シリーズ・設定変更/据え置き/電断/天井/モード/ガックン等へ検索語を変え、公式・業界・当時解析・古DB・回顧資料を横断した後のみ確定。競合は平均せずCONFLICT。
 
 ## 主要出典 — 取得日 2026-09-08
-### No.1004 パチスロ 戦姫絶唱シンフォギア
-- HAZUSE: https://hazuse.com/machine/pachislot/5S1161/
-- P-WORLD: https://www.p-world.co.jp/machine/database/8085
-- 一撃: https://1geki.jp/slot/s_symphogear/
-- 一撃 天井/設定変更: https://1geki.jp/slot/s_symphogear/3/
-- すろぱちくえすと: https://www.slopachi-quest.com/article/symphogear-reset/
-- ちょんぼりすた: https://chonborista.com/slot/sankyo-slot/21975/
-- pachislo-data: https://pachislo-data.com/sankyo/26457
-- K-Navi: https://p-kn.com/slot/2547/
-- 5号機クロニクル: https://5goki.com/sankyo
-- 期待値見える化: https://slotjin.com/zone/symphogear/
+### 08/22混入候補監査
+- ALL7 2016年8月一覧: https://www.all7.jp/plans/index/2016/08
+- HAZUSE CR仄暗い水の底からFPMZ: https://hazuse.com/machine/pachinko/6P0485/
+- ちょんぼりすた CR鉄拳2: https://chonborista.com/pachinko/sankyo/21645/
+- P-Summa CRさくらももこ劇場ミラくるずきんちゃん: https://psumma.jp/pachinko/24054/
 
-### 直前No.1003
-- `docs/real_machine_db/machines/2016-08-22_super-planet-deluxe.md`
+### No.1005 パチスロBLOOD+ 二人の女王
+- HAZUSE: https://hazuse.com/machine/pachislot/6S0606/
+- HAZUSE 天井: https://hazuse.com/machine/pachislot/6S0606/genre/207/
+- 一撃: https://1geki.jp/slot/s_bloodplus2/
+- 一撃 ART概要: https://1geki.jp/slot/s_bloodplus2/81/
+- 一撃 天井/設定変更: https://1geki.jp/slot/s_bloodplus2/3/
+- すろぱちくえすと: https://www.slopachi-quest.com/blood-two-queens/
+- pachislo-data: https://pachislo-data.com/taiyoelec/26437
+- K-Navi: https://p-kn.com/slot/2565/
+
+### 次候補確認
+- ロストプラネット2: https://pachislo-data.com/olympia/26459
+- パチスロ未来日記: https://p-kn.com/slot/2561/
