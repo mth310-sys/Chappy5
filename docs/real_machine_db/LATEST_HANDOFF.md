@@ -1,66 +1,67 @@
 更新日: 2026-09-08
 
 ## 現在地点
-- recordCount: **1025**
-- latestRecordAdded: **SLOTバジリスク～甲賀忍法帖～Ⅲ**（エレコ）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2016-11-28_slot-basilisk-kouga-ninpouchou-3.md`
+- recordCount: **1026**
+- latestRecordAdded: **パチスロ火曜サスペンス劇場**（タイヨーエレック）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2016-11-28_pachislot-kayou-suspense-gekijou.md`
 - chronologicalFrontier: **2016-11-28**
-- frontierLatestMachine: **SLOTバジリスク～甲賀忍法帖～Ⅲ — No.1025**
+- frontierLatestMachine: **パチスロ火曜サスペンス劇場 — No.1026**
 - schema: **resetBehavior v0.7**
-- status: **2016-11-15_TO_2016-11-27_BOUNDARY_CLOSED_FOR_CURRENT_RESEARCH / 2016-11-28_GROUP_OPEN**
+- status: **2016-11-28_GROUP_CLOSED_FOR_CURRENT_RESEARCH / NEXT_BOUNDARY_2016-11-29_TO_2016-12-04**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、mission v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、No.1024実レコードを再取得して開始。
+- 最新mainの `README.md`、mission v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、No.1025実レコードを再取得して開始。
 - `INDEX.md` は19件時点の旧集約のため、README規定どおり最新 `LATEST_HANDOFF.md` + main実レコードを進捗正本として使用。
-- handoff正本 **1024件 / chronologicalFrontier 2016-11-14 / 11/14群CLOSED** から継続。
-- 2016-11-15〜11-27境界をHAZUSE新台カレンダー、ALL7 11月一覧、個別メーカー/業界資料で監査。HAZUSEは2016年11月のパチスロ導入日を **11/07・11/14・11/28** としており、11/15〜27に新たな全国導入本線を確認できなかったため境界CLOSED。
-- 直前handoffの先行候補だった `SLOTスターオーシャン4` / `パチスロ牙狼 -守りし者-` の11/21表記は後年設置期限一覧由来の誤誘導と判定。スターオーシャン4は2016-11-29発表会、牙狼は2016-11-18時点の業界記事で2017-02-05納品予定と確認できるため11/21群へ登録しない。
-- ALL7に2016-11-25表記の `ヱヴァンゲリヲン～いま、目覚めの時～` があるが、これはビスティの**パチンコ機**でSANKYO公式も2016.12導入のパチンコとして掲載。パチスロ本線へ混入させない。
-- 次の実パチスロ導入日を2016-11-28へ前進し、先頭のエレコ `SLOTバジリスク～甲賀忍法帖～Ⅲ` をNo.1025として追加。
+- handoff正本 **1025件 / chronologicalFrontier 2016-11-28 / 11/28群OPEN** から継続。
+- 次未処理のタイヨーエレック `パチスロ火曜サスペンス劇場` をNo.1026として追加。
+- ALL7 2016年11月一覧の11/28パチスロ枠は `SLOTバジリスク～甲賀忍法帖～3` と `パチスロ火曜サスペンス劇場` の2機種。別掲載の `火曜サスペンス劇場 真相の扉 22の過ち` はパチンコであり、本線へ混入させない。
+- HAZUSE新台カレンダーも2016年11月の導入日群を11/07・11/14・11/28としている。11/28群はNo.1025/1026で現調査範囲CLOSED。
+- HAZUSEの次日付は2016-12-05だが同カレンダーはパチンコ/パチスロ混合。ALL7 2016年12月一覧で12/05に見える `ANOTHER牙狼～炎の刻印～` と `ぱちんこテラフォーマーズ` はパチンコ機なので、日付だけを根拠にパチスロ本線へ登録しない。
 
-## No.1025 — SLOTバジリスク～甲賀忍法帖～Ⅲ
-- manufacturer: **エレコ / ユニバーサルエンターテインメント**
+## No.1026 — パチスロ火曜サスペンス劇場
+- manufacturer: **タイヨーエレック**
 - releaseDate canonical: **2016-11-28**
-- formalModelName: **UNVERIFIED_AFTER_RESEARCH**
-- certificationNumber: **UNVERIFIED_AFTER_RESEARCH**
-- generation/system: **5号機 / 5.5号機期 / A+ART / 周期CZ / 自力継続型ART**
-- recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7**
+- formalModelName: **パチスロ火曜サスペンス劇場／ZZ**
+- certificationNumber: **6S0296**
+- generation/system: **5号機 / 5.5号機期 / ノーマル+A+RT / BIG後32G RT**
+- recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7_PARTIAL_PUBLIC_RESET_DATA**
 
 ### performanceCore
-- 機械割: **98.5 / 99.8 / 102.0 / 104.0 / 107.1 / 110.1%**。
-- 通常BC(黄/青BAR): **1/1024.0 / 993.0 / 963.8 / 936.2 / 910.2 / 840.2**。
-- PBC(白BAR): **1/32768.0**（全設定）。
-- ART初当たり: **1/376.8 / 363.0 / 356.9 / 312.1 / 316.2 / 256.2**。
-- ボーナス+ART合成: **1/273.1 / 263.7 / 258.4 / 232.4 / 233.0 / 195.2**。
-- ベース: **約37.6G/50枚**。
-- ART純増: **約1.7枚/G**。ボーナス込み約2.0枚/G表記は定義を分離。
-- BC平均約200枚、PBC 204枚掲載資料あり。ART1セット平均約35G。
-- 通常天井: **ART間1200GでCZ+ART**。通常BCを挟んでも天井G数はリセットされない。
+- 4段階設定 **1 / 2 / 5 / 6**。
+- 機械割 canonical: **97.6 / 100.6 / 105.0 / 110.0%**。
+- 設定6のみ後年カレンダー系資料に110.3%表記があるため `CONFLICT_PAYOUT_SETTING6_110_0_VS_110_3` を保持。
+- BIG: **1/309.1 / 303.4 / 282.5 / 264.3**。
+- MIDDLE BONUS: **1/376.6 / 350.5 / 300.6 / 265.3**。
+- 合算: **1/169.8 / 162.6 / 145.6 / 132.4**。
+- ベース: **33.63 / 34.24 / 34.47 / 35.62G/50枚**。
+- BIG約312枚、MIDDLE BONUS 104枚、BIG後32G RT。
+- RT純増/Gは十分な再探索後も比較可能な直接数値を固定できず `UNVERIFIED_AFTER_RESEARCH`。
 
 ### resetBehavior v0.7
-- 設定変更: ART間天井RESET、内部状態RESET/再抽選、RT状態RESET、液晶は甲賀卍谷。
-- 据え置き / 純電源OFF→ON: 天井・内部状態・RT状態をCARRYOVER。液晶は甲賀卍谷。
-- 設定変更専用の固定短縮天井: `NONE_CONFIRMED_AFTER_RESEARCH`。
-- 周期モード1〜3は存在するが、設定変更時の初期周期モード具体振り分けは `UNVERIFIED_AFTER_RESEARCH`。
-- 設定変更直後の通常/高確具体振り分けも `UNVERIFIED_AFTER_RESEARCH`。
+- 通常ゲーム数天井なし → gameCounterReset / ceilingAfterReset は `NOT_APPLICABLE_NO_CEILING`。
+- CZ / ART / AT / 朝一専用長期モードは非搭載または確認なし。
+- 設定変更専用の短縮天井、朝一高確、特定G以内当選率などの恩恵数値は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- BIG後32Gの一時的RT状態について、設定変更 / 据え置き / 純電源OFF→ONの本機固有直接契約は、機種名・略称・正式型式・検定番号に「設定変更」「リセット」「朝一」「据え置き」「電源」「RT状態」「ガックン」を組み合わせ、当時解析・古いDB・中古実機資料まで再探索したが固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 一般的な5号機RT機の挙動から推測して埋めていない。
+- 本機固有のガックン/初期出目/ランプ等による設定変更判別は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- ボーナス終了画面等の「現在設定の示唆」は変更/据え置き判別とは別用途なのでresetDetectionへ混入させない。
 - 有利区間: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
-- 変更判別: ガックン報告あり。ただしメーカー保証ではないため `GACKUN_REPORTED_NOT_MANUFACTURER_GUARANTEE`。
-- RT状態を利用し、ベルこぼし前の中段リプレイ=リセット濃厚 / 上段リプレイ=据え置き濃厚とする解析あり。確定契約ではなく判別材料として保存。
-- 設定変更/通常電源OFF ONだけでは液晶遊技履歴はクリアされないとする解析あり。
 
-### definitions / quality
-- パチマガスロマガの通常BC系列と、ちょんぼりすた等のPBC込み総ボーナス系列は定義差。平均化せず分離して保存。
-- ART純増1.7枚/Gとボーナス込み2.0枚/Gも定義差として分離。
-- 型式名/検定番号は機種名・バジリスク3・ELECO・6S・型式・検定番号等へ検索語を変えたが直接固定できず、推測せずUNVERIFIED。
+### quality
+- P-WORLD、当時解析、2016年当時スペック転載でボーナス確率・基本獲得枚数・32G RTを複数照合。
+- 50枚ベースも設定別精密値と当時の33.6〜35.6G/約34G表記が整合。
+- 設定6機械割110.0 vs 110.3は平均化せずCONFLICT。
+- resetBehaviorの一時RT状態は機種固有資料がないため一般論を採用せずUNVERIFIED。
 
-## 2016-11-28群 — OPEN
-確定候補:
-- **SLOTバジリスク～甲賀忍法帖～Ⅲ**（エレコ）— No.1025 登録済み
-- **パチスロ火曜サスペンス劇場**（タイヨーエレック）— Sammy公式マイスロが2016-11-28をホール導入日と明記。次未処理候補。
+## 2016-11-28群 — CLOSED_FOR_CURRENT_RESEARCH
+登録済み:
+- **SLOTバジリスク～甲賀忍法帖～Ⅲ**（エレコ）— No.1025
+- **パチスロ火曜サスペンス劇場**（タイヨーエレック）— No.1026
 
-要再監査:
-- ALL7 11月一覧とHAZUSE 11/28群を全メーカー横断し、他の同日未処理パチスロを確認してから群CLOSED判定する。
-- `ニューペガサスR` は後年設置期限一覧で11/28表記があるが、パチビー/HAZUSEは **2016-12-12** 導入で一致するため11/28群へ先行登録しない。
+境界監査メモ:
+- ALL7 2016年11月一覧で11/28のパチスロは上記2機種を確認。
+- 同日掲載の `火曜サスペンス劇場 真相の扉 22の過ち` はパチンコ。
+- `ニューペガサスR` はパチビー/HAZUSEで2016-12-12導入系が一致しているため11/28へ遡及しない。
 
 ## 遡及 resetBehavior QA
 - retroQaScanConfirmedThrough: **2006-03-27_golgo13-the-professional.md**
@@ -68,26 +69,25 @@
 - 新規本線を止めず、既存未QAレコードを最新main実体から順次補完する。
 
 ## 次回再開地点
-1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1025を再取得。
-2. **1025件 / chronologicalFrontier 2016-11-28 / 11/28群OPEN** を正本として継続。
-3. 次未処理の **タイヨーエレック「パチスロ火曜サスペンス劇場」** を重複確認後、性能コア+resetBehavior v0.7で登録。
-4. その後11/28同日全メーカー監査。HAZUSE/ALL7/メーカー/当時業界資料を横断し、漏れがなければ11/28群CLOSED → 11/29〜12/04境界 → 2016-12-05群へ進む。
-5. PARTIAL/UNVERIFIEDは機種名・型式名・メーカー・シリーズ名と設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックン等を組み替え、公式・業界・当時解析・古いDB・アーカイブ/回顧資料を横断後のみ確定。競合は平均せずCONFLICT。
+1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1026を再取得。
+2. **1026件 / chronologicalFrontier 2016-11-28 / 11/28群CLOSED** を正本として継続。
+3. **2016-11-29〜2016-12-04境界**をメーカー/HAZUSE/ALL7/当時業界資料で監査。未登録の全国導入パチスロがなければ境界CLOSED。
+4. HAZUSE上の次日付 **2016-12-05** はパチンコ/パチスロ混合日付なので、パチスロ実機が存在するか個別に確認する。ALL7の12/05掲載で現時点確認できる `ANOTHER牙狼～炎の刻印～` / `ぱちんこテラフォーマーズ` はパチンコのため本線へ登録しない。
+5. 12/05にパチスロ本線がなければ12/06〜12/11境界を閉じ、**2016-12-12群**へ進む。先行候補 `ニューペガサスR`、`パチスロ涼宮ハルヒの憂鬱` 等は必ず導入日・型式・重複を再確認してから登録する。
+6. PARTIAL/UNVERIFIEDは機種名・型式名・メーカー・シリーズ名と設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックン等を組み替え、公式・業界・当時解析・古いDB・アーカイブ/回顧資料を横断後のみ確定。競合は平均せずCONFLICT。
 
 ## 主要出典 — 取得日 2026-09-08
-### No.1025 SLOTバジリスク～甲賀忍法帖～Ⅲ
-- PiDEA 発表会: https://www.pidea.jp/articles/%E3%80%9D%E7%A5%9E%E3%81%A3%E3%81%A6%E3%82%8B%E3%80%9F%E3%83%90%E3%82%B8%E3%83%AA%E3%82%B9%E3%82%AF%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA%E6%9C%80%E6%96%B0%E4%BD%9C%E3%82%92%E7%99%BA%E8%A1%A8%EF%BC%8F%E3%83%A6%E3%83%8B%E3%83%90%E3%83%BC%E3%82%B5%E3%83%AB
-- K-Navi: https://p-kn.com/slot/2651/
-- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/eleco_slot/99/h-1.php
-- 一撃 総合: https://1geki.jp/slot/s_basirisk3/
-- 一撃 reset/天井: https://1geki.jp/slot/s_basirisk3/3/
-- ちょんぼりすた: https://chonborista.com/slot/universal-slot/27085/
-- 期待値見える化: https://slotjin.com/zone/basilisk3/
-- スロパチクエスト setting-change判別: https://www.slopachi-quest.com/article/bazirisk3-setttei/
+### No.1026 パチスロ火曜サスペンス劇場
+- PiDEA 発表会: https://www.pidea.jp/articles/%E3%82%BF%E3%82%A4%E3%83%A8%E3%83%BC%E3%82%A8%E3%83%AC%E3%83%83%E3%82%AF%E3%80%8C%E7%81%AB%E3%82%B5%E3%82%B9%E3%80%8D%E3%83%91%E3%83%81%E3%83%BB%E3%82%B9%E3%83%AD%E5%90%8C%E6%99%82%E7%99%BA%E8%A1%A8
+- パチビー: https://www.pachibee.jp/movies/index/13108
+- P-WORLD: https://www.p-world.co.jp/machine/database/8182
+- スロパチクエスト: https://www.slopachi-quest.com/article/kasasu-settei/
+- スロット解析情報~すろかい~: https://slotkaiseki.hatenablog.com/entry/kasasu
+- ぱちんこドキュメント!!: https://pachinkolist.com/archives/49553807.html
+- 5号機クロニクル: https://5goki.com/yaiyoelec
 
 ### 境界/次候補
 - HAZUSE 新台カレンダー: https://hazuse.com/new-machine-calendar/newmachine-calendar/
 - ALL7 2016年11月: https://www.all7.jp/plans/index/2016/11
-- Sammyマイスロ 2016-11-28 火曜サスペンス導入日: https://www.sammy.co.jp/japanese/myslot/news/index_10.html
-- パチビー ニューペガサスR 2016-12-12: https://www.pachibee.jp/movies/index/13138
-- HAZUSE ニューペガサスR: https://data.hazuse.com/?genre=204&machine_code=6S1222
+- ALL7 2016年12月: https://www.all7.jp/plans/index/2016/12
+- パチビー ニューペガサスR: https://www.pachibee.jp/movies/index/13138
