@@ -1,7 +1,7 @@
 # ロックユークイーン3
 
 status: PARTIAL
-qaResetBehavior: PARTIAL
+qaResetBehavior: PARTIAL_RESEARCH_EXHAUSTED
 
 machineName: ロックユークイーン3
 manufacturer: エレコ / アルゼ
@@ -52,44 +52,45 @@ RT「QUEEN GAME」。最大1000G。1Gあたり純増枚数の比較可能な公�
 
 ## resetBehavior
 
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
+resetQaLastUpdated: 2026-09-09
 
-`ロックユークイーン3 / ロックユークイーン / QUEEN / エレコ / アルゼ` と `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / QUEEN GAME / RT / ガックン / 天井` を組み替え、当時業界記事・旧解析/DB・回顧資料を再探索。
+`ロックユークイーン3 / ロックユークイーン / QUEEN / エレコ / アルゼ` と `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 電断 / QUEEN GAME / RT / ガックン / 天井 / RAM` を組み替え、公式・当時業界記事・旧解析/DB・アーカイブ・回顧資料を再探索。2026-09-09の再探索でも、QUEEN GAME中の設定変更/据え置き/純電断を直接比較する本機固有契約は追加固定できなかったため、性能側statusは崩さずreset QAだけを `PARTIAL_RESEARCH_EXHAUSTED` とする。
 
 ### settingChangeBehavior
 
-- 設定変更時にQUEEN GAMEの残G・内部RT状態をどう処理するか: UNVERIFIED。
-- 設定変更専用の朝一モード/通常時ゲーム数モード: NONE_CONFIRMED。
+- 設定変更時にQUEEN GAMEの残G・内部RT状態をどう処理するか: UNVERIFIED_AFTER_RESEARCH。
+- 設定変更専用の朝一モード/通常時ゲーム数モード: NONE_CONFIRMED_AFTER_RESEARCH。
 
 ### carryOverBehavior
 
-- 据え置き時のQUEEN GAME残G・内部RT状態引継ぎ: UNVERIFIED。
+- 据え置き時のQUEEN GAME残G・内部RT状態引継ぎ: UNVERIFIED_AFTER_RESEARCH。
 - 通常時ゲーム数天井の据え置き引継ぎ: NOT_APPLICABLE / NONE_CONFIRMED。
 
 ### powerCycleBehavior
 
-- 電源OFF→ONのみでQUEEN GAME残G・内部RT状態を維持するか: UNVERIFIED。
+- 電源OFF→ONのみでQUEEN GAME残G・内部RT状態を維持するか: UNVERIFIED_AFTER_RESEARCH。
 - 設定変更挙動から電断挙動を推定しない。
 
 ### gameCounterReset
 
 - 1000GはQUEEN GAMEの最大継続上限であり、通常時ハマリ天井ではない。
 - 通常時天井用ゲームカウンタ: NOT_APPLICABLE / NONE_CONFIRMED。
-- RT残Gの設定変更時初期化/引継ぎ: UNVERIFIED。
+- RT残Gの設定変更時初期化/引継ぎ: UNVERIFIED_AFTER_RESEARCH。
 
 ### ceilingAfterReset
 
 - 通常時ゲーム数天井: NONE_CONFIRMED。
-- リセット専用短縮天井: NONE_CONFIRMED。
+- リセット専用短縮天井: NONE_CONFIRMED_AFTER_RESEARCH。
 
 ### modeAfterReset
 
-- 朝一専用モード、設定変更専用モード再抽選: NONE_CONFIRMED。
-- QUEEN GAME状態の設定変更時処理: UNVERIFIED。
+- 朝一専用モード、設定変更専用モード再抽選: NONE_CONFIRMED_AFTER_RESEARCH。
+- QUEEN GAME状態の設定変更時処理: UNVERIFIED_AFTER_RESEARCH。
 
 ### stateAfterReset
 
-- QUEEN GAMEの設定変更・据え置き・電断時状態処理: UNVERIFIED。
+- QUEEN GAMEの設定変更・据え置き・電断時状態処理: UNVERIFIED_AFTER_RESEARCH。
 
 ### advantageousSectionReset
 
@@ -97,26 +98,26 @@ resetBehaviorQA: PARTIAL
 
 ### resetBenefits
 
-- 設定変更専用短縮天井、朝一RT優遇、設定変更専用ボーナス優遇: NONE_CONFIRMED。
+- 設定変更専用短縮天井、朝一RT優遇、設定変更専用ボーナス優遇: NONE_CONFIRMED_AFTER_RESEARCH。
 
 ### resetPenalties
 
-- 設定変更固有の公開不利要素: NONE_CONFIRMED。
+- 設定変更固有の公開不利要素: NONE_CONFIRMED_AFTER_RESEARCH。
 
 ### resetDetection
 
-- 本機固有のガックン、出目、液晶等による設定変更/据え置き判別: 十分再探索後もUNVERIFIED。
+- 本機固有のガックン、出目、液晶等による設定変更/据え置き判別: 十分再探索後もUNVERIFIED_AFTER_RESEARCH。
 
 ### numericResetData
 
-- 設定変更時モード振り分け: NONE_CONFIRMED
-- 朝一特定G以内当選率: NONE_CONFIRMED
-- リセット恩恵発生率: NONE_CONFIRMED
-- リセット後短縮天井G数: NONE_CONFIRMED / NOT_APPLICABLE
+- 設定変更時モード振り分け: NONE_CONFIRMED_AFTER_RESEARCH
+- 朝一特定G以内当選率: NONE_CONFIRMED_AFTER_RESEARCH
+- リセット恩恵発生率: NONE_CONFIRMED_AFTER_RESEARCH
+- リセット後短縮天井G数: NONE_CONFIRMED_AFTER_RESEARCH / NOT_APPLICABLE
 
 ## sources
 
-取得日: 2026-09-01
+取得日: 2026-09-09
 
 1. グリーンべると — 伝説のバンドがS機で復活『ロックユークイーン3』
    - https://web-greenbelt.jp/00004599/
@@ -147,11 +148,11 @@ resetBehaviorQA: PARTIAL
 
 - 50枚あたりゲーム数
 - RT 1Gあたり純増枚数
-- 設定変更時のQUEEN GAME残G・内部RT状態処理
-- 据え置き時のRT状態引継ぎ
-- 電源OFF→ON時のRT状態処理
-- 本機固有の設定変更判別
-- 公開朝一専用数値
+- 設定変更時のQUEEN GAME残G・内部RT状態処理: UNVERIFIED_AFTER_RESEARCH
+- 据え置き時のRT状態引継ぎ: UNVERIFIED_AFTER_RESEARCH
+- 電源OFF→ON時のRT状態処理: UNVERIFIED_AFTER_RESEARCH
+- 本機固有の設定変更判別: UNVERIFIED_AFTER_RESEARCH
+- 公開朝一専用数値: NONE_CONFIRMED_AFTER_RESEARCH
 
 ## conflicts
 
