@@ -3,73 +3,75 @@
 更新日: 2026-09-08
 
 ## 現在地点
-- recordCount: **966**
-- latestRecordAdded: **バガナックルー**（大都技研）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2016-03-22_baganuckle.md`
-- chronologicalFrontier: **2016-03-22**
-- frontierLatestMachine: **バガナックルー**
+- recordCount: **967**
+- latestRecordAdded: **南国物語**（オリンピア）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2016-03-28_nangoku-monogatari.md`
+- chronologicalFrontier: **2016-03-28**
+- frontierLatestMachine: **南国物語**
 - schema: **resetBehavior v0.7**
-- status: **2016-03-22_GROUP_CLOSED_FOR_CURRENT_RESEARCH**
+- status: **2016-03-28_GROUP_CLOSED_FOR_CURRENT_RESEARCH**
 
 ## 今回の同期 / 正本確認
-- 最新mainの `README.md`、mission v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、No.965 `2016-03-22_getter-mouse.md` を再取得。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（ミッションv0.7）、`INDEX.md`、`LATEST_HANDOFF.md`、No.966 `2016-03-22_baganuckle.md` を再取得。
 - INDEXは19件時点の旧集約なのでREADME規定どおり **LATEST_HANDOFF + 実レコード** を進捗正本として使用。
-- 開始時正本は recordCount **965** / chronologicalFrontier **2016-03-22** / 03-22群OPEN。
-- handoff指定の次未処理 **バガナックルー** をNo.966として追加。
+- 開始時正本は recordCount **966** / chronologicalFrontier **2016-03-22** / 03-22群CLOSED。
+- 2016-03-23〜03-28境界を監査し、03/28群の未登録 **南国物語** をNo.967として追加。
 
-## No.966 — バガナックルー
-- record: `docs/real_machine_db/machines/2016-03-22_baganuckle.md`
-- manufacturer: **大都技研**
-- releaseDate canonical: **2016-03-22**
-- generation/system: **5号機 / AT / 擬似ボーナス / モード管理 / 技術介入**
-- formalModelName / certificationNumber: **UNVERIFIED_AFTER_RESEARCH**
+## No.967 — 南国物語
+- record: `docs/real_machine_db/machines/2016-03-28_nangoku-monogatari.md`
+- manufacturer: **オリンピア**
+- releaseDate canonical: **2016-03-28**
+- formalModelName: **南国物語／F1**
+- certificationNumber: **5S1146**
+- generation/system: **5号機 / AT / 擬似ボーナス / ゲーム数・モード管理 / 連チャンゾーン**
 
 ### performanceCore
-- 機械割: **97.1 / 98.4 / 100.4 / 104.4 / 107.2 / 111.1%**。
-- AT/擬似ボーナス初当り: **1/336 / 1/315 / 1/290 / 1/259 / 1/231 / 1/212**。
-- ベース: **約48G/50枚**。
-- AT純増: **約3.0枚/G**。
-- BIG: **50G+α / 約150枚**、REG: **20G / 約60枚**。
-- 最大天井: **1500G**。通常A/Bは1500G、チャンス100G、天国/昇天国はポイント管理で平均約50G相当。昇天準備は固定天井なしで次回昇天国確定。
-- P-WORLD、ちょんぼりすた、パチマガスロマガ系旧DBを主照合。
+- 機械割: **97.1 / 98.2 / 100.4 / 103.2 / 107.0 / 110.3%**。
+- 南国ボーナス初当り: **1/323.9 / 318.4 / 304.7 / 294.9 / 276.9 / 244.2**。
+- ボーナス総出現率: **1/134.3 / 129.1 / 120.7 / 113.2 / 100.6 / 90.5**（連チャン込みの別定義として分離）。
+- ベース: **約46G/50枚**（45.8G表記は丸め差）。
+- AT純増: **約2.9枚/G**。
+- BIG: **70G+α / 基本約203枚**、REG: **20G / 基本約58枚**。
+- 通常主要天井: **759G / 996G**。初当たりD系は最大333G。
+- HAZUSE、PiDEA、当時解析で性能系列を照合。
 
 ### resetBehavior v0.7
-- 設定変更時の天井進捗は **RESET** と後年天井DBで確認。前日ハマリの宵越し価値は設定変更で消失する扱い。
-- パチマガスロマガ系旧DBに本機専用「設定変更時」解析項目が存在することは確認できるが、今回取得可能な本文では設定変更時モード振り分け数値を直接固定できなかった。
-- 据え置き時の天井/モード/ポイント、純電源OFF→ON時の天井/モード/ポイントは本機固有直接根拠を固定できず **UNVERIFIED_AFTER_RESEARCH**。設定変更RESETから逆算してCARRYOVERと決めない。
-- 設定変更専用短縮天井、朝一専用CZ/保証ボーナス等は **NONE_CONFIRMED_AFTER_RESEARCH**。
-- ガックン・初期出目等による本機固有の確定設定変更判別は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 設定変更: **天井再抽選 / 内部モード再抽選**。告知タイプ・パトランラン表示もリセット。
+- 純電源OFF→ON: **天井引継ぎ / 内部モード引継ぎ**。告知タイプ・表示はリセット。
+- リセット時天井（全設定共通）: **8G 1.0% / 16G 1.0% / 28G 1.0% / 759G 72.0% / 996G 25.0%**。
+- リセット時初当たりモード（設定1・3・5）: **A25.0 / B25.0 / C25.0 / D1 15.6 / D2 3.1 / D3 3.1 / SP南国3.1%**。
+- リセット時初当たりモード（設定2・4・6）: **A60.9 / B12.5 / C12.5 / D1 7.8 / D2 1.6 / D3 1.6 / SP南国3.1%**。
+- リセット時飛翔モード（設定1・3・5）: **A50.0 / B37.5 / C12.5%**。
+- リセット時飛翔モード（設定2・4・6）: **A50.0 / B25.0 / C25.0%**。
+- 設定変更時は28G以内天井が合計3%、759Gが72%となり朝一に明確な優遇あり。一方、前日天井進捗・内部モードは設定変更で失う。
+- 告知タイプ/表示は設定変更・純電断の双方で初期化されるため判別材料にならない。ガックンは本機固有の確定情報を固定できず変更判別には採用しない。
 - 有利区間: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
 
-## 2016-03-22群監査 — CLOSED_FOR_CURRENT_RESEARCH
-照合できた同日群:
-1. **ミラクル** — エレコ — No.964 処理済み
-2. **ゲッターマウス** — アクロス — No.965 処理済み
-3. **バガナックルー** — 大都技研 — No.966 今回処理
+### conflict
+- PiDEAの導入前業界記事は通常天井を **759G or 999G（1:1）** と記載。
+- 導入後解析は **996G**、かつリセット時は759G 72% / 996G 25%等を掲載。
+- 平均せず `CEILING_PRE_RELEASE_CONFLICT` として保持し、canonicalは導入後解析の996Gを採用。
 
-- モゲスロ2016年導入カレンダーの03/22群は上記3機種。
-- HAZUSE新台カレンダーでも2016年3月の導入日区分として03/22の次は03/28が存在することを確認。
-- 現時点の複数カレンダー横断で03/22同日追加候補を確認できないため `CLOSED_FOR_CURRENT_RESEARCH`。
-- 次は **2016-03-23〜03-28境界監査**を行い、03/28群の具体機種をメーカー/型式/導入日で固定して最初の未登録機から進める。
+## 2016-03-23〜03-28境界 / 03-28群監査 — CLOSED_FOR_CURRENT_RESEARCH
+- HAZUSE新台カレンダーで03/22の次のパチスロ導入日区分が **03/28**。
+- 2016年導入日順一覧では03/28群に **南国物語のみ**を掲載し、03/22群（ゲッターマウス / バガナックルー / ミラクル）との境界も一致。
+- 「2016年3月28日導入」「3月28日導入 パチスロ」「2016-03-28 slot」等へ検索語を変え、別機種の具体的な同日全国導入を固定できなかった。
+- よって現時点で `2016-03-28_GROUP_CLOSED_FOR_CURRENT_RESEARCH`。
 
 ## 遡及 resetBehavior QA
-- 今回対象: `2006-02_new-oasis.md`（ニューオアシス）
-- 性能側 `coreStatus: COMPLETE_CORE` は維持。
-- 型式 `P5NSB` を含め「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / ガックン / 初期出目 / ハイビスカス」へ検索語を変更し、当時業界記事・5号機回顧DB・古解析を再探索。
-- 天井・ゲーム数モード・RT/ART・有利区間は非該当。
-- 設定変更/据え置き/純電断時の成立済みボーナス・告知状態・初期出目等の本機固有直接契約は追加固定できず、reset側のみ **PARTIAL_RESEARCH_EXHAUSTED**へ更新。
-- グリーンべると当時記事でレバーON50% / 全リール停止12.5% / 次ゲームレバーON37.5%の通常告知タイミングを確認したが、resetDetectionではないため混入させていない。
-- retroQaScanConfirmedThrough: **2006-02_new-oasis.md**
+- retroQaScanConfirmedThrough: **2006-02_new-oasis.md**（前回から変更なし）
 - retroQaNextInspection: **2006-02_nurse-witch-komugi-chan-magicalte.md**
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**
+- 今回は時系列本線No.967の性能コア+resetBehaviorと03/28境界監査を優先し、既存性能値の再調査は実施していない。
 
 ## 次回再開地点
-1. **recordCount 966 / chronologicalFrontier 2016-03-22 / 03-22群CLOSED** から開始。
-2. README / mission v0.7 / INDEX / LATEST_HANDOFF / No.966をmainから再取得。
-3. **2016-03-23〜03-28境界監査 → 03/28群の具体機種確定 → 最初の未登録機**を性能コア+resetBehavior v0.7で処理。
-4. PARTIAL/UNVERIFIEDは表記揺れ・正式型式・メーカー・設定変更/据え置き/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間へ検索語を変え、公式・業界・当時解析・古DB・アーカイブ・回顧資料まで再探索後のみ付与。
-5. 競合は平均せずCONFLICT/variant差/定義差として双方保存。
-6. 遡及QAは **`2006-02_nurse-witch-komugi-chan-magicalte.md`** から継続。既存性能コアを無駄にやり直さない。
+1. **recordCount 967 / chronologicalFrontier 2016-03-28 / 03-28群CLOSED** から開始。
+2. README / mission v0.7 / INDEX / LATEST_HANDOFF / No.967をmainから再取得。
+3. **2016-03-29〜04-04境界監査 → 2016-04-04群**を処理。
+4. 現時点の04/04先行候補: **機動警察パトレイバー / キングパルサー / 探偵歌劇 ミルキィホームズ TD**。導入日・メーカー・型式を個別に再確認して最初の未登録機から進める。
+5. PARTIAL/UNVERIFIEDは表記揺れ・正式型式・メーカー・設定変更/据え置き/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間へ検索語を変え、公式・業界・当時解析・古DB・アーカイブ・回顧資料まで再探索後のみ付与。
+6. 競合は平均せずCONFLICT/variant差/定義差として双方保存。
+7. 遡及QAは **`2006-02_nurse-witch-komugi-chan-magicalte.md`** から継続。既存性能コアを無駄にやり直さない。
 
 ## safeguard
 - INDEXは旧集約状態なので進捗正本にしない。LATEST_HANDOFF + 実レコードを優先。
@@ -81,27 +83,22 @@
 - 前作/後継機・同名別機種のresetBehaviorを流用しない。
 
 ## 主要出典 — 取得日 2026-09-08
-### No.966 バガナックルー
-- P-WORLD: https://www.p-world.co.jp/machine/database/7993
-- ちょんぼりすた: https://chonborista.com/slot/daito-slot/17619/
-- パチマガスロマガ公式系旧DB: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/daitogiken_slot/63/daitogiken_slot_63.php
-- 2ndsight天井一覧: https://2ndsight.xyz/1768
-- 大都技研公式サウンドトラック: https://www.daitogiken.com/products/music/soundtrack/
-- モゲスロ2016年導入カレンダー: https://moge-site.com/new-slot2016
+### No.967 南国物語
+- HAZUSE: https://hazuse.com/machine/pachislot/5S1146/
+- HAZUSE基本スペック: https://hazuse.com/machine/pachislot/5S1146/genre/201/
+- PiDEA: https://www.pidea.jp/articles/%E4%B8%89%E6%9C%A8%E6%B5%81%E3%80%8C%E5%8D%97%E5%9B%BD%E7%89%A9%E8%AA%9E%E3%80%8D%E3%81%AE%E8%A9%95%E4%BE%A1%E3%81%AF%EF%BC%9F
+- 期待値見える化: https://slotjin.com/zone/nangoku-monogatari/
+- すろぱちくえすと朝一: https://www.slopachi-quest.com/article/nangokumonogatari-reset/
+- すろぱちくえすとリセット数値: https://www.slopachi-quest.com/article/nangoku-reset28/
+- スロットガーデン: https://xn--mckza4ard4ttb2d.com/nangokumonogatari
+- 2016年導入一覧: https://www.slopachi-quest.com/article/%E3%80%90%E5%B0%8E%E5%85%A5%E6%97%A5%E9%A0%86%E3%80%912016%E5%B9%B4%E3%83%91%E3%83%81%E3%82%B9%E3%83%AD%E6%96%B0%E5%8F%B0%E4%B8%80%E8%A6%A7%E3%81%BE%E3%81%A8%E3%82%81/
 - HAZUSE新台カレンダー: https://hazuse.com/new-machine-calendar/newmachine-calendar/
 
-### retro QA ニューオアシス
-- グリーンべると: https://web-greenbelt.jp/00004505/
-- 5号機クロニクル: https://5goki.com/pioneer
-- pacnk: https://pacnk.com/slot/tools/hamari.php?id=newoashisu
-
 ## confidence
-- No.966 identity/manufacturer/system: **INDUSTRY_DATABASE_PLUS_MULTI_SOURCE_HIGH**
-- No.966 releaseDate: **HIGH_MULTI_SOURCE_PERIOD_PLUS_OFFICIAL_DATE_SUPPORT**
-- No.966 performanceCore: **HIGH_MULTI_SOURCE_PERIOD**
-- No.966 settingChange gameCounter: **ANALYSIS_SECONDARY_DIRECT_RESET_LABEL**
-- No.966 settingChange mode numeric / carryOver / powerCycle: **UNVERIFIED_AFTER_RESEARCH**
-- No.966 resetDetection: **NEGATIVE_FINDING_AFTER_MULTI_QUERY_RESEARCH**
-- 2016-03-22 group: **CLOSED_FOR_CURRENT_RESEARCH**
-- retro New Oasis core: **COMPLETE_CORE_UNCHANGED**
-- retro New Oasis resetBehavior: **PARTIAL_RESEARCH_EXHAUSTED**
+- No.967 identity/formalModel/certification/releaseDate: **PERIOD_DATABASE_HIGH**
+- No.967 performanceCore: **INDUSTRY_PLUS_ANALYSIS_HIGH_MULTI_SOURCE**
+- No.967 reset settingChange/powerCycle: **ANALYSIS_HIGH_DIRECT_TABLE_MULTI_SOURCE**
+- No.967 reset numeric tables: **ANALYSIS_HIGH_PERIOD_DIRECT_NUMERIC_TABLE**
+- No.967 resetDetection: **NEGATIVE_FINDING_WITH_EXPLICIT_SHARED_DISPLAY_RESET**
+- No.967 ceiling 996 vs pre-release 999: **CONFLICT_PRESERVED_CANONICAL_POST_RELEASE_ANALYSIS**
+- 2016-03-28 group: **CLOSED_FOR_CURRENT_RESEARCH**
