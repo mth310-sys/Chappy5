@@ -1,79 +1,70 @@
 更新日: 2026-09-09
 
 ## 現在地点
-- recordCount: **1037**
-- latestRecordAdded: **パチスロ モンスターハンター～狂竜戦線～**（エンターライズ）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2017-01-10_monster-hunter-kyouryu-sensen.md`
+- recordCount: **1038**
+- latestRecordAdded: **シスタークエスト～時の魔術師と悠久の姉妹～**（ハイライツ・エンタテインメント / P-WORLD掲載メーカー: アイゲート）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2017-01-10_sister-quest-toki-no-majutsushi.md`
 - chronologicalFrontier: **2017-01-10**
-- frontierLatestMachine: **パチスロ モンスターハンター～狂竜戦線～ — No.1037**
+- frontierLatestMachine: **シスタークエスト～時の魔術師と悠久の姉妹～ — No.1038**
 - schema: **resetBehavior v0.7**
-- status: **2017-01-03_GROUP_CLOSED_FOR_CURRENT_RESEARCH / 2017-01-04_TO_2017-01-08_BOUNDARY_CLOSED_FOR_CURRENT_RESEARCH / 2017-01-09_TO_10_GROUP_OPEN_RELEASE_DATE_DEFINITION_AUDIT_REQUIRED**
+- status: **2017-01-03_GROUP_CLOSED_FOR_CURRENT_RESEARCH / 2017-01-04_TO_2017-01-08_BOUNDARY_CLOSED_FOR_CURRENT_RESEARCH / 2017-01-09_TO_10_GROUP_OPEN**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、No.1036実レコードを再取得して開始。
-- main正本は **1036件 / chronologicalFrontier 2017-01-03 / 1/03群OPEN**。過去チャット上の古い地点へ戻らず、handoffを優先した。
-- 2017-01-03同日を「1月3日/パチスロ/新台/導入」等で再監査。弱虫ペダル以外の全国導入パチスロを固定できず、既存releaseDate conflict（1/3 vs 1/9納品予定 vs 1/10）はNo.1036内で保持したまま **2017-01-03_GROUP_CLOSED_FOR_CURRENT_RESEARCH** とした。
-- 1/04〜1/08境界でも独立した全国導入パチスロ本線を固定できずCLOSED。
-- 次の本線としてエンターライズ **パチスロ モンスターハンター～狂竜戦線～** をNo.1037登録。
-- 同機は関西等で2016-12-19先行、K-Navi 2017-01-09、HAZUSE/複数解析 2017-01-10の差がある。地域先行を全国本線へ早取りせずcanonicalを2017-01-10、`CONFLICT_RELEASE_DATE_2016_12_19_EARLY_VS_2017_01_09_VS_2017_01_10` を保持。
-- 1/10同日には **シスタークエスト～時の魔術師と悠久の姉妹～** の実機導入開始をドラス系プレス/アプリ説明で確認したため、群はOPENのまま。
+- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、No.1037実レコードを再取得して開始。
+- main正本は **1037件 / chronologicalFrontier 2017-01-10 / 1/09〜10群OPEN**。旧INDEXの19件表示は進捗正本にせず、README規定どおりより新しい `LATEST_HANDOFF.md` と実レコードを優先した。
+- handoff指定の次機種 **シスタークエスト～時の魔術師と悠久の姉妹～** をNo.1038として登録。
+- releaseDateはドラス/Apple実機シミュレーター説明が **2017-01-10** を直接明記し、パチビー・ちょんぼりすたとも一致。
+- 1/10同日群を導入カレンダー/解析資料で監査し、未処理の **EXCITE「パチスロZETMAN」** が2017-01-10導入として複数資料で固定できるため群はOPENのまま。モンスターハンター狂竜戦線・シスタークエストは登録済みなので重複追加しない。
 
-## No.1037 — パチスロ モンスターハンター～狂竜戦線～
-- manufacturer: **エンターライズ**
-- releaseDate canonical: **2017-01-10**
-- releaseDate conflict: **2016-12-19先行 vs 2017-01-09 vs 2017-01-10**
-- formalModelName: **モンスターハンター狂竜戦線／ZS**
-- certificationNumber: **6S1097**
-- generation/system: **5号機 / 5.5号機期 / A+ART / クエストボーナス+ART / モード・スルーテーブル管理**
-- recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7_AND_RELEASE_DATE_CONFLICT**
+## No.1038 — シスタークエスト～時の魔術師と悠久の姉妹～
+- manufacturer canonical display: **ハイライツ・エンタテインメント**
+- P-WORLD manufacturer label: **アイゲート**
+- releaseDate: **2017-01-10**
+- formalModelName: **シスタークエスト／HA**
+- certificationNumber: **6S0941**
+- generation/system: **5号機 / 5.5号機期 / A+ART / リアルボーナス+ART**
+- recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7_AND_PAYOUT_ROUNDING_CONFLICT**
 
 ### performanceCore
-- 機械割: **97.5 / 98.6 / 100.6 / 103.8 / 107.6 / 112.2%**。
-- クエストボーナス: 設定1〜5 **約1/140**、設定6 **約1/129**。
-- ART初当たり: **1/443.8 / 404.4 / 403.7 / 320.5 / 319.3 / 203.8**。
-- baseGamesPer50: **約32〜34G/50枚**。HAZUSE約33〜32G、ちょんぼりすた約34Gのため平均せずレンジ保持。
-- ART「狩猟戦線」純増 **約2.0枚/G**、初期ストックパート **20〜100G**。
-- クエストボーナス獲得 **約40枚**。
-- ゲーム数天井: ボーナス及びART間 **777GでART**。
+- 機械割: **97.5 / 98.8 / 100.0 / 103.5 / 105.5 / 109.3〜109.4%**。設定6のみ二次資料で109.3/109.4の丸め差をCONFLICT保持。
+- ボーナス合算: **1/258.0 / 256.0 / 252.1 / 248.2 / 244.5 / 237.4**。
+- ART初当たり: **1/531.0 / 498.8 / 474.8 / 404.0 / 371.7 / 239.9**。
+- baseGamesPer50: **約31.64〜32G/50枚**。精密値と丸め値を平均せずレンジ保持。
+- ART「冒険RUSH」純増: **約1.4枚/G（ボーナス非込）**。解析上のボーナス込み実質約2.0枚/Gは定義分離。
+- BIG/十勇士伝説: **204枚**、REG「錬金チャンス」: **54枚**。
+- ART: **1セット40G or 100G + 継続バトル4G**。
+- 天井: **ボーナス間999GでART**。ARTを挟んでもボーナス間天井はリセットされない。
 
 ### resetBehavior v0.7
-- settingChangeBehavior: **777G天井RESET / スルー・モードテーブルRESELECT / 内部状態RESELECT / 液晶バルバレ / ART・ボーナス中状態RESET**。
-- carryOverBehavior: 据え置きはゲーム数・スルー/モード・状態を継続する攻略契約。純電源OFF→ONは一撃の直接比較表で引継ぎ確認。
-- powerCycleBehavior: **ゲーム数天井・モード・状態CARRYOVER**。液晶はバルバレ。ART中はインパクト告知、ボーナス中は捜索クエストへ表示復帰。
-- gameCounterReset: 設定変更で777G進捗RESET、電断/据え置きでCARRYOVER。
-- ceilingAfterReset: 設定変更専用の固定短縮777G天井は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- settingChangeBehavior: **ボーナス間999G天井RESET / 内部状態RESELECT / RT状態RESET / 帝国街道開始**。
+- powerCycleBehavior: **天井・内部状態・RT状態CARRYOVER / 帝国街道開始**。
+- carryOverBehavior: 据え置きは継続側として扱う攻略文脈だが、本機固有の独立した「据え置き」比較表は今回直接固定できず **UNVERIFIED_DIRECT_CARRYOVER_AFTER_RESEARCH** を付記。
+- ceilingAfterReset: 設定変更専用固定短縮天井は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- modeAfterReset: 通常A/B等の設定変更専用モード振り分けは **NONE_CONFIRMED_AFTER_RESEARCH**。
+- stateAfterReset: **全設定共通50.0%で高確スタート**。純電源OFF→ONは内部状態引継ぎ。
 - advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
-- resetDetection: 設定変更/純電断とも朝一バルバレのためステージ単独判別不可。本機固有の確定ガックン等は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- resetDetection: 設定変更/純電断とも帝国街道開始のためステージ単独判別不可。高確挙動は変更期待を上げるが確定ではない。本機固有の確定ガックン/初期出目/ランプ契約は **NONE_CONFIRMED_AFTER_RESEARCH**。
 
 ### public reset numeric data
-設定変更時スルーテーブル:
-| テーブル | 設定1〜3 | 設定4〜6 |
-|---|---:|---:|
-| 1 | 46.9% | 36.7% |
-| 2 | 25.0% | 25.0% |
-| 3 | 14.8% | 14.8% |
-| 4 | 3.1% | 3.1% |
-| 5 | 10.2% | 20.3% |
-
-設定変更時内部状態:
-| 設定 | 通常 | 高確 | 超高確 | 確定高確 |
-|---:|---:|---:|---:|---:|
-| 1〜3 | 75.00% | 23.83% | 0.78% | 0.39% |
-| 4〜6 | 66.80% | 30.86% | 1.56% | 0.78% |
-
-- 高確以上合計: **設定1〜3 25.00% / 設定4〜6 33.20%**。
-- 設定変更時テーブル5: **10.2% / 20.3%**。
+- 設定変更後高確移行率: **50.0%（全設定共通）**。
+- 比較値: ストーリーボーナス後 **25.0%**、錬金チャンス後 **100%**、ART終了後 **18.75〜19.0%**。
+- 通常天井: **ボーナス間999G**。
+- リセット専用短縮天井: **NONE_CONFIRMED_AFTER_RESEARCH**。
 
 ## data quality
-- エンターライズ公式特設サイト、メーカー発表転載、HAZUSE、一撃、ちょんぼりすた、K-Naviを横断。
-- 2016-12-19先行を全国導入として早取りせず、1/09・1/10差をCONFLICT保持。
-- 50枚ベースの32〜34G差は平均化していない。
-- リセット挙動は設定変更と純電源OFF→ONを分離。一撃の直接比較表を主軸に状態/テーブル資料で照合。
+- 導入日: ドラス/Apple公式アプリ文、パチビー、ちょんぼりすたで2017-01-10一致。
+- 型式/検定: P-WORLDで「シスタークエスト／HA」「6S0941」を確認。
+- 性能コア: P-WORLD、ちょんぼりすた、期待値見える化、パチ＆スロ必勝本を横断。
+- resetBehavior: ちょんぼりすた/期待値見える化の設定変更 vs 電源OFF→ON直接比較表と、必勝本/すろぱちくえすとの設定変更後高確50%を照合。
+- 設定6機械割109.3/109.4は平均せず `CONFLICT_SETTING6_PAYOUT_ROUNDING_109_3_VS_109_4`。
+- P-WORLDのメーカー欄「アイゲート」と製品展開主体「ハイライツ・エンタテインメント」は役割差として併記し、数値CONFLICT扱いにはしていない。
 
 ## 境界監査
 - **2017-01-03_GROUP_CLOSED_FOR_CURRENT_RESEARCH**。
 - **2017-01-04_TO_2017-01-08_BOUNDARY_CLOSED_FOR_CURRENT_RESEARCH**。
-- **2017-01-09_TO_10_GROUP_OPEN_RELEASE_DATE_DEFINITION_AUDIT_REQUIRED**。
+- **2017-01-09_TO_10_GROUP_OPEN**。
+- 2017-01-10未処理強候補: **EXCITE「パチスロZETMAN」**。ちょんぼりすた、2017新台カレンダー、2-9伝説で1/10一致。
+- ZETMAN処理後に1/09〜10群を全メーカー横断再監査し、漏れがなければCLOSED。次の強い日付境界は **2017-01-16「パチスロ エウレカセブンAO」**。
 - chronologicalFrontier: **2017-01-10**。
 
 ## 遡及 resetBehavior QA
@@ -82,26 +73,27 @@
 - 新規本線を止めず、既存未QAレコードを最新main実体から順次補完する。
 
 ## 次回再開地点
-1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1037を再取得。
-2. **1037件 / chronologicalFrontier 2017-01-10 / 1/09〜10群OPEN** を正本として継続。
-3. 次の未処理機種は **ハイライツ・エンタテインメント「シスタークエスト～時の魔術師と悠久の姉妹～」** をNo.1038候補として処理。ドラス系プレス/アプリ説明で2017-01-10実機導入開始を確認済み。
-4. 性能コア＋resetBehavior v0.7を同時収集。天井、設定変更/据え置き/純電断、モード・状態、朝一数値、変更判別を検索語・資料系統を変えて十分に再探索する。
-5. その後2017-01-09〜10群を全メーカー横断監査し、未登録がなければCLOSED。1/09と1/10の祝日/地域/納品定義差は機種別に保持する。
-6. 既登録の弱虫ペダルを1/10側へ重複追加しない。
+1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1038を再取得。
+2. **1038件 / chronologicalFrontier 2017-01-10 / 1/09〜10群OPEN** を正本として継続。
+3. 次の未処理機種は **EXCITE「パチスロZETMAN」** をNo.1039候補として処理。
+4. 性能コア＋resetBehavior v0.7を同時収集。天井、設定変更/据え置き/純電断、状態、朝一数値、ガックン等を検索語・資料系統を変えて再探索する。
+5. ZETMAN登録後、2017-01-09〜10群を全メーカー横断監査。未登録がなければCLOSED。
+6. その後1/11〜1/15境界を監査し、漏れがなければ2017-01-16群へ進む。強候補は **サミー「パチスロ エウレカセブンAO」**。
+7. 既登録のモンスターハンター狂竜戦線、弱虫ペダル、シスタークエストを重複追加しない。
 
 ## 主要出典 — 取得日 2026-09-09
-### No.1037 モンスターハンター～狂竜戦線～
-- エンターライズ公式: https://www.enterrise.co.jp/slot/mhk/
-- 4Gamer（コムシード発表転載）: https://www.4gamer.net/games/369/G036935/20170120081/
-- HAZUSE: https://hazuse.com/machine/pachislot/6S1097/
-- 一撃 天井/設定変更: https://1geki.jp/slot/s_monhan_k/3/
-- 一撃 モード/テーブル: https://1geki.jp/slot/s_monhan_k/43/
-- 一撃 状態: https://1geki.jp/slot/s_monhan_k/42/
-- 一撃 ART: https://1geki.jp/slot/s_monhan_k/81/
-- 一撃 ボーナス: https://1geki.jp/slot/s_monhan_k/61/
-- ちょんぼりすた: https://chonborista.com/slot/enta-slot/26726/
-- K-Navi: https://p-kn.com/slot/2631/
+### No.1038 シスタークエスト
+- Apple / ドラス実機シミュレーター: https://apps.apple.com/jp/app/%E6%BF%80j%E3%83%91%E3%83%81%E3%82%B9%E3%83%AD-%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88-%E6%99%82%E3%81%AE%E9%AD%94%E8%A1%93%E5%B8%AB%E3%81%A8%E6%82%A0%E4%B9%85%E3%81%AE%E5%A7%89%E5%A6%B9/id1147076453
+- ドラス press: https://www.value-press.com/pressrelease/176619
+- パチビー: https://www.pachibee.jp/machines/about/216110008
+- P-WORLD: https://www.p-world.co.jp/machine/database/8211/
+- ちょんぼりすた: https://chonborista.com/slot/high-enter/28232/
+- 期待値見える化: https://slotjin.com/tenjoukitaichi/sister-quest4/
+- パチ＆スロ必勝本: https://p.hisshobon.jp/machine/2871/1/61614
+- すろぱちくえすと設定判別: https://www.slopachi-quest.com/article/sister-quest4-settei/
+- P-WORLD/グリーンべると新パネル記事: https://news.p-world.co.jp/articles/9067/greenbelt
 
-### 次回候補 シスタークエスト
-- ドラス系プレス（実機2017-01-10導入の説明）: https://www.value-press.com/pressrelease/176619
-- ドラス シスクエくじ発表: https://www.value-press.com/pressrelease/176041
+### 次回候補 ZETMAN
+- ちょんぼりすた: https://chonborista.com/slot/newgin-slot/28706/
+- 2017新台カレンダー: https://slotnews777.blog.fc2.com/blog-entry-3121.html
+- 2-9伝説カレンダー: https://29den.com/newslot/
