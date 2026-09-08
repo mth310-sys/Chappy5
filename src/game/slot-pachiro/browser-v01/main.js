@@ -44,8 +44,7 @@ class MainScene extends Phaser.Scene{
 
  drawFloor(){
   const g=this.add.graphics();
-  g.fillStyle(0xe7dfcf,1);
-  g.fillRect(0,0,MAP_W*TILE,MAP_H*TILE);
+  g.fillStyle(0xe7dfcf,1);g.fillRect(0,0,MAP_W*TILE,MAP_H*TILE);
   for(let y=0;y<MAP_H;y++)for(let x=0;x<MAP_W;x++){
    if((x+y)%2===0){g.fillStyle(0xf0e9dc,.22);g.fillRect(px(x),py(y),TILE,TILE)}
   }
@@ -57,17 +56,16 @@ class MainScene extends Phaser.Scene{
 
  drawWalls(){
   const g=this.add.graphics(),w=MAP_W*TILE,h=MAP_H*TILE;
-  g.fillStyle(0x30353b,1);
-  g.fillRect(0,0,w,8);g.fillRect(0,0,8,h);g.fillRect(w-8,0,8,h);g.fillRect(0,h-8,w,8);
-  g.fillStyle(0x626a73,1);
-  g.fillRect(8,8,w-16,5);g.fillRect(8,8,5,h-16);g.fillRect(w-13,8,5,h-16);
+  g.fillStyle(0x30353b,1);g.fillRect(0,0,w,8);g.fillRect(0,0,8,h);g.fillRect(w-8,0,8,h);g.fillRect(0,h-8,w,8);
+  g.fillStyle(0x626a73,1);g.fillRect(8,8,w-16,5);g.fillRect(8,8,5,h-16);g.fillRect(w-13,8,5,h-16);
   g.fillStyle(0x15191d,.45);g.fillRect(13,13,w-26,4);
   this.world.add(g);
  }
 
  drawSign(x,y,text){
-  const shadow=this.add.rectangle(x+2,y+3,text.length*9+18,20,0x000000,.22).setDepth(9000);
-  const bg=this.add.rectangle(x,y,text.length*9+18,20,0x17191c,.96).setStrokeStyle(1,0x4c4f54).setDepth(9001);
+  const width=Math.max(48,text.length*9+18);
+  const shadow=this.add.rectangle(x+2,y+3,width,20,0x000000,.22).setDepth(9000);
+  const bg=this.add.rectangle(x,y,width,20,0x17191c,.96).setStrokeStyle(1,0x4c4f54).setDepth(9001);
   const t=this.add.text(x,y,text,{fontFamily:'sans-serif',fontSize:'10px',fontStyle:'bold',color:'#fff'}).setOrigin(.5).setDepth(9002);
   this.world.add([shadow,bg,t]);
  }
@@ -91,21 +89,15 @@ class MainScene extends Phaser.Scene{
   g.fillStyle(0xb77a48,1);g.fillRect(x,y+8,w,h-8);
   g.fillStyle(0xd49a62,1);g.fillRect(x,y,w,12);
   g.fillStyle(0x6d3f25,1);g.fillRect(x,y+h-8,w,8);
-  g.lineStyle(2,0x4b2f20,1);g.strokeRect(x,y,w,h);
-  this.world.add(g);
+  g.lineStyle(2,0x4b2f20,1);g.strokeRect(x,y,w,h);this.world.add(g);
   for(let i=0;i<3;i++){
    const sx=x+28+i*46;
    const mon=this.add.rectangle(sx,y+15,12,9,0x1f2e35).setStrokeStyle(1,0x101416).setDepth(y+h+5);
-   const base=this.add.rectangle(sx,y+22,8,2,0x202020).setDepth(y+h+5);
-   this.world.add([mon,base]);
+   const base=this.add.rectangle(sx,y+22,8,2,0x202020).setDepth(y+h+5);this.world.add([mon,base]);
   }
   const clerk=this.add.container(x+w/2,y+17).setDepth(y+h+10);
-  clerk.add([
-   this.add.circle(0,-7,5,0xe8bf99).setStrokeStyle(1,0x71523d),
-   this.add.rectangle(0,3,11,15,0x2b78ad).setStrokeStyle(1,0x163d59),
-   this.add.rectangle(0,0,7,4,0xffffff,.8)
-  ]);this.world.add(clerk);
-  this.drawSign(x+w/2,y-6,'カウンター');
+  clerk.add([this.add.circle(0,-7,5,0xe8bf99).setStrokeStyle(1,0x71523d),this.add.rectangle(0,3,11,15,0x2b78ad).setStrokeStyle(1,0x163d59),this.add.rectangle(0,0,7,4,0xffffff,.8)]);
+  this.world.add(clerk);this.drawSign(x+w/2,y-6,'カウンター');
   this.drawPlant(f.x-1,f.y+1);this.drawPlant(f.x+f.w,f.y+1);
  }
 
@@ -115,12 +107,10 @@ class MainScene extends Phaser.Scene{
   g.fillStyle(0x000000,.16);g.fillRect(x+5,y+7,w,h);
   g.fillStyle(0xf3eee4,1);g.fillRect(x,y,w,h);
   g.fillStyle(0xc9c2b5,1);g.fillRect(x,y,w,7);g.fillRect(x,y,7,h);g.fillRect(x+w-7,y,7,h);
-  g.lineStyle(2,0x777269,.9);g.strokeRect(x,y,w,h);
-  this.world.add(g);
+  g.lineStyle(2,0x777269,.9);g.strokeRect(x,y,w,h);this.world.add(g);
   const doorColor=f.type==='toiletM'?0x2e7ac4:f.type==='toiletF'?0xd65668:0x31463c;
   const door=this.add.rectangle(x+w/2,y+h-19,18,30,doorColor).setStrokeStyle(2,0x303030).setDepth(y+h+10);
-  const knob=this.add.circle(x+w/2+5,y+h-19,1.5,0xf5e7b1).setDepth(y+h+11);
-  this.world.add([door,knob]);
+  const knob=this.add.circle(x+w/2+5,y+h-19,1.5,0xf5e7b1).setDepth(y+h+11);this.world.add([door,knob]);
   this.drawSign(x+w/2,y+13,f.label);
  }
 
@@ -129,12 +119,8 @@ class MainScene extends Phaser.Scene{
   for(let i=0;i<2;i++){
    const x=px(f.x+i)+TILE/2,y=py(f.y)+TILE/2+8;
    const c=this.add.container(x,y).setDepth(y+30);
-   c.add([
-    this.add.rectangle(0,0,18,34,i===0?0x317ec3:0xc7473f).setStrokeStyle(1,0x202020),
-    this.add.rectangle(0,-6,12,11,0xe7f3ff).setStrokeStyle(1,0x33505f),
-    this.add.rectangle(0,9,10,4,0x1f2a30),
-    this.add.rectangle(5,-15,3,3,0xffffff,.8)
-   ]);this.world.add(c);
+   c.add([this.add.rectangle(0,0,18,34,i===0?0x317ec3:0xc7473f).setStrokeStyle(1,0x202020),this.add.rectangle(0,-6,12,11,0xe7f3ff).setStrokeStyle(1,0x33505f),this.add.rectangle(0,9,10,4,0x1f2a30),this.add.rectangle(5,-15,3,3,0xffffff,.8)]);
+   this.world.add(c);
   }
   this.drawSign(px(f.x+1),py(f.y)-5,'自販機');
  }
@@ -159,41 +145,70 @@ class MainScene extends Phaser.Scene{
  drawMachine(gx,gy,side,color){
   const x=px(gx),y=py(gy),cx=x+TILE/2;
   const machine=this.add.container(cx,y+TILE/2);
-  const shadow=this.add.ellipse(0,9,19,7,0x000000,.22);
-  const chairX=side==='L'?-12:12;
-  const chair=this.add.container(chairX,5);
-  chair.add([
-   this.add.ellipse(0,2,10,7,0x24282c).setStrokeStyle(1,0x111111),
-   this.add.rectangle(0,6,2,8,0x5b5b5b),
-   this.add.rectangle(0,10,8,2,0x3a3a3a)
-  ]);
-  const body=this.add.rectangle(0,-2,16,20,color).setStrokeStyle(1,0x202020);
-  const top=this.add.polygon(0,-14,[-8,4,0,0,8,4,0,8],Phaser.Display.Color.IntegerToColor(color).brighten(24).color,1).setStrokeStyle(1,0x202020);
-  const screen=this.add.rectangle(0,-6,10,6,0x89d7fb).setStrokeStyle(1,0x153b4a);
-  const reel=this.add.rectangle(0,1,11,6,0xf4f2e9).setStrokeStyle(1,0x5a5a5a);
-  const tray=this.add.rectangle(0,6,12,3,0x33363a);
-  const lamp=this.add.rectangle(0,-11,10,2,0xfff0aa,.85);
-  machine.add([shadow,chair,body,top,screen,reel,tray,lamp]);
+  const accent=Phaser.Display.Color.IntegerToColor(color).brighten(24).color;
+  const dark=Phaser.Display.Color.IntegerToColor(color).darken(32).color;
+  const chairX=side==='L'?-13:13;
+
+  const floorShadow=this.add.ellipse(side==='L'?-2:2,10,24,8,0x000000,.22);
+  const pedestal=this.add.rectangle(0,8,17,5,0x23262a).setStrokeStyle(1,0x111315);
+  const cabinet=this.add.rectangle(0,-2,18,22,dark).setStrokeStyle(1,0x141619);
+  const sideRail=this.add.rectangle(side==='L'?7:-7,-2,3,20,accent,.9);
+  const upper=this.add.rectangle(0,-9,15,7,color).setStrokeStyle(1,0x1e2124);
+  const topCap=this.add.polygon(0,-16,[-9,5,0,0,9,5,0,9],accent,1).setStrokeStyle(1,0x1d1f22);
+  const topLamp=this.add.rectangle(0,-12,11,2,0xffe98d,.95);
+  const screenFrame=this.add.rectangle(0,-5,12,7,0x15191d).setStrokeStyle(1,0x080a0b);
+  const screen=this.add.rectangle(0,-5,9,4,0x76d9ff).setStrokeStyle(1,0x285164);
+  const reelFrame=this.add.rectangle(0,1,13,7,0x2a2d31).setStrokeStyle(1,0x111315);
+  const reel=this.add.rectangle(0,1,10,5,0xf5f1df);
+  const reelLine1=this.add.rectangle(-3,1,1,5,0xb9b7ae,.8);
+  const reelLine2=this.add.rectangle(3,1,1,5,0xb9b7ae,.8);
+  const controls=this.add.rectangle(0,5,12,2,0x25292d);
+  const button1=this.add.circle(-3,5,1.2,0xff4f4f);
+  const button2=this.add.circle(0,5,1.2,0x58d16b);
+  const button3=this.add.circle(3,5,1.2,0x4d8dff);
+  const tray=this.add.rectangle(0,7,13,3,0x4a4e53).setStrokeStyle(1,0x1a1c1f);
+
+  const chair=this.add.container(chairX,6);
+  const chairShadow=this.add.ellipse(0,8,12,5,0x000000,.18);
+  const seat=this.add.ellipse(0,1,11,8,0x9c2f2f).setStrokeStyle(1,0x2b1717);
+  const back=this.add.rectangle(side==='L'?-2:2,-3,8,7,0xb13b3b).setStrokeStyle(1,0x321919);
+  const stem=this.add.rectangle(0,6,2,8,0x696c70);
+  const foot=this.add.rectangle(0,10,9,2,0x34373a);
+  chair.add([chairShadow,stem,foot,back,seat]);
+
+  machine.add([floorShadow,pedestal,cabinet,sideRail,upper,topCap,topLamp,screenFrame,screen,reelFrame,reel,reelLine1,reelLine2,controls,button1,button2,button3,tray,chair]);
   machine.setDepth(y+TILE);this.world.add(machine);return machine;
  }
 
  drawIslandSpine(island){
-  const x=px(island.x+2)-6,y=py(island.y)-3,h=15*TILE+6;
+  const x=px(island.x+2)-8,y=py(island.y)-4,h=15*TILE+8;
   const g=this.add.graphics();
-  g.fillStyle(0x000000,.17);g.fillRect(x+4,y+4,18,h);
-  g.fillStyle(0x2d3136,1);g.fillRect(x,y,18,h);
-  g.fillStyle(0x454a50,1);g.fillRect(x+3,y,12,h);
-  g.fillStyle(0x1b1e21,.55);g.fillRect(x+13,y,3,h);
+  g.fillStyle(0x000000,.18);g.fillRect(x+5,y+5,22,h);
+  g.fillStyle(0x24282d,1);g.fillRect(x,y,22,h);
+  g.fillStyle(0x40464d,1);g.fillRect(x+3,y,15,h);
+  g.fillStyle(0x555c64,.75);g.fillRect(x+4,y+2,11,h-4);
+  g.fillStyle(0x15181b,.75);g.fillRect(x+17,y,3,h);
+  g.lineStyle(1,0x181b1e,1);g.strokeRect(x,y,22,h);
   this.world.add(g);
+ }
+
+ drawIslandEndCap(island,atBottom=false){
+  const gy=atBottom?island.y+14:island.y;
+  const x=px(island.x+2)+TILE/2,y=py(gy)+(atBottom?TILE+5:-5);
+  const c=this.add.container(x,y).setDepth(y+50);
+  const shadow=this.add.ellipse(0,5,30,8,0x000000,.15);
+  const base=this.add.rectangle(0,0,28,9,0x34393f).setStrokeStyle(1,0x1c1f22);
+  const face=this.add.rectangle(0,-4,22,8,0x515861).setStrokeStyle(1,0x24272a);
+  c.add([shadow,base,face]);this.world.add(c);
  }
 
  drawIslands(){
   const machines=[];
   islands.forEach((island,idx)=>{
    this.drawIslandSpine(island);
-   this.drawSign(px(island.x+2),py(island.y)-16,`島0${idx+1}`);
-   this.drawPlant(island.x+2,island.y-1);
-   this.drawPlant(island.x+2,island.y+15);
+   this.drawIslandEndCap(island,false);this.drawIslandEndCap(island,true);
+   this.drawSign(px(island.x+2)+TILE/2,py(island.y)-18,`島0${idx+1}`);
+   this.drawPlant(island.x+2,island.y-1);this.drawPlant(island.x+2,island.y+15);
    for(let side=0;side<2;side++)for(let n=0;n<15;n++){
     const gx=island.x+side*4,gy=island.y+n;
     const color=n%3===0?0xe84343:n%3===1?0x3478d4:0xd33bb0;
@@ -233,8 +248,9 @@ class MainScene extends Phaser.Scene{
   }
   for(const i of islands){
    const inY=gy>=i.y&&gy<i.y+15;
-   const onLeft=gx===i.x,onRight=gx===i.x+4,onSpine=gx===i.x+2;
-   if(inY&&(onLeft||onRight||onSpine))return true;
+   const onLeft=gx===i.x;
+   const onRight=gx===i.x+4;
+   if(inY&&(onLeft||onRight))return true;
   }
   return false;
  }
@@ -242,7 +258,8 @@ class MainScene extends Phaser.Scene{
  moveGrid(dx,dy){
   const nx=this.playerGrid.x+dx,ny=this.playerGrid.y+dy;
   if(this.isBlocked(nx,ny))return;
-  this.playerGrid={x:nx,y:ny};this.playerAnchor.setDepth(py(ny)+TILE+100);
+  this.playerGrid={x:nx,y:ny};
+  this.playerAnchor.setDepth(py(ny)+TILE+100);
   this.tweens.add({targets:this.playerAnchor,x:px(nx)+TILE/2,y:py(ny)+TILE/2,duration:90,ease:'Linear'});
  }
 
