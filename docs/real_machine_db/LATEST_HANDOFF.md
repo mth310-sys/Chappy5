@@ -1,39 +1,39 @@
 更新日: 2026-09-09
 
 ## 現在地点
-- recordCount: **1062**
-- latestRecordAdded: **ドキドキマンゴー-30**（パイオニア）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2017-04-03_dokidoki-mango-30.md`
+- recordCount: **1063**
+- latestRecordAdded: **ドキドキマンゴー-25**（パイオニア）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2017-04-03_dokidoki-mango-25.md`
 - chronologicalFrontier: **2017-04-03**
-- frontierLatestMachine: **ドキドキマンゴー-30 — No.1062**
+- frontierLatestMachine: **ドキドキマンゴー-25 — No.1063**
 - schema: **resetBehavior v0.7**
 - status: **2017-04-03_GROUP_OPEN**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、No.1061実レコードを取得して開始。
+- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、No.1062実レコードを取得して開始。
 - INDEX本文は初期19件時点の旧スナップショットのため、README規定どおり最新handoffと実レコードを直近進捗正本として採用。
-- 開始時mainは **1061件 / chronologicalFrontier 2017-03-21 / 2017-03-21_GROUP_OPEN**。次候補は「ドキドキマンゴー」。
-- ドキドキマンゴーの日付を公式・当時業界・K-Navi/P-WORLD等で再検証した結果、当時展示会には「30パイは2017-03-21から導入予定」という記載がある一方、パイオニア公式更新履歴は **2017-04-03『ドキドキマンゴー/ドキドキマンゴー-30 全国稼働開始』** と明記。K-Naviも30φのホール導入開始を2017-04-03とする。
-- 本DBの時系列本線は全国導入をcanonicalとするため、3/21を地域先行/予定情報として分離し、No.1062は **2017-04-03** に登録した。
-- 3/21同日群を再監査。登録済みのアナザーゴッドポセイドン-海皇の参戦-、パチスロ攻殻機動隊S.A.C. 2nd GIG、防空少女ラブキューレ以外に全国導入本線へ固定できる未登録機を今回確認できなかったため **2017-03-21_GROUP_CLOSED_FOR_CURRENT_RESEARCH**。
-- 2017-03-22〜2017-04-02の境界も日付検索・当時新台資料で再監査し、新たな全国導入本線を固定できなかったため **BOUNDARY_CLOSED_FOR_CURRENT_RESEARCH**。次の明確な全国導入群は2017-04-03。
+- 開始時mainは **1062件 / chronologicalFrontier 2017-04-03 / 2017-04-03_GROUP_OPEN**。次候補は「ドキドキマンゴー-25」。
+- No.1063として **ドキドキマンゴー-25** を登録。
+- K-NaviとP-WORLDで2017-04-03導入、25φ独立仕様、設定別BIG/MID/REG/合算、機械割、基本獲得枚数を照合。
+- 25φと30φは機械割系列は同じだがボーナス確率が異なるため別レコードを維持。
+- 25φ固有の50枚ベースは検索語・資料系統を変えて再探索したが直接固定できず、30φの約35Gを流用せず `UNVERIFIED_AFTER_RESEARCH`。
+- 設定変更/据え置き/純電源OFF→ONについては、通常ゲーム数天井・周期・AT/ART/CZ・ゲーム数モードが非搭載のため該当項目を `NOT_APPLICABLE`。設定変更専用の朝一高確、短縮天井、専用モード、初当り優遇、確定的ガックン/初期出目/ランプ判別は `NONE_CONFIRMED_AFTER_RESEARCH`。
 
-## No.1062 — ドキドキマンゴー-30
+## No.1063 — ドキドキマンゴー-25
 - manufacturer: **パイオニア**
-- releaseDate: **2017-04-03**（メーカー公式全国稼働開始）
-- regional/advance note: **2017-03-21 30φ先行/予定情報あり**
+- releaseDate: **2017-04-03**
 - formalModelName: **UNVERIFIED_AFTER_RESEARCH**
 - certificationNumber: **UNVERIFIED_AFTER_RESEARCH**
-- generation/system: **5号機 / ノーマルA / 完全告知 / 30φ / BIG+MID+REG**
-- recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7**
+- generation/system: **5号機 / ノーマルA / 完全告知 / 25φ / BIG+MID+REG**
+- recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7_BASE_UNVERIFIED**
 
 ### performanceCore
 - 機械割: **98 / 99 / 100 / 103 / 106 / 110%**。
-- BIG: **1/278 / 275 / 270 / 259 / 245 / 232**。
-- MID: **1/1260 / 1129 / 1057 / 923 / 809 / 762**。
-- REG: **1/840 / 840 / 829 / 809 / 799 / 753**。
-- ボーナス合算: **1/179 / 175 / 171 / 161 / 152 / 144**。
-- 50枚ベース: **約35G/50枚**。
+- BIG: **1/286 / 282 / 277 / 264 / 250 / 239**。
+- MID: **1/1213 / 1170 / 1110 / 993 / 862 / 789**。
+- REG: **1/712 / 704 / 704 / 697 / 697 / 689**。
+- ボーナス合算: **1/174 / 172 / 168 / 160 / 151 / 144**。
+- 50枚ベース: **UNVERIFIED_AFTER_RESEARCH**。
 - BIG最大300枚 / MID最大200枚 / REG最大100枚。
 - ノーマルタイプのためAT/ART純増は `NOT_APPLICABLE`。
 
@@ -45,19 +45,33 @@
 - 本機固有の確定的ガックン・初期出目・ハイビスカス/ランプ判別: `NONE_CONFIRMED_AFTER_RESEARCH`。
 
 ### dataQuality / conflicts
-- `RELEASE_DATE_SCOPE_DIFFERENCE`: 2017-03-21（30φ地域先行/予定） vs 2017-04-03（メーカー公式全国稼働開始）。平均・混同せず定義差を保持し、全国時系列canonical=2017-04-03。
-- 30φと25φはボーナス確率が異なるため独立レコード対象。
+- 25φと30φはボーナス確率が異なるため独立レコード。
+- 25φ固有のbaseGamesPer50は再探索後も直接値を固定できず `UNVERIFIED_AFTER_RESEARCH`。
 - formalModelName / certificationNumber は表記揺れ・メーカー・型式・検定番号等を変えて再探索後も今回直接固定できず `UNVERIFIED_AFTER_RESEARCH`。
 
 ## 2017-04-03群監査
 - status: **OPEN**。
 - 登録済み:
   1. **ドキドキマンゴー-30 — No.1062**。
-- 未処理候補:
-  1. **ドキドキマンゴー-25** — パイオニア。K-Navi/P-WORLDとも2017-04-03。30φとスペック差があるため独立レコード候補。
-  2. **パチスロ 機動戦士Zガンダム** — Bisty。HAZUSEで2017-04-03、型式 `パチスロ機動戦士ZガンダムS`、検定6S1412を確認済み。
-  3. **恵比寿マスカッツ** — ニューギン。複数解析で2017-04-03導入を確認。
+  2. **ドキドキマンゴー-25 — No.1063**。
+- 次未処理候補:
+  1. **パチスロ 機動戦士Zガンダム** — Bisty。HAZUSEで2017-04-03、型式 `パチスロ機動戦士ZガンダムS`、検定 `6S1412` を確認済み。SANKYO公式オンライン博物館も2017.04導入、ART初期40G以上・純増約1.7枚/Gを確認。
+  2. **恵比寿マスカッツ** — ニューギン。複数解析で2017-04-03導入を確認済み。
 - 4/3群には他機種もあり得るため、上記処理後に全メーカー横断監査してCLOSED可否を判定する。
+
+## 次候補事前調査 — パチスロ 機動戦士Zガンダム
+- releaseDate: **2017-04-03**。
+- formalModelName: **パチスロ機動戦士ZガンダムS**。
+- certificationNumber: **6S1412**。
+- system: **A+ART**。
+- payoutRateBySetting: **96.9 / 99.8 / 102.2 / 105.7 / 108.4 / 111.0%** を複数解析で一致確認。
+- BB: **1/595.8 全設定共通**。CB: **1/182.6 → 1/165.9**。ボーナス合算 **1/139.7 → 1/129.8**。ART初当たり **1/429.7 → 1/297.9**。
+- baseGamesPer50: 設定別 **33.3 / 33.4 / 33.6 / 33.9 / 34.2 / 34.6G**、概算約33G。
+- ART: **純増約1.3枚/G、ボーナス込み約1.7枚/G、初回40G以上**。
+- BB/CB基本獲得: **約56枚**。
+- 天井: **通常時777G消化以降のボーナスでART濃厚**、および **ART非当選ボーナス9回連続後の10回目ボーナスでART濃厚**。BB非当選はスルー2回、CB非当選は1回としてカウント。
+- resetBehavior: 一撃で **設定変更時 天井ゲーム数RESET / 電源OFF→ON 天井ゲーム数CARRYOVER** を直接確認。モード・状態・液晶ステージは当時ページ上 `現在調査中`。
+- 別当時解析にはリセット時内部状態再抽選、電源OFF→ON内部状態引継ぎ、ステージ「フォウ・ブラウン」記載があるため、次回は資料定義を精査し、競合/補完可否を判定する。
 
 ## 遡及 resetBehavior QA
 - retroQaScanConfirmedThrough: **2006-04_rock-you-queen-3.md**。
@@ -66,26 +80,28 @@
 - 今回は時系列本線を優先し、遡及QAカーソルは変更していない。
 
 ## 次回再開地点
-1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1062を再取得。
-2. **1062件 / chronologicalFrontier 2017-04-03 / 4/3群OPEN** を正本として継続。
-3. 次の未処理候補 **「ドキドキマンゴー-25」** をNo.1063候補として性能コア＋resetBehavior v0.7で処理。
-4. 続いて **パチスロ 機動戦士Zガンダム → 恵比寿マスカッツ** を候補順に処理し、4/3同日全メーカー監査を実施。
+1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1063を再取得。
+2. **1063件 / chronologicalFrontier 2017-04-03 / 4/3群OPEN** を正本として継続。
+3. 次の未処理候補 **「パチスロ 機動戦士Zガンダム」** をNo.1064候補として性能コア＋resetBehavior v0.7で処理。
+4. 続いて **恵比寿マスカッツ** を処理し、4/3同日全メーカー監査を実施。
 5. 遡及QAは `2006-05_gold-shio-30.md` から継続。
 
 ## 主要出典 — 取得日 2026-09-09
-### No.1062 ドキドキマンゴー-30
-- パイオニア更新履歴（2017-04-03 全国稼働開始）: https://www.slot-pioneer.co.jp/news.html
-- パイオニア「ドキドキマンゴー-30 発売のお知らせ」: https://www.slot-pioneer.co.jp/information/dokidoki_mango_30.html
-- パチビー展示会記事（4/3予定、30φ3/21予定注記）: https://www.pachibee.jp/pparticles/view/924
-- K-Navi ドキドキマンゴー30: https://p-kn.com/slot/2731/
-- P-WORLD ドキドキマンゴー-30: https://www.p-world.co.jp/machine/database/8302
-- スロスター当時記事（30φ約35G/50枚、4月上旬/沖縄3月下旬）: https://ameblo.jp/slostar/
-- パチ7回顧/当時記事: https://pachiseven.jp/articles/detail/3333
-
-### 次候補 / 4/3群監査
+### No.1063 ドキドキマンゴー-25
+- パイオニア更新履歴: https://www.slot-pioneer.co.jp/news.html
 - K-Navi ドキドキマンゴー25: https://p-kn.com/slot/2730/
 - P-WORLD ドキドキマンゴー-25: https://www.p-world.co.jp/machine/database/8301
-- HAZUSE 機動戦士Zガンダム: https://hazuse.com/machine/pachislot/6S1412/
+- スロパチまとめ ドキドキマンゴー: https://slotblogpachinkoblog.com/dokidokimango/
+
+### 次候補 — パチスロ 機動戦士Zガンダム
+- SANKYOオンライン博物館: https://www.sankyo-fever.jp/collection/886/
+- HAZUSE: https://hazuse.com/machine/pachislot/6S1412/
+- 一撃 天井/設定変更: https://1geki.jp/slot/s_zgundam/3/
+- 一撃 ART概要: https://1geki.jp/slot/s_zgundam/81/
+- ちょんぼりすた: https://chonborista.com/slot/bisty-slot/32863/
+- 当時解析まとめ: https://pachislo-data.com/bisty/34910
+
+### 4/3群残候補
 - ちょんぼりすた 恵比寿マスカッツ: https://chonborista.com/slot/newgin-slot/34518/
 
 ### 遡及QA 次カーソル
