@@ -1,70 +1,63 @@
 更新日: 2026-09-09
 
 ## 現在地点
-- recordCount: **1061**
-- latestRecordAdded: **防空少女ラブキューレ**（KPE / Konami Amusement）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2017-03-21_love-kyure.md`
-- chronologicalFrontier: **2017-03-21**
-- frontierLatestMachine: **防空少女ラブキューレ — No.1061**
+- recordCount: **1062**
+- latestRecordAdded: **ドキドキマンゴー-30**（パイオニア）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2017-04-03_dokidoki-mango-30.md`
+- chronologicalFrontier: **2017-04-03**
+- frontierLatestMachine: **ドキドキマンゴー-30 — No.1062**
 - schema: **resetBehavior v0.7**
-- status: **2017-03-21_GROUP_OPEN**
+- status: **2017-04-03_GROUP_OPEN**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、No.1060実レコードを取得して開始。
+- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、No.1061実レコードを取得して開始。
 - INDEX本文は初期19件時点の旧スナップショットのため、README規定どおり最新handoffと実レコードを直近進捗正本として採用。
-- 開始時mainは **1060件 / chronologicalFrontier 2017-03-21 / 2017-03-21_GROUP_OPEN**。
-- 前handoffの次候補 **「防空少女ラブキューレ」** を調査。並行リレーによりNo.1061実レコードがmainへ先に出現したため重複作成を中止し、実レコードを取得して独立QAした。
-- 公式アーカイブ、HAZUSE、K-Navi、パチビー、一撃、P-WORLD、当時/後年解析を横断。2017-03-21導入、型式 `ラブキューレ／KY`、検定番号 `6S1317` を固定。
-- 性能コアの精密値を再照合し、設定1 ART初当りに HAZUSE `1/365.3` vs pachislo-data `1/363.5` の競合を発見。平均せず `CONFLICT_ART_INITIAL_SETTING1` としてNo.1061へ反映。
-- resetBehaviorは当時一撃が設定変更/純電源OFF→ONの天井・状態・液晶ステージをすべて「調査中」としており、初代2017年機について後発高信頼の確定契約を固定できなかった。後継スマスロ「ラブキューレ2」のリセット仕様は混入していない。
-- 個人実戦記事の朝一エネルギーメーターによる変更推測は `LOW_CONFIDENCE_EXPERIMENTAL_CLUE` として隔離し、確定判別扱いしていない。
+- 開始時mainは **1061件 / chronologicalFrontier 2017-03-21 / 2017-03-21_GROUP_OPEN**。次候補は「ドキドキマンゴー」。
+- ドキドキマンゴーの日付を公式・当時業界・K-Navi/P-WORLD等で再検証した結果、当時展示会には「30パイは2017-03-21から導入予定」という記載がある一方、パイオニア公式更新履歴は **2017-04-03『ドキドキマンゴー/ドキドキマンゴー-30 全国稼働開始』** と明記。K-Naviも30φのホール導入開始を2017-04-03とする。
+- 本DBの時系列本線は全国導入をcanonicalとするため、3/21を地域先行/予定情報として分離し、No.1062は **2017-04-03** に登録した。
+- 3/21同日群を再監査。登録済みのアナザーゴッドポセイドン-海皇の参戦-、パチスロ攻殻機動隊S.A.C. 2nd GIG、防空少女ラブキューレ以外に全国導入本線へ固定できる未登録機を今回確認できなかったため **2017-03-21_GROUP_CLOSED_FOR_CURRENT_RESEARCH**。
+- 2017-03-22〜2017-04-02の境界も日付検索・当時新台資料で再監査し、新たな全国導入本線を固定できなかったため **BOUNDARY_CLOSED_FOR_CURRENT_RESEARCH**。次の明確な全国導入群は2017-04-03。
 
-## No.1061 — 防空少女ラブキューレ
-- manufacturer: **KPE / Konami Amusement**
-- releaseDate: **2017-03-21**
-- formalModelName: **ラブキューレ／KY**
-- certificationNumber: **6S1317**
-- generation/system: **5号機 / 5.5号機期 / A+ART / CZ**
-- recordStatus: **COMPLETE_CORE_WITH_PARTIAL_RESET_BEHAVIOR_V0_7**
+## No.1062 — ドキドキマンゴー-30
+- manufacturer: **パイオニア**
+- releaseDate: **2017-04-03**（メーカー公式全国稼働開始）
+- regional/advance note: **2017-03-21 30φ先行/予定情報あり**
+- formalModelName: **UNVERIFIED_AFTER_RESEARCH**
+- certificationNumber: **UNVERIFIED_AFTER_RESEARCH**
+- generation/system: **5号機 / ノーマルA / 完全告知 / 30φ / BIG+MID+REG**
+- recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7**
 
 ### performanceCore
-- 機械割: **97.2 / 98.5 / 101.7 / 104.2 / 107.8 / 113.5%**。
-- BIG BONUS EX: **全設定1/2048.0**。
-- BIG: **1/329.3 / 316.6 / 309.1 / 304.8 / 291.3 / 276.5**。
-- REG: **1/668.7 / 668.7 / 642.5 / 601.2 / 601.2 / 555.4**。
-- ボーナス合算: **1/199.2 / 194.4 / 189.4 / 184.1 / 179.1 / 169.3**。
-- ART初当り: 設定1 **CONFLICT 1/365.3 vs 1/363.5**、設定2～6 **1/307.1 / 339.3 / 282.7 / 307.3 / 240.4**。
-- 50枚ベース: **約31G/50枚**。
-- ART「絶対空域」単体純増: **約1.0枚/G**、ボーナス込み約**1.9枚/G**。
-- BIG/BIG EX: **純増200枚**、REG系: **約50枚**。
-- 通常天井: **ボーナス間777Gで成功確定CZ→実質ART確定**。
+- 機械割: **98 / 99 / 100 / 103 / 106 / 110%**。
+- BIG: **1/278 / 275 / 270 / 259 / 245 / 232**。
+- MID: **1/1260 / 1129 / 1057 / 923 / 809 / 762**。
+- REG: **1/840 / 840 / 829 / 809 / 799 / 753**。
+- ボーナス合算: **1/179 / 175 / 171 / 161 / 152 / 144**。
+- 50枚ベース: **約35G/50枚**。
+- BIG最大300枚 / MID最大200枚 / REG最大100枚。
+- ノーマルタイプのためAT/ART純増は `NOT_APPLICABLE`。
 
 ### resetBehavior v0.7
-- 設定変更時の天井RESET/CARRYOVER: `UNVERIFIED_AFTER_RESEARCH`。
-- 据え置き時の天井進捗/内部状態: `UNVERIFIED_AFTER_RESEARCH`。
-- 純電源OFF→ONの天井/状態/液晶: `UNVERIFIED_AFTER_RESEARCH`。当時一撃も全項目「調査中」。
-- 設定変更専用の短縮天井/朝一モード/高確保証/初当り優遇: `NONE_CONFIRMED_AFTER_RESEARCH`。
+- ゲーム数天井・周期天井・AT/ART/CZ・ゲーム数モード: `NOT_APPLICABLE`。
+- 設定変更専用の短縮天井・朝一高確・専用モード・初当り優遇: `NONE_CONFIRMED_AFTER_RESEARCH`。
+- 据え置き/純電源OFF→ONで客側朝一行動を変える公開天井・状態契約: `NOT_APPLICABLE / NONE_CONFIRMED_AFTER_RESEARCH`。
 - 有利区間: `NOT_APPLICABLE_5TH_GEN_PRE_5_9`。
-- 確定的なガックン/ランプ/初期出目判別: `NONE_CONFIRMED_AFTER_RESEARCH`。
-- 朝一最初のチャンスリプレイ後のエネルギーメーターを使う変更推測は2017-03-24個人実戦記事由来のため `LOW_CONFIDENCE_EXPERIMENTAL_CLUE`。
+- 本機固有の確定的ガックン・初期出目・ハイビスカス/ランプ判別: `NONE_CONFIRMED_AFTER_RESEARCH`。
 
 ### dataQuality / conflicts
-- コナミ公式: 2017年3月稼働、5号機A+ART。
-- exact date 2017-03-21はHAZUSE/K-Navi/パチビー/複数解析で一致。
-- 型式・検定番号はHAZUSEで直接確認。
-- material conflict: **設定1 ART初当り 1/365.3 vs 1/363.5**。平均せず両値保持。
-- resetBehaviorの欠損は一度の検索失敗ではなく、表記揺れ・型式・メーカー・設定変更/リセット/朝一/据え置き/電源OFF ON/天井/ガックン等を変えて公式・解析・古い記事・後年整理を横断した後の `UNVERIFIED_AFTER_RESEARCH`。
+- `RELEASE_DATE_SCOPE_DIFFERENCE`: 2017-03-21（30φ地域先行/予定） vs 2017-04-03（メーカー公式全国稼働開始）。平均・混同せず定義差を保持し、全国時系列canonical=2017-04-03。
+- 30φと25φはボーナス確率が異なるため独立レコード対象。
+- formalModelName / certificationNumber は表記揺れ・メーカー・型式・検定番号等を変えて再探索後も今回直接固定できず `UNVERIFIED_AFTER_RESEARCH`。
 
-## 2017-03-21群監査
+## 2017-04-03群監査
 - status: **OPEN**。
 - 登録済み:
-  - アナザーゴッドポセイドン-海皇の参戦- — No.1059。
-  - パチスロ攻殻機動隊S.A.C. 2nd GIG — No.1060。
-  - 防空少女ラブキューレ — No.1061。
-- 前handoffから残る未処理候補:
-  1. **ドキドキマンゴー**
-- 次回は **ドキドキマンゴー** をNo.1062候補として個別公式/業界/当時解析で導入日・型式・性能コア・resetBehavior v0.7を再固定する。
-- その後2017-03-21群を全メーカー横断監査してCLOSED可否を判定する。
+  1. **ドキドキマンゴー-30 — No.1062**。
+- 未処理候補:
+  1. **ドキドキマンゴー-25** — パイオニア。K-Navi/P-WORLDとも2017-04-03。30φとスペック差があるため独立レコード候補。
+  2. **パチスロ 機動戦士Zガンダム** — Bisty。HAZUSEで2017-04-03、型式 `パチスロ機動戦士ZガンダムS`、検定6S1412を確認済み。
+  3. **恵比寿マスカッツ** — ニューギン。複数解析で2017-04-03導入を確認。
+- 4/3群には他機種もあり得るため、上記処理後に全メーカー横断監査してCLOSED可否を判定する。
 
 ## 遡及 resetBehavior QA
 - retroQaScanConfirmedThrough: **2006-04_rock-you-queen-3.md**。
@@ -73,27 +66,27 @@
 - 今回は時系列本線を優先し、遡及QAカーソルは変更していない。
 
 ## 次回再開地点
-1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1061を再取得。
-2. **1061件 / chronologicalFrontier 2017-03-21 / 3/21群OPEN** を正本として継続。
-3. 次の未処理候補 **「ドキドキマンゴー」** をNo.1062候補として性能コア＋resetBehavior v0.7で処理。
-4. 3/21群の全メーカー横断監査後にCLOSED可否を判定。
+1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1062を再取得。
+2. **1062件 / chronologicalFrontier 2017-04-03 / 4/3群OPEN** を正本として継続。
+3. 次の未処理候補 **「ドキドキマンゴー-25」** をNo.1063候補として性能コア＋resetBehavior v0.7で処理。
+4. 続いて **パチスロ 機動戦士Zガンダム → 恵比寿マスカッツ** を候補順に処理し、4/3同日全メーカー監査を実施。
 5. 遡及QAは `2006-05_gold-shio-30.md` から継続。
 
 ## 主要出典 — 取得日 2026-09-09
-### No.1061 防空少女ラブキューレ
-- コナミアミューズメント機種アーカイブ: https://www.konami.com/amusement/psm/archive/ps/2017/lovekyure/index.html
-- HAZUSE 機種概要・型式・検定番号: https://hazuse.com/machine/pachislot/6S1317/genre/209/
-- HAZUSE 基本スペック・確率・機械割・配当: https://hazuse.com/machine/pachislot/6S1317/genre/201/
-- 一撃 天井/設定変更/電源OFF ON: https://1geki.jp/slot/s_lovekyure/3/
-- pachislo-data: https://pachislo-data.com/kpe/33356
-- K-Navi: https://p-kn.com/slot/2711/
-- パチビー: https://www.pachibee.jp/machines/lecture/217020005
-- P-WORLD: https://www.p-world.co.jp/machine/database/8274
-- みんスロ: https://minslo.com/%E9%98%B2%E7%A9%BA%E5%B0%91%E5%A5%B3%E3%83%A9%E3%83%96%E3%82%AD%E3%83%A5%E3%83%BC%E3%83%AC/
-- 2017-03-24個人実戦記事（LOW_CONFIDENCE_EXPERIMENTAL）: https://episode.doorblog.jp/archives/50920201.html
+### No.1062 ドキドキマンゴー-30
+- パイオニア更新履歴（2017-04-03 全国稼働開始）: https://www.slot-pioneer.co.jp/news.html
+- パイオニア「ドキドキマンゴー-30 発売のお知らせ」: https://www.slot-pioneer.co.jp/information/dokidoki_mango_30.html
+- パチビー展示会記事（4/3予定、30φ3/21予定注記）: https://www.pachibee.jp/pparticles/view/924
+- K-Navi ドキドキマンゴー30: https://p-kn.com/slot/2731/
+- P-WORLD ドキドキマンゴー-30: https://www.p-world.co.jp/machine/database/8302
+- スロスター当時記事（30φ約35G/50枚、4月上旬/沖縄3月下旬）: https://ameblo.jp/slostar/
+- パチ7回顧/当時記事: https://pachiseven.jp/articles/detail/3333
 
-### 次候補 / 3/21群監査
-- 次候補: **ドキドキマンゴー**。
+### 次候補 / 4/3群監査
+- K-Navi ドキドキマンゴー25: https://p-kn.com/slot/2730/
+- P-WORLD ドキドキマンゴー-25: https://www.p-world.co.jp/machine/database/8301
+- HAZUSE 機動戦士Zガンダム: https://hazuse.com/machine/pachislot/6S1412/
+- ちょんぼりすた 恵比寿マスカッツ: https://chonborista.com/slot/newgin-slot/34518/
 
 ### 遡及QA 次カーソル
 - `docs/real_machine_db/machines/2006-05_gold-shio-30.md`
