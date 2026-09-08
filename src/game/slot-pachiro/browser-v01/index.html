@@ -7,7 +7,7 @@
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
   <title>パチ朗 - 店舗基盤 v0.1</title>
-  <link rel="stylesheet" href="./style.css?v=20260909-reel1" />
+  <link rel="stylesheet" href="./style.css?v=20260909-pekachu1" />
 </head>
 <body>
   <main id="app">
@@ -27,6 +27,7 @@
     <button id="action-button" class="action-button" aria-label="決定">決定</button>
     <section id="reel-panel" class="reel-panel" hidden aria-label="遊技パネル">
       <div id="reel-machine-name" class="reel-machine-name">---</div>
+      <button id="launch-pekachu" class="launch-machine-button" type="button">⚡ ペカチュウで遊技</button>
       <div class="reels" aria-label="リール">
         <div id="reel-0" class="reel">7</div>
         <div id="reel-1" class="reel">BAR</div>
@@ -39,8 +40,51 @@
         <button class="stop-button" data-reel="2" aria-label="右リール停止">STOP</button>
       </div>
     </section>
+
+    <section id="machine-launcher" class="machine-launcher" hidden aria-label="ペカチュウ遊技画面">
+      <div class="machine-launcher-bar">
+        <div id="machine-launcher-title" class="machine-launcher-title">ペカチュウ</div>
+        <button id="close-machine-launcher" class="close-machine-launcher" type="button">ホールへ戻る</button>
+      </div>
+      <iframe id="machine-frame" class="machine-frame" title="ペカチュウ Ver.0.6.2" loading="lazy"></iframe>
+    </section>
   </main>
   <script src="https://cdn.jsdelivr.net/npm/phaser@3.90.0/dist/phaser.min.js"></script>
   <script type="module" src="./main.js?v=20260909-reel1"></script>
+  <script>
+    (()=>{
+      const launcher=document.getElementById('machine-launcher');
+      const frame=document.getElementById('machine-frame');
+      const openBtn=document.getElementById('launch-pekachu');
+      const closeBtn=document.getElementById('close-machine-launcher');
+      const title=document.getElementById('machine-launcher-title');
+      const machineName=document.getElementById('reel-machine-name');
+      const machineUrl='../machines/pekachu/index.html';
+
+      const getMachineId=()=>{
+        const text=(machineName?.textContent||'').trim();
+        return text.split(' / ')[0]||'UNKNOWN';
+      };
+
+      const openMachine=()=>{
+        const machineId=getMachineId();
+        title.textContent=`${machineId} / ペカチュウ Ver.0.6.2`;
+        frame.src=`${machineUrl}?from=pachiro&machine=${encodeURIComponent(machineId)}&t=${Date.now()}`;
+        launcher.hidden=false;
+        document.body.classList.add('machine-open');
+      };
+
+      const closeMachine=()=>{
+        launcher.hidden=true;
+        frame.src='about:blank';
+        document.body.classList.remove('machine-open');
+      };
+
+      openBtn?.addEventListener('pointerdown',e=>{e.preventDefault();openMachine()});
+      closeBtn?.addEventListener('pointerdown',e=>{e.preventDefault();closeMachine()});
+      document.addEventListener('contextmenu',e=>{if(e.target.closest('.machine-launcher,.launch-machine-button'))e.preventDefault()});
+      document.addEventListener('selectstart',e=>{if(e.target.closest('.machine-launcher,.launch-machine-button'))e.preventDefault()});
+    })();
+  </script>
 </body>
 </html>
