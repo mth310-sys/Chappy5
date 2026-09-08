@@ -60,14 +60,83 @@
       const title=document.getElementById('machine-launcher-title');
       const machineName=document.getElementById('reel-machine-name');
       const machineUrl='../machines/pekachu/index.html';
+      let session=null;
 
+      const getScene=()=>window.Phaser?.GAMES?.[0]?.scene?.getScene('main')||null;
       const getMachineId=()=>{
         const text=(machineName?.textContent||'').trim();
         return text.split(' / ')[0]||'UNKNOWN';
       };
+      const readCredit=()=>{
+        const n=Number(frame.contentDocument?.getElementById('credit')?.textContent);
+        return Number.isFinite(n)?n:null;
+      };
+      const readMessage=()=>frame.contentDocument?.getElementById('msg')?.textContent?.trim()||'';
+      const classifyBonus=text=>/SUPER BIG|BIG BONUS|雷BONUS/.test(text);
+
+      const finalizeSpin=()=>{
+        if(!session?.spinActive)return;
+        const doc=frame.contentDocument;
+        if(!doc)return;
+        const stops=[...doc.querySelectorAll('.stop')];
+        if(stops.length!==3||stops.some(b=>!b.disabled))return;
+        session.spinActive=false;
+        session.games+=1;
+        const result=readMessage();
+        if(classifyBonus(result))session.bonuses+=1;
+        session.lastResult=result||'遊技終了';
+      };
+
+      const bindPekachu=()=>{
+        if(!session)return;
+        const doc=frame.contentDocument;
+        const win=frame.contentWindow;
+        const scene=getScene();
+        if(!doc||!win||!scene)return;
+
+        const hallCredit=Math.max(0,Number(scene.playerMedals)||0);
+        session.hallCreditBefore=hallCredit;
+        session.syncedCredit=false;
+        try{
+          win.eval(`credit=${hallCredit};bet=0;pay=0;update();`);
+          session.syncedCredit=readCredit()===hallCredit;
+        }catch(_){session.syncedCredit=false}
+        session.baseCredit=readCredit()??50;
+
+        const startBtn=doc.getElementById('startBtn');
+        const stopBtns=[...doc.querySelectorAll('.stop')];
+        startBtn?.addEventListener('click',()=>setTimeout(()=>{
+          if(stopBtns.some(b=>!b.disabled))session.spinActive=true;
+        },0));
+        stopBtns.forEach(btn=>btn.addEventListener('click',()=>setTimeout(()=>{
+          if(stopBtns.every(b=>b.disabled))setTimeout(finalizeSpin,1050);
+        },0)));
+      };
+
+      const applySession=()=>{
+        if(!session||session.applied)return;
+        finalizeSpin();
+        const scene=getScene();
+        const machine=scene?.seatedMachine;
+        if(!scene||!machine||machine.machineId!==session.machineId)return;
+
+        const finalCredit=readCredit();
+        const base=session.baseCredit??50;
+        const delta=finalCredit==null?0:finalCredit-base;
+        if(finalCredit!=null){
+          scene.playerMedals=session.syncedCredit?finalCredit:Math.max(0,(session.hallCreditBefore??scene.playerMedals)+delta);
+        }
+        machine.totalGames+=session.games;
+        machine.bonusCount+=session.bonuses;
+        machine.differenceCoins+=delta;
+        const sign=delta>=0?'+':'';
+        scene.lastPlayResult=`ペカチュウ ${session.games}G / 差枚${sign}${delta}${session.lastResult?` / ${session.lastResult}`:''}`;
+        session.applied=true;
+      };
 
       const openMachine=()=>{
         const machineId=getMachineId();
+        session={machineId,games:0,bonuses:0,spinActive:false,lastResult:'',applied:false,baseCredit:null,hallCreditBefore:null,syncedCredit:false};
         title.textContent=`${machineId} / ペカチュウ Ver.0.6.2`;
         frame.src=`${machineUrl}?from=pachiro&machine=${encodeURIComponent(machineId)}&t=${Date.now()}`;
         launcher.hidden=false;
@@ -75,11 +144,17 @@
       };
 
       const closeMachine=()=>{
+        applySession();
         launcher.hidden=true;
         frame.src='about:blank';
         document.body.classList.remove('machine-open');
+        session=null;
       };
 
+      frame.addEventListener('load',()=>{
+        if(!session||frame.src==='about:blank')return;
+        bindPekachu();
+      });
       openBtn?.addEventListener('pointerdown',e=>{e.preventDefault();openMachine()});
       closeBtn?.addEventListener('pointerdown',e=>{e.preventDefault();closeMachine()});
       document.addEventListener('contextmenu',e=>{if(e.target.closest('.machine-launcher,.launch-machine-button'))e.preventDefault()});
