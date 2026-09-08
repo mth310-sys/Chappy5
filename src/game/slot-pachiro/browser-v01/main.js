@@ -1,78 +1,195 @@
-const TILE_W=32,TILE_H=16,MAP_W=48,MAP_H=32;
-const iso=(gx,gy)=>({x:(gx-gy)*(TILE_W/2),y:(gx+gy)*(TILE_H/2)});
+const TILE=24,MAP_W=48,MAP_H=32;
+const px=(gx)=>gx*TILE, py=(gy)=>gy*TILE;
+
 const facilities=[
- {type:'counter',label:'カウンター',x:7,y:1,w:21,h:5},
- {type:'toiletM',label:'男子トイレ',x:32,y:1,w:4,h:5},
- {type:'toiletF',label:'女子トイレ',x:37,y:1,w:4,h:5},
- {type:'smoking',label:'喫煙所',x:42,y:1,w:5,h:6},
- {type:'vending',label:'自販機',x:44,y:11,w:2,h:3},
- {type:'entrance',label:'入口',x:20,y:29,w:8,h:3}
+ {type:'counter',label:'カウンター',x:7,y:1,w:21,h:5,color:0x9a633f},
+ {type:'toiletM',label:'男子トイレ',x:32,y:1,w:4,h:5,color:0x4174bd},
+ {type:'toiletF',label:'女子トイレ',x:37,y:1,w:4,h:5,color:0xc95883},
+ {type:'smoking',label:'喫煙所',x:42,y:1,w:5,h:6,color:0x59636e},
+ {type:'vending',label:'自販機',x:44,y:11,w:2,h:3,color:0x287ac2},
+ {type:'entrance',label:'入口',x:20,y:29,w:8,h:3,color:0xb7322d}
 ];
-const islands=[{id:'I01',x:3,y:9},{id:'I02',x:13,y:9},{id:'I03',x:23,y:9},{id:'I04',x:33,y:9}];
+
+const islands=[
+ {id:'I01',x:3,y:9},{id:'I02',x:13,y:9},{id:'I03',x:23,y:9},{id:'I04',x:33,y:9}
+];
 
 class MainScene extends Phaser.Scene{
  constructor(){super('main')}
+
  create(){
-  this.world=this.add.container(this.scale.width/2,30);
-  this.drawFloor();this.drawWalls();this.drawFacilities();this.machineData=this.drawIslands();
-  const start=iso(24,27);
-  this.player=this.add.rectangle(start.x,start.y-10,14,22,0x2457d6).setStrokeStyle(2,0xffffff);
-  this.world.add(this.player);this.playerGrid={x:24,y:27};
-  this.keys=this.input.keyboard.createCursorKeys();this.keyWASD=this.input.keyboard.addKeys('W,A,S,D');
-  this.cameras.main.setZoom(1.7);this.cameras.main.startFollow(this.player,true,0.12,0.12);this.cameras.main.setDeadzone(100,70);
+  this.world=this.add.container(0,0);
+  this.drawFloor();
+  this.drawWalls();
+  this.drawFacilities();
+  this.machineData=this.drawIslands();
+  this.createPlayer(24,27);
+
+  this.keys=this.input.keyboard.createCursorKeys();
+  this.keyWASD=this.input.keyboard.addKeys('W,A,S,D');
   this.setupTouch();
-  this.scale.on('resize',()=>{this.world.x=this.scale.width/2});
-  this.status=this.add.text(8,this.scale.height-24,'',{fontFamily:'sans-serif',fontSize:'11px',color:'#ffffff',backgroundColor:'rgba(0,0,0,.55)',padding:{x:5,y:3}}).setScrollFactor(0).setDepth(1000);
+
+  this.cameras.main.setBounds(0,0,MAP_W*TILE,MAP_H*TILE);
+  this.cameras.main.setZoom(1.15);
+  this.cameras.main.startFollow(this.playerAnchor,true,0.12,0.12);
+  this.cameras.main.setDeadzone(110,80);
+
+  this.status=this.add.text(8,this.scale.height-26,'',{
+   fontFamily:'sans-serif',fontSize:'11px',color:'#fff',
+   backgroundColor:'rgba(0,0,0,.58)',padding:{x:5,y:3}
+  }).setScrollFactor(0).setDepth(99999);
+
+  this.scale.on('resize',size=>this.status.setY(size.height-26));
  }
+
  drawFloor(){
   const g=this.add.graphics();
-  for(let y=0;y<MAP_H;y++)for(let x=0;x<MAP_W;x++){
-   const p=iso(x,y),pts=[{x:p.x,y:p.y},{x:p.x+TILE_W/2,y:p.y+TILE_H/2},{x:p.x,y:p.y+TILE_H},{x:p.x-TILE_W/2,y:p.y+TILE_H/2}];
-   g.fillStyle(((x+y)&1)?0xd9cfb8:0xe4dac3,1);g.fillPoints(pts,true);g.lineStyle(1,0xc7bda7,.35);g.strokePoints(pts,true);
-  }
+  g.fillStyle(0xe1d7c1,1);
+  g.fillRect(0,0,MAP_W*TILE,MAP_H*TILE);
+  g.lineStyle(1,0xc9bea8,.5);
+  for(let x=0;x<=MAP_W;x++)g.lineBetween(x*TILE,0,x*TILE,MAP_H*TILE);
+  for(let y=0;y<=MAP_H;y++)g.lineBetween(0,y*TILE,MAP_W*TILE,y*TILE);
   this.world.add(g);
  }
+
  drawWalls(){
-  const g=this.add.graphics(),outline=[[0,0],[MAP_W,0],[MAP_W,MAP_H],[0,MAP_H],[0,0]];g.lineStyle(5,0x3f454d,1);
-  for(let i=0;i<outline.length-1;i++){const a=iso(...outline[i]),b=iso(...outline[i+1]);g.lineBetween(a.x,a.y+8,b.x,b.y+8)}
+  const g=this.add.graphics();
+  const w=MAP_W*TILE,h=MAP_H*TILE;
+  g.fillStyle(0x454a52,1);
+  g.fillRect(0,0,w,6);
+  g.fillRect(0,0,6,h);
+  g.fillRect(w-6,0,6,h);
+  g.fillRect(0,h-6,w,6);
+  g.fillStyle(0x6c737c,.9);
+  g.fillRect(6,6,w-12,4);
   this.world.add(g);
  }
- addIsoBlock(x,y,w,h,color,label){
+
+ addRaisedBlock(f){
+  const x=px(f.x),y=py(f.y),w=f.w*TILE,h=f.h*TILE;
   const g=this.add.graphics();
-  for(let yy=y;yy<y+h;yy++)for(let xx=x;xx<x+w;xx++){
-   const p=iso(xx,yy);g.fillStyle(color,1);g.fillPoints([{x:p.x,y:p.y-5},{x:p.x+TILE_W/2,y:p.y+TILE_H/2-5},{x:p.x,y:p.y+TILE_H-5},{x:p.x-TILE_W/2,y:p.y+TILE_H/2-5}],true);
-  }
-  this.world.add(g);const c=iso(x+w/2,y+h/2);const t=this.add.text(c.x,c.y-12,label,{fontFamily:'sans-serif',fontSize:'8px',color:'#fff',backgroundColor:'rgba(0,0,0,.72)',padding:{x:3,y:2}}).setOrigin(.5);this.world.add(t);
+  g.fillStyle(0x000000,.16);g.fillRect(x+5,y+7,w,h);
+  g.fillStyle(f.color,1);g.fillRect(x,y,w,h);
+  g.fillStyle(0xffffff,.12);g.fillRect(x,y,w,7);
+  g.fillStyle(0x000000,.18);g.fillRect(x,y+h-7,w,7);
+  g.lineStyle(2,0x25282d,.8);g.strokeRect(x,y,w,h);
+  this.world.add(g);
+  const t=this.add.text(x+w/2,y+h/2-4,f.label,{
+   fontFamily:'sans-serif',fontSize:'10px',color:'#fff',align:'center',
+   backgroundColor:'rgba(0,0,0,.55)',padding:{x:4,y:2}
+  }).setOrigin(.5).setDepth(y+h+20);
+  this.world.add(t);
  }
- drawFacilities(){
-  this.addIsoBlock(7,1,21,5,0x9a633f,'カウンター（景品交換・精算）');this.addIsoBlock(32,1,4,5,0x4174bd,'男子トイレ');this.addIsoBlock(37,1,4,5,0xc95883,'女子トイレ');this.addIsoBlock(42,1,5,6,0x59636e,'喫煙所');this.addIsoBlock(44,11,2,3,0x287ac2,'自販機');this.addIsoBlock(20,29,8,3,0xb7322d,'入口');
+
+ drawFacilities(){facilities.forEach(f=>this.addRaisedBlock(f))}
+
+ drawMachine(gx,gy,side,color){
+  const x=px(gx),y=py(gy),cx=x+TILE/2;
+  const machine=this.add.container(cx,y+TILE/2);
+  const shadow=this.add.ellipse(0,8,18,7,0x000000,.22);
+  const chairX=side==='L'?-11:11;
+  const chair=this.add.ellipse(chairX,6,9,7,0x292929,1).setStrokeStyle(1,0x111111);
+  const body=this.add.rectangle(0,-3,15,19,color).setStrokeStyle(1,0x202020);
+  const top=this.add.polygon(0,-13,[-8,4,0,0,8,4,0,8],Phaser.Display.Color.IntegerToColor(color).brighten(22).color,1)
+   .setStrokeStyle(1,0x202020);
+  const screen=this.add.rectangle(0,-5,9,5,0x8fd7ff).setStrokeStyle(1,0x163040);
+  const reel=this.add.rectangle(0,1,10,5,0xf2f2e8).setStrokeStyle(1,0x555555);
+  machine.add([shadow,chair,body,top,screen,reel]);
+  machine.setDepth(y+TILE);
+  this.world.add(machine);
+  return machine;
  }
+
  drawIslands(){
   const machines=[];
   islands.forEach((island,idx)=>{
-   const sign=iso(island.x+3,island.y-1);const t=this.add.text(sign.x,sign.y-14,`島0${idx+1}`,{fontFamily:'sans-serif',fontSize:'9px',color:'#fff',backgroundColor:'#a32020',padding:{x:4,y:2}}).setOrigin(.5);this.world.add(t);
-   for(let side=0;side<2;side++)for(let n=0;n<15;n++){
-    const gx=island.x+side*4,gy=island.y+n,p=iso(gx,gy),color=(n%3===0)?0xe84343:(n%3===1?0x3478d4:0xd33bb0);
-    const body=this.add.rectangle(p.x,p.y-8,12,17,color).setStrokeStyle(1,0x222222);const chair=this.add.ellipse(p.x+(side===0?-8:8),p.y+2,8,6,0x262626);this.world.add([body,chair]);
-    machines.push({machineId:`I0${idx+1}-${side===0?'L':'R'}${String(n+1).padStart(2,'0')}`,islandId:`I0${idx+1}`,side:side===0?'L':'R',number:n+1,gridX:gx,gridY:gy,setting:1,occupied:false,totalGames:0,bonusCount:0,differenceCoins:0});
+   const label=this.add.text(px(island.x+2),py(island.y)-17,`島0${idx+1}`,{
+    fontFamily:'sans-serif',fontSize:'10px',color:'#fff',backgroundColor:'#a32020',padding:{x:4,y:2}
+   }).setDepth(py(island.y)+5000);
+   this.world.add(label);
+
+   for(let side=0;side<2;side++){
+    for(let n=0;n<15;n++){
+     const gx=island.x+side*4,gy=island.y+n;
+     const color=n%3===0?0xe84343:n%3===1?0x3478d4:0xd33bb0;
+     this.drawMachine(gx,gy,side===0?'L':'R',color);
+     machines.push({
+      machineId:`I0${idx+1}-${side===0?'L':'R'}${String(n+1).padStart(2,'0')}`,
+      islandId:`I0${idx+1}`,side:side===0?'L':'R',number:n+1,
+      gridX:gx,gridY:gy,setting:1,occupied:false,
+      totalGames:0,bonusCount:0,differenceCoins:0
+     });
+    }
    }
   });
   return machines;
  }
- setupTouch(){document.querySelectorAll('.mobile-pad button').forEach(btn=>{const dir=btn.dataset.dir;btn.addEventListener('pointerdown',e=>{e.preventDefault();this.touchDir=dir});['pointerup','pointercancel','pointerleave'].forEach(ev=>btn.addEventListener(ev,()=>this.touchDir=null))})}
+
+ createPlayer(gx,gy){
+  this.playerGrid={x:gx,y:gy};
+  const c=this.add.container(px(gx)+TILE/2,py(gy)+TILE/2);
+  const shadow=this.add.ellipse(0,9,14,6,0x000000,.25);
+  const body=this.add.rectangle(0,0,12,18,0x2457d6).setStrokeStyle(1,0x15306f);
+  const head=this.add.circle(0,-11,5,0xf0c9a4).setStrokeStyle(1,0x7d5a43);
+  const highlight=this.add.rectangle(-3,-1,3,12,0xffffff,.2);
+  c.add([shadow,body,highlight,head]);
+  c.setDepth(py(gy)+TILE+100);
+  this.world.add(c);
+  this.playerAnchor=c;
+ }
+
+ setupTouch(){
+  document.querySelectorAll('.mobile-pad button').forEach(btn=>{
+   const dir=btn.dataset.dir;
+   btn.addEventListener('pointerdown',e=>{e.preventDefault();this.touchDir=dir});
+   ['pointerup','pointercancel','pointerleave'].forEach(ev=>btn.addEventListener(ev,()=>this.touchDir=null));
+  });
+ }
+
  isBlocked(gx,gy){
   if(gx<1||gy<1||gx>=MAP_W-1||gy>=MAP_H-1)return true;
-  for(const f of facilities)if(gx>=f.x&&gx<f.x+f.w&&gy>=f.y&&gy<f.y+f.h)return true;
-  for(const i of islands){const inY=gy>=i.y-1&&gy<=i.y+15,inX=(gx>=i.x-1&&gx<=i.x+1)||(gx>=i.x+3&&gx<=i.x+5);if(inY&&inX)return true}
+  for(const f of facilities){
+   if(gx>=f.x&&gx<f.x+f.w&&gy>=f.y&&gy<f.y+f.h)return true;
+  }
+  for(const i of islands){
+   const inY=gy>=i.y&&gy<i.y+15;
+   const onLeft=gx===i.x;
+   const onRight=gx===i.x+4;
+   if(inY&&(onLeft||onRight))return true;
+  }
   return false;
  }
- moveGrid(dx,dy){const nx=this.playerGrid.x+dx,ny=this.playerGrid.y+dy;if(!this.isBlocked(nx,ny)){this.playerGrid={x:nx,y:ny};const p=iso(nx,ny);this.tweens.add({targets:this.player,x:p.x,y:p.y-10,duration:90,ease:'Linear'})}}
+
+ moveGrid(dx,dy){
+  const nx=this.playerGrid.x+dx,ny=this.playerGrid.y+dy;
+  if(this.isBlocked(nx,ny))return;
+  this.playerGrid={x:nx,y:ny};
+  this.playerAnchor.setDepth(py(ny)+TILE+100);
+  this.tweens.add({
+   targets:this.playerAnchor,
+   x:px(nx)+TILE/2,y:py(ny)+TILE/2,
+   duration:90,ease:'Linear'
+  });
+ }
+
  update(time){
-  if(time<(this.nextMove||0))return;let dir=this.touchDir;
-  if(this.keys.left.isDown||this.keyWASD.A.isDown)dir='left';else if(this.keys.right.isDown||this.keyWASD.D.isDown)dir='right';else if(this.keys.up.isDown||this.keyWASD.W.isDown)dir='up';else if(this.keys.down.isDown||this.keyWASD.S.isDown)dir='down';
-  if(dir){const map={left:[-1,0],right:[1,0],up:[0,-1],down:[0,1]};this.moveGrid(...map[dir]);this.nextMove=time+115}
-  this.status.setText(`座標 ${this.playerGrid.x},${this.playerGrid.y} / 台数 ${this.machineData.length}`);
+  if(time<(this.nextMove||0))return;
+  let dir=this.touchDir;
+  if(this.keys.left.isDown||this.keyWASD.A.isDown)dir='left';
+  else if(this.keys.right.isDown||this.keyWASD.D.isDown)dir='right';
+  else if(this.keys.up.isDown||this.keyWASD.W.isDown)dir='up';
+  else if(this.keys.down.isDown||this.keyWASD.S.isDown)dir='down';
+  if(dir){
+   const map={left:[-1,0],right:[1,0],up:[0,-1],down:[0,1]};
+   this.moveGrid(...map[dir]);
+   this.nextMove=time+115;
+  }
+  this.status.setText(`□グリッド ${this.playerGrid.x},${this.playerGrid.y} / 台数 ${this.machineData.length}`);
  }
 }
 
-new Phaser.Game({type:Phaser.AUTO,parent:'game',backgroundColor:'#171a20',scale:{mode:Phaser.Scale.RESIZE,width:window.innerWidth,height:window.innerHeight},render:{pixelArt:true,antialias:false},scene:[MainScene]});
+new Phaser.Game({
+ type:Phaser.AUTO,parent:'game',backgroundColor:'#171a20',
+ scale:{mode:Phaser.Scale.RESIZE,width:window.innerWidth,height:window.innerHeight},
+ render:{pixelArt:true,antialias:false},scene:[MainScene]
+});
