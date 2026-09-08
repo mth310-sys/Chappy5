@@ -1,99 +1,102 @@
 更新日: 2026-09-09
 
 ## 現在地点
-- recordCount: **1055**
-- latestRecordAdded: **パチスロ ゼクスイグニッション**（オリンピア）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2017-03-06_zx-ignition.md`
-- chronologicalFrontier: **2017-03-06**
-- frontierLatestMachine: **パチスロ ゼクスイグニッション — No.1055**
+- recordCount: **1056**
+- latestRecordAdded: **アイムジャグラーEX AnniversaryEdition**（北電子）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2017-03-13_im-juggler-ex-anniversary-edition.md`
+- chronologicalFrontier: **2017-03-13**
+- frontierLatestMachine: **アイムジャグラーEX AnniversaryEdition — No.1056**
 - schema: **resetBehavior v0.7**
-- status: **2017-03-06_GROUP_CLOSED_FOR_CURRENT_RESEARCH**
+- status: **2017-03-13_GROUP_OPEN**
 
 ## 今回の同期 / 進捗
-- 最新mainの README、mission v0.7、旧INDEX、LATEST_HANDOFF、No.1054実レコードを再取得し、1054件 / 2017-03-06群OPENを正本として開始。
-- INDEXはREADME規定上の旧スナップショットのため、最新handoffと実レコードを進捗正本として使用。
-- main未登録を再確認した **パチスロ ゼクスイグニッション** をNo.1055として追加。
-- 性能コア＋resetBehavior v0.7を同時収集。設定変更時モードA/B再抽選と公開朝一数値を保存。
-- 3/06群を再監査。導入一覧系資料ではドリスタせかんど / ビビッドレッド・オペレーション / ゼクスイグニッションの3機が2017-03-06群として一致し、追加の確実なパチスロ未登録機を現調査範囲で確認できなかったため `CLOSED_FOR_CURRENT_RESEARCH`。
-- サミー「サクラ大戦～熱き血潮に～」は2017-03-06が発売発表日で、公式が5月上旬稼働予定と明記しているため3/06導入機へ誤登録しない。
+- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、No.1055実レコードを再取得して開始。
+- INDEX本文は初期19件時点の旧スナップショットのため、README規定どおり最新handoffと実レコードを直近進捗正本として採用。
+- 開始時mainは **1055件 / chronologicalFrontier 2017-03-06 / 2017-03-06_GROUP_CLOSED_FOR_CURRENT_RESEARCH**。
+- 2017-03-13境界の先行候補をmain検索し、未登録の **アイムジャグラーEX AnniversaryEdition** をNo.1056として追加。
+- 性能コア＋resetBehavior v0.7を同時収集。天井/ゲーム数管理/モード/高確を持たないノーマル機のため該当しないreset項目を明示し、存在しない内部契約を推測で補完していない。
+- 朝一ガックンは本機固有/シリーズ比較資料で「発生し得るが非常に小さく目視判別が難しい」と確認。確定判別ではなく `WEAK_INFERENCE_NOT_DETERMINISTIC` とした。
+- ボーナス後スペシャルBGMの前日跨ぎによる据え置き推測は実戦系資料で確認したが、公式契約ではないため `LOW_CONFIDENCE_SECONDARY` として隔離。純電源OFF→ON時のBGM用履歴保持は一般論から補わず `UNVERIFIED_AFTER_RESEARCH`。
+- 3/13群は **OPEN**。未処理確認済み候補「みんなで楽シーサー」「パチスロ 輪るピングドラム」を続けて監査する。
 
-## No.1055 — パチスロ ゼクスイグニッション
-- manufacturer: **オリンピア**
-- releaseDate canonical: **2017-03-06**
-- formalModelName: **パチスロ ゼクスイグニッション／Z1**
-- certificationNumber: **UNVERIFIED_AFTER_RESEARCH**
-- generation/system: **5号機 / 5.5号機期 / ART / ボーナス非搭載**
-- recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7_PARTIAL_POWER_CONTRACT_CERT_UNVERIFIED**
+## No.1056 — アイムジャグラーEX AnniversaryEdition
+- manufacturer: **北電子**
+- releaseDate canonical: **2017-03-13**
+- formalModelName: **アイムジャグラーEX-AnniversaryEdition／KK**
+- certificationNumber: **6S0442**
+- generation/system: **5号機 / 5.5号機期 / ノーマルA / 完全告知**
+- recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7_LOW_CONFIDENCE_BGM_CARRYOVER_NOTE**
 
 ### performanceCore
-- 機械割: **96.7 / 97.9 / 100.1 / 103.7 / 105.5 / 110.2%**。
-- ART初当たり: **1/493.5 / 471.8 / 442.4 / 390.2 / 368.1 / 311.8**。
-- 50枚ベース: **約46G/50枚**。
-- ART純増: **約2.0枚/G**。
-- ART「イグニッション・フェイズ」: **40G以上+α / ゲーム数上乗せ型**。
-- 通常代表天井: モードA **999G+前兆**、モードB **500G+前兆**。別資料の600G表記は前兆込み/実消化上の定義差としてCONFLICTではなく `DEFINITION_DIFFERENCE_MODE_B_CEILING_500_PLUS_FOREWARNING_VS_600_DISPLAY` を保持。
+- 機械割: **95.9 / 96.7 / 98.7 / 100.8 / 102.8 / 105.2%**。
+- BIG: **1/287.4 / 282.5 / 282.5 / 273.1 / 273.1 / 268.6**。
+- REG: **1/455.1 / 442.8 / 348.6 / 321.3 / 268.6 / 268.6**。
+- 合算: **1/176.2 / 172.5 / 156.0 / 147.6 / 135.4 / 134.3**。
+- 50枚ベース代表: **約34G/50枚**。チェリー狙い解析値は設定1〜6で **34.53〜35.87G/50枚**、完全小役奪取は **35.00〜36.38G/50枚**として定義分離。
+- BIG約**325枚**、REG約**104枚**。
+- 技術介入/小役取得条件の異なる後年解析機械割 **96.91〜106.55%** は公表値へ平均せず別系列保持。
 
 ### resetBehavior v0.7
-- 設定変更: **ART間ゲーム数RESET / モードA-B RESELECT**。
-- 設定変更時モードB: **設定1・2=25.0%、設定3・4=37.5%、設定5・6=50.0%**。残りはモードA。
-- 設定変更専用固定短縮天井ではなく、モードB選択時に通常モード契約として浅い天井となる。
-- 当時攻略マガジン引用の設定1条件では、設定変更後100Gまでの期待値 **+564.0円 / 機械割104.5%**。内部抽選率ではなく立ち回り参考値として分離保存。
-- 据え置き: 天井進捗・モード・内部状態の本機固有直接比較を固定できず `UNVERIFIED_AFTER_RESEARCH`。
-- 純電源OFF→ON: 天井進捗・モード・内部状態とも `UNVERIFIED_AFTER_RESEARCH`。設定変更挙動から推定しない。
-- 内部通常/高確の設定変更時初期振り分け: `UNVERIFIED_AFTER_RESEARCH`。
-- 有利区間: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
-- 変更判別: モード/当選Gは推測材料だが非決定的。確定的ガックン/初期出目/液晶判別は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- 天井・ゾーン: **NOT_APPLICABLE / 非搭載**。
+- gameCounterReset / ceilingAfterReset: **NOT_APPLICABLE_NO_CEILING**。
+- modeAfterReset: **NOT_APPLICABLE_NO_GAME_COUNT_MODE**。朝一専用モードなし。
+- stateAfterReset: AT/ART系通常/高確は **NOT_APPLICABLE**。設定変更専用状態は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
+- resetBenefits: 短縮天井、高確、初当たり優遇等 **NONE_CONFIRMED_AFTER_RESEARCH**。
+- resetPenalties: 天井進捗消失等 **NOT_APPLICABLE**。
+- resetDetection: 朝一リールガックンは存在するが非常に小さく判別困難。確定変更判別にはしない。
+- 据え置き推測: スペシャルBGM用ゲーム数が前日から継続したとみられる実戦例あり。ただし `LOW_CONFIDENCE_SECONDARY`。
+- 純電源OFF→ON時のスペシャルBGM履歴: **UNVERIFIED_AFTER_RESEARCH**。
+- 設定変更専用の公開数値: **NONE_CONFIRMED_AFTER_RESEARCH**。
 
 ## dataQuality / conflicts
-- 導入日、ART初当たり、機械割、50枚ベース、純増は複数当時解析/機種DBで一致。
-- 業界記事で純増2.0枚/GのART特化型を確認。
-- formalModelName `/Z1` は当時解析系資料で確認。検定番号はZ1/6S/型式/検定/オリンピア/平和/HAZUSE系等へ再探索したが直接固定できずUNVERIFIED。
-- モードB天井の500G+前兆 / 600G表記は平均化しない。
+- 導入日はHAZUSE / K-Navi / パチビー / 当時解析で2017-03-13一致。
+- 型式 `/KK` と検定番号 `6S0442` はHAZUSEで直接確認。
+- 北電子公式に製品ページと2017-01-13特設サイト公開履歴が現存。
+- ボーナス確率・機械割はHAZUSE、ちょんぼりすた、中古実機DB等の複数系統で一致。
+- 代表ベース約34Gと打ち方別詳細ベースは同一値へ平均化しない。
+- 公表機械割とチェリー狙い解析機械割は `DEFINITION_DIFFERENCE_PAYOUT_PUBLISHED_VS_CHERRY_TARGETING_ANALYSIS` として分離。
+- スペシャルBGM跨ぎは公式確定契約ではないため低信頼注記のまま保存。
 
-## 2017-03-06群監査
-- status: **CLOSED_FOR_CURRENT_RESEARCH**。
+## 2017-03-13群監査
+- status: **OPEN**。
 - 登録済み:
-  - ドリスタせかんど — No.1053。
-  - パチスロ ビビッドレッド・オペレーション — No.1054。
-  - パチスロ ゼクスイグニッション — No.1055。
-- 導入一覧系資料で上記3機が3/06群として一致。
-- 2017-03-06付サミー「サクラ大戦～熱き血潮に～」記事は発売告知であり、同記事中に5月上旬全国稼働予定と明記。3/06群へ混入禁止。
+  - アイムジャグラーEX AnniversaryEdition — No.1056。
+- 次の未処理先行候補:
+  - **みんなで楽シーサー**。
+  - **パチスロ 輪るピングドラム**。
+- 上記処理後に同日全メーカー横断監査を行い、3/13群CLOSED可否を判定する。
 
 ## 遡及 resetBehavior QA
-- `2006-04_bomberman-victory-f.md` は既に `PARTIAL_RESEARCH_EXHAUSTED` まで処理済みだったため再処理せず確認通過。
-- 次の既存レコード **`2006-04_rock-you-queen-3.md`** を再QA。
-- 性能側 `status: PARTIAL` は維持し、reset QAのみ **`PARTIAL_RESEARCH_EXHAUSTED`**へ更新。
-- QUEEN GAMEは最大1000G、BIG成立で終了するRTであることを再確認。
-- 設定変更/据え置き/純電断時のQUEEN GAME残G・内部RT状態、本機固有変更判別、公開朝一数値は公式・業界・旧解析/DB・アーカイブ・回顧まで資料系統を変えて再探索したが直接契約を固定できず、一般論補完を行わない。
-- retroQaScanConfirmedThrough: **2006-04_rock-you-queen-3.md**
-- retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**
+- retroQaScanConfirmedThrough: **2006-04_rock-you-queen-3.md**。
+- retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
 - 次カーソル: `2006-05_gold-shio-30.md`。
+- 性能statusは維持し、reset QAのみ別管理する。
 
 ## 次回再開地点
-1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1055を再取得。
-2. **1055件 / chronologicalFrontier 2017-03-06 / 3/06群CLOSED_FOR_CURRENT_RESEARCH** を正本として継続。
-3. 次の導入境界は **2017-03-13**。先行確認済み候補は **アイムジャグラーEX AnniversaryEdition / みんなで楽シーサー / 輪るピングドラム**。main既登録を確認して未処理機からNo.1056候補として処理。
-4. 3/13群もメーカー横断監査し、日付資料汚染を除外する。
-5. 遡及QAは **`2006-05_gold-shio-30.md`** から継続。性能statusは維持し、reset QAのみ別管理。
+1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1056を再取得。
+2. **1056件 / chronologicalFrontier 2017-03-13 / 3/13群OPEN** を正本として継続。
+3. main未登録を再確認し、次の先行候補 **「みんなで楽シーサー」** からNo.1057候補として処理。
+4. 続けて **「パチスロ 輪るピングドラム」** と3/13同日全メーカー監査を行う。
+5. 遡及QAは **`2006-05_gold-shio-30.md`** から継続する。性能値は無駄に再収集せずresetBehaviorのみ再QA。
 
 ## 主要出典 — 取得日 2026-09-09
-### No.1055 パチスロ ゼクスイグニッション
-- グリーンべると/P-WORLD: https://news.p-world.co.jp/articles/8985/greenbelt
-- P-WORLD: https://www.p-world.co.jp/machine/database/8280
-- ちょんぼりすた: https://chonborista.com/slot/orinpia-slot/31673/comment-page-2/
-- すろぱちくえすと: https://www.slopachi-quest.com/article/zxignition/
-- スロットガーデン: https://xn--mckza4ard4ttb2d.com/zekusuigunissyon
-- K-Navi: https://p-kn.com/slot/2717/
-- すろかい archive: https://slotkaiseki.hatenablog.com/archive/category/ART
+### No.1056 アイムジャグラーEX AnniversaryEdition
+- 北電子公式製品ページ: https://www.kitadenshi.co.jp/products/2017/ae_p/
+- 北電子ニュース履歴: https://www.kitadenshi.co.jp/hallnews/page/13/
+- グリーンべると/P-WORLD: https://news.p-world.co.jp/articles/8968/greenbelt
+- HAZUSE: https://hazuse.com/machine/pachislot/6S0442/
+- P-WORLD: https://www.p-world.co.jp/machine/database/8275
+- K-Navi プレミアムピンク: https://p-kn.com/slot/2708/
+- K-Navi プレミアムホワイト: https://p-kn.com/slot/2707/
+- ちょんぼりすた: https://chonborista.com/slot/kitadenshi/31983/
+- イチカツ: https://ichikatsu.com/imjuggler20th/
+- jugjug.net: https://jugjug.net/imjugglerex
+- パチよみ ガックン比較: https://www.ps-channel.net/gakkuncheck/
+- 実戦系据え置きBGM資料: https://pachi778.com/imjugglerex-ae-deferred.html
 
-### 3/06群監査 / 次境界
+### 3/13群監査 / 次境界
 - 2-9伝説 新台導入一覧: https://29den.com/newslot/
-- サミー サクラ大戦発売告知: https://www.sammy.co.jp/japanese/news/2017/658.html
 
-### 遡及QA ロックユークイーン3
-- グリーンべると: https://web-greenbelt.jp/00004599/
-- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/eleco_slot/60/k.php
-- HAZUSE旧解析: https://www.hazuse.com/i/det2/rockyouqueen/top.htm
-- 5号機クロニクル: https://5goki.com/universal
-- CDJournal: https://www.cdjournal.com/news/-/11102
-- パチ7回顧: https://pachiseven.jp/articles/detail/14341
+### 遡及QA 次カーソル
+- `docs/real_machine_db/machines/2006-05_gold-shio-30.md`
