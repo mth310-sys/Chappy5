@@ -1,22 +1,20 @@
-# 実機DB 最新リレー引継ぎ
-
 更新日: 2026-09-08
 
 ## 現在地点
-- recordCount: **978**
-- latestRecordAdded: **パチスロ コードギアス 反逆のルルーシュ R2**（サミー）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2016-05-30_code-geass-r2.md`
+- recordCount: **979**
+- latestRecordAdded: **パチスロ 翠星のガルガンティア**（D-light / ディ・ライト）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2016-05-30_suisei-no-gargantia.md`
 - chronologicalFrontier: **2016-05-30**
-- frontierLatestMachine: **パチスロ コードギアス 反逆のルルーシュ R2**
+- frontierLatestMachine: **パチスロ 翠星のガルガンティア**
 - schema: **resetBehavior v0.7**
 - status: **2016-05-30_GROUP_OPEN**
 
 ## 今回の同期 / 正本確認
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、No.977 `2016-04-18_super-reno-max.md` を再取得して開始。
+- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、No.978 `2016-05-30_code-geass-r2.md` を再取得して開始。
 - INDEXは19件時点の旧集約なので、README規定どおり **LATEST_HANDOFF + 実レコード + 最新main** を進捗正本として使用。
-- 開始時点: recordCount 977 / chronologicalFrontier 2016-04-18 / 04-18群CLOSED。
-- 2016-04-19〜05-29境界を再監査。HAZUSEカレンダーは2016年5月を05/30のみとし、グリーンべると当時記事で全日遊連の全国一斉入替自粛期間が05/02〜05/27と確認できるため、現調査範囲では **04/19〜05/29をCLOSED_FOR_CURRENT_RESEARCH** とする。
-- 次群05/30の未処理先頭「コードギアスR2」をGitHub重複なし確認後、No.978として追加。
+- 開始時点: recordCount 978 / chronologicalFrontier 2016-05-30 / 05-30群OPEN。
+- HANDOFF指定の次未処理「パチスロ 翠星のガルガンティア」をGitHub重複なし確認後、No.979として追加。
+- 2016-05-30群は継続OPEN。次は山佐 **「ナイツ2」**。
 
 ## 2016-04-18群 — CLOSED_FOR_CURRENT_RESEARCH
 登録済み:
@@ -40,62 +38,59 @@
 ## 2016-05-30群 — OPEN
 登録済み:
 - No.978 **パチスロ コードギアス 反逆のルルーシュ R2**（サミー）
+- No.979 **パチスロ 翠星のガルガンティア**（D-light / ディ・ライト）
 
 次の未処理候補:
-1. **パチスロ 翠星のガルガンティア**（D-Light）
-   - パチビー、ちょんぼりすた等で2016-05-30。
-   - パチ7に設定変更後最大300G天井の公開情報あり。次回は性能コア + resetBehavior v0.7を複数ソースで固定する。
-2. **ナイツ2**（山佐）
-3. **めぞん一刻 桜の下で**（オリンピア）
-4. **コクッチーブラック**
-5. **パチスロ バルタン星人**
+1. **ナイツ2**（山佐）
+2. **めぞん一刻 桜の下で**（オリンピア）
+3. **コクッチーブラック**
+4. **パチスロ バルタン星人**
 - 05/30群は上記以外も全メーカー横断で再監査し、漏れ確認後にCLOSED判定する。
 
-## No.978 — パチスロ コードギアス 反逆のルルーシュ R2
-- manufacturer: **サミー**
+## No.979 — パチスロ 翠星のガルガンティア
+- manufacturer: **D-light（ディ・ライト）**
 - releaseDate canonical: **2016-05-30**
-- formalModelName: **コードギアス反逆のルルーシュR2／ZX**
-- certificationNumber: **5S1380**
-- generation/system: **5号機 / A+ART / セット継続型ART**
+- formalModelName: **UNVERIFIED_AFTER_RESEARCH**
+- certificationNumber: **UNVERIFIED_AFTER_RESEARCH**
+- generation/system: **5号機 / A+ART / 差枚数管理型ART**
 
 ### identity / release date
-- Sammy公式マイスロが2016-05-30を「本日…ホール導入日」と直接明記（地域差注記あり）。
-- P-WORLDでZX / 5S1380を確認。
-- 当時解析には2016-06-06、または「6/6（最速5/30）」表記があるため、`RELEASE_DATE_REGION_OR_SCHEDULE_2016_05_30_VS_2016_06_06` を保持。
-- chronological canonicalはメーカー公式の実導入告知 **2016-05-30**。
+- パチビー、パチ7、pachislo-data、ちょんぼりすた等で2016-05-30導入、D-lightを照合。
+- 実機流通資料でもD-light / 2016年5月導入 / 5号機を確認。
+- 正式型式・検定番号は作品名、メーカー表記揺れ、5S/6S、型式、検定通過、実機DB等へ検索を広げたが直接固定できず `UNVERIFIED_AFTER_RESEARCH`。推測登録しない。
 
 ### performanceCore
-- 通常掲載機械割: **97.5 / 98.5 / 100.8 / 103.9 / 108.5 / 112.3%**。
-- 完全攻略時: **98.5 / 99.5 / 101.8 / 104.9 / 109.5 / 113.3%**。P-WORLDの98.53〜113.3%は完全攻略側と整合するため定義差として分離。
-- ボーナス合算: **1/239.2 / 237.4 / 236.6 / 234.1 / 232.4 / 229.1**。
-- ART初当たり: **1/624.2 / 589.6 / 507.0 / 450.5 / 376.7 / 339.2**。
-- ボーナス+ART合算: **1/172.9 / 169.3 / 161.3 / 154.0 / 143.7 / 136.8**。
-- ベース: **約32G/50枚**。
-- ART純増: **約1.4枚/G**（ボーナス込み約2.0枚/G表記は別定義）。
-- HYPER BIG約250枚 / BIG約180枚 / REG約54枚。
-- ART「BLACK REBELLION R2」: **1セット40G**。
-- 天井: **ボーナス終了またはART開始後1000G+αでART当選濃厚**。
+- 機械割: **97.1 / 98.4 / 99.9 / 103.9 / 106.8 / 110.1%**。
+- 純ボーナス: **全設定共通1/873.8**。
+- ART初当たり: **1/315.0 / 302.1 / 288.1 / 261.6 / 242.6 / 228.8**。
+- ボーナス+ART合算: **1/231.5 / 224.5 / 216.7 / 201.3 / 189.9 / 181.3**。
+- ベース: **約37G/50枚**。
+- ART純増: **約1.7枚/G**、ボーナス込み **約1.9枚/G**（別定義で保持）。
+- 純ボーナス: **約300枚**。
+- ART「翠星チャンス」: 差枚数管理型。
+- 通常天井: **ART間1000G消化後、次回連続演出発展でART濃厚**。ボーナスでは天井ゲーム数をリセットしない。
 
 ### resetBehavior v0.7
-- 設定変更: **天井RESET / ギアスポイントRESET→0pt or 5pt再初期化 / 内部状態RESELECT**。
-- 据え置き: **天井・ギアスポイント・内部状態CARRYOVER**。
-- 純電源OFF→ON: **天井CARRYOVER / 内部状態CARRYOVER / RT状態変化なし**。ギアスポイントは据え置き比較からCARRYOVERを支持するが、純電断だけの一次直接表は未確認として注記。
-- 設定変更専用固定短縮天井: **NONE_CONFIRMED_AFTER_RESEARCH**。リセット後も上限1000G+α。
+- 設定変更: **通常天井進捗RESET → リセット専用0/100/200/300Gテーブル再抽選 / 内部状態RESELECT / バーストpt再抽選**。
+- リセット天井公開値: **0G 10.16% / 100G 10.16% / 200G 39.84% / 300G 39.84%**。300G到達即発動ではなく次回連続演出発展が条件。
+- 設定変更時内部状態: **低確62.5% / 高確25.0% / 超高確12.5%**。
+- バーストpt再抽選: 0・1pt各0.4% / 2・3pt各25.0% / 4・5pt各14.5% / 6・7pt各7.8% / 8・9pt各2.3%。
+- 据え置き: **ART間天井CARRYOVER_SUPPORTED / バーストpt CARRYOVER**。内部状態を独立表記した本機固有資料は `UNVERIFIED_AFTER_RESEARCH`。
+- 純電源OFF→ON: **限定解除の前兆カウントはCARRYOVER** を複数資料で直接確認。ART間天井カウンタ・低確/高確/超高確の完全な純電断比較は `UNVERIFIED_AFTER_RESEARCH` とし、表示カウンタ保持から内部全項目を推定しない。
 - 有利区間: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
-- 公開朝一数値:
-  - ギアスポイント: **0pt 50% / 5pt 50%（全設定共通）**。
-  - 内部状態: 設定1〜3 **通常62.5% / 高確37.5%**、設定4〜6 **通常50.0% / 高確50.0%**。
-- 朝一恩恵: 50%の5ptスタート、高確スタート37.5〜50%。
-- 朝一不利: 前日天井進捗と前日保有ギアスポイントを失う。
+- 朝一恩恵: 通常最大1000G→リセット最大300G+α、60.16%が200G以下選択、高確以上37.5%。
+- 朝一不利: 前日天井進捗を失う / 前日高バーストptは再抽選で失う可能性。ただし最大300G短縮が強いため総じて朝一価値は高い。
 - 変更判別:
-  - 天井跨ぎで据え置き/変更を推測可能。
-  - 当時解析でサミー筐体のリールガックン有効、実演動画あり。ただし店側1G回し等で対策可能なので `PRACTICAL_GAKKUN_INDICATOR`。
-  - 初期液晶ステージは学園廊下で共通のため単独判別不可。
+  - 限定解除前兆G数表示は純電源ON/OFFでは消えないため、閉店時表示あり→翌朝消失なら設定変更濃厚（店側手動対策には注意）。
+  - バーストptは据え置き時引継ぎ、変更時再抽選。前日把握値とのズレは変更を支持するが偶然一致し得るため確定ではない。
+  - 朝一に連結器/凪の日等の高確示唆ステージへ早期移行すれば変更期待を上げる材料。
+  - ガックンは当時資料でも未確認推測止まりのため `NONE_CONFIRMED_AFTER_RESEARCH`。
 
 ### data-quality notes
-- `PAYOUT_RATE_DEFINITION_97_5_TO_112_3_VS_98_5_TO_113_3`: 通常掲載値 vs 完全攻略値。CONFLICTではなく定義差として両方保存。
-- 純電源OFF→ON時ギアスポイントの一次直接比較は `UNVERIFIED_AFTER_RESEARCH`。据え置きCARRYOVER/設定変更時初期化からの支持情報は別記。
-- メーカー一次資料でのresetBehavior内部契約表は未発見。攻略解析複数一致を採用。
+- `10.2/39.8%` と `10.16/39.84%` は同一系列の丸め差。CONFLICTにしない。
+- 性能コアは複数解析で整合し、重大CONFLICTなし。
+- 純電断は限定解除カウンタ保持のみ直接固定。天井・内部状態まで一括CARRYOVERとは推測しない。
+- 正式型式名・検定番号は十分な再探索後も直接資料を固定できずUNVERIFIED。
 
 ## 遡及 resetBehavior QA
 - retroQaScanConfirmedThrough: **2006-02_nurse-witch-komugi-chan-magicalte.md**
@@ -104,11 +99,11 @@
 - 新規時系列収集を止めずQAリレーで補完。
 
 ## 次回再開地点
-1. **recordCount 978 / chronologicalFrontier 2016-05-30 / 05-30群OPEN** から開始。
-2. README / mission v0.7 / INDEX / LATEST_HANDOFF / No.978を最新mainから再取得。
-3. 次の未処理は **2016-05-30「パチスロ 翠星のガルガンティア」（D-Light）**。GitHub重複確認後、性能コア + resetBehavior v0.7を収集。
-4. ガルガンティアは設定変更後最大300G天井という強い朝一数値が公開されているため、通常天井との定義、設定変更/据え置き/電源OFF→ON、モード/状態、変更判別まで複数資料で照合する。
-5. 続いてナイツ2、めぞん一刻 桜の下で、コクッチーブラック、バルタン星人等を全メーカー横断監査し05/30群を閉じる。
+1. **recordCount 979 / chronologicalFrontier 2016-05-30 / 05-30群OPEN** から開始。
+2. README / mission v0.7 / INDEX / LATEST_HANDOFF / No.979を最新mainから再取得。
+3. 次の未処理は **2016-05-30 山佐「ナイツ2」**。GitHub重複確認後、正式型式・検定・性能コア + resetBehavior v0.7を収集する。
+4. 続いて **めぞん一刻 桜の下で → コクッチーブラック → パチスロ バルタン星人** を候補順に監査する。ただし具体導入日variant/重複を先に固定し、順序は資料に従って修正可。
+5. 05/30群を全メーカー横断で再監査し、漏れ確認後にCLOSED判定する。
 6. **トリプルクラウンG-30** は2016年6月群で具体導入日を再監査。
 7. PARTIAL/UNVERIFIEDは表記揺れ・型式・メーカー・設定変更/据え置き/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間へ検索語を変え、公式・業界・当時解析・古DB・アーカイブ・回顧資料まで再探索後のみ付与。
 8. 競合は平均せずCONFLICT/variant差/定義差/予定日vs実導入日/地域導入差として双方保存。
@@ -121,19 +116,18 @@
 - 後年の設置期限一覧の日付を全国導入日に転記しない。
 
 ## 主要出典 — 取得日 2026-09-08
-### No.978 コードギアスR2
-- Sammy公式マイスロ: https://www.sammy.co.jp/japanese/myslot/news/index_11.html
-- Sammy公式ニュースリリース: https://www.sammy.co.jp/japanese/news/2016/502.html
-- P-WORLD: https://www.p-world.co.jp/machine/database/8022
-- すろぱちくえすと機種まとめ: https://www.slopachi-quest.com/kisyubetsu/code-geass-r2/
-- すろぱちくえすと設定変更: https://www.slopachi-quest.com/article/code-geass-r2-reset/
-- パチ7 朝一/天井: https://pachiseven.jp/lp/codegeassr2_tenjo
-- pachislo-data: https://pachislo-data.com/sammy/24225
-- ちょんぼりすた: https://chonborista.com/slot/sammy-slot/18862/
+### No.979 翠星のガルガンティア
+- パチビー: https://www.pachibee.jp/machines/movie/216050001
+- パチ7 天井: https://pachiseven.jp/machines/4837/cutout/78
+- すろぱちくえすと機種まとめ: https://www.slopachi-quest.com/kisyubetsu/gargantia/
+- すろぱちくえすと設定変更: https://www.slopachi-quest.com/article/gargantia-reset/
+- pachislo-data: https://pachislo-data.com/diright/24961
+- ちょんぼりすた: https://chonborista.com/slot/d-light/19556/
+- 真パチスロ備忘録: https://sin-surobi.com/garugan/16041/
+- ピロ式: https://piro-shiki.com/gargantia-tenjo-reset/
+- A-SLOT実機DB: https://www.a-slot.com/SHOP/dlight_8.html
 
 ### 境界監査 / 次候補
 - グリーンべると 入替自粛: https://web-greenbelt.jp/00008425/
 - K-Navi 新台導入がない: https://p-kn.com/beginners/42/264/
 - HAZUSE 新台カレンダー: https://hazuse.com/new-machine-calendar/newmachine-calendar/
-- パチビー 翠星のガルガンティア: https://www.pachibee.jp/machines/movie/216050001
-- パチ7 ガルガンティア天井: https://pachiseven.jp/machines/4837/cutout/78
