@@ -1,7 +1,7 @@
 # キューティーハニー
 
 status: PARTIAL
-qaResetBehavior: PARTIAL
+qaResetBehavior: PARTIAL_RESEARCH_EXHAUSTED
 
 machineName: キューティーハニー
 manufacturer: エレコ
@@ -69,18 +69,21 @@ REG: 搭載なしとする当時解析資料あり。5号機クロニクルに�
 
 ## resetBehavior
 
-resetBehaviorQA: PARTIAL
+schemaVersion: v0.7
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
+resetQaLastUpdated: 2026-09-08
 
 settingChangeBehavior:
 - 「キューティーハニー / キューティーハニー3 / エレコ」に「設定変更 / リセット / 朝一 / ガックン / RT / キューティーゲーム」を組み合わせ、メーカー公式・HAZUSE・パチマガスロマガ・後年資料を再探索したが、設定変更時にRT残G数や内部RT状態をどう処理するかを明記した高信頼資料は確認できずUNVERIFIED。
+- 2026-09-08の遡及再QAでも「キューティーゲーム 設定変更 据え置き」「電源OFF ON RT」「朝一 ガックン」等へ検索語を分解し、公式・当時解析・後年回顧を再横断したが追加の直接契約は確認できなかった。
 - 設定変更専用の朝一モード、短縮天井、初当たり優遇はNONE_CONFIRMED。
 
 carryOverBehavior:
 - 通常時ゲーム数天井・モードストックはNONE_CONFIRMED。
-- BIG後RT「キューティーゲーム」途中の残G数/状態を据え置き時に維持するかは、本機固有の高信頼資料で未確認のためUNVERIFIED。
+- BIG後RT「キューティーゲーム」途中の残G数/状態を据え置き時に維持するかは、本機固有の高信頼資料で未確認のためUNVERIFIED_AFTER_RESEARCH。
 
 powerCycleBehavior:
-- 電源OFF→ONのみの場合にRT残G数/内部状態を維持・初期化するかはUNVERIFIED。
+- 電源OFF→ONのみの場合にRT残G数/内部状態を維持・初期化するかはUNVERIFIED_AFTER_RESEARCH。
 - 電源投入だけで朝一専用モード・短縮天井・当選優遇が発生する根拠はNONE_CONFIRMED。
 
 gameCounterReset:
@@ -94,20 +97,20 @@ modeAfterReset:
 - 通常時モード管理、朝一専用モード振り分けはNONE_CONFIRMED。
 
 stateAfterReset:
-- 本機の主要状態はBIG後RT「キューティーゲーム」。設定変更/電断時にRT途中状態・残G数・チェリー成立前状態をどう扱うかはUNVERIFIED。
-- 成立済みBIGの特殊状態処理もUNVERIFIED。
+- 本機の主要状態はBIG後RT「キューティーゲーム」。設定変更/電断時にRT途中状態・残G数・チェリー成立前状態をどう扱うかはUNVERIFIED_AFTER_RESEARCH。
+- 成立済みBIGの特殊状態処理もUNVERIFIED_AFTER_RESEARCH。
 
 advantageousSectionReset:
 - NOT_APPLICABLE（5号機初期・有利区間制度導入前）。
 
 resetBenefits:
-- 朝一/設定変更専用の天井短縮・モード優遇・初当たり優遇はNONE_CONFIRMED。
+- 朝一/設定変更専用の天井短縮・モード優遇・初当たり優遇はNONE_CONFIRMED_AFTER_RESEARCH。
 
 resetPenalties:
-- NONE_CONFIRMED。
+- NONE_CONFIRMED_AFTER_RESEARCH。
 
 resetDetection:
-- 「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / ガックン」を表記揺れと組み合わせて再探索したが、本機固有のリールガックン・表示等による変更判別を高信頼資料で確認できずUNVERIFIED。
+- 「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / ガックン」を表記揺れと組み合わせて再探索したが、本機固有のリールガックン・表示等による変更判別を高信頼資料で確認できずNONE_CONFIRMED_AFTER_RESEARCH。
 
 numericResetData:
 - 設定変更時モード振り分け: NONE_CONFIRMED
@@ -116,12 +119,13 @@ numericResetData:
 
 ## sources
 
-取得日: 2026-08-31
+初回取得日: 2026-08-31
+遡及QA再取得日: 2026-09-08
 
 1. ユニバーサルエンターテインメント公式 — キューティーハニー
    - https://www.universal-777.com/product/slot/cutie_honey/
    - エレコ、5号機、2006年2月、ボーナス+RT、BIG約300枚、440枚超払い出し終了、RT約0.5枚/G、最大500G
-   - reset QAではRT仕様と通常時天井/朝一専用数値の掲載有無も確認。
+   - 2026-09-08再確認でも設定変更/据え置き/純電断時のRT残G処理の公開記載は確認できず。
    - reliability: OFFICIAL
 2. HAZUSE — キューティーハニー3 解析・機種情報
    - https://www.hazuse.com/i/det2/cutiehoney/top.htm
@@ -131,7 +135,8 @@ numericResetData:
    - reliability: ANALYSIS_HIGH
 3. パチマガスロマガ — キューティーハニー3
    - https://cs62.cs-plaza.com/g/pachi/pla/s_conq/eleco_slot/58/a.php
-   - ボーナスは赤7/青7のBIGのみ、BIG約307枚、500G RT
+   - ボーナスは赤7/青7のBIGのみ、BIG約307枚、500G RT。
+   - 2026-09-08再確認でも設定変更・電断時のRT契約は掲載確認できず。
    - reliability: ANALYSIS_HIGH
 4. 5号機クロニクル — ユニバーサル系5号機全機種一覧
    - https://5goki.com/universal
@@ -139,7 +144,7 @@ numericResetData:
    - reliability: ANALYSIS_SINGLE
 5. 掘り出しモンみっけた!! — キューティーハニー3
    - https://plaza.rakuten.co.jp/horida/16003/
-   - 設定1約1/386、設定6約1/334、2段階設定、RT約0.5枚/G
+   - 設定1約1/386、設定6約1/334、2段階設定、RT約0.5枚/G。朝一/リセット契約の直接記載なし。
    - reliability: ANALYSIS_SINGLE
 
 ## missingFields
@@ -157,6 +162,7 @@ numericResetData:
 
 ## QA note
 
-- v0.7 resetBehavior遡及QAを実施。
-- 本機の朝一客行動に関係しうるRT残G数/状態の設定変更・据え置き・電断処理を重点探索したが確定資料なし。推測せずUNVERIFIED。
+- v0.7 resetBehavior遡及QAを再実施し、性能側 `status: PARTIAL` は変更していない。
+- 本機の朝一客行動に関係しうるRT残G数/状態の設定変更・据え置き・電断処理を重点探索したが、2026-09-08の再探索でも本機固有の直接契約を追加固定できなかった。
+- このため reset QA のみ `PARTIAL_RESEARCH_EXHAUSTED` とし、推測でRESET/CARRYOVERを補完しない。
 - 通常時天井、朝一専用モード、設定変更専用短縮天井/当選優遇はNONE_CONFIRMED。有利区間はNOT_APPLICABLE。
