@@ -1,7 +1,8 @@
 # ボンバーマンビクトリーF
 
 status: COMPLETE_CORE
-qaResetBehavior: PARTIAL
+qaResetBehavior: PARTIAL_RESEARCH_EXHAUSTED
+resetQaLastUpdated: 2026-09-09
 
 machineName: ボンバーマンビクトリーF
 manufacturer: サミー
@@ -64,45 +65,45 @@ RT「ボンバータイム」。通常RT中リプレイ確率1/1.293。1Gあた�
 
 ## resetBehavior
 
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
 
-`ボンバーマンビクトリーF / ボンバーマンビクトリー / Sammy / サミー` と `設定変更 / リセット / 朝一 / 据え置き / 電源 / ボンバータイム / RT / 3000G / ガックン` を組み替え、当時解析・旧DB・回顧資料・業界記事を再探索。
+`ボンバーマンビクトリーF / ボンバーマンビクトリー / Sammy / サミー` と `設定変更 / リセット / 朝一 / 据え置き / 電源OFF→ON / 電断 / ボンバータイム / RT / 3000G / ガックン / 変更判別` を組み替え、当時解析・旧DB・回顧資料・業界記事を再探索。機種固有のRT残G・内部RT状態・ナビ権利の設定変更/据え置き/純電断契約を直接固定できる追加資料は確認できなかったため、一般的な5号機挙動から推定しない。
 
 ### settingChangeBehavior
 
-- 設定変更時にRT「ボンバータイム」の残りG、内部RT状態、ボムナビ権利/ナビ回数状態がどう処理されるか: UNVERIFIED。
+- 設定変更時にRT「ボンバータイム」の残りG、内部RT状態、ボムナビ権利/ナビ回数状態がどう処理されるか: UNVERIFIED_AFTER_RESEARCH。
 - RT中ナビ回数振り分けには設定差が存在したことを回顧資料で確認できるが、設定変更時の保持/再抽選処理は別問題のため推定しない。
-- 通常時ゲーム数天井や設定変更専用短縮天井: NONE_CONFIRMED。
+- 通常時ゲーム数天井や設定変更専用短縮天井: NONE_CONFIRMED_AFTER_RESEARCH。
 
 ### carryOverBehavior
 
-- 据え置き時に前日のボンバータイム残G・内部RT状態・ナビ権利を保持するか: UNVERIFIED。
-- 通常時ゲーム数天井の据え置き引継ぎ: NOT_APPLICABLE / NONE_CONFIRMED。
+- 据え置き時に前日のボンバータイム残G・内部RT状態・ナビ権利を保持するか: UNVERIFIED_AFTER_RESEARCH。
+- 通常時ゲーム数天井の据え置き引継ぎ: NOT_APPLICABLE / NONE_CONFIRMED_AFTER_RESEARCH。
 
 ### powerCycleBehavior
 
-- 電源OFF→ONのみでボンバータイム残G・内部RT状態・ナビ権利を維持するか: UNVERIFIED。
+- 電源OFF→ONのみでボンバータイム残G・内部RT状態・ナビ権利を維持するか: UNVERIFIED_AFTER_RESEARCH。
 - 設定変更挙動から電断挙動を推定転記しない。
 
 ### gameCounterReset
 
 - 最大3000Gはボーナス後RTの継続上限であり、通常時のハマリ天井ではない。
-- 通常時ゲーム数天井用カウンタ: NONE_CONFIRMED / NOT_APPLICABLE。
-- RT残Gカウンタの設定変更時処理: UNVERIFIED。
+- 通常時ゲーム数天井用カウンタ: NONE_CONFIRMED_AFTER_RESEARCH / NOT_APPLICABLE。
+- RT残Gカウンタの設定変更時処理: UNVERIFIED_AFTER_RESEARCH。
 
 ### ceilingAfterReset
 
-- 通常時ゲーム数天井: NONE_CONFIRMED。
-- リセット専用短縮天井: NONE_CONFIRMED。
+- 通常時ゲーム数天井: NONE_CONFIRMED_AFTER_RESEARCH。
+- リセット専用短縮天井: NONE_CONFIRMED_AFTER_RESEARCH。
 
 ### modeAfterReset
 
-- 通常時ゲーム数管理モード、朝一専用モード、設定変更時の専用モード振り分け: NONE_CONFIRMED。
-- RT中ナビ回数状態の設定変更時処理: UNVERIFIED。
+- 通常時ゲーム数管理モード、朝一専用モード、設定変更時の専用モード振り分け: NONE_CONFIRMED_AFTER_RESEARCH。
+- RT中ナビ回数状態の設定変更時処理: UNVERIFIED_AFTER_RESEARCH。
 
 ### stateAfterReset
 
-- ボンバータイムの設定変更/据え置き/電断時の残G・内部RT・ナビ状態処理: UNVERIFIED。
+- ボンバータイムの設定変更/据え置き/電断時の残G・内部RT・ナビ状態処理: UNVERIFIED_AFTER_RESEARCH。
 
 ### advantageousSectionReset
 
@@ -110,27 +111,27 @@ resetBehaviorQA: PARTIAL
 
 ### resetBenefits
 
-- 設定変更専用短縮天井、朝一初当たり優遇、朝一RT付与等: NONE_CONFIRMED。
-- 朝一専用の公開数値: NONE_CONFIRMED。
+- 設定変更専用短縮天井、朝一初当たり優遇、朝一RT付与等: NONE_CONFIRMED_AFTER_RESEARCH。
+- 朝一専用の公開数値: NONE_CONFIRMED_AFTER_RESEARCH。
 
 ### resetPenalties
 
-- 設定変更固有の主要不利要素: NONE_CONFIRMED。
+- 設定変更固有の主要不利要素: NONE_CONFIRMED_AFTER_RESEARCH。
 
 ### resetDetection
 
-- 本機固有のガックン、リール出目、液晶、RT/ナビ挙動による設定変更/据え置き判別: 表記揺れと検索語を変更して再探索したがUNVERIFIED。
+- 本機固有のガックン、リール出目、液晶、RT/ナビ挙動による設定変更/据え置き判別: 表記揺れと検索語を変更して再探索したが NONE_CONFIRMED_AFTER_RESEARCH / UNVERIFIED_AFTER_RESEARCH。
 
 ### numericResetData
 
-- リセット後短縮天井G数: NONE_CONFIRMED / NOT_APPLICABLE
-- 設定変更時モード振り分け: NONE_CONFIRMED
-- 朝一特定G以内当選率: NONE_CONFIRMED
-- リセット恩恵発生率: NONE_CONFIRMED
+- リセット後短縮天井G数: NONE_CONFIRMED_AFTER_RESEARCH / NOT_APPLICABLE
+- 設定変更時モード振り分け: NONE_CONFIRMED_AFTER_RESEARCH
+- 朝一特定G以内当選率: NONE_CONFIRMED_AFTER_RESEARCH
+- リセット恩恵発生率: NONE_CONFIRMED_AFTER_RESEARCH
 
 ## sources
 
-取得日: 2026-09-01
+取得日: 2026-09-09
 
 1. 5号機クロニクル — サミー
    - https://5goki.com/sammy
@@ -165,14 +166,14 @@ resetBehaviorQA: PARTIAL
 
 - REGの純増枚数
 - RTの1Gあたり純増枚数
-- 設定変更時のRT残G・内部RT・ナビ状態処理
-- 据え置き時のRT残G・内部RT・ナビ状態引継ぎ
-- 電源OFF→ONのみのRT/ナビ状態処理
-- 本機固有のガックン/朝一変更判別
-- 公開朝一専用数値
+- 設定変更時のRT残G・内部RT・ナビ状態処理: UNVERIFIED_AFTER_RESEARCH
+- 据え置き時のRT残G・内部RT・ナビ状態引継ぎ: UNVERIFIED_AFTER_RESEARCH
+- 電源OFF→ONのみのRT/ナビ状態処理: UNVERIFIED_AFTER_RESEARCH
+- 本機固有のガックン/朝一変更判別: NONE_CONFIRMED_AFTER_RESEARCH
+- 公開朝一専用数値: NONE_CONFIRMED_AFTER_RESEARCH
 
 ## conflicts
 
 - 導入月は複数資料で2006年4月、パチマガ回顧記事で2006年5月表記。ホール導入時期差の可能性があるためCONFLICT保持。
 - 設定6機械割は115.0% / 114.7%など小差あり。古い当時議論では120%超表記もあったが後に115%前後へ収束しており、120%超は採用しない。
-- resetBehaviorは今回確定資料を得られず、性能コアのCOMPLETE_CORE判定を崩さずQA状態のみPARTIALとして分離管理。
+- resetBehaviorは再探索後も確定資料を得られず、性能コアのCOMPLETE_CORE判定を崩さずQA状態のみPARTIAL_RESEARCH_EXHAUSTEDとして分離管理。
