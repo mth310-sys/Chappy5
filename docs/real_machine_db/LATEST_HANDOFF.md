@@ -1,116 +1,85 @@
 更新日: 2026-09-08
 
 ## 現在地点
-- recordCount: **985**
-- latestRecordAdded: **ドリームハナハナ-30**（パイオニア）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2016-06-06_dream-hanahana-30.md`
-- chronologicalFrontier: **2016-06-06**
-- frontierLatestMachine: **ドリームハナハナ-30**
+- recordCount: **986**
+- latestRecordAdded: **ぱちスロ テラフォーマーズ**（京楽産業.）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2016-06-20_pachislot-terraformars.md`
+- chronologicalFrontier: **2016-06-20**
+- frontierLatestMachine: **ぱちスロ テラフォーマーズ**
 - schema: **resetBehavior v0.7**
-- status: **2016-06-06_GROUP_OPEN_FINAL_AUDIT_REQUIRED**
+- status: **2016-06-20_GROUP_OPEN**
 
 ## 今回の同期 / 正本確認
-- 最新mainの `README.md`、`docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md`（v0.7）、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、No.984 `2016-06-06_big-dream-in-lost-island2.md` を再取得して開始。
-- INDEXは19件時点の旧集約なので、README規定どおり **LATEST_HANDOFF + 実レコード + 最新main** を進捗正本として使用。
-- 開始時点は recordCount **984** / chronologicalFrontier **2016-06-06** / `2016-06-06_GROUP_OPEN_AUDIT_REQUIRED`。
-- 06/06群をALL7、パチビー、メーカー/業界資料で再監査し、未処理の **ドリームハナハナ-30** を発見。GitHub重複検索で既存レコードなしを確認後、No.985として追加。
+- 最新mainの README、mission v0.7、INDEX、LATEST_HANDOFF、No.985ドリームハナハナ-30、遡及QA対象「平成カツヲ伝説」を再取得して開始。
+- INDEXは19件時点の旧集約なので、README規定どおり LATEST_HANDOFF + 実レコード + 最新main を進捗正本として使用。
+- 06/06最終監査で一見未登録に見えたコクッチーブラックを検出したが、最新コミット列と実ファイルを照合し **No.982として既登録**と確認。重複追加しなかった。
+- ALL7/HAZUSE等の境界監査では06/13はパチンコ候補のみで、パチスロ本線の確実な未処理機を固定できず06/20へ進行。
 
-## 2016-06-06群 — 現在の登録済み
-- No.984 **パチスロ ビッグドリーム in ロストアイランド2**（タイヨーエレック）
-- No.985 **ドリームハナハナ-30**（パイオニア）
-
-## No.985 — ドリームハナハナ-30
-- manufacturer: **パイオニア**
-- releaseDate canonical: **2016-06-06**
-- formalModelName: **ドリームハナハナ/DX-30**
-- certificationNumber: **UNVERIFIED_AFTER_RESEARCH**
-- generation/system: **5号機 / ノーマル / Aタイプ / 完全告知 / 30φ**
+## No.986 — ぱちスロ テラフォーマーズ
+- manufacturer: **京楽産業.**
+- releaseDate: **2016-06-20**（京楽公式全国導入開始）
+- formalModelName: **ぱちスロ テラフォーマーズ**
+- certification/model identifier: **6S0317**
+- generation/system: **5号機 / A+ART**
 - recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7**
 
-### release-date audit
-- パチビー: **2016-06-06導入**。
-- ALL7 2016年6月一覧: **2016-06-06導入予定**。
-- グリーンべると2016-05-11記事: **6月中旬納品予定**。
-- ちょんぼりすた: **2016-06-20導入**。
-- K-Navi: **2016-06-27ホール導入開始**。
-- 平成28年6月稼働開始はドラス/サミーネット系後年資料でも確認。
-- 本DBは最も早い実導入日明示を時系列canonicalとして **2016-06-06**、差を `CONFLICT_RELEASE_DATE_2016_06_06_VS_2016_06_20_VS_2016_06_27` として保持。平均しない。
-
 ### performanceCore
-- 機械割: **96.0 / 98.0 / 101.0 / 104.0 / 107.0 / 111.0%**。
-- BIG: **1/318 / 306 / 293 / 277 / 262 / 246**。
-- REG canonical: **1/528 / 492 / 458 / 420 / 385 / 352**。
-- 合算 canonical: **1/198 / 188 / 179 / 167 / 156 / 145**。
-- 設定5のみ、ちょんぼりすた/すろぱちくえすとに **REG 1/395 / 合算1/158** が残るため `CONFLICT_SETTING5_REG_1_385_VS_1_395_AND_COMBINED_1_156_VS_1_158`。平均しない。
-- 50枚ベース: **約38.5G**。
-- BIG: **最大312枚** / REG: **最大130枚**。
-- 天井: **非搭載**。
+- 機械割: **97.9 / 99.0 / 100.3 / 104.1 / 107.8 / 112.0%**。
+- ボーナス合算: **1/149.6 / 144.7 / 138.3 / 132.4 / 124.8 / 119.4**。
+- ART初当たり: **1/443.2 / 425.1 / 407.2 / 363.9 / 328.4 / 294.4**。
+- 50枚ベース: **約37G**。
+- ART「MARS RUSH」: **1セット40G / 純増約1.6枚/G / 継続率76〜97% / 平均約80%**。
+- ゲーム数天井: **ボーナス/ART間777G消化後、次回ボーナスでART確定**。
+- ARTスルー天井: **10連続非当選後の次回ボーナスでART確定**。
+- チャンスリプレイ天井: 規定回数到達後のボーナスでART確定。
 
 ### resetBehavior v0.7
-- 設定変更: 天井/通常時モードは非搭載でN/A。**設定変更後最初のBIG終了時のみ専用パネルフラッシュ抽選**。
-- 公開朝一数値: 初回BIG後、**上のみ37.5% / 上下12.5% / 合計50.0%**、全設定共通。
-- 据え置き: 天井/通常時モードはN/A。設定変更専用初回BIGフラッシュ条件には該当しない。
-- 純電源OFF→ON: 本機固有の直接比較資料を、型式名/電源OFF ON/据え置き/朝一/ガックン等へ検索語を変えて再探索しても固定できず **UNVERIFIED_AFTER_RESEARCH**。設定変更と純電断を同義扱いしない。
-- 変更判別: 設定変更後1G目の**リールガックン**が補助指標。ただしハナハナは判別が難しく個体差・1G回し対策があるため確定扱いしない。
-- 初回BIG後パネルフラッシュ50%も変更推測材料だが、通常BIG後にもフラッシュは発生し得るため確定ではない。
-- BETランプはクイーンハナハナ以降のシリーズで変更判別に使えないとの解析整理あり。
+- 設定変更: **ゲーム数天井RESET / 内部状態再抽選 / チャンスリプレイ天井残り回数を専用テーブルで再セット**。
+- 電源OFF→ONのみ: **天井・内部状態・ステージを引き継ぎ**。
+- 設定変更時内部状態: **通常69.80 / 高確29.80 / 超高確0.39%**。
+- 設定変更時チャンスリプレイ天井残り回数: **0回10.2 / 5回10.2 / 10回10.2 / 25回19.9 / 50回19.9 / 75回29.7%**。
+- 固定ゲーム数の短縮天井は確認せず。朝一恩恵は状態再抽選とCR天井再セットとして別管理。
+- ARTスルー回数進捗の設定変更/据え置き/純電断時の個別処理は直接資料不足のため **UNVERIFIED_AFTER_RESEARCH**。
 - 有利区間: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
-- 朝一出玉面の固定恩恵/不利: 天井短縮・高確移行等は **NONE_CONFIRMED_AFTER_RESEARCH**。
 
-### quality / missing
-- 型式 `ドリームハナハナ/DX-30` は検定通過記事・中古実機資料等で複数確認。
-- certificationNumberは十分再探索しても直接固定できず **UNVERIFIED_AFTER_RESEARCH**。
-- powerCycleBehaviorは本機固有直接比較がなく **UNVERIFIED_AFTER_RESEARCH**。
-- releaseDateと設定5REG/合算競合は原値を双方保持。
-
-## 2016-06-06群 — 継続事項
-- No.984 Big Dream、No.985 Dream Hanahana-30を登録済み。
-- コードギアスR2は5/30 canonicalでNo.978登録済み。6/6表記資料があっても重複登録しない。
-- サミー公式製品年表のA-SLOT北斗の拳 将 / A-SLOT偽物語の `2016/06/06` 表記は、後年導入DBの7/4実導入と定義差があるため06/06群へ即登録しない。7/4群で再監査。
-- **ぱちスロ テラフォーマーズ / パチスロ バルタン星人 / 元祖ハネスロ再び** は6/20群へDEFER。
-- **沖ドキ!パラダイス / -30、南国物語 SPECIAL** は6/27群へDEFER。
-- ALL7 2016年6月一覧では、06/06のパチスロとしてドリームハナハナ-30を確認。Big Dreamは別資料で06/06 canonical。もう一度メーカー横断・HAZUSE/当時カレンダー横断を行い、追加がなければ06/06群をCLOSEDにする。
+## 2016-06-20群 — 継続事項
+- No.986 **ぱちスロ テラフォーマーズ**登録済み。
+- 次の未処理候補: **パチスロ バルタン星人** → **元祖ハネスロ再び**。
+- Big Dreamの06/20表記資料はNo.984で06/06 canonicalとして既登録。重複しない。
+- 06/20群を上記候補処理後にメーカー/HAZUSE/ALL7横断監査し、追加がなければCLOSED。
+- その後06/27群の **沖ドキ!パラダイス / 沖ドキ!パラダイス-30 / 南国物語 SPECIAL** を監査。
 
 ## 遡及 resetBehavior QA
-- retroQaScanConfirmedThrough: **2006-02_cutie-honey.md**
-- retroQaNextInspection: **2006-02-19_heisei-katsuo-densetsu.md**
+- retroQaScanConfirmedThrough: **2006-02-19_heisei-katsuo-densetsu.md**
+- retroQaNextInspection: **2006-03-06_be-bop.md**
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**
-- 新規時系列収集を止めずQAリレーで補完。
+
+### 平成カツヲ伝説 QA結果
+- 性能側 `status: PARTIAL` は維持。
+- reset側のみ **PARTIAL_RESEARCH_EXHAUSTED**へ更新。
+- 特殊リプレイ後3G RT自体は既存HAZUSE根拠を維持。
+- 設定変更/据え置き/純電源OFF→ON時の3G RT残G処理、成立済み特殊状態、本機固有ガックン等を表記揺れ・型式・メーカー・朝一・電断語まで拡張して再探索したが、直接固定できる追加資料なし。
+- 通常時天井/長期モード/AT・ARTストックは NONE_CONFIRMED / NOT_APPLICABLE相当。推測補完しない。
 
 ## 次回再開地点
-1. **recordCount 985 / chronologicalFrontier 2016-06-06 / `2016-06-06_GROUP_OPEN_FINAL_AUDIT_REQUIRED`** から開始。
-2. README / mission v0.7 / INDEX / LATEST_HANDOFF / No.985を最新mainから再取得。
-3. **2016-06-06群を最終メーカー横断監査**。Big Dream / Dream Hanahana以外の全国初導入5号機を固定できれば未処理先頭から追加。
-4. 追加がなければ `2016-06-06_GROUP_CLOSED_FOR_CURRENT_RESEARCH` → 06/07〜06/12境界監査 → **2016-06-13群**へ進む。
-5. ALL7の06/13一覧はパチンコ「アニマルパラダイス」「烈火の炎2」であり、パチスロ本線候補かどうかを種別確認して混入させない。パチスロ候補がなければ次の具体日06/20へ進む。
-6. 06/20群でテラフォーマーズ / バルタン星人 / 元祖ハネスロ再び / Big Dream 6/20競合を再監査。
-7. 06/27群で沖ドキ!パラダイス25/30、南国物語SPECIAL等を監査。
-8. 遡及QAの次対象は `2006-02-19_heisei-katsuo-densetsu.md`（平成カツヲ伝説）。
-9. PARTIAL/UNVERIFIEDは表記揺れ・型式・メーカー・設定変更/据え置き/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間へ検索語を変え、公式・業界・当時解析・古DB・アーカイブ・回顧資料まで再探索後のみ付与。
-10. 競合は平均せずCONFLICT/variant差/定義差/予定日vs実導入日/地域導入差として双方保存。
-
-## safeguard
-- INDEXは旧集約なので進捗正本にしない。LATEST_HANDOFF + 実レコード + 最新mainを優先。
-- 全国導入日と記事公開日・検定日・発表日・納品予定日・地域先行日を混同しない。
-- 設定変更・据え置き・純電断・RAMクリアを同義扱いしない。
-- 通常機械割と完全攻略値を混ぜない。
-- パチンコ機をパチスロ本線へ混入させない。
+1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.986を再取得。
+2. **2016-06-20「パチスロ バルタン星人」**から性能コア+resetBehavior v0.7を収集。
+3. 次に **元祖ハネスロ再び**を処理し、06/20群を最終監査。
+4. 追加がなければ06/20群CLOSED → 06/27群へ。
+5. 遡及QAは **`2006-03-06_be-bop.md`** から継続。
+6. PARTIAL/UNVERIFIEDは検索語・資料系統を変え、公式・業界・当時解析・古DB・アーカイブ・回顧資料まで再探索後のみ確定。
+7. 競合は平均せずCONFLICT。設定変更/据え置き/純電断/RAMクリアを混同しない。
 
 ## 主要出典 — 取得日 2026-09-08
-### No.985 ドリームハナハナ-30
-- グリーンべると: https://web-greenbelt.jp/00008644/
-- 日刊アミューズメント: https://www.nikkansports.com/amusement/pachinko/news/1646787.html
-- パチビー: https://www.pachibee.jp/movies/index/12732
-- ALL7 2016年6月: https://www.all7.jp/plans/index/2016/06
-- K-Navi: https://p-kn.com/slot/2506/
-- P-WORLD: https://www.p-world.co.jp/machine/database/8042
-- すろぱちくえすと: https://www.slopachi-quest.com/article/dream-hanahana/
-- なな徹: https://nana-press.com/kaiseki/machine/32/545/
-- けんのスロットシミュレーション: https://kenslo65536.com/kaiseki/hanahana-dream-30.html
-- ちょんぼりすた: https://chonborista.com/slot/pionia-slot/20098/
-- p-media 型式: https://p-media.info/%E3%83%8F%E3%83%8A%E3%83%8F%E3%83%8A%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA%E6%96%B0%E6%A9%9F%E7%A8%AE%E7%A2%BA%E8%AA%8D%EF%BC%8F%E3%83%89%E3%83%AA%E3%83%BC%E3%83%A0%E3%83%8F%E3%83%8A%E3%83%8F%E3%83%8A/
-- 中一商事 型式: https://store.shopping.yahoo.co.jp/nakaiticom/60006.html
+### No.986 テラフォーマーズ
+- 京楽公式: https://www.kyoraku.co.jp/news/20160620.php
+- パチビー: https://www.pachibee.jp/machines/movie/216050005
+- HAZUSE: https://hazuse.com/machine/pachislot/6S0317/
+- HAZUSE ART: https://hazuse.com/machine/pachislot/6S0317/genre/209/
+- スロ確.com: https://slotkaku.com/terraformars
+- pachinavi: https://pachinavi.net/machines/terraformars/
+- pacnk: https://pacnk.com/slot/tools/sh_terafuomazu.html
 
-### date-boundary audit
-- HAZUSE新台カレンダー: https://hazuse.com/new-machine-calendar/newmachine-calendar/
+### boundary audit
 - ALL7 2016年6月: https://www.all7.jp/plans/index/2016/06
+- HAZUSE新台カレンダー: https://hazuse.com/new-machine-calendar/newmachine-calendar/
