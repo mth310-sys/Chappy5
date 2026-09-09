@@ -1,50 +1,57 @@
 更新日: 2026-09-10
 
 ## 現在地点
-- recordCount: **1145**
-- latestRecordAdded: **トロピカルKISS スウィートVer.**（ハイライツ・エンタテインメント）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2017-09-19_tropical-kiss-sweet-ver.md`
+- recordCount: **1146**
+- latestRecordAdded: **パチスロ 地獄少女 宵伽**（藤商事）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2017-09-19_jigoku-shoujo-yoi-no-togi.md`
 - chronologicalFrontier: **2017-09-19**
-- frontierLatestMachine: **トロピカルKISS スウィートVer. — No.1145**
+- frontierLatestMachine: **パチスロ 地獄少女 宵伽 — No.1146**
 - schema: **resetBehavior v0.7**
 - status: **2017-09-19_GROUP_OPEN**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、正本mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、No.1144「トロピカルKISS ビターVer.」を再取得して開始。
+- 最新mainの `README.md`、正本mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、No.1145「トロピカルKISS スウィートVer.」を再取得して開始。
 - INDEXは初期19件時点の旧スナップショットのため、README規定どおり最新 `LATEST_HANDOFF.md` + 実レコードを進捗正本として採用。
-- 開始時正本は **1144件 / chronologicalFrontier 2017-09-19 / 9/19群OPEN**。
-- 前handoff最優先候補 **「トロピカルKISS スウィートVer.」** をビターVer.との重複・別スペック性を確認し、performance core + resetBehavior v0.7を収集して **No.1145** としてmainへ保存。
-- 導入 **2017-09-19**。パチビー業界発表では2017年9月中旬予定、K-Navi・必勝本・すろぱちくえすと・ちょんぼりすたで9/19が一致。当時納品資料の納品可能日は9/18。
-- メーカーは業界発表・K-Navi・必勝本・解析資料が **ハイライツ・エンタテインメント**。P-WORLDのみ **アイゲート** 表記のため **MANUFACTURER_ATTRIBUTION_CONFLICT_OR_ROLE_SPLIT** として保持。
-- 正式型式名・検定番号はスウィート/Sweet、ハイライツ、アイゲート、型式、検定通過、中古実機等へ検索語を変えても直接固定できず **UNVERIFIED_AFTER_RESEARCH**。ビターVer.の型式を転記しない。
-- 性能コア: 機械割 **98.1 / 99.3 / 100.7 / 105.0 / 108.2 / 111.0%**。SBB **1/993.0→1/481.9**、BIG **1/392.4→1/354.2**、ALOHA/REG **1/372.4→1/344.9**、ボーナス合算 **1/160.2→1/128.3**。
-- ベース **約32G/50枚**。SBB **252枚** / BIG **153枚** / ALOHA **54枚**。SRT純増 **約0.3枚/G**、50〜500G＋無限SRT。
-- 通常天井は **ボーナス&SRT間777G → SRT**。天井到達時SRT公開振り分けは **50G 91% / 100G 5% / 150G 2% / 200G 1% / 300G 1%**。
-- resetBehavior: **設定変更＝天井RESET・状態RESET・アロハ館内ステージ開始**。**純電源OFF→ON＝天井・状態・ステージCARRYOVER**。スウィートVer.朝一表で直接比較確認。
-- 設定変更専用天井短縮、朝一専用モード、高確確定、固定初当たり/SRT優遇率は **NONE_CONFIRMED_AFTER_RESEARCH**。通常777G契約を維持。
-- 純電源OFF→ONとは別条件として直接書かれた「据え置き」契約は固定できず **UNVERIFIED_AS_DISTINCT_CONDITION_AFTER_RESEARCH**。電断表から無条件転記しない。
-- 設定変更時アロハ館内ステージ固定は変更推測材料になり得るが通常基本ステージでもあるため確定判別とはしない。本機固有ガックン/初期出目/ランプ確定契約は **UNVERIFIED_AFTER_RESEARCH**。
+- 開始時正本は **1145件 / chronologicalFrontier 2017-09-19 / 9/19群OPEN**。
+- 前handoff最優先候補 **「パチスロ 地獄少女 宵伽」** を重複確認し、performance core + resetBehavior v0.7を収集して **No.1146** としてmainへ保存。
+- 藤商事公式でシリーズ第2弾・Fusion Core・ART機を確認。ホール導入日はK-Navi、一撃、ちょんぼりすた、2-9伝説で **2017-09-19** が一致。プレミアム先行導入の記録は別扱い。
+- formalModelName は中古実機系複数資料で **地獄少女 宵伽FSB** を確認。検定番号は表記揺れ・FSB・藤商事・検定/7S等へ再探索したが直接固定できず **UNVERIFIED_AFTER_RESEARCH**。
+- 性能コア: 機械割 **97.7 / 99.1 / 100.5 / 103.6 / 107.3 / 111.6%**。ART初当たり **1/415.2 / 379.1 / 356.5 / 319.6 / 261.1 / 221.7**。ボーナス合算は全設定 **1/1057.0**。
+- ベース **約39G/50枚**。BIG **約210枚**。ART純増は **単体約1.8枚/G / ボーナス込み約2.0枚/G** と定義分離。基本ART「地獄巡行」は **40〜80G+5G**。
+- 通常時は **通常 / 天国準備 / 天国** の3モード。最大天井は **1200 / 800 / 100G+前兆**。ART間カウントでボーナスでは天井をリセットしない。
+- resetBehavior: **設定変更＝天井G RESET / モード再抽選 / 状態再抽選 / CZモード再抽選**。純電源OFF→ONは **天井G・モード・状態・CZモードCARRYOVER**。据え置きを純電断とは別条件で明記した契約は **UNVERIFIED_AS_DISTINCT_CONDITION_AFTER_RESEARCH**。
+- 設定変更時モード振り分けを公開数値で保存。設定1は **通常44.53 / 天国準備44.92 / 天国10.55%**、設定5は **33.59 / 33.59 / 32.81%**、設定6は **34.77 / 37.11 / 28.13%** 等。
+- 設定変更時高確スタート率は **25.00〜33.59%**。高確選択時G数は **10G 66.80 / 15G 32.03 / 20G 0.39 / 25G 0.39 / 30G 0.39%**。
+- 設定変更時CZモードは **A 8.59 / B 33.20 / C 33.20 / D 25.00%**。
+- 朝一恩恵は固定短縮天井ではなく、再抽選されたモード次第で最大天井が **100/800/1200G** になる点。天国振り分けは設定1 10.55%〜最大設定5 32.81%。高確スタートも25.00〜33.59%。
+- 設定変更で前日ART間G数・モード・状態・CZモードを失うため、前日有利状態を保持していた場合は不利。`怨みストック`の設定変更/据え置き/純電断契約は十分な再探索後も直接固定できず **UNVERIFIED_AFTER_RESEARCH**。
+- 設定変更/純電源OFF→ONとも液晶ステージは学校/商店街/公園から抽選とする解析があり、ステージ単独では確定判別不可。本機固有の確定ガックン・初期出目/ランプ契約は **UNVERIFIED_AFTER_RESEARCH**。
 - 有利区間は **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
 
-## No.1145 — トロピカルKISS スウィートVer.
-- manufacturer: **ハイライツ・エンタテインメント**（P-WORLDはアイゲート表記を競合保持）
+## No.1146 — パチスロ 地獄少女 宵伽
+- manufacturer: **藤商事**
 - releaseDate: **2017-09-19**
-- formalModelName: **UNVERIFIED_AFTER_RESEARCH**
+- formalModelName: **地獄少女 宵伽FSB**（二次資料複数一致）
 - certificationNumber: **UNVERIFIED_AFTER_RESEARCH**
-- generation/system: **5号機（5.5号機世代） / A+SRT**
+- generation/system: **5号機（5.5号機世代） / A+ART**
 - recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7**
 
 ### resetBehavior v0.7 要点
-- settingChange: **ceiling RESET / state RESET / アロハ館内ステージ開始**。
+- settingChange: **ceiling counter RESET / mode REROLL / state REROLL / CZ mode REROLL**。
 - stay setting: **UNVERIFIED_AS_DISTINCT_CONDITION_AFTER_RESEARCH**。
-- pure power OFF→ON: **ceiling CARRYOVER / state CARRYOVER / stage CARRYOVER**。
-- normal ceiling: **777G（ボーナス&SRT間）→SRT**。
-- ceiling SRT distribution: **50G 91% / 100G 5% / 150G 2% / 200G 1% / 300G 1%**。
-- reset shortening: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- mode: **独立した朝一専用モード/設定変更専用モード振り分け NONE_CONFIRMED_AFTER_RESEARCH**。
-- reset benefit: **固定優遇 NONE_CONFIRMED_AFTER_RESEARCH**。
-- reset penalty: 天井進行・内部状態がRESETされるため前日進行/有利状態は失われ得る。専用追加ペナルティ率は **NONE_CONFIRMED_AFTER_RESEARCH**。
-- reset detection: **設定変更時アロハ館内ステージ固定 vs 純電断ステージ引継ぎ**は推測材料。本機固有ガックンは **UNVERIFIED_AFTER_RESEARCH**。
+- pure power OFF→ON: **ceiling counter / mode / state / CZ mode CARRYOVER**。
+- mode ceilings: **通常1200G / 天国準備800G / 天国100G (+前兆)**。
+- reset mode distribution:
+  - s1 **44.53 / 44.92 / 10.55%**
+  - s2 **42.19 / 42.58 / 15.23%**
+  - s3 **41.02 / 41.41 / 17.58%**
+  - s4 **38.67 / 39.06 / 22.27%**
+  - s5 **33.59 / 33.59 / 32.81%**
+  - s6 **34.77 / 37.11 / 28.13%**
+  - order: 通常 / 天国準備 / 天国
+- reset high-state probability: **25.00 / 26.56 / 28.13 / 29.69 / 31.64 / 33.59%**。
+- reset CZ mode: **A8.59 / B33.20 / C33.20 / D25.00%**。
+- reset detection: deterministic machine-specific gakkun **UNVERIFIED_AFTER_RESEARCH**。
 
 ## 2017-09-04群 — CLOSED
 登録済み No.1127〜No.1134。SLOTデビルマンχは9/4 vs 9/19の導入日CONFLICTを保持。
@@ -61,11 +68,11 @@
 8. 想定科学パチスロ STEINS;GATE廻転世界のインダクタンス ランヴォア — No.1142
 9. ワンダークーちゃん — No.1143
 10. トロピカルKISS ビターVer. — No.1144
-11. **トロピカルKISS スウィートVer. — No.1145**
+11. トロピカルKISS スウィートVer. — No.1145
+12. **パチスロ 地獄少女 宵伽 — No.1146**
 
 ### 同日横断監査・未処理候補
-- **地獄少女 宵伽 — No.1146候補**。2017-09-19候補。次本線として導入日・型式・重複を確認しperformance core + resetBehavior v0.7を収集する。
-- **イースⅠ&Ⅱ** — 2017-09-19候補、未登録。
+- **イースⅠ&Ⅱ — No.1147候補**。2017-09-19候補。次本線として導入日・型式・重複確認後、performance core + resetBehavior v0.7を収集する。
 - **紅き魂は桜の如く** — 2017-09-19候補、未登録。
 - **乱嵐エイサー ver.100** — 2017-09-19候補、未登録。
 - `闘え!サラリーマン` は一部当時一覧で2017-09-19表記が見つかるため、同日群CLOSED前に導入日・型式・独立発売有無を再監査する。
@@ -78,24 +85,28 @@
 - 新規機種収集本線を止めず、別QAリレーで順次補完する。
 
 ## 次回再開地点
-1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1145を再取得。
-2. **1145件 / chronologicalFrontier 2017-09-19 / 9/19群OPEN** を正本として継続。
-3. 最優先は **「地獄少女 宵伽」— No.1146候補**。
-4. 続いて **イースⅠ&Ⅱ → 紅き魂は桜の如く → 乱嵐エイサー ver.100** を重複・導入日確認しながら処理。
+1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1146を再取得。
+2. **1146件 / chronologicalFrontier 2017-09-19 / 9/19群OPEN** を正本として継続。
+3. 最優先は **「イースⅠ&Ⅱ」— No.1147候補**。
+4. 続いて **紅き魂は桜の如く → 乱嵐エイサー ver.100** を重複・導入日確認しながら処理。
 5. `闘え!サラリーマン` の9/19導入可否を再監査し、2017-09-19同日全メーカー監査を継続。追加漏れがなければCLOSED判定して次導入日群へ進む。
 6. 遡及QAは `docs/real_machine_db/machines/2006-07_ooedo-manyuuki.md` から継続。
 
 ## 主要出典 — 取得日 2026-09-10
-### No.1145 トロピカルKISS スウィートVer.
-- パチビー: https://www.pachibee.jp/pparticles/view/983
-- PiDEA X: https://www.pidea.jp/articles/%E4%BA%BA%E6%B0%97%E3%82%B2%E3%83%BC%E3%83%A0%E3%80%8C%E3%83%88%E3%83%AD%E3%83%94%E3%82%AB%E3%83%ABKISS%E3%80%8D%E6%96%B0%E6%84%9F%E8%A6%9ASRT%E6%90%AD%E8%BC%89%EF%BC%8F%E3%83%8F%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%84
-- K-Navi: https://p-kn.com/slot/2868/
-- パチスロ必勝本: https://p.hisshobon.jp/machine/3043/1/66069
-- P-WORLD: https://www.p-world.co.jp/machine/database/8473
-- ちょんぼりすた: https://chonborista.com/slot/high-enter/45615/
-- すろぱちくえすと: https://www.slopachi-quest.com/article/tropicalkiss-sweet/
-- 当時スペックPDF: https://rashinban-web.com/system/files/member/column/suzumenosu/%EF%BD%94%EF%BD%8B.pdf
-- 当時納品情報: https://www.answer-now.co.jp/newpage2.html
+### No.1146 パチスロ 地獄少女 宵伽
+- 藤商事公式: https://www.fujimarukun.co.jp/products/s_jigoku2/
+- K-Navi: https://p-kn.com/slot/2875/
+- 一撃 機種TOP: https://1geki.jp/slot/s_jigoku2/
+- 一撃 天井/設定変更: https://1geki.jp/slot/s_jigoku2/3/
+- 一撃 朝イチ: https://1geki.jp/slot/s_jigoku2/5/
+- 一撃 内部モード: https://1geki.jp/slot/s_jigoku2/43/
+- 一撃 内部状態: https://1geki.jp/slot/s_jigoku2/44/
+- 一撃 CZモード: https://1geki.jp/slot/s_jigoku2/45/
+- ちょんぼりすた: https://chonborista.com/slot/fuji-slot/43934/
+- 2-9伝説: https://2-9densetsu.com/jigoku2/
+- P-WORLD: https://www.p-world.co.jp/machine/database/8482
+- 中一商事（型式名）: https://www.nakaiti.com/html/sFujisho016.html
+- 愛品館（型式名補助）: https://www.aihin.co.jp/new/news-1042354/
 
 ### 2017-09-19群監査
 - 2017年導入機種まとめ: https://squid-and-ball.net/archives/776
