@@ -5,7 +5,7 @@ manufacturer: ビスティ
 releaseDate: 2006-06
 generation: 5号機初期
 systemType: ボーナス主体 / BIG + CB
-qaResetBehavior: PARTIAL
+qaResetBehavior: PARTIAL_RESEARCH_EXHAUSTED
 
 ## payoutRateBySetting
 
@@ -86,56 +86,61 @@ BIG純増は既存HAZUSE系約308枚とパチマガ旧ページ約292枚で差�
 - RT/ART/ATを主ゲーム性として持つ公開仕様は確認できない。
 
 ## resetBehavior
+schemaVersion: v0.7
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
+resetQaLastUpdated: 2026-09-09
 
-resetBehaviorQA: PARTIAL
+### settingChangeBehavior
+- `ロード・オブ・ザ・リング / ロードオブザリング / フィーバーロード・オブ・ザ・リングS / ビスティ` と `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / モード / ガックン` を組み替え、メーカー公式、P-WORLD、K-Navi、パチマガスロマガ旧ページ、旧解析資料、回顧DBを再探索。
+- 本機は公開仕様上ボーナス主体のBIG+CB機で、通常時ゲーム数天井、RT/ART/AT、朝一専用CZ、ゲーム数モードは **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 設定変更時に専用高確/モード/恩恵が発生する本機固有情報は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 設定変更操作そのものによる成立済みボーナス等の低レベル内部契約は、実機完全再現範囲かつ機種固有資料なしのため推測しない。
+reliability: RESEARCH_EXHAUSTED_NO_CONFIRMED_MACHINE_SPECIFIC_BEHAVIOR
 
-settingChangeBehavior:
-- `ロード・オブ・ザ・リング / ロードオブザリング / フィーバーロード・オブ・ザ・リングS / ビスティ` と `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / モード / ガックン` を組み替え、メーカー公式、P-WORLD、K-Navi、パチマガスロマガ旧ページ、旧解析資料を再探索。
-- 本機は公開仕様上ボーナス主体のBIG+CB機で、通常時ゲーム数天井、RT/ART/AT、朝一専用CZ、ゲーム数モードはNONE_CONFIRMED。
-- 設定変更時に専用高確/モード/恩恵が発生する本機固有情報は確認できずNONE_CONFIRMED。
-- 設定変更操作そのものによる内部成立状態等の詳細は実機完全再現範囲のため追わない。
+### carryOverBehavior
+- 通常時天井/周期/モード管理がNONE_CONFIRMEDのため、ホール経営物差し上のゲーム数持越し対象は **NOT_APPLICABLE**。
+- ボーナス成立後など特殊な内部状態の据え置き挙動は本機固有資料を固定できず **UNVERIFIED_AFTER_RESEARCH**。
+reliability: UNVERIFIED_AFTER_RESEARCH_FOR_LOW_LEVEL_STATE
 
-carryOverBehavior:
-- 通常時天井/周期/モード管理がNONE_CONFIRMEDのため、ゲーム数持越し対象はNOT_APPLICABLE寄り。
-- ボーナス成立後など特殊な内部状態の据え置き挙動は本DB粒度ではUNVERIFIED。
+### powerCycleBehavior
+- 電源OFF→ONのみで朝一専用恩恵や天井短縮が発生する情報は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 本機固有の細かな内部状態保持/初期化契約は **UNVERIFIED_AFTER_RESEARCH**。
+reliability: UNVERIFIED_AFTER_RESEARCH_FOR_LOW_LEVEL_STATE
 
-powerCycleBehavior:
-- 電源OFF→ONのみで朝一専用恩恵や天井短縮が発生する情報はNONE_CONFIRMED。
-- 本機固有の細かな内部状態保持はUNVERIFIED。
+### gameCounterReset
+- 通常時ゲーム数天井・周期天井は **NONE_CONFIRMED_AFTER_RESEARCH / NOT_APPLICABLE**。
 
-gameCounterReset:
-- 通常時ゲーム数天井・周期天井はNONE_CONFIRMED / NOT_APPLICABLE。
+### ceilingAfterReset
+- リセット時短縮天井・変更後専用天井は **NONE_CONFIRMED_AFTER_RESEARCH / NOT_APPLICABLE**。
 
-ceilingAfterReset:
-- リセット時短縮天井・変更後専用天井はNONE_CONFIRMED / NOT_APPLICABLE。
+### modeAfterReset
+- 朝一専用モード、設定変更専用モード、モード振り分け公開値は **NONE_CONFIRMED_AFTER_RESEARCH**。
 
-modeAfterReset:
-- 朝一専用モード、設定変更専用モード、モード振り分け公開値はNONE_CONFIRMED。
+### stateAfterReset
+- 通常時にホール経営/朝一客AIへ影響する公開高確状態やART状態は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 細かな内部成立状態は **UNVERIFIED_AFTER_RESEARCH**。
 
-stateAfterReset:
-- 通常時にホール経営/朝一客AIへ影響する公開高確状態やART状態はNONE_CONFIRMED。
-- 細かな内部成立状態はUNVERIFIED。
+### advantageousSectionReset
+- **NOT_APPLICABLE_5TH_GEN_PRE_ADVANTAGEOUS_SECTION**。
 
-advantageousSectionReset:
-- NOT_APPLICABLE（5号機初期・有利区間制度導入前）。
+### resetBenefits
+- 設定変更専用の短縮天井、朝一CZ/RT/ART、初当たり優遇は **NONE_CONFIRMED_AFTER_RESEARCH**。
 
-resetBenefits:
-- 設定変更専用の短縮天井、朝一CZ/RT/ART、初当たり優遇はNONE_CONFIRMED。
+### resetPenalties
+- 設定変更専用の公開不利要素は **NONE_CONFIRMED_AFTER_RESEARCH**。
 
-resetPenalties:
-- 設定変更専用の公開不利要素はNONE_CONFIRMED。
+### resetDetection
+- 本機固有のガックン、リール初動、液晶表示による設定変更/据え置き判別情報は、検索語・資料系統変更後も高信頼資料を確認できず **UNVERIFIED_AFTER_RESEARCH**。
+reliability: UNVERIFIED_AFTER_RESEARCH
 
-resetDetection:
-- 本機固有のガックン、リール初動、液晶表示による設定変更/据え置き判別情報は、検索語・資料系統変更後も高信頼資料を確認できずUNVERIFIED。
-
-numericResetData:
-- 公開朝一関連数値: 今回未確認
-- 短縮天井: NOT_APPLICABLE / NONE_CONFIRMED
-- 設定変更時モード/状態振り分け: NONE_CONFIRMED
+### numericResetData
+- 公開朝一関連数値: **NONE_CONFIRMED_AFTER_RESEARCH**
+- 短縮天井: **NOT_APPLICABLE / NONE_CONFIRMED_AFTER_RESEARCH**
+- 設定変更時モード/状態振り分け: **NONE_CONFIRMED_AFTER_RESEARCH**
 
 ## sources
 
-取得日: 2026-08-31
+取得日: 2026-09-09
 
 1. SANKYOオンライン博物館 — ロード・オブ・ザ・リング
    - https://www.sankyo-fever.jp/collection/860/
@@ -157,14 +162,18 @@ numericResetData:
    - https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sankyo_slot/05/a.php
    - 5号機/8ライン/3枚掛け専用、BIG/CT規定払い出し・純増
    - reliability: ANALYSIS_HIGH
+6. pacnk — ロード・オブ・ザ・リング設定判別ツール
+   - https://pacnk.com/slot/tools/sh_rodoobuzaringu.html
+   - 設定別BIG/CB/機械割の後年照合
+   - reliability: RETROSPECTIVE_SUPPORT
 
 ## missingFields
 
 - 50枚あたりゲーム数
 - 設定別数値の別系統完全照合
-- 本機固有の設定変更/据え置き/電源OFF→ON時の細かな内部状態
-- 本機固有のガックン/設定変更判別
-- 公開朝一関連数値
+- 本機固有の設定変更/据え置き/電源OFF→ON時の細かな内部状態: UNVERIFIED_AFTER_RESEARCH
+- 本機固有のガックン/設定変更判別: UNVERIFIED_AFTER_RESEARCH
+- 公開朝一関連数値: NONE_CONFIRMED_AFTER_RESEARCH
 
 ## conflicts
 
