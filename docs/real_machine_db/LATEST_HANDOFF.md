@@ -1,121 +1,91 @@
 更新日: 2026-09-09
 
 ## 現在地点
-- recordCount: **1113**
-- latestRecordAdded: **パチスロ バイオハザード リベレーションズ**（エンターライズ）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2017-07-31_biohazard-revelations.md`
+- recordCount: **1114**
+- latestRecordAdded: **燃えよ！功夫淑女ドラゴン**（山佐）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2017-07-31_moeyo-kungfu-lady-dragon.md`
 - chronologicalFrontier: **2017-07-31**
-- frontierLatestMachine: **パチスロ バイオハザード リベレーションズ — No.1113**
+- frontierLatestMachine: **燃えよ！功夫淑女ドラゴン — No.1114**
 - schema: **resetBehavior v0.7**
 - status: **2017-07-31_GROUP_OPEN**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、No.1112「トラッドサンダーブラック」、遡及対象「ちゅら姫SUN」を再取得して開始。
+- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、No.1113「パチスロ バイオハザード リベレーションズ」を再取得して開始。
 - INDEX本文は初期19件時点の旧スナップショットのため、README規定どおりLATEST_HANDOFFと実レコードを進捗正本として採用。
-- 開始時mainは **1112件 / chronologicalFrontier 2017-07-18 / 7/18群CLOSED**。
-- handoff指定の次未処理 **「パチスロ バイオハザード リベレーションズ」** をNo.1113として登録。
+- 開始時mainは **1113件 / chronologicalFrontier 2017-07-31 / 7/31群OPEN**。
+- handoff指定の次未処理 **「燃えよ！功夫淑女ドラゴン」** をNo.1114として登録。
 - performance core + resetBehavior v0.7を同時収集。
-- exact release dateは2017-07-24 vs 2017-07-31を再監査。複数の当時解析/機種DBが7/31で一致し、モゲスロのみ7/24のため、7/31をchronological canonical、7/24を `CONFLICT_SECONDARY_RELEASE_DATE` として保持。
-- 遡及reset QAは `2006-06_churahime-sun.md` を再探索し、性能側 `status: PARTIAL` を維持したままreset側のみ `PARTIAL_RESEARCH_EXHAUSTED` へ更新。
+- 欠損判定前に「燃えよ！功夫淑女ドラゴン / 燃えよ！功夫淑女龍 / カンフーレディドラゴン / 山佐 / EE / GG」と「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / ガックン / 功夫チャージ」を組み替え、業界記事・当時解析・旧DB・実機流通資料を横断。
 
-## No.1113 — パチスロ バイオハザード リベレーションズ
-- manufacturer: **エンターライズ**
+## No.1114 — 燃えよ！功夫淑女ドラゴン
+- manufacturer: **山佐**
 - releaseDate canonical: **2017-07-31**
-- secondary exact-date source: **2017-07-24 — CONFLICT_SECONDARY_RELEASE_DATE**
-- formalModelName: **バイオハザードリベレーションズ／ZW**
-- certificationNumber: **7S0275**
-- generation/system: **5号機 / A+ART / ST-ART**
-- recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7**
+- formalModelName canonical: **カンフーレディドラゴン/GG**
+- modelVariantConflict: **カンフーレディドラゴン/EE** も検定通過資料/一部DBに存在。市場実機資料ではGGが複数一致するためGGをcanonicalとしたが、EEを `MODEL_VARIANT_CONFLICT_EE_VS_GG` として保持。
+- certificationNumber: **UNVERIFIED_AFTER_RESEARCH**。型式末尾等から推定していない。
+- generation/system: **5号機 / A+ART / ゲーム数上乗せART**
+- recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7_AND_MODEL_VARIANT_CONFLICT**
 
 ### performanceCore
-- 標準機械割: **97.9 / 98.8 / 101.3 / 103.9 / 106.6 / 108.1%**。
-- 完全攻略系上限値: **99.0 / 99.9 / 102.6 / 105.3 / 108.1 / 109.8%**。算出条件差として別保持し平均しない。
-- BONUS: **1/119.6 / 1/118.7 / 1/117.9 / 1/116.2 / 1/115.0 / 1/113.4**。
-- ART初当たり: **1/520.0 / 1/502.5 / 1/449.1 / 1/406.3 / 1/365.8 / 1/347.9**。
-- ベース: **約34G/50枚**。
-- BONUS「リベレーションズチャンス」: **約60枚 / 10G**。
-- ST-ART「RAID MODE」: **1セット50G+α / ボーナス込み約2.0枚/G**。
-- 第1天井: **400G 5.0% / 500G 10.0% / 600G 12.5% / 700G 25.0% / 800G 47.5%**。選択G数以降のボーナスでART。
-- 第2天井: **ボーナスorART間最大810GでART**。
-- 通常スルー天井: ART非当選ボーナス14連続後、**15回目でART**。
+- 機械割: **97.6 / 99.1 / 101.0 / 105.8 / 109.0 / 116.3%**。
+- ART初当たり: **1/473.1 / 449.2 / 437.8 / 400.3 / 378.9 / 294.6**。
+- ボーナス合算: **1/228.3 / 224.4 / 217.0 / 204.8 / 195.6 / 191.1**。
+- CZ初当たり: **1/176.8 / 164.7 / 160.3 / 143.7 / 136.1 / 100.6**。
+- ベース: **約32G/50枚**。
+- ART「功夫RUSH」: **約1.3枚/G**、ボーナス込み約**1.8枚/G**。
+- ハイパーBONUS: **120枚**、チャレンジBONUS: **約90枚**。
+- 通常ゲーム数天井: **666G**。
 
 ### resetBehavior v0.7
 - settingChange:
-  - ゲーム数天井 **RESET**。
-  - スルー回数天井 **6回目ボーナスでART**へ短縮。
-  - 内部状態 **再抽選**。
-  - 液晶 **船員居住区**開始。
-- powerCycle:
-  - ゲーム数天井 **CARRYOVER**。
-  - スルー回数天井 **CARRYOVER**。
-  - 内部状態 **CARRYOVER**。
-  - 液晶は船員居住区。ボーナス/ART中の電断は当該状態引継ぎ資料あり。
-  - 低レベルRT状態契約は当時資料でも調査中のため `UNVERIFIED_AFTER_RESEARCH`。
-- resetModeDistribution: **通常1 34.38% / 通常2 50.00% / 通常3 15.63%**。
-- resetStateDistribution:
-  - 戦慄S **12.50%**、戦慄D **12.50%**（全設定共通）。
-  - 戦慄R: 設定1/3/5 **3.13%**、設定2/4 **6.25%**、設定6 **12.50%**。
-- ART後の短縮スルー天井状態: **40.2%（精密40.23%）継続 / 59.8%（59.77%）転落**。
-- resetDetection: 設定変更/純電断とも船員居住区開始のため開始ステージ単独判別不可。本機固有の確定ガックン確率は `UNVERIFIED_AFTER_RESEARCH`。
+  - ゲーム数天井進捗 **RESET**。
+  - リセット後天井 **222G 50% / 666G 50%**。
+  - 内部状態を再抽選し、高確スタート率を設定別に公開。
+  - 試練モードのリセット時専用振り分けあり。
+- resetHighStateRate:
+  - 設定1 **33.2%** / 設定2 **37.5%** / 設定3 **33.2%** / 設定4 **37.5%** / 設定5 **50.0%** / 設定6 **55.1%**。
+- resetTrialModeDistribution:
+  - B **11.7%** / C **33.2%** / D **50.0%** / S **5.1%**。
+- resetBenefits: **50%で天井222Gへ短縮**。高確/試練モード再抽選も朝一挙動へ影響。
+- resetDetection: 攻略資料では朝一判別は実用上困難。ガックン判別も難易度が高いとされるが、確定発生率は未固定。
+- pure power OFF→ON: ゲーム数天井・内部状態・功夫チャージの本機固有直接契約を再探索しても固定できず **UNVERIFIED_AFTER_RESEARCH**。設定変更と混同しない。
+- carryOver/stay setting: 独立した本機固有契約を固定できず **UNVERIFIED_AFTER_RESEARCH**。一般的5号機挙動から推測しない。
 - advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
 
-## 遡及 resetBehavior QA — ちゅら姫SUN
-- path: `docs/real_machine_db/machines/2006-06_churahime-sun.md`
-- performance status: **PARTIAL 維持**。性能完了判定は変更していない。
-- resetQaStatus: **PARTIAL_RESEARCH_EXHAUSTED**。
-- メーカー公式、当時パチマガスロマガ、旧機種DB、5号機回顧、業界資料を再探索。
-- 公開仕様上、通常ゲーム数天井 / RT / AT / ART / CZ / 朝一ゲーム数モードは **NONE_CONFIRMED / NOT_APPLICABLE**。
-- 設定変更/据え置き/純電断時の成立済みボーナス・告知・液晶等の低レベル内部状態は本機固有の直接契約を固定できず **UNVERIFIED_AFTER_RESEARCH**。
-- 本機固有ガックン/初期出目/ランプ等の変更判別も **UNVERIFIED_AFTER_RESEARCH**。
-- 公開朝一数値は **NONE_CONFIRMED_AFTER_RESEARCH**。
-- 一般的な5号機ノーマル機挙動からRESET/CARRYOVERを推測していない。
-
-## 2017-07-24〜07-31境界監査
-- バイオハザード リベレーションズ: 7/24資料が1系統ある一方、HAZUSE/一撃/すろぱちくえすと/ちょんぼりすた/K-Navi等は7/31で一致。No.1113に競合保存済み。
-- グレートキングハナハナ-30の7/24表記はNo.1111で既処理済みのため重複しない。
-- **燃えよ！功夫淑女ドラゴン**: モゲスロ/K-Navi/ちょんぼりすた等で **2017-07-31** 候補。次の未処理として優先。
-- **政宗2**: 当時解析の一部は **2017-07-31**、HAZUSEおよび複数後年資料は **2017-08-07**。未処理時に `CONFLICT_2017_07_31_VS_2017_08_07` を再監査する。
-- したがって7/31群はまだ **OPEN**。
+## 2017-07-31群 / 次境界監査
+- No.1113 バイオハザード リベレーションズ、No.1114 燃えよ！功夫淑女ドラゴンまで登録済み。
+- **政宗2**: 一部当時解析は **2017-07-31**、HAZUSEおよび複数資料は **2017-08-07**。未処理。
+- 次回は政宗2のexact release dateを公式/業界一次・当時解析・機種DBで再監査し、`CONFLICT_2017_07_31_VS_2017_08_07` を解消できなければ双方保持したままchronological canonicalを決める。
+- 政宗2監査後に7/31群の全メーカー横断漏れ監査を行い、CLOSE可否を判定する。
 
 ## 遡及 resetBehavior QA
 - retroQaScanConfirmedThrough: **2006-06_churahime-sun.md**。
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
 - 次カーソル: `docs/real_machine_db/machines/2006-06_thunderbirds-neo-xx.md`。
-- 次カーソルは初回レコード追加コミット順で、ちゅら姫SUNの直後がサンダーバードNEOXXであることをGitHub履歴から確認。
+- 今回は新規本線No.1114を優先したため遡及カーソルは進めていない。
+- 次QAではサンダーバードNEOXXの設定1機械割91.0%別ソース照合と、設定変更/据え置き/純電断時のRT・天井・状態契約を優先再探索する。
 
 ## 次回再開地点
-1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1113を再取得。
-2. **1113件 / chronologicalFrontier 2017-07-31 / 7/31群OPEN** を正本として継続。
-3. 次の未処理 **「燃えよ！功夫淑女ドラゴン」** をNo.1114候補として性能コア + resetBehavior v0.7同時収集。
-4. その後 **政宗2** の2017-07-31 vs 2017-08-07競合を再監査し、7/31群CLOSE可否を判定。
-5. 遡及QAは `docs/real_machine_db/machines/2006-06_thunderbirds-neo-xx.md` から継続。既存PARTIAL性能を不用意に崩さず、特に設定1機械割91.0%の別ソースQAとRTリセット契約を優先再探索する。
+1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1114を再取得。
+2. **1114件 / chronologicalFrontier 2017-07-31 / 7/31群OPEN** を正本として継続。
+3. 次の境界候補 **「政宗2」** をNo.1115候補として、2017-07-31 vs 2017-08-07の導入日競合を先に再監査する。
+4. 導入日をcanonical化した上でperformance core + resetBehavior v0.7を収集・保存する。
+5. その後7/31同日全メーカー監査を行い、群CLOSE可否を判定する。
+6. 遡及QAは `docs/real_machine_db/machines/2006-06_thunderbirds-neo-xx.md` から継続。
 
 ## 主要出典 — 取得日 2026-09-09
-### No.1113 バイオハザード リベレーションズ
-- HAZUSE: https://hazuse.com/machine/pachislot/7S0275/
-- HAZUSE 天井: https://hazuse.com/machine/pachislot/7S0275/genre/207/
-- 一撃: https://1geki.jp/slot/s_biohazard_revelations/
-- 一撃 天井/設定変更: https://1geki.jp/slot/s_biohazard_revelations/3/
-- 一撃 ART: https://1geki.jp/slot/s_biohazard_revelations/81/
-- パチ＆スロ必勝本: https://p.hisshobon.jp/machine/2989/1/65361
-- すろぱちくえすと: https://www.slopachi-quest.com/article/biohazard-revelations/
-- ちょんぼりすた: https://chonborista.com/slot/enta-slot/39201/
-- P-WORLD: https://www.p-world.co.jp/machine/database/8419
-- K-Navi: https://p-kn.com/slot/2815/
-- ニッカンアミューズメント/娯楽産業: https://www.nikkansports.com/amusement/pachinko/news/1825966.html
-- モゲスロ2017導入カレンダー: https://moge-site.com/new-slot2017
-
-### ちゅら姫SUN QA
-- ユニバーサル公式: https://www.universal-777.com/product/slot/churahime_sun/
-- パチマガスロマガ基本: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/eleco_slot/62/a.php
-- パチマガスロマガ設定推測: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/eleco_slot/62/i.php
-- 5号機クロニクル: https://5goki.com/universal
-- なな徹設定段階: https://nana-press.com/post/1591139
-- ALL7 2006年6月: https://www.all7.jp/plans/index/2006/06
-- グリーンべると: https://web-greenbelt.jp/00004865/
+### No.1114 燃えよ！功夫淑女ドラゴン
+- K-Navi: https://p-kn.com/slot/2828/
+- グリーンべると/P-WORLD業界記事: https://news.p-world.co.jp/articles/9395/greenbelt
+- ちょんぼりすた: https://chonborista.com/slot/yamasa-slot/40820/
+- P-WORLD: https://www.p-world.co.jp/machine/database/8424
+- すろぱちくえすと: https://www.slopachi-quest.com/article/kung-fu-lady-dragon/
+- 2-9伝説: https://29den.com/kungfuladydragon/
+- SLOT HACK: https://slothack.net/matome/3346/
+- pacnk: https://pacnk.com/slot/tools/sh_moeyoisaoshukujodoragon.html
+- pachinko’s blog: https://pachinko.hatenablog.jp/entry/2017/07/kung-fu-lady-dragon
+- 中一商事実機流通資料: https://store.shopping.yahoo.co.jp/nakaiticom/20115.html
 
 ### 次境界監査
-- 燃えよ！功夫淑女ドラゴン/K-Navi: https://p-kn.com/slot/2828/
-- ちょんぼりすた: https://chonborista.com/slot/yamasa-slot/40820/
 - 政宗2 HAZUSE: https://hazuse.com/machine/pachislot/7S0209/
 - 政宗2 すろぱちくえすと: https://www.slopachi-quest.com/article/masamune2/
