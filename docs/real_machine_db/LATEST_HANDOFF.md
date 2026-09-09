@@ -1,54 +1,55 @@
 更新日: 2026-09-09
 
 ## 現在地点
-- recordCount: **1121**
-- latestRecordAdded: **戦国パチスロ花の慶次～天を穿つ戦槍～**（EXCITE）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2017-08-21_hana-no-keiji-ten-wo-ugatsu-ikusayari.md`
+- recordCount: **1122**
+- latestRecordAdded: **ぱちスロ 仮面ライダーBLACK**（京楽産業.）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2017-08-21_pachislot-kamen-rider-black.md`
 - chronologicalFrontier: **2017-08-21**
-- frontierLatestMachine: **戦国パチスロ花の慶次～天を穿つ戦槍～ — No.1121**
+- frontierLatestMachine: **ぱちスロ 仮面ライダーBLACK — No.1122**
 - schema: **resetBehavior v0.7**
 - status: **2017-08-21_GROUP_OPEN**
 
 ## 今回の同期 / 進捗
-- 最新mainのREADME、mission v0.7、INDEX、LATEST_HANDOFF、No.1120「戦国乙女～TYPE-A～」を再取得して開始。
+- 最新mainのREADME、mission v0.7、INDEX、LATEST_HANDOFF、No.1121「戦国パチスロ花の慶次～天を穿つ戦槍～」を再取得して開始。
 - INDEXは初期19件時点の旧スナップショットのため、README規定どおりLATEST_HANDOFF＋実レコードを進捗正本として採用。
-- 開始時mainは **1120件 / chronologicalFrontier 2017-08-21 / 8/21群OPEN**。
-- HANDOFF最優先の次機種 **「戦国パチスロ花の慶次～天を穿つ戦槍～」** をNo.1121としてperformance core + resetBehavior v0.7で登録。
-- 型式名は検定通過記事で **花の慶次～天を穿つ戦槍～T**、鹿児島県公安委員会告示で製造者 **株式会社EXCITE**・検定番号 **7S0422** を一次確認。
-- 導入日は2017年8月7日付週刊アミューズメントジャパンの「8月21日導入予定」、PiDEA Xの納品8/20～、複数解析の8/21で一致し **2017-08-21** をcanonical。
-- resetBehaviorは一撃の設定変更/電源OFF ON直接表と設定変更時モード数値を採用。実戦値由来の周期前倒しは解析確定値と分離保存。
+- 開始時mainは **1121件 / chronologicalFrontier 2017-08-21 / 8/21群OPEN**。
+- HANDOFF最優先の次機種 **「ぱちスロ 仮面ライダーBLACK」** をNo.1122としてperformance core + resetBehavior v0.7で登録。
+- 京楽公式2017-08-07告知、京楽発表を伝える2017-06-29業界記事、パチビー/K-Navi/一撃等で2017-08-21導入を固定。
+- 型式名 **パチスロ仮面ライダーBLACKKB** は中古実機流通資料2系統で確認。検定番号は表記揺れ・KB・京楽・回胴式遊技機・7S0x等へ検索拡張後も直接固定できず UNVERIFIED_AFTER_RESEARCH。
+- resetBehaviorは一撃の設定変更/電源OFF→ON直接表、期待値見える化の同表、月/太陽レベルの公開数値を採用。実戦値のリセット後ゾーン約1.4倍は解析確定値と分離保存。
 
-## No.1121 — 戦国パチスロ花の慶次～天を穿つ戦槍～
-- manufacturer: **EXCITE（エキサイト）**
+## No.1122 — ぱちスロ 仮面ライダーBLACK
+- manufacturer: **京楽産業.（KYORAKU）**
 - releaseDate canonical: **2017-08-21**
-- formalModelName: **花の慶次～天を穿つ戦槍～T**
-- certificationNumber: **7S0422**
+- formalModelName: **パチスロ仮面ライダーBLACKKB**
+- certificationNumber: **UNVERIFIED_AFTER_RESEARCH**
 - generation/system: **5号機 / ART / CZ / 周期抽選 / ボーナス非搭載**
 - recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7**
 
 ### performanceCore
-- 機械割: **98.5 / 99.2 / 100.7 / 103.3 / 107.0 / 110.1%**。
-- ART初当たり: **1/431.3 / 419.7 / 398.7 / 357.3 / 330.1 / 306.3**。
-- CZ「皆朱の刻」突入率: **1/671.7 / 598.4 / 671.1 / 605.1 / 683.1 / 611.2**、ART期待度 **44.5～45.5%**。
-- ベース: **約47G/50枚**。
+- 機械割: **97.5 / 97.8 / 100.3 / 103.8 / 106.5 / 112.0%**。
+- ART初当たり: **1/495.1 / 489.7 / 453.5 / 430.8 / 411.2 / 368.2**。
+- CZ合算: **1/197.4 / 195.7 / 178.9 / 168.6 / 160.9 / 144.7**。
+- ベース: **約46.5G/50枚**。
 - ART純増: **約2.0枚/G**。
-- ART「大合戦BONUS」: **1セット平均約50G / 最大100G**。
-- 通常天井: **12周期目（液晶1187G）＋前兆**、恩恵 **ART＋ストック1個**。
+- ART「ライジングRUSH」初期G数: **40G or 100G + α**。
+- 通常天井: **ART間1280GでART当選**。
 
 ### resetBehavior v0.7
-- settingChange: **天井RESET / モード再抽選 / 状態RESET / 液晶桜並木**。
-- pure power OFF→ON: **天井・モード・状態CARRYOVER / 液晶桜並木**。
+- settingChange: **天井RESET / 内部状態再抽選 / 月レベル・太陽レベル再抽選 / 埠頭ステージ**。
+- pure power OFF→ON: **天井・内部状態・月レベル・太陽レベルCARRYOVER / 埠頭ステージ**。
 - explicit stay-setting contract: 純電断表から推測転記せず **UNVERIFIED_AFTER_RESEARCH**。
-- 設定変更時モード: **通常A33% / 通常B25% / 天国準備17% / 天国25%**。
-- 天国選択時は **1周期目ART確定**。
-- リセット後周期位置は実戦値で通常より約30～40G前倒し、70～100G前後に集中・平均約50G前後で周期到達との観測があるが、固定短縮天井ではなく `OBSERVATIONAL_RESET_CYCLE_OFFSET` として分離。
-- 設定変更時の状態数値振り分けは検索語・資料系統を変えても直接固定できず **UNVERIFIED_AFTER_RESEARCH_FOR_NUMERIC_STATE_DISTRIBUTION**。
-- ガックンは非常に判別困難。設定変更/純電断とも桜並木開始のためステージ単独では変更判別不可。
+- 設定変更時の月レベル・太陽レベルは両方とも **Lv2 50% / Lv3 25% / Lv4 15% / Lv5 10% / Lv1 0%**。
+- 通常の周期CZ「創世ゾーン」チェックポイント: **100 / 300 / 500 / 700 / 900 / 1100G**。
+- 固定の設定変更専用短縮天井: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- リセット後は両レベルLv2以上により周期CZ/ART期待度が優遇。新台初日実戦集計の「通常平均比約1.4倍」は `OBSERVATIONAL_RESET_ZONE_UPLIFT` として解析確定値から分離。
+- 設定変更時の低確/通常/高確等の具体的状態振り分けは検索拡張後も **UNVERIFIED_AFTER_RESEARCH_FOR_NUMERIC_STATE_DISTRIBUTION**。
+- ガックン判別: **不可**とする当時解析あり。設定変更/純電断とも埠頭ステージのためステージ単独でも判別不可。
 - advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
 
 ## 2017-08-21群監査 — OPEN
-- 登録済み: **No.1118 イノキロードトゥゴッド / No.1119 パチスロ ロボットガールズZ / No.1120 戦国乙女～TYPE-A～ / No.1121 戦国パチスロ花の慶次～天を穿つ戦槍～**。
-- 同日未処理候補: **ぱちスロ 仮面ライダーBLACK / 神の左手 悪魔の右目**。
+- 登録済み: **No.1118 イノキロードトゥゴッド / No.1119 パチスロ ロボットガールズZ / No.1120 戦国乙女～TYPE-A～ / No.1121 戦国パチスロ花の慶次～天を穿つ戦槍～ / No.1122 ぱちスロ 仮面ライダーBLACK**。
+- 同日未処理候補: **神の左手 悪魔の右目**。
 - ALL7の同日「めぞん一刻～約束～」はパチンコ `CRめぞん一刻4 約束` のため本パチスロDB対象外。
 - イミソーレ3A等の8月候補は日付を個別資料で再監査してから群へ含める。
 
@@ -56,32 +57,31 @@
 - retroQaScanConfirmedThrough: **2006-06_churahime-sun.md**。
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
 - 次カーソル: `docs/real_machine_db/machines/2006-06_thunderbirds-neo-xx.md`。
-- 今回は新規本線No.1121を優先したため遡及カーソルは進めていない。
+- 今回は新規本線No.1122を優先したため遡及カーソルは進めていない。
 
 ## 次回再開地点
-1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1121を再取得。
-2. **1121件 / chronologicalFrontier 2017-08-21 / 8/21群OPEN** を正本として継続。
-3. 次の未処理候補は **「ぱちスロ 仮面ライダーBLACK」No.1122**。正式型式・検定番号・performance core + resetBehavior v0.7を収集する。
-4. 続いて **神の左手 悪魔の右目** を処理し、8/21全メーカー横断監査後に群CLOSED可否を判定。
+1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1122を再取得。
+2. **1122件 / chronologicalFrontier 2017-08-21 / 8/21群OPEN** を正本として継続。
+3. 次の未処理候補は **「神の左手 悪魔の右目」No.1123**。正式型式・検定番号・performance core + resetBehavior v0.7を収集する。
+4. その後、8/21全メーカー横断監査を実施し、群CLOSED可否を判定。
 5. イミソーレ3A等の8月候補も別系統カレンダー・型式名・メーカーで境界監査して漏れを防ぐ。
 6. 遡及QAは `docs/real_machine_db/machines/2006-06_thunderbirds-neo-xx.md` から継続。
 
 ## 主要出典 — 取得日 2026-09-09
-### No.1121 戦国パチスロ花の慶次～天を穿つ戦槍～
-- 鹿児島県公安委員会告示第59号: https://www.pref.kagoshima.jp/ab04/kensei/jourei/kouhou/1705/documents/59374_20170529164319-1.pdf
-- パチマガスロマガ 遊技機検定情報: https://cs62.cs-plaza.com/g/pachi/column/detail.php?mcl_cd=0098&mwr_cd=009&tac_cd=00039297&type=1
-- p-media 検定通過記事: https://p-media.info/%E3%81%9B%E3%82%93%E3%81%9D%E3%81%86%EF%BC%9F%E3%81%84%E3%81%8F%E3%81%95%E3%82%84%E3%82%8A%EF%BC%9F%E3%82%A8%E3%82%AD%E3%82%B5%E3%82%A4%E3%83%88%E3%81%8B%E3%82%89%E3%80%8C%E8%8A%B1%E3%81%AE%E6%85%B6/
-- グリーンべると/P-WORLD 発表会: https://news.p-world.co.jp/articles/9347/greenbelt
-- PiDEA X 機械選定/スペック: https://pidea.jp/articles/%E4%B8%89%E6%9C%A8%E6%B5%81%E3%80%81%E8%8A%B1%E3%81%AE%E6%85%B6%E6%AC%A1%E3%81%AE%E8%A9%95%E4%BE%A1%E3%81%AF%EF%BC%9F
-- 週刊アミューズメントジャパン 2017-08-07号: https://www.niraku.co.jp/news/assets/672e550adb59a8b13acc9b7d7a0d1f9b045c7b45.pdf
-- P-WORLD 機種DB: https://www.p-world.co.jp/machine/database/8436
-- ちょんぼりすた: https://chonborista.com/slot/newgin-slot/41213/
-- 一撃 天井/設定変更: https://1geki.jp/slot/s_hananokeiji_ten/3/
-- 一撃 モード移行抽選: https://1geki.jp/slot/s_hananokeiji_ten/42/
-- 一撃 CZ「皆朱の刻」: https://1geki.jp/slot/s_hananokeiji_ten/43/
-- 期待値見える化 リセット挙動: https://slotjin.com/slot/keiji4-reset/
-- すろぱちくえすと: https://www.slopachi-quest.com/article/hananokeiji-ikusayari/
-
-### 8/21群境界監査
-- 2017年導入日順一覧: https://www.slopachi-quest.com/article/2017-sindai/
-- 神の左手 悪魔の右目: https://chonborista.com/slot/high-enter/41803/
+### No.1122 ぱちスロ 仮面ライダーBLACK
+- KYORAKU公式 NEWS（2017-08-07）: https://www.kyoraku.co.jp/news/detail/145
+- パチ7 / プレイグラフ 京楽発表記事（2017-06-29）: https://pachiseven.jp/news/index/page%3A64
+- グリーンべると / P-WORLD 業界記事（2017-06-29）: https://news.p-world.co.jp/articles/9422/greenbelt
+- P-WORLD 機種DB: https://www.p-world.co.jp/machine/database/8450
+- パチビー: https://www.pachibee.jp/movies/index/13963
+- K-Navi: https://p-kn.com/slot/2843/
+- 一撃 機種トップ: https://1geki.jp/slot/s_kamenrider_black/
+- 一撃 天井/設定変更: https://1geki.jp/slot/s_kamenrider_black/3/
+- 一撃 月/太陽レベル: https://1geki.jp/slot/s_kamenrider_black/46/
+- 一撃 設定判別/朝一: https://1geki.jp/slot/s_kamenrider_black/5/
+- 一撃 50枚ベース: https://1geki.jp/slot/s_kamenrider_black/4/
+- ちょんぼりすた: https://chonborista.com/slot/kyoraku-slot/42116/
+- 期待値見える化 リセット: https://slotjin.com/slot/kamenrider-black-reset/
+- pacnk 設定判別/スペック: https://pacnk.com/slot/tools/sh_kamenraidaburakku.html
+- 中一商事 型式名: https://www.nakaiti.com/html/sKyoraku008.html
+- Yahoo!ショッピング 中一商事 型式名: https://store.shopping.yahoo.co.jp/nakaiticom/20216.html
