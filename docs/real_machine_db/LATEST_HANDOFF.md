@@ -1,46 +1,50 @@
 更新日: 2026-09-10
 
 ## 現在地点
-- recordCount: **1143**
-- latestRecordAdded: **ワンダークーちゃん**（山佐）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2017-09-19_wonder-koo-chan.md`
+- recordCount: **1144**
+- latestRecordAdded: **トロピカルKISS ビターVer.**（ハイライツ・エンタテインメント）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2017-09-19_tropical-kiss-bitter-ver.md`
 - chronologicalFrontier: **2017-09-19**
-- frontierLatestMachine: **ワンダークーちゃん — No.1143**
+- frontierLatestMachine: **トロピカルKISS ビターVer. — No.1144**
 - schema: **resetBehavior v0.7**
 - status: **2017-09-19_GROUP_OPEN**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、No.1142「STEINS;GATE ランヴォア」を再取得して開始。
+- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、No.1143「ワンダークーちゃん」を再取得して開始。
 - INDEXは初期19件時点の旧スナップショットのため、README規定どおり最新 `LATEST_HANDOFF.md` + 実レコードを進捗正本として採用。
-- 開始時正本は **1142件 / chronologicalFrontier 2017-09-19 / 9/19群OPEN**。
-- 前handoff最優先候補 **「ワンダークーちゃん」** をGitHub重複検索後、performance core + resetBehavior v0.7を収集し **No.1143** としてmainへ保存。
-- 山佐製。HAZUSE・K-Navi・複数当時解析で導入 **2017-09-19** が一致。グリーンべるとは納品9/18予定で整合。
-- 正式型式 **`ワンダークーちゃん／GG`**、検定番号 **`7S0941`**。
-- 性能コア: 設定Yの1段階。通常掲載出率 **98%**、フル攻略時 **102%**。BIG **1/216** / REG **1/324** / 合算 **1/129**、BIG:REG **6:4**。
-- ベース **約27G/50枚**、BIG平均約318枚（最大321枚）/ REG平均約110枚（最大116枚）。AT/ART/RTなしの完全告知ノーマル。
-- 天井は **非搭載**。通常掲載98%とフル攻略102%は条件差なのでCONFLICT化せず別定義で保持。
-- resetBehavior: 天井・短縮天井・通常時モード・高確状態・有利区間は該当なし/確認なし。設定Yのみのため通常の別設定値への変更運用も存在しない。
-- 設定キー操作/同一設定リセット時、据え置き時、純電源OFF→ON時の成立済みボーナス・告知ランプ・初期出目の本機固有直接契約は、表記揺れ・型式・設定Y・リセット・朝一・据え置き・電断・ガックン語を変えて再探索しても固定できず **UNVERIFIED_AFTER_RESEARCH**。
-- リセット専用の朝一恩恵/不利、専用モード、公開朝一数値は **NONE_CONFIRMED_AFTER_RESEARCH**。
-- 本機固有の確定ガックン/初期出目/ランプによる変更判別も **UNVERIFIED_AFTER_RESEARCH**。
+- 開始時正本は **1143件 / chronologicalFrontier 2017-09-19 / 9/19群OPEN**。
+- 前handoff最優先候補 **「トロピカルKISS ビターVer.」** を重複確認し、performance core + resetBehavior v0.7を収集して **No.1144** としてmainへ保存。
+- 導入 **2017-09-19**。業界発表・K-Navi・パチ7・解析資料はハイライツ・エンタテインメント表記で一致。P-WORLDのみメーカー欄をアイゲートとするため **MANUFACTURER_ATTRIBUTION_CONFLICT_OR_ROLE_SPLIT** として保持。
+- 検定通過資料には **`トロピカルキス ビター／HA` と `／HC`** の2型式。中古実機資料で市場実機を `／HA` と直接確認したため本レコードは `／HA` をcanonical、`／HC` は **APPROVED_VARIANT_NOT_CONFIRMED_AS_MARKETED_SPEC** として分離。
+- 検定番号は型式・メーカー・7S・検定・公安委員会等へ検索語を変えても直接固定できず **UNVERIFIED_AFTER_RESEARCH**。
+- 性能コア: 機械割 **97.8 / 98.7 / 100.6 / 104.5 / 107.6 / 112.6%**。SBB **1/689.9→1/461.5**、BIG **1/936.2→1/753.3**、ALOHA/REG **1/1236.5→1/1040.3**、ボーナス合算 **1/300.6→1/224.4**。
+- ベース **約32G/50枚**。SBB **300枚** / BIG **207枚** / ALOHA **108枚**。SRT純増 **約0.3枚/G**、基本50〜500G＋無限SRT。
+- 通常天井は **ボーナス&SRT間999G → SRT**。
+- resetBehavior: **設定変更＝天井RESET・状態RESET・アロハ館内ステージ開始**。**純電源OFF→ON＝天井・状態・ステージCARRYOVER**。ちょんぼりすた朝一表で直接比較確認。
+- 設定変更専用の天井短縮、朝一専用モード、高確確定、公開優遇率は **NONE_CONFIRMED_AFTER_RESEARCH**。通常最大999Gは維持。
+- 純電源OFF→ONとは別条件として直接書かれた「据え置き」契約は固定できず **UNVERIFIED_AS_DISTINCT_CONDITION_AFTER_RESEARCH**。電断表から無条件転記しない。
+- 設定変更時の開始ステージ固定は変更推測材料になり得るが確定判別とはしない。本機固有ガックン/初期出目/ランプ確定契約は **UNVERIFIED_AFTER_RESEARCH**。
 - 有利区間は **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
 
-## No.1143 — ワンダークーちゃん
-- manufacturer: **山佐**
+## No.1144 — トロピカルKISS ビターVer.
+- manufacturer: **ハイライツ・エンタテインメント**（P-WORLDはアイゲート表記を競合保持）
 - releaseDate: **2017-09-19**
-- formalModelName: **ワンダークーちゃん／GG**
-- certificationNumber: **7S0941**
-- generation/system: **5号機 / ノーマルAタイプ・完全告知・技術介入・設定Yのみ**
+- formalModelName: **トロピカルキス ビター／HA**
+- approvedVariant: **トロピカルキス ビター／HC**（市場流通未確定）
+- certificationNumber: **UNVERIFIED_AFTER_RESEARCH**
+- generation/system: **5号機 / A+SRT・ボーナス+ART系SRT**
 - recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7**
 
 ### resetBehavior v0.7 要点
-- settingChange: **1段階設定Yのみ。別設定値への変更はNOT_APPLICABLE。設定キー操作/同一設定リセットの成立済みボーナス等はUNVERIFIED_AFTER_RESEARCH**。
-- stay setting: **天井/モード管理はNOT_APPLICABLE、成立済みボーナス等の直接契約はUNVERIFIED_AFTER_RESEARCH**。
-- pure power OFF→ON: **UNVERIFIED_AFTER_RESEARCH**（成立済みボーナス/告知/初期出目）。
-- normal ceiling: **NONE**。
-- reset shortening: **NOT_APPLICABLE_NO_CEILING**。
-- reset benefit / dedicated numeric data: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- reset detection / gakkun: **UNVERIFIED_AFTER_RESEARCH**。
+- settingChange: **ceiling RESET / state RESET / アロハ館内ステージ開始**。
+- stay setting: **UNVERIFIED_AS_DISTINCT_CONDITION_AFTER_RESEARCH**。
+- pure power OFF→ON: **ceiling CARRYOVER / state CARRYOVER / stage CARRYOVER**。
+- normal ceiling: **999G（ボーナス&SRT間）**。
+- reset shortening: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- mode: **独立した朝一モード/設定変更専用モード振り分け NONE_CONFIRMED_AFTER_RESEARCH**。
+- reset benefit: **固定優遇 NONE_CONFIRMED_AFTER_RESEARCH**。
+- reset penalty: 天井進行・内部状態がRESETされるため前日進行/有利状態は失われ得る。専用追加ペナルティ率は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- reset detection: **設定変更時アロハ館内ステージ固定 vs 純電断ステージ引継ぎ**は推測材料。本機固有ガックンは **UNVERIFIED_AFTER_RESEARCH**。
 
 ## 2017-09-04群 — CLOSED
 登録済み No.1127〜No.1134。SLOTデビルマンχは9/4 vs 9/19の導入日CONFLICTを保持。
@@ -55,11 +59,11 @@
 6. 盗忍！剛衛門 — No.1140
 7. シンデレラブレイド3 — No.1141
 8. 想定科学パチスロ STEINS;GATE廻転世界のインダクタンス ランヴォア — No.1142
-9. **ワンダークーちゃん — No.1143**
+9. ワンダークーちゃん — No.1143
+10. **トロピカルKISS ビターVer. — No.1144**
 
 ### 同日横断監査・未処理候補
-- **トロピカルKISS ビターVer. — No.1144候補**。ちょんぼりすた・すろぱちくえすと・当時業界資料で **2017-09-19 / ハイライツエンタテインメント / スウィートVer.との2スペック同時導入** を確認。次本線として独立レコード化する。
-- **トロピカルKISS スウィートVer.** — ビターと別スペックのため独立収集対象。
+- **トロピカルKISS スウィートVer. — No.1145候補**。ビターと別スペック。P-WORLD等でSBB252枚 / BIG153枚 / ALOHA54枚、天井777G、SRT約0.3枚/Gを先行確認。次本線として独立レコード化する。
 - **地獄少女 宵伽** — 2017-09-19候補、未登録。
 - **イースⅠ&Ⅱ** — 2017-09-19候補、未登録。
 - **紅き魂は桜の如く** — 2017-09-19候補、未登録。
@@ -74,25 +78,25 @@
 - 新規機種収集本線を止めず、別QAリレーで順次補完する。
 
 ## 次回再開地点
-1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1143を再取得。
-2. **1143件 / chronologicalFrontier 2017-09-19 / 9/19群OPEN** を正本として継続。
-3. 最優先は **「トロピカルKISS ビターVer.」— No.1144候補**。
-4. 続いて **スウィートVer. → 地獄少女 宵伽 → イースⅠ&Ⅱ → 紅き魂は桜の如く → 乱嵐エイサー ver.100** を重複・導入日確認しながら処理。
-5. 2017-09-19同日全メーカー監査を継続し、追加漏れがなければCLOSED判定して次導入日群へ進む。
+1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1144を再取得。
+2. **1144件 / chronologicalFrontier 2017-09-19 / 9/19群OPEN** を正本として継続。
+3. 最優先は **「トロピカルKISS スウィートVer.」— No.1145候補**。
+4. 続いて **地獄少女 宵伽 → イースⅠ&Ⅱ → 紅き魂は桜の如く → 乱嵐エイサー ver.100** を重複・導入日確認しながら処理。
+5. `闘え!サラリーマン` の9/19導入可否を再監査し、2017-09-19同日全メーカー監査を継続。追加漏れがなければCLOSED判定して次導入日群へ進む。
 6. 遡及QAは `docs/real_machine_db/machines/2006-07_ooedo-manyuuki.md` から継続。
 
 ## 主要出典 — 取得日 2026-09-10
-### No.1143 ワンダークーちゃん
-- グリーンべると: https://web-greenbelt.jp/00009872/
-- HAZUSE: https://hazuse.com/machine/pachislot/7S0941/
-- P-WORLD: https://www.p-world.co.jp/machine/database/8507
-- K-Navi: https://p-kn.com/slot/2882/
-- ちょんぼりすた: https://chonborista.com/slot/yamasa-slot/44553/
-- 2-9伝説: https://29den.com/wonderqoo/
-- Re.design: https://www.redesign777.tokyo/Spec/SlotView?flag=0&id=S2017080912003501
-- スロット解析情報~すろかい~: https://slotkaiseki.hatenablog.com/entry/wonder
+### No.1144 トロピカルKISS ビターVer.
+- 遊技日本: https://yugi-nippon.com/pachinko-news/post-14018/
+- パチビー: https://www.pachibee.jp/pparticles/view/983
+- K-Navi: https://p-kn.com/slot/2869/
+- P-WORLD: https://www.p-world.co.jp/machine/database/8472
+- ちょんぼりすた: https://chonborista.com/slot/high-enter/45615/
+- すろぱちくえすと: https://www.slopachi-quest.com/article/tropicalkiss-bitter/
+- パチ7（天井）: https://pachiseven.jp/machines/5264/cutout/78
+- 愛品館（実機型式／HA）: https://www.aihin.co.jp/new/news-975352/
+- パチ7ニュース（／HA・／HC検定通過）: https://pachiseven.jp/news/index/page%3A64
+- ぱちんこドキュメント（検定通過回顧）: https://pachinkolist.com/archives/51625030.html
 
 ### 2017-09-19群監査
 - 2017年導入機種まとめ: https://squid-and-ball.net/archives/776
-- トロピカルKISS（ちょんぼりすた）: https://chonborista.com/slot/high-enter/45615/
-- トロピカルKISS発表（パチビー）: https://www.pachibee.jp/pparticles/view/983
