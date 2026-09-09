@@ -1,59 +1,59 @@
 更新日: 2026-09-10
 
 ## 現在地点
-- recordCount: **1154**
-- latestRecordAdded: **パチスロ 闘え！サラリーマン**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2017-09-04_tatakae-salaryman.md`
+- recordCount: **1155**
+- latestRecordAdded: **SLOTデビルマンχ**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2017-09-04_slot-devilman-x.md`
 - chronologicalFrontier: **2017-09-19**
 - frontierLatestMachine: **パチスロ ゴルゴ13 — No.1153**
 - schema: **resetBehavior v0.7**
-- status: **2017-09-19_GROUP_OPEN_RETROACTIVE_RELEASE_DATE_CONFLICT_GAP_RECOVERED**
+- status: **2017-09-19_GROUP_OPEN_RETROACTIVE_RELEASE_DATE_CONFLICT_GAP_RECOVERED_AGAIN**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、No.1153を再取得して開始。
-- INDEXは初期19件時点の旧スナップショット。README規定どおり最新 `LATEST_HANDOFF.md` + 実レコードを進捗正本として採用。
-- 開始時正本は **1153件 / chronologicalFrontier 2017-09-19 / 9/19群OPEN_FINAL_CROSS_SOURCE_AUDIT_FOUND_ADDITIONAL_GAP**。
-- 9/19群のメーカー・導入カレンダー・表記揺れ再監査で、ロデオ **「パチスロ 闘え！サラリーマン」** が未登録と判明したため **No.1154** として追加。
-- 本機の導入日は資料競合あり。HAZUSE・ちょんぼりすた・2017年新台カレンダーは **2017-09-04**、パチビー・後年天井資料は **2017-09-19**。平均せず `CONFLICT_RELEASE_DATE_2017_09_04_VS_2017_09_19` とし、複数の当時系資料一致の **9/4をchronological canonical** とした。このため今回追加は遡及漏れ回収で、chronologicalFrontier自体は **2017-09-19** のまま。
+- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、実レコード、`LATEST_HANDOFF.md` を再取得して開始。
+- INDEXは初期19件時点の旧スナップショットのため、README規定どおり最新 `LATEST_HANDOFF.md` + main実レコードを進捗正本として採用。
+- 開始時正本は **1154件 / chronologicalFrontier 2017-09-19 / 9/19群OPEN_RETROACTIVE_RELEASE_DATE_CONFLICT_GAP_RECOVERED**。
+- 2017-09-19群を導入カレンダー・HAZUSE・K-Navi・当時解析で再横断し、エレコ **「SLOTデビルマンχ」** が未登録と判明したため **No.1155** として追加。
+- 導入日は資料競合あり。HAZUSE・パチビーは **2017-09-04**、K-Navi・ちょんぼりすた・すろかい・slotnews777は **2017-09-19**。平均せず `CONFLICT_RELEASE_DATE_2017_09_04_VS_2017_09_19` を保持し、型式・検定番号まで一体管理しているHAZUSEとパチビーが一致する **9/4をchronological canonical** とした。
+- このため今回追加も9/19監査から発見した遡及漏れであり、chronologicalFrontier自体は **2017-09-19** のまま。
 
-## No.1154 — パチスロ 闘え！サラリーマン
-- manufacturer: **ロデオ**。
-- formalModelName: **闘え！サラリーマン／XA**。
-- certificationNumber: **7S0687**。
-- 型式・製造者・検定番号は鹿児島県公安委員会2017-07-25公告で一次確認。フィールズ2017-07-11発売告知でもロデオ製を確認。
-- recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7_PARTIAL_POWER_CYCLE**。
+## No.1155 — SLOTデビルマンχ
+- manufacturer: **エレコ**。
+- formalModelName: **SLOTデビルマンχDA**。
+- certificationNumber: **7S0565**。
+- recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7**。
 
 ### 性能コア
-- 機械割: **97.2 / 98.6 / 100.3 / 102.2 / 105.4 / 110.2%**。
-- 赤7BIG: **1/528.52 / 524.29 / 508.03 / 504.12 / 481.88 / 464.79**。
-- 白7宴BIG: **1/16384.0**（全設定共通掲載）。
-- ボーナス合算: **1/512.0 / 508.0 / 492.8 / 489.1 / 468.1 / 452.0**。
-- ART初当たり: **1/358.9 / 342.7 / 326.2 / 299.6 / 281.3 / 259.1**。
-- 50枚ベース: **約34G**（ちょんぼりすた34.1G）。
-- 純増: **ART単体約1.5枚/G / ボーナス込み約1.7枚/G**を定義分離。HAZUSE本文の約1.7枚/G表記は定義曖昧として注記。
-- BIG約 **200枚** / 宴BIG約 **300枚**。
-- ART「通勤RUSH」: 基本 **約36G+α**。資料によって約40G+α要約あり。
-- 通常最大天井: ART間 **1095G**、ボーナスではリセットされない。
+- 機械割: **98.4 / 99.0 / 101.0 / 104.1 / 109.0 / 115.2%**。
+- ボーナス合算: **1/299.3 / 299.3 / 284.9 / 284.9 / 265.3 / 265.3**。
+- ART初当たり: **1/566.2 / 554.0 / 542.4 / 486.2 / 509.1 / 387.3**。
+- アモンボーナス: **1/16384.0**（全設定共通）。
+- 50枚ベース: **約32.6〜32.9G**。
+- ART純増: **約1.4枚/G**、ボーナス込み **約2.0枚/G**を定義分離。
+- デビルボーナス / アモンボーナス: **各210枚**。
+- ART「アーマゲドン」: **1セット50G**。
+- 通常天井: ART終了後、ボーナス間 **1280G**で前兆後ART。
 
 ### resetBehavior v0.7
-- 設定変更時の天井: **365G or 730G**。
-- HAZUSE公開振り分け: 通常3年から **1年短縮50.00% / 2年短縮50.00%**、すなわち **730G 50% / 365G 50%**。
-- 設定変更時の内部状態・開始ステージ: 当時比較表でも調査中。再探索後 **UNVERIFIED_AFTER_RESEARCH**。
-- 据え置きを独立条件とした天井/モード/状態の直接契約: **UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION**。
-- 純電源OFF→ON: ちょんぼりすた比較表で天井・内部状態・ステージ全て調査中。HAZUSE・当時/後年解析・中古実機資料まで再探索しても直接契約を固定できず **UNVERIFIED_AFTER_RESEARCH**。
-- ガックン・初期出目・ランプ等の確定変更判別: **UNVERIFIED_AFTER_RESEARCH**。
+- 設定変更: **天井RESET / 内部状態RESELECT / 街or学校ステージ開始**。
+- 純電源OFF→ON: **天井CARRYOVER / 内部状態CARRYOVER**。通常時は街or学校、ボーナス/ART中は当該状態を引き継ぐ。
+- 据え置き: 純電源OFF→ONとは分離し、独立条件での直接比較資料を固定できなかったため **UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION**。
+- 設定変更専用の短縮天井: **NONE_CONFIRMED_AFTER_RESEARCH**。1280Gをゼロから再計数。
+- 設定変更時のモードA/B・通常/高確/魔界等の具体的初期振り分け: **UNVERIFIED_AFTER_RESEARCH**。
+- 設定変更判別: 初回デビルボーナスの設定変更示唆ボイス「デビルマンの力を教えてやる」の振り分けが **設定1〜3 20.0% / 設定4 27.4% / 設定5 29.0% / 設定6 30.5%**。単独確定扱いにはしない。
+- 確定ガックン・初期出目・ランプ判別: **UNVERIFIED_AFTER_RESEARCH**。
 - 有利区間: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
 
 ## CONFLICT / 品質メモ
 - `CONFLICT_RELEASE_DATE_2017_09_04_VS_2017_09_19`: 9/4系と9/19系を平均せず保持。canonical 9/4。
-- `NET_INCREASE_DEFINITION_SPLIT`: ART単体約1.5枚/Gとボーナス込み約1.7枚/Gを別定義として保存。
-- `ART_SET_LENGTH_DISPLAY_DIFFERENCE`: 高解像度時間換算は約36G+α、別資料は約40G+α要約。両方保持。
+- `NET_INCREASE_DEFINITION_SPLIT`: ART単体約1.4枚/Gとボーナス込み約2.0枚/Gを別定義として保存。
+- 最初に見つかったちょんぼりすた朝一表は「調査中」だったが、検索を止めず必勝本の機種別「天井&設定変更」まで横断し、設定変更 / 電源OFF→ONの直接比較契約を固定した。
 
 ## 2017-09-19群 — OPEN / 最終横断監査継続
 - 今回も追加漏れが1件見つかったため群はCLOSEしない。
-- 「闘え！サラリーマン」は9/4 canonicalだが9/19資料にも載るため、9/19群監査から発見した遡及漏れとして処理した。
-- 次回は **2017-09-19導入カレンダーの残りメーカー・別スペック・地域差を、No.1154までの実レコードと再突合**する。
-- 追加漏れが見つかれば、その最古未処理機種を **No.1155候補**として追加。
+- 「SLOTデビルマンχ」は9/4 canonicalだが9/19資料群にも載るため、9/19群監査から発見した遡及漏れとして処理した。
+- 次回は **2017-09-19導入カレンダーの残り機種をNo.1155までのmain実レコードと再突合**する。
+- 特に同日カレンダーに現れる別スペック・メーカー表記揺れ・地域差を再確認し、追加漏れが見つかれば最古未処理を **No.1156候補**として追加。
 - 複数系統で追加漏れ無しを確認できた時点で **2017-09-19_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT** とし、次導入日群へ進む。
 
 ## 遡及 resetBehavior QA
@@ -63,19 +63,21 @@
 - 新規機種収集本線を止めず、別QAリレーで順次補完する。
 
 ## 次回再開地点
-1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1154を再取得。
-2. **1154件 / chronologicalFrontier 2017-09-19 / 9/19群OPEN_RETROACTIVE_RELEASE_DATE_CONFLICT_GAP_RECOVERED** を正本として継続。
-3. 2017-09-19を導入カレンダー・メーカー別一覧・HAZUSE/P-WORLD/K-Navi/当時解析・地域差・別スペックで再横断し、No.1154までの既存レコードと突合。
-4. 漏れが見つかった場合は最古未処理を **No.1155候補**としてperformance core + resetBehavior v0.7を収集・保存。
+1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1155を再取得。
+2. **1155件 / chronologicalFrontier 2017-09-19 / 9/19群OPEN_RETROACTIVE_RELEASE_DATE_CONFLICT_GAP_RECOVERED_AGAIN** を正本として継続。
+3. 2017-09-19を導入カレンダー・メーカー別一覧・HAZUSE/P-WORLD/K-Navi/当時解析・地域差・別スペックで再横断し、No.1155までのmain実レコードと突合。
+4. 漏れが見つかった場合は最古未処理を **No.1156候補**としてperformance core + resetBehavior v0.7を収集・保存。
 5. 漏れが無ければ **2017-09-19_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT** とし、複数導入日資料で次の日付群を確定して時系列前進。
 6. 遡及QAは `docs/real_machine_db/machines/2006-07_ooedo-manyuuki.md` から継続。
 
 ## 主要出典 — 取得日 2026-09-10
-- フィールズ「新機種『パチスロ 闘え!サラリーマン』発売のお知らせ」（2017-07-11）: https://www.tsuburaya-fields.co.jp/ir/j/files/press/2017/press_20170711a.pdf
-- 鹿児島県公報 第3334号 / 公安委員会告示第85号（2017-07-25）: https://www.pref.kagoshima.jp/ab04/kensei/jourei/kouhou/1707/documents/60654_20170724145425-1.pdf
-- HAZUSE: https://hazuse.com/machine/pachislot/7S0687/
-- ちょんぼりすた: https://chonborista.com/slot/sammy-slot/45491/
-- パチビー: https://www.pachibee.jp/machines/about/217080013
-- パチマ中古実機DB: https://www.pachima.com/c/slot/s_23sammyk/S00443
-- 楽スロ: https://rakuslo.com/tatakae_salaryman-tenjyo.html
+- HAZUSE: https://hazuse.com/machine/pachislot/7S0565/
+- パチ＆スロ必勝本「天井&設定変更」: https://p.hisshobon.jp/machine/3047/1/66209
+- パチビー: https://www.pachibee.jp/machines/index/217080024
+- K-Navi: https://p-kn.com/slot/2881/
+- ちょんぼりすた: https://chonborista.com/slot/universal-slot/45302/
+- すろかい: https://slotkaiseki.hatenablog.com/entry/2017/08/16/153259
+- P-WORLD: https://www.p-world.co.jp/machine/database/8489
+- グリーンべると: https://web-greenbelt.jp/00009901/
+- 遊技日本: https://yugi-nippon.com/pachinko-new-machine/post-14308/
 - slotnews777 2017年度新台カレンダー: https://slotnews777.blog.fc2.com/blog-entry-3121.html
