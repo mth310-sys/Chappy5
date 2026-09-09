@@ -1,128 +1,108 @@
 更新日: 2026-09-09
 
 ## 現在地点
-- recordCount: **1084**
-- latestRecordAdded: **賞金首2**（ネット）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2017-05-22_shokinkubi2.md`
-- chronologicalFrontier: **2017-05-22**
-- frontierLatestMachine: **賞金首2 — No.1084**
+- recordCount: **1085**
+- latestRecordAdded: **パチスロ ツインエンジェルBREAK**（サミー）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2017-06-05_twin-angel-break.md`
+- chronologicalFrontier: **2017-06-05**
+- frontierLatestMachine: **パチスロ ツインエンジェルBREAK — No.1085**
 - schema: **resetBehavior v0.7**
-- status: **2017-05-22_GROUP_CLOSED / NEXT_BOUNDARY_2017-05-23_TO_2017-06-04_AUDIT_REQUIRED**
+- status: **2017-05-23_TO_2017-06-04_BOUNDARY_CLOSED / 2017-06-05_GROUP_OPEN**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、No.1082「パチスロ ラストエグザイル-銀翼のファム-」実レコードを取得して開始。
+- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、No.1084「賞金首2」実レコードを取得して開始。
 - INDEX本文は初期19件時点の旧スナップショットのため、README規定どおり最新handoffと実レコードを進捗正本として採用。
-- 開始時mainは **1082件 / chronologicalFrontier 2017-05-22 / 5/22群OPEN**。
-- handoff指定の次未処理 **「パチスロ 黒神 The Animation」** をNo.1083として登録。
-- 続いて **「賞金首2」** をNo.1084として登録。
-- 両機とも性能コア + resetBehavior v0.7を同時収集し、欠損・競合は検索語と資料系統を変えて再探索した。
-- 5/22群は複数年別カレンダーで `タイムクロス2 / 逆転裁判 / ラストエグザイル銀翼のファム / 黒神 The Animation / 賞金首2` の5機が一致し、No.1080〜1084ですべて登録済みのため **CLOSED_FOR_CURRENT_RESEARCH** とした。
+- 開始時mainは **1084件 / chronologicalFrontier 2017-05-22 / 5/22群CLOSED**。
+- 指示どおり先に **2017-05-23〜2017-06-04境界監査**を実施。
+- 2017導入122タイトル整理では5/22の5機の次が6/5群へ直接進み、K-Navi 2017年6月導入カレンダーでも次のパチスロ掲載日は6/5。別カレンダーも同じ境界を支持したため、現時点で5/23〜6/4の独立全国導入パチスロを固定できず **BOUNDARY_CLOSED_FOR_CURRENT_RESEARCH** とした。
+- 6/5群の未処理先頭候補 **「パチスロ ツインエンジェルBREAK」** をNo.1085として登録。
+- 6/5群はK-Navi/2017導入122タイトルで `信長の野望 創造 / ぱちスロ アベンジャーズ / テイルズ オブ シンフォニア / ツインエンジェルBREAK` の4機を確認。
+- 2-9伝説のみ `ケロロ軍曹` を6/5へ掲載するが、K-Naviと2017導入122タイトルは6/19に置くため、**ケロロ軍曹は導入日CONFLICT候補**として6/5群CLOSE前に再照合する。
 
-## No.1083 — パチスロ 黒神 The Animation
-- manufacturer: **オリンピア**
-- releaseDate: **2017-05-22**
-- formalModelName: **パチスロ黒神／K2**
-- certificationNumber: **7S0110**
-- generation/system: **5号機 / 5.5号機 / ART / ボーナス非搭載**
-- recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7_CONFLICT**
-
-### performanceCore
-- 機械割: **97.6 / 98.7 / 100.0 / 103.2 / 105.1 / 110.2%**（精密掲載値97.55〜110.21は丸め差扱い）。
-- ART初当たり: **1/175.34 / 172.57 / 166.00 / 155.80 / 149.49 / 138.45**。
-- ベース: **約46〜48G/50枚**（約46G表記もあり、定義差として保持）。
-- ART純増: **約1.8枚/G**。
-- 黒神遊戯はBGBで初期/追加G数を獲得するゲーム数上乗せ型。当時解析では30G以上。
-- 通常ゲーム数天井: **467G + 最大33G前兆（最大500G）でBGB**。
-- 通常BGB初戦敗北回数天井: **10回目BGBで初戦勝利確定**。
-
-### resetBehavior v0.7
-- 設定変更: ゲーム数天井RESET、BGB敗北回数天井RESELECT（最大6回）、テラカウンターRESET、マイナスポイントRESELECT。
-- 純電源OFF→ON: 内部ゲーム数、BGB規定回数、マイナスポイントをCARRYOVER。テラカウンターも内部的にはCARRYOVERするが表示上は消える解析あり。
-- 設定変更後BGB敗北回数天井は**最大10回→最大6回**へ短縮する主要朝一恩恵。
-- 公開朝一状態値: **低確61.7 / 高確33.2 / 超高確5.1%**。
-- ただし設定変更時の内部状態は、すろぱちくえすと/ちょんぼりすた/SLOT HACKが**再抽選**、一撃が**引継ぎ**とするため `CONFLICT_STATE_AFTER_SETTING_CHANGE`。
-- マイナスpt再抽選: 2/4/6/8pt各10.94%、10pt42.97%、12pt10.94%、14pt1.17%、16pt0.78%、18pt0.39%。
-- BGB敗北回数天井は設定別1〜6回振り分けをレコード内に保存済み。
-- ガックンは情報/動画があるが当時解析で判別難度が高く、確定判別にはしない。
-- advantageousSectionReset: `NOT_APPLICABLE_5TH_GEN_PRE_5_9`。
-
-## No.1084 — 賞金首2
-- manufacturer: **ネット**
-- releaseDate: **2017-05-22**
-- formalModelName: **賞金首2／NE**
-- certificationNumber: **6S1679**
-- generation/system: **5号機 / 5.5号機 / A+ART / CZ経由**
+## No.1085 — パチスロ ツインエンジェルBREAK
+- manufacturer: **サミー**
+- releaseDate: **2017-06-05**
+- formalModelName: **ツインエンジェルBREAK／ZS**
+- certificationNumber: **7S0115**
+- generation/system: **5号機 / 5.5号機 / A+ART / リアルボーナス併用 / 周期CZ**
 - recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7**
 
 ### performanceCore
-- 機械割: **97.0 / 98.5 / 100.0 / 103.6 / 106.5 / 110.3%**。
-- ART初当たり: **1/324 / 301 / 282 / 247 / 221 / 193**。
-- CZ: **1/167 / 158 / 151 / 138 / 129 / 118**。
-- ボーナス合算: **1/348 / 344 / 337 / 326 / 312 / 299**。
-- ベース: **約33.3G/50枚**。
-- ART純増: **約1.6枚/G**、ボーナス込み約**1.9枚/G**。
-- BIG **204枚**、REG **48枚**、ART 1セット**50G+α**。
-- 通常天井: **ボーナス&ART間998G+前兆**。
+- 機械割: **97.7 / 98.5 / 101.1 / 105.0 / 108.5 / 112.1%**。
+- ART初当たり: **1/364.6 / 357.5 / 338.0 / 307.5 / 290.4 / 270.7**。
+- ボーナス合算: **1/179.1 / 175.7 / 165.5 / 154.2 / 149.3 / 144.0**。
+- BIG合成: **1/322.8 / 316.6 / 299.3 / 278.9 / 269.7 / 257.0**。
+- MID: **1/402.1 / 394.8 / 370.3 / 344.9 / 334.4 / 327.7**。
+- S-BIG: 全設定共通約 **1/5957.8**。
+- ベース: **約33G/50枚**。
+- ART純増: **約0.8枚/G**、ボーナス込み掲載値約**1.6枚/G**。
+- S-BIG/BIG: **約203枚**、MID: **約56枚**。
+- ART「エンジェルタイム」: **1セット33G**。
 
 ### resetBehavior v0.7
-- 設定変更: 天井RESETし**665Gへ短縮**、内部モードRESELECT、酒場ステージ。
-- 公開朝一モード: **低34.38 / 中33.59 / 高32.03%**。
-- 純電源OFF→ON: ちょんぼりすたは天井・内部モードCARRYOVERを明記。一方、すろぱちくえすとは電源ON/OFF欄を調査中としていたため、CARRYOVER契約は`ANALYSIS_SINGLE_DIRECT`として保存。
-- 前日天井進捗は設定変更で消えるが、998G→665G短縮が明確な朝一恩恵。
-- 本機固有の確定的ガックン/初期出目/ランプ判別は再探索後も`UNVERIFIED_AFTER_RESEARCH`。
+- 通常は約333Gごとに周期CZ、3周期目約999GでART濃厚。
+- 設定変更: **周期番号を2周期目へRESET/SHIFT**する一方、**周期内G数はCARRYOVER**する特殊型。
+- 設定変更: **RT状態・RT残りG数もCARRYOVER**。
+- 電源OFF→ON: 周期番号/周期内G数/RT状態をCARRYOVER。期待値見える化では内部状態もCARRYOVER。
+- 据え置き: 設定変更処理なしとして周期/周期内G/RT/内部状態を基本CARRYOVER。独立据え置き表は弱いため直接比較表由来と明記。
+- 実質リセット天井: 内部2周期目開始 + 前日周期内G引継ぎにより **約349〜666G**。固定666G天井ではない。
+- 設定変更後背景振り分け:
+  - 設定1・2: 昼70.31% / 夕方29.69%
+  - 設定3・4: 昼59.77% / 夕方40.23%
+  - 設定5・6: 昼50.00% / 夕方50.00%
+- 通常周期ART期待度: **1周期目20%以上 / 2周期目50%以上 / 3周期目100%**。
+- 内部状態: 期待値見える化は設定変更RESELECT / 電断CARRYOVER。一撃2017-06-29時点は双方「調査中」で、**PUBLICATION_TIME_DIFFERENCE**として保持。
+- 変更判別: RT状態を引き継ぐためRT出目等では判別不能。液晶から内部2周期目を直接見抜けない資料あり。朝一数Gで夕方なら変更可能性は上がるが確定ではない。
+- 本機固有の確定ガックンは再探索後も `UNVERIFIED_AFTER_RESEARCH`。
 - advantageousSectionReset: `NOT_APPLICABLE_5TH_GEN_PRE_5_9`。
 
-## 2017-05-22群
-- status: **CLOSED_FOR_CURRENT_RESEARCH**。
-- 登録済み:
-  1. タイムクロス2 — No.1080
-  2. パチスロ 逆転裁判 — No.1081
-  3. パチスロ ラストエグザイル-銀翼のファム- — No.1082
-  4. パチスロ 黒神 The Animation — No.1083
-  5. 賞金首2 — No.1084
-- すろぱちくえすと2017導入日順一覧、別の2017年導入122タイトル整理で同じ5機を5/22群として確認。
+### 注意 / conflict
+- 2018年の別機 `A-SLOTツインエンジェルBREAK-A／ZR` と混同しない。本レコードは2017年 `ツインエンジェルBREAK／ZS`。
+- 一部カレンダーにA+RT表記があるが、2017年機の当時解析はA+ARTで一致するためA+ARTをcanonical。
+- MATERIAL_NUMERIC_CONFLICT: NONE_CONFIRMED for core yardstick values.
 
-## 次日付境界の先行確認
-- 複数カレンダーで次の大きな全国導入群は **2017-06-05**。
-- 先行候補: `ツインエンジェルBREAK / テイルズ オブ シンフォニア / アベンジャーズ / 信長の野望 創造`。
-- `ケロロ軍曹` は2-9伝説では2017-06-05群、すろぱちくえすとでは2017-06-19群に掲載され、**導入日CONFLICT候補**。処理時に公式・業界・当時解析を追加照合し、地域先行/本導入の可能性も分離する。
-- 5/23〜6/04に独立全国導入機が存在しないか、日付境界をメーカー横断で最終監査してから6/5群へ進むこと。
+## 2017-05-23〜2017-06-04境界
+- status: **CLOSED_FOR_CURRENT_RESEARCH**。
+- 2017導入122タイトル整理では5/22群の次は6/5群。
+- K-Navi 2017年6月導入カレンダーでもパチスロの次掲載日は6/5。
+- 5/29はパチンコ新台の掲載はあるが、今回確認した複数パチスロカレンダーで独立全国導入スロットを固定できなかった。
+
+## 2017-06-05群
+- status: **OPEN**。
+- 登録済み:
+  1. パチスロ ツインエンジェルBREAK — No.1085
+- 未処理確認済み候補:
+  1. パチスロ テイルズ オブ シンフォニア — 北電子
+  2. ぱちスロ アベンジャーズ — オッケー.
+  3. パチスロ 信長の野望-創造- — EXCITE
+- 日付CONFLICT監査候補:
+  - ケロロ軍曹 — 2-9伝説は2017-06-05、K-Navi/2017導入122タイトルは2017-06-19。平均せず、処理前に公式・業界・当時解析で再照合する。
 
 ## 遡及 resetBehavior QA
 - retroQaScanConfirmedThrough: **2006-05_gold-shio-30.md**。
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
 - 次カーソル: `2006-05-15_looney-tunes-bia.md`。
+- 新規本線優先のため今回は未更新。
 
 ## 次回再開地点
-1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1084を再取得。
-2. **1084件 / chronologicalFrontier 2017-05-22 / 5/22群CLOSED** を正本として継続。
-3. **2017-05-23〜2017-06-04境界監査**を先に完了する。
-4. 境界に未処理全国導入機がなければCLOSEDし、**2017-06-05群の次未処理機**をNo.1085として処理する。
-5. 6/5群は全メーカー横断で列挙して順に登録。`ケロロ軍曹`の日付競合を必ず再照合する。
+1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1085を再取得。
+2. **1085件 / chronologicalFrontier 2017-06-05 / 6/5群OPEN** を正本として継続。
+3. 次の未処理 **北電子「パチスロ テイルズ オブ シンフォニア」** をNo.1086候補として性能コア + resetBehavior v0.7で処理。
+4. 続いて `ぱちスロ アベンジャーズ → パチスロ 信長の野望-創造-` を処理。
+5. 6/5群CLOSE前に `ケロロ軍曹` の6/5 vs 6/19導入日CONFLICTを公式・業界・当時解析で再監査。
 6. 遡及QAは `2006-05-15_looney-tunes-bia.md` から継続。
 
 ## 主要出典 — 取得日 2026-09-09
-### No.1083 黒神 The Animation
-- HAZUSE: https://hazuse.com/machine/pachislot/7S0110/
-- HAZUSE ART解析: https://hazuse.com/machine/pachislot/7S0110/genre/209/
-- K-Navi: https://p-kn.com/slot/2770/
-- P-WORLD: https://www.p-world.co.jp/machine/database/8347
-- 一撃: https://1geki.jp/slot/s_kurokami_theanime/
-- 一撃 天井/設定変更: https://1geki.jp/slot/s_kurokami_theanime/3/
-- ちょんぼりすた: https://chonborista.com/slot/orinpia-slot/35618/
-- すろぱちくえすと: https://www.slopachi-quest.com/article/kurokami/
-- すろかい: https://slotkaiseki.hatenablog.com/entry/kurokami
-- SLOT HACK: https://slothack.net/matome/3346/
+### No.1085 パチスロ ツインエンジェルBREAK
+- HAZUSE 型式/導入: https://hazuse.com/machine/pachislot/7S0115/genre/209/
+- HAZUSE 設定変更: https://hazuse.com/machine/pachislot/7S0115/genre/208/
+- K-Navi: https://p-kn.com/slot/2785/
+- 一撃 天井/設定変更: https://1geki.jp/slot/s_twinangel_break/3/
+- 期待値見える化: https://slotjin.com/zone/twinangelbreak/
+- すろかい: https://slotkaiseki.hatenablog.com/entry/break
 
-### No.1084 賞金首2
-- NET発売発表（DreamNews掲載）: https://www.dreamnews.jp/press/0000150006/
-- HAZUSE: https://hazuse.com/machine/pachislot/6S1679/
-- HAZUSE ART解析: https://hazuse.com/machine/pachislot/6S1679/genre/209/
-- ちょんぼりすた: https://chonborista.com/slot/net-slot/36138/
-- すろぱちくえすと: https://www.slopachi-quest.com/article/showkinkubi2/
-
-### 5/22群監査 / 次境界
-- すろぱちくえすと 2017導入日順: https://www.slopachi-quest.com/article/2017-sindai/
-- 2017年導入機種まとめ: https://squid-and-ball.net/archives/776
+### 境界 / 6月導入群
+- K-Navi 2017年6月導入カレンダー: https://p-kn.com/calendar/201706/
+- 2017年導入機種まとめ（122タイトル）: https://squid-and-ball.net/archives/776
 - 2-9伝説新台一覧: https://29den.com/newslot/
-- 2017新台カレンダー: https://slotnews777.blog.fc2.com/blog-entry-3121.html
+- 2017新台スロットカレンダー: https://slotnews777.blog.fc2.com/blog-entry-3121.html
