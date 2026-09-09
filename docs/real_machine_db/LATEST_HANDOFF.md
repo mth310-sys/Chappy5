@@ -1,70 +1,73 @@
 更新日: 2026-09-09
 
 ## 現在地点
-- recordCount: **1103**
-- latestRecordAdded: **SHAKE III SIDE-A**（大都技研）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2017-07-03_shake3-side-a.md`
+- recordCount: **1105**
+- latestRecordAdded: **ロイヤルマハロ-30**（北電子）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2017-07-03_royal-mahalo-30.md`
 - chronologicalFrontier: **2017-07-03**
-- frontierLatestMachine: **SHAKE III SIDE-A — No.1103**
+- frontierLatestMachine: **ロイヤルマハロ-30 — No.1105**
 - schema: **resetBehavior v0.7**
-- status: **2017-07-03_GROUP_OPEN**
+- status: **2017-07-03_GROUP_CLOSED_FOR_CURRENT_RESEARCH**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、No.1102「しすくえパラダイス」実レコードを再取得して開始。
+- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、No.1103「SHAKE III SIDE-A」、遡及QAカーソル「ザ・キング・オブ・ファイターズ」を再取得して開始。
 - INDEX本文は初期19件時点の旧スナップショットのため、README規定どおりLATEST_HANDOFFと実レコードを進捗正本として採用。
-- 開始時mainは **1102件 / chronologicalFrontier 2017-07-03 / 7/3群OPEN**。
-- handoff指定の次未処理 **「SHAKE III SIDE-A」** をNo.1103として登録。
-- HAZUSE、すろぱちくえすと、ちょんぼりすた、パチスロデータ、K-Navi、すろかい、P-WORLD、中古実機資料を横断。
-- 導入日2017-07-03、大都技研、A+RT、型式 `SHAKEIII SIDE-A／A7`、検定番号 `6S1514` を固定。
-- 機械割98.6〜111.2%、SIDE-A/SIDE-B確率、合算、約32G/50枚、SIDE-A約308枚、SIDE-B約200枚、30G RTを複数照合。
-- RT純増は主要当時解析では「調査中」だが中古実機資料に約0.1枚/G（現状維持程度）があるため、単一補助資料値として `ANALYSIS_SINGLE` を明記して保持。
-- 天井は非搭載。2016年版「SHAKE III」の設定変更時天井/CZリセット記事は別AT機のためSIDE-Aへ転用しなかった。
-- SIDE-A固有の設定変更/据え置き/純電断時RT・液晶・LIVEチケット/フリーパス状態契約は十分な再探索後も固定できず `UNVERIFIED_AFTER_RESEARCH`。
-- 設定変更専用の短縮天井・朝一モード・高確スタート・ボーナス初当たり優遇は `NONE_CONFIRMED_AFTER_RESEARCH` / 天井関連は `NOT_APPLICABLE_NO_CEILING`。
-- 当時解析の「ガックン判別はおそらく不可」は断定ではないため `POSSIBLE_NO_GAKKUN / NOT_DETERMINISTIC` として保存。
+- 開始時mainは **1103件 / chronologicalFrontier 2017-07-03 / 7/3群OPEN**。
+- handoff指定の次未処理 **「熊酒場2丁目店」** をNo.1104として登録。
+- その後2017-07-03同日全メーカー横断監査を実施し、旧handoff/一部導入一覧から漏れていた **「ロイヤルマハロ-30」** を検出。
+- 北電子公式は2017年7月製品、グリーンべると業界記事は納品2017-07-02予定、パチビー/2-9伝説等は導入2017-07-03を示すため、No.1105として補完。
+- 2017-07-03群は現調査範囲で9機種を収録し **CLOSED_FOR_CURRENT_RESEARCH** とした。
+- 遡及QAは `2006-05_the-king-of-fighters.md` を再探索し、性能側 `PARTIAL` は維持、reset側のみ `PARTIAL_RESEARCH_EXHAUSTED` へ更新。
 
-## No.1103 — SHAKE III SIDE-A
-- manufacturer: **大都技研**
+## No.1104 — 熊酒場2丁目店
+- manufacturer: **ネット**
 - releaseDate: **2017-07-03**
-- formalModelName: **SHAKEIII SIDE-A／A7**
-- certificationNumber: **6S1514**
-- generation/system: **5号機 / A+RT / 2種BIG + 30G RT**
+- generation/system: **5号機 / ノーマル / 完全告知 / 技術介入**
 - recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7**
 
 ### performanceCore
-- 機械割: **98.6 / 100.5 / 102.7 / 105.2 / 107.5 / 111.2%**（HAZUSEは完全攻略条件と明記）。
-- BIG SIDE-A: **1/370.3 / 364.1 / 358.1 / 346.8 / 326.1 / 316.6**。
-- BIG SIDE-B: **1/425.6 / 394.8 / 376.6 / 360.1 / 356.2 / 318.1**。
-- ボーナス合算: **1/198.0 / 189.4 / 183.6 / 176.6〜176.7 / 170.2 / 158.7**。
-- ベース: canonical **約32G/50枚**。別解析に約32〜35G/50枚レンジあり。
-- RT: **30G**、純増 **約0.1枚/G**は単一補助資料値。ボーナス後RT突入率約60%、通常時サボハニ揃いも契機。
-- SIDE-A **平均約308枚** / SIDE-B **平均約200枚** / REG非搭載。
+- 機械割: **97.0 / 98.5 / 100.0 / 105.0 / 110.0 / 119.9%**。
+- BIG: **1/264 / 264 / 258 / 250 / 235 / 202**。
+- REG: **1/392 / 392 / 330 / 263 / 235 / 202**。
+- 合算: **1/157 / 157 / 144 / 128 / 117 / 101**。
+- ベース: **約33G/50枚**（単一解析資料値）。
+- BIG最大 **311枚** / REG最大 **103枚**。
 - 通常ゲーム数天井: **非搭載**。
 
 ### resetBehavior v0.7
-- settingChangeBehavior: 天井関連 **NOT_APPLICABLE_NO_CEILING**。RT/液晶/チケット状態契約は **UNVERIFIED_AFTER_RESEARCH**。
-- carryOverBehavior: 宵越しゲーム数天井なし。据え置き時RT/液晶/チケット状態の直接契約は **UNVERIFIED_AFTER_RESEARCH**。
-- powerCycleBehavior: 純電源OFF→ON時RT/液晶/チケット状態の直接契約は **UNVERIFIED_AFTER_RESEARCH**。フリーパス非引継ぎ予想記事は推測のためcanonical不採用。
-- gameCounterReset: **NOT_APPLICABLE_NO_GAME_COUNT_CEILING**。
-- ceilingAfterReset: **NOT_APPLICABLE_NO_CEILING**。
-- modeAfterReset: 設定変更専用朝一/解除/RT優遇モード **NONE_CONFIRMED_AFTER_RESEARCH**。
-- stateAfterReset: RT状態の設定変更/据え置き/純電断契約 **UNVERIFIED_AFTER_RESEARCH**。
+- settingChange/carryOver/powerCycle: ゲーム数天井・AT/ART/CZ進捗は **NOT_APPLICABLE**。本機固有の表示/リール状態契約は **UNVERIFIED_AFTER_RESEARCH**。
+- gameCounterReset / ceilingAfterReset: **NOT_APPLICABLE_NO_CEILING**。
+- mode/state: 設定変更専用朝一モード/内部優遇は **NONE_CONFIRMED_AFTER_RESEARCH**。
 - advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
-- resetBenefits: 天井短縮・高確スタート・朝一専用モード・ボーナス初当たり優遇 **NONE_CONFIRMED_AFTER_RESEARCH**。
-- resetPenalties: ゲーム数天井消滅 **NOT_APPLICABLE**。状態契約不明のため推定不利は記録しない。
-- resetDetection: **POSSIBLE_NO_GAKKUN / NOT_DETERMINISTIC**。確定変更判別は未確認。
-- numericResetData: 公開設定変更専用数値 **NONE_CONFIRMED_AFTER_RESEARCH / UNVERIFIED_AFTER_RESEARCH**。
+- resetBenefits / resetPenalties: **NONE_CONFIRMED_AFTER_RESEARCH**（天井関連はNOT_APPLICABLE）。
+- resetDetection / 公開朝一数値: **UNVERIFIED_AFTER_RESEARCH / NONE_CONFIRMED_AFTER_RESEARCH**。
 
-## conflicts / missing
-- materialCoreNumericConflict: **NONE_CONFIRMED_AFTER_MULTI_SOURCE_COMPARISON**。
-- payoutDefinitionNote: 98.6〜111.2%はHAZUSEが完全攻略条件と明示。
-- baseGamesPer50Display: 約32G vs 約32〜35Gは掲載粒度差として保持。
-- rtNetIncreaseEvidence: 当時主要解析「調査中」 vs 中古実機資料約0.1枚/G。平均せず資料時点/信頼度を分離。
-- direct setting-change/carry-over/power-cycle RT-state contract: UNVERIFIED_AFTER_RESEARCH。
-- direct LIVE-ticket/free-pass persistence contract: UNVERIFIED_AFTER_RESEARCH。
-- deterministicMachineSpecificResetDetection: UNVERIFIED_AFTER_RESEARCH。
+## No.1105 — ロイヤルマハロ-30
+- manufacturer: **北電子**
+- releaseDate: **2017-07-03**
+- formalModelName: **ロイヤルマハロ／KT-30**
+- certificationNumber: **5S1419**
+- generation/system: **5号機 / ノーマル / 完全告知 / 30Φ沖スロ**
+- recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7**
 
-## 2017-07-03群 — OPEN
+### performanceCore
+- 機械割: **97.5 / 98.4 / 100.3 / 104.0 / 107.0 / 111.0%**（北電子公式）。
+- BIG: **1/294 / 291 / 284 / 256 / 242 / 229**。
+- REG: **1/508 / 471 / 423 / 423 / 388 / 336**。
+- 合算: **1/186 / 180 / 170 / 159 / 149 / 136**。
+- ベース: **約36G/50枚**（単一解析資料値）。
+- BIG最大 **312枚** / REG最大 **130枚**。
+- 通常ゲーム数天井: **非搭載**。
+
+### resetBehavior v0.7
+- settingChange/carryOver/powerCycle: 天井・AT/ART/CZ進捗は **NOT_APPLICABLE**。告知モード/リール状態の本機固有直接契約は **UNVERIFIED_AFTER_RESEARCH**。
+- gameCounterReset / ceilingAfterReset: **NOT_APPLICABLE_NO_CEILING**。
+- mode/state: ロイヤル/クラシック/ランダムは遊技者選択の演出モード。設定変更専用内部モード/状態は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
+- resetBenefits / resetPenalties: **NONE_CONFIRMED_AFTER_RESEARCH**（天井関連はNOT_APPLICABLE）。
+- resetDetection / 公開朝一数値: **UNVERIFIED_AFTER_RESEARCH / NONE_CONFIRMED_AFTER_RESEARCH**。
+
+## 2017-07-03群 — CLOSED_FOR_CURRENT_RESEARCH
 登録済み:
 1. パチスロ アクエリオンEVOL — No.1097
 2. パチスロ 悪魔城ドラキュラ Lords of Shadow — No.1098
@@ -73,36 +76,58 @@
 5. A-SLOTエイリヤンエボリューション — No.1101
 6. しすくえパラダイス — No.1102
 7. SHAKE III SIDE-A — No.1103
+8. 熊酒場2丁目店 — No.1104
+9. ロイヤルマハロ-30 — No.1105
 
-確認済み未処理候補:
-- **熊酒場2丁目店** — 次のNo.1104候補。パチビー/K-Navi等で2017-07-03導入を先行確認済み。
-- 上記処理後、2017-07-03同日全メーカー横断監査を行いCLOSED判定する。
+### 境界監査メモ
+- 複数の2017年導入一覧で7/3群の主要8機種は一致。
+- すろぱちくえすとの年別一覧はロイヤルマハロ-30を7/3欄に載せていないが、北電子公式の2017年7月製品情報、グリーンべると/P-WORLD業界ニュースの7/2納品予定、パチビー/2-9伝説の7/3導入が揃うため、漏れとしてNo.1105を追加。
+- 7/10を独立導入日とする高信頼な主要パチスロ群は今回固定できず、次の明確な大きな導入群は **2017-07-18**。
+- 7/18候補として、聖闘士星矢 海皇覚醒 / ガールフレンド(仮) / 結城友奈は勇者である / ラグナロクサーガ / ワンバーワン-30 / グレートキングハナハナ-30 / トラッドサンダーブラックを複数導入一覧で確認。個別処理時に再監査する。
 
 ## 遡及 resetBehavior QA
-- retroQaScanConfirmedThrough: **2006-05-15_looney-tunes-bia.md**。
+- retroQaScanConfirmedThrough: **2006-05_the-king-of-fighters.md**。
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
-- 次カーソル: `2006-05_the-king-of-fighters.md`。
-- 新規本線優先のため今回未更新。
+- KOF性能側status: **PARTIAL（維持）**。
+- KOF resetBehaviorQA: **PARTIAL_RESEARCH_EXHAUSTED**。
+- KOFは全BIG後50G RT「RTドライブ」を保持。設定変更/据え置き/純電断時のRT残G・RT状態、本機固有ガックン、公開朝一数値は検索語・資料系統を変えた再探索後も直接固定できず `UNVERIFIED_AFTER_RESEARCH` / `NONE_CONFIRMED_AFTER_RESEARCH`。
+- 次カーソル: `2006-06_churahime-sun.md`。
 
 ## 次回再開地点
-1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1103を再取得。
-2. **1103件 / chronologicalFrontier 2017-07-03 / 7/3群OPEN** を正本として継続。
-3. 次の未処理 **「熊酒場2丁目店」** をNo.1104候補として性能コア + resetBehavior v0.7で処理。
-4. その後、2017-07-03同日全メーカー横断監査を行いCLOSED可否を判定。
-5. 遡及QAは `2006-05_the-king-of-fighters.md` から継続。
+1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1104 / No.1105を再取得。
+2. **1105件 / chronologicalFrontier 2017-07-03 / 7/3群CLOSED** を正本として継続。
+3. 次の時系列境界 **2017-07-18群**を全メーカー横断再監査し、既登録有無を確認して最初の未処理機からNo.1106候補として処理。先行候補は **「パチスロ 聖闘士星矢 海皇覚醒」**。
+4. 7/18群では、ガールフレンド(仮) / 結城友奈は勇者である / ラグナロクサーガ / ワンバーワン-30 / グレートキングハナハナ-30 / トラッドサンダーブラックも漏れなく確認する。
+5. 遡及QAは `2006-06_churahime-sun.md` から継続。
 
 ## 主要出典 — 取得日 2026-09-09
-### No.1103 SHAKE III SIDE-A
-- HAZUSE: https://hazuse.com/machine/pachislot/6S1514/
-- HAZUSE 初打講座: https://hazuse.com/machine/pachislot/6S1514/genre/203/
-- すろぱちくえすと: https://www.slopachi-quest.com/article/shake3_sidea/
-- ちょんぼりすた: https://chonborista.com/slot/daito-slot/40713/
-- パチスロデータ: https://pachislo-data.com/daito/48215
-- K-Navi: https://p-kn.com/slot/2831/
-- すろかい: https://slotkaiseki.hatenablog.com/entry/shakesidea
-- P-WORLD: https://www.p-world.co.jp/machine/database/8431
-- 中古実機資料: https://www.pachislowasshoi.jp/SHOP/daito-slot0037.html
+### No.1104 熊酒場2丁目店
+- ネット公式プレスリリース（Dream News転載）: https://www.dreamnews.jp/press/0000153042
+- グリーンべると: https://web-greenbelt.jp/00009704/
+- パチビー: https://www.pachibee.jp/machines/about/217050016
+- K-Navi: https://p-kn.com/slot/2814/
+- パチスロデータ: https://pachislo-data.com/net/45095
+- すろぱちくえすと: https://www.slopachi-quest.com/article/kumasakaba2/
+- ちょんぼりすた: https://chonborista.com/slot/net-slot/41024/
+- P-WORLD: https://www.p-world.co.jp/machine/database/8404
 
-### 次候補 / 同日境界
-- 次候補: 熊酒場2丁目店
-- 以降: 2017-07-03群全メーカー横断監査
+### No.1105 ロイヤルマハロ-30
+- 北電子公式: https://www.kitadenshi.co.jp/slot/royalmahalo-30/
+- 北電子公式製品一覧: https://www.kitadenshi.co.jp/slot/
+- グリーンべると/P-WORLD業界ニュース: https://news.p-world.co.jp/articles/9194/greenbelt
+- 娯楽産業: https://www.goraku-sangyo.com/%E5%8C%97%E9%9B%BB%E5%AD%90%E3%80%80%E3%83%91%E3%83%81%E3%82%B9%E3%83%AD3%E6%A9%9F%E7%A8%AE%E5%90%8C%E6%99%82%E7%99%BA%E8%A1%A8/
+- パチビー: https://www.pachibee.jp/movies/index/13843
+- P-WORLD: https://www.p-world.co.jp/machine/database/8356
+- 2-9伝説: https://29den.com/royalmahalo/
+
+### 遡及QA — ザ・キング・オブ・ファイターズ
+- 電撃オンライン: https://dengekionline.com/data/news/2006/4/28/3e96f67b289f9fdb3a10a28ff46aacb6.html
+- P-WORLD: https://www.p-world.co.jp/machine/database/4193
+- 5号機クロニクル: https://5goki.com/snkplaymore
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/snk_slot/04/a.php
+- A-SLOT: https://www.a-slot.com/SHOP/snk_kof1.html
+
+### 次境界
+- ALL7 2017年7月導入一覧: https://www.all7.jp/plans/index/2017/07/10
+- すろぱちくえすと2017年導入日順: https://www.slopachi-quest.com/article/2017-sindai/
+- パチビー ラグナロクサーガ: https://www.pachibee.jp/machines/about/217060006
