@@ -1,56 +1,57 @@
 更新日: 2026-09-09
 
 ## 現在地点
-- recordCount: **1109**
-- latestRecordAdded: **ラグナロクサーガ**（メーシー）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2017-07-18_ragnarok-saga.md`
+- recordCount: **1110**
+- latestRecordAdded: **ワンバーワン-30**（ベルコ）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2017-07-18_one-bar-one-30.md`
 - chronologicalFrontier: **2017-07-18**
-- frontierLatestMachine: **ラグナロクサーガ — No.1109**
+- frontierLatestMachine: **ワンバーワン-30 — No.1110**
 - schema: **resetBehavior v0.7**
 - status: **2017-07-18_GROUP_OPEN**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、No.1108「パチスロ 結城友奈は勇者である」を再取得して開始。
+- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、No.1109「ラグナロクサーガ」を再取得して開始。
 - INDEX本文は初期19件時点の旧スナップショットのため、README規定どおりLATEST_HANDOFFと実レコードを進捗正本として採用。
-- 開始時mainは **1108件 / chronologicalFrontier 2017-07-18 / 7/18群OPEN**。
-- handoff指定の次未処理 **「ラグナロクサーガ」** をNo.1109として登録。
-- 導入日2017-07-18、メーカー メーシーをパチビー/K-Navi/HAZUSE/DMM等で照合。
-- 型式 `ラグナロクサーガ／RN` をDMMぱちタウン・中古実機資料で確認。HAZUSE DATA当該ページの `machine_code=7S0502` を検定番号として保存。
-- performance coreとresetBehavior v0.7を同時収集。設定変更/据え置き/純電断の天井・内部モード、朝一液晶357、アースガルド開始まで保存。
+- 開始時mainは **1109件 / chronologicalFrontier 2017-07-18 / 7/18群OPEN**。
+- handoff指定の次未処理 **「ワンバーワン-30」** をNo.1110として登録。
+- 30Φ版と25Φ版を分離。2017-06-14ベルコ内覧会の当時業界記事で **沖縄7/18、その他地域7/24** の地域別導入予定を確認し、30Φ版の最初の実導入日として7/18をchronological canonicalに採用。
+- HAZUSEで型式 `ワンバーワン／S5-30`、検定番号 `7S0476` を確認。
+- performance coreとresetBehavior v0.7を同時収集。設定変更時高確100%、純電断時状態/RT引継ぎ、天井非搭載、変更判別の非決定性まで保存。
 
-## No.1109 — ラグナロクサーガ
-- manufacturer: **メーシー**
-- releaseDate: **2017-07-18**
-- formalModelName: **ラグナロクサーガ／RN**
-- certificationNumber: **7S0502**
-- generation/system: **5号機（5.5号機） / ボーナス+ART / ゲーム数上乗せ+セットストック / モード管理**
+## No.1110 — ワンバーワン-30
+- manufacturer: **ベルコ**
+- releaseDate: **2017-07-18（沖縄先行） / 2017-07-24（その他地域）**
+- formalModelName: **ワンバーワン／S5-30**
+- certificationNumber: **7S0476**
+- generation/system: **5号機（5.5号機） / A+ART / 30Φ沖スロ / セット継続+ゲーム数上乗せ**
 - recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7**
 
 ### performanceCore
-- 機械割: **98.1 / 99.9 / 101.5 / 106.0 / 110.1 / 119.1%**。
-- ART初当たり: **1/549.3 / 475.2 / 496.0 / 355.0 / 299.9 / 163.9**。
-- グングニルボーナス: 全設定共通 **1/8192.0**。
-- ベース: **約35.6～36.3G/50枚**。
-- ART純増: **約2.0枚/G**。
-- ART: **1セット60G以上**。
-- SEVEN RUSH平均: **約132G**、神話RUSH平均: **約248G**。
-- グングニルボーナス実獲得: **約56枚**、ダークサイドゾーン約**100枚**。
-- 通常天井: **ART間999Gまたは1499G**、振り分け約**1:2**。
+- 機械割: **97 / 99 / 101 / 104 / 107 / 111%**。
+- ART初当たり: **1/498 / 1/474 / 1/452 / 1/425 / 1/407 / 1/390**。
+- CDボーナス: 全設定共通 **約1/112**。
+- ベース: **約31G/50枚**（現時点ANALYSIS_SINGLE。独立照合値は未固定）。
+- ART純増: **約2.0枚/G（ボーナス込み）**。
+- CDボーナス: **54枚**。
+- ONE BAR BONUS: **1セット33G以上、初当たり最低2セット保証**。
+- Hooah!: 3桁以上、フリーズBIG ONE BAR BONUSは333G以上のART上乗せ解析。
+- ゲーム数天井: **NO_GAME_COUNT_CEILING** をcanonical。P-WORLD/パチビーの天井カテゴリタグだけでは天井ありとしない。
 
 ### resetBehavior v0.7
-- settingChange: **天井RESET / 内部モードRESELECT**。RT状態は二次資料でRT0開始。
-- powerCycle / 据え置き: **天井CARRYOVER / 内部モードCARRYOVER**。
-- 設定変更時・電源OFF→ON時とも液晶出目 **357**。出目単独では変更判別不可。
-- 朝一ステージ: **アースガルド**。
-- 設定変更専用の天井短縮、朝一専用高確、専用初当たり優遇は **NONE_CONFIRMED_AFTER_RESEARCH**。
-- 設定変更時の具体的ART抽選モード/神話モード/闇モード初期振り分けは **UNVERIFIED_AFTER_RESEARCH**。
-- 純電断時RT状態は資料が「引き継ぐ？」表記のため **UNVERIFIED_AFTER_RESEARCH**。
-- deterministic machine-specific gakkun/change detection: **UNVERIFIED_AFTER_RESEARCH**。
+- settingChange: **内部状態HIGH（高確）100%**。HAZUSE/DMM/すろぱちくえすとで一致。
+- settingChange RT state: すろぱちくえすと直接表で **CARRYOVER**（単一直接資料）。
+- powerCycle: **内部状態CARRYOVER / RT状態CARRYOVER**（すろぱちくえすと直接表）。
+- 据え置き: 本機固有に「据え置き」と明記した独立契約を固定できず **UNVERIFIED_DIRECT_CARRYOVER_AFTER_RESEARCH**。純電断契約から自動転記していない。
+- gameCounterReset / ceilingAfterReset: **NOT_APPLICABLE_NO_GAME_COUNT_CEILING**。
+- resetBenefits: **設定変更後高確スタート確定**。DMMでは通常高確の平均滞在約**31G**。朝一専用31G保証とは扱わない。
+- resetDetection: 高確示唆は変更推測材料になるが、DMMは高確確定演出なしと明記。deterministic判別不可。本機固有ガックンは **UNVERIFIED_AFTER_RESEARCH**。
 - advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
 
 ### conflict / definition QA
-- 機械割設定6: HAZUSE/P-WORLD/期待値見える化 **119.1%** vs ちょんぼりすた **119.9%**。平均せず119.1%をcanonical、119.9%をCONFLICT保持。
-- ART設定1: HAZUSE/P-WORLD **1/549.3** vs ちょんぼりすた **1/549.0**。精密値1/549.3をcanonicalとして差異を保持。
+- 導入日は当時ベルコ内覧会記事で **沖縄7/18・その他7/24** と説明されるため両立。HAZUSE/Pachibee DBの7/24は一般地域導入日として保持。
+- ベルコ公式現行ページの「2017年8月登場」は月単位整理表記で、日単位chronological canonicalには用いない。
+- ちょんぼりすたはページ上部7/18に対し本文表7/28があり、当時業界資料群と整合しないため **CONFLICT_SECONDARY_RELEASE_DATE_2017-07-28**。
+- P-WORLD/パチビーは「天井」カテゴリタグを持つが具体的ゲーム数/恩恵なし。すろぱちくえすとは天井非搭載と明記するため、本DBでは **NO_GAME_COUNT_CEILING** を採用。
 
 ## 2017-07-18群 — OPEN
 今回までの登録:
@@ -58,40 +59,42 @@
 2. パチスロ ガールフレンド（仮）～聖櫻学園メモリアル～ — No.1107
 3. パチスロ 結城友奈は勇者である — No.1108
 4. ラグナロクサーガ — No.1109
+5. ワンバーワン-30 — No.1110
 
 未処理先行候補（個別処理時に導入日・型式・メーカーを再監査）:
-1. **ワンバーワン-30**
-2. **グレートキングハナハナ-30**
-3. **トラッドサンダーブラック**
+1. **グレートキングハナハナ-30**
+2. **トラッドサンダーブラック**
 
 ### 次候補先行確認
-- HAZUSEの導入開始日順一覧上、2017-07-18付近に **ワンバーワン-30 / グレートキングハナハナ-30 / トラッドサンダーブラック** が並ぶため、次回は「ワンバーワン-30」から個別再監査する。
-- 同名の25φ「ワンバーワン」等と混同しないこと。
+- 直前handoffで7/18群の次候補として **グレートキングハナハナ-30 → トラッドサンダーブラック** を指定済み。
+- 次回は「グレートキングハナハナ-30」をNo.1111候補として、パイオニア公式/当時業界記事/HAZUSE/Pachibee等で導入日・型式・検定番号を再固定する。
+- 同名25Φ派生や後継ハナハナを混同しない。
 
 ## 遡及 resetBehavior QA
 - retroQaScanConfirmedThrough: **2006-05_the-king-of-fighters.md**。
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
 - 次カーソル: `2006-06_churahime-sun.md`。
-- 今回は新規7/18群No.1109処理を優先し、遡及QAカーソルは進めていない。
+- 今回は新規7/18群No.1110処理を優先し、遡及QAカーソルは進めていない。
 
 ## 次回再開地点
-1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1109を再取得。
-2. **1109件 / chronologicalFrontier 2017-07-18 / 7/18群OPEN** を正本として継続。
-3. 次の未処理 **「ワンバーワン-30」** をNo.1110候補として処理。
-4. 型式・検定番号・性能コア・resetBehavior v0.7を収集し、同名25φ「ワンバーワン」と30φ版を混同しない。
-5. 続いて **グレートキングハナハナ-30 → トラッドサンダーブラック** を順に処理。
+1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1110を再取得。
+2. **1110件 / chronologicalFrontier 2017-07-18 / 7/18群OPEN** を正本として継続。
+3. 次の未処理 **「グレートキングハナハナ-30」** をNo.1111候補として処理。
+4. 型式・検定番号・性能コア・resetBehavior v0.7を収集。ノーマル/沖スロ系のため、天井N/Aだけで終わらず設定変更/据え置き/純電断時の内部状態、朝一ガックン、ランプ/出目、変更判別の公開契約を探索する。
+5. 続いて **トラッドサンダーブラック** を処理。
 6. 7/18群処理後、同日全メーカー横断監査を行って漏れを確認しCLOSED可否を判断。
 7. 遡及QAは `2006-06_churahime-sun.md` から継続。
 
 ## 主要出典 — 取得日 2026-09-09
-### No.1109 ラグナロクサーガ
-- パチビー: https://www.pachibee.jp/machines/about/217060006
-- グリーンべると/P-WORLD業界ニュース: https://news.p-world.co.jp/articles/9428/greenbelt
-- K-Navi: https://p-kn.com/slot/2833/
-- HAZUSE DATA: https://data.hazuse.com/?machine_code=7S0502
-- P-WORLD: https://www.p-world.co.jp/machine/database/8428
-- DMMぱちタウン: https://p-town.dmm.com/machines/2916/recommend
-- 期待値見える化: https://slotjin.com/zone/ragnaroksaga/
-- ちょんぼりすた: https://chonborista.com/slot/universal-slot/40720/
-- 2-9伝説: https://29den.com/ragnaroksaga/
-- 中古実機型式補助: https://slot-kingdam.com/SHOP/raguna.html
+### No.1110 ワンバーワン-30
+- ベルコ公式: https://www.s-bellco.co.jp/products/slot/onebarone_2017/
+- パチビー 内覧会ニュース: https://www.pachibee.jp/pparticles/view/971
+- パチビー 機種情報: https://www.pachibee.jp/machines/index/217060009
+- HAZUSE: https://hazuse.com/machine/pachislot/7S0476/
+- HAZUSE AT/ART: https://hazuse.com/machine/pachislot/7S0476/genre/209/
+- PiDEA X 内覧会記事: https://www.pidea.jp/articles/%E7%9B%AE%E6%8A%BC%E3%81%97%E4%B8%8D%E8%A6%81Hooah%E3%81%A7%E7%88%86%E4%B9%97%E3%81%9B%E3%80%8C%E3%83%AF%E3%83%B3%E3%83%90%E3%83%BC%E3%83%AF%E3%83%B3%E3%80%8D%E5%BE%A9%E6%B4%BB%EF%BC%8F%E3%83%99%E3%83%AB%E3%82%B3
+- P-WORLD: https://www.p-world.co.jp/machine/database/8439
+- DMMぱちタウン: https://p-town.dmm.com/machines/2928
+- すろぱちくえすと: https://www.slopachi-quest.com/article/one-bar-one/
+- ちょんぼりすた: https://chonborista.com/slot/belko-slot/43021/
+- pacnk: https://pacnk.com/slot/tools/sh_wambawansanzero.html
