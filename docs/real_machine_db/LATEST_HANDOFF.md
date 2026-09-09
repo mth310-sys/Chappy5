@@ -1,44 +1,46 @@
 更新日: 2026-09-09
 
 ## 現在地点
-- recordCount: **1136**
-- latestRecordAdded: **パチスロ亜人**（オリンピア）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2017-09-19_ajin.md`
+- recordCount: **1137**
+- latestRecordAdded: **パチスロ蒼き鋼のアルペジオ -アルス・ノヴァ-**（タイヨーエレック製造 / サミー発売）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2017-09-19_aoki-hagane-no-arpeggio-ars-nova.md`
 - chronologicalFrontier: **2017-09-19**
-- frontierLatestMachine: **パチスロ亜人 — No.1136**
+- frontierLatestMachine: **パチスロ蒼き鋼のアルペジオ -アルス・ノヴァ- — No.1137**
 - schema: **resetBehavior v0.7**
 - status: **2017-09-19_GROUP_OPEN**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、mission v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、No.1135「パチスロ ゴルゴ13（SANKYO 2017版）」を再取得して開始。
+- 最新mainの `README.md`、mission v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、No.1136「パチスロ亜人」を再取得して開始。
 - INDEXは初期19件時点の旧スナップショットのため、README規定どおり最新 `LATEST_HANDOFF.md` + 実レコードを進捗正本として採用。
-- 開始時正本は **1135件 / chronologicalFrontier 2017-09-19 / 9/19群OPEN**。
-- **「パチスロ亜人」No.1136** を追加。並行リレーによる根拠強化コミットもmainへ入ったため、最新実レコードを正本とする。
-- オリンピア公式製品ページが現存。HAZUSEは型式 **パチスロ亜人／A3**、検定番号 **7S0590**、導入開始日 **2017-09-19**。K-Navi・ちょんぼりすたも9/19一致。グリーンべると2017-08-10業界記事は9/18納品開始予定で整合。
-- 一撃 / すろぱちくえすと / スロパチネットには **2017-09-04** 表記が残るため、平均せずCONFLICT保持。canonicalは2017-09-19。
-- 性能コア: 機械割 **97.8 / 98.8 / 100.8 / 103.5 / 105.5 / 110.1%**、ART初当たり **1/358.1 → 1/230.2**、ボーナス全設定 **1/299.3**、ベース代表 **約30.1G/50枚**（30.1～31.1G表記差保持）、ART純増 **約1.3枚/G**（ボーナス込み約1.8枚/G）、亜人BONUS **150枚**、ART初期 **40G+α**。
-- 通常天井はART間 **999G**、設定変更時は **600G** へ短縮。
-- resetBehavior v0.7: 設定変更で **天井RESET / 内部状態RESELECT / ART中エピソードRESELECT / RT状態はボーナス後状態へ**。純電源OFF→ONでは **天井・内部状態・ART中エピソード・RT状態CARRYOVER**。
-- 設定変更時内部状態: 設定1～3 **低確73.44 / 高確25.00 / 警戒1.56%**、設定4～6 **低確63.28 / 高確33.59 / 警戒3.13%**。
-- resetDetection: 期待値見える化の直接比較で **ガックン判別不可**。市街地ステージ開始は公開挙動だが単独で確定変更判別扱いにしない。
+- 開始時正本は **1136件 / chronologicalFrontier 2017-09-19 / 9/19群OPEN**。
+- **「パチスロ蒼き鋼のアルペジオ -アルス・ノヴァ-」No.1137** を追加。
+- サミー公式2017-07-18発売告知で **製造元タイヨーエレック / 9月上旬稼働予定**。PiDEA Xは9/18納品予定、パチ＆スロ必勝本・期待値見える化・クランキーセブンは **2017-09-19導入**で一致。canonicalは2017-09-19。
+- 型式名・検定番号は表記揺れ、タイヨーエレック/サミー、型式/検定/7S系、2018年Mental Model ver.混同回避まで再探索したが初代の直接値を固定できず **UNVERIFIED_AFTER_RESEARCH**。
+- 性能コア: 機械割 **97.6 / 99.2 / 100.7 / 103.1 / 106.0 / 110.2%**、ART初当たり **1/377.9 → 1/244.4**、ボーナス **1/993.0**、ベース **約38.2G/50枚**、ART純増 **約1.8枚/G**、BIG/トライデントBONUS **各150枚**。
+- 通常天井 **ART間1200G+最大16G前兆**。ボーナスではART間天井をリセットしない。
+- resetBehavior v0.7: 設定変更で **天井RESET/再抽選・内部状態RESELECT**。設定変更専用天井 **100G 25% / 400G 25% / 800G 50%**。内部状態 **低確50 / 通常25 / 高確25%**。
+- 純電源OFF→ONは **天井・内部状態CARRYOVER**。据え置きも同系統の引継ぎ扱い。
+- resetDetection: 期待値見える化は **ガックン判別有効**とするが「サミー筐体でホールが対策していなければ」という条件付きのため、確定判別ではなく **POSSIBLE_GAKKUN_INDICATOR_NOT_DETERMINISTIC / COUNTERMEASURE_DEPENDENT** とした。
+- 設定変更/純電断後の朝一ステージは当時解析も調査中で、今回の再探索後も **UNVERIFIED_AFTER_RESEARCH**。
 - 有利区間は **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
 
-## No.1136 — パチスロ亜人
-- manufacturer: **オリンピア**
-- releaseDate: **2017-09-19**（9/4表記CONFLICT保持）
-- formalModelName: **パチスロ亜人／A3**
-- certificationNumber: **7S0590**
-- generation/system: **5号機（5.5号機世代） / A+ART / G数上乗せ型**
-- recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7**
+## No.1137 — パチスロ蒼き鋼のアルペジオ -アルス・ノヴァ-
+- manufacturer: **タイヨーエレック製造 / サミー発売**
+- releaseDate: **2017-09-19**
+- formalModelName: **UNVERIFIED_AFTER_RESEARCH**
+- certificationNumber: **UNVERIFIED_AFTER_RESEARCH**
+- generation/system: **5号機（5.5号機世代） / A+ART / 自力バトル型ART**
+- recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7_IDENTITY_PARTIAL**
 
 ### resetBehavior v0.7 要点
-- settingChange: **天井RESET→600G / 内部状態RESELECT / ART中エピソードRESELECT / RT状態ボーナス後状態へ**。
-- stay setting: **天井・内部状態等CARRYOVER**。
-- pure power OFF→ON: **天井・内部状態・ART中エピソード・RT状態CARRYOVER**。
-- normal ceiling: **999G**。
-- reset ceiling: **600G**。
-- reset benefit: **399G短縮 + 設定4～6は高確/警戒スタート比率が高い**。
-- reset detection: **ガックン判別不可**。
+- settingChange: **天井RESET / 100G 25%・400G 25%・800G 50% / 内部状態RESELECT**。
+- stay setting: **天井・内部状態CARRYOVER**。
+- pure power OFF→ON: **天井・内部状態CARRYOVER**。
+- normal ceiling: **ART間1200G+最大16G前兆**。
+- reset maximum ceiling: **800G**。
+- reset state: **低確50% / 通常25% / 高確25%**。
+- reset benefit: **100G以内25% / 400G以内50% / 最大800G天井 + 高確25%スタート**。
+- reset detection: **ガックン有効情報あり。ただし対策依存で確定判別不可**。
 
 ## 2017-09-04群 — CLOSED
 登録済み No.1127〜No.1134。SLOTデビルマンχは9/4 vs 9/19の導入日CONFLICTを保持。
@@ -46,58 +48,51 @@
 ## 2017-09-19群 — OPEN
 登録済み:
 1. パチスロ ゴルゴ13（SANKYO 2017版）— No.1135
-2. **パチスロ亜人 — No.1136**
+2. パチスロ亜人 — No.1136
+3. **パチスロ蒼き鋼のアルペジオ -アルス・ノヴァ- — No.1137**
 
 優先未処理候補:
-- **パチスロ蒼き鋼のアルペジオ -アルス・ノヴァ-** — 次本線。タイヨーエレック製 / サミー。
-- ウルトラセブン
-- 魁!!男塾
-- 盗忍！剛衛門
-- シンデレラブレイド3
+- **ぱちスロ ウルトラセブン** — 次本線。K-Navi / 一撃 / ちょんぼりすたで2017-09-19導入を先行確認。
+- 魁!!男塾〜目指せ！闘宴大武會〜 — 2017-09-19導入先行確認。
+- 盗忍！剛衛門 — 2017-09-19導入先行確認。
+- シンデレラブレイド3 — HAZUSE / パチビーで2017-09-19、型式 `シンデレラ×ブレイド3／NI`、検定番号 `7S0870` を先行確認。
 - 同日・周辺日の全メーカー横断監査を継続し、漏れ確認後に群CLOSED判定する。
 
-### 次候補「蒼き鋼のアルペジオ -アルス・ノヴァ-」先行確認
-- 2017-09-19導入本線。
-- A+ART、ART純増約 **1.8枚/G**、ボーナス150枚。
-- 期待値見える化掲載値: 機械割 **97.6 / 99.2 / 100.7 / 103.1 / 106.0 / 110.2%**、ART初当たり **1/377.9 → 1/244.4**、ボーナス **1/993.0**、ベース **約38.2G/50枚**。
-- 通常天井 **ART間1200G+前兆**。設定変更時は最大 **800G**へ短縮し、公開振り分け **100G 25% / 400G 25% / 800G 50%**。
-- 設定変更時内部状態 **低確50 / 通常25 / 高確25%**、純電源OFF→ONは天井・内部状態CARRYOVERとの解析あり。
-- 次回、型式/検定番号・設定変更/据え置き/電源OFF→ON・変更判別を表記揺れ込みで再監査してNo.1137化する。
+### 次候補「ぱちスロ ウルトラセブン」先行確認
+- 2017-09-19導入本線。オッケー./京楽系列。
+- ART機、純増約 **2.0枚/G**、ベース約 **48G/50枚**、通常天井 **1280G**。
+- 一撃掲載値: 機械割 **97.5 / 98.9 / 100.3 / 104.2 / 107.9 / 112.6%**、ART初当たり **1/548.3 → 1/375.1**。
+- K-NaviにはART初当たり別値（例: 設定1 1/548.1等）があるため、次回は丸め差/解析差を精査しCONFLICT要否を判断する。
+- 次回、型式/検定番号、設定変更/据え置き/純電源OFF→ON、天井短縮、モード/状態、朝一数値、ガックンを表記揺れ込みで再探索してNo.1138化する。
 
 ## 遡及 resetBehavior QA
-- 直前handoffは `2006-06_thunderbirds-neo-xx.md` を次カーソルとしていたが、最新main実レコードでは同機は既に **`PARTIAL_RESEARCH_EXHAUSTED`** までQA完了済み。重複処理を回避した。
-- 実レコード追加順をGitHubコミット履歴で確認し、サンダーバードNEOXX直後の **`docs/real_machine_db/machines/2006-06_lord-of-the-rings.md`** を今回処理。
-- 「ロード・オブ・ザ・リング」の性能側 `status: PARTIAL` は維持し、reset側のみ **`PARTIAL_RESEARCH_EXHAUSTED`** へ更新。
-- ボーナス主体BIG+CB機で、通常ゲーム数天井・RT/ART/AT・朝一専用CZ/ゲーム数モードは **NONE_CONFIRMED_AFTER_RESEARCH / NOT_APPLICABLE**。
-- 設定変更/据え置き/純電断時の成立済みボーナス等の低レベル内部契約は機種固有の直接資料を固定できず、一般的5号機挙動から推測せず **UNVERIFIED_AFTER_RESEARCH**。
-- 設定変更専用の短縮天井、朝一優遇/不利、モード振り分け、公開朝一数値は **NONE_CONFIRMED_AFTER_RESEARCH**。本機固有ガックン/表示判別は **UNVERIFIED_AFTER_RESEARCH**。
+- 最新カーソルは `docs/real_machine_db/machines/2006-07_ooedo-manyuuki.md`（大江戸漫遊記）。
 - retroQaScanConfirmedThrough: **2006-06_lord-of-the-rings.md**。
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
-- 次カーソル: `docs/real_machine_db/machines/2006-07_ooedo-manyuuki.md`（大江戸漫遊記）。
+- 新規機種収集本線を止めず、別QAリレーで順次補完する。
 
 ## 次回再開地点
-1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1136を再取得。
-2. **1136件 / chronologicalFrontier 2017-09-19 / 9/19群OPEN** を正本として継続。
-3. 最優先は **「パチスロ蒼き鋼のアルペジオ -アルス・ノヴァ-」— No.1137候補**。
-4. 次にウルトラセブン / 魁!!男塾 / 盗忍！剛衛門 / シンデレラブレイド3等を全メーカー・表記揺れ・地域導入差で横断監査。
+1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1137を再取得。
+2. **1137件 / chronologicalFrontier 2017-09-19 / 9/19群OPEN** を正本として継続。
+3. 最優先は **「ぱちスロ ウルトラセブン」— No.1138候補**。
+4. 次に 魁!!男塾〜目指せ！闘宴大武會〜 / 盗忍！剛衛門 / シンデレラブレイド3 等を全メーカー・表記揺れ・地域導入差で横断監査。
 5. 遡及QAは `docs/real_machine_db/machines/2006-07_ooedo-manyuuki.md` から継続。
 
 ## 主要出典 — 取得日 2026-09-09
-### No.1136 パチスロ亜人
-- オリンピア公式: https://www.olympia.co.jp/newmachine/ps_ajin/index.html
-- グリーンべると / P-WORLD業界ニュース: https://news.p-world.co.jp/articles/9518/greenbelt
-- HAZUSE: https://hazuse.com/machine/pachislot/7S0590/
-- K-Navi: https://p-kn.com/slot/2870/
-- ちょんぼりすた: https://chonborista.com/slot/orinpia-slot/44167/
-- 期待値見える化: https://slotjin.com/zone/ajin/
-- すろかい: https://slotkaiseki.hatenablog.com/entry/ajin
-- スロパチネット: https://slopachi-net.com/ajin
-- 一撃: https://1geki.jp/slot/s_ajin/
-- すろぱちくえすと: https://www.slopachi-quest.com/article/ajin/
+### No.1137 パチスロ蒼き鋼のアルペジオ -アルス・ノヴァ-
+- サミー公式発売告知: https://www.sammy.co.jp/japanese/news/2017/732.html
+- サミー公式2017年製品一覧: https://www.sammy.co.jp/japanese/products/pachislot/2017/index.html
+- PiDEA X: https://www.pidea.jp/articles/%E3%80%8C%E8%92%BC%E3%81%8D%E9%8B%BC%E3%81%AE%E3%82%A2%E3%83%AB%E3%83%9A%E3%82%B8%E3%82%AA%E3%80%8D%E5%A4%A7%E8%BF%AB%E5%8A%9B%E3%81%AE%E8%89%A6%E9%9A%8A%E3%83%90%E3%83%88%E3%83%ABART%EF%BC%8F%E3%82%B5%E3%83%9F%E3%83%BC
+- グリーンべると: https://web-greenbelt.jp/00009796/
+- パチ＆スロ必勝本: https://p.hisshobon.jp/machine/3040/1/66051
+- P-WORLD: https://www.p-world.co.jp/machine/database/8471
+- 期待値見える化: https://slotjin.com/zone/aokihagane/
+- ちょんぼりすた: https://chonborista.com/slot/sammy-slot/45380/
+- クランキーセブン: https://crankyseven.com/arpeggio-pc.htm
 
-### retro QA ロード・オブ・ザ・リング
-- SANKYOオンライン博物館: https://www.sankyo-fever.jp/collection/860/
-- P-WORLD: https://www.p-world.co.jp/machine/database/4225
-- K-Navi: https://p-kn.com/slot/721/
-- pacnk: https://pacnk.com/slot/tools/sh_rodoobuzaringu.html
-- 既存HAZUSE / パチマガスロマガ旧ページも継続参照。
+### 次候補先行確認
+- K-Navi ウルトラセブン: https://p-kn.com/slot/2876/
+- 一撃 ウルトラセブン: https://1geki.jp/slot/s_ultraseven/
+- ちょんぼりすた ウルトラセブン: https://chonborista.com/slot/kyoraku-slot/44095/
+- パチビー 盗忍！剛衛門: https://www.pachibee.jp/machines/kouryaku/217080011
+- HAZUSE シンデレラブレイド3: https://hazuse.com/machine/pachislot/7S0870/
