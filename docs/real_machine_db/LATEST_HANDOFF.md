@@ -1,100 +1,93 @@
 更新日: 2026-09-09
 
 ## 現在地点
-- recordCount: **1079**
-- latestRecordAdded: **ハッピージャックポット**（岡崎産業）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2017-05-08_happy-jackpot.md`
-- chronologicalFrontier: **2017-05-08**
-- frontierLatestMachine: **ハッピージャックポット — No.1079**
+- recordCount: **1081**
+- latestRecordAdded: **パチスロ 逆転裁判**（エンターライズ）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2017-05-22_gyakuten-saiban.md`
+- chronologicalFrontier: **2017-05-22**
+- frontierLatestMachine: **パチスロ 逆転裁判 — No.1081**
 - schema: **resetBehavior v0.7**
-- status: **2017-05-08_GROUP_CLOSED_NEXT_2017-05-22_GROUP_OPEN**
+- status: **2017-05-22_GROUP_OPEN**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、No.1077「ラッキーベガス」実レコードを取得して開始。
+- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、No.1079「ハッピージャックポット」実レコードを取得して開始。
 - INDEX本文は初期19件時点の旧スナップショットのため、README規定どおり最新handoffと実レコードを進捗正本として採用。
-- 開始時mainは **1077件 / chronologicalFrontier 2017-05-08 / 5/8群OPEN**。
-- handoff指定の次候補 **「ぱちスロ 水戸黄門」** をNo.1078として登録。
-- 続いて **「ハッピージャックポット」** をNo.1079として登録。
-- 2017-05-08群を、すろぱちくえすと2017年導入一覧・モゲスロ2017カレンダー・一撃2017年5月カレンダーおよび個別機種資料で横断再監査。
-- すろぱちくえすとの5/8掲載7機（サクラ大戦、水戸黄門、グラップラー刃牙、忍魂、呪怨、ラッキーベガス、ハッピージャックポット）は全て登録済み。モゲスロはこれにマクロスフロンティア3を5/8として掲載するが、同機は既存No.1072でregionalEarly 5/1 / canonical 5/8として処理済み。
-- 一撃カレンダーは5/8をサクラ大戦・呪怨・忍魂・ラッキーベガスの4機に絞っているため、単一カレンダー依存せず複数系統の和集合で監査した。
-- 上記のため **2017-05-08_GROUP_CLOSED_FOR_CURRENT_RESEARCH** と判定。
-- 次の主要日付境界は **2017-05-22**。すろぱちくえすとでは `タイムクロス2 / 逆転裁判 / ラストエグザイル 銀翼のファム / パチスロ 黒神 / 賞金首2` を掲載。一撃では5/22に黒神を掲載しており、5/22群はOPENとして次回全メーカー横断監査を継続する。
-- 遡及reset QAカーソルは `2006-05-15_looney-tunes-bia.md` を維持。新規本線優先で今回は未更新。
+- 開始時mainは **1079件 / chronologicalFrontier 2017-05-08 / 5/8群CLOSED / 5/22群OPEN**。
+- handoff指定の次候補 **「タイムクロス2」** をNo.1080として登録。
+- 続いて **「パチスロ 逆転裁判」** をNo.1081として登録。
+- 両機とも性能コアとresetBehavior v0.7を同時収集。最初の検索のみで欠損判定せず、機種名・型式・メーカー・設定変更/リセット/朝一/据え置き/電源OFF ON/天井/モード/ガックン等を組み替えて再探索した。
+- 5/22群は未処理候補が残るためOPENを維持。
 
-## No.1078 — ぱちスロ 水戸黄門
-- manufacturer: **京楽産業.**
-- releaseDate canonical: **2017-05-08**
-- generation/system: **5号機 / 5.5号機 / A+ART / 周期管理型ART**
-- recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7_AND_RELEASE_DATE_CONFLICT**
+## No.1080 — タイムクロス2
+- manufacturer: **山佐**
+- releaseDate: **2017-05-22**
+- generation/system: **5号機 / 5.5号機 / ノーマルAタイプ / 技術介入**
+- formalModelName: **タイムクロス2／DD**
+- certificationNumber: **6S1083**
+- recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7_AND_TECHNICAL_INTERVENTION_SPLIT**
 
 ### performanceCore
-- 機械割: **97.0 / 98.1 / 100.1 / 104.2 / 106.4 / 109.0%**。
-- ART初当たり: **1/395.6 / 393.9 / 373.8 / 330.0 / 280.8 / 261.3**。
-- ボーナス合算: **1/1057.0 / 1057.0 / 1057.0 / 1008.2 / 1008.2 / 949.8**。
-- ベース: **約44G/50枚**。
-- ART「勧善懲悪ボーナス」純増: **約1.6枚/G**。一部資料の約1.7枚/Gはボーナス込み表記として定義分離。
-- リアルボーナス: **100枚 or 200枚**。
-- ART: **1セット40G + 継続演出5G**。
-- 通常天井: **11周期到達でART確定**。1周期127里が基本だが短縮契機があり、平均約80Gとされる周期型。
+- 平均/通常攻略機械割: **97.5 / 99.0 / 101.1 / 102.0 / 106.3 / 110.5%**。
+- フル攻略機械割: **99.1 / 100.3 / 102.3 / 105.4 / 110.2 / 115.0%**。
+- BIG: **1/280.07 / 276.52 / 268.59 / 254.02 / 235.74 / 219.92**。
+- REG: **1/348.60 / 324.44 / 303.41 / 275.36 / 245.45 / 228.35**。
+- ボーナス合算: **1/155.30 / 149.28 / 142.47 / 132.13 / 120.25 / 112.03**。
+- ベース: 代表 **約35G/50枚**。設定別独自算出 **33.81〜36.94G/50枚**は定義分離。
+- BIG最大 **311枚**、REG **100枚**。
+- 天井なし。
 
 ### resetBehavior v0.7
-- settingChange: 天井周期/進捗RESET、内部モードRESELECT、内部状態RESET/RESELECT、開始目的地は江戸、里表示「??」。
-- powerCycle: 天井/モード/状態CARRYOVER。表示上は江戸・「??」となる資料があり見た目単独判別不可。
-- carryOver: 天井/モード/状態CARRYOVER。
-- 公開朝一値: **2周期目までのART突入可能性 約40%**。
-- これは「2周期天井確定」ではない。約40%の早期当選優遇として保持。
-- ガックン: すろぱちくえすとの検証で**判別不可**。
+- 天井・AT/ART/CZ・ゲーム数管理モードはNOT_APPLICABLE。
+- 設定変更専用の朝一天井短縮/当選率優遇/専用モードはNONE_CONFIRMED_AFTER_RESEARCH。
+- 純電源OFF→ON専用の主要恩恵/不利もNONE_CONFIRMED_AFTER_RESEARCH。
+- ガックンは、すろぱちくえすとが「山佐なので可能性大」と推測表現。2-9伝説には本機のガックンリール動画項目があるが、取得テキスト上で設定変更との決定的1対1契約は固定できないため `GAKKUN_OBSERVATION_AVAILABLE_BUT_NOT_DETERMINISTIC`。
 - advantageousSectionReset: `NOT_APPLICABLE_5TH_GEN_PRE_5_9`。
-- formalModelName / certificationNumber / 設定変更時モード完全振り分け / 朝一内部状態数値は再探索後 `UNVERIFIED_AFTER_RESEARCH`。
 
-### conflict
-- 導入日: PiDEA X（業界記事）・ちょんぼりすた・期待値見える化・2-9伝説は **2017-05-08**。すろぱちくえすとは記事冒頭5/8だが機種情報表のみ **2017/4/17**、5号機クロニクルは **2017/4**。平均せず `CONFLICT_RELEASE_DATE_2017_05_08_VS_2017_04_17_OR_2017_04_MONTH`。業界記事+複数一致の5/8をcanonical。
+### conflict / definition split
+- 2-9伝説は平均値とフル攻略値を2系列で明示。
+- HAZUSE/すろぱちくえすとは **97.5 / 99.0 / 101.1 / 105.4 / 110.2 / 115.0%** を単一機械割系列として掲載。
+- 技術介入定義差として全系列を保持し、平均化しない。
 
-## No.1079 — ハッピージャックポット
-- manufacturer: **岡崎産業**
-- releaseDate: **2017-05-08**
-- generation/system: **5号機 / 5.5号機 / ノーマルAタイプ / 完全告知**
-- formalModelName: **ハッピージャックポット／H1**
-- certificationNumber: **6S1329**
+## No.1081 — パチスロ 逆転裁判
+- manufacturer: **エンターライズ**
+- releaseDate: **2017-05-22**
+- generation/system: **5号機 / 5.5号機 / ART / 周期管理 / CZ経由**
+- formalModelName: **逆転裁判／ZW**
+- certificationNumber: **6S1366**
 - recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7**
 
 ### performanceCore
-- 機械割: **96.7 / 98.2 / 99.8 / 103.3 / 107.1 / 110.5%**。
-- BIG: **1/295.21 / 288.70 / 282.48 / 267.49 / 252.06 / 240.94**。
-- REG: **1/358.12 / 336.08 / 319.69 / 288.70 / 271.93 / 240.94**。
-- 合算: **1/161.82 / 155.30 / 149.97 / 138.85 / 130.81 / 120.47**。
-- 50枚ベース: 設定1→6 **34.99 / 35.20 / 35.38 / 35.73 / 36.32 / 36.72G**。
-- BIG純増 **312枚**、REG最大 **104枚**。
-- 天井/AT/ART/CZ/周期: **NONE / NOT_APPLICABLE**。
+- 機械割: **97.6 / 98.7 / 100.8 / 104.0 / 107.3 / 112.5%**。
+- ART初当たり: **1/347.6 / 336.4 / 322.7 / 288.7 / 263.5 / 237.5**。
+- CZ: **1/180.4 / 172.2 / 168.1 / 151.7 / 135.3 / 123.0**。
+- ベース: **約46G/50枚**。
+- ART純増: **約2.0枚/G**、1セット平均約40G、継続率約75%。
+- 通常1周期40G。ART天井 **30周期**、CZ天井 **15周期**。
 
 ### resetBehavior v0.7
-- ノーマルAタイプで天井・モード管理・内部性能状態がないため、gameCounterReset / ceilingAfterReset / modeAfterReset は **NOT_APPLICABLE**。
-- 設定変更専用の朝一当選優遇・天井短縮・モード優遇: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- 電源OFF→ON専用の主要恩恵/不利: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- ガックン: 当時解析は**不明**。表記・検索語・資料系統変更後も決定的本機固有判別を固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- settingChange: 周期/天井進捗RESET、サイコ・ロックpt内部モードRESELECT。
+- powerCycle: 周期/天井進捗・内部モードCARRYOVER。
+- 据え置き: 前日の液晶表示引継ぎ資料あり。
+- 実戦観測の朝一初期表示: **ナゾpt 123pt / 弁護士レベル0 / 成歩堂法律事務所**。解析確定値ではなくOBSERVATIONALとして保持。
+- 設定変更時モード振り分け:
+  - 設定1・2: **A75.0 / B12.5 / C6.3 / D6.3%**
+  - 設定3・4: **A62.5 / B25.0 / C6.3 / D6.3%**
+  - 設定5: **A50.0 / B25.0 / C12.5 / D12.5%**
+  - 設定6: **A37.5 / B25.0 / C18.8 / D18.8%**
+- リセット後実践値では1周期目に特段強い当選傾向なし。
+- resetDetection: 液晶表示リセット/前日表示引継ぎが主要手掛かり。本機固有ガックンは再探索後もUNVERIFIED。
 - advantageousSectionReset: `NOT_APPLICABLE_5TH_GEN_PRE_5_9`。
 
-## 2017-05-08群監査
-- status: **CLOSED_FOR_CURRENT_RESEARCH**。
+## 2017-05-22群
+- status: **OPEN**。
 - 登録済み:
-  1. パチスロ マクロスフロンティア3 — No.1072（regionalEarly 5/1 / canonical 5/8として既存処理）
-  2. パチスロサクラ大戦～熱き血潮に～ — No.1073
-  3. パチスロ 呪怨 — No.1074
-  4. 忍魂 ～暁ノ章～ — No.1075
-  5. パチスロ グラップラー刃牙 — No.1076
-  6. ラッキーベガス — No.1077
-  7. ぱちスロ 水戸黄門 — No.1078
-  8. ハッピージャックポット — No.1079
-- すろぱちくえすと・モゲスロ・一撃・個別機種資料を横断。現時点で追加未登録候補なし。
-
-## 次の2017-05-22群候補
-- **タイムクロス2**
-- **逆転裁判**
-- **ラストエグザイル 銀翼のファム**
-- **パチスロ 黒神 The Animation**
-- **賞金首2**
-- 単一カレンダー差があるため、この5機を固定リストと思い込まず、処理時に全メーカー横断監査を行う。
+  1. タイムクロス2 — No.1080
+  2. パチスロ 逆転裁判 — No.1081
+- handoff由来の未処理先行候補:
+  1. **ラストエグザイル 銀翼のファム**
+  2. **パチスロ 黒神 The Animation**
+  3. **賞金首2**
+- この3機を固定リストと思い込まず、処理時に2017-05-22同日の全メーカー横断監査を継続する。
 
 ## 遡及 resetBehavior QA
 - retroQaScanConfirmedThrough: **2006-05_gold-shio-30.md**。
@@ -102,31 +95,28 @@
 - 次カーソル: `2006-05-15_looney-tunes-bia.md`。
 
 ## 次回再開地点
-1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1079を再取得。
-2. **1079件 / chronologicalFrontier 2017-05-08 / 5/8群CLOSED / 5/22群OPEN** を正本として継続。
-3. 次未処理 **「タイムクロス2」** をNo.1080候補として性能コア+resetBehavior v0.7まで処理。
-4. 続いて `逆転裁判 → ラストエグザイル 銀翼のファム → パチスロ 黒神 The Animation → 賞金首2` を候補に、導入日・重複を都度照合して処理。
+1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1081を再取得。
+2. **1081件 / chronologicalFrontier 2017-05-22 / 5/22群OPEN** を正本として継続。
+3. 次未処理 **「ラストエグザイル 銀翼のファム」** をNo.1082候補として性能コア+resetBehavior v0.7まで処理。
+4. 続いて **「パチスロ 黒神 The Animation」→「賞金首2」** を候補に導入日・重複を都度照合して処理。
 5. 5/22群を全メーカー横断監査し、漏れがなければCLOSED判定して次の日付境界へ進む。
 6. 遡及QAは `2006-05-15_looney-tunes-bia.md` から継続。
 
 ## 主要出典 — 取得日 2026-09-09
-### No.1078 水戸黄門
-- グリーンべると: https://web-greenbelt.jp/00009435/
-- PiDEA X: https://pidea.jp/articles/%E6%99%82%E4%BB%A3%E5%8A%87%E3%83%91%E3%83%81%E3%82%B9%E3%83%AD%E3%81%AE%E6%9C%80%E9%AB%98%E5%B3%B0%E3%80%8C%E6%B0%B4%E6%88%B8%E9%BB%84%E9%96%80%E3%80%8D%E3%82%92%E7%99%BA%E8%A1%A8%EF%BC%8F%E4%BA%AC%E6%A5%BD
-- ちょんぼりすた: https://chonborista.com/slot/kyoraku-slot/34909/
-- すろぱちくえすと: https://www.slopachi-quest.com/article/mitokoumon/
-- 2-9伝説: https://29den.com/mitokohmon/
-- 期待値見える化: https://slotjin.com/zone/mitokoumon/
-- P-WORLD: https://www.p-world.co.jp/machine/database/8330
-- 5号機クロニクル: https://5goki.com/kyoraku
+### No.1080 タイムクロス2
+- HAZUSE: https://hazuse.com/machine/pachislot/6S1083/
+- グリーンべると: https://web-greenbelt.jp/00009431/
+- PiDEA X: https://www.pidea.jp/articles/%E3%82%B2%E3%83%BC%E3%83%A0%E6%80%A7%26%E3%83%AA%E3%83%BC%E3%83%AB%E5%88%B6%E5%BE%A1%E3%81%8C%E5%A4%89%E5%8C%96%E3%80%8C%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%AF%E3%83%AD%E3%82%B92%E3%80%8D%EF%BC%8F%E5%B1%B1%E4%BD%90
+- すろぱちくえすと: https://www.slopachi-quest.com/article/timecross2/
+- ちょんぼりすた: https://chonborista.com/slot/yamasa-slot/35247/
+- 2-9伝説: https://29den.com/timecross2/
+- パチビー: https://www.pachibee.jp/machines/lecture/217040007
 
-### No.1079 ハッピージャックポット
-- HAZUSE: https://hazuse.com/machine/pachislot/6S1329/
-- HAZUSE 基本スペック: https://hazuse.com/machine/pachislot/6S1329/genre/201/
-- すろぱちくえすと: https://www.slopachi-quest.com/article/happyjackpot/
-- P-WORLD: https://www.p-world.co.jp/machine/database/8337
-
-### 5/8群監査 / 次境界
-- すろぱちくえすと 2017導入一覧: https://www.slopachi-quest.com/article/2017-sindai/
-- モゲスロ 2017導入カレンダー: https://moge-site.com/new-slot2017
-- 一撃 2017年5月新台カレンダー: https://1geki.jp/newmachinecalender/201705/
+### No.1081 パチスロ 逆転裁判
+- HAZUSE: https://hazuse.com/machine/pachislot/6S1366/
+- パチビー: https://www.pachibee.jp/machines/index/217040008
+- すろぱちくえすと: https://www.slopachi-quest.com/article/gyakutensaiban/
+- ちょんぼりすた: https://chonborista.com/slot/enta-slot/36075/
+- 期待値見える化: https://slotjin.com/zone/gyakutensaiban/
+- スロがち: https://slogati.com/gyakutensaiban/
+- P-WORLD: https://www.p-world.co.jp/machine/database/8358
