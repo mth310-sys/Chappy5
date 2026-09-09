@@ -1,133 +1,96 @@
 更新日: 2026-09-09
 
 ## 現在地点
-- recordCount: **1105**
-- latestRecordAdded: **ロイヤルマハロ-30**（北電子）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2017-07-03_royal-mahalo-30.md`
-- chronologicalFrontier: **2017-07-03**
-- frontierLatestMachine: **ロイヤルマハロ-30 — No.1105**
+- recordCount: **1106**
+- latestRecordAdded: **パチスロ 聖闘士星矢 海皇覚醒**（三洋物産 / SANYO）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2017-07-18_saint-seiya-kaiou-kakusei.md`
+- chronologicalFrontier: **2017-07-18**
+- frontierLatestMachine: **パチスロ 聖闘士星矢 海皇覚醒 — No.1106**
 - schema: **resetBehavior v0.7**
-- status: **2017-07-03_GROUP_CLOSED_FOR_CURRENT_RESEARCH**
+- status: **2017-07-18_GROUP_OPEN**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、No.1103「SHAKE III SIDE-A」、遡及QAカーソル「ザ・キング・オブ・ファイターズ」を再取得して開始。
+- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、No.1105「ロイヤルマハロ-30」を再取得して開始。
 - INDEX本文は初期19件時点の旧スナップショットのため、README規定どおりLATEST_HANDOFFと実レコードを進捗正本として採用。
-- 開始時mainは **1103件 / chronologicalFrontier 2017-07-03 / 7/3群OPEN**。
-- handoff指定の次未処理 **「熊酒場2丁目店」** をNo.1104として登録。
-- その後2017-07-03同日全メーカー横断監査を実施し、旧handoff/一部導入一覧から漏れていた **「ロイヤルマハロ-30」** を検出。
-- 北電子公式は2017年7月製品、グリーンべると業界記事は納品2017-07-02予定、パチビー/2-9伝説等は導入2017-07-03を示すため、No.1105として補完。
-- 2017-07-03群は現調査範囲で9機種を収録し **CLOSED_FOR_CURRENT_RESEARCH** とした。
-- 遡及QAは `2006-05_the-king-of-fighters.md` を再探索し、性能側 `PARTIAL` は維持、reset側のみ `PARTIAL_RESEARCH_EXHAUSTED` へ更新。
+- 開始時mainは **1105件 / chronologicalFrontier 2017-07-03 / 7/3群CLOSED**。
+- 7/4～7/17境界を前handoffの監査結果に従い継続し、次の明確な導入群 **2017-07-18** へ前進。
+- 7/18群先行候補 **「パチスロ 聖闘士星矢 海皇覚醒」** をNo.1106として登録。
+- 2017年5号機版と2019年「海皇覚醒Special」、2024年スマスロ「CUSTOM EDITION」の混同を避けるため、型式 `パチスロ聖闘士星矢海皇覚醒KH` / 検定 `7S0460` を軸に資料を分離。
+- resetBehaviorは一撃・なな徹等で設定変更/据え置き/純電断契約と設定変更時GBレベル・内部状態・不屈ポイントを数値まで固定。
 
-## No.1104 — 熊酒場2丁目店
-- manufacturer: **ネット**
-- releaseDate: **2017-07-03**
-- generation/system: **5号機 / ノーマル / 完全告知 / 技術介入**
+## No.1106 — パチスロ 聖闘士星矢 海皇覚醒
+- manufacturer: **三洋物産 / SANYO**
+- releaseDate: **2017-07-18**
+- formalModelName: **パチスロ聖闘士星矢海皇覚醒KH**
+- certificationNumber: **7S0460**
+- generation/system: **5号機（5.5号機） / ART / バトル突破型ART→ゲーム数上乗せART**
 - recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7**
 
 ### performanceCore
-- 機械割: **97.0 / 98.5 / 100.0 / 105.0 / 110.0 / 119.9%**。
-- BIG: **1/264 / 264 / 258 / 250 / 235 / 202**。
-- REG: **1/392 / 392 / 330 / 263 / 235 / 202**。
-- 合算: **1/157 / 157 / 144 / 128 / 117 / 101**。
-- ベース: **約33G/50枚**（単一解析資料値）。
-- BIG最大 **311枚** / REG最大 **103枚**。
-- 通常ゲーム数天井: **非搭載**。
+- 機械割: **97.8 / 98.8 / 100.8 / 103.9 / 107.5 / 113.1%**。
+- 海将軍激闘（GB）初当たり: **1/376 / 362 / 344 / 324 / 299 / 275**。
+- 聖闘士RUSH（SR）初当たり: **1/1311.34 / 1263.84 / 1137.00 / 980.51 / 769.01 / 683.12**。
+- ベース: **約45.3～45.9G/50枚**、比較用代表約45G/50枚。
+- ART純増: **約2.0枚/G**。
+- GB: **25G＋バトル**、最大3戦突破でSR。
+- SR: **100G以上＋α**。
+- GB間天井: **最大999G**、SPモードなら **536G**。
+- SRスルー天井: **9回連続非当選→10回目GBでSR確定**。
 
 ### resetBehavior v0.7
-- settingChange/carryOver/powerCycle: ゲーム数天井・AT/ART/CZ進捗は **NOT_APPLICABLE**。本機固有の表示/リール状態契約は **UNVERIFIED_AFTER_RESEARCH**。
-- gameCounterReset / ceilingAfterReset: **NOT_APPLICABLE_NO_CEILING**。
-- mode/state: 設定変更専用朝一モード/内部優遇は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- settingChange: **GB間天井 / SR間天井 / GB抽選状態 / CZ抽選状態 / GBレベル / 不屈ptをRESET/RESELECT**。RT状態は引継ぎ。
+- carryOver / powerCycle: **GB間天井 / SR間天井 / GB抽選状態 / CZ抽選状態 / GBレベル / 不屈pt / RT状態をCARRYOVER**。
+- 朝一液晶: 設定変更・電源ON/OFFとも **アンドロメダ島**。ステージ単独では変更判別不可。
+- GB抽選状態: **低確50.0% / 高確50.0%**。
+- CZ抽選状態: **低確50.0% / 高確ショート46.88～46.9% / 高確ロング3.13～3.1%**。
+- 設定変更時GBレベル:
+  - 設定1～3: Lv1 **49.2%** / Lv2 **25.0%** / Lv3 **12.5%** / Lv4 **12.5%** / Lv5 **0.8%**。
+  - 設定4: **47.7 / 24.2 / 12.1 / 14.1 / 1.9%**。
+  - 設定5: **47.3 / 24.0 / 12.0 / 14.5 / 2.2%**。
+  - 設定6: **41.5 / 21.1 / 10.6 / 20.1 / 6.5%**。
+- 不屈pt: **30pt以上スタート43%以上**、0pt **14.1%**、49pt **1.6%**を確認。中間個別振り分けは現行資料の表レンダリング欠落のため推測しない。
 - advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
-- resetBenefits / resetPenalties: **NONE_CONFIRMED_AFTER_RESEARCH**（天井関連はNOT_APPLICABLE）。
-- resetDetection / 公開朝一数値: **UNVERIFIED_AFTER_RESEARCH / NONE_CONFIRMED_AFTER_RESEARCH**。
+- deterministic gakkun: 検索語/資料系統変更後も高信頼の本機固有確定契約を固定できず **UNVERIFIED_AFTER_RESEARCH**。
 
-## No.1105 — ロイヤルマハロ-30
-- manufacturer: **北電子**
-- releaseDate: **2017-07-03**
-- formalModelName: **ロイヤルマハロ／KT-30**
-- certificationNumber: **5S1419**
-- generation/system: **5号機 / ノーマル / 完全告知 / 30Φ沖スロ**
-- recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7**
+### conflict QA
+- SR初当たりについて、みんスロに設定4 **1/1059** / 設定5 **1/879** / 設定6 **1/800** がある一方、一撃/すろぱちくえすと等は **1/980.51 / 1/769.01 / 1/683.12** で一致。
+- 平均せず、後者をcanonical、前者を **CONFLICT_OUTLIER_SECONDARY_SOURCE** としてNo.1106レコードへ保存。
 
-### performanceCore
-- 機械割: **97.5 / 98.4 / 100.3 / 104.0 / 107.0 / 111.0%**（北電子公式）。
-- BIG: **1/294 / 291 / 284 / 256 / 242 / 229**。
-- REG: **1/508 / 471 / 423 / 423 / 388 / 336**。
-- 合算: **1/186 / 180 / 170 / 159 / 149 / 136**。
-- ベース: **約36G/50枚**（単一解析資料値）。
-- BIG最大 **312枚** / REG最大 **130枚**。
-- 通常ゲーム数天井: **非搭載**。
+## 2017-07-18群 — OPEN
+今回までの登録:
+1. パチスロ 聖闘士星矢 海皇覚醒 — No.1106
 
-### resetBehavior v0.7
-- settingChange/carryOver/powerCycle: 天井・AT/ART/CZ進捗は **NOT_APPLICABLE**。告知モード/リール状態の本機固有直接契約は **UNVERIFIED_AFTER_RESEARCH**。
-- gameCounterReset / ceilingAfterReset: **NOT_APPLICABLE_NO_CEILING**。
-- mode/state: ロイヤル/クラシック/ランダムは遊技者選択の演出モード。設定変更専用内部モード/状態は **NONE_CONFIRMED_AFTER_RESEARCH**。
-- advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
-- resetBenefits / resetPenalties: **NONE_CONFIRMED_AFTER_RESEARCH**（天井関連はNOT_APPLICABLE）。
-- resetDetection / 公開朝一数値: **UNVERIFIED_AFTER_RESEARCH / NONE_CONFIRMED_AFTER_RESEARCH**。
-
-## 2017-07-03群 — CLOSED_FOR_CURRENT_RESEARCH
-登録済み:
-1. パチスロ アクエリオンEVOL — No.1097
-2. パチスロ 悪魔城ドラキュラ Lords of Shadow — No.1098
-3. パチスロ そらのおとしものフォルテ — No.1099
-4. パチスロ 閃乱カグラ — No.1100
-5. A-SLOTエイリヤンエボリューション — No.1101
-6. しすくえパラダイス — No.1102
-7. SHAKE III SIDE-A — No.1103
-8. 熊酒場2丁目店 — No.1104
-9. ロイヤルマハロ-30 — No.1105
-
-### 境界監査メモ
-- 複数の2017年導入一覧で7/3群の主要8機種は一致。
-- すろぱちくえすとの年別一覧はロイヤルマハロ-30を7/3欄に載せていないが、北電子公式の2017年7月製品情報、グリーンべると/P-WORLD業界ニュースの7/2納品予定、パチビー/2-9伝説の7/3導入が揃うため、漏れとしてNo.1105を追加。
-- 7/10を独立導入日とする高信頼な主要パチスロ群は今回固定できず、次の明確な大きな導入群は **2017-07-18**。
-- 7/18候補として、聖闘士星矢 海皇覚醒 / ガールフレンド(仮) / 結城友奈は勇者である / ラグナロクサーガ / ワンバーワン-30 / グレートキングハナハナ-30 / トラッドサンダーブラックを複数導入一覧で確認。個別処理時に再監査する。
+未処理先行候補（個別処理時に導入日・型式・メーカーを再監査）:
+1. ガールフレンド(仮)
+2. 結城友奈は勇者である
+3. ラグナロクサーガ
+4. ワンバーワン-30
+5. グレートキングハナハナ-30
+6. トラッドサンダーブラック
 
 ## 遡及 resetBehavior QA
 - retroQaScanConfirmedThrough: **2006-05_the-king-of-fighters.md**。
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
-- KOF性能側status: **PARTIAL（維持）**。
-- KOF resetBehaviorQA: **PARTIAL_RESEARCH_EXHAUSTED**。
-- KOFは全BIG後50G RT「RTドライブ」を保持。設定変更/据え置き/純電断時のRT残G・RT状態、本機固有ガックン、公開朝一数値は検索語・資料系統を変えた再探索後も直接固定できず `UNVERIFIED_AFTER_RESEARCH` / `NONE_CONFIRMED_AFTER_RESEARCH`。
 - 次カーソル: `2006-06_churahime-sun.md`。
+- 今回は新規7/18群のNo.1106処理を優先し、遡及QAカーソルは進めていない。
 
 ## 次回再開地点
-1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1104 / No.1105を再取得。
-2. **1105件 / chronologicalFrontier 2017-07-03 / 7/3群CLOSED** を正本として継続。
-3. 次の時系列境界 **2017-07-18群**を全メーカー横断再監査し、既登録有無を確認して最初の未処理機からNo.1106候補として処理。先行候補は **「パチスロ 聖闘士星矢 海皇覚醒」**。
-4. 7/18群では、ガールフレンド(仮) / 結城友奈は勇者である / ラグナロクサーガ / ワンバーワン-30 / グレートキングハナハナ-30 / トラッドサンダーブラックも漏れなく確認する。
-5. 遡及QAは `2006-06_churahime-sun.md` から継続。
+1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1106を再取得。
+2. **1106件 / chronologicalFrontier 2017-07-18 / 7/18群OPEN** を正本として継続。
+3. 次の未処理 **「ガールフレンド(仮)」** をNo.1107候補として、導入日・型式・検定番号・性能コア・resetBehavior v0.7を再探索して処理。
+4. 続いて **結城友奈は勇者である → ラグナロクサーガ → ワンバーワン-30 → グレートキングハナハナ-30 → トラッドサンダーブラック** を順に処理。
+5. 7/18群処理後、同日全メーカー横断監査を行って漏れを確認しCLOSED可否を判断。
+6. 遡及QAは `2006-06_churahime-sun.md` から継続。
 
 ## 主要出典 — 取得日 2026-09-09
-### No.1104 熊酒場2丁目店
-- ネット公式プレスリリース（Dream News転載）: https://www.dreamnews.jp/press/0000153042
-- グリーンべると: https://web-greenbelt.jp/00009704/
-- パチビー: https://www.pachibee.jp/machines/about/217050016
-- K-Navi: https://p-kn.com/slot/2814/
-- パチスロデータ: https://pachislo-data.com/net/45095
-- すろぱちくえすと: https://www.slopachi-quest.com/article/kumasakaba2/
-- ちょんぼりすた: https://chonborista.com/slot/net-slot/41024/
-- P-WORLD: https://www.p-world.co.jp/machine/database/8404
-
-### No.1105 ロイヤルマハロ-30
-- 北電子公式: https://www.kitadenshi.co.jp/slot/royalmahalo-30/
-- 北電子公式製品一覧: https://www.kitadenshi.co.jp/slot/
-- グリーンべると/P-WORLD業界ニュース: https://news.p-world.co.jp/articles/9194/greenbelt
-- 娯楽産業: https://www.goraku-sangyo.com/%E5%8C%97%E9%9B%BB%E5%AD%90%E3%80%80%E3%83%91%E3%83%81%E3%82%B9%E3%83%AD3%E6%A9%9F%E7%A8%AE%E5%90%8C%E6%99%82%E7%99%BA%E8%A1%A8/
-- パチビー: https://www.pachibee.jp/movies/index/13843
-- P-WORLD: https://www.p-world.co.jp/machine/database/8356
-- 2-9伝説: https://29den.com/royalmahalo/
-
-### 遡及QA — ザ・キング・オブ・ファイターズ
-- 電撃オンライン: https://dengekionline.com/data/news/2006/4/28/3e96f67b289f9fdb3a10a28ff46aacb6.html
-- P-WORLD: https://www.p-world.co.jp/machine/database/4193
-- 5号機クロニクル: https://5goki.com/snkplaymore
-- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/snk_slot/04/a.php
-- A-SLOT: https://www.a-slot.com/SHOP/snk_kof1.html
-
-### 次境界
-- ALL7 2017年7月導入一覧: https://www.all7.jp/plans/index/2017/07/10
-- すろぱちくえすと2017年導入日順: https://www.slopachi-quest.com/article/2017-sindai/
-- パチビー ラグナロクサーガ: https://www.pachibee.jp/machines/about/217060006
+### No.1106 パチスロ 聖闘士星矢 海皇覚醒
+- SANYO公式製品一覧: https://www.sanyobussan.co.jp/products/slot.html
+- HAZUSE: https://hazuse.com/machine/pachislot/7S0460/
+- パチビー: https://www.pachibee.jp/machines/index/217060007
+- PiDEA X: https://www.pidea.jp/articles/%E4%B8%89%E6%9C%A8%E6%B5%81%E3%80%81%E8%81%96%E9%97%98%E5%A3%AB%E6%98%9F%E7%9F%A2%E6%B5%B7%E7%9A%87%E8%A6%9A%E9%86%92%E3%81%AE%E8%A9%95%E4%BE%A1%E3%81%AF%EF%BC%9F
+- 一撃 5号機版: https://1geki.jp/slot/s_seiya_kaiou/
+- 一撃 天井/朝一: https://1geki.jp/slot/s_seiya_kaiou/3/
+- なな徹 朝イチ/設定変更: https://nana-press.com/kaiseki/machine/37/641/
+- なな徹 小役確率: https://nana-press.com/kaiseki/machine/37/644/
+- すろぱちくえすと: https://www.slopachi-quest.com/article/seiya-poseidon/
+- みんスロ（競合検知用）: https://minslo.com/%E8%81%96%E9%97%98%E5%A3%AB%E6%98%9F%E7%9F%A2-%E6%B5%B7%E7%9A%87%E8%A6%9A%E9%86%92/
