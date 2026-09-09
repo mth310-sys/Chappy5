@@ -1,112 +1,121 @@
 更新日: 2026-09-09
 
 ## 現在地点
-- recordCount: **1112**
-- latestRecordAdded: **トラッドサンダーブラック**（岡崎産業）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2017-07-18_trad-thunder-black.md`
-- chronologicalFrontier: **2017-07-18**
-- frontierLatestMachine: **トラッドサンダーブラック — No.1112**
+- recordCount: **1113**
+- latestRecordAdded: **パチスロ バイオハザード リベレーションズ**（エンターライズ）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2017-07-31_biohazard-revelations.md`
+- chronologicalFrontier: **2017-07-31**
+- frontierLatestMachine: **パチスロ バイオハザード リベレーションズ — No.1113**
 - schema: **resetBehavior v0.7**
-- status: **2017-07-18_GROUP_CLOSED_FOR_CURRENT_RESEARCH**
+- status: **2017-07-31_GROUP_OPEN**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、No.1111「グレートキングハナハナ-30」を再取得して開始。
+- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、No.1112「トラッドサンダーブラック」、遡及対象「ちゅら姫SUN」を再取得して開始。
 - INDEX本文は初期19件時点の旧スナップショットのため、README規定どおりLATEST_HANDOFFと実レコードを進捗正本として採用。
-- 開始時mainは **1111件 / chronologicalFrontier 2017-07-18 / 7/18群OPEN**。
-- handoff指定の次未処理 **「トラッドサンダーブラック」** をNo.1112として登録。
+- 開始時mainは **1112件 / chronologicalFrontier 2017-07-18 / 7/18群CLOSED**。
+- handoff指定の次未処理 **「パチスロ バイオハザード リベレーションズ」** をNo.1113として登録。
 - performance core + resetBehavior v0.7を同時収集。
-- 7/18群は複数の年次導入一覧・当時導入カレンダーを横断。現時点の全候補7機が登録済みとなったため `2017-07-18_GROUP_CLOSED_FOR_CURRENT_RESEARCH` と判定。
+- exact release dateは2017-07-24 vs 2017-07-31を再監査。複数の当時解析/機種DBが7/31で一致し、モゲスロのみ7/24のため、7/31をchronological canonical、7/24を `CONFLICT_SECONDARY_RELEASE_DATE` として保持。
+- 遡及reset QAは `2006-06_churahime-sun.md` を再探索し、性能側 `status: PARTIAL` を維持したままreset側のみ `PARTIAL_RESEARCH_EXHAUSTED` へ更新。
 
-## No.1112 — トラッドサンダーブラック
-- manufacturer: **岡崎産業**
-- releaseDate canonical: **2017-07-18**
-- secondary exact-date source: **2017-07-17 — CONFLICT_SECONDARY_RELEASE_DATE**
-- formalModelName: **トラッドサンダーブラック／T1**
-- certificationNumber: **7S0197**
-- generation/system: **5号機 / ノーマルA / 完全告知**
+## No.1113 — パチスロ バイオハザード リベレーションズ
+- manufacturer: **エンターライズ**
+- releaseDate canonical: **2017-07-31**
+- secondary exact-date source: **2017-07-24 — CONFLICT_SECONDARY_RELEASE_DATE**
+- formalModelName: **バイオハザードリベレーションズ／ZW**
+- certificationNumber: **7S0275**
+- generation/system: **5号機 / A+ART / ST-ART**
 - recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7**
 
 ### performanceCore
-- 機械割: **96.5 / 99.0 / 101.0 / 104.3 / 107.1 / 111.5%**。
-- BIG: **1/293.88 / 1/287.44 / 1/277.69 / 1/265.33 / 1/254.02 / 1/253.03**。
-- REG: **1/383.25 / 1/350.46 / 1/327.68 / 1/291.27 / 1/276.52 / 1/227.56**。
-- 合算: **1/166.34 / 1/157.92 / 1/150.31 / 1/138.85 / 1/132.40 / 1/119.81**。
-- ベース: **約35G/50枚**。
-- BIG最大 **312枚**、REG **104枚**。
-- AT/ART純増: **NOT_APPLICABLE_NORMAL_A**。
-- ゲーム数天井: **NO_GAME_COUNT_CEILING**。
+- 標準機械割: **97.9 / 98.8 / 101.3 / 103.9 / 106.6 / 108.1%**。
+- 完全攻略系上限値: **99.0 / 99.9 / 102.6 / 105.3 / 108.1 / 109.8%**。算出条件差として別保持し平均しない。
+- BONUS: **1/119.6 / 1/118.7 / 1/117.9 / 1/116.2 / 1/115.0 / 1/113.4**。
+- ART初当たり: **1/520.0 / 1/502.5 / 1/449.1 / 1/406.3 / 1/365.8 / 1/347.9**。
+- ベース: **約34G/50枚**。
+- BONUS「リベレーションズチャンス」: **約60枚 / 10G**。
+- ST-ART「RAID MODE」: **1セット50G+α / ボーナス込み約2.0枚/G**。
+- 第1天井: **400G 5.0% / 500G 10.0% / 600G 12.5% / 700G 25.0% / 800G 47.5%**。選択G数以降のボーナスでART。
+- 第2天井: **ボーナスorART間最大810GでART**。
+- 通常スルー天井: ART非当選ボーナス14連続後、**15回目でART**。
 
 ### resetBehavior v0.7
-- settingChange: 朝一高確・専用モード・初当たり優遇・短縮天井等の本機固有変更恩恵は **NONE_CONFIRMED_AFTER_RESEARCH**。一般的ノーマル機挙動から推測補完しない。
-- gameCounterReset / ceilingAfterReset: **NOT_APPLICABLE_NO_GAME_COUNT_CEILING**。
-- modeAfterReset: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- stateAfterReset: 高確/低確/CZ前兆等は **NOT_APPLICABLE_OR_NONE_CONFIRMED_FOR_NORMAL_A_GAMEPLAY**。成立済みボーナス等の低レベル内部状態は直接契約を固定できずUNVERIFIED。
-- carryOver: 据え置き時の成立済みボーナス/告知状態/ボーナス後履歴等の本機固有直接契約は **UNVERIFIED_AFTER_RESEARCH**。
-- powerCycle: 同項目の純電源OFF→ON直接契約も **UNVERIFIED_AFTER_RESEARCH**。
-- resetBenefits / resetPenalties: 設定変更専用の公開恩恵・不利要素は **NONE_CONFIRMED_AFTER_RESEARCH**。
-- resetDetection: 本機固有の確定ガックン/ランプ/初期出目等は十分な再探索後も **UNVERIFIED_AFTER_RESEARCH**。通常のREG確率・小役・BIG中ハズレは設定推測材料であって変更判別には転用しない。
-- numericResetData: reset-specificな公開朝一数値は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- settingChange:
+  - ゲーム数天井 **RESET**。
+  - スルー回数天井 **6回目ボーナスでART**へ短縮。
+  - 内部状態 **再抽選**。
+  - 液晶 **船員居住区**開始。
+- powerCycle:
+  - ゲーム数天井 **CARRYOVER**。
+  - スルー回数天井 **CARRYOVER**。
+  - 内部状態 **CARRYOVER**。
+  - 液晶は船員居住区。ボーナス/ART中の電断は当該状態引継ぎ資料あり。
+  - 低レベルRT状態契約は当時資料でも調査中のため `UNVERIFIED_AFTER_RESEARCH`。
+- resetModeDistribution: **通常1 34.38% / 通常2 50.00% / 通常3 15.63%**。
+- resetStateDistribution:
+  - 戦慄S **12.50%**、戦慄D **12.50%**（全設定共通）。
+  - 戦慄R: 設定1/3/5 **3.13%**、設定2/4 **6.25%**、設定6 **12.50%**。
+- ART後の短縮スルー天井状態: **40.2%（精密40.23%）継続 / 59.8%（59.77%）転落**。
+- resetDetection: 設定変更/純電断とも船員居住区開始のため開始ステージ単独判別不可。本機固有の確定ガックン確率は `UNVERIFIED_AFTER_RESEARCH`。
 - advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
 
-### conflict / definition QA
-- exact release date: **2017-07-18 vs 2017-07-17**。すろぱちくえすと/2-9伝説/年次一覧は7/18、HAZUSE/別新台カレンダーは7/17。7/18をchronological canonical、7/17を二次競合として保持。
-- BIG時の特別BGM条件（ボーナス後50G以内、100G以内ゾロ目等）は演出条件であり天井/解除ゾーンではない。
+## 遡及 resetBehavior QA — ちゅら姫SUN
+- path: `docs/real_machine_db/machines/2006-06_churahime-sun.md`
+- performance status: **PARTIAL 維持**。性能完了判定は変更していない。
+- resetQaStatus: **PARTIAL_RESEARCH_EXHAUSTED**。
+- メーカー公式、当時パチマガスロマガ、旧機種DB、5号機回顧、業界資料を再探索。
+- 公開仕様上、通常ゲーム数天井 / RT / AT / ART / CZ / 朝一ゲーム数モードは **NONE_CONFIRMED / NOT_APPLICABLE**。
+- 設定変更/据え置き/純電断時の成立済みボーナス・告知・液晶等の低レベル内部状態は本機固有の直接契約を固定できず **UNVERIFIED_AFTER_RESEARCH**。
+- 本機固有ガックン/初期出目/ランプ等の変更判別も **UNVERIFIED_AFTER_RESEARCH**。
+- 公開朝一数値は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 一般的な5号機ノーマル機挙動からRESET/CARRYOVERを推測していない。
 
-## 2017-07-18群 — CLOSED_FOR_CURRENT_RESEARCH
-登録済み:
-1. パチスロ 聖闘士星矢 海皇覚醒 — No.1106
-2. パチスロ ガールフレンド（仮）～聖櫻学園メモリアル～ — No.1107
-3. パチスロ 結城友奈は勇者である — No.1108
-4. ラグナロクサーガ — No.1109
-5. ワンバーワン-30 — No.1110
-6. グレートキングハナハナ-30 — No.1111
-7. トラッドサンダーブラック — No.1112
-
-### 群監査
-- すろぱちくえすと2017年導入日順一覧は7/18群を上記7機として列挙。
-- 2-9伝説導入日一覧も7/18群に主要同日機を列挙。
-- ALL7の当時導入予定一覧も聖闘士星矢/ガールフレンド/結城友奈/ラグナロクサーガ/ワンバーワン等を7/18として確認。
-- HAZUSEはトラッドサンダーブラックを7/17、一部別資料はグレートキングハナハナ-30を7/24とするため、個別レコードにexact-date conflictを保持したまま群を閉じる。
-
-## 次境界の先行監査
-- 7/18群の後は資料間で導入日の揺れがある。
-- **バイオハザード リベレーションズ**は、モゲスロが2017-07-24、すろぱちくえすと/別カレンダー系が2017-07-31とするため、次の未処理先行候補として最優先で導入日CONFLICTを再監査する。
-- **グレートキングハナハナ-30**の7/24表記はNo.1111で既処理・競合保存済みなので重複追加しない。
-- 7/31候補として **政宗2 / 燃えよ！功夫淑女ドラゴン** も確認。ただし政宗2はHAZUSEに8/7表記もあり、個別処理時に導入日を再固定する。
+## 2017-07-24〜07-31境界監査
+- バイオハザード リベレーションズ: 7/24資料が1系統ある一方、HAZUSE/一撃/すろぱちくえすと/ちょんぼりすた/K-Navi等は7/31で一致。No.1113に競合保存済み。
+- グレートキングハナハナ-30の7/24表記はNo.1111で既処理済みのため重複しない。
+- **燃えよ！功夫淑女ドラゴン**: モゲスロ/K-Navi/ちょんぼりすた等で **2017-07-31** 候補。次の未処理として優先。
+- **政宗2**: 当時解析の一部は **2017-07-31**、HAZUSEおよび複数後年資料は **2017-08-07**。未処理時に `CONFLICT_2017_07_31_VS_2017_08_07` を再監査する。
+- したがって7/31群はまだ **OPEN**。
 
 ## 遡及 resetBehavior QA
-- retroQaScanConfirmedThrough: **2006-05_the-king-of-fighters.md**。
+- retroQaScanConfirmedThrough: **2006-06_churahime-sun.md**。
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
-- 次カーソル: `2006-06_churahime-sun.md`。
-- 今回は新規No.1112と7/18群監査を優先し、遡及QAカーソルは進めていない。
+- 次カーソル: `docs/real_machine_db/machines/2006-06_thunderbirds-neo-xx.md`。
+- 次カーソルは初回レコード追加コミット順で、ちゅら姫SUNの直後がサンダーバードNEOXXであることをGitHub履歴から確認。
 
 ## 次回再開地点
-1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1112を再取得。
-2. **1112件 / chronologicalFrontier 2017-07-18 / 7/18群CLOSED** を正本として継続。
-3. 次の未処理 **「バイオハザード リベレーションズ」** をNo.1113候補として処理し、まず **2017-07-24 vs 2017-07-31** の導入日競合を公式/業界/HAZUSE/P-WORLD/当時解析/年次カレンダーで再固定する。
-4. 型式・検定番号・性能コア・resetBehavior v0.7を同時収集。設定変更/据え置き/純電断、天井・モード・状態、朝一恩恵/不利、変更判別、公開朝一数値を欠損前に再探索する。
-5. その後 **政宗2 / 燃えよ！功夫淑女ドラゴン** を導入日競合込みで監査し、7/24〜7/31境界を漏れなく確定する。
-6. 遡及QAは `2006-06_churahime-sun.md` から継続。
+1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1113を再取得。
+2. **1113件 / chronologicalFrontier 2017-07-31 / 7/31群OPEN** を正本として継続。
+3. 次の未処理 **「燃えよ！功夫淑女ドラゴン」** をNo.1114候補として性能コア + resetBehavior v0.7同時収集。
+4. その後 **政宗2** の2017-07-31 vs 2017-08-07競合を再監査し、7/31群CLOSE可否を判定。
+5. 遡及QAは `docs/real_machine_db/machines/2006-06_thunderbirds-neo-xx.md` から継続。既存PARTIAL性能を不用意に崩さず、特に設定1機械割91.0%の別ソースQAとRTリセット契約を優先再探索する。
 
 ## 主要出典 — 取得日 2026-09-09
-### No.1112 トラッドサンダーブラック
-- HAZUSE 基本/天井・設定判別: https://hazuse.com/machine/pachislot/7S0197/
-- HAZUSE 基本スペック: https://hazuse.com/machine/pachislot/7S0197/genre/201/
-- HAZUSE 初打講座: https://hazuse.com/machine/pachislot/7S0197/genre/203/
-- HAZUSE 設定推測: https://hazuse.com/machine/pachislot/7S0197/genre/208/
-- すろぱちくえすと: https://www.slopachi-quest.com/article/trad-thunder-black/
-- 2-9伝説: https://29den.com/tradthunderblack/
-- ちょんぼりすた: https://chonborista.com/slot/okazaki-slot/43051/
-- pacnk: https://pacnk.com/slot/tools/sh_toraddosandaburakku.html
-- すろぱちくえすと2017年導入日順一覧: https://www.slopachi-quest.com/article/2017-sindai/
-- 2-9伝説 新台導入日一覧: https://29den.com/newslot/
-- ALL7 2017年7月導入予定一覧: https://www.all7.jp/plans/index/2017/07/10
-- 新台スロット2017年度カレンダー: https://slotnews777.blog.fc2.com/blog-entry-3121.html
-- ぱちんこドキュメント（岡崎産業公式ページ公開記録）: https://pachinkolist.com/archives/51416747.html
-- 岡崎産業当時公式ページURL（保存記録）: http://www.okazakisangyo.com/slot/tradthunderblack/index.html
-- ホームスロット: https://home-slot.net/SHOP/s-okazaki14.html
+### No.1113 バイオハザード リベレーションズ
+- HAZUSE: https://hazuse.com/machine/pachislot/7S0275/
+- HAZUSE 天井: https://hazuse.com/machine/pachislot/7S0275/genre/207/
+- 一撃: https://1geki.jp/slot/s_biohazard_revelations/
+- 一撃 天井/設定変更: https://1geki.jp/slot/s_biohazard_revelations/3/
+- 一撃 ART: https://1geki.jp/slot/s_biohazard_revelations/81/
+- パチ＆スロ必勝本: https://p.hisshobon.jp/machine/2989/1/65361
+- すろぱちくえすと: https://www.slopachi-quest.com/article/biohazard-revelations/
+- ちょんぼりすた: https://chonborista.com/slot/enta-slot/39201/
+- P-WORLD: https://www.p-world.co.jp/machine/database/8419
+- K-Navi: https://p-kn.com/slot/2815/
+- ニッカンアミューズメント/娯楽産業: https://www.nikkansports.com/amusement/pachinko/news/1825966.html
+- モゲスロ2017導入カレンダー: https://moge-site.com/new-slot2017
+
+### ちゅら姫SUN QA
+- ユニバーサル公式: https://www.universal-777.com/product/slot/churahime_sun/
+- パチマガスロマガ基本: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/eleco_slot/62/a.php
+- パチマガスロマガ設定推測: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/eleco_slot/62/i.php
+- 5号機クロニクル: https://5goki.com/universal
+- なな徹設定段階: https://nana-press.com/post/1591139
+- ALL7 2006年6月: https://www.all7.jp/plans/index/2006/06
+- グリーンべると: https://web-greenbelt.jp/00004865/
 
 ### 次境界監査
-- モゲスロ2017年導入カレンダー: https://moge-site.com/new-slot2017
-- すろぱちくえすと2017年導入日順一覧: https://www.slopachi-quest.com/article/2017-sindai/
-- 新台スロット2017年度カレンダー: https://slotnews777.blog.fc2.com/blog-entry-3121.html
+- 燃えよ！功夫淑女ドラゴン/K-Navi: https://p-kn.com/slot/2828/
+- ちょんぼりすた: https://chonborista.com/slot/yamasa-slot/40820/
+- 政宗2 HAZUSE: https://hazuse.com/machine/pachislot/7S0209/
+- 政宗2 すろぱちくえすと: https://www.slopachi-quest.com/article/masamune2/
