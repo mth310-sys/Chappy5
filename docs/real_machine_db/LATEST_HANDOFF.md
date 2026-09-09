@@ -1,115 +1,115 @@
 更新日: 2026-09-09
 
 ## 現在地点
-- recordCount: **1125**
-- latestRecordAdded: **パチスロ 討鬼伝**（七匠）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2017-08-28_toukiden.md`
+- recordCount: **1126**
+- latestRecordAdded: **戦国美少女 織田信奈の野望**（D-light / ディ・ライト）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2017-08-28_sengoku-bishoujo-oda-nobuna-no-yabou.md`
 - chronologicalFrontier: **2017-08-28**
-- frontierLatestMachine: **パチスロ 討鬼伝 — No.1125**
+- frontierLatestMachine: **戦国美少女 織田信奈の野望 — No.1126**
 - schema: **resetBehavior v0.7**
-- status: **2017-08-28_GROUP_OPEN**
+- status: **2017-08-28_GROUP_CLOSED / NEXT_2017-09-04_GROUP_OPEN**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、mission v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前No.1124「イミソーレ3V-30」を再取得して開始。
+- 最新mainの `README.md`、mission v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前No.1125「パチスロ 討鬼伝」を再取得して開始。
 - INDEXは初期19件時点の旧スナップショットのため、README規定どおり最新 `LATEST_HANDOFF.md` ＋実レコードを進捗正本として採用。
-- 開始時mainは **1124件 / chronologicalFrontier 2017-08-21 / 8/21群CLOSED / 2017-08-28群OPEN**。
-- HANDOFF指定の次候補 **「パチスロ 討鬼伝」** をGitHubコード検索し、同名既存レコードなしを確認してNo.1125として新規登録。
-- 七匠公式製品アーカイブで機種存在とミタマを核にしたゲーム性を確認。2017年検定通過記事で正式型式 **パチスロ討鬼伝N** を固定。
-- 導入日はALL7・すろぱちくえすと・期待値見える化の **2017-08-28** をcanonical。ちょんぼりすたの **2017-08-27** は平均せずCONFLICT保持。
-- 検定番号は型式名・メーカー・公安委員会・検定・7S等で資料系統を変えて再探索したが直接固定できず **UNVERIFIED_AFTER_RESEARCH**。
-- 性能コアは複数解析で一致し、機械割 **97.9 / 98.9 / 100.1 / 104.8 / 107.5 / 115.5%**、ART初当たり **1/488 / 476 / 461 / 400 / 367 / 254**、ベース約 **35G/50枚**、ART純増約 **2.0枚/G**、討鬼RUSH **30～150G** を保存。
-- 通常時は **1周期99G+α / 最大12周期**。12周期目はモードD（極モード）確定。
-- resetBehavior v0.7は設定変更/純電断の直接表と公開数値を保存。設定変更で周期天井RESET・周期モード再抽選・ミタマ保留RESET、純電源OFF→ONでは周期天井/周期進行/周期モードCARRYOVER、ミタマ保留は一時非表示後に周期到達で再表示。
-- 設定変更後天井は設定1～5が最大7周期、設定6のみ12周期12.5%。全設定共通でモードD（極モード）25.0%。
-- ガックンは資料が **「おそらく可能」 vs 「判別不可」** と競合するため断定せず `CONFLICT_GAKKUN_DETECTION`。
+- 開始時mainは **1125件 / chronologicalFrontier 2017-08-28 / 8/28群OPEN**。
+- HANDOFF指定の次候補 **「戦国美少女 織田信奈の野望」** をGitHubコード検索し、同名既存レコードなしを確認してNo.1126として新規登録。
+- HAZUSEでメーカー **D-light**、型式 **織田信奈の野望S**、検定番号 **7S0411**、導入 **2017-08-28** を固定。パチビー、すろぱちくえすと、期待値見える化、ALL7も8/28で一致。
+- ちょんぼりすたのみ **2017-08-27** のため、平均せず `CONFLICT_2017_08_28_VS_2017_08_27`。canonicalは8/28。
+- 性能コアは機械割 **97.5 / 99.1 / 100.1 / 104.6 / 108.0 / 112.0%**、ART初当たり **1/496 / 479 / 455 / 405 / 368 / 335**、約 **30G/50枚**。
+- ART純増は定義分離し、**ART区間単体約1.6枚/G / ボーナス込み約2.0枚/G**。天下布武RUSHは **1セット40G以上**。良晴野ボーナス120枚、決戦の刻60枚、六将集結の儀20G。
+- 通常時は100万石=1周期、通常天井 **600万石（6周期）**。六将集結の儀4回連続ART非当選後、5回目でART確定。
+- resetBehavior v0.7は設定変更で **0～255万石ランダム加算 / モードA 100% / 森ステージ**、純電源OFF→ONで **周期石高・内部モード・六将集結の儀スルー回数CARRYOVER / 森ステージ** を保存。
+- モードAの疑似ボーナス当選率は **200万石70.31% / 400万石76.56%**。朝一の主要リセット恩恵として保存。
+- 0～255万石の個別振り分け率、設定変更時の六将集結の儀スルー回数、設定変更/純電断時の通常・高確内部状態、本機固有ガックン、「据え置き」と明記した独立操作契約は検索語・資料系統を変えた再探索後も直接固定できず **UNVERIFIED_AFTER_RESEARCH**。
 - 有利区間は **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
 
-## No.1125 — パチスロ 討鬼伝
-- manufacturer: **七匠**
+## No.1126 — 戦国美少女 織田信奈の野望
+- manufacturer: **D-light（ディ・ライト）**
 - releaseDate canonical: **2017-08-28**
 - releaseDate conflict: **2017-08-28 vs 2017-08-27**
-- formalModelName: **パチスロ討鬼伝N**
-- certificationNumber: **UNVERIFIED_AFTER_RESEARCH**
-- generation/system: **5号機 / ART / 周期管理 / 擬似ボーナス**
+- formalModelName: **織田信奈の野望S**
+- certificationNumber: **7S0411**
+- generation/system: **5号機（5.5号機世代） / A+ART / 周期管理 / リアルボーナス+擬似ボーナス**
 - recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7**
 
 ### performanceCore
-- 機械割: **97.9 / 98.9 / 100.1 / 104.8 / 107.5 / 115.5%**。
-- ART初当たり: **1/488 / 476 / 461 / 400 / 367 / 254**。
-- baseGamesPer50: **約35G/50枚**。
-- netIncrease: **約2.0枚/G**。
-- 討鬼RUSH: **1セット30～150G**。
-- 討鬼ボーナス: **30G**、真討鬼ボーナス: **60G**。
-- 通常周期: **99G+α**、通常最大天井 **12周期**。
+- 機械割: **97.5 / 99.1 / 100.1 / 104.6 / 108.0 / 112.0%**。
+- ART初当たり: **1/496 / 479 / 455 / 405 / 368 / 335**。
+- 良晴野ボーナス: **1/245 / 243 / 237 / 230 / 227 / 223**。
+- 六将集結の儀: **1/394 / 392 / 390 / 388 / 385 / 382**。
+- 決戦の刻: **全設定1/8192**。
+- baseGamesPer50: **約30G/50枚**。
+- netIncrease: **ART単体約1.6枚/G / ボーナス込み約2.0枚/G**。
+- 天下布武RUSH: **1セット40G以上**。
+- 良晴野ボーナス **120枚** / 決戦の刻 **60枚** / 六将集結の儀 **20G**。
 
 ### resetBehavior v0.7
-- settingChange: **周期天井RESET / 周期モードRESELECT / ミタマ保留RESET**。
-- pure power OFF→ON: **周期天井・周期進行・周期モードCARRYOVER / ミタマ保留は一時非表示後再表示**。
-- reset ceiling distribution:
-  - 設定1: **1周期12.5 / 3周期37.5 / 7周期50.0 / 12周期0%**
-  - 設定2: **12.5 / 43.8 / 43.8 / 0%**
-  - 設定3: **12.5 / 37.5 / 50.0 / 0%**
-  - 設定4: **12.5 / 43.8 / 43.8 / 0%**
-  - 設定5: **12.5 / 37.5 / 50.0 / 0%**
-  - 設定6: **12.5 / 37.5 / 37.5 / 12.5%**
-- reset cycle mode:
-  - 設定1/3/5: **B37.5 / C37.5 / D25.0%**
-  - 設定2/4/6: **B25.0 / C50.0 / D25.0%**
-  - モードA: **0%**、モードD=極モード。
-- resetBenefits: **設定1～5最大7周期 / 全設定25%極モード / 1or3周期選択が大幅優遇**。
-- resetDetection: ガックンは **CONFLICT**。朝一極モードはリセット可能性UPのヒントだが確定判別ではない。ステージ単独判別不可。
+- settingChange: **周期石高RESET/RESEED（0～255万石ランダム加算） / モードA 100% / 森ステージ**。
+- pure power OFF→ON: **周期石高CARRYOVER / 内部モードCARRYOVER / 六将集結の儀スルー回数CARRYOVER / 森ステージ**。
+- normal ceiling: **600万石 / 6周期**。リアルボーナスを挟んでも有効。
+- pseudo-bonus skip ceiling: **六将集結の儀4連続ART非当選 → 5回目ART確定**。
+- reset mode A zone:
+  - 100万石 **14.84%**
+  - 200万石 **70.31%**
+  - 300万石 **12.50%**
+  - 400万石 **76.56%**
+  - 500万石 **9.38%**
+  - 600万石 **100%**
+- resetBenefits: **0～255万石の周期進行加算 + モードA 100%**。
+- resetDetection: 設定変更/電断とも森ステージのためステージ単独判別不可。ガックンは **UNVERIFIED_AFTER_RESEARCH**。
 - advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
 
 ## conflicts / unresolved
 - releaseDate: **2017-08-28 vs 2017-08-27**。canonical 2017-08-28。
-- certificationNumber: **UNVERIFIED_AFTER_RESEARCH**。
-- gakkun: **おそらく可能 vs 判別不可**。平均/断定せずCONFLICT。
-- 設定変更時の周期モード以外の低確/高確等内部状態振り分け: **UNVERIFIED_AFTER_RESEARCH**。
+- ART純増: **ART単体約1.6枚/G / ボーナス込み約2.0枚/G** の定義差。CONFLICTではなく定義分離。
+- 設定変更時の六将集結の儀スルー回数: **UNVERIFIED_AFTER_RESEARCH**。
+- 設定変更/純電断時の通常・高確内部状態: **UNVERIFIED_AFTER_RESEARCH**。
+- 0～255万石ランダム加算の個別振り分け率: **UNVERIFIED_AFTER_RESEARCH**。
+- 本機固有ガックン: **UNVERIFIED_AFTER_RESEARCH**。
+- 据え置き独立操作契約: **UNVERIFIED_DIRECT_STAY_SETTING_CONTRACT_AFTER_RESEARCH**。
 
-## 2017-08-21群監査 — CLOSED
-- No.1118 イノキロードトゥゴッド
-- No.1119 パチスロ ロボットガールズZ
-- No.1120 戦国乙女～TYPE-A～
-- No.1121 戦国パチスロ花の慶次～天を穿つ戦槍～
-- No.1122 ぱちスロ 仮面ライダーBLACK
-- No.1123 神の左手 悪魔の右目
-- 遡及漏れ「イミソーレ3V-30」もNo.1124で回収済み。
-
-## 2017-08-28群 — OPEN
+## 2017-08-28群監査 — CLOSED
 - No.1125 **パチスロ 討鬼伝** — 登録済み。
-- 次候補 **戦国美少女 織田信奈の野望** は先行再確認済み:
-  - HAZUSE: 導入開始 **2017-08-28**、メーカー **D-light**、型式 **織田信奈の野望S**、検定番号 **7S0411**。
-  - パチビー、すろぱちくえすとも **2017-08-28** で一致。
-  - ちょんぼりすたのみ **2017-08-27** のため、次回レコード化時に日付CONFLICTとして保持予定。
-- 「戦国美少女 織田信奈の野望」処理後、8/28群を全メーカー横断監査してCLOSED可否を判定する。
+- No.1126 **戦国美少女 織田信奈の野望** — 登録済み。
+- ALL7の2017年8月導入一覧、すろぱちくえすとの2017年導入日一覧、2-9伝説の当時整理で8/28新規パチスロ本線を横断確認し、討鬼伝・織田信奈の野望で一致。
+- **戦国乙女～TYPE-A～** はHAZUSEに2017-08-28表記があるが、既存No.1120レコードで既に **canonical 2017-08-21 / HAZUSE 2017-08-28 CONFLICT** を保持済み。重複新規レコードは作成しない。
+- 以上より8/28群を **CLOSED** とする。
+
+## 次境界 2017-09-04 — OPEN
+- 8/28の次の主要導入境界は **2017-09-04**。
+- すろぱちくえすと2017一覧では次候補群に **パチスロ北斗の拳 新伝説創造 / ぱちスロAKB48 勝利の女神 / 回胴性ミリオンアーサー / 笑ゥせぇるすまん3 / 亜人 / デビルマンχ / アメイジング・スパイダーマン / セイクリッドセブン / YASUDA7** 等を掲載。
+- 一撃の2017年9月スケジュールは9/4を **北斗の拳 新伝説創造 / 亜人 / セイクリッドセブン / 笑ゥせぇるすまん3** の4機種としており、別資料ではAKB48・回胴性ミリオンアーサー・蒼き鋼のアルペジオ等も9/4表記がある。地域導入・掲載定義差の可能性があるため、9/4群は **OPEN** のまま全メーカー監査してからCLOSED判定する。
+- 最優先次候補: **パチスロ北斗の拳 新伝説創造 — No.1127候補**。複数資料で2017-09-04導入を先行確認済み。
 
 ## 遡及 resetBehavior QA
 - retroQaScanConfirmedThrough: **2006-06_churahime-sun.md**。
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
 - 次カーソル: `docs/real_machine_db/machines/2006-06_thunderbirds-neo-xx.md`。
-- 今回は本線No.1125を優先し、QAカーソルは進めていない。
+- 今回は本線No.1126と8/28境界監査を優先し、QAカーソルは進めていない。
 
 ## 次回再開地点
-1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1125を再取得。
-2. **1125件 / chronologicalFrontier 2017-08-28 / 2017-08-28群OPEN** を正本として継続。
-3. **最優先:「戦国美少女 織田信奈の野望」No.1126候補**。重複確認後、performance core + resetBehavior v0.7を収集・登録。
-4. その後8/28群を全メーカー横断再監査し、漏れ回収後にCLOSED判定。
+1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1126を再取得。
+2. **1126件 / chronologicalFrontier 2017-08-28 / 2017-08-28群CLOSED / 2017-09-04群OPEN** を正本として継続。
+3. **最優先:「パチスロ北斗の拳 新伝説創造」No.1127候補**。重複確認後、performance core + resetBehavior v0.7を収集・登録。
+4. その後9/4群をメーカー・表記揺れ・地域導入差まで横断し、同日候補を順次回収してからCLOSED判定。
 5. 遡及QAは `docs/real_machine_db/machines/2006-06_thunderbirds-neo-xx.md` から継続。
 
 ## 主要出典 — 取得日 2026-09-09
-### No.1125 パチスロ 討鬼伝
-- 七匠公式 機種情報: https://www.nanashow.co.jp/product/
-- ALL7 2017年8月導入予定一覧: https://www.all7.jp/plans/index/2017/08
-- P-MEDIA 検定通過（型式パチスロ討鬼伝N）: https://p-media.info/%E5%92%8C%E9%A2%A8%E3%82%B2%E3%83%BC%E3%83%A0%E7%89%88%E6%A8%A9%E3%81%8C%E3%83%91%E3%83%81%E3%82%B9%E3%83%AD%E5%8C%96%EF%BC%8F%E4%B8%83%E5%8C%A0%E3%81%95%E3%82%93%E3%81%8B%E3%82%89%E3%80%8C%E3%83%91/
-- P-WORLD: https://www.p-world.co.jp/machine/database/8469
-- すろぱちくえすと: https://www.slopachi-quest.com/article/toukiden/
-- 期待値見える化: https://slotjin.com/zone/toukiden/
-- ちょんぼりすた: https://chonborista.com/slot/nanashow/43458/
-- パチ7: https://pachiseven.jp/machines/5261/cutout/66
-- SLOT HACK: https://slothack.net/matome/3346/
-
-### 次候補 戦国美少女 織田信奈の野望
+### No.1126 戦国美少女 織田信奈の野望
+- D-light / 大一公式: https://daiichi777.jp/product/detail/157/slot_odanobuna
 - HAZUSE: https://hazuse.com/machine/pachislot/7S0411/
-- パチビー: https://www.pachibee.jp/machines/movie/217080001
-- 大一/D-light公式: https://daiichi777.jp/product/detail/157/slot_odanobuna
+- HAZUSE ART/内部状態: https://hazuse.com/machine/pachislot/7S0411/genre/209/
+- 一撃 天井/設定変更: https://1geki.jp/slot/s_odanobuna/3/
+- 一撃 モード移行: https://1geki.jp/slot/s_odanobuna/44/
+- 一撃 石高システム: https://1geki.jp/slot/s_odanobuna/46/
+- 一撃 ボーナス確率: https://1geki.jp/slot/s_odanobuna/1/
+- 期待値見える化: https://slotjin.com/zone/odanobuna/
 - すろぱちくえすと: https://www.slopachi-quest.com/article/slot-odanobunanoyabou/
+- パチビー: https://www.pachibee.jp/machines/movie/217080001
+- ALL7: https://www.all7.jp/plans/index/2017/08
+- ちょんぼりすた: https://chonborista.com/slot/d-light/43538/
+
+### 次境界 2017-09-04
+- すろぱちくえすと 2017年導入一覧: https://www.slopachi-quest.com/article/2017-sindai/
+- 一撃 2017年9月新台スケジュール: https://1geki.jp/newmachinecalender/201709/
