@@ -1,53 +1,55 @@
 更新日: 2026-09-09
 
 ## 現在地点
-- recordCount: **1132**
-- latestRecordAdded: **アメイジング・スパイダーマン**（ミズホ）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2017-09-04_amazing-spiderman.md`
+- recordCount: **1133**
+- latestRecordAdded: **パチスロ セイクリッドセブン**（山佐）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2017-09-04_sacred-seven.md`
 - chronologicalFrontier: **2017-09-04**
-- frontierLatestMachine: **アメイジング・スパイダーマン — No.1132**
+- frontierLatestMachine: **パチスロ セイクリッドセブン — No.1133**
 - schema: **resetBehavior v0.7**
 - status: **2017-09-04_GROUP_OPEN**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、直前No.1131「SLOTデビルマンχ」を再取得して開始。
+- 最新mainの `README.md`、mission v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前No.1132「アメイジング・スパイダーマン」を再取得して開始。
 - INDEXは初期19件時点の旧スナップショットのため、README規定どおり最新 `LATEST_HANDOFF.md` + 実レコードを進捗正本として採用。
-- 開始時mainは **1131件 / chronologicalFrontier 2017-09-04 / 9/4群OPEN**。
-- 前handoff最優先候補 **「アメイジング・スパイダーマン」** の重複候補パスが未登録であることを確認し **No.1132** として登録。
-- ユニバーサル公式2017年製品一覧で2017年9月発売、HAZUSEで型式 **アメイジングスパイダーマンQG**、検定番号 **7S0032**、導入 **2017-09-04** を確認。パチビー/K-Navi/ちょんぼりすたも9/4で一致。
-- 性能コアは機械割 **98.5 / 99.6 / 102.0 / 105.5 / 108.1 / 117.2%**（精密表記98.49 / 99.58 / 102.02 / 105.52 / 108.08 / 117.22%）、ART初当たり **1/468.7 / 446.5 / 407.1 / 361.3〜361.8 / 329.0 / 239.2**、リアルボーナス約 **1/936.2**、ベース **約40.8〜41G/50枚**。
-- ART「SPIDEY RUSH」は **1セット100G+α / リアルボーナス込み約1.8枚/G**。リアルボーナス平均155枚、擬似ボーナス平均20G。
-- 通常天井は **ART間1580G+前兆**でART当選。
-- resetBehavior v0.7: 設定変更時は **内部状態RESELECT**、純電源OFF→ONでは **内部状態CARRYOVER**。当時解析の直接比較表で確認。
-- 設定変更時内部状態振り分けを公開数値で保存。設定1 **低確69.9 / 通常25.0 / 高確A5.1%** → 設定6 **62.5 / 30.5 / 7.0%**。
-- 設定変更時/純電断時の **天井カウンタ処理** と液晶初期ステージは、当時資料で「調査中」。表記揺れ、リセット、宵越し、据え置き、電断、ガックン等へ検索を広げたが直接契約を固定できず `UNVERIFIED_AFTER_RESEARCH`。
-- 設定変更専用の短縮天井は **NONE_CONFIRMED_AFTER_RESEARCH**。通常1580G天井と短縮未確認は保存するが、設定変更時に必ず0G再開とは推測しない。
-- 据え置き・電源操作なしの独立契約は `UNVERIFIED_DIRECT_OPERATION_ISOLATION_AFTER_RESEARCH`。宵越し狙いの当時実戦観測は存在するが店側設定操作を確定できないためcanonical化しない。
-- 本機固有ガックン/初期出目/ランプ等の確定変更判別は十分な再探索後も固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 開始時正本は **1132件 / chronologicalFrontier 2017-09-04 / 9/4群OPEN**。
+- 前handoff最優先候補 **「パチスロ セイクリッドセブン」** を重複検索し、main上の未処理候補として調査。保存処理中に同パスが生成済みとなったため現物を再取得し、**No.1133**・performance core・resetBehavior v0.7が正しく存在することを確認したうえでhandoffを前進。
+- 導入日は **2017-09-04**。パチビー、一撃、ちょんぼりすた、すろかい等で一致。グリーンべると2017-07-24業界記事は納品9月上旬予定。
+- 型式は **セイクリッドセブン/XX**。2017-06-15の山佐検定通過記録にも同型式を確認。検定番号は表記揺れ・型式・7S・検定通過等へ再探索したが直接固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 性能コア: 機械割 **96.9 / 99.1 / 100.8 / 104.2 / 106.1 / 110.3%**、ART初当たり **1/574.9 / 464.7 / 531.7 / 404.0 / 478.4 / 378.5〜378.6**、BIG **1/394.8 → 1/348.6**、REG **1/399.6 → 1/381.0**、ベース **約33G/50枚**。
+- ART「セイクリッドラッシュ」は **1セット50G / 純増約1.3枚/G / ボーナス込み約1.8枚/G**。BIG **204枚**、SACRED BONUS **48枚**。
+- 通常天井は **ボーナス及びART間999G+前兆**でART突入。
+- resetBehavior v0.7: 設定変更時 **天井RESET / 内部状態RESELECT / モードRESELECT / 浜辺ステージ開始**。純電源OFF→ON時 **天井・内部状態・モードCARRYOVER / 浜辺ステージ開始**。一撃の直接比較表と期待値見える化の朝一比較で照合。
+- 設定変更専用の固定短縮天井は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- リセット後高確/超高確公開値: 設定1 **33.6 / 0.8%** → 設定6 **50.0 / 6.3%**。
+- 設定変更時の白7高確移行率: **3.1 / 4.7 / 6.3 / 7.8 / 9.4 / 12.5%**。
+- 設定変更・純電断とも浜辺開始のため、開始ステージ単独では変更判別不可。朝一の高状態示唆は統計的ヒントとして保持。本機固有ガックン/初期出目/ランプによる確定判別は再探索後も `UNVERIFIED_AFTER_RESEARCH`。
+- 据え置き・電源操作なしの独立操作表は固定できず `UNVERIFIED_DIRECT_OPERATION_ISOLATION_AFTER_RESEARCH`。純電源OFF→ONのCARRYOVER契約とは区別。
 - 有利区間は **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
 
-## No.1132 — アメイジング・スパイダーマン
-- manufacturer: **ミズホ（ユニバーサルエンターテインメント系列）**
+## No.1133 — パチスロ セイクリッドセブン
+- manufacturer: **山佐**
 - releaseDate: **2017-09-04**
-- formalModelName: **アメイジングスパイダーマンQG**
-- certificationNumber: **7S0032**
-- generation/system: **5号機（5.5号機世代） / A+ART / 擬似ボーナス併用 / ARTリブート型**
+- formalModelName: **セイクリッドセブン/XX**
+- certificationNumber: **UNVERIFIED_AFTER_RESEARCH**
+- generation/system: **5号機（5.5号機世代） / A+ART**
 - recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7**
 
 ### resetBehavior v0.7 要点
-- settingChange: **内部状態RESELECT**。天井カウンタ/初期ステージはUNVERIFIED。
-- pure power OFF→ON: **内部状態CARRYOVER**。天井カウンタ/初期ステージはUNVERIFIED。
+- settingChange: **天井RESET / 状態RESELECT / モードRESELECT / 浜辺開始**。
+- pure power OFF→ON: **天井・状態・モードCARRYOVER / 浜辺開始**。
 - stay setting: **UNVERIFIED_DIRECT_OPERATION_ISOLATION_AFTER_RESEARCH**。
-- normal ceiling: **ART間1580G+前兆**。
+- normal ceiling: **ボーナス及びART間999G+前兆**。
 - reset ceiling shortening: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- setting-change state distribution:
-  - 設定1: **低確69.9 / 通常25.0 / 高確A5.1%**
-  - 設定2: **69.5 / 25.0 / 5.5%**
-  - 設定3: **67.6 / 26.6 / 5.9%**
-  - 設定4: **66.4 / 27.3 / 6.3%**
-  - 設定5: **64.5 / 28.9 / 6.6%**
-  - 設定6: **62.5 / 30.5 / 7.0%**
-- reset detection: **本機固有の確定契約はUNVERIFIED_AFTER_RESEARCH**。
+- setting-change high/very-high:
+  - 設定1: **33.6 / 0.8%**
+  - 設定2: **33.6 / 0.8%**
+  - 設定3: **33.6 / 1.6%**
+  - 設定4: **50.0 / 3.1%**
+  - 設定5: **50.0 / 4.7%**
+  - 設定6: **50.0 / 6.3%**
+- setting-change white7-high: **3.1 / 4.7 / 6.3 / 7.8 / 9.4 / 12.5%**（設定1→6）。
+- reset detection: **浜辺開始は変更/電断共通。本機固有の確定ガックン等はUNVERIFIED_AFTER_RESEARCH**。
 
 ## 2017-09-04群 — OPEN
 登録済み:
@@ -57,50 +59,64 @@
 4. **パチスロ笑ゥせぇるすまん3～笑撃のドーン～ — No.1130**
 5. **SLOTデビルマンχ — No.1131**（導入日9/4 vs 9/19 CONFLICT）
 6. **アメイジング・スパイダーマン — No.1132**
+7. **パチスロ セイクリッドセブン — No.1133**
 
 9/4候補からDEFER:
 - **亜人** — 9/4表記あり。ただし業界記事の納品9/18予定 + HAZUSE/K-Navi/複数解析9/19が強く、2017-09-19群で処理予定。将来レコードでは9/4表記もCONFLICT保持。
 
 次候補:
-1. **パチスロ セイクリッドセブン**
-2. **YASUDA7**
-3. **パチスロ ゴルゴ13**（2017年版。既存2006年版と混同禁止）
-4. **蒼き鋼のアルペジオ -アルス・ノヴァ-** 等、資料によって9/4表記がある機種を地域導入/掲載定義差まで横断監査。
+1. **YASUDA7**
+2. **パチスロ ゴルゴ13**（2017年版。既存2006年版と混同禁止）
+3. **蒼き鋼のアルペジオ -アルス・ノヴァ-** 等、資料によって9/4表記がある機種を地域導入/掲載定義差まで横断監査。
+
+### YASUDA7 先行監査
+- K-Navi、パチビーの2017-08-24発表記事、すろぱちくえすとで **2017-09-04導入**を確認。
+- manufacturer: **JPS**。
+- P-WORLDに型式 **YASUDA7 AA**、検定番号 **7S0923**。
+- ノーマル完全告知、BIG312枚 / REG91枚、天井非搭載。次回は既存重複確認後、設定変更/据え置き/純電断/ガックン等を重点探索してNo.1134候補として処理。
 
 ## 遡及 resetBehavior QA
 - retroQaScanConfirmedThrough: **2006-06_churahime-sun.md**。
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
 - 次カーソル: `docs/real_machine_db/machines/2006-06_thunderbirds-neo-xx.md`。
-- 今回は本線No.1132を優先し、QAカーソルは進めていない。
+- 今回は本線No.1133を優先し、QAカーソルは進めていない。
 
 ## 次回再開地点
-1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1132を再取得。
-2. **1132件 / chronologicalFrontier 2017-09-04 / 9/4群OPEN** を正本として継続。
-3. 最優先は **「パチスロ セイクリッドセブン」No.1133候補**。重複確認後、performance core + resetBehavior v0.7を収集。
-4. その後 **YASUDA7 → パチスロ ゴルゴ13（2017版）** を優先監査。
-5. 9/4群は全メーカー・表記揺れ・地域導入差まで横断し、候補を順次登録してからCLOSED判定。
+1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1133を再取得。
+2. **1133件 / chronologicalFrontier 2017-09-04 / 9/4群OPEN** を正本として継続。
+3. 最優先は **「YASUDA7」No.1134候補**。重複確認後、performance core + resetBehavior v0.7を収集。
+4. 次に **パチスロ ゴルゴ13（2017版）**。2006年オリンピア版との混同禁止。
+5. 9/4群を全メーカー・表記揺れ・地域導入差まで横断し、候補を順次登録してからCLOSED判定。
 6. 「亜人」は **2017-09-19群候補としてDEFER**。9/4表記とのCONFLICTを保持して処理する。
 7. 遡及QAは `docs/real_machine_db/machines/2006-06_thunderbirds-neo-xx.md` から継続。
 
 ## 主要出典 — 取得日 2026-09-09
-### No.1132 アメイジング・スパイダーマン
-- ユニバーサルエンターテインメント 2017年製品一覧: https://www.universal-777.com/product/slot/2017/
-- HAZUSE 型式/検定/基本性能/天井: https://hazuse.com/machine/pachislot/7S0032/
-- ちょんぼりすた スペック/天井/朝一/設定変更時状態振り分け: https://chonborista.com/slot/universal-slot/44939/
-- パチビー 基本スペック/導入日/ART構造: https://www.pachibee.jp/machines/index/217080005
-- K-Navi 導入日/基本: https://p-kn.com/slot/2872/
-- P-WORLD 基本仕様/ART構造: https://www.p-world.co.jp/machine/database/8487
-- すろかい 基本スペック/ベース: https://slotkaiseki.hatenablog.com/entry/amazing
-- すろぱちくえすと 天井/解析: https://www.slopachi-quest.com/article/amazing-spiderman-2/
-- 悠遊道 2017-09-04新台整理/精密機械割/天井: https://www.pachinko-road.com/writer_blog/3224/
+### No.1133 パチスロ セイクリッドセブン
+- 山佐ネクスト公式 機種情報: https://yamasa-next.co.jp/model_sc7/
+- グリーンべると / P-WORLD業界ニュース: https://news.p-world.co.jp/articles/9488/greenbelt
+- パチビー: https://www.pachibee.jp/machines/index/217080003
+- P-WORLD: https://www.p-world.co.jp/machine/database/8462
+- 一撃 基本: https://1geki.jp/slot/s_sarcred_seven/
+- 一撃 天井/設定変更/電源OFF ON: https://1geki.jp/slot/s_sarcred_seven/3/
+- 一撃 白7高確: https://1geki.jp/slot/s_sarcred_seven/44/
+- ちょんぼりすた: https://chonborista.com/slot/yamasa-slot/42700/
+- 期待値見える化: https://slotjin.com/zone/sacred7/
+- すろかい: https://slotkaiseki.hatenablog.com/entry/seven
+- 山佐検定通過機種整理: https://q-and-a.hatenablog.com/entry/%E5%B1%B1%E4%BD%90%E3%81%AE%E6%A4%9C%E5%AE%9A%E9%80%9A%E9%81%8E
 
-### No.1131 SLOTデビルマンχ — 前回主要出典
-- HAZUSE: https://hazuse.com/machine/pachislot/7S0565/
-- 必勝本 天井&設定変更/電源OFF ON比較: https://p.hisshobon.jp/machine/3047/1/66209
+### No.1132 アメイジング・スパイダーマン — 前回主要出典
+- HAZUSE: https://hazuse.com/machine/pachislot/7S0032/
+- ちょんぼりすた: https://chonborista.com/slot/universal-slot/44939/
+
+### 次候補 YASUDA7 先行監査
+- K-Navi: https://p-kn.com/slot/2889/
+- P-WORLD: https://www.p-world.co.jp/machine/database/8502
+- パチビー発表記事: https://www.pachibee.jp/pparticles/view/994
+- すろぱちくえすと: https://www.slopachi-quest.com/article/yasuda7/
 
 ### 亜人 DEFER根拠
-- グリーンべると 2017-08-10発表/納品9月18日開始予定: https://news.p-world.co.jp/articles/9518/greenbelt
-- HAZUSE 型式/検定/導入9月19日: https://hazuse.com/machine/pachislot/7S0590/
-- K-Navi 導入9月19日: https://p-kn.com/slot/2870/
-- ちょんぼりすた 導入9月19日/リセット: https://chonborista.com/slot/orinpia-slot/44167/
-- すろぱちくえすと 9月4日表記（CONFLICT側）: https://www.slopachi-quest.com/article/ajin/
+- グリーンべると: https://news.p-world.co.jp/articles/9518/greenbelt
+- HAZUSE: https://hazuse.com/machine/pachislot/7S0590/
+- K-Navi: https://p-kn.com/slot/2870/
+- ちょんぼりすた: https://chonborista.com/slot/orinpia-slot/44167/
+- すろぱちくえすと9/4表記: https://www.slopachi-quest.com/article/ajin/
