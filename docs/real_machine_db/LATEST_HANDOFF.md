@@ -1,61 +1,70 @@
 更新日: 2026-09-10
 
 ## 現在地点
-- recordCount: **1172**
-- latestRecordAdded: **新世紀エヴァンゲリオン～まごころを、君に～2**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2018-02-05_evangelion-magokoro-2.md`
-- chronologicalFrontier: **2018-02-05**
-- frontierLatestMachine: **新世紀エヴァンゲリオン～まごころを、君に～2 — No.1172**
+- recordCount: **1173**
+- latestRecordAdded: **パチスロ GATE**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2018-02-19_gate.md`
+- chronologicalFrontier: **2018-02-19**
+- frontierLatestMachine: **パチスロ GATE — No.1173**
 - schema: **resetBehavior v0.7**
-- status: **2018-02-05_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**
+- status: **2018-02-19_GROUP_OPEN_1_OF_3_CALENDAR_CONFIRMED_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、直前No.1171 `乙女マスターズ～空を翔る白き軌跡～` を再取得して開始。
+- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、直前No.1172 `新世紀エヴァンゲリオン～まごころを、君に～2` を再取得して開始。
 - INDEXは初期19件時点の旧スナップショットのため、README規定どおり `LATEST_HANDOFF.md` + main実レコードを正本として採用。
-- 開始時正本は **1171件 / chronologicalFrontier 2018-02-05 / 2/5群OPEN 2/3処理済み**。
-- handoff指定の最古未処理No.1172候補 `新世紀エヴァンゲリオン～まごころを、君に～2` をperformance core + resetBehavior v0.7で追加。
-- K-Navi全国導入カレンダー、P-Summa月間新台まとめ、個別機種資料を再突合し、2/5群の確認済み3機（戦場のヴァルキュリア / 乙女マスターズ / エヴァまごころ2）が全て処理済みとなったため、**2018-02-05群をCLOSE**。
+- 開始時正本は **1172件 / chronologicalFrontier 2018-02-05 / 2/5群CLOSED**。
+- K-Navi 2018年2月全国導入カレンダーを再確認し、2/5の次の日付見出しが2/19であることを直接確認。2/12～2/18に確定的なパチスロ本線機種は同カレンダー上存在せず、追加の検索でも独立した確定導入機種を固定できなかった。
+- 2018-02-19群としてK-Naviで `パチスロ GATE` / `鬼若弁慶` / `コンチネンタルゼロ` の3機を確認。
+- 先頭未処理 `パチスロ GATE` をNo.1173としてperformance core + resetBehavior v0.7で追加。2/19群はまだOPEN。
 
-## No.1172 — 新世紀エヴァンゲリオン～まごころを、君に～2
-- path: `docs/real_machine_db/machines/2018-02-05_evangelion-magokoro-2.md`
-- manufacturer: ビスティ
-- releaseDate: 2018-02-05
-- generation/system: 5.9号機 / A+RT / 技術介入 / リアルボーナス
-- formalModelName: `パチスロ 新世紀エヴァンゲリオン・まごころを君に2j`
-- certificationNumber: `UNVERIFIED_AFTER_RESEARCH`
-- 機械割: **97.5 / 98.6 / 101.1 / 104.1 / 106.3 / 110.2%**
-- ボーナス合算: **1/199.8 → 1/163.0**
-- SBB: **1/697.2 → 1/668.7**
-- NBB: **1/736.4 → 1/555.4**
-- REG: **1/452.0 → 1/352.3**
-- 50枚ベース: **約41.3G（設定1）**
-- 基本獲得: **SBB最大407枚 / BIG最大203枚 / REG最大96枚**
-- RT: ボーナス後レイチャレンジ（SBB/BIG後最大20G、REG後最大10G）→特殊リプレイ成立でレイチャンス最大50G
+## No.1173 — パチスロ GATE
+- path: `docs/real_machine_db/machines/2018-02-19_gate.md`
+- manufacturer: ネット
+- releaseDate: 2018-02-19
+- generation/system: 5.9号機 / A+RT / CZ / 技術介入 / リアルボーナス
+- formalModelName: `GATE／ND`
+- certificationNumber: `7S1215`
+- 通常機械割canonical: **97.5 / 99.1 / 100.7 / 102.0 / 104.9 / 113.2%**
+- 完全攻略: **99.0 / 100.6 / 102.2 / 103.6 / 106.6 / 115.0%**
+- BIG合算: **1/286 → 1/234**
+- REG合算: **1/402 → 1/244**
+- ボーナス合算: **1/167 → 1/119**
+- RT初当たり: **1/305 → 1/224**
+- ボーナス+RT合算: **1/108 → 1/78**
+- 50枚ベース: **約32G**
+- RT純増canonical: **約0.1枚/G**
+- BIG最大308枚 / REG最大104枚
+- RT: 30G or 次回ボーナス成立までの無限RT
 - 天井: **なし**
-- RT純増の比較可能な数値は再探索後も決定的に固定できず、公式系説明「メダルをほぼ減らすことなく」を保持し、数値は推測補完しない。
+
+### conflicts
+- 設定1通常機械割はHAZUSE/5号機クロニクル **97.5%** vs ちょんぼりすた **97.9%**。平均せず`CONFLICT_PAYOUT_SETTING1_97_5_VS_97_9`、97.5系列をcanonical。
+- RT純増はP-WORLD **約0.1枚/G**、A-SLOT「現状維持程度」に対し、slot-kakaku単独で **2.0枚**。高信頼側と大きく不整合のため0.1枚/Gをcanonical、2.0は`CONFLICT_LOW_CONFIDENCE_RT_NET_2_0`として隔離。
+- 5号機クロニクルは機械割系列はHAZUSEと一致する一方、別欄にA+ART/BIG約150枚等の本機と不整合な記述があり、その部分は採用しない。
 
 ### resetBehavior v0.7
-- パチ＆スロ必勝本の本機専用比較表で、**設定変更 / 純電源OFF→ONの双方とも開始ステージは「使徒、襲来ステージ」**と直接確認。
-- 同比較表のRT状態欄は双方とも**「現在調査中」**。後年資料、型式名、メーカー/シリーズ名と設定変更・リセット・朝一・据え置き・電源OFF ON・RT状態・ガックン・有利区間を組み替えて再探索したが、決定的な更新を固定できなかったため`UNVERIFIED_AFTER_RESEARCH`。一般的なA+RT機の仕様から補完しない。
+- ちょんぼりすた本機専用朝一比較表では、**設定変更時 / 電源OFF→ON時とも「状態」「ステージ」は調査中**。
+- K-Naviにも「設定変更後の挙動」項目は存在するが、現存インデックスから具体的状態・数値契約を回収できない。
+- 機種名/別表記/型式`GATE／ND`/NETと、設定変更・リセット・朝一・据え置き・電源OFF ON・RT状態・ガックン・有利区間を組み替えて再探索後も決定的な本機固有契約は固定できず、設定変更/純電断のRT/CZ内部状態は`UNVERIFIED_AFTER_RESEARCH`。
+- 据え置き独立契約: `UNVERIFIED_AS_DISTINCT_CONDITION_AFTER_RESEARCH`。
 - 天井非搭載のためゲーム数天井/リセット短縮天井はN/A。
-- 設定据え置きを純電断と独立条件で明記した契約は`UNVERIFIED_AS_DISTINCT_CONDITION_AFTER_RESEARCH`。
-- 朝一専用モード、設定変更専用初当たり/CZ優遇、数値的恩恵/不利は`NONE_CONFIRMED_AFTER_RESEARCH`。
-- 本機固有ガックン・初期出目・ランプ等の確定的変更判別も`UNVERIFIED_AFTER_RESEARCH`。
-- 5.9号機として扱われるが、設定変更時の有利区間そのものを直接記述した機種固有契約は`UNVERIFIED_AS_EXPLICIT_ADVANTAGEOUS_SECTION_CONTRACT_AFTER_RESEARCH`。
+- 設定変更専用モード、CZ/RT/ボーナス優遇率、朝一数値恩恵/不利: `NONE_CONFIRMED_AFTER_RESEARCH`。
+- 本機固有の有利区間リセット契約: `UNVERIFIED_AS_EXPLICIT_ADVANTAGEOUS_SECTION_CONTRACT_AFTER_RESEARCH`。一般的な5.9号機仕様から補完しない。
+- ガックン/初期出目/ランプ等の確定的変更判別: `UNVERIFIED_AFTER_RESEARCH`。
 
-## 2018-02-05群監査
-K-Navi全国導入カレンダー等で確認したパチスロ3機を全処理。
-1. `パチスロ戦場のヴァルキュリア` — **No.1170 完了**
-2. `乙女マスターズ～空を翔る白き軌跡～` — **No.1171 完了**
-3. `新世紀エヴァンゲリオン～まごころを、君に～2` — **No.1172 完了**
+## 2018-02-19群監査
+K-Navi全国導入カレンダーでパチスロ3機を確認。
+1. `パチスロ GATE` — **No.1173 完了**
+2. `鬼若弁慶` / `超速回胴 鬼若弁慶` — **No.1174候補**
+3. `コンチネンタルゼロ` — **No.1175候補**
 
-- status: `2018-02-05_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT`
-- 2/12境界を検索したが、今回の検索では確定的なパチスロ本線新機種を固定できず。次回はK-Navi月間カレンダーを2/19まで精査し、最古未処理日を確定する。
-- 2/19には `超速回胴 鬼若弁慶` が存在することをHAZUSE/ちょんぼりすた/DMMで直接確認済み。導入2018-02-19、ボーダー、型式`オニワカベンケイ`、検定番号`7S1056`、Aタイプ、天井なし。次回候補の一つだが、2/12～2/18の漏れ監査を先に行う。
+- status: `2018-02-19_GROUP_OPEN_1_OF_3_CALENDAR_CONFIRMED_PROCESSED`
+- HAZUSEでもGATE / 鬼若弁慶 / コンチネンタルゼロの2018-02-19を個別確認済み。
+- 月単位欄に `トリプルクラウンZEROII SECOND EDITION` があるため、2/19群処理後の月内境界監査でexact dayを別途確認し、日付不明のまま2/19へ強制混入しない。
 
 ## 継続注意事項
-- **鬼若弁慶**は2018-02-19で正式回収する。古い予定表記へ戻さない。
-- `イミソーレXX` exact dayは新しい決定的資料が出た場合のみ追補。月単位No.1159として既回収。
+- `鬼若弁慶`は2018-02-19で正式回収する。HAZUSEで型式`オニワカベンケイ`、検定番号`7S1056`、メーカーBorderを確認済み。
+- `コンチネンタルゼロ`はHAZUSEで2018-02-19、型式`コンチネンタルゼロZZ`、検定番号`7S1397`、ユニバーサルブロスを確認済み。
 - ノーマル/A+RT機のRT内部状態や成立済みボーナスの設定変更/純電断挙動を一般論から埋めない。
 - 5.9号機の有利区間も一般論で機種固有挙動を補完しない。直接比較表・機種固有解析がある場合のみ確定する。
 - 機械割/ボーナス合算等の資料差は平均化せずCONFLICT保持。
@@ -67,24 +76,27 @@ K-Navi全国導入カレンダー等で確認したパチスロ3機を全処理�
 - 新規機種収集本線を止めず、別QAリレーで順次補完する。
 
 ## 次回再開地点
-1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1172を再取得。
-2. **1172件 / chronologicalFrontier 2018-02-05 / 2/5群CLOSED** を正本として継続。
-3. K-Navi 2018年2月カレンダー等で **2/12～2/18のパチスロ本線機種を最終監査**。
-4. 漏れが無ければ **2018-02-19群OPEN**。確認済み候補 `超速回胴 鬼若弁慶` を含め、同日全機種をメーカー別一覧・別スペック・地域差まで横断して最古未処理機種をNo.1173として処理。
-5. 遡及QAは `2006-07_ooedo-manyuuki.md` から継続。
+1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1173を再取得。
+2. **1173件 / chronologicalFrontier 2018-02-19 / 2/19群OPEN 1/3処理済み** を正本として継続。
+3. 次の未処理 `超速回胴 鬼若弁慶` をNo.1174候補としてperformance core + resetBehavior v0.7で回収。
+4. 続いて `コンチネンタルゼロ` を処理し、2/19同日全メーカー・別スペック・地域差を再監査して群CLOSED判定。
+5. その後、月単位掲載 `トリプルクラウンZEROII SECOND EDITION` のexact dayを監査して時系列を確定。
+6. 遡及QAは `2006-07_ooedo-manyuuki.md` から継続。
 
 ## 主要出典 — 取得日 2026-09-10
-### No.1172 新世紀エヴァンゲリオン～まごころを、君に～2
-- SANKYOオンライン博物館: https://www.sankyo-fever.jp/collection/887/
-- パチビー: https://www.pachibee.jp/machines/index/218010000
-- パチ＆スロ必勝本 基本: https://p.hisshobon.jp/machine/3106/1/67827
-- パチ＆スロ必勝本 天井&設定変更: https://p.hisshobon.jp/machine/3106/1/68306
-- ちょんぼりすた: https://chonborista.com/slot/bisty-slot/52229/
-- K-Navi: https://p-kn.com/slot/2949/
-- P-WORLD: https://www.p-world.co.jp/machine/database/8574
+### No.1173 パチスロ GATE
+- K-Navi 2018年2月カレンダー: https://p-kn.com/calendar/201802/
+- HAZUSE 基本: https://hazuse.com/machine/pachislot/7S1215/
+- HAZUSE RT: https://hazuse.com/machine/pachislot/7S1215/genre/209/
+- ちょんぼりすた: https://chonborista.com/slot/net-slot/51612/
+- P-WORLD: https://www.p-world.co.jp/machine/database/8561
+- K-Navi個別: https://p-kn.com/slot/2935/
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/net_slot/173/c-1.php
+- P-Summa: https://psumma.jp/trend/40677/
+- A-SLOT: https://www.a-slot.com/SHOP/net57.html
+- slot-kakaku: https://slot-kakaku.com/gate/
 
-### 2018-02-05群 / 次境界監査
-- K-Navi 2018年2月新台カレンダー: https://p-kn.com/calendar/201802/
-- P-Summa 2018年2月新台まとめ: https://psumma.jp/trend/40677/
+### 次候補 / 同日監査
 - 鬼若弁慶 HAZUSE: https://hazuse.com/machine/pachislot/7S1056/
 - 鬼若弁慶 ちょんぼりすた: https://chonborista.com/slot/border/54563/
+- コンチネンタルゼロ HAZUSE: https://hazuse.com/machine/pachislot/7S1397/
