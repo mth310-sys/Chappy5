@@ -1,4 +1,4 @@
-// ZELVOLT bonus / reel presentation engine v0.3
+// ZELVOLT bonus / reel presentation engine v0.4
 // Extends the current Pekachu baseline without replacing its cabinet UI.
 
 const BONUS_SPEC=Object.freeze({
@@ -16,10 +16,17 @@ const NORMAL_REEL_PATTERNS=Object.freeze({
   MISS:[['BELL','GRAPE','STAR'],['GRAPE','BAR','BELL'],['STAR','CHERRY','GRAPE'],['7R','BELL','BAR'],['BAR','GRAPE','7W']]
 });
 
+const NOTICE_PROFILE=Object.freeze({
+  DIRECT:'DIRECT',
+  STEP:'STEP',
+  SILENT:'SILENT'
+});
+
 let bigCount=0,regCount=0,bonusGame=0,bonusGamesTotal=0,bonusPayoutPlan=[],bonusNetStartCredit=0;
 let bonusVisualPattern=['BELL','GRAPE','STAR'];
 let normalVisualPattern=['BELL','GRAPE','STAR'];
-let hitFlashTimer=null;
+let hitFlashTimer=null,boltTimer=null;
+let noticeProfile=NOTICE_PROFILE.STEP;
 
 function shuffleCopy(values){
   const out=[...values];
@@ -32,6 +39,13 @@ function shuffleCopy(values){
 
 function chooseFrom(list){
   return [...list[Math.floor(Math.random()*list.length)]];
+}
+
+function chooseNoticeProfile(){
+  const r=Math.random();
+  if(r<.35)return NOTICE_PROFILE.DIRECT;
+  if(r<.80)return NOTICE_PROFILE.STEP;
+  return NOTICE_PROFILE.SILENT;
 }
 
 function ensureBonusHud(){
@@ -48,16 +62,27 @@ function ensureBonusHud(){
     #zelvoltHitFlash.on{display:block;animation:zelvoltHit .72s ease-out}
     #zelvoltHitFlash.white{color:#e8d7ff;border-color:#c792ff;text-shadow:0 0 12px #fff,0 0 28px #a55cff;box-shadow:0 0 32px #d9b7ff,0 0 58px #8a46ff}
     #zelvoltHitFlash.reg{color:#ffb45b;border-color:#ff8a00;text-shadow:0 0 12px #ffb45b,0 0 24px #ff4d00;box-shadow:0 0 30px #ff8a00,0 0 52px #ff4d00}
+    #zelvoltBolt{display:none;position:absolute;z-index:7;inset:70px 12px auto;height:220px;align-items:center;justify-content:center;font-size:110px;color:#fff200;text-shadow:0 0 16px #fff,0 0 34px #ffe600,0 0 64px #ff8a00;pointer-events:none;mix-blend-mode:screen}
+    #zelvoltBolt.on{display:flex;animation:zelvoltBoltPulse .34s ease-out}
+    #zelvoltBolt.white{color:#e7dcff;text-shadow:0 0 18px #fff,0 0 40px #b370ff,0 0 70px #7940ff}
+    #zelvoltBolt.reg{color:#ffb45b;text-shadow:0 0 16px #fff,0 0 34px #ff8a00,0 0 60px #ff3d00}
     body.zelvolt-hit .machine{filter:brightness(1.32)}
+    body.zelvolt-charge .machine{filter:brightness(1.16)}
+    body.zelvolt-star .machine{filter:brightness(1.2)}
     body.zelvolt-big .machine{box-shadow:0 0 42px #ffe600,0 0 80px #fff200,inset 0 0 34px #000}
     body.zelvolt-reg .machine{box-shadow:0 0 34px #ff9a00,0 0 58px #ff5a00,inset 0 0 34px #000}
     body.zelvolt-big .top-led{animation:topRun .38s infinite linear;filter:brightness(1.45)}
     body.zelvolt-reg .top-led{animation:topRun .72s infinite linear}
+    body.zelvolt-charge .led-side{animation:zelvoltCharge .24s infinite alternate}
+    body.zelvolt-star .top-led{animation:zelvoltStar .18s 3 alternate}
     .reel.zelvolt-stop{animation:zelvoltStop .16s ease-out}
     .reel.zelvolt-hit-stop{animation:zelvoltHitStop .24s ease-out}
     @keyframes zelvoltStop{0%{transform:translateY(-5px);filter:brightness(2)}100%{transform:none;filter:none}}
     @keyframes zelvoltHitStop{0%{transform:translateY(-8px) scale(1.04);filter:brightness(2.5)}100%{transform:none;filter:none}}
     @keyframes zelvoltHit{0%{transform:scale(.76);opacity:0}30%{transform:scale(1.08);opacity:1}100%{transform:scale(1);opacity:1}}
+    @keyframes zelvoltBoltPulse{0%{transform:scale(.55);opacity:0}35%{transform:scale(1.18);opacity:1}100%{transform:scale(1);opacity:.15}}
+    @keyframes zelvoltCharge{from{filter:brightness(.65)}to{filter:brightness(2.15)}}
+    @keyframes zelvoltStar{from{filter:brightness(.7)}to{filter:brightness(2.3)}}
   `;
   document.head.appendChild(style);
   const hud=document.createElement('div');
@@ -65,10 +90,14 @@ function ensureBonusHud(){
   hud.innerHTML='<div class="zbh-title" id="zbhTitle">BIG BONUS</div><div class="zbh-row"><span>GAME <b class="zbh-value" id="zbhGame">0/0</b></span><span>GET <b class="zbh-value" id="zbhGet">0</b></span><span>PAY <b class="zbh-value" id="zbhPay">0</b></span></div>';
   const center=document.querySelector('.center-panel');
   if(center)center.insertAdjacentElement('afterend',hud);
+  const machine=document.querySelector('.machine');
   const flash=document.createElement('div');
   flash.id='zelvoltHitFlash';
-  const machine=document.querySelector('.machine');
   if(machine)machine.appendChild(flash);
+  const bolt=document.createElement('div');
+  bolt.id='zelvoltBolt';
+  bolt.textContent='⚡';
+  if(machine)machine.appendChild(bolt);
 }
 
 function updateBonusHud(){
@@ -111,6 +140,30 @@ function animateStoppedReel(i,isHit=false){
   el.classList.add(isHit?'zelvolt-hit-stop':'zelvolt-stop');
 }
 
+function pulseBolt(kind='normal',duration=360){
+  ensureBonusHud();
+  const bolt=document.getElementById('zelvoltBolt');
+  if(!bolt)return;
+  if(boltTimer){clearTimeout(boltTimer);boltTimer=null}
+  bolt.classList.remove('on','white','reg');
+  if(kind==='white')bolt.classList.add('white');
+  if(kind==='reg')bolt.classList.add('reg');
+  void bolt.offsetWidth;
+  bolt.classList.add('on');
+  boltTimer=setTimeout(()=>{bolt.classList.remove('on','white','reg');boltTimer=null},duration);
+}
+
+function setCharge(active){
+  document.body.classList.toggle('zelvolt-charge',active);
+}
+
+function playStarFlash(){
+  document.body.classList.add('zelvolt-star');
+  pulseBolt('normal',320);
+  setTimeout(()=>document.body.classList.remove('zelvolt-star'),620);
+  bridge('star-flash',{phase:'result'});
+}
+
 function showBonusHit(){
   ensureBonusHud();
   const flash=document.getElementById('zelvoltHitFlash');
@@ -122,6 +175,8 @@ function showBonusHit(){
   if(currentBonusType==='REG')flash.classList.add('reg');
   flash.textContent=currentBonusType==='REG'?'⚡ REG BONUS ⚡':white?'⚡ WHITE BIG ⚡':'⚡ BIG BONUS ⚡';
   document.body.classList.add('zelvolt-hit');
+  setCharge(false);
+  pulseBolt(currentBonusType==='REG'?'reg':white?'white':'normal',500);
   void flash.offsetWidth;
   flash.classList.add('on');
   hitFlashTimer=setTimeout(()=>{
@@ -200,14 +255,27 @@ function stopNormalReel(i){
   spinning[i]=false;
   reels[i]=normalVisualPattern[i]||rand();
   drawReel(i);
-  animateStoppedReel(i,['BIG','REG'].includes(resultType));
+  const isBonus=['BIG','REG'].includes(resultType);
+  animateStoppedReel(i,isBonus);
   stopped++;
-  if(['BIG','REG'].includes(resultType)&&stopped<3){
-    msg(stopped===1?'⚡ 電圧上昇…':'⚡⚡ もうすぐ確定…',resultType==='BIG'?'super':'big');
+
+  if(isBonus){
+    if(noticeProfile===NOTICE_PROFILE.DIRECT){
+      if(stopped===1)pulseBolt(resultType==='REG'?'reg':targetSymbol==='7W'?'white':'normal',300);
+      if(stopped<3)msg(stopped===1?'⚡ BONUS SIGNAL':'⚡⚡ VOLT MAX',resultType==='BIG'?'super':'big');
+    }else if(noticeProfile===NOTICE_PROFILE.STEP){
+      setCharge(true);
+      if(stopped===1){msg('⚡ 電圧上昇…',resultType==='BIG'?'super':'big');pulseBolt(resultType==='REG'?'reg':'normal',230)}
+      if(stopped===2){msg('⚡⚡ 限界電圧…',resultType==='BIG'?'super':'big');pulseBolt(resultType==='REG'?'reg':targetSymbol==='7W'?'white':'normal',330)}
+    }else if(stopped<3){
+      msg('リール回転中');
+    }
   }
+
   if(stopped===3){
     setGameState(GAME_STATE.NORMAL_RESULT);
     judge();
+    if(resultType==='STAR')playStarFlash();
   }
   update();
 }
@@ -254,6 +322,7 @@ function finishBonus(){
     bet=0;
     pay=0;
     setLamp('off');
+    setCharge(false);
     setGameState(GAME_STATE.NORMAL_READY,{bonusType:null});
     msg('BETしてください');
     bridge('bonus-return-normal',{endedType});
@@ -287,12 +356,24 @@ start=function(){
   baseStart();
   if(currentState===GAME_STATE.NORMAL_SPIN){
     normalVisualPattern=chooseNormalReelPattern();
-    if(resultType==='BIG'){
-      setLamp(targetSymbol==='7W'?'super':'big');
-      bridge('bonus-notice',{bonusType:'BIG',targetSymbol,phase:'start'});
-    }else if(resultType==='REG'){
-      setLamp('big');
-      bridge('bonus-notice',{bonusType:'REG',targetSymbol:'BAR',phase:'start'});
+    noticeProfile=chooseNoticeProfile();
+    setCharge(false);
+    if(resultType==='BIG'||resultType==='REG'){
+      const noticeKind=resultType==='REG'?'reg':targetSymbol==='7W'?'white':'normal';
+      if(noticeProfile===NOTICE_PROFILE.DIRECT){
+        setLamp(resultType==='REG'?'big':targetSymbol==='7W'?'super':'big');
+        pulseBolt(noticeKind,320);
+        msg(resultType==='REG'?'⚡ REG SIGNAL':'⚡ BONUS SIGNAL',resultType==='BIG'?'super':'big');
+      }else if(noticeProfile===NOTICE_PROFILE.STEP){
+        setCharge(true);
+        msg('…微弱な電圧を検知');
+      }else{
+        setLamp('off');
+        msg('リール回転中');
+      }
+      bridge('bonus-notice',{bonusType:resultType,targetSymbol,phase:'start',noticeProfile});
+    }else if(resultType==='STAR'){
+      msg('STARチャンス');
     }
   }
 };
@@ -314,9 +395,14 @@ const baseCompleteSpin=completeSpin;
 completeSpin=function(result){
   baseCompleteSpin(result);
   if(currentState===GAME_STATE.BONUS_HIT){
+    if(noticeProfile===NOTICE_PROFILE.SILENT){
+      setLamp(currentBonusType==='REG'?'big':targetSymbol==='7W'?'super':'big');
+    }
     showBonusHit();
-    bridge(currentBonusType==='BIG'?'big-hit':'reg-hit',{result,targetSymbol});
+    bridge(currentBonusType==='BIG'?'big-hit':'reg-hit',{result,targetSymbol,noticeProfile});
     setTimeout(beginBonus,900);
+  }else{
+    setCharge(false);
   }
 };
 
@@ -329,12 +415,16 @@ resetGame=function(){
   bonusPayoutPlan=[];
   bonusNetStartCredit=0;
   normalVisualPattern=['BELL','GRAPE','STAR'];
+  noticeProfile=NOTICE_PROFILE.STEP;
   if(hitFlashTimer){clearTimeout(hitFlashTimer);hitFlashTimer=null}
-  document.body.classList.remove('zelvolt-big','zelvolt-reg','zelvolt-hit');
+  if(boltTimer){clearTimeout(boltTimer);boltTimer=null}
+  document.body.classList.remove('zelvolt-big','zelvolt-reg','zelvolt-hit','zelvolt-charge','zelvolt-star');
   const hud=document.getElementById('zelvoltBonusHud');
   if(hud)hud.classList.remove('on','reg');
   const flash=document.getElementById('zelvoltHitFlash');
   if(flash)flash.classList.remove('on','white','reg');
+  const bolt=document.getElementById('zelvoltBolt');
+  if(bolt)bolt.classList.remove('on','white','reg');
   baseResetGame();
 };
 
