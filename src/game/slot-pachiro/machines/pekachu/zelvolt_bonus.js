@@ -1,4 +1,4 @@
-// ZELVOLT bonus engine v0.2
+// ZELVOLT bonus / reel presentation engine v0.3
 // Extends the current Pekachu baseline without replacing its cabinet UI.
 
 const BONUS_SPEC=Object.freeze({
@@ -11,8 +11,15 @@ const BONUS_REEL_PATTERNS=Object.freeze({
   REG:[['BAR','BELL','BAR'],['BELL','BAR','BELL'],['GRAPE','BAR','GRAPE'],['CHERRY','BAR','CHERRY']]
 });
 
+const NORMAL_REEL_PATTERNS=Object.freeze({
+  REPLAY:[['BELL','GRAPE','BELL'],['GRAPE','STAR','GRAPE'],['BAR','BELL','STAR']],
+  MISS:[['BELL','GRAPE','STAR'],['GRAPE','BAR','BELL'],['STAR','CHERRY','GRAPE'],['7R','BELL','BAR'],['BAR','GRAPE','7W']]
+});
+
 let bigCount=0,regCount=0,bonusGame=0,bonusGamesTotal=0,bonusPayoutPlan=[],bonusNetStartCredit=0;
 let bonusVisualPattern=['BELL','GRAPE','STAR'];
+let normalVisualPattern=['BELL','GRAPE','STAR'];
+let hitFlashTimer=null;
 
 function shuffleCopy(values){
   const out=[...values];
@@ -21,6 +28,10 @@ function shuffleCopy(values){
     [out[i],out[j]]=[out[j],out[i]];
   }
   return out;
+}
+
+function chooseFrom(list){
+  return [...list[Math.floor(Math.random()*list.length)]];
 }
 
 function ensureBonusHud(){
@@ -33,12 +44,20 @@ function ensureBonusHud(){
     #zelvoltBonusHud.reg .zbh-title{color:#ffb45b;text-shadow:0 0 10px #ff7a00}
     #zelvoltBonusHud .zbh-row{display:flex;justify-content:space-between;gap:8px;margin-top:4px;font-size:12px}
     #zelvoltBonusHud .zbh-value{font-size:18px;font-weight:900;color:#fff}
+    #zelvoltHitFlash{display:none;position:absolute;z-index:8;left:18px;right:18px;top:112px;padding:14px 6px;border:3px solid #fff200;border-radius:16px;background:rgba(0,0,0,.88);font-weight:1000;font-size:27px;letter-spacing:1px;color:#fff200;text-shadow:0 0 12px #fff200,0 0 24px #fff;box-shadow:0 0 30px #fff200,0 0 55px #ff9a00;pointer-events:none}
+    #zelvoltHitFlash.on{display:block;animation:zelvoltHit .72s ease-out}
+    #zelvoltHitFlash.white{color:#e8d7ff;border-color:#c792ff;text-shadow:0 0 12px #fff,0 0 28px #a55cff;box-shadow:0 0 32px #d9b7ff,0 0 58px #8a46ff}
+    #zelvoltHitFlash.reg{color:#ffb45b;border-color:#ff8a00;text-shadow:0 0 12px #ffb45b,0 0 24px #ff4d00;box-shadow:0 0 30px #ff8a00,0 0 52px #ff4d00}
+    body.zelvolt-hit .machine{filter:brightness(1.32)}
     body.zelvolt-big .machine{box-shadow:0 0 42px #ffe600,0 0 80px #fff200,inset 0 0 34px #000}
     body.zelvolt-reg .machine{box-shadow:0 0 34px #ff9a00,0 0 58px #ff5a00,inset 0 0 34px #000}
     body.zelvolt-big .top-led{animation:topRun .38s infinite linear;filter:brightness(1.45)}
     body.zelvolt-reg .top-led{animation:topRun .72s infinite linear}
     .reel.zelvolt-stop{animation:zelvoltStop .16s ease-out}
+    .reel.zelvolt-hit-stop{animation:zelvoltHitStop .24s ease-out}
     @keyframes zelvoltStop{0%{transform:translateY(-5px);filter:brightness(2)}100%{transform:none;filter:none}}
+    @keyframes zelvoltHitStop{0%{transform:translateY(-8px) scale(1.04);filter:brightness(2.5)}100%{transform:none;filter:none}}
+    @keyframes zelvoltHit{0%{transform:scale(.76);opacity:0}30%{transform:scale(1.08);opacity:1}100%{transform:scale(1);opacity:1}}
   `;
   document.head.appendChild(style);
   const hud=document.createElement('div');
@@ -46,6 +65,10 @@ function ensureBonusHud(){
   hud.innerHTML='<div class="zbh-title" id="zbhTitle">BIG BONUS</div><div class="zbh-row"><span>GAME <b class="zbh-value" id="zbhGame">0/0</b></span><span>GET <b class="zbh-value" id="zbhGet">0</b></span><span>PAY <b class="zbh-value" id="zbhPay">0</b></span></div>';
   const center=document.querySelector('.center-panel');
   if(center)center.insertAdjacentElement('afterend',hud);
+  const flash=document.createElement('div');
+  flash.id='zelvoltHitFlash';
+  const machine=document.querySelector('.machine');
+  if(machine)machine.appendChild(flash);
 }
 
 function updateBonusHud(){
@@ -66,15 +89,46 @@ function updateBonusHud(){
 
 function chooseBonusReelPattern(){
   const list=BONUS_REEL_PATTERNS[currentBonusType]||BONUS_REEL_PATTERNS.BIG;
-  return [...list[Math.floor(Math.random()*list.length)]];
+  return chooseFrom(list);
 }
 
-function animateStoppedReel(i){
+function chooseNormalReelPattern(){
+  if(resultType==='BIG')return [targetSymbol,targetSymbol,targetSymbol];
+  if(resultType==='REG')return ['BAR','BAR','BAR'];
+  if(resultType==='STAR')return ['STAR','STAR','STAR'];
+  if(resultType==='BELL')return ['BELL','BELL','BELL'];
+  if(resultType==='GRAPE')return ['GRAPE','GRAPE','GRAPE'];
+  if(resultType==='CHERRY')return ['CHERRY','BELL','GRAPE'];
+  if(resultType==='REPLAY')return chooseFrom(NORMAL_REEL_PATTERNS.REPLAY);
+  return chooseFrom(NORMAL_REEL_PATTERNS.MISS);
+}
+
+function animateStoppedReel(i,isHit=false){
   const el=document.getElementById('r'+(i+1));
   if(!el)return;
-  el.classList.remove('zelvolt-stop');
+  el.classList.remove('zelvolt-stop','zelvolt-hit-stop');
   void el.offsetWidth;
-  el.classList.add('zelvolt-stop');
+  el.classList.add(isHit?'zelvolt-hit-stop':'zelvolt-stop');
+}
+
+function showBonusHit(){
+  ensureBonusHud();
+  const flash=document.getElementById('zelvoltHitFlash');
+  if(!flash)return;
+  if(hitFlashTimer){clearTimeout(hitFlashTimer);hitFlashTimer=null}
+  flash.classList.remove('on','white','reg');
+  const white=currentBonusType==='BIG'&&targetSymbol==='7W';
+  if(white)flash.classList.add('white');
+  if(currentBonusType==='REG')flash.classList.add('reg');
+  flash.textContent=currentBonusType==='REG'?'⚡ REG BONUS ⚡':white?'⚡ WHITE BIG ⚡':'⚡ BIG BONUS ⚡';
+  document.body.classList.add('zelvolt-hit');
+  void flash.offsetWidth;
+  flash.classList.add('on');
+  hitFlashTimer=setTimeout(()=>{
+    flash.classList.remove('on','white','reg');
+    document.body.classList.remove('zelvolt-hit');
+    hitFlashTimer=null;
+  },820);
 }
 
 bridge=function(type,extra={}){
@@ -137,6 +191,24 @@ function stopBonusReel(i){
   animateStoppedReel(i);
   stopped++;
   if(stopped===3)completeBonusGame();
+  update();
+}
+
+function stopNormalReel(i){
+  if(currentState!==GAME_STATE.NORMAL_SPIN||!spinning[i])return;
+  clearInterval(timers[i]);
+  spinning[i]=false;
+  reels[i]=normalVisualPattern[i]||rand();
+  drawReel(i);
+  animateStoppedReel(i,['BIG','REG'].includes(resultType));
+  stopped++;
+  if(['BIG','REG'].includes(resultType)&&stopped<3){
+    msg(stopped===1?'⚡ 電圧上昇…':'⚡⚡ もうすぐ確定…',resultType==='BIG'?'super':'big');
+  }
+  if(stopped===3){
+    setGameState(GAME_STATE.NORMAL_RESULT);
+    judge();
+  }
   update();
 }
 
@@ -213,12 +285,26 @@ start=function(){
     return;
   }
   baseStart();
+  if(currentState===GAME_STATE.NORMAL_SPIN){
+    normalVisualPattern=chooseNormalReelPattern();
+    if(resultType==='BIG'){
+      setLamp(targetSymbol==='7W'?'super':'big');
+      bridge('bonus-notice',{bonusType:'BIG',targetSymbol,phase:'start'});
+    }else if(resultType==='REG'){
+      setLamp('big');
+      bridge('bonus-notice',{bonusType:'REG',targetSymbol:'BAR',phase:'start'});
+    }
+  }
 };
 
 const baseStop=stop;
 stop=function(i){
   if([GAME_STATE.BIG_PLAY,GAME_STATE.REG_PLAY].includes(currentState)){
     stopBonusReel(i);
+    return;
+  }
+  if(currentState===GAME_STATE.NORMAL_SPIN){
+    stopNormalReel(i);
     return;
   }
   baseStop(i);
@@ -228,8 +314,9 @@ const baseCompleteSpin=completeSpin;
 completeSpin=function(result){
   baseCompleteSpin(result);
   if(currentState===GAME_STATE.BONUS_HIT){
+    showBonusHit();
     bridge(currentBonusType==='BIG'?'big-hit':'reg-hit',{result,targetSymbol});
-    setTimeout(beginBonus,500);
+    setTimeout(beginBonus,900);
   }
 };
 
@@ -241,9 +328,13 @@ resetGame=function(){
   bonusGamesTotal=0;
   bonusPayoutPlan=[];
   bonusNetStartCredit=0;
-  document.body.classList.remove('zelvolt-big','zelvolt-reg');
+  normalVisualPattern=['BELL','GRAPE','STAR'];
+  if(hitFlashTimer){clearTimeout(hitFlashTimer);hitFlashTimer=null}
+  document.body.classList.remove('zelvolt-big','zelvolt-reg','zelvolt-hit');
   const hud=document.getElementById('zelvoltBonusHud');
   if(hud)hud.classList.remove('on','reg');
+  const flash=document.getElementById('zelvoltHitFlash');
+  if(flash)flash.classList.remove('on','white','reg');
   baseResetGame();
 };
 
