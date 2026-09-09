@@ -1,68 +1,70 @@
 更新日: 2026-09-09
 
 ## 現在地点
-- recordCount: **1124**
-- latestRecordAdded: **イミソーレ3V-30**（エマ / 遡及漏れ回収）
-- latestRecordAddedPath: `docs/real_machine_db/machines/2017-08_imisore-3v-30.md`
-- chronologicalFrontier: **2017-08-21**
-- frontierLatestMachine: **神の左手 悪魔の右目 — No.1123**
+- recordCount: **1125**
+- latestRecordAdded: **パチスロ 討鬼伝**（七匠）
+- latestRecordAddedPath: `docs/real_machine_db/machines/2017-08-28_toukiden.md`
+- chronologicalFrontier: **2017-08-28**
+- frontierLatestMachine: **パチスロ 討鬼伝 — No.1125**
 - schema: **resetBehavior v0.7**
-- status: **2017-08-21_GROUP_CLOSED_RETROACTIVE_GAP_RECOVERED_NEXT_2017-08-28_GROUP_OPEN**
+- status: **2017-08-28_GROUP_OPEN**
 
 ## 今回の同期 / 進捗
-- 最新mainのREADME、mission v0.7、INDEX、LATEST_HANDOFF、No.1123「神の左手 悪魔の右目」を再取得して開始。
-- INDEXは初期19件時点の旧スナップショットのため、README規定どおりLATEST_HANDOFF＋実レコードを進捗正本として採用。
-- 開始時mainは **1123件 / chronologicalFrontier 2017-08-21 / 8/21群CLOSED + RETROACTIVE_GAP_OPEN**。
-- HANDOFF最優先の遡及漏れ **「イミソーレ3V-30」** をNo.1124としてperformance core + resetBehavior v0.7で登録。
-- GitHubコード検索で同名既存レコードなしを確認してから新規作成。
-- HAZUSEで型式 **イミソーレ3V-30**、検定番号 **7S0676**、メーカー **エマ**、導入開始 **2017-08-07** を確認。
-- 既存HANDOFFの2-9伝説 **2017-08-17**、P-Summa回顧の **8月15日頃から導入開始** と競合するため、平均せずCONFLICT保持。canonicalはHAZUSEの日付付き型式DB **2017-08-07**。
-- BIG/REG確率はHAZUSE当時表、機械割は5号機クロニクル、BIG/REG獲得とBIG後100G「はながさタイム」はP-WORLD/HAZUSE/実機資料で収集。
-- resetBehaviorでは **設定変更後1回目BIGの設定示唆信頼度が大きく上がる**直接記載を保存。天井短縮・朝一専用モード・ガックン等は十分な再探索後も固定できず推測転記していない。
-- 50枚ベースは「50枚/1000円/ベース/コイン持ち/回転数」＋機種名表記揺れで複数資料系統を再探索したが固定できず **UNVERIFIED_AFTER_RESEARCH**。
-- 2017年当時の異常出玉/裏モノ疑惑・電源継続時の個人実機観測は、正規検定型式の公開仕様として検証不能なためcanonical性能・resetBehaviorから除外。
+- 最新mainの `README.md`、mission v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前No.1124「イミソーレ3V-30」を再取得して開始。
+- INDEXは初期19件時点の旧スナップショットのため、README規定どおり最新 `LATEST_HANDOFF.md` ＋実レコードを進捗正本として採用。
+- 開始時mainは **1124件 / chronologicalFrontier 2017-08-21 / 8/21群CLOSED / 2017-08-28群OPEN**。
+- HANDOFF指定の次候補 **「パチスロ 討鬼伝」** をGitHubコード検索し、同名既存レコードなしを確認してNo.1125として新規登録。
+- 七匠公式製品アーカイブで機種存在とミタマを核にしたゲーム性を確認。2017年検定通過記事で正式型式 **パチスロ討鬼伝N** を固定。
+- 導入日はALL7・すろぱちくえすと・期待値見える化の **2017-08-28** をcanonical。ちょんぼりすたの **2017-08-27** は平均せずCONFLICT保持。
+- 検定番号は型式名・メーカー・公安委員会・検定・7S等で資料系統を変えて再探索したが直接固定できず **UNVERIFIED_AFTER_RESEARCH**。
+- 性能コアは複数解析で一致し、機械割 **97.9 / 98.9 / 100.1 / 104.8 / 107.5 / 115.5%**、ART初当たり **1/488 / 476 / 461 / 400 / 367 / 254**、ベース約 **35G/50枚**、ART純増約 **2.0枚/G**、討鬼RUSH **30～150G** を保存。
+- 通常時は **1周期99G+α / 最大12周期**。12周期目はモードD（極モード）確定。
+- resetBehavior v0.7は設定変更/純電断の直接表と公開数値を保存。設定変更で周期天井RESET・周期モード再抽選・ミタマ保留RESET、純電源OFF→ONでは周期天井/周期進行/周期モードCARRYOVER、ミタマ保留は一時非表示後に周期到達で再表示。
+- 設定変更後天井は設定1～5が最大7周期、設定6のみ12周期12.5%。全設定共通でモードD（極モード）25.0%。
+- ガックンは資料が **「おそらく可能」 vs 「判別不可」** と競合するため断定せず `CONFLICT_GAKKUN_DETECTION`。
+- 有利区間は **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
 
-## No.1124 — イミソーレ3V-30
-- manufacturer: **エマ**
-- releaseDate canonical: **2017-08-07**
-- releaseDate conflict: **2017-08-07 vs 2017-08-17 with mid-August observation**
-- formalModelName: **イミソーレ3V-30**
-- certificationNumber: **7S0676**
-- generation/system: **5号機 / ノーマル / 完全告知 / 30Φ / BIG後100G小役ナビ**
-- recordStatus: **PARTIAL_CORE_WITH_RESET_BEHAVIOR_V0_7**
+## No.1125 — パチスロ 討鬼伝
+- manufacturer: **七匠**
+- releaseDate canonical: **2017-08-28**
+- releaseDate conflict: **2017-08-28 vs 2017-08-27**
+- formalModelName: **パチスロ討鬼伝N**
+- certificationNumber: **UNVERIFIED_AFTER_RESEARCH**
+- generation/system: **5号機 / ART / 周期管理 / 擬似ボーナス**
+- recordStatus: **COMPLETE_CORE_WITH_RESET_BEHAVIOR_V0_7**
 
 ### performanceCore
-- 機械割: **96.5 / 97.9 / 100.1 / 103.1 / 105.8 / 109.0%**（5号機クロニクル単一後年整理。HAZUSE当時ページは出玉率「調査中」）。
-- BIG: **1/235.7 / 234.1 / 232.4 / 230.8 / 229.1 / 227.6**。
-- REG: **1/481.9 / 409.6 / 360.1 / 318.1 / 287.4 / 260.1**。
-- 合算: **1/158.3 / 148.9 / 141.3 / 133.7 / 127.5 / 121.4**。
-- BIG獲得: **約286枚**。
-- REG獲得: **約104枚**。
-- BIG後: **100G「はながさタイム」**。小役ナビによりコイン持ちアップ。
-- baseGamesPer50: **UNVERIFIED_AFTER_RESEARCH**。
-- はながさタイム純増/G: **UNVERIFIED_AFTER_RESEARCH**。
+- 機械割: **97.9 / 98.9 / 100.1 / 104.8 / 107.5 / 115.5%**。
+- ART初当たり: **1/488 / 476 / 461 / 400 / 367 / 254**。
+- baseGamesPer50: **約35G/50枚**。
+- netIncrease: **約2.0枚/G**。
+- 討鬼RUSH: **1セット30～150G**。
+- 討鬼ボーナス: **30G**、真討鬼ボーナス: **60G**。
+- 通常周期: **99G+α**、通常最大天井 **12周期**。
 
 ### resetBehavior v0.7
-- settingChange: **設定変更後1回目BIGの設定示唆信頼度が大きく上昇**。
-- BIG中示唆色: **青 < 黄 < 緑 < 赤** の順で高設定示唆。具体出現率はUNVERIFIED。
-- P-WORLDは「設定変更後or初回BIG」に限り信頼度大幅UPと書くため、HAZUSEの「設定変更後1回目」に対する条件表現差をconflict/note保持。
-- normal game-count ceiling: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- reset shortened ceiling: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- reset mode/state distributions: **UNVERIFIED_AFTER_RESEARCH**。
-- stay-setting / pure-power-cycle hanagasa remaining-G and machine-specific internal-state contract: **UNVERIFIED_AFTER_RESEARCH**。
-- direct gakkun / initial-display reset detection: **UNVERIFIED_AFTER_RESEARCH**。
-- first-BIG示唆は設定変更そのものを確定判別する契約ではないため `RESET_HINT_CONTEXT_NOT_DETERMINISTIC_RESET_DETECTION`。
+- settingChange: **周期天井RESET / 周期モードRESELECT / ミタマ保留RESET**。
+- pure power OFF→ON: **周期天井・周期進行・周期モードCARRYOVER / ミタマ保留は一時非表示後再表示**。
+- reset ceiling distribution:
+  - 設定1: **1周期12.5 / 3周期37.5 / 7周期50.0 / 12周期0%**
+  - 設定2: **12.5 / 43.8 / 43.8 / 0%**
+  - 設定3: **12.5 / 37.5 / 50.0 / 0%**
+  - 設定4: **12.5 / 43.8 / 43.8 / 0%**
+  - 設定5: **12.5 / 37.5 / 50.0 / 0%**
+  - 設定6: **12.5 / 37.5 / 37.5 / 12.5%**
+- reset cycle mode:
+  - 設定1/3/5: **B37.5 / C37.5 / D25.0%**
+  - 設定2/4/6: **B25.0 / C50.0 / D25.0%**
+  - モードA: **0%**、モードD=極モード。
+- resetBenefits: **設定1～5最大7周期 / 全設定25%極モード / 1or3周期選択が大幅優遇**。
+- resetDetection: ガックンは **CONFLICT**。朝一極モードはリセット可能性UPのヒントだが確定判別ではない。ステージ単独判別不可。
 - advantageousSectionReset: **NOT_APPLICABLE_5TH_GEN_PRE_5_9**。
 
 ## conflicts / unresolved
-- exact release date: HAZUSE **2017-08-07** vs 既存HANDOFFで確認した2-9伝説 **2017-08-17** vs P-Summa回顧 **8月15日頃から導入開始**。平均せず保持。
-- payoutRateBySetting: 数値表は後年5号機クロニクル1系統。別高信頼数値表の照合待ち。
-- baseGamesPer50: UNVERIFIED_AFTER_RESEARCH。
-- hanagasaTime net increase/G: UNVERIFIED_AFTER_RESEARCH。
-- setting-change treatment of hanagasa remaining games: UNVERIFIED_AFTER_RESEARCH。
-- stay-setting / pure-power-cycle internal state: UNVERIFIED_AFTER_RESEARCH。
-- gakkun / reset display: UNVERIFIED_AFTER_RESEARCH。
-- anomalous field behavior / 裏モノ疑惑は正規公開仕様として検証不能のためcanonicalから除外。
+- releaseDate: **2017-08-28 vs 2017-08-27**。canonical 2017-08-28。
+- certificationNumber: **UNVERIFIED_AFTER_RESEARCH**。
+- gakkun: **おそらく可能 vs 判別不可**。平均/断定せずCONFLICT。
+- 設定変更時の周期モード以外の低確/高確等内部状態振り分け: **UNVERIFIED_AFTER_RESEARCH**。
 
 ## 2017-08-21群監査 — CLOSED
 - No.1118 イノキロードトゥゴッド
@@ -71,35 +73,43 @@
 - No.1121 戦国パチスロ花の慶次～天を穿つ戦槍～
 - No.1122 ぱちスロ 仮面ライダーBLACK
 - No.1123 神の左手 悪魔の右目
-- 群自体はCLOSED。境界監査で発見したイミソーレ3V-30の遡及漏れもNo.1124で回収完了。
+- 遡及漏れ「イミソーレ3V-30」もNo.1124で回収済み。
 
-## 2017-08-28次群 — OPEN
-- 先行監査済み候補:
-  1. **討鬼伝**
-  2. **戦国美少女 織田信奈の野望**
-- 次回はまず「討鬼伝」の既存重複/正式導入日・型式を確認し、未登録なら **No.1125候補**としてperformance core + resetBehavior v0.7を収集。
-- 続いて「戦国美少女 織田信奈の野望」を処理し、8/28群を全メーカー横断再監査してCLOSED可否を判定。
+## 2017-08-28群 — OPEN
+- No.1125 **パチスロ 討鬼伝** — 登録済み。
+- 次候補 **戦国美少女 織田信奈の野望** は先行再確認済み:
+  - HAZUSE: 導入開始 **2017-08-28**、メーカー **D-light**、型式 **織田信奈の野望S**、検定番号 **7S0411**。
+  - パチビー、すろぱちくえすとも **2017-08-28** で一致。
+  - ちょんぼりすたのみ **2017-08-27** のため、次回レコード化時に日付CONFLICTとして保持予定。
+- 「戦国美少女 織田信奈の野望」処理後、8/28群を全メーカー横断監査してCLOSED可否を判定する。
 
 ## 遡及 resetBehavior QA
 - retroQaScanConfirmedThrough: **2006-06_churahime-sun.md**。
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
 - 次カーソル: `docs/real_machine_db/machines/2006-06_thunderbirds-neo-xx.md`。
-- 今回は本線境界の遡及漏れNo.1124回収を優先し、QAカーソルは進めていない。
+- 今回は本線No.1125を優先し、QAカーソルは進めていない。
 
 ## 次回再開地点
-1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1124を再取得。
-2. **1124件 / chronologicalFrontier 2017-08-21 / 8/21群CLOSED / retroactive gap recovered / 2017-08-28群OPEN** を正本として継続。
-3. **最優先:「討鬼伝」No.1125候補**。重複・正式導入日・型式確認後、performance core + resetBehavior v0.7を登録。
-4. 次に **「戦国美少女 織田信奈の野望」**。
-5. 8/28群を全メーカー横断監査してCLOSED判定。
-6. 遡及QAは `docs/real_machine_db/machines/2006-06_thunderbirds-neo-xx.md` から継続。
+1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1125を再取得。
+2. **1125件 / chronologicalFrontier 2017-08-28 / 2017-08-28群OPEN** を正本として継続。
+3. **最優先:「戦国美少女 織田信奈の野望」No.1126候補**。重複確認後、performance core + resetBehavior v0.7を収集・登録。
+4. その後8/28群を全メーカー横断再監査し、漏れ回収後にCLOSED判定。
+5. 遡及QAは `docs/real_machine_db/machines/2006-06_thunderbirds-neo-xx.md` から継続。
 
 ## 主要出典 — 取得日 2026-09-09
-### No.1124 イミソーレ3V-30
-- HAZUSE イミソーレXX30（型式/検定/導入日/ボーナス確率/ゲームフロー）: https://hazuse.com/machine/pachislot/7S0676/
-- HAZUSE 設定推測（設定変更後1回目BIG示唆）: https://hazuse.com/machine/pachislot/7S0676/genre/208/
-- P-WORLD イミソーレ3V-30: https://www.p-world.co.jp/machine/database/8490
-- 5号機クロニクル エマ: https://5goki.com/ema
-- P-Summa イミソーレ回顧: https://psumma.jp/pachislo/36486/
-- A-SLOT 実機資料: https://www.a-slot.com/SHOP/ema6.html
-- ピーボム 実機資料: https://www.bomb-slot.jp/view/item/000000000647
+### No.1125 パチスロ 討鬼伝
+- 七匠公式 機種情報: https://www.nanashow.co.jp/product/
+- ALL7 2017年8月導入予定一覧: https://www.all7.jp/plans/index/2017/08
+- P-MEDIA 検定通過（型式パチスロ討鬼伝N）: https://p-media.info/%E5%92%8C%E9%A2%A8%E3%82%B2%E3%83%BC%E3%83%A0%E7%89%88%E6%A8%A9%E3%81%8C%E3%83%91%E3%83%81%E3%82%B9%E3%83%AD%E5%8C%96%EF%BC%8F%E4%B8%83%E5%8C%A0%E3%81%95%E3%82%93%E3%81%8B%E3%82%89%E3%80%8C%E3%83%91/
+- P-WORLD: https://www.p-world.co.jp/machine/database/8469
+- すろぱちくえすと: https://www.slopachi-quest.com/article/toukiden/
+- 期待値見える化: https://slotjin.com/zone/toukiden/
+- ちょんぼりすた: https://chonborista.com/slot/nanashow/43458/
+- パチ7: https://pachiseven.jp/machines/5261/cutout/66
+- SLOT HACK: https://slothack.net/matome/3346/
+
+### 次候補 戦国美少女 織田信奈の野望
+- HAZUSE: https://hazuse.com/machine/pachislot/7S0411/
+- パチビー: https://www.pachibee.jp/machines/movie/217080001
+- 大一/D-light公式: https://daiichi777.jp/product/detail/157/slot_odanobuna
+- すろぱちくえすと: https://www.slopachi-quest.com/article/slot-odanobunanoyabou/
