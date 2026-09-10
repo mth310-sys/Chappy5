@@ -1,70 +1,52 @@
 更新日: 2026-09-11
 
 ## 現在地点
-- recordCount: **1288**
-- latestRecordAdded: **超AT 美ら沖**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2019-06-03_cho-at-churaoki.md`
-- chronologicalFrontier: **2019-06-03**
-- frontierLatestMachine: **超AT 美ら沖 — No.1288**
+- recordCount: **1289**
+- latestRecordAdded: **スーパードラゴン**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2019-06-17_super-dragon.md`
+- chronologicalFrontier: **2019-06-17**
+- frontierLatestMachine: **スーパードラゴン — No.1289**
 - schema: **resetBehavior v0.7**
-- status: **2019-06-03_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**
+- status: **2019-06-17_GROUP_OPEN_1_OF_AT_LEAST_2_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1286を再取得して開始。
-- INDEXは旧スナップショットのため、README規則どおりLATEST_HANDOFF + main実レコードを正本として継続。
-- 直前handoffの2019-06-03群を処理し、`実況BINGO倶楽部` をNo.1287、`超AT 美ら沖` をNo.1288として性能コア + resetBehavior v0.7で登録。
-- 1gekiの2019年6月導入カレンダーは6/3の全5機中パチスロ2機を `実況BINGO倶楽部 / 超AT 美ら沖` と掲載。モゲスロ年間カレンダーも同2機で一致するため、6/3群をCLOSED。
-- 6/4〜6/16について導入一覧・機種DB・メーカー系検索を横断し、独立登録すべきパチスロを固定できず。次の明確な群は2019-06-17。
-- 6/17群は `スーパードラゴン` と、以前5/13予定から延期確認済みの `咲桜弁慶` を候補として戻す。
+- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1288を再取得して開始。
+- INDEXは旧スナップショット（19件）のため、README規則どおりLATEST_HANDOFF + main実レコードを正本として継続。
+- 直前正本はNo.1288 `超AT 美ら沖`、2019-06-03群CLOSED。
+- 6/4〜6/16監査済みhandoffを引き継ぎ、2019-06-17群 `スーパードラゴン` をNo.1289として性能コア + resetBehavior v0.7で登録。
+- `咲桜弁慶` は当初2019-05-13予定から2019-06-17へ延期されたことを、ちょんぼりすたとHAZUSEで再確認。次の未処理として同日群に保持。
 
-## No.1287 — 実況BINGO倶楽部
-- manufacturer: **コナミアミューズメント**
-- formalModel: **`S実況BINGO倶楽部KU`**
-- certificationNumber: **`8S0682`**
-- generation/system: **6号機 / AT / CZ経由疑似ボーナスAT**
-- releaseDate: **2019-06-03**
-- 機械割: **97.5 / 98.9 / 100.5 / 102.1 / 104.6 / 108.2%**
-- CZ: **1/82.5 / 83.1 / 83.4 / 83.9 / 84.1 / 84.5**
-- ボーナス合算: **1/313.5 / 304.3 / 291.0 / 280.1 / 261.5 / 259.5**
-- baseGamesPer50: **約50G**
-- AT純増: **約3.0枚/G**
-- CZ間天井: **224G+α**
-- ボーナス間天井: **573G+α**
-
-### resetBehavior v0.7
-- settingChange: **CZ/ボーナス天井RESET / 状態・モードRESET / 非有利区間へ**。
-- powerCycle: **天井G・状態/モード・有利区間CARRY_OVER**。
-- carryOver: 据え置き独立条件を純電断から完全分離した直接契約は `UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION`。
-- resetStage: 当時解析の「スタジオモード」とHAZUSE「通常ステージへ」が競合。`CONFLICT_RESET_STAGE_STUDIO_MODE_VS_NORMAL_STAGE`。
-- numericResetData: 設定変更専用短縮天井/モード振り分け/朝一当選率は `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
-- HAZUSE設定5 CZ `1/94.1` は他複数資料の `1/84.1` と競合。canonical=1/84.1、`CONFLICT_CZ_SETTING5_84_1_MULTI_SOURCE_VS_94_1_HAZUSE`。
-
-## No.1288 — 超AT 美ら沖
-- manufacturer: **七匠**
-- formalModel: **`S ATちゅら沖S`**
-- certificationNumber: **`8S0820`**
+## No.1289 — スーパードラゴン
+- manufacturer: **ネット（NET）**
+- formalModel: **`SスーパードラゴンNO`**
+- certificationNumber: **`9S0197`**
 - generation/system: **6号機 / AT / 疑似ボーナス連荘タイプ**
-- releaseDate: **2019-06-03**
-- 機械割: **97.8 / 98.6 / 100.3 / 103.5 / 106.8 / 112.4%**
-- ボーナス初当たり: **1/459 / 446 / 424 / 389 / 337 / 292**
-- baseGamesPer50: **約50G**
-- AT純増: **約4.0枚/G**
-- BIG: **50G・約200枚** / REG: **15G・約60枚**
-- 最大通常天井: **999G**
+- releaseDate: **2019-06-17**
+- 機械割: **97.7 / 98.9 / 100.4 / 102.3 / 103.9 / 107.5%**
+- 赤7初当たり: **1/391.6 / 308.7 / 365.6 / 276.5 / 320.5 / 233.9**
+- ボーナス合算: **1/125.2 / 119.1 / 114.8 / 107.4 / 100.1 / 92.2**
+- baseGamesPer50: **約43.2G**
+- AT純増: **約2.8枚/G**
+- 赤7: **100〜998枚** / ドラゴンBONUS: **100〜1999枚**
+- 龍宮ゾーン: **7G、概ね約70%引き戻し**
+- モード別最大天井: **通常997G+α / ミドル997G+α / ドラゴン998G+α / 連127G+α**
 
 ### resetBehavior v0.7
-- settingChange: **天井G RESET / モード再抽選 / 非有利区間へ / 有利区間ランプ消灯**。
-- powerCycle: **天井G・モード・有利区間・ランプ状態CARRY_OVER**。
-- carryOver: 据え置き独立条件は `UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION`。
-- modeAfterReset: 有利区間移行時ストック放出モード率 **50.0 / 50.0 / 50.0 / 52.3 / 55.1 / 66.8%（設定1〜6）**。これは設定変更専用値ではなく有利区間移行時共通値だが、設定変更後は再移行するため朝一比較値として採用。
-- ceilingAfterReset: ストック放出モード基本**111G**、条件付き**222G**。通常モードのリセット後主要天井**888G**。最大通常天井999Gとは定義分離。
-- resetDetection: 設定変更直後の有利区間ランプ消灯は強い推測材料だが、自然な区間終了等でも消灯し得るため `STRONG_CLUE_NOT_DETERMINISTIC`。
-- resetBenefits: 朝一有利区間移行時、設定1〜3でも50%以上で111G系ストック放出モードへ入るため、公開朝一数値として保存。
+- settingChange: **内部天井G/pt RESET / モード再抽選 / 非有利区間へ / 有利区間ランプ消灯**。
+- powerCycle: **内部天井G/pt・モード・有利区間・ランプ状態CARRY_OVER**。
+- carryOver: 据え置き独立条件を純電断と完全分離した直接契約は `UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION`。朝一ランプ点灯=据え置き濃厚という複数解析は保持。
+- resetBenefit: **設定変更後約37%で内部龍宮ゾーンへ移行**。龍宮ゾーン自体のボーナス期待度は概ね約70%（設定別解析64.0〜71.2%）。
+- modeAfterReset: 設定変更時モード再抽選。設定1の完全取得値は **通常70.3 / ミドル14.8 / ドラゴン10.2 / 連4.7%**。設定2〜6は公開表があるが検索テキスト化時の行結合セル欠落があるため、欠落セルを100%差分から推定せずレコードに明記。
+- resetDetection: **朝一有利区間ランプ点灯=据え置き濃厚 / 消灯=設定変更濃厚**。ただしボーナス終了時にも消灯するため `STRONG_CLUE_NOT_DETERMINISTIC`。
+- morningDisplay: 設定変更・電源OFF→ONの双方で台枠が128G間濃い青系になる資料があり、単独判別には使わない。
+- gameCounter/ceiling: 設定変更でRESET、純電断でCARRY_OVER。内部天井最大998G+αとデータカウンター上999G/1000G超表記は定義分離。
+- numericResetData: **約37%内部龍宮ゾーン / 設定1モード70.3・14.8・10.2・4.7% / 連最大127G+α**。参考実測 **新台初回10G以内42/263=15.9%** は解析抽選率と平均せず観測値として分離。
 
 ## qualityNotes / conflicts
-- 実況BINGO倶楽部の設定変更後画面は `スタジオモード` vs `通常ステージ` の資料差を平均化せずCONFLICT保持。
-- 実況BINGO倶楽部の設定5 CZは `1/84.1` 多数一致 vs HAZUSE `1/94.1` のCONFLICT。
-- 美ら沖の50%表記は概括値。HAZUSEの設定別有利区間移行時値 50.0〜66.8%を精密値として保持し、「設定変更専用抽選」とはしない。
+- 天井表記 `999G` / `最大998G` / `998G+α` / `表示上1000G超あり` は内部天井・α・データ表示基準の差を分離。平均しない。
+- リセット解析値 `約37%で内部龍宮ゾーン` と、新台初回参考実測 `10G以内42/263=15.9%` は定義が異なるため `RESET_RYUGU_RATE_VS_OBSERVED_FIRST_HIT_SAMPLE` として分離。
+- 設定変更時モード表は一撃/すろぱちくえすとに存在するが、検索抽出で設定2〜6のrowspanセルが欠落。欠損値を算術推定しない。
+- formalModel / certificationNumber はHAZUSEと後年機種DBで一致。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**
@@ -74,44 +56,37 @@
 - nextRetroQaAction: main上の導入時系列でPIKASLO直後の未QAレコードを特定して継続。本線前進を優先。
 
 ## 2019-06-03群 — CLOSED
-### 登録済み
 - No.1287 実況BINGO倶楽部
 - No.1288 超AT 美ら沖
+- 6/4〜6/16は前handoffで監査済み、追加パチスロ固定なし。
 
-### 群監査メモ
-- 1geki 2019年6月新台カレンダーは6/3に「全5機・パチンコ3機・パチスロ2機」とし、パチスロ2機が実況BINGO倶楽部 / 超AT 美ら沖。
-- モゲスロ2019年間新台カレンダーも6/3を同2機で掲載。
-- 6/4〜6/16を別導入一覧・機種DB・メーカー/型式検索で監査し、追加パチスロを固定できず。
-- 次の明確な導入群は2019-06-17。
+## 2019-06-17群 — OPEN
+### 登録済み
+- No.1289 スーパードラゴン
+
+### 未処理確認済み
+- 咲桜弁慶 — Border。ちょんぼりすたは導入日を2019-05-13から2019-06-17へ訂正、HAZUSEも2019-06-17導入開始。formalModel `サクラベンケイ2` / certificationNumber `8S0064` を確認済み。
 
 ## 次回再開地点
-1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1288を再取得。
-2. **2019-06-17群 `スーパードラゴン` をNo.1289候補**として性能コア + resetBehavior v0.7を本調査。
-3. 続いて、5/13予定から実導入6/17へ延期確認済みの **`咲桜弁慶`** を同群で処理。
-4. 6/17群を全メーカー / 別型式 / 別スペック / PB / 地域差まで最終監査してCLOSED可否判定。
-5. 欠損は公式 / 業界 / 当時解析 / 古DB / アーカイブ / 回顧資料まで資料系統を変えてからUNVERIFIED。
+1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1289を再取得。
+2. **2019-06-17群 `咲桜弁慶` をNo.1290候補**として性能コア + resetBehavior v0.7を本調査。
+3. 6/17群を全メーカー / 別型式 / 別スペック / PB / 地域差まで最終監査してCLOSED可否判定。
+4. 欠損は公式 / 業界 / 当時解析 / 古DB / アーカイブ / 回顧資料まで資料系統を変えてからUNVERIFIED。
 
 ## 主要出典 — 取得日 2026-09-11
-### 実況BINGO倶楽部
-- K-Navi: https://p-kn.com/slot/3222/
-- ぱちんこキュレーション: https://pachinko-curation.com/441/
-- みんスロ: https://minslo.com/%E5%AE%9F%E6%B3%81bingo%E5%80%B6%E6%A5%BD%E9%83%A8/
-- おスロおパチおいでやす: https://oslo-opachi.com/2019/06/06/binngo_tennjyou/
-- HAZUSE機種DB: https://hazuse.com/machine/pachislot/8S0682/
-- HAZUSE設定変更/電断: https://hazuse.com/machine/pachislot/8S0682/genre/207/
-- ちょんぼりすた: https://chonborista.com/slot/konami-slot/81406/
-- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/konami_slot/07/l.php
-- P-WORLD: https://www.p-world.co.jp/machine/database/8922
+### スーパードラゴン
+- NET公式 製品情報: https://www.net-fun.co.jp/product/page/3
+- NETプレスリリース（Dream News転載）: https://www.dreamnews.jp/press/0000192861/
+- HAZUSE: https://hazuse.com/machine/pachislot/9S0197/
+- 一撃: https://1geki.jp/slot/s_s_dragon/
+- 一撃 モード: https://1geki.jp/slot/s_s_dragon/43/
+- すろぱちくえすと 設定: https://www.slopachi-quest.com/article/super-dragon-settei/
+- すろぱちくえすと 天井/朝一: https://www.slopachi-quest.com/article/superdragon-tennjou/
+- ぱちんこキュレーション: https://www.pachinko-curation.com/1181/
+- パチスロ ジゴク耳: https://suropatizamuraibuttagiri.com/2019/06/11/superdoragon-tenjyou-risetto/
+- おスロおパチおいでやす: https://oslo-opachi.com/2019/06/18/superdoragon_tennjyou/
+- パチスロメソッド: https://slotmethod.jp/archives/13123/
 
-### 超AT 美ら沖
-- K-Navi: https://p-kn.com/slot/3237/
-- ぱちんこキュレーション: https://pachinko-curation.com/567/
-- 一撃: https://1geki.jp/slot/s_churaoki/
-- HAZUSE機種DB/モード: https://hazuse.com/machine/pachislot/8S0820/
-- HAZUSE設定変更/電断: https://hazuse.com/machine/pachislot/8S0820/genre/207/
-- おスロおパチおいでやす: https://oslo-opachi.com/2019/06/07/churaoki_tennjyou/
-- モゲスロ: https://moge-site.com/archives/21996
-
-### 群監査 / 次群
-- 一撃 2019年6月新台カレンダー: https://1geki.jp/newmachinecalender/201906/
-- モゲスロ 2019新台カレンダー: https://moge-site.com/new-slot2019
+### 次機種 / 群境界
+- ちょんぼりすた 咲桜弁慶: https://chonborista.com/slot/border/81327/
+- HAZUSE 咲桜弁慶: https://hazuse.com/machine/pachislot/8S0064/
