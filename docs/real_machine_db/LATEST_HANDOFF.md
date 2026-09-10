@@ -1,67 +1,68 @@
 更新日: 2026-09-10
 
 ## 現在地点
-- recordCount: **1219**
-- latestRecordAdded: **クレアの秘宝伝 女神の夢と魔法の遺跡**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2018-08-06_claire-no-hihouden3.md`
+- recordCount: **1220**
+- latestRecordAdded: **クロノス～刻の支配者～**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2018-08-06_chronos-toki-no-shihai-sha.md`
 - chronologicalFrontier: **2018-08-06**
-- frontierLatestMachine: **クレアの秘宝伝 女神の夢と魔法の遺跡 — No.1219**
+- frontierLatestMachine: **クロノス～刻の支配者～ — No.1220**
 - schema: **resetBehavior v0.7**
-- status: **2018-08-06_GROUP_OPEN_3_OF_AT_LEAST_6_PROCESSED**
+- status: **2018-08-06_GROUP_OPEN_4_OF_AT_LEAST_6_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1218を再取得して開始。
+- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1219を再取得して開始。
 - INDEXは19件時点の旧スナップショットのため、README規定どおりLATEST_HANDOFF + main実レコードを正本として継続。
-- 1218件 / 2018-08-06群OPENを確認し、未処理先頭「クレアの秘宝伝3」を既存重複なし確認後No.1219として登録。
-- HAZUSEで型式`クレアの秘宝伝 女神の夢と魔法の遺跡／P4`、検定番号`7S1909`、2018-08-06、メーカー=パオン・ディーピーを固定。
-- 設定1/2/5/6、機械割98.0/99.8/104.6/108.4%、BIG1/266.4〜1/240.9、REG1/337.8〜1/277.6、合算1/148.9〜1/129.0、約35G/50枚。
-- 同色BIG最大302枚、異色BIG最大203枚、REG最大105枚。BIG後は30G RT、純増は信頼資料では「現状維持程度」。天井非搭載。
-- resetBehaviorは一撃の本機専用比較表で、設定変更時=内部状態「チャンス目RT移行状態」/RTリセット/原始の森、純電源OFF→ON時=「チャンス目RT非移行状態」/RT引継ぎ/原始の森（ボーナス中・RT中等は状態引継ぎ）を固定。
-- 据え置きを純電断から独立させた直接契約とガックン確定条件は、表記揺れ・型式・メーカー・設定変更/リセット/朝一/据え置き/電源OFF ON/RT状態/ガックン等へ検索語を変えても直接固定できずUNVERIFIED_AFTER_RESEARCH。
-- 短縮天井・朝一当選率・リセット恩恵率などの公開数値はNONE_CONFIRMED_AFTER_RESEARCH。
-- 導入日はHAZUSE/すろぱちくえすとが2018-08-06で一致。ちょんぼりすたは2018-07-23のため`CONFLICT_RELEASE_DATE_2018_08_06_VS_2018_07_23`として保持し、canonical=8/6。
-- 5号機クロニクルの該当機記述にAT/純増約3.5枚/Gという本機A+RTと整合しない記述があるため、機種混同の可能性が高く性能根拠から除外。
+- 1219件 / 2018-08-06群OPENを確認し、未処理先頭「クロノス～刻の支配者～」を既存重複なし確認後No.1220として登録。
+- ベルコ公式で2018年8月、5号機ART、設定別ART初当たり1/368.7〜1/322.9を確認。Amusement Japan、日刊スポーツ、複数解析で2018-08-06導入を固定。
+- 機械割97/99/101/104/106/108%、ボーナス合算1/101.9〜1/80.4、約33G/50枚、クロノスボーナス約42枚。
+- ART純増は資料競合。すろぱちくえすと約1.6枚/G、ちょんぼりすた・パチマガスロマガ約1.7枚/G。ボーナス込み約2.0枚/Gは一致するため`CONFLICT_ART_NET_INCREASE_APPROX_1_6_VS_1_7_PER_G`として保持。
+- 通常ゲーム数天井は非搭載。クロノスチャンス最大33G、クロノスタイムは次回ボーナスまで。パチマガスロマガで有利区間連続1300G消化時のスペシャルクロノスタイムを確認。
+- resetBehaviorは当時の本機専用朝一比較表が設定変更時/電源OFF→ON時の内部状態・ステージをともに「調査中」としており、その後も表記揺れ/メーカー/設定変更/リセット/朝一/据え置き/電源OFF ON/ガックン/有利区間へ検索語と資料系統を変えて再探索したが、本機固有契約を固定できずUNVERIFIED_AFTER_RESEARCH。
+- 据え置きは純電断と同義扱いせず独立してUNVERIFIED。設定変更時の有利区間処理、1300G連続カウンタ処理、ガックン条件/発生率もUNVERIFIED。
+- 短縮天井・朝一ART/CZ優遇率・専用モード・リセット恩恵率などの公開数値はNONE_CONFIRMED_AFTER_RESEARCH。
+- 正式型式名/検定番号は今回の公式・業界・解析・古いDB検索でも高信頼固定できずUNVERIFIED_AFTER_RESEARCH。
 
-## No.1219 — クレアの秘宝伝 女神の夢と魔法の遺跡
-- manufacturer: **パオン・ディーピー（大都技研系）**
+## No.1220 — クロノス～刻の支配者～
+- manufacturer: **ベルコ**
 - releaseDateCanonical: **2018-08-06**
-- formalModelName: **クレアの秘宝伝 女神の夢と魔法の遺跡／P4**
-- certificationNumber: **7S1909**
-- generation/system: **5号機 / 5.9号機 / A+RT**
-- settings: **1 / 2 / 5 / 6**
-- payout: **98.0 / 99.8 / 104.6 / 108.4%**
-- BIG: **1/266.4 / 1/258.0 / 1/250.1 / 1/240.9**
-- REG: **1/337.8 / 1/321.2 / 1/284.9 / 1/277.6**
-- bonusCombined: **1/148.9 / 1/143.1 / 1/133.2 / 1/129.0**
-- base: **約35G/50枚（プチRT込み）**
-- basic payout: **同色BIG最大302枚 / 異色BIG最大203枚 / REG最大105枚**
-- RT: **BIG後30G / 現状維持程度**
+- formalModelName: **UNVERIFIED_AFTER_RESEARCH**
+- certificationNumber: **UNVERIFIED_AFTER_RESEARCH**
+- generation/system: **5号機 / 5.9号機 / A+ART / W-ART**
+- settings: **1 / 2 / 3 / 4 / 5 / 6**
+- payout: **97.0 / 99.0 / 101.0 / 104.0 / 106.0 / 108.0%**
+- ART initial: **1/368.7 / 1/358.5 / 1/349.4 / 1/339.9 / 1/331.7 / 1/322.9**
+- bonusCombined: **1/101.9 / 1/96.8 / 1/92.2 / 1/88.0 / 1/84.1 / 1/80.4**
+- base: **約33G/50枚**
+- basic payout: **クロノスボーナス約42枚**
+- ART: **クロノスチャンス最大33G / クロノスタイム次回ボーナスまで**
+- netIncrease: **CONFLICT 約1.6 vs 約1.7枚/G / ボーナス込み約2.0枚/G**
 - ceiling: **非搭載**
 
 ### resetBehavior v0.7
-- settingChange: **チャンス目RT移行状態 / RT RESET / 原始の森**。
+- settingChange: **UNVERIFIED_AFTER_RESEARCH**。当時本機専用表は内部状態/ステージとも調査中。
 - carryOver: **UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION**。純電断を自動転記しない。
-- powerOFF→ON: **チャンス目RT非移行状態 / RT CARRY_OVER / 原始の森**。ボーナス中・RT中等は状態引継ぎ。
-- gameCounter/ceiling: 通常ゲーム数天井なし、短縮天井N/A。
-- mode/state: 設定変更と純電断でチャンス目後プチRT移行可否およびRT引継ぎに差。
-- advantageousSection: 本機の主ゲームフローに関する有利区間朝一契約は`NONE_CONFIRMED_AFTER_RESEARCH`。一般5.9号機論で補完しない。
-- resetBenefits/penalties: 短縮天井・初当たり優遇等`NONE_CONFIRMED_AFTER_RESEARCH`。
-- resetDetection: 朝一チャンス目後のプチRT移行可否は設定変更/純電断の判別材料になり得る。ガックン確定条件はUNVERIFIED。
-- numericResetData: 公開された朝一当選率/短縮天井/恩恵率等`NONE_CONFIRMED_AFTER_RESEARCH`。
+- powerOFF→ON: **UNVERIFIED_AFTER_RESEARCH**。当時本機専用表は内部状態/ステージとも調査中。
+- gameCounter/ceiling: 通常ゲーム数天井なし。1300G有利区間連続カウンタの変更/据え置き/純電断別処理はUNVERIFIED。
+- mode/state: 朝一専用モード/状態契約はNONE_CONFIRMED_AFTER_RESEARCH。
+- advantageousSection: 5.9号機として有利区間使用、連続1300G時の仕様は確認。ただし朝一リセット契約はUNVERIFIED。
+- resetBenefits/penalties: 短縮天井・初当たり/CZ優遇等`NONE_CONFIRMED_AFTER_RESEARCH`。
+- resetDetection: 本機固有ガックン・表示等の確定条件/発生率はUNVERIFIED。
+- numericResetData: 公開された朝一専用数値`NONE_CONFIRMED_AFTER_RESEARCH`。
 
 ## 2018-08-06群監査
 ### 登録済み
 - No.1217 ハイカ101 — 2018-08-06。
 - No.1218 花人-はなんちゅ- — 2018-08-06。
 - No.1219 クレアの秘宝伝 女神の夢と魔法の遺跡 — 2018-08-06。
+- No.1220 クロノス～刻の支配者～ — 2018-08-06。
 
 ### 未処理候補
-- クロノス 刻の支配者
-- ウィザードバリスターズ 弁護士セシル
+- ウィザード・バリスターズ～弁魔士セシル / ウィザードバリスターズ 弁護士セシル
 - TOWSER(トウサー)
 
 ### 群判定
-- `2018-08-06_GROUP_OPEN_3_OF_AT_LEAST_6_PROCESSED`
+- `2018-08-06_GROUP_OPEN_4_OF_AT_LEAST_6_PROCESSED`
+- 日刊スポーツ導入カレンダーとすろぱちくえすと双方で、8/6群に少なくとも上記6機を確認。
 - 全メーカー/別スペック/PB/地域差監査は未完了のためCLOSEDにしない。
 
 ## 遡及 resetBehavior QA
@@ -78,23 +79,22 @@
 - 同日/境界群は全メーカー/別スペック/PB/地域差監査後にのみCLOSED判定する。
 
 ## 次回再開地点
-1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1219を再取得。
-2. **1219件 / chronologicalFrontier 2018-08-06 / 8/6群OPEN**を正本として継続。ただし並行更新があれば最新HEADを優先。
-3. **クロノス 刻の支配者**をNo.1220候補として既存重複・型式・導入日を照合し、性能コア+resetBehavior v0.7を収集。
-4. 続いてウィザードバリスターズ 弁護士セシル / TOWSER(トウサー)を順次監査。
+1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1220を再取得。
+2. **1220件 / chronologicalFrontier 2018-08-06 / 8/6群OPEN**を正本として継続。ただし並行更新があれば最新HEADを優先。
+3. **ウィザード・バリスターズ～弁魔士セシル**をNo.1221候補として既存重複・型式・導入日を照合し、性能コア+resetBehavior v0.7を収集。
+4. 続いてTOWSER(トウサー)を監査。
 5. 8/6群を全メーカー/別スペック/PB/地域差で横断監査してCLOSE可否を判定。
 6. 遡及QAは `docs/real_machine_db/machines/2006-08-28_taiho-shichauzo.md` から継続。
 
 ## 主要出典 — 取得日 2026-09-10
-### No.1219 クレアの秘宝伝 女神の夢と魔法の遺跡
-- HAZUSE: https://hazuse.com/machine/pachislot/7S1909/
-- 一撃 reset: https://1geki.jp/slot/s_kurea3/3/
-- 一撃 base: https://1geki.jp/slot/s_kurea3/4/
-- すろぱちくえすと: https://www.slopachi-quest.com/article/crea3/
-- pachislo-data: https://pachislo-data.com/daito/75679
-- ちょんぼりすた: https://chonborista.com/slot/daito-slot/59726/
-
-### Retro QA ランブルローズ
-- コナミ公式アーカイブ: https://www.konami.com/amusement/psm/archive/ps/2006/rumble/
-- パチ7 5号機ボーナス構造回顧: https://pachiseven.jp/articles/detail/7071
-- グリーンべると初代回顧: https://web-greenbelt.jp/00003794/
+### No.1220 クロノス～刻の支配者～
+- ベルコ公式: https://www.s-bellco.co.jp/products/slot/chronos/
+- Amusement Japan: https://amusement-japan.co.jp/article/detail/10000668/
+- グリーンべると: https://web-greenbelt.jp/00010517/
+- 日刊スポーツ導入カレンダー: https://www.nikkansports.com/amusement/pachislot/news/201807270000405.html
+- すろぱちくえすと: https://www.slopachi-quest.com/article/chronos/
+- ちょんぼりすた: https://chonborista.com/slot/belko-slot/61320/
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/belco_slot/101/a.php
+- パチマガスロマガ ゲーム性: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/belco_slot/101/l.php
+- 5号機クロニクル: https://5goki.com/bellco
+- P-WORLD: https://www.p-world.co.jp/machine/database/8678
