@@ -1,59 +1,70 @@
 更新日: 2026-09-11
 
 ## 現在地点
-- recordCount: **1286**
-- latestRecordAdded: **ぱちスロ 冬のソナタ**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2019-05-20_pachislot-fuyu-no-sonata.md`
-- chronologicalFrontier: **2019-05-20**
-- frontierLatestMachine: **ぱちスロ 冬のソナタ — No.1286**
+- recordCount: **1288**
+- latestRecordAdded: **超AT 美ら沖**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2019-06-03_cho-at-churaoki.md`
+- chronologicalFrontier: **2019-06-03**
+- frontierLatestMachine: **超AT 美ら沖 — No.1288**
 - schema: **resetBehavior v0.7**
-- status: **2019-05-20_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**
+- status: **2019-06-03_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**
 
 ## 今回の同期 / 進捗
-- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1285を再取得して開始。
+- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1286を再取得して開始。
 - INDEXは旧スナップショットのため、README規則どおりLATEST_HANDOFF + main実レコードを正本として継続。
-- 直前handoffの未処理先頭 `ぱちスロ 冬のソナタ` をNo.1286として性能コア + resetBehavior v0.7で登録。
-- KYORAKU公式 / グリーンべると / 遊技通信 / Amusement Japan / K-Navi / パチナビ / モゲスロ / ちょんぼりすた / すろぱちくえすと / 当時攻略誌目次を横断。
-- 5/20群は `天晴！モグモグ風林火山〜全国制覇版〜 / ハナビ通 / ぱちスロ 冬のソナタ` の3機を登録済み。
-- 日刊スポーツ2019-05-10導入カレンダー、メーカー/解析別導入日、5/24更新カレンダーを再監査し、5/21〜6/2に独立登録すべき追加パチスロを固定できなかったため5/20群をCLOSED。
-- 次の明確な実導入群は **2019-06-03**。`実況BINGO倶楽部` / `超AT 美ら沖` を複数資料で確認。
+- 直前handoffの2019-06-03群を処理し、`実況BINGO倶楽部` をNo.1287、`超AT 美ら沖` をNo.1288として性能コア + resetBehavior v0.7で登録。
+- 1gekiの2019年6月導入カレンダーは6/3の全5機中パチスロ2機を `実況BINGO倶楽部 / 超AT 美ら沖` と掲載。モゲスロ年間カレンダーも同2機で一致するため、6/3群をCLOSED。
+- 6/4〜6/16について導入一覧・機種DB・メーカー系検索を横断し、独立登録すべきパチスロを固定できず。次の明確な群は2019-06-17。
+- 6/17群は `スーパードラゴン` と、以前5/13予定から延期確認済みの `咲桜弁慶` を候補として戻す。
 
-## No.1286 — ぱちスロ 冬のソナタ
-- manufacturer: **京楽産業．**
-- formalModel: **`パチスロ冬のソナタKJ`**
-- certificationNumber: **`7S1507`**
-- generation/system: **5.9号機 / A+RT / ボーナス+CZ+RT**
-- releaseDate canonical: **2019-05-20**
-- release scope conflict: **5/20納品/ホール導入開始系資料 vs KYORAKU公式5/21全国導入スタート**
-- 機械割: **98.6 / 99.0 / 101.3 / 102.2 / 104.1 / 107.2%**
-- BIG: **1/492.8 / 492.8 / 485.5 / 485.5 / 478.4 / 445.8**
-- MIDDLE: **1/636.3 / 612.5 / 590.4 / 560.1 / 532.8 / 524.3**
-- REG: **1/508.0 / 508.0 / 500.3 / 500.3 / 471.5 / 458.3**
-- 合算: **1/179.6 / 177.6 / 173.8 / 171.1 / 164.3 / 157.9**
-- baseGamesPer50: **35.3 / 36.1 / 37.6 / 38.0 / 38.6 / 40.0G**
-- RT「恋愛モード」: **約0.3枚/G・1セット30G**
-- BIG最大**304枚** / MIDDLE最大**206枚** / REG canonical最大**110枚**
-- CZ→RT突入期待度: **約50%**
-- 天井: **非搭載**
+## No.1287 — 実況BINGO倶楽部
+- manufacturer: **コナミアミューズメント**
+- formalModel: **`S実況BINGO倶楽部KU`**
+- certificationNumber: **`8S0682`**
+- generation/system: **6号機 / AT / CZ経由疑似ボーナスAT**
+- releaseDate: **2019-06-03**
+- 機械割: **97.5 / 98.9 / 100.5 / 102.1 / 104.6 / 108.2%**
+- CZ: **1/82.5 / 83.1 / 83.4 / 83.9 / 84.1 / 84.5**
+- ボーナス合算: **1/313.5 / 304.3 / 291.0 / 280.1 / 261.5 / 259.5**
+- baseGamesPer50: **約50G**
+- AT純増: **約3.0枚/G**
+- CZ間天井: **224G+α**
+- ボーナス間天井: **573G+α**
 
 ### resetBehavior v0.7
-- settingChange: **内部状態再抽選**（2019年当時解析表で直接確認）。
-- carryOver: 据え置き単独を純電断と分離した直接契約は `UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION`。
-- powerCycle: **電源OFF→ONのみは内部状態引継ぎ**（当時解析表で直接確認）。
-- gameCounterReset / ceilingAfterReset: 天井非搭載のため **NOT_APPLICABLE**。
-- modeAfterReset: 朝一専用モード/設定変更専用モード振り分けは `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
-- stateAfterReset: 設定変更=内部状態再抽選、純電断=内部状態引継ぎ。液晶ステージは当時資料でも双方「調査中」で追加探索後もUNVERIFIED。
-- advantageousSectionReset: 5.9号機A+RTのため6号機型有利区間は **NOT_APPLICABLE**。
-- resetBenefits: **朝一リセット恩恵「特に無し」**と解析資料で明記。
-- resetPenalties: 特記すべき設定変更専用不利要素は確認なし。
-- resetDetection: 本機固有ガックン条件/発生率、朝一表示による確定判別値は `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
-- numericResetData: 専用短縮天井・専用モード振り分け・朝一特定G以内当選率はN/A / 公開値なし。
+- settingChange: **CZ/ボーナス天井RESET / 状態・モードRESET / 非有利区間へ**。
+- powerCycle: **天井G・状態/モード・有利区間CARRY_OVER**。
+- carryOver: 据え置き独立条件を純電断から完全分離した直接契約は `UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION`。
+- resetStage: 当時解析の「スタジオモード」とHAZUSE「通常ステージへ」が競合。`CONFLICT_RESET_STAGE_STUDIO_MODE_VS_NORMAL_STAGE`。
+- numericResetData: 設定変更専用短縮天井/モード振り分け/朝一当選率は `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
+- HAZUSE設定5 CZ `1/94.1` は他複数資料の `1/84.1` と競合。canonical=1/84.1、`CONFLICT_CZ_SETTING5_84_1_MULTI_SOURCE_VS_94_1_HAZUSE`。
+
+## No.1288 — 超AT 美ら沖
+- manufacturer: **七匠**
+- formalModel: **`S ATちゅら沖S`**
+- certificationNumber: **`8S0820`**
+- generation/system: **6号機 / AT / 疑似ボーナス連荘タイプ**
+- releaseDate: **2019-06-03**
+- 機械割: **97.8 / 98.6 / 100.3 / 103.5 / 106.8 / 112.4%**
+- ボーナス初当たり: **1/459 / 446 / 424 / 389 / 337 / 292**
+- baseGamesPer50: **約50G**
+- AT純増: **約4.0枚/G**
+- BIG: **50G・約200枚** / REG: **15G・約60枚**
+- 最大通常天井: **999G**
+
+### resetBehavior v0.7
+- settingChange: **天井G RESET / モード再抽選 / 非有利区間へ / 有利区間ランプ消灯**。
+- powerCycle: **天井G・モード・有利区間・ランプ状態CARRY_OVER**。
+- carryOver: 据え置き独立条件は `UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION`。
+- modeAfterReset: 有利区間移行時ストック放出モード率 **50.0 / 50.0 / 50.0 / 52.3 / 55.1 / 66.8%（設定1〜6）**。これは設定変更専用値ではなく有利区間移行時共通値だが、設定変更後は再移行するため朝一比較値として採用。
+- ceilingAfterReset: ストック放出モード基本**111G**、条件付き**222G**。通常モードのリセット後主要天井**888G**。最大通常天井999Gとは定義分離。
+- resetDetection: 設定変更直後の有利区間ランプ消灯は強い推測材料だが、自然な区間終了等でも消灯し得るため `STRONG_CLUE_NOT_DETERMINISTIC`。
+- resetBenefits: 朝一有利区間移行時、設定1〜3でも50%以上で111G系ストック放出モードへ入るため、公開朝一数値として保存。
 
 ## qualityNotes / conflicts
-- 導入日の定義差を `CONFLICT_RELEASE_SCOPE_2019_05_20_DELIVERY_OR_HALL_START_VS_2019_05_21_NATIONAL_START` として保持。DBの時系列canonicalは多数機種DB/納品開始資料に合わせ2019-05-20。
-- REG最大獲得はグリーンべると / 遊技通信 / K-Navi / パチナビ / ちょんぼりすた等で **110枚**。Amusement Japanのみ **120枚**のため、`CONFLICT_REG_MAX_110_MULTI_SOURCE_VS_120_SINGLE_INDUSTRY_ARTICLE`。平均化しない。
-- 型式 `パチスロ冬のソナタKJ`、検定番号 `7S1507` はパチナビDBで確認。別型式競合は今回固定できず。
-- `咲桜弁慶` は日刊スポーツ5/13予定掲載があるが、既存handoffどおり `PLANNED_2019_05_13_BUT_ACTUAL_2019_06_17` を維持。6/17到達時に候補へ戻す。
+- 実況BINGO倶楽部の設定変更後画面は `スタジオモード` vs `通常ステージ` の資料差を平均化せずCONFLICT保持。
+- 実況BINGO倶楽部の設定5 CZは `1/84.1` 多数一致 vs HAZUSE `1/94.1` のCONFLICT。
+- 美ら沖の50%表記は概括値。HAZUSEの設定別有利区間移行時値 50.0〜66.8%を精密値として保持し、「設定変更専用抽選」とはしない。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**
@@ -62,42 +73,45 @@
 - latestFormalizedStatus: **PARTIAL_RESEARCH_EXHAUSTED**
 - nextRetroQaAction: main上の導入時系列でPIKASLO直後の未QAレコードを特定して継続。本線前進を優先。
 
-## 2019-05-20群 — CLOSED
+## 2019-06-03群 — CLOSED
 ### 登録済み
-- No.1284 天晴！モグモグ風林火山〜全国制覇版〜
-- No.1285 ハナビ通
-- No.1286 ぱちスロ 冬のソナタ
+- No.1287 実況BINGO倶楽部
+- No.1288 超AT 美ら沖
 
 ### 群監査メモ
-- 日刊スポーツ2019-05-10導入カレンダーは5/20にモグモグ / 冬のソナタを掲載。
-- ハナビ通はメーカー公式/複数導入資料で2019-05-20を確認しNo.1285登録済み。
-- 冬のソナタは5/20納品/導入開始と5/21全国導入スタートの定義差を保持してNo.1286登録。
-- 5/21〜6/2について全メーカー / 別型式 / 別スペック / PB / 地域差を検索語・導入一覧系統を変えて監査したが、独立登録すべき追加機を固定できず。
-- 日刊スポーツ2019-05-24導入カレンダーおよび別導入資料で次群は2019-06-03 `実況BINGO倶楽部 / 超AT 美ら沖` と一致。
+- 1geki 2019年6月新台カレンダーは6/3に「全5機・パチンコ3機・パチスロ2機」とし、パチスロ2機が実況BINGO倶楽部 / 超AT 美ら沖。
+- モゲスロ2019年間新台カレンダーも6/3を同2機で掲載。
+- 6/4〜6/16を別導入一覧・機種DB・メーカー/型式検索で監査し、追加パチスロを固定できず。
+- 次の明確な導入群は2019-06-17。
 
 ## 次回再開地点
-1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1286を再取得。
-2. **2019-06-03群 `実況BINGO倶楽部` をNo.1287候補**として性能コア + resetBehavior v0.7を本調査。
-3. 続いて **`超AT 美ら沖`** を同じ群で処理。
-4. 6/3群を全メーカー / 別型式 / 別スペック / PB / 地域差まで最終監査してCLOSED可否判定。
-5. 6/17到達時には延期確認済み `咲桜弁慶` を漏らさず候補へ戻す。
+1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1288を再取得。
+2. **2019-06-17群 `スーパードラゴン` をNo.1289候補**として性能コア + resetBehavior v0.7を本調査。
+3. 続いて、5/13予定から実導入6/17へ延期確認済みの **`咲桜弁慶`** を同群で処理。
+4. 6/17群を全メーカー / 別型式 / 別スペック / PB / 地域差まで最終監査してCLOSED可否判定。
+5. 欠損は公式 / 業界 / 当時解析 / 古DB / アーカイブ / 回顧資料まで資料系統を変えてからUNVERIFIED。
 
 ## 主要出典 — 取得日 2026-09-11
-### ぱちスロ 冬のソナタ
-- KYORAKU公式機種サイト: https://www.kyoraku.co.jp/product_site/2019/fuyusona_s/
-- KYORAKU 2019 NEWS: https://www.kyoraku.co.jp/news/year/2019
-- グリーンべると/P-WORLD: https://news.p-world.co.jp/articles/10931/greenbelt
-- 遊技通信/P-WORLD: https://news.p-world.co.jp/articles/10942/yugitsushin
-- Amusement Japan: https://amusement-japan.co.jp/article/detail/10001131/
-- パチナビ: https://pachinavi.net/machines/winter-sonata/
-- パチナビ設定判別: https://pachinavi.net/machines/winter-sonata/settei/
-- K-Navi: https://p-kn.com/slot/3233/
-- モゲスロ: https://moge-site.com/archives/21870
-- ちょんぼりすた: https://chonborista.com/slot/kyoraku-slot/80705/
-- すろぱちくえすと: https://www.slopachi-quest.com/article/fuyunosonata-settei/
-- パチスロ必勝ガイドMAX 2019年7月号目次: https://www.fujisan.co.jp/product/1219887/b/1837277/
+### 実況BINGO倶楽部
+- K-Navi: https://p-kn.com/slot/3222/
+- ぱちんこキュレーション: https://pachinko-curation.com/441/
+- みんスロ: https://minslo.com/%E5%AE%9F%E6%B3%81bingo%E5%80%B6%E6%A5%BD%E9%83%A8/
+- おスロおパチおいでやす: https://oslo-opachi.com/2019/06/06/binngo_tennjyou/
+- HAZUSE機種DB: https://hazuse.com/machine/pachislot/8S0682/
+- HAZUSE設定変更/電断: https://hazuse.com/machine/pachislot/8S0682/genre/207/
+- ちょんぼりすた: https://chonborista.com/slot/konami-slot/81406/
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/konami_slot/07/l.php
+- P-WORLD: https://www.p-world.co.jp/machine/database/8922
+
+### 超AT 美ら沖
+- K-Navi: https://p-kn.com/slot/3237/
+- ぱちんこキュレーション: https://pachinko-curation.com/567/
+- 一撃: https://1geki.jp/slot/s_churaoki/
+- HAZUSE機種DB/モード: https://hazuse.com/machine/pachislot/8S0820/
+- HAZUSE設定変更/電断: https://hazuse.com/machine/pachislot/8S0820/genre/207/
+- おスロおパチおいでやす: https://oslo-opachi.com/2019/06/07/churaoki_tennjyou/
+- モゲスロ: https://moge-site.com/archives/21996
 
 ### 群監査 / 次群
-- 日刊スポーツ 2019-05-10導入カレンダー: https://www.nikkansports.com/amusement/pachislot/news/201905100000340.html
-- 日刊スポーツ 2019-05-24導入カレンダー: https://www.nikkansports.com/amusement/pachislot/news/201905240000339.html
-- 6/3導入予定機種まとめ: https://pachi-jyouhoukyoku.hatenablog.com/entry/2019/05/30/230528
+- 一撃 2019年6月新台カレンダー: https://1geki.jp/newmachinecalender/201906/
+- モゲスロ 2019新台カレンダー: https://moge-site.com/new-slot2019
