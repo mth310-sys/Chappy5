@@ -89,30 +89,30 @@ P-WORLDの型式ページはBIG 345枚超、異色7ボーナス145枚超の終�
 ## resetBehavior
 
 schemaVersion: v0.7
-resetBehaviorQA: PARTIAL
-resetQaLastUpdated: 2026-09-06
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
+resetQaLastUpdated: 2026-09-11
 
-- settingChangeBehavior: 本機固有の設定変更時にCZ/RT状態がどう扱われるかを高信頼資料で確定できず UNVERIFIED_AFTER_RESEARCH
-- carryOverBehavior: 据え置き時のCZ/RT内部状態引継ぎについて高信頼資料で確定できず UNVERIFIED_AFTER_RESEARCH
-- powerCycleBehavior: 電源OFF→ONのみのCZ/RT状態挙動を高信頼資料で確定できず UNVERIFIED_AFTER_RESEARCH
-- gameCounterReset: 天井非搭載のため天井ゲーム数管理は非該当
-- ceilingAfterReset: 非該当（天井非搭載）
-- modeAfterReset: 朝一専用モード/設定変更専用モードの公開情報を確認できず
-- stateAfterReset: CZ/RT状態の設定変更時再抽選・消去・維持は今回確定できず
-- advantageousSectionReset: 非該当（有利区間制度導入前）
-- resetBenefits: 公開された主要な朝一/設定変更恩恵を確認できず
-- resetPenalties: 公開された主要な設定変更不利要素を確認できず
-- resetDetection: 本機固有のガックン等変更判別を、当時解析・後年回顧・機種DBを横断したが確定できず
-- publicMorningNumbers: 確認できる公開数値なし
+- settingChangeBehavior: 後年整理資料slot-games.onlineに「設定変更時にはチャンスゾーンからスタート」とする初代固有記述を確認したため、設定変更後の開始状態=CZを `ANALYSIS_SINGLE` で固定。設定変更直前がRT/CZだった場合の残G・フラグ処理まで直接説明する資料は未固定のため推測しない。
+- carryOverBehavior: 据え置き時のCZ/RT内部状態引継ぎについて、初代固有の直接契約を資料系統変更後も固定できず `UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION`。
+- powerCycleBehavior: 電源OFF→ONのみのCZ/RT状態挙動を、据え置きと独立した初代固有契約として固定できず `UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION`。
+- gameCounterReset: 天井非搭載のため公開天井ゲーム数管理は `NOT_APPLICABLE`。
+- ceilingAfterReset: 天井非搭載のため `NOT_APPLICABLE`。設定変更専用短縮天井なし。
+- modeAfterReset: ゲーム数モードは確認されない。設定変更後はCZ開始とする資料を確認。
+- stateAfterReset: 設定変更後=CZ開始を `ANALYSIS_SINGLE` で確認。CZ中はベル成立等から33G完走型RTへ突入する通常システム。設定変更前RT残G等の扱いは未固定。
+- advantageousSectionReset: 有利区間制度導入前のため `NOT_APPLICABLE`。
+- resetBenefits: 設定変更後CZ開始のため、朝一にCZ由来のRT突入機会が存在する。これを固定的な出玉恩恵率とは扱わない。
+- resetPenalties: 設定変更専用の公開不利要素は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- resetDetection: slot-games.onlineは「朝一にチェリーより先にベルが成立し、RT突入したら設定変更の可能性が高くなる」とする判別手掛かりを掲載。確定条件ではなく `WEAK_TO_MODERATE_CLUE_ANALYSIS_SINGLE` として保持。ガックン等の本機固有確定条件は `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
+- publicMorningNumbers: 設定変更時CZ開始は確認したが、朝一CZからのRT突入率や変更判別精度などの設定変更専用公開数値は `PUBLIC_NUMERIC_RESET_DATA_NOT_FOUND_AFTER_RESEARCH`。
 
 ### resetBehavior 再探索メモ
 
-「スカイラブ / スカイラブX / SNKプレイモア / 2007」に「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / RT引継ぎ / CZ / ガックン / 天井」を組み合わせ、P-WORLD、パチマガスロマガ旧攻略、パチマガインターネット、パチ7の当時解析担当者回顧、古い機種情報サイトを再横断した。2026-09-06の遡及QAでも、天井非搭載、通常時のCZ/RTシステムまでは高信頼で確認できた一方、ホール電源断・設定変更時の内部CZ/RT状態処理を直接示す追加資料は固定できなかった。一般的な5号機挙動から補完せずPARTIALを維持する。
+「スカイラブ / スカイラブX / SNKプレイモア / 2007」に「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / RT引継ぎ / CZ / ガックン / 天井 / ベル / チェリー」を組み合わせ、P-WORLD、パチマガスロマガ旧攻略、パチマガインターネット、パチ7の当時解析担当者回顧、古い機種情報サイト、後年整理資料を再横断。今回、初代固有の「設定変更時CZスタート」と、朝一ベル先行→RT突入を変更判別の手掛かりとする資料を追加固定。一方、据え置き・純電断時のCZ/RT内部状態、設定変更前RT残G等の処理は直接資料を固定できず一般的5号機挙動から補完しない。
 
 ## sources
 
 初回取得日: 2026-08-31
-resetBehavior再取得日: 2026-09-06
+resetBehavior再取得日: 2026-09-11
 
 1. P-WORLD — スカイラブ「2007年」
    - https://www.p-world.co.jp/machine/database/4529
@@ -144,16 +144,18 @@ resetBehavior再取得日: 2026-09-06
    - reliability: ANALYSIS_HIGH
 8. slot-games.online — パチスロスカイラブ概要
    - https://slot-games.online/slot/skylove.html
-   - 2007年5号機、天井機能なし、33G完走型RTの後年整理
-   - reliability: ANALYSIS_SINGLE
+   - 2007年初代。天井なし、33G完走型RT/CZ構造に加え「設定変更時はチャンスゾーンからスタート」、朝一ベル先行後RT突入を変更可能性の手掛かりと記載。
+   - reliability: ANALYSIS_SINGLE / RETROSPECTIVE
 
 ## missingFields
 
-- 設定変更/据え置き/電源OFF→ON時のCZ・RT内部状態処理
-- 本機固有のresetDetection（ガックン等）
+- 据え置き/電源OFF→ON時のCZ・RT内部状態処理
+- 設定変更前RT/CZ残状態の詳細処理
+- 本機固有ガックン等の確定resetDetection
+- 設定変更専用公開朝一数値
 
 coreStatus: COMPLETE_CORE
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
 
 ## conflicts
 
