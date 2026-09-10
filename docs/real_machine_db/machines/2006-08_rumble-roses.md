@@ -6,7 +6,7 @@ releaseDate: 2006-08
 generation: 5号機初期
 systemType: ノーマル系 + 技術介入チャレンジタイム
 coreStatus: PARTIAL
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
 
 ## payoutRateBySetting
 
@@ -77,7 +77,7 @@ UNVERIFIED_AFTER_RESEARCH
 
 ### powerCycleBehavior
 
-電源OFF→ONのみの場合のチャレンジタイム状態、成立済みボーナス、初期出目等の扱いは `UNVERIFIED_AFTER_RESEARCH`。
+電源OFF→ONのみの場合のチャレンジタイム状態、成立済みボーナス、初期出目等の扱いは `UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION`。
 
 ### gameCounterReset
 
@@ -105,11 +105,11 @@ UNVERIFIED_AFTER_RESEARCH
 
 ### resetBenefits
 
-短縮天井、朝一専用RT/ART、専用モード、初当たり優遇: `NONE_CONFIRMED`。
+短縮天井、朝一専用RT/ART、専用モード、初当たり優遇: `NONE_CONFIRMED_AFTER_RESEARCH`。
 
 ### resetPenalties
 
-`NONE_CONFIRMED`。
+`NONE_CONFIRMED_AFTER_RESEARCH`。
 
 ### resetDetection
 
@@ -117,11 +117,21 @@ UNVERIFIED_AFTER_RESEARCH
 
 ### numericResetData
 
-設定変更時専用の比較可能な公開朝一数値: `NONE_CONFIRMED`。
+設定変更時専用の比較可能な公開朝一数値: `NONE_CONFIRMED_AFTER_RESEARCH`。
+
+## retrospectiveResetQA
+
+- qaDate: 2026-09-10
+- qaResult: `PARTIAL_RESEARCH_EXHAUSTED`
+- performanceCoreStatusPreserved: `YES; coreStatus remains PARTIAL`
+- 再探索系統: 初代機名+KPE+設定変更/リセット/朝一/据え置き/電源OFF ON/チャレンジタイム/50枚/コイン持ち、公式・業界回顧・旧解析・実機販売資料。
+- 2026-09-10再探索でも初代固有の設定変更/据え置き/純電断時チャレンジタイム処理、変更判別、公開朝一数値は新規固定できなかった。
+- 検索結果には後継`ランブルローズXX`/`ランブルローズ3D`および同名ゲーム資料が多数混入するため、初代実機へ流用しない。
+- パチ7の5号機ボーナス構造回顧で、初代の青7「ランブルチャンス」が253枚超払い出しで終了する2種BB/CB高確率構造である点は再確認。これは性能コア補強でありreset処理の証拠ではない。
 
 ## sources
 
-取得日: 2026-09-01
+取得日: 2026-09-01 / reset QA再確認: 2026-09-10
 
 1. コナミアミューズメント 機種アーカイブ — 2006年 ランブルローズ
    - https://www.konami.com/amusement/psm/archive/ps/2006/rumble/
@@ -137,7 +147,7 @@ UNVERIFIED_AFTER_RESEARCH
    - reliability: ANALYSIS_SINGLE
 4. パチ7 — 5号機のボーナス構造解説
    - https://pachiseven.jp/articles/detail/7071
-   - 2006年8月KPE機として、ランブルチャンスの2種BB/CB高確率構造を解説。
+   - 2006年8月KPE機として、青7ランブルチャンスの253枚超払い出し終了・2種BB/CB高確率構造を解説。2026-09-10再確認。
    - reliability: ANALYSIS_HIGH
 5. グリーンべると — KPE『ランブルローズXX』発表記事
    - https://web-greenbelt.jp/00003794/
