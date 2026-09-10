@@ -1,109 +1,102 @@
 更新日: 2026-09-11
 
 ## 現在地点
-- recordCount: **1259**
-- latestRecordAdded: **パチスロ フィーバークィーンII**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2019-01-21_pachislo-fever-queen-ii.md`
+- recordCount: **1261**
+- latestRecordAdded: **島漢-30**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2019-01-21_shima-musuko-30.md`
 - chronologicalFrontier: **2019-01-21**
-- frontierLatestMachine: **パチスロ フィーバークィーンII — No.1259**
+- frontierLatestMachine: **島漢-30 — No.1261**
 - schema: **resetBehavior v0.7**
 - status: **2019-01-21_GROUP_OPEN**
 
 ## 今回の同期 / 進捗
-- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1258を再取得して開始。
-- INDEXは旧スナップショットのため、LATEST_HANDOFF + main実レコードを正本として継続。
-- 開始時mainは1258件、No.1258 `戦国BASARA HEROES PARTY`、2019-01-21群OPEN。
-- handoff指定の未処理先頭 No.1259 `パチスロ フィーバークィーンII` を性能コア + resetBehavior v0.7で登録。
-- 2019-01-21群は島漢/ゲッターロボ候補が残るためOPENを維持。
+- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1259を再取得して開始。
+- INDEXは旧スナップショットのためLATEST_HANDOFF + main実レコードを正本として継続。
+- handoff指定の島漢について25Φ/30Φの型式・メーカー差を再監査。
+- 性能は同一だが、25Φ=`SシマムスコHB1` / 平和、30Φ=`SシマムスコMB1-30` / アムテックスと独立型式・製造元差があるため、全機種方針に従い2レコード化。
+- No.1260 `島漢（25Φ）`、No.1261 `島漢-30` を性能コア + resetBehavior v0.7で登録。
+- 30ΦはHAZUSEで検定番号 `8S0769` まで固定。25Φ検定番号は十分再探索後も未固定。
+- 2019-01-21群は `ぱちスロ ゲッターロボ` が未処理のためOPEN維持。
 
-## No.1259 — パチスロ フィーバークィーンII
-- manufacturer canonical: **SANKYO**（公式ブランド表記を優先。P-WORLD/中古DBにビスティ表記あり）
+## No.1260 / No.1261 — 島漢 25Φ / 30Φ
 - releaseDateCanonical: **2019-01-21**
-- generation/system: **5.9号機 / A+RT / リアルボーナス+30G RT**
+- generation/system: **6号機 / AT疑似ボーナス / 完全告知**
 - settings: **1 / 2 / 5 / 6**
-- formalModelName: **パチスロ フィーバークィーンII b** (`OFFICIAL`)
-- certificationNumber: **UNVERIFIED_AFTER_RESEARCH**
-- 機械割: **97.5 / 99.9 / 104.2 / 109.3%**
-- 赤7BIG: **1/993 / 1/963 / 1/936 / 1/910**
-- 青7BIG: **1/402 / 1/390 / 1/376 / 1/356**
-- REG: **1/346 / 1/321 / 1/299 / 1/268**
-- ボーナス合算: **1/156 / 1/148 / 1/141 / 1/131**
-- baseGamesPer50: **約33.3G**
-- RT純増: **現状維持程度**。比較可能な枚/G値は `UNVERIFIED_AFTER_RESEARCH_AS_NUMERIC_RATE`。
-- 赤7BIG **300枚** / 青7BIG **240枚** / REG **最大108枚**。
-- 全ボーナス後 **30G RT**。
-- 通常ゲーム数天井: **非搭載**。
+- 25Φ manufacturer/formalModel: **平和 / `SシマムスコHB1`**
+- 30Φ manufacturer/formalModel/certification: **アムテックス / `SシマムスコMB1-30` / `8S0769`**
+- 機械割: **97.5 / 99.9 / 104.9 / 110.1%**
+- BIG CHANCE: **1/455.1 / 1/406.6 / 1/343.0 / 1/286.3**
+- 島CHANCE: **1/425.8 / 1/400.2 / 1/355.1 / 1/333.1**
+- 合算: **1/220.0 / 1/201.7 / 1/174.5 / 1/154.0**
+- baseGamesPer50: **約50.3G**
+- AT純増: **約4.0枚/G**
+- BIG CHANCE: **70G / 約280枚**
+- 島CHANCE: **30G / 約120枚**
+- 通常ゲーム数天井: **約600G**
+- スイカ回数天井: **通常時スイカ3回でBIG CHANCE**
 
 ### resetBehavior v0.7
-- settingChangeBehavior: **RT状態リセット / 演出モード=クィーンモード / 保留・リーチ=リセット**。本機専用朝一表2系統で一致。
-- powerCycleBehavior: **RT状態引継ぎ / 演出モード=クィーンモード / 保留・リーチ=リセット**。本機専用朝一表2系統で一致。
-- carryOverBehavior: 据え置きを純電源OFF→ONと分離した直接契約は `UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION`。
-- gameCounterReset / ceilingAfterReset: 通常天井非搭載につき `NOT_APPLICABLE_NORMAL_GAME_CEILING`。設定変更短縮天井なし。
-- modeAfterReset: 演出モードは設定変更/電断ともクィーンモード。朝一専用内部当選モードは `NONE_CONFIRMED_AFTER_RESEARCH`。
-- advantageousSectionReset: 本機固有の適用有無/設定変更契約を直接固定できず `NOT_CONFIRMED_AS_APPLICABLE / UNVERIFIED_AFTER_RESEARCH`。一般5.9号機仕様から補完しない。
-- resetBenefits: 朝一専用短縮天井・ボーナス当選率・RT優遇は `NONE_CONFIRMED_AFTER_RESEARCH`。
-- resetPenalties: 設定変更時はRT状態リセット。その他は `NONE_CONFIRMED_AFTER_RESEARCH`。
-- resetDetection: RT状態の差は材料になり得るが据え置き独立契約未固定。保留/リーチと演出モードは双方同じため変更判別不可。本機固有ガックン条件/率は `UNVERIFIED_AFTER_RESEARCH`。
-- numericResetData: 公開朝一専用当選率/恩恵率/ガックン率は `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
+- settingChange: **天井G RESET / 内部モード再抽選 / 内部状態再抽選 / 非有利区間へ移行**。
+- powerCycle: **天井G・内部モード・内部状態を引継ぎ**。HAZUSEと当時解析で一致。
+- carryOver: 据え置きを純電断から完全分離した直接契約は `UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION`。
+- ceilingAfterReset: 約600G。短縮天井は確認なし。
+- resetBenefits: リセット後は内部的にときめき高確スタート濃厚とする当時解析。100G以内当選時BIG優遇。
+- numericResetData: リセット後100G以内初当たり実戦値 **約1/337.6**、同区間で当選時BIG比率 **約97%**、その後100G以内連チャン率 **約72%**。いずれも `EMPIRICAL_PUBLIC_VALUE` として解析確定値と分離。
+- resetDetection: 朝一100G以内REG=据え置き濃厚、BIG=リセット可能性上昇。前日+当日600G当選=据え置き濃厚、600G超過=リセット濃厚とする解析。ガックン率は未確認。
 
-### quality notes
-- SANKYOオンライン博物館が公式型式名 `パチスロ フィーバークィーンII b` を明記。
-- 導入日はAmusement Japan 2018-11-28当時記事と複数解析で2019-01-21一致。
-- K-NaviのBIG合算欄には設定2=1/278という個別BIG値と整合しない表記があるため、BIG合算はcanonical採用せず公式の赤/青BIG個別値と全ボーナス合算を優先。
-- メーカーは公式ブランドSANKYOをcanonical。一部DBのビスティ表記は資料差として記録。
-- 検定番号は表記揺れ/型式名/公安委員会/検定通過/旧DB等まで再探索したが直接固定できずUNVERIFIED。
+## 遡及 resetBehavior QA
+- retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**
+- retroQaScanConfirmedThrough: **`docs/real_machine_db/machines/2006-12_aqua-venus.md`**
+- lastRetroQaResult: **アクアビーナス — PARTIAL_RESEARCH_EXHAUSTED**
+- アクアビーナスは性能コア/既存CONFLICTを崩さずreset側のみ再監査。
+- 設定変更/据え置き/純電断時のボーナス成立後高リプレイ状態・告知待ち状態の契約、朝一ガックン/初期出目/公開数値を検索語・資料系統変更で再探索したが直接資料を固定できず推測補完しない。
+- advantageousSectionReset: `NOT_APPLICABLE`（制度前）。
+- nextRetroQaCandidate: **`docs/real_machine_db/machines/2006-12_thunder-v-special.md`**。main上ですでにv0.7 QA済みなら重複編集せずGit追加順の次の未QA機へ自動前進する。
 
 ## 2019-01-21群
 ### 登録済み
 - No.1257 ぱちスロAKB48 エンジェル
 - No.1258 戦国BASARA HEROES PARTY
 - No.1259 パチスロ フィーバークィーンII
+- No.1260 島漢（25Φ）
+- No.1261 島漢-30
 
 ### 未処理候補
-1. **島漢** — 2019-01-21導入。25Φ=平和 / 30Φ=アムテックス、性能同一と一撃が明記。型式差と独立レコード要否を確認してNo.1260候補を決定。
-2. **ぱちスロ ゲッターロボ** — KYORAKU公式告知の2019-01-21全国導入を二次引用で確認。島漢処理後候補。
+1. **ぱちスロ ゲッターロボ** — KYORAKU系、2019-01-21全国導入候補。次回No.1262候補として公式/業界/当時解析を再監査。
 
 ### 群判定
 - **2019-01-21_GROUP_OPEN**。
-- 2019-01-17付導入直前一覧では、フィーバークィーンII / AKB48エンジェル / 戦国BASARA HEROES PARTY / 島漢 / ゲッターロボの5機を列挙。
-- 残り処理後に全メーカー/別型式/別スペック/PB/地域差監査で追加なしを確認してからCLOSED判定。
-
-## 遡及 resetBehavior QA
-- retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
-- retroQaScanConfirmedThrough: **`docs/real_machine_db/machines/2006-12_moeru-marine-battle.md`**。
-- lastRetroQaResult: **モエる まりんバトる — PARTIAL_RESEARCH_EXHAUSTED**。
-- nextRetroQaCandidate: **`docs/real_machine_db/machines/2006-12_aqua-venus.md`（アクアビーナス）**。
-- 今回は新規時系列群処理を優先し、QAカーソル変更なし。
+- ゲッターロボ処理後に全メーカー/別型式/別スペック/PB/地域差監査を実施し、追加なし確認後のみCLOSED。
 
 ## 継続注意事項
-- `INDEX.md`は旧スナップショット。`LATEST_HANDOFF.md` + main実レコードを優先。
-- 毎回最新mainのREADME / mission / INDEX / LATEST_HANDOFF / latest recordを読み直す。
-- 並行更新があれば最新HEADを優先し、古い番号で上書きしない。
+- 毎回最新mainのREADME / mission / INDEX / LATEST_HANDOFF / latest recordを再取得。
+- 並行更新があれば最新mainを優先し、古い番号で上書きしない。
 - 据え置きと純電断を同義扱いしない。
+- 同一性能でも正式型式・製造元・25/30Φ等の明確な派生差は全機種方針に従い独立収録を検討。
 - 同一/近似ゲーム性の先行・後継機からresetBehaviorを自動転記しない。
-- 同日群は全メーカー/別型式/別スペック/PB/地域差監査後のみCLOSED。
-- 競合値は平均せずCONFLICTを保持。
+- COMPLETE_COREの性能完了判定とreset QA状態を分離。
+- 競合値は平均せずCONFLICT保持。
 
 ## 次回再開地点
-1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1259を再取得。
-2. **1259件 / chronologicalFrontier 2019-01-21 / `2019-01-21_GROUP_OPEN`** を正本として継続。並行更新があれば最新HEAD優先。
-3. **島漢 25Φ/30Φ** の型式差・独立レコード要否を先に固定し、最古未処理を **No.1260** として性能コア + resetBehavior v0.7で収集。
-4. 次に **ぱちスロ ゲッターロボ** を処理。
-5. 1/21群を全メーカー/別型式/別スペック/PB/地域差監査後にのみCLOSED判定。
-6. 遡及QAは `docs/real_machine_db/machines/2006-12_aqua-venus.md` から再開。
+1. 最新mainを再取得しrecordCount/HEAD競合を確認。
+2. **No.1262候補 `ぱちスロ ゲッターロボ`** を性能コア + resetBehavior v0.7で収集。
+3. 2019-01-21群の全メーカー/別型式/別スペック/PB/地域差を最終監査しCLOSED可否判定。
+4. 遡及QAは `2006-12_thunder-v-special.md` から確認し、既QAなら次の未QA機まで進める。
 
 ## 主要出典 — 取得日 2026-09-11
-### No.1259 パチスロ フィーバークィーンII
-- SANKYOオンライン博物館: https://www.sankyo-fever.jp/collection/720/
-- Amusement Japan: https://amusement-japan.co.jp/article/detail/10000919/
-- ちょんぼりすた: https://chonborista.com/slot/sankyo-slot/74772/
-- pachislo-data: https://pachislo-data.com/sankyo/82208
-- K-Navi: https://p-kn.com/slot/3140/
-- P-WORLD: https://www.p-world.co.jp/machine/database/8808
-- 5号機クロニクル: https://5goki.com/bisty
+### 島漢
+- DMMぱちタウン: https://p-town.dmm.com/machines/3299
+- HAZUSE 島漢-30: https://hazuse.com/machine/pachislot/8S0769/
+- すろかい: https://slotkaiseki.hatenablog.com/entry/shimamusuko
+- パチ＆スロ必勝本: https://p.hisshobon.jp/machine/3284/1/72007
+- すろぱちくえすと設定: https://www.slopachi-quest.com/article/shimamusuko-settei/
+- すろぱちくえすとリセット: https://www.slopachi-quest.com/article/shimamusuko-reset/
+- ちょんぼりすた: https://chonborista.com/slot/orinpia-slot/69475/
+- 日刊スポーツ: https://www.nikkansports.com/m/amusement/pachislot/news/201811130000380_m.html
+- パチビー: https://www.pachibee.jp/pparticles/view/1108
 
-### 2019-01-21群監査
-- 導入直前一覧: https://pachi-jyouhoukyoku.hatenablog.com/entry/2019/01/17/230000
-- 島漢 一撃: https://1geki.jp/slot/s_shimamusuko
-- 島漢 すろぱちくえすと: https://www.slopachi-quest.com/article/shimamusuko-settei/
-- ゲッターロボ/KYORAKU公式告知引用: https://psumma.jp/pachislo/47186/
+### アクアビーナス QA
+- P-WORLD: https://www.p-world.co.jp/machine/database/4492
+- 5号機クロニクル: https://5goki.com/heiwa-olympia
+- グリーンべると: https://web-greenbelt.jp/00004935/
+- パチマガスロマガFREE: https://pachimaga.com/free/special/c8e934bc667b6ad09cfc1125474f943e7dc41e52.php
