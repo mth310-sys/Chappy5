@@ -1,54 +1,56 @@
 更新日: 2026-09-11
 
 ## 現在地点
-- recordCount: **1264**
-- latestRecordAdded: **ミリオンルーレット**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2019-02-04_million-roulette.md`
+- recordCount: **1265**
+- latestRecordAdded: **ニューパルサーDX ～チェリーバージョン～**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2019-02-04_new-pulsar-dx-cherry-version.md`
 - chronologicalFrontier: **2019-02-04**
-- frontierLatestMachine: **ミリオンルーレット — No.1264**
+- frontierLatestMachine: **ニューパルサーDX ～チェリーバージョン～ — No.1265**
 - schema: **resetBehavior v0.7**
-- status: **2019-02-04_GROUP_OPEN_2_OF_3_CONFIRMED_CANDIDATES_PROCESSED**
+- status: **2019-02-04_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**
 
 ## 今回の同期 / 進捗
-- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1263を再取得して開始。
+- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1264を再取得して開始。
 - INDEXは旧スナップショット（19件）のため、LATEST_HANDOFF + main実レコードを正本として継続。
-- main上で `ミリオンルーレット` 未登録を確認し、2019-02-04群の次の未処理としてNo.1264登録。
-- コナミアミューズメント公式アーカイブで2019年2月稼働開始・5.9号機ノーマルを確認。
-- ちょんぼりすた / すろぱちくえすと / モゲスロ / P-WORLD / 当時導入一覧で2019-02-04が一致するためcanonical固定。
-- P-WORLDで型式 `ミリオンルーレット／KU`、検定番号 `7S1401` を取得。
+- main上で `ニューパルサーDX ～チェリーバージョン～` 未登録を確認し、2019-02-04群の次の未処理としてNo.1265登録。
+- 山佐ネクスト公式で5号機/Aタイプ/2019年2月稼働を確認。
+- HAZUSEで2019-02-04、型式 `ニューパルサーDX2／CC`、検定番号 `7S1206` を取得。
+- 日刊スポーツ・Amusement Japanの当時業界記事、HAZUSE、パチマガスロマガ、すろぱちくえすと、ちょんぼりすた、一撃、P-WORLDで性能コアを照合。
+- 設定変更/据え置き/純電断について、機種名表記揺れ・型式・メーカー・シリーズ名と設定変更/リセット/朝一/据え置き/電源OFF ON/ガックンを組み替えて再探索。天井非搭載・朝一リセット恩恵なしの可能性までは確認したが、本機固有の初期出目/内部ボーナス成立/告知状態/ガックン契約は固定できず推定しない。
+- 2019-02-04群を当時新台一覧・HAZUSE・一撃月間カレンダーで再監査。当時新台一覧はA-SLOT DARTSLIVE / ニューパルサーDXチェリー / ミリオンルーレットの3機を明示。全3機登録済みのため群をCLOSED。なお後年一撃月間カレンダーは2/4のスロットを2機と表示しミリオンルーレットを欠くため、単独の完全一覧としては採用しない。
 
-## No.1264 — ミリオンルーレット
+## No.1265 — ニューパルサーDX ～チェリーバージョン～
 - releaseDateCanonical: **2019-02-04**
-- manufacturer: **コナミアミューズメント**
-- generation/system: **5.9号機 / ノーマルAタイプ**
-- formalModel: **`ミリオンルーレット／KU`**
-- certificationNumber: **`7S1401`**
+- manufacturer: **山佐**
+- generation/system: **5.9号機 / ノーマルAタイプ / 完全告知**
+- formalModel: **`ニューパルサーDX2／CC`**
+- certificationNumber: **`7S1206`**
 - settings: **1 / 2 / 3 / 4 / 5 / 6**
-- 機械割: **97.5 / 98.7 / 100.1 / 102.1 / 104.9 / 110.9%**
-- BIG: **1/277.7 / 1/274.2 / 1/271.9 / 1/268.6 / 1/262.1 / 1/241.8**
-- REG: **1/368.2 / 1/348.6 / 1/321.3 / 1/290.0 / 1/266.4 / 1/241.8**
-- 合算: **1/158.3 / 1/153.5 / 1/147.3 / 1/139.4 / 1/132.1 / 1/120.9**
-- baseGamesPer50: **約33.7G/50枚**
+- 機械割: **96.9 / 98.2 / 99.8 / 102.1 / 105.3 / 108.5%**
+- BIG: **1/284.94 / 1/283.71 / 1/277.69 / 1/268.59 / 1/260.06 / 1/251.10**
+- REG: **1/404.54 / 1/385.51 / 1/372.36 / 1/344.93 / 1/312.08 / 1/287.44**
+- 合算: **1/167.18 / 1/163.43 / 1/159.07 / 1/151.00 / 1/141.85 / 1/134.02**
+- baseGamesPer50: **35.31 / 35.69 / 36.00 / 36.50 / 36.87 / 37.65G**
 - BIG: **312枚**
 - REG: **約104枚**
 - RT/ART/AT: **非搭載**
 - 天井: **非搭載**
 
 ### resetBehavior v0.7
-- settingChange: 天井・AT/ART/RTモード管理はN/A。初期出目/内部ボーナス成立/ルーレット演出状態の本機固有直接契約は `UNVERIFIED_AFTER_RESEARCH`。
+- settingChange: 天井・AT/ART/RTモード管理はN/A。初期出目/内部ボーナス成立/告知状態の本機固有直接契約は `UNVERIFIED_AFTER_RESEARCH`。
 - carryOver: 据え置きを純電断と分離した本機固有保持契約は `UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION`。
-- powerCycle: 純電源OFF→ON時の初期出目/内部成立/演出状態は `UNVERIFIED_AFTER_RESEARCH`。
+- powerCycle: 純電源OFF→ON時の初期出目/内部成立/告知状態は `UNVERIFIED_AFTER_RESEARCH`。
 - gameCounterReset / ceilingAfterReset: `NOT_APPLICABLE`（天井・ゾーン非搭載）。
 - modeAfterReset / stateAfterReset: AT/ART/RTモードはN/A。朝一専用当選率・専用モードは `NONE_CONFIRMED_AFTER_RESEARCH`。
 - advantageousSectionReset: `NOT_APPLICABLE_TO_GAMEPLAY / NO_AT_ART_ADVANTAGEOUS_SECTION_BEHAVIOR_TO_MODEL`。世代一般論から補完しない。
-- resetBenefits: ちょんぼりすたは朝一恩恵なしの可能性が高いと記載。短縮天井等は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- resetBenefits: ちょんぼりすたは朝一リセット恩恵なしの可能性が高いと記載。短縮天井等は `NONE_CONFIRMED_AFTER_RESEARCH`。
 - resetPenalties: `NONE_CONFIRMED_AFTER_RESEARCH`。
-- resetDetection: モゲスロは液晶なしAタイプのため確実なリセット判別は難しく、コナミ機ではガックンが効かない可能性が高いとする。確定契約ではないため `RESET_DETECTION_DIFFICULT / GAKKUN_UNCONFIRMED_POSSIBLY_INEFFECTIVE`。
+- resetDetection: 本機固有ガックン条件/率を固定できず `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。山佐他機種の仕様を転記しない。
 - numericResetData: 短縮天井N/A。朝一当選率/専用モード振り分け/ガックン率の公開固定値なし。
 
 ## conflicts
-- 性能コア・導入日の主要値に実質的CONFLICTなし。
-- 朝一恩恵・ガックンに関する二次資料は推測表現を含むため確定仕様へ昇格させない。
+- 後年5号機クロニクルに導入「2019年4月」・BIG「最大259枚」とあるが、山佐公式2019年2月、当時業界記事2019年2月上旬、複数当時解析2019-02-04、BB312枚が一致。`CONFLICT_SECONDARY_RETROSPECTIVE_RELEASE_2019_04_AND_BIG259_VS_CONTEMPORARY_2019_02_04_AND_BIG312` としてNo.1265内に保持。
+- 2019-02-04群一覧について、当時パチパチ情報部はスロット3機を明示する一方、後年一撃月間カレンダーは2機表示でミリオンルーレットを欠く。群監査では当時資料+既存個別導入資料を優先し3機群とする。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**
@@ -60,12 +62,10 @@
 ### 登録済み
 - No.1263 A-SLOT DARTSLIVE
 - No.1264 ミリオンルーレット
-
-### 未処理確認候補
-1. **ニューパルサーDX ～チェリーバージョン～** — 山佐 / 5.9号機ノーマル。
+- No.1265 ニューパルサーDX ～チェリーバージョン～
 
 ### 群判定
-- **OPEN**。確認済み3機中2機処理済み。残るニューパルサーDX ～チェリーバージョン～を処理後、メーカー別/別型式/別スペック/PB/地域差を再監査してCLOSED可否を判断する。
+- **CLOSED_AFTER_CROSS_SOURCE_AUDIT**。当時2/4新台一覧のスロット3機を全登録。メーカー別/別型式/別スペック/PB/地域差の追加独立機は今回の横断検索で固定できず。
 
 ## 継続注意事項
 - 毎回最新mainのREADME / mission / INDEX / LATEST_HANDOFF / latest recordを再取得。
@@ -76,17 +76,25 @@
 
 ## 次回再開地点
 1. 最新mainを再取得しrecordCount/HEAD競合を確認。
-2. **2019-02-04群の次の未処理機 `ニューパルサーDX ～チェリーバージョン～` をNo.1265候補として個別監査・登録**。
-3. 2/4群を全メーカー・別型式・別スペック・PB・地域差で最終横断監査しCLOSED可否を判定。
-4. 遡及QAは `2006-12_thunder-v-special.md` から確認し、既QAなら次の未QA機まで進める。
+2. **2019-02-05以降〜次の導入群までの境界監査**を行い、未処理機を導入日順に固定する。
+3. 現時点で次の有力な導入群は **2019-02-18**。先行確認候補として **パチスロ ヱヴァンゲリヲン AT777**（ビスティ / 6号機AT / 2019-02-18）を確認済み。境界に2/5〜2/17機がないことを横断確認してからNo.1266候補として処理する。
+4. 2019-02-18群は単一候補でCLOSEせず、メーカー別/別型式/別スペック/PB/地域差まで監査する。
+5. 遡及QAは `2006-12_thunder-v-special.md` から確認し、既QAなら次の未QA機まで進める。
 
 ## 主要出典 — 取得日 2026-09-11
-### ミリオンルーレット
-- コナミアミューズメント公式: https://www.konami.com/amusement/psm/archive/ps/2019/millionroulette/
-- P-WORLD: https://www.p-world.co.jp/machine/database/8822
-- ちょんぼりすた: https://chonborista.com/slot/konami-slot/75448/
-- すろぱちくえすと: https://www.slopachi-quest.com/article/millionroulette-settei/
-- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/konami_slot/05/a.php
-- モゲスロ: https://moge-site.com/archives/19565
-- スロット解析情報~すろかい~: https://slotkaiseki.hatenablog.com/entry/million
+### ニューパルサーDX ～チェリーバージョン～
+- 山佐ネクスト公式: https://yamasa-next.co.jp/model_npd2/
+- 日刊スポーツ: https://www.nikkansports.com/amusement/pachislot/news/201812100000411.html
+- Amusement Japan: https://amusement-japan.co.jp/article/detail/10000951/
+- HAZUSE: https://hazuse.com/machine/pachislot/7S1206/
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/230/a.php
+- パチマガスロマガ ベース: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/230/c-1.php
+- すろぱちくえすと: https://www.slopachi-quest.com/article/newpluser-dx-cherry-settei/
+- ちょんぼりすた: https://chonborista.com/slot/yamasa-slot/75476/
+- 一撃: https://1geki.jp/slot/s_newpul_c/4/
+- P-WORLD: https://www.p-world.co.jp/machine/database/8839
 - 当時2/4新台一覧: https://pachi-jyouhoukyoku.hatenablog.com/entry/2019/01/27/223203
+- 5号機クロニクル山佐一覧（競合参照）: https://5goki.com/yamasa
+
+### 次回先行候補
+- パチスロ ヱヴァンゲリヲン AT777: https://slotkaiseki.hatenablog.com/entry/2018/12/31/215348
