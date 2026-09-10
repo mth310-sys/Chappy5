@@ -1,120 +1,99 @@
 更新日: 2026-09-10
 
 ## 現在地点
-- recordCount: **1222**
-- latestRecordAdded: **TOWSER（トウサー）**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2018-08-06_towser.md`
-- chronologicalFrontier: **2018-08-06**
-- frontierLatestMachine: **TOWSER（トウサー） — No.1222**
+- recordCount: **1223**
+- latestRecordAdded: **パチスロ蒼き鋼のアルペジオ‐アルス・ノヴァ‐ Mental Model ver.**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2018-08-20_aoki-hagane-arpeggio-mental-model.md`
+- chronologicalFrontier: **2018-08-20**
+- frontierLatestMachine: **パチスロ蒼き鋼のアルペジオ‐アルス・ノヴァ‐ Mental Model ver. — No.1223**
 - schema: **resetBehavior v0.7**
-- status: **2018-08-06_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**
+- status: **2018-08-20_GROUP_OPEN_1_OF_AT_LEAST_2_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1221を再取得して開始。
+- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1222を再取得して開始。
 - INDEXは19件時点の旧スナップショットのため、README規定どおりLATEST_HANDOFF + main実レコードを正本として継続。
-- 1221件 / 2018-08-06群OPENを確認し、未処理先頭TOWSERを既存重複なし確認後No.1222として登録。
-- 日刊スポーツ導入カレンダーと当時解析でTOWSERの2018-08-06導入、JPS、ノーマル機を固定。
-- TOWSERはBIG312枚、REG104枚、通常ゲーム数天井非搭載。設定別BIG/REG/合算、打ち方別機械割、打ち方別50枚ベースを取得。
-- 精密な完全取得機械割は97.65/99.01/101.64/103.87/105.89/110.35%。適当打ちは95.47/96.87/99.55/101.85/103.92/108.40%。
-- BIGは1/281.27～1/234.06、REGは1/451.97～1/270.81、合算は1/173.38～1/125.55。
-- 50枚ベースは適当打ち33.3～34.1G、完全取得35.4～36.4G。手順差を競合扱いせず定義差として分離。
-- 正式型式名/検定番号は検索語・資料系統を変更しても高信頼固定できずUNVERIFIED_AFTER_RESEARCH。
-- resetBehaviorはTOWSER/トウサー/JPS/オリスロAA/MONASLOT/あっぱれPREGOの表記揺れと、設定変更/朝一/据え置き/電源OFF ON/ガックン等を組み替えて再探索したが、設定変更・据え置き・純電断の本機固有直接契約は固定できずUNVERIFIED_AFTER_RESEARCH系で独立管理。
-- 通常ゲーム数天井はないため天井カウンタ/短縮天井はNOT_APPLICABLE。本機固有の朝一専用モード、優遇/不利、公開リセット数値はNONE_CONFIRMED_AFTER_RESEARCH。
-- 有利区間は一般5.9号機論から付与せず、公開ゲーム性がリアルボーナスのみのノーマル機であることに限定して `NOT_APPLICABLE_TO_PUBLISHED_NORMAL_TYPE_GAMEPLAY` とした。
+- 並行進捗を取り込み、1222件 / 2018-08-06群CLOSEDを確認。
+- 未処理先頭「パチスロ蒼き鋼のアルペジオ‐アルス・ノヴァ‐ Mental Model ver.」を既存重複なし確認後No.1223として登録し、2018-08-20群をOPEN。
+- サミー公式、PiDEA X、HAZUSE、必勝本、P-WORLD、当時解析を横断し、導入2018-08-20、タイヨーエレック製造/サミー発売、型式 `蒼き鋼のアルペジオ アルスノヴァ2／ZS`、検定 `7S1689`、5.9号機A+RT/GRTを固定。
+- 通常機械割97.9/98.8/100.6/103.2/106.2/110.0%、フル攻略98.9/99.9/101.7/104.3/107.3/111.1%。
+- ボーナス合算1/162.2～1/130.0、約31G/50枚、RT純増約0.2枚/G。
+- EPISODE BIG 252枚、Trident BONUS最大250枚、BIG最大205枚、MB最大60枚。全ボーナス後RT、無限/100G/50G+αの3系統。通常天井なし。
+- resetBehaviorは当時比較表の設定変更時RTが「リセット?」と疑問符付き、純電源OFF→ON時RT/ステージは「調査中」。型式・メーカー・シリーズ名・GRT・設定変更/リセット/朝一/据え置き/電源OFF ON/RT状態/ガックン/有利区間を組み替えて再探索したが断定可能な別ソースを固定できず、疑問符を確定値へ昇格しない。
+- 通常天井非搭載のため天井カウンタ/短縮天井はNOT_APPLICABLE。朝一専用モード、設定変更専用初当たり優遇/不利、公開リセット数値はNONE_CONFIRMED_AFTER_RESEARCH。
+- 有利区間は一般5.9号機論から補完せず、公開ゲーム性がリアルボーナス+A+RTであることに限定して `NOT_APPLICABLE_TO_PUBLISHED_A_PLUS_RT_GAMEPLAY`。
 
-## No.1222 — TOWSER（トウサー）
-- manufacturer: **JPS**
-- releaseDateCanonical: **2018-08-06**
-- formalModelName: **UNVERIFIED_AFTER_RESEARCH**
-- certificationNumber: **UNVERIFIED_AFTER_RESEARCH**
-- generation/system: **5号機 / ノーマル / 完全告知 / 技術介入**
+## No.1223 — パチスロ蒼き鋼のアルペジオ‐アルス・ノヴァ‐ Mental Model ver.
+- manufacturer: **タイヨーエレック製造 / サミー販売・ブランド**
+- releaseDateCanonical: **2018-08-20**
+- formalModelName: **蒼き鋼のアルペジオ アルスノヴァ2／ZS**
+- certificationNumber: **7S1689**
+- generation/system: **5.9号機 / A+RT / GRT / 技術介入**
 - settings: **1 / 2 / 3 / 4 / 5 / 6**
-- payoutFullAcquisition: **97.65 / 99.01 / 101.64 / 103.87 / 105.89 / 110.35%**
-- payoutFreePlay: **95.47 / 96.87 / 99.55 / 101.85 / 103.92 / 108.40%**
-- BIG: **1/281.27 / 1/275.30 / 1/267.49 / 1/260.06 / 1/254.02 / 1/234.06**
-- REG: **1/451.97 / 1/399.60 / 1/358.12 / 1/319.69 / 1/299.25 / 1/270.81**
-- bonusCombined: **1/173.38 / 1/163.00 / 1/153.12 / 1/143.40 / 1/137.39 / 1/125.55**
-- baseFreePlay: **33.3 / 33.5 / 33.5 / 33.6 / 34.0 / 34.1G/50枚**
-- baseFullAcquisition: **35.4 / 35.6 / 35.7 / 35.8 / 36.2 / 36.4G/50枚**
-- basicPayout: **BIG312枚 / REG104枚**
+- payoutNormal: **97.9 / 98.8 / 100.6 / 103.2 / 106.2 / 110.0%**
+- payoutFullStrategy: **98.9 / 99.9 / 101.7 / 104.3 / 107.3 / 111.1%**
+- bonusCombined: **1/162.2 / 1/159.8 / 1/156.4 / 1/149.6 / 1/141.9 / 1/130.0**
+- baseGamesPer50: **約31G/50枚**
+- netIncrease: **RT約0.2枚/G**
+- basicPayout: **EPISODE BIG 252枚 / Trident BONUS最大250枚 / BIG最大205枚 / MB最大60枚**
 - ceiling: **非搭載**
 
 ### resetBehavior v0.7
-- settingChange: **UNVERIFIED_AFTER_RESEARCH**。
-- carryOver: **UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION**。純電断を自動転記しない。
-- powerOFF→ON: **UNVERIFIED_AFTER_RESEARCH**。
-- gameCounter/ceiling: 通常ゲーム数天井なし。天井カウンタ・短縮天井はNOT_APPLICABLE。
-- mode/state: 朝一専用モードはNONE_CONFIRMED_AFTER_RESEARCH、本機固有状態差はUNVERIFIED_AFTER_RESEARCH。
-- advantageousSection: **NOT_APPLICABLE_TO_PUBLISHED_NORMAL_TYPE_GAMEPLAY**。一般論から補完しない。
+- settingChange: **UNVERIFIED_AFTER_RESEARCH_SOURCE_SUGGESTS_RESET_WITH_QUESTION_MARK**。当時資料はRT状態「リセット?」で断定不可。
+- carryOver: **UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION**。据え置きを純電断と同義扱いしない。
+- powerOFF→ON: **UNVERIFIED_AFTER_RESEARCH**。当時資料でもRT状態/ステージは調査中。
+- gameCounter/ceiling: 通常ゲーム数天井なし。天井カウンタ/短縮天井はNOT_APPLICABLE。
+- mode/state: 朝一専用モードはNONE_CONFIRMED_AFTER_RESEARCH。RT/ステージの設定変更・純電断契約は未確定。
+- advantageousSection: **NOT_APPLICABLE_TO_PUBLISHED_A_PLUS_RT_GAMEPLAY**。一般5.9号機論から補完しない。
 - resetBenefits/penalties: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- resetDetection: 本機固有ガックン/初期出目/Luckyランプ等による変更判別は**UNVERIFIED_AFTER_RESEARCH**。通常の設定推測要素とは分離。
+- resetDetection: 本機固有ガックン/初期出目/RT表示等による変更判別は **UNVERIFIED_AFTER_RESEARCH**。
 - numericResetData: **NONE_CONFIRMED_AFTER_RESEARCH**。
 
-## 2018-08-06群監査
+## 2018-08-20群監査
 ### 登録済み
-- No.1217 ハイカ101 — 2018-08-06。
-- No.1218 花人-はなんちゅ- — 2018-08-06。
-- No.1219 クレアの秘宝伝 女神の夢と魔法の遺跡 — 2018-08-06。
-- No.1220 クロノス～刻の支配者～ — 2018-08-06。
-- No.1221 パチスロ ウィザード・バリスターズ～弁魔士セシル～ — 2018-08-06。
-- No.1222 TOWSER（トウサー） — 2018-08-06。
+- No.1223 パチスロ蒼き鋼のアルペジオ‐アルス・ノヴァ‐ Mental Model ver. — 2018-08-20。
 
-### 群判定
-- `2018-08-06_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT`
-- 日刊スポーツ導入カレンダーで8/6群に上記6機を確認し、当時解析側の2018年導入一覧とも照合。
-- TOWSERはMONASLOT/あっぱれ!PREGOと同スペックのオリスロAA一般販売版だが、PB兄弟機を今回の8/6新規別導入として重複追加しない。
-- 8/13の独立パチスロ導入群は今回の横断検索で固定できず、次に業界カレンダーで明示される群は2018-08-20。
-
-## 次の時系列群
-- nextChronologicalGroup: **2018-08-20**
-- candidate1: **パチスロ蒼き鋼のアルペジオ‐アルス・ノヴァ‐ Mental Model ver.**（サミー）
-- candidate2: **ルーレットクイーン‐女神の羅針盤‐**（コナミアミューズメント）
-- 日刊スポーツ2018-08-10導入カレンダーで両機を8/20パチスロ群として掲載。
-- 次回は候補1から既存重複・正式型式・導入日を確認し、8/20群をOPENして収集する。
+### 未処理候補
+- **ルーレットクイーン‐女神の羅針盤‐**（コナミアミューズメント） — 2018-08-20。
+  - ちょんぼりすた/K-Navi/すろかい/すろぱちくえすとで8/20導入一致。
+  - 型式候補 `ルーレットクイーン/KN`。次回正式型式・検定番号を別ソース照合してからNo.1224候補として登録。
+  - 当時朝一表には設定変更時内部状態「リセット!?」、電源OFF→ON時「引き継ぎ!?」があるため、疑問符の扱いを保持したまま追加照合する。
+- 群はまだ `OPEN`。ルーレットクイーン処理後、同日全メーカー/別スペック/PB/地域差と8/21以降境界を再監査してからCLOSE判定する。
 
 ## 遡及 resetBehavior QA
 - retroQaScanConfirmedThrough: **2006-08-28_taiho-shichauzo.md**（逮捕しちゃうぞ）。
 - latestRetroQaResult: **PARTIAL_RESEARCH_EXHAUSTED**。
-- 既存性能コアおよびボーナス確率CONFLICTは変更せず、reset側のみ別管理。
-- 設定変更時の無限RT「特売タイム」/成立済みボーナス状態はUNVERIFIED_AFTER_RESEARCH。
-- 据え置きと純電源OFF→ONは同義扱いせず双方 `UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION`。
-- 通常天井/短縮天井/朝一専用モード/恩恵/不利/公開朝一数値は再探索後もNONE_CONFIRMED_AFTER_RESEARCH。
-- advantageousSectionReset: **NOT_APPLICABLE**（制度導入前）。
-- Git追加履歴を確認し、逮捕しちゃうぞ追加commit直後のhandoff更新後、次の実機追加は「球児」。
 - nextRetroQaCursor: `docs/real_machine_db/machines/2006-09_kyuji.md`（球児）。
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
+- 既存性能コアは無駄に再収集せず、QAではreset側のみ順次補完する。
 
 ## 継続注意事項
 - `INDEX.md`は旧スナップショット。LATEST_HANDOFF + main実レコードを優先する。
 - 毎回、最新mainのREADME / mission / INDEX / LATEST_HANDOFF / latest recordを読み直す。
 - 並行更新がある場合は最新HEADを優先し、古い番号で上書きしない。
-- resetBehaviorで一般論を確定契約へ昇格しない。据え置きと純電断を同義扱いしない。
+- resetBehaviorで一般論・疑問符付き資料を確定契約へ昇格しない。据え置きと純電断を同義扱いしない。
 - 同日/境界群は全メーカー/別スペック/PB/地域差監査後にのみCLOSED判定する。
-- 技術介入機では適当打ち/小役狙い/完全攻略などの機械割・ベース定義を混同しない。
+- 技術介入機では通常/フル攻略等の機械割定義を混同しない。
 
 ## 次回再開地点
-1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1222を再取得。
-2. **1222件 / chronologicalFrontier 2018-08-06 / 8/6群CLOSED**を正本として継続。ただし並行更新があれば最新HEADを優先。
-3. **パチスロ蒼き鋼のアルペジオ‐アルス・ノヴァ‐ Mental Model ver.**をNo.1223候補として既存重複・正式型式・導入日を照合し、性能コア+resetBehavior v0.7を収集。
-4. 続いてルーレットクイーンを監査し、8/20群の漏れを横断確認する。
+1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1223を再取得。
+2. **1223件 / chronologicalFrontier 2018-08-20 / `2018-08-20_GROUP_OPEN_1_OF_AT_LEAST_2_PROCESSED`**を正本として継続。ただし並行更新があれば最新HEADを優先。
+3. **ルーレットクイーン‐女神の羅針盤‐**をNo.1224候補として既存重複・正式型式・検定番号・導入日を照合し、性能コア+resetBehavior v0.7を収集。
+4. その後8/20群の全メーカー/別スペック/PB/地域差を再監査し、漏れがなければCLOSEして次の時系列群へ進む。
 5. 遡及QAは `docs/real_machine_db/machines/2006-09_kyuji.md`（球児）から継続。
 
 ## 主要出典 — 取得日 2026-09-10
-### No.1222 TOWSER
-- 日刊スポーツ導入カレンダー: https://www.nikkansports.com/amusement/pachislot/news/201807270000405.html
-- すろぱちくえすと基本: https://www.slopachi-quest.com/article/towser/
-- すろぱちくえすと設定: https://www.slopachi-quest.com/article/towser-settei/
-- すろぱちくえすと小役/コイン持ち: https://www.slopachi-quest.com/article/towser-koyaku/
-- パチマガスロマガ基本: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/jps_slot/37/a.php
-- パチマガスロマガ精密表: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/jps_slot/37/h.php
-- パチセブン回顧: https://pachiseven.jp/articles/detail/11436
+### No.1223 蒼き鋼のアルペジオ Mental Model ver.
+- Sammy公式: https://www.sammy.co.jp/japanese/news/2018/931.html
+- PiDEA X: https://www.pidea.jp/articles/GRT%E7%AC%AC3%E5%BC%BE%E3%81%A7%E3%80%8C%E8%92%BC%E3%81%8D%E9%8B%BC%E3%81%AE%E3%82%A2%E3%83%AB%E3%83%9A%E3%82%B8%E3%82%AA%E3%80%8D%E5%86%8D%E5%87%BA%E8%88%AA%EF%BC%8F%E3%82%B5%E3%83%9F%E3%83%BC
+- HAZUSE: https://hazuse.com/machine/pachislot/7S1689/genre/201/
+- ちょんぼりすた: https://chonborista.com/slot/sammy-slot/61580/
+- 必勝本: https://p.hisshobon.jp/machine/3220/1/70566
+- P-WORLD: https://www.p-world.co.jp/machine/database/8672
+- すろかい: https://slotkaiseki.hatenablog.com/entry/arpeggio2
+- 日刊スポーツ導入カレンダー: https://www.nikkansports.com/amusement/pachislot/news/201808100000381.html
 
-### 次群監査
-- 日刊スポーツ導入カレンダー（2018-08-10）: https://www.nikkansports.com/amusement/pachislot/news/201808100000381.html
-
-### 逮捕しちゃうぞ reset QA
-- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/igt_slot/42/a.php
-- 悠遊道: https://www.pachinko-road.com/column/27129/
-- パチセブン IGT回顧: https://pachiseven.jp/articles/detail/13009
-- A-SLOT実機資料（ホール朝一根拠には不採用）: https://www.a-slot.com/SHOP/igt4.html
+### 次候補 ルーレットクイーン
+- ちょんぼりすた: https://chonborista.com/slot/konami-slot/61967/
+- K-Navi: https://p-kn.com/slot/3039/
+- すろかい: https://slotkaiseki.hatenablog.com/entry/roulettequeen
+- すろぱちくえすと: https://www.slopachi-quest.com/article/roulette-queen/
