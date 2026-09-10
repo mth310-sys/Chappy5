@@ -1,0 +1,38 @@
+/* ZELVOLT cabinet redesign v0.1
+   Direction: classic 5th-gen A-type cabinet 70% + HanaHana-style light guide 30%.
+   Visual-only layer. Game/lottery/reel logic is unchanged. */
+body{background:radial-gradient(ellipse at 50% 18%,#282828 0,#090909 48%,#000 100%)!important}
+.wrap{max-width:390px!important;padding:5px!important}
+.machine{background:linear-gradient(90deg,#090909 0 4%,#555 5%,#e4e4e4 7%,#383838 9%,#080808 13%,#111 50%,#080808 87%,#383838 91%,#e4e4e4 93%,#555 95%,#090909 96%)!important;border:4px solid #2b2b2b!important;border-radius:19px!important;padding:10px 15px 13px!important;box-shadow:0 8px 26px #000,inset 0 0 0 2px #777,inset 0 0 0 5px #151515!important}
+.machine:before{inset:6px!important;border:1px solid #a7a7a7!important;border-radius:14px!important;box-shadow:inset 0 0 8px #000!important}
+.machine:after{content:""!important;display:none!important}
+.led-side{top:45px!important;bottom:48px!important;width:6px!important;border-radius:4px!important;background:linear-gradient(180deg,#2d2700,#817000 22%,#3b3300 48%,#9b8500 72%,#2a2500)!important;background-size:auto!important;box-shadow:inset 0 0 2px #ffe97a,0 0 3px #b99b00!important;animation:none!important;opacity:.62}
+.led-left{left:7px!important}.led-right{right:7px!important}
+.top-led{height:8px!important;margin:0 32px 5px!important;border-radius:5px!important;background:linear-gradient(90deg,#171717,#5c5100,#b79a00,#5c5100,#171717)!important;box-shadow:inset 0 0 3px #fff0a0,0 0 4px #7a6500!important;clip-path:none!important;animation:none!important;opacity:.72}
+.top-panel{margin:0 3px 7px!important;border-radius:8px!important;background:#020202!important;box-shadow:0 0 0 1px #8c8c8c,0 2px 5px #000!important}
+.zelvolt-logo{border-radius:7px!important;max-height:92px!important}
+.center-panel{position:relative!important;background:linear-gradient(180deg,#202020,#050505 14%,#050505 86%,#262626)!important;border:1px solid #a7a7a7!important;border-radius:7px!important;padding:11px 7px 8px!important;margin:0 2px 7px!important;box-shadow:inset 0 0 0 2px #303030,0 2px 5px #000!important}
+.center-panel:before,.center-panel:after{content:"";position:absolute;top:7px;bottom:7px;width:3px;background:linear-gradient(#bbb,#383838,#aaa);opacity:.8}.center-panel:before{left:3px}.center-panel:after{right:3px}
+.reel-area{gap:6px!important;align-items:center!important}
+.reels{gap:3px!important;padding:4px!important;background:#050505;border:1px solid #5b5b5b;border-radius:4px;box-shadow:inset 0 0 5px #000}
+.reel{width:79px!important;height:108px!important;border-radius:3px!important;border:2px solid #777!important;background:linear-gradient(90deg,#d7d7d7,#fff 18%,#fff 82%,#d7d7d7)!important;box-shadow:inset 0 0 8px #999!important}
+.symbol{width:70px!important;height:70px!important}
+/* Temporary notification lens: retained functionally, restyled as a physical part. */
+.lamp{width:48px!important;height:48px!important;flex:0 0 48px!important;border-radius:50%!important;background:radial-gradient(circle,#141414 0 48%,#080808 50% 63%,#303030 65% 70%,#0a0a0a 72%)!important;border:2px solid #8a8a8a!important;color:#4b430d!important;font-size:0!important;box-shadow:inset 0 0 8px #000,0 1px 2px #000!important}
+.lamp:before{content:"∞";font:900 29px/1 Georgia,serif;color:#50460b;text-shadow:0 0 1px #74620c}
+.lamp.on{background:radial-gradient(circle,#fffbd0 0 25%,#ffe943 42%,#7e6500 61%,#272100 72%)!important;border-color:#d7d7d7!important;box-shadow:0 0 7px #fff6a0,0 0 15px #f3ce22,inset 0 0 5px #fff!important}
+.lamp.on:before{color:#fffde2;text-shadow:0 0 4px #fff,0 0 8px #ffd900}
+.lamp.super{background:radial-gradient(circle,#fff 0 24%,#ffe75a 42%,#9c7b00 62%,#282100 72%)!important;border-color:#eee!important;box-shadow:0 0 9px #fff,0 0 18px #ffd900!important}
+.lamp.super:before{color:#fff;text-shadow:0 0 4px #fff,0 0 10px #ffe600}
+.msg{font-size:17px!important;color:#e8cf39!important;min-height:24px!important;margin:5px 0 0!important;text-shadow:none!important}
+.info-panel{background:linear-gradient(180deg,#171717,#030303)!important;border:1px solid #777!important;border-radius:5px!important;padding:6px 5px!important;margin:0 2px 6px!important;box-shadow:inset 0 0 0 1px #252525,0 2px 4px #000!important}
+.info-label{color:#bdbdbd!important;letter-spacing:.5px}.info-value{color:#e63333!important;font-size:28px!important;text-shadow:0 0 3px #6d0000}
+.play-panel{background:linear-gradient(180deg,#5d5d5d 0,#222 10%,#0b0b0b 45%,#171717 100%)!important;border:1px solid #aaa!important;border-radius:7px!important;padding:8px!important;margin:0 2px 7px!important;box-shadow:inset 0 1px 2px #aaa,inset 0 -2px 5px #000,0 2px 5px #000!important}
+.control-panel,.stop-panel{border:0!important;border-radius:4px!important;padding:5px!important;background:#111!important;box-shadow:inset 0 0 0 1px #444!important}
+.btn-lever,.btn-bet{height:50px!important;border-radius:6px!important;background:linear-gradient(#4b4b4b,#181818)!important;color:#e5e5e5!important;border:1px solid #777!important;box-shadow:inset 0 1px 1px #aaa,0 2px 2px #000!important}
+.stop{width:64px!important;height:64px!important;background:radial-gradient(circle at 45% 35%,#ff3b3b,#c40000 55%,#650000 100%)!important;border:4px solid #c8c8c8!important;box-shadow:inset 0 0 0 2px #710000,0 2px 4px #000!important}
+.reset{background:linear-gradient(#3d3d3d,#111)!important;color:#bbb!important;border:1px solid #666!important;border-radius:5px!important}
+.role{color:#8e8e8e!important}
+body.zelvolt-big .led-side,body.zelvolt-hit .led-side{opacity:1!important;background:linear-gradient(180deg,#fff9b2,#f0d22c 25%,#fff8a1 50%,#e8c514 75%,#fffbd0)!important;box-shadow:0 0 8px #ffe75b,0 0 15px #c99f00!important}
+body.zelvolt-reg .led-side{opacity:.9!important;background:linear-gradient(180deg,#ffe0a2,#e79528,#fff0bd,#d87817)!important;box-shadow:0 0 7px #f0a53a!important}
+body.zelvolt-big .top-led,body.zelvolt-hit .top-led{opacity:1!important;background:linear-gradient(90deg,#6e5a00,#fff6a3,#ffe32d,#fff6a3,#6e5a00)!important;box-shadow:0 0 9px #f2cf27!important}
