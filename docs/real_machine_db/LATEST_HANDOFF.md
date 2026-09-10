@@ -1,53 +1,55 @@
 更新日: 2026-09-10
 
 ## 現在地点
-- recordCount: **1221**
-- latestRecordAdded: **パチスロ ウィザード・バリスターズ～弁魔士セシル～**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2018-08-06_wizard-barristers-benma-shi-cecil.md`
+- recordCount: **1222**
+- latestRecordAdded: **TOWSER（トウサー）**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2018-08-06_towser.md`
 - chronologicalFrontier: **2018-08-06**
-- frontierLatestMachine: **パチスロ ウィザード・バリスターズ～弁魔士セシル～ — No.1221**
+- frontierLatestMachine: **TOWSER（トウサー） — No.1222**
 - schema: **resetBehavior v0.7**
-- status: **2018-08-06_GROUP_OPEN_5_OF_AT_LEAST_6_PROCESSED**
+- status: **2018-08-06_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**
 
 ## 今回の同期 / 進捗
-- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1220を再取得して開始。
+- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1221を再取得して開始。
 - INDEXは19件時点の旧スナップショットのため、README規定どおりLATEST_HANDOFF + main実レコードを正本として継続。
-- 1220件 / 2018-08-06群OPENを確認し、未処理先頭「パチスロ ウィザード・バリスターズ～弁魔士セシル～」を既存重複なし確認後No.1221として登録。
-- 日刊スポーツ導入カレンダー、パチビー、すろぱちくえすと、ちょんぼりすたで2018-08-06導入を固定。オーイズミ、5.9号機A+ART。
-- 機械割97.8/98.4/99.9/102.1/105.9/109.1%、ART初当たり1/347.5～1/339.8、ボーナス合算1/248.24～1/206.09、38.5G/50枚。
-- ART純増は単体約1.4枚/G、ボーナス込み約1.8枚/G。MOYO BIG約312枚、CECIL BIG約150枚、REG約48枚。通常ゲーム数天井は非搭載。
-- resetBehaviorは当時の本機専用朝一表で設定変更時内部状態が「リセット？」、電源OFF→ON時が「引き継ぎ？」、ステージは双方調査中。疑問符付き情報を確定契約へ昇格させず、表記揺れ/メーカー/設定変更/リセット/朝一/据え置き/電源OFF ON/ガックン/有利区間へ再探索したが直接固定できずUNVERIFIED_AFTER_RESEARCH。
-- 据え置きは純電断と同義扱いせず独立してUNVERIFIED。
-- 5.9号機有利区間はゲーム性として確認できるが、設定変更/据え置き/純電断別の朝一有利区間処理は本機固有資料を固定できずUNVERIFIED。
-- 短縮天井・朝一ART/CZ優遇率・専用モード・リセット恩恵率などの公開数値はNONE_CONFIRMED_AFTER_RESEARCH。
-- 正式型式名/検定番号は今回の公式/業界/解析/古いDB/検索語変更でも高信頼固定できずUNVERIFIED_AFTER_RESEARCH。
+- 1221件 / 2018-08-06群OPENを確認し、未処理先頭TOWSERを既存重複なし確認後No.1222として登録。
+- 日刊スポーツ導入カレンダーと当時解析でTOWSERの2018-08-06導入、JPS、ノーマル機を固定。
+- TOWSERはBIG312枚、REG104枚、通常ゲーム数天井非搭載。設定別BIG/REG/合算、打ち方別機械割、打ち方別50枚ベースを取得。
+- 精密な完全取得機械割は97.65/99.01/101.64/103.87/105.89/110.35%。適当打ちは95.47/96.87/99.55/101.85/103.92/108.40%。
+- BIGは1/281.27～1/234.06、REGは1/451.97～1/270.81、合算は1/173.38～1/125.55。
+- 50枚ベースは適当打ち33.3～34.1G、完全取得35.4～36.4G。手順差を競合扱いせず定義差として分離。
+- 正式型式名/検定番号は検索語・資料系統を変更しても高信頼固定できずUNVERIFIED_AFTER_RESEARCH。
+- resetBehaviorはTOWSER/トウサー/JPS/オリスロAA/MONASLOT/あっぱれPREGOの表記揺れと、設定変更/朝一/据え置き/電源OFF ON/ガックン等を組み替えて再探索したが、設定変更・据え置き・純電断の本機固有直接契約は固定できずUNVERIFIED_AFTER_RESEARCH系で独立管理。
+- 通常ゲーム数天井はないため天井カウンタ/短縮天井はNOT_APPLICABLE。本機固有の朝一専用モード、優遇/不利、公開リセット数値はNONE_CONFIRMED_AFTER_RESEARCH。
+- 有利区間は一般5.9号機論から付与せず、公開ゲーム性がリアルボーナスのみのノーマル機であることに限定して `NOT_APPLICABLE_TO_PUBLISHED_NORMAL_TYPE_GAMEPLAY` とした。
 
-## No.1221 — パチスロ ウィザード・バリスターズ～弁魔士セシル～
-- manufacturer: **オーイズミ**
+## No.1222 — TOWSER（トウサー）
+- manufacturer: **JPS**
 - releaseDateCanonical: **2018-08-06**
 - formalModelName: **UNVERIFIED_AFTER_RESEARCH**
 - certificationNumber: **UNVERIFIED_AFTER_RESEARCH**
-- generation/system: **5号機 / 5.9号機 / A+ART / CZ経由G数上乗せ型**
+- generation/system: **5号機 / ノーマル / 完全告知 / 技術介入**
 - settings: **1 / 2 / 3 / 4 / 5 / 6**
-- payout: **97.8 / 98.4 / 99.9 / 102.1 / 105.9 / 109.1%**
-- ART initial: **1/347.5 / 1/345.3 / 1/344.3 / 1/343.7 / 1/343.0 / 1/339.8**
-- bonusCombined: **1/248.24 / 1/245.45 / 1/237.45 / 1/229.95 / 1/220.66 / 1/206.09**
-- base: **38.5G/50枚**
-- basic payout: **MOYO BIG約312枚 / CECIL BIG約150枚 / REG約48枚**
-- ART: **初回40G以上 / G数上乗せ型**
-- netIncrease: **ART単体約1.4枚/G / ボーナス込み約1.8枚/G**
+- payoutFullAcquisition: **97.65 / 99.01 / 101.64 / 103.87 / 105.89 / 110.35%**
+- payoutFreePlay: **95.47 / 96.87 / 99.55 / 101.85 / 103.92 / 108.40%**
+- BIG: **1/281.27 / 1/275.30 / 1/267.49 / 1/260.06 / 1/254.02 / 1/234.06**
+- REG: **1/451.97 / 1/399.60 / 1/358.12 / 1/319.69 / 1/299.25 / 1/270.81**
+- bonusCombined: **1/173.38 / 1/163.00 / 1/153.12 / 1/143.40 / 1/137.39 / 1/125.55**
+- baseFreePlay: **33.3 / 33.5 / 33.5 / 33.6 / 34.0 / 34.1G/50枚**
+- baseFullAcquisition: **35.4 / 35.6 / 35.7 / 35.8 / 36.2 / 36.4G/50枚**
+- basicPayout: **BIG312枚 / REG104枚**
 - ceiling: **非搭載**
 
 ### resetBehavior v0.7
-- settingChange: **UNVERIFIED_AFTER_RESEARCH**。当時本機専用表の内部状態は「リセット？」、ステージは調査中。
+- settingChange: **UNVERIFIED_AFTER_RESEARCH**。
 - carryOver: **UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION**。純電断を自動転記しない。
-- powerOFF→ON: **UNVERIFIED_AFTER_RESEARCH**。当時本機専用表の内部状態は「引き継ぎ？」、ステージは調査中。
-- gameCounter/ceiling: 通常ゲーム数天井なし。天井カウンタはNOT_APPLICABLE。
-- mode/state: 朝一専用モード/確定状態契約はNONE_CONFIRMED/UNVERIFIED_AFTER_RESEARCH。
-- advantageousSection: 5.9号機として有利区間を使用するが、朝一の変更/据え置き/純電断別処理はUNVERIFIED。
-- resetBenefits/penalties: 短縮天井・初当たり/CZ優遇等`NONE_CONFIRMED_AFTER_RESEARCH`。
-- resetDetection: 本機固有ガックン・初期出目・表示等の確定条件/発生率はUNVERIFIED。
-- numericResetData: 公開された朝一専用数値`NONE_CONFIRMED_AFTER_RESEARCH`。
+- powerOFF→ON: **UNVERIFIED_AFTER_RESEARCH**。
+- gameCounter/ceiling: 通常ゲーム数天井なし。天井カウンタ・短縮天井はNOT_APPLICABLE。
+- mode/state: 朝一専用モードはNONE_CONFIRMED_AFTER_RESEARCH、本機固有状態差はUNVERIFIED_AFTER_RESEARCH。
+- advantageousSection: **NOT_APPLICABLE_TO_PUBLISHED_NORMAL_TYPE_GAMEPLAY**。一般論から補完しない。
+- resetBenefits/penalties: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- resetDetection: 本機固有ガックン/初期出目/Luckyランプ等による変更判別は**UNVERIFIED_AFTER_RESEARCH**。通常の設定推測要素とは分離。
+- numericResetData: **NONE_CONFIRMED_AFTER_RESEARCH**。
 
 ## 2018-08-06群監査
 ### 登録済み
@@ -56,19 +58,31 @@
 - No.1219 クレアの秘宝伝 女神の夢と魔法の遺跡 — 2018-08-06。
 - No.1220 クロノス～刻の支配者～ — 2018-08-06。
 - No.1221 パチスロ ウィザード・バリスターズ～弁魔士セシル～ — 2018-08-06。
-
-### 未処理候補
-- **TOWSER(トウサー)** — 日刊スポーツ導入カレンダーの2018-08-06群に掲載。次の未処理先頭。
+- No.1222 TOWSER（トウサー） — 2018-08-06。
 
 ### 群判定
-- `2018-08-06_GROUP_OPEN_5_OF_AT_LEAST_6_PROCESSED`
-- 日刊スポーツ導入カレンダーで、8/6群に少なくとも上記6機を確認。
-- TOWSER処理後に全メーカー/別スペック/PB/地域差を再監査してCLOSED可否を判定する。
+- `2018-08-06_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT`
+- 日刊スポーツ導入カレンダーで8/6群に上記6機を確認し、当時解析側の2018年導入一覧とも照合。
+- TOWSERはMONASLOT/あっぱれ!PREGOと同スペックのオリスロAA一般販売版だが、PB兄弟機を今回の8/6新規別導入として重複追加しない。
+- 8/13の独立パチスロ導入群は今回の横断検索で固定できず、次に業界カレンダーで明示される群は2018-08-20。
+
+## 次の時系列群
+- nextChronologicalGroup: **2018-08-20**
+- candidate1: **パチスロ蒼き鋼のアルペジオ‐アルス・ノヴァ‐ Mental Model ver.**（サミー）
+- candidate2: **ルーレットクイーン‐女神の羅針盤‐**（コナミアミューズメント）
+- 日刊スポーツ2018-08-10導入カレンダーで両機を8/20パチスロ群として掲載。
+- 次回は候補1から既存重複・正式型式・導入日を確認し、8/20群をOPENして収集する。
 
 ## 遡及 resetBehavior QA
-- retroQaScanConfirmedThrough: **2006-08_rumble-roses.md**（ランブルローズ）。
-- latestRetroQaResult: **PARTIAL_RESEARCH_EXHAUSTED**。既存`coreStatus: PARTIAL`は維持し、reset側のみ別管理。
-- nextRetroQaCursor: `docs/real_machine_db/machines/2006-08-28_taiho-shichauzo.md`（逮捕しちゃうぞ）。
+- retroQaScanConfirmedThrough: **2006-08-28_taiho-shichauzo.md**（逮捕しちゃうぞ）。
+- latestRetroQaResult: **PARTIAL_RESEARCH_EXHAUSTED**。
+- 既存性能コアおよびボーナス確率CONFLICTは変更せず、reset側のみ別管理。
+- 設定変更時の無限RT「特売タイム」/成立済みボーナス状態はUNVERIFIED_AFTER_RESEARCH。
+- 据え置きと純電源OFF→ONは同義扱いせず双方 `UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION`。
+- 通常天井/短縮天井/朝一専用モード/恩恵/不利/公開朝一数値は再探索後もNONE_CONFIRMED_AFTER_RESEARCH。
+- advantageousSectionReset: **NOT_APPLICABLE**（制度導入前）。
+- Git追加履歴を確認し、逮捕しちゃうぞ追加commit直後のhandoff更新後、次の実機追加は「球児」。
+- nextRetroQaCursor: `docs/real_machine_db/machines/2006-09_kyuji.md`（球児）。
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
 
 ## 継続注意事項
@@ -76,23 +90,31 @@
 - 毎回、最新mainのREADME / mission / INDEX / LATEST_HANDOFF / latest recordを読み直す。
 - 並行更新がある場合は最新HEADを優先し、古い番号で上書きしない。
 - resetBehaviorで一般論を確定契約へ昇格しない。据え置きと純電断を同義扱いしない。
-- 当時資料の「リセット？」「引き継ぎ？」等、疑問符付き情報は確定値として扱わない。
 - 同日/境界群は全メーカー/別スペック/PB/地域差監査後にのみCLOSED判定する。
+- 技術介入機では適当打ち/小役狙い/完全攻略などの機械割・ベース定義を混同しない。
 
 ## 次回再開地点
-1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1221を再取得。
-2. **1221件 / chronologicalFrontier 2018-08-06 / 8/6群OPEN**を正本として継続。ただし並行更新があれば最新HEADを優先。
-3. **TOWSER(トウサー)**をNo.1222候補として既存重複・正式型式・導入日を照合し、性能コア+resetBehavior v0.7を収集。
-4. TOWSER処理後、8/6群を全メーカー/別スペック/PB/地域差で横断監査してCLOSE可否を判定。
-5. CLOSEDなら次の最古未処理導入群へ時系列で進む。
-6. 遡及QAは `docs/real_machine_db/machines/2006-08-28_taiho-shichauzo.md` から継続。
+1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1222を再取得。
+2. **1222件 / chronologicalFrontier 2018-08-06 / 8/6群CLOSED**を正本として継続。ただし並行更新があれば最新HEADを優先。
+3. **パチスロ蒼き鋼のアルペジオ‐アルス・ノヴァ‐ Mental Model ver.**をNo.1223候補として既存重複・正式型式・導入日を照合し、性能コア+resetBehavior v0.7を収集。
+4. 続いてルーレットクイーンを監査し、8/20群の漏れを横断確認する。
+5. 遡及QAは `docs/real_machine_db/machines/2006-09_kyuji.md`（球児）から継続。
 
 ## 主要出典 — 取得日 2026-09-10
-### No.1221 パチスロ ウィザード・バリスターズ～弁魔士セシル～
+### No.1222 TOWSER
 - 日刊スポーツ導入カレンダー: https://www.nikkansports.com/amusement/pachislot/news/201807270000405.html
-- グリーンべると / P-WORLD業界ニュース: https://news.p-world.co.jp/articles/10137/greenbelt
-- パチビー: https://www.pachibee.jp/machines/movie/218050007
-- P-WORLD: https://www.p-world.co.jp/machine/database/8664
-- すろぱちくえすと: https://www.slopachi-quest.com/article/wizardbarristers/
-- ちょんぼりすた: https://chonborista.com/slot/oizumi-slot/60619/
-- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/oizumi_slot/43/a.php
+- すろぱちくえすと基本: https://www.slopachi-quest.com/article/towser/
+- すろぱちくえすと設定: https://www.slopachi-quest.com/article/towser-settei/
+- すろぱちくえすと小役/コイン持ち: https://www.slopachi-quest.com/article/towser-koyaku/
+- パチマガスロマガ基本: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/jps_slot/37/a.php
+- パチマガスロマガ精密表: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/jps_slot/37/h.php
+- パチセブン回顧: https://pachiseven.jp/articles/detail/11436
+
+### 次群監査
+- 日刊スポーツ導入カレンダー（2018-08-10）: https://www.nikkansports.com/amusement/pachislot/news/201808100000381.html
+
+### 逮捕しちゃうぞ reset QA
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/igt_slot/42/a.php
+- 悠遊道: https://www.pachinko-road.com/column/27129/
+- パチセブン IGT回顧: https://pachiseven.jp/articles/detail/13009
+- A-SLOT実機資料（ホール朝一根拠には不採用）: https://www.a-slot.com/SHOP/igt4.html
