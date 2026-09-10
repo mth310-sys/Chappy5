@@ -51,55 +51,57 @@ UNVERIFIED
 
 ## resetBehavior
 
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
+resetBehaviorLastQA: 2026-09-10
 
 settingChangeBehavior:
-- `電撃フランケン / スーパーデラックス1 / エレコ` と `設定変更 / リセット / 朝一 / RT / GHOST GAME / ガックン` を組み替え、メーカー公式・当時解析系・旧DB・後年回顧を再探索したが、設定変更時にGHOST GAME残Gや内部RT状態をどう処理するかを直接示す本機固有資料は確認できず `UNVERIFIED`。
-- 設定変更時の成立済みボーナス、初期出目、リール初動処理も `UNVERIFIED`。
+- `電撃フランケン / スーパーデラックス1 / エレコ` と `設定変更 / リセット / 朝一 / RT / GHOST GAME / ガックン / 出目 / 電源` を組み替え、メーカー公式・当時解析系・旧DB・後年回顧を再探索したが、設定変更時にGHOST GAME残Gや内部RT状態をどう処理するかを直接示す本機固有資料は確認できず `UNVERIFIED_AFTER_RESEARCH`。
+- 設定変更時の成立済みボーナス、初期出目、リール初動処理も `UNVERIFIED_AFTER_RESEARCH`。
 
 carryOverBehavior:
-- 据え置き時のGHOST GAME残G・内部RT状態について直接資料を確認できず `UNVERIFIED`。
+- 据え置きを純電断から独立条件として扱ったGHOST GAME残G・内部RT状態の本機固有資料は確認できず `UNVERIFIED_AFTER_RESEARCH`。
 - 通常時ゲーム数天井は後年解析DBで「非搭載」とされるため、通常時ハマリゲーム数の宵越し天井は `NOT_APPLICABLE`。
 
 powerCycleBehavior:
-- 電源OFF→ONのみでGHOST GAME残G・内部RT状態・成立済みボーナスをどう扱うかは、本機固有資料を確認できず `UNVERIFIED`。
+- 設定変更を伴わない電源OFF→ONのみでGHOST GAME残G・内部RT状態・成立済みボーナスをどう扱うかは、本機固有資料を確認できず `UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION`。
 
 gameCounterReset:
 - 通常時ゲーム数天井は `NOT_APPLICABLE`。
 - BIG後RTは150G固定だが、これは通常時ハマリ天井ではなくRT継続ゲーム数として分離する。
+- 設定変更/据え置き/純電断時のRT残Gカウンタ処理は `UNVERIFIED_AFTER_RESEARCH`。
 
 ceilingAfterReset:
-- 通常時ゲーム数天井非搭載のため、設定変更後の短縮天井は `NOT_APPLICABLE / NONE_CONFIRMED`。
+- 通常時ゲーム数天井非搭載のため、設定変更後の短縮天井は `NOT_APPLICABLE / NONE_CONFIRMED_AFTER_RESEARCH`。
 
 modeAfterReset:
-- 朝一専用モード、設定変更専用モード振り分けは `NONE_CONFIRMED`。
+- 朝一専用モード、設定変更専用モード振り分けは `NONE_CONFIRMED_AFTER_RESEARCH`。
 
 stateAfterReset:
 - BIG後GHOST GAMEは150GのRT状態。
-- 設定変更・据え置き・電源OFF→ON時のRT残G/内部RT状態の扱いは `UNVERIFIED`。
-- SUPER GHOST GAME等の演出ステージを設定変更時にどう扱うかも `UNVERIFIED`。
+- 設定変更・据え置き・電源OFF→ON時のRT残G/内部RT状態の扱いは `UNVERIFIED_AFTER_RESEARCH`。
+- SUPER GHOST GAME等の演出ステージを設定変更時にどう扱うかも `UNVERIFIED_AFTER_RESEARCH`。
 
 advantageousSectionReset:
 - `NOT_APPLICABLE`（2006年の5号機初期。有利区間制度導入前）。
 
 resetBenefits:
-- 朝一RT、短縮天井、初当たり優遇、設定変更専用CZ等の本機固有恩恵は `NONE_CONFIRMED`。
+- 朝一RT、短縮天井、初当たり優遇、設定変更専用CZ等の本機固有恩恵は `NONE_CONFIRMED_AFTER_RESEARCH`。
 
 resetPenalties:
-- 設定変更に伴う本機固有の不利要素は `NONE_CONFIRMED`。
+- 設定変更に伴う本機固有の不利要素は `NONE_CONFIRMED_AFTER_RESEARCH`。
 
 resetDetection:
-- `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / ガックン / 出目 / 液晶 / RT` を組み替えて再探索したが、本機固有のガックン・初期出目・液晶表示等による変更判別は `UNVERIFIED`。
+- `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / ガックン / 出目 / 液晶 / RT` を組み替え、公式・当時解析・古いDB・回顧資料を再探索したが、本機固有のガックン・初期出目・液晶表示等による変更判別は `UNVERIFIED_AFTER_RESEARCH`。
 
 numericResetData:
-- 公開朝一専用数値: `NONE_CONFIRMED`
+- 公開朝一専用数値: `NONE_CONFIRMED_AFTER_RESEARCH`
 - リセット短縮天井G数: `NOT_APPLICABLE`
-- 設定変更時モード振り分け: `NONE_CONFIRMED`
-- 朝一RT当選率/恩恵率: `NONE_CONFIRMED`
+- 設定変更時モード振り分け: `NONE_CONFIRMED_AFTER_RESEARCH`
+- 朝一RT当選率/恩恵率: `NONE_CONFIRMED_AFTER_RESEARCH`
 
 ## sources
 
-取得日: 2026-09-01
+取得日: 2026-09-10
 
 1. ユニバーサルエンターテインメント公式 — 電撃フランケン
    - https://www.universal-777.com/product/slot/dengeki_franken/
@@ -117,6 +119,10 @@ numericResetData:
    - https://www.p-world.co.jp/machine/database/4267
    - 型式名スーパーデラックス1、BIG後GHOST GAME 150G、約85枚増加。
    - reliability: DATABASE
+5. resetBehavior QA再探索 — 2026-09-10
+   - 上記4系統に加え、機種名/型式名を用いて `設定変更 / リセット / 朝一 / 据え置き / 電源OFF→ON / ガックン / RT / GHOST GAME` の検索語を変更して再探索。
+   - 直接固定可能な本機固有reset契約は追加確認できなかったため、未確認項目を推測せず `UNVERIFIED_AFTER_RESEARCH` / `NONE_CONFIRMED_AFTER_RESEARCH` へ正規化。
+   - reliability: QA_RESEARCH_EXHAUSTED
 
 ## missingFields
 
