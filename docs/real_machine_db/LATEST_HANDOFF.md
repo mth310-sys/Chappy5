@@ -1,71 +1,71 @@
 更新日: 2026-09-11
 
 ## 現在地点
-- recordCount: **1272**
-- latestRecordAdded: **ドンちゃん2**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2019-03-25_donchan2.md`
-- chronologicalFrontier: **2019-03-25**
-- frontierLatestMachine: **ドンちゃん2 — No.1272**
+- recordCount: **1273**
+- latestRecordAdded: **戦国パチスロ 義風堂々!!～兼続と慶次～**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2019-04-01_gifuudoudou-kanetsugu-keiji.md`
+- chronologicalFrontier: **2019-04-01**
+- frontierLatestMachine: **戦国パチスロ 義風堂々!!～兼続と慶次～ — No.1273**
 - schema: **resetBehavior v0.7**
-- status: **2019-03-25_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**
+- status: **2019-04-01_GROUP_OPEN**
 
 ## 今回の同期 / 進捗
-- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1271を再取得して開始。
+- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1272を再取得して開始。
 - INDEXは19件時点の旧スナップショットのため、README規則どおりLATEST_HANDOFF + main実レコードを正本として継続。
-- 開始時mainはrecordCount 1271、2019-03-18群CLOSED。
-- 2019-03-19〜03-24境界を監査し、独立登録すべき全国導入機を固定できず3/25へ前進。
-- handoff指定の `ドンちゃん2` をNo.1272として性能コア + resetBehavior v0.7で登録。
-- HAZUSEで型式 `S／ドンちゃん2／DC` / 検定番号 `8S1238` を固定。
-- 導入日は3/25先行導入資料と4/1本格導入資料が併存するため、最初の確認日2019-03-25をcanonical、4/1をCONFLICTとして保持。
-- 設定別BIG/REG/合算/機械割、完全攻略時、44.4〜48.7G、RT約0.3枚/G、BIG222枚/REG104枚を複数解析で照合。
-- 設定変更/純電断とも選択キャラは緑ドンへ戻る。一方、ボーナス成立状態は設定変更でRESET、純電断でCARRY_OVERとする当時解析を保存。
-- 2019-03-25群はモゲスロでドンちゃん2単独。別型式/別スペック/PB/地域差を監査して追加機を固定できずCLOSED。
+- 開始時mainはrecordCount 1272、2019-03-25群CLOSED。
+- 2019-03-26〜03-31境界を新台カレンダー/当時解析で監査し、独立登録すべき全国導入パチスロを固定できず4/1へ前進。
+- handoff第一候補 `戦国パチスロ 義風堂々!!～兼続と慶次～` をNo.1273として性能コア + resetBehavior v0.7で登録。
+- HAZUSEで型式 `義風堂々！！～兼続と慶次～EM` / 検定番号 `7S1876` を固定。
+- 導入日はHAZUSE/すろぱちくえすと/当時業界予定の2019-04-01と、K-Navi/ちょんぼりすた/スロパチネットの2019-04-08が競合。平均せず4/1を時系列canonical、4/8をCONFLICTとして保持。
+- 設定1/2/5/6のボーナス確率、技術介入レベル別機械割、38.2〜41.9G/50枚、RT約0.2枚/G、416/最大404/最大64枚を複数系統で照合。
+- 通常ゲーム数天井は非搭載。
+- 設定変更/据え置き/純電断別のRT/CZ/ボーナス成立状態・語りポイント等を直接示す本機固有表は、表記揺れ/型式/メーカー/朝一/ガックン/有利区間まで再探索しても固定できず `UNVERIFIED_AFTER_RESEARCH`。一般ノーマル機仕様から推定補完していない。
 
-## No.1272 — ドンちゃん2
-- manufacturer: **アクロス**
-- formalModel: **`S／ドンちゃん2／DC`**
-- certificationNumber: **`8S1238`**
-- generation/system: **6号機 / A+RT / 技術介入**
+## No.1273 — 戦国パチスロ 義風堂々!!～兼続と慶次～
+- manufacturer: **EXCITE**
+- formalModel: **`義風堂々！！～兼続と慶次～EM`**
+- certificationNumber: **`7S1876`**
+- generation/system: **5.9号機 / A+RT / 技術介入**
 - settings: **1 / 2 / 5 / 6**
-- BIG: **1/297.9 / 1/287.4 / 1/275.4 / 1/264.3**
-- REG: **1/392.4 / 1/354.2 / 1/322.8 / 1/281.3**
-- 合算: **1/169.3 / 1/158.7 / 1/148.6 / 1/136.2**
-- 市場掲載機械割: **97.7 / 100.0 / 103.4 / 106.4%**
-- 完全攻略時: **99.2 / 101.5 / 105.0 / 108.1%**
-- baseGamesPer50: **44.4〜48.7G**
-- RT純増: **約0.3枚/G**
-- BIG / REG: **最大222枚 / 最大104枚**
-- BIG後RT: **22G**
+- ボーナス合算: **1/244.5 / 1/240.9 / 1/224.4 / 1/210.1**
+- 機械割（初級→神）: **97.1→98.4 / 98.2→99.6 / 101.9→103.6 / 104.3→106.2%**
+- baseGamesPer50: **38.2〜41.9G（RT除外）**
+- RT純増: **約0.2枚/G**
+- RT: **50G**
+- 夢語りBIG極 / 戦語りBIG / 酒語りBONUS: **416枚 / 最大404枚（平均約364枚） / 最大64枚**
 - 天井: **非搭載**
 
 ### resetBehavior v0.7
-- settingChange: 選択キャラ→緑ドン。ボーナス成立/告知状態はRESET方向。ユニメモ引継ぎ。
-- powerCycle: 選択キャラ→緑ドン。ボーナス成立状態CARRY_OVER。ユニメモ引継ぎ。
-- carryOver: 据え置き資料では告知ランプ・ユニメモ引継ぎ。全内部状態契約は `PARTIAL_CROSSCHECKED_WITH_POWER_CYCLE`。
-- gameCounterReset / ceilingAfterReset: `NOT_APPLICABLE`（天井・規定Gゾーン非搭載）。
+- settingChange: RT/CZ/ボーナス成立状態・語りポイント等の直接契約は `UNVERIFIED_AFTER_RESEARCH`。
+- carryOver: 据え置きを純電断と分離した本機固有公開契約は `UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION`。
+- powerCycle: 純電源OFF→ON時のRT/CZ/ボーナス成立状態・液晶復帰は `UNVERIFIED_AFTER_RESEARCH`。
+- gameCounterReset / ceilingAfterReset: `NOT_APPLICABLE`（通常ゲーム数天井・規定G当選非搭載）。
 - modeAfterReset: 朝一専用モード/設定変更専用振り分けは `NONE_CONFIRMED_AFTER_RESEARCH`。
-- stateAfterReset: ボーナス成立状態は設定変更RESET / 純電断CARRY_OVER。RT状態の直接契約は `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
-- advantageousSectionReset: 主ゲームフロー上の朝一有利区間管理は `NOT_APPLICABLE_TO_MAIN_GAME_FLOW`。有利区間ランプ判別契約なし。
-- resetBenefits: 天井短縮・朝一CZ/初当たり優遇等は `NONE_CONFIRMED_AFTER_RESEARCH`。
-- resetDetection: 選択キャラは設定変更/純電断とも緑ドンで判別不可。本機固有ガックン率未固定。
-- numericResetData: 天井/短縮 `NOT_APPLICABLE`、resetModeDistribution / resetHitBoost `NONE_CONFIRMED_AFTER_RESEARCH`、gakkunRate `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
+- stateAfterReset: 設定変更/据え置き/純電断別の直接契約は `UNVERIFIED_AFTER_RESEARCH`。
+- advantageousSectionReset: 主ゲームフロー上の朝一有利区間比較は `NOT_APPLICABLE_TO_MAIN_GAME_FLOW`。本機固有有利区間ランプ判別契約なし。
+- resetBenefits / resetPenalties: 天井短縮・朝一CZ・初当たり優遇・専用不利数値は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- resetDetection: ガックン条件/率、初期出目・ランプ・液晶による変更判別は `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
+- numericResetData: 天井/短縮 `NOT_APPLICABLE`、resetModeDistribution/resetHitBoost `NONE_CONFIRMED_AFTER_RESEARCH`、gakkunRate `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
 
 ### conflicts / quality
-- `CONFLICT_RELEASE_DATE_2019_03_25_EARLY_VS_2019_04_01_NATIONAL`
-  - K-Navi/モゲスロ/ちょんぼりすた等: 3/25。
-  - HAZUSE: 4/1。別当時解析: 4/1〜、一部地域3/25〜。
-  - earliest confirmed hall introductionの3/25をcanonicalとして保持。
-- `BASE_MINOR_VARIANCE_44_4_VS_44_8_LOWER_BOUND`
-  - 多数資料44.4〜48.7G、すろぱちくえすと44.8〜48.7G。
+- `CONFLICT_RELEASE_DATE_2019_04_01_VS_2019_04_08`
+  - 4/1: HAZUSE（導入開始）、すろぱちくえすと、PiDEA X当時導入予定。
+  - 4/8: K-Navi、ちょんぼりすた、スロパチネット。
+  - 時系列キューでは最古の導入開始表記4/1をcanonical。両日を保持。
+- 機械割は技術介入レベル別レンジであり、単一値へ平均化しない。
 
-## 2019-03-25群
+## 2019-04-01群
 ### 登録済み
-- No.1272 ドンちゃん2
+- No.1273 戦国パチスロ 義風堂々!!～兼続と慶次～（導入日4/1 vs 4/8 CONFLICT保持）
+
+### 未処理確認済み
+- パチスロ猛獣王 王者の咆哮（Sammy） — K-Navi/複数当時解析で2019-04-01。
+- 新世紀エヴァンゲリオン 暴走400（ビスティ） — K-Navi/ちょんぼりすたで2019-04-01。
 
 ### 群監査
-- モゲスロ2019新台カレンダーは3/25パチスロをドンちゃん2単独掲載し、次の主要群を4/1 `義風堂々!!～兼続と慶次～` / `猛獣王 王者の咆哮` と掲載。
-- K-Naviはドンちゃん2を2019-03-25導入とする一方、HAZUSEは2019-04-01。本格導入/地域差として競合をレコード内保持。
-- 3/19〜3/24境界および3/25同日について別メーカー/別型式/別スペック/PB/地域差を検索したが、独立登録すべき追加機を固定できず **2019-03-25_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**。
+- K-Navi 2019年4月カレンダーは4/1に猛獣王・エヴァ暴走400、4/8に義風堂々を掲載。
+- HAZUSE/すろぱちくえすと/当時業界記事側では義風堂々4/1資料が存在するため、漏れ防止優先で4/1群OPENのまま保持。
+- 4/1群の全メーカー/別型式/別スペック/PB/地域差の最終監査は未完。既知未処理2機処理後にCLOSED判定する。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**
@@ -73,23 +73,20 @@
 - nextRetroQaCandidate: **`docs/real_machine_db/machines/2006-12_thunder-v-special.md`**。すでにv0.7 QA済みなら重複編集せず次の未QA機へ自動前進。
 
 ## 次回再開地点
-1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1272を再取得し並行更新確認。
-2. **2019-03-26〜03-31境界を短く全メーカー監査**。
-3. 2019-04-01群の未登録候補を処理。第一候補は **`義風堂々!!～兼続と慶次～`（EXCITE）**、続いて **`パチスロ猛獣王 王者の咆哮`（Sammy）**。
-4. K-Navi月間カレンダーには4/1 `新世紀エヴァンゲリオン 暴走400`（ビスティ）も掲載されるため、独立パチスロ機として未登録なら漏らさず個別監査・登録する。
-5. 4/1群の全メーカー/別型式/別スペック/PB/地域差を最終監査してCLOSED可否判定。
+1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1273を再取得し並行更新確認。
+2. **2019-04-01群OPENを継続。次の未処理は `パチスロ猛獣王 王者の咆哮`（Sammy）をNo.1274候補。**
+3. 続いて `新世紀エヴァンゲリオン 暴走400`（ビスティ）を未登録なら処理。
+4. 4/1群の全メーカー/別型式/別スペック/PB/地域差を再監査しCLOSED可否判定。
+5. 4/8側にはゴーゴージャグラー2 / マイフラワー-30 / ワンダフルジャック等がK-Naviで確認されるため、4/1群CLOSED後に時系列順で既存重複確認して進む。
 6. 遡及QAは `2006-12_thunder-v-special.md` から確認。
 
 ## 主要出典 — 取得日 2026-09-11
-### ドンちゃん2
-- HAZUSE: https://hazuse.com/machine/pachislot/8S1238/
-- K-Navi: https://p-kn.com/slot/3197/
-- 一撃 設定変更: https://1geki.jp/slot/s_don2/3/
-- モゲスロ2019新台カレンダー: https://moge-site.com/new-slot2019
-- モゲスロ機種解析: https://moge-site.com/archives/21251
-- ちょんぼりすた: https://chonborista.com/slot/universal-slot/77096/
-- おスロおパチおいでやす: https://oslo-opachi.com/2019/03/24/post-5348/
-- 元プロMG: https://www.pachislotblog.tokyo/donchan2-kaiseki/
-- すろぱちくえすと: https://www.slopachi-quest.com/article/donnchan2-settei/
-- スロットセブン: https://slot-seven.com/donchan2-settei/
+### 義風堂々!!～兼続と慶次～
+- HAZUSE: https://hazuse.com/machine/pachislot/7S1876/
+- PiDEA X（2019-02-22内覧会）: https://www.pidea.jp/articles/%E6%88%A6%E5%9B%BD%E3%83%91%E3%83%81%E3%82%B9%E3%83%AD%E3%80%8C%E7%BE%A9%E9%A2%A8%E5%A0%82%E3%80%85!!%E3%80%8D%E6%9E%9A%E6%95%B0%E5%A4%89%E5%8B%95%E3%83%9C%E3%83%BC%E3%83%8A%E3%82%B9%E6%90%AD%E8%BC%89%EF%BC%8FEXCITE
+- すろぱちくえすと: https://www.slopachi-quest.com/article/gifuudoudou-settei/
+- K-Navi機種ページ: https://p-kn.com/slot/3195/
+- ちょんぼりすた: https://chonborista.com/slot/newgin-slot/80338/
+- スロパチネット: https://slopachi-net.com/gihudoudo
+- スロット解析.com 2019年3月カレンダー: https://slotkaiseki.com/2019-3/
 - K-Navi 2019年4月カレンダー: https://p-kn.com/calendar/201904/
