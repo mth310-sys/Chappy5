@@ -1,67 +1,70 @@
 更新日: 2026-09-10
 
 ## 現在地点
-- recordCount: **1213**
-- latestRecordAdded: **ストリートファイターV パチスロエディション**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2018-07-23_street-fighter-v-pachislot-edition.md`
+- recordCount: **1214**
+- latestRecordAdded: **SLOTハイスクール・フリート**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2018-07-23_slot-high-school-fleet.md`
 - chronologicalFrontier: **2018-07-23**
-- frontierLatestMachine: **ストリートファイターV パチスロエディション — No.1213**
+- frontierLatestMachine: **SLOTハイスクール・フリート — No.1214**
 - schema: **resetBehavior v0.7**
-- status: **2018-07-23_GROUP_OPEN_1_MACHINE_PROCESSED_AUDIT_PENDING**
+- status: **2018-07-23_GROUP_OPEN_2_MACHINES_PROCESSED_AUDIT_PENDING**
 
 ## 今回の同期 / 進捗
-- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1212を再取得して開始。
+- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1213を再取得して開始。
 - INDEXは19件時点の旧スナップショットのため、README規定どおりLATEST_HANDOFF + main実レコードを正本として継続。
-- mainは並行進捗により1212件 / No.1212「雷雷弁慶」まで前進済みだったため、古い再開地点を破棄して最新handoffを採用。
-- handoff指定の最優先候補「ストリートファイターV パチスロエディション」を7/16〜7/23境界機として監査・登録。
-- 導入日はすろぱちくえすと2018-07-16に対し、型式・検定番号付きHAZUSE、K-Navi、ちょんぼりすたが2018-07-23で一致。`CONFLICT_RELEASE_DATE_2018_07_16_VS_2018_07_23`を保持し、canonicalを2018-07-23とした。
-- 性能コアはパチマガスロマガ、HAZUSE、すろぱちくえすと、業界記事、P-WORLDで照合。設定別PAYOUT、BIG合算、ART初当たり、A+ART合成、約34G/50枚、ART約1.5枚/G、BIG204枚、ART1セット30G+αを固定。
-- グリーンべるとの「ART初当たり1/232.0〜1/166.2」は他解析の「ボーナス+ART合成」と数列が一致するため、ラベル混同候補としてCONFLICT保持。ART単独は1/379.90〜1/371.67。
-- ちょんぼりすたの設定4 BIG 1/450.1は、パチマガスロマガ・すろぱちくえすと等の1/420.1と競合するためsource typo suspectedとして保持しcanonicalは1/420.10。
-- resetBehaviorではパチマガスロマガ/HAZUSE/ちょんぼりすたを横断し、朝一3G以内（レア小役非成立条件）のステージチェンジ率を設定変更後と据え置きで取得。対応する全セルで設定変更後が据え置きの10倍。
-- 設定変更時の内部状態、純電源OFF→ON時の内部状態、本機固有の有利区間処理は検索語・型式・メーカー・シリーズ名を変えて再探索したが、疑問符なしの直接契約を固定できず `UNVERIFIED_AFTER_RESEARCH`。5.9号機一般論では補完しない。
-- 天井は非搭載。短縮天井は`NOT_APPLICABLE`。ガックン公開率は見つからず、朝一ステージチェンジ数値を主要変更判別契約として保存。
+- mainは1213件 / No.1213「ストリートファイターV パチスロエディション」まで進行済みだったため、旧会話上のNo.1210候補等は破棄し、最新handoffの次候補を採用。
+- 既存重複検索後、handoff最優先候補「SLOTハイスクール・フリート」をNo.1214として登録。
+- 導入日はHAZUSE/K-Navi/すろぱちくえすと/ちょんぼりすたで2018-07-23一致。型式`SLOTハイスクール・フリートBU`、検定番号`7S1684`をHAZUSEで固定。
+- 性能コアはHAZUSE/パチマガスロマガ/一撃/ちょんぼりすた等を横断。PAYOUT 97.6〜108.2%、同色BIG1/468.1共通、異色BIG1/348.6〜1/226.8、ボーナス合算1/199.8〜1/152.8、ART初当たり1/539.7〜1/482.4、35.5〜38.4G/50枚、ART約1.0枚/G、ART1セット約40G、通常ゲーム数天井非搭載を固定。
+- 通常天井は非搭載だが、有利区間80G継続でARTとなる救済措置を確認。通常ゲーム数天井と定義を混ぜず別項目で保存。
+- resetBehaviorでは、設定変更時の液晶を艦内ステージ1とする本機ページを確認。内部状態は同資料/一撃で調査中。
+- 純電源OFF→ONは、ちょんぼりすたが内部状態「調査中」・ステージ原則引継ぎ（非有利区間時は艦内ステージ1、ボーナス内部成立中は確定画面）と掲載。一方、期待値見える化は有利区間ランプ/内部状態引継ぎとするため `CONFLICT_POWER_CYCLE_INTERNAL_STATE_UNDER_INVESTIGATION_VS_CARRY_OVER` として保持。
+- 期待値見える化は設定変更後を非有利区間/有利区間ランプ消灯とするが、5.9号機規定由来の説明を含むため、本機固有直接契約へ無条件昇格せず `UNVERIFIED_WITH_STRONG_REGULATORY_INDICATION` とした。
+- 本機固有の据え置き独立契約、ガックン条件/率、有利区間80G救済カウンタの設定変更/据え置き/純電断時の個別処理は検索語・資料系統を変えても直接固定できずUNVERIFIED。
 
-## No.1213 — ストリートファイターV パチスロエディション
-- manufacturer: **エンターライズ**
+## No.1214 — SLOTハイスクール・フリート
+- manufacturer: **ユニバーサルブロス**
 - releaseDateCanonical: **2018-07-23**
-- releaseDateConflict: **2018-07-16 / 2018-07-23**
-- formalModelName: **ストリートファイターV／ZS**
-- certificationNumber: **7S1716**
+- formalModelName: **SLOTハイスクール・フリートBU**
+- certificationNumber: **7S1684**
 - generation/system: **5.9号機 / A+ART**
 - settings: **1 / 2 / 3 / 4 / 5 / 6**
-- payout: **97.82 / 99.48 / 101.38 / 103.84 / 106.61 / 110.48%**
-- BIG合算: **1/595.78 / 1/528.52 / 1/474.90 / 1/420.10 / 1/368.20 / 1/300.60**
-- ART初当たり: **1/379.90 / 1/379.20 / 1/378.70 / 1/375.77 / 1/374.86 / 1/371.67**
-- ボーナス+ART合成: **1/231.98 / 1/220.79 / 1/208.01 / 1/198.37 / 1/185.74 / 1/166.18**
-- base: **約34G/50枚**
-- ART純増: **約1.5枚/G**
-- BIG: **204枚**
-- ART: **1セット30G+α**
+- payout: **97.6 / 99.3 / 101.2 / 103.5 / 105.0 / 108.2%**
+- sameColorBIG: **全設定1/468.1**
+- differentColorBIG: **1/348.6 / 1/348.6 / 1/282.5 / 1/282.5 / 1/262.1 / 1/226.8**
+- bonusCombined: **1/199.8 / 1/199.8 / 1/176.2 / 1/176.2 / 1/168.0 / 1/152.8**
+- ART初当たり: **1/539.7 / 1/539.7 / 1/513.5 / 1/513.5 / 1/503.2 / 1/482.4**
+- bonus+ART: **1/145.8 / 1/145.8 / 1/131.2 / 1/131.2 / 1/126.0 / 1/116.0**
+- base: **35.5 / 37.3 / 35.7 / 38.0 / 38.1 / 38.4G/50枚**
+- ART純増: **約1.0枚/G**
+- 同色BIG: **通常時約150枚 / ART中最大204枚**
+- 異色BIG: **通常時約104枚 / ART中最大144枚**
+- ART: **1セット約40G**
 - normal ceiling: **非搭載**
+- advantageous-section relief: **有利区間80G継続でART**
 
 ### resetBehavior v0.7
-- settingChange: 朝一1〜3Gステージチェンジ率に設定変更専用値あり。設定別・G別数値はNo.1213レコードに保存。
-- carryOver: 同条件の据え置き値あり。各対応セルで設定変更値の1/10。
-- powerOFF→ON: 据え置きから独立した確定的内部状態契約は `UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION`。
-- gameCounter/ceiling: 通常天井なし。短縮天井`NOT_APPLICABLE`。
-- mode/state: 朝一専用出玉モード振り分けは未固定。内部状態比較表は疑問符付きのため確定へ昇格しない。
-- advantageousSection: 本機固有設定変更/据え置き/純電断契約 `UNVERIFIED_AFTER_RESEARCH`。
-- resetBenefits: 天井短縮・初当たり優遇は確認なし。変更判別上は朝一ステチェン率10倍差が主要。
-- resetDetection: レア小役非成立の朝一3G以内ステージチェンジ。1G目は設定2以上、2G目は偶数、3G目は設定4以上の可能性アップ。ガックン率は未固定。
+- settingChange: 液晶は艦内ステージ1の解析あり。内部状態は直接解析で調査中。非有利区間/ランプ消灯とする二次資料は強い規定示唆として保持するが確定契約へ昇格しない。
+- carryOver: 据え置きを純電断から独立して示す本機固有契約は `UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION`。
+- powerOFF→ON: ステージ原則引継ぎ。ただし非有利区間時は艦内ステージ1、ボーナス内部成立中は確定画面。内部状態は資料間で調査中 vs 引継ぎのCONFLICT。
+- gameCounter/ceiling: 一般的な通常天井なし。リセット短縮天井なし。有利区間80G救済は常設機能として分離。
+- mode/state: 朝一専用モード振り分け・リセット専用初当たり数値は未確認。
+- advantageousSection: 設定変更後非有利区間/ランプ消灯という強い規定示唆あり。ただし本機固有直接解析が不足しUNVERIFIED_WITH_STRONG_REGULATORY_INDICATION。純電断は資料間CONFLICT。
+- resetBenefits: リセット専用天井短縮・ART初当たり優遇なし。80G救済はリセット専用ではない。
+- resetDetection: 前日有利区間ランプ点灯→朝一も点灯なら据え置き推測材料との解析あり。艦内ステージ1のみでは確定判別不可。ガックン公開率なし。
+- numericResetData: 有利区間80G救済、BIG後32G有利区間高確を保持。リセット専用率は未確認。
 
-## 2018-07-16〜23境界監査
+## 2018-07-23群監査
 ### 登録済み
-- No.1212 雷雷弁慶 — canonical 2018-07-17、導入日CONFLICTあり。
-- No.1213 ストリートファイターV パチスロエディション — canonical 2018-07-23、7/16 vs 7/23 CONFLICTあり。
+- No.1213 ストリートファイターV パチスロエディション — canonical 2018-07-23、7/16 vs 7/23導入日CONFLICT。
+- No.1214 SLOTハイスクール・フリート — 2018-07-23。
 
 ### 次の既知候補
-- ハイスクール・フリート
-- マイジャグラーIV
+- **マイジャグラーIV**
 
 ### 群判定
-- `2018-07-23_GROUP_OPEN_1_MACHINE_PROCESSED_AUDIT_PENDING`
-- 上記既知候補と同日全メーカー/別スペック/PB/地域差監査が終わるまでCLOSEしない。
+- `2018-07-23_GROUP_OPEN_2_MACHINES_PROCESSED_AUDIT_PENDING`
+- マイジャグラーIV処理後、2018-07-23同日全メーカー/別スペック/PB/地域差を再監査してからCLOSE可否を判定する。
 
 ## 遡及 resetBehavior QA
 - retroQaScanConfirmedThrough: **2006-08_cranky-condor-x.md**（クランキーコンドルX）。
@@ -75,25 +78,24 @@
 - 毎回、最新mainのREADME / mission / INDEX / LATEST_HANDOFF / latest recordを読み直す。
 - 並行更新がある場合は最新HEADを優先し、古い番号で上書きしない。
 - resetBehaviorで一般論を確定契約へ昇格しない。据え置きと純電断を同義扱いしない。
-- 導入日競合機は最古候補日を飛ばさず境界群として監査し、CONFLICTを保持する。
+- 通常ゲーム数天井と有利区間継続救済を同じ定義に混ぜない。
 - 同日/境界群は全メーカー/別スペック/PB/地域差監査後にのみCLOSED判定する。
 
 ## 次回再開地点
-1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1213を再取得。
-2. **1213件 / chronologicalFrontier 2018-07-23 / 7/23群OPEN**を正本として継続。ただし並行更新があれば最新HEADを優先。
-3. **ハイスクール・フリート**を最優先候補として既存レコード重複確認→性能コア+resetBehavior v0.7収集。
-4. 続いて **マイジャグラーIV** を処理し、2018-07-23同日全メーカー/別スペック/PB/地域差を横断監査してから群CLOSE判定。
+1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1214を再取得。
+2. **1214件 / chronologicalFrontier 2018-07-23 / 7/23群OPEN**を正本として継続。ただし並行更新があれば最新HEADを優先。
+3. **マイジャグラーIV**を最優先候補として既存レコード重複確認→性能コア+resetBehavior v0.7収集。
+4. その後、2018-07-23同日全メーカー/別スペック/PB/地域差を横断監査して群CLOSE可否を判定。
 5. 遡及QAは `docs/real_machine_db/machines/2006-08_rumble-roses.md` から継続。
 
 ## 主要出典 — 取得日 2026-09-10
-### No.1213 ストリートファイターV パチスロエディション
-- HAZUSE: https://hazuse.com/machine/pachislot/7S1716/
-- パチマガスロマガ ボーナス確率: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/enterrise_slot/18/h-1.php
-- パチマガスロマガ ステージチェンジ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/enterrise_slot/18/en04.php
-- パチマガスロマガ 50枚ゲーム数: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/enterrise_slot/18/c-1.php
-- すろぱちくえすと: https://www.slopachi-quest.com/article/street-fighter-v/
-- ちょんぼりすた: https://chonborista.com/slot/enta-slot/60006/
-- K-Navi: https://p-kn.com/slot/3030/
-- グリーンべると: https://web-greenbelt.jp/00010566/
-- PiDEA X: https://www.pidea.jp/articles/%E5%8B%9D%E3%81%A4%E3%81%BB%E3%81%A9%E6%9C%89%E5%88%A9%E3%81%AB%EF%BC%81%E3%80%8C%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%82%BF%E3%83%BC%E2%85%A4%E3%80%8D%EF%BC%8F%E3%82%A8%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%A9%E3%82%A4%E3%82%BA
-- P-WORLD: https://www.p-world.co.jp/machine/database/8699
+### No.1214 SLOTハイスクール・フリート
+- HAZUSE: https://hazuse.com/machine/pachislot/7S1684/
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/universalbros_slot/09/a.php
+- 一撃 ボーナス: https://1geki.jp/slot/s_highfle/1/
+- 一撃 ベース: https://1geki.jp/slot/s_highfle/4/
+- 一撃 設定変更: https://1geki.jp/slot/s_highfle/3/
+- ちょんぼりすた: https://chonborista.com/slot/universal-slot/59827/
+- 期待値見える化: https://slotjin.com/slot/highschoolfleet/
+- K-Navi: https://p-kn.com/slot/3024/
+- すろぱちくえすと: https://www.slopachi-quest.com/article/high-school-fleet/
