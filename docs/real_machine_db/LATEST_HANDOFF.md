@@ -1,53 +1,57 @@
 更新日: 2026-09-10
 
 ## 現在地点
-- recordCount: **1245**
-- latestRecordAdded: **パチスロ ダンジョンに出会いを求めるのは間違っているだろうか（ダンまち）**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2018-11-19_danmachi.md`
-- chronologicalFrontier: **2018-11-19**
-- frontierLatestMachine: **ダンまち — No.1245**
+- recordCount: **1246**
+- latestRecordAdded: **パチスロ マッハGoGoGo**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2018-12-03_mach-gogogo.md`
+- chronologicalFrontier: **2018-12-03**
+- frontierLatestMachine: **パチスロ マッハGoGoGo — No.1246**
 - schema: **resetBehavior v0.7**
-- status: **2018-11-19_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**
+- status: **2018-12-03_GROUP_OPEN_1_OF_AT_LEAST_4_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md` / mission v0.7 / `INDEX.md` / `LATEST_HANDOFF.md` / No.1244を取得して開始。
-- `INDEX.md`は旧スナップショットのため、README指示どおり `LATEST_HANDOFF.md` + main実レコードを現行正本として継続。
-- 開始時正本は1244件 / 2018-11-19 / `2018-11-19_GROUP_OPEN_2_OF_AT_LEAST_3_PROCESSED`。
-- handoff指定の次機種 `ダンまち` をNo.1245として登録。
-- すろぱちくえすとの2018年導入日一覧は2018-11-19群を `戦コレ！［泰平女君］徳川家康 / バイオハザード イントゥザパニック / ダンまち` の3機として掲載。個別機種資料でも各3機の11/19導入を確認。
-- ALL7の2018年11月一覧には戦コレ/バイオはあるがダンまちが欠けるため、同サイト単独では完全一覧とみなさず、複数系統監査を優先。
-- 2018-11-19の追加パチスロ別スペック/PB/地域差候補は今回の横断検索で固定できず、同日群をCLOSED判定。
+- 最新mainの `README.md` / mission v0.7 / `INDEX.md` / `LATEST_HANDOFF.md` / No.1245を取得して開始。
+- `INDEX.md` は旧スナップショット（19件）のため、README指示どおり `LATEST_HANDOFF.md` + main実レコードを現行正本として継続。
+- 開始時正本は1245件 / 2018-11-19群CLOSED。
+- 2018-11-20〜12-02の境界を導入一覧で再確認し、今回追加すべき未処理機を固定できなかったため次の明確な群2018-12-03へ進行。
+- handoff指定の次機種 `パチスロ マッハGoGoGo` をNo.1246として登録。
+- すろぱちくえすと2018年12月一覧では12/3群に `マッハGoGoGo / スーパーリノXX / ドリームクルーン711 / 巨人の星 情熱編` の4機を掲載。2-9伝説の導入一覧でも同4機を確認。
+- 12/3群はまだOPEN。次はスーパーリノXXから継続する。
 
-## No.1245 — ダンまち
-- manufacturer: **北電子**
-- releaseDateCanonical: **2018-11-19**
-- formalModelName: **ダンまち／KT**
+## No.1246 — パチスロ マッハGoGoGo
+- manufacturer: **七匠**
+- releaseDateCanonical: **2018-12-03**
+- formalModelName: **パチスロマッハGoGoGo A**
 - certificationNumber: **UNVERIFIED_AFTER_RESEARCH**
-- generation/system: **5.9号機 / A+RT**
-- settings: **1 / 2 / 5 / 6**
-- payoutRate: **98.2 / 100.3 / 106.4 / 111.9%**
-- BONUS合算: **1/189.4 / 1/179.1 / 1/168.5 / 1/149.3**
-- RT初当たり: **1/215.6 / 1/214.6 / 1/213.6 / 1/211.3**
-- baseGamesPer50: **約36G**
-- RT純増: **約0.4枚/G**
-- basicPayout: **青FAMILIA BONUS最大251枚 / 赤FAMILIA BONUS最大202枚 / DIVINE JUDGE DOUBLE平均224枚 / DIVINE JUDGE平均128枚 / FAMILIA CHANCE約56枚**
+- generation/system: **5.9号機 / A+RT / 技術介入**
+- settings: **1 / 3 / 6 / Go**
+- payoutRate: **97.8 / 99.6 / 108.0 / 108.0%**
+- BIG合算: **1/343.12 / 1/329.33 / 1/292.57 / 1/313.57**
+- REG合算: **1/426.56 / 1/420.10 / 1/337.81 / 1/270.81**
+- BONUS合算: **1/189.96 / 1/184.61 / 1/156.78 / 1/145.31**
+- baseGamesPer50: **約44G**（ANALYSIS_SINGLE）
+- RT純増: **約0.1枚/G**（別資料表現: 現状維持程度）
+- basicPayout: **SBB最大400枚 / BIG最大257枚 / REG最大65枚**
+- RT: **全BONUS後5G CZ→BAR揃いで55G RT**
 - ceiling: **NONE**
 
 ### resetBehavior v0.7
-- settingChange: **UNVERIFIED_AFTER_RESEARCH**。一撃の本機専用ページでも状態/モード/液晶ステージは「現在調査中」。検索語・資料系統を変更して再探索しても本機固有の確定契約を固定できず。
-- carryOver: **UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION**。据え置き時の内部状態/RT直撃ゾーン進行/石盤時計/有利区間を純電断と独立して示す直接資料なし。
-- powerOFF→ON: **UNVERIFIED_AFTER_RESEARCH**。一撃専用ページでも状態/モード/液晶ステージは「現在調査中」。
-- gameCounterReset: 通常G数天井はN/A。ボーナス間G数連動のRT直撃ゾーン/石盤時計進行値の設定変更・据え置き・電断処理はUNVERIFIED。
-- ceilingAfterReset: **N/A**。通常天井非搭載、短縮天井なし。
-- mode/state: 通常/高確/超高確は存在するが設定変更時の初期状態/再抽選振り分けはUNVERIFIED。
-- advantageousSection: **UNVERIFIED_AFTER_RESEARCH_5_9_ADVANTAGEOUS_SECTION_RELEVANT**。5.9号機として有利区間概念は解析上確認できるが、本機固有の朝一リセット契約は固定できず。
+- settingChange: **UNVERIFIED_AFTER_RESEARCH**。ちょんぼりすた本機専用朝一表でもRT状態/ステージは調査中。検索語・資料系統を変更して再探索後も確定契約を固定できず。
+- carryOver: **UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION**。据え置き時のRT/CZ/液晶状態を純電断と独立して示す直接資料なし。
+- powerOFF→ON: **UNVERIFIED_AFTER_RESEARCH**。本機専用朝一表でRT状態/ステージとも調査中。
+- gameCounterReset: 通常G数天井非搭載のため **N/A**。CZ/RT残Gの設定変更・純電断処理はUNVERIFIED。
+- ceilingAfterReset: **N/A / NO_CEILING**。
+- modeAfterReset: **NONE_CONFIRMED_AFTER_RESEARCH**。通常ゲーム数解除/朝一専用モードは確認なし。
+- stateAfterReset: **UNVERIFIED_AFTER_RESEARCH**。RT/CZ内部状態契約を固定できず。
+- advantageousSection: **UNVERIFIED_AFTER_RESEARCH_OR_NOT_APPLICABLE_TO_THIS_A_PLUS_RT_IMPLEMENTATION**。5.9号機一般論から補完しない。
 - resetBenefits / resetPenalties: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- resetDetection: **UNVERIFIED_AFTER_RESEARCH**。ガックン/初期画面/石盤時計等の確定判別条件・発生率を固定できず。他の北電子機から自動転記しない。
-- numericResetData: conventionalCeiling **NONE**、その他の設定変更専用公開数値は **NONE_CONFIRMED / UNVERIFIED**。
+- resetDetection: **UNVERIFIED_AFTER_RESEARCH**。ガックン/初期出目/液晶等の本機固有朝一判別条件・発生率を固定できず。
+- numericResetData: conventionalCeiling **NONE**、reset専用公開数値は **NONE_CONFIRMED / UNVERIFIED**。
 
-### quality note
-- P-WORLDの基本獲得枚数は実獲得値。一撃の青349枚超/赤279枚超/DJ DOUBLE287枚超/DJ161枚超/FC79枚超は払い出し終了条件であり、定義が異なるためCONFLICTにしない。
-- すろぱちくえすとの月間紹介記事には「11/18~」表記があるが、一撃・ちょんぼりすた・P-WORLD等の複数資料が2018-11-19で一致するためcanonicalは11/19。
+### quality notes
+- 設定1 BONUS合算 `1/190.0` 表記と精密値 `1/189.96` は丸め整合のためCONFLICTではない。
+- 設定6と設定Goは機械割108.0%で同値だが、BIG後RT突入率やマッハGoチャージ発生率が異なるため別設定として保持。
+- RT純増 `約0.1枚/G` と `現状維持程度` は方向性が整合し、表現差として保持。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
@@ -55,24 +59,19 @@
 - nextRetroQaCandidate: **`docs/real_machine_db/machines/2006-11_jack-to-mamenoki.md`（ジャックと豆の木）**。
 - 既存性能値をやり直さず、resetBehavior欠損のみ順次QAする。
 
-## 2018-11-19群
+## 2018-12-03群
 ### 登録済み
-- No.1243 戦コレ！［泰平女君］徳川家康
-- No.1244 バイオハザード イントゥザパニック
-- No.1245 ダンまち
+- No.1246 パチスロ マッハGoGoGo
+
+### 未処理既知候補
+1. **スーパーリノXX**（山佐）— No.1247候補
+2. **ドリームクルーン711 / ドリームクルーンR711/CX**（オーイズミ）
+3. **巨人の星 情熱編 / 巨人の星情熱編/S3**（サンセイR&D）
 
 ### 判定
-- **2018-11-19_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**。
-- すろぱちくえすと年次導入一覧で同日3機、各個別資料でも11/19導入を確認。
-- ALL7はダンまち欠落のため補助資料扱い。全メーカー/別スペック/PB/地域差を再検索したが追加候補を固定できず。
-
-## 次の時系列群
-- 2018-11-20〜2018-12-02の境界漏れを短く再監査する。
-- 現時点で次の明確な導入群は **2018-12-03**。
-- 2018-12-03パチスロ候補として少なくとも以下を確認済み:
-  1. **パチスロマッハGoGoGo — No.1246候補**（七匠）
-  2. **スーパーリノXX**（山佐）
-- すろぱちくえすと2018年12月新台一覧および一撃メーカー一覧等を起点に、12/3同日群を全メーカー/別スペック/PB/地域差で横断監査してからCLOSEする。
+- **2018-12-03_GROUP_OPEN_1_OF_AT_LEAST_4_PROCESSED**。
+- すろぱちくえすと月次/年次一覧と2-9伝説で少なくとも上記4機を確認。
+- 同日群は全メーカー/別スペック/PB/地域差監査後にのみCLOSED化する。
 
 ## 継続注意事項
 - `INDEX.md`は旧スナップショット。`LATEST_HANDOFF.md` + main実レコードを優先。
@@ -85,26 +84,21 @@
 - 競合値は平均せずCONFLICTを保持。
 
 ## 次回再開地点
-1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1245を再取得。
-2. **1245件 / chronologicalFrontier 2018-11-19 / `2018-11-19_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT`** を正本として継続。ただし並行更新があれば最新HEAD優先。
-3. 2018-11-20〜12-02境界漏れを短く監査。
-4. 次の未処理機種 **パチスロマッハGoGoGo** をNo.1246候補として調査・登録。
-5. 続いて **スーパーリノXX**、その他12/3候補を横断監査。
-6. 遡及QAは **`docs/real_machine_db/machines/2006-11_jack-to-mamenoki.md`（ジャックと豆の木）** から再開。
+1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1246を再取得。
+2. **1246件 / chronologicalFrontier 2018-12-03 / `2018-12-03_GROUP_OPEN_1_OF_AT_LEAST_4_PROCESSED`** を正本として継続。ただし並行更新があれば最新HEAD優先。
+3. 次の未処理機種 **スーパーリノXX** をNo.1247候補として調査・登録。
+4. 続いて **ドリームクルーン711 → 巨人の星 情熱編** を処理し、12/3群を全メーカー/別型式/別スペック/PB/地域差まで再監査してCLOSED判定。
+5. 遡及QAは **`docs/real_machine_db/machines/2006-11_jack-to-mamenoki.md`（ジャックと豆の木）** から再開。
 
 ## 主要出典 — 取得日 2026-09-10
-### No.1245 ダンまち
-- 北電子 公式検定情報: https://www.kitadenshi.co.jp/slot-kentei/danmachi/
-- 一撃 機種概要: https://1geki.jp/slot/s_danmachi/
-- 一撃 天井/設定変更: https://1geki.jp/slot/s_danmachi/3/
-- 一撃 小役/ベース: https://1geki.jp/slot/s_danmachi/4/
-- ちょんぼりすた: https://chonborista.com/slot/kitadenshi/66530/
-- P-WORLD: https://www.p-world.co.jp/machine/database/8768
-- パチビー: https://www.pachibee.jp/machines/lecture/218100003
-- スロット解析.com: https://slotkaiseki.com/danmachi-spec/
-- すろぱちくえすと 2018年導入一覧: https://www.slopachi-quest.com/article/sindai-2018/
-- Amusement Japan: https://amusement-japan.co.jp/article/detail/10000832/
-
-### 次群監査
+### No.1246 パチスロ マッハGoGoGo
+- 七匠 公式製品アーカイブ: https://www.nanashow.co.jp/product/
+- パチビー: https://www.pachibee.jp/machines/about/218100012
+- P-WORLD: https://www.p-world.co.jp/machine/database/8786
+- ちょんぼりすた: https://chonborista.com/slot/nanashow/67215/
+- すろぱちくえすと 機種解析: https://www.slopachi-quest.com/article/mach-gogogo/
 - すろぱちくえすと 2018年12月新台: https://www.slopachi-quest.com/article/erunote-12-shindai/
-- 一撃 山佐メーカー一覧: https://1geki.jp/maker/yamasa/
+- すろぱちくえすと 2018年導入一覧: https://www.slopachi-quest.com/article/sindai-2018/
+- 中一商事 中古実機DB: https://www.nakaiti.com/html/sNanashow009.html
+- 元プロMG パチスロブログ: https://www.pachislotblog.tokyo/mach-gogogo-kaiseki/
+- 2-9伝説 新台一覧: https://29den.com/newslot/
