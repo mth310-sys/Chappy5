@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 250" role="img" aria-label="ZELVOLT">
+  <defs>
+    <filter id="glow" x="-30%" y="-60%" width="160%" height="220%">
+      <feGaussianBlur stdDeviation="7" result="b1"/>
+      <feGaussianBlur stdDeviation="16" result="b2"/>
+      <feMerge><feMergeNode in="b2"/><feMergeNode in="b1"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1000" height="250" rx="26" fill="#030303"/>
+  <g fill="none" stroke="#ffd91a" stroke-linecap="square" stroke-linejoin="round" filter="url(#glow)">
+    <g stroke-width="10">
+      <path d="M28 98H145M28 125H145M28 152H145"/>
+      <path d="M855 98H972M855 125H972M855 152H972"/>
+    </g>
+    <g font-family="Arial Black,Arial,sans-serif" font-size="156" font-weight="900" text-anchor="middle">
+      <text x="500" y="178" stroke-width="16" stroke="#ffd91a">ZELVOLT</text>
+      <text x="500" y="178" stroke-width="10" stroke="#030303">ZELVOLT</text>
+      <text x="500" y="178" stroke-width="6" stroke="#ffd91a">ZELVOLT</text>
+      <text x="500" y="178" stroke-width="2.2" stroke="#030303">ZELVOLT</text>
+    </g>
+  </g>
+</svg>
