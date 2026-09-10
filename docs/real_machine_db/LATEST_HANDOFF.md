@@ -14,8 +14,9 @@
 - `INDEX.md` は初期19件時点の旧スナップショットのため、README規定どおり `LATEST_HANDOFF.md` + main実レコードを正本として採用。
 - 開始時正本は **1185件 / chronologicalFrontier 2018-04-09 / 4/9群CLOSED**。
 - GitHub検索で `不二子TYPE-A+`、`SLOTパックマン` の既存レコードがないことを確認。
-- No.1186 `パチスロ 不二子 TYPE A+` を追加し、4/16群をCLOSE。
-- No.1187 `SLOTパックマン` を追加し、複数導入カレンダー/解析資料で4/23の独立追加機種を再監査。追加の同日パチスロ機を固定できなかったため4/23群をCLOSE。
+- 並行リレーがNo.1186 `パチスロ 不二子 TYPE A+`、No.1187 `SLOTパックマン` をmainへ追加したため重複作成せず最新mainを取り込んだ。
+- No.1186で4/16群、No.1187で4/23群がCLOSE済み。
+- リレー5では遡及QAカーソル `2006-07_ooedo-manyuuki.md`（大江戸漫遊記）を再探索し、性能側statusを維持したままreset側のみ `PARTIAL_RESEARCH_EXHAUSTED` へ更新。
 
 ## No.1186 — パチスロ 不二子 TYPE A+
 - path: `docs/real_machine_db/machines/2018-04-16_fujiko-type-a-plus.md`
@@ -89,10 +90,15 @@
 - 既存性能値を無駄にやり直さず、新規未処理機種とresetBehaviorの必要箇所のみ進める。
 
 ## 遡及 resetBehavior QA
-- 最新カーソルは `docs/real_machine_db/machines/2006-07_ooedo-manyuuki.md`（大江戸漫遊記）。
-- retroQaScanConfirmedThrough: **2006-06_lord-of-the-rings.md**。
+- **今回完了:** `docs/real_machine_db/machines/2006-07_ooedo-manyuuki.md`（大江戸漫遊記）。
+- 性能側status `PARTIAL` は維持。
+- resetBehaviorQA: **`PARTIAL_RESEARCH_EXHAUSTED`**。
+- 設定変更/据え置き/純電断時の本機固有リール・成立済みボーナス状態処理、変更判別: `UNVERIFIED_AFTER_RESEARCH`。
+- 通常時ゲーム数天井、短縮天井、朝一専用モード、主要恩恵/不利、公開朝一数値: `NONE_CONFIRMED_AFTER_RESEARCH`。
+- advantageousSectionReset: `NOT_APPLICABLE`（5号機初期・制度導入前）。
+- retroQaScanConfirmedThrough: **2006-07_ooedo-manyuuki.md**。
+- nextRetroQaCursor: `docs/real_machine_db/machines/2006-07_shinzo-ningen-casshern.md`（新造人間キャシャーン）。大江戸漫遊記の直後に追加されたレコードであることを当時コミット列から確認。
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
-- 新規機種収集本線を止めず、別QAリレーで順次補完する。
 
 ## 次回再開地点
 1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1187を再取得。
@@ -101,7 +107,7 @@
 4. **2018-05-07群OPEN**。大海物語4 / 北斗修羅 羅刹ver. / FAIRY TAIL を重複確認し、最古の未処理機種からNo.1188以降で登録。
 5. 各機performance core + resetBehavior v0.7を収集。
 6. 5/7同日全メーカー・別スペック・表記揺れを横断監査して群CLOSE判定。
-7. 遡及QAは `2006-07_ooedo-manyuuki.md` から継続。
+7. 遡及QAは `2006-07_shinzo-ningen-casshern.md` から継続。
 
 ## 主要出典 — 取得日 2026-09-10
 ### No.1186 不二子 TYPE A+
@@ -118,3 +124,9 @@
 - ちょんぼりすた: https://chonborista.com/slot/universal-slot/56726/
 - すろぱちくえすと: https://www.slopachi-quest.com/article/pachislot-pacman/
 - すろかい: https://slotkaiseki.hatenablog.com/entry/pacman
+
+### 遡及QA 大江戸漫遊記
+- 5号機クロニクル: https://5goki.com/first
+- グリーンべると: https://web-greenbelt.jp/00004987/
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/first_slot/01/a.php
+- P-WORLD: https://www.p-world.co.jp/machine/database/4239
