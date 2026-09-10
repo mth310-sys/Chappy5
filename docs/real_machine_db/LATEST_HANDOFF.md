@@ -1,72 +1,74 @@
 更新日: 2026-09-10
 
 ## 現在地点
-- recordCount: **1197**
-- latestRecordAdded: **パチスロ黄門ちゃまV**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2018-06-04_koumon-chama-v.md`
+- recordCount: **1198**
+- latestRecordAdded: **パチスロ 天元突破グレンラガン極**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2018-06-04_tengen-toppa-gurren-lagann-kiwami.md`
 - chronologicalFrontier: **2018-06-04**
-- frontierLatestMachine: **パチスロ黄門ちゃまV — No.1197**
+- frontierLatestMachine: **パチスロ 天元突破グレンラガン極 — No.1198**
 - schema: **resetBehavior v0.7**
-- status: **2018-06-04_GROUP_OPEN_2_OF_AT_LEAST_5_PROCESSED**
+- status: **2018-06-04_GROUP_OPEN_3_OF_AT_LEAST_6_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1196を再取得して開始。
+- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1197を再取得して開始。
 - `INDEX.md` は19件時点の旧スナップショットのため、README規定どおりLATEST_HANDOFF + main実レコードを正本として採用。
-- 開始時点で並行リレーが1196件まで前進していたため、旧1193地点へ戻らず **1196件 / 2018-06-04群OPEN** を正本として継続。
-- 2018-06-04群の次候補 `パチスロ黄門ちゃまV` をNo.1197としてperformance core + resetBehavior v0.7収集。
-- 公式オリンピア、HAZUSE、一撃、PiDEA X、当時解析を横断。導入日は2018-06-04で一致。
-- 機械割は設定1/2のみ **98.1/99.1%** と **97.6/98.2%** の資料差があるため平均せずCONFLICT保持。設定3～6は100.4/104.9/106.0/109.1%で一致。
-- resetBehaviorは機種固有資料から、設定変更後=有利区間ランプ消灯・内部状態通常、純電源OFF→ON=有利区間ランプ/内部状態引継ぎを固定。
-- 通常ゲーム数天井は非搭載。設定変更専用短縮天井/朝一専用モード/初当たり優遇の公開数値は確認なし。
-- 前日有利区間ランプ点灯→翌朝も点灯なら据え置き濃厚という判別要素を保存。本機固有ガックン定量値は十分な再探索後も固定できずUNVERIFIED_AFTER_RESEARCH。
+- 開始時点は **1197件 / 2018-06-04群OPEN**。直前指定どおり `パチスロ 天元突破グレンラガン極` をNo.1198としてperformance core + resetBehavior v0.7収集。
+- PiDEA X、HAZUSE、K-Navi、パチマガスロマガ、P-WORLD、当時解析を横断。導入日は2018-06-04で一致。
+- 機械割 97.6 / 98.8 / 101.2 / 106.2 / 110.6 / 114.1%、BIG 1/455→1/366、REG 1/874→1/362、合算1/299→1/182を複数資料照合。
+- 50枚ベースは約34.4～39.8G、RT純増は約0.25枚/G、BIG約308枚、REG約71枚、天井非搭載。
+- 型式はHAZUSEの `パチスロ天元突破グレンラガン極／SA` / 検定`7S1387`をcanonical。二次資料に`パチスロ天元突破グレンラガンH`表記があるため型式表記差をCONFLICTとして保持。
+- resetBehaviorは「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / RT状態 / ガックン / 有利区間」を機種名・型式・メーカー表記で再探索したが、本機固有の設定変更/据え置き/純電断時RT状態や判別契約を固定できず `UNVERIFIED_AFTER_RESEARCH`。当時解析の朝一リセット恩恵欄も「調査中」のため一般論を転記しない。
+- 通常ゲーム数天井は非搭載。短縮天井、朝一専用モード、設定変更専用初当たり優遇・公開朝一数値は確認なし。
+- 同日群横断監査で、既存handoff未記載だった **シークレットハイビスカス（パイオニア）** を日刊スポーツ2018-05-25導入カレンダーの6月4日欄から発見。6/4群は少なくとも6機種としてOPEN継続。
 
-## No.1197 — パチスロ黄門ちゃまV
-- path: `docs/real_machine_db/machines/2018-06-04_koumon-chama-v.md`
-- manufacturer: **オリンピア**
+## No.1198 — パチスロ 天元突破グレンラガン極
+- path: `docs/real_machine_db/machines/2018-06-04_tengen-toppa-gurren-lagann-kiwami.md`
+- manufacturer: **スパイキー（製造） / 七匠（開発）**
 - releaseDateCanonical: **2018-06-04**
-- formalModelName: `パチスロ黄門ちゃまV／K2`
-- certificationNumber: `7S1718`
-- generation/system: **5.9号機 / A+ART**
+- formalModelName: `パチスロ天元突破グレンラガン極／SA`
+- certificationNumber: `7S1387`
+- generation/system: **5.9号機 / A+RT**
 - settings: **1 / 2 / 3 / 4 / 5 / 6**
-- payout canonical: **98.1 / 99.1 / 100.4 / 104.9 / 106.0 / 109.1%**
-- payout conflict: **97.6 / 98.2 / 100.4 / 104.9 / 106.0 / 109.0～109.1%系**
-- BIG合算: **全設定1/318.1**
-- REG: **1/360.1 / 1/360.1 / 1/318.1 / 1/250.1 / 1/266.4 / 1/227.6**
-- bonus combined: **1/168.9 / 1/168.9 / 1/159.1 / 1/140.0 / 1/145.0 / 1/132.7**
-- ART初当たり: **1/567.3 / 1/565.0 / 1/545.9 / 1/518.7 / 1/529.2 / 1/499.2**
-- base: **約28.8～30.2G/50枚**
-- ART純増: **約0.8枚/G**（ボーナス込み約1.5枚/G資料あり、定義分離）
-- payout: 同色BIG約284枚 / 異色BIG平均約185枚・最大232枚 / REG最大59枚
+- payout: **97.6 / 98.8 / 101.2 / 106.2 / 110.6 / 114.1%**
+- BIG: **1/455 / 1/428 / 1/407 / 1/370 / 1/368 / 1/366**
+- REG: **1/874 / 1/874 / 1/874 / 1/762 / 1/546 / 1/362**
+- bonus combined: **1/299 / 1/287 / 1/278 / 1/249 / 1/220 / 1/182**
+- base: **約34.4～39.8G/50枚**
+- RT純増: **約0.25枚/G**（約0.3枚/G表記は丸め差）
+- basic payout: **BIG約308枚 / REG約71枚**
+- RT: **100G / 200G / 次回ボーナスまで**
 - ceiling: **非搭載**
 
 ### resetBehavior v0.7
-- settingChange: **有利区間ランプ消灯 / 内部状態=通常 / 非有利区間開始**。
-- carryOver: 前日ランプ点灯→翌朝点灯で据え置き濃厚。ただし純電断と独立した全状態契約は `UNVERIFIED_AFTER_RESEARCH_AS_SEPARATE_CONDITION`。
-- powerOFF→ON: **有利区間ランプ・内部状態を引き継ぐ**。
+- settingChange: `UNVERIFIED_AFTER_RESEARCH`（RT状態/開始ステージ/初期出目の本機固有直接資料なし）。
+- carryOver: `UNVERIFIED_AFTER_RESEARCH`（純電断と独立した据え置き契約を固定できず）。
+- powerOFF→ON: `UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION`。
 - gameCounter/ceiling: `NOT_APPLICABLE_NO_CEILING`。
-- resetBenefit: 短縮天井/朝一専用モード/初当たり優遇数値は `NONE_CONFIRMED_AFTER_RESEARCH`。
-- resetDetection: 有利区間ランプが主要判別要素。本機固有ガックン発生率は `UNVERIFIED_AFTER_RESEARCH`。
+- advantageousSection: 本機固有の有利区間/ランプ挙動を固定できず `UNVERIFIED_AFTER_RESEARCH`。A+RT分類のみから推測しない。
+- resetBenefit: 短縮天井 `NOT_APPLICABLE`、朝一専用モード/初当たり優遇/RT優遇の公開数値 `NONE_CONFIRMED_AFTER_RESEARCH`。
+- resetDetection: ガックン/初期出目/ランプ等の本機固有判別契約 `UNVERIFIED_AFTER_RESEARCH`。
 
 ## 2018-06-04群監査
 ### 処理済み
 - No.1196 パチスロディスクアップ
 - No.1197 パチスロ黄門ちゃまV
+- No.1198 パチスロ 天元突破グレンラガン極
 
 ### 未処理候補
-- **パチスロ 天元突破グレンラガン極** — スパイキー
 - **パチスロ 貞子vs伽椰子** — 藤商事
 - **ちゃぶ台返し** — ベルコ
+- **シークレットハイビスカス** — パイオニア（今回の横断監査で追加発見）
 
 ### 群判定
-- `2018-06-04_GROUP_OPEN_2_OF_AT_LEAST_5_PROCESSED`
-- 次回は同日候補の正式導入日・型式・別スペック・メーカー横断監査を続け、最古未処理をNo.1198から処理する。
-- 次候補は **パチスロ 天元突破グレンラガン極 — No.1198候補**。最新mainで並行更新が無いことを再確認してから確定する。
+- `2018-06-04_GROUP_OPEN_3_OF_AT_LEAST_6_PROCESSED`
+- 日刊スポーツ当時導入カレンダーで、6/4欄に `ちゃぶ台返し / シークレットハイビスカス / 黄門ちゃまV / 貞子vs伽椰子 / 天元突破グレンラガン極` を確認。ディスクアップは既存レコードで6/4 canonical（5/21資料CONFLICT保持済み）。
+- 未処理3機種を処理し、さらに全メーカー/別スペックを横断監査してからのみCLOSEする。
 
 ## 遡及 resetBehavior QA
 - retroQaScanConfirmedThrough: **2006-07_hanasakari.md**（花盛）。
 - nextRetroQaCursor: `docs/real_machine_db/machines/2006-07_dengeki-franken.md`（電撃フランケン）。
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
-- 今回は並行更新追従と前進レコードを優先し、QAカーソル自体は変更していない。
+- 今回は前進レコードと同日群漏れ監査を優先し、QAカーソル自体は変更していない。
 
 ## 継続注意事項
 - `INDEX.md`は旧スナップショット。LATEST_HANDOFF + main実レコードを優先する。
@@ -74,29 +76,28 @@
 - ディスクアップの導入日は2018-06-04 canonical、2018-05-21資料はCONFLICT保持済み。
 - resetBehaviorで疑問符・「調査中」・一般論を確定契約へ昇格しない。
 - 据え置きと純電断を同義扱いしない。直接資料がある場合のみ各契約へ記録する。
-- 導入日・出玉率等の競合は平均化せず`CONFLICT`として保持する。
-- 6/4群は `天元突破グレンラガン極` / `貞子vs伽椰子` / `ちゃぶ台返し` を処理するまで閉じない。
+- 導入日・出玉率・型式等の競合は平均/統合せず`CONFLICT`として保持する。
+- 6/4群は `貞子vs伽椰子` / `ちゃぶ台返し` / `シークレットハイビスカス` と追加漏れ監査を完了するまで閉じない。
 
 ## 次回再開地点
-1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1197を再取得。
-2. **1197件 / chronologicalFrontier 2018-06-04 / 6/4群OPEN**を正本として継続。
-3. **パチスロ 天元突破グレンラガン極をNo.1198先頭候補**としてperformance core + resetBehavior v0.7を収集。
-4. 続いて `パチスロ 貞子vs伽椰子` / `ちゃぶ台返し` を漏れなく処理。
+1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1198を再取得。
+2. **1198件 / chronologicalFrontier 2018-06-04 / 6/4群OPEN**を正本として継続。
+3. **パチスロ 貞子vs伽椰子をNo.1199先頭候補**としてperformance core + resetBehavior v0.7を収集。
+4. 続いて `ちゃぶ台返し` / `シークレットハイビスカス` を処理。
 5. 同日群の全メーカー/別スペック監査後にのみ6/4群をCLOSEする。
 6. 遡及QAは `2006-07_dengeki-franken.md`（電撃フランケン）から継続。
 
 ## 主要出典 — 取得日 2026-09-10
-### No.1197 パチスロ黄門ちゃまV
-- オリンピア公式: https://www.olympia.co.jp/newmachine/ps_chamav/
-- HAZUSE: https://hazuse.com/machine/pachislot/7S1718/
-- 一撃 機種ページ: https://1geki.jp/slot/s_koumonv/
-- 一撃 ボーナス/ART確率: https://1geki.jp/slot/s_koumonv/1/
-- 一撃 50枚ベース: https://1geki.jp/slot/s_koumonv/4/
-- 一撃 ボーナス概要: https://1geki.jp/slot/s_koumonv/61/
-- PiDEA X: https://www.pidea.jp/articles/%E9%81%B8%E6%8A%9E%E5%BC%8F%E4%B8%8A%E4%B9%97%E3%81%9B%E3%82%BE%E3%83%BC%E3%83%B3%E3%82%92%E7%B6%99%E6%89%BF%EF%BC%81%E9%BB%84%E9%96%80%E3%81%A1%E3%82%83%E3%81%BEV%EF%BC%8F%E3%82%AA%E3%83%AA%E3%83%B3%E3%83%94%E3%82%A2
-- 期待値見える化 朝一解析: https://slotjin.com/slot/koumonv/
-- すろかい: https://slotkaiseki.hatenablog.com/entry/2018/03/30/090612
-- PAY競合資料: https://ameblo.jp/kenchan-retro/entry-12869487725.html
+### No.1198 パチスロ 天元突破グレンラガン極
+- PiDEA X: https://www.pidea.jp/articles/HYPER%20RT%E3%81%A7%E3%83%AB%E3%83%BC%E3%83%97%E6%9C%9F%E5%BE%85%E5%A4%A7%E3%80%8C%E3%82%B0%E3%83%AC%E3%83%B3%E3%83%A9%E3%82%AC%E3%83%B3%E6%A5%B5%E3%80%8D%EF%BC%8F%E3%82%B9%E3%83%91%E3%82%A4%E3%82%AD%E3%83%BC
+- HAZUSE: https://hazuse.com/machine/pachislot/7S1387/
+- K-Navi: https://p-kn.com/slot/3011/
+- パチマガスロマガ 50枚ベース: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/spiky_slot/10/c.php
+- パチマガスロマガ ゲーム性: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/spiky_slot/10/l.php
+- P-WORLD: https://www.p-world.co.jp/machine/database/8657
+- ちょんぼりすた: https://chonborista.com/slot/spiky/56865/
+- 日刊スポーツ 導入カレンダー: https://www.nikkansports.com/amusement/pachislot/news/201805250000665.html
+- スロパチネット（型式表記差）: https://slopachi-net.com/post-1443
 
 ## 今回コミット
-- No.1197追加: `55407eb104c55ca99a78f4ecfdac69e8753b43d7`
+- No.1198追加: `83ae4bbc7aa860ad1ac928452a4f9ae4c6048ec2`
