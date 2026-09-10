@@ -1,92 +1,98 @@
 更新日: 2026-09-11
 
 ## 現在地点
-- recordCount: **1282**
-- latestRecordAdded: **ジャングルマスターコングダム**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2019-05-07_jungle-master-kongdom.md`
+- recordCount: **1283**
+- latestRecordAdded: **パチスロ ボンバーパワフルIII**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2019-05-07_bomber-powerful-3.md`
 - chronologicalFrontier: **2019-05-07**
-- frontierLatestMachine: **ジャングルマスターコングダム — No.1282**
+- frontierLatestMachine: **パチスロ ボンバーパワフルIII — No.1283**
 - schema: **resetBehavior v0.7**
-- status: **2019-05-07_GROUP_OPEN_1_OF_AT_LEAST_2_PROCESSED**
+- status: **2019-05-07_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**
 
 ## 今回の同期 / 進捗
-- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1281を再取得して開始。
+- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1282を再取得して開始。
 - INDEXは旧スナップショットのため、README規則どおりLATEST_HANDOFF + main実レコードを正本として継続。
-- 直前handoff指定の2019-05-07群先頭 `ジャングルマスターコングダム` をNo.1282として性能コア + resetBehavior v0.7で登録。
-- 娯楽産業 / HAZUSE / P-WORLD / パチマガスロマガ / すろぱちくえすと / スロパチネット / モゲスロ等を横断。導入日2019-05-07、山佐、型式 `ジャングルマスターコングダム／CC`、machine_code/検定番号 `7S1352`、A+RT、設定別スペック、RT仕様を照合。
-- BIG/REG獲得枚数は当時複数資料が最大300枚/84枚で一致。一方、後年5号機回顧DBに155枚/40枚表記があり `CONFLICT_RETROSPECTIVE_PAYOUT_155_40_VS_CONTEMPORARY_300_84` として保持。canonicalは当時複数資料一致を採用。
-- resetBehaviorは設定変更/据え置き/純電断/ガックン等へ検索語を変えたが、本機固有のRT内部状態契約を直接固定できず `PARTIAL_RESEARCH_EXHAUSTED`。一般5.9号機/A+RT挙動から推測して埋めていない。
-- 2019-05-07群は少なくともジャングルマスターコングダム / パチスロ ボンバーパワフルIIIの2機。群は未CLOSE。
+- 直前handoff指定の2019-05-07群未処理 `パチスロ ボンバーパワフルIII` をNo.1283として性能コア + resetBehavior v0.7で登録。
+- SANKYO公式 / HAZUSE / DMMぱちタウン / P-WORLD / 遊技通信 / グリーンべると / 一撃 / ちょんぼりすた / K-Navi / 2019導入カレンダーを横断。
+- 導入日は2019-05-06 / 2019-05-07の資料差を保持し、多数資料一致・公式2019.05との整合から2019-05-07をcanonical。2019-04-22表記は外れ値CONFLICTとして別保持。
+- 5/7群は導入カレンダーと個別機種資料でジャングルマスターコングダム / ボンバーパワフルIIIの2機を確認。追加の同日別型式・別スペック・PB・地域差を固定できずCLOSED。
+- 遡及resetBehavior QAでは `2007-02_pikaslo.md` を再探索枯渇結果どおり `PARTIAL_RESEARCH_EXHAUSTED` として正式保存。
 
-## No.1282 — ジャングルマスターコングダム
-- manufacturer: **山佐**
-- formalModel: **`ジャングルマスターコングダム／CC`**
-- certificationNumber: **`7S1352`**
-- generation/system: **5.9号機 / A+RT / 技術介入 / 4段階設定**
-- releaseDate: **2019-05-07**
-- settings: **1 / 2 / 5 / 6**
-- 機械割: **97.3 / 100.2 / 105.1 / 108.5%**
-- BIG: **1/300.6 / 1/291.3 / 1/283.7 / 1/271.9**
-- REG: **1/374.5 / 1/337.8 / 1/299.3 / 1/273.1**
-- 合算: **1/166.8 / 1/156.4 / 1/145.6 / 1/136.2**
-- baseGamesPer50: **約34〜35G**
-- BIG: **最大300枚** / REG: **最大84枚**
-- RT: BIG後20G「ナイトモード」→特殊リプレイで100G or 999G「ジャングルタイム」
-- ceiling: **非搭載**
+## No.1283 — パチスロ ボンバーパワフルIII
+- manufacturer: **SANKYO**
+- formalModel: **`Sボンバーパワフル3V`**（公式表記 `Sボンバーパワフル3 V`）
+- certificationNumber: **`8S0924`**
+- generation/system: **6号機 / AT / 疑似ボーナス / CZ / 6段階設定**
+- releaseDate canonical: **2019-05-07**
+- 機械割: **97.7 / 99.7 / 101.9 / 104.4 / 107.7 / 112.1%**
+- CZ: **1/162 / 1/160 / 1/158 / 1/157 / 1/156 / 1/149**
+- 通常時ボーナス初当たり: **1/324 / 1/303 / 1/278 / 1/252 / 1/226 / 1/160**
+- AT初当たり: **1/691 / 1/638 / 1/576 / 1/514 / 1/448 / 1/229**
+- baseGamesPer50: **約49.4G**
+- AT / 疑似ボーナス純増: **約3.2枚/G**
+- AT「パワフルタイム」: **1セット25G / 平均継続率約85%（セット上乗せ・引き戻し込み）**
+- 通常時CZ「シャッターチャンス」: **10G / ボーナス期待度約45%**
+- game ceiling: **有利区間移行後900G → ボーナス当選濃厚CZ**
+- CZ skip ceiling: **4回連続失敗後の5回目CZでボーナス当選濃厚**
 
 ### resetBehavior v0.7
-- settingChange: 本機固有の設定変更時RT状態/成立済みボーナス状態/テトラリール初期状態契約は `UNVERIFIED_AFTER_RESEARCH`。
-- carryOver: 据え置き単独条件でRT残りG・内部RT状態を明記した直接資料を固定できず `UNVERIFIED_AFTER_RESEARCH`。
-- powerCycle: 純電源OFF→ONのみのRT残りG・内部RT状態・テトラ表示/状態契約は `UNVERIFIED_AFTER_RESEARCH`。
-- gameCounterReset: 通常ゲーム数天井なしのため天井カウンタはN/A。RT残りGの変更/電断契約は未固定。
-- ceilingAfterReset: 天井非搭載、リセット専用短縮天井N/A。
-- mode/stateAfterReset: 朝一専用通常モード/設定変更時モード振り分けは確認なし。RT状態の3条件別契約は未固定。
-- advantageousSectionReset: 朝一判別に使える本機固有の有利区間ランプ/区間契約は固定できず、一般論から補完しない。
-- resetBenefits: リセット専用短縮天井、朝一ボーナス/CZ優遇、専用RT付与は `NONE_CONFIRMED_AFTER_RESEARCH`。
-- resetPenalties: 公開不利要素は `NONE_CONFIRMED_AFTER_RESEARCH`。
-- resetDetection: テトラリールに始動/逆回転/バウンド系演出があり、朝一実戦記でガックンと誤認した記録あり。ただし設定変更時メインリールガックンの本機固有確定条件/率は `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
-- numericResetData: 設定変更時のみの公開朝一数値は `PUBLIC_NUMERIC_RESET_DATA_NOT_FOUND_AFTER_RESEARCH`。
+- settingChange: **天井G数 / CZ回数 / ポイント / メニュー情報をRESET**。DMMは「すべての状態がリセット」。通常時は市街地（昼）開始。
+- carryOver: 据え置き単独の全項目直接記述は限定的だが、純電断の直接資料で主要進行値の保持を確認。
+- powerCycle: **天井G数 / CZ回数をCARRY_OVER**。ポイント表示は0へ戻るが**内部ポイントはCARRY_OVER**。通常時は市街地（昼）開始。ボムボムチャージ/CZ/ボーナス/AT中の電断は当該状態を引き継ぐ資料あり。
+- gameCounterReset: 設定変更=RESET / 純電断=CARRY_OVER。通常天井900G。
+- ceilingAfterReset: リセット専用短縮天井は `NO_SHORTENING_CONFIRMED`。通常900Gをゼロから再計測。
+- mode/stateAfterReset: 設定変更で主要状態RESET。有利区間移行時は高確スタートの解析あり。設定変更専用の詳細モード振り分け率は `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
+- advantageousSectionReset: DMMで設定変更時は非有利区間へ移行し、高確から開始。CZスルー回数は有利区間終了でRESET。純電断は進行値CARRY_OVER。
+- resetBenefits: 有利区間移行時の高確スタートを確認。設定変更専用短縮天井・AT/CZ確定恩恵は確認なし。
+- resetPenalties: 設定変更により育った天井G / CZスルー回数 / 内部ポイントを失う。
+- resetDetection: 設定変更・純電断とも通常時は市街地（昼）開始のためステージ単独判別不可。0pt表示も純電断で内部ポイントを引継ぐため確定材料にならない。本機固有ガックン率/確定条件は `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
+- numericResetData: 設定変更専用モード振り分け・短縮天井・初当たり率などは `PUBLIC_NUMERIC_RESET_DATA_NOT_FOUND_AFTER_RESEARCH`。
 
 ## qualityNotes / conflicts
-- 導入日はHAZUSE / 解析サイト / 2019導入カレンダーで **2019-05-07** 一致。
-- 型式 `ジャングルマスターコングダム／CC` は複数資料一致。HAZUSE machine_code `7S1352` を検定番号として保持。
-- 50枚ベースは約34G / 34.8G / 35Gで、丸め精度差として約34〜35Gをcanonical。
-- BIG/REGは当時業界記事・P-WORLD・パチマガスロマガ・当時解析が最大300/84枚で一致。後年5号機クロニクルの155/40枚はCONFLICTとして別保持。
+- `CONFLICT_RELEASE_DATE_2019_05_06_VS_2019_05_07`
+- `CONFLICT_OUTLIER_RELEASE_DATE_2019_04_22`
+- モゲスロのメーカー欄 `SANYO` はSANKYO公式・K-Navi・機種DBと競合するため `SOURCE_TYPO_MANUFACTURER_SANYO_VS_OFFICIAL_SANKYO`。
+- 型式名の空白有無 `Sボンバーパワフル3 V` / `Sボンバーパワフル3V` は表記差として扱う。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**
-- retroQaScanConfirmedThrough: **`docs/real_machine_db/machines/2007-02_playboy-30.md`**
-- pendingFormalization: **`docs/real_machine_db/machines/2007-02_pikaslo.md`**
-- NOTE: 直前runでピカスロ固有の設定変更/据え置き/純電断契約は検索枯渇確認済みだが、ファイルへの `PARTIAL_RESEARCH_EXHAUSTED` 正式保存が未実施。次回、前進キューを止めない範囲で正式保存してから次のQAレコードへ進める。
+- retroQaScanConfirmedThrough: **`docs/real_machine_db/machines/2007-02_pikaslo.md`**
+- latestFormalized: **`docs/real_machine_db/machines/2007-02_pikaslo.md`**
+- latestFormalizedStatus: **PARTIAL_RESEARCH_EXHAUSTED**
+- nextRetroQaAction: main上の導入時系列でPIKASLO直後の未QAレコードを特定し、同じv0.7全項目契約で継続。前進キューを優先し、retro QAで本線を止めない。
 
-## 2019-05-07群 — OPEN
+## 2019-05-07群 — CLOSED
 ### 登録済み
 - No.1282 ジャングルマスターコングダム
-
-### 未処理確定候補
-1. **パチスロ ボンバーパワフルIII** — SANKYO — 6号機AT
+- No.1283 パチスロ ボンバーパワフルIII
 
 ### 群監査
-- モゲスロ2019導入カレンダー等で5/7にジャングルマスターコングダムとボンバーパワフルIIIを確認。
-- 次回、K-Navi月間カレンダー/当時導入一覧/メーカー系資料で全メーカー・別型式・別スペック・PB・地域差を再監査し、ボンバーパワフルIII登録後にCLOSED可否を判定する。
+- モゲスロ2019導入カレンダーは5/7に上記2機を掲載。
+- 両機の個別資料でも2019-05-07導入を確認。
+- 追加の同日パチスロ、別型式、別スペック、PB、地域差を今回の横断検索で固定できず `2019-05-07_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT`。
 
 ## 次回再開地点
-1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1282を再取得。
-2. 2019-05-07群を再監査し、**パチスロ ボンバーパワフルIIIをNo.1283候補**として性能コア + resetBehavior v0.7で処理。
-3. 5/7同日全メーカー/別型式/別スペック/PB/地域差を監査し、群CLOSED可否を判定。
-4. 遡及QAは `2007-02_pikaslo.md` の検索枯渇結果を正式保存してから次レコードへ進める。
+1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1283を再取得。
+2. 2019-05-08〜05-19境界を短く再監査。
+3. **2019-05-20群**へ進み、第一候補 **天晴！モグモグ風林火山〜全国制覇版〜** をNo.1284候補として性能コア + resetBehavior v0.7で処理。
+4. 同日確定候補 **ハナビ通 / ぱちスロ 冬のソナタ** を順次処理し、5/20群を全メーカー/別型式/別スペック/PB/地域差まで監査してCLOSED可否を判定。
+5. 遡及QAはPIKASLO直後の未QAレコードから継続。
 
 ## 主要出典 — 取得日 2026-09-11
-### ジャングルマスターコングダム
-- 娯楽産業: https://www.goraku-sangyo.com/%E5%B1%B1%E4%BD%90%E3%80%80%E6%96%B0%E6%A9%9F%E7%A8%AE%E3%80%8C%E3%82%B8%E3%83%A3%E3%83%B3%E3%82%B0%E3%83%AB%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%B3%E3%83%B3%E3%82%B0%E3%83%80%E3%83%A0%E3%80%8D/
-- HAZUSE: https://data.hazuse.com/?genre=209&machine_code=7S1352
-- P-WORLD: https://www.p-world.co.jp/machine/database/8901
-- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/232/a.php
-- パチマガスロマガ RT: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/232/01-1.php
-- すろぱちくえすと: https://www.slopachi-quest.com/article/jungle-master-kongdom/
-- スロパチネット: https://slopachi-net.com/kongdom
-- モゲスロ: https://moge-site.com/archives/21990
+### パチスロ ボンバーパワフルIII
+- SANKYO公式: https://www.sankyo-fever.jp/collection/890/
+- HAZUSE: https://hazuse.com/machine/pachislot/8S0924/
+- DMMぱちタウン: https://p-town.dmm.com/machines/3416
+- P-WORLD: https://www.p-world.co.jp/machine/database/8918
+- 遊技通信/P-WORLD: https://news.p-world.co.jp/articles/10926/yugitsushin
+- グリーンべると: https://web-greenbelt.jp/00011220/
+- ちょんぼりすた: https://chonborista.com/slot/sankyo-slot/80592/
+- 一撃 AT概要: https://1geki.jp/slot/s_bomp3/81/
+- 一撃 状態移行: https://1geki.jp/slot/s_bomp3/45/
+- K-Navi: https://p-kn.com/slot/3230/
 - モゲスロ2019導入カレンダー: https://moge-site.com/new-slot2019
-- ぱちんこキュレーション: https://pachinko-curation.com/1052/
-- 5号機クロニクル: https://5goki.com/yamasa
-- にくじる: https://www.nikuziru.com/archives/3926
+
+### 次群確認
+- モゲスロ2019導入カレンダー: https://moge-site.com/new-slot2019
+- 天晴！モグモグ風林火山 解析: https://www.slopachi-quest.com/article/mogumoguhuurin-zennkokuseiha/
+- ぱちスロ 冬のソナタ K-Navi: https://p-kn.com/slot/3233/
