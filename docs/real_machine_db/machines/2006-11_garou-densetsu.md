@@ -5,7 +5,7 @@ manufacturer: SNKプレイモア
 releaseDate: 2006-11
 generation: 5号機初期
 systemType: ボーナス + AT（餓狼チャンス）
-coreStatus: PARTIAL_RESET_QA_ADDED_PERFORMANCE_CORE_UNCHANGED
+coreStatus: PARTIAL
 
 ## payoutRateBySetting
 
