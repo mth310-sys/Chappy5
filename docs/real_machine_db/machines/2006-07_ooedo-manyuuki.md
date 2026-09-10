@@ -1,7 +1,7 @@
 # 大江戸漫遊記
 
 status: PARTIAL
-qaResetBehavior: PARTIAL
+qaResetBehavior: PARTIAL_RESEARCH_EXHAUSTED
 
 machineName: 大江戸漫遊記
 manufacturer: ファースト
@@ -29,7 +29,7 @@ systemType: ノーマル / ボーナス主体 / 5ライン
 
 ## initialHitBySetting
 
-- 設定別ボーナス確率表は、パチマガスロマガに該当タブの存在を確認したが今回取得本文から数値を安定確保できず `UNVERIFIED` のまま。
+- 設定別ボーナス確率表は、パチマガスロマガに該当タブの存在を確認したが取得本文から数値を安定確保できず `UNVERIFIED` のまま。
 - ボーナス種別は赤7BIG / 赤7・赤7・紫7 / 赤7・赤7・黒7の3系統を確認。
 
 信頼度: UNVERIFIED（設定別確率） / ANALYSIS_HIGH（ボーナス構成）
@@ -64,56 +64,58 @@ systemType: ノーマル / ボーナス主体 / 5ライン
 
 - 5号機 / 5ラインのボーナス主体ノーマル。
 - 純増約413枚の大型ボーナスと、約82枚・約54枚の小型ボーナスを搭載。
-- 通常時ゲーム数天井、RT/ART/CZ、朝一専用モードは今回の本機固有資料では確認なし。
+- 通常時ゲーム数天井、RT/ART/CZ、朝一専用モードは本機固有資料では確認なし。
 - 有利区間制度導入前。
 
 ## resetBehavior
 
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
+qaCheckedAt: 2026-09-10
 
 settingChangeBehavior:
-- `大江戸漫遊記 / F-501 / ファースト / FIRST` と `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / ガックン / 初期出目 / 変更判別` を組み替え、パチマガスロマガ、P-WORLD、5号機クロニクル、当時/後年業界記事、回顧・実戦資料を横断して再探索。
-- 設定変更時専用の天井短縮、モード移行、RT/ART/CZ恩恵は `NONE_CONFIRMED`。
-- 本機固有のリール初期化、成立済みボーナス状態等の処理は `UNVERIFIED`。
+- `大江戸漫遊記 / F-501 / ファースト / FIRST` と `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / ガックン / 初期出目 / 変更判別 / ボーナス成立状態` を組み替え、パチマガスロマガ、P-WORLD、5号機クロニクル、当時/後年業界記事、旧DB、回顧・実戦資料を再探索。
+- 設定変更時専用の天井短縮、モード移行、RT/ART/CZ恩恵は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- 本機固有のリール初期化、成立済みボーナス状態等の処理は `UNVERIFIED_AFTER_RESEARCH`。
 
 carryOverBehavior:
-- 通常時ゲーム数天井・モード・継続状態として持ち越す公開対象は `NONE_CONFIRMED`。
-- 成立済みボーナス等の特殊状態について据え置き時処理は本機固有資料がなく `UNVERIFIED`。
+- 通常時ゲーム数天井・モード・継続状態として持ち越す公開対象は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- 成立済みボーナス等の特殊状態について据え置き時処理は本機固有資料がなく `UNVERIFIED_AFTER_RESEARCH`。
 
 powerCycleBehavior:
-- 電源OFF→ONのみで通常時のゲーム数・モード・状態が変化する公開資料は `NONE_CONFIRMED`。
-- 設定変更との差を利用した本機固有判別は `UNVERIFIED`。
+- 電源OFF→ONのみで通常時のゲーム数・モード・状態が変化する公開資料は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- 設定変更との差を利用した本機固有判別、成立済みボーナス等の低レベル状態処理は `UNVERIFIED_AFTER_RESEARCH`。
 
 gameCounterReset:
-- 通常時ゲーム数天井: `NONE_CONFIRMED`。
+- 通常時ゲーム数天井: `NONE_CONFIRMED_AFTER_RESEARCH`。
 
 ceilingAfterReset:
-- リセット時短縮天井 / 変更天井: `NONE_CONFIRMED`。
+- リセット時短縮天井 / 変更天井: `NONE_CONFIRMED_AFTER_RESEARCH`。
 
 modeAfterReset:
-- 朝一専用モード / 設定変更時モード再抽選: `NONE_CONFIRMED`。
+- 朝一専用モード / 設定変更時モード再抽選: `NONE_CONFIRMED_AFTER_RESEARCH`。
 
 stateAfterReset:
-- 通常時の公開内部状態再抽選: `NONE_CONFIRMED`。
+- 通常時の公開内部状態再抽選: `NONE_CONFIRMED_AFTER_RESEARCH`。
+- 成立済みボーナス等の低レベル内部状態: `UNVERIFIED_AFTER_RESEARCH`。
 
 advantageousSectionReset:
 - `NOT_APPLICABLE`（5号機初期・有利区間制度導入前）。
 
 resetBenefits:
-- 朝一RT/ART/CZ、短縮天井、設定変更時だけの当選優遇: `NONE_CONFIRMED`。
+- 朝一RT/ART/CZ、短縮天井、設定変更時だけの当選優遇: `NONE_CONFIRMED_AFTER_RESEARCH`。
 
 resetPenalties:
-- 設定変更時固有の公開不利要素: `NONE_CONFIRMED`。
+- 設定変更時固有の公開不利要素: `NONE_CONFIRMED_AFTER_RESEARCH`。
 
 resetDetection:
-- 本機固有ガックン、初期出目、液晶/ランプ差等による設定変更/据え置き判別は再探索後も直接資料を確定できず `UNVERIFIED`。
+- 本機固有ガックン、初期出目、液晶/ランプ差等による設定変更/据え置き判別は再探索後も直接資料を確定できず `UNVERIFIED_AFTER_RESEARCH`。
 
 numericResetData:
-- 公開朝一数値 / 短縮天井G / 朝一モード振り分け / リセット恩恵発生率: `NONE_CONFIRMED`。
+- 公開朝一数値 / 短縮天井G / 朝一モード振り分け / リセット恩恵発生率: `NONE_CONFIRMED_AFTER_RESEARCH`。
 
 ## sources
 
-取得日: 2026-09-01
+取得日: 2026-09-10（reset QA再確認。性能コア既存値は従来出典を維持）
 
 1. 5号機クロニクル — ファースト5号機全機種一覧
    - https://5goki.com/first
@@ -152,8 +154,8 @@ numericResetData:
 
 - 設定別ボーナス確率
 - 設定別機械割の別系統全設定照合
-- 設定変更/据え置き/電源OFF→ON時の本機固有リール・成立済みボーナス状態処理
-- 本機固有の設定変更判別要素（ガックン等）
+- 設定変更/据え置き/電源OFF→ON時の本機固有リール・成立済みボーナス状態処理: `UNVERIFIED_AFTER_RESEARCH`
+- 本機固有の設定変更判別要素（ガックン等）: `UNVERIFIED_AFTER_RESEARCH`
 
 ## conflicts
 
@@ -162,5 +164,6 @@ numericResetData:
 
 ## notes
 
-- v0.7 resetBehavior遡及QAを実施。既存の性能status `PARTIAL` を不用意に変更せず、resetBehaviorQAを別管理で追加。
-- QA再探索中にパチマガスロマガから、従来欠損だった50枚相当ベースと基本獲得性能を回収したため性能コアも部分補完。
+- v0.7 resetBehavior遡及QAを再実施。既存の性能status `PARTIAL` は維持し、resetBehaviorQAのみ `PARTIAL_RESEARCH_EXHAUSTED` へ更新。
+- `NONE_CONFIRMED_AFTER_RESEARCH` は「機能が存在しないと断定」ではなく、朝一/ホール経営用公開資料として十分な再探索後も確認できなかったことを表す。
+- 次の遡及QAカーソルは追加順で `2006-07_shinzo-ningen-casshern.md`。
