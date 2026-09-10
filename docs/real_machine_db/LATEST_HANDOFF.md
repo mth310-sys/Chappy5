@@ -1,104 +1,122 @@
 更新日: 2026-09-10
 
 ## 現在地点
-- recordCount: **1234**
-- latestRecordAdded: **HEY！鏡**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2018-10-01_hey-kagami.md`
-- chronologicalFrontier: **2018-10-01**
-- frontierLatestMachine: **HEY！鏡 — No.1234**
+- recordCount: **1235**
+- latestRecordAdded: **A-SLOTツインエンジェルBREAK**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2018-10-09_a-slot-twin-angel-break.md`
+- chronologicalFrontier: **2018-10-09**
+- frontierLatestMachine: **A-SLOTツインエンジェルBREAK — No.1235**
 - schema: **resetBehavior v0.7**
-- status: **2018-10-01_GROUP_OPEN_1_PROCESSED_PENDING_SAME_DAY_AUDIT**
+- status: **2018-10-09_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md` / mission v0.7 / `INDEX.md` / `LATEST_HANDOFF.md` / No.1233を再取得して開始。
-- `INDEX.md`は旧19件スナップショットのため、`LATEST_HANDOFF.md` + main実レコードを正本としてNo.1233の次から継続。
-- 2018-09-18群CLOSED後の次候補として、main指定の `HEY！鏡` をNo.1234として登録。
-- 2018-09-19～09-30境界を再検索し、新規パチスロ導入候補を今回固定できず、2018-10-01へ前進。
-- HAZUSEで型式 `Sアメリカン番長HEY！鏡B2` / 検定番号 `8S0371` / 大都技研 / 導入2018-10-01を確認。当時業界記事でも同型式の2018-07-09検定通過を照合。
-- K-Navi、ちょんぼりすた、一撃、すろぱちくえすと、当時解析等で性能コアを横断照合。
-- 機械割97.9/99.5/101.1/104.2/107.3/112.0%、ボーナス+AT初当たり1/330.5→1/189.7、ベース約49G/50枚、純増約5.0枚/G。
-- ゲーム数天井950G+前兆、HEY天井は通常599 / チャンス699 / 天国100HEY。
-- resetBehaviorは設定変更で天井G/規定HEY/HEYモード/HEYカウンター/有利区間をリセット・再抽選、純電源OFF→ONでは内部ゲーム数/HEY/モード/状態/有利区間を引き継ぐ直接比較資料を複数系統で確認。
-- 設定変更後/DZ終了後のHEYモード振り分けを設定1～6で公開数値として収録。
-- ガックン判別不可、HEYゾーン・宵越し天井・内部同行キャラ・有利区間消化位置を使った据え置き推測情報を収録。
-- 一律の朝一リセット恩恵は実戦集計で確認されないが、設定変更時のHEYモード再抽選には明確な設定差があるため、両者を定義分離して保存。
-- 据え置き単独条件の全内部契約は純電断から自動転記せず `UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION`。
+- 最新mainの `README.md` / mission v0.7 / `INDEX.md` / `LATEST_HANDOFF.md` / No.1234を再取得して開始。
+- `INDEX.md`は旧19件スナップショットのため、`LATEST_HANDOFF.md` + main実レコードを正本としてNo.1234の次から継続。
+- 2018-10-01同日群を業界記事・複数導入一覧で再監査。HEY！鏡以外の同日パチスロ追加候補を固定できず、`2018-10-01_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT` とした。
+- 2018-10-02～10-08境界を検索。発売発表記事等はあるが、この期間にホール導入開始した未登録パチスロ機を固定できず、2018-10-09へ前進。
+- No.1235 `A-SLOTツインエンジェルBREAK` を登録。
+- Sammy公式製品ページ、HAZUSE、K-Navi、一撃、ちょんぼりすた、すろぱちくえすと、パチマガスロマガ、グリーンべると等を横断照合。
+- 型式 `ツインエンジェルBREAK-A／ZR` / 検定番号 `8S0077` / Sammy（製造元ロデオ）/ 2018-10-09導入を確認。
+- 公表機械割98.0/99.5/104.3/108.1%、完全攻略100.4/101.9/106.8/110.6%。
+- ボーナス合算1/159.8 / 1/154.6 / 1/143.7 / 1/132.1。約35G/50枚。
+- SBB最大311枚 / HBB259枚 / BIG207枚 / MB103枚。RTは30G、CZ経由で約50%ループ。
+- CZ間777GでCZ突入。ボーナス天井ではないため定義分離。
+- resetBehaviorは設定変更でもCZ天井G・RT状態を引継ぎ、電源OFF→ONでも引継ぐ直接比較資料を確認。
+- 設定変更時は内部RT/CZを残したまま通常時画面に見える場合があり、純電断ではRT/CZ画面を復帰するため、前日CZ/RT中閉店台では表示差が変更判別材料。
+- 設定変更専用の短縮天井・朝一モード振り分け・当選率上昇は十分な再探索後も確認できず `NONE_CONFIRMED_AFTER_RESEARCH`。
+- 本機固有ガックン発生率/確定条件、RT純増の比較可能な枚/Gは再探索後も固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 2-9伝説の2018年10月導入一覧と当時予定表の双方で10/9は本機のみを確認し、追加候補を固定できなかったため10/9群CLOSED。
 
-## No.1234 — HEY！鏡
-- manufacturer: **大都技研**
-- releaseDateCanonical: **2018-10-01**
-- formalModelName: **Sアメリカン番長HEY！鏡B2**
-- certificationNumber: **8S0371**
-- generation/system: **6号機初期 / AT / 疑似ボーナス+ベルナビAT**
-- settings: **1 / 2 / 3 / 4 / 5 / 6**
-- payoutRate: **97.9 / 99.5 / 101.1 / 104.2 / 107.3 / 112.0%**
-- bonusPlusATInitial: **1/330.5 / 1/311.4 / 1/288.3 / 1/256.6 / 1/231.7 / 1/189.7**
-- baseGamesPer50: **約49G**
-- netIncrease: **約5.0枚/G**
-- basicPayout: **JET BONUS 20G / KCベルナビ10・20・30・50・100回 / KC後DZループ**
-- ceiling: **950G+前兆→JET BONUS / HEY最大699**
+## No.1235 — A-SLOTツインエンジェルBREAK
+- manufacturer: **Sammy（製造元: ロデオ）**
+- releaseDateCanonical: **2018-10-09**
+- formalModelName: **ツインエンジェルBREAK-A／ZR**
+- certificationNumber: **8S0077**
+- generation/system: **5.9号機 / A+RT / 技術介入**
+- settings: **1 / 2 / 5 / 6**
+- payoutRate: **98.0 / 99.5 / 104.3 / 108.1%**
+- fullStrategyPayout: **100.4 / 101.9 / 106.8 / 110.6%**
+- bonusCombined: **1/159.8 / 1/154.6 / 1/143.7 / 1/132.1**
+- baseGamesPer50: **約35G**（補助実測 S1 35.2G / S6 35.5G）
+- basicPayout: **SBB311 / HBB259 / BIG207 / MB103枚 最大**
+- RT: **30G / CZ経由 / 約50%ループ**
+- ceiling: **CZ間通常時777G→CZ**
 
 ### resetBehavior v0.7
-- settingChange: **天井Gリセット、規定HEY再抽選、HEYモード再抽選、HEYカウンターリセット、HEY周期1周期目、有利区間リセット、同行キャラリセット。状態=通常とする解析あり。**
-- carryOver: **UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION**。据え置き推測に使える前日HEY/同行キャラ/有利区間G数の引継ぎ情報は別途保存。
-- powerOFF→ON: **天井G/規定HEY/HEYモード/HEY周期/有利区間/RT状態/同行キャラ/内部状態を引継ぎ。HEYカウンターは見た目上リセットだが内部引継ぎ。**
-- gameCounterReset: **設定変更RESET / 純電断CARRY_OVER**。
-- ceilingAfterReset: **専用短縮天井なし確認。通常950G+前兆。**
-- modeAfterReset: **設定変更でHEYモード再抽選 / 純電断で引継ぎ**。
-- advantageousSection: **設定変更RESET / 純電断CARRY_OVER**。
-- resetBenefits: **一律恩恵なし。ただしモード再抽選の設定差あり。**
+- settingChange: **CZ天井G CARRY_OVER / RT状態 CARRY_OVER / 液晶はBREAKモード・廊下or街・月ランダム / マイスロCARRY_OVER**。
+- carryOver: **CZ天井GおよびRT/CZ内部状態を引継ぐ。前日CZ/RT中閉店台が朝一狙い・判別材料。**
+- powerOFF→ON: **CZ天井G・RT状態・マイスロ引継ぎ。RT中ならRT画面復帰、CZ等は電断前表示へ戻る直接資料あり。**
+- gameCounterReset: **設定変更/据え置き/純電断ともCARRY_OVER（CZ間777Gカウンター）**。
+- ceilingAfterReset: **短縮なし確認。CZ間777Gを引継ぎ。**
+- modeAfterReset: **内部RT状態引継ぎ / 朝一専用内部モード振り分け NONE_CONFIRMED_AFTER_RESEARCH**。
+- advantageousSection: **N/A_NOT_APPLICABLE_TO_CORE_GAMEPLAY**。
+- resetBenefits: **前日CZ間ハマリ・RT/CZ状態が設定変更でも消えないことが条件付き朝一要素。専用当選率UPなし確認。**
 - resetPenalties: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- resetDetection: **ガックン判別不可。規定HEY・宵越し天井・同行キャラ・有利区間G数が据え置き推測材料。**
-- numericResetData: **設定変更後/DZ終了後 HEYモード通常/チャンス/天国 = S1 85.9/10.2/3.9、S2 71.9/20.3/7.8、S3 84.8/10.2/5.1、S4 67.2/25.0/7.8、S5 82.4/12.5/5.1、S6 53.9/35.9/10.2%。**
+- resetDetection: **前日CZ/RT中なら設定変更時の通常画面化と純電断時の画面復帰差が推測材料。通常状態でのガックン確定条件/発生率はUNVERIFIED。**
+- numericResetData: **CZ天井777G。設定変更専用短縮値/モード振分/恩恵率はNONE_CONFIRMED_AFTER_RESEARCH。**
 
 ## 2018-10-01群監査
 ### 登録済み
 - No.1234 HEY！鏡
 
 ### 群判定
-- `2018-10-01_GROUP_OPEN_1_PROCESSED_PENDING_SAME_DAY_AUDIT`
-- 現時点の主要検索では同日パチスロ追加候補を固定できていないが、全メーカー/別型式/PB/地域差監査をもう一段行ってからCLOSED判定する。
+- `2018-10-01_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT`
+- グリーンべると/P-WORLD業界記事は10月1日に稼働開始した6号機としてHEY！鏡を明示。2-9伝説の2018年10月導入一覧も10/1をHEY！鏡のみとしている。
+
+## 2018-10-09群監査
+### 登録済み
+- No.1235 A-SLOTツインエンジェルBREAK
+
+### 群判定
+- `2018-10-09_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT`
+- 2-9伝説導入一覧および当時予定表で10/9はA-SLOTツインエンジェルBREAKのみ。追加別スペック/PB/地域差を今回固定できずCLOSED。
 
 ## 次の時系列候補
-- **2018-10-09 A-SLOTツインエンジェルBREAK** — Sammy。K-Navi・一撃・HAZUSEで2018-10-09導入一致。
-- 型式 `ツインエンジェルBREAK-A／ZR` / 検定番号 `8S0077` をHAZUSEで先行確認。
-- 次回はまず2018-10-01同日群を最終監査し、追加候補がなければCLOSED。その後2018-10-02～10-08境界を確認し、No.1235候補としてA-SLOTツインエンジェルBREAKへ進む。
+- **2018-10-15 大海物語4 withすーぱーそに子**
+- **2018-10-15 ツインドラゴンハナハナ**
+- 2-9伝説導入一覧と当時予定表の双方で10/15群として確認。
+- 次回は2018-10-10～10-14境界監査後、No.1236候補 `大海物語4 withすーぱーそに子` から性能コア+resetBehavior v0.7を収集し、その後 `ツインドラゴンハナハナ`、同日全メーカー/別スペック/PB/地域差監査へ進む。
 
 ## 遡及 resetBehavior QA
 - retroQaScanConfirmedThrough: **2006-09_takenaka-naoto-taikoki.md**（前回handoffを継承）。
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
-- 今回は時系列新規No.1234の性能コア+resetBehavior収集を優先し、遡及QAカーソルは進めていない。
-- 次回以降、mainの2006-09以降の実ファイル順を確認して隣接レコードへ進める。性能コアは無駄に再収集しない。
+- 今回は時系列新規No.1235の性能コア+resetBehavior収集を優先し、遡及QAカーソルは進めていない。
 
 ## 継続注意事項
 - `INDEX.md`は旧スナップショット。`LATEST_HANDOFF.md` + main実レコードを優先。
 - 毎回、最新mainのREADME / mission / INDEX / LATEST_HANDOFF / latest recordを読み直す。
 - 並行更新があれば最新HEADを優先し、古い番号で上書きしない。
-- 据え置きと純電断を同義扱いしない。一般論を本機固有契約へ昇格しない。
+- 据え置きと純電断を同義扱いしない。
 - 同一シリーズでも別型式/別検定番号は単独資料照合なしに性能・resetBehaviorを自動転記しない。
 - 同日群は全メーカー/別スペック/PB/地域差監査後にのみCLOSED判定する。
+- CZ天井・ボーナス天井・AT天井など定義の異なる天井を混同しない。
 - 既存COMPLETE_CORE/PARTIALの性能側判定とresetBehavior QA状態は分離する。
 
 ## 次回再開地点
-1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1234を再取得。
-2. **1234件 / chronologicalFrontier 2018-10-01 / `2018-10-01_GROUP_OPEN_1_PROCESSED_PENDING_SAME_DAY_AUDIT`** を正本として継続。ただし並行更新があれば最新HEAD優先。
-3. 2018-10-01同日全メーカー/別型式/PB/地域差を最終監査。追加なしなら群CLOSED。
-4. 2018-10-02～10-08境界監査後、**2018-10-09 A-SLOTツインエンジェルBREAK** をNo.1235候補として性能コア+resetBehavior v0.7収集。
-5. 遡及QAは2006-09以降の隣接レコードをmain実ファイル順で確認して継続。
+1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1235を再取得。
+2. **1235件 / chronologicalFrontier 2018-10-09 / `2018-10-09_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT`** を正本として継続。ただし並行更新があれば最新HEAD優先。
+3. 2018-10-10～10-14境界監査。
+4. **2018-10-15 大海物語4 withすーぱーそに子** をNo.1236候補として性能コア+resetBehavior v0.7収集。
+5. 続いて **ツインドラゴンハナハナ**、その後10/15群横断監査。
+6. 遡及QAは2006-09以降の隣接レコードをmain実ファイル順で確認して継続。
 
 ## 主要出典 — 取得日 2026-09-10
-### No.1234 HEY！鏡
-- HAZUSE: https://hazuse.com/machine/pachislot/8S0371/
-- パチンコ・パチスロ 悠遊道: https://www.pachinko-road.com/psnews/9908/
-- K-Navi: https://p-kn.com/slot/3090/
-- ちょんぼりすた: https://chonborista.com/slot/daito-slot/61837/
-- 一撃: https://1geki.jp/slot/s_hey_kagami/3/
-- 期待値見える化: https://slotjin.com/slot/heykagami-reset/
-- LackLuckLife: https://l-l-life.com/kagami/
-- パチ＆スロ必勝本: https://p.hisshobon.jp/machine/3211/1/71267
-- すろぱちくえすと: https://www.slopachi-quest.com/article/hey-kagami/
-
-### 次回候補 A-SLOTツインエンジェルBREAK
-- K-Navi: https://p-kn.com/slot/3078/
+### No.1235 A-SLOTツインエンジェルBREAK
+- Sammy公式: https://www.sammy.co.jp/japanese/product/pachislot/2018/twinangelbreak_Aslot/
+- Sammy 2018年製品一覧: https://www.sammy.co.jp/japanese/products/pachislot/2018/index.html
 - HAZUSE: https://hazuse.com/machine/pachislot/8S0077/
-- 一撃: https://1geki.jp/slot/s_aslo_twinbreak/
+- K-Navi: https://p-kn.com/slot/3078/
+- 一撃 基本: https://1geki.jp/slot/s_aslo_twinbreak/
+- 一撃 天井/設定変更: https://1geki.jp/slot/s_aslo_twinbreak/3/
+- ちょんぼりすた: https://chonborista.com/slot/sammy-slot/63259/
+- すろぱちくえすと: https://www.slopachi-quest.com/article/twin-angel-break-atype/
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sammy_slot/169/c.php
+- グリーンべると: https://web-greenbelt.jp/00010686/
+- 2-9伝説導入一覧: https://29den.com/newslot/
+
+### 10/1群監査
+- グリーンべると/P-WORLD: https://news.p-world.co.jp/articles/10473/greenbelt
+- 2-9伝説導入一覧: https://29den.com/newslot/
+
+### 次回10/15群
+- 2-9伝説導入一覧: https://29den.com/newslot/
