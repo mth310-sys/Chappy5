@@ -1,68 +1,70 @@
 更新日: 2026-09-10
 
 ## 現在地点
-- recordCount: **1230**
-- latestRecordAdded: **パチスロ南国育ち～蝶々ver～25Φ**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2018-09-18_nangoku-sodachi-choucho-ver-25.md`
+- recordCount: **1231**
+- latestRecordAdded: **パチスロ ロックマン アビリティ 史上最大の試練**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2018-09-18_rockman-ability.md`
 - chronologicalFrontier: **2018-09-18**
-- frontierLatestMachine: **パチスロ南国育ち～蝶々ver～25Φ — No.1230**
+- frontierLatestMachine: **パチスロ ロックマン アビリティ 史上最大の試練 — No.1231**
 - schema: **resetBehavior v0.7**
-- status: **2018-09-18_GROUP_OPEN_3_OF_AT_LEAST_6_PROCESSED**
+- status: **2018-09-18_GROUP_OPEN_4_OF_AT_LEAST_6_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md` / mission v0.7 / `INDEX.md` / `LATEST_HANDOFF.md` / No.1229を再取得して開始。
-- mainは **1229件 / 2018-09-18群OPEN** まで進んでいたため、その地点を正本として継続。INDEXは旧19件スナップショットのためhandoff + main実レコードを優先。
-- main指定の次候補 `パチスロ南国育ち～蝶々ver～25Φ` をNo.1230として独立登録。
-- 25Φはアムテックス、型式 `南国育ちC／1A`、検定番号 `8S0149`。30Φの `南国育ちC／1A-30` / `7S1949` とは別型式・別検定番号。
-- 導入日は25Φ単独中古DB/ちょんぼりすた等が2018-09-18、HAZUSEは2018-09-17導入開始のため `CONFLICT_RELEASE_DATE_2018_09_17_VS_2018_09_18` を保持し9/18をcanonical。
-- 設定1/4/6、機械割97.8/99.7/105.0%、ART初当たり全設定1/390.1、BIG合算1/129.9→1/121.0、REG合算1/197.8→1/179.7、総出現1/78.4→1/72.3。
-- ベース約32.8～36.0G/50枚、ART純増約1.8枚/G。SPECIAL BIG 80G+1G連、BIG 80G、REG 30G。天井非搭載。
-- resetBehaviorは25Φ単独資料と25/30共通資料を分離。共通ページでは朝一設定変更/電源OFF→ONの内部状態は調査中。25Φ単独のRT状態・有利区間・ガックン/パトランプ等の設定変更/据え置き/純電断契約は十分な再探索後も固定できずUNVERIFIED。
-- 30Φに存在する詳細reset契約は別型式であるため25Φへ自動転記していない。
+- 最新mainの `README.md` / mission v0.7 / `INDEX.md` / `LATEST_HANDOFF.md` / No.1230を再取得して開始。
+- INDEXは旧19件スナップショットのため、LATEST_HANDOFF + main実レコードを正本として1230件から継続。
+- main指定の次候補 `パチスロ ロックマン アビリティ 史上最大の試練` をNo.1231として登録。
+- 型式 `ロックマンアビリティ／ZY`、検定番号 `8S0119`、メーカーはスパイキー。グリーンべると当時業界記事でもスパイキー製を確認。
+- 導入日は複数解析2018-09-18、HAZUSE2018-09-17導入開始のため `CONFLICT_RELEASE_DATE_2018_09_17_VS_2018_09_18` を保持し9/18をcanonical。
+- 設定4/5/6/H。市場掲載機械割96.1/98.2/100.2/102.0%、完全攻略103.0/105.4/107.6/109.0%。ボーナス合算1/218.5→1/184.6。
+- ベース33.5/34.5/35.5/36.5G/50枚、RT純増約0.3枚/G。S-BIG337枚、BIG206枚、REG57枚、RT30/55/80/200G。
+- 通常時300G消化でCZアビリティフィールド確定。通常のボーナス天井とは分離して `CZ_COUNTER_300G` として保持。
+- 設定変更でもCZ天井カウンタを引き継ぐ。RT/CZ/アビリティアタック/ボーナス中の設定変更では、見た目通常ステージ・内部CZ状態から開始。朝一狙いに直結する特殊契約として保存。
+- ちょんぼりすたは電源OFF→ONでもCZ天井引継ぎ/ステージランダム。純電断時のRT/CZ/ボーナス内部状態の独立契約はUNVERIFIED。
+- HAZUSEと複数解析で設定6/HのBIG・REG個別値に競合があるため平均せず `CONFLICT_BIG_REG_SETTING6_H_HAZUSE_VS_MULTIPLE_ANALYSIS` を保存。ボーナス合算は一致。
 
-## No.1230 — パチスロ南国育ち～蝶々ver～25Φ
-- manufacturer: **アムテックス**
+## No.1231 — パチスロ ロックマン アビリティ 史上最大の試練
+- manufacturer: **スパイキー**
 - releaseDateCanonical: **2018-09-18**
-- formalModelName: **南国育ちC／1A**
-- certificationNumber: **8S0149**
-- generation/system: **5.9号機 / ART**
-- settings: **1 / 4 / 6**
-- payoutRate: **97.8 / 99.7 / 105.0%**
-- ART initial: **全設定1/390.1**
-- BIG combined: **1/129.9 / 1/126.5 / 1/121.0**
-- REG combined: **1/197.8 / 1/190.4 / 1/179.7**
-- bonusTotal: **1/78.4 / 1/76.0 / 1/72.3**
-- baseGamesPer50: **約32.8～36.0G/50枚（設定域）**
-- netIncrease: **ART約1.8枚/G**
-- basicPayout: **SPECIAL BIG 80G+1G連 / BIG 80G / REG 30G**
-- ceiling: **非搭載**
+- formalModelName: **ロックマンアビリティ／ZY**
+- certificationNumber: **8S0119**
+- generation/system: **5.9号機 / A+RT / 技術介入**
+- settings: **4 / 5 / 6 / H**
+- payoutRate market: **96.1 / 98.2 / 100.2 / 102.0%**
+- payoutRate full攻略: **103.0 / 105.4 / 107.6 / 109.0%**
+- bonusTotal: **1/218.5 / 1/209.4 / 1/195.6 / 1/184.6**
+- baseGamesPer50: **33.5 / 34.5 / 35.5 / 36.5G**
+- netIncrease: **RT約0.3枚/G**
+- basicPayout: **S-BIG337枚 / BIG206枚 / REG57枚 / RT30・55・80・200G**
+- ceiling: **通常時300GでCZ確定（通常ボーナス天井ではない）**
 
 ### resetBehavior v0.7
-- settingChange: **内部状態調査中（25/30共通資料） / 25Φ単独RT・有利区間契約UNVERIFIED_AFTER_RESEARCH**。
-- carryOver: **UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION**。
-- powerOFF→ON: **共通資料で内部状態調査中、25Φ単独契約UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION**。
-- gameCounter/ceilingAfterReset: 天井非搭載のため `NOT_APPLICABLE`。
-- mode/state: 設定変更専用モード振り分け数値 `NONE_CONFIRMED_AFTER_RESEARCH`。
-- advantageousSection: 有利区間使用/有利区間中ART初当たり天国移行は共通解析で確認。ただし25Φ単独の設定変更/据え置き/純電断契約はUNVERIFIED。
-- resetBenefits: **25Φ単独の設定変更専用定量恩恵 `NONE_CONFIRMED_AFTER_RESEARCH`**。
+- settingChange: **CZ天井G数引継ぎ。RT/CZ/アビリティアタック/ボーナス中変更なら内部CZ状態開始（液晶は通常）**。
+- carryOver: **CZ天井引継ぎ。前日RT/CZ/ボーナス状態そのものの独立継続契約はUNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION**。
+- powerOFF→ON: **CZ天井引継ぎ、ステージランダム。RT/CZ/ボーナス内部状態の純電断独立契約はUNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION**。
+- gameCounterReset: **CZ 300Gカウンタは設定変更でも引継ぎ**。
+- ceilingAfterReset: **短縮なし。300Gカウンタ引継ぎ**。
+- modeAfterReset: **通常時の一般的モードなし。リセット専用モードNOT_APPLICABLE**。
+- stateAfterReset: **特殊状態中の設定変更は内部CZへ**。
+- advantageousSection: **本機固有の朝一有利区間契約UNVERIFIED_AFTER_RESEARCH**。
+- resetBenefits: **前日RT/CZ/アビリティアタック/ボーナス閉店→設定変更で内部CZ開始。通常状態でもCZカウンタ引継ぎで宵越しCZ狙い可**。
 - resetPenalties: `NONE_CONFIRMED_AFTER_RESEARCH`。
-- resetDetection: **25Φ単独のガックン/パトランプ/ランプ判別条件・発生率UNVERIFIED_AFTER_RESEARCH**。
-- numericResetData: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- resetDetection: **開始ステージ・300G挙動だけでは設定変更/据え置き判別困難。ガックン条件/発生率UNVERIFIED_AFTER_RESEARCH**。
+- numericResetData: **CZ 300G / 通常アビリティフィールドRT期待度約50%**。
 
 ## 2018-09-18群監査
 ### 登録済み
 - No.1228 パチスロ ベン・トー ～狼たちの夜～
 - No.1229 パチスロ南国育ち～蝶々ver～30Φ
 - No.1230 パチスロ南国育ち～蝶々ver～25Φ
+- No.1231 パチスロ ロックマン アビリティ 史上最大の試練
 
 ### 未処理・同日候補
-- **パチスロ ロックマン アビリティ 史上最大の試練** — 2018-09-18候補。朝一資料にCZ天井/RT・CZ関連の機種固有契約あり、別ソース照合して登録。
-- パチスロ 闇芝居 — NET。9/18確認済み。
-- アレックス — アクロス。9/18確認済み。
+- **パチスロ 闇芝居** — NET。2018-09-18確認済み。次に性能コア＋resetBehavior v0.7を収集。
+- **アレックス** — アクロス。2018-09-18確認済み。その次に処理。
 
 ### 群判定
-- `2018-09-18_GROUP_OPEN_3_OF_AT_LEAST_6_PROCESSED`
-- 少なくとも残り3機を処理し、さらに全メーカー/別スペック/PB/地域差監査後にのみCLOSED判定する。
+- `2018-09-18_GROUP_OPEN_4_OF_AT_LEAST_6_PROCESSED`
+- 残り既知2機を処理し、全メーカー/別スペック/PB/地域差監査後にのみCLOSED判定する。
 
 ## 遡及 resetBehavior QA
 - retroQaScanConfirmedThrough: **2006-09_kyuji.md**（球児）。
@@ -80,16 +82,17 @@
 - 同日群は全メーカー/別スペック/PB/地域差監査後にのみCLOSED判定する。
 
 ## 次回再開地点
-1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1230を再取得。
-2. **1230件 / chronologicalFrontier 2018-09-18 / `2018-09-18_GROUP_OPEN_3_OF_AT_LEAST_6_PROCESSED`** を正本として継続。ただし並行更新があれば最新HEAD優先。
-3. 次の未処理は **`パチスロ ロックマン アビリティ 史上最大の試練`**。性能コア＋resetBehavior v0.7、とくにCZ天井/RT・CZ関連の設定変更/据え置き/純電断差を複数ソースで照合。
-4. 続いて `パチスロ 闇芝居` → `アレックス`。その後9/18全メーカー/別スペック/PB/地域差監査。
+1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1231を再取得。
+2. **1231件 / chronologicalFrontier 2018-09-18 / `2018-09-18_GROUP_OPEN_4_OF_AT_LEAST_6_PROCESSED`** を正本として継続。ただし並行更新があれば最新HEAD優先。
+3. 次の未処理は **`パチスロ 闇芝居`**。性能コア＋resetBehavior v0.7を収集。
+4. 続いて **`アレックス`**。その後9/18全メーカー/別スペック/PB/地域差監査。
 5. 遡及QAは `docs/real_machine_db/machines/2006-09_burichika-30.md` から継続。
 
 ## 主要出典 — 取得日 2026-09-10
-### No.1230 南国育ち～蝶々ver～25Φ
-- HAZUSE 25Φ: https://hazuse.com/machine/pachislot/8S0149/
-- HAZUSE 25Φ基本: https://hazuse.com/machine/pachislot/8S0149/genre/201/
-- ちょんぼりすた: https://chonborista.com/slot/amute/62658/
-- P-WORLD 25Φ: https://www.p-world.co.jp/machine/database/8722
-- スロ安サーチ25Φ: https://slot-price.com/slot_price_details/id/1269
+### No.1231 ロックマン アビリティ
+- HAZUSE: https://hazuse.com/machine/pachislot/8S0119/
+- グリーンべると: https://web-greenbelt.jp/00010659/
+- すろぱちくえすと: https://www.slopachi-quest.com/article/rockman-abilty/
+- ちょんぼりすた: https://chonborista.com/slot/enta-slot/62583/
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/spiky_slot/12/c-2.php
+- P-WORLD: https://www.p-world.co.jp/machine/database/8725
