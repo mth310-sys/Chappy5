@@ -1,73 +1,72 @@
 更新日: 2026-09-11
 
 ## 現在地点
-- recordCount: **1252**
-- latestRecordAdded: **アナザーゴッドハーデス-冥王召喚-**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2018-12-17_another-god-hades-meiou-shoukan.md`
-- chronologicalFrontier: **2018-12-17**
-- frontierLatestMachine: **アナザーゴッドハーデス-冥王召喚- — No.1252**
+- recordCount: **1253**
+- latestRecordAdded: **パチスロ聖闘士星矢 海皇覚醒Special**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2019-01-07_saint-seiya-kaiou-kakusei-special.md`
+- chronologicalFrontier: **2019-01-07**
+- frontierLatestMachine: **パチスロ聖闘士星矢 海皇覚醒Special — No.1253**
 - schema: **resetBehavior v0.7**
-- status: **2018-12-17_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**
+- status: **2019-01-07_GROUP_OPEN_1_MACHINE_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1251を再取得して開始。
-- INDEXは旧スナップショットのためREADME指示どおりLATEST_HANDOFF + main実レコードを正本として継続。
-- 12/17群の未処理 `アナザーゴッドハーデス-冥王召喚-` をNo.1252として登録。
-- 同日群を全メーカー/別型式/別スペック/PB/地域差観点で再監査。
-- `戦国BASARA HEROES PARTY` を12/17扱いする後年一覧を検出したが、当時業界発表は1月中旬予定、複数解析/導入資料は **2019-01-21** で一致するため12/17群へは混入させない。
-- 2018-12-17群は LoV Re: / カイジ4 / ハーデス冥王召喚の3機でCLOSED判定。
+- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1252を再取得して開始。
+- mainはNo.1252 / 2018-12-17群CLOSEDまで進行済みだったため、その正本地点から継続。
+- 2018-12-18〜2019-01-06境界と2019-01-07群候補を再監査。
+- `パチスロ聖闘士星矢 海皇覚醒Special` をNo.1253として登録。
+- 2019-01-07群には少なくとも `パチスロ蒼天の拳 朋友`、`戦国パチスロ花の慶次～天を穿つ戦槍～剛弓ver.` が同日導入であることを再確認。`Sミクちゃん` は次回個別再照合を継続するため群はOPEN。
 
-## No.1252 — アナザーゴッドハーデス-冥王召喚-
-- manufacturer: **ミズホ**
-- releaseDateCanonical: **2018-12-17**
-- formalModelNameCanonical: **アナザーゴッドハーデス冥王／GL**
-- certificationNumber: **8S0069**
-- generation/system: **5.9号機 / ART**
+## No.1253 — パチスロ聖闘士星矢 海皇覚醒Special
+- manufacturer: **三洋物産**
+- releaseDateCanonical: **2019-01-07**
+- formalModelNameCanonical: **S聖闘士星矢海皇覚醒SP-KF**
+- certificationNumber: **UNVERIFIED_AFTER_RESEARCH**
+- generation/system: **6号機 / AT**
 - settings: **1 / 2 / 3 / 4 / 5 / 6**
-- payoutRate: **97.4 / 98.3 / 99.3 / 104.4 / 105.7 / 106.8%**
-- CZ合算: **1/228.7 / 1/230.3 / 1/232.8 / 1/235.3 / 1/237.1 / 1/239.8**
-- GG初当たり: **1/737.0 / 1/740.9 / 1/744.6 / 1/749.6 / 1/752.7 / 1/756.1**
-- baseGamesPer50 canonical range: **約40.6〜45.9G**
-- ART純増: **約2.0枚/G**
-- GG: **初期100G+α**
-- ceiling: **非搭載**
+- payoutRate: **97.7 / (98.7 vs 98.9 CONFLICT) / 100.6 / 103.7 / 105.0 / 107.1%**
+- GB/AT endpoints: 設定1 **1/523.6 / 1/1748.0**、設定6 **1/217.8 / 1/288.2**
+- baseGamesPer50: **約51〜53.4G**
+- AT純増: **約2.8枚/G**
+- ceiling: **最大736GでGB**。通常736 / 天国準備536 / 海底736 / SP536 / 天国136G。
 
 ### resetBehavior v0.7
-- settingChange: **内部状態再抽選 / MB状態リセット / 液晶123**。
-- carryOver: 据え置き独立条件の全内部契約は **UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION**。前日MB出目が既知なら、据え置き時に朝一2枚掛け13枚獲得となる可能性があり据え置き濃厚材料。
-- powerOFF→ON: **内部状態引継ぎ / MB状態引継ぎ / 液晶123**。
-- gameCounterReset / ceilingAfterReset: **NOT_APPLICABLE_NO_GAME_COUNT_CEILING**。
-- modeAfterReset: 設定変更で内部状態再抽選。GG/JOT/HZのリセット専用数値振り分けは未確認。
-- stateAfterReset: 設定変更は再抽選、純電断は引継ぎ。
-- advantageousSectionReset: 5.9号機として有利区間搭載は確認。ただし設定変更/据え置き/純電断ごとの本機固有RESET/CARRY_OVER直接契約は固定できず **APPLICABLE_BUT_RESET_CONTRACT_UNVERIFIED_AFTER_RESEARCH**。
-- resetBenefits: 専用短縮天井なし。設定変更専用CZ/GG優遇率・朝一専用モード値は **NONE_CONFIRMED_AFTER_RESEARCH**。
-- resetPenalties: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- resetDetection: **設定変更後リールガックンなし**という本機固有解析あり。液晶123は設定変更/純電断共通で判別不可。MB出目は据え置き補助判別に利用可能。
+- settingChange: **天井RESET / 内部状態RESET / 非有利区間スタート → 1G目有利区間セット**。火時計ステージ移行。小宇宙pt / 不屈pt / GBレベル等は有利区間移行時に再抽選。
+- carryOver: 据え置きを純電断と分離した全内部契約は **UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION**。
+- powerOFF→ON: 本機固有朝一資料で **天井引継ぎ / 内部状態据え置き**。別解析で有利区間、小宇宙pt、不屈pt、GBレベル引継ぎ整理あり。ステージは調査中。
+- gameCounter: 設定変更RESET / pure power cycle CARRY_OVER。
+- advantageousSectionReset: 設定変更で非有利区間へ。pure power cycleは引継ぎ報告。
+- resetBenefits: 有利区間移行時GB高確 **100%**、10G保証。小宇宙pt / 不屈ptの公開振り分けあり。
+- resetDetection: 非有利区間→1G目有利区間セット、火時計ステージ、初回アイキャッチ/火時計役物が補助材料。本機固有ガックン率・確定性は **UNVERIFIED_AFTER_RESEARCH**。
+
+### 公開朝一/有利区間移行時数値
+- 小宇宙pt: **0pt 62.6 / 600pt 27.9 / 700pt 8.6 / 800pt 0.8%**。
+- 不屈pt: **0pt 58.4 / 5pt 6.4 / 10pt 12.3 / 20pt 6.4 / 30pt 10.8 / 40pt 5.0 / 45pt 0.7 / 50pt 0.002%**。
+- GB高確: **100%移行、10G保証**。
+- GBレベルは滞在モード別の有利区間移行時振り分けをrecordへ保存済み。
+- 上記は設定変更だけでなくGB敗北/AT終了後等の有利区間移行時にも適用される公開値であり、設定変更専用抽選値とは扱わない。
 
 ### quality notes
-- baseGamesPer50はHAZUSE `40.6G（設定1〜6）` と複数解析 `40.6〜45.9G` が競合するため **CONFLICT** として保持し平均化しない。
-- reset内部状態はモゲスロが `再抽選/引継ぎ`、ちょんぼりすたが `リセット!?/据え置き!?`。方向性は一致するが確定度表現差を保持。
-- 一般5.9号機仕様から有利区間reset契約を自動補完していない。
+- 設定2機械割は主要解析で **98.7% / 98.9%** が競合するためCONFLICT保持。
+- 50枚ベースは初期約51Gと後発解析51.6〜53.4Gを範囲保持。
+- 型式名は中古実機DBで確認したが、検定番号は十分な再探索後も高信頼固定できずUNVERIFIED。
 
-## 2018-12-17群
+## 2019-01-07群
 ### 登録済み
-- No.1250 パチスロ ロード オブ ヴァーミリオン Re:
-- No.1251 回胴黙示録カイジ4
-- No.1252 アナザーゴッドハーデス-冥王召喚-
+- No.1253 パチスロ聖闘士星矢 海皇覚醒Special
 
-### 群監査
-- 2018年12月当時の新台一覧ではLoV Re: / カイジ4を12/17掲載。
-- ハーデス冥王召喚はHAZUSE・ちょんぼりすた・K-Navi・アタリ7で2018-12-17が一致し、ミズホ/ユニバーサル系一覧でも同日導入を確認。
-- 後年5.9号機一覧の一部が `戦国BASARA HEROES PARTY` を2018-12-17扱いするが、Amusement Japan 2018-11-20記事は「1月中旬から」、ちょんぼりすた・すろぱちくえすと等は **2019-01-21** で一致。よって12/17群から除外し、2019-01-21候補として保持。
+### 確認済み未処理候補
+- **パチスロ蒼天の拳 朋友** — K-Navi/ちょんぼりすた等で2019-01-07一致。
+- **戦国パチスロ花の慶次～天を穿つ戦槍～剛弓ver.** — ちょんぼりすた/解析DB等で2019-01-07一致。
+- **Sミクちゃん** — 前handoff候補。次回、型式/導入日を個別再照合して収録可否確定。
 
 ### 判定
-- **2018-12-17_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**。
+- **2019-01-07_GROUP_OPEN_1_MACHINE_PROCESSED**。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
 - retroQaScanConfirmedThrough: **`docs/real_machine_db/machines/2006-12_comic-world-oki.md`**。
 - nextRetroQaCandidate: **`docs/real_machine_db/machines/2006-12_moeru-marine-battle.md`（モエる まりんバトる）**。
-- 今回は時系列frontier機種と12/17群監査を優先し、遡及QA地点は変更していない。
+- 今回は時系列frontier機種を優先し、遡及QA地点は変更していない。
 
 ## 継続注意事項
 - `INDEX.md`は旧スナップショット。`LATEST_HANDOFF.md` + main実レコードを優先。
@@ -80,27 +79,26 @@
 - 競合値は平均せずCONFLICTを保持。
 
 ## 次回再開地点
-1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1252を再取得。
-2. **1252件 / chronologicalFrontier 2018-12-17 / `2018-12-17_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT`** を正本として継続。ただし並行更新があれば最新HEAD優先。
-3. 2018-12-18〜2019-01-06境界を監査し、次の導入群 **2019-01-07** へ進む。
-4. 2019-01-07群は少なくとも **パチスロ聖闘士星矢 海皇覚醒Special / パチスロ蒼天の拳 朋友** を複数一覧で確認。別資料では **戦国パチスロ花の慶次～天を穿つ戦槍～剛弓ver. / Sミクちゃん** も同日掲載されるため、導入日を個別再照合して未処理先頭をNo.1253候補として確定する。
-5. `戦国BASARA HEROES PARTY` は現時点で **2019-01-21候補**として保持し、1/21群到達時に再監査する。
-6. 遡及QAは **`docs/real_machine_db/machines/2006-12_moeru-marine-battle.md`（モエる まりんバトる）** から再開。
+1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1253を再取得。
+2. **1253件 / chronologicalFrontier 2019-01-07 / `2019-01-07_GROUP_OPEN_1_MACHINE_PROCESSED`** を正本として継続。並行更新があれば最新HEAD優先。
+3. **No.1254候補 `パチスロ蒼天の拳 朋友`** を先頭に性能コア + resetBehavior v0.7を収集。
+4. 続いて `戦国パチスロ花の慶次～天を穿つ戦槍～剛弓ver.`、`Sミクちゃん` の順序/収録可否を個別導入日照合で確定。
+5. 2019-01-07群を全メーカー/別型式/別スペック/PB/地域差で横断監査後にCLOSED可否判定。
+6. `戦国BASARA HEROES PARTY` は **2019-01-21候補**として保持。
+7. 遡及QAは **`docs/real_machine_db/machines/2006-12_moeru-marine-battle.md`** から再開。
 
 ## 主要出典 — 取得日 2026-09-11
-### No.1252 アナザーゴッドハーデス-冥王召喚-
-- HAZUSE: https://hazuse.com/machine/pachislot/8S0069/
-- ちょんぼりすた: https://chonborista.com/slot/universal-slot/71691/
-- モゲスロ: https://moge-site.com/archives/22301
-- 元プロMGのパチスロブログ: https://www.pachislotblog.tokyo/hades-meioushoukan-kaiseki/
-- P-WORLD: https://www.p-world.co.jp/machine/database/8827
-- グリーンべると/P-WORLD業界ニュース: https://news.p-world.co.jp/articles/10641/greenbelt
-- アタリ7: https://www.atari7.com/slot/date1543922271.php
-- スロット解析.com: https://slotkaiseki.com/hades_meiou-spec_/
+### No.1253 パチスロ聖闘士星矢 海皇覚醒Special
+- ちょんぼりすた: https://chonborista.com/slot/sanyo-slot/69654/
+- パチマガスロマガ 小役/50枚: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sanyo_slot/35/c.php
+- パチマガスロマガ AT: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sanyo_slot/35/13.php
+- 1geki: https://1geki.jp/slot/s_seiya_ks/
+- K-Navi: https://p-kn.com/slot/3139/
+- P-WORLD: https://www.p-world.co.jp/machine/database/8817
+- おスロおパチおいでやす: https://oslo-opachi.com/2019/01/03/post-3809/
+- パチマ（型式確認）: https://www.pachima.com/c/slot/s_28sonota/S00217
 
-### 12/17群 / 次群境界監査
-- すろぱちくえすと 2018年12月新台一覧: https://www.slopachi-quest.com/article/erunote-12-shindai/
-- 1geki ユニバーサル2018機種一覧: https://1geki.jp/maker/universal/
-- Amusement Japan 戦国BASARA発表: https://amusement-japan.co.jp/article/detail/10000912/
-- ちょんぼりすた 戦国BASARA HEROES PARTY: https://chonborista.com/slot/enta-slot/70813/
-- すろぱちくえすと 2019年1月新台一覧: https://www.slopachi-quest.com/article/erunote-shindai-2019-1/
+### 2019-01-07群監査
+- K-Navi 蒼天の拳 朋友: https://p-kn.com/slot/3147/
+- ちょんぼりすた 蒼天の拳 朋友: https://chonborista.com/slot/sammy-slot/69735/
+- ちょんぼりすた 花の慶次 剛弓ver.: https://chonborista.com/slot/newgin-slot/71777/
