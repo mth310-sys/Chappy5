@@ -55,24 +55,30 @@ reliability: ANALYSIS_SINGLE + OFFICIAL(system)
 
 ## resetBehavior
 
-settingChangeBehavior: UNVERIFIED
-carryOverBehavior: UNVERIFIED
-powerCycleBehavior: UNVERIFIED
-gameCounterReset: 固定ゲーム数天井を示す高信頼資料を今回確認できず。UNVERIFIED
-ceilingAfterReset: 公開天井情報を確認できず。UNVERIFIED
-modeAfterReset: ナビポイント/CZ/RT関連の設定変更時扱いはUNVERIFIED
-stateAfterReset: UNVERIFIED
-advantageousSectionReset: NOT_APPLICABLE（5号機初期）
-resetBenefits: 設定変更時固有の朝一恩恵は今回確認できず。UNVERIFIED
-resetPenalties: UNVERIFIED
-resetDetection: ガックン等の変更判別情報は高信頼資料で確認できず
-numericResetData: UNVERIFIED
+resetQaStatus: `PARTIAL_RESEARCH_EXHAUSTED`
+resetQaUpdatedAt: `2026-09-11`
 
-再探索語: 「モエるまりんバトる 設定変更」「リセット」「朝一」「据え置き」「電源OFF ON」「天井」「ナビポイント 引継ぎ」「ガックン」。高信頼な変更時仕様を確認できないため推測しない。
+settingChangeBehavior: `UNVERIFIED_AFTER_RESEARCH`。ナビポイント、CZ/33G RT残状態、ボーナス後状態の設定変更時処理を機種固有資料で固定できず。
+carryOverBehavior: `UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION`。据え置きを純電源OFF→ONと同義扱いしない。
+powerCycleBehavior: `UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION`。電源OFF→ONのみの場合のナビポイント/CZ/RT状態契約を直接確認できず。
+gameCounterReset: 固定ゲーム数天井を示す機種固有資料は確認できず `NO_FIXED_GAME_CEILING_CONFIRMED_AFTER_RESEARCH`。
+ceilingAfterReset: `NOT_APPLICABLE_NO_FIXED_GAME_CEILING_CONFIRMED`。
+modeAfterReset: ナビポイント/CZ/RTループに関する設定変更時の再抽選/引継ぎは `UNVERIFIED_AFTER_RESEARCH`。
+stateAfterReset: CZ滞在、33G RT残G、ナビポイント等の変更時/純電断時処理は `UNVERIFIED_AFTER_RESEARCH`。
+advantageousSectionReset: `NOT_APPLICABLE`（5号機初期・有利区間制度前）。
+resetBenefits: 設定変更時固有の朝一優遇は `NONE_CONFIRMED_AFTER_RESEARCH`。
+resetPenalties: 設定変更時固有の不利要素は `NONE_CONFIRMED_AFTER_RESEARCH`。
+resetDetection: ガックン、初期出目、ランプ等による本機固有の設定変更判別契約は `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
+numericResetData: `PUBLIC_MACHINE_SPECIFIC_RESET_VALUES_NOT_FOUND_AFTER_RESEARCH`。
+
+### reset QA notes
+- 公式/K-Navi/後年回顧資料で、BIG中に得たナビポイントを利用してBIG後CZでチェリー転落を回避し、プラム入賞から33G RTへ移行、RT終了後にCZへ戻るという基本状態機構を再確認。
+- 2026-09-11に検索語を変更して「設定変更」「リセット」「朝一」「据え置き」「電源OFF ON」「ナビポイント 引継ぎ」「RT 引継ぎ」「天井」「ガックン」を再探索。
+- 機種固有の設定変更/純電断時の状態保持契約は追加固定できなかった。一般的な5号機RT機や後継/類似機から補完しない。
 
 ## sources
 
-取得日: 2026-08-31
+取得日: 2026-08-31 / reset QA再取得日: 2026-09-11
 
 1. ユニバーサルエンターテインメント公式 — モエる まりんバトる
    - https://www.universal-777.com/product/slot/moeru_marinebattle/
@@ -90,13 +96,17 @@ numericResetData: UNVERIFIED
    - https://pachiseven.jp/articles/detail/14166
    - エレコ・2006年12月導入の照合
    - reliability: ANALYSIS_SINGLE
+5. ウリぼーの萌えスロ日記 — https://ameblo.jp/urikko/entry-10146378232.html
+   - 2006年12月、BIG中ナビポイント、BIG後CZ→プラムで33G RT→CZ復帰という当時実戦系回顧
+   - reliability: RETROSPECTIVE_SECONDARY
 
 ## missingFields
 
 - 設定別BIG/REG確率
 - 50枚あたりゲーム数
 - RT 1Gあたり純増
-- resetBehaviorの公開数値・引継ぎ仕様
+- 設定変更/据え置き/純電断時のナビポイント・CZ・RT状態契約
+- 本機固有の変更判別・公開朝一数値
 
 ## conflicts
 
