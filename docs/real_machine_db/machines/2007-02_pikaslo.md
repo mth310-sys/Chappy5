@@ -59,28 +59,30 @@ BIG/CB1/CB2個別の設定別確率は、機種名表記揺れ・型式名候補
 
 ## resetBehavior
 
-resetBehaviorQA: PARTIAL
+resetBehaviorVersion: v0.7
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
 
-- settingChangeBehavior: 本機固有の設定変更時挙動を高信頼資料で確認できず UNVERIFIED
-- carryOverBehavior: 天井・モード・RT/ARTを用いないノーマル機であり、引継ぎ対象となる公開ゲーム数管理は今回確認できず
-- powerCycleBehavior: 電源OFF→ONのみの固有挙動を確認できず UNVERIFIED
-- gameCounterReset: 天井非搭載。公開された内部ゲーム数天井管理なし
-- ceilingAfterReset: 非該当（天井非搭載）
-- modeAfterReset: 朝一専用モード/モード管理を確認できず
-- stateAfterReset: 設定変更時の朝一内部状態優遇を確認できず
-- advantageousSectionReset: 非該当（有利区間制度導入前）
-- resetBenefits: 公開された主要朝一恩恵を確認できず
-- resetPenalties: 公開された主要朝一不利要素を確認できず
-- resetDetection: ガックン/告知ランプ/リール挙動を含め、本機固有の変更判別情報を高信頼資料で確認できず
-- numericResetData: なし / UNVERIFIED
+- settingChangeBehavior: 本機固有の設定変更時挙動を、検索語・資料系統を変更して再探索したが直接固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- carryOverBehavior: 天井・モード・RT/ARTを用いないノーマル機であり、据え置き時に引継ぎ対象となる公開ゲーム数管理は確認できない。本機固有の成立済みボーナス等の契約は `UNVERIFIED_AFTER_RESEARCH`。
+- powerCycleBehavior: 電源OFF→ONのみの本機固有挙動を再探索後も直接固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- gameCounterReset: 天井非搭載。公開された内部ゲーム数天井管理なしのため天井カウンタは `NOT_APPLICABLE`。
+- ceilingAfterReset: 天井非搭載のため `NOT_APPLICABLE`。リセット専用短縮天井なし。
+- modeAfterReset: 朝一専用モード/モード管理は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- stateAfterReset: 設定変更時の朝一内部状態優遇は `NONE_CONFIRMED_AFTER_RESEARCH`。成立済みボーナス等の本機固有状態契約は未固定。
+- advantageousSectionReset: 有利区間制度導入前のため `NOT_APPLICABLE`。
+- resetBenefits: 公開された主要朝一恩恵は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- resetPenalties: 公開された主要朝一不利要素は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- resetDetection: ガックン/告知ランプ/リール挙動を含め、本機固有の変更判別情報を再探索後も固定できず `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
+- numericResetData: 設定変更時のみの公開朝一数値は `PUBLIC_NUMERIC_RESET_DATA_NOT_FOUND_AFTER_RESEARCH`。
 
 ### resetBehavior 再探索メモ
 
-「PIKASLO / ピカスロ / ピカスロ1 / ヤーマ / 2007」に「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / ガックン / 天井」を組み合わせ、メーカー公式、当時攻略資料、古い機種DB、後年5号機一覧を横断。天井非搭載までは確認できたが、本機固有の設定変更判別や電源断挙動は確定できなかった。
+「PIKASLO / ピカスロ / ピカスロ1 / ヤーマ / 2007」に「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / ガックン / 天井 / ボーナス成立状態」を組み合わせ、メーカー公式、当時攻略資料、古い機種DB、後年5号機一覧・回顧資料まで横断。天井非搭載までは確認できるが、本機固有の設定変更/据え置き/純電断契約や変更判別数値は固定できなかった。一般ノーマル機の挙動から推測して補完しない。
 
 ## sources
 
-取得日: 2026-08-31
+初回取得日: 2026-08-31
+resetBehavior QA再確認日: 2026-09-11
 
 1. BELLCO公式 — パチスロ機種一覧（ヤーマ旧機種）
    - https://www.s-bellco.co.jp/products/slot/
@@ -107,11 +109,11 @@ resetBehaviorQA: PARTIAL
 
 - BIG/CB1/CB2の設定別個別確率
 - baseGamesPer50
-- resetBehaviorの本機固有設定変更/据え置き/電源断挙動
-- resetDetection
+- resetBehaviorの本機固有設定変更/据え置き/電源断挙動: UNVERIFIED_AFTER_RESEARCH
+- resetDetection: PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH
 
 coreStatus: PARTIAL
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
 
 ## conflicts
 
