@@ -1,76 +1,78 @@
 更新日: 2026-09-10
 
 ## 現在地点
-- recordCount: **1227**
-- latestRecordAdded: **パチスロ ハクション大魔王**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2018-09-03_hakushon-daimaoh.md`
-- chronologicalFrontier: **2018-09-03**
-- frontierLatestMachine: **パチスロ ハクション大魔王 — No.1227**
+- recordCount: **1228**
+- latestRecordAdded: **パチスロ ベン・トー ～狼たちの夜～**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2018-09-18_ben-to-wolves-night.md`
+- chronologicalFrontier: **2018-09-18**
+- frontierLatestMachine: **パチスロ ベン・トー ～狼たちの夜～ — No.1228**
 - schema: **resetBehavior v0.7**
-- status: **2018-09-03_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**
+- status: **2018-09-18_GROUP_OPEN_1_OF_AT_LEAST_5_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1226を再取得して開始。
-- INDEXは旧スナップショットのためREADME規定どおりLATEST_HANDOFF + main実レコードを正本として継続。
-- 1226件 / 2018-09-03群OPENから、既知同日未処理の `パチスロ ハクション大魔王` を重複なし確認後No.1227として登録。
-- Amusement Japan当時業界記事、日刊スポーツ導入カレンダー、パチマガスロマガ、ちょんぼりすた、すろぱちくえすと、P-WORLD、中古実機DBを横断。
-- WORLDブランド第1弾、製造JPS、5号機A+RT、正式型式表記 `パチスロハクション大魔王AA` を複数DBで照合。検定番号は再探索後もUNVERIFIED。
-- 導入日は当時業界記事+カレンダー+複数解析が2018-09-03で一致。一部後年ページの2018-09-02は `CONFLICT_RELEASE_DATE_2018_09_02_VS_2018_09_03` として保持。
-- 設定2/5/6。通常機械割98.5/101.7/105.3%、完全攻略101.1/103.7/107.2%。BIG 1/348.6/1/372.3/1/394.8、REG 1/387.7/1/269.7/1/221.4、合算1/183.5/1/156.4/1/141.8。
-- 約39G/50枚をcanonical headlineとし、別解析の約39～43Gは設定/手順差を含むレンジとして併記。BIG最大311枚、REG最大104枚、RT約0.1枚/G、BIG後10G CZ経由で20G/40G RT。通常ゲーム数天井なし。
-- resetBehaviorは当時解析自体が設定変更/電源OFF→ON時のRT状態・ステージを「調査中」と掲載。他系統も再探索したが直接契約を固定できず、一般論を転記せずUNVERIFIED。公開朝一数値・変更判別条件もNONE_CONFIRMED/UNVERIFIED。
-- 日刊スポーツ当時カレンダー上9/3パチスロはスーパービンゴリバースとハクション大魔王の2機。別検索でも追加同日機を固定できなかったため9/3群をCLOSED。
-- 遡及QAは `2006-09_kyuji.md`（球児）を再探索。既存 `coreStatus: PARTIAL` は維持し、reset側のみ `PARTIAL_RESEARCH_EXHAUSTED` へ更新。
-- 球児の設定変更/据え置き/純電断時「反撃タイム」残G・内部RT状態を直接示す本機固有資料は追加固定できず、据え置き/純電断を独立未確認として保存。有利区間は制度前でNOT_APPLICABLE。
+- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1227を再取得して開始。
+- mainは並行進捗により1227件 / 2018-09-03群CLOSEDまで進んでいたため、その地点を正本として継続。既存性能値は再収集しなかった。
+- 9/4～9/17境界を日刊スポーツ導入カレンダー、後年導入一覧、機種別資料で監査。9/3の次の主要導入群は9/18として進行。
+- 既知先頭候補 `パチスロ ベン・トー ～狼たちの夜～` をGitHub検索で重複なし確認後、No.1228として登録。
+- 型式 `パチスロベントー／BA`、検定番号 `7S1703`、メーカー バルテックをHAZUSEで固定。
+- ホール導入日は日刊スポーツ/K-Navi/ちょんぼりすた/すろぱちくえすとが2018-09-18で一致。HAZUSEは9/17導入開始、グリーンべるとは9/17納品予定のため `CONFLICT_RELEASE_DATE_2018_09_17_VS_2018_09_18` を保持し、canonicalは9/18。
+- 設定1/3/5/7、機械割98.4/100.7/105.4/109.2%、SBIG全設定1/8192、BIG 1/297.9→1/258.0、REG 1/312.1→1/262.1、合算1/149.6→1/128.0。
+- ベースはHAZUSEの約32.4～34.8G/50枚を設定差レンジとしてcanonical。RT純増約0.2枚/G。SBIG/BIG最大252枚、REG最大98枚、RT20G、CZとのループ率約60%over。SBIG後は次回BIGまで無限RT。
+- 333G/555G到達で周期CZへ移るハマり救済あり。REGでは周期到達までのゲーム数がリセットされない解析を確認。一般的な強制当選天井とは別定義で保存。
+- resetBehaviorは当時解析の朝一比較表自体が設定変更/電源OFF→ONの天井・内部状態・ステージを全て「調査中」。型式名/メーカー/設定変更/リセット/朝一/据え置き/電断/333G/555G/RT/CZまで検索語を変えて再探索したが確定契約を別資料で固定できず、一般論を補完せずUNVERIFIED_AFTER_RESEARCH。
+- 後年5号機クロニクルの機械割98.79/100.52/104.17/107.07%は当時複数資料系列と異なるため `CONFLICT_PAYOUT_RETROSPECTIVE` として分離。
+- 9/18群の横断監査で、日刊スポーツ掲載のベン・トー/闇芝居/アレックスに加え、別導入一覧・機種別資料から `パチスロ南国育ち～蝶々ver～30Φ` と `パチスロ ロックマン アビリティ 史上最大の試練` も2018-09-18導入対象と確認。9/18群は少なくとも5機でOPEN維持。
 
-## No.1227 — パチスロ ハクション大魔王
-- manufacturer: **WORLD（ブランド） / JPS（製造）**
-- releaseDateCanonical: **2018-09-03**
-- formalModelName: **パチスロハクション大魔王AA**
-- certificationNumber: **UNVERIFIED_AFTER_RESEARCH**
+## No.1228 — パチスロ ベン・トー ～狼たちの夜～
+- manufacturer: **バルテック**
+- releaseDateCanonical: **2018-09-18**
+- formalModelName: **パチスロベントー／BA**
+- certificationNumber: **7S1703**
 - generation/system: **5号機 / A+RT**
-- settings: **2 / 5 / 6**
-- payoutRateNormal: **98.5 / 101.7 / 105.3%**
-- payoutRateFullStrategy: **101.1 / 103.7 / 107.2%**
-- BIG: **1/348.6 / 1/372.3 / 1/394.8**
-- REG: **1/387.7 / 1/269.7 / 1/221.4**
-- bonusCombined: **1/183.5 / 1/156.4 / 1/141.8**
-- baseGamesPer50: **約39G/50枚（別解析レンジ約39～43G）**
-- netIncrease: **RT約0.1枚/G**
-- basicPayout: **BIG最大311枚 / REG最大104枚 / BIG後CZ10G→RT20G or 40G**
-- ceiling: **非搭載**
+- settings: **1 / 3 / 5 / 7**
+- payoutRate: **98.4 / 100.7 / 105.4 / 109.2%**
+- SUPER BIG: **全設定1/8192.0**
+- BIG: **1/297.9 / 1/288.7 / 1/269.7 / 1/258.0**
+- REG: **1/312.1 / 1/295.2 / 1/277.7 / 1/262.1**
+- bonusCombined: **1/149.6 / 1/143.4 / 1/134.6 / 1/128.0**
+- baseGamesPer50: **約32.4～34.8G/50枚**
+- netIncrease: **RT約0.2枚/G**
+- basicPayout: **SBIG最大252枚 / BIG最大252枚 / REG最大98枚 / RT20G / CZ-RTループ約60%over / SBIG後次回BIGまで無限RT**
+- ceiling/relief: **通常333Gまたは555Gで周期CZ。REGでは周期G非リセット。強制当選型天井とは区別**
 
 ### resetBehavior v0.7
-- settingChange: **UNVERIFIED_AFTER_RESEARCH**。
+- settingChange: **UNVERIFIED_AFTER_RESEARCH**（当時解析も天井/内部状態/ステージ「調査中」）。
 - carryOver: **UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION**。
-- powerOFF→ON: **UNVERIFIED_AFTER_RESEARCH**（当時解析もRT状態/ステージ「調査中」）。
-- gameCounter/ceiling: 通常ゲーム数天井なし。短縮天井NOT_APPLICABLE。
-- mode/state: 朝一専用モードNONE_CONFIRMED、RT残G処理UNVERIFIED。
-- advantageousSection: **UNVERIFIED_AFTER_RESEARCH**。5.9号機一般論等を本機固有契約に昇格しない。
+- powerOFF→ON: **UNVERIFIED_AFTER_RESEARCH**（当時解析も天井/内部状態/ステージ「調査中」）。
+- gameCounter: REG当選では333G/555G周期カウンタ非リセット。設定変更/純電断時はUNVERIFIED。
+- ceilingAfterReset: 設定変更専用短縮/変更値 `NONE_CONFIRMED_AFTER_RESEARCH`。
+- mode/state: 朝一専用モードNONE_CONFIRMED、CZ/RT/ステージ処理UNVERIFIED。
+- advantageousSection: **UNVERIFIED_AFTER_RESEARCH**。一般論から補完しない。
 - resetBenefits/resetPenalties: **NONE_CONFIRMED_AFTER_RESEARCH**。
 - resetDetection: **UNVERIFIED_AFTER_RESEARCH**。
 - numericResetData: **NONE_CONFIRMED_AFTER_RESEARCH**。
 
-## 2018-09-03群監査
+## 2018-09-18群監査
 ### 登録済み
-- No.1226 スーパービンゴリバース — 2018-09-03。
-- No.1227 パチスロ ハクション大魔王 — 2018-09-03。
+- No.1228 パチスロ ベン・トー ～狼たちの夜～ — 2018-09-18 canonical（9/17資料差保持）。
+
+### 未処理・同日候補
+- パチスロ 闇芝居 — NET。日刊スポーツ/K-Navi/ちょんぼりすたで9/18確認。
+- アレックス — アクロス。日刊スポーツ/必勝本/ちょんぼりすたで9/18確認。
+- パチスロ南国育ち～蝶々ver～30Φ — アムテックス。パチビー/K-Navi/すろぱちくえすと/後年導入一覧で9/18確認。日刊スポーツカレンダーからは漏れているため要独立登録監査。
+- パチスロ ロックマン アビリティ 史上最大の試練 — スパイキー製造/フィールズ発表系。後年導入一覧、解析、当時告知で9/18確認。日刊スポーツカレンダーからは漏れているため要独立登録監査。
 
 ### 群判定
-- 日刊スポーツ2018-08-31導入カレンダーは9/3パチスロを上記2機として掲載。
-- 機種名/9月3日/新台/各メーカー系検索を追加し、別スペック/PB/地域差の追加対象を固定できず `2018-09-03_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT`。
-
-## 次時系列群
-- 次の既知群は **2018-09-18**。
-- 候補: `パチスロ ベン・トー ～狼たちの夜～（バルテック）` / `パチスロ 闇芝居（ネット）` / `アレックス（アクロス）`。
-- 次回は9/4～9/17境界漏れを別系統資料で再監査後、9/18群をOPENする。
+- `2018-09-18_GROUP_OPEN_1_OF_AT_LEAST_5_PROCESSED`
+- 日刊スポーツ単独では3機だが、別系統の導入一覧が南国育ち蝶々ver/ロックマンを追加掲載するため、少なくとも5機を処理するまでCLOSE禁止。
+- 5機処理後も全メーカー/別スペック/PB/地域差監査を行ってからCLOSED判定する。
 
 ## 遡及 resetBehavior QA
 - retroQaScanConfirmedThrough: **2006-09_kyuji.md**（球児）。
 - latestRetroQaResult: **PARTIAL_RESEARCH_EXHAUSTED**。
 - nextRetroQaCursor: `docs/real_machine_db/machines/2006-09_burichika-30.md`（ブリチカ-30）。
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
-- Git追加履歴上、球児追加commit `48ba1794...` の直後の実機追加がブリチカ-30 commit `f2dcb4d4...` であることを確認。
+- 今回は新規時系列群の境界監査とNo.1228登録を優先し、QAカーソルは進めず維持。
 
 ## 継続注意事項
 - `INDEX.md`は旧スナップショット。LATEST_HANDOFF + main実レコードを優先する。
@@ -81,23 +83,28 @@
 - 技術介入機では通常/完全攻略等の機械割定義を混同しない。
 
 ## 次回再開地点
-1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1227を再取得。
-2. **1227件 / chronologicalFrontier 2018-09-03 / `2018-09-03_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT`**を正本として継続。ただし並行更新があれば最新HEADを優先。
-3. 9/4～9/17境界監査後、**2018-09-18群**をOPEN。先頭候補は `パチスロ ベン・トー ～狼たちの夜～`。闇芝居/アレックスも同日候補として保持。
-4. 遡及QAは `docs/real_machine_db/machines/2006-09_burichika-30.md`（ブリチカ-30）から継続。
+1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1228を再取得。
+2. **1228件 / chronologicalFrontier 2018-09-18 / `2018-09-18_GROUP_OPEN_1_OF_AT_LEAST_5_PROCESSED`**を正本として継続。ただし並行更新があれば最新HEADを優先。
+3. 次の未処理は **`パチスロ南国育ち～蝶々ver～30Φ`** を優先候補とする。続いて `パチスロ ロックマン アビリティ 史上最大の試練`、`パチスロ 闇芝居`、`アレックス`。同日内の順序は漏れ防止を優先し、重複確認後に連番登録。
+4. 南国育ち蝶々verは導入9/18、5.9号機ART、設定1/4/6、ART純増約1.8枚/G、初当たり全設定1/390.1、総出現1/78.4→1/72.3が先行確認済み。resetBehaviorは次回、設定変更/据え置き/電源OFF→ON/有利区間/朝一恩恵/判別数値まで再探索してから固定。
+5. ロックマンは9/18導入を複数資料で確認済み。朝一資料に `CZ天井はリセット・据え置きとも引き継ぐ`、`RT/CZ/ボーナス中の設定変更後は見た目通常だが内部CZ相当` の有力な機種固有契約があるため、次回以降別ソース照合してnumeric/resetBehaviorへ反映する。
+6. 遡及QAは `docs/real_machine_db/machines/2006-09_burichika-30.md`（ブリチカ-30）から継続。
 
 ## 主要出典 — 取得日 2026-09-10
-### No.1227 パチスロ ハクション大魔王
-- Amusement Japan: https://amusement-japan.co.jp/article/detail/10000709/
-- 日刊スポーツ導入カレンダー: https://www.nikkansports.com/m/amusement/pachislot/news/amp/201808310000459.html
-- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/world_slot/01/a.php
-- ちょんぼりすた: https://chonborista.com/slot/world/63323/
-- すろぱちくえすと: https://www.slopachi-quest.com/article/hakushon-daimaoh/
-- P-WORLD: https://www.p-world.co.jp/machine/database/8708
-- 中一商事: https://www.nakaiti.com/html/sJPS002.html
+### No.1228 パチスロ ベン・トー ～狼たちの夜～
+- グリーンべると: https://web-greenbelt.jp/00010603/
+- 日刊スポーツ導入カレンダー: https://www.nikkansports.com/amusement/pachislot/news/201808310000459.html
+- HAZUSE: https://hazuse.com/machine/pachislot/7S1703/
+- K-Navi: https://p-kn.com/slot/3061/
+- ちょんぼりすた: https://chonborista.com/slot/baltec/65423/
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/baltech_slot/60/a.php
+- P-WORLD: https://www.p-world.co.jp/machine/database/8709
+- 5号機クロニクル: https://5goki.com/baltec
 
-### 球児 QA
-- 5号機クロニクル: https://5goki.com/snkplaymore
-- パチメロ: https://pachimelo.com/snk/s-kyuji/
-- SNK公式: https://www.snk-corp.co.jp/official/slot-panic/
-- 回顧資料: https://www.marimo0925.net/pachislot-kikaiwari-ranking-kyuuji-ban/
+### 9/18群追加候補監査
+- 2-9伝説導入一覧: https://29den.com/newslot/
+- パチビー 南国育ち～蝶々ver～30Φ: https://www.pachibee.jp/machines/index/218080000
+- K-Navi 南国育ち～蝶々ver～: https://p-kn.com/slot/3074/
+- すろぱちくえすと 南国育ち: https://www.slopachi-quest.com/article/nanngokusodachi-chocho-settei/
+- PiDEA X ロックマン: https://www.pidea.jp/articles/%E5%90%8D%E4%BD%9C%E3%82%B2%E3%83%BC%E3%83%A0%E3%81%8C%E3%83%91%E3%83%81%E3%82%B9%E3%83%AD%E3%82%AA%E3%83%AA%E3%82%B8%E3%83%8A%E3%83%AB%E3%81%A7%E7%99%BB%E5%A0%B4%EF%BC%8F%E3%82%B9%E3%83%91%E3%82%A4%E3%82%AD%E3%83%BC
+- すろぱちくえすと ロックマン朝一: https://www.slopachi-quest.com/article/rockman-abilty/
