@@ -1,73 +1,83 @@
 更新日: 2026-09-10
 
 ## 現在地点
-- recordCount: **1250**
-- latestRecordAdded: **パチスロ ロード オブ ヴァーミリオン Re:**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2018-12-17_lord-of-vermilion-re.md`
+- recordCount: **1251**
+- latestRecordAdded: **回胴黙示録カイジ4**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2018-12-17_kaiji4.md`
 - chronologicalFrontier: **2018-12-17**
-- frontierLatestMachine: **パチスロ ロード オブ ヴァーミリオン Re: — No.1250**
+- frontierLatestMachine: **回胴黙示録カイジ4 — No.1251**
 - schema: **resetBehavior v0.7**
-- status: **2018-12-17_GROUP_OPEN**
+- status: **2018-12-17_GROUP_OPEN_2_OF_AT_LEAST_3_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1249を取得して開始。
-- INDEXは旧スナップショット（19件）のためREADME指示どおりLATEST_HANDOFF + main実レコードを正本として継続。
-- 2018-12-04〜12-16を当時12月新台一覧・後年カレンダーで境界監査し、新規パチスロの固定候補を確認できず12/17群へ進行。
-- handoff先頭候補 `パチスロ ロード オブ ヴァーミリオン Re:` をNo.1250として登録。
-- 12/17群監査で既知の `回胴黙示録カイジ4` に加え、`アナザーゴッドハーデス-冥王召喚-` も同日導入候補として確認。群はOPENのまま。
+- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1250を取得して開始。
+- INDEXは旧スナップショットのためREADME指示どおりLATEST_HANDOFF + main実レコードを正本として継続。
+- 12/17群の最古未処理 `回胴黙示録カイジ4` をNo.1251として登録。
+- 同日候補 `アナザーゴッドハーデス-冥王召喚-` は未処理のため群はOPENを維持。
+- 遡及QAはサンダーVスペシャルが既にv0.7 QA済みであることを再確認。追加順のリンダの狙いうち、ドカベンDも既にv0.7 QA済みのため重複編集せず通過し、最初の旧形式欠損 `コミックワールド沖` をv0.7へ更新。
 
-## No.1250 — パチスロ ロード オブ ヴァーミリオン Re:
-- manufacturer: **七匠（NANASHOW）**
+## No.1251 — 回胴黙示録カイジ4
+- manufacturer: **サミー**
 - releaseDateCanonical: **2018-12-17**
-- formalModelNameCanonical: **SATロードオブヴァーミリオンRe:A**
-- certificationNumber: **UNVERIFIED_AFTER_RESEARCH**
-- generation/system: **6号機 / AT / 擬似ボーナス型**
+- formalModelNameCanonical: **カイジ4／ZS**
+- certificationNumber: **7S1728**
+- generation/system: **5.9号機 / A+ART**
 - settings: **1 / 2 / 3 / 4 / 5 / 6**
-- payoutRate: **97.8 / 99.5 / 100.9 / 104.3 / 107.5 / 111.5%**
-- AT初当たり: **1/306 / 1/298 / 1/292 / 1/278 / 1/269 / 1/256**
-- baseGamesPer50: **約50.0G**
-- AT純増: **約5.7枚/G**
-- basicPayout: **VC=15枚ベル5回まで / VB=50・100・150・200G / CZ5G・期待度約33%**
-- ceiling: **有利区間開始後1183G+α、ボーナス終了後基準1279G+α / 恩恵VB100G以上**
+- payoutRate: **97.5 / 98.7 / 100.2 / 104.1 / 110.0 / 114.1%**
+- bonusCombined: **1/198.6 / 1/189.4 / 1/187.2 / 1/171.6 / 1/156.8 / 1/145.0**
+- ART初当たり: **1/299.8 / 1/299.0 / 1/298.9 / 1/297.8 / 1/296.2 / 1/294.9**
+- baseGamesPer50: **約33.4G**
+- ART純増: **約0.3枚/G**
+- ART: **1セット30G+α / 平均滞在約145G**
+- ceiling: **非搭載**
 
 ### resetBehavior v0.7
-- settingChange: **天井RESET / 非有利区間へ / 通常・マナ・アルカナ状態再抽選**。液晶1・2・3、キリーク半島。非有利区間後はハズレ以外の小役で約1/1.2で有利区間へ移行し、天井カウント開始。
-- carryOver: **天井 / 有利区間 / 通常状態 / マナ状態 / アルカナ状態を引継ぎ**。マナポイントも前日持越しとする当時解析あり。
-- powerOFF→ON: 当時朝一表の「据え置き 電源ON/OFF時」では **天井・有利区間・各状態を引継ぎ**。
-- gameCounterReset: 設定変更 **RESET** / 据え置き・純電断 **CARRY_OVER**。
-- ceilingAfterReset: **1183G+α（有利区間移行後）**。通常のボーナス終了後基準1279G+αより96G分短い見え方。
-- modeAfterReset: **天国10% / 天国準備20%以上**。
-- stateAfterReset: **マナ状態3 50% / アルカナ状態3 12.5%**。
-- advantageousSectionReset: 設定変更 **非有利区間へ** / 据え置き・純電断 **引継ぎ**。
-- resetBenefits: 上記モード・状態優遇。ただし当時攻略評価ではリセット単独狙いは強くない。
-- resetPenalties: 前日天井G数・有利区間・マナポイント等の蓄積消去が据え置き比で不利。
-- resetDetection: ガックン判別は **ほぼ不可能**。当日約1200G到達はリセット濃厚材料。朝一数Gでマナヘイストなら変更可能性UPだが自力移行あり。
-- numericResetData: **天国10% / 天国準備20%以上 / マナ状態3 50% / アルカナ状態3 12.5% / 有利区間移行約1/1.2（ハズレ以外）**。
+- settingChange: **有利区間→非有利区間 / RT状態引継ぎ / 公園ステージ**。
+- carryOver: **有利区間引継ぎ / RT状態引継ぎ / 公園ステージ**。
+- powerOFF→ON: 当時朝一表で **有利区間引継ぎ / RT状態引継ぎ / 公園ステージ**。
+- gameCounterReset / ceilingAfterReset: **NOT_APPLICABLE_NO_CEILING**。
+- modeAfterReset: 長期ゲーム数モード体系は比較対象として確認せず。
+- stateAfterReset: RTは全条件引継ぎ。有利区間のみ設定変更で非有利区間へ。
+- advantageousSectionReset: 設定変更 **RESET_TO_NON_ADVANTAGEOUS_SECTION** / 据え置き・純電断 **CARRY_OVER**。
+- resetBenefits: 当時解析で **朝一専用恩恵なし**。
+- resetPenalties: 専用不利数値なし。設定変更で有利区間を失う仕様差は保持。
+- resetDetection: 有利区間ランプは補助材料になり得るが単独確定契約は固定せず。ガックン率・初期出目の公開確定値は未取得。
 
 ### quality notes
-- 検定番号は型式・メーカー・公安委員会・検定通過・認定・8S等で再探索したが固定できずUNVERIFIED。
-- リセット後1183G+αとボーナス終了後1279G+αは競合ではなく、有利区間開始位置の定義差。
-- 朝一表が据え置きと電源ON/OFFを同一列で扱うため、その資料定義をpowerCycleBehaviorにも明示して採用。
+- `RT状態引継ぎ` と `有利区間リセット` は別レイヤーの状態でありCONFLICTではない。
+- 据え置きと純電断は同義推定せず、当時朝一表が電源ON/OFF条件を明示する範囲で採用。
+- 主要性能コアに重大CONFLICTなし。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
-- retroQaScanConfirmedThrough: **`docs/real_machine_db/machines/2006-11_kaidouou.md`**。
-- nextRetroQaCandidate: **`docs/real_machine_db/machines/2006-11_thunder-v-special.md`（サンダーVスペシャル）**。
-- 既存性能値をやり直さず、resetBehavior欠損のみ順次QAする。
+- サンダーVスペシャル: **既存v0.7 QA済み**のため重複編集なし。
+- リンダの狙いうち: **既存v0.7 QA済み**のため通過。
+- ドカベンD: **既存v0.7 QA済み**のため通過。
+- retroQaScanConfirmedThrough: **`docs/real_machine_db/machines/2006-12_comic-world-oki.md`**。
+- 今回 `コミックワールド沖` を `PARTIAL_RESEARCH_EXHAUSTED` のv0.7形式へ更新。性能コアは変更せずreset側のみ再整理。
+- nextRetroQaCandidate: **`docs/real_machine_db/machines/2006-12_moeru-marine-battle.md`（モエる まりんバトる）**。
+
+### コミックワールド沖 reset QA要約
+- settingChange / carryOver: **UNVERIFIED_AFTER_RESEARCH**。
+- powerOFF→ON: **UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION**。
+- gameCounter / ceiling: **公開ゲーム数天井なし確認範囲でNOT_APPLICABLE**。
+- 南国モード、シフトアップナビ色ランプ状態の変更/据え置き/純電断処理: **UNVERIFIED_AFTER_RESEARCH**。
+- advantageousSection: **NOT_APPLICABLE（5号機初期）**。
+- 朝一専用恩恵/不利、ガックン率、公開朝一数値: **NONE_CONFIRMED / PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH**。
+- 類似沖スロ・一般5号機からの転用なし。
 
 ## 2018-12-17群
 ### 登録済み
 - No.1250 パチスロ ロード オブ ヴァーミリオン Re:
+- No.1251 回胴黙示録カイジ4
 
 ### 未処理候補
-1. **回胴黙示録カイジ4 /ZS**（サミー）— 2018-12-17。
-2. **アナザーゴッドハーデス-冥王召喚-**（ミズホ）— 2018-12-17。
+1. **アナザーゴッドハーデス-冥王召喚-**（ミズホ）— 2018-12-17。
 
 ### 判定
-- **2018-12-17_GROUP_OPEN**。
-- 一撃2018年12月スケジュールはLoV Re:とハーデス冥王召喚を12/17掲載。
-- HAZUSE/複数解析はカイジ4を12/17導入として確認。
-- 単一カレンダーの掲載漏れを前提にせず、次回は3系統を横断して同日群を最終監査する。
+- **2018-12-17_GROUP_OPEN_2_OF_AT_LEAST_3_PROCESSED**。
+- LoV Re:、カイジ4、ハーデス冥王召喚を少なくとも同日候補として保持。
+- ハーデス処理後に12/17全メーカー/別型式/別スペック/PB/地域差を再監査してCLOSED可否を判定する。
 
 ## 継続注意事項
 - `INDEX.md`は旧スナップショット。`LATEST_HANDOFF.md` + main実レコードを優先。
@@ -80,25 +90,24 @@
 - 競合値は平均せずCONFLICTを保持。
 
 ## 次回再開地点
-1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1250を再取得。
-2. **1250件 / chronologicalFrontier 2018-12-17 / `2018-12-17_GROUP_OPEN`** を正本として継続。ただし並行更新があれば最新HEAD優先。
-3. 同日群の `回胴黙示録カイジ4 /ZS` と `アナザーゴッドハーデス-冥王召喚-` の導入日・既存重複を再確認し、最古未処理をNo.1251として処理。
-4. その後もう1機を順次処理し、12/17同日全メーカー/別型式/別スペック/PB/地域差を監査してCLOSED判定。
-5. 遡及QAは **`docs/real_machine_db/machines/2006-11_thunder-v-special.md`（サンダーVスペシャル）** から再開。
+1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1251を再取得。
+2. **1251件 / chronologicalFrontier 2018-12-17 / `2018-12-17_GROUP_OPEN_2_OF_AT_LEAST_3_PROCESSED`** を正本として継続。ただし並行更新があれば最新HEAD優先。
+3. **アナザーゴッドハーデス-冥王召喚-**の導入日・重複を再確認し、未処理ならNo.1252として性能コア+resetBehavior v0.7を処理。
+4. 12/17同日全メーカー/別型式/別スペック/PB/地域差を再監査し、CLOSED可否を判定。
+5. 遡及QAは **`docs/real_machine_db/machines/2006-12_moeru-marine-battle.md`（モエる まりんバトる）** から再開。
 
 ## 主要出典 — 取得日 2026-09-10
-### No.1250 パチスロ ロード オブ ヴァーミリオン Re:
-- グリーンべると: https://web-greenbelt.jp/00010938/
-- 一撃: https://1geki.jp/slot/s_lov_re/
-- 一撃 小役/ベース: https://1geki.jp/slot/s_lov_re/4/
-- すろぱちくえすと 朝一リセット: https://www.slopachi-quest.com/article/lord-of-vermilion-re-reset/
-- DMMぱちタウン: https://p-town.dmm.com/machines/3324
-- P-WORLD: https://www.p-world.co.jp/machine/database/8813
-- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/nanashow_slot/11/a.php
-- スロ安サーチ: https://slot-price.com/slot_price_details/id/1295
-- すろ・ぱち(解)検定通過情報: https://kaiseki.sulopachinews.com/archives/2352
+### No.1251 回胴黙示録カイジ4
+- すろぱちくえすと: https://www.slopachi-quest.com/article/kaiji4/
+- ちょんぼりすた: https://chonborista.com/slot/sammy-slot/68801/
+- P-WORLD: https://www.p-world.co.jp/machine/database/8793
+- HAZUSE: https://hazuse.com/machine/pachislot/7S1728/
+- 遊技日本: https://yugi-nippon.com/pachinko-new-machine/post-22604/
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sammy_slot/171/l.php
 
-### 境界 / 同日群監査
-- 2018年12月新台一覧: https://www.slopachi-quest.com/article/erunote-12-shindai/
-- 一撃2018年12月スケジュール: https://1geki.jp/newmachinecalender/201812/
-- HAZUSE カイジ4: https://hazuse.com/machine/pachislot/7S1728/
+### 遡及QA — コミックワールド沖
+- グリーンべると: https://web-greenbelt.jp/00004945/
+- pacnk: https://pacnk.com/slot/tools/sh_komikkuwarudooki.html
+- 5号機クロニクル: https://5goki.com/baltec
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/baltech_slot/47/baltech_slot_47.php
+- pachinko's blog: https://pachinko.hatenablog.jp/entry/2006/12/comicWorld-oki
