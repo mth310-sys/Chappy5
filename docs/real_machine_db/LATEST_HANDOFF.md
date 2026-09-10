@@ -1,86 +1,86 @@
 更新日: 2026-09-11
 
 ## 現在地点
-- recordCount: **1290**
-- latestRecordAdded: **咲桜弁慶**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2019-06-17_sakura-benkei.md`
-- chronologicalFrontier: **2019-06-17**
-- frontierLatestMachine: **咲桜弁慶 — No.1290**
+- recordCount: **1291**
+- latestRecordAdded: **パチスロ ガールズ＆パンツァーG ～これが私の戦車道です！～**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2019-07-08_girls-und-panzer-g.md`
+- chronologicalFrontier: **2019-07-08**
+- frontierLatestMachine: **ガールズ＆パンツァーG — No.1291**
 - schema: **resetBehavior v0.7**
-- status: **2019-06-17_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**
+- status: **2019-07-08_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**
 
 ## 今回の同期 / 進捗
-- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1289を再取得して開始。
+- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1290を再取得して開始。
 - INDEXは旧スナップショットのため、README規則どおりLATEST_HANDOFF + main実レコードを正本として継続。
-- No.1290 `咲桜弁慶` を性能コア + resetBehavior v0.7で登録。
-- 2019-06-17群は `スーパードラゴン` / `咲桜弁慶` を確認。別メーカー・別型式・延期日・当時導入カレンダーを再監査し、追加固定なしとしてCLOSED。
-- 2019-06-18〜07-07境界を先行監査し、次の確定スロット導入群として2019-07-08 `ガールズ＆パンツァーG` を次候補に保持。
+- 直前handoffがNo.1290まで進行済みだったため、過去チャット上の古い再開地点には戻らずNo.1291から継続。
+- No.1291 `パチスロ ガールズ＆パンツァーG ～これが私の戦車道です！～` を性能コア + resetBehavior v0.7で登録。
+- 2019-07-08群は当時導入カレンダーを再監査し、スロットは本機のみを固定。別型式L4は検定通過を確認したが独立販売スペックの根拠を固定できず重複登録せず、群をCLOSED。
+- 2019-07-09〜07-21境界を先行監査し、次の確定スロット導入群として2019-07-22 `パチスロ鉄拳4` を次候補に保持。
 
-## No.1290 — 咲桜弁慶
-- manufacturer: **ボーダー（Border）**
-- formalModel: **`サクラベンケイ2`**
-- certificationNumber: **`8S0064`**
-- generation/system: **5.9号機 / ノーマルA / BIG+REG**
-- releaseDate: **2019-06-17**
-- 機械割: **97.17 / 99.02 / 100.58 / 103.13 / 106.03 / 110.36%**
-- BIG: **1/452.0 / 439.8 / 434.0 / 417.4 / 385.5 / 362.1**
-- REG: **1/485.5 / 474.9 / 458.3 / 436.9 / 407.1 / 362.1**
-- 合算: **1/234.1 / 228.3 / 222.9 / 213.5 / 198.0 / 181.0**
-- baseGamesPer50: **公開レンジ約41.9〜47.1G**。設定別表を固定できず算術配分しない。
-- BIG最大402枚 / REG104枚。
-- 天井・ゲーム数ゾーン非搭載。
+## No.1291 — ガールズ＆パンツァーG
+- manufacturer: **オリンピア（平和グループ）**
+- formalModel: **`Sガールズ＆パンツァーG/LA1`**
+- certificationNumber: **UNVERIFIED_AFTER_RESEARCH**
+- generation/system: **6号機 / AT / CZ・周期抽選 / 自力バトル継続型**
+- releaseDate canonical: **2019-07-08**
+- regional early introduction: **2019-07-01（一部地域）**
+- 機械割: **97.7 / 99.2 / 100.0 / 102.5 / 105.3 / 110.1%**
+- AT初当り: **1/461.2 / 441.7 / 433.9 / 405.0 / 379.7 / 328.5**
+- baseGamesPer50: **約50.4G**
+- AT純増: **約2.6枚/G**
+- 1周期: **平均約48G**
+- ゲーム数AT天井なし。CZ5周期連続非当選後、6周期目到達でCZ確定。
 
 ### resetBehavior v0.7
-- resetBehaviorQA: **PARTIAL_RESEARCH_EXHAUSTED**
-- settingChange / carryOver / purePowerCycle: 機種固有の内部状態契約を十分再探索したが直接固定できず、3条件を独立UNVERIFIEDで保持。
-- gameCounter / ceilingAfterReset: 天井非搭載のためNOT_APPLICABLE。
-- advantageousSection: ボーナスのみで出玉を増やす5.9号機ノーマル。主要資料で有利区間を使うAT/ART機能なし。
-- resetBenefits: モゲスロは天井・ゾーン・リセット性能を整理し「リセット恩恵なし」と明記。
-- resetDetection: ガックン・初期出目・ランプ等の本機固有確定条件/発生率は固定できず。
-- publicMorningNumbers: 設定変更専用の公開比較数値は固定できず。
+- resetBehaviorQA: **COMPLETE_PUBLIC_RESET_CORE**
+- settingChange: 周期をリセット、あんこうカウンター内部300pt開始、パンツァーハイ関連状態リセット、約30.4%で内部CZ開始。
+- carryOver / purePowerCycle: 周期天井、カウンター、内部状態、有利区間および有利区間ランプを引き継ぐ。
+- advantageousSection: 設定変更で非有利区間へ移行しランプ消灯。据え置き/純電断は引継ぎ。
+- resetBenefit: 約30.4%で内部CZ。内部CZは液晶通常画面のまま32G継続。
+- resetDetection: 朝一有利区間ランプ消灯=変更濃厚、点灯=据え置き濃厚。ただし対策/前日状態による例外があるため確定条件にはしない。液晶G数とデータ表示器のズレも判別材料。
+- 1G内部CZ判別: 必勝本で逆押し純正1枚役判別手順を確認。
+- publicMorningNumbers: **内部CZ約30.4% / 32G**。内部CZ非当選時でも**実戦上3周期以内CZ**、その条件からCZ当選までの期待収支**+549円**という必勝本実戦値をメーカー値と分離して保持。
 
 ## qualityNotes / conflicts
-- 導入日は当初2019-05-12/13予定とする当時資料があるが、その後2019-06-17へ延期。複数解析・導入カレンダーが6/17で一致するためcanonicalは2019-06-17。予定変更として保持し、誤った競合平均はしない。
-- 型式 `サクラベンケイ2` / 検定番号 `8S0064` は東京都公安委員会検定通過情報の業界転載とHAZUSEで一致。
-- 50枚ベースは41.9〜47.1Gの公開レンジのみ固定。設定別対応を推定しない。
+- 導入日は多数資料が2019-07-08、一部地域7/1先行。日刊スポーツ当時カレンダーも7/1欄に掲載。全国本格導入をcanonical 7/8、7/1を `REGIONAL_EARLY_INTRODUCTION` として保持。
+- `Sガールズ＆パンツァーG/L4` と `/LA1` の双方が検定通過。市場導入資料・実機流通表記はLA1を確認。L4の独立販売性能を固定できず別レコード化しない。
+- 検定番号は型式・メーカー・シリーズ・検定語を変えて再探索したが高信頼資料で固定できず。
+- 内部CZ率は精密値30.4%と「約32%」表記がある。概数差と判断し30.4%を主値にし、平均しない。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**
-- PIKASLOは既にresetBehavior収録済みのため重複編集せず通過。
-- `docs/real_machine_db/machines/2007-02_skylove.md` を再探索・正式QA更新。
-- スカイラブは既存 `coreStatus: COMPLETE_CORE` を維持し、reset側のみ `PARTIAL_RESEARCH_EXHAUSTED`。
-- 新規固定: 後年整理資料で **設定変更時はCZスタート**。朝一にチェリーより先にベル成立→RT突入なら設定変更可能性が高まる、という弱〜中程度の判別材料を確認。確定条件や数値には昇格させない。
-- 据え置き / 純電断時のCZ・RT状態、変更前RT残G等は機種固有の直接契約を固定できず、別条件UNVERIFIEDを維持。
-- `docs/real_machine_db/machines/2007-02_ps-adlib-ouji.md` は既にresetBehavior項目が存在することを確認。性能 `COMPLETE_CORE` は触らない。次回はこのレコードから順次、QA状態の再評価/不足補完を継続する。
 - retroQaScanConfirmedThrough: **`docs/real_machine_db/machines/2007-02_skylove.md`**
 - latestFormalized: **`docs/real_machine_db/machines/2007-02_skylove.md`**
 - latestFormalizedStatus: **PARTIAL_RESEARCH_EXHAUSTED**
-- nextRetroQaAction: **`docs/real_machine_db/machines/2007-02_ps-adlib-ouji.md`（PSアドリブ王子）から再開**。既収集なら重複せずGit追加順の次レコードへ進む。
+- nextRetroQaAction: **`docs/real_machine_db/machines/2007-02_ps-adlib-ouji.md`（PSアドリブ王子）から再開**。既にresetBehavior収録済みなら重複編集せず次レコードへ進む。
+- 既存 `COMPLETE_CORE` は不用意に崩さず、reset QAを別管理する。
 
-## 2019-06-17群 — CLOSED
-- No.1289 スーパードラゴン
-- No.1290 咲桜弁慶
+## 2019-07-08群 — CLOSED
+- No.1291 パチスロ ガールズ＆パンツァーG ～これが私の戦車道です！～
 
 ## 次回再開地点
-1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1290を再取得。
-2. 2019-06-18〜07-07境界を再確認後、**2019-07-08 `ガールズ＆パンツァーG` をNo.1291候補**として性能コア + resetBehavior v0.7を本調査。
+1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1291を再取得。
+2. 2019-07-09〜07-21境界を再確認後、**2019-07-22 `パチスロ鉄拳4` をNo.1292候補**として性能コア + resetBehavior v0.7を本調査。
 3. 同日群を全メーカー / 別型式 / 別スペック / PB / 地域差まで監査。
-4. 遡及QAは `2007-02_ps-adlib-ouji.md` から再開。既存COMPLETE_COREは不用意に崩さずreset QAを別管理。
+4. 遡及QAは `2007-02_ps-adlib-ouji.md` から再開。既収集なら重複せずGit追加順の次レコードへ進む。
 5. PARTIAL / UNVERIFIEDは公式 / 業界 / 当時解析 / 古DB / アーカイブ / 回顧資料まで資料系統を変えて再探索し、競合はCONFLICTのまま保持。
 
 ## 主要出典 — 取得日 2026-09-11
-### 咲桜弁慶
-- 遊技通信web 東京都公安委員会検定通過状況: https://www.yugitsushin.jp/news/gyousei/%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%85%AC%E5%AE%89%E5%A7%94%E5%93%A1%E4%BC%9A%E6%A4%9C%E5%AE%9A%E9%80%9A%E9%81%8E%E7%8A%B6%E6%B3%81%EF%BC%882%E6%9C%8812%E6%97%A5%EF%BC%89-2/
-- HAZUSE: https://hazuse.com/machine/pachislot/8S0064/
-- 一撃: https://1geki.jp/slot/s_sb/
-- ちょんぼりすた: https://chonborista.com/slot/border/81327/
-- グリーンべると: https://web-greenbelt.jp/00011192/
-- モゲスロ: https://moge-site.com/archives/21994
-- 導入カレンダー: https://crankyseven.com/newmachine-info.htm
+### ガールズ＆パンツァーG
+- 平和公式 NEWS 2019: https://www.heiwanet.co.jp/news/2019/
+- パチビー プレス発表会: https://www.pachibee.jp/pparticles/view/1151
+- Amusement Japan: https://amusement-japan.co.jp/article/detail/10001180/
+- 遊技日本 検定通過: https://yugi-nippon.com/pachinko-new-machine/post-26855/
+- ちょんぼりすた: https://chonborista.com/slot/orinpia-slot/85072/
+- スロット解析.com: https://slotkaiseki.com/garupang_spec/
+- すろかい: https://slotkaiseki.hatenablog.com/entry/garupang
+- スロパチクエスト: https://www.slopachi-quest.com/article/girls-und-panzer-g-tennjou/
+- パチ＆スロ必勝本: https://p.hisshobon.jp/machine/3369/1/83387
+- P-WORLD: https://www.p-world.co.jp/machine/database/8957
+- 2019新台カレンダー: https://pachinkopachisro.com/archives/52807194.html
+- 日刊スポーツ導入カレンダー: https://www.nikkansports.com/amusement/pachislot/news/201905240000339.html
 
-### スカイラブ resetBehavior QA
-- P-WORLD: https://www.p-world.co.jp/machine/database/4529
-- パチマガインターネット: https://psmaga.com/database/machine/slot_index.php?id=5708
-- パチマガスロマガ旧攻略: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/snk_slot/10/a.php
-- パチ7回顧: https://pachiseven.jp/articles/detail/11235
-- slot-games.online: https://slot-games.online/slot/skylove.html
+### 次候補 — 鉄拳4
+- K-Navi: https://p-kn.com/slot/3244/
+- P-WORLD: https://opt.p-world.co.jp/machine/database/8946
+- ちょんぼりすた: https://chonborista.com/slot/yamasa-slot/86332/
