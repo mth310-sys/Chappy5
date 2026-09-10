@@ -6,7 +6,7 @@ releaseDate: 2006-09
 generation: 5号機初期
 systemType: 30φノーマル + REG後RT
 coreStatus: PARTIAL
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
 
 ## payoutRateBySetting
 1: 95.8%
@@ -52,24 +52,24 @@ REG: 純増約219枚
 ## resetBehavior
 
 settingChangeBehavior: UNVERIFIED_AFTER_RESEARCH。本機固有の設定変更時処理を直接確認できる資料は未取得。
-carryOverBehavior: UNVERIFIED_AFTER_RESEARCH。据え置き時にREG後32G RTの残G/内部RT状態がどう扱われるか直接確定できず。
-powerCycleBehavior: UNVERIFIED_AFTER_RESEARCH。電源OFF→ONのみの場合のRT残G/内部状態処理を直接確定できず。
+carryOverBehavior: UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION。据え置き時にREG後32G RTの残G/内部RT状態がどう扱われるかを、設定変更や単なる電源再投入とは独立した条件として直接確定できず。
+powerCycleBehavior: UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION。電源OFF→ONのみの場合のRT残G/内部状態処理を据え置き一般論から推定せず、独立条件として未確認。
 gameCounterReset: NOT_APPLICABLE / NONE_CONFIRMED。通常時ゲーム数天井は確認されず、32GはREG後RTの固定継続ゲーム数。
 ceilingAfterReset: NONE_CONFIRMED。リセット短縮天井・変更天井は確認されない。
 modeAfterReset: NONE_CONFIRMED。朝一専用通常モードや設定変更時モード振り分けの公開情報は確認されない。
-stateAfterReset: UNVERIFIED_AFTER_RESEARCH。ブリチカチャンス中の設定変更/据え置き/電断時RT状態処理を直接確定できず。
+stateAfterReset: UNVERIFIED_AFTER_RESEARCH。ブリチカチャンス中の設定変更/据え置き/純電断時RT状態処理を、それぞれ本機固有資料で直接確定できず。
 advantageousSectionReset: NOT_APPLICABLE。5号機初期で有利区間制度前。
-resetBenefits: NONE_CONFIRMED。公開された朝一専用恩恵・設定変更専用優遇は確認されない。
-resetPenalties: NONE_CONFIRMED。公開された設定変更専用不利要素は確認されない。
+resetBenefits: NONE_CONFIRMED_AFTER_RESEARCH。公開された朝一専用恩恵・設定変更専用優遇は確認されない。
+resetPenalties: NONE_CONFIRMED_AFTER_RESEARCH。公開された設定変更専用不利要素は確認されない。
 resetDetection: UNVERIFIED_AFTER_RESEARCH。本機固有のガックン、初期出目、告知ランプ等による設定変更判別を直接確定できず。
-numericResetData: NONE_CONFIRMED。設定変更時だけ適用されるモード振り分け・短縮天井・朝一当選率等の公開数値は確認されない。
+numericResetData: NONE_CONFIRMED_AFTER_RESEARCH。設定変更時だけ適用されるモード振り分け・短縮天井・朝一当選率等の公開数値は確認されない。
 
 ### resetBehavior QA note
 
-`ブリチカ-30 / ブリチカ30 / パイオニア / ブリチカチャンス / 設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / ガックン / 初期出目 / RT / 32G` を組み替え、メーカー公式、パチマガスロマガ、HAZUSE、2006年当時業界記事、回顧資料まで再探索した。REG後32G RT自体は高信頼で確認できる一方、その残Gや内部RT状態の設定変更・据え置き・電断処理を本機固有資料で確定できなかった。一般的な5号機RT挙動は推測転記しない。
+2026-09-10にリレー5で再QA。`ブリチカ-30 / ブリチカ30 / パイオニア / ブリチカチャンス / 設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / ガックン / 初期出目 / RT / 32G / RT残り` を組み替え、メーカー公式、パチマガスロマガ、HAZUSE、2006年当時業界記事、回顧資料を再横断した。REG後32G RT自体は公式・当時資料・旧解析で高信頼に再確認できたが、その残Gや内部RT状態の設定変更・据え置き・純電断処理を本機固有の直接資料で確定できなかった。一般的な5号機RT挙動や「据え置き=電源再投入」の推測は転記しない。性能側 `coreStatus: PARTIAL` は既存判定を維持し、リセットQAのみ `PARTIAL_RESEARCH_EXHAUSTED` とする。
 
 ## sources
-取得日: 2026-09-01
+取得日: 2026-09-10（resetBehavior再QA。性能コア出典を再確認）
 
 1. パイオニア公式 — https://www.slot-pioneer.co.jp/product/burichika/bc1.html — 5号機、30φ、REG後32G RT、同時抽選、完全告知 — reliability: OFFICIAL
 2. パチマガスロマガ — https://cs62.cs-plaza.com/g/pachi/pla/s_conq/pioneer_slot/68/h.php — 設定別BIG/REG、メーカー発表機械割 — reliability: ANALYSIS_HIGH
@@ -81,7 +81,7 @@ numericResetData: NONE_CONFIRMED。設定変更時だけ適用されるモード
 - 50枚あたりゲーム数
 - RT純増/G
 - 設定変更/据え置き/電源OFF→ON時の本機固有処理
-- ブリチカチャンス中の設定変更/電断時RT残G・状態処理
+- ブリチカチャンス中の各条件別RT残G・内部状態処理
 - 本機固有の設定変更判別挙動
 
 ## conflicts
