@@ -1,97 +1,131 @@
 更新日: 2026-09-10
 
 ## 現在地点
-- recordCount: **1188**
-- latestRecordAdded: **パチスロ 大海物語4**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2018-05-07_pachislot-ooumi-monogatari-4.md`
+- recordCount: **1190**
+- latestRecordAdded: **パチスロ FAIRY TAIL**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2018-05-07_pachislot-fairy-tail.md`
 - chronologicalFrontier: **2018-05-07**
-- frontierLatestMachine: **パチスロ 大海物語4 — No.1188**
+- frontierLatestMachine: **パチスロ FAIRY TAIL — No.1190**
 - schema: **resetBehavior v0.7**
-- status: **2018-05-07_GROUP_OPEN_1_OF_AT_LEAST_3_CONFIRMED_CANDIDATES**
+- status: **2018-05-07_GROUP_CORE_3_REGISTERED_DATE_CONFLICT_AUDIT_REMAINS**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、直前No.1187 `SLOTパックマン` を再取得して開始。
+- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、直前No.1188 `パチスロ 大海物語4` を再取得して開始。
 - `INDEX.md` は19件時点の旧スナップショットのため、README規定どおり `LATEST_HANDOFF.md` + main実レコードを正本として採用。
-- 開始時正本は **1187件 / chronologicalFrontier 2018-04-23 / 4/23群CLOSED**。
-- GitHub検索で `パチスロ 大海物語4` の既存レコードがないことを確認。
-- 4/24〜5/6境界を再探索。今回の探索範囲では4/23のSLOTパックマン後、次の確定パチスロ導入群として2018-05-07の複数機を確認。境界監査は5/7群CLOSE時に再度行う。
-- No.1188 `パチスロ 大海物語4` を新規登録。
+- 開始時正本は **1188件 / chronologicalFrontier 2018-05-07 / 5/7群OPEN**。
+- GitHub検索で `パチスロ北斗の拳 修羅の国篇 羅刹ver.` と `パチスロ FAIRY TAIL` の既存レコードがないことを確認。
+- No.1189 `パチスロ北斗の拳 修羅の国篇 羅刹ver.` を新規登録。
+- No.1190 `パチスロ FAIRY TAIL` を新規登録。
+- 5/7横断監査で `楽シーサー30π` に **2018-05-07 vs 2018-05-21** の導入日競合を発見。5/7群を完全CLOSEDにせず、次回まず日付を裁定する。
+- 複数導入カレンダーでは5/7群を北斗羅刹 / FAIRY TAIL / 大海物語4の3機とする資料がある一方、すろぱちくえすと等は楽シーサー30πも5/7に置く。ちょんぼりすたは5/21。平均化せずDATE_CONFLICTとして保留。
+- `秘宝伝 Rev.` は資料に5/7と5/21の揺れが見えるため、楽シーサー30πと同様に次境界で日付監査対象。
 
-## No.1188 — パチスロ 大海物語4
-- path: `docs/real_machine_db/machines/2018-05-07_pachislot-ooumi-monogatari-4.md`
-- manufacturer: **三洋物産 / SANYO**
+## No.1189 — パチスロ北斗の拳 修羅の国篇 羅刹ver.
+- path: `docs/real_machine_db/machines/2018-05-07_hokuto-no-ken-shura-rasetsu-ver.md`
+- manufacturer: **サミー / Sammy**
 - releaseDateCanonical: **2018-05-07**
-- formalModelName: `パチスロ大海物語4KF`
-- certificationNumber: `UNVERIFIED_AFTER_RESEARCH`
-- generation/system: **5.9号機 / A+RT / ノーマル+RT**
-- settings: **1 / 2 / 5 / 6**
-- 機械割: **98.0 / 100.9 / 103.9 / 108.0%**
-- BIG: **1/312.1 / 1/309.1 / 1/304.8 / 1/281.3**
-- REG: **1/368.2 / 1/344.9 / 1/321.3 / 1/281.3**
-- 合算: **1/168.9 / 1/163.0 / 1/156.4 / 1/140.6**
-- 50枚ベースcanonical: **約35.3G/50枚（設定1）**
-- BIG: **300枚** / REG: **約100枚**
-- RT: **チャンスタイム20G → スペシャル魚群タイム40G**
-- 天井: **非搭載**
+- formalModelName: `パチスロ北斗の拳AA／ZS`
+- certificationNumber: `7S0983`
+- generation/system: **5.9号機 / A+RT / GRT**
+- 機械割: **97.2 / 98.1 / 100.5 / 103.4 / 108.2 / 111.8%**
+- 完全攻略PAY: **99.7 / 100.6 / 103.0 / 106.0 / 111.0 / 115.1%**
+- ボーナス合算: **1/229.9 → 1/164.7前後**
+- 50枚ベース: **約34.3G**
+- HBB **300枚** / BIG **最大239枚** / REG **最大64枚**、全ボーナス後RT100G。
+- 天井: **非搭載**。
 
 ### resetBehavior v0.7
-- 設定変更時: **ラグーンモード / 出目3・4・7 / RT通常**。
-- 電源OFF→ON時: **ラグーンモード / 出目3・4・7**。RTは、ボーナス非当選中CZならリプレイ高確率状態を維持したままラグーンへ、その他は基本的に引継ぎ。
-- よって表示モードと出目は設定変更・純電断で同じになり、単独では変更確定判別に使えない。
-- 据え置きを純電断と分離した本機固有RT状態契約は `UNVERIFIED_AFTER_RESEARCH`。
-- 天井非搭載のため天井リセット/短縮は `NOT_APPLICABLE`。
-- 朝一専用当選モード、短縮天井、主要当選率上昇などは `NONE_CONFIRMED_AFTER_RESEARCH`。
-- 本機固有ガックン率/確定判別は `UNVERIFIED_AFTER_RESEARCH`。
+- 一撃の本機専用比較表は、設定変更時/純電源OFF→ON時ともRT状態・液晶ステージを当時「現在調査中」。
+- 検索語・資料系統を変えて再探索したが、本機固有の確定契約へ昇格できる資料を固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 天井非搭載のため短縮天井は `NOT_APPLICABLE`。
+- 設定変更専用の朝一モード振り分け、当選率上昇、RT優遇は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- 本機固有ガックン確率/変更確定契約は `UNVERIFIED_AFTER_RESEARCH`。
 
-### conflict / missing
-- `CONFLICT_BASE_35_3_VS_33_3`: パチマガスロマガ / すろかいは設定1約35.3G/50枚、すろぱちくえすとは33.3G/50枚。平均せず35.3を複数系統一致のcanonicalとし33.3を競合保持。
-- RT純増/Gの信頼できる具体値は再探索後も `UNVERIFIED_AFTER_RESEARCH`。後継「with すーぱーそに子」の純増表現は別スペックなので転記しない。
-- certificationNumber: `UNVERIFIED_AFTER_RESEARCH`。
+## No.1190 — パチスロ FAIRY TAIL
+- path: `docs/real_machine_db/machines/2018-05-07_pachislot-fairy-tail.md`
+- manufacturer: **藤商事**
+- releaseDateCanonical: **2018-05-07**
+- formalModelName: `FAIRY TAIL FSA`
+- certificationNumber: `7S1186`
+- generation/system: **5.9号機 / A+ART**
+- 機械割: **97.1 / 98.9 / 100.4 / 104.3 / 107.6 / 115.3%**
+- ART初当たり: **1/528.6 / 526.2 / 524.1 / 519.9 / 514.6 / 508.6**
+- ボーナス合算: **1/368.2 → 1/209.4**
+- 50枚ベース: **約33G**
+- ART純増: **約1.2枚/G、ボーナス込み約2.0枚/G**
+- SFB: **351枚** / FB: **207枚**
+- 天井: **非搭載**。
 
-## 2018-05-07群の先行確認
-- **登録済み:** `パチスロ 大海物語4` — 三洋物産 / 2018-05-07 / No.1188。
-- **次候補:** `パチスロ北斗の拳 修羅の国篇 羅刹ver.` — サミー。グリーンべるとが2018年3月発表・5月上旬納品、PiDEA Xが納品5/6〜、一撃メーカー一覧が導入2018-05-07。No.1189候補。
-- **後続候補:** `パチスロ FAIRY TAIL` — 藤商事。HAZUSE、当時イベント資料、複数解析が2018-05-07で一致。No.1190候補。
-- 2機処理後、5/7同日全メーカー・別スペック・表記揺れ、および4/24〜5/6境界を最終横断監査して群CLOSE判定する。
+### resetBehavior v0.7
+- 設定変更時: **内部状態RESET / 有利区間ランプRESET / 液晶ステージ再抽選 / ミニキャラレベルRESET**。
+- 電源OFF→ON時: **内部状態CARRYOVER / 有利区間ランプCARRYOVER / 液晶ステージ再抽選 / ミニキャラレベルRESET**。
+- 据え置き資料も内部状態・有利区間ランプ引継ぎ、液晶再抽選、ミニキャラレベルRESETで一致。
+- 朝一液晶ステージ公開値（設定変更/電源OFF→ON共通）:
+  - 設定1/3/5: マグノリア33.3 / ルーシィの部屋33.3 / ビーチ33.3%
+  - 設定2/4/6: マグノリア25.0 / ルーシィの部屋25.0 / ビーチ50.0%
+- すろぱちくえすとは「ガックンしない」「リセット/据え置き判別不可」と記載。
+- 有利区間ランプは前日状態が分かる場合に据え置き推測材料になり得る。
+
+## 2018-05-07群監査
+### 確定登録済み
+- No.1188 `パチスロ 大海物語4` — 三洋物産。
+- No.1189 `パチスロ北斗の拳 修羅の国篇 羅刹ver.` — サミー。
+- No.1190 `パチスロ FAIRY TAIL` — 藤商事。
+
+### 日付競合 / 境界保留
+- `楽シーサー30π` — SANKYO。
+  - すろぱちくえすと: 2018-05-07。
+  - 2018導入一覧の一部: 2018-05-07。
+  - ちょんぼりすた: 2018-05-21。
+  - 別の導入カレンダーは5/7群に掲載せず。
+  - 次回、公式/業界一次・HAZUSE/P-WORLD/当時ホール導入資料を追加照合しcanonical dayを裁定。競合は保持。
+- `秘宝伝 Rev.` — 一部2018一覧で5/7、別導入カレンダーで5/21。次回境界監査対象。
 
 ## 継続注意事項
 - `美ラメキ！`を2018-03-12へ登録しない。canonicalは2018-07-02として後続キューで処理する。
 - resetBehaviorで推測表現「?」「可能性が高い」「調査中」を確定契約へ昇格しない。
 - 5.9号機一般論から本機固有の有利区間リセット契約を推定転記しない。
-- 別スペック（例: 大海物語4 with すーぱーそに子）の値を先行機へ転記しない。
+- 別スペックの値を転記しない。
+- 導入カレンダー間の日付競合は平均化せず `CONFLICT` として保持し、実導入/納品開始/予定日の定義差を確認する。
 - `INDEX.md` は旧スナップショット。次回も `LATEST_HANDOFF.md` + main実レコードを優先する。
-- 既存性能値を無駄にやり直さず、新規未処理機種とresetBehaviorの必要箇所のみ進める。
 
 ## 遡及 resetBehavior QA
 - retroQaScanConfirmedThrough: **2006-07_ooedo-manyuuki.md**（大江戸漫遊記）。
 - nextRetroQaCursor: `docs/real_machine_db/machines/2006-07_shinzo-ningen-casshern.md`（新造人間キャシャーン）。
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
-- 今回は新規本線No.1188を優先し、retro cursorは変更なし。
+- 今回は新規本線No.1189〜1190を優先し、retro cursorは変更なし。
 
 ## 次回再開地点
-1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1188を再取得。
-2. **1188件 / chronologicalFrontier 2018-05-07 / 5/7群OPEN** を正本として継続。
-3. `パチスロ北斗の拳 修羅の国篇 羅刹ver.` の重複確認 → 未登録ならNo.1189としてperformance core + resetBehavior v0.7を収集。
-4. `パチスロ FAIRY TAIL` → 未登録ならNo.1190候補。
-5. 5/7同日全メーカー・別スペック・表記揺れ + 4/24〜5/6境界を横断監査して群CLOSE判定。
-6. 遡及QAは `2006-07_shinzo-ningen-casshern.md` から継続。
+1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1190を再取得。
+2. **1190件 / chronologicalFrontier 2018-05-07** を正本として継続。
+3. `楽シーサー30π` の2018-05-07 vs 2018-05-21を公式・業界・当時DBで再裁定。未登録確認後、canonical dayを確定してNo.1191候補としてperformance core + resetBehavior v0.7を収集。
+4. `秘宝伝 Rev.` の5/7 vs 5/21境界も同時監査し、未登録なら時系列を崩さない位置で次候補化。
+5. 5/7群の追加漏れがないことを最終確認し、日付競合の帰属を確定した段階でCLOSED判定。
+6. 次の日付群（主に2018-05-21候補群）へ前進。
+7. 遡及QAは `2006-07_shinzo-ningen-casshern.md` から継続。
 
 ## 主要出典 — 取得日 2026-09-10
-### No.1188 パチスロ 大海物語4
-- SANYO公式: https://www.sanyobussan.co.jp/products/slot_ooumi4/
-- Amusement Japan: https://amusement-japan.co.jp/article/detail/10000557/
-- P-WORLD / グリーンべると: https://news.p-world.co.jp/articles/10018/greenbelt
-- K-Navi: https://p-kn.com/slot/2986/
-- パチビー: https://www.pachibee.jp/machines/index/218030001
-- 一撃: https://1geki.jp/slot/s_ooumi4/
-- 一撃 設定変更/電源ON-OFF: https://1geki.jp/slot/s_ooumi4/3/
-- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sanyo_slot/33/c-2.php
-- すろかい: https://slotkaiseki.hatenablog.com/entry/ooumi
-- すろぱちくえすと: https://www.slopachi-quest.com/article/slot-ooumimonogatari4/
-- P-WORLD機種DB: https://www.p-world.co.jp/machine/database/8622
+### No.1189 北斗羅刹
+- Sammy公式: https://www.sammy.co.jp/japanese/product/pachislot/2018/hokuto_rasetsu/campaign/application.html
+- グリーンべると: https://news.p-world.co.jp/articles/9992/greenbelt
+- PiDEA X: https://www.pidea.jp/articles/%E4%B8%89%E6%9C%A8%E6%B5%81%E3%80%81%E5%8C%97%E6%96%97%E3%81%AE%E6%8B%B3%20%E4%BF%AE%E7%BE%85%E3%81%AE%E5%9B%BD%E7%AF%87%20%E7%BE%85%E5%88%B9Ver%E3%81%AE%E8%A9%95%E4%BE%A1%E3%81%AF%EF%BC%9F
+- HAZUSE: https://hazuse.com/machine/pachislot/7S0983/genre/201/
+- 一撃: https://1geki.jp/slot/s_hokuto_sr/
+- 一撃 設定変更: https://1geki.jp/slot/s_hokuto_sr/3/
+- ちょんぼりすた: https://chonborista.com/slot/sammy-slot/55750/
 
-### 5/7後続候補
-- グリーンべると 北斗羅刹: https://news.p-world.co.jp/articles/9992/greenbelt
-- PiDEA X 北斗羅刹: https://www.pidea.jp/articles/%E4%B8%89%E6%9C%A8%E6%B5%81%E3%80%81%E5%8C%97%E6%96%97%E3%81%AE%E6%8B%B3%20%E4%BF%AE%E7%BE%85%E3%81%AE%E5%9B%BD%E7%AF%87%20%E7%BE%85%E5%88%B9Ver%E3%81%AE%E8%A9%95%E4%BE%A1%E3%81%AF%EF%BC%9F
-- HAZUSE FAIRY TAIL: https://hazuse.com/machine/pachislot/7S1186/
-- P-WORLD / グリーンべると FAIRY TAIL: https://news.p-world.co.jp/articles/10026/greenbelt
+### No.1190 FAIRY TAIL
+- HAZUSE: https://hazuse.com/machine/pachislot/7S1186/
+- P-Summa: https://psumma.jp/featured/42539/
+- ちょんぼりすた: https://chonborista.com/slot/fuji-slot/55964/
+- 一撃 設定変更: https://1geki.jp/slot/s_fairy_tail/3/
+- 一撃 朝一ステージ: https://1geki.jp/slot/s_fairy_tail/5/
+- 期待値見える化: https://slotjin.com/slot/fairytail/
+- すろぱちくえすと: https://www.slopachi-quest.com/article/pachislot-fairytail/
+
+### 5/7境界監査
+- すろぱちくえすと 2018導入順: https://www.slopachi-quest.com/article/sindai-2018/
+- パチスロ立ち回り講座 新台導入予定日: https://crankyseven.com/newmachine-info.htm
+- 2-9伝説 新台情報: https://29den.com/newslot/
+- 楽シーサー30 ちょんぼりすた: https://chonborista.com/slot/sankyo-slot/56854/
+- 楽シーサー30 すろぱちくえすと: https://www.slopachi-quest.com/article/tanosi-sa-30pai/
