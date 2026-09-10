@@ -1,55 +1,57 @@
 更新日: 2026-09-10
 
 ## 現在地点
-- recordCount: **1231**
-- latestRecordAdded: **パチスロ ロックマン アビリティ 史上最大の試練**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2018-09-18_rockman-ability.md`
+- recordCount: **1232**
+- latestRecordAdded: **パチスロ 闇芝居**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2018-09-18_yamishibai.md`
 - chronologicalFrontier: **2018-09-18**
-- frontierLatestMachine: **パチスロ ロックマン アビリティ 史上最大の試練 — No.1231**
+- frontierLatestMachine: **パチスロ 闇芝居 — No.1232**
 - schema: **resetBehavior v0.7**
-- status: **2018-09-18_GROUP_OPEN_4_OF_AT_LEAST_6_PROCESSED**
+- status: **2018-09-18_GROUP_OPEN_5_OF_AT_LEAST_6_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md` / mission v0.7 / `INDEX.md` / `LATEST_HANDOFF.md` / No.1230を再取得して開始。
-- INDEXは旧19件スナップショットのため、LATEST_HANDOFF + main実レコードを正本として1230件から継続。
-- main指定の次候補 `パチスロ ロックマン アビリティ 史上最大の試練` をNo.1231として登録。
-- 型式 `ロックマンアビリティ／ZY`、検定番号 `8S0119`、メーカーはスパイキー。グリーンべると当時業界記事でもスパイキー製を確認。
-- 導入日は複数解析2018-09-18、HAZUSE2018-09-17導入開始のため `CONFLICT_RELEASE_DATE_2018_09_17_VS_2018_09_18` を保持し9/18をcanonical。
-- 設定4/5/6/H。市場掲載機械割96.1/98.2/100.2/102.0%、完全攻略103.0/105.4/107.6/109.0%。ボーナス合算1/218.5→1/184.6。
-- ベース33.5/34.5/35.5/36.5G/50枚、RT純増約0.3枚/G。S-BIG337枚、BIG206枚、REG57枚、RT30/55/80/200G。
-- 通常時300G消化でCZアビリティフィールド確定。通常のボーナス天井とは分離して `CZ_COUNTER_300G` として保持。
-- 設定変更でもCZ天井カウンタを引き継ぐ。RT/CZ/アビリティアタック/ボーナス中の設定変更では、見た目通常ステージ・内部CZ状態から開始。朝一狙いに直結する特殊契約として保存。
-- ちょんぼりすたは電源OFF→ONでもCZ天井引継ぎ/ステージランダム。純電断時のRT/CZ/ボーナス内部状態の独立契約はUNVERIFIED。
-- HAZUSEと複数解析で設定6/HのBIG・REG個別値に競合があるため平均せず `CONFLICT_BIG_REG_SETTING6_H_HAZUSE_VS_MULTIPLE_ANALYSIS` を保存。ボーナス合算は一致。
+- 最新mainの `README.md` / mission v0.7 / `INDEX.md` / `LATEST_HANDOFF.md` / No.1231を再取得して開始。
+- `INDEX.md`は旧19件スナップショットのため、`LATEST_HANDOFF.md` + main実レコードを正本としてNo.1231の次から継続。
+- main指定の次未処理 `パチスロ 闇芝居` をNo.1232として登録。
+- 2018-09-18導入は、すろぱちくえすと・ちょんぼりすた・K-Naviで一致。
+- メーカーNET、5.9号機ノーマル/Aタイプ/技術介入。設定1/2/5/6。
+- 機械割97.0/99.0/103.1/107.0%、BIG合算1/228/1/228/1/228/1/212、REG1/280/1/265/1/228/1/212、ボーナス合算1/125/1/122/1/114/1/106。
+- ベース27.6/28.3/29.5/29.5G/50枚。BIG最大311枚、REG最大103枚。通常ゲーム数天井は非搭載。
+- 中古実機系資料で型式 `闇芝居/ND` を確認したが、公的検定番号との対照を固定できないため検定番号は `UNVERIFIED_AFTER_RESEARCH`。
+- resetBehaviorは、当時解析に「朝一の恩恵などは無し」の直接記述あり。一方、設定変更/据え置き/純電断の内部処理・ガックン等は本機固有直接資料を固定できず、一般論で補完せず独立してUNVERIFIED管理。
+- 遡及QAは `2006-09_burichika-30.md`（ブリチカ-30）を再探索。既存 `coreStatus: PARTIAL` は維持し、reset側のみ `PARTIAL_RESEARCH_EXHAUSTED` へ更新。
+- ブリチカ-30は公式・HAZUSE・当時業界資料でREG後32G RT「ブリチカチャンス」を再確認したが、設定変更/据え置き/純電断時のRT残G・内部状態処理は機種固有契約を固定できなかった。據え置きと純電断を同義扱いしない。
+- Git追加履歴を確認し、ブリチカ-30の次の遡及QA対象は `2006-09_takenaka-naoto-taikoki.md`（竹中直人のパチスロ太閤記）。
 
-## No.1231 — パチスロ ロックマン アビリティ 史上最大の試練
-- manufacturer: **スパイキー**
+## No.1232 — パチスロ 闇芝居
+- manufacturer: **ネット**
 - releaseDateCanonical: **2018-09-18**
-- formalModelName: **ロックマンアビリティ／ZY**
-- certificationNumber: **8S0119**
-- generation/system: **5.9号機 / A+RT / 技術介入**
-- settings: **4 / 5 / 6 / H**
-- payoutRate market: **96.1 / 98.2 / 100.2 / 102.0%**
-- payoutRate full攻略: **103.0 / 105.4 / 107.6 / 109.0%**
-- bonusTotal: **1/218.5 / 1/209.4 / 1/195.6 / 1/184.6**
-- baseGamesPer50: **33.5 / 34.5 / 35.5 / 36.5G**
-- netIncrease: **RT約0.3枚/G**
-- basicPayout: **S-BIG337枚 / BIG206枚 / REG57枚 / RT30・55・80・200G**
-- ceiling: **通常時300GでCZ確定（通常ボーナス天井ではない）**
+- formalModelName: **闇芝居/ND（SECONDARY確認）**
+- certificationNumber: **UNVERIFIED_AFTER_RESEARCH**
+- generation/system: **5.9号機 / ノーマル / Aタイプ / 技術介入**
+- settings: **1 / 2 / 5 / 6**
+- payoutRate: **97.0 / 99.0 / 103.1 / 107.0%**
+- BIG: **1/228 / 1/228 / 1/228 / 1/212**
+- REG: **1/280 / 1/265 / 1/228 / 1/212**
+- bonusTotal: **1/125 / 1/122 / 1/114 / 1/106**
+- baseGamesPer50: **27.6 / 28.3 / 29.5 / 29.5G**
+- netIncrease: **NOT_APPLICABLE_NORMAL_TYPE**
+- basicPayout: **BIG最大311枚 / REG最大103枚**
+- ceiling: **非搭載**
 
 ### resetBehavior v0.7
-- settingChange: **CZ天井G数引継ぎ。RT/CZ/アビリティアタック/ボーナス中変更なら内部CZ状態開始（液晶は通常）**。
-- carryOver: **CZ天井引継ぎ。前日RT/CZ/ボーナス状態そのものの独立継続契約はUNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION**。
-- powerOFF→ON: **CZ天井引継ぎ、ステージランダム。RT/CZ/ボーナス内部状態の純電断独立契約はUNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION**。
-- gameCounterReset: **CZ 300Gカウンタは設定変更でも引継ぎ**。
-- ceilingAfterReset: **短縮なし。300Gカウンタ引継ぎ**。
-- modeAfterReset: **通常時の一般的モードなし。リセット専用モードNOT_APPLICABLE**。
-- stateAfterReset: **特殊状態中の設定変更は内部CZへ**。
-- advantageousSection: **本機固有の朝一有利区間契約UNVERIFIED_AFTER_RESEARCH**。
-- resetBenefits: **前日RT/CZ/アビリティアタック/ボーナス閉店→設定変更で内部CZ開始。通常状態でもCZカウンタ引継ぎで宵越しCZ狙い可**。
-- resetPenalties: `NONE_CONFIRMED_AFTER_RESEARCH`。
-- resetDetection: **開始ステージ・300G挙動だけでは設定変更/据え置き判別困難。ガックン条件/発生率UNVERIFIED_AFTER_RESEARCH**。
-- numericResetData: **CZ 300G / 通常アビリティフィールドRT期待度約50%**。
+- settingChange: **UNVERIFIED_AFTER_RESEARCH**。朝一恩恵なしの資料はあるが、そこから内部処理全体を推定しない。
+- carryOver: **UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION**。
+- powerOFF→ON: **UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION**。
+- gameCounterReset: **NOT_APPLICABLE_NO_CEILING_COUNTER**。
+- ceilingAfterReset: **NOT_APPLICABLE_NO_CEILING**。
+- modeAfterReset: **NONE_CONFIRMED_AFTER_RESEARCH**。通常/闇芝居/仮面モードはプレイヤー選択式の告知演出モードで、内部モードとして扱わない。
+- stateAfterReset: **UNVERIFIED_AFTER_RESEARCH**。
+- advantageousSection: **NONE_CONFIRMED_AFTER_RESEARCH_FOR_NORMAL_TYPE**。一般的な5.9号機規則から本機固有契約へ昇格しない。
+- resetBenefits: **当時解析で朝一恩恵なし**。
+- resetPenalties: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- resetDetection: **UNVERIFIED_AFTER_RESEARCH**。
+- numericResetData: **NONE_CONFIRMED_AFTER_RESEARCH**。
 
 ## 2018-09-18群監査
 ### 登録済み
@@ -57,42 +59,50 @@
 - No.1229 パチスロ南国育ち～蝶々ver～30Φ
 - No.1230 パチスロ南国育ち～蝶々ver～25Φ
 - No.1231 パチスロ ロックマン アビリティ 史上最大の試練
+- No.1232 パチスロ 闇芝居
 
 ### 未処理・同日候補
-- **パチスロ 闇芝居** — NET。2018-09-18確認済み。次に性能コア＋resetBehavior v0.7を収集。
-- **アレックス** — アクロス。2018-09-18確認済み。その次に処理。
+- **アレックス** — アクロス。2018-09-18確認済み。次に性能コア＋resetBehavior v0.7を収集。
 
 ### 群判定
-- `2018-09-18_GROUP_OPEN_4_OF_AT_LEAST_6_PROCESSED`
-- 残り既知2機を処理し、全メーカー/別スペック/PB/地域差監査後にのみCLOSED判定する。
+- `2018-09-18_GROUP_OPEN_5_OF_AT_LEAST_6_PROCESSED`
+- アレックス処理後も、全メーカー/別スペック/PB/地域差を再監査してからのみCLOSED判定する。
 
 ## 遡及 resetBehavior QA
-- retroQaScanConfirmedThrough: **2006-09_kyuji.md**（球児）。
+- retroQaScanConfirmedThrough: **2006-09_burichika-30.md**（ブリチカ-30）。
 - latestRetroQaResult: **PARTIAL_RESEARCH_EXHAUSTED**。
-- nextRetroQaCursor: `docs/real_machine_db/machines/2006-09_burichika-30.md`（ブリチカ-30）。
+- nextRetroQaCursor: `docs/real_machine_db/machines/2006-09_takenaka-naoto-taikoki.md`（竹中直人のパチスロ太閤記）。
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
-- 今回は新規時系列キューを優先しQAカーソルは維持。
+- ブリチカ-30の性能側 `coreStatus: PARTIAL` は維持。resetBehavior欠損のみ独立QAした。
 
 ## 継続注意事項
-- `INDEX.md`は旧スナップショット。LATEST_HANDOFF + main実レコードを優先。
+- `INDEX.md`は旧スナップショット。`LATEST_HANDOFF.md` + main実レコードを優先。
 - 毎回、最新mainのREADME / mission / INDEX / LATEST_HANDOFF / latest recordを読み直す。
 - 並行更新があれば最新HEADを優先し、古い番号で上書きしない。
 - 据え置きと純電断を同義扱いしない。一般論を本機固有契約へ昇格しない。
 - 同一シリーズでも別型式/別検定番号は単独資料照合なしに性能・resetBehaviorを自動転記しない。
 - 同日群は全メーカー/別スペック/PB/地域差監査後にのみCLOSED判定する。
+- 既存COMPLETE_CORE/PARTIALの性能側判定とresetBehavior QA状態は分離する。
 
 ## 次回再開地点
-1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1231を再取得。
-2. **1231件 / chronologicalFrontier 2018-09-18 / `2018-09-18_GROUP_OPEN_4_OF_AT_LEAST_6_PROCESSED`** を正本として継続。ただし並行更新があれば最新HEAD優先。
-3. 次の未処理は **`パチスロ 闇芝居`**。性能コア＋resetBehavior v0.7を収集。
-4. 続いて **`アレックス`**。その後9/18全メーカー/別スペック/PB/地域差監査。
-5. 遡及QAは `docs/real_machine_db/machines/2006-09_burichika-30.md` から継続。
+1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1232を再取得。
+2. **1232件 / chronologicalFrontier 2018-09-18 / `2018-09-18_GROUP_OPEN_5_OF_AT_LEAST_6_PROCESSED`** を正本として継続。ただし並行更新があれば最新HEAD優先。
+3. 次の未処理は **`アレックス`**。性能コア＋resetBehavior v0.7を収集。
+4. アレックス処理後、2018-09-18群の全メーカー/別スペック/PB/地域差を最終監査し、漏れがなければCLOSED判定して次導入群へ進む。
+5. 遡及QAは `docs/real_machine_db/machines/2006-09_takenaka-naoto-taikoki.md` から継続。
 
 ## 主要出典 — 取得日 2026-09-10
-### No.1231 ロックマン アビリティ
-- HAZUSE: https://hazuse.com/machine/pachislot/8S0119/
-- グリーンべると: https://web-greenbelt.jp/00010659/
-- すろぱちくえすと: https://www.slopachi-quest.com/article/rockman-abilty/
-- ちょんぼりすた: https://chonborista.com/slot/enta-slot/62583/
-- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/spiky_slot/12/c-2.php
-- P-WORLD: https://www.p-world.co.jp/machine/database/8725
+### No.1232 パチスロ 闇芝居
+- すろぱちくえすと: https://www.slopachi-quest.com/article/yamishibai/
+- ちょんぼりすた: https://chonborista.com/slot/net-slot/63462/
+- K-Navi: https://p-kn.com/slot/3048/
+- P-WORLD: https://www.p-world.co.jp/machine/database/8692
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/net_slot/175/c.php
+- 5号機クロニクル NET: https://5goki.com/net
+- 中一商事（型式補助）: https://www.nakaiti.com/html/Net032.html
+
+### ブリチカ-30 resetBehavior再QA
+- パイオニア公式: https://www.slot-pioneer.co.jp/product/burichika/bc1.html
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/pioneer_slot/68/h.php
+- HAZUSE: https://hazuse.com/i/data/burichika/top.htm
+- Pマンズ / プレイグラフ当時記事: https://p-mans.blogspot.com/2006/08/
