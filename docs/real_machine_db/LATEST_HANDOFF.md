@@ -1,64 +1,70 @@
 更新日: 2026-09-10
 
 ## 現在地点
-- recordCount: **1181**
-- latestRecordAdded: **パチスロ マイケル・ジャクソン**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2018-03-19_pachislot-michael-jackson.md`
+- recordCount: **1182**
+- latestRecordAdded: **カンフーレディ・テトラ**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2018-03-19_kung-fu-lady-tetra.md`
 - chronologicalFrontier: **2018-03-19**
-- frontierLatestMachine: **パチスロ マイケル・ジャクソン — No.1181**
+- frontierLatestMachine: **カンフーレディ・テトラ — No.1182**
 - schema: **resetBehavior v0.7**
-- status: **2018-03-19_GROUP_OPEN_2_PROCESSED**
+- status: **2018-03-19_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、直前No.1180 `ドリームクルーン500` を再取得して開始。
+- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、直前No.1181 `パチスロ マイケル・ジャクソン` を再取得して開始。
 - INDEXは初期19件時点の旧スナップショットのため、README規定どおり `LATEST_HANDOFF.md` + main実レコードを正本として採用。
-- 開始時正本は **1180件 / chronologicalFrontier 2018-03-19 / 3/19群OPEN / 1機処理済み**。
-- handoff指定の次候補 `パチスロ マイケル・ジャクソン` をNo.1181としてperformance core + resetBehavior v0.7で追加。
-- 3/19群は `ドリームクルーン500` / `パチスロ マイケル・ジャクソン` / `カンフーレディ・テトラ` の3機を主要候補として確認済み。No.1180/1181処理済みのため、残る既知候補は `カンフーレディ・テトラ`。
+- 開始時正本は **1181件 / chronologicalFrontier 2018-03-19 / 3/19群OPEN / 2機処理済み**。
+- handoff指定の次候補 `カンフーレディ・テトラ` を既存レコード検索で未登録確認後、No.1182としてperformance core + resetBehavior v0.7で追加。
+- 当時カレンダー/導入一覧/業界記事を再監査し、3/19パチスロ候補は `ドリームクルーン500` / `パチスロ マイケル・ジャクソン` / `カンフーレディ・テトラ` の3機で相互確認。3機すべて処理済みのため3/19群をCLOSE。
+- 2018-03-26の独立パチスロ新台群は今回の横断検索で固定できず、次に複数資料で明確に確認できる導入日群は **2018-04-02**。
 
-## No.1181 — パチスロ マイケル・ジャクソン
-- path: `docs/real_machine_db/machines/2018-03-19_pachislot-michael-jackson.md`
-- manufacturer: **SANKYO**
+## No.1182 — カンフーレディ・テトラ
+- path: `docs/real_machine_db/machines/2018-03-19_kung-fu-lady-tetra.md`
+- manufacturer: **山佐**
 - releaseDateCanonical: **2018-03-19**
-- formalModelName: `パチスロ マイケル・ジャクソンA`
-- certificationNumber: `7S1461`
-- generation/system: **5.9号機 / A+ART / リアルボーナス+ゲーム数上乗せART**
-- 機械割: **96.9 / 98.2 / 99.1 / 101.2 / 103.1 / 106.1%**
-- ART初当たり: **1/599 / 1/597 / 1/596 / 1/595 / 1/593 / 1/593**
-- ボーナス合成: **1/248 / 1/246 / 1/245 / 1/244 / 1/243 / 1/242**
-- ボーナス+ART合成: **1/175 / 1/174 / 1/173 / 1/173 / 1/172 / 1/172**
-- 50枚ベース: **約34.3G/50枚（全設定代表値）**
-- ART純増: **ボーナス込み約1.9枚/G**
-- Michael Jackson BONUS: **222枚**
-- CB/RANKUP BONUS: **約60枚**
-- ART初当たり時: **最低100G、平均約200G**
+- formalModelName: `カンフーレディEVO／XX`
+- certificationNumber: `7S1214`
+- generation/system: **5.9号機 / A+RT / 技術介入機**
+- settings: **1 / 2 / 5 / 6**
+- 通常機械割: **97.9 / 100.0 / 102.4 / 105.5%**
+- 完全攻略機械割: **100.6 / 103.0 / 105.5 / 108.7%**
+- BIG: **全設定1/295.2**
+- REG: **1/370.2 / 1/343.1 / 1/313.5 / 1/295.2**
+- ボーナス合成: **1/164.2 / 1/158.6 / 1/152.0 / 1/147.6**
+- 50枚ベース: **約36G/50枚**
+- BIG: **最大285枚** / REG: **最大117枚**
+- RT純増: **約0.1枚/G**
+- RT: BIG後初回奥義15G、再昇格時7G、試練との技術介入時ループ約66%、平均滞在約35G
 - 天井: **非搭載**
 
 ### resetBehavior v0.7
-- 天井非搭載のため通常ゲーム数天井の`gameCounterReset`/`ceilingAfterReset`は`NOT_APPLICABLE`。
-- 一撃の2018-04-13更新本機専用「天井/設定変更」では、設定変更時のRT状態・モード・液晶ステージ・有利区間ランプはいずれも当時`現在調査中`。
-- 機種名/正式型式/SANKYO/5.9号機と「設定変更」「リセット」「朝一」「据え置き」「電源OFF ON」「有利区間」「ガックン」を組み替え、HAZUSE・一撃・ちょんぼりすた・パチマガスロマガ・K-Navi・P-WORLD等を再探索したが、設定変更時の本機固有直接契約は固定できず`UNVERIFIED_AFTER_RESEARCH`。
-- 純電源OFF→ONでは一撃の本機専用資料により **RT状態引継ぎ / CB・各CZ等は復帰中画面後に元状態へ復帰 / 有利区間ランプ引継ぎ** を直接確認。
-- dream Island / dream City / dream Central滞在時は電断復帰後dream Islandへ、dream Stage / 神殿ステージは元ステージへ復帰。
-- 据え置きを純電源OFF→ONとは別条件で直接説明した資料は`UNVERIFIED_AFTER_RESEARCH`。
-- 設定変更専用の朝一モード振り分け、初当たり/CZ優遇率、短縮天井等の公開朝一数値は`NONE_CONFIRMED_AFTER_RESEARCH`または`NOT_APPLICABLE`。
-- 本機固有のガックン/初期出目による変更判別は`UNVERIFIED_AFTER_RESEARCH`。
+- 天井非搭載のため通常天井カウンタ/設定変更時短縮天井は`NOT_APPLICABLE`。
+- 機種名/型式/山佐/シリーズ名と、設定変更・リセット・朝一・据え置き・電源OFF ON・RT状態・ガックン・有利区間を組み替え、HAZUSE、必勝本、パチマガスロマガ、ちょんぼりすた、P-WORLD、業界記事、後年DBを横断。
+- 設定変更時RT状態/残G、成立済みボーナス、表示/演出モード、純電源OFF→ON時RT状態/残G、据え置きを純電断と分離した直接契約は十分な再探索後も`UNVERIFIED_AFTER_RESEARCH`。
+- 朝一専用の内部モード、ボーナス/RT優遇、設定変更専用の公開数値的恩恵は`NONE_CONFIRMED_AFTER_RESEARCH`。
+- 本機固有のガックン/初期出目/ランプ変更判別は`UNVERIFIED_AFTER_RESEARCH`。
+- 5.9号機一般論から有利区間使用/設定変更時処理を推定転記しない。本機固有資料では固定できず`UNVERIFIED_AFTER_RESEARCH`。
+- 通常時の「閃光/心眼」はユーザー任意選択の演出モードで、朝一内部モードと混同しない。
 
 ## CONFLICT / 品質メモ
-- No.1181の主要性能コアはHAZUSE・一撃・ちょんぼりすた・パチマガスロマガ等で実質一致し、採用を左右する数値CONFLICTは今回確認なし。
-- 5.9号機の一般的な設定変更時有利区間処理を本機固有resetBehaviorへ推定転記しない。
-- JACKPOTは有利区間1000G相当到達で約500Gを上乗せして1500G完走へ接続するが、設定変更時のJACKPOTカウンタ処理は直接資料を固定できないためUNVERIFIED。
+- 主要性能コアは必勝本・HAZUSE・パチマガスロマガ・ちょんぼりすた・P-WORLDおよび当時業界記事で整合。
+- 後年5号機クロニクルは当該項目に導入2018年11月、BIG207枚、REG48枚を載せるが、型式/検定番号付きHAZUSEおよび複数当時資料の2018-03-19、BIG285枚、REG117枚と大きく競合。平均せず`CONFLICT_LOW_CONFIDENCE_RETROSPECTIVE`としてレコードに保持し不採用。
+- グリーンべるとの「納品開始3/18予定」と各解析DBの「ホール導入3/19」は定義差であり、releaseDateCanonicalは3/19。
 
 ## 2018-03-19群監査
-- 3/19候補として `ドリームクルーン500`、`パチスロ マイケル・ジャクソン`、`カンフーレディ・テトラ` を複数資料で確認。
-- No.1180 `ドリームクルーン500`、No.1181 `パチスロ マイケル・ジャクソン` を処理済み。
-- 3/19群はOPEN継続。次は`カンフーレディ・テトラ`を処理し、その後同日全メーカー・別スペック・表記揺れを横断監査する。
+- 複数資料で `ドリームクルーン500`、`パチスロ マイケル・ジャクソン`、`カンフーレディ・テトラ` を確認。
+- No.1180〜1182として全3機処理済み。
+- status: `2018-03-19_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT`。
+
+## 次導入日群の先行確認
+- **2018-04-02**候補として少なくとも以下を確認:
+  - `押忍！番長A` — 大都技研 — 2018-04-02
+  - `ガールズガンズグルービー` — ニューギン — 2018-04-02
+- 2018-03-26については検索を変えても今回独立したパチスロ新台群を確定できず。次回開始時に3/20〜4/1境界をもう一度横断してから4/2群OPENとする。
 
 ## 継続注意事項
 - `美ラメキ！`を2018-03-12へ登録しない。canonicalは2018-07-02として後続キューで処理する。
 - `ドリームクルーン500`と後継`ドリームクルーン711`（2018-12-03）、6号機`ドリームクルーン2`を混同しない。
-- No.1181は5.9号機であり、後年AI生成系ページ等の「6号機」誤分類は採用しない。
-- 5.9号機一般論から設定変更時有利区間処理を補完しない。
+- No.1182のBIG/REG獲得枚数は285/117枚をcanonicalとし、後年回顧DBの207/48枚はCONFLICTとしてのみ保持。
 
 ## 遡及 resetBehavior QA
 - 最新カーソルは `docs/real_machine_db/machines/2006-07_ooedo-manyuuki.md`（大江戸漫遊記）。
@@ -67,26 +73,29 @@
 - 新規機種収集本線を止めず、別QAリレーで順次補完する。
 
 ## 次回再開地点
-1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1181を再取得。
-2. **1181件 / chronologicalFrontier 2018-03-19 / 3/19群OPEN / 2機処理済み** を正本として継続。
-3. 次候補 **`カンフーレディ・テトラ` = No.1182候補** を既存表記揺れ・型式まで照合し、未登録ならperformance core + resetBehavior v0.7で処理。
-4. その後、2018-03-19同日全メーカー・別スペック・表記揺れを当時カレンダー・業界記事・解析・古いDB・アーカイブで横断監査。
-5. 漏れがなければ `2018-03-19_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT` として次導入日群へ進む。
+1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1182を再取得。
+2. **1182件 / chronologicalFrontier 2018-03-19 / 3/19群CLOSED** を正本として継続。
+3. 2018-03-20〜04-01境界を当時カレンダー・業界記事・古いDBで最終監査。
+4. 漏れがなければ **2018-04-02群OPEN**。最古候補 `押忍！番長A` をNo.1183候補として既存重複確認後、performance core + resetBehavior v0.7で処理。
+5. 同日候補 `ガールズガンズグルービー` も後続処理し、同日全メーカー・別スペック・表記揺れを横断監査して群CLOSE判定。
 6. 遡及QAは `2006-07_ooedo-manyuuki.md` から継続。
 
 ## 主要出典 — 取得日 2026-09-10
-### No.1181 パチスロ マイケル・ジャクソン
-- HAZUSE: https://hazuse.com/machine/pachislot/7S1461/
-- 一撃 機種TOP: https://1geki.jp/slot/s_mj/
-- 一撃 天井/設定変更: https://1geki.jp/slot/s_mj/3/
-- 一撃 ART概要: https://1geki.jp/slot/s_mj/81/
-- パチマガスロマガ ボーナス確率: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sankyo_slot/46/h.php
-- パチマガスロマガ 50枚ゲーム数: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sankyo_slot/46/c-1.php
-- P-WORLD: https://www.p-world.co.jp/machine/database/8584
-- K-Navi: https://p-kn.com/slot/2956/
-- ちょんぼりすた: https://chonborista.com/slot/sankyo-slot/56275/
-
-### 3月境界・3/19群監査
-- HAZUSE新台カレンダー: https://hazuse.com/new-machine-calendar/newmachine-calendar/
+### No.1182 カンフーレディ・テトラ
+- HAZUSE: https://hazuse.com/machine/pachislot/7S1214/
+- HAZUSE 基本スペック: https://hazuse.com/machine/pachislot/7S1214/genre/201/
+- パチ＆スロ必勝本: https://p.hisshobon.jp/machine/3132/1/68443
+- パチマガスロマガ ボーナス確率: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/225/h.php
+- パチマガスロマガ 機種概要: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/225/a.php
+- ちょんぼりすた: https://chonborista.com/slot/yamasa-slot/54991/
+- P-WORLD: https://www.p-world.co.jp/machine/database/8605
+- グリーンべると: https://web-greenbelt.jp/00010233/
+- Amusement Japan: https://amusement-japan.co.jp/article/detail/10000508/
 - P-Summa 2018年3月新台まとめ: https://psumma.jp/trend/41810/
-- グリーンべると（カンフーレディ・テトラ3/19導入確認）: https://news.p-world.co.jp/articles/10034/greenbelt
+- 真パチスロ備忘録 2018導入日一覧: https://sin-surobi.com/dounyubi/23041/
+- 5号機クロニクル 山佐: https://5goki.com/yamasa
+
+### 次群先行確認
+- 押忍！番長A: https://chonborista.com/slot/daito-slot/53886/
+- 押忍！番長A K-Navi: https://p-kn.com/slot/2981/
+- ガールズガンズグルービー: https://chonborista.com/slot/newgin-slot/55074/
