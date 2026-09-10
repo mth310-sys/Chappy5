@@ -6,7 +6,8 @@ releaseDate: 2006-08
 generation: 5号機初期
 systemType: ボーナス + 完走型RT
 coreStatus: PARTIAL
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
+resetBehaviorQALastChecked: 2026-09-10
 
 ## payoutRateBySetting
 
@@ -64,6 +65,7 @@ resetBehaviorQA: PARTIAL
 
 - 設定変更時の100G/50G RT残G、内部RT状態、成立済みボーナス状態、リール初期挙動を示す本機固有の直接資料は `UNVERIFIED_AFTER_RESEARCH`。
 - `じゃりン子チエ / じゃりン子チエSP / バルテック` と `設定変更 / リセット / 朝一 / ガックン / 据え置き / 電源 / RT` を組み替え、当時解析・業界記事・旧DB・回顧系を再探索したが確定資料なし。
+- 2026-09-10再QAでも資料系統と検索語を変更して再探索したが新たな本機固有直接契約は固定できなかった。
 - 後継機 `じゃりン子チエ 雷蔵伝説` はART/天井を持つ別仕様のため、後継機のリセット特性は流用しない。
 
 ### carryOverBehavior
@@ -72,25 +74,28 @@ resetBehaviorQA: PARTIAL
 
 ### powerCycleBehavior
 
-- 電源OFF→ONのみの場合のRT残G・内部状態引継ぎは `UNVERIFIED_AFTER_RESEARCH`。
+- 電源OFF→ONのみの場合のRT残G・内部状態引継ぎは `UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION`。
+- 据え置きと純電断を同義扱いせず、独立した直接資料がないため確定しない。
 
 ### gameCounterReset
 
 - 本機の100G/50Gはボーナス後RTの規定継続G数であり、通常時ハマリ天井ではない。
-- 通常時ゲーム数天井は今回の高信頼資料では確認できず `NONE_CONFIRMED`。
+- 通常時ゲーム数天井は今回の高信頼資料では確認できず `NONE_CONFIRMED_AFTER_RESEARCH`。
 
 ### ceilingAfterReset
 
-- リセット短縮天井、設定変更後専用天井は `NONE_CONFIRMED`。
+- リセット短縮天井、設定変更後専用天井は `NONE_CONFIRMED_AFTER_RESEARCH`。
 
 ### modeAfterReset
 
-- 朝一専用モード、設定変更時のモード振り分けを示す資料は `NONE_CONFIRMED`。
+- 朝一専用モード、設定変更時のモード振り分けを示す資料は `NONE_CONFIRMED_AFTER_RESEARCH`。
 - 通常演出の朝/昼/夕方/夜ステージは存在するが、設定変更時専用の内部モードと確認できる資料はないためリセットモード扱いしない。
 
 ### stateAfterReset
 
-- 完走型RT中に設定変更/電断した場合の残G・内部RT状態処理は `UNVERIFIED_AFTER_RESEARCH`。
+- 完走型RT中に設定変更した場合の残G・内部RT状態処理は `UNVERIFIED_AFTER_RESEARCH`。
+- 据え置き時は `UNVERIFIED_AFTER_RESEARCH`。
+- 純電源OFF→ON時は `UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION`。
 
 ### advantageousSectionReset
 
@@ -98,11 +103,11 @@ resetBehaviorQA: PARTIAL
 
 ### resetBenefits
 
-- 設定変更・朝一固有のRT直行、短縮天井等の公開恩恵は `NONE_CONFIRMED`。
+- 設定変更・朝一固有のRT直行、短縮天井等の公開恩恵は `NONE_CONFIRMED_AFTER_RESEARCH`。
 
 ### resetPenalties
 
-- 設定変更・朝一固有の公開不利要素は `NONE_CONFIRMED`。
+- 設定変更・朝一固有の公開不利要素は `NONE_CONFIRMED_AFTER_RESEARCH`。
 
 ### resetDetection
 
@@ -110,11 +115,15 @@ resetBehaviorQA: PARTIAL
 
 ### numericResetData
 
-- 公開された設定変更時専用の朝一数値は今回確認できず。
+- resetSpecificShortenedCeiling: `NONE_CONFIRMED_AFTER_RESEARCH`
+- resetSpecificModeDistribution: `NONE_CONFIRMED_AFTER_RESEARCH`
+- resetSpecificRTBoost: `NONE_CONFIRMED_AFTER_RESEARCH`
+- gakkunChangeDetectionRate: `PUBLIC_RATE_NOT_FOUND`
+- morningSpecificPublicHitRate: `PUBLIC_VALUE_NOT_FOUND`
 
 ## sources
 
-取得日: 2026-09-01
+取得日: 2026-09-10（reset QA再確認）
 
 1. グリーンべると — 人気漫画『じゃりン子チエ』がパチスロに
    - https://web-greenbelt.jp/00004714/
