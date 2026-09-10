@@ -1,100 +1,96 @@
 更新日: 2026-09-10
 
 ## 現在地点
-- recordCount: **1191**
-- latestRecordAdded: **パチスロ 楽シーサー30Φ**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2018-05-07_tanoshisa-30.md`
-- chronologicalFrontier: **2018-05-07**
-- frontierLatestMachine: **パチスロ 楽シーサー30Φ — No.1191**
+- recordCount: **1192**
+- latestRecordAdded: **秘宝伝 Rev.**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2018-05-21_hihouden-rev.md`
+- chronologicalFrontier: **2018-05-21**
+- frontierLatestMachine: **秘宝伝 Rev. — No.1192**
 - schema: **resetBehavior v0.7**
-- status: **2018-05-07_GROUP_CORE_4_REGISTERED_HIHOUDEN_REV_DATE_AUDIT_REMAINS**
+- status: **2018-05-07_GROUP_CLOSED_2018-05-21_GROUP_OPEN_RETRO_QA_CASSHERN_DONE**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、mission v0.7、旧 `INDEX.md`、`LATEST_HANDOFF.md`、直前No.1190 `パチスロ FAIRY TAIL` を再取得して開始。
-- `INDEX.md` は19件時点の旧スナップショットのため、README規定どおり `LATEST_HANDOFF.md` + main実レコードを正本として採用。
-- 開始時正本は **1190件 / chronologicalFrontier 2018-05-07 / 5/7群DATE_CONFLICT監査中**。
-- GitHub検索で `楽シーサー30` の既存レコードがないことを確認。
-- `パチスロ 楽シーサー30Φ` の導入日を再監査。2018-05-07と2018-05-21の競合を再確認し、複数の導入一覧・当時解析・回顧が支持する2018-05-07をchronological canonical、5/21をCONFLICTとして保持。
-- No.1191 `パチスロ 楽シーサー30Φ` を新規登録。
-- SANKYO公式オンライン博物館から販売名/型式名 `パチスロ 楽シーサー jR` と設定別BB/RB/合算を一次確認。
-- performance coreとresetBehavior v0.7を同時収集。resetBehavior固有契約は検索語・資料系統を変えて再探索したが固定できず、推測補完せず `UNVERIFIED_AFTER_RESEARCH`。
-- `秘宝伝 Rev.` の5/7 vs 5/21境界監査は未完了のため、5/7群はまだCLOSEDにしない。
+- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1191を再取得して開始。
+- `INDEX.md` は旧スナップショットのため、README規定どおりLATEST_HANDOFF + main実レコードを正本として採用。
+- 開始時正本は **1191件 / chronologicalFrontier 2018-05-07**。
+- `秘宝伝 Rev.` の既存レコードがないことを確認し、日付競合を公式補助・業界事前資料・HAZUSE・当時解析・導入一覧で再監査。
+- 2018-05-21を複数独立資料が支持し、PiDEAの「納品5/20～」とも整合するためcanonicalを2018-05-21に裁定。2018-05-07表記はCONFLICTとして保持。
+- No.1192 `秘宝伝 Rev.` をperformance core + resetBehavior v0.7付きで新規登録。
+- 出玉率は事前業界資料と導入後解析で設定3～6が競合するため平均化せず双方保持。導入後複数解析一致値をcanonical tableに採用。
+- 遡及QAは `2006-07_shinzo-ningen-casshern.md` を再探索し、性能側`PARTIAL`は維持したままreset側のみ`PARTIAL_RESEARCH_EXHAUSTED`へ更新。
+- Git履歴でキャシャーン作成直後の追加レコードが `2006-07_hanasakari.md` であることを確認し、次QAカーソルを固定。
 
-## No.1191 — パチスロ 楽シーサー30Φ
-- path: `docs/real_machine_db/machines/2018-05-07_tanoshisa-30.md`
-- manufacturer: **SANKYO**
-- releaseDateCanonical: **2018-05-07**
+## No.1192 — 秘宝伝 Rev.
+- path: `docs/real_machine_db/machines/2018-05-21_hihouden-rev.md`
+- manufacturer: **サボハニ（大都技研）**
+- releaseDateCanonical: **2018-05-21**
 - releaseDateConflict: **2018-05-07 vs 2018-05-21**
-- formalModelName: `パチスロ 楽シーサー jR`
-- certificationNumber: `UNVERIFIED_AFTER_RESEARCH`
-- generation/system: **5.9号機 / ノーマル / 完全告知 / 30Φ**
-- 機械割: **96.9 / 98.0 / 101.0 / 104.0 / 107.1 / 110.5%**
-- BIG: **1/291 / 283 / 278 / 261 / 249 / 238**
-- REG: **1/468 / 448 / 422 / 385 / 354 / 339**
-- 合算: **1/179 → 1/140**（設定2のみ公式1/173、解析表1/172の丸め差保持）
-- 50枚ベース: **35.4 / 35.8 / 36.1 / 36.4 / 36.7 / 37.1G**
-- BIG: **312枚** / REG: **130枚**
-- 天井: **非搭載**。
+- formalModelName: `秘宝伝Rev.／A4`
+- certificationNumber: `7S1918`
+- generation/system: **5.9号機 / A+ART**
+- canonical機械割: **97.9 / 99.6 / 103.7 / 106.5 / 109.9 / 114.3%**
+- 事前PiDEA機械割: **97.9 / 99.6 / 101.1 / 103.4 / 106.4 / 110.2%** — `CONFLICT`保持。
+- ボーナス+ART合算: **1/201.3 / 195.0 / 182.4 / 167.6 / 158.4 / 139.9**。
+- 50枚ベース: **約31G**。
+- ART純増: **約1.4枚/G、ボーナス込み約1.9枚/G**。
+- BIG/MIDDLE: **約150枚** / Rev BONUS: **約90枚**。
+- 通常ゲーム数天井: **非搭載**。
 
 ### resetBehavior v0.7
-- settingChangeBehavior: `UNVERIFIED_AFTER_RESEARCH`。
-- carryOverBehavior: `UNVERIFIED_AFTER_RESEARCH`。
-- powerCycleBehavior: `UNVERIFIED_AFTER_RESEARCH`。
-- gameCounterReset / ceilingAfterReset: `NOT_APPLICABLE_NO_CEILING`。
-- modeAfterReset: 朝一専用/リセット専用モード `NONE_CONFIRMED_AFTER_RESEARCH`。
-- stateAfterReset: `UNVERIFIED_AFTER_RESEARCH`。
-- advantageousSectionReset: `NOT_APPLICABLE_NORMAL_TYPE`。
-- resetBenefits: 短縮天井なし、設定変更専用初当たり/CZ/モード優遇 `NONE_CONFIRMED_AFTER_RESEARCH`。
-- resetPenalties: `NONE_CONFIRMED_AFTER_RESEARCH`。
-- resetDetection: 本機固有ガックン/初期出目/ランプ変更判別契約は `UNVERIFIED_AFTER_RESEARCH`。
-- ボーナス告知や設定示唆演出は設定変更判別とは別なので転用しない。
+- settingChange: 有利区間ランプ消灯、内部状態リセット。ただし初期が通常確定かは原資料に疑問符があるため未確定。
+- powerOFF→ON: 有利区間ランプ・内部状態を引き継ぐ。本機固有の当時朝一表を根拠とする。
+- setting kept: 有利区間ランプ点灯が翌朝残れば据え置き濃厚という判別情報あり。
+- gameCounter / ceiling: `NOT_APPLICABLE_NO_CEILING`。
+- mode/state: 通常/高確/超高確は存在。設定変更時初期振り分け数値は`UNVERIFIED_AFTER_RESEARCH`。
+- advantageousSection: 設定変更時は引き継がず、電源OFF→ONではランプ状態を引き継ぐ。
+- morning benefit: 出玉優遇ではなく、設定変更後1回目MIDDLE BONUS開始時の**50%でメジェド横切り**。
+- resetDetection: メジェド横切りは設定変更確定演出。BIGを先に引いた場合も抽選有効。有利区間ランプ残存は据え置き濃厚。
+- gakkun: `UNVERIFIED_AFTER_RESEARCH`。
 
-## 2018-05-07群監査
-### 登録済み
-- No.1188 `パチスロ 大海物語4` — 三洋物産。
-- No.1189 `パチスロ北斗の拳 修羅の国篇 羅刹ver.` — サミー。
-- No.1190 `パチスロ FAIRY TAIL` — 藤商事。
-- No.1191 `パチスロ 楽シーサー30Φ` — SANKYO。5/7 vs 5/21のDATE_CONFLICT保持。
+## 2018-05-07 / 2018-05-21境界
+- 5/7群登録済み: No.1188 大海物語4 / No.1189 北斗修羅 羅刹ver. / No.1190 FAIRY TAIL / No.1191 楽シーサー30Φ。
+- 秘宝伝Rev.を2018-05-21 canonicalへ裁定したため、5/7群は今回CLOSED。
+- 2018-05-21群はOPEN。導入一覧上の次候補は `ディスクアップ`、`マジカルハロウィン6`、`シークレットハイビスカス25π`。次回は全メーカー/別スペックを含め漏れ監査して未登録先頭から処理する。
 
-### 日付競合 / 境界保留
-- `秘宝伝 Rev.`
-  - すろぱちくえすとの2018導入順は2018-05-07群に掲載。
-  - 別の導入カレンダー/当時解析には2018-05-21表記がある。
-  - 次回、公式/業界一次・HAZUSE/P-WORLD/当時ホール導入資料を追加照合しcanonical dayを裁定する。
-  - GitHub既存登録の有無も必ず再確認する。
+## 遡及 resetBehavior QA
+- retroQaScanConfirmedThrough: **2006-07_shinzo-ningen-casshern.md**（新造人間キャシャーン）。
+- qaResult: **PARTIAL_RESEARCH_EXHAUSTED**（性能側status `PARTIAL`は維持）。
+- 設定変更/据え置き/純電断時のRT/AT・ステージ・ミニゲーム関連状態: `UNVERIFIED_AFTER_RESEARCH`。
+- 通常時天井/短縮天井/公開朝一恩恵: `NONE_CONFIRMED_AFTER_RESEARCH`。
+- advantageousSection: `NOT_APPLICABLE`。
+- resetDetection: `UNVERIFIED_AFTER_RESEARCH`。
+- nextRetroQaCursor: `docs/real_machine_db/machines/2006-07_hanasakari.md`（花盛）。
+- cursorEvidence: Git履歴上、キャシャーン追加commit `01ab3390...` の直後が花盛追加commit `be42c692...`。
+- retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
 
 ## 継続注意事項
 - `美ラメキ！`を2018-03-12へ登録しない。canonicalは2018-07-02として後続キューで処理する。
-- resetBehaviorで推測表現「?」「可能性が高い」「調査中」を確定契約へ昇格しない。
-- 5.9号機一般論から本機固有の有利区間リセット契約を推定転記しない。
-- ノーマル機一般論から設定変更/電断挙動を推定転記しない。
-- 別スペックの値を転記しない。
-- 導入カレンダー間の日付競合は平均化せず `CONFLICT` として保持し、実導入/納品開始/予定日の定義差を確認する。
-- `INDEX.md` は旧スナップショット。次回も `LATEST_HANDOFF.md` + main実レコードを優先する。
-
-## 遡及 resetBehavior QA
-- retroQaScanConfirmedThrough: **2006-07_ooedo-manyuuki.md**（大江戸漫遊記）。
-- nextRetroQaCursor: `docs/real_machine_db/machines/2006-07_shinzo-ningen-casshern.md`（新造人間キャシャーン）。
-- retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
-- 今回は新規本線No.1191を優先し、retro cursorは変更なし。
+- resetBehaviorで疑問符・「調査中」・一般論を確定契約へ昇格しない。
+- 据え置きと純電断を同義扱いしない。直接資料がある場合のみ各契約へ記録する。
+- 導入日・出玉率の競合は平均化せず`CONFLICT`として保持する。
+- `INDEX.md`は旧スナップショット。LATEST_HANDOFF + main実レコードを優先する。
 
 ## 次回再開地点
-1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1191を再取得。
-2. **1191件 / chronologicalFrontier 2018-05-07** を正本として継続。
-3. `秘宝伝 Rev.` の2018-05-07 vs 2018-05-21を公式・業界・当時DBで再裁定。GitHub未登録なら、canonical dayを確定した上でNo.1192候補としてperformance core + resetBehavior v0.7を収集。
-4. 5/7群の追加漏れを全メーカー/別スペック/地域差で最終監査し、秘宝伝Rev.の帰属確定後にCLOSED判定。
-5. 次の日付群（主に2018-05-21候補群）へ前進。
-6. 遡及QAは `2006-07_shinzo-ningen-casshern.md` から継続。
+1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1192を再取得。
+2. **1192件 / chronologicalFrontier 2018-05-21 / 5/21群OPEN**を正本として継続。
+3. 5/21群を全メーカー/別スペック/地域差で監査し、GitHub未登録先頭からNo.1193候補としてperformance core + resetBehavior v0.7を収集。現時点の第一候補は`ディスクアップ`。
+4. 遡及QAは `2006-07_hanasakari.md`（花盛）から継続。
+5. PARTIAL/UNVERIFIED/reset欠損は公式・業界・当時解析・古DB・アーカイブ・回顧で検索系統を変えて再探索。
 
 ## 主要出典 — 取得日 2026-09-10
-### No.1191 楽シーサー30Φ
-- SANKYOオンライン博物館: https://www.sankyo-fever.jp/collection/688/
-- すろぱちくえすと本機: https://www.slopachi-quest.com/article/tanosi-sa-30pai/
-- すろぱちくえすと2018導入順: https://www.slopachi-quest.com/article/sindai-2018/
-- ちょんぼりすた: https://chonborista.com/slot/sankyo-slot/56854/
-- パチ7回顧: https://pachiseven.jp/columns/column_detail/15367
+### No.1192 秘宝伝 Rev.
+- HAZUSE: https://hazuse.com/machine/pachislot/7S1918/
+- PiDEA X: https://www.pidea.jp/articles/%E4%B8%89%E6%9C%A8%E6%B5%81%E3%80%81%E7%A7%98%E5%AE%9D%E4%BC%9DRev%E3%81%AE%E8%A9%95%E4%BE%A1%E3%81%AF%EF%BC%9F
+- 期待値見える化: https://slotjin.com/slot/hihoudenrev/
+- スロパチネット: https://slopachi-net.com/hihouden-rev
+- すろぱちくえすと本機: https://www.slopachi-quest.com/article/hihouden-rev/
+- すろぱちくえすと2018一覧: https://www.slopachi-quest.com/article/sindai-2018/
+- 2-9伝説: https://29den.com/newslot/
+- 大都技研サウンドトラック: https://www.daitogiken.com/products/music/soundtrack/
 
-### 直前No.1190 FAIRY TAIL主要出典
-- HAZUSE: https://hazuse.com/machine/pachislot/7S1186/
-- 一撃 設定変更: https://1geki.jp/slot/s_fairy_tail/3/
-- ちょんぼりすた: https://chonborista.com/slot/fuji-slot/55964/
+### retro QA — 新造人間キャシャーン
+- グリーンべると: https://web-greenbelt.jp/00004745/
+- P-WORLD: https://www.p-world.co.jp/machine/database/4245
+- 5号機クロニクル JPS: https://5goki.com/jps
+- コムシード2006ニュースリリース: https://www.commseed.net/news-old/pdf/news_pdf/2006/060720_p1.pdf
+- パチ7 JPS歴史レビュー: https://pachiseven.jp/articles/detail/11436
