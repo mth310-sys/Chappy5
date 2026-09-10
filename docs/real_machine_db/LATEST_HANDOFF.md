@@ -1,55 +1,52 @@
 更新日: 2026-09-11
 
 ## 現在地点
-- recordCount: **1292**
-- latestRecordAdded: **パチスロ鉄拳4**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2019-07-22_tekken4.md`
-- chronologicalFrontier: **2019-07-22**
-- frontierLatestMachine: **パチスロ鉄拳4 — No.1292**
+- recordCount: **1293**
+- latestRecordAdded: **パチスロあの日見た花の名前を僕達はまだ知らない。**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2019-08-05_anohana.md`
+- chronologicalFrontier: **2019-08-05**
+- frontierLatestMachine: **パチスロあの日見た花の名前を僕達はまだ知らない。 — No.1293**
 - schema: **resetBehavior v0.7**
-- status: **2019-07-22_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**
+- status: **2019-08-05_GROUP_OPEN_1_OF_5_CONFIRMED_CANDIDATES_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1291を再取得して開始。
+- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1292を再取得して開始。
 - INDEXは旧スナップショットのため、README規則どおりLATEST_HANDOFF + main実レコードを正本として継続。
-- 直前handoffのNo.1291 / 2019-07-08群CLOSEDを引き継ぎ、7/9〜7/21境界を監査。
-- No.1292 `パチスロ鉄拳4` を性能コア + resetBehavior v0.7で登録。
-- 2019-07-22群は日刊スポーツ当時導入カレンダー、パチンコ・パチスロ.com当時カレンダー等で監査し、スロットは鉄拳4のみを固定したためCLOSED。
-- 2019-07-23〜08-04境界を先行監査し、次の明確なスロット導入群を2019-08-05と確認。
+- 直前handoffの2019-07-22群CLOSEDを引き継ぎ、2019-08-05群へ前進。
+- No.1293 `パチスロあの日見た花の名前を僕達はまだ知らない。` を性能コア + resetBehavior v0.7で登録。
+- 8/5群はまだOPEN。既知候補 `麻雀格闘倶楽部参 / AT天元突破グレンラガン / ハイハイシオサイ / バンバンクロス` を未処理として残す。
 
-## No.1292 — パチスロ鉄拳4
-- manufacturer: **山佐**
-- formalModel: **`Sパチスロ鉄拳4CC`**
-- certificationNumber: **`9S0147`**
-- generation/system: **6号機 / AT / CZ・疑似ボーナス / 鉄拳チャンス連鎖型**
-- releaseDate canonical: **2019-07-22**
-- 機械割: **97.8 / 99.0 / 100.4 / 102.7 / 105.3 / 108.0%**
-- 引き戻し込みボーナス合算: **1/193.6 / 184.5 / 175.0 / 162.5 / 153.6 / 143.9**
-- BIG: **1/411.3 → 1/232.6**
-- REG: **1/740.9 → 1/814.5**
-- バトルボーナス: **1/723.1 → 1/703.2**
-- baseGamesPer50: **約54G**
-- 疑似ボーナス純増: **約4.0枚/G**
-- BIG約126枚 / REG約56枚。
-- 天井: **有利区間移行後1000G+前兆**。到達時はバトルボーナス+勝利ストック1個。
+## No.1293 — パチスロあの日見た花の名前を僕達はまだ知らない。
+- manufacturer: **サミー**
+- formalModel: **`SあのはなZM`**
+- certificationNumber: **`9S0405`**
+- generation/system: **6号機 / AT / CZ・疑似ボーナス / 純増変動型セット数管理AT**
+- releaseDate canonical: **2019-08-05**
+- 機械割: **97.9 / 98.9 / 100.8 / 104.1 / 107.5 / 110.1%**
+- AT初当たり: **1/386.7 / 373.1 / 342.5 / 310.9 / 290.1 / 272.0**
+- baseGamesPer50: **約50.6G**
+- 純増: **ATメイン約1.5枚/G / 高純増区間約3.0〜3.1枚/G**
+- AT「Flower's memory」: **1セット20G**。AT開始時21Gプロローグ。
+- BIG: ベルナビ20回+α / REG: ベルナビ6回。
+- 仮天井: **有利区間移行後500GでなかよしメーターMAX**。
+- 本天井: **有利区間移行後1000G+前兆でごめんまBONUS**。
 
 ### resetBehavior v0.7
 - resetBehaviorQA: **COMPLETE_PUBLIC_RESET_CORE**
-- settingChange: 天井G数リセット、ボーナス高確/TC高確終了、内部状態再抽選、有利区間は非有利区間から。
-- carryOver: 天井G数、高確、内部状態、有利区間を引継ぎ。
-- purePowerCycle: 据え置き同様に天井G数、高確、内部状態、有利区間を引継ぎ。
-- advantageousSection: 設定変更で非有利区間スタート。据え置き/純電断は引継ぎ。有利区間ランプも引継ぐが通常時は基本消灯のため常用判別には不向き。
-- resetBenefit: 主要解析では明確な設定変更専用恩恵は「なし」。短縮天井も確認されず。
-- resetDetection: ガックン判別有効、ガックンで設定変更濃厚。期待値見える化ではBIG終了画面「木人」出現を設定変更確定とする解析あり。PUSH長押しの内部G数表示も前日情報があれば判別材料。
-- publicMorningNumbers: 設定変更専用モード振り分け、朝一特定G以内当選率、短縮天井数値は再探索後も未確認。
+- settingChange: 天井G数RESET、なかよしメーターRESET、リーチボード非表示、非有利区間、夕方の神社スタート。
+- carryOver: 天井G数・内部状態・有利区間を引継ぎ。メーター/リーチボードも内部値を引継ぐ解析あり。
+- purePowerCycle: 据え置き同様に天井G数・内部状態・有利区間・有利区間ランプを引継ぐ。
+- advantageousSection: 設定変更で非有利区間・ランプ消灯。据え置き/純電断は引継ぎ。ただしランプ非連動型のため消灯単独では変更確定不可。
+- resetBenefit: 非有利区間中のレア役経由AT直撃チャンス。ただしAT終了後も同じ非有利区間を通るため設定変更専用恩恵ではない。主要解析も朝一恩恵は弱い/特になしと評価。
+- resetDetection: 朝一ランプ点灯は据え置き濃厚、前日点灯→朝一消灯ならリセット濃厚、1G目ガックンも変更濃厚。ランプ点灯+リーチボード非表示も据え置き材料。
+- publicMorningNumbers: 非有利区間平均約15G。有利区間移行時AT直撃率は弱チェリー/スイカ **5.0 / 6.2 / 7.9 / 9.9 / 11.1 / 12.3%**、強チェリー/チャンス目 **50.0 / 50.5 / 51.3 / 51.7 / 52.2 / 53.0%**。設定変更専用ではなく非有利区間共通値として保存。
 
 ## qualityNotes / conflicts
-- 型式 `Sパチスロ鉄拳4CC` / 検定番号 `9S0147` はHAZUSEとP-WORLDで一致。
-- 導入日2019-07-22はK-Navi、P-WORLD、一撃、日刊スポーツ当時導入カレンダー等で一致。
-- 天井は内部有利区間G数基準。ボーナス後高確は前有利区間を引き継ぐため、データカウンターの単純G数と内部天井G数が一致しない場合あり。
-- 有利区間ランプは据え置き時引継ぎだが、通常時は基本消灯なので「朝一消灯=変更」とはしない。
-- ガックン/木人は攻略解析情報でありメーカー一次値ではない。
-- 主要性能値で平均化が必要なCONFLICTは今回確認なし。
+- 型式 `SあのはなZM` / 検定番号 `9S0405` はHAZUSEで確認。
+- 導入日2019-08-05は一撃、ちょんぼりすた、スロパチクエスト、当時実戦記事で一致。業界記事も8月上旬予定で整合。
+- 設定別AT初当たり・機械割は一撃、ちょんぼりすた、スロパチクエスト、おスロおパチおいでやすの主要欄で一致。
+- おスロおパチおいでやす同一ページ内に定義不明の別AT/出玉率表が併存するため `CONFLICT_PAGE_INTERNAL_ALTERNATE_AT_TABLE` として注記。複数一致値をcanonical採用。
+- 設定変更専用短縮天井は確認されず `NONE_CONFIRMED_AFTER_RESEARCH`。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**
@@ -59,30 +56,26 @@
 - nextRetroQaAction: **`docs/real_machine_db/machines/2007-02_ps-adlib-ouji.md`（PSアドリブ王子）から再開**。既にresetBehavior収録済みなら重複編集せず次レコードへ進む。
 - 既存 `COMPLETE_CORE` は不用意に崩さず、reset QAを別管理する。
 
-## 2019-07-22群 — CLOSED
-- No.1292 パチスロ鉄拳4
+## 2019-08-05群 — OPEN
+- No.1293 パチスロあの日見た花の名前を僕達はまだ知らない。
+- 未処理候補: 麻雀格闘倶楽部参 / AT天元突破グレンラガン / ハイハイシオサイ / バンバンクロス
 
 ## 次回再開地点
-1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1292を再取得。
-2. 2019-07-23〜08-04境界を再確認後、**2019-08-05群**へ進む。
-3. 現時点の同日候補は **パチスロあの日見た花の名前を僕達はまだ知らない。 / 麻雀格闘倶楽部参 / AT天元突破グレンラガン / ハイハイシオサイ / バンバンクロス**。導入日・別型式・PB・地域差を個別照合してNo.1293候補を確定する。
-4. 同日群を全メーカー / 別型式 / 別スペック / PB / 地域差まで監査。
+1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1293を再取得。
+2. **No.1294候補 `麻雀格闘倶楽部参`** から性能コア + resetBehavior v0.7収集を継続。
+3. 続いて `AT天元突破グレンラガン / ハイハイシオサイ / バンバンクロス` を未処理順に個別照合。
+4. 2019-08-05群を全メーカー / 別型式 / 別スペック / PB / 地域差まで監査しCLOSED可否を判定。
 5. 遡及QAは `2007-02_ps-adlib-ouji.md` から再開。既収集なら重複せずGit追加順の次レコードへ進む。
 6. PARTIAL / UNVERIFIEDは公式 / 業界 / 当時解析 / 古DB / アーカイブ / 回顧資料まで資料系統を変えて再探索し、競合はCONFLICTのまま保持。
 
 ## 主要出典 — 取得日 2026-09-11
-### パチスロ鉄拳4
-- HAZUSE: https://hazuse.com/machine/pachislot/9S0147/
-- P-WORLD: https://opt.p-world.co.jp/machine/database/8946
-- K-Navi: https://p-kn.com/slot/3244/
-- 一撃: https://1geki.jp/slot/s_tekken4/
-- スロパチクエスト 天井/朝一: https://www.slopachi-quest.com/article/tekken4-tennjou/
-- 期待値見える化 朝一リセット: https://slotjin.com/slot/tekken4-reset/
-- おスロおパチおいでやす: https://oslo-opachi.com/2019/06/20/tekken4_tennjou/
-- 日刊スポーツ導入カレンダー: https://www.nikkansports.com/amusement/pachislot/news/201905240000339.html
-- 日刊スポーツ発表会: https://www.nikkansports.com/amusement/pachislot/news/201905160000423.html
-
-### 次群監査
-- スロット解析.com 2019年8月新台カレンダー: https://slotkaiseki.com/2019_8/
-- パチスロ立ち回り講座 新台導入予定日: https://crankyseven.com/newmachine-info.htm
-- パチンコ・パチスロ.com 2019新台導入日カレンダー: https://pachinkopachisro.com/archives/52807194.html
+### パチスロあの日見た花の名前を僕達はまだ知らない。
+- HAZUSE: https://hazuse.com/machine/pachislot/9S0405/
+- P-WORLD: https://www.p-world.co.jp/machine/database/8970
+- 一撃: https://1geki.jp/slot/s_anohana/
+- ちょんぼりすた: https://chonborista.com/slot/sammy-slot/86957/
+- スロパチクエスト 天井/朝一: https://www.slopachi-quest.com/article/anohana-tennjou/
+- 期待値見える化 朝一: https://slotjin.com/slot/anohana-reset/
+- おスロおパチおいでやす: https://oslo-opachi.com/2019/06/27/anohana_tenjou/
+- グリーンべると: https://web-greenbelt.jp/00011313/
+- P-WORLD業界ニュース / 遊技通信: https://news.p-world.co.jp/articles/11224/yugitsushin
