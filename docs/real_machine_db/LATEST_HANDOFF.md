@@ -1,52 +1,52 @@
 更新日: 2026-09-10
 
 ## 現在地点
-- recordCount: **1220**
-- latestRecordAdded: **クロノス～刻の支配者～**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2018-08-06_chronos-toki-no-shihai-sha.md`
+- recordCount: **1221**
+- latestRecordAdded: **パチスロ ウィザード・バリスターズ～弁魔士セシル～**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2018-08-06_wizard-barristers-benma-shi-cecil.md`
 - chronologicalFrontier: **2018-08-06**
-- frontierLatestMachine: **クロノス～刻の支配者～ — No.1220**
+- frontierLatestMachine: **パチスロ ウィザード・バリスターズ～弁魔士セシル～ — No.1221**
 - schema: **resetBehavior v0.7**
-- status: **2018-08-06_GROUP_OPEN_4_OF_AT_LEAST_6_PROCESSED**
+- status: **2018-08-06_GROUP_OPEN_5_OF_AT_LEAST_6_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1219を再取得して開始。
+- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1220を再取得して開始。
 - INDEXは19件時点の旧スナップショットのため、README規定どおりLATEST_HANDOFF + main実レコードを正本として継続。
-- 1219件 / 2018-08-06群OPENを確認し、未処理先頭「クロノス～刻の支配者～」を既存重複なし確認後No.1220として登録。
-- ベルコ公式で2018年8月、5号機ART、設定別ART初当たり1/368.7〜1/322.9を確認。Amusement Japan、日刊スポーツ、複数解析で2018-08-06導入を固定。
-- 機械割97/99/101/104/106/108%、ボーナス合算1/101.9〜1/80.4、約33G/50枚、クロノスボーナス約42枚。
-- ART純増は資料競合。すろぱちくえすと約1.6枚/G、ちょんぼりすた・パチマガスロマガ約1.7枚/G。ボーナス込み約2.0枚/Gは一致するため`CONFLICT_ART_NET_INCREASE_APPROX_1_6_VS_1_7_PER_G`として保持。
-- 通常ゲーム数天井は非搭載。クロノスチャンス最大33G、クロノスタイムは次回ボーナスまで。パチマガスロマガで有利区間連続1300G消化時のスペシャルクロノスタイムを確認。
-- resetBehaviorは当時の本機専用朝一比較表が設定変更時/電源OFF→ON時の内部状態・ステージをともに「調査中」としており、その後も表記揺れ/メーカー/設定変更/リセット/朝一/据え置き/電源OFF ON/ガックン/有利区間へ検索語と資料系統を変えて再探索したが、本機固有契約を固定できずUNVERIFIED_AFTER_RESEARCH。
-- 据え置きは純電断と同義扱いせず独立してUNVERIFIED。設定変更時の有利区間処理、1300G連続カウンタ処理、ガックン条件/発生率もUNVERIFIED。
+- 1220件 / 2018-08-06群OPENを確認し、未処理先頭「パチスロ ウィザード・バリスターズ～弁魔士セシル～」を既存重複なし確認後No.1221として登録。
+- 日刊スポーツ導入カレンダー、パチビー、すろぱちくえすと、ちょんぼりすたで2018-08-06導入を固定。オーイズミ、5.9号機A+ART。
+- 機械割97.8/98.4/99.9/102.1/105.9/109.1%、ART初当たり1/347.5～1/339.8、ボーナス合算1/248.24～1/206.09、38.5G/50枚。
+- ART純増は単体約1.4枚/G、ボーナス込み約1.8枚/G。MOYO BIG約312枚、CECIL BIG約150枚、REG約48枚。通常ゲーム数天井は非搭載。
+- resetBehaviorは当時の本機専用朝一表で設定変更時内部状態が「リセット？」、電源OFF→ON時が「引き継ぎ？」、ステージは双方調査中。疑問符付き情報を確定契約へ昇格させず、表記揺れ/メーカー/設定変更/リセット/朝一/据え置き/電源OFF ON/ガックン/有利区間へ再探索したが直接固定できずUNVERIFIED_AFTER_RESEARCH。
+- 据え置きは純電断と同義扱いせず独立してUNVERIFIED。
+- 5.9号機有利区間はゲーム性として確認できるが、設定変更/据え置き/純電断別の朝一有利区間処理は本機固有資料を固定できずUNVERIFIED。
 - 短縮天井・朝一ART/CZ優遇率・専用モード・リセット恩恵率などの公開数値はNONE_CONFIRMED_AFTER_RESEARCH。
-- 正式型式名/検定番号は今回の公式・業界・解析・古いDB検索でも高信頼固定できずUNVERIFIED_AFTER_RESEARCH。
+- 正式型式名/検定番号は今回の公式/業界/解析/古いDB/検索語変更でも高信頼固定できずUNVERIFIED_AFTER_RESEARCH。
 
-## No.1220 — クロノス～刻の支配者～
-- manufacturer: **ベルコ**
+## No.1221 — パチスロ ウィザード・バリスターズ～弁魔士セシル～
+- manufacturer: **オーイズミ**
 - releaseDateCanonical: **2018-08-06**
 - formalModelName: **UNVERIFIED_AFTER_RESEARCH**
 - certificationNumber: **UNVERIFIED_AFTER_RESEARCH**
-- generation/system: **5号機 / 5.9号機 / A+ART / W-ART**
+- generation/system: **5号機 / 5.9号機 / A+ART / CZ経由G数上乗せ型**
 - settings: **1 / 2 / 3 / 4 / 5 / 6**
-- payout: **97.0 / 99.0 / 101.0 / 104.0 / 106.0 / 108.0%**
-- ART initial: **1/368.7 / 1/358.5 / 1/349.4 / 1/339.9 / 1/331.7 / 1/322.9**
-- bonusCombined: **1/101.9 / 1/96.8 / 1/92.2 / 1/88.0 / 1/84.1 / 1/80.4**
-- base: **約33G/50枚**
-- basic payout: **クロノスボーナス約42枚**
-- ART: **クロノスチャンス最大33G / クロノスタイム次回ボーナスまで**
-- netIncrease: **CONFLICT 約1.6 vs 約1.7枚/G / ボーナス込み約2.0枚/G**
+- payout: **97.8 / 98.4 / 99.9 / 102.1 / 105.9 / 109.1%**
+- ART initial: **1/347.5 / 1/345.3 / 1/344.3 / 1/343.7 / 1/343.0 / 1/339.8**
+- bonusCombined: **1/248.24 / 1/245.45 / 1/237.45 / 1/229.95 / 1/220.66 / 1/206.09**
+- base: **38.5G/50枚**
+- basic payout: **MOYO BIG約312枚 / CECIL BIG約150枚 / REG約48枚**
+- ART: **初回40G以上 / G数上乗せ型**
+- netIncrease: **ART単体約1.4枚/G / ボーナス込み約1.8枚/G**
 - ceiling: **非搭載**
 
 ### resetBehavior v0.7
-- settingChange: **UNVERIFIED_AFTER_RESEARCH**。当時本機専用表は内部状態/ステージとも調査中。
+- settingChange: **UNVERIFIED_AFTER_RESEARCH**。当時本機専用表の内部状態は「リセット？」、ステージは調査中。
 - carryOver: **UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION**。純電断を自動転記しない。
-- powerOFF→ON: **UNVERIFIED_AFTER_RESEARCH**。当時本機専用表は内部状態/ステージとも調査中。
-- gameCounter/ceiling: 通常ゲーム数天井なし。1300G有利区間連続カウンタの変更/据え置き/純電断別処理はUNVERIFIED。
-- mode/state: 朝一専用モード/状態契約はNONE_CONFIRMED_AFTER_RESEARCH。
-- advantageousSection: 5.9号機として有利区間使用、連続1300G時の仕様は確認。ただし朝一リセット契約はUNVERIFIED。
+- powerOFF→ON: **UNVERIFIED_AFTER_RESEARCH**。当時本機専用表の内部状態は「引き継ぎ？」、ステージは調査中。
+- gameCounter/ceiling: 通常ゲーム数天井なし。天井カウンタはNOT_APPLICABLE。
+- mode/state: 朝一専用モード/確定状態契約はNONE_CONFIRMED/UNVERIFIED_AFTER_RESEARCH。
+- advantageousSection: 5.9号機として有利区間を使用するが、朝一の変更/据え置き/純電断別処理はUNVERIFIED。
 - resetBenefits/penalties: 短縮天井・初当たり/CZ優遇等`NONE_CONFIRMED_AFTER_RESEARCH`。
-- resetDetection: 本機固有ガックン・表示等の確定条件/発生率はUNVERIFIED。
+- resetDetection: 本機固有ガックン・初期出目・表示等の確定条件/発生率はUNVERIFIED。
 - numericResetData: 公開された朝一専用数値`NONE_CONFIRMED_AFTER_RESEARCH`。
 
 ## 2018-08-06群監査
@@ -55,15 +55,15 @@
 - No.1218 花人-はなんちゅ- — 2018-08-06。
 - No.1219 クレアの秘宝伝 女神の夢と魔法の遺跡 — 2018-08-06。
 - No.1220 クロノス～刻の支配者～ — 2018-08-06。
+- No.1221 パチスロ ウィザード・バリスターズ～弁魔士セシル～ — 2018-08-06。
 
 ### 未処理候補
-- ウィザード・バリスターズ～弁魔士セシル / ウィザードバリスターズ 弁護士セシル
-- TOWSER(トウサー)
+- **TOWSER(トウサー)** — 日刊スポーツ導入カレンダーの2018-08-06群に掲載。次の未処理先頭。
 
 ### 群判定
-- `2018-08-06_GROUP_OPEN_4_OF_AT_LEAST_6_PROCESSED`
-- 日刊スポーツ導入カレンダーとすろぱちくえすと双方で、8/6群に少なくとも上記6機を確認。
-- 全メーカー/別スペック/PB/地域差監査は未完了のためCLOSEDにしない。
+- `2018-08-06_GROUP_OPEN_5_OF_AT_LEAST_6_PROCESSED`
+- 日刊スポーツ導入カレンダーで、8/6群に少なくとも上記6機を確認。
+- TOWSER処理後に全メーカー/別スペック/PB/地域差を再監査してCLOSED可否を判定する。
 
 ## 遡及 resetBehavior QA
 - retroQaScanConfirmedThrough: **2006-08_rumble-roses.md**（ランブルローズ）。
@@ -76,25 +76,23 @@
 - 毎回、最新mainのREADME / mission / INDEX / LATEST_HANDOFF / latest recordを読み直す。
 - 並行更新がある場合は最新HEADを優先し、古い番号で上書きしない。
 - resetBehaviorで一般論を確定契約へ昇格しない。据え置きと純電断を同義扱いしない。
+- 当時資料の「リセット？」「引き継ぎ？」等、疑問符付き情報は確定値として扱わない。
 - 同日/境界群は全メーカー/別スペック/PB/地域差監査後にのみCLOSED判定する。
 
 ## 次回再開地点
-1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1220を再取得。
-2. **1220件 / chronologicalFrontier 2018-08-06 / 8/6群OPEN**を正本として継続。ただし並行更新があれば最新HEADを優先。
-3. **ウィザード・バリスターズ～弁魔士セシル**をNo.1221候補として既存重複・型式・導入日を照合し、性能コア+resetBehavior v0.7を収集。
-4. 続いてTOWSER(トウサー)を監査。
-5. 8/6群を全メーカー/別スペック/PB/地域差で横断監査してCLOSE可否を判定。
+1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1221を再取得。
+2. **1221件 / chronologicalFrontier 2018-08-06 / 8/6群OPEN**を正本として継続。ただし並行更新があれば最新HEADを優先。
+3. **TOWSER(トウサー)**をNo.1222候補として既存重複・正式型式・導入日を照合し、性能コア+resetBehavior v0.7を収集。
+4. TOWSER処理後、8/6群を全メーカー/別スペック/PB/地域差で横断監査してCLOSE可否を判定。
+5. CLOSEDなら次の最古未処理導入群へ時系列で進む。
 6. 遡及QAは `docs/real_machine_db/machines/2006-08-28_taiho-shichauzo.md` から継続。
 
 ## 主要出典 — 取得日 2026-09-10
-### No.1220 クロノス～刻の支配者～
-- ベルコ公式: https://www.s-bellco.co.jp/products/slot/chronos/
-- Amusement Japan: https://amusement-japan.co.jp/article/detail/10000668/
-- グリーンべると: https://web-greenbelt.jp/00010517/
+### No.1221 パチスロ ウィザード・バリスターズ～弁魔士セシル～
 - 日刊スポーツ導入カレンダー: https://www.nikkansports.com/amusement/pachislot/news/201807270000405.html
-- すろぱちくえすと: https://www.slopachi-quest.com/article/chronos/
-- ちょんぼりすた: https://chonborista.com/slot/belko-slot/61320/
-- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/belco_slot/101/a.php
-- パチマガスロマガ ゲーム性: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/belco_slot/101/l.php
-- 5号機クロニクル: https://5goki.com/bellco
-- P-WORLD: https://www.p-world.co.jp/machine/database/8678
+- グリーンべると / P-WORLD業界ニュース: https://news.p-world.co.jp/articles/10137/greenbelt
+- パチビー: https://www.pachibee.jp/machines/movie/218050007
+- P-WORLD: https://www.p-world.co.jp/machine/database/8664
+- すろぱちくえすと: https://www.slopachi-quest.com/article/wizardbarristers/
+- ちょんぼりすた: https://chonborista.com/slot/oizumi-slot/60619/
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/oizumi_slot/43/a.php
