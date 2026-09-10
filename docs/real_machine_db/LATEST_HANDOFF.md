@@ -1,66 +1,71 @@
 更新日: 2026-09-10
 
 ## 現在地点
-- recordCount: **1225**
-- latestRecordAdded: **SLOTファミリースタジアム**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2018-08-27_slot-family-stadium.md`
-- chronologicalFrontier: **2018-08-27**
-- frontierLatestMachine: **SLOTファミリースタジアム — No.1225**
+- recordCount: **1226**
+- latestRecordAdded: **スーパービンゴリバース**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2018-09-03_super-bingo-reverse.md`
+- chronologicalFrontier: **2018-09-03**
+- frontierLatestMachine: **スーパービンゴリバース — No.1226**
 - schema: **resetBehavior v0.7**
-- status: **2018-08-27_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**
+- status: **2018-09-03_GROUP_OPEN_1_OF_2_KNOWN_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1224を再取得して開始。
+- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1225を再取得して開始。
 - INDEXは19件時点の旧スナップショットのため、README規定どおりLATEST_HANDOFF + main実レコードを正本として継続。
-- 開始時点は1224件 / 2018-08-20群CLOSED。未処理先頭 `SLOTファミリースタジアム` を既存重複なし確認後No.1225として登録。
-- ユニバーサルエンターテインメント公式、Amusement Japan、日刊スポーツ、P-WORLD、パチマガスロマガ、K-Navi、ちょんぼりすた、一撃、すろぱちくえすと等を横断。
-- 導入2018-08-27、メーシー、5号機A+RTを固定。型式 `SLOTファミリースタジアム/DN` は中古実機DBで確認したが公報/一次資料照合が取れず単一二次資料扱い。検定番号は再探索後もUNVERIFIED。
-- 設定は1/2/5/6。機械割97.5/99.3/103.2/107.1%、BIG合成1/341.3/1/337.8/1/327.7/1/318.1、REG1/481.9/1/431.2/1/394.8/1/348.6、ボーナス合算1/199.8/1/189.4/1/179.1/1/166.3。
-- 約35.5～37.9G/50枚。BIG最大304枚、REG最大108枚。BIG後RT30G、REG後RTはチャンスリプレイ成立まで。RT純増は当時解析で現状維持程度。通常ゲーム数天井なし。
-- resetBehaviorは設定変更時RT RESET、電源OFF→ON時RT CARRYOVERをちょんぼりすた/一撃でクロスチェック。朝一専用特典なし。未告知ボーナス成立中に電源断した場合は復帰時ボーナス告知状態へ移行する当時解析注記あり。
-- 据え置きそのものを純電断と分離した本機固有契約、ガックン/初期出目等の変更判別確定条件・発生率、公開朝一数値は検索語/資料系統変更後も固定できずUNVERIFIED/NONE_CONFIRMED。
-- 8/21～8/26境界および8/27同日全メーカー/別スペック/PB/地域差を再監査。日刊スポーツ当時カレンダーは8/27パチスロを本機のみ掲載し、複数導入DBでも8/27を照合。今回独立登録すべき追加機を固定できず `2018-08-27_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT`。
+- 開始時点は1225件 / 2018-08-27群CLOSED。8/28～9/2境界を導入カレンダー等で再監査し、次の群は2018-09-03と確認。
+- 日刊スポーツ当時カレンダーは9/3パチスロとして `スーパービンゴリバース（ベルコ）` と `パチスロ ハクション大魔王（WORLD）` の2機を掲載。
+- 先頭のスーパービンゴリバースを既存重複なし確認後No.1226として登録。
+- ベルコ公式、PiDEA X、日刊スポーツ、パチマガスロマガ、ちょんぼりすた、すろぱちくえすと、グリーンべると、中古実機DBを横断。
+- 導入2018-09-03、ベルコ、5.9号機A+ART、型式 `ビンゴ/A1` を固定。検定番号は再探索後もUNVERIFIED。
+- 機械割97.5/99.0/100.5/102.0/103.5/105.0%。ボーナス合算1/76.2/1/74.3/1/72.5/1/70.7/1/69.1/1/67.6。ART初当たりは解析系1/563/1/559/1/554/1/549/1/544/1/539。
+- ベルコ公式のみ設定1 ARTを1/536と掲載し、設定2～6は解析値と一致。平均せず `CONFLICT_ART_INITIAL_SETTING1_OFFICIAL_1_536_VS_ANALYSIS_1_563` を保存。
+- 約31G/50枚。ART単体約1.7枚/G、ボーナス込み約2.0枚/G。ボーナスは約30/78/150/150枚。ART基本1セット50G。通常ゲーム数天井なし。
+- resetBehaviorは設定変更時 `非有利区間 / 星ステージ`、据え置き時 `状態 / 液晶ステージ引継ぎ` を当時設定判別資料から取得。星ステージ以外で前日閉店なら翌朝星ステージは変更判別材料。
+- 純電源OFF→ONのみを据え置きから独立して示す本機固有契約、ガックン確定条件/発生率、公開朝一数値は検索語・資料系統変更後も固定できずUNVERIFIED/NONE_CONFIRMED。
 
-## No.1225 — SLOTファミリースタジアム
-- manufacturer: **メーシー**
-- releaseDateCanonical: **2018-08-27**
-- formalModelName: **SLOTファミリースタジアム/DN**（単一二次DB、一次照合待ち）
+## No.1226 — スーパービンゴリバース
+- manufacturer: **ベルコ**
+- releaseDateCanonical: **2018-09-03**
+- formalModelName: **ビンゴ/A1**（グリーンべると+中古実機DB照合）
 - certificationNumber: **UNVERIFIED_AFTER_RESEARCH**
-- generation/system: **5号機 / A+RT / リアルボーナス+RT / 技術介入**
-- settings: **1 / 2 / 5 / 6**
-- payoutRate: **97.5 / 99.3 / 103.2 / 107.1%**
-- BIGCombined: **1/341.3 / 1/337.8 / 1/327.7 / 1/318.1**
-- REG: **1/481.9 / 1/431.2 / 1/394.8 / 1/348.6**
-- bonusCombined: **1/199.8 / 1/189.4 / 1/179.1 / 1/166.3**
-- baseGamesPer50: **約35.5～37.9G/50枚**
-- netIncrease: **RT 現状維持程度（精密枚/GはUNVERIFIED）**
-- basicPayout: **BIG最大304枚 / REG最大108枚 / BIG後RT30G / REG後RTはチャンスリプレイ成立まで**
+- generation/system: **5.9号機 / A+ART**
+- settings: **1 / 2 / 3 / 4 / 5 / 6**
+- payoutRate: **97.5 / 99.0 / 100.5 / 102.0 / 103.5 / 105.0%**
+- bonusCombined: **1/76.2 / 1/74.3 / 1/72.5 / 1/70.7 / 1/69.1 / 1/67.6**
+- ARTInitial: **解析 1/563 / 1/559 / 1/554 / 1/549 / 1/544 / 1/539**
+- ARTInitialConflict: **設定1のみ公式1/536 vs 複数解析1/563**
+- baseGamesPer50: **約31G/50枚**
+- netIncrease: **ART単体約1.7枚/G / ボーナス込み約2.0枚/G**
+- basicPayout: **プチ約30枚 / ミドル約78枚 / スーパー約150枚 / 極約150枚 / ART基本50G**
 - ceiling: **非搭載**
 
 ### resetBehavior v0.7
-- settingChange: **RT_STATE_RESET_ANALYSIS_HIGH_CROSSCHECKED**。ちょんぼりすたはボーナス/RT等の状態をすべてリセット、一撃はRT RESETを明記。
-- carryOver: **UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION**。据え置きを純電断と同義扱いしない。
-- powerOFF→ON: **RT_STATE_CARRYOVER_ANALYSIS_HIGH_CROSSCHECKED**。未告知ボーナス成立状態は復帰後告知状態へ移行との注記あり。
-- gameCounter/ceiling: 通常ゲーム数天井なし。短縮天井NOT_APPLICABLE。RT残り状態は上記設定変更/純電断契約に従う。
-- mode/state: 朝一専用モードなし確認。RTは設定変更RESET / 純電断CARRYOVER。
-- advantageousSection: 公開ゲーム性はリアルボーナス+RTで、朝一有利区間挙動は `NOT_APPLICABLE_TO_PUBLIC_GAMEPLAY_NO_ADVANTAGEOUS_SECTION_BEHAVIOR_CONFIRMED`。
-- resetBenefits: **NONE_CONFIRMED / 朝一特典なし**。
+- settingChange: **RESET_TO_NON_ADVANTAGEOUS_SECTION / STAR_STAGE**。
+- carryOver: **STATE_AND_LCD_STAGE_CARRYOVER**。
+- powerOFF→ON: **UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION**。
+- gameCounter/ceiling: 通常ゲーム数天井なし。短縮天井NOT_APPLICABLE。
+- mode/state: 設定変更時非有利区間+星ステージ、据え置き時状態/ステージ引継ぎ。
+- advantageousSection: **設定変更時非有利区間 / 据え置き時引継ぎ**。
+- resetBenefits: **専用ART/CZ優遇率、短縮天井等はNONE_CONFIRMED_AFTER_RESEARCH**。
 - resetPenalties: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- resetDetection: **UNVERIFIED_AFTER_RESEARCH**。本機固有ガックン/変更判別確定条件・発生率を固定できず。
+- resetDetection: **液晶ステージ引継ぎを利用した判別材料あり。ガックン条件/率はUNVERIFIED_AFTER_RESEARCH**。
 - numericResetData: **NONE_CONFIRMED_AFTER_RESEARCH**。
 
-## 2018-08-27群監査
+## 2018-09-03群監査
 ### 登録済み
-- No.1225 SLOTファミリースタジアム — 2018-08-27。
+- No.1226 スーパービンゴリバース — 2018-09-03。
+
+### 未処理の既知同日機
+- パチスロ ハクション大魔王 — WORLD — 2018-09-03。
 
 ### 群判定
-- 日刊スポーツ2018年8月導入カレンダーは8/27パチスロ群として本機のみを掲載。
-- K-Navi、ちょんぼりすた、すろぱちくえすと、一撃でも2018-08-27導入を照合。
-- 8/21～8/26境界および同日全メーカー/別スペック/PB/地域差を追加検索したが、今回独立登録すべき別パチスロ機は固定できず `2018-08-27_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT`。
+- 日刊スポーツ2018-08-31導入カレンダーは9/3パチスロ群を上記2機として掲載。
+- 9/3群はまだ `OPEN`。ハクション大魔王処理後、全メーカー/別スペック/PB/地域差を再監査してCLOSE可否を判定する。
 
 ## 次時系列群
-- 日刊スポーツ当時導入カレンダーでは **2018-09-03 スーパービンゴリバース（ベルコ） / パチスロ ハクション大魔王（WORLD）** が次のパチスロ導入群。
-- 次回は8/28～9/2境界漏れと9/3同日全メーカー/別スペック/PB/地域差を別系統資料で再監査し、**スーパービンゴリバース**をNo.1226先頭候補として処理する。並行更新があれば最新mainを優先。
+- 9/3群をCLOSEした後の次既知群は日刊スポーツ当時カレンダー上 **2018-09-18**。
+- 候補: `パチスロ ベン・トー ～狼たちの夜～（バルテック）` / `パチスロ 闇芝居（ネット）` / `アレックス（アクロス）`。
+- 9/4～9/17境界漏れを別系統資料で監査してから進む。
 
 ## 遡及 resetBehavior QA
 - retroQaScanConfirmedThrough: **2006-08-28_taiho-shichauzo.md**（逮捕しちゃうぞ）。
@@ -78,23 +83,20 @@
 - 技術介入機では通常/フル攻略等の機械割定義を混同しない。
 
 ## 次回再開地点
-1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1225を再取得。
-2. **1225件 / chronologicalFrontier 2018-08-27 / `2018-08-27_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT`**を正本として継続。ただし並行更新があれば最新HEADを優先。
-3. 2018-08-28～09-02境界を再監査し、**スーパービンゴリバース**（ベルコ、2018-09-03）をNo.1226先頭候補として既存重複・正式型式・検定番号・導入日を照合、性能コア+resetBehavior v0.7を収集。
-4. 続いて **パチスロ ハクション大魔王**（WORLD、2018-09-03）を処理し、9/3群の全メーカー/別スペック/PB/地域差を監査して群CLOSE可否を判定する。
+1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1226を再取得。
+2. **1226件 / chronologicalFrontier 2018-09-03 / `2018-09-03_GROUP_OPEN_1_OF_2_KNOWN_PROCESSED`**を正本として継続。ただし並行更新があれば最新HEADを優先。
+3. **パチスロ ハクション大魔王（WORLD、2018-09-03）**をNo.1227先頭候補として既存重複・正式型式・検定番号・導入日を照合し、性能コア+resetBehavior v0.7を収集。
+4. ハクション大魔王処理後、9/3同日全メーカー/別スペック/PB/地域差を再監査して群CLOSE可否を判定。
 5. 遡及QAは `docs/real_machine_db/machines/2006-09_kyuji.md`（球児）から継続。
 
 ## 主要出典 — 取得日 2026-09-10
-### No.1225 SLOTファミリースタジアム
-- ユニバーサルエンターテインメント公式: https://www.universal-777.com/product/slot/famista/
-- ユニバーサルエンターテインメント2018製品一覧: https://www.universal-777.com/product/slot/2018/
-- Amusement Japan: https://amusement-japan.co.jp/article/detail/10000738/
-- 日刊スポーツ導入カレンダー: https://www.nikkansports.com/amusement/pachislot/news/201808170000386.html
-- P-WORLD: https://www.p-world.co.jp/machine/database/8735
-- パチマガスロマガ確率: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/macy_slot/49/h-1.php
-- パチマガスロマガゲーム性: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/macy_slot/49/l.php
-- ちょんぼりすた: https://chonborista.com/slot/universal-slot/62557/
-- 一撃: https://1geki.jp/slot/s_famista/ ; https://1geki.jp/slot/s_famista/3/
-- K-Navi: https://p-kn.com/slot/3072/
-- すろぱちくえすと: https://www.slopachi-quest.com/article/family-stadium/
-- 中一商事型式DB: https://www.nakaiti.com/html/sMacy101.html
+### No.1226 スーパービンゴリバース
+- ベルコ公式: https://www.s-bellco.co.jp/products/slot/superbingo_rebirth/
+- PiDEA X: https://www.pidea.jp/articles/1%2F2%E8%B6%85%E3%81%A7Hooah%21%E7%99%BA%E7%94%9F%E3%80%8C%E3%83%93%E3%83%B3%E3%82%B4%E3%83%AA%E3%83%90%E3%83%BC%E3%82%B9%E3%80%8D%EF%BC%8F%E3%83%99%E3%83%AB%E3%82%B3
+- 日刊スポーツ導入カレンダー: https://www.nikkansports.com/amusement/pachislot/news/201808310000459.html
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/belco_slot/102/h-1.php
+- ちょんぼりすた: https://chonborista.com/slot/belko-slot/63231/
+- すろぱちくえすと: https://www.slopachi-quest.com/article/super-bingo-reverse/
+- すろぱちくえすと設定判別: https://www.slopachi-quest.com/article/super-bingo-reverse-settei/
+- グリーンべると旧規則機リスト: https://web-greenbelt.jp/post-55482/
+- 中一商事中古実機DB: https://item.rakuten.co.jp/auc-nakaiti/bikoba/
