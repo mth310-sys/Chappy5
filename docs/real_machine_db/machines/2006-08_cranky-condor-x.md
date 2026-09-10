@@ -5,7 +5,8 @@ manufacturer: エレコ
 generation: 5号機初期
 releaseDate: 2006-08
 systemType: Aタイプ + 完走型RT / 技術介入
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
+resetBehaviorQALastChecked: 2026-09-10
 
 ## payoutRateBySetting
 
@@ -55,33 +56,33 @@ RT純増/G: UNVERIFIED
 
 ### settingChangeBehavior
 
-`クランキーコンドルX / クランキーコンドルX5 / エレコ / アルゼ` と `設定変更 / リセット / 朝一 / 朝イチ / 据え置き / 電源OFF ON / 電断 / RT / クランキーチャレンジ / ガックン` を組み替え、メーカー公式、2006年当時業界記事、当時攻略資料、後年専門回顧、旧DBを横断したが、設定変更時の本機固有RT状態・RT残G・初期出目処理を直接明記した資料は確定できず `UNVERIFIED`。
+`クランキーコンドルX / クランキーコンドルX5 / エレコ / アルゼ` と `設定変更 / リセット / 朝一 / 朝イチ / 据え置き / 電源OFF ON / 電断 / RT / クランキーチャレンジ / ガックン / 初期出目` を組み替え、メーカー公式、2006年当時業界記事、当時攻略資料、後年専門回顧、旧DBを横断。2026-09-10にも資料系統を変えて再探索したが、設定変更時の本機固有RT状態・RT残G・初期出目処理を直接固定できる資料は得られず `UNVERIFIED_AFTER_RESEARCH`。
 
 ### carryOverBehavior
 
-- 据え置き時の進行中100G完走型RTの残G、ボーナス成立済み状態等の本機固有引継ぎ: `UNVERIFIED`。
+- 据え置き時の進行中100G完走型RT残G、ボーナス成立済み状態等を「据え置き」条件として直接定義した本機固有資料は再探索後も固定できず `UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION`。
 
 ### powerCycleBehavior
 
-- 電源OFF→ONのみ時の進行中RT残G/内部RT状態/成立済みボーナスの本機固有処理: `UNVERIFIED`。
+- 電源OFF→ONのみ時の進行中RT残G/内部RT状態/成立済みボーナスの本機固有処理は、据え置き一般論から補完せず `UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION`。
 
 ### gameCounterReset
 
-- 通常時ゲーム数天井としてのカウンタは今回確認できず `NONE_CONFIRMED`。
+- 通常時ゲーム数天井としてのカウンタは再探索後も `NONE_CONFIRMED_AFTER_RESEARCH`。
 - 100Gは通常時天井ではなく、クランキーチャレンジ系の完走型RT継続G数として区別。
 
 ### ceilingAfterReset
 
-- 設定変更専用の短縮天井/短縮RT到達G数: `NONE_CONFIRMED`。
-- 通常時ゲーム数天井自体も `NONE_CONFIRMED`。
+- 設定変更専用の短縮天井/短縮RT到達G数: `NONE_CONFIRMED_AFTER_RESEARCH`。
+- 通常時ゲーム数天井自体も `NONE_CONFIRMED_AFTER_RESEARCH`。
 
 ### modeAfterReset
 
-- 朝一専用モード、設定変更時専用モード振り分け: `NONE_CONFIRMED`。
+- 朝一専用モード、設定変更時専用モード振り分け: `NONE_CONFIRMED_AFTER_RESEARCH`。
 
 ### stateAfterReset
 
-- 設定変更/据え置き/電断時の完走型RT状態・残G処理: `UNVERIFIED`。
+- 設定変更/据え置き/純電断時の完走型RT状態・残G処理: `UNVERIFIED_AFTER_RESEARCH`。
 
 ### advantageousSectionReset
 
@@ -89,25 +90,26 @@ RT純増/G: UNVERIFIED
 
 ### resetBenefits
 
-- 設定変更/朝一専用の確定恩恵・公開数値: `NONE_CONFIRMED`。
+- 設定変更/朝一専用の確定恩恵・公開数値: `NONE_CONFIRMED_AFTER_RESEARCH`。
 
 ### resetPenalties
 
-- 設定変更時固有の公開された不利要素: `NONE_CONFIRMED`。
+- 設定変更時固有の公開された不利要素: `NONE_CONFIRMED_AFTER_RESEARCH`。
 
 ### resetDetection
 
-- 本機固有のガックン、初期出目、液晶/ランプ、RT挙動による設定変更・据え置き判別を直接裏付ける資料は今回確定できず `UNVERIFIED`。
+- 本機固有のガックン、初期出目、液晶/ランプ、RT挙動による設定変更・据え置き判別を直接裏付ける資料は、再探索後も固定できず `UNVERIFIED_AFTER_RESEARCH`。
 - 同社他機種や後継クランキー系の挙動は流用しない。
 
 ### numericResetData
 
-- 設定変更時のみ適用される公開G数、モード振り分け、朝一当選率、恩恵発生率: `NONE_CONFIRMED`。
+- 設定変更時のみ適用される公開G数、モード振り分け、朝一当選率、恩恵発生率: `NONE_CONFIRMED_AFTER_RESEARCH`。
 - 参考として通常ゲーム中のクランキーチャレンジ契機は約1/200とメーカー公式が説明する一方、既存解析では突リプ役1/655.36を確認している。これはリセット専用数値ではないためnumericResetDataには採用しない。
 
 ## sources
 
-取得日: 2026-09-01
+初回取得日: 2026-09-01
+resetBehavior再探索日: 2026-09-10
 
 1. 5号機クロニクル — ユニバーサル系5号機一覧
    - https://5goki.com/universal
@@ -141,6 +143,10 @@ RT純増/G: UNVERIFIED
    - https://p-kn.com/topics/news/11/
    - 2006-07-26当時記事。赤7/青7BIGとクランキーチャンス、通常プレイ中に突然突入するRTを確認。
    - reliability: INDUSTRY
+
+### resetBehavior再探索結果
+- 2026-09-10、公式製品ページ、当時攻略ページ、パチ7の機種史/5号機システム回顧、旧DB系を再横断したが、設定変更・据え置き・純電断それぞれの100G完走型RT残Gや初期出目/ガックンを本機固有に固定する追加資料は確認できなかった。
+- よって既存性能コアの判定は変更せず、reset QAのみ `PARTIAL_RESEARCH_EXHAUSTED` とする。
 
 ## missingFields
 
