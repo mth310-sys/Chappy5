@@ -1,22 +1,53 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 250" role="img" aria-label="ZELVOLT">
   <defs>
-    <filter id="glow" x="-30%" y="-60%" width="160%" height="220%">
-      <feGaussianBlur stdDeviation="7" result="b1"/>
-      <feGaussianBlur stdDeviation="16" result="b2"/>
-      <feMerge><feMergeNode in="b2"/><feMergeNode in="b1"/><feMergeNode in="SourceGraphic"/></feMerge>
+    <filter id="softGlow" x="-30%" y="-70%" width="160%" height="240%">
+      <feGaussianBlur stdDeviation="5" result="g1"/>
+      <feGaussianBlur stdDeviation="12" result="g2"/>
+      <feMerge>
+        <feMergeNode in="g2"/>
+        <feMergeNode in="g1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
     </filter>
+    <g id="word" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Z -->
+      <path d="M250 70 H344 L258 180 H352"/>
+      <!-- E -->
+      <path d="M420 70 H368 V180 H426 M368 124 H414"/>
+      <!-- L -->
+      <path d="M455 70 V180 H526"/>
+      <!-- V -->
+      <path d="M545 70 L595 180 L645 70"/>
+      <!-- O -->
+      <path d="M714 67 C666 67 650 91 650 125 C650 159 666 183 714 183 C762 183 778 159 778 125 C778 91 762 67 714 67 Z"/>
+      <!-- L -->
+      <path d="M806 70 V180 H872"/>
+      <!-- T -->
+      <path d="M882 70 H968 M925 70 V180"/>
+    </g>
   </defs>
+
   <rect width="1000" height="250" rx="26" fill="#030303"/>
-  <g fill="none" stroke="#ffd91a" stroke-linecap="square" stroke-linejoin="round" filter="url(#glow)">
-    <g stroke-width="10">
-      <path d="M28 98H145M28 125H145M28 152H145"/>
-      <path d="M855 98H972M855 125H972M855 152H972"/>
-    </g>
-    <g font-family="Arial Black,Arial,sans-serif" font-size="156" font-weight="900" text-anchor="middle">
-      <text x="500" y="178" stroke-width="16" stroke="#ffd91a">ZELVOLT</text>
-      <text x="500" y="178" stroke-width="10" stroke="#030303">ZELVOLT</text>
-      <text x="500" y="178" stroke-width="6" stroke="#ffd91a">ZELVOLT</text>
-      <text x="500" y="178" stroke-width="2.2" stroke="#030303">ZELVOLT</text>
-    </g>
+
+  <!-- neon glow behind the geometry -->
+  <g fill="none" stroke="#ffb400" stroke-width="30" opacity="0.28" filter="url(#softGlow)">
+    <path d="M30 98 H182 M30 125 H182 M30 152 H182"/>
+    <use href="#word"/>
+    <path d="M818 98 H970 M818 125 H970 M818 152 H970" opacity="0"/>
+  </g>
+
+  <!-- left / right triple bars -->
+  <g fill="none" stroke="#ffd91a" stroke-width="8" stroke-linecap="round" filter="url(#softGlow)">
+    <path d="M30 98 H176 M30 125 H176 M30 152 H176"/>
+    <path d="M824 98 H970 M824 125 H970 M824 152 H970"/>
+  </g>
+
+  <!-- custom geometric letters: three nested light tracks, no font -->
+  <g filter="url(#softGlow)">
+    <use href="#word" stroke="#ffd91a" stroke-width="22"/>
+    <use href="#word" stroke="#050505" stroke-width="15"/>
+    <use href="#word" stroke="#ffd91a" stroke-width="10"/>
+    <use href="#word" stroke="#050505" stroke-width="5"/>
+    <use href="#word" stroke="#ffd91a" stroke-width="2.5"/>
   </g>
 </svg>
