@@ -1,67 +1,72 @@
 更新日: 2026-09-11
 
 ## 現在地点
-- recordCount: **1257**
-- latestRecordAdded: **ぱちスロAKB48 エンジェル**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2019-01-21_pachislot-akb48-angel.md`
+- recordCount: **1258**
+- latestRecordAdded: **戦国BASARA HEROES PARTY**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2019-01-21_sengoku-basara-heroes-party.md`
 - chronologicalFrontier: **2019-01-21**
-- frontierLatestMachine: **ぱちスロAKB48 エンジェル — No.1257**
+- frontierLatestMachine: **戦国BASARA HEROES PARTY — No.1258**
 - schema: **resetBehavior v0.7**
 - status: **2019-01-21_GROUP_OPEN**
 
 ## 今回の同期 / 進捗
-- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1256を再取得して開始。
-- main正本はNo.1256 `パチスロ ミクちゃん`、2019-01-07群CLOSED。古い会話上の地点へ戻らず継続。
-- 2019-01-08〜01-20境界を2019年1月新台一覧・個別導入日検索で再監査し、本線へ追加すべき独立機を今回固定できなかったため2019-01-21群OPEN。
-- No.1257 `ぱちスロAKB48 エンジェル` を登録。
+- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1257を再取得して開始。
+- INDEXは旧スナップショットのため、LATEST_HANDOFF + main実レコードを正本として継続。
+- 開始時mainは1257件、No.1257 `ぱちスロAKB48 エンジェル`、2019-01-21群OPEN。
+- handoff指定の未処理先頭 No.1258 `戦国BASARA HEROES PARTY` を性能コア + resetBehavior v0.7で登録。
+- 2019-01-21群は未処理候補が残るためOPENを維持。
 
-## No.1257 — ぱちスロAKB48 エンジェル
-- manufacturer: **京楽産業． / KYORAKU**
+## No.1258 — 戦国BASARA HEROES PARTY
+- manufacturer: **エンターライズ / Enterrise**
 - releaseDateCanonical: **2019-01-21**
-- formalModelName: **パチスロAKB48エンジェルMA**
-- certificationNumber: **7S1325**
-- generation/system: **5.9号機 / ノーマルAタイプ / 技術介入**
-- settings: **1 / 2 / 5 / 6**
-- 市場値機械割: **97.8 / 98.6 / 103.3 / 106.8%**
-- 完全攻略機械割: **99.5 / 100.3 / 105.1 / 108.9%**
-- BIG: **1/364.1 / 1/362.1 / 1/352.3 / 1/339.6**
-- REG: **1/394.8 / 1/387.8 / 1/352.3 / 1/339.6**
-- 合算: **1/189.4 / 1/187.2 / 1/176.2 / 1/169.8**
-- baseGamesPer50: **約36.5 / 36.9 / 39.8 / 41.9G**
-- BIG最大**402枚** / REG最大**103枚**
-- 天井: **非搭載**
+- generation/system: **5.9号機 / A+ART / リアルボーナス+ART**
+- settings: **1 / 2 / 3 / 4 / 5 / 6**
+- formalModelName: **UNVERIFIED_AFTER_RESEARCH**
+- certificationNumber: **UNVERIFIED_AFTER_RESEARCH**
+- 機械割 canonical: **97.9 / 99.1 / 101.0 / 103.2 / 104.8 / 108.4%**
+- 設定5のみ **104.8% vs 104.2%** の資料競合があるため `CONFLICT_SETTING5_PAYOUT_104_8_VS_104_2` を保持。
+- BE/BC合算: **1/186.2 → 1/151.0**
+- BB: **全設定1/1598.4**
+- ボーナス合算: **1/166.8 → 1/138.0**
+- ART初当たり: **1/311.7 → 1/271.9**
+- ボーナス+ART合算: **1/108.6 → 1/91.5**
+- baseGamesPer50: **約29.9G**
+- ART純増: **約1.4枚/G（ART単体）** / **約1.7枚/G（ボーナス込み）**。定義差なのでCONFLICTではない。
+- BASARA BONUS: **154枚**、BASARA CHALLENGE / BASARA EPISODE: **42枚**。
+- Let's PARTY: **初期40G+α**、HEROES PARTY: **1セット30G / 実質継続期待度約75%**。
+- 通常ゲーム数天井: **非搭載**。
 
 ### resetBehavior v0.7
-- 朝一1回目のボーナス終了画面に設定変更/据え置きで機種固有の公開振り分け差あり。
-- サイン入り終了画面: **設定変更75% / 据え置き50%**。
-- サインなし: **設定変更25% / 据え置き50%**。
-- したがってサイン入りは設定変更の可能性を上げるが、据え置きでも50%で出るため単独確定要素ではない。
-- 通常ゲーム数天井非搭載のため gameCounterReset / ceilingAfterReset は `NOT_APPLICABLE`。
-- 朝一専用当選優遇・短縮天井は `NONE_CONFIRMED_AFTER_RESEARCH`。
-- 純電源OFF→ONのみの内部状態/初期出目、据え置き独立条件の内部成立状態、本機固有ガックン発生率/確定条件は表記揺れ・型式・メーカー・設定変更/リセット/朝一/据え置き/電源OFF ON/ガックン等で再探索後も `UNVERIFIED_AFTER_RESEARCH`。
-- 48/ミュージック/トロピカルは遊技者選択の演出モードであり、AT/ARTの内部モードとして扱わない。
-- 5.9号機ノーマルでRT/ART非搭載。公開ゲーム性上、有利区間を出玉契機として運用しないため `NOT_APPLICABLE_TO_PUBLISHED_NORMAL_GAME_STRUCTURE`。
+- settingChangeBehavior: 本機専用朝一資料で**内部状態再抽選**。ただし別資料は「リセット?」表記のため `ANALYSIS_SINGLE_MACHINE_SPECIFIC` として保持。
+- powerCycleBehavior: 本機専用朝一資料で**内部状態引継ぎ**。別資料も「引き継ぎ?」で方向性一致。ステージは調査中。
+- carryOverBehavior: 据え置きを純電源OFF→ONと分離した本機固有契約は十分な再探索後も `UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION`。
+- gameCounterReset / ceilingAfterReset: 通常天井非搭載につき `NOT_APPLICABLE_NORMAL_GAME_CEILING`。短縮天井なし。
+- modeAfterReset: 設定変更専用のモード/状態振り分け公開値は確認できず `UNVERIFIED_AFTER_RESEARCH`。
+- advantageousSectionReset: 5.9号機A+ARTとして有利区間を使用。ただし設定変更/純電断時に有利区間そのものをどう処理するかを直接示した本機固有資料は固定できず `UNVERIFIED_AFTER_RESEARCH`。一般仕様から類推しない。
+- resetBenefits / resetPenalties: 朝一専用短縮天井、専用当選率、ART/CZ優遇・不利は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- resetDetection: 本機固有ガックンは推測記事のみで確定情報なし。発生条件/発生率は `UNVERIFIED_AFTER_RESEARCH`。
+- commonAdvantageousSectionEntryStateDistribution: **通常54.7% / 高確30.1% / 超高確15.2%**。設定変更専用値ではなく、有利区間移行時共通値として分離保存。
+- commonAdvantageousSectionEntryRate: **約1/47〜1/47.6**。設定変更専用値ではない。
 
 ### quality notes
-- 導入日はグリーンべると/P-WORLD業界ニュース、HAZUSE、各解析で2019-01-21一致。
-- 型式 `パチスロAKB48エンジェルMA` / 検定番号 `7S1325` はHAZUSEで固定。
-- BIG/REG/合算、機械割はHAZUSE・P-WORLD・パチマガスロマガ・複数解析で一致。
-- 50枚ベースは概要の約36Gと設定別36.5〜41.9Gがあるが、丸め概要値と設定別詳細値の定義差として扱いCONFLICTにはしない。
+- 導入日は公式特設サイト更新履歴、業界記事、複数解析で2019-01-21を固定。
+- 設定5機械割は一撃・モゲスロ104.8%、ちょんぼりすた104.2%。平均せずCONFLICT。
+- ART純増1.4枚/Gと1.7枚/GはART単体 / ボーナス込みの定義差として分離。
+- 正式型式名・検定番号は機種名表記揺れ、型式名、検定番号、検定通過、メーカー名等で公式・業界・解析・旧DB系を再探索したが高信頼固定できずUNVERIFIED。
 
 ## 2019-01-21群
 ### 登録済み
 - No.1257 ぱちスロAKB48 エンジェル
+- No.1258 戦国BASARA HEROES PARTY
 
 ### 未処理候補
-1. **戦国BASARA HEROES PARTY**（エンターライズ）— No.1258第一候補
-2. **パチスロ フィーバークィーンII**（SANKYO）
-3. **S島漢 25Φ / 30Φ**（平和/アムテックス系。別型式・独立レコード要否を個別確認）
-4. **Sゲッターロボ**（京楽系）
+1. **パチスロ フィーバークィーンII**（SANKYO）— No.1259第一候補
+2. **S島漢 25Φ / 30Φ**（平和/アムテックス系。別型式・独立レコード要否を個別確認）
+3. **Sゲッターロボ**（京楽系）
 
 ### 群判定
 - **2019-01-21_GROUP_OPEN**。
-- 2019年1月新台一覧は1/21群としてAKB48エンジェル / BASARA HEROES PARTY / フィーバークィーンII / 島漢25・30Φ / ゲッターロボを列挙。
-- 全メーカー/別型式/別スペック/PB/地域差監査は残り候補処理後に実施し、追加なしを確認してからCLOSED判定する。
+- 残り候補を処理後、全メーカー/別型式/別スペック/PB/地域差監査で追加なしを確認してからCLOSED判定する。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
@@ -81,23 +86,26 @@
 - 競合値は平均せずCONFLICTを保持。
 
 ## 次回再開地点
-1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1257を再取得。
-2. **1257件 / chronologicalFrontier 2019-01-21 / `2019-01-21_GROUP_OPEN`** を正本として継続。並行更新があれば最新HEAD優先。
-3. **No.1258候補 `戦国BASARA HEROES PARTY`** を性能コア + resetBehavior v0.7で収集。
-4. フィーバークィーンII → 島漢25/30 → ゲッターロボを個別照合。
+1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1258を再取得。
+2. **1258件 / chronologicalFrontier 2019-01-21 / `2019-01-21_GROUP_OPEN`** を正本として継続。並行更新があれば最新HEAD優先。
+3. **No.1259候補 `パチスロ フィーバークィーンII`** を性能コア + resetBehavior v0.7で収集。
+4. 島漢25Φ/30Φ → ゲッターロボを個別照合。
 5. 1/21群を全メーカー/別型式/別スペック/PB/地域差監査後にのみCLOSED判定。
 6. 遡及QAは **`docs/real_machine_db/machines/2006-12_aqua-venus.md`** から再開。
 
 ## 主要出典 — 取得日 2026-09-11
-### No.1257 ぱちスロAKB48 エンジェル
-- P-WORLD業界ニュース / グリーンべると: https://news.p-world.co.jp/articles/10671/greenbelt
-- HAZUSE: https://hazuse.com/machine/pachislot/7S1325/
-- P-WORLD: https://www.p-world.co.jp/machine/database/8829
-- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/kyoraku_slot/10/a.php
-- パチマガスロマガ ボーナス: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/kyoraku_slot/10/h-1.php
-- パチマガスロマガ 50枚: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/kyoraku_slot/10/c-1.php
-- すろぱちくえすと設定/朝一: https://www.slopachi-quest.com/article/akb48-angel-settei/
-- スロパチネット: https://slopachi-net.com/post-3253
+### No.1258 戦国BASARA HEROES PARTY
+- エンターライズ公式: https://www.enterrise.co.jp/slot/sbh/
+- エンターライズ公式スペック: https://www.enterrise.co.jp/slot/sbh/spec.php
+- Amusement Japan: https://amusement-japan.co.jp/article/detail/10000912/
+- P-WORLD: https://www.p-world.co.jp/machine/database/8828
+- 一撃: https://1geki.jp/slot/s_basara_hp/
+- 一撃 ART概要: https://1geki.jp/slot/s_basara_hp/81/
+- パチマガスロマガ 有利区間/内部状態: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/enterrise_slot/19/l07.php
+- パチマガスロマガ HEROES PARTY: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/enterrise_slot/19/l06.php
+- ちょんぼりすた: https://chonborista.com/slot/enta-slot/70813/
+- モゲスロ: https://moge-site.com/archives/19735
+- すろぱちくえすと: https://www.slopachi-quest.com/article/sengokubasara-heroes-party-settei/
 
 ### 2019-01新台群監査
 - すろぱちくえすと 2019年1月新台一覧: https://www.slopachi-quest.com/article/erunote-shindai-2019-1/
