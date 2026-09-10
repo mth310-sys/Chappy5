@@ -1,107 +1,125 @@
 更新日: 2026-09-10
 
 ## 現在地点
-- recordCount: **1241**
-- latestRecordAdded: **パチスロらんま1/2**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2018-11-05_pachislot-ranma-half.md`
+- recordCount: **1242**
+- latestRecordAdded: **パチスロ チェインクロニクル**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2018-11-05_pachislot-chain-chronicle.md`
 - chronologicalFrontier: **2018-11-05**
-- frontierLatestMachine: **パチスロらんま1/2 — No.1241**
+- frontierLatestMachine: **パチスロ チェインクロニクル — No.1242**
 - schema: **resetBehavior v0.7**
-- status: **2018-11-05_GROUP_OPEN_3_OF_AT_LEAST_4_PROCESSED**
+- status: **2018-11-05_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md` / mission v0.7 / `INDEX.md` / `LATEST_HANDOFF.md` / No.1240を再取得して開始。
-- `INDEX.md`は旧19件スナップショットのため、README指示どおり `LATEST_HANDOFF.md` + main実レコードを現行進捗の正本として継続。
-- 開始時正本は1240件 / 2018-11-05 / `2018-11-05_GROUP_OPEN_2_OF_AT_LEAST_4_PROCESSED`。
-- handoff指定の次機種 `パチスロらんま1/2（EXCITE）` をNo.1241として登録。
-- 同日群は少なくとも `スーパープラネットSP / パチスロ戦国乙女TYPE-A+ / パチスロらんま1/2 / パチスロ チェインクロニクル` の4機。残る既知候補はチェインクロニクル。
+- 最新mainの `README.md` / mission v0.7 / `INDEX.md` / `LATEST_HANDOFF.md` / No.1241を再取得して開始。
+- `INDEX.md`は旧スナップショットのため、README指示どおり `LATEST_HANDOFF.md` + main実レコードを現行進捗の正本として継続。
+- 開始時正本は1241件 / 2018-11-05 / `2018-11-05_GROUP_OPEN_3_OF_AT_LEAST_4_PROCESSED`。
+- handoff指定の次機種 `パチスロ チェインクロニクル（Sammy）` をNo.1242として登録。
+- 当時導入一覧の11/5群は `スーパープラネットSP / パチスロ戦国乙女TYPE-A+ / パチスロらんま1/2 / パチスロ チェインクロニクル` の4機で一致。4機登録完了後に再監査し、11/5群をCLOSEDとした。
+- 次の明確な導入群は2018-11-19。すろぱちくえすと2018導入一覧では `戦コレ！［泰平女君］徳川家康 / バイオハザード イントゥザパニック / ダンまち` の3機。
 
-## No.1241 — パチスロらんま1/2
-- manufacturer: **EXCITE（ニューギン系列）**
+## No.1242 — パチスロ チェインクロニクル
+- manufacturer: **Sammy**
 - releaseDateCanonical: **2018-11-05**
-- formalModelName: **パチスロらんま1/2W**
-- certificationNumber: **8S0007**
-- generation/system: **5.9号機 / ART / 擬似ボーナス / CZ**
+- formalModelName: **SチェインクロニクルWR**
+- certificationNumber: **8S0469**
+- generation/system: **6号機 / AT / CZ / 擬似ボーナス / AP周期管理**
 - settings: **1 / 2 / 3 / 4 / 5 / 6**
-- payoutRate: **97.3 / 98.8 / 100.6 / 102.5 / 104.3 / 106.3%**
-- ART/擬似ボーナス初当たり: **1/516.5 / 1/515.5 / 1/514.8 / 1/514.5 / 1/514.1 / 1/512.9**
-- CZ合算: **1/178.1 / 1/178.4 / 1/178.9 / 1/179.4 / 1/179.7 / 1/180.6**
-- baseGamesPer50Canonical: **47.4 / 48.4 / 49.8 / 51.4 / 53.0 / 54.9G（MB消化G込み）**
-- baseSupportingValues: **50.7G代表値 / 約49G初期記事**
-- netIncrease: **約1.7枚/G**
-- basicPayout: **擬似ボーナス20G / 熊猫的衝撃20G / ART乱馬・らんまフェスティバルは規定G数不定**
-- ceiling: **非搭載**
+- payoutRate: **97.9 / 99.0 / 101.4 / 104.6 / 107.2 / 110.1%**
+- AT初当たり: **1/354.9 / 1/342.1 / 1/313.0 / 1/281.8 / 1/263.2 / 1/249.4**
+- baseGamesPer50: **39.03G（全設定共通）**
+- netIncrease: **約4.0枚/G**
+- 義勇軍BONUS: **30G**
+- conventionalGameCountCeiling: **NONE_CONFIRMED**
+- AP周期上限: **333AP**。固定G数天井とは分離管理。
 
 ### resetBehavior v0.7
-- settingChange: **UNVERIFIED_AFTER_RESEARCH**。ちょんぼりすた当時ページで設定変更時の内部状態・ステージとも「調査中」。表記/型式/メーカー/設定変更/リセット/朝一/有利区間等へ検索語を変え、P-WORLD / K-Navi / パチマガスロマガ / すろぱちくえすと / パチ7 / 当時業界記事を横断したが本機固有の確定契約を固定できず。
-- carryOver: **UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION**。通常天井はN/A。据え置き時の高確/CZ前兆/ART内部状態を純電断と分離した直接資料を固定できず。
-- powerOFF→ON: **UNVERIFIED_AFTER_RESEARCH**。ちょんぼりすたは内部状態・ステージとも調査中。別系統再探索でも固定できず。
-- gameCounterReset: **NOT_APPLICABLE_NO_NORMAL_CEILING_COUNTER**。
-- ceilingAfterReset: **NOT_APPLICABLE_NO_CEILING**。
-- modeAfterReset: **朝一専用モード NONE_CONFIRMED_AFTER_RESEARCH / 通常高確の設定変更時再抽選・引継ぎはUNVERIFIED**。
-- stateAfterReset: **通常高確/CZ前兆/ART状態の設定変更・純電断時契約 UNVERIFIED_AFTER_RESEARCH**。
-- advantageousSection: **APPLICABLE_5_9_ART_BUT_RESET_CONTRACT_UNVERIFIED_AFTER_RESEARCH**。一般規則から本機固有仕様を補完しない。
-- resetBenefits: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- resetPenalties: **NONE_CONFIRMED_AFTER_RESEARCH**。
-- resetDetection: **UNVERIFIED_AFTER_RESEARCH**。本機固有ガックン/初期出目/ランプ/ステージによる確定判別条件・率を固定できず。
-- numericResetData: **resetSpecificCeiling N/A / resetModeDistribution NONE_CONFIRMED / morningHitRate NONE_CONFIRMED / resetBenefitRate NONE_CONFIRMED / gakkunRate UNVERIFIED**。
+- settingChange: **CONFIRMED_PARTIAL**。APリセット、AP周期進捗リセット、内部状態リセット、朝一AP表示 `???`。液晶ステージはUNVERIFIED。
+- carryOver: **UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION**。据え置きを純電断と自動同義扱いしない。
+- powerOFF→ON: **CONFIRMED_PARTIAL**。APは内部引継ぎ、AP周期進捗引継ぎ、内部状態引継ぎ、表示は `???`。液晶ステージはUNVERIFIED。
+- gameCounterReset: **NOT_APPLICABLE_CONVENTIONAL_GAME_COUNT_COUNTER**。代替管理値APは設定変更でリセット、純電断で内部引継ぎ。
+- ceilingAfterReset: **設定変更後も通常最大333AP。短縮上限なし確認**。
+- mode/state: 設定変更で内部状態リセット、純電断で内部状態引継ぎ。具体的初期分布はUNVERIFIED。
+- advantageousSection: **APPLICABLE_6_0_AT_MACHINE_SPECIFIC_SECTION_LAMP_DETAIL_UNVERIFIED_AFTER_RESEARCH**。一般6号機規則から機種固有契約を補完しない。
+- resetBenefits / resetPenalties: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- resetDetection: **PARTIAL_CONFIRMED**。ガックン判別有効との解析あり。発生率はUNVERIFIED。AP `???` は設定変更/純電断双方で出るため単独判別不可。
+- quality note: 一撃初期資料の内部状態「調査中」と後期更新資料のリセット/引継ぎ確定は `SOURCE_UPDATE_MATURITY_DIFFERENCE_RESET_STATE` として履歴保持。
 
-## No.1241 conflicts / quality notes
-- 導入日: K-Navi / P-WORLD / DMMぱちタウン / すろぱちくえすと / パチ7は **2018-11-05**、ちょんぼりすたは **2018-11-12**。平均せず `CONFLICT_RELEASE_DATE_2018_11_05_VS_2018_11_12`。複数一致の11/5をcanonical。
-- 50枚ベース: 設定別 **47.4〜54.9G/50枚（MB消化G込み）**、代表 **50.7G/50枚**、初期記事 **約49G/50枚** が併存。平均せず `SOURCE_DEFINITION_UPDATE_DIFFERENCE_BASE_GAMES_PER_50` として定義分離。
-- 2013年SANKYO版の同名機は別機種。今回のEXCITE・型式Wと混同しない。
+## 遡及 resetBehavior QA
+- retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
+- main実レコード再確認で、`2006-10_kakutou-gekisenku.md` → `2006-10_burglar.md` → `2006-10_nangoku-musume-30.md` → `2006-11_cs-surogenjin.md` → `2006-11_jackpot-tropical-version.md` は既にresetBehavior QA収録済みだったため、重複編集せずスキップ。
+- firstMissingResetRecordFound: **`docs/real_machine_db/machines/2006-11_garou-densetsu.md`（餓狼伝説）**。
+- retroQaScanConfirmedThrough: **`docs/real_machine_db/machines/2006-11_garou-densetsu.md`**。
+- nextRetroQaCandidate: **`docs/real_machine_db/machines/2006-11_jack-to-mamenoki.md`（ジャックと豆の木）**。Git追加履歴で餓狼伝説の次の実機追加であることを確認。
+
+### 餓狼伝説 resetBehavior v0.7 QA
+- 既存 `coreStatus: PARTIAL` を維持。性能側ステータスは変更せず、reset QA状態を別管理。
+- settingChange: **UNVERIFIED_AFTER_RESEARCH**。
+- carryOver: **UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION**。
+- powerOFF→ON: **UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION**。
+- 当時グリーンべると/P-WORLD資料から、初代に**ボーナス間一定G数で餓狼チャンスが発動する天井機能**があること自体は確認。
+- 初代固有の正確な天井G数、設定変更/据え置き/純電断時の天井進捗・GC状態処理は再探索後も固定できず。
+- advantageousSection: **NOT_APPLICABLE**。
+- resetBenefits / resetPenalties: **NONE_CONFIRMED_AFTER_RESEARCH**。
+- resetDetection: **UNVERIFIED_AFTER_RESEARCH**。
+- resetBehaviorQA: **PARTIAL_RESEARCH_EXHAUSTED_CEILING_EXISTENCE_CONFIRMED_RESET_CARRYOVER_POWER_CYCLE_AND_NUMERIC_THRESHOLD_UNVERIFIED**。
+- 後継 `餓狼伝説スペシャル / 餓狼伝説☆双撃 / 餓狼伝説PREMIUM` の天井・reset数値は初代へ転記していない。
 
 ## 2018-11-05群監査
 ### 登録済み
 - No.1239 スーパープラネットSP
 - No.1240 パチスロ戦国乙女TYPE-A+
 - No.1241 パチスロらんま1/2
+- No.1242 パチスロ チェインクロニクル
 
-### 未処理候補
-1. **パチスロ チェインクロニクル（サミー）**
+### 判定
+- **2018-11-05_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**。
+- 当時/後年導入一覧で11/5の4機構成を再照合。
+- 11/12単独群は高信頼で固定できず。らんま1/2の11/12表記は既存CONFLICTとしてNo.1241内に保持。
+- 次の明確な群は **2018-11-19**。
 
-### 横断監査状況
-- すろぱちくえすと2018導入一覧、パチスロ立ち回り講座の過去導入予定一覧で11/5の4機群を確認済み。
-- No.1241はK-Navi / P-WORLD / DMMぱちタウン / すろぱちくえすと / パチ7が11/5で一致。ちょんぼりすたのみ11/12のためCONFLICT保持。
-- 11/5群はまだOPEN。チェインクロニクル登録後、全メーカー/別型式/別スペック/PB/地域差を再監査してCLOSED可否を判定する。
+## 次の時系列候補 — 2018-11-19群
+1. **戦コレ！［泰平女君］徳川家康（コナミアミューズメント） — No.1243候補**
+2. **バイオハザード イントゥザパニック**
+3. **ダンまち**
 
-## 遡及 resetBehavior QA
-- retroQaScanConfirmedThrough: **2006-10_kaitou-tenshi-twin-angel.md**。
-- retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
-- nextRetroQaCandidate: **`docs/real_machine_db/machines/2006-10_kakutou-gekisenku.md`（格闘激戦区）**。
-- 今回は新規時系列No.1241を優先し、遡及QAカーソルは進めていない。
+- コナミ公式は戦コレ徳川家康を2018年11月稼働の6号機ATとして掲載。
+- K-Navi / ちょんぼりすた / すろぱちくえすとは2018-11-19導入で一致。
+- 次回はまず11/6〜11/18境界を再監査してから、戦コレ徳川家康をNo.1243候補として着手する。
 
 ## 継続注意事項
-- `INDEX.md`は旧19件スナップショット。`LATEST_HANDOFF.md` + main実レコードを優先。
+- `INDEX.md`は旧スナップショット。`LATEST_HANDOFF.md` + main実レコードを優先。
 - 毎回、最新mainのREADME / mission / INDEX / LATEST_HANDOFF / latest recordを読み直す。
 - 並行更新があれば最新HEADを優先し、古い番号で上書きしない。
+- COMPLETE_CORE等の性能完了判定をreset欠損だけで崩さない。reset QA状態は別管理。
 - 据え置きと純電断を同義扱いしない。
 - 同一/近似ゲーム性の先行・後継機からresetBehaviorを自動転記しない。
 - 同日群は全メーカー/別スペック/PB/地域差監査後にのみCLOSED判定する。
 - 競合値は平均せずCONFLICTを保持。
 
 ## 次回再開地点
-1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1241を再取得。
-2. **1241件 / chronologicalFrontier 2018-11-05 / `2018-11-05_GROUP_OPEN_3_OF_AT_LEAST_4_PROCESSED`** を正本として継続。ただし並行更新があれば最新HEAD優先。
-3. 次の未処理機種 **パチスロ チェインクロニクル（サミー）** をNo.1242候補として調査・登録。
-4. 登録後、11/5全メーカー/別型式/別スペック/PB/地域差を再監査し、群CLOSED可否を判定。
-5. 遡及QAは `2006-10_kakutou-gekisenku.md`（格闘激戦区）から再開。
+1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1242を再取得。
+2. **1242件 / chronologicalFrontier 2018-11-05 / `2018-11-05_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT`** を正本として継続。ただし並行更新があれば最新HEAD優先。
+3. 2018-11-06〜2018-11-18境界を再監査。
+4. 次の未処理機種 **戦コレ！［泰平女君］徳川家康** をNo.1243候補として調査・登録し、11/19群をOPEN。
+5. 遡及QAは **`docs/real_machine_db/machines/2006-11_jack-to-mamenoki.md`（ジャックと豆の木）** から再開。
 
 ## 主要出典 — 取得日 2026-09-10
-### No.1241 パチスロらんま1/2
-- 日刊スポーツ: https://www.nikkansports.com/m/amusement/pachislot/news/amp/201809260000694.html
-- Amusement Japan: https://amusement-japan.co.jp/article/detail/10000829/
-- PiDEA X: https://www.pidea.jp/articles/P%E3%80%8C%E3%82%B4%E3%82%B8%E3%83%A9%E3%80%8DS%E3%80%8C%E3%82%89%E3%82%93%E3%81%BE1%2F2%E3%80%8D%E3%82%92%E3%81%8A%E6%8A%AB%E9%9C%B2%E7%9B%AE%EF%BC%8F%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%AE%E3%83%B3
-- P-WORLD: https://www.p-world.co.jp/machine/database/8770
-- K-Navi: https://p-kn.com/slot/3101/
-- すろぱちくえすと機種トップ: https://www.slopachi-quest.com/article/ranma/
-- すろぱちくえすと設定判別: https://www.slopachi-quest.com/article/ranma-settei/
-- ちょんぼりすた: https://chonborista.com/slot/newgin-slot/66328/
-- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/excite_slot/09/a.php
-- パチ7: https://pachiseven.jp/machines/5570/cutout/13
-- DMMぱちタウン: https://p-town.dmm.com/machines/3262/recommend
+### No.1242 パチスロ チェインクロニクル
+- パチビー: https://www.pachibee.jp/machines/index/218100000
+- HAZUSE: https://hazuse.com/machine/pachislot/8S0469/
+- 一撃 設定変更/天井: https://1geki.jp/slot/s_cc/3/
+- 一撃 小役確率: https://1geki.jp/slot/s_cc/4/
+- ちょんぼりすた: https://chonborista.com/slot/sammy-slot/65025/
+- すろぱちくえすと: https://www.slopachi-quest.com/article/chainchronicle/
+- すろぱちくえすと設定判別: https://www.slopachi-quest.com/article/chain-chronicle-settei/
 
-### 時系列境界 / 11/5群
+### 餓狼伝説 reset QA
+- P-WORLD / グリーンべると: https://news.p-world.co.jp/articles/1899/greenbelt
+- 5号機クロニクル SNKプレイモア: https://5goki.com/snkplaymore
+- pacnk: https://pacnk.com/slot/tools/sh_garoudensetsu.html
+- pachinko's blog: https://pachinko.hatenablog.jp/entry/2006/12/garouDensetsu
+
+### 時系列境界
 - すろぱちくえすと2018導入一覧: https://www.slopachi-quest.com/article/sindai-2018/
-- パチスロ立ち回り講座 新台導入予定日: https://crankyseven.com/newmachine-info.htm
-- ALL7.jp 2018年11月導入一覧: https://www.all7.jp/plans/index/2018/11
+- コナミ公式 戦コレ徳川家康: https://www.konami.com/amusement/psm/archive/ps/2018/sencolletokugawa/
+- K-Navi 戦コレ徳川家康: https://p-kn.com/slot/3108/
