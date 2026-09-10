@@ -1,76 +1,69 @@
 更新日: 2026-09-11
 
 ## 現在地点
-- recordCount: **1253**
-- latestRecordAdded: **パチスロ聖闘士星矢 海皇覚醒Special**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2019-01-07_saint-seiya-kaiou-kakusei-special.md`
+- recordCount: **1254**
+- latestRecordAdded: **パチスロ蒼天の拳 朋友**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2019-01-07_souten-no-ken-ponyou.md`
 - chronologicalFrontier: **2019-01-07**
-- frontierLatestMachine: **パチスロ聖闘士星矢 海皇覚醒Special — No.1253**
+- frontierLatestMachine: **パチスロ蒼天の拳 朋友 — No.1254**
 - schema: **resetBehavior v0.7**
-- status: **2019-01-07_GROUP_OPEN_1_MACHINE_PROCESSED**
+- status: **2019-01-07_GROUP_OPEN_2_MACHINES_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1252を再取得して開始。
-- mainはNo.1252 / 2018-12-17群CLOSEDまで進行済みだったため、その正本地点から継続。
-- 2018-12-18〜2019-01-06境界と2019-01-07群候補を再監査。
-- `パチスロ聖闘士星矢 海皇覚醒Special` をNo.1253として登録。
-- 2019-01-07群には少なくとも `パチスロ蒼天の拳 朋友`、`戦国パチスロ花の慶次～天を穿つ戦槍～剛弓ver.` が同日導入であることを再確認。`Sミクちゃん` は次回個別再照合を継続するため群はOPEN。
+- 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1253を再取得して開始。
+- No.1254として `パチスロ蒼天の拳 朋友` を登録。
+- 遡及QAは `モエる まりんバトる` を再探索し、性能コアを崩さずreset QAだけ `PARTIAL_RESEARCH_EXHAUSTED` として更新。
+- Git追加履歴でモエる まりんバトる追加commit `7069dd0b...` の直後が `アクアビーナス` 追加commit `4699c7ef...` であることを確認し、次回QAカーソルを進めた。
 
-## No.1253 — パチスロ聖闘士星矢 海皇覚醒Special
-- manufacturer: **三洋物産**
+## No.1254 — パチスロ蒼天の拳 朋友
+- manufacturer: **サミー**
 - releaseDateCanonical: **2019-01-07**
-- formalModelNameCanonical: **S聖闘士星矢海皇覚醒SP-KF**
-- certificationNumber: **UNVERIFIED_AFTER_RESEARCH**
-- generation/system: **6号機 / AT**
+- generation/system: **6号機 / ボーナス連チャン・バトルボーナス主体**
 - settings: **1 / 2 / 3 / 4 / 5 / 6**
-- payoutRate: **97.7 / (98.7 vs 98.9 CONFLICT) / 100.6 / 103.7 / 105.0 / 107.1%**
-- GB/AT endpoints: 設定1 **1/523.6 / 1/1748.0**、設定6 **1/217.8 / 1/288.2**
-- baseGamesPer50: **約51〜53.4G**
-- AT純増: **約2.8枚/G**
-- ceiling: **最大736GでGB**。通常736 / 天国準備536 / 海底736 / SP536 / 天国136G。
+- payoutRate: **97.5 / 98.7 / 100.1 / 103.5 / 106.8 / 110.1%**
+- 死合の刻初当たり: **1/340.2 → 1/269.9**
+- 天授の儀初当たり: **1/15184.8 → 1/12000.6**
+- ボーナス合算（引戻し込）: **1/213.1 → 1/172.1**
+- baseGamesPer50: **32.9G**
+- バトルボーナス: **純増約6枚/G・平均約120枚・継続期待度66〜89%**
+- ceiling: **1200G到達後、死合の刻約1/50・天授の儀約1/12800**。有利区間とは別管理。
 
 ### resetBehavior v0.7
-- settingChange: **天井RESET / 内部状態RESET / 非有利区間スタート → 1G目有利区間セット**。火時計ステージ移行。小宇宙pt / 不屈pt / GBレベル等は有利区間移行時に再抽選。
-- carryOver: 据え置きを純電断と分離した全内部契約は **UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION**。
-- powerOFF→ON: 本機固有朝一資料で **天井引継ぎ / 内部状態据え置き**。別解析で有利区間、小宇宙pt、不屈pt、GBレベル引継ぎ整理あり。ステージは調査中。
-- gameCounter: 設定変更RESET / pure power cycle CARRY_OVER。
-- advantageousSectionReset: 設定変更で非有利区間へ。pure power cycleは引継ぎ報告。
-- resetBenefits: 有利区間移行時GB高確 **100%**、10G保証。小宇宙pt / 不屈ptの公開振り分けあり。
-- resetDetection: 非有利区間→1G目有利区間セット、火時計ステージ、初回アイキャッチ/火時計役物が補助材料。本機固有ガックン率・確定性は **UNVERIFIED_AFTER_RESEARCH**。
-
-### 公開朝一/有利区間移行時数値
-- 小宇宙pt: **0pt 62.6 / 600pt 27.9 / 700pt 8.6 / 800pt 0.8%**。
-- 不屈pt: **0pt 58.4 / 5pt 6.4 / 10pt 12.3 / 20pt 6.4 / 30pt 10.8 / 40pt 5.0 / 45pt 0.7 / 50pt 0.002%**。
-- GB高確: **100%移行、10G保証**。
-- GBレベルは滞在モード別の有利区間移行時振り分けをrecordへ保存済み。
-- 上記は設定変更だけでなくGB敗北/AT終了後等の有利区間移行時にも適用される公開値であり、設定変更専用抽選値とは扱わない。
+- settingChange: **1200G天井を引き継ぐ**。内部状態/液晶ステージ/七星カウンターG数は十分な再探索後も未固定。
+- carryOver: 据え置き独立条件は **UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION**。
+- powerOFF→ON: **1200G天井を引き継ぐ**。その他内部契約は未固定。
+- gameCounter: settingChange=`CARRY_OVER`; pure power cycle=`CARRY_OVER`。ただし機種固有ペナルティ成立時は天井RESET。
+- ceilingAfterReset: **短縮なしを確認、前日天井進捗を引継ぎ**。
+- advantageousSection: 有利区間は存在するが1200G天井とは別管理。変更/純電断時の有利区間そのものの直接契約は未固定。
+- resetBenefits: 設定変更でも天井進捗が残るため宵越し狙いが成立し得る。
+- resetDetection: 天井進捗だけでは設定変更判別不能。ガックン率/初期出目/ランプ単独確定契約は未固定。
+- numeric: `1200G`, 到達後 `死合1/50 / 天授1/12800`, 七星システム発動天井 `サブ液晶200G`。
 
 ### quality notes
-- 設定2機械割は主要解析で **98.7% / 98.9%** が競合するためCONFLICT保持。
-- 50枚ベースは初期約51Gと後発解析51.6〜53.4Gを範囲保持。
-- 型式名は中古実機DBで確認したが、検定番号は十分な再探索後も高信頼固定できずUNVERIFIED。
+- 1gekiの2019-04-04ページには設定変更/電源OFF→ONの天井等を「調査中」とした旧表が残るが、ちょんぼりすた後発整理は双方で天井引継ぎを明記。更新時点差として保持し、天井契約には後発の機種固有解析を採用。
+- 正式型式名/検定番号は十分な再探索後も高信頼固定できず `UNVERIFIED_AFTER_RESEARCH`。
 
 ## 2019-01-07群
 ### 登録済み
 - No.1253 パチスロ聖闘士星矢 海皇覚醒Special
+- No.1254 パチスロ蒼天の拳 朋友
 
 ### 確認済み未処理候補
-- **パチスロ蒼天の拳 朋友** — K-Navi/ちょんぼりすた等で2019-01-07一致。
-- **戦国パチスロ花の慶次～天を穿つ戦槍～剛弓ver.** — ちょんぼりすた/解析DB等で2019-01-07一致。
-- **Sミクちゃん** — 前handoff候補。次回、型式/導入日を個別再照合して収録可否確定。
+- **戦国パチスロ花の慶次～天を穿つ戦槍～剛弓ver.** — 2019-01-07候補として継続。
+- **Sミクちゃん** — 型式/導入日を個別再照合して収録可否確定。
 
 ### 判定
-- **2019-01-07_GROUP_OPEN_1_MACHINE_PROCESSED**。
+- **2019-01-07_GROUP_OPEN_2_MACHINES_PROCESSED**。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
-- retroQaScanConfirmedThrough: **`docs/real_machine_db/machines/2006-12_comic-world-oki.md`**。
-- nextRetroQaCandidate: **`docs/real_machine_db/machines/2006-12_moeru-marine-battle.md`（モエる まりんバトる）**。
-- 今回は時系列frontier機種を優先し、遡及QA地点は変更していない。
+- retroQaScanConfirmedThrough: **`docs/real_machine_db/machines/2006-12_moeru-marine-battle.md`**。
+- lastRetroQaResult: **モエる まりんバトる — PARTIAL_RESEARCH_EXHAUSTED**。
+- nextRetroQaCandidate: **`docs/real_machine_db/machines/2006-12_aqua-venus.md`（アクアビーナス）**。
 
 ## 継続注意事項
 - `INDEX.md`は旧スナップショット。`LATEST_HANDOFF.md` + main実レコードを優先。
-- 毎回、最新mainのREADME / mission / INDEX / LATEST_HANDOFF / latest recordを読み直す。
+- 毎回最新mainのREADME / mission / INDEX / LATEST_HANDOFF / latest recordを読み直す。
 - 並行更新があれば最新HEADを優先し、古い番号で上書きしない。
 - COMPLETE_CORE等の性能完了判定をreset欠損だけで崩さない。reset QA状態は別管理。
 - 据え置きと純電断を同義扱いしない。
@@ -79,26 +72,23 @@
 - 競合値は平均せずCONFLICTを保持。
 
 ## 次回再開地点
-1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1253を再取得。
-2. **1253件 / chronologicalFrontier 2019-01-07 / `2019-01-07_GROUP_OPEN_1_MACHINE_PROCESSED`** を正本として継続。並行更新があれば最新HEAD優先。
-3. **No.1254候補 `パチスロ蒼天の拳 朋友`** を先頭に性能コア + resetBehavior v0.7を収集。
-4. 続いて `戦国パチスロ花の慶次～天を穿つ戦槍～剛弓ver.`、`Sミクちゃん` の順序/収録可否を個別導入日照合で確定。
+1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1254を再取得。
+2. **1254件 / chronologicalFrontier 2019-01-07 / `2019-01-07_GROUP_OPEN_2_MACHINES_PROCESSED`** を正本として継続。並行更新があれば最新HEAD優先。
+3. **No.1255候補 `戦国パチスロ花の慶次～天を穿つ戦槍～剛弓ver.`** を先頭に性能コア + resetBehavior v0.7を収集。
+4. `Sミクちゃん` の導入日/型式/収録可否を個別再照合。
 5. 2019-01-07群を全メーカー/別型式/別スペック/PB/地域差で横断監査後にCLOSED可否判定。
-6. `戦国BASARA HEROES PARTY` は **2019-01-21候補**として保持。
-7. 遡及QAは **`docs/real_machine_db/machines/2006-12_moeru-marine-battle.md`** から再開。
+6. 遡及QAは **`docs/real_machine_db/machines/2006-12_aqua-venus.md`** から再開。
 
 ## 主要出典 — 取得日 2026-09-11
-### No.1253 パチスロ聖闘士星矢 海皇覚醒Special
-- ちょんぼりすた: https://chonborista.com/slot/sanyo-slot/69654/
-- パチマガスロマガ 小役/50枚: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sanyo_slot/35/c.php
-- パチマガスロマガ AT: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sanyo_slot/35/13.php
-- 1geki: https://1geki.jp/slot/s_seiya_ks/
-- K-Navi: https://p-kn.com/slot/3139/
-- P-WORLD: https://www.p-world.co.jp/machine/database/8817
-- おスロおパチおいでやす: https://oslo-opachi.com/2019/01/03/post-3809/
-- パチマ（型式確認）: https://www.pachima.com/c/slot/s_28sonota/S00217
+### No.1254 パチスロ蒼天の拳 朋友
+- ちょんぼりすた: https://chonborista.com/slot/sammy-slot/69735/
+- 1geki 天井/設定変更: https://1geki.jp/slot/s_souten3/3/
+- K-Navi: https://p-kn.com/slot/3147/
+- Amusement Japan: https://www.amusement-japan.co.jp/article/detail/10000917/
 
-### 2019-01-07群監査
-- K-Navi 蒼天の拳 朋友: https://p-kn.com/slot/3147/
-- ちょんぼりすた 蒼天の拳 朋友: https://chonborista.com/slot/sammy-slot/69735/
-- ちょんぼりすた 花の慶次 剛弓ver.: https://chonborista.com/slot/newgin-slot/71777/
+### reset QA モエる まりんバトる
+- Universal公式: https://www.universal-777.com/product/slot/moeru_marinebattle/
+- K-Navi: https://p-kn.com/slot/718/
+- 5号機クロニクル: https://5goki.com/universal
+- パチセブン: https://pachiseven.jp/articles/detail/14166
+- 回顧資料: https://ameblo.jp/urikko/entry-10146378232.html
