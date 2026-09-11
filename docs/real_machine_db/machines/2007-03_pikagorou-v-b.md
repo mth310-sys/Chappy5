@@ -75,28 +75,30 @@ confidence: HIGH
 
 ## resetBehavior
 
-resetBehaviorQA: PARTIAL
+resetBehaviorVersion: v0.7
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
+resetQaLastUpdated: 2026-09-11
 
-settingChangeBehavior: UNVERIFIED（本機固有の設定変更時内部処理を確定できる公開資料未発見）
-carryOverBehavior: UNVERIFIED（据え置き時の本機固有差分を確定できる公開資料未発見）
-powerCycleBehavior: UNVERIFIED（電源OFF→ONのみでの本機固有挙動を確定できる公開資料未発見）
+settingChangeBehavior: UNVERIFIED_AFTER_RESEARCH（本機固有の設定変更時内部処理を確定できる公開資料未発見）
+carryOverBehavior: UNVERIFIED_AFTER_RESEARCH（据え置き時の本機固有差分を確定できる公開資料未発見）
+powerCycleBehavior: UNVERIFIED_AFTER_RESEARCH（電源OFF→ONのみでの本機固有挙動を確定できる公開資料未発見）
 gameCounterReset: NOT_APPLICABLE_TO_CEILING（天井非搭載。通常の表示ゲーム数処理そのものはホール設備依存のためDB対象外）
 ceilingAfterReset: NOT_APPLICABLE（天井機能なし）
 modeAfterReset: NOT_APPLICABLE（通常時の天井モード・朝一専用モード等を確認できず、ノーマルAタイプとして該当機構なし）
-stateAfterReset: UNVERIFIED（ボーナス成立状態等を除く、朝一客行動に影響する本機固有内部状態の公開資料未発見）
+stateAfterReset: UNVERIFIED_AFTER_RESEARCH（朝一客行動に影響する本機固有内部状態の公開契約を固定できず。ボーナス成立状態等の完全再現用内部処理は推測しない）
 advantageousSectionReset: NOT_APPLICABLE（5号機・有利区間制度導入前）
-resetBenefits: NONE_CONFIRMED（朝一/設定変更固有の恩恵を示す資料未確認）
-resetPenalties: NONE_CONFIRMED（朝一/設定変更固有の不利を示す資料未確認）
-resetDetection: UNVERIFIED（ガックン等、本機固有の変更判別を確定できる資料未発見）
-numericResetData: NONE_CONFIRMED
+resetBenefits: NONE_CONFIRMED_AFTER_RESEARCH（朝一/設定変更固有の恩恵を示す資料未確認）
+resetPenalties: NONE_CONFIRMED_AFTER_RESEARCH（朝一/設定変更固有の不利を示す資料未確認）
+resetDetection: UNVERIFIED_AFTER_RESEARCH（ガックン、初期出目、ランプ状態など本機固有の変更判別を確定できる資料未発見）
+numericResetData: PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH
 
 ### resetBehavior research memo
 
-取得日2026-08-31。機種名「ピカゴロウV」「ピカゴロウV-B」「ピカゴロウV B」、メーカー名「山佐」を組み合わせ、設定変更/リセット/朝一/据え置き/電源OFF ON/ガックン/天井/設定変更判別へ検索語を展開。メーカー公式、2007年当時のグリーンべると/P-WORLD業界記事、P-WORLD機種DB、旧攻略系、後年の機種整理資料を横断した。天井なし・RT等付加機能なしは複数資料で確認できたが、設定変更や単純電断時にのみ発生する本機固有の内部処理・変更判別は確定資料に到達できなかったため推測しない。
+取得日2026-09-11。既存の2026-08-31探索に加え、`ピカゴロウV / ピカゴロウV-B / 山佐 / 5号機 / 完全告知` と `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 電断 / ガックン / リールガックン / 天井 / 状態引継ぎ / 設定変更判別 / 初期出目` を再度組み替え、山佐公式、2007年当時グリーンべると/P-WORLD業界記事、K-Navi、P-WORLD機種DB、旧攻略系、後年整理資料まで再探索した。公式・業界資料から5号機Aタイプ、天井なし、完全告知、4段階設定、ボーナス性能は再確認できた。一方、設定変更・据え置き・純電断で差が出る本機固有内部状態、ガックン等の変更判別、公開朝一数値は直接資料を固定できなかった。一般的な5号機ノーマル機の挙動からは補完せず、性能コアの `COMPLETE_CORE` は維持してreset側のみ `PARTIAL_RESEARCH_EXHAUSTED` とした。
 
 ## sources
 
-取得日: 2026-08-31
+取得日: 2026-09-11
 
 1. 山佐ネクスト公式「機種情報：ピカゴロウV」
    - https://yamasa-next.co.jp/model_pkv/
@@ -118,6 +120,10 @@ numericResetData: NONE_CONFIRMED
    - https://www.eightbeat.com/slot99/kishu/ha_gyou/hi/pikagorouV/page_menu.html
    - 5号機、天井なし、RT等付加機能なし、設定別BIG/REG/合算、BIG約335枚、REG約105枚
    - confidence: ANALYSIS_SINGLE
+6. K-Navi「ピカゴロウV」
+   - https://p-kn.com/slot/698/
+   - 5号機完全告知機としての概要を再確認。reset固有契約の掲載は確認できず。
+   - confidence: ANALYSIS_SINGLE
 
 ## missingFields
 
@@ -125,6 +131,7 @@ numericResetData: NONE_CONFIRMED
 - 設定変更時固有挙動
 - 据え置き/電源OFF→ON時固有挙動
 - 本機固有の変更判別（ガックン等）
+- 公開朝一数値
 
 ## conflicts
 
@@ -132,4 +139,4 @@ numericResetData: NONE_CONFIRMED
 - SMALL純増は当時業界記事約104枚、旧攻略資料約105枚。丸め差として双方を保持しCONFLICT扱いにはしない。
 
 coreStatus: COMPLETE_CORE
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
