@@ -1,90 +1,107 @@
 更新日: 2026-09-11
 
 ## 現在地点
-- recordCount: **1368**
-- latestRecordAdded: **パチスロ 対魔導学園35試験小隊 — No.1368**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2020-09-23_taimadou-gakuen-35-shiken-shoutai.md`
-- chronologicalFrontier: **2020-09-23**
-- frontierLatestMachine: **パチスロ 対魔導学園35試験小隊 — No.1368**
+- recordCount: **1370**
+- latestRecordAdded: **吉宗3 — No.1370**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2020-10-05_yoshimune3.md`
+- chronologicalFrontier: **2020-10-05**
+- frontierLatestMachine: **吉宗3 — No.1370**
 - schema: **resetBehavior v0.7**
-- status: **2020-09-23_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**
+- status: **2020-10-05_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、mission v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前No.1367「PACHISLOT リングにかけろ1 ワールドチャンピオンカーニバル編」を再取得して開始。
+- 最新mainの `README.md`、mission v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前No.1368「パチスロ 対魔導学園35試験小隊」を再取得して開始。
 - `INDEX.md` は旧19件表示のため、README規定どおり最新handoffとmain実レコードを正本として継続。
-- 正本上の次の未処理候補 **パチスロ 対魔導学園35試験小隊** をNo.1368として追加。
-- 2020-09-23群はリングにかけろ1 WCC / 対魔導学園35試験小隊の2機を処理。新台カレンダー、当時導入資料、機種DBを再監査し、同日へ追加すべき別パチスロを固定できなかったためCLOSED。
-- 次の明確な導入群は **2020-10-05**。少なくとも **S笑ゥせぇるすまん 絶笑SJ / S吉宗3 EA5** を確認。
-- 「回胴黙示録カイジ～沼～」は2020-10-19実導入候補として、その時系列地点まで保留。
+- 正本上の2020-10-05群を処理し、**No.1369 S笑ゥせぇるすまん 絶笑**、**No.1370 吉宗3** を追加。
+- 2020年新台導入カレンダーでは10/5のパチスロは `S笑ゥせぇるすまん 絶笑 SJ` / `S吉宗3 EA5` の2機。業界記事・当時解析・機種DBでも両機の10/5導入を照合し、同日へ追加すべき別パチスロを固定できなかったため **2020-10-05群CLOSED**。
+- 次の明確なパチスロ導入群は **2020-10-19**。カレンダー上は `Sカイジ沼 KR`（回胴黙示録カイジ～沼～）を確認。
 
-## No.1368 — パチスロ 対魔導学園35試験小隊
-- path: `docs/real_machine_db/machines/2020-09-23_taimadou-gakuen-35-shiken-shoutai.md`
-- manufacturer: **平和 / オリンピア**
-- formalModel: **S対魔導学園35試験小隊H1**
-- certificationNumber: **9S1900**
-- releaseDate: **2020-09-23**
-- generation/system: **6号機 / ゲーム数上乗せ型AT / CZ経由+直撃 / 有利区間管理**
-- 出玉率: **97.3 / 99.0 / 101.1 / 105.1 / 107.9 / 110.2%**
-- AT初当たり: **1/588.2 / 1/494.4 / 1/450.9 / 1/360.8 / 1/324.5 / 1/292.7**
-- base: **HAZUSE設定1 約42.5G/50枚**。別資料の約39.9G/50枚とは `BASE_CONFLICT_42.5G_VS_39.9G` として分離。
-- netIncrease: **約2.2枚/G**
-- ATは「Embrace RUSH」で初期G数決定。必勝本では平均上乗せ100G以上。
-- 天井: 有利区間移行後通常時最大 **555G（523G+前兆32G）**。いつどこゾーン介入時は最大35G先送り可能。
+## No.1369 — S笑ゥせぇるすまん 絶笑
+- path: `docs/real_machine_db/machines/2020-10-05_warau-salesman-zesshou.md`
+- manufacturer: **サンスリー / SANYO GROUP**
+- formalModel: **S笑ゥせぇるすまん絶笑SJ**
+- releaseDate: **2020-10-05**
+- generation/system: **6号機 / 差枚数管理型AT / CZ+ゲーム数解除 / 有利区間管理**
+- 出玉率: **97.7 / 98.9 / 101.5 / 104.8 / 108.0 / 110.8%**
+- AT初当たり: **1/346.0 / 1/330.7 / 1/301.6 / 1/262.5 / 1/231.3 / 1/221.0**
+- base: **約50.5G/50枚**
+- netIncrease: **約2.8枚/G**
+- 通常/真/極ATの期待獲得枚数: **約290 / 610 / 1040枚**（必勝本公開値）
+- 天井: 通常A 699G / 通常B 499G / 引き戻し 449G / 天国 99G。
 - coreStatus: **COMPLETE_CORE**
 - resetBehaviorQA: **COMPLETE_RESET_CORE_WITH_PUBLIC_MORNING_NUMERIC_DATA**
 
-### resetBehavior v0.7 — No.1368
-- 設定変更: **有利区間RESET→非有利区間、天井G RESET、内部モードRESET/再抽選、内部状態RESET/再抽選**。
-- 据え置き/純電源OFF→ON: **有利区間・天井進行・内部モード・内部状態をCARRY_OVER**。
-- 朝一有利区間ランプ: 点灯=据え置き濃厚、消灯=設定変更濃厚。ただし前日状況・店側対策例外あり。
-- 非有利区間中はテンションカウンターに黄色いテープ表示が出るため、未対策なら朝一画面でもリセット推測可能。
-- 設定変更専用固定短縮天井・AT直撃保証は確認できず `NONE_CONFIRMED_AFTER_RESEARCH`。
-- 公開朝一比較値として有利区間開始時モード振り分けを保存。レア小役以外: **通常78.9 / 優遇19.9 / 引き戻し0.8 / フリーズ0.4%**。レア小役: **優遇83.2 / 引き戻し15.6 / フリーズ1.2%**。
-- モード別天井: 通常/引き戻し **333G 0.4 / 560G 99.6%**、優遇 **111G 0.4 / 333G 1.2 / 560G 98.4%**。
-- 有利区間開始時内部状態: 通常/引き戻し **通常87.5 / 高確11.7 / 超高確0.8%**、優遇 **高確88.3 / 超高確11.7%**。
+### resetBehavior v0.7 — No.1369
+- 設定変更: **天井G RESET / 有利区間RESET / 通常時モード再抽選 / 笑ゥポイント初期再抽選**。
+- 据え置き/純電源OFF→ON: **天井G・有利区間CARRY_OVER**。液晶G数は0へ戻る。
+- 設定変更専用固定短縮天井は確認なし。ただし有利区間移行時の天国移行率は **20.3%（全設定共通）**で、天国なら最大99G。
+- 293G到達時はCZ抽選状態が必ず高確へ移行し、前日G数との組み合わせでリセット/据え置き推測に利用可能。
+- 通常時は有利区間ランプ基本消灯のため、朝一消灯だけでは設定変更判別不可。点灯なら据え置き濃厚材料。
+- 本機固有ガックン、設定変更時CZ状態詳細振り分けは再探索後も `UNVERIFIED_AFTER_RESEARCH`。
+
+## No.1370 — 吉宗3
+- path: `docs/real_machine_db/machines/2020-10-05_yoshimune3.md`
+- manufacturer: **サボハニ / 大都技研**
+- formalModel: **S吉宗3EA5**
+- releaseDate: **2020-10-05**
+- generation/system: **6号機 / 疑似ボーナス型AT / 差枚数管理BIG+REG / 有利区間管理**
+- 出玉率: **97.8 / 99.0 / 100.3 / 104.0 / 108.3 / 112.1%**
+- ボーナス初当たり: **1/527.3 / 1/518.6 / 1/459.9 / 1/381.1 / 1/330.9 / 1/294.4**
+- base: **約50.6G/50枚**
+- netIncrease: **約4.0枚/G**
+- BIG期待獲得枚数: **約711枚**。REGはベルナビ7回。
+- 天井: 通常時767G+前兆。モード別前兆込み目安は通常A約799G / B約663G / C約363G / 天国約193G。
+- coreStatus: **COMPLETE_CORE**
+- resetBehaviorQA: **COMPLETE_RESET_CORE_WITH_PUBLIC_MORNING_NUMERIC_DATA**
+
+### resetBehavior v0.7 — No.1370
+- 設定変更: **有利区間RESET→非有利区間 / 天井G RESET / モード再抽選 / 千両pt 0pt / 内部状態RESET**。
+- 据え置き/純電源OFF→ON: **天井G・有利区間・内部状態・千両pt CARRY_OVER**。千両ptは見た目0ptの場合あり。
+- 設定変更専用固定短縮天井は確認なし。
+- 設定変更後は朝一数ゲームで内部的に千両回胴へ移行し、見た目で千両回胴へ入る割合は後発解析で約50%。突入ならリセットの可能性大、非突入でも否定不可。
+- 通常時有利区間ランプは基本消灯のため朝一ランプでの変更判別は困難。
+- 朝一1～66Gの越後屋＆悪代官ランプ点灯は **設定変更+設定2以上濃厚**。設定2以上へ変更時の約25%で点灯。44G=設定4以上、55G=設定5以上、66G=設定6。
 - 本機固有ガックン条件/発生率は再探索後も `UNVERIFIED_AFTER_RESEARCH`。
 
-## 2020-09-23群監査 — CLOSED
-- **PACHISLOT リングにかけろ1 ワールドチャンピオンカーニバル編**: No.1367処理済み。
-- **パチスロ 対魔導学園35試験小隊**: No.1368処理済み。
-- 2020年新台カレンダー、当時導入記事、HAZUSE/攻略機種DBを再横断し、9/23同日へ追加すべき別パチスロを固定できず **CLOSED**。
-- 次群は2020-10-05。公開カレンダーでは **S笑ゥせぇるすまん 絶笑SJ（三洋） / S吉宗3 EA5（サボハニ）** を確認。
+## 2020-10-05群監査 — CLOSED
+- **S笑ゥせぇるすまん 絶笑SJ**: No.1369処理済み。
+- **S吉宗3 EA5**: No.1370処理済み。
+- 2020新台導入カレンダー、P-WORLD/グリーンべると、娯楽産業、DMM、1geki、パチ7等を横断し、10/5同日へ追加すべき別パチスロを固定できず **CLOSED**。
+- 次群は **2020-10-19**。先頭候補は **回胴黙示録カイジ～沼～ / Sカイジ沼 KR — No.1371候補**。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
-- 今回処理: `docs/real_machine_db/machines/2007-04_dance-man.md`（ダンス☆マン）。
-- 性能側 `coreStatus: PARTIAL` は維持。
-- reset側を **`PARTIAL_RESEARCH_EXHAUSTED`** へ正式化。
-- 通常時ゲーム数天井・短縮天井・朝一専用モード/恩恵は確認なし。有利区間は制度導入前。
-- ART「アンコールタイム」「ダンスライブ」の設定変更/据え置き/純電断時残状態・内部状態、ガックン等の本機固有変更判別は、検索語・資料系統を変えて再探索しても直接契約を固定できず推測補完していない。
-- Git追加履歴でダンス☆マン直後の実機追加を確認し、次回遡及QAは **`docs/real_machine_db/machines/2007-04-01_slot-channel-tv.md`（スロットチャンネルTV）**。
+- 直前処理: `docs/real_machine_db/machines/2007-04_dance-man.md`（ダンス☆マン）。reset側 `PARTIAL_RESEARCH_EXHAUSTED`。
+- 次回遡及QA: **`docs/real_machine_db/machines/2007-04-01_slot-channel-tv.md`（スロットチャンネルTV）**。
+- 今回は本線2機と同日群監査を優先し、遡及QA地点は進めていない。
 
 ## 次回本線の再開地点
-- 最新main再同期後、**2020-10-05群**を開始。
-- 先頭候補: **S笑ゥせぇるすまん 絶笑SJ — No.1369候補**。その後 **S吉宗3 EA5**。
-- 10/5群処理後、全メーカー・別型式・別スペック・PB・地域差・延期機まで横断監査してCLOSED可否を判定する。
-- 「回胴黙示録カイジ～沼～」は2020-10-19候補として保留継続。
+- 最新main再同期後、**2020-10-06～10-18境界監査 → 2020-10-19群**を開始。
+- 先頭候補: **回胴黙示録カイジ～沼～ / Sカイジ沼 KR — No.1371候補**。
+- 10/19群処理後、全メーカー・別型式・別スペック・PB・地域差・延期機まで横断監査してCLOSED可否を判定する。
 
 ## GitHub保存
-- No.1368追加 commit: `cca43ba07bf03eeef73b5dcc6e6bd97dd5e0b1ac`
-- ダンス☆マン resetBehavior QA commit: `a781a3797ae0d7fade9a8a3aad97b8cd00044b2e`
+- No.1369追加 commit: `4664877fc07d8c37e2d41f81c9f6a78cea18f317`
+- No.1370追加 commit: `5913cd39c228b90b157fe1058297564b9a1f4046`
+- 直前No.1368追加 commit: `cca43ba07bf03eeef73b5dcc6e6bd97dd5e0b1ac`
+- 直前遡及QAダンス☆マン commit: `a781a3797ae0d7fade9a8a3aad97b8cd00044b2e`
 
 ## 主要出典 — 取得日 2026-09-11
-### No.1368 対魔導学園35試験小隊
-- HAZUSE 基本: https://hazuse.com/machine/pachislot/9S1900/genre/201/
-- HAZUSE 天井/設定変更: https://hazuse.com/machine/pachislot/9S1900/genre/207/
-- 1geki: https://1geki.jp/slot/s_35s/
-- パチマガスロマガ AT: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/heiwa_slot/44/at02-1.php
-- パチマガスロマガ 内部状態: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/heiwa_slot/44/tj08.php
-- なな徹 モード: https://nana-press.com/kaiseki/machine/84/1824/
-- 必勝本: https://p.hisshobon.jp/machine/3544/1/78656
-- すろぱちくえすと: https://www.slopachi-quest.com/article/taimadougakuen-tenjou/
+### No.1369 S笑ゥせぇるすまん 絶笑
+- SANYO公式: https://www.sanyobussan.co.jp/products/slot.html
+- 遊技通信/P-WORLD: https://news.p-world.co.jp/articles/14342/yugitsushin
+- なな徹: https://nana-press.com/kaiseki/machine/81/
+- 1geki設定変更: https://1geki.jp/slot/s_warau_z/3/
+- 必勝本: https://p.hisshobon.jp/machine/3564/1/79348
+- P-WORLD機種DB: https://www.p-world.co.jp/machine/database/9230
 
-### 2020-10-05境界
+### No.1370 吉宗3
+- DMMぱちタウン: https://p-town.dmm.com/machines/3750
+- グリーンべると/P-WORLD: https://news.p-world.co.jp/articles/14751/greenbelt
+- 娯楽産業: https://www.goraku-sangyo.com/%E3%82%B5%E3%83%9C%E3%83%8B%EF%BC%8F%E5%A4%A7%E9%83%BD%E6%8A%80%E7%A0%94%E3%80%80%E6%96%B0%E6%A9%9F%E7%A8%AE%E3%80%8C%E5%90%89%E5%AE%973%E3%80%8D%E7%99%BA%E8%A1%A8/
+- パチ7: https://pachiseven.jp/machines/6129/cutout/2
+- 必勝本設定変更: https://p.hisshobon.jp/vpage/2396/5
+- ちょんぼりすた: https://chonborista.com/slot/daito-slot/117551/
+
+### 2020-10-05群監査
 - 2020新台導入カレンダー: https://pachinkopachisro.com/archives/53951811.html
-- 吉宗3導入記事: https://news.p-world.co.jp/articles/14751/greenbelt
-
-### 遡及QA ダンス☆マン
-- グリーンべると: https://web-greenbelt.jp/00004090/
-- 5号機クロニクル: https://5goki.com/aristocrat
-- パチ7回顧: https://pachiseven.jp/articles/detail/11837
