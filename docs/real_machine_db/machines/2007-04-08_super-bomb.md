@@ -1,7 +1,7 @@
 # スーパーボム
 
 status: PARTIAL
-qaResetBehavior: PARTIAL
+qaResetBehavior: PARTIAL_RESEARCH_EXHAUSTED
 
 machineName: スーパーボム
 manufacturer: SNKプレイモア
@@ -70,62 +70,77 @@ modeSpecificMinimumData:
 - ボンバーゾーンは次回ボーナスまで（最大5000G）のRT、純増約0.6枚/G。
 - 有利区間制度導入前。
 
-## resetBehavior
+coreStatus: PARTIAL
 
-resetBehaviorQA: PARTIAL
+## resetBehavior
+resetBehaviorVersion: v0.7
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
+resetQaLastUpdated: 2026-09-12
 
 settingChangeBehavior:
-- 「スーパーボム / SUPER BOMB / SNKプレイモア / 設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / RT / ボンバーゾーン / ガックン」を組み合わせ、現存する当時業界記事・解析サイト・旧DBを再探索したが、本機固有の設定変更時RT/CZ状態処理を明記した高信頼資料は今回確認できずUNVERIFIED。
+- `スーパーボム / SUPER BOMB / SNKプレイモア` と `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / RT / ボンバーチャンス / ボンバーゾーン / 成立済みボーナス / ガックン` を組み替え、当時業界記事、旧攻略、数値DB、メーカー年表、回顧資料まで再探索。
+- 本機固有の設定変更時に、ボンバーチャンス残りG・ボンバーゾーンRT・成立済みボーナス/告知待ち状態をどう処理するかを直接明記した高信頼資料は固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 一般的な5号機RT機の挙動からRESET/CARRYを推測補完しない。
 
 carryOverBehavior:
-- 通常時ゲーム数によるボーナス天井は確認できない。
-- RT「ボンバーゾーン」中閉店時の据え置き翌日持越し可否は本機固有資料で確定できずUNVERIFIED。
+- 通常時ゲーム数によるボーナス天井は確認できないため、通常天井ゲーム数の据え置き問題はNOT_APPLICABLE。
+- RT「ボンバーゾーン」中閉店時の据え置き翌日持越し、BIG後32G/CB後128Gの高確率状態残りGの持越しは、本機固有資料で確定できず `UNVERIFIED_AFTER_RESEARCH`。
 
 powerCycleBehavior:
-- 電源OFF→ONのみと設定変更を区別した本機固有のRT/CZ状態処理はUNVERIFIED。
+- 純電源OFF→ONのみと設定変更を区別した、本機固有のボンバーチャンス/ボンバーゾーン/成立済みボーナス状態処理は `UNVERIFIED_AFTER_RESEARCH`。
+- 一般論から「純電断なら必ずRT継続」等の固定は行わない。
 
 gameCounterReset:
 - NOT_APPLICABLE_TO_NORMAL_CEILING。通常時ゲーム数天井は確認できない。
+- ボンバーチャンス32G/CB後128Gはボーナス後状態の規定ゲーム数であり、通常時天井とは分離する。
 
 ceilingAfterReset:
-- NONE_CONFIRMED。設定変更時の短縮天井・朝一天井は確認できない。
+- NONE_CONFIRMED。通常時ゲーム数天井および設定変更時の短縮天井・朝一天井は確認できない。
 
 modeAfterReset:
 - 通常時のゲーム数モード/朝一専用モードを示す公開資料は確認できない。
+- ボーナス後高確/RTは内部状態として別管理し、未確認の朝一モードへ読み替えない。
 
 stateAfterReset:
-- ボンバーチャンス/ボンバーゾーンの設定変更・電源断時処理はUNVERIFIED。
+- BIG後32G「ボンバーチャンス」、CB/RB後128Gのチャンスリプレイ高確率状態、RT「ボンバーゾーン」の設定変更・据え置き・純電断時処理はいずれも `UNVERIFIED_AFTER_RESEARCH`。
 
 advantageousSectionReset:
 - NOT_APPLICABLE（5号機初期・有利区間制度導入前）。
 
 resetBenefits:
-- NONE_CONFIRMED。
+- NONE_CONFIRMED_AFTER_RESEARCH。設定変更専用の朝一RT、短縮天井、専用高確率状態等は固定できない。
 
 resetPenalties:
-- NONE_CONFIRMED。
+- NONE_CONFIRMED_AFTER_RESEARCH。
 
 resetDetection:
-- UNVERIFIED。ガックン、液晶表示、ゲーム数挙動等の本機固有の変更判別情報は、検索語・資料系統変更後も確定できない。
+- 本機固有のガックン発生条件/発生率、初期出目、液晶/ランプ、ボンバーチャンス表示等を利用した設定変更確定契約は、検索語・資料系統変更後も固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 後年の一般的なリセット判別論を本機固有仕様として流用しない。
 
-numericResetData:
+numericResetData / publicMorningNumbers:
 - 通常時天井: NONE_CONFIRMED
 - リセット時短縮天井: NONE_CONFIRMED
 - 朝一専用モード数値: NONE_CONFIRMED
 - リセット恩恵発生率: NONE_CONFIRMED
+- 設定変更時RT/CZ継続率・初期状態振り分け: NO_PUBLIC_MACHINE_SPECIFIC_NUMERIC_DATA_FOUND_AFTER_RESEARCH
+
+## resetBehavior 遡及QAメモ
+2026-09-12。メーカー/機種名表記に加え、`ボンバーチャンス / ボンバーゾーン / RT / チャンスリプレイ / 設定変更 / リセット / 据え置き / 電断 / 朝一 / ガックン / 持ち越し` を組み替え、グリーンべると/P-WORLD当時記事、パチマガスロマガ旧機種資料、pacnk、5号機回顧DB、メーカー系年表を再探索。性能コアのRT仕様は確認できたが、リセット3区分に対する機種固有の直接契約は発見できなかった。既存性能側 `coreStatus: PARTIAL` は変更せず、reset側のみ `PARTIAL_RESEARCH_EXHAUSTED` として正式化する。
 
 ## sources
 
-取得日: 2026-08-31
+取得日: 2026-09-12
 
 1. グリーンべると / P-WORLD「SNKプレイモアから完全告知機『スーパーボム』」2007-03-16
    - https://news.p-world.co.jp/articles/2097/greenbelt
    - 2007-04-08納品、BIG約250枚、RB/CB約204枚、BIG後32G/CB後128GのRT高確、RT最大5000G、純増0.6枚/G、RT突入目安約25%/約11%を確認。
+   - リセット/据え置き/純電断契約の記載は確認できない。
    - reliability: INDUSTRY
 
 2. pacnk「スーパーボム 設定判別ツール」
    - https://pacnk.com/slot/tools/sh_supabomu.html
    - 2007年4月導入、設定1〜6のBIG/CB確率、PAYOUT 96〜109%を確認。
+   - 設定示唆なし、数値判別中心とする後年整理。朝一リセット契約の直接記載なし。
    - reliability: ANALYSIS_SINGLE
 
 3. パチマガスロマガ「スーパーボム 基本システム」
@@ -146,8 +161,9 @@ numericResetData:
 ## missingFields
 
 - 設定別PAYOUTの別系統照合
-- 設定変更/据え置き/電源OFF→ON時のRT/CZ状態処理
-- 本機固有の設定変更判別
+- 設定変更/据え置き/電源OFF→ON時のRT/CZ/成立済みボーナス状態処理: UNVERIFIED_AFTER_RESEARCH
+- 本機固有の設定変更判別: UNVERIFIED_AFTER_RESEARCH
+- 公開朝一確率付き数値: NO_PUBLIC_MACHINE_SPECIFIC_NUMERIC_DATA_FOUND_AFTER_RESEARCH
 
 ## conflicts
 
@@ -155,4 +171,4 @@ numericResetData:
 - 当時業界記事は204枚側を「REG」と表記し、パチマガスロマガ/pacnkは「CB」と表記するため、役名称の表記差を保持する。獲得性能は約204枚で一致。
 
 coreStatus: PARTIAL
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
