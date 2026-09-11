@@ -107,28 +107,29 @@ HAZUSE当時版はボーナス出現率「調査中」のため、精密値の�
 
 ## resetBehavior
 
-resetBehaviorQA: PARTIAL
+resetBehaviorVersion: v0.7
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
 
-- settingChangeBehavior: 「わんぱくパイロット大冒険 / わんぱくﾊﾟｲﾛｯﾄ大冒険 / わんぱくパイロットダイボウケン / 岡崎産業 / OKAZAKI」に「設定変更 / リセット / 朝一 / 高確率 / RT / わくわくCHANCE / わくわくTIME」を組み合わせて再探索したが、本機固有の設定変更時処理を断定できる高信頼資料は確認できず UNVERIFIED
-- carryOverBehavior: 据え置き時のRT・高確率状態・ゲーム数等の引継ぎ仕様を明記した資料を確認できず UNVERIFIED
-- powerCycleBehavior: 電源OFF→ONのみでのRT/高確率状態の扱いを明記した本機固有資料を確認できず UNVERIFIED
-- gameCounterReset: 今回確認した一次/当時解析/旧DBではゲーム数天井を主要仕様として確認できず。設定変更時に比較可能な天井ゲーム数リセット数値なし
-- ceilingAfterReset: リセット時の天井短縮・変更に関する公開数値を確認できず
-- modeAfterReset: 朝一専用モード、設定変更時モード振り分けの公開情報を確認できず
-- stateAfterReset: ボーナス後50Gのランプ点灯高確率状態自体は確認できるが、設定変更/電源断時に当該状態を引き継ぐか再抽選するかは未確認
-- advantageousSectionReset: 非該当（有利区間制度導入前）
-- resetBenefits: 設定変更/朝一固有の主要恩恵は確認できず
-- resetPenalties: 設定変更固有の主要不利要素は確認できず
-- resetDetection: 設定変更判別 / ガックン / 朝一表示 / 据え置き判別まで検索したが、本機固有の高信頼な変更判別情報を確認できず UNVERIFIED
-- numericResetData: 公開朝一専用数値は確認できず
+- settingChangeBehavior: 「わんぱくパイロット大冒険 / わんぱくﾊﾟｲﾛｯﾄ大冒険 / わんぱくパイロットダイボウケン / 岡崎産業 / OKAZAKI」に「設定変更 / リセット / 朝一 / 高確率 / RT / わくわくCHANCE / わくわくTIME」を組み合わせて再探索したが、本機固有の設定変更時処理を断定できる高信頼資料は確認できず UNVERIFIED_AFTER_RESEARCH。
+- carryOverBehavior: 据え置き時のRT・高確率状態・ゲーム数等の引継ぎ仕様を明記した資料を確認できず UNVERIFIED_AFTER_RESEARCH。
+- powerCycleBehavior: 電源OFF→ONのみでのRT/高確率状態の扱いを明記した本機固有資料を確認できず UNVERIFIED_AFTER_RESEARCH。
+- gameCounterReset: 今回確認した一次/当時解析/旧DBではゲーム数天井を主要仕様として確認できず。設定変更時に比較可能な天井ゲーム数リセット数値なし。
+- ceilingAfterReset: リセット時の天井短縮・変更に関する公開数値を確認できず。
+- modeAfterReset: 朝一専用モード、設定変更時モード振り分けの公開情報を確認できず。
+- stateAfterReset: ボーナス後50Gのランプ点灯高確率状態自体は確認できるが、設定変更/電源断時に当該状態を引き継ぐか再抽選するかは未確認。
+- advantageousSectionReset: 非該当（有利区間制度導入前）。
+- resetBenefits: 設定変更/朝一固有の主要恩恵は確認できず NONE_CONFIRMED_AFTER_RESEARCH。
+- resetPenalties: 設定変更固有の主要不利要素は確認できず NONE_CONFIRMED_AFTER_RESEARCH。
+- resetDetection: 設定変更判別 / ガックン / 朝一表示 / 据え置き判別まで検索したが、本機固有の高信頼な変更判別情報を確認できず UNVERIFIED_AFTER_RESEARCH。
+- numericResetData: 公開朝一専用数値は確認できず NOT_FOUND_AFTER_RESEARCH。
 
 ### resetBehavior 再探索メモ
 
-機種名・半角表記・正式型式名・メーカー名を変え、設定変更、リセット、朝一、据え置き、電源OFF ON、RT、わくわくTIME、わくわくCHANCE、高確率状態、ガックン、変更判別、天井を組み合わせた。グリーンべると、HAZUSE、パチマガスロマガ旧DB、P-WORLD、5号機クロニクルまで横断したが、設定変更時/据え置き時/電源断時の本機固有挙動は確定できなかったため推測補完しない。
+2026-09-11にQA再探索。機種名・半角表記・正式型式名・メーカー名を変え、設定変更、リセット、朝一、据え置き、電源OFF ON、RT、わくわくTIME、わくわくCHANCE、高確率状態、ガックン、変更判別、天井を再度組み合わせた。グリーンべると、HAZUSE、パチマガスロマガ旧DB、P-WORLD、後年DBまで横断したが、設定変更時/据え置き時/電源断時の本機固有挙動は確定できなかったため推測補完しない。性能コアの既存COMPLETE_CORE判定は維持し、reset側だけをPARTIAL_RESEARCH_EXHAUSTEDとして管理する。
 
 ## sources
 
-取得日: 2026-08-31
+取得日: 2026-09-11（resetBehavior QA再取得。性能コア初回取得2026-08-31）
 
 1. グリーンべると — 岡崎産業が初の液晶搭載機をリリース
    - https://web-greenbelt.jp/00004037/
@@ -176,4 +177,4 @@ resetBehaviorQA: PARTIAL
 - RT純増: グリーンべると一次資料は約0.65枚/G、旧解析DBは設定別+0.67〜+0.71枚/G。丸めまたは算出条件差の可能性があるため平均しない。
 
 coreStatus: COMPLETE_CORE
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
