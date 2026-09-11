@@ -13,10 +13,10 @@
 - 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.1419「パチスロ 百花繚乱 サムライガールズ」を確認して開始。
 - `INDEX.md` は旧19件表示のため、README規定どおり `LATEST_HANDOFF.md` とmain実レコードを正本として進捗判定。
 - 2021-06-08〜06-13境界を再監査し、次の未処理群を2021-06-14と固定。
-- 調査中にmainへNo.1420「ノーゲーム・ノーライフ THE SLOT」が並行追加されたことを検出。重複登録せず既存No.1420を正本として採用し、内容を再照合した。
+- No.1420「ノーゲーム・ノーライフ THE SLOT」を追加。並行作業による同機種handoff更新も検出したため、重複登録せずmain上のNo.1420を正本として再照合・統合。
 - 2021-06-14群を複数カレンダー・機種DB・当時解析で再監査し、独立パチスロ新台は本機1機でCLOSED。
 - 2021-06-15〜07-04境界も監査し、次の明確な本線群は2021-07-05。現時点で `新ハナビ` と `パチスロ零` の2機を確認。
-- 遡及resetBehavior QAは本線優先のため今回は進めず、次カーソル `アストロ球団` を維持。
+- 遡及QAカーソルはhandoff上アストロ球団のままだったが、main実レコードとGit履歴を確認すると `2007-05-06_astro-kyudan.md` は2026-09-12に既に `PARTIAL_RESEARCH_EXHAUSTED` まで更新済み。重複を避け、Git追加順の次レコード `2007-05_aqua-venus-30.md`（アクアビーナス30）を正式QA。
 
 ## No.1420 — ノーゲーム・ノーライフ THE SLOT
 - path: `docs/real_machine_db/machines/2021-06-14_no-game-no-life-the-slot.md`
@@ -47,20 +47,32 @@
 1. **ノーゲーム・ノーライフ THE SLOT — No.1420 / DONE**
 - 複数カレンダー・業界/解析DBを照合し、同日の独立パチスロ追加機を確認できず群CLOSED。
 
+## 遡及 resetBehavior QA — アクアビーナス30
+- path: `docs/real_machine_db/machines/2007-05_aqua-venus-30.md`
+- performance core: **既存 `COMPLETE_CORE` を維持**。
+- resetBehaviorQA: **PARTIAL_RESEARCH_EXHAUSTED**。
+- 通常時ゲーム数天井、通常モード、ART/ATストック等は持たず、朝一専用短縮天井・モード優遇・当選率優遇は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- ボーナス成立後にリプレイ確率が通常約1/7.30から約1/1.82へ上昇する仕様自体は確認済み。
+- 成立済みボーナス/告知待ち/ボーナス成立後高リプレイ状態の設定変更・据え置き・純電断時の正式処理、本機固有ガックン/初期出目等は、メーカー/当時業界/当時解析/旧DB/後年資料を再探索しても直接契約を固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 一般的5号機ノーマル機の挙動から推測補完しない。既存の設定別機械割CONFLICTも維持。
+
 ## 次回本線の再開地点
 - 最新main再同期後、**2021-07-05群「新ハナビ」＝No.1421候補**から継続。
 - 現時点の同日キュー: **新ハナビ → パチスロ零**。
 - 処理前に2021-06-15〜07-04境界、メーカー別一覧、別型式/PB、地域先行・延期/段階導入を再監査して漏れ防止する。
+- 新ハナビは業界記事で2021-07-05ホール導入を確認。イチカツ本文に `2020年7月5日` とする誤記があるため、その日付は採用せず別系統で再照合して登録する。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
-- 前回処理済み: `docs/real_machine_db/machines/2007-05_tokonatsu-aloha.md`（常夏アロハ）。
-- 次回遡及QAカーソル: **`docs/real_machine_db/machines/2007-05-06_astro-kyudan.md`（アストロ球団）**。
-- 既存性能値をやり直さずreset側のみ正式再探索する。
+- 前回処理済み（main実態）: `docs/real_machine_db/machines/2007-05-06_astro-kyudan.md`（アストロ球団）→ `PARTIAL_RESEARCH_EXHAUSTED`。
+- 今回処理済み: `docs/real_machine_db/machines/2007-05_aqua-venus-30.md`（アクアビーナス30）→ `PARTIAL_RESEARCH_EXHAUSTED`。
+- 次回遡及QAカーソル: **`docs/real_machine_db/machines/2007-05_harem-ace.md`（もえろ!ハーレムエース）**。
+- 既存性能値をやり直さず、既存 `COMPLETE_CORE` 判定を不用意に崩さずreset側のみ正式再探索する。
 
 ## GitHub保存
-- No.1420: main上の並行追加レコードを正本として採用し再照合。
-- `LATEST_HANDOFF.md`: No.1420反映・2021-06-14群CLOSED・次回2021-07-05群へ更新。
+- No.1420追加 commit: `ab5289353f8e64187e0507d058165805707b5256`
+- アクアビーナス30 reset QA commit: `4f4e64605e190ae1f34a7cd5a748ef9999681593`
+- `LATEST_HANDOFF.md`: 並行更新を再取得後、この更新commitでmainへ統合。
 
 ## 主要出典 — 取得日 2026-09-12
 ### No.1420 ノーゲーム・ノーライフ THE SLOT
@@ -77,7 +89,16 @@
 - https://slot-seven.com/nogamenolife-tenzyou/
 - https://ichikatsu.com/newslot/
 
+### アクアビーナス30 retro QA
+- https://www.p-world.co.jp/machine/database/4763
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/heiwa_slot/32/a.php
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/heiwa_slot/32/c.php
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/heiwa_slot/32/e.php
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/heiwa_slot/32/
+- https://5goki.com/heiwa-olympia
+
 ### 群監査 / 次回境界
 - https://ichikatsu.com/newslot/
 - https://www.all7.jp/plans/index/2021/06
 - https://news.p-world.co.jp/articles/17137/nippon
+- https://news.p-world.co.jp/articles/17236/greenbelt
