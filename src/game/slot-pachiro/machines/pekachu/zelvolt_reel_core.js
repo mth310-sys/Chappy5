@@ -1,4 +1,4 @@
-// ZELVOLT native 3-reel engine v1.3
+// ZELVOLT native 3-reel engine v1.4
 // Machine-local physical reel engine. The inherited symbol-swap timers are disabled after START.
 (()=>{
   const STRIPS=[
@@ -10,16 +10,16 @@
   const VISIBLE_ROWS=3;
   const ROW=WINDOW/VISIBLE_ROWS;
 
-  // Slower, heavier reel feel than v1.2.
-  const SPEED=[0.76,0.80,0.78]; // px/ms
-  const ACCEL=0.0052;
-  const START_VELOCITY=0.10;
+  // v1.4: much slower and heavier. Values are intentionally conservative for iPhone tuning.
+  const SPEED=[0.34,0.36,0.35]; // px/ms
+  const ACCEL=0.0028;
+  const START_VELOCITY=0.055;
 
-  // STOP tuning: small input reaction, short forward slip, then firm settle.
-  const STOP_REACTION_MS=42;
-  const MIN_STOP_TRAVEL=ROW*1.25;
-  const MIN_STOP_MS=150;
-  const MAX_STOP_MS=245;
+  // STOP tuning: brief reaction, modest slip, firm settle.
+  const STOP_REACTION_MS=52;
+  const MIN_STOP_TRAVEL=ROW*0.85;
+  const MIN_STOP_MS=175;
+  const MAX_STOP_MS=285;
 
   const reelsView=[];
   const mod=(n,m)=>((n%m)+m)%m;
@@ -42,10 +42,10 @@
       .zv-native-cell img{display:block;width:32px;height:32px;object-fit:contain;pointer-events:none;user-select:none;-webkit-user-drag:none}
       .zv-native-payline{position:absolute;z-index:4;left:2px;right:2px;top:${ROW}px;height:${ROW}px;border-top:1px solid rgba(255,215,55,.35);border-bottom:1px solid rgba(255,215,55,.35);pointer-events:none}
       .zv-native-shadow{position:absolute;z-index:5;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.16),transparent 18%,transparent 82%,rgba(0,0,0,.16))}
-      .reel.zv-native-spinning .zv-native-track{filter:blur(.24px)}
-      .reel.zv-native-stopping .zv-native-track{filter:blur(.08px)}
-      .reel.zv-native-settle{animation:zvReelSettle .085s ease-out}
-      @keyframes zvReelSettle{0%{transform:translateY(-1.6px)}100%{transform:translateY(0)}}
+      .reel.zv-native-spinning .zv-native-track{filter:blur(.14px)}
+      .reel.zv-native-stopping .zv-native-track{filter:blur(.04px)}
+      .reel.zv-native-settle{animation:zvReelSettle .095s ease-out}
+      @keyframes zvReelSettle{0%{transform:translateY(1.2px)}100%{transform:translateY(0)}}
     `;
     document.head.appendChild(s);
   }
@@ -69,11 +69,14 @@
     reelsView[i]=view;return view;
   }
 
+  // Positive phase now moves the repeated strip DOWN through the window.
+  // The repeated copies make the wrap seamless.
   function render(v){
     const p=mod(v.phase,v.cycle);
-    v.track.style.transform=`translate3d(0,${-(v.cycle+p)}px,0)`;
+    v.track.style.transform=`translate3d(0,${-v.cycle+p}px,0)`;
   }
-  function phaseForIndex(index,cycle){return mod(index*ROW-ROW,cycle)}
+  // With downward travel, this phase places `index` on the middle payline.
+  function phaseForIndex(index,cycle){return mod(ROW-index*ROW,cycle)}
 
   function nearestIndexForCode(v,code,minTravel=0){
     const current=v.phase;let best=null;
@@ -120,9 +123,7 @@
     v.host.classList.remove('zv-native-spinning','zv-native-settle');
     v.host.classList.add('zv-native-stopping');
 
-    // Keep the reel coasting briefly after the button press so STOP does not feel digital.
-    const reactionStart=v.phase;
-    const reactionVelocity=Math.max(v.velocity,SPEED[i]*0.88);
+    const reactionVelocity=Math.max(v.velocity,SPEED[i]*0.84);
     const reactionT0=now();
     const coast=t=>{
       const elapsed=t-reactionT0;
@@ -139,9 +140,9 @@
       if(!hit){v.stopping=false;v.host.classList.remove('zv-native-stopping');setStatic(i,code);return}
       const start=v.phase;
       const distance=hit.target-start;
-      const duration=Math.max(MIN_STOP_MS,Math.min(MAX_STOP_MS,125+distance/0.95));
+      const duration=Math.max(MIN_STOP_MS,Math.min(MAX_STOP_MS,145+distance/0.55));
       const t0=now();
-      const ease=t=>1-Math.pow(1-t,4);
+      const ease=t=>1-Math.pow(1-t,4.3);
       const settle=t=>{
         const q=Math.min(1,(t-t0)/duration);
         v.phase=start+distance*ease(q);render(v);
@@ -150,7 +151,7 @@
         v.host.classList.remove('zv-native-stopping');
         v.host.classList.add('zv-native-settle');
         render(v);
-        setTimeout(()=>v.host.classList.remove('zv-native-settle'),100);
+        setTimeout(()=>v.host.classList.remove('zv-native-settle'),110);
       };
       v.raf=requestAnimationFrame(settle);
     };
@@ -196,7 +197,7 @@
 
     window.ZELVOLT_REELS={
       strips:STRIPS.map(s=>[...s]),
-      tuning:{speed:[...SPEED],accel:ACCEL,reactionMs:STOP_REACTION_MS,minStopTravel:MIN_STOP_TRAVEL,minStopMs:MIN_STOP_MS,maxStopMs:MAX_STOP_MS},
+      tuning:{speed:[...SPEED],accel:ACCEL,reactionMs:STOP_REACTION_MS,minStopTravel:MIN_STOP_TRAVEL,minStopMs:MIN_STOP_MS,maxStopMs:MAX_STOP_MS,direction:'down'},
       getState:()=>reelsView.map((v,i)=>({
         reel:i,phase:v?.phase??0,velocity:v?.velocity??0,
         spinning:!!v?.spinning,stopping:!!v?.stopping,stopIndex:v?.stopIndex??null,
