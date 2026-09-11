@@ -1,56 +1,80 @@
 更新日: 2026-09-11
 
 ## 現在地点
-- recordCount: **1302**
-- latestRecordAdded: **OVER-SLOT「AINZ OOAL GOWN絶対支配者光臨」 — No.1302**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2019-08-19_over-slot-ainz-ooal-gown.md`
-- chronologicalFrontier: **2019-08-19**
-- frontierLatestMachine: **OVER-SLOT「AINZ OOAL GOWN絶対支配者光臨」 — No.1302**
+- recordCount: **1304**
+- latestRecordAdded: **パチスロ TIGER & BUNNY — No.1304**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2019-09-02_pachislot-tiger-and-bunny.md`
+- chronologicalFrontier: **2019-09-02**
+- frontierLatestMachine: **パチスロ TIGER & BUNNY — No.1304**
 - schema: **resetBehavior v0.7**
-- status: **2019_08_19_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**
+- status: **2019_09_02_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、mission v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、No.1301 `どき！すろ` を再取得して開始。
-- `INDEX.md` は旧スナップショットのため、README規則どおり `LATEST_HANDOFF.md` + main実レコードを正本として継続。
-- main検索で `AINZ OOAL GOWN絶対支配者光臨` の既存レコードなしを再確認。
-- 直前handoff指定どおり **No.1302 `OVER-SLOT「AINZ OOAL GOWN絶対支配者光臨」`** を登録。
-- 日刊スポーツ2019-08-09導入カレンダーでは2019-08-19パチスロ群が `どき！すろ / 花娘 / OVER-SLOT「AINZ OOAL GOWN絶対支配者光臨」` の3機種。3機種すべて収録済みとなったため、同日群を全メーカー/別型式/PB差の既知候補まで再監査し **CLOSED** とした。
-- 遡及resetBehavior QAは `ニューハナハナ-30 → パチスロあっぱれ応援団 → ガオガオフェスティバルS → トレジャーパイレーツ` をGit追加順に確認。4機種とも既にv0.7相当の再探索記録があるため重複編集せず通過した。
-- `COMPLETE_CORE` 等の性能完了判定は変更していない。reset QA状態は各レコードの既存状態をそのまま分離管理。
+- 最新mainの `README.md`、mission v0.7、旧スナップショットの `INDEX.md`、`LATEST_HANDOFF.md`、直前実レコードを再取得して開始。
+- 並行更新で No.1302 `OVER-SLOT「AINZ OOAL GOWN絶対支配者光臨」` と2019-08-19群CLOSEDが先行していたため、上書きせず最新mainへ再同期。
+- No.1303 **`SLOT劇場版魔法少女まどか☆マギカ[新編]叛逆の物語`** を登録。
+- No.1304 **`パチスロ TIGER & BUNNY`** を登録し、追加再探索で2019年版そのものの内部状態RESET/CARRY_OVER資料を取得して補正済み。
+- モゲスロ、2019年導入カレンダー、複数個別解析を横断し、2019-09-02パチスロ群は `叛逆の物語 / TIGER & BUNNY` の2機種で一致したため **CLOSED**。
+- 既存性能値の再調査は行わず、新規2機種の性能コアとv0.7 resetBehaviorのみ収集。
 
-## No.1302 — OVER-SLOT「AINZ OOAL GOWN絶対支配者光臨」
-- manufacturer: **オーイズミ**
-- formalModel: **`SパチスロオーバーロードYX`**
-- certificationNumber: **`9S0570`**
-- releaseDate canonical: **2019-08-19**
-- generation/system: **6号機 / AT / 疑似ボーナス経由バトルAT**
-- payout: **97.8 / 99.4 / 101.4 / 103.9 / 106.3 / 110.1%**
-- BIG合算: **1/265.1 / 239.2 / 227.9 / 201.0 / 198.4 / 156.2**
-- AT初当たり: **1/737.6 / 611.9 / 639.6 / 499.5 / 535.2 / 352.2**
-- baseGamesPer50: **約50G/50枚**
-- netIncrease: **約2.8枚/G**
-- basicPayout: **BIG 30G+α・約100枚 / AT初回52G+α**
-- 最大天井: **786G+α、BIG / AT 50:50**
+## No.1303 — SLOT劇場版魔法少女まどか☆マギカ[新編]叛逆の物語
+- manufacturer: **メーシー**
+- formalModel: **`S／叛逆の物語／FH`**
+- certificationNumber: **`9S0698`**
+- releaseDate: **2019-09-02**
+- generation/system: **6号機 / 疑似ボーナス + 差枚数管理AT**
+- payout: **97.3 / 98.3 / 100.2 / 103.5 / 106.3 / 111.5%**
+- Magica Bonus: **1/285.8 / 259.6 / 255.1 / 253.9 / 244.5 / 214.4**
+- Episode Bonus: **1/7221.0 / 7316.4 / 6928.2 / 5780.6 / 5307.4 / 3640.4**
+- AT初当たり: **1/543.0 / 464.8 / 418.2 / 389.1 / 364.1 / 289.5**
+- baseGamesPer50: **約50G/50枚**（資料に約50.6〜50.9G級の詳細値あり）
+- netIncrease: **約3.0枚/G**（公式）
+- basicPayout: **マギカ20G約60枚 / エピソード40G約120枚**
+- 最大天井: **有利区間移行後699G → マギカボーナス**
 
-### resetBehavior v0.7 — No.1302
-- settingChange: 当時解析複数系統で **天井RESET / 内部状態RESET（HAZUSEは低確スタート） / モード再抽選**。液晶は執務室。
-- powerCycle: **天井 / 内部状態 / モード CARRY_OVER**。液晶は執務室。
-- carryOver: 据え置きを純電断と独立して直接対照する機種固有資料は `UNVERIFIED_AS_DISTINCT_CONDITION`。
-- gameCounterReset: 設定変更RESET / 純電断CARRY_OVER。
-- ceilingAfterReset: 最大786G+α。設定変更専用短縮天井は `NONE_CONFIRMED_AFTER_RESEARCH`。
-- modeAfterReset: 設定変更再抽選 / 純電断引継ぎ。通常BIG/AT後のモードA/B振り分けは公開されるが、設定変更時専用値とは断定できないため朝一数値へ流用しない。
-- stateAfterReset: 設定変更RESET（低確開始） / 純電断引継ぎ。
-- advantageousSection: 6号機有利区間対象。通常時ランプ消灯型で、据え置きでも朝一消灯とする当時攻略あり。ランプ単独で変更判別不可。設定変更/純電断それぞれの有利区間内部契約は `APPLICABLE_BUT_DIRECT_SECTION_RESET_CONTRACT_PARTIAL`。
-- resetBenefits: 当時攻略は **リセット固有恩恵なし**。短縮天井・朝一専用高確等は確認できず。
-- resetDetection: リセットでもガックンしない可能性が高いという当時攻略あり。ゾーン外・レア役なしでCZ/AT当選なら据え置き推測材料だが確定条件ではない。
-- publicMorningNumbers: 設定変更専用モード振り分け / 朝一特定G以内当選率 / 恩恵発生率は `NONE_CONFIRMED_AFTER_RESEARCH`。
+### resetBehavior v0.7 — No.1303
+- settingChange: **天井RESET / 内部状態RESET / 非有利区間開始 / 有利区間移行時にモード再抽選**。
+- carryOver/powerCycle: **天井 / 内部状態 / 内部モード CARRY_OVER**。
+- advantageousSection: 設定変更後は非有利区間から始まり、実戦解析では基本1〜2Gで有利区間へ移行。通常時ランプ常時消灯のため判別不可。
+- resetBenefits: 非有利区間中のみレア役でAT直撃機会あり。ただし約2000万Gの比較では通常時とリセット後に大きな差なし。
+- resetDetection: 有利区間ランプ / ガックン不可。81〜100 / 281〜300 / 481〜500Gの解除、当日100 / 400 / 600Gでの穢れ吸い込み等は実戦上の推測材料で確定条件ではない。
+- publicMorningNumbers: 新台初日1回目初当たり **1995件中12件**で朝一即AT直撃（2G目10件 / 3G目2件、約0.60%）。メーカー値ではなく `EMPIRICAL_ANALYSIS_SINGLE`。
+- conflict: 設定5マギカボーナス **1/244.5 vs 1/244.4**。平均せず1/244.5をcanonical、丸め差CONFLICT保持。
+
+## No.1304 — パチスロ TIGER & BUNNY
+- manufacturer: **山佐**
+- formalModel: **`Sパチスロタイガー＆バニーHZ`**
+- certificationNumber: **`9S0603`**
+- releaseDate: **2019-09-02**
+- generation/system: **6号機 / AT×疑似ボーナス / 純増変動型**
+- payout: **97.9 / 99.2 / 101.1 / 103.5 / 106.5 / 110.2%**
+- bonus合算: **1/229.8 / 220.1 / 203.7 / 189.7 / 170.3 / 157.7**
+- AT初当たり: **1/684.7 / 621.0 / 502.5 / 448.4 / 368.7 / 331.5**
+- baseGamesPer50: **50.5 / 50.5 / 50.5 / 50.7 / 51.0 / 51.5G**
+- netIncrease: **AT純増1 / 2 / 4枚/G、最高約4.0枚/G**
+- basicPayout: **BIG平均126枚 / BLUE ROSE LIVE平均150枚 / REG平均53枚 / EPISODE平均103枚**
+- AT basic: **1セット30G+α**
+- 最大天井: **666G+α、BIG以上**
+
+### resetBehavior v0.7 — No.1304
+- settingChange: 機種固有2019年版資料で **天井RESET / 内部状態RESET / 有利区間RESET**。
+- powerCycle/carryOver: **天井 / 内部状態 / 有利区間 CARRY_OVER**。
+- modeAfterReset: 2019年版の設定変更/純電断時内部モード直接契約は、表記揺れ・型式・メーカー・シリーズ名まで変えて再探索後も `UNVERIFIED_AFTER_RESEARCH`。2022年SPのRESET表は別型式のため転記しない。
+- advantageousSection: 通常時ランプ常時消灯で変更判別不可。
+- resetBenefits: 設定変更専用短縮天井 / 朝一高確 / 専用優遇率は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- resetDetection: ガックン発生条件/率/確定性は `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
+- publicMorningNumbers: 設定変更専用の比較可能な確定数値は `NONE_CONFIRMED_AFTER_RESEARCH`。通常時の111/333/666G天井振り分けを朝一専用値へ流用しない。
+
+## 2019-09-02群 — CLOSED
+1. **SLOT劇場版魔法少女まどか☆マギカ[新編]叛逆の物語** — No.1303。
+2. **パチスロ TIGER & BUNNY** — No.1304。
+
+モゲスロ2019年導入日カレンダー、パチンコ・パチスロ.com 2019新台カレンダー、個別解析で同日スロット2機種が一致。別型式 / 別スペック / 後継SPを混同しない。
 
 ## 2019-08-19群 — CLOSED
-1. **花娘** — No.1300。
-2. **どき！すろ** — No.1301。
-3. **OVER-SLOT「AINZ OOAL GOWN絶対支配者光臨」** — No.1302。
-
-日刊スポーツ導入カレンダーの同日パチスロ3機種と一致。PB系列差としてSオリスロ2AA派生の `タマどき！ / プレドキ！` は別導入時期候補として引き続き監査対象であり、2019-08-19群CLOSEDとは分離する。
+- No.1300 花娘
+- No.1301 どき！すろ
+- No.1302 OVER-SLOT「AINZ OOAL GOWN絶対支配者光臨」
 
 ## Sオリスロ2AA 系列 — 継続監査
 1. SLOT WONDER AGENT — 2019-07-08 / No.1298 / 登録済み。
@@ -58,7 +82,7 @@
 3. 花娘 — 2019-08-19 / No.1300 / 登録済み。
 4. どき！すろ — 2019-08-19 / No.1301 / 登録済み。
 5. タマどき！ — 9〜10月候補、未登録。
-6. プレドキ！ — 導入法人・時期・独立レコード要否を当時資料で追加監査、未登録。
+6. プレドキ！ — 導入法人・時期・独立レコード要否の監査継続、未登録。
 
 ## 2019-08-05群 — REOPENED / NOT CLOSED
 - No.1293 パチスロあの日見た花の名前を僕達はまだ知らない。
@@ -74,28 +98,34 @@
 - retroQaScanConfirmedThrough: `docs/real_machine_db/machines/2007-03-11_treasure-pirates.md`
 - latestFormalized: `docs/real_machine_db/machines/2007-02_skylove.md`
 - latestFormalizedStatus: **PARTIAL_RESEARCH_EXHAUSTED**
-- 今回確認済み: `2007-02_new-hanahana-30.md` / `2007-02-25_appare-ouendan.md` / `2007-03-04_gaogao-festival-s.md` / `2007-03-11_treasure-pirates.md`。
-- 4件ともresetBehavior再探索記録が既存のため重複編集せず通過。
-- nextRetroQaAction: **`docs/real_machine_db/machines/2007-03-19_kakumei-senshi-choshu-riki.md`（革命戦士長州力）** を確認し、既QAなら次のGit追加順へ進む。reset欠損/旧形式なら性能コアを不用意に崩さずreset側だけ補完する。
+- nextRetroQaAction: **`docs/real_machine_db/machines/2007-03-19_kakumei-senshi-choshu-riki.md`（革命戦士長州力）**。既QAなら次のGit追加順へ進み、reset欠損/旧形式なら性能コアを崩さずreset側だけ補完する。
 
 ## 次回再開地点
-1. 最新mainのREADME / mission v0.7 / INDEX / LATEST_HANDOFF / No.1302を再取得。
-2. 次の時系列境界 **2019-09-02群** を再監査。
-3. 既知候補 **`SLOT劇場版魔法少女まどか☆マギカ［新編］叛逆の物語`（メーシー）No.1303候補** を最初に既存検索・導入日再確認して処理。
-4. 同日候補 **`パチスロ TIGER ＆ BUNNY`（山佐）** も漏れ防止対象。複数導入カレンダーでは2019-09-02導入を確認済み。
-5. 性能コア + v0.7 resetBehaviorを公式 / 業界 / 当時解析 / 古DB / アーカイブ / 回顧資料まで横断し、欠損は十分な再探索後のみUNVERIFIED、競合は平均せずCONFLICT。
-6. 遡及QAは **革命戦士長州力** から再開。
-7. Sオリスロ2AAの `タマどき！ / プレドキ！` は時系列到達時または遡及監査で必ず回収する。
+1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1303 / No.1304 を再取得。
+2. 次の時系列境界 **2019-09-03〜09-16** を再監査。
+3. 次の既知導入群 **2019-09-17** を処理。候補は **`パチスロ ラブ嬢2`（オリンピア）No.1305候補 → `スーパービンゴギャラクシー`（ベルコ）No.1306候補**。
+4. 全メーカー / 別型式 / 別スペック / PB / 地域差を監査して9/17群CLOSED可否を判定。
+5. 遡及QAは **革命戦士長州力** から再開。
+6. Sオリスロ2AA `タマどき！ / プレドキ！` は時系列到達時または遡及監査で必ず回収する。
 
 ## 主要出典 — 取得日 2026-09-11
-### No.1302 / 2019-08-19群
-- 日刊スポーツ導入カレンダー: https://www.nikkansports.com/amusement/pachislot/news/201908090000270.html
-- HAZUSE: https://hazuse.com/machine/pachislot/9S0570/
-- 一撃 機種概要: https://1geki.jp/slot/s_overslot/
-- 一撃 天井/設定変更: https://1geki.jp/slot/s_overslot/3/
-- P-WORLD: https://www.p-world.co.jp/machine/database/8998
-- すろぱちくえすと 天井/朝一: https://www.slopachi-quest.com/article/overlord-tennjou/
+### No.1303
+- ユニバーサル公式: https://www.universal-777.com/product/slot/mmh/
+- HAZUSE: https://hazuse.com/machine/pachislot/9S0232/
+- K-Navi: https://p-kn.com/slot/3267/
+- 期待値見える化: https://slotjin.com/slot/madomagi-h-reset/
+- おスロおパチおいでやす: https://oslo-opachi.com/2019/06/19/madomagi3_tennjou/
 
-### 次時系列候補
-- 日刊スポーツ導入カレンダー（2019-08-09時点）: 9/2 `SLOT劇場版魔法少女まどか☆マギカ［新編］叛逆の物語`
-- 当時導入予定一覧 / 一撃 / 山佐系解析: 9/2 `パチスロ TIGER ＆ BUNNY`
+### No.1304
+- 山佐ネクスト公式: https://yamasa-next.co.jp/model_tab/
+- HAZUSE: https://hazuse.com/machine/pachislot/9S0603/
+- パチ7: https://pachiseven.jp/machines/5834/cutout/3
+- おスロおパチおいでやす: https://oslo-opachi.com/2019/09/02/tigerandbunny-tennjou/
+- スロパチネット: https://slopachi-net.com/tiger-bunny
+- すろぱちくえすと: https://www.slopachi-quest.com/article/tiger-and-bunny-tennjou/
+- 遊技通信/P-WORLD: https://news.p-world.co.jp/articles/11434/yugitsushin
+
+### 2019-09-02群監査
+- モゲスロ2019導入日カレンダー: https://moge-site.com/new-slot2019
+- パチンコ・パチスロ.com 2019新台カレンダー: https://pachinkopachisro.com/archives/52807194.html
+- すろぱちくえすと2019導入機種: https://www.slopachi-quest.com/article/2019-dounyuukishu/
