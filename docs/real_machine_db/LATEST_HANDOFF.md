@@ -1,92 +1,95 @@
 更新日: 2026-09-11
 
 ## 現在地点
-- recordCount: **1357**
-- latestRecordAdded: **沖ドキ！2-30 — No.1357**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2020-05-18_okidoki2-30.md`
+- recordCount: **1358**
+- latestRecordAdded: **OZ-1 — No.1358**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2020-05-18_oz1.md`
 - chronologicalFrontier: **2020-05-18**
-- frontierLatestMachine: **沖ドキ！2-30 — No.1357**
+- frontierLatestMachine: **OZ-1 — No.1358**
 - schema: **resetBehavior v0.7**
-- status: **2020-05-18_GROUP_OPEN_3_OF_4_PROCESSED**
+- status: **2020-05-18_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、mission v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前No.1356「ビッグシオ-30」を再取得して開始。
+- 最新mainの `README.md`、mission v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前No.1357「沖ドキ！2-30」を再取得して開始。
 - `INDEX.md` は旧19件表示のため、README規定どおり最新handoffとmain実レコードを正本として継続。
-- main上の正本はNo.1356まで進行済みであることを確認し、2020-05-18群の3機目 **沖ドキ！2-30** をNo.1357として追加。
-- 性能コア＋resetBehavior v0.7を、正式型式/検定番号/設定変更/リセット/朝一/据え置き/電源OFF ON/天井/999G/967G/モード/モード振り分け/非有利区間/有利区間/ランプ/ガックン等を組み替えて再探索。
-- 5/18群は **OPEN / 3 of 4 processed**。次はSOZ1-01。
+- 2020-05-18群の4機目 **OZ-1（型式SOZ1-01）** をNo.1358として追加。
+- OZ-1は解析公開が極端に少ないため、性能値は確認できた公開値のみ採用。単一攻略系の機械割は参考値として保持し、設定別BIG/REG確率は推測補完していない。
+- 5/18群を全メーカー・別型式・別スペック・地域/段階導入まで横断監査し **CLOSED** とした。
+- 遡及QAは `2007-04-15_yattane-harumi-chan-30.md` をv0.7形式へ正式化。既存 `COMPLETE_CORE` は維持し、reset側のみ `PARTIAL_RESEARCH_EXHAUSTED` とした。
 
-## No.1357 — 沖ドキ！2-30
-- path: `docs/real_machine_db/machines/2020-05-18_okidoki2-30.md`
-- manufacturer: **アクロス**
-- formalModel: **S／沖ドキ！2／SA-30**
-- certificationNumber: **8S1437**
+## No.1358 — OZ-1
+- path: `docs/real_machine_db/machines/2020-05-18_oz1.md`
+- manufacturer: **オズ**
+- formalModel: **SOZ1-01**
+- certificationNumber: **UNVERIFIED**
 - releaseDate canonical: **2020-05-18**
-- generation/system: **6号機 / AT / 30Φ沖スロ / 完全告知 / 擬似ボーナス / モード管理**
-- payoutRate: **97.0 / 98.6 / 101.0 / 103.1 / 105.0 / 107.0%**
-- BIG初当たり: **1/681.8 / 678.8 / 605.4 / 582.9 / 539.2 / 535.7**
-- REG初当たり: **1/967.6 / 968.3 / 883.4 / 873.9 / 807.8 / 808.3**
-- BONUS初当たり合算: **1/399.9 / 399.0 / 359.2 / 349.7 / 323.3 / 322.2**
-- base: **約51.0G/50枚**
-- netIncrease: **約4.0枚/G**
-- BIG: **55G / 約220枚**
-- REG: **15G / 約60枚**
-- モード別天井: **通常A/B 999G、チャンス256G、天国準備500G、天国/ドキドキ/超ドキドキ/保証32G**
-- coreStatus: **COMPLETE_CORE**
-- resetBehaviorQA: **COMPLETE_PUBLIC_SETTING_CHANGE_CORE_POWER_CYCLE_PARTIAL**
+- generation/system: **6号機 / リアルボーナス連チャン / リノタイプ相当 / 30Φ / 完全告知**
+- payoutRate reference: **97.0 / 98.0 / 99.5 / 102.4 / 105.3 / 108.1%**（単一攻略系の参考値。複数照合未達）
+- settingSpecific BIG/REG: **UNVERIFIED_AFTER_RESEARCH**
+- base: **約27G/50枚 vs 約33G/50枚 = CONFLICT**
+- BIG: **210枚超払い出しで終了**
+- REG: **74枚超払い出しで終了**
+- 流星タイム: 当時攻略でボーナス成立約1/10、状態転落約1/40〜1/50、ループ約80%以上の参考値あり
+- 通常時ゲーム数天井: **NONE_CONFIRMED**
+- coreStatus: **PARTIAL**
+- resetBehaviorQA: **PARTIAL_RESEARCH_EXHAUSTED**
 
-### resetBehavior v0.7 — No.1357
-- 設定変更: **非有利区間へ移行 / 天井進行RESET / 有利区間RESET**。
-- 設定変更後はハズレ以外の成立役を参照して有利区間へ移行し、成立役×設定で内部モードを再抽選。
-- ベル/リプレイ成立時の設定1→6モード振り分け:
-  - 通常A **76.2 / 64.1 / 74.2 / 64.1 / 74.2 / 55.5%**
-  - 通常B **16.8 / 25.0 / 18.8 / 25.0 / 18.8 / 31.2%**
-  - チャンス **6.2 / 10.1 / 6.2 / 10.1 / 6.2 / 12.5%**
-  - 天国準備 **0.8%全設定**
-- チェリー/スイカ/確定役/中段チェリー成立時は別の優遇振り分けが公開されているが、完全再現用の全表は保存せず朝一に成立役依存がある事実のみ物差しへ採用。
-- 通常時は有利区間ランプ基本消灯型。**朝一消灯だけでは設定変更判別不可**。朝一点灯なら前日から区間が残った据え置き挙動を強く示すが万能確定条件とはしない。
-- 純電源OFF→ONについて、1gekiの初期比較表は天井/モードとも「調査中」。後期の本機固有直接契約を再探索しても十分な高信頼固定値を得られず **UNVERIFIED_AFTER_RESEARCH**。
-- 据え置きを純電断から独立条件として天井/モード/区間すべて明記した高信頼表も **UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION**。
-- 本機固有ガックン条件/発生率は **UNVERIFIED_AFTER_RESEARCH**。
+### resetBehavior v0.7 — No.1358
+- 設定変更時の内部MB成立状態・ボーナス高確状態・成立済みボーナス状態の初期化契約は、本機固有の直接資料を固定できず **UNVERIFIED_AFTER_RESEARCH**。
+- 据え置き時の上記状態の翌日引継ぎも、純電源OFF→ON時の処理も、独立条件として確定できる公開資料を固定できず **UNVERIFIED_AFTER_RESEARCH**。
+- 通常時ゲーム数天井は確認されていないため `gameCounterReset` / `ceilingAfterReset` は通常天井について **NOT_APPLICABLE / NONE_CONFIRMED**。
+- 流星タイム表示50Gは演出上の表示であり、朝一の通常天井進捗として扱わない。
+- ゲーム数管理の朝一専用モード振り分け、リセット専用短縮天井、朝一特定G以内当選率、リセット恩恵発生率は **NONE_CONFIRMED**。
+- 当時解説では出玉ナビを使わないリアルボーナス連チャン機で有利区間非搭載とされるため、朝一有利区間ランプ判別対象として扱わない。
+- 本機固有のガックン、初期出目、ランプ等による変更確定条件は **UNVERIFIED_AFTER_RESEARCH**。
 
-## conflicts / QA notes — No.1357
-- releaseDate: 実導入確認が厚い **2020-05-18** をcanonical。一部事前/旧資料に5/11、地域別一覧に5/25併記あり。`RELEASE_SCHEDULE_VARIANT_2020-05-11_VS_2020-05-18_VS_2020-05-25` として保持。
-- ceilingAfterReset: 後期解析は設定変更→非有利区間→成立役別モード選択、そのモード規定G数。初期攻略の一部に「リセット後実質967G」表現があるため、通常A/Bの999Gを上書きせず `PROVISIONAL_DEFINITION_CONFLICT_967G_VS_MODE_REGULATION` として分離。
-- powerCycleBehavior: 本機固有の後期確定公開値を固定できないため、後継機の引継ぎ契約を転記していない。
+## conflicts / QA notes — No.1358
+- releaseDate: K-Naviは **2020-05-18**、当時記事には「5月先行」「7/6全国デビュー」「8/24全国」等の段階導入表現あり。`RELEASE_SCHEDULE_CONFLICT_OR_STAGED_ROLLOUT` として保持し、同型式を7月/8月に別レコード化しない。
+- baseGamesPer50: 約27Gと約33Gで資料差。定義/実測条件差を解消できないため `CONFLICT_27G_VS_33G`。
+- payoutRate: 97.0〜108.1%は単一攻略系が「参考値」として掲載。別系統照合未達のため `ANALYSIS_SINGLE_REFERENCE_ONLY`。
+- 設定別BIG/REG確率は当時資料でも「調査中」で、後年資料でも高信頼表を固定できずUNVERIFIEDのまま。
 
 ## 2020-05-18群監査
 1. ハイドラ-30 — **No.1355 / 処理済み**
 2. ビッグシオ-30 — **No.1356 / 処理済み**
 3. 沖ドキ！2-30 — **No.1357 / 処理済み**
-4. SOZ1-01 — **未処理 / No.1358候補**
-- 群判定: **OPEN_3_OF_4_PROCESSED**。
-- 次回はSOZ1-01を処理後、5/18同日全メーカー・別型式・別スペック・PB・地域差・延期機を再監査してCLOSED可否を判定する。
+4. OZ-1 / SOZ1-01 — **No.1358 / 処理済み**
+- K-Navi 2020年5月導入カレンダーの5/18パチスロ4機と一致。
+- OZ-1の7/6・8/24表記は段階導入/全国展開資料としてNo.1358へ統合し、後続で重複登録しない。
+- 群判定: **CLOSED_AFTER_CROSS_SOURCE_AUDIT**。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
-- 前回処理済み: `2007-04-15_yattane-harumi-chan4.md`（やったネ！はるみちゃん4）。
-- 次の未formalized候補: `docs/real_machine_db/machines/2007-04-15_yattane-harumi-chan-30.md`（やったネ！はるみちゃん-30）。
-- 本線を止めず、余力時に既存性能コアをやり直さずresetBehaviorのみv0.7基準で順次補完する。
+- 今回処理済み: `docs/real_machine_db/machines/2007-04-15_yattane-harumi-chan-30.md`（やったネ！はるみちゃん-30）。
+- 性能側 `COMPLETE_CORE` は維持。
+- resetBehaviorVersion: **v0.7**。
+- resetBehaviorQA: **PARTIAL_RESEARCH_EXHAUSTED**。
+- MRT/内部RT残りGの設定変更・据え置き・純電断時処理、本機固有ガックン等は、メーカー/業界/当時解析/旧DB/回顧資料を再横断しても固定できず推測補完していない。
+- 次の未formalized候補: `docs/real_machine_db/machines/2007-04-15_kuma-sakaba.md`（熊酒場）。Git追加履歴で、やったネ！はるみちゃん-30の後続追加レコードとして確認。
 
 ## 次回本線の再開地点
-- 最新main再同期後、**2020-05-18群の4機目「SOZ1-01」＝No.1358候補**から再開。
-- 処理後、5/18同日全メーカー・別型式・別スペック・PB・地域差・延期機を再監査してCLOSED可否を判定。
+- 最新main再同期後、**2020-07-06群**へ進む。
+- 既知候補:
+  1. **ワンバーS1-30 — No.1359候補**
+  2. **パチスロ 言い訳はさせないわよ！by壇蜜**
+- **OZ-1 / SOZ1-01**にも7/6全国展開資料があるが、No.1358と同一型式の段階導入として処理済み。重複レコード化しない。
+- 2020年6月は確認した導入カレンダー上、パチスロ新台の明確な本線候補なし。次回は7/6群を複数系統で再監査してから最初の未処理機種を登録する。
 
 ## GitHub保存
-- No.1357追加 commit: `4990c6447a8814021089b8c0fe49e92bcaad6c42`
+- No.1358追加 commit: `46ea839534650a33f69d3c71db52c8993cc42d87`
+- やったネ！はるみちゃん-30 reset QA commit: `dbc3c354008cbf3d91f380f8680607d2195521a7`
 
 ## 主要出典 — 取得日 2026-09-11
-### No.1357 沖ドキ！2-30
-- ユニバーサルエンターテインメント公式: https://www.universal-777.co.jp/news/20200127001462/
-- 岡山県公安委員会告示第167号: https://www.pref.okayama.jp/uploaded/life/1002555_9663975_misc.pdf
-- P-WORLD業界ニュース / グリーンべると: https://news.p-world.co.jp/articles/12729/greenbelt
-- HAZUSE: https://hazuse.com/machine/pachislot/8S1437/genre/209/
-- パチビー: https://www.pachibee.jp/machines/index/220040005
-- K-Navi: https://p-kn.com/slot/3409/odds/
-- 1geki TOP: https://1geki.jp/slot/s_okidoki30/
-- 1geki 天井/設定変更: https://1geki.jp/slot/s_okidoki30/3/
-- 1geki 通常時モード移行: https://1geki.jp/slot/s_okidoki30/43/
-- SLOT HACK: https://slothack.net/matome/7480/
-- スロパチクエスト天井: https://www.slopachi-quest.com/article/okidoki2-tennjou/
-- 期待値見える化: https://slotjin.com/tenjoukitaichi/okidoki2/
-- ぱちんこキュレーション: https://pachinko-curation.com/2254/
+### No.1358 OZ-1
+- グリーンべると「新規メーカー『オズ』のパチスロ機が検定通過」: https://web-greenbelt.jp/post-37215/
+- K-Navi 2020年5月導入カレンダー: https://p-kn.com/calendar/202005/
+- P-WORLD「OZ-1」: https://www.p-world.co.jp/machine/database/9209
+- スロパチクエスト「OZ1(オズワン) 設定差まとめ」: https://www.slopachi-quest.com/article/oz1-settei/
+- P-Summa「謎の爆裂6号機『OZ-1』」: https://psumma.jp/pachislo/49072/ / https://psumma.jp/pachislo/49284/
+- パチスロのある日常「OZ1 3択の押し位置考察」: https://mokkun7.com/enjoy/oz1-3taku/
+- ぱちんこキュレーション「スロットOZ1-オズワン-」: https://pachinko-curation.com/15898/
+- クオぱち「OZ-1」: https://www.pachinkoquora.com/machine/pachinslot/1497/
+
+### 次回導入群監査
+- 2020導入カレンダー: https://www.pachinkopachisro.com/newmachine/calendar2020.html
+- グリーンべると「パチスロ 言い訳はさせないわよ！by壇蜜」: https://web-greenbelt.jp/post-38935/
