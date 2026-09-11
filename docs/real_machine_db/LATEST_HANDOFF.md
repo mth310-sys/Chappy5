@@ -1,83 +1,87 @@
 更新日: 2026-09-11
 
 ## 現在地点
-- recordCount: **1306**
-- latestRecordAdded: **スーパービンゴギャラクシー — No.1306**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2019-09-17_super-bingo-galaxy.md`
-- chronologicalFrontier: **2019-09-17**
-- frontierLatestMachine: **スーパービンゴギャラクシー — No.1306**
+- recordCount: **1307**
+- latestRecordAdded: **タマどき！ — No.1307**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2019-10-07_tamadoki.md`
+- chronologicalFrontier: **2019-10-07**
+- frontierLatestMachine: **タマどき！ — No.1307**
 - schema: **resetBehavior v0.7**
-- status: **2019_09_17_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**
+- status: **2019_10_07_GROUP_OPEN**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、mission v0.7、旧スナップショットの `INDEX.md`、`LATEST_HANDOFF.md`、直前No.1304を再取得して開始。
-- mainは既にNo.1304 / 2019-09-02群CLOSEDまで進んでいたため、古いチャット進捗へ戻らず最新handoffを正として継続。
-- 2019-09-03〜09-16境界を監査し、9/17の既知導入群へ進行。
-- No.1305 **`パチスロ ラブ嬢2`** を登録。
-- No.1306 **`スーパービンゴギャラクシー`** を登録。
-- 日刊スポーツ導入カレンダーと個別当時資料で2019-09-17パチスロ群は上記2機で一致したため **CLOSED**。
-- Sオリスロ2AA系列の `タマどき！` は遊技通信系資料で9〜10月導入計画、パチマガスロマガで2019年10月扱い。9/17群へ混入させず、次境界監査で個別導入時期を確定する。
-- `プレドキ！` は後年DBで2019年10月導入表記あり。導入法人/独立レコード要否/実導入日を次回継続監査。
+- 最新mainの `README.md`、mission v0.7、旧スナップショットの `INDEX.md`、`LATEST_HANDOFF.md`、直前No.1306を再取得して開始。
+- 正本は No.1306 `スーパービンゴギャラクシー` / 2019-09-17群CLOSED。古いチャット進捗へ戻らず最新handoffから継続。
+- 2019-09-18〜10-06境界を再監査。日刊スポーツ2019-09-06導入カレンダーでは9/17後、9/30はパチンコのみ、次の全国パチスロ群は10/7。
+- Sオリスロ2AA系列 `タマどき！` を最優先監査。遊技通信系資料はコンチェルト系列へ9〜10月導入計画、パチマガスロマガは2019年10月、777パチガブ当時公式試打（2019-09-23公開）が **2019-10-07よりコンサートホール専用導入予定** と明記したため、ホール導入時系列canonicalを2019-10-07に固定。
+- No.1307 **`タマどき！`** を登録。
+- `タマどき！` は既存Sオリスロ2AA各PB版と同様、同一正式型式・同一メイン基板性能だが、法人専用版として独立名称・独自サブ演出を持つため、全機種方針上は独立レコード化。
+- `プレドキ！` はP-WORLD/後年DBで同一性能かつ2019年10月扱いを再確認したが、今回の探索では **具体的なホール導入日/法人を固定できず**。時系列順を崩さないためまだ登録せず継続監査。
 
-## No.1305 — パチスロ ラブ嬢2
-- manufacturer: **オリンピア**
-- formalModel: **`Sパチスロラブ嬢2L2`**
-- certificationNumber: **`9S0385`**
-- releaseDate: **2019-09-17**
-- generation/system: **6号機 / ベルナビ回数+継続率管理AT**
-- payout: **97.5 / 99.8 / 101.8 / 104.0 / 105.8 / 112.0%**
-- AT初当たり: **1/330.0 / 287.8 / 261.4 / 238.2 / 227.2 / 182.5**
-- baseGamesPer50: **51.0 / 51.2 / 51.5 / 52.2 / 53.7 / 55.0G**。概数約51G資料もあり、平均化しない。
+## No.1307 — タマどき！
+- manufacturer: **ジェイピーエス（Sオリスロ2AA共同企画・コンチェルト/コンサートホール専用版）**
+- formalModel: **`Sオリスロ2AA`**
+- certificationNumber: **`9S0186`**
+- releaseDate: **2019-10-07**
+- generation/system: **6号機 / 疑似ボーナス連荘AT / PB**
+- payout: **97.2 / 98.4 / 99.8 / 101.2 / 104.0 / 105.6%**
+- ボーナス初当たり: **1/413.4 / 408.1 / 396.8 / 382.4 / 275.3 / 269.3**
+- baseGamesPer50: **約53G/50枚**
 - netIncrease: **約3.0枚/G**
-- AT basic: ベルナビ回数+継続率管理。初回上乗せパート最低8G、以降最低4G、継続チャンス10G。
-- VIP BONUS: **20G / 約60枚**
-- 天井: **12周期（1周期平均約60G、概ね約720〜780G級）→AT**
+- BIG: **70G / 約210枚**
+- REG: **30G / 約90枚**
+- 通常A天井: **1000G**
+- 通常B天井: **500G**
+- 通常C: **78Gまで約1/156で抽選、非当選で有利区間転落とする同型式解析あり**
+- 通常D: **78G**
+- 天国A/B・ドキドキ・超ドキドキ・保証: **32G**
 
-### resetBehavior v0.7 — No.1305
-- settingChange: **天井周期RESET / 有利区間RESET / ランプ消灯 / キャストスタンバイステージ**。
-- carryOver/powerCycle: **天井周期 / 内部進行 / 有利区間 CARRY_OVER**。表示Gは`??G`でも内部進行は引継ぎ。
-- mode/state: 有利区間移行時にATレベル初期値を抽選。設定変更専用の別天井モード/短縮天井は確認できず。
-- resetBenefits: 設定変更専用短縮天井・朝一高確・専用初当たり優遇率は `NONE_CONFIRMED_AFTER_RESEARCH`。
-- resetDetection: 前日点灯条件が確認できる場合、朝一有利区間ランプ **消灯=設定変更濃厚 / 点灯=据え置き濃厚**。前日消灯なら単独判別不可。
-- gakkun: `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
-- publicMorningNumbers: 設定変更専用の比較可能な確定数値は `NONE_CONFIRMED_AFTER_RESEARCH`。通常有利区間移行時ATレベル振り分けを朝一専用値として扱わない。
+### resetBehavior v0.7 — No.1307
+- settingChange: 同一正式型式の当時解析で **天井RESET / 内部状態再抽選 / モード再抽選**。
+- carryOver: タマどき！固有に据え置きを純電断から分離して直接規定する資料は `UNVERIFIED_AS_DISTINCT_TAMADOKI_CONDITION`。
+- powerCycle: 同一型式の当時解析で **天井 / 内部状態 / モード CARRY_OVER**。
+- gameCounterReset: 設定変更RESET、純電断CARRY_OVER。
+- ceilingAfterReset: 通常最深1000G。設定変更専用短縮天井は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- mode/state: 設定変更で再抽選、純電断で引継ぎ。リセット専用モード振り分け数値は `PUBLIC_NUMERIC_DISTRIBUTION_NOT_FOUND_AFTER_RESEARCH`。
+- advantageousSection: 有利区間管理機。同型式の通常C後転落/再セット構造は確認。ただしタマどき！固有の朝一有利区間ランプ契約は `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
+- resetBenefits: モード再抽選以外の短縮天井/朝一専用高確/専用当選率は `NONE_NUMERICALLY_CONFIRMED_AFTER_RESEARCH`。
+- resetPenalties: `NONE_CONFIRMED_AFTER_RESEARCH`。
+- resetDetection: タマどき！固有ガックン、朝一ランプ等の確定変更判別は `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
+- publicMorningNumbers: 設定変更時モード振り分け、朝一特定G以内当選率、恩恵発生率は `PUBLIC_NUMERIC_RESET_VALUES_NOT_FOUND_AFTER_RESEARCH`。
 
-## No.1306 — スーパービンゴギャラクシー
-- manufacturer: **ベルコ**
-- formalModel: **`SスーパービンゴギャラクシーG3`**
-- certificationNumber: **`8S1314`**
-- releaseDate: **2019-09-17**
-- generation/system: **6号機 / 周期管理AT**
-- payout: **97.5 / 99.5 / 101.5 / 104.0 / 107.0 / 110.0%**
-- CZ合算: **1/345.7 / 329.4 / 312.2 / 295.9 / 280.3 / 266.8**
-- BC初当たり: **1/637.7 / 610.0 / 580.1 / 552.0 / 524.1 / 501.2**
-- baseGamesPer50: **約50G/50枚**
-- netIncrease: **約4.6枚/G**
-- AT basic: **BINGO CHANCE 1セット33G**。初回突破約50%、2セット目以降約80%ループ。
-- 天井: CZ終了後/エンディング後は外れ周期6回、通常BC後は引き戻し周期を含むため外れ周期7回。平均約700〜800G前後。
-
-### resetBehavior v0.7 — No.1306
-- settingChange: **周期消化G RESET / 規定G RESET / 有利区間ランプRESET / 液晶停止パターンRESET**。開始サターン、液晶図柄8・6・5。
-- powerCycle/carryOver: **周期消化G / 規定G / 有利区間ランプ CARRY_OVER**。ただしセグ表示自体はRESET、液晶停止パターンもRESET。
-- advantageousSection: 設定変更でRESET、電断でCARRY_OVER。
-- resetBenefits: 非有利区間中レア役はCZ/AT直撃に若干期待とする当時解析あり。ただし攻略上「設定変更時の狙い目なし」。
-- resetDetection: 前日点灯条件を確認できる場合、朝一点灯=据え置き濃厚 / 消灯=設定変更濃厚。CZ終了後等の自然消灯があるため前日状態不明なら確定条件ではない。
-- gakkun: `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
-- publicMorningNumbers: 設定変更専用モード振り分け/短縮天井/朝一特定G当選率は `NONE_CONFIRMED_AFTER_RESEARCH`。
+### No.1307 conflicts / quality
+- 当時業界一次資料はSオリスロ2AA各派生の **メイン基板・リール制御・ボーナス確率・出玉率共通 / サブ側独自** を明記。性能コアとメイン基板reset契約の共有根拠に使用。
+- 日刊スポーツ2019-07-02はコンチェルト版を **「ダマどき！」**、遊技通信転載・パチマガスロマガ・P-WORLD等は **「タマどき！」**。`NAME_VARIANT_CONFLICT_DAMADOKI_VS_TAMADOKI` として同一版の表記揺れで保持。
+- ちょんぼりすた等の系列一括ページは2019-08-05導入とする一方、遊技通信系一次資料は法人別に導入時期が異なると明記し、タマどき！個別の当時試打は2019-10-07導入予定。`CONFLICT_GROUP_PAGE_2019_08_05_VS_TAMADOKI_SPECIFIC_2019_10_07` とし、個別当時資料をcanonical採用。
 
 ## 2019-09-17群 — CLOSED
 1. **パチスロ ラブ嬢2** — No.1305。
 2. **スーパービンゴギャラクシー** — No.1306。
 
-日刊スポーツ2019-09導入カレンダーで9/17パチスロは2機種。両機を個別の当時解析・HAZUSE・業界記事で再照合。別型式/後継機を混同しない。
+## 2019-09-18〜10-06境界 — AUDITED
+- 日刊スポーツ2019-09-06導入カレンダーでは9/30の新台はパチンコのみで、パチスロ全国導入記載なし。
+- PB/地域専用機は `タマどき！` が10/7個別導入で確定したため境界外。
+- `プレドキ！` は2019年10月までは確認したが日付未確定のため保留。漏れ防止のため次回も継続監査。
+
+## 2019-10-07群 — OPEN
+確認済み候補:
+1. **タマどき！** — No.1307 / 登録済み。
+2. **パチスロ 南国娘2** — 25Φ / 平和 / 型式 `S南国娘2H2` 候補 / 未登録。
+3. **パチスロ 南国娘2-30** — 30Φ / アムテックス / 25Φとは別型式・別スペック / 未登録。
+4. **カードバトルパチスロ ガンダム クロスオーバー** — ビスティ / 2019-10-07を日刊スポーツ2019-10-04版で確認 / 未登録。
+5. **ドラゴンホイール** — コナミアミューズメント / 2019-10-07を日刊スポーツ2019-10-04版で確認 / 未登録。
+
+注意:
+- 日刊スポーツ2019-09-06版では10/7パチスロにS南国娘2のみ掲載だが、2019-10-04更新版ではガンダム クロスオーバー、ドラゴンホイールが追加。古い版だけで群を閉じない。
+- 南国娘2 30Φは当時導入カレンダーで省略される場合があるため、HAZUSE/解析で別型式・別性能を直接確認して独立レコード化する。
 
 ## Sオリスロ2AA 系列 — 継続監査
 1. SLOT WONDER AGENT — 2019-07-08 / No.1298 / 登録済み。
 2. BELLE CITY — 2019-08-05 / No.1299 / 登録済み。
 3. 花娘 — 2019-08-19 / No.1300 / 登録済み。
 4. どき！すろ — 2019-08-19 / No.1301 / 登録済み。
-5. タマどき！ — **2019年10月候補**。遊技通信系一次資料はコンチェルト系へ9〜10月導入計画、パチマガスロマガは2019年10月。個別実導入日を次境界で確定して登録。
-6. プレドキ！ — **2019年10月候補**。P-WORLD/後年DBで同一性能を確認。導入法人・時期・独立レコード要否を継続監査。
+5. タマどき！ — **2019-10-07 / No.1307 / 登録済み**。
+6. プレドキ！ — **2019年10月候補 / 未登録**。P-WORLD・後年DBで同一性能。法人・具体導入日を次回も探索し、10/7以前/同日なら時系列を優先してNo.1308候補より先に処理する。
 
 ## 2019-08-05群 — REOPENED / NOT CLOSED
 - No.1293 パチスロあの日見た花の名前を僕達はまだ知らない。
@@ -86,43 +90,36 @@
 - No.1296 ハイハイシオサイ
 - No.1297 バンバンクロス
 - No.1299 BELLE CITY
-- Sオリスロ2AA系列の遡及補完継続中のため最終CLOSED判定は保留。
+- Sオリスロ2AA系列の法人別導入監査を継続しているため最終CLOSED判定は保留。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**
 - retroQaScanConfirmedThrough: `docs/real_machine_db/machines/2007-03-11_treasure-pirates.md`
 - latestFormalized: `docs/real_machine_db/machines/2007-02_skylove.md`
 - latestFormalizedStatus: **PARTIAL_RESEARCH_EXHAUSTED**
-- nextRetroQaAction: **`docs/real_machine_db/machines/2007-03-19_kakumei-senshi-choshu-riki.md`（革命戦士長州力）**。既QAなら次のGit追加順へ進み、reset欠損/旧形式なら性能コアを崩さずreset側だけ補完する。
+- nextRetroQaAction: **`docs/real_machine_db/machines/2007-03-19_kakumei-senshi-choshu-riki.md`（革命戦士長州力）**。既QAなら次のGit追加順へ進み、性能コアを崩さずreset側のみ補完。
 
 ## 次回再開地点
-1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1305 / No.1306 を再取得。
-2. 次の時系列境界 **2019-09-18〜10-06** を全メーカー / 別型式 / 別スペック / PB / 地域差込みで監査。
-3. この境界で **Sオリスロ2AA `タマどき！ / プレドキ！`** の実導入日・法人・独立レコード要否を最優先で確定。10月導入が確定したものは時系列位置へ登録。
-4. 次の既知全国導入群は **2019-10-07**。少なくとも **`パチスロ 南国娘2`（25Φ / 平和）** と **`パチスロ 南国娘2-30`（30Φ / アムテックス）** が別型式・別スペックとして確認済み。PB監査後にNo.1307以降を確定する。
-5. 遡及QAは **革命戦士長州力** から再開。
+1. 最新mainの README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1307 を再取得。
+2. **プレドキ！の具体導入日/導入法人を最優先で再探索**。2019-10-07以前または同日と固定できれば時系列優先で次レコード化。
+3. それでも日付固定不能なら `2019-10-07_GROUP_OPEN` を継続し、次の未処理機種 **`パチスロ 南国娘2`（25Φ / 平和）** を No.1308候補として処理。
+4. その後 **南国娘2-30 → カードバトルパチスロ ガンダム クロスオーバー → ドラゴンホイール**。全メーカー/別型式/別スペック/PB/地域差を監査して10/7群CLOSED可否を判定。
+5. 遡及QAは **革命戦士長州力** から継続。
 
 ## 主要出典 — 取得日 2026-09-11
-### No.1305
-- HAZUSE: https://hazuse.com/machine/pachislot/9S0385/
-- おスロおパチおいでやす: https://oslo-opachi.com/2019/09/11/lovejo2_tenjyou/
-- 期待値見える化: https://slotjin.com/slot/lovejo2-reset/
-- 一撃 ATレベル: https://1geki.jp/slot/s_lovej2/84/
-- K-Navi: https://p-kn.com/slot/3286/
-- Amusement Japan: https://amusement-japan.co.jp/article/detail/10001290/
-- グリーンべると: https://web-greenbelt.jp/00011411/
-
-### No.1306
-- ベルコ公式: https://www.s-bellco.co.jp/products/slot/superbingo_galaxy/
-- HAZUSE: https://hazuse.com/machine/pachislot/8S1314/
-- おスロおパチおいでやす: https://oslo-opachi.com/2019/09/12/bingogalaxy_tenjyou/
-- すろぱちくえすと: https://www.slopachi-quest.com/article/super-bingo-galaxy-tennjou/
-- PiDEA: https://www.pidea.jp/articles/%E9%AB%98%E7%B4%94%E5%A2%97%26%E6%B8%9B%E5%B0%91%E5%8C%BA%E9%96%93%E3%81%AA%E3%81%97%E3%80%8C%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%83%93%E3%83%B3%E3%82%B4%E3%82%AE%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%B7%E3%83%BC%E3%80%8D%EF%BC%8F%E3%83%99%E3%83%AB%E3%82%B3
-
-### 2019-09-17群 / 次境界監査
-- 日刊スポーツ導入カレンダー: https://www.nikkansports.com/m/amusement/pachislot/news/amp/201909060000314.html
-- 遊技通信系Sオリスロ2AA記事: https://nagasaki-yukyo.or.jp/information/jps%E3%80%81at%E9%80%A3%E6%9C%80%E5%A4%A7%E7%B4%8490%EF%BC%85%E3%82%92%E5%AE%9F%E7%8F%BE%E3%81%97%E3%81%9F6%E7%A4%BE%E5%85%B1%E5%90%8C%E4%BC%81%E7%94%BB%E3%81%AEpb%E3%83%91%E3%83%81%E3%82%B9%E3%83%AD/
+### No.1307 / Sオリスロ2AA
+- 日刊スポーツ Sオリスロ2AA発表: https://www.nikkansports.com/amusement/pachislot/news/201907020000411.html
+- 遊技通信系転載: https://nagasaki-yukyo.or.jp/information/jps%E3%80%81at%E9%80%A3%E6%9C%80%E5%A4%A7%E7%B4%8490%EF%BC%85%E3%82%92%E5%AE%9F%E7%8F%BE%E3%81%97%E3%81%9F6%E7%A4%BE%E5%85%B1%E5%90%8C%E4%BC%81%E7%94%BB%E3%81%AEpb%E3%83%91%E3%83%81%E3%82%B9%E3%83%AD/
+- Amusement Japan: https://amusement-japan.co.jp/article/detail/10001249/
+- 777パチガブ タマどき！試打（10/7導入予定）: https://www.youtube.com/watch?v=bX1pGlgFGng
 - パチマガスロマガ タマどき!: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/jps_slot/41/a.php
+- パチマガスロマガ ゲーム性: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/jps_slot/41/l.php
+- P-WORLD タマどき!: https://www.p-world.co.jp/machine/database/8987
+- ちょんぼりすた系列一括: https://chonborista.com/slot/jps-slot/89525/
 - P-WORLD プレドキ!: https://www.p-world.co.jp/machine/database/9067
+
+### 境界 / 2019-10-07群
+- 日刊スポーツ 2019-09-06版: https://www.nikkansports.com/amusement/pachislot/news/201909060000314.html
+- 日刊スポーツ 2019-10-04更新版: https://www.nikkansports.com/m/amusement/pachislot/news/201910040000287_m.html
 - HAZUSE 南国娘2 25Φ: https://hazuse.com/machine/pachislot/8S1296/
 - HAZUSE 南国娘2-30: https://hazuse.com/machine/pachislot/8S1147/
