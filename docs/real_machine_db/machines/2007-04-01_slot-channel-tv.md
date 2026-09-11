@@ -1,7 +1,7 @@
 # スロットチャンネルTV
 
 status: PARTIAL
-qaResetBehavior: PARTIAL
+qaResetBehavior: PARTIAL_RESEARCH_EXHAUSTED
 
 machineName: スロットチャンネルTV
 manufacturer: アビリット
@@ -85,17 +85,20 @@ modeSpecificMinimumData:
 
 ## resetBehavior
 
-resetBehaviorQA: PARTIAL
+resetBehaviorVersion: v0.7
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
+resetQaLastUpdated: 2026-09-11
 
 settingChangeBehavior:
-- 「スロットチャンネルTV / スロットチャンネルTV アビリット / 設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / モード / ガックン / RT持越し」へ検索語を分岐し、当時HAZUSE、パチマガスロマガ、業界記事を横断したが、本機固有の設定変更時RT状態処理を明記した高信頼資料は確認できずUNVERIFIED。
+- 「スロットチャンネルTV / スロットチャンネルTV アビリット / 設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 電断 / 天井 / モード / ガックン / RT持越し / ゴールデンタイム」を組み替え、当時HAZUSE、パチマガスロマガ、業界記事、旧DB・回顧資料を再探索したが、本機固有の設定変更時RT残りG・内部RT状態・成立済みボーナス/告知状態処理を明記した高信頼資料は確認できずUNVERIFIED_AFTER_RESEARCH。
 
 carryOverBehavior:
 - 通常時ゲーム数天井は確認されず、宵越し天井の比較対象はNONE_CONFIRMED。
-- RT中閉店時の据え置き翌日持越し可否は本機固有資料で確定できずUNVERIFIED。
+- RT中閉店時の据え置き翌日持越し可否、内部RT残りG、成立済みボーナス/告知状態の扱いは本機固有資料で確定できずUNVERIFIED_AFTER_RESEARCH。
 
 powerCycleBehavior:
-- 電源OFF→ONのみと設定変更を区別した本機固有挙動はUNVERIFIED。
+- 電源OFF→ONのみと設定変更を区別した本機固有のRT残りG・内部RT状態・成立済みボーナス/告知状態処理はUNVERIFIED_AFTER_RESEARCH。
+- 一般的な5号機RT機の挙動からは推測補完しない。
 
 gameCounterReset:
 - NOT_APPLICABLE_TO_NORMAL_CEILING。通常時ゲーム数天井は確認できない。
@@ -107,29 +110,37 @@ modeAfterReset:
 - 通常時のゲーム数モードや朝一専用モードを示す公開資料は確認できない。
 
 stateAfterReset:
-- RT中状態の設定変更/電源断時処理はUNVERIFIED。
+- RT「ゴールデンタイム」中状態、RT残りG、内部RT状態の設定変更・据え置き・電源断時処理はUNVERIFIED_AFTER_RESEARCH。
 
 advantageousSectionReset:
 - NOT_APPLICABLE（5号機初期・有利区間制度導入前）。
 
 resetBenefits:
-- NONE_CONFIRMED。
+- NONE_CONFIRMED_AFTER_RESEARCH。設定変更専用の短縮天井、専用高確、朝一RT付与等の直接公開契約は確認できない。
 
 resetPenalties:
-- NONE_CONFIRMED。
+- NONE_DIRECTLY_PUBLISHED。
 
 resetDetection:
-- UNVERIFIED。ガックン、表示、ゲーム数挙動等の本機固有の設定変更判別情報は再探索後も確認できない。
+- UNVERIFIED_AFTER_RESEARCH。ガックン、初期出目、表示、ゲーム数挙動等の本機固有の設定変更判別情報は検索語・資料系統を変えた再探索後も確認できない。
 
 numericResetData:
 - 通常時天井: NONE_CONFIRMED
 - リセット時短縮天井: NONE_CONFIRMED
 - 朝一専用モード数値: NONE_CONFIRMED
 - リセット恩恵発生率: NONE_CONFIRMED
+- publicMorningNumbers: NO_PUBLIC_RESET_SPECIFIC_NUMERIC_DATA_FOUND_AFTER_RESEARCH
+
+## resetBehavior 再探索メモ
+
+取得日: 2026-09-11
+- 既存のグリーンべると/P-WORLD、パチマガスロマガ、HAZUSEに加え、機種名・メーカー名・RT名称「ゴールデンタイム」を軸に設定変更/リセット/朝一/据え置き/電源断/ガックン/RT持越しの検索語を分岐して再探索。
+- 性能コアにある50G RT、通常時天井非確認、有利区間制度前という範囲は固定できるが、設定変更・据え置き・純電断でのRT内部状態契約は固定できなかった。
+- よって既存性能コアのPARTIAL判定はそのまま保持し、reset側だけPARTIAL_RESEARCH_EXHAUSTEDへ正式化する。
 
 ## sources
 
-取得日: 2026-08-31
+取得日: 2026-08-31 / resetBehavior再探索: 2026-09-11
 
 1. グリーンべると / P-WORLD「出川哲朗の『ヤバイよ!!哲ちゃん』、アビリットから」2007-02-09
    - https://news.p-world.co.jp/articles/2039/greenbelt
@@ -164,8 +175,9 @@ numericResetData:
 ## missingFields
 
 - RT純増/G
-- 設定変更/据え置き/電源OFF→ON時のRT状態処理
-- 本機固有の設定変更判別
+- 設定変更/据え置き/電源OFF→ON時のRT残りG・内部RT状態・成立済みボーナス/告知状態処理: UNVERIFIED_AFTER_RESEARCH
+- 本機固有の設定変更判別: UNVERIFIED_AFTER_RESEARCH
+- 設定変更専用朝一数値: NO_PUBLIC_RESET_SPECIFIC_NUMERIC_DATA_FOUND_AFTER_RESEARCH
 
 ## conflicts
 
@@ -173,4 +185,4 @@ numericResetData:
 - 導入時期表記: HAZUSEページ見出しは「2007年2月」だが、グリーンべると当時記事は納品開始を2007-04-01と明記。本DBはホール実導入基準で2007-04-01を採用し、2月は発表/解析掲載時期として扱う。
 
 coreStatus: PARTIAL
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
