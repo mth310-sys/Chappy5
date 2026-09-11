@@ -1,7 +1,7 @@
 # 三國志
 
 status: COMPLETE_CORE
-qaResetBehavior: PARTIAL
+qaResetBehavior: PARTIAL_RESEARCH_EXHAUSTED
 
 machineName: 三國志
 aliases:
@@ -107,34 +107,35 @@ modeSpecificMinimumData:
 
 ## resetBehavior
 
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
+retroQaReviewedAt: 2026-09-12
 
 settingChangeBehavior:
 - 設定変更後はチャンスゾーンから開始することをP-WORLDおよび当時HAZUSEで確認。
 - 通常画面のまま内部的にチャンスゾーンへ滞在するため、朝一チェリーからRTへ突入した場合は設定変更濃厚とされる。
 
 carryOverBehavior:
-- 据え置き時に前日の通常時777G救済カウンタ、CZ/RT残状態がどのように引き継がれるかを本機固有の高信頼資料で確認できずUNVERIFIED。
+- 据え置き時に前日の通常時777G救済カウンタ、CZ/RT残状態がどのように引き継がれるかを本機固有の高信頼資料で確認できずUNVERIFIED_AFTER_RESEARCH。
 
 powerCycleBehavior:
-- 設定を変更せず電源OFF→ONのみ行った場合に、777Gカウンタ/CZ/RT状態を維持するか、本機固有資料で確認できずUNVERIFIED。
+- 設定を変更せず電源OFF→ONのみ行った場合に、777Gカウンタ/CZ/RT状態を維持するか、本機固有資料で確認できずUNVERIFIED_AFTER_RESEARCH。
 
 gameCounterReset:
 - 設定変更後は即チャンスゾーン開始が確認できる。
-- 通常時777Gで再度チャンスゾーンへ入る救済カウンタが存在するが、変更時に内部カウンタが0へ明示的にリセットされるとの一次記述は今回確認できず、推測しない。
+- 通常時777Gで再度チャンスゾーンへ入る救済カウンタが存在するが、変更時に内部カウンタが0へ明示的にリセットされるとの一次記述は確認できず、推測しない。
 
 ceilingAfterReset:
 - 通常時の救済到達点は777Gでチャンスゾーン移行。
 - 設定変更直後は777Gを待たずチャンスゾーン滞在となるため、朝一の実質的な恩恵は即CZ開始。
-- 「リセット後天井が○Gへ短縮」という別の公開数値はNONE_CONFIRMED。
+- 「リセット後天井が○Gへ短縮」という別の公開数値はNONE_CONFIRMED_AFTER_RESEARCH。
 
 modeAfterReset:
 - モード管理型ではなく、設定変更後はチャンスゾーン開始を確認。
-- 朝一専用モード振り分けはNONE_CONFIRMED。
+- 朝一専用モード振り分けはNONE_CONFIRMED_AFTER_RESEARCH。
 
 stateAfterReset:
 - 設定変更後: チャンスゾーン。
-- 設定変更時に成立済みボーナス、RT途中状態等がどう処理されるかはUNVERIFIED。
+- 設定変更時に成立済みボーナス、RT途中状態等がどう処理されるかはUNVERIFIED_AFTER_RESEARCH。
 
 advantageousSectionReset:
 - NOT_APPLICABLE（5号機初期・有利区間制度導入前）。
@@ -144,23 +145,23 @@ resetBenefits:
 - 朝一チェリー成立時に、特殊リプレイでCZ終了する前であればRT突入チャンスを得る。
 
 resetPenalties:
-- 公開された設定変更固有の不利要素はNONE_CONFIRMED。
+- 公開された設定変更固有の不利要素はNONE_CONFIRMED_AFTER_RESEARCH。
 
 resetDetection:
 - P-WORLD: 設定変更後は通常画面でも内部CZ。朝一チェリーからRTへ突入すれば設定変更濃厚。
 - HAZUSEも設定変更後をCZ突入契機として記載。
-- ガックン等のリール始動挙動による判別は高信頼資料を確認できずUNVERIFIED。
+- ガックン等のリール始動挙動による判別は資料系統を変えた再探索後もUNVERIFIED_AFTER_RESEARCH。
 
 numericResetData:
 - 設定変更後CZ: CONFIRMED
 - CZ平均滞在: 約16G（HAZUSE）
 - CZからRTへの期待度: 約50%、設定差なし（HAZUSE / パチマガスロマガ）
-- リセット後短縮天井: NONE_CONFIRMED
-- 朝一専用モード振り分け: NONE_CONFIRMED
+- リセット後短縮天井: NONE_CONFIRMED_AFTER_RESEARCH
+- 朝一専用モード振り分け: NONE_CONFIRMED_AFTER_RESEARCH
 
 ## sources
 
-取得日: 2026-08-31
+取得日: 2026-08-31 / reset遡及再探索: 2026-09-12
 
 1. パチマガスロマガ — 三國志 基本システム
    - https://cs62.cs-plaza.com/g/pachi/pla/s_conq/igt_slot/44/a.php
@@ -184,7 +185,7 @@ numericResetData:
 
 5. P-WORLD — 三國志
    - https://www.p-world.co.jp/machine/database/4663
-   - 50G・約+0.7枚/GのRT、赤7約315枚/緑7約206枚/REG約86枚、通常時777G後CZ、設定変更後は内部CZ、朝一チェリーからRTなら設定変更濃厚を確認。
+   - 50G・約+0.7枚/GのRT、各ボーナス獲得、通常時777G後CZ、設定変更後は内部CZ、朝一チェリーからRTなら設定変更濃厚を確認。2026-09-12再確認でも据え置き/純電断の直接契約は掲載なし。
    - reliability: ANALYSIS_HIGH
 
 6. HAZUSE — 三國志 解析・機種情報
@@ -224,5 +225,6 @@ numericResetData:
 
 ## QA note
 
-- 欠損判定前に「三國志 / パチスロ三國志 / IGT / IGTジャパン / 設定別 / 機械割 / BIG / REG / 合算 / 1000円 / 50枚 / ベース / RT / 決戦ラッシュ / 天井 / 777G / 設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / ガックン」を組み替え、当時解析、古いDB、業界記事、後年回顧資料を横断した。
-- 性能コアは主要比較値が取得できたためCOMPLETE_CORE。resetBehaviorは設定変更後CZという重要挙動を確認できたが、据え置き/電断時引継ぎが未確定のためPARTIAL。
+- 2026-09-12遡及QAで「三國志 / IGT / 設定変更 / 朝一 / 据え置き / 電源ON OFF / 777G / CZ / RT / 決戦ラッシュ / ガックン」を再度組み替え、P-WORLD、旧解析、メーカー別回顧DBを横断。
+- 設定変更後の内部CZは複数系統で固定できる。一方、据え置き/純電断時の777G救済カウンタ、CZ/RT残状態、成立済みボーナス処理は直接契約を固定できなかった。
+- 一般的5号機RTの挙動から補完せず、性能側COMPLETE_COREを維持したままreset側のみPARTIAL_RESEARCH_EXHAUSTEDへ正式化した。
