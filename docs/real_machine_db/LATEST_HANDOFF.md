@@ -1,58 +1,68 @@
 更新日: 2026-09-12
 
 ## 現在地点
-- recordCount: **1414**
-- latestRecordAdded: **鬼浜爆走紅蓮隊 狂闘旅情編 — No.1414**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2021-05-24_onihama-bakusou-gurentai-kyoutou-ryojouhen.md`
+- recordCount: **1415**
+- latestRecordAdded: **チバリヨ-30 — No.1415**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2021-05-24_chibariyo-30.md`
 - chronologicalFrontier: **2021-05-24**
-- frontierLatestMachine: **鬼浜爆走紅蓮隊 狂闘旅情編 — No.1414**
+- frontierLatestMachine: **チバリヨ-30 — No.1415**
 - schema: **resetBehavior v0.7**
-- status: **2021-05-24_GROUP_OPEN_1_OF_2_KNOWN_PROCESSED**
+- status: **2021-05-24_GROUP_CLOSED_AFTER_REGIONAL_STAGED_RELEASE_AUDIT**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.1413「ORIGINAL SLOT4 PLUS」を再取得して開始。
-- `INDEX.md` は旧19件表示のためREADME規定どおり `LATEST_HANDOFF.md` とmain実レコードを正本として進捗判定。
-- mainはNo.1413 / `2021-05-10_GROUP_CLOSED_AFTER_PB_AND_ALIAS_AUDIT` まで処理済みだったため重複せず、handoff指定の次機 `鬼浜爆走紅蓮隊 狂闘旅情編` をNo.1414として追加。
-- 2021-05-24群は一般新台カレンダーで少なくとも `鬼浜爆走紅蓮隊 狂闘旅情編` / `チバリヨ-30` の2機が一致。今回は鬼浜を処理し、群はOPENのまま維持。
-- 遡及resetBehavior QAは本線優先のため進めず、既存カーソル「アストロ球団」を維持。
+- 最新mainを再取得したところ前回会話地点No.1410より先行し、No.1414「鬼浜爆走紅蓮隊 狂闘旅情編」まで処理済みだったため重複登録せずNo.1414から継続。
+- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.1414レコードを確認して開始。
+- `INDEX.md` は旧19件表示のため、README規定どおり `LATEST_HANDOFF.md` とmain実レコードを正本として進捗判定。
+- 2021-05-24群の残り `チバリヨ-30` をNo.1415として追加。
+- NET公式、HAZUSE、P-WORLD、当時導入/業界記事、1geki、必勝本系、ちょんぼりすた、旧新台一覧を横断し、性能コアとresetBehavior v0.7を同時収集。
+- 導入日は **2021-05-24 / 2021-06-07** の資料差を確認。5/24を先行/初回市場導入、6/7を全国・一般導入とする段階導入差として保持し、最初に確認できる市場導入日5/24をcanonicalとした。6/7に同一型式を重複登録しない。
+- 設定変更は天井・内部状態/モード・有利区間RESET、据え置き/純電断はCARRY_OVER。有利区間移行時は全設定共通で50%以上が天国チャンスA/Bまたはパトランプ準備となる公開数値を保存。
+- 設定変更専用の固定短縮天井は確認できず。朝一32G期待は優遇モード抽選と区別し、「32Gリセット天井」と誤登録しない。
+- 本機固有ガックン条件/発生率と、設定変更時の天国チャンスA/B/パトランプ準備の個別振り分け率は検索語・型式・メーカー・資料系統を変えて再探索後 `UNVERIFIED_AFTER_RESEARCH`。
+- 2021-05-24群は当時新台カレンダーで鬼浜/チバリヨの2機が一致。地域先行・30Φ・段階導入を再監査し、新たな独立型式を固定できなかったためCLOSED。
+- 遡及resetBehavior QAは本線優先のため今回は進めず、既存カーソル「アストロ球団」を維持。
 
-## No.1414 — 鬼浜爆走紅蓮隊 狂闘旅情編
-- path: `docs/real_machine_db/machines/2021-05-24_onihama-bakusou-gurentai-kyoutou-ryojouhen.md`
-- manufacturer: **ベルコ**
-- formalModel: **Sオニハマ4H2**
-- certificationNumber: **0S1405**
-- releaseDate: **2021-05-24**
-- generation/system: **6.1号機 / AT / ゲーム数管理型 / 2段階継続AT**
-- payoutRateBySetting: **設定1 97.6% / 2 98.4% / 3 101.3% / 4 104.9% / 6 108.2% / L 80.5%**
-- AT初当たり: **1/301.0 / 1/298.5 / 1/281.4 / 1/254.5 / 1/230.9（設定1/2/3/4/6）**
-- baseGamesPer50: **約40G/50枚**
-- netIncrease: **約2.8枚/G**
-- basicPayout: **ツッパリRUSH 1セット30G+α、初回継続期待約50%；真ツッパリRUSH 1セット30G+α、継続期待約80%、期待獲得約620枚**
-- normalCeiling: **最大768G+α（A〜D 768 / E 512 / F 384 / G 128）**
+## No.1415 — チバリヨ-30
+- path: `docs/real_machine_db/machines/2021-05-24_chibariyo-30.md`
+- manufacturer: **ネット（製造: オーゼキ）**
+- formalModel: **SチバリヨZH-30**
+- certificationNumber: **1S0017**
+- releaseDate: **2021-05-24 canonical / 2021-06-07 nationwide staged rollout**
+- generation/system: **6.1号機 / AT / 30Φ / 完全告知 / 擬似ボーナス連チャン**
+- payoutRateBySetting: **97.9 / 99.2 / 101.1 / 103.2 / 105.3 / 107.5%**
+- initialHitBySetting: **1/240 / 1/235 / 1/221 / 1/207 / 1/193 / 1/189**
+- baseGamesPer50: **約33.7G/50枚**
+- netIncrease: **約3.0枚/G**
+- basicPayout: **BIG 70G・約210枚 / REG 30G・約90枚**
+- normalCeiling: **最大900Gまたはチェリー最大40回成立**
 - coreStatus: **COMPLETE_CORE**
-- resetBehaviorQA: **COMPLETE_APPLICABLE_RESET_CORE**
+- resetBehaviorQA: **COMPLETE_APPLICABLE_RESET_CORE_WITH_EXACT_MODE_SPLIT_UNVERIFIED**
 
-### resetBehavior v0.7 — No.1414
-- 設定変更: **有利区間RESET / 天井RESET / 状態再抽選 / 真・鬼メーターRESET / 虎水寺ステージ開始**。
-- 据え置き: **天井・有利区間・内部状態CARRY_OVER**。鬼メーターは見た目上リセットされるが内部的に引継ぎ。
-- 純電断: 据え置きと同様に **天井・有利区間・内部状態CARRY_OVER**。虎水寺ステージ開始。
-- ceilingAfterReset: **設定変更後約75%で専用天井振り分け、最深512G+α**。
-- 公開専用天井表: A〜D=`256G 0.8% / 384G 0.8% / 512G 98%`、E=`256G 10% / 384G 40% / 512G 50%`、F=`256G 10% / 384G 90%`、G=`128G 100%`。A〜Dは公表丸めで99.6%のため補正せず保存。
-- resetDetection: 液晶は変更/据え置きとも虎水寺・鬼メーター見た目リセットのため判別不可。有利区間ランプは通常時点灯型で **点灯=据え置き濃厚 / 消灯=設定変更濃厚**（前日消灯閉店・店側対策等の例外あり）。
-- ガックン: 表記揺れ・型式・メーカー・設定変更/リセット/朝一/ガックンを再探索しても本機固有の高信頼直接資料を固定できず `UNVERIFIED_AFTER_RESEARCH`。
-- 設定変更時だけのモードA〜G選択率は直接固定できず、通常時モード移行率を朝一専用率として流用しない。
+### resetBehavior v0.7 — No.1415
+- 設定変更: **天井進行RESET / 内部状態・モード再抽選 / 有利区間RESET**。
+- 据え置き: **天井・内部状態/モード・有利区間CARRY_OVER**。
+- 純電断: **天井・内部状態CARRY_OVER**。有利区間もランプ/据え置き挙動と整合する引継ぎとして保存。
+- ceilingAfterReset: **設定変更専用の固定短縮天井は確認できない**。通常の最大900G/40チェリー天井を0から再開。
+- modeAfterReset / numericResetData: **有利区間移行時、全設定共通で50%以上が天国チャンスA / 天国チャンスB / パトランプ準備のいずれか**。個別3モード振り分けは `UNVERIFIED_AFTER_RESEARCH`。
+- resetDetection: 通常時有利区間ランプ点灯型のため、未対策なら **朝一消灯=設定変更濃厚 / 点灯=据え置き濃厚**。前日消灯閉店や店側対策等の例外あり。
+- ガックン: 本機固有の高信頼直接資料を固定できず `UNVERIFIED_AFTER_RESEARCH`。
 
-## 2021-05-24群 — OPEN
+## 2021-05-24群 — CLOSED
 1. **鬼浜爆走紅蓮隊 狂闘旅情編 — No.1414 / DONE**
-2. **チバリヨ-30 — No.1415候補 / NEXT**
+2. **チバリヨ-30 — No.1415 / DONE**
 
-- 一般新台カレンダー、2021年5月導入一覧で上記2機が同日群として一致。
-- `チバリヨ-30` 処理後、全メーカー・沖縄/地域先行・30Φ・PB・別型式・延期/段階導入を再監査してCLOSED可否を判定する。
+- 当時カレンダーで5/24のパチスロ新台として上記2機を確認。
+- `チバリヨ-30` は資料により6/7掲載もあるが同一型式の全国段階導入であり、6/7に重複登録しない。
+- status: **2021-05-24_GROUP_CLOSED_AFTER_REGIONAL_STAGED_RELEASE_AUDIT**
 
 ## 次回本線の再開地点
-- 最新main再同期後、**2021-05-24「チバリヨ-30」— No.1415候補**から継続。
-- 先行確認: NET / 6.1号機AT / 30Φ / 2021-05-24一般導入 / 純増約3.0枚/G / 約33.7G/50枚。
-- 沖縄地域先行・導入日の地域差、正式型式、設定変更/据え置き/電断、32G連、天国/モード、有利区間、朝一短縮/恩恵、ランプ/ガックン判別を重点監査する。
+- 最新main再同期後、**2021-05-25〜2021-06-06境界を短く再監査 → 2021-06-07「パチスロガールズ＆パンツァー 劇場版」— No.1416候補**から継続。
+- 2021-06-07カレンダーでは5スロット掲載のうち `チバリヨ-30` はNo.1415で段階導入処理済み。同日未処理の独立機種として少なくとも以下を固定:
+  1. **パチスロガールズ＆パンツァー 劇場版 — No.1416候補 / NEXT**
+  2. **パチスロガメラ — No.1417候補 / PENDING**
+  3. **パチスロ鉄拳4デビルVer. — No.1418候補 / PENDING**
+  4. **パチスロ 百花繚乱 サムライガールズ — No.1419候補 / PENDING**
+- 6/7群処理時もPB・地域先行・別型式・延期/段階導入を再監査して群CLOSED可否を判定する。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
@@ -61,25 +71,27 @@
 - 既存性能値をやり直さずreset側のみ正式再探索する。
 
 ## GitHub保存
-- No.1414追加 commit: `8b901fa092a53f20e48fb3b389dcfd1e1a67727e`
+- No.1415追加 commit: `cb29803df93950b32235f004975655274e67d567`
 - `LATEST_HANDOFF.md`: この更新commitでmainへ反映。
 
 ## 主要出典 — 取得日 2026-09-12
-### No.1414 鬼浜爆走紅蓮隊 狂闘旅情編
-- https://www.s-bellco.co.jp/products/slot/onihama-kyou/
-- https://www.s-bellco.co.jp/news/20210311_01/
-- https://www.p-world.co.jp/machine/database/9364
-- https://www.yugitsushin.jp/news/maker/20210318-1146/
-- https://chonborista.com/slot/belko-slot/134651/
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/belco_slot/107/kr01.php
-- https://nana-press.com/kaiseki/machine/124/3742/
-- https://nana-press.com/kaiseki/machine/124/3741/
-- https://hazuse.com/machine/pachislot/0S1405/genre/207/
-- https://hazuse.com/machine/pachislot/0S1405/genre/209/
-- https://slot-seven.com/onihamabakusogurentaikyo-tenzyou/
-- https://slothack.net/matome/3346/
-
-### 2021-05-24群監査
+### No.1415 チバリヨ-30
+- https://www.net-fun.co.jp/CBR-30_2021/
+- https://www.net-fun.co.jp/topic/
+- https://hazuse.com/machine/pachislot/1S0017/
+- https://www.p-world.co.jp/machine/database/9392
+- https://pachinkopachisro.com/archives/55655669.html
+- https://pachibee.7world.jp/machines/index/4854
+- https://hisshobon.news/pachislot/17161/
+- https://1geki.jp/slot/s_chibariyo30/
+- https://1geki.jp/slot/s_chibariyo30/82/
+- https://1geki.jp/slot/s_chibariyo30/83/
+- https://1geki.jp/slot/s_chibariyo30/84/
+- https://chonborista.com/slot/net-slot/138518/
 - https://ichikatsu.com/newslot/
-- https://hisshobon.news/column/1394/
-- https://slothack.net/matome/32288/
+- https://slot-seven.com/chibariyo30-tenzyou/
+
+### 2021-06-07次群先行確認
+- https://1geki.jp/newmachinecalender/202106/
+- https://1geki.jp/slot/s_ggp/
+- https://1geki.jp/slot/s_tekken4d/
