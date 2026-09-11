@@ -1,76 +1,74 @@
 更新日: 2026-09-12
 
 ## 現在地点
-- recordCount: **1412**
-- latestRecordAdded: **豪炎高校應援團 檄 — No.1412**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2021-05-10_gouen-koukou-ouendan-geki.md`
+- recordCount: **1413**
+- latestRecordAdded: **ORIGINAL SLOT4 PLUS — No.1413**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2021-05-10_original-slot4-plus.md`
 - chronologicalFrontier: **2021-05-10**
-- frontierLatestMachine: **豪炎高校應援團 檄 — No.1412**
+- frontierLatestMachine: **ORIGINAL SLOT4 PLUS — No.1413**
 - schema: **resetBehavior v0.7**
-- status: **2021-05-10_GROUP_OPEN_3_OF_AT_LEAST_4_PROCESSED_PB_CANDIDATE_FOUND**
+- status: **2021-05-10_GROUP_CLOSED_AFTER_PB_AND_ALIAS_AUDIT**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.1411「SLOTアルドノア・ゼロ」を再取得して開始。
-- `INDEX.md` は旧表示（19件地点）のため、README規定どおり最新handoffとmain実レコードを正本として進捗判定。
-- mainはNo.1411まで処理済みだったため、handoff指定の次機種No.1412候補「豪炎高校應援團 檄」から継続。
-- No.1412「豪炎高校應援團 檄」を追加。山佐公式、山佐ネクスト、業界記事、HAZUSE、1geki、なな徹、Pachiseven、ちょんぼりすた、パチマガスロマガ、K-Navi、当時立ち回り資料を横断して性能コアとresetBehavior v0.7を収集。
-- 型式 `SゴウエンコウコウオウエンダンゲキCC`、検定番号 `0S1087` をHAZUSE機種DBで固定。
-- 設定変更時は有利区間・天井・内部モード・絵瑠チャンス・気合ポイント・マサルポイントをRESET。新規有利区間開始後、初回「天丼チャレンジ」を液晶非表示で内部実行する。
-- 純電断/据え置きは有利区間・天井・内部モード・各ポイントをCARRY_OVER。ただし朝一の規定ゲーム数カウンターは設定変更/純電断どちらも `???` 表示となるため、表示RESETと内部進行CARRY_OVERを分離して保存。
-- 初回天丼チャレンジは5G保証後の継続率80%以上、平均滞在約10G、1Gあたり5〜100G減算。終了後の残りG数別モード移行率も公開数値として保存。
-- 有利区間ランプは通常時基本消灯型。朝一消灯だけでは設定変更確定不可。朝一点灯は前日有利区間引継ぎの強い据え置き材料。
-- 設定変更専用の独立モード表、CZ高確初期振り分け、本機固有ガックン条件/発生率、設定別AT総初当りは再探索後も固定できず、必要箇所を `UNVERIFIED_AFTER_RESEARCH` / `NO_SEPARATE_RESET_ONLY_TABLE_CONFIRMED_AFTER_RESEARCH` とした。
-- 2021-05-10群を閉じるため再監査したところ、一般導入カレンダー2系統ではWUG / アルドノア・ゼロ / 豪炎高校應援團 檄の3機が一致する一方、JPSのPB機 `Sオリスロ4AA / ORIGINAL SLOT4 PLUS` が同日導入としてP-WORLD・解析資料・当時記事に存在することを発見。PBも本DB対象のため未処理候補としてキューへ追加し、群はCLOSEDにせずOPENを維持。
-- `Sオリスロ4AA` はP-WORLDで検定番号 `0S1493`、型式 `Sオリスロ4AA`、導入開始 `2021-05-10` を確認。JPSのホールPB機で、ホールにより機種名・パネル名が異なる可能性があるため、次回は同型式派生名を統合/分離判断してから登録する。
-- 遡及resetBehavior QAは本線優先のため今回は進めず、前回カーソルを維持。
+- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.1412「豪炎高校應援團 檄」を再取得して開始。
+- `INDEX.md` は旧19件表示のためREADME規定どおりLATEST_HANDOFFとmain実レコードを正本として進捗判定。
+- mainはNo.1412まで処理済みで、handoff指定の次候補 `Sオリスロ4AA / ORIGINAL SLOT4 PLUS` から継続。
+- No.1413「ORIGINAL SLOT4 PLUS」を追加。JPSの6号機ノーマルPB、型式 `Sオリスロ4AA`、検定番号 `0S1493`、2021-05-10導入をP-WORLDと2021年当時資料で固定。
+- 設定は5 / 6 / Pの3段階。BIG/REG確率、一般遊技時出玉率と成立小役全取得/完全攻略時出玉率を定義分離して保存。
+- 50枚ベースは2021年版の直接資料で固定できなかったが、同一正式型式 `Sオリスロ4AA` の後年PB「メルヘンクエスト」で約36G/50枚、同一BIG/REG・獲得枚数・攻略出率を確認したため型式共通性能値として採用。根拠を明記し信頼度をANALYSIS_SINGLE / SAME_FORMAL_MODEL_CROSSCHECKとした。
+- resetBehaviorはノーマル機のため天井・AT/ARTモード・有利区間進行は非該当。後年リセット一覧でも「リセット恩恵は特になし」、天井一覧でも「天井非搭載」を確認。
+- PLUSシステムの累積ポイント/ステータスについて、設定変更・据え置き・純電断時の初期化/保持契約は表記揺れ・型式名・後年同型式PBまで再探索したが直接固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 本機固有のガックン/朝一表示による設定変更判別も十分な再探索後 `UNVERIFIED_AFTER_RESEARCH`。
+- 同一型式 `Sオリスロ4AA` は2022-02-21に「メルヘンクエスト」として別法人PB再展開が確認される。2021年ORIGINAL SLOT4 PLUSの単純別名にはせず、後年PB派生として分離する方針を明記。
+- 2021-05-10群を再監査。一般導入カレンダーでは Wake Up, Girls！ / SLOTアルドノア・ゼロ / 豪炎高校應援團 檄の3機が一致し、PB再監査でORIGINAL SLOT4 PLUSを補完。2021年攻略誌・6号機全機種一覧・PB資料も横断し、同日追加候補を今回新たに確認できなかったため群をCLOSED。
+- 遡及resetBehavior QAは本線優先のため今回は進めず、既存カーソルを維持。
 
-## No.1412 — 豪炎高校應援團 檄
-- path: `docs/real_machine_db/machines/2021-05-10_gouen-koukou-ouendan-geki.md`
-- manufacturer: **山佐** / sales: **山佐ネクスト**
-- formalModel: **SゴウエンコウコウオウエンダンゲキCC**
-- certificationNumber: **0S1087**
+## No.1413 — ORIGINAL SLOT4 PLUS
+- path: `docs/real_machine_db/machines/2021-05-10_original-slot4-plus.md`
+- manufacturer: **JPS（ジェイピーエス）**
+- formalModel: **Sオリスロ4AA**
+- certificationNumber: **0S1493**
 - releaseDate: **2021-05-10**
-- generation/system: **6.1号機 / AT / 規定ゲーム数管理 / 擬似ボーナス「応援ロード」経由**
-- payoutRateBySetting: **97.3 / 98.7 / 100.0 / 103.9 / 106.2 / 110.2%**
-- 応援ロード初当り: **1/482.65 / 427.66 / 474.60 / 373.36 / 485.23 / 330.79**
-- baseGamesPer50: **設定1約50.01G / 一般表記約51G/50枚**
-- netIncrease: **AT 約2.7枚/G**（森羅万象経由時約4.8枚/Gとの解析あり）
-- basicPayout: **応援ロード平均約54枚 / 団旗ラッシュ1セット46G+α / 団旗バッシュ1セット20G+α・約86%ST / 熱血BONUS約100枚**
+- generation/system: **6号機 / ノーマル / 完全告知 / 技術介入・小役フォロー型 / PB**
+- payoutRateBySetting（一般遊技時）: **設定5 99.4% / 設定6 100.6〜100.7% / 設定P 102.3〜102.4%**
+- payoutRateBySetting（成立小役全取得/完全攻略）: **設定5 101.6〜101.7% / 設定6 103.1〜103.2% / 設定P 105.1〜105.2%**
+- BIG: **1/172.5 / 1/218.5 / 1/218.5**
+- REG: **1/436.9 / 1/218.5 / 1/218.5**
+- 合算: **1/123.7 / 1/109.2 / 1/109.2**
+- baseGamesPer50: **約36G/50枚（同一型式後年PBによる型式共通値クロスチェック）**
+- basicPayout: **BIG 195枚 / REG 104枚**
 - coreStatus: **COMPLETE_CORE**
-- resetBehaviorQA: **COMPLETE_PUBLIC_RESET_CORE_WITH_POWER_CYCLE_AND_HIDDEN_INITIAL_TENDON_NUMERIC_DATA**
+- resetBehaviorQA: **COMPLETE_APPLICABLE_RESET_CORE_WITH_PLUS_POINT_POWER_STATE_UNVERIFIED**
 
-### resetBehavior v0.7 — No.1412
-- 設定変更: **有利区間・天井・内部モード・絵瑠チャンス・気合pt・マサルpt RESET**。
-- 据え置き/純電断: **有利区間・天井・内部モード・各ポイント CARRY_OVER**。
-- 朝一表示: 設定変更/純電断とも規定Gカウンター `???`、昼通常ステージ系。表示だけでは判別不可。
-- 設定変更後: 新規有利区間の初回天丼チャレンジを液晶非表示で内部実行。
-- 初回天丼チャレンジ: **5G保証、継続率80%以上、平均滞在約10G、1Gあたり5〜100G減算**。
-- モード別最大規定G: **通常A 800G / 通常B 750G / 通常C 500G / SP 800G**。
-- 初回天丼終了時・残りG別モード:
-  - ～449G: 通常C 100%
-  - 450〜549G: 通常B 50.00% / 通常C 50.00%
-  - 550〜649G: 通常A 21.88% / 通常B 50.78% / 通常C 27.34%
-  - 650〜749G: 通常A 44.14% / 通常B 39.84% / 通常C 10.94% / SP 5.08%
-  - 750G以上: 通常A 57.81% / 通常B 25.00% / 通常C 7.03% / SP 10.16%
-- 応援ロードAT非当選後に有利区間継続なら **気合pt引継ぎ＋次回最大規定G500G以下**。
-- 有利区間ランプ: 通常時基本消灯。**朝一点灯は据え置き/区間引継ぎの強材料、消灯だけでは設定変更確定不可**。
-- 設定変更専用の独立モード振り分け、CZ高確初期振り分け、本機固有ガックンは再探索後も未固定。
+### resetBehavior v0.7 — No.1413
+- 設定変更: 天井/ATモード/有利区間リセット恩恵は構造上非該当。公開整理ではリセット恩恵特になし。
+- 据え置き: 天井・ゲーム数モード非搭載。PLUS累積pt/ステータス保持契約は未固定。
+- 純電断: 天井・AT状態等は非該当。PLUS累積pt/ステータス保持/初期化は未固定。
+- gameCounterReset: NOT_APPLICABLE（天井非搭載）。
+- ceilingAfterReset: NOT_APPLICABLE / 天井非搭載。
+- modeAfterReset: NOT_APPLICABLE。PLUSステータスは遊技補助状態として別扱い。
+- stateAfterReset: 出玉用通常/高確は非該当。PLUSポイントのみ未固定。
+- advantageousSectionReset: NOT_APPLICABLE（ノーマル機）。
+- resetBenefits: 公開資料上「特になし」。
+- resetPenalties: 定量的公開なし。PLUSポイント初期化有無は推測禁止で未固定。
+- resetDetection: 本機固有ガックン/朝一表示は再探索後も未固定。
+- numericResetData: `NO_PUBLIC_RESET_SPECIFIC_NUMERIC_DATA_FOUND_AFTER_RESEARCH`。
 
-## 2021-05-10群 — OPEN / PB再監査中
+## 2021-05-10群 — CLOSED
 1. **パチスロ Wake Up, Girls！Seven Memories — No.1410 / DONE**
 2. **SLOTアルドノア・ゼロ — No.1411 / DONE**
 3. **豪炎高校應援團 檄 — No.1412 / DONE**
-4. **Sオリスロ4AA / ORIGINAL SLOT4 PLUS — No.1413候補 / NEXT / JPS PB**
+4. **ORIGINAL SLOT4 PLUS — No.1413 / DONE / JPS PB**
 
-- 一般新台カレンダーでは上3機のみ掲載する資料が複数あるが、PB資料・P-WORLD・2021年機種年鑑では `ORIGINAL SLOT4 PLUS` の存在を確認。
-- status: **2021-05-10_GROUP_OPEN_3_OF_AT_LEAST_4_PROCESSED_PB_CANDIDATE_FOUND**
-- `Sオリスロ4AA` はホール法人別名称・パネル派生があり得るため、次回に型式単位で別名を洗い出し、同型式の単一レコードか独立PB派生かを正本ルールに沿って判定する。
-- この候補処理後、全メーカー・地域機・PB・別型式・延期差をもう一度監査してCLOSED可否を決める。
+- 一般新台カレンダーの3機に対し、PB監査でORIGINAL SLOT4 PLUSを補完。
+- 2021年当時攻略誌掲載、P-WORLD、PB/6号機一覧、後年年鑑まで再監査し、2021-05-10導入の追加スロット候補を今回新たに確認できずCLOSED。
+- 2022年「メルヘンクエスト」は同一型式だが別法人PB・別導入日なので2021-05-10群へ重複追加しない。
 
 ## 次回本線の再開地点
-- 最新main再同期後、**2021-05-10「Sオリスロ4AA / ORIGINAL SLOT4 PLUS」— No.1413候補**から継続。
-- 型式 `Sオリスロ4AA` / 検定番号 `0S1493` / JPS / ノーマル / 2021-05-10導入をP-WORLDで先行確認済み。
-- 処理後に2021-05-10群を再監査してCLOSED可否を判定し、その後の本線は2021-05-24群（少なくとも鬼浜爆走紅蓮隊 狂闘旅情編 / チバリヨ-30）へ進む。
+- 最新main再同期後、**2021-05-24「鬼浜爆走紅蓮隊 狂闘旅情編」— No.1414候補**から継続。
+- 先行確認: ベルコ / 6.1号機AT / 2021-05-24 / AT約2.8枚/G / 約40G/50枚 / 最大768G+α。
+- 同日群の既知候補は少なくとも **鬼浜爆走紅蓮隊 狂闘旅情編 / チバリヨ-30**。一般新台カレンダーではこの2機が5/24群として一致。
+- 鬼浜処理後、チバリヨ-30へ進み、全メーカー・地域機・PB・別型式・延期差を再監査してCLOSED可否を判定する。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
@@ -79,35 +77,25 @@
 - 既存性能値をやり直さずreset側のみ正式再探索する。
 
 ## GitHub保存
-- No.1412追加 commit: `fdb479f4a43e00aaaa25687b9bfdb72cb1f3c69c`
+- No.1413追加 commit: `9a6da5e1b5348c69853d3b4e6e9e6dc4cecd94a1`
 - `LATEST_HANDOFF.md`: この更新commitでmainへ反映。
 
 ## 主要出典 — 取得日 2026-09-12
-### No.1412 豪炎高校應援團 檄
-- https://www1.yamasa.co.jp/gog/
-- https://yamasa-next.co.jp/music-distribution/gog/
-- https://www.nikkansports.com/amusement/pachislot/news/202103080000555.html
-- https://www.pidea.jp/articles/1614765626
-- https://web-greenbelt.jp/post-44912/
-- https://hazuse.com/machine/pachislot/0S1087/
-- https://hazuse.com/machine/pachislot/0S1087/genre/207/
-- https://1geki.jp/slot/s_goeng/
-- https://1geki.jp/slot/s_goeng/42/
-- https://nana-press.com/kaiseki/machine/120/3780/
-- https://nana-press.com/kaiseki/machine/120/3567/
-- https://nana-press.com/kaiseki/machine/120/3564/
-- https://pachiseven.jp/machines/6283/cutout/8
-- https://chonborista.com/slot/yamasa-slot/133450/
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/239/kh03.php
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/239/tj04-1.php
-- https://p-kn.com/slot/3567/
-- https://slotmethod.jp/archives/6331/
-
-### 2021-05-10群監査 / PB候補
-- https://ichikatsu.com/newslot/
-- https://www.slopachi-quest.com/article/2021-dounyuukisyu/
-- https://hisshobon.news/column/1394/
-- https://psumma.jp/pachislo/51658/
-- https://chonborista.com/slot/jps-slot/134601/
+### No.1413 ORIGINAL SLOT4 PLUS
 - https://www.p-world.co.jp/machine/database/9395
-- https://galapagosstore.com/web/book/detail/mbj-27424-124121939-001-001
+- https://psumma.jp/pachislo/51658/
+- https://sulocale.sulopachinews.com/archives/20825
+- https://www.fujisan.co.jp/product/1219887/b/2100520/
+- https://pachisuro100.com/reset/
+- https://pachisuro100.com/tenjyo/
+- https://pachinko-curation.com/28698/
+- https://hazuse.com/machine/pachislot/SX0044/
+- https://ameblo.jp/sapporoslotschool/entry-12696079237.html
+
+### 2021-05-10群 / 次群監査
+- https://ichikatsu.com/newslot/
+- https://www.p-world.co.jp/machine/database/9395
+- https://www.fujisan.co.jp/product/1219887/b/2100520/
+- https://ameblo.jp/sapporoslotschool/entry-12696079237.html
+- https://chonborista.com/slot/belko-slot/134651/
+- https://slothack.net/matome/32288/
