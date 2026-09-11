@@ -1,63 +1,114 @@
 更新日: 2026-09-11
 
 ## 現在地点
-- recordCount: **1320**
-- latestRecordAdded: **パチスロ トータル・イクリプス2 — No.1320**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2019-12-02_total-eclipse2.md`
+- recordCount: **1323**
+- latestRecordAdded: **ドリームクルーン2 — No.1323**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2019-12-02_dream-crune2.md`
 - chronologicalFrontier: **2019-12-02**
-- frontierLatestMachine: **パチスロ トータル・イクリプス2 — No.1320**
+- frontierLatestMachine: **ドリームクルーン2 — No.1323**
 - schema: **resetBehavior v0.7**
-- status: **2019_12_02_GROUP_OPEN_3_OF_6_PROCESSED**
+- status: **2019_12_02_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、mission v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前No.1319「天下布武4」を再取得。
+- 最新mainの `README.md`、mission v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前No.1320「パチスロ トータル・イクリプス2」を再取得。
 - `INDEX.md` は旧19件表示のため、README明示ルールどおり最新 `LATEST_HANDOFF.md` とmain実レコードを正として継続。
-- main上で「パチスロ トータル・イクリプス2」の既存レコードなしを確認し、12/02群の未処理先頭を **No.1320** として追加。
-- 性能コア＋resetBehavior v0.7を収集。SANKYO公式博物館、当時業界記事、HAZUSE、1geki、当時攻略系を横断。
-- 遡及QAはGodzillaの次のGit追加順を再計算し、未formalizedだった **ミスターマジックネオ**を現行v0.7へ正式化。性能側`coreStatus: PARTIAL`は維持。
-- 12/02群は既知6機。今回3機目まで処理済み、残り3機。
+- main上で同名既存レコードなしを逐次確認し、12/02群の残り3機を追加。
+  - **No.1321 マジカルハロウィン7**
+  - **No.1322 パチスロ ルパン三世～イタリアの夢～**
+  - **No.1323 ドリームクルーン2**
+- 3機とも性能コアとresetBehavior v0.7を同時収集。最初の検索で欠損判定せず、型式/メーカー/シリーズ/設定変更/朝一/据え置き/純電断/天井/モード/有利区間/ガックンを変えて公式・業界記事・当時解析・旧DBを横断。
+- 2019-12-02群は導入カレンダー再監査で既知6機が一致し、**CLOSED_AFTER_CROSS_SOURCE_AUDIT**へ移行。
 
-## No.1320 — パチスロ トータル・イクリプス2
-- manufacturer: **SANKYO**
-- formalModel: **`Sトータル・イクリプス2R`**
-- certificationNumber: **`9S0862`**
+## No.1321 — マジカルハロウィン7
+- path: `docs/real_machine_db/machines/2019-12-02_magical-halloween7.md`
+- manufacturer: **コナミアミューズメント**
+- formalModel: **`Sマジカルハロウィン7KU`**
+- certificationNumber: **PUBLIC_VALUE_NOT_FIXED_AFTER_RESEARCH**
 - releaseDate: **2019-12-02**
 - generation/system: **6号機 / AT / 疑似ボーナス+CZ+ST型AT**
-- payout: **96.7 / 98.4 / 100.4 / 103.9 / 106.9 / 111.0%**
-- 疑似ボーナス: **1/331 / 325 / 302 / 271 / 246 / 118**
-- AT初当たり: **1/734 / 698 / 623 / 516 / 440 / 174**
-- CZ: **1/182 / 180 / 177 / 174 / 166 / 89**
-- base: **約50.8G/50枚**（約51G表記は丸め差）
-- 純増: **約2.7枚/G**
-- basic performance: 出撃ボーナス30G / AT「サバイバルタイム」1セット最大30G / 「シューティングチャンス」10～50G / 最大継続率約96.4%
-- 天井: **有利区間移行後777Gで疑似ボーナス**。AT確定天井ではない。
+- payout: **98.3 / 99.5 / 100.7 / 103.4 / 105.0 / 108.1%**
+- ボーナス合算: **1/232.5 / 222.3 / 210.9 / 187.7 / 173.4 / 156.1**
+- AT初当たり: **1/641.7 / 594.8 / 547.9 / 466.6 / 420.5 / 354.9**
+- base: **約50.9G/50枚**
+- 純増: **AT約1～3枚/G / 疑似ボ約5枚/G**
+- basic payout: 黒BAR BIG 200枚+α / 赤7 BIG 100枚+α / REG 50枚+α / AT1セット30G以上
+- 天井: **573G+αでボーナス以上**
 - coreStatus: **COMPLETE_CORE**
 
-### resetBehavior v0.7 — No.1320
-- resetBehaviorQA: **COMPLETE_PUBLIC_RESET_CORE_WITH_DISPLAY_VS_INTERNAL_POINT_DISTINCTION**
-- 設定変更: **天井RESET / 内部モード再抽選 / 内部状態RESET・再抽選**。
-- 据え置き: **天井・内部モード・内部状態・内部ポイントCARRY_OVER**とする当時朝一解析。
-- 純電源OFF→ON: 当時資料では「据え置き」と同列で **天井・モード・状態・内部ポイントCARRY_OVER**。無電断据え置きとの独立比較一次資料は未固定。
-- 朝一の見た目ポイント表示は設定変更/据え置きにかかわらず0から。**据え置きでは内部ポイントを引き継ぐ**ため、極端に早い999pt到達は据え置き示唆になり得る。
-- 設定変更専用の固定短縮天井は **なし確認**。公開最深は有利区間移行後777G。
-- 有利区間ランプ単独での朝一変更判別は不可とする攻略資料あり。
-- 本機固有ガックン発生率/確定条件、設定変更専用モード振り分け、朝一特定G当選率は十分再探索しても未固定。
+### resetBehavior v0.7 — No.1321
+- resetBehaviorQA: **COMPLETE_PUBLIC_RESET_CORE_WITH_ADVANTAGEOUS_SECTION_ENTRY_NUMBERS**
+- 設定変更: **天井RESET / 有利区間RESET / 非有利区間へ**。
+- 純電源OFF→ON: **天井・有利区間CARRY_OVER**。
+- 有利区間移行1G目は高確以上/CZ抽選。CZ当選率はモードA/B/C/Dで **2.0 / 10.6 / 38.3 / 62.5%**。これは設定変更専用値ではなく有利区間移行時共通値として保存。
+- 通常時有利区間ランプ消灯タイプで、ランプ単独変更判別不可。
+- 当時攻略ではガックン確認なし。コナミ公式スタッフ回答でもカスタム/演出面から設定変更は見抜けない。
+- 設定変更専用モードA～D振り分け、純電断時の内部モード/状態独立契約は未固定。
 
-## No.1320 品質メモ / CONFLICT
-- 導入日はSANKYO公式2019.12、HAZUSE/1geki/複数DBが **2019-12-02** で一致。一方、2019-10-25業界記事は事前予定として12/9表記。実導入資料を優先し12/2をcanonical、12/9は予定差として保持。
-- 朝一ステージ名は二次資料間で「リルフォート歓楽街」「ユーコン基地」の表記差があるため変更判別には採用しない。
-- ベース50.8G / 約51Gは丸め精度差。
-- 導入台数5,000/6,000/8,000台の差は必須収集対象外のためcanonical化しない。
+### No.1321 CONFLICT
+- 導入日はコナミ公式PV・K-Navi等が **2019-12-02**。早期単一解析に **2019-11-05** 表記が残るため平均せず、公式12/2をcanonical、11/5は事前情報段階の誤記/予定混同として保持。
 
-## 2019-12-02群 — OPEN
-1. **喰霊-零- 運命乱～うんめいのみだれ～** — No.1318 / 処理済み。
-2. **天下布武4**（セブンリーグ） — No.1319 / 処理済み。
-3. **パチスロ トータル・イクリプス2**（SANKYO） — No.1320 / **処理済み**。
-4. **マジカルハロウィン7**（コナミアミューズメント） — 未処理。
-5. **ルパン三世～イタリアの夢～**（平和） — 未処理。
-6. **ドリームクルーン2**（オーイズミ） — 未処理。
+## No.1322 — パチスロ ルパン三世～イタリアの夢～
+- path: `docs/real_machine_db/machines/2019-12-02_lupin-italian-dream.md`
+- manufacturer: **オリンピア（販売: 平和）**
+- formalModel: **`Sルパン三世イタリアの夢H5`**
+- certificationNumber: **`9S0828`**
+- releaseDate: **2019-12-02**
+- generation/system: **6号機 / AT / 高純増疑似ボーナス+1G連**
+- payout: **97.3 / 99.0 / 101.3 / 104.8 / 109.7 / 112.8%**
+- 初当たり: **1/421.4 / 396.6 / 367.6 / 337.1 / 297.1 / 277.3**
+- base: **約51.7～52.0G/50枚**
+- 純増: **約9.0枚/G**
+- basic payout: MAX BONUS **34G / 約306枚**、LUPIN BONUS **15枚役ナビ5回 / 約60枚**
+- 天井: **766G+α**
+- coreStatus: **COMPLETE_CORE**
 
-群完了後、全メーカー/別型式/別スペック/PB/地域差を横断してCLOSED判定する。
+### resetBehavior v0.7 — No.1322
+- resetBehaviorQA: **COMPLETE_PUBLIC_RESET_CORE_WITH_STRONG_DETECTION_SIGNALS**
+- 設定変更: **天井RESET / 内部状態RESET / 有利区間RESET・非有利区間へ**。
+- 据え置き/純電断: **内部天井G・内部状態・有利区間CARRY_OVER**。メニュー画面は0Gへ戻るため表示Gと内部Gを分離。
+- 朝一有利区間ランプ **点灯=据え置き濃厚 / 消灯=設定変更濃厚**。開店前対策等の例外があるため確定扱いしない。
+- 不二子ポイント高確率の実戦上内部G帯 **1～99 / 200～249 / 400～449 / 600～649 / 750G～**を、内部Gズレによる補助変更判別値として保存。
+- 設定変更専用短縮天井/固定恩恵はなし確認。
+
+## No.1323 — ドリームクルーン2
+- path: `docs/real_machine_db/machines/2019-12-02_dream-crune2.md`
+- manufacturer: **オーイズミ**
+- formalModel: **`Sドリームクルーン2CX`**
+- certificationNumber: **`9S0550`**
+- releaseDate: **2019-12-02**
+- generation/system: **6号機 / AT / 疑似ボーナス・権利物風**
+- payout: **97.4 / 98.9 / 103.0 / 107.0%**（設定1/2/5/6）
+- AT初当たり: **1/698.1 / 630.4 / 504.3 / 421.9**
+- クルーン&ルーレット: **1/128.8 / 122.8 / 119.0 / 112.3**
+- base: **約53.6～53.7G/50枚**
+- 純増: **約3.1枚/G**
+- basic payout: **1権利約500枚 / 3回権利約1500枚 / AT後32Gくるくるタイム**
+- 通常ゲーム数天井: **NONE_CONFIRMED**（後年整理では「–」）
+- coreStatus: **COMPLETE_CORE**
+
+### resetBehavior v0.7 — No.1323
+- resetBehaviorQA: **PARTIAL_RESEARCH_EXHAUSTED**
+- 1geki当時専用ページ自体が設定変更/電源OFF ON時の天井・状態・モード・ステージをすべて「調査中」としていた。
+- 型式`Sドリームクルーン2CX`/検定`9S0550`/OIZUMIを含め検索語変更し、HAZUSE・K-Navi・パチマガスロマガ・ちょんぼりすた・業界記事まで横断したが、本機固有の設定変更/据え置き/純電断の内部契約を固定できず。
+- 通常時モードA/B/Cの存在は固定できたが、リセット時のモード選択/引継ぎは未固定。
+- 有利区間ランプ朝一契約、ガックン、初期出目、公開朝一専用数値も未固定。一般6号機挙動から補完しない。
+
+## 2019-12-02群 — CLOSED
+1. **喰霊-零- 運命乱～うんめいのみだれ～** — No.1318
+2. **天下布武4** — No.1319
+3. **パチスロ トータル・イクリプス2** — No.1320
+4. **マジカルハロウィン7** — No.1321
+5. **パチスロ ルパン三世～イタリアの夢～** — No.1322
+6. **ドリームクルーン2** — No.1323
+
+複数の当時導入カレンダーで12/2パチスロ6機が一致。全メーカー/別型式/別スペック/PB/地域差まで再監査し、現時点で追加の12/2機を固定できなかったため **`2019_12_02_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT`**。
+
+## 次の時系列群 — 2019-12-09候補
+当時導入カレンダーで少なくとも以下2機を確認済み。
+1. **パチスロ交響詩篇エウレカセブン3 HI-EVOLUTION ZERO**（サミー） — **No.1324候補**
+2. **S沖っ娘25**（サンセイR&D） — **No.1325候補**
+
+次回は12/03～12/08境界を再監査してから12/09群を開始し、群完了後に同日追加/PB/地域差/別型式をCLOSED監査する。
 
 ## 継続監査
 - `プレドキ！`: プレゴ専用PBまでは固定済み。P-WORLDで2019-12-02時点の機種DB掲載は確認済みだが、具体的初回ホール導入日未固定のため未登録継続。本線は止めない。
@@ -66,40 +117,49 @@
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**
-- `2007-03_godzilla-pachislot-wars.md`: 既formalizedのため再処理せず通過。
-- `2007-03_mister-magic-neo.md`: **今回formalize完了**。
-  - 既存`coreStatus: PARTIAL`維持。
-  - resetBehaviorVersion: v0.7
-  - resetBehaviorQA: **PARTIAL_RESEARCH_EXHAUSTED**
-  - 通常時ゲーム数天井非確認 / 有利区間制度前を固定。
-  - 設定変更/据え置き/純電断の機種固有内部契約、ガックン/初期出目等の変更判別、公開朝一数値は資料系統変更後も固定できず、一般5号機挙動から補完しない。
-- Git追加順で次の未formalized候補は **`2007-03_wild7.md`（ワイルド7）**。main上で現在`resetBehaviorQA: PARTIAL`を確認済み。
+- 今回は本線12/02群残り3機の完了と群CLOSEDを優先し、既存性能値の再調査は実施しなかった。
+- 次の未formalized候補は **`2007-03_wild7.md`（ワイルド7）**。main上で`resetBehaviorQA: PARTIAL`のため、次回以降v0.7 formalize対象。
 
 ## 次回再開地点
-1. 最新main README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1320を再取得。
-2. 12/02群の既存有無を再検索し、未処理先頭 **`マジカルハロウィン7`** を **No.1321候補** として性能コア＋resetBehavior v0.7を収集。
-3. 続けて `ルパン三世～イタリアの夢～ → ドリームクルーン2` の順で進行。
-4. 6機完了後に2019-12-02群を全メーカー/別型式/別スペック/PB/地域差まで横断監査しCLOSED可否を判定。
-5. 遡及QAは **`2007-03_wild7.md`** から継続し、既formalizedなら重複編集せず次へ進む。
+1. 最新main README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1323を再取得。
+2. 2019-12-03～12-08境界を再監査。
+3. **2019-12-09「パチスロ交響詩篇エウレカセブン3 HI-EVOLUTION ZERO」No.1324候補**を性能コア＋resetBehavior v0.7で収集。
+4. 続けて **S沖っ娘25 No.1325候補**。
+5. 12/09群完了後、全メーカー/別型式/別スペック/PB/地域差を横断監査してCLOSED可否判定。
+6. 遡及QAは **`2007-03_wild7.md`** から継続。既formalizedなら重複編集せず次へ進む。
 
 ## 主要出典 — 取得日 2026-09-11
 
-### No.1320 パチスロ トータル・イクリプス2
-- SANKYOオンライン博物館: https://www.sankyo-fever.jp/collection/899/
-- Amusement Japan/P-WORLD: https://news.p-world.co.jp/articles/12101/amusement
-- 遊技通信/P-WORLD: https://news.p-world.co.jp/articles/12085/yugitsushin
-- HAZUSE: https://hazuse.com/machine/pachislot/9S0862/
-- 1geki 機種概要: https://1geki.jp/slot/s_te2/
-- 1geki 初当たり: https://1geki.jp/slot/s_te2/1/
-- 1geki AT概要: https://1geki.jp/slot/s_te2/81/
-- スロぱちクエスト 天井/朝一: https://www.slopachi-quest.com/article/muvluv-alternative-total-eclipse2-tennjou/
-- スロットセブン 天井/朝一: https://slot-seven.com/totaleclipse2-tenzyou/
-- ぱちんこキュレーション: https://pachinko-curation.com/4580/
+### No.1321 マジカルハロウィン7
+- KONAMI公式PV: https://www.youtube.com/watch?v=RC0HQdQkOkM
+- KONAMI公式スタッフQ&A: https://www.konami.com/amusement/psm/portal/magihallo/magiotsu_23/20200124.html
+- 娯楽産業: https://www.goraku-sangyo.com/%E3%82%B3%E3%83%8A%E3%83%9F%E3%82%A2%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%BA%E3%83%A1%E3%83%B3%E3%83%88%E3%80%80%E6%96%B0%E6%A9%9F%E7%A8%AE%E3%80%8C%E3%83%9E%E3%82%B8%E3%82%AB%E3%83%AB%E3%83%8F%E3%83%AD/
+- P-WORLD: https://www.p-world.co.jp/machine/database/9061/
+- K-Navi: https://p-kn.com/slot/3325/
+- スロぱちクエスト: https://www.slopachi-quest.com/article/magical-halloween7-tennjou/
+- おスロおパチおいでやす: https://oslo-opachi.com/2019/12/09/majiharo7_tennjyou/
+- すろかい: https://slotkaiseki.hatenablog.com/entry/majiharo7
+- P-MEDIA JAPAN: https://p-media.info/post-22869/
 
-### 遡及QA — ミスターマジックネオ
-- K-Navi業界ニュース: https://p-kn.com/topics/news/164/
-- グリーンべると: https://web-greenbelt.jp/00004077/
-- グリーンべると導入支援記事: https://web-greenbelt.jp/00004081/
-- HAZUSE旧解析: https://hazuse.com/i/data/neomagic/top.htm
-- pacnk: https://pacnk.com/slot/tools/sh_misutamajikeo.html
-- MediaWorld実機シミュレータ資料: https://mediaworld.co.jp/products/10403007001
+### No.1322 ルパン三世～イタリアの夢～
+- 平和2019 NEWS: https://www.heiwanet.co.jp/news/2019/
+- 遊技通信/P-WORLD: https://news.p-world.co.jp/articles/11933/yugitsushin
+- K-Navi: https://p-kn.com/slot/3333/
+- HAZUSE: https://hazuse.com/machine/pachislot/9S0828/
+- すろかい: https://slotkaiseki.hatenablog.com/entry/lupinitaly
+- スロぱちクエスト: https://www.slopachi-quest.com/article/rupin-the-3rd-italy-tennjou/
+- 期待値見える化: https://slotjin.com/slot/lupinitaly-reset/
+
+### No.1323 ドリームクルーン2
+- PiDEA発売記事: https://www.pidea.jp/articles/6%E5%8F%B7%E6%A9%9F%E3%81%A7%E3%82%82%E3%82%AF%E3%83%AB%E3%83%BC%E3%83%B3%E5%81%A5%E5%9C%A8%E3%80%8C%E3%83%89%E3%83%AA%E3%83%BC%E3%83%A0%E3%82%AF%E3%83%AB%E3%83%BC%E3%83%B32%E3%80%8D%E7%99%BA%E5%A3%B2%EF%BC%8F%E3%82%AA%E3%83%BC%E3%82%A4%E3%82%BA%E3%83%9F
+- グリーンべると検定: https://web-greenbelt.jp/00011556/
+- HAZUSE: https://hazuse.com/machine/pachislot/9S0550/
+- 1geki機種概要: https://1geki.jp/slot/s_dc2/
+- 1geki設定変更/電断: https://1geki.jp/slot/s_dc2/3/
+- 1gekiベース: https://1geki.jp/slot/s_dc2/4/
+- ちょんぼりすた: https://chonborista.com/slot/oizumi-slot/95079/
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/oizumi_slot/46/a.php
+
+### 12/02群監査 / 次群
+- 2019新台導入カレンダー: https://pachinkopachisro.com/archives/52807194.html
+- 12/02機種まとめ後半: https://pachi-jyouhoukyoku.hatenablog.com/entry/2019/12/02/001633
