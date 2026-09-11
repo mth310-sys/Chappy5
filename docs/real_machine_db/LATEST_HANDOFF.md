@@ -1,80 +1,78 @@
 更新日: 2026-09-11
 
 ## 現在地点
-- recordCount: **1377**
-- latestRecordAdded: **アカメが斬る！ — No.1377**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2020-11-09_akame-ga-kill.md`
-- chronologicalFrontier: **2020-11-09**
-- frontierLatestMachine: **アカメが斬る！ — No.1377**
+- recordCount: **1378**
+- latestRecordAdded: **パチスロ モンスターハンター:ワールド™ — No.1378**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2020-11-16_monster-hunter-world.md`
+- chronologicalFrontier: **2020-11-16**
+- frontierLatestMachine: **パチスロ モンスターハンター:ワールド™ — No.1378**
 - schema: **resetBehavior v0.7**
-- status: **2020-11-09_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**
+- status: **2020-11-16_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、正本mission v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前No.1376「華祭」を再取得して開始。
+- 最新mainの `README.md`、正本mission v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前No.1377「アカメが斬る！」を再取得して開始。
 - `INDEX.md` は旧19件表示のため、README規定どおり最新handoffとmain実レコードを正本として進捗を判定。
-- 開始時mainの最新handoffは **No.1376 / 2020-11-02群CLOSED**。過去会話の旧地点には戻らず、次の未処理境界から継続。
-- 1geki 2020年11月カレンダーを再監査し、11/03～11/08に別パチスロ導入群を確認せず、次は11/09「アカメが斬る！」1機であることを確認。
-- No.1377「アカメが斬る！」を性能コア+resetBehavior v0.7で追加。
-- 11/09は1geki月間カレンダー上スロット1機であり、パチビー/HAZUSE/業界記事でも導入帯を照合。別型式・別スペック・PBの追加同日機を今回固定できず **2020-11-09群CLOSED** と判定。
+- 開始時mainは会話上のNo.1373より先行し、**No.1377 / 2020-11-09群CLOSED** まで完了済みだったため重複せず次の未処理境界へ継続。
+- 1geki 2020年11月カレンダーを監査し、11/10～11/15に別パチスロ導入群を確認せず、11/16のスロットは「パチスロ モンスターハンター:ワールド™」1機のみと確認。
+- No.1378を性能コア+resetBehavior v0.7で追加。
+- 11/16は1geki月間カレンダー上「全3機種 / パチンコ2 / スロット1」。HAZUSE・パチビー・複数解析でも導入日/型式/主要性能を照合し、別型式・別スペック・PBの追加同日機を固定できず **2020-11-16群CLOSED** と判定。
+- 2020年11月は1geki月間カレンダー上のスロット6機が 11/02=4機、11/09=1機、11/16=1機で全て処理済み。11/17以降の同月独立パチスロ導入群は同カレンダー上確認なし。
 
-## No.1377 — アカメが斬る！
-- path: `docs/real_machine_db/machines/2020-11-09_akame-ga-kill.md`
-- manufacturer: **七匠**
-- formalModel: **SATアカメが斬る！K**
-- certificationNumber: **9S1271**
-- releaseDate canonical: **2020-11-09**
-- releaseDate note: **2020-11-16表記もあり（地域差）**。canonicalは11/09、定義差/地域差を保持。
-- generation/system: **6号機 / AT / 擬似ボーナス / 規定G+レア役W抽選 / CZ / 有利区間管理**
-- 出玉率: **97.6 / 99.0 / 100.9 / 104.5 / 107.1 / 112.4%**
-- BIG: **1/542 / 1/523 / 1/489 / 1/454 / 1/421 / 1/410**
-- REG: **1/687 / 1/681 / 1/676 / 1/687 / 1/684 / 1/682**
-- 合算: **1/303 / 1/296 / 1/284 / 1/273 / 1/260 / 1/256**
-- base: **約50.0G/50枚**
-- netIncrease: **約4.0枚/G**
-- basicPayout: **BIG 30G約120枚 / REG 15G約60枚 / AT「アカメチャンス」1セット30G+α**
-- canonical internal ceiling: **有利区間移行後997Gでボーナス**
+## No.1378 — パチスロ モンスターハンター:ワールド™
+- path: `docs/real_machine_db/machines/2020-11-16_monster-hunter-world.md`
+- manufacturer: **エンターライズ**
+- formalModel: **SモンスターハンターワールドZI**
+- certificationNumber: **0S0948**
+- releaseDate: **2020-11-16**
+- generation/system: **6号機 / AT / 擬似ボーナス / クエスト周期 / 有利区間管理**
+- 出玉率: **97.4 / 98.8 / 100.7 / 105.2 / 108.1 / 111.2%**
+- ボーナス初当たり: **1/375.1 / 1/356.8 / 1/336.3 / 1/306.7 / 1/284.6 / 1/262.6**
+- base: **約51.3G/50枚（設定1）**
+- netIncrease: **約3.0枚/G**
+- basicPayout: **BBは狩猟失敗まで継続 / アイルーボーナスはベル8回成立まで / 剥ぎ取りRUSHはベル8回成立まで・平均FRストック7個**
 - coreStatus: **COMPLETE_CORE**
 - resetBehaviorQA: **COMPLETE_WITH_LIMITED_UNVERIFIED_FIELDS**
 
-### resetBehavior v0.7 — No.1377
-- 設定変更: **有利区間→非有利区間 / 天井RESET / 内部状態再抽選**。
+### 天井構造
+- 有利区間突入時に **最低50%** で天井権利となる「有利区間引き継ぎ抽選」を実施。
+- 権利獲得時のみ **同一有利区間750G** または **クエスト3スルー** でボーナス告知。
+- 非当選時はクエスト終了後に有利区間をリセットし、次回有利区間突入時に再抽選するため、見た目上750G超のハマリが発生し得る。
+- 単純な「通常時最大750G」ではないため、詳細契約をcanonicalとして保存。
+
+### resetBehavior v0.7 — No.1378
+- 設定変更: **有利区間RESET→非有利区間 / 天井RESET / アステラ開始 / ガックンなし**。
 - 据え置き・純電源OFF→ON: **有利区間CARRY_OVER / 天井CARRY_OVER / 内部状態CARRY_OVER**。
-- DMMぱちタウンはリセット仕様を **高確スタート** と記載。
-- 通常時は有利区間ランプ基本消灯型のため **朝一消灯だけでは変更判別不可**。
-- 朝一からランプ点灯なら **据え置き + 前日有利区間引き継ぎ状態濃厚**。ランプ位置はクレジット右上の丸型。
-- 有利区間継続時は、ボーナス後最大400G / AT後最大300Gへ短縮。これは設定変更恩恵ではなく、前区間引き継ぎ契約として分離。
-- 本機固有ガックン条件/発生率、設定変更専用モード振り分け率は横断再探索後も `UNVERIFIED_AFTER_RESEARCH` / `NO_PUBLIC_FULL_TABLE_FOUND_AFTER_RESEARCH`。
+- 電断復帰: 狩猟中なら狩猟状態、フィールドならアステラorフィールド、AT中ならOFF前の出玉状態に応じ復帰。
+- 設定変更後の詳細な内部状態初期振り分けは直接固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 通常時は有利区間ランプ基本消灯型のため **朝一消灯では変更判別不可**。
+- 朝一アステラは変更/据え置き双方で起こり得るため判別不可。朝一クエスト/狩猟なら据え置き濃厚〜条件一致時は据え置き確定扱いの解析あり。
+- 設定変更専用の一律短縮天井・専用モード振り分け・専用初当たり/CZ数値は横断再探索後も公開値を固定できず `UNVERIFIED_AFTER_RESEARCH` / `NO_PUBLIC_RESET_SPECIFIC_NUMERIC_DATA_FOUND_AFTER_RESEARCH`。
+- リセット専用の明確な恩恵は複数攻略整理で **特になし**。有利区間突入時の最低50%抽選は設定変更専用ではなく共通仕様。
 
 ### publicMorningNumbers / reset numeric
-有利区間リセット後の規定ゲーム数分布（次回REG / 次回BIG）:
-- 0～199G: **34.4% / 28.9%**
-- 200～399G: **25.4% / 29.3%**
-- 400～599G: **14.1% / 18.8%**
-- 600～799G: **21.5% / 18.4%**
-- 800～999G: **4.7% / 4.7%**
-
-有利区間引き継ぎ時の規定G（ボーナス後 / AT後）:
-- 0～99G: **33.6% / 3.1%**
-- 100～199G: **50.0% / 57.0%**
-- 200～299G: **12.5% / 39.8%**
-- 300～399G: **3.9% / なし**
+- 有利区間突入時の天井権利抽選: **最低50%**。
+- 当選時: **750G or 3クエストスルー**でボーナス告知。
+- 非当選時: クエスト終了後に有利区間リセット→次回有利区間突入時に再度最低50%抽選。
+- 定義: **有利区間突入時共通値**。設定変更専用値ではない。
 
 ## conflicts / 定義差
-- releaseDate: **2020-11-09 vs 2020-11-16（地域差）**。1geki月間カレンダー、パチビー、HAZUSEの11/09をcanonical。
-- ceiling: **有利区間移行後997G**（HAZUSE/1geki） / **液晶基準999G**（複数攻略） / **996G+α**（Re.design）。非有利区間中も液晶G数が進むため表示上ズレる説明があり、内部契約997Gをcanonical、表示/営業資料差はCONFLICT/定義差として保持。
+- 天井: 一部概要資料は「3周期+α」「750G」と簡略表記。詳細解析では有利区間突入時の最低50%引き継ぎ抽選当選時のみ権利が有効。本DBは詳細契約をcanonicalとし、固定最大750Gとはしない。
+- 型式表記: `SモンスターハンターワールドZI` / `SモンスターハンターワールドZⅠ` は字体差として同一型式扱い。
 
-## 2020-11-09群監査 — CLOSED
+## 2020-11-16群監査 — CLOSED
 処理済み:
-1. **アカメが斬る！ — No.1377**
+1. **パチスロ モンスターハンター:ワールド™ — No.1378**
 
-- 1geki月間カレンダーは11/09を「全1機種 / パチンコ0 / スロット1」とし、本機のみ。
-- パチビー・HAZUSE・業界記事・検定資料でも本機の11月上旬導入を照合。
-- 11/03～11/08境界にも独立パチスロ導入群を今回固定できず、11/09群をCLOSED。
+- 1geki月間カレンダーは11/16を「全3機種 / パチンコ2 / スロット1」とし、本機のみ。
+- HAZUSE、パチビーも2020-11-16導入で一致。
+- 11/10～11/15境界に独立パチスロ導入群を今回固定できず、11/16群をCLOSED。
+- 2020年11月のスロット6機は11/02=4、11/09=1、11/16=1で全件処理済み。
 
 ## 次回本線の再開地点
-- 最新main再同期後、**2020-11-10～11-15境界監査**。
-- 次の既知未処理は **2020-11-16「パチスロ モンスターハンター:ワールド™」— No.1378候補**。
-- 11/16群処理後、月間カレンダーと業界記事で次の導入群へ進む。
+- 最新main再同期後、**2020-11-17～2020-12-13境界監査**。
+- 1geki 2020年12月カレンダーでは **2020-12-07はスロット0機**。
+- 次の既知未処理は **2020-12-14「アイムジャグラーEX（6号機）」— No.1379候補**。
+- 12/14群処理前に、11/17～12/13の別型式・地域先行・PB・延期機を業界/旧DBでも再監査する。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
@@ -83,25 +81,24 @@
 - 今回は本線を優先し、遡及QA地点は進めていない。
 
 ## GitHub保存
-- No.1377追加 commit: `149fdee91a02b900aa19bab2787674f71f9a56c7`
+- No.1378追加 commit: `ea000adff730d286247b8cda152b52ef8585d7c0`
 
 ## 主要出典 — 取得日 2026-09-11
-### No.1377 アカメが斬る！
-- https://1geki.jp/newmachinecalender/202011/
-- https://1geki.jp/slot/s_akame/3/
-- https://hazuse.com/machine/pachislot/9S1271/genre/201/
-- https://hazuse.com/machine/pachislot/9S1271/genre/207/
-- https://hazuse.com/machine/pachislot/9S1271/genre/205/
-- https://www.p-world.co.jp/machine/database/9258
-- https://p-town.dmm.com/machines/3767
-- https://nana-press.com/kaiseki/machine/87/2086/
-- https://slotjin.com/tenjoukitaichi/akame/
-- https://chonborista.com/slot/nanashow/120005/
-- https://www.slopachi-quest.com/article/akamegakill-tenjjou/
-- https://www.pachibee.jp/machines/about/220100004
-- https://www.pidea.jp/articles/1590108168
-- https://news.p-world.co.jp/articles/14779/yugitsushin
-- https://www.redesign777.tokyo/Spec/SlotView?flag=True&id=S2020091516052001
+### No.1378 パチスロ モンスターハンター:ワールド™
+- https://hazuse.com/machine/pachislot/0S0948/genre/201/
+- https://hazuse.com/machine/pachislot/0S0948/genre/203/
+- https://hazuse.com/machine/pachislot/0S0948/genre/209/
+- https://1geki.jp/slot/s_mhw/0/
+- https://1geki.jp/slot/s_mhw/3/
+- https://1geki.jp/slot/s_mhw/4/
+- https://1geki.jp/slot/s_mhw/62/
+- https://nana-press.com/kaiseki/machine/88/2106/
+- https://nana-press.com/kaiseki/machine/88/2151/
+- https://www.pachibee.jp/machines/index/220100005
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/enterrise_slot/21/kr01.php
+- https://chonborista.com/slot/enta-slot/120055/
+- https://slotmethod.jp/archives/9532/
 
-### 11/09群・次回境界
+### 11月群・次回境界
 - https://1geki.jp/newmachinecalender/202011/
+- https://1geki.jp/newmachinecalender/202012/
