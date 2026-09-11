@@ -76,28 +76,70 @@ HAZUSE当時系統解析とpacnk後年整理で一致。
 
 ## resetBehavior
 
-resetBehaviorQA: PARTIAL
+resetBehaviorVersion: v0.7
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
+resetQaLastUpdated: 2026-09-11
 
-- settingChangeBehavior: 本機固有の設定変更時内部処理を明記した高信頼資料を確認できず UNVERIFIED
-- carryOverBehavior: 通常時ゲーム数天井は今回確認できず。CZ/RT内部状態の据え置き時引継ぎ仕様も未確認
-- powerCycleBehavior: 電源OFF→ONのみの本機固有挙動は未確認
-- gameCounterReset: 天井ゲーム数を用いる仕様を今回確認できず、公開天井カウンタとしては非確認
-- ceilingAfterReset: 朝一短縮天井等の公開情報は確認できず
-- modeAfterReset: 朝一専用モード/設定変更時モード振り分けの公開情報は確認できず
-- stateAfterReset: 索敵MODE/迎撃MODEを含む内部状態が設定変更・電断でどう扱われるかは未確認
-- advantageousSectionReset: 非該当（有利区間制度導入前）
-- resetBenefits: 朝一/設定変更固有の主要恩恵は確認できず
-- resetPenalties: 設定変更固有の主要な不利要素は確認できず
-- resetDetection: 「設定変更」「リセット」「朝一」「据え置き」「電源OFF ON」「ガックン」「変更判別」まで再探索したが、本機固有の高信頼な変更判別情報を確定できず UNVERIFIED
-- numericResetData: 公開朝一専用数値は確認できず
+### settingChangeBehavior
+
+- 本機固有の設定変更時に、CZ「索敵MODE」/ RT「迎撃MODE」残G / 内部RT状態 / ボーナス成立状態をどのように処理するかを直接規定する公開資料は固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 5号機一般論や後年サミー機の仕様からは補完しない。
+
+### carryOverBehavior
+
+- 通常時ゲーム数天井を用いる仕様は確認できず、ゲーム数ハマりの据え置き恩恵は `NOT_APPLICABLE_AS_PUBLIC_GAME_CEILING`。
+- CZ/RT内部状態、RT残G、成立ボーナス状態の据え置き時引継ぎ契約は `UNVERIFIED_AFTER_RESEARCH`。
+
+### powerCycleBehavior
+
+- 純電源OFF→ONのみの本機固有挙動は `UNVERIFIED_AFTER_RESEARCH`。
+- 設定変更と電源再投入を同一扱いとする推測はしない。
+
+### gameCounterReset
+
+- 通常時の公開ゲーム数天井は確認できず、天井ゲーム数カウンタのRESET/CARRY_OVERは `NOT_APPLICABLE_AS_PUBLIC_GAME_CEILING`。
+- RT100Gの残Gが設定変更/電断時にどう扱われるかは公開直接契約を固定できず `UNVERIFIED_AFTER_RESEARCH`。
+
+### ceilingAfterReset
+
+- 通常時ゲーム数天井および朝一短縮天井は確認できず `NOT_APPLICABLE_AS_PUBLIC_GAME_CEILING`。
+
+### modeAfterReset
+
+- 朝一専用モード / 設定変更時モード振り分けの公開情報は確認できず `PUBLIC_RESET_MODE_NOT_FOUND_AFTER_RESEARCH`。
+
+### stateAfterReset
+
+- 索敵MODE / 迎撃MODEを含む内部状態が設定変更・据え置き・純電断でどう扱われるかは `UNVERIFIED_AFTER_RESEARCH`。
+
+### advantageousSectionReset
+
+- `NOT_APPLICABLE`（有利区間制度導入前）。
+
+### resetBenefits
+
+- 朝一/設定変更固有の主要恩恵は、検索語・資料系統を変えた再探索後も確認できず `PUBLIC_RESET_BENEFIT_NOT_FOUND_AFTER_RESEARCH`。
+
+### resetPenalties
+
+- 設定変更固有の主要な不利要素は確認できず `PUBLIC_RESET_PENALTY_NOT_FOUND_AFTER_RESEARCH`。
+
+### resetDetection
+
+- `ゴジラパチスロウォーズ / ゴジラ パチスロ 2007 / Sammy / サミー` と `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / RT / 索敵MODE / 迎撃MODE / ガックン / 変更判別` を組み合わせ、当時業界記事、旧解析系統、後年DB、回顧資料を再探索。
+- 本機固有のガックン、初期出目、ランプ/液晶、朝一RT/CZ挙動による変更判別契約は固定できず `PUBLIC_RESET_DETECTION_NOT_FOUND_AFTER_RESEARCH`。
+
+### numericResetData / publicMorningNumbers
+
+- 公開朝一専用数値は `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
 
 ### resetBehavior 再探索メモ
 
-機種名・メーカー名に「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / モード / 状態 / ガックン / 変更判別」を組み合わせ、当時解析・業界記事・後年DBを横断。RT/CZ仕様は確認できたが、本機固有の設定変更・電断・朝一数値は確認できなかったため推測で埋めない。
+2026-09-11に現行v0.7として再評価。機種名表記揺れ、メーカー名、2007年版と2008年ST版の識別を行い、設定変更/リセット/朝一/据え置き/電源OFF ON/RT/CZ/ガックン/変更判別を組み合わせて横断検索した。2007年版のCZ「索敵MODE」→100G RT「迎撃MODE」というゲーム性、通常時ゲーム数天井非確認、有利区間制度前は再確認できたが、本機固有の設定変更・据え置き・純電断契約、変更判別、公開朝一数値は追加固定できなかった。2008年「ぱちスロSTゴジラパチスロウォーズ」の仕様は別スペックのため転記しない。
 
 ## sources
 
-取得日: 2026-08-31
+取得日: 2026-08-31 / resetBehavior再探索: 2026-09-11
 
 1. グリーンべると — サミー、新たに5号機導入支援プランをスタート
    - https://web-greenbelt.jp/00004081/
@@ -124,7 +166,7 @@ resetBehaviorQA: PARTIAL
 
 - baseGamesPer50
 - 本機（2007年版）のBIG/REG実獲得枚数の高信頼精密値
-- 本機固有の設定変更/据え置き/電源OFF→ON挙動
+- 本機固有の設定変更/据え置き/電源OFF→ON時のCZ/RT状態契約
 - 本機固有の変更判別情報
 - 公開朝一専用数値
 
@@ -134,4 +176,4 @@ resetBehaviorQA: PARTIAL
 - 2008年「ぱちスロSTゴジラパチスロウォーズ」はスペック違いの別機種。2008年版のBIG約311枚・REG約24枚は2007年本機のbasicPayoutへ転記しない。
 
 coreStatus: PARTIAL
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
