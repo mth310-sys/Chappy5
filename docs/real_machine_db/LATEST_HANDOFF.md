@@ -1,99 +1,90 @@
 更新日: 2026-09-11
 
 ## 現在地点
-- recordCount: **1344**
-- latestRecordAdded: **パチスロ〈物語〉シリーズ セカンドシーズン — No.1344**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2020-03-16_monogatari-series-second-season.md`
+- recordCount: **1345**
+- latestRecordAdded: **スペリオーレ — No.1345**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2020-03-16_superiore.md`
 - chronologicalFrontier: **2020-03-16**
-- frontierLatestMachine: **パチスロ〈物語〉シリーズ セカンドシーズン — No.1344**
+- frontierLatestMachine: **スペリオーレ — No.1345**
 - schema: **resetBehavior v0.7**
-- status: **2020-03-16_GROUP_OPEN_1_OF_3_PROCESSED**
+- status: **2020-03-16_GROUP_OPEN_2_OF_3_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、mission v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、No.1343「パチスロ ハナペカ」を再取得して開始。
+- 最新mainの `README.md`、mission v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、No.1344「パチスロ〈物語〉シリーズ セカンドシーズン」を再取得して開始。
 - `INDEX.md` は旧19件表示のため、README規定どおり最新handoffとmain実レコードを正とした。
-- 開始時main最新handoffは No.1343 / 2020-03-02群CLOSED。
-- 2020-03-03〜03-15境界を再確認し、次の明確な導入群を2020-03-16とした。
-- 2020-03-16群は複数資料から **パチスロ〈物語〉シリーズ セカンドシーズン / スペリオーレ / みうのおしゃべりパチスロ** の3機を確認。
-- 群先頭「パチスロ〈物語〉シリーズ セカンドシーズン」をNo.1344として追加。
-- 遡及QA `やったネ！はるみちゃん` は追加再探索でも本機固有reset契約を固定できなかったため、一般5号機ART挙動を推測せず `PARTIAL_RESEARCH_EXHAUSTED` としてレコード側を正式化した。
+- 開始時main最新handoffは No.1344 / 2020-03-16群OPEN_1_OF_3。
+- 前リレー指定どおり、次の未処理「スペリオーレ」をNo.1345として追加。
+- 2020-03-16群は **パチスロ〈物語〉シリーズ セカンドシーズン / スペリオーレ / みうのおしゃべりパチスロ** の3機を確認済み。現在2/3処理済み。
 
-## No.1344 — パチスロ〈物語〉シリーズ セカンドシーズン
-- path: `docs/real_machine_db/machines/2020-03-16_monogatari-series-second-season.md`
-- manufacturer: **サミー（製造元: タイヨーエレック）**
-- formalModel: **S物語セカンドシーズンXA**
-- certificationNumber: **9S1727**
+## No.1345 — スペリオーレ
+- path: `docs/real_machine_db/machines/2020-03-16_superiore.md`
+- manufacturer: **バルテック**
+- formalModel: **SスペリオーレBB**
+- certificationNumber: **9S1368**
 - releaseDate canonical: **2020-03-16**
-- generation/system: **6号機 / 差枚数管理AT / CZ→チャンスAT→メインAT**
-- payoutRate: **97.3 / 98.9 / 101.1 / 105.1 / 109.0 / 112.8%**
-- CZ「結末ノ儀」: **1/149.4 / 147.6 / 146.9 / 145.2 / 141.1 / 133.1**
-- チャンスAT「傾物語」: **1/331.4 / 323.8 / 311.9 / 273.9 / 250.2 / 221.8**
-- base: **約50.8G/50枚**
-- netIncrease: **約2.8枚/G**
-- 倖時間SS: **初期150枚 + 倍倍チャンス上乗せ**
-- あとがたり: **1セット100枚**
-- 天井: **200G or 500G消化後+前兆で傾物語**。スイカで5G/100G減算。
+- generation/system: **6号機 / AT / 疑似ボーナス連チャン / 完全告知**
+- payoutRate: **97.8 / 98.8 / 100.5 / 103.8 / 105.8 / 110.2%**
+- SBB: **1/3487.3 / 2862.6 / 3282.6 / 3650.0 / 5263.2 / 4015.9**
+- BIG: **1/551.6 / 575.8 / 502.2 / 438.7 / 384.7 / 342.7**
+- REG: **1/613.1 / 543.7 / 557.1 / 472.6 / 404.0 / 383.0**
+- bonusCombined: **1/268.0 / 254.8 / 244.4 / 214.2 / 189.9 / 173.1**
+- base: **約50.0〜51.2G/50枚**（設定1約50.0G）
+- netIncrease: **約5.0枚/G**
+- basicPayout: **SBB約500枚 / BIG約300枚 / REG約100枚**
+- ceiling: **有利区間移行後1231G、BIG以上**
 
-### resetBehavior v0.7 — No.1344
-- resetBehaviorQA: **PARTIAL_RESEARCH_EXHAUSTED_WITH_CONFIRMED_RESET_TABLE_AND_GAKKUN**
-- 後発朝一解析で **設定変更=天井RESET / 内部状態RESET、電源OFF→ON=天井CARRY_OVER / 内部状態CARRY_OVER**。
-- 1geki導入直後（2020-03-19）ページは天井・状態・モード・液晶ステージを「調査中」としており、後発解析との公開時点差を保持。
-- 設定変更時モード振り分け・液晶開始ステージは再探索後も未固定。
-- 通常時は有利区間ランプ消灯タイプのため、ランプだけでは変更判別不可。
-- **ガックンによる変更判別は有効**とする複数攻略資料を確認。ただし本機固有発生率は未固定。
-- 有利区間移行時は天井減算高確。高確G数は **30G 69.1% / 40G 20.3% / 50G 10.2% / 100G 0.4% / 平均34.3G**。
-- 設定変更専用の固定天井短縮・朝一専用モード振り分け・朝一特定G以内当選率は `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
+### resetBehavior v0.7 — No.1345
+- resetBehaviorQA: **PARTIAL_RESEARCH_EXHAUSTED_WITH_CONFIRMED_GAME_RESET_AND_ADVANTAGEOUS_SECTION_START**
+- **設定変更=天井RESET、非有利区間からスタート**。
+- **電源OFF→ON=天井CARRY_OVER**。据え置きも同契約として整理。
+- 設定変更/電断とも枠ランプ消灯・有利区間ランプ消灯。通常時は有利区間ランプ消灯タイプのためランプ判別不可。
+- 有利区間移行時モード（設定1→6）:
+  - 天国 **56.3 / 50.0 / 54.7 / 53.1 / 50.0 / 50.0%**
+  - A **31.3 / 25.0 / 29.7 / 23.4 / 25.0 / 25.0%**
+  - B **12.5 / 25.0 / 15.6 / 23.4 / 25.0 / 25.0%**
+- 天国時は**1〜96G 100%**。1〜99G以内当選期待度は **60.2 / 54.4 / 59.4 / 58.4 / 56.4 / 57.2%**。
+- 上記モード/99G数値は設定変更専用ではなく、ボーナス後も含む **有利区間移行時共通仕様** として分離保存。
+- 設定変更専用の固定短縮天井は確認できず `NONE_CONFIRMED_AFTER_RESEARCH`。
+- 設定変更時の独立した内部状態、据え置き/純電断時の現在モード・内部状態、本機固有ガックン条件/率は資料系統を変えて再探索後も `UNVERIFIED_AFTER_RESEARCH`。
 
-### No.1344 conflict
-- CZ「結末ノ儀」は2020-02-14グリーンべると事前記事で **設定1 1/150〜設定6 1/122.7**、導入後のパチマガスロマガ・必勝本・HAZUSE・なな徹・K-Navi等は **1/149.4〜1/133.1**。導入後の複数一致値をcanonicalとし、事前公表値をCONFLICT保持。
+## No.1345 data-quality notes
+- 50枚ベースは「約50.0G」と「約50.0〜51.2G」の掲載があるが、前者は設定1目安、後者は設定別レンジであり定義差。CONFLICTにはしない。
+- coreStatus: **COMPLETE_CORE**。
+- overallReliability: **ANALYSIS_HIGH_WITH_OFFICIAL_PRODUCT_EXISTENCE_CONFIRMATION**。
 
 ## 2020-03-16群監査
 - 確認済み3機:
   1. パチスロ〈物語〉シリーズ セカンドシーズン — **No.1344 / 処理済み**
-  2. スペリオーレ — **未処理 / No.1345候補**
-  3. みうのおしゃべりパチスロ — **未処理**
-- 遊技日本で〈物語〉シリーズの3/16全国導入を確認。
-- スペリオーレ、みうのおしゃべりパチスロも各攻略DBで2020-03-16導入を確認。
-- 当時の導入直前まとめも3/16導入を3機として記載。
-- 群判定: **OPEN_1_OF_3_PROCESSED**。残り2機処理後に別メーカー/別型式/PBを再監査してCLOSED可否を判定する。
+  2. スペリオーレ — **No.1345 / 処理済み**
+  3. みうのおしゃべりパチスロ — **未処理 / No.1346候補**
+- 群判定: **OPEN_2_OF_3_PROCESSED**。
+- `みうのおしゃべりパチスロ` 完了後、2020-03-16同日全メーカー・別型式・PB・地域差を再監査してCLOSED可否を判定する。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
-- `docs/real_machine_db/machines/2007-04-15_yattane-harumi-chan.md` は **PARTIAL_RESEARCH_EXHAUSTED** へ正式化済み。
-- 本機固有の設定変更時ART/内部RT、据え置き/純電断時ART残G、ガックン/初期出目は追加再探索でも固定できず。
-- 次回は最新mainの既存レコードから、同QAキューの次の未formalized候補を再計算して進む。
+- 前回 `やったネ！はるみちゃん` は `PARTIAL_RESEARCH_EXHAUSTED` へ正式化済み。
+- 今回は新規本線No.1345を優先。次回以降、最新mainから同QAキュー次候補を再計算して継続する。
 
 ## 次回再開地点
-1. 最新main README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1344を再取得。
-2. **2020-03-16群の次の未処理 `スペリオーレ` をNo.1345候補として処理する。**
-3. 続いて **`みうのおしゃべりパチスロ`** を処理。
-4. 3機完了後、3/16同日全メーカー・別型式・PBを再監査し、群CLOSED可否を判定する。
-5. 遡及QAは最新mainから `やったネ！はるみちゃん` の次の未formalized候補を再計算する。
+1. 最新main README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1345を再取得。
+2. **2020-03-16群の最後の未処理 `みうのおしゃべりパチスロ` をNo.1346候補として処理する。**
+3. 3機完了後、3/16同日全メーカー・別型式・PB・地域差を再監査し、群CLOSED可否を判定する。
+4. 次の導入群を時系列で特定して本線継続。
+5. 遡及QAは最新mainから未formalized候補を再計算して進める。
 
 ## 主要出典 — 取得日 2026-09-11
-### No.1344
-- サミー公式: https://www.sammy.co.jp/japanese/news/2020/1403.html
-- 遊技日本: https://yugi-nippon.com/pachinko-new-machine/post-33817/
-- グリーンべると: https://web-greenbelt.jp/post-35694/
-- HAZUSE: https://hazuse.com/machine/pachislot/9S1727/
-- パチマガスロマガ 基本確率: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sammy_slot/179/h.php
-- パチマガスロマガ 天井減算: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sammy_slot/179/09.php
-- 必勝本: https://p.hisshobon.jp/machine/3488/1/76898
-- なな徹 基本: https://nana-press.com/kaiseki/machine/13/169/
-- なな徹 天井: https://nana-press.com/kaiseki/machine/13/173/
-- 1geki: https://1geki.jp/slot/s_monogatari2/3/
-- おスロおパチおいでやす: https://oslo-opachi.com/2020/03/15/monogatari-series-tennjou/
-- スロパチクエスト: https://www.slopachi-quest.com/article/monogatari-series-tennjou/
-- P-WORLD: https://www.p-world.co.jp/machine/database/9147
-
-### 2020-03-16群
-- スペリオーレ: https://chonborista.com/slot/baltec/105472/
-- みうのおしゃべりパチスロ: https://chonborista.com/slot/okazaki-slot/104548/
+### No.1345
+- バルテック公式プレス一覧: https://www.baltec.co.jp/press/press.html
+- HAZUSE: https://hazuse.com/machine/pachislot/9S1368/
+- K-Navi: https://p-kn.com/slot/3424/
+- なな徹 基本: https://nana-press.com/kaiseki/machine/47/
+- なな徹 モード移行: https://nana-press.com/kaiseki/machine/47/829/
+- なな徹 ボーナス分布: https://nana-press.com/kaiseki/machine/47/831/
+- なな徹 天井: https://nana-press.com/kaiseki/machine/47/824/
+- なな徹 小役: https://nana-press.com/kaiseki/machine/47/827/
+- パチマガスロマガ 小役: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/baltech_slot/61/c.php
+- パチマガスロマガ ボーナス分布: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/baltech_slot/61/03.php
+- スロパチクエスト 天井/朝一: https://www.slopachi-quest.com/article/superiore-tennjou/
+- おスロおパチおいでやす: https://oslo-opachi.com/2020/03/16/superiore-tennjou/
+- ちょんぼりすた: https://chonborista.com/slot/baltec/105472/
 - 導入直前まとめ: https://pachi-jyouhoukyoku.hatenablog.com/entry/2020/03/13/234806
-
-### 遡及QA やったネ！はるみちゃん
-- BELLCO公式: https://www.s-bellco.co.jp/products/slot/yama_harumichan/
-- グリーンべると: https://web-greenbelt.jp/00004071/
-- HAZUSE: https://hazuse.com/i/data/haruni1/top.htm
-- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yama_slot/05/yama_slot_05.php
-- なな徹回顧: https://nana-press.com/post/1618061
