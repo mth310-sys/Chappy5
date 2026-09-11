@@ -80,28 +80,70 @@ HAZUSE当時解析:
 
 ## resetBehavior
 
-resetBehaviorQA: PARTIAL
+resetBehaviorVersion: v0.7
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
+resetQaLastUpdated: 2026-09-11
 
-- settingChangeBehavior: 本機固有の設定変更時内部処理を明記した高信頼資料を確認できず UNVERIFIED
-- carryOverBehavior: 本機固有の据え置き時内部状態引継ぎを明記した資料を確認できず
-- powerCycleBehavior: 電源OFF→ONのみの場合の本機固有挙動は未確認
-- gameCounterReset: 今回確認した性能資料ではゲーム数天井を用いる仕様を確認できず。設定変更時の内部カウンタ処理として断定できる資料はなし
-- ceilingAfterReset: リセット時の短縮天井等の公開情報は確認できず
-- modeAfterReset: 朝一専用モード/設定変更時モード振り分けの公開情報は確認できず
-- stateAfterReset: 朝一専用内部状態の公開情報は確認できず
-- advantageousSectionReset: 非該当（有利区間制度導入前）
-- resetBenefits: 朝一/設定変更固有の主要恩恵は確認できず
-- resetPenalties: 設定変更固有の主要な不利要素は確認できず
-- resetDetection: 「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / モード / 状態 / ガックン / 変更判別」まで検索語を変えて再探索したが、本機固有の高信頼な変更判別情報を確定できず UNVERIFIED
-- numericResetData: 公開朝一専用数値は確認できず
+### settingChangeBehavior
+
+- 本機固有の設定変更時内部処理を直接規定する公開資料は、再探索後も固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- ボーナス成立/告知状態、リール制御上の状態、その他内部フラグを設定変更でどう処理するかは推測しない。
+
+### carryOverBehavior
+
+- 公開ゲーム数天井を用いる仕様は確認できず、天井ゲーム数の宵越しは `NOT_APPLICABLE_AS_PUBLIC_GAME_CEILING`。
+- 据え置き時のボーナス成立/告知状態や内部フラグの機種固有引継ぎ契約は `UNVERIFIED_AFTER_RESEARCH`。
+
+### powerCycleBehavior
+
+- 純電源OFF→ONのみの場合の本機固有挙動は `UNVERIFIED_AFTER_RESEARCH`。
+- 設定変更と単純電断を同一扱いとする一般論では補完しない。
+
+### gameCounterReset
+
+- 通常時ゲーム数天井は確認できず、比較対象となる天井ゲーム数カウンタは `NOT_APPLICABLE_AS_PUBLIC_GAME_CEILING`。
+- ボーナス間等の別内部カウンタを設定変更/電断で処理する機種固有公開契約は確認できず。
+
+### ceilingAfterReset
+
+- 通常時ゲーム数天井および設定変更時の短縮天井は確認できず `NOT_APPLICABLE_AS_PUBLIC_GAME_CEILING`。
+
+### modeAfterReset
+
+- 朝一専用モード、設定変更専用モード、公開された設定変更時モード振り分けは `PUBLIC_RESET_MODE_NOT_FOUND_AFTER_RESEARCH`。
+
+### stateAfterReset
+
+- 本機固有の朝一内部状態、設定変更時状態再抽選、据え置き/純電断時の状態引継ぎ契約は `UNVERIFIED_AFTER_RESEARCH`。
+
+### advantageousSectionReset
+
+- `NOT_APPLICABLE`（有利区間制度導入前）。
+
+### resetBenefits
+
+- 朝一/設定変更固有の主要恩恵は、検索語・資料系統を変えた再探索後も確認できず `PUBLIC_RESET_BENEFIT_NOT_FOUND_AFTER_RESEARCH`。
+
+### resetPenalties
+
+- 設定変更固有の主要な不利要素は確認できず `PUBLIC_RESET_PENALTY_NOT_FOUND_AFTER_RESEARCH`。
+
+### resetDetection
+
+- `ミスターマジックネオ / Mr.MAGIC NEO / ﾐｽﾀｰﾏｼﾞｯｸﾈｵ / Sammy / サミー` と `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / ガックン / 初期出目 / 告知ランプ / 変更判別` を組み合わせ、当時業界記事、旧解析系統、後年DB、実機シミュレータ関連資料まで再探索。
+- 本機固有のガックン発生契約、初期出目、告知ランプ等による設定変更確定/推測条件は固定できず `PUBLIC_RESET_DETECTION_NOT_FOUND_AFTER_RESEARCH`。
+
+### numericResetData / publicMorningNumbers
+
+- 公開朝一専用数値は `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
 
 ### resetBehavior 再探索メモ
 
-機種名表記揺れ「ミスターマジックネオ / Mr.MAGIC NEO / ﾐｽﾀｰﾏｼﾞｯｸﾈｵ」、メーカー名「サミー / Sammy」と、設定変更・リセット・朝一・据え置き・電源OFF ON・天井・モード・状態・ガックン・変更判別を組み合わせて再探索。HAZUSE、当時業界ニュース、後年DBまで横断したが、本機固有のリセット処理・朝一数値は確認できなかったため推測で補完しない。
+2026-09-11に現行v0.7として再評価。従来資料に加え、機種名表記揺れ、メーカー名、PS2実機シミュレータ資料を含め、設定変更/リセット/朝一/据え置き/電源OFF ON/天井/状態/ガックン/初期出目/変更判別を横断検索した。2007年機としての完全告知・ボーナス主体仕様、有利区間制度前、公開ゲーム数天井非確認は再確認できたが、本機固有の設定変更・据え置き・純電断契約、変更判別、公開朝一数値は追加固定できなかった。一般的な5号機ノーマル機の挙動からは補完しない。
 
 ## sources
 
-取得日: 2026-08-31
+取得日: 2026-08-31 / resetBehavior再探索: 2026-09-11
 
 1. K-Navi業界ニュース — 勝利の光、感動のスベリ!『完全告知タイプ』ズルピカfor everybody(サミー)
    - https://p-kn.com/topics/news/164/
@@ -125,7 +167,7 @@ resetBehaviorQA: PARTIAL
    - reliability: ANALYSIS_SINGLE
 6. MediaWorld — PS2 実戦パチスロ必勝法! ミスターマジックネオ
    - https://mediaworld.co.jp/products/10403007001
-   - 2007年3月に全国ホール登場予定の5号機として紹介されていることを確認
+   - 2007年3月に全国ホール登場予定の5号機として紹介。実機シミュレータが存在することも再探索系統として確認
    - reliability: ANALYSIS_SINGLE
 
 ## missingFields
@@ -142,4 +184,4 @@ resetBehaviorQA: PARTIAL
 - 機械割はpacnkに設定別値があるがHAZUSE当時版は「調査中」。数値競合ではないためCONFLICTではなく別系統照合待ち。
 
 coreStatus: PARTIAL
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
