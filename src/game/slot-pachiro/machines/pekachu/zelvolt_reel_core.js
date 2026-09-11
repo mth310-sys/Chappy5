@@ -1,4 +1,4 @@
-// ZELVOLT native 3-reel engine v1.2
+// ZELVOLT native 3-reel engine v1.3
 // Machine-local physical reel engine. The inherited symbol-swap timers are disabled after START.
 (()=>{
   const STRIPS=[
@@ -9,9 +9,18 @@
   const WINDOW=102;
   const VISIBLE_ROWS=3;
   const ROW=WINDOW/VISIBLE_ROWS;
-  const SPEED=[1.12,1.18,1.15];
-  const ACCEL=0.009;
-  const MIN_STOP_TRAVEL=ROW*4;
+
+  // Slower, heavier reel feel than v1.2.
+  const SPEED=[0.76,0.80,0.78]; // px/ms
+  const ACCEL=0.0052;
+  const START_VELOCITY=0.10;
+
+  // STOP tuning: small input reaction, short forward slip, then firm settle.
+  const STOP_REACTION_MS=42;
+  const MIN_STOP_TRAVEL=ROW*1.25;
+  const MIN_STOP_MS=150;
+  const MAX_STOP_MS=245;
+
   const reelsView=[];
   const mod=(n,m)=>((n%m)+m)%m;
   const now=()=>performance.now();
@@ -33,8 +42,10 @@
       .zv-native-cell img{display:block;width:32px;height:32px;object-fit:contain;pointer-events:none;user-select:none;-webkit-user-drag:none}
       .zv-native-payline{position:absolute;z-index:4;left:2px;right:2px;top:${ROW}px;height:${ROW}px;border-top:1px solid rgba(255,215,55,.35);border-bottom:1px solid rgba(255,215,55,.35);pointer-events:none}
       .zv-native-shadow{position:absolute;z-index:5;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.16),transparent 18%,transparent 82%,rgba(0,0,0,.16))}
-      .reel.zv-native-spinning .zv-native-track{filter:blur(.4px)}
-      .reel.zv-native-stopping .zv-native-track{filter:blur(.16px)}
+      .reel.zv-native-spinning .zv-native-track{filter:blur(.24px)}
+      .reel.zv-native-stopping .zv-native-track{filter:blur(.08px)}
+      .reel.zv-native-settle{animation:zvReelSettle .085s ease-out}
+      @keyframes zvReelSettle{0%{transform:translateY(-1.6px)}100%{transform:translateY(0)}}
     `;
     document.head.appendChild(s);
   }
@@ -80,7 +91,7 @@
     const v=reelsView[i]||buildReel(i);if(!v)return;
     if(v.raf)cancelAnimationFrame(v.raf);
     v.raf=0;v.spinning=false;v.stopping=false;v.velocity=0;
-    v.host.classList.remove('zv-native-spinning','zv-native-stopping');
+    v.host.classList.remove('zv-native-spinning','zv-native-stopping','zv-native-settle');
     const hit=nearestIndexForCode(v,code,0);
     if(hit){v.phase=hit.target;v.stopIndex=hit.index;}
     render(v);
@@ -88,8 +99,8 @@
 
   function startPhysical(i){
     const v=reelsView[i]||buildReel(i);if(!v||v.spinning||v.stopping)return;
-    v.spinning=true;v.stopIndex=null;v.velocity=Math.max(v.velocity,.18);v.last=now();
-    v.host.classList.remove('zv-native-stopping');
+    v.spinning=true;v.stopIndex=null;v.velocity=Math.max(v.velocity,START_VELOCITY);v.last=now();
+    v.host.classList.remove('zv-native-stopping','zv-native-settle');
     v.host.classList.add('zv-native-spinning');
     const step=t=>{
       if(!v.spinning)return;
@@ -106,31 +117,52 @@
     if(!v.spinning&&!v.stopping){setStatic(i,code);return}
     if(v.raf)cancelAnimationFrame(v.raf);
     v.raf=0;v.spinning=false;v.stopping=true;
-    v.host.classList.remove('zv-native-spinning');
+    v.host.classList.remove('zv-native-spinning','zv-native-settle');
     v.host.classList.add('zv-native-stopping');
-    const hit=nearestIndexForCode(v,code,MIN_STOP_TRAVEL);
-    if(!hit){v.stopping=false;v.host.classList.remove('zv-native-stopping');setStatic(i,code);return}
-    const start=v.phase;
-    const distance=hit.target-start;
-    const startVelocity=Math.max(v.velocity,SPEED[i]*.78);
-    const duration=Math.max(210,Math.min(390,(distance/Math.max(.6,startVelocity))*1.35));
-    const t0=now();
-    const ease=t=>1-Math.pow(1-t,3);
-    const settle=t=>{
-      const q=Math.min(1,(t-t0)/duration);
-      v.phase=start+distance*ease(q);render(v);
-      if(q<1){v.raf=requestAnimationFrame(settle);return}
-      v.phase=hit.target;v.stopIndex=hit.index;v.velocity=0;v.stopping=false;v.raf=0;
-      v.host.classList.remove('zv-native-stopping');render(v);
+
+    // Keep the reel coasting briefly after the button press so STOP does not feel digital.
+    const reactionStart=v.phase;
+    const reactionVelocity=Math.max(v.velocity,SPEED[i]*0.88);
+    const reactionT0=now();
+    const coast=t=>{
+      const elapsed=t-reactionT0;
+      const dt=Math.min(34,t-(v.last||reactionT0)||16.7);
+      v.last=t;
+      v.phase+=reactionVelocity*dt;
+      render(v);
+      if(elapsed<STOP_REACTION_MS){v.raf=requestAnimationFrame(coast);return}
+      beginSettle();
     };
-    v.raf=requestAnimationFrame(settle);
+
+    const beginSettle=()=>{
+      const hit=nearestIndexForCode(v,code,MIN_STOP_TRAVEL);
+      if(!hit){v.stopping=false;v.host.classList.remove('zv-native-stopping');setStatic(i,code);return}
+      const start=v.phase;
+      const distance=hit.target-start;
+      const duration=Math.max(MIN_STOP_MS,Math.min(MAX_STOP_MS,125+distance/0.95));
+      const t0=now();
+      const ease=t=>1-Math.pow(1-t,4);
+      const settle=t=>{
+        const q=Math.min(1,(t-t0)/duration);
+        v.phase=start+distance*ease(q);render(v);
+        if(q<1){v.raf=requestAnimationFrame(settle);return}
+        v.phase=hit.target;v.stopIndex=hit.index;v.velocity=0;v.stopping=false;v.raf=0;
+        v.host.classList.remove('zv-native-stopping');
+        v.host.classList.add('zv-native-settle');
+        render(v);
+        setTimeout(()=>v.host.classList.remove('zv-native-settle'),100);
+      };
+      v.raf=requestAnimationFrame(settle);
+    };
+
+    v.last=reactionT0;
+    v.raf=requestAnimationFrame(coast);
   }
 
   function init(){
     addStyle();
     for(let i=0;i<3;i++){buildReel(i);setStatic(i,reels[i])}
 
-    // The machine logic decides the predetermined result. Physical display owns all actual reel motion.
     window.drawReel=function(i){
       if(i<0||i>2)return;
       if(spinning[i])return;
@@ -142,7 +174,6 @@
     window.start=function(){
       const before=[...spinning];
       machineStart();
-      // Kill inherited rand()/drawReel() symbol-swap intervals immediately.
       clearLegacyTimers();
       for(let i=0;i<3;i++)if(spinning[i]&&!before[i])startPhysical(i);
     };
@@ -152,7 +183,6 @@
       if(i<0||i>2||!spinning[i])return;
       clearLegacyTimer(i);
       machineStop(i);
-      // machineStop resolves reels[i] and calls drawReel(i), which decelerates only this reel.
     };
 
     const machineReset=window.resetGame;
@@ -166,6 +196,7 @@
 
     window.ZELVOLT_REELS={
       strips:STRIPS.map(s=>[...s]),
+      tuning:{speed:[...SPEED],accel:ACCEL,reactionMs:STOP_REACTION_MS,minStopTravel:MIN_STOP_TRAVEL,minStopMs:MIN_STOP_MS,maxStopMs:MAX_STOP_MS},
       getState:()=>reelsView.map((v,i)=>({
         reel:i,phase:v?.phase??0,velocity:v?.velocity??0,
         spinning:!!v?.spinning,stopping:!!v?.stopping,stopIndex:v?.stopIndex??null,
