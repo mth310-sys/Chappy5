@@ -1,4 +1,4 @@
-// ZELVOLT native 3-reel engine v1.4
+// ZELVOLT native 3-reel engine v1.5
 // Machine-local physical reel engine. The inherited symbol-swap timers are disabled after START.
 (()=>{
   const STRIPS=[
@@ -10,12 +10,12 @@
   const VISIBLE_ROWS=3;
   const ROW=WINDOW/VISIBLE_ROWS;
 
-  // v1.4: much slower and heavier. Values are intentionally conservative for iPhone tuning.
-  const SPEED=[0.34,0.36,0.35]; // px/ms
-  const ACCEL=0.0028;
-  const START_VELOCITY=0.055;
+  // v1.5: midpoint between the previous fast and slow settings.
+  const SPEED=[0.55,0.58,0.565]; // px/ms
+  const ACCEL=0.0040;
+  const START_VELOCITY=0.075;
 
-  // STOP tuning: brief reaction, modest slip, firm settle.
+  // Keep the v1.4 stop feel; only the running speed/acceleration are retuned here.
   const STOP_REACTION_MS=52;
   const MIN_STOP_TRAVEL=ROW*0.85;
   const MIN_STOP_MS=175;
@@ -42,7 +42,7 @@
       .zv-native-cell img{display:block;width:32px;height:32px;object-fit:contain;pointer-events:none;user-select:none;-webkit-user-drag:none}
       .zv-native-payline{position:absolute;z-index:4;left:2px;right:2px;top:${ROW}px;height:${ROW}px;border-top:1px solid rgba(255,215,55,.35);border-bottom:1px solid rgba(255,215,55,.35);pointer-events:none}
       .zv-native-shadow{position:absolute;z-index:5;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.16),transparent 18%,transparent 82%,rgba(0,0,0,.16))}
-      .reel.zv-native-spinning .zv-native-track{filter:blur(.14px)}
+      .reel.zv-native-spinning .zv-native-track{filter:blur(.18px)}
       .reel.zv-native-stopping .zv-native-track{filter:blur(.04px)}
       .reel.zv-native-settle{animation:zvReelSettle .095s ease-out}
       @keyframes zvReelSettle{0%{transform:translateY(1.2px)}100%{transform:translateY(0)}}
@@ -69,13 +69,10 @@
     reelsView[i]=view;return view;
   }
 
-  // Positive phase now moves the repeated strip DOWN through the window.
-  // The repeated copies make the wrap seamless.
   function render(v){
     const p=mod(v.phase,v.cycle);
     v.track.style.transform=`translate3d(0,${-v.cycle+p}px,0)`;
   }
-  // With downward travel, this phase places `index` on the middle payline.
   function phaseForIndex(index,cycle){return mod(ROW-index*ROW,cycle)}
 
   function nearestIndexForCode(v,code,minTravel=0){
