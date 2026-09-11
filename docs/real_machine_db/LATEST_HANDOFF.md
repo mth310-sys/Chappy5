@@ -1,68 +1,66 @@
 更新日: 2026-09-12
 
 ## 現在地点
-- recordCount: **1415**
-- latestRecordAdded: **チバリヨ-30 — No.1415**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2021-05-24_chibariyo-30.md`
-- chronologicalFrontier: **2021-05-24**
-- frontierLatestMachine: **チバリヨ-30 — No.1415**
+- recordCount: **1416**
+- latestRecordAdded: **パチスロガールズ＆パンツァー 劇場版 — No.1416**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2021-06-07_girls-und-panzer-der-film.md`
+- chronologicalFrontier: **2021-06-07**
+- frontierLatestMachine: **パチスロガールズ＆パンツァー 劇場版 — No.1416**
 - schema: **resetBehavior v0.7**
-- status: **2021-05-24_GROUP_CLOSED_AFTER_REGIONAL_STAGED_RELEASE_AUDIT**
+- status: **2021-06-07_GROUP_OPEN_1_OF_4_UNIQUE_PENDING_AFTER_CHIBARIYO_DEDUP**
 
 ## 今回の同期 / 進捗
-- 最新mainを再取得したところ前回会話地点No.1410より先行し、No.1414「鬼浜爆走紅蓮隊 狂闘旅情編」まで処理済みだったため重複登録せずNo.1414から継続。
-- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.1414レコードを確認して開始。
+- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.1415「チバリヨ-30」レコードを確認して開始。
 - `INDEX.md` は旧19件表示のため、README規定どおり `LATEST_HANDOFF.md` とmain実レコードを正本として進捗判定。
-- 2021-05-24群の残り `チバリヨ-30` をNo.1415として追加。
-- NET公式、HAZUSE、P-WORLD、当時導入/業界記事、1geki、必勝本系、ちょんぼりすた、旧新台一覧を横断し、性能コアとresetBehavior v0.7を同時収集。
-- 導入日は **2021-05-24 / 2021-06-07** の資料差を確認。5/24を先行/初回市場導入、6/7を全国・一般導入とする段階導入差として保持し、最初に確認できる市場導入日5/24をcanonicalとした。6/7に同一型式を重複登録しない。
-- 設定変更は天井・内部状態/モード・有利区間RESET、据え置き/純電断はCARRY_OVER。有利区間移行時は全設定共通で50%以上が天国チャンスA/Bまたはパトランプ準備となる公開数値を保存。
-- 設定変更専用の固定短縮天井は確認できず。朝一32G期待は優遇モード抽選と区別し、「32Gリセット天井」と誤登録しない。
-- 本機固有ガックン条件/発生率と、設定変更時の天国チャンスA/B/パトランプ準備の個別振り分け率は検索語・型式・メーカー・資料系統を変えて再探索後 `UNVERIFIED_AFTER_RESEARCH`。
-- 2021-05-24群は当時新台カレンダーで鬼浜/チバリヨの2機が一致。地域先行・30Φ・段階導入を再監査し、新たな独立型式を固定できなかったためCLOSED。
+- No.1415で2021-05-24群CLOSED済み。5/25〜6/6境界を短く再確認し、次の本線2021-06-07群へ進行。
+- `チバリヨ-30` はNo.1415で5/24先行導入として登録済みのため、6/7全国導入掲載では重複登録しない。
+- 2021-06-07未処理独立機種の先頭 `パチスロガールズ＆パンツァー 劇場版` をNo.1416として追加。
+- HAZUSE、2021年業界記事、1geki、なな徹、ちょんぼりすた、期待値見える化、当時新台一覧を横断し、性能コアとresetBehavior v0.7を同時収集。
+- 設定変更は有利区間・天井・進軍カウンター・内部モード・内部状態RESET。純電断/据え置きは基本CARRY_OVER。
+- 通常時有利区間ランプ点灯型で、朝一消灯=設定変更濃厚、点灯=据え置き濃厚。進軍カウンターの大幅進行も据え置き材料。
+- 有利区間移行時の全設定モード振り分け表を取得し、設定変更後にも適用される新規有利区間共通値として保存。
+- 設定変更専用固定短縮天井は確認できず。天井はモード別進軍pt 5〜25pt、最大25ptは平均約455G。
+- 本機固有ガックン条件/発生率と、設定変更専用の独立した内部高確初期振り分け率は検索語・型式・資料系統変更後も固定できず `UNVERIFIED_AFTER_RESEARCH`。
 - 遡及resetBehavior QAは本線優先のため今回は進めず、既存カーソル「アストロ球団」を維持。
 
-## No.1415 — チバリヨ-30
-- path: `docs/real_machine_db/machines/2021-05-24_chibariyo-30.md`
-- manufacturer: **ネット（製造: オーゼキ）**
-- formalModel: **SチバリヨZH-30**
-- certificationNumber: **1S0017**
-- releaseDate: **2021-05-24 canonical / 2021-06-07 nationwide staged rollout**
-- generation/system: **6.1号機 / AT / 30Φ / 完全告知 / 擬似ボーナス連チャン**
-- payoutRateBySetting: **97.9 / 99.2 / 101.1 / 103.2 / 105.3 / 107.5%**
-- initialHitBySetting: **1/240 / 1/235 / 1/221 / 1/207 / 1/193 / 1/189**
-- baseGamesPer50: **約33.7G/50枚**
-- netIncrease: **約3.0枚/G**
-- basicPayout: **BIG 70G・約210枚 / REG 30G・約90枚**
-- normalCeiling: **最大900Gまたはチェリー最大40回成立**
+## No.1416 — パチスロガールズ＆パンツァー 劇場版
+- path: `docs/real_machine_db/machines/2021-06-07_girls-und-panzer-der-film.md`
+- manufacturer: **オリンピア（平和グループ）**
+- formalModel: **Sガールズ＆パンツァー劇場版H4**
+- certificationNumber: **0S1509**
+- releaseDate: **2021-06-07**
+- generation/system: **6.1号機 / AT / 擬似ボーナス経由・完全自力バトルAT**
+- payoutRateBySetting: **97.5 / 98.5 / 101.7 / 104.8 / 108.1 / 110.2%**
+- initialHitBySetting: **1/196.6 / 1/191.0 / 1/177.3 / 1/164.2 / 1/151.5 / 1/144.2**
+- ATBySetting: **1/539.9 / 1/521.9 / 1/472.3 / 1/433.4 / 1/397.1 / 1/375.6**
+- baseGamesPer50: **約34.5〜34.8G/50枚**
+- netIncrease: **約2.5枚/G**
+- basicPayout: **GIRLS und BONUS 40G+α / エピソード43G / AT中隊バトル50G+α / AT平均TY約510.2〜514.4枚**
+- normalCeiling: **進軍pt最大25pt（平均約455G）**
 - coreStatus: **COMPLETE_CORE**
-- resetBehaviorQA: **COMPLETE_APPLICABLE_RESET_CORE_WITH_EXACT_MODE_SPLIT_UNVERIFIED**
+- resetBehaviorQA: **COMPLETE_APPLICABLE_RESET_CORE_WITH_PUBLIC_MODE_TABLE**
 
-### resetBehavior v0.7 — No.1415
-- 設定変更: **天井進行RESET / 内部状態・モード再抽選 / 有利区間RESET**。
-- 据え置き: **天井・内部状態/モード・有利区間CARRY_OVER**。
-- 純電断: **天井・内部状態CARRY_OVER**。有利区間もランプ/据え置き挙動と整合する引継ぎとして保存。
-- ceilingAfterReset: **設定変更専用の固定短縮天井は確認できない**。通常の最大900G/40チェリー天井を0から再開。
-- modeAfterReset / numericResetData: **有利区間移行時、全設定共通で50%以上が天国チャンスA / 天国チャンスB / パトランプ準備のいずれか**。個別3モード振り分けは `UNVERIFIED_AFTER_RESEARCH`。
-- resetDetection: 通常時有利区間ランプ点灯型のため、未対策なら **朝一消灯=設定変更濃厚 / 点灯=据え置き濃厚**。前日消灯閉店や店側対策等の例外あり。
-- ガックン: 本機固有の高信頼直接資料を固定できず `UNVERIFIED_AFTER_RESEARCH`。
+### resetBehavior v0.7 — No.1416
+- 設定変更: **有利区間・天井・進軍カウンター・内部モード・内部状態RESET**。
+- 据え置き: **天井・進軍カウンター・内部モード・内部状態・有利区間CARRY_OVER**。
+- 純電断: **基本CARRY_OVER**。通常時液晶ステージは仮校舎/お泊り会/露天風呂のいずれか、CZ/ボーナス/AT中電断は当該状態を引継ぐ。
+- ceilingAfterReset: **固定短縮なし**。新規有利区間でモード再抽選後、そのモードの5〜25pt天井を適用。
+- modeAfterReset / numericResetData: 非レア役での有利区間移行時、設定1は通常A40.2 / B40.2 / C16.4 / D1.2 / 天国A1.6 / 天国B0.4%、設定6は40.2 / 28.9 / 16.4 / 3.1 / 9.0 / 2.3%。全設定表はレコード内保存。
+- 有利区間移行Gで弱チェリー/双眼鏡なら通常C以上、強チェリー/チャンス目なら天国A以上。
+- resetDetection: 通常時有利区間ランプ点灯型。未対策なら **朝一消灯=設定変更濃厚 / 点灯=据え置き濃厚**。進軍カウンターの大幅進行も据え置き材料。
+- ガックン: `UNVERIFIED_AFTER_RESEARCH`。
 
-## 2021-05-24群 — CLOSED
-1. **鬼浜爆走紅蓮隊 狂闘旅情編 — No.1414 / DONE**
-2. **チバリヨ-30 — No.1415 / DONE**
-
-- 当時カレンダーで5/24のパチスロ新台として上記2機を確認。
-- `チバリヨ-30` は資料により6/7掲載もあるが同一型式の全国段階導入であり、6/7に重複登録しない。
-- status: **2021-05-24_GROUP_CLOSED_AFTER_REGIONAL_STAGED_RELEASE_AUDIT**
+## 2021-06-07群 — OPEN
+- `チバリヨ-30` はNo.1415で段階導入処理済みにつき6/7では重複登録しない。
+1. **パチスロガールズ＆パンツァー 劇場版 — No.1416 / DONE**
+2. **パチスロガメラ — No.1417候補 / NEXT**
+3. **パチスロ鉄拳4デビルVer. — No.1418候補 / PENDING**
+4. **パチスロ 百花繚乱 サムライガールズ — No.1419候補 / PENDING**
+- 上記4独立機種を処理後、PB・地域先行・別型式・延期/段階導入を再監査して群CLOSED可否を判定する。
 
 ## 次回本線の再開地点
-- 最新main再同期後、**2021-05-25〜2021-06-06境界を短く再監査 → 2021-06-07「パチスロガールズ＆パンツァー 劇場版」— No.1416候補**から継続。
-- 2021-06-07カレンダーでは5スロット掲載のうち `チバリヨ-30` はNo.1415で段階導入処理済み。同日未処理の独立機種として少なくとも以下を固定:
-  1. **パチスロガールズ＆パンツァー 劇場版 — No.1416候補 / NEXT**
-  2. **パチスロガメラ — No.1417候補 / PENDING**
-  3. **パチスロ鉄拳4デビルVer. — No.1418候補 / PENDING**
-  4. **パチスロ 百花繚乱 サムライガールズ — No.1419候補 / PENDING**
-- 6/7群処理時もPB・地域先行・別型式・延期/段階導入を再監査して群CLOSED可否を判定する。
+- 最新main再同期後、**No.1417候補「パチスロガメラ」**から継続。
+- その後 `パチスロ鉄拳4デビルVer.` → `パチスロ 百花繚乱 サムライガールズ` の順で2021-06-07群を処理。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
@@ -71,27 +69,20 @@
 - 既存性能値をやり直さずreset側のみ正式再探索する。
 
 ## GitHub保存
-- No.1415追加 commit: `cb29803df93950b32235f004975655274e67d567`
+- No.1416追加 commit: `8837b3be10c0eabddeadb992cae1fc4a1a121a3a`
 - `LATEST_HANDOFF.md`: この更新commitでmainへ反映。
 
 ## 主要出典 — 取得日 2026-09-12
-### No.1415 チバリヨ-30
-- https://www.net-fun.co.jp/CBR-30_2021/
-- https://www.net-fun.co.jp/topic/
-- https://hazuse.com/machine/pachislot/1S0017/
-- https://www.p-world.co.jp/machine/database/9392
-- https://pachinkopachisro.com/archives/55655669.html
-- https://pachibee.7world.jp/machines/index/4854
-- https://hisshobon.news/pachislot/17161/
-- https://1geki.jp/slot/s_chibariyo30/
-- https://1geki.jp/slot/s_chibariyo30/82/
-- https://1geki.jp/slot/s_chibariyo30/83/
-- https://1geki.jp/slot/s_chibariyo30/84/
-- https://chonborista.com/slot/net-slot/138518/
-- https://ichikatsu.com/newslot/
-- https://slot-seven.com/chibariyo30-tenzyou/
-
-### 2021-06-07次群先行確認
-- https://1geki.jp/newmachinecalender/202106/
+### No.1416 パチスロガールズ＆パンツァー 劇場版
+- https://hazuse.com/machine/pachislot/0S1509/
+- https://hazuse.com/machine/pachislot/0S1509/genre/201/
+- https://hazuse.com/machine/pachislot/0S1509/genre/207/
+- https://news.p-world.co.jp/articles/16298/yugitsushin
 - https://1geki.jp/slot/s_ggp/
-- https://1geki.jp/slot/s_tekken4d/
+- https://nana-press.com/kaiseki/machine/130/
+- https://nana-press.com/kaiseki/machine/130/3639/
+- https://nana-press.com/kaiseki/machine/130/3643/
+- https://nana-press.com/kaiseki/machine/130/4134/
+- https://chonborista.com/slot/orinpia-slot/137100/
+- https://slotjin.com/tenjoukitaichi/girlsundpanzer/
+- https://ichikatsu.com/newslot/
