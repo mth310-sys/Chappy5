@@ -90,28 +90,72 @@ P-WORLDと2007年当時の業界記事でRT純増約0.4枚/Gを照合。
 
 ## resetBehavior
 
-resetBehaviorQA: PARTIAL
+resetBehaviorVersion: v0.7
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
+resetQaLastUpdated: 2026-09-11
 
-- settingChangeBehavior: 本機固有の設定変更時内部処理を明記した高信頼資料を確認できず UNVERIFIED
-- carryOverBehavior: 通常時ゲーム数天井は非搭載。通常モード管理の公開仕様も確認できず、天井ゲーム数/モード引継ぎは物差し上非該当。本機固有のRT内部状態据え置き処理は未確認
-- powerCycleBehavior: 電源OFF→ONのみの本機固有挙動を示す高信頼資料を確認できず UNVERIFIED
-- gameCounterReset: 通常時ゲーム数天井非搭載のため、天井用ゲーム数カウンタは物差し上非該当
-- ceilingAfterReset: 通常時天井非搭載のため非該当
-- modeAfterReset: 朝一専用モード/通常時モード再抽選の公開情報を確認できず
-- stateAfterReset: 設定変更時のRT等内部状態再抽選・引継ぎを直接示す高信頼資料は未確認
-- advantageousSectionReset: 非該当（有利区間制度導入前）
-- resetBenefits: 朝一/設定変更固有の主要な出玉恩恵は確認できず
-- resetPenalties: 設定変更固有の主要な不利要素は確認できず
-- resetDetection: 「設定変更」「リセット」「朝一」「据え置き」「電源OFF ON」「ガックン」「変更判別」まで検索語を変えて再探索したが、本機固有の高信頼な変更判別情報を確定できず UNVERIFIED
-- numericResetData: 公開朝一専用数値は確認できず
+### settingChangeBehavior
+
+- 本機固有の設定変更時内部処理を直接明記した高信頼資料は、当時系・後年回顧・古いDBを再探索しても固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- RT中/ボーナス成立後/告知待ち状態を設定変更した際の残RTや成立状態の処理は推測補完しない。
+
+### carryOverBehavior
+
+- 通常時ゲーム数天井は非搭載のため、天井G引継ぎは `NOT_APPLICABLE`。
+- 通常時モード管理の公開仕様も確認できず、モード引継ぎは物差し上非該当。
+- 据え置き時のRT残G・RT内部状態・ボーナス成立/告知状態の機種固有契約は `UNVERIFIED_AFTER_RESEARCH`。
+
+### powerCycleBehavior
+
+- 純電源OFF→ONのみのRT残G・RT内部状態・ボーナス成立/告知状態の機種固有契約は `UNVERIFIED_AFTER_RESEARCH`。
+- 一般的な5号機A+RT機の挙動からの推定は採用しない。
+
+### gameCounterReset
+
+- 通常時ゲーム数天井非搭載のため、天井用ゲーム数カウンタは `NOT_APPLICABLE`。
+
+### ceilingAfterReset
+
+- 通常時天井非搭載のため `NOT_APPLICABLE`。
+
+### modeAfterReset
+
+- 朝一専用モード/通常時モード再抽選の公開情報を確認できず `NOT_APPLICABLE_OR_UNVERIFIED`。
+
+### stateAfterReset
+
+- 設定変更/据え置き/純電断時のRT内部状態、残RTゲーム数、ボーナス成立/告知状態の直接契約は `UNVERIFIED_AFTER_RESEARCH`。
+
+### advantageousSectionReset
+
+- **NOT_APPLICABLE**（有利区間制度導入前）。
+
+### resetBenefits
+
+- 朝一/設定変更固有の主要な出玉恩恵は十分な再探索後も確認できず `PUBLIC_BENEFIT_NOT_FOUND_AFTER_RESEARCH`。
+
+### resetPenalties
+
+- 設定変更固有の主要な不利要素は十分な再探索後も確認できず `PUBLIC_PENALTY_NOT_FOUND_AFTER_RESEARCH`。
+
+### resetDetection
+
+- `リングにかけろ1 / リングにかけろ / 銀座 / Sammy / 2007` と `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / ガックン / 初期出目 / 変更判別` を組み合わせて再探索したが、本機固有の確定級変更判別条件は固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- ガックン率や初期出目契約も公開確定値を確認できないため推測補完しない。
+
+### numericResetData / publicMorningNumbers
+
+- 公開朝一専用数値: `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
+- 設定変更専用RT移行率/状態振り分け: `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
+- 本機固有ガックン率: `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
 
 ### resetBehavior 再探索メモ
 
-「リングにかけろ1」「リングにかけろ」「銀座」「Sammy」に「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / モード / 状態 / ガックン / 変更判別」を組み合わせ、P-WORLD、当時業界記事、解析サイト、古いまとめ、後年回顧資料を横断。RT/ボーナス仕様と通常時天井非搭載は確認できたが、2007年機固有の設定変更・電断・朝一判別挙動を裏付ける資料は確定できなかったため推測で埋めない。
+2026-09-11遡及QAで再探索。`リングにかけろ1 / リングにかけろ / 銀座 / Sammy / 2007` に `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / RT / ブーメランラッシュ / 状態 / ガックン / 初期出目 / 変更判別` を組み合わせ、P-WORLD、当時業界記事、K-Navi、解析サイト、古いまとめ、後年回顧資料を再横断。RT/ボーナス仕様と通常時天井非搭載は再確認できたが、2007年機固有の設定変更・据え置き・純電断契約および朝一判別を裏付ける直接資料は固定できなかった。既存性能側のPARTIAL判定は維持し、reset側だけ `PARTIAL_RESEARCH_EXHAUSTED` として正式化する。
 
 ## sources
 
-取得日: 2026-08-31
+取得日: 2026-08-31 / resetBehavior再取得日: 2026-09-11
 
 1. P-WORLD機種DB — リングにかけろ
    - https://www.p-world.co.jp/machine/database/4578
@@ -137,12 +181,17 @@ resetBehaviorQA: PARTIAL
    - https://www.marimo0925.net/pachisuro-rekidai-ranking-ringkakero/
    - 2007年、銀座、設定1 98.0%〜設定6 119.5%、RT純増0.4枚/G、合算設定1約1/317〜設定6約1/203を照合
    - reliability: ANALYSIS_SINGLE
+7. K-Navi — リングにかけろ1
+   - https://p-kn.com/slot/704/
+   - 初代機の機種同定と当時系統情報を再確認
+   - reliability: ANALYSIS_SINGLE
 
 ## missingFields
 
 - 50枚あたりゲーム数/ベース
-- 本機固有の設定変更時内部処理
-- 電源OFF→ONのみの本機固有挙動
+- 本機固有の設定変更時RT/ボーナス成立状態処理
+- 据え置き時RT/ボーナス成立状態処理
+- 電源OFF→ONのみのRT/ボーナス成立状態処理
 - 本機固有の変更判別/ガックン情報
 - 公開朝一専用数値
 
@@ -152,4 +201,4 @@ resetBehaviorQA: PARTIAL
 - 基本獲得枚数は解析資料の実獲得目安312/312/104枚に対し、当時業界記事は約300/約300/約90枚。紹介時の丸め/定義差として平均せず双方保持。
 
 coreStatus: PARTIAL
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
