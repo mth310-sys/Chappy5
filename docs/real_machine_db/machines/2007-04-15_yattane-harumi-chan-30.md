@@ -1,7 +1,7 @@
 # やったネ！はるみちゃん-30
 
 status: COMPLETE_CORE
-qaResetBehavior: PARTIAL
+qaResetBehavior: PARTIAL_RESEARCH_EXHAUSTED
 
 machineName: やったネ！はるみちゃん-30
 manufacturer: ヤーマ
@@ -73,7 +73,9 @@ modeSpecificMinimumData:
 
 ## resetBehavior
 
-resetBehaviorQA: PARTIAL
+resetBehaviorVersion: v0.7
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
+resetQaLastUpdated: 2026-09-11
 
 settingChangeBehavior:
 - 本機固有の設定変更時にMRT/内部RT状態や残りゲーム数を引き継ぐか、通常状態へ移行するかを確定できる高信頼公開資料は未発見。
@@ -119,11 +121,11 @@ numericResetData:
 
 ### resetBehavior 再探索メモ
 
-取得日2026-08-31。表記揺れ・30Φ表記・メーカー名・シリーズ名に設定変更/リセット/朝一/据え置き/電源OFF ON/天井/モード/ガックン/MRT持越し/RT残りGを組み合わせ、BELLCO現存メーカー情報、グリーンべると、パチマガスロマガ、HAZUSE、5号機クロニクル、後年回顧資料まで確認したが、設定変更・据え置き・単純電断を区別する本機固有の公開値は確認できなかったため推測で埋めない。
+取得日2026-08-31、2026-09-11再検証。表記揺れ・30Φ表記・メーカー名・シリーズ名に設定変更/リセット/朝一/据え置き/電源OFF ON/天井/モード/ガックン/MRT持越し/RT残りGを組み合わせ、BELLCO現存メーカー情報、グリーンべると、パチマガスロマガ、HAZUSE、5号機クロニクル、後年回顧資料まで再横断。2026-09-11時点でも、設定変更・据え置き・純電断を区別する本機固有の公開契約は確認できなかった。一般的な5号機RTの挙動から推測補完せず、既存COMPLETE_COREを維持してreset側のみ `PARTIAL_RESEARCH_EXHAUSTED` とする。
 
 ## sources
 
-取得日: 2026-08-31
+取得日: 2026-08-31 / resetBehavior再確認: 2026-09-11
 
 1. BELLCO（ベルコ株式会社）機種情報「やったネ!はるみちゃん」シリーズ
    - https://www.s-bellco.co.jp/products/slot/yama_harumichan/
@@ -152,7 +154,7 @@ numericResetData:
 
 6. HAZUSE「やったネ!はるみちゃん4」
    - https://hazuse.com/i/data/yattane%21harumichan4/top.htm
-   - シリーズ唯一の30パイ仕様「-30」が「4」と同スペックと明記。BIG/CT/MRT性能を確認。
+   - シリーズ唯一の30パイ仕様「-30」が「4」と同スペックと明記。BIG/CT/MRT性能を確認。内部システム側にresetBehaviorを固定できる公開記述は確認できず。
    - confidence: ANALYSIS_HIGH
 
 7. 5号機クロニクル「ヤーマ5号機全機種一覧」
@@ -177,4 +179,4 @@ numericResetData:
 - releaseDateはメーカー公式が2007年4月、当時グリーンべるとは2007-04-15「納品開始予定」。予定日と実導入確認日を同一視しない。
 
 coreStatus: COMPLETE_CORE
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
