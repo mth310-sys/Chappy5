@@ -95,7 +95,7 @@ carryOverBehavior:
 powerCycleBehavior:
 - 純電源OFF→ONのみと設定変更を区別した、本機固有のプチRT残りG/内部RT状態/成立済みボーナス状態の処理は `UNVERIFIED_AFTER_RESEARCH`。
 
- gameCounterReset:
+gameCounterReset:
 - `NOT_APPLICABLE_TO_NORMAL_CEILING`。通常時ゲーム数天井は非搭載。
 - プチRTの残りGは通常天井カウンタと定義が異なるため、この欄へ推測転記しない。
 
