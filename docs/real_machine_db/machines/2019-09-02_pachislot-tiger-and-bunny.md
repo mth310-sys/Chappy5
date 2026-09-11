@@ -54,47 +54,50 @@ systemType: AT / 擬似ボーナス連動・純増変動型AT
 
 ## netIncrease
 
-- AT「グッドラックタイム」はナビレベルにより純増が変動し、約1.0〜4.0枚/G。
+- AT「グッドラックタイム」はナビレベルにより純増が変動し、約1.0 / 2.0 / 4.0枚/G。
 - 山佐公式は最高純増約4.0枚/G、最高擬似ボーナス確率約1/13と説明。
 
 信頼度: OFFICIAL + ANALYSIS_HIGH
 
 ## basicPayout
 
-- 擬似ボーナス複数種を搭載。
-- 後年整理資料ではエピソードボーナス平均約103枚、レギュラーボーナス平均約53枚等を確認。
-- ATは擬似ボーナス当選時に残りG数を30Gへ再セットし、ボーナス確率・ナビレベル上昇を狙う構造。
-- 完全再現用の各ボーナス振り分けは物差し用途外として収録しない。
+- BIG BONUS: 平均約126枚、純増約4.0枚/G、AT期待度約36%。
+- BLUE ROSE LIVE: 平均約150枚、純増約4.0枚/G、AT期待度約66%。
+- REG BONUS: 平均約53枚、純増約4.0枚/G、AT期待度約12%。
+- EPISODE BONUS: 平均約103枚、純増約4.0枚/G、AT確定。
+- AT「グッドラックタイム」: 1セット30G+α、純増1 / 2 / 4枚/Gの変動型。擬似ボーナス当選時に残りG数を30Gへ再セットする。
+
+完全再現用の各ボーナス振り分け・AT内詳細抽選は収録しない。
 
 ## modeSpecificMinimumData
 
-- 通常時天井: 111G / 333G / 666Gの振り分けがあり、最深666G+αでボーナス当選。
+- 通常時天井: 111G / 333G / 666Gの振り分けがあり、最深666G+αでBIG以上当選。
 - 公開されている設定別天井振り分けは通常時性能として存在するが、設定変更専用振り分けとは断定せず朝一専用値には転用しない。
 - 6号機有利区間管理機。
 
 ## resetBehavior
 
 resetBehaviorVersion: v0.7
-resetBehaviorQA: COMPLETE_PUBLIC_RESET_CORE_WITH_INTERNAL_STATE_GAPS
+resetBehaviorQA: COMPLETE_PUBLIC_RESET_CORE_WITH_MODE_GAP
 resetQaLastUpdated: 2026-09-11
 
 ### settingChangeBehavior
 
-- 機種固有当時解析で **天井RESET / 有利区間RESET**。
+- 機種固有当時解析で **天井RESET / 内部状態RESET / 有利区間RESET**。
 - 朝一ステージは虎徹の部屋 or 市街。
 - 通常時有利区間ランプは常時消灯型。
-- 設定変更時の内部モード / 内部状態について、同名2022年SPでは詳細表があるが別スペックのため本機へ転記しない。本機2019年版の直接契約は十分な再探索後も `UNVERIFIED_AFTER_RESEARCH`。
+- 設定変更時の内部モードについて、2019年版の直接契約は十分な再探索後も `UNVERIFIED_AFTER_RESEARCH`。
 
 ### carryOverBehavior
 
-- 機種固有当時解析で、設定変更なしの電源OFF→ONでは **天井 / 有利区間を引き継ぐ**。
-- 据え置き時の内部モード / 内部状態の独立した直接表は `UNVERIFIED_AFTER_RESEARCH`。
+- 機種固有当時解析で、設定変更なしの電源OFF→ONでは **天井 / 内部状態 / 有利区間を引き継ぐ**。
+- 据え置き時の内部モード独立契約は `UNVERIFIED_AFTER_RESEARCH`。
 
 ### powerCycleBehavior
 
-- 電源OFF→ONのみ: **天井CARRY_OVER / 有利区間CARRY_OVER**。
+- 電源OFF→ONのみ: **天井CARRY_OVER / 内部状態CARRY_OVER / 有利区間CARRY_OVER**。
 - ステージは虎徹の部屋 or 市街。
-- 内部モード / 内部状態については2019年版機種固有の直接対照表を固定できず、2022年SP資料から推定しない。
+- 内部モードは2019年版機種固有の直接対照表を固定できず、2022年SP資料から推定しない。
 
 ### gameCounterReset
 
@@ -113,8 +116,9 @@ resetQaLastUpdated: 2026-09-11
 
 ### stateAfterReset
 
-- 2019年版機種固有の設定変更 / 純電断時内部状態契約は `UNVERIFIED_AFTER_RESEARCH`。
-- 同シリーズ後継SPのRESET/CARRY_OVER表は別型式・別ゲーム性なので転記しない。
+- 設定変更: RESET。
+- 純電源OFF→ON / 据え置き: CARRY_OVER。
+- 2019年版の機種固有資料で直接確認。
 
 ### advantageousSectionReset
 
@@ -140,13 +144,13 @@ resetQaLastUpdated: 2026-09-11
 ### numericResetData / publicMorningNumbers
 
 - 設定変更専用モード振り分け、朝一特定G以内当選率、リセット恩恵発生率の比較可能な公開確定値は `NONE_CONFIRMED_AFTER_RESEARCH`。
-- 通常時の設定別111/333/666G天井振り分けは公開されているが、朝一リセット専用値とは断定できないためここには転記しない。
+- 通常時の設定別111 / 333 / 666G天井振り分けは公開されているが、朝一リセット専用値とは断定できないためここには転記しない。
 
 ### resetBehavior 再探索メモ
 
-「パチスロ TIGER & BUNNY / タイガー＆バニー / タイバニ / Sパチスロタイガー＆バニーHZ / 山佐」に「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / モード / 内部状態 / 有利区間 / 有利区間ランプ / ガックン」を組み合わせて再探索。山佐公式、HAZUSE、パチ7、おスロおパチおいでやす、すろぱちくえすと、モゲスロ、ちょんぼりすた、後継SP資料まで横断した。
+「パチスロ TIGER & BUNNY / タイガー＆バニー / タイバニ / Sパチスロタイガー＆バニーHZ / 山佐」に「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / モード / 内部状態 / 有利区間 / 有利区間ランプ / ガックン」を組み合わせて再探索。山佐公式、HAZUSE、パチ7、おスロおパチおいでやす、スロパチネット、すろぱちくえすと、モゲスロ、ちょんぼりすた、後継SP資料まで横断した。
 
-2019年版では天井と有利区間のRESET/CARRY_OVERを機種固有当時資料で固定。一方、検索で多く出る2022年 `TIGER & BUNNY SP` は別型式・別性能で、内部モード/内部状態RESET表を2019年版へ転記しない。ガックンや朝一専用数値も固定できず、十分な再探索後のみ未確認とした。
+2019年版では天井・内部状態・有利区間のRESET/CARRY_OVERを機種固有当時資料で固定。一方、検索で多く出る2022年 `TIGER & BUNNY SP` は別型式・別性能で、内部モードRESET表を2019年版へ転記しない。ガックンや朝一専用数値も固定できず、十分な再探索後のみ未確認とした。
 
 ## qualityNotes / conflicts
 
@@ -154,7 +158,7 @@ resetQaLastUpdated: 2026-09-11
 - HAZUSEで正式型式 `Sパチスロタイガー＆バニーHZ`、検定番号 `9S0603`、2019-09-02導入を確認。
 - パチ7・複数解析で設定別初当たり / 出玉率 / ベースを照合。
 - `パチスロ TIGER & BUNNY SP`（2022年）は別機種。検索結果に混在しやすいため性能・resetBehaviorを混同しない。
-- 基本獲得枚数はボーナス種別・資料定義により整理粒度が異なるため、確認できた代表値のみ保持し各種振り分けは収録しない。
+- 導入台数は資料に約5,000台 / 約10,000台の差があるが市場実績は今回の必須収集外のためcanonical化しない。
 
 ## sources
 
@@ -176,15 +180,19 @@ resetQaLastUpdated: 2026-09-11
    - https://oslo-opachi.com/2019/09/02/tigerandbunny-tennjou/
    - 設定変更: 天井/有利区間RESET、電源OFF→ON: 天井/有利区間CARRY_OVER、通常時ランプ常時消灯、朝一ステージ。
    - reliability: ANALYSIS_HIGH
-5. すろぱちくえすと — 天井解析 / 朝一
+5. スロパチネット — タイガー＆バニー
+   - https://slopachi-net.com/tiger-bunny
+   - 2019年版の型式、性能、天井、設定変更時の天井/内部状態RESET、電断時引継ぎ、各疑似ボーナス平均枚数、AT1セット30G+α。
+   - reliability: ANALYSIS_HIGH
+6. すろぱちくえすと — 天井解析 / 朝一
    - https://www.slopachi-quest.com/article/tiger-and-bunny-tennjou/
    - 2019-09-02導入、天井振り分け、状態関連、朝一挙動を再照合。
    - reliability: ANALYSIS_HIGH
-6. モゲスロ — TIGER&BUNNYまとめ
+7. モゲスロ — TIGER&BUNNYまとめ
    - https://moge-site.com/archives/23753
    - 2019-09-02、6号機AT、設定別AT初当たり/ボーナス合算。
    - reliability: ANALYSIS_HIGH
-7. 遊技通信 / P-WORLD業界ニュース
+8. 遊技通信 / P-WORLD業界ニュース
    - https://news.p-world.co.jp/articles/11434/yugitsushin
    - 山佐新機種、AT純増と擬似ボーナス確率変動、最高約1/13・最高純増約4.0枚、9月上旬導入予定。
    - reliability: INDUSTRY
@@ -192,7 +200,6 @@ resetQaLastUpdated: 2026-09-11
 ## missingFields
 
 - 2019 model setting-change/power-cycle internal mode direct contract: UNVERIFIED_AFTER_RESEARCH
-- 2019 model setting-change/power-cycle internal state direct contract: UNVERIFIED_AFTER_RESEARCH
 - machine-specific gakkun probability/condition: PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH
 - public numeric morning reset benefit: NONE_CONFIRMED_AFTER_RESEARCH
 
@@ -202,4 +209,4 @@ resetQaLastUpdated: 2026-09-11
 - Search contamination risk: 2022 `TIGER & BUNNY SP` has detailed reset tables but is a separate model and is explicitly excluded from canonical 2019 reset fields.
 
 coreStatus: COMPLETE_CORE
-resetBehaviorQA: COMPLETE_PUBLIC_RESET_CORE_WITH_INTERNAL_STATE_GAPS
+resetBehaviorQA: COMPLETE_PUBLIC_RESET_CORE_WITH_MODE_GAP
