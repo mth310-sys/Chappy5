@@ -74,7 +74,7 @@
 
 ## GitHub保存
 - No.1400追加 commit: `5a29f184b50e50bd30b2080fc22ccf40e9442a10`
-- handoff更新 commit: **THIS_COMMIT**
+- `LATEST_HANDOFF.md`: main反映済み（コミットSHAは実行結果側で確認）。
 
 ## 主要出典 — 取得日 2026-09-12
 ### No.1400 ミスタートリプルクラウン
