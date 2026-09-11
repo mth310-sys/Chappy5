@@ -1,57 +1,58 @@
 更新日: 2026-09-12
 
 ## 現在地点
-- recordCount: **1424**
-- latestRecordAdded: **SLOT劇場版魔法少女まどか☆マギカ[前編]始まりの物語／[後編]永遠の物語 — No.1424**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2021-08-02_slot-madoka-magica-movie-beginnings-eternal.md`
+- recordCount: **1425**
+- latestRecordAdded: **もっと！クレアの秘宝伝 女神の歌声と太陽の子供達 — No.1425**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2021-08-02_motto-crea-hihouden-megami-utagoe-taiyo.md`
 - chronologicalFrontier: **2021-08-02**
-- frontierLatestMachine: **SLOT劇場版魔法少女まどか☆マギカ[前編]始まりの物語／[後編]永遠の物語 — No.1424**
+- frontierLatestMachine: **もっと！クレアの秘宝伝 女神の歌声と太陽の子供達 — No.1425**
 - schema: **resetBehavior v0.7**
-- status: **2021-08-02_GROUP_OPEN_1_OF_4_KNOWN_PROCESSED**
+- status: **2021-08-02_GROUP_OPEN_2_OF_4_KNOWN_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.1423「パチスロ東京レイヴンズ」を確認して開始。
+- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.1424「SLOT劇場版魔法少女まどか☆マギカ[前編]始まりの物語／[後編]永遠の物語」を確認して開始。
 - `INDEX.md` は旧19件表示のため、README規定どおり `LATEST_HANDOFF.md` とmain実レコードを正本として進捗判定。
-- 開始時点でmainはNo.1423 / 2021-07-19群CLOSEDまで進行済みだったため、過去チャットの古い再開地点には戻らずhandoff指定の2021-08-02群から継続。
-- 2021-08-02群の先頭としてNo.1424「SLOT劇場版魔法少女まどか☆マギカ[前編]始まりの物語／[後編]永遠の物語」を追加。
-- 2021-08-02群は複数導入日資料から、少なくとも **まどか前後編 / もっと！クレアの秘宝伝 女神の歌声と太陽の子供達 / パチスロコードギアス 反逆のルルーシュ3 / GI優駿倶楽部3** の4ユニーク機を確認。現時点1/4処理済みでOPEN。
+- 2021-08-02群の2機目としてNo.1425「もっと！クレアの秘宝伝 女神の歌声と太陽の子供達」を追加。
+- 群は引き続き **まどか前後編 / もっと！クレア / コードギアス3 / GI優駿倶楽部3** の4ユニーク機を既知キューとして保持。2/4処理済みでOPEN。
 
-## No.1424 — SLOT劇場版魔法少女まどか☆マギカ[前編]始まりの物語／[後編]永遠の物語
-- path: `docs/real_machine_db/machines/2021-08-02_slot-madoka-magica-movie-beginnings-eternal.md`
-- manufacturer: **ミズホ**
-- formalModel: **S/劇場版まどか/KK**
-- certificationNumber: **1S0068**
+## No.1425 — もっと！クレアの秘宝伝 女神の歌声と太陽の子供達
+- path: `docs/real_machine_db/machines/2021-08-02_motto-crea-hihouden-megami-utagoe-taiyo.md`
+- manufacturer: **パオン・ディーピー（大都技研ブランド文脈）**
+- formalModel: **Sもっと！クレアの秘宝伝 女神の歌声と太陽の子供達PA2**
+- certificationNumber: **0S0647**
 - releaseDate: **2021-08-02**
-- generation/system: **6.1号機 / AT**
+- generation/system: **6.1号機 / ボーナス+RT**
 - settings: **1 / 2 / 3 / 4 / 5 / 6**
-- AT firstHit: **1/269.4 / 1/251.3 / 1/241.9 / 1/222.2 / 1/205.5 / 1/188.8**
-- payoutRate: **97.3 / 99.8 / 102.0 / 104.1 / 107.1 / 110.0%**
-- baseGamesPer50: **約39G/50枚（約39.1G表記あり）**
-- AT純増: **約2.5枚/G**
-- basicPayout: **マギカラッシュ初期100枚以上 / BIG 30G / EPISODE BONUS 50G**
-- normalCeiling: **最大700G（解析上659G+前兆。特殊モードは699G+前兆付近の別表現あり）**
+- BB: **1/277.7 / 1/270.8 / 1/262.1 / 1/240.9 / 1/224.4 / 1/206.1**
+- RB: **1/431.2 / 1/397.2 / 1/366.1 / 1/322.8 / 1/315.1 / 1/290.0**
+- bonusCombined: **1/168.9 / 1/161.0 / 1/152.8 / 1/138.0 / 1/131.1 / 1/120.5**
+- payoutRate market: **97.1 / 98.0 / 100.0 / 103.2 / 105.8 / 108.6%**
+- payoutRate full-strategy: **98.2 / 99.2 / 101.2 / 104.5 / 107.2 / 110.0%**
+- baseGamesPer50: **約39G/50枚**
+- basicPayout: **BIG最大207枚 / REG最大71枚 / RT30G・純増現状維持程度**
+- ceiling: **非搭載**
 - coreStatus: **COMPLETE_CORE**
 - resetBehaviorQA: **COMPLETE_PUBLIC_RESET_CORE**
 
-### resetBehavior v0.7 — No.1424
-- 設定変更時は **天井RESET / 内部モード再抽選 / 内部状態RESET / 有利区間RESET** を当時解析で確認。
-- 据え置き・純電断では **天井 / 内部モード / 有利区間をCARRY_OVER**。
-- 通常時は有利区間ランプ基本消灯型のため **朝一消灯だけでは設定変更判別不可**。朝一から点灯なら据え置き濃厚材料。
-- 設定変更専用の固定短縮天井、専用モード振り分け、AT直撃保証、朝一当選率は表記揺れ・型式・メーカー・シリーズ名とリセット/朝一/据え置き/電断/天井/モード/有利区間を組み替えて再探索したが固定できず、一般論で補完していない。
-- 設定1機械割はP-WORLD/K-Navi/なな徹等の **97.3%** が複数系統で一致。一部二次資料に **97.9%** があるため平均せず `CONFLICT_SECONDARY_TABLE` として保持。
-- 本機固有ガックン条件・発生率は十分な再探索後も直接資料を固定できず `UNVERIFIED_AFTER_RESEARCH`。
+### resetBehavior v0.7 — No.1425
+- ボーナス+RT機で天井・ゾーン非搭載のため、ゲーム数天井・リセット短縮天井・AT/CZ天井モードは `NOT_APPLICABLE`。
+- AT/ART用の有利区間契約も本機へ推測転記せず `NOT_APPLICABLE` とした。
+- 朝一変更判別の公開仕様として、**前日から設定が上がった場合、朝イチ1回目のRT終了後CZ失敗時に「上げ上げだ」スタンプが出現する可能性あり**。公開出現率は新設定2～6で各 **1.00%**、設定1は対象外。
+- このスタンプは「設定変更全般」ではなく「前日より設定が上がった場合」の限定示唆であり、非出現から据え置きを断定しない。
+- BB楽曲の解放状態は **電断されない限り維持**。純電断が演出系の蓄積状態を初期化する公開仕様として補助記録。
+- 設定変更/据え置き/純電断時のRT・CZ内部状態、成立済みボーナス状態、本機固有ガックン条件・発生率は、表記揺れ・型式・メーカー・シリーズ名と設定変更/リセット/朝一/据え置き/電源OFF ON/ガックンを組み替えて再探索したが直接契約を固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 一部二次資料に2021-06-07導入表記があるが、HAZUSE/K-Navi/イチカツの2021-08-02一致および2021-06-28業界リリースの「8月上旬予定」と時系列整合するため、2021-08-02をcanonicalとし6/7は `SECONDARY_DATE_ERROR` 扱い。
 
 ## 2021-08-02群 — OPEN
 1. **SLOT劇場版魔法少女まどか☆マギカ[前編]始まりの物語／[後編]永遠の物語 — No.1424 / DONE**
-2. **もっと！クレアの秘宝伝 女神の歌声と太陽の子供達 — NEXT / No.1425候補**
-3. **パチスロコードギアス 反逆のルルーシュ3 — PENDING**
+2. **もっと！クレアの秘宝伝 女神の歌声と太陽の子供達 — No.1425 / DONE**
+3. **パチスロコードギアス 反逆のルルーシュ3 — NEXT / No.1426候補**
 4. **GI優駿倶楽部3 — PENDING**
 - 4機処理後、全メーカー・別型式/PB・地域先行・延期/段階導入を再監査してCLOSED可否を判定する。
 
 ## 次回本線の再開地点
-- 最新main再同期後、**2021-08-02群の次の未処理「もっと！クレアの秘宝伝 女神の歌声と太陽の子供達」No.1425候補**から継続。
-- その後、コードギアス3 → GI優駿倶楽部3の未処理順を再監査して進める。
-- 同日群は全メーカー・別型式/PB・地域先行・延期/段階導入まで再監査してCLOSED可否を判定する。
+- 最新main再同期後、**2021-08-02群の次の未処理「パチスロコードギアス 反逆のルルーシュ3」No.1426候補**から継続。
+- その後 **GI優駿倶楽部3** を処理し、同日群の全メーカー・別型式/PB・地域先行・延期/段階導入を再監査してCLOSED可否を判定する。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
@@ -60,21 +61,17 @@
 - 次回遡及QAカーソル: **`docs/real_machine_db/machines/2007-05_sangokushi-igt.md`（三國志 / IGTジャパン）**。
 
 ## GitHub保存
-- No.1424追加 commit: `981f4d03c3a0aed90d5ffe4c45dd3a907c0bd68b`
+- No.1425追加 commit: `3cd937f100ccdb10216ae2c54dbdeb1ad3ee7c81`
 - `LATEST_HANDOFF.md`: この更新commitでmainへ反映。
 
 ## 主要出典 — 取得日 2026-09-12
-### No.1424 まどか前後編
-- https://www.p-world.co.jp/machine/database/9413
-- https://yugi-nippon.com/pachinko-new-machine/post-45013/
-- https://news.p-world.co.jp/articles/17121/greenbelt
-- https://web-greenbelt.jp/post-49389/
-- https://p-kn.com/slot/3620/
-- https://nana-press.com/kaiseki/machine/140/4212/
-- https://slotjin.com/tenjoukitaichi/madokazenkouhen/
-- https://slot-seven.com/madokamagica4-tenzyou/
-- https://chonborista.com/slot/universal-slot/141931/
-- https://web-greenbelt.jp/post-47595/
+### No.1425 もっと！クレアの秘宝伝
+- https://hazuse.com/machine/pachislot/0S0647/
+- https://p-kn.com/slot/3627/
+- https://1geki.jp/slot/s_crea_taiyo/
+- https://slothack.net/matome/32805/
+- https://p-bomb.co.jp/industry/new-machine/1336/
+- https://ichikatsu.com/crea4/
 
 ### 次回境界 2021-08-02
 - https://ichikatsu.com/newslot/
