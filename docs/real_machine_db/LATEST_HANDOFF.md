@@ -1,104 +1,79 @@
 更新日: 2026-09-12
 
 ## 現在地点
-- recordCount: **1420**
-- latestRecordAdded: **ノーゲーム・ノーライフ THE SLOT — No.1420**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2021-06-14_no-game-no-life-the-slot.md`
-- chronologicalFrontier: **2021-06-14**
-- frontierLatestMachine: **ノーゲーム・ノーライフ THE SLOT — No.1420**
+- recordCount: **1421**
+- latestRecordAdded: **新ハナビ — No.1421**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2021-07-05_shin-hanabi.md`
+- chronologicalFrontier: **2021-07-05**
+- frontierLatestMachine: **新ハナビ — No.1421**
 - schema: **resetBehavior v0.7**
-- status: **2021-06-14_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**
+- status: **2021-07-05_GROUP_OPEN_1_OF_2_KNOWN_DONE**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.1419「パチスロ 百花繚乱 サムライガールズ」を確認して開始。
-- `INDEX.md` は旧19件表示のため、README規定どおり `LATEST_HANDOFF.md` とmain実レコードを正本として進捗判定。
-- 2021-06-08〜06-13境界を再監査し、次の未処理群を2021-06-14と固定。
-- No.1420「ノーゲーム・ノーライフ THE SLOT」を追加。並行作業による同機種handoff更新も検出したため、重複登録せずmain上のNo.1420を正本として再照合・統合。
-- 2021-06-14群を複数カレンダー・機種DB・当時解析で再監査し、独立パチスロ新台は本機1機でCLOSED。
-- 2021-06-15〜07-04境界も監査し、次の明確な本線群は2021-07-05。現時点で `新ハナビ` と `パチスロ零` の2機を確認。
-- 遡及QAカーソルはhandoff上アストロ球団のままだったが、main実レコードとGit履歴を確認すると `2007-05-06_astro-kyudan.md` は2026-09-12に既に `PARTIAL_RESEARCH_EXHAUSTED` まで更新済み。重複を避け、Git追加順の次レコード `2007-05_aqua-venus-30.md`（アクアビーナス30）を正式QA。
+- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.1420「ノーゲーム・ノーライフ THE SLOT」を確認して開始。
+- `INDEX.md` は旧表示のため、README規定どおり `LATEST_HANDOFF.md` とmain実レコードを正本として進捗判定。
+- 2021-06-15〜07-04境界を再確認し、次の本線を2021-07-05群と固定。
+- No.1421「新ハナビ」を追加。A+RT機のため、AT機向けの有利区間・天井項目を推測で埋めず、RT状態の設定変更/据え置き/純電断契約をresetBehaviorの中心として記録。
+- 2021-07-05群は既知2機（新ハナビ / パチスロ零）のうち新ハナビのみ完了。群はOPENを維持。
 
-## No.1420 — ノーゲーム・ノーライフ THE SLOT
-- path: `docs/real_machine_db/machines/2021-06-14_no-game-no-life-the-slot.md`
-- manufacturer: **北電子**
-- formalModel: **Sノーゲーム・ノーライフKG**
-- certificationNumber: **1S0178**
-- releaseDate: **2021-06-14**
-- generation/system: **6.1号機 / AT / 擬似ボーナス・CZ・差枚数管理型AT**
-- payoutRateBySetting: **97.5 / 98.7 / 101.0 / 103.1 / 106.5 / 110.1%**
-- strategyGame: **1/350.1 / 296.3 / 390.1 / 271.4 / 265.3 / 243.7**
-- baseGamesPer50: **約49G/50枚**
-- netIncrease: **約2.5枚/G**
-- normalCeiling: **通常時700Gでストラテジーゲーム / スコアジャッジ10周期（累計10000pt）でストラテジーゲーム＋十の盟約濃厚**
+## No.1421 — 新ハナビ
+- path: `docs/real_machine_db/machines/2021-07-05_shin-hanabi.md`
+- manufacturer: **エレコ**
+- formalModel: **S／新ハナビR／HA**
+- certificationNumber: **1S0226**
+- releaseDate: **2021-07-05**
+- generation/system: **6.1号機 / A+RT / リアルボーナス＋RT**
+- settings: **1 / 2 / 5 / 6**
+- BIG: **1/277.7 / 1/268.6 / 1/256.0 / 1/248.2**
+- REG: **1/356.2 / 1/331.0 / 1/306.2 / 1/280.1**
+- combined: **1/156.0 / 1/148.3 / 1/139.4 / 1/131.6**
+- payoutRate market average: **98.1 / 99.9 / 102.3 / 104.6%**
+- payoutRate full strategy: **102.0 / 104.0 / 106.5 / 109.0%**
+- baseGamesPer50: **約44G/50枚**
+- BIG max: **202枚**
+- REG max: **112枚**
+- RT: **花火チャレンジ最大20G（約0.3枚/G）→JAC IN後 花火GAME 20G（約0.6枚/G）**
+- ceiling: **NONE**
 - coreStatus: **COMPLETE_CORE**
-- resetBehaviorQA: **COMPLETE_PUBLIC_RESET_CORE_WITH_INITIAL_SCORE_AND_MODE_TABLE**
+- resetBehaviorQA: **COMPLETE_PUBLIC_RESET_CORE_WITH_RT_STATE**
 
-### resetBehavior v0.7 — No.1420
-- 設定変更: **天井・内部モード・内部状態・有利区間RESET、スコアカウンター再抽選**。
-- 据え置き/純電断: **天井・スコア・内部モード・内部状態・有利区間CARRY_OVER**。
-- 朝一専用固定短縮天井: **なし**。通常700G / 10周期天井を新規開始。
-- 有利区間開始時の初期スコアは **5〜995ptからランダム抽選**。1周期目は初期スコア優遇により平均約**62G**、通常周期平均約**104G**。
-- 有利区間開始時の公開モード比率（設定変更専用テーブルではない）: 設定1 **A58.5/B29.0/天国12.5%**、設定2 **25.5/51.0/23.5%**、設定3 **60.0/29.8/10.2%**、設定4 **24.7/49.4/25.9%**、設定5 **53.3/26.6/20.0%**、設定6 **22.4/44.3/33.3%**。
-- 天国は **1周期目でストラテジーゲーム当選濃厚**。
-- resetDetection: 通常時有利区間ランプ消灯型のため **朝一消灯だけでは変更判別不可**。朝一点灯なら据え置き濃厚材料。
-- 本機固有ガックン条件・発生率は表記揺れ/型式/メーカー/設定変更/朝一/据え置き等で再探索後も高信頼契約を固定できず `UNVERIFIED_AFTER_RESEARCH`。
+### resetBehavior v0.7 — No.1421
+- 設定変更: **RT状態を通常状態へRESET**。天井は非搭載。朝一専用の固定短縮・モード優遇・初当たり優遇は確認できず。
+- 据え置き/純電断: **RT状態CARRY_OVER**。前日RT中閉店かつ朝一RT継続なら据え置き材料になり得る。
+- 有利区間: A+RTの公開ゲームフロー上、物差しDBとして有用な独立リセット契約を確認できないため **NOT_APPLICABLE_TO_PUBLIC_GAME_FLOW**。推測補完しない。
+- ガックン: 設定変更・電源OFF→ONとも朝一1G目は **しない** とする解析を採用。
+- ユニメモ: 設定変更でも残るため単独判別不可。
+- 公開朝一数値: 固定短縮天井・専用モード振り分け・専用初当たり率などは資料系統を変えて再探索しても確認できず `NO_PUBLIC_FIXED_RESET_SPECIFIC_NUMERIC_TABLE_FOUND_AFTER_RESEARCH`。
+- 日付競合: イチカツの導入日欄 `2020-07-05` は誤記。2021-07-05を当時業界記事・HAZUSE・複数DBで照合しcanonical採用。
 
-## 2021-06-14群 — CLOSED
-1. **ノーゲーム・ノーライフ THE SLOT — No.1420 / DONE**
-- 複数カレンダー・業界/解析DBを照合し、同日の独立パチスロ追加機を確認できず群CLOSED。
-
-## 遡及 resetBehavior QA — アクアビーナス30
-- path: `docs/real_machine_db/machines/2007-05_aqua-venus-30.md`
-- performance core: **既存 `COMPLETE_CORE` を維持**。
-- resetBehaviorQA: **PARTIAL_RESEARCH_EXHAUSTED**。
-- 通常時ゲーム数天井、通常モード、ART/ATストック等は持たず、朝一専用短縮天井・モード優遇・当選率優遇は `NONE_CONFIRMED_AFTER_RESEARCH`。
-- ボーナス成立後にリプレイ確率が通常約1/7.30から約1/1.82へ上昇する仕様自体は確認済み。
-- 成立済みボーナス/告知待ち/ボーナス成立後高リプレイ状態の設定変更・据え置き・純電断時の正式処理、本機固有ガックン/初期出目等は、メーカー/当時業界/当時解析/旧DB/後年資料を再探索しても直接契約を固定できず `UNVERIFIED_AFTER_RESEARCH`。
-- 一般的5号機ノーマル機の挙動から推測補完しない。既存の設定別機械割CONFLICTも維持。
+## 2021-07-05群 — OPEN
+1. **新ハナビ — No.1421 / DONE**
+2. **パチスロ零 — No.1422候補 / TODO**
 
 ## 次回本線の再開地点
-- 最新main再同期後、**2021-07-05群「新ハナビ」＝No.1421候補**から継続。
-- 現時点の同日キュー: **新ハナビ → パチスロ零**。
-- 処理前に2021-06-15〜07-04境界、メーカー別一覧、別型式/PB、地域先行・延期/段階導入を再監査して漏れ防止する。
-- 新ハナビは業界記事で2021-07-05ホール導入を確認。イチカツ本文に `2020年7月5日` とする誤記があるため、その日付は採用せず別系統で再照合して登録する。
+- 最新main再同期後、**2021-07-05群「パチスロ零」＝No.1422候補**から継続。
+- パチスロ零処理後、2021-07-05群をメーカー別一覧・別型式/PB・地域先行・延期/段階導入で再監査し、CLOSED可否を判定する。
+- 群CLOSED後は次の導入日境界へ進む。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
-- 前回処理済み（main実態）: `docs/real_machine_db/machines/2007-05-06_astro-kyudan.md`（アストロ球団）→ `PARTIAL_RESEARCH_EXHAUSTED`。
-- 今回処理済み: `docs/real_machine_db/machines/2007-05_aqua-venus-30.md`（アクアビーナス30）→ `PARTIAL_RESEARCH_EXHAUSTED`。
+- 前回処理済み: `docs/real_machine_db/machines/2007-05_aqua-venus-30.md`（アクアビーナス30）→ `PARTIAL_RESEARCH_EXHAUSTED`。
 - 次回遡及QAカーソル: **`docs/real_machine_db/machines/2007-05_harem-ace.md`（もえろ!ハーレムエース）**。
 - 既存性能値をやり直さず、既存 `COMPLETE_CORE` 判定を不用意に崩さずreset側のみ正式再探索する。
 
 ## GitHub保存
-- No.1420追加 commit: `ab5289353f8e64187e0507d058165805707b5256`
-- アクアビーナス30 reset QA commit: `4f4e64605e190ae1f34a7cd5a748ef9999681593`
-- `LATEST_HANDOFF.md`: 並行更新を再取得後、この更新commitでmainへ統合。
+- No.1421追加 commit: `19653459f1d90cbf87bbdd9202226ecdef14cb5a`
+- `LATEST_HANDOFF.md`: この更新commitでmainへ反映。
 
 ## 主要出典 — 取得日 2026-09-12
-### No.1420 ノーゲーム・ノーライフ THE SLOT
-- https://hazuse.com/machine/pachislot/1S0178/
-- https://hazuse.com/machine/pachislot/1S0178/genre/207/
-- https://1geki.jp/slot/s_nogamenolife/
-- https://nana-press.com/kaiseki/machine/133/
-- https://nana-press.com/kaiseki/machine/133/3925/
-- https://nana-press.com/kaiseki/machine/133/3936/
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/kitac_slot/115/tj03-1.php
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/kitac_slot/115/tj07-4.php
-- https://slotjin.com/tenjoukitaichi/nogamenolife/
-- https://www.slopachi-quest.com/article/no-game-no-life-tenjou/
-- https://slot-seven.com/nogamenolife-tenzyou/
-- https://ichikatsu.com/newslot/
-
-### アクアビーナス30 retro QA
-- https://www.p-world.co.jp/machine/database/4763
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/heiwa_slot/32/a.php
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/heiwa_slot/32/c.php
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/heiwa_slot/32/e.php
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/heiwa_slot/32/
-- https://5goki.com/heiwa-olympia
+### No.1421 新ハナビ
+- https://hazuse.com/machine/pachislot/1S0226/genre/201/
+- https://hazuse.com/machine/pachislot/1S0226/genre/203/
+- https://news.p-world.co.jp/articles/17137/nippon
+- https://ichikatsu.com/shinhanabi/
+- https://www.nankaikoya.jp/shinhanabi-settei/
+- https://slotters.jp/shinhanabi/
 
 ### 群監査 / 次回境界
 - https://ichikatsu.com/newslot/
-- https://www.all7.jp/plans/index/2021/06
-- https://news.p-world.co.jp/articles/17137/nippon
-- https://news.p-world.co.jp/articles/17236/greenbelt
+- https://www.all7.jp/plans/index/2021/07
