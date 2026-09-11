@@ -1,66 +1,65 @@
 更新日: 2026-09-12
 
 ## 現在地点
-- recordCount: **1416**
-- latestRecordAdded: **パチスロガールズ＆パンツァー 劇場版 — No.1416**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2021-06-07_girls-und-panzer-der-film.md`
+- recordCount: **1417**
+- latestRecordAdded: **パチスロガメラ — No.1417**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2021-06-07_gamera.md`
 - chronologicalFrontier: **2021-06-07**
-- frontierLatestMachine: **パチスロガールズ＆パンツァー 劇場版 — No.1416**
+- frontierLatestMachine: **パチスロガメラ — No.1417**
 - schema: **resetBehavior v0.7**
-- status: **2021-06-07_GROUP_OPEN_1_OF_4_UNIQUE_PENDING_AFTER_CHIBARIYO_DEDUP**
+- status: **2021-06-07_GROUP_OPEN_2_OF_4_UNIQUE_PENDING_AFTER_CHIBARIYO_DEDUP**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.1415「チバリヨ-30」レコードを確認して開始。
+- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.1416「パチスロガールズ＆パンツァー 劇場版」レコードを確認して開始。
 - `INDEX.md` は旧19件表示のため、README規定どおり `LATEST_HANDOFF.md` とmain実レコードを正本として進捗判定。
-- No.1415で2021-05-24群CLOSED済み。5/25〜6/6境界を短く再確認し、次の本線2021-06-07群へ進行。
-- `チバリヨ-30` はNo.1415で5/24先行導入として登録済みのため、6/7全国導入掲載では重複登録しない。
-- 2021-06-07未処理独立機種の先頭 `パチスロガールズ＆パンツァー 劇場版` をNo.1416として追加。
-- HAZUSE、2021年業界記事、1geki、なな徹、ちょんぼりすた、期待値見える化、当時新台一覧を横断し、性能コアとresetBehavior v0.7を同時収集。
-- 設定変更は有利区間・天井・進軍カウンター・内部モード・内部状態RESET。純電断/据え置きは基本CARRY_OVER。
-- 通常時有利区間ランプ点灯型で、朝一消灯=設定変更濃厚、点灯=据え置き濃厚。進軍カウンターの大幅進行も据え置き材料。
-- 有利区間移行時の全設定モード振り分け表を取得し、設定変更後にも適用される新規有利区間共通値として保存。
-- 設定変更専用固定短縮天井は確認できず。天井はモード別進軍pt 5〜25pt、最大25ptは平均約455G。
-- 本機固有ガックン条件/発生率と、設定変更専用の独立した内部高確初期振り分け率は検索語・型式・資料系統変更後も固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 最新mainはNo.1416まで進行済みだったため、未処理先頭 `パチスロガメラ` をNo.1417として追加。
+- サミー公式、グリーンべると/P-WORLD、HAZUSE、なな徹、1geki、パチマガスロマガ、当時解析系を横断し、性能コアとresetBehavior v0.7を同時収集。
+- 設定変更は天井・有利区間・内部モード・内部状態RESET。設定変更後天井は900G+αに短縮。
+- 据え置き/純電断は天井・内部モード・内部状態・有利区間ランプ状態をCARRY_OVER。
+- 有利区間移行時の裏モード振り分けは通常86.4% / 準備3.1% / 裏ガメラ10.5%。裏ガメラ中のボーナスはBIG濃厚、平均約200G以上滞在。
+- 通常時有利区間ランプ点灯型で、未対策なら朝一消灯=設定変更濃厚、点灯=据え置き濃厚。
+- 本機固有ガックン条件/発生率と、有利区間移行時の表モード全初期振り分けは検索語・型式・資料系統変更後も固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 完全攻略時機械割の設定2/5はHAZUSE `102.5/106.5%` と一部二次資料 `102.6/106.6%` に0.1pt差があるため平均化せずCONFLICT保持。
 - 遡及resetBehavior QAは本線優先のため今回は進めず、既存カーソル「アストロ球団」を維持。
 
-## No.1416 — パチスロガールズ＆パンツァー 劇場版
-- path: `docs/real_machine_db/machines/2021-06-07_girls-und-panzer-der-film.md`
-- manufacturer: **オリンピア（平和グループ）**
-- formalModel: **Sガールズ＆パンツァー劇場版H4**
-- certificationNumber: **0S1509**
+## No.1417 — パチスロガメラ
+- path: `docs/real_machine_db/machines/2021-06-07_gamera.md`
+- manufacturer: **株式会社銀座（製造元） / サミー（発売・ブランド）**
+- formalModel: **S パチスロ ガメラ KH**
+- certificationNumber: **0S1446**
 - releaseDate: **2021-06-07**
-- generation/system: **6.1号機 / AT / 擬似ボーナス経由・完全自力バトルAT**
-- payoutRateBySetting: **97.5 / 98.5 / 101.7 / 104.8 / 108.1 / 110.2%**
-- initialHitBySetting: **1/196.6 / 1/191.0 / 1/177.3 / 1/164.2 / 1/151.5 / 1/144.2**
-- ATBySetting: **1/539.9 / 1/521.9 / 1/472.3 / 1/433.4 / 1/397.1 / 1/375.6**
-- baseGamesPer50: **約34.5〜34.8G/50枚**
-- netIncrease: **約2.5枚/G**
-- basicPayout: **GIRLS und BONUS 40G+α / エピソード43G / AT中隊バトル50G+α / AT平均TY約510.2〜514.4枚**
-- normalCeiling: **進軍pt最大25pt（平均約455G）**
+- generation/system: **6.1号機 / AT / A600-AT・技術介入擬似ボーナス主体**
+- payoutRateBySetting: **97.6 / 98.1 / 99.0 / 101.2 / 102.1 / 103.0%**
+- full攻略RateBySetting: **102.0 / 102.5 / 103.4 / 105.6 / 106.5 / 107.4%**（設定2/5に0.1pt別資料差あり）
+- initialHitBySetting: **1/219.0 / 215.8 / 211.4 / 202.5 / 191.4 / 170.8**
+- baseGamesPer50: **設定1 約33.6G/50枚**（資料レンジ約31.9〜33.6G）
+- netIncrease: **固定単一純増値なし / NOT_DIRECTLY_COMPARABLE**
+- basicPayout: **BIG平均約560枚 / REG平均約90枚**
+- normalCeiling: **BIG後1000G+α / REG後930G+α / 設定変更後900G+α**
 - coreStatus: **COMPLETE_CORE**
-- resetBehaviorQA: **COMPLETE_APPLICABLE_RESET_CORE_WITH_PUBLIC_MODE_TABLE**
+- resetBehaviorQA: **COMPLETE_APPLICABLE_RESET_CORE_WITH_NUMERIC_RESET_BENEFIT**
 
-### resetBehavior v0.7 — No.1416
-- 設定変更: **有利区間・天井・進軍カウンター・内部モード・内部状態RESET**。
-- 据え置き: **天井・進軍カウンター・内部モード・内部状態・有利区間CARRY_OVER**。
-- 純電断: **基本CARRY_OVER**。通常時液晶ステージは仮校舎/お泊り会/露天風呂のいずれか、CZ/ボーナス/AT中電断は当該状態を引継ぐ。
-- ceilingAfterReset: **固定短縮なし**。新規有利区間でモード再抽選後、そのモードの5〜25pt天井を適用。
-- modeAfterReset / numericResetData: 非レア役での有利区間移行時、設定1は通常A40.2 / B40.2 / C16.4 / D1.2 / 天国A1.6 / 天国B0.4%、設定6は40.2 / 28.9 / 16.4 / 3.1 / 9.0 / 2.3%。全設定表はレコード内保存。
-- 有利区間移行Gで弱チェリー/双眼鏡なら通常C以上、強チェリー/チャンス目なら天国A以上。
-- resetDetection: 通常時有利区間ランプ点灯型。未対策なら **朝一消灯=設定変更濃厚 / 点灯=据え置き濃厚**。進軍カウンターの大幅進行も据え置き材料。
-- ガックン: `UNVERIFIED_AFTER_RESEARCH`。
+### resetBehavior v0.7 — No.1417
+- 設定変更: **天井・有利区間・内部モード・内部状態RESET/再抽選**。
+- 据え置き: **天井・内部モード・内部状態・有利区間ランプ状態CARRY_OVER**。
+- 純電断: **天井・内部モード・内部状態・有利区間ランプ状態CARRY_OVER**。
+- ceilingAfterReset: **900G+α**。通常BIG後1000G+α、REG後930G+αより短縮。
+- modeAfterReset / numericResetData: 有利区間移行時の裏モードは **通常86.4% / 準備3.1% / 裏ガメラ10.5%**。
+- resetBenefits: 裏ガメラ中のボーナスはBIG濃厚、平均約200G以上滞在。設定変更後天井短縮も明確な朝一恩恵。
+- resetDetection: 通常時有利区間ランプ点灯型。未対策なら **朝一消灯=設定変更濃厚 / 点灯=据え置き濃厚**。
+- 表モード全初期振り分け / 本機固有ガックン: `UNVERIFIED_AFTER_RESEARCH`。
 
 ## 2021-06-07群 — OPEN
-- `チバリヨ-30` はNo.1415で段階導入処理済みにつき6/7では重複登録しない。
+- `チバリヨ-30` はNo.1415で2021-05-24先行導入として登録済みのため、6/7全国導入掲載では重複登録しない。
 1. **パチスロガールズ＆パンツァー 劇場版 — No.1416 / DONE**
-2. **パチスロガメラ — No.1417候補 / NEXT**
-3. **パチスロ鉄拳4デビルVer. — No.1418候補 / PENDING**
+2. **パチスロガメラ — No.1417 / DONE**
+3. **パチスロ鉄拳4デビルVer. — No.1418候補 / NEXT**
 4. **パチスロ 百花繚乱 サムライガールズ — No.1419候補 / PENDING**
-- 上記4独立機種を処理後、PB・地域先行・別型式・延期/段階導入を再監査して群CLOSED可否を判定する。
+- 上記独立機種を処理後、PB・地域先行・別型式・延期/段階導入を再監査して群CLOSED可否を判定する。
 
 ## 次回本線の再開地点
-- 最新main再同期後、**No.1417候補「パチスロガメラ」**から継続。
-- その後 `パチスロ鉄拳4デビルVer.` → `パチスロ 百花繚乱 サムライガールズ` の順で2021-06-07群を処理。
+- 最新main再同期後、**No.1418候補「パチスロ鉄拳4デビルVer.」**から継続。
+- その後 `パチスロ 百花繚乱 サムライガールズ` を処理し、2021-06-07群を再監査。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
@@ -69,20 +68,22 @@
 - 既存性能値をやり直さずreset側のみ正式再探索する。
 
 ## GitHub保存
-- No.1416追加 commit: `8837b3be10c0eabddeadb992cae1fc4a1a121a3a`
+- No.1417追加 commit: `10cd36d3b6ea8cf2690c153463970c9aa3acc20d`
 - `LATEST_HANDOFF.md`: この更新commitでmainへ反映。
 
 ## 主要出典 — 取得日 2026-09-12
-### No.1416 パチスロガールズ＆パンツァー 劇場版
-- https://hazuse.com/machine/pachislot/0S1509/
-- https://hazuse.com/machine/pachislot/0S1509/genre/201/
-- https://hazuse.com/machine/pachislot/0S1509/genre/207/
-- https://news.p-world.co.jp/articles/16298/yugitsushin
-- https://1geki.jp/slot/s_ggp/
-- https://nana-press.com/kaiseki/machine/130/
-- https://nana-press.com/kaiseki/machine/130/3639/
-- https://nana-press.com/kaiseki/machine/130/3643/
-- https://nana-press.com/kaiseki/machine/130/4134/
-- https://chonborista.com/slot/orinpia-slot/137100/
-- https://slotjin.com/tenjoukitaichi/girlsundpanzer/
-- https://ichikatsu.com/newslot/
+### No.1417 パチスロガメラ
+- https://www.sammy.co.jp/japanese/news/2021/1614.html
+- https://web-greenbelt.jp/post-47814/
+- https://news.p-world.co.jp/articles/16137/greenbelt
+- https://hazuse.com/machine/pachislot/0S1446/
+- https://nana-press.com/kaiseki/machine/125/
+- https://nana-press.com/kaiseki/machine/125/4415/
+- https://nana-press.com/kaiseki/machine/125/4102/
+- https://1geki.jp/slot/s_gamera/3/
+- https://1geki.jp/slot/s_gamera/48/
+- https://1geki.jp/slot/s_gamera/45/
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sammy_slot/187/tj03.php
+- https://www.slopachi-quest.com/article/gamera-tenjou/
+- https://slotkaiseki.com/gamera_slo_dounyubi/
+- https://www.atari7.com/slot/slot-gamera.php
