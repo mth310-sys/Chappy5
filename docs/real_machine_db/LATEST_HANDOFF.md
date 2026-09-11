@@ -1,141 +1,88 @@
 更新日: 2026-09-11
 
 ## 現在地点
-- recordCount: **1325**
-- latestRecordAdded: **S沖っ娘25 — No.1325**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2019-12-09_s-okikko25.md`
-- chronologicalFrontier: **2019-12-09**
-- frontierLatestMachine: **S沖っ娘25 — No.1325**
+- recordCount: **1326**
+- latestRecordAdded: **パチスロたまピー — No.1326**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2019-12-22_pachislot-tamapi.md`
+- chronologicalFrontier: **2019-12-22**
+- frontierLatestMachine: **パチスロたまピー — No.1326**
 - schema: **resetBehavior v0.7**
-- status: **2019_12_09_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**
+- status: **2019_YEAR_END_BOUNDARY_OPEN_PENDING_12_24_TO_2020_01_05_AUDIT**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、mission v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前No.1323「ドリームクルーン2」を再取得。
+- 最新mainの `README.md`、mission v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前No.1325「S沖っ娘25」を再取得。
 - `INDEX.md` は旧19件表示のため、README明示ルールどおり最新 `LATEST_HANDOFF.md` とmain実レコードを正として継続。
-- 12/03～12/08境界を確認し、日刊スポーツ当時導入カレンダー等で12/09群を監査。
-- main上で同名既存レコードなしを確認後、以下2機を追加。
-  - **No.1324 パチスロ交響詩篇エウレカセブン3 HI-EVOLUTION ZERO**
-  - **No.1325 S沖っ娘25**
-- 2機とも性能コアとresetBehavior v0.7を同時収集。型式/メーカー/シリーズ/設定変更/朝一/据え置き/純電断/天井/モード/有利区間/ガックンを組み替え、業界記事・旧DB・当時解析・後年整理を横断。
-- 日刊スポーツ2019-11-22導入カレンダーの12/09パチスロ欄は上記2機で一致。追加メーカー/別型式/別スペック/PB/地域差を検索したが同日独立登録機を固定できなかったため **2019-12-09群CLOSED**。
+- main上で「パチスロたまピー」の既存レコードなしを確認し、No.1326として新規追加。
+- PB機のため、一般機種DBだけでなく遊技通信、PiDEA/情報島、グリーンべると、P-WORLD、K-Navi、1geki、パチ7、パチマガスロマガ、JPS回顧まで横断。
+- 2019-12-22と12-23の導入日差は平均化せずCONFLICTとして正式保存。
 
-## No.1324 — パチスロ交響詩篇エウレカセブン3 HI-EVOLUTION ZERO
-- path: `docs/real_machine_db/machines/2019-12-09_eureka-seven3-hi-evolution-zero.md`
-- manufacturer: **サミー**
-- formalModel: **`Sエウレカセブン3 HIEVO ZR`**
-- certificationNumber: **`9S1265`**
-- releaseDate canonical: **2019-12-09**
-- generation/system: **6号機 / AT / 疑似ボーナス+ST型AT**
-- payout: **98.0 / 98.8 / 100.5 / 104.3 / 107.1 / 111.2%**
-- BONUS合算: **1/257.5 / 247.1 / 231.9 / 204.2 / 189.0 / 165.4**
-- AT「コーラリアンモード」: **1/365.7 / 342.6 / 330.2 / 282.3 / 265.5 / 220.3**
-- base: **約50.5～51G/50枚**
-- 純増: **約1.8枚/G または約4.5枚/G**
-- basic payout: BIG平均約170枚 / HYPER BIG平均約255枚 / REG 20G+押し順当て5回 / CM 1セット30G
-- 天井: **有利区間移行後707G+前兆でBIG、10周期でBONUS+AT濃厚**。303Gは確定天井ではなくBIG抽選。
-- coreStatus: **COMPLETE_CORE**
-
-### resetBehavior v0.7 — No.1324
-- resetBehaviorQA: **COMPLETE_PUBLIC_RESET_CORE_WITH_MORNING_DETECTION_AND_NUMERIC_SAMPLE**
-- 設定変更: **内部天井G RESET / コンパクカウンターRESET / 有利区間RESET・非有利区間へ / ランプ消灯**。
-- 据え置き/純電断: **内部天井G・コンパクカウンター内部値・有利区間CARRY_OVER**。表示は初期化されるため内部値と分離。
-- 有利区間移行時: **KCC突入確定 / 初期ATレベル抽選 / 高確スタート**。
-- 朝一判別: 有利区間ランプ点灯=据え置き濃厚、消灯=変更濃厚。KCC突入も変更濃厚材料。前日条件/対策の例外があるため確定扱いしない。
-- 本機固有ガックン条件/率は再探索後も未固定。
-- 公開朝一実戦サンプル1295件: 10G以内0.23%、11～20G0.23%、21～30G0.77%、31～40G2.16%、41～50G2.01%。メーカー値ではなく攻略集計として分離保存。
-
-### No.1324 CONFLICT
-- 導入日 **2019-12-09**: HAZUSE、日刊スポーツ、すろぱちくえすと等。
-- 導入日 **2019-12-16**: 複数当時解析、ぱちガブ系資料。
-- 12/09をchronological canonical、12/16を地域/全国導入定義差として保持。
-
-## No.1325 — S沖っ娘25
-- path: `docs/real_machine_db/machines/2019-12-09_s-okikko25.md`
-- manufacturer: **サンセイR&D**
-- formalModel: **`S沖っ娘25/A4`**
+## No.1326 — パチスロたまピー
+- path: `docs/real_machine_db/machines/2019-12-22_pachislot-tamapi.md`
+- manufacturer: **JPS（ジェイピーエス） / 玉屋共同開発PB**
+- formalModel: **`STMPAA`**
 - certificationNumber: **PUBLIC_VALUE_NOT_FIXED_AFTER_RESEARCH**
-- releaseDate canonical: **2019-12-09**
-- generation/system: **6号機 / AT / 完全告知・疑似ボーナス / 25Φ**
-- payout: **97.3 / 98.2 / 99.3 / 100.4 / 101.5 / 105.0%**
-- AT/BONUS初当たり: **1/231.3 / 223.7 / 214.9 / 206.8 / 198.7 / 177.5**
-- base: **約51G/50枚**
-- 純増: **約6.0枚/G**
-- basic payout: **BONUS 30G+α / 約180枚+α**
-- modes: モードA / モードB / サンセット。設定6はモードBなし。
-- 基本天井: **999G+αでBONUS**。P-WORLDの「最大899～999G」はCONFLICT_NOTE保持。
-- coreStatus: **COMPLETE_CORE**
+- releaseDate canonical: **2019-12-22**
+- releaseDate conflict: **2019-12-23**
+- generation/system: **6号機 / ノーマルタイプ / 完全告知 / PB / 設定5・6の2段階**
+- full-strategy payout: **設定5 約102% / 設定6 約103%**
+- bonus combined: **設定5 約1/139（K-Navi 1/139.7） / 設定6 約1/116（同1/116.2）**
+- BIG/REG（1geki自社調査）: **設定5 1/156・1/1310 / 設定6 1/232・1/232**
+- base: **PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH**
+- basic payout: **BIG最大195枚 / BONUS GAME最大104枚**
+- ceiling: **非搭載**
+- coreStatus: **PARTIAL_CORE_BASE_UNVERIFIED**
 
-### resetBehavior v0.7 — No.1325
-- resetBehaviorQA: **COMPLETE_PUBLIC_RESET_CORE_WITH_STRONG_MORNING_BENEFIT**
-- 設定変更: **天井RESET / 有利区間RESET / 新規有利区間でモード選択**。
-- 据え置き/純電断: **内部天井・有利区間進行CARRY_OVER**。純電断の表示詳細/モード個別表は未固定。
-- 有利区間移行時モード比率:
-  - 設定1～5: モードA約15～25% / モードB約25～35% / **サンセット約49.6～50%**
-  - 設定6: モードA約66% / モードB 0% / サンセット約34%
-- 朝一最大恩恵: 設定1～5で約50%のサンセットモード。**111G以内BONUS3セット保証、期待獲得約500枚**。
-- 変更判別: 前日閉店時ランプ点灯を確認できる場合、翌朝消灯=変更濃厚 / 点灯=据え置き濃厚。前日消灯なら判別困難。
-- リセット専用短縮天井は確認なし。本機固有ガックン条件/率は未固定。
+### resetBehavior v0.7 — No.1326
+- resetBehaviorQA: **PARTIAL_RESEARCH_EXHAUSTED_NO_PERSISTENT_CEILING_OR_MODE**
+- 天井: 非搭載のため、gameCounterReset / ceilingAfterReset はN/A。
+- 公開モード管理: 確認なし。設定変更専用モード振り分け/朝一専用モードも確認なし。
+- 有利区間: 6号機純ノーマル・AT/ART非搭載のため、本DBで追跡する朝一有利区間契約はN/A。
+- 設定変更/据え置き/純電断: 本機固有の成立済みボーナス、初期出目、告知状態等の直接契約は、検索語・資料系統変更後も固定できずUNVERIFIED。
+- 朝一恩恵/不利: 天井短縮、モード優遇、専用初当たり優遇等はNONE_CONFIRMED_AFTER_RESEARCH。
+- 変更判別: 本機固有ガックン条件/率、朝一ランプ/7セグ/出目による確定契約はPUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH。
+- 100G以内等のボーナス時楽曲変化は通常演出条件であり、設定変更専用恩恵には含めない。
 
-### No.1325 CONFLICT
-- 導入日 **2019-12-09**: 日刊スポーツ、Amusement Japan、DMM、1geki、すろぱちくえすと。
-- **2019-12-02**: ちょんぼりすた。
-- **2019-12-16**: ぱちんこキュレーション。
-- 12/09を複数当時業界/DB一致によりcanonical。
-- 天井は多数解析999G+α、P-WORLD最大899～999G。平均化せず保持。
+## No.1326 CONFLICT
+### releaseDate
+- **2019-12-22**: 遊技通信（P-WORLD転載）が「12月22日から玉屋グループ全16店舗に導入」と明記。
+- **2019-12-23**: K-Navi、1geki、パチ7などがホール導入開始日として掲載。
+- **2019-12下旬**: PiDEA・グリーンべると。
+- 当時業界記事の具体的な最初の導入日を優先し12/22をchronological canonical。12/23は機種DB上の一般導入日として保持。
 
-## 2019-12-09群 — CLOSED
-1. **パチスロ交響詩篇エウレカセブン3 HI-EVOLUTION ZERO** — No.1324
-2. **S沖っ娘25** — No.1325
-
-日刊スポーツ当時導入カレンダーは12/09のパチスロを上記2機として掲載。同日全メーカー/別型式/別スペック/PB/地域差を再検索し、独立登録すべき追加機を固定できなかったため **`2019_12_09_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT`**。
-
-## 次の時系列境界
-- 12/10～12/21を再監査。
-- **パチスロたまピー**（JPS × 玉屋PB）は遊技通信系業界記事で **2019-12-22から玉屋グループ全16店舗へ導入**、1geki/K-Naviでは **2019-12-23導入開始**。日付差をCONFLICTとして個別登録対象。
-- PiDEAは型式 **`STMPAA`**、6号機Aタイプ、設定5/6の2段階、フル攻略約102/103%を確認。
-- よって次の未処理は **「パチスロたまピー」No.1326候補**。12/22をcanonical候補とし、12/23表記との定義差を調査して確定する。
-- その後、2019年末境界を監査して2020-01-06群（少なくともパチスロ1000ちゃん）へ進む。
-
-## 継続監査
-- `プレドキ！`: プレゴ専用PBまでは固定済み。具体的初回ホール導入日未固定のため未登録継続。本線は止めない。
-- `パチスロたまピー`: 今回、新たに2019-12-22/23の具体的導入日資料を固定したため本線次候補へ昇格。
-- 並行更新対策として、毎回mainの同名ファイル存在確認後にcreate/updateする。
+## 2019年末境界
+- 12/09群は前回までにCLOSED済み。
+- 12/22/23 PB「パチスロたまピー」をNo.1326として処理済み。
+- **12/24～2020-01-05は追加独立登録機がないか引き続き全メーカー/PB/地域差/別型式で監査する。現時点ではCLOSEDにしない。**
+- 次の通常導入候補は **2020-01-06「パチスロ1000ちゃん」**。K-Navi、当時解析で2020-01-06を確認。6号機A+AT、約37.5G/50枚、純増約2.0枚/G、777G+α天井等の先行資料あり。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**
-- 今回は本線12/09群完了と次境界のPB検出を優先。
-- 次の未formalized候補は **`2007-03_wild7.md`（ワイルド7）**。main上で既formalizedなら重複編集せず次へ進む。
+- 次の未formalized候補は前handoff継承の **`2007-03_wild7.md`（ワイルド7）**。本線を止めず、余力のあるリレーで順次処理。
 
 ## 次回再開地点
-1. 最新main README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1325を再取得。
-2. 2019-12-10～12-21境界を再監査。
-3. **「パチスロたまピー」No.1326候補**を性能コア＋resetBehavior v0.7で収集。12/22 vs 12/23導入日CONFLICTを正式判定。
-4. たまピー処理後、12/24～2020-01-05境界を全メーカー/PB/地域差/別型式で監査。
-5. 次の通常群は **2020-01-06**候補（少なくともパチスロ1000ちゃん）。
-6. 遡及QAは `2007-03_wild7.md` から継続。
+1. 最新main README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1326を再取得。
+2. 2019-12-24～2020-01-05境界を全メーカー/PB/地域差/別型式で最終監査し、CLOSED可否を判定。
+3. 追加機がなければ **「パチスロ1000ちゃん」No.1327候補（2020-01-06）** を性能コア＋resetBehavior v0.7で収集。
+4. 同日2020-01-06群の他機種を洗い出し、順番に処理。
+5. 遡及QAは `2007-03_wild7.md` から継続。
 
 ## 主要出典 — 取得日 2026-09-11
 
-### No.1324 エウレカセブン3
-- HAZUSE: https://hazuse.com/en/machine/pachislot/9S1265/
-- グリーンべると検定: https://web-greenbelt.jp/00011640/
-- P-WORLD: https://www.p-world.co.jp/machine/database/9084
-- 必勝本 天井＆設定変更: https://p.hisshobon.jp/machine/3432/1/76238
-- すろぱちくえすと 天井/朝一: https://www.slopachi-quest.com/article/eurekaseven3-tennjou/
-- DMM システム解説: https://p-town.dmm.com/machines/3591/directing/329
-- NANA PRESS 天井: https://nana-press.com/kaiseki/machine/10/113/
+### No.1326 パチスロたまピー
+- 遊技通信/P-WORLD: https://news.p-world.co.jp/articles/12457/yugitsushin
+- PiDEA X/情報島: https://www.pidea.jp/articles/%EF%BD%8A%EF%BD%90%EF%BD%93%E7%8E%89%E5%B1%8B%E3%81%A8%E5%85%B1%E5%90%8C%E9%96%8B%E7%99%BA%E3%81%97%E3%81%9F%EF%BD%90%EF%BD%82%E6%A9%9F%E3%80%8C%E3%83%91%E3%83%81%E3%82%B9%E3%83%AD%E3%81%9F%E3%81%BE%E3%83%94%E3%83%BC%E3%80%8D%E3%82%92%E7%99%BA%E8%A1%A8
+- グリーンべると: https://web-greenbelt.jp/post-27491/
+- K-Navi: https://p-kn.com/slot/3375/
+- 1geki: https://1geki.jp/slot/s_tamapy/
+- 1geki bonus: https://1geki.jp/slot/s_tamapy/1/
+- 1geki ceiling/reset: https://1geki.jp/slot/s_tamapy/3/
+- P-WORLD: https://www.p-world.co.jp/machine/database/9103
+- パチ7: https://pachiseven.jp/machines/5955/cutout/5
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/jps_slot/43/a.php
+- パチマガスロマガ bonus: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/jps_slot/43/h.php
+- JPS回顧（パチ7）: https://pachiseven.jp/articles/detail/11436
 
-### No.1325 S沖っ娘25
-- Amusement Japan: https://amusement-japan.co.jp/article/detail/10001417/
-- DMM: https://p-town.dmm.com/machines/3572/shops
-- 1geki: https://1geki.jp/slot/s_okikko/
-- すろぱちくえすと設定: https://www.slopachi-quest.com/article/okikko-settei/
-- すろぱちくえすと天井/朝一: https://www.slopachi-quest.com/article/okikko-tennjou/
-- P-WORLD: https://www.p-world.co.jp/machine/database/9068
-
-### 12/09群監査 / 次境界
-- 日刊スポーツ導入カレンダー: https://www.nikkansports.com/amusement/pachislot/news/201911220000268.html
-- 遊技通信/P-WORLD — たまピー: https://news.p-world.co.jp/articles/12457/yugitsushin
-- PiDEA — たまピー: https://www.pidea.jp/articles/%EF%BD%8A%EF%BD%90%EF%BD%93%E7%8E%89%E5%B1%8B%E3%81%A8%E5%85%B1%E5%90%8C%E9%96%8B%E7%99%BA%E3%81%97%E3%81%9F%EF%BD%90%EF%BD%82%E6%A9%9F%E3%80%8C%E3%83%91%E3%83%81%E3%82%B9%E3%83%AD%E3%81%9F%E3%81%BE%E3%83%94%E3%83%BC%E3%80%8D%E3%82%92%E7%99%BA%E8%A1%A8
-- 1geki — たまピー: https://1geki.jp/slot/s_tamapy/
-- K-Navi — たまピー: https://p-kn.com/slot/3375/
+### 次候補 パチスロ1000ちゃん
+- K-Navi: https://p-kn.com/slot/3363/
+- すろぬー: https://slonuu.com/pg/s-1000chan
+- すろぱちくえすと: https://www.slopachi-quest.com/article/1000chan-settei/
