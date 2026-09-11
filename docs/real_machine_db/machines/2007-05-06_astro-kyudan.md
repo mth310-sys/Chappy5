@@ -1,7 +1,7 @@
 # アストロ球団
 
 status: PARTIAL
-qaResetBehavior: PARTIAL
+qaResetBehavior: PARTIAL_RESEARCH_EXHAUSTED
 
 machineName: アストロ球団
 manufacturer: JPS（ジェイピーエス） / 総発売元トレード
@@ -105,61 +105,64 @@ modeSpecificMinimumData:
 - パチマガスロマガはアストロタイムを「平均1000枚、最大一撃5000枚」の出玉性能として紹介。これは期待/上限的な紹介値であり基本獲得枚数には混ぜない。
 - 有利区間制度導入前。
 
-## resetBehavior
+coreStatus: PARTIAL
 
-resetBehaviorQA: PARTIAL
+## resetBehavior
+resetBehaviorVersion: v0.7
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
+resetQaLastUpdated: 2026-09-12
 
 settingChangeBehavior:
-- 後年の実戦回顧で「設定変更で（RT側の枚数上限が）再セットされる」とする記述を確認したが、一次/高信頼解析資料で設定変更時の具体的なRT状態・差枚上限処理を照合できていないため、現時点ではANALYSIS_SINGLE参考情報として保持し断定しない。
-- 本機固有の設定変更時内部状態を明記した一次/高信頼資料はUNVERIFIED。
+- 後年実戦回顧に「設定変更でRT側の枚数上限が再セットされる」とする記述は存在するが、メーカー公式・当時業界・当時解析・旧DB・回顧資料を再探索しても、設定変更時の通常RT/アストロタイム残り状態、72G進行、内部差枚上限、成立済みボーナス/告知状態の機種固有契約を複数高信頼ソースで固定できなかった。
+- 一般的な5号機RT挙動からRESETを推測補完しない。
+- reliability: ANALYSIS_SINGLE / UNVERIFIED_AFTER_RESEARCH
 
 carryOverBehavior:
-- 後年の実戦回顧では「据え置きで状態が残っていればRT状態になる」旨の記述あり。ただし高信頼資料での照合未完のためANALYSIS_SINGLE参考情報。
-- 通常RT/アストロタイム残存状態・内部差枚上限の据え置き時正式処理はUNVERIFIED。
+- 後年実戦回顧に「据え置きで状態が残っていればRT状態になる」旨の記述はあるが、通常RT/アストロタイム残り状態、72G進行、内部差枚上限、成立済みボーナス/告知状態の正式CARRY_OVER契約は高信頼資料で固定できず `UNVERIFIED_AFTER_RESEARCH`。
 
 powerCycleBehavior:
-- 電源OFF→ONのみの場合のRT状態・内部差枚上限の扱いを明記した高信頼資料は確認できずUNVERIFIED。
+- 純電源OFF→ON時の通常RT/アストロタイム残り状態、72G進行、内部差枚上限、成立済みボーナス/告知状態の保持/初期化を明記した本機固有の直接資料は、資料系統を変えて再探索しても固定できず `UNVERIFIED_AFTER_RESEARCH`。
 
 gameCounterReset:
-- 通常状態72G消化後に通常RTへ移る周期的仕様は確認。
-- 設定変更/据え置き/電源OFF→ON時にこの72G進行がリセット/引継ぎされるかはUNVERIFIED。
+- 通常状態72G消化後に通常RTへ移る周期仕様自体は確認済み。
+- 設定変更/据え置き/純電断時にこの72G進行をRESET/CARRY_OVERのどちらとするかは直接契約未確認のため固定しない。
 
 ceilingAfterReset:
 - 一般的なボーナス間ゲーム数天井ではなく、通常状態72G後に通常RTへ移る仕様。
-- 設定変更後の短縮天井という形の公開数値はNONE_CONFIRMED。
+- 設定変更後の短縮天井という形の公開数値は `NONE_CONFIRMED_AFTER_RESEARCH`。
 
 modeAfterReset:
-- 朝一専用モード・モード振り分けの公開根拠はNONE_CONFIRMED。
+- 朝一専用モード、設定変更専用モード振り分けは `NONE_CONFIRMED_AFTER_RESEARCH`。
 
 stateAfterReset:
 - 通常RT/アストロタイムというRESET_SENSITIVE候補状態を持つ。
-- 設定変更での正式な状態再抽選/初期化、据え置き/電断時引継ぎは高信頼資料未確定のためUNVERIFIED。
+- 設定変更時初期化/再抽選、据え置き/純電断時引継ぎの直接契約は `UNVERIFIED_AFTER_RESEARCH`。
 
 advantageousSectionReset:
 - NOT_APPLICABLE（5号機初期・有利区間制度導入前）。
 
 resetBenefits:
-- 設定変更後に明確な朝一恩恵が発生するとする高信頼資料はNONE_CONFIRMED。
-- 後年回顧にはRT状態/差枚上限のリセット特性を示唆する記述があり、朝一挙動へ影響する可能性があるためQA継続対象。
+- 設定変更/朝一専用の確定的な恩恵は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- 後年回顧のRT状態/差枚上限記述は参考情報に留め、朝一恩恵として格上げしない。
 
 resetPenalties:
-- NONE_CONFIRMED。
+- `NONE_CONFIRMED_AFTER_RESEARCH`。
 
 resetDetection:
-- ガックン、表示、ランプ等による本機固有の設定変更判別はUNVERIFIED。
+- ガックン、初期出目、表示、ランプ等による本機固有の設定変更/据え置き判別契約は再探索後も `UNVERIFIED_AFTER_RESEARCH`。
 
 numericResetData:
-- 通常状態→通常RT: 72G（通常ゲーム中の基本仕様。リセット短縮値ではない）
-- 設定変更時モード振り分け: NONE_CONFIRMED
-- 朝一当選率/恩恵発生率: NONE_CONFIRMED
+- 通常状態→通常RT: 72G（通常ゲーム中の基本仕様でありリセット専用数値ではない）。
+- 設定変更時モード振り分け: NONE_CONFIRMED_AFTER_RESEARCH
+- 朝一当選率/恩恵発生率: NONE_CONFIRMED_AFTER_RESEARCH
 
 ## sources
 
-取得日: 2026-08-31
+取得日: 2026-09-12
 
 1. グリーンべると「JPS新機種、『瞬発力がないとは言わせない』」
    - https://web-greenbelt.jp/00004059/
-   - 2007-03-26掲載。3/19発表会、型式名モエロアストロキュウダン2、通常状態72G後/ボーナス後の通常RT、アストロチャンス→アストロタイム、BB約260枚/CT約50枚、合算約1/327〜1/196、納品5/6開始予定を確認。
+   - 2007-03-26掲載。3/19発表会、型式名モエロアストロキュウダン2、通常状態72G後/ボーナス後の通常RT、アストロチャンス→アストロタイム、BB約260枚/CT約50枚、合算約1/327〜1/196、納品5/6開始予定を確認。reset固有契約の記載なし。
    - reliability: INDUSTRY
 
 2. パチマガスロマガ「アストロ球団 基本システム」
@@ -189,21 +192,21 @@ numericResetData:
 
 7. パチ7自由帳「思い出深いパチスロと自分のすきなやつ」
    - https://pachiseven.jp/columns/column_detail/12018
-   - 実戦回顧として、RTの枚数上限、設定変更時再セット、据え置き時に状態が残る旨の記述。一次/高信頼解析ではないためresetBehaviorの参考情報に限定。
+   - 実戦回顧としてRTの枚数上限、設定変更時再セット、据え置き時に状態が残る旨の記述。直接契約ではないため参考情報に限定。
    - reliability: ANALYSIS_SINGLE
 
 ## missingFields
-
 - 50枚あたりゲーム数 / ベース
 - 機械割レンジの厳密な各条件（通常手順/攻略手順等）の一次定義
-- 設定変更/据え置き/電源OFF→ON時の通常RT・アストロタイム・内部差枚上限の正式処理
-- 72G周期進行の設定変更/据え置き/電断時処理
-- 本機固有の変更判別
+- 設定変更/据え置き/純電源OFF→ON時の通常RT・アストロタイム・内部差枚上限・72G進行の正式処理
+- 成立済みボーナス/告知状態の電源状態別処理
+- 本機固有の設定変更判別
 
 ## conflicts
-
 - BIG/CT純増はパチマガスロマガの約265/52枚とグリーンべるとの概数約260/50枚。丸め差の範囲として扱い、CONFLICTにはしない。
 - 機械割は単一値ではなく設定ごとに幅があるため、定義不明のまま平均化せずレンジ保持。
+- 後年回顧の「設定変更でRT側枚数上限再セット / 据え置きで状態残存」は単一回顧資料。高信頼な直接契約で再確認できないため `UNVERIFIED_SINGLE_SOURCE` とし、RESET/CARRY_OVER断定には使用しない。
 
-coreStatus: PARTIAL
-resetBehaviorQA: PARTIAL
+## researchNotes
+- 2026-09-12再探索では `アストロ球団` / `モエロアストロキュウダン2` / `JPS` と `設定変更` / `リセット` / `据え置き` / `電源OFF ON` / `朝一` / `RT` / `アストロタイム` / `72G` / `ガックン` / `内部状態` を組み替え、メーカー/業界/当時解析/旧DB/回顧資料まで再確認。
+- 性能側 `coreStatus: PARTIAL` は既存判定を維持し、reset側のみ `PARTIAL_RESEARCH_EXHAUSTED` として別管理する。
