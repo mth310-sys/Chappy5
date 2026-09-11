@@ -1,84 +1,79 @@
 更新日: 2026-09-11
 
 ## 現在地点
-- recordCount: **1359**
-- latestRecordAdded: **ワンバーS-30 — No.1359**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2020-07-06_onebar-s-30.md`
+- recordCount: **1360**
+- latestRecordAdded: **PACHISLOT言い訳はさせないわよby壇蜜 — No.1360**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2020-07-06_iiwake-wa-sasenaiwayo-by-danmitsu.md`
 - chronologicalFrontier: **2020-07-06**
-- frontierLatestMachine: **ワンバーS-30 — No.1359**
+- frontierLatestMachine: **PACHISLOT言い訳はさせないわよby壇蜜 — No.1360**
 - schema: **resetBehavior v0.7**
-- status: **2020-07-06_GROUP_OPEN_1_OF_3_CONFIRMED_CANDIDATES_PROCESSED**
+- status: **2020-07-06_GROUP_OPEN_2_OF_3_CONFIRMED_CANDIDATES_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、mission v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前No.1358「OZ-1」を再取得して開始。
+- 最新mainの `README.md`、mission v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前No.1359「ワンバーS-30」を再取得して開始。
 - `INDEX.md` は旧19件表示のため、README規定どおり最新handoffとmain実レコードを正本として継続。
-- mainはNo.1358「OZ-1」まで並行更新済みで、2020-05-18群CLOSEDだったため重複せず引き継いだ。
-- 2020年6月は既確認カレンダー上、本線へ追加すべき明確なパチスロ新台なし。2020-07-06群を複数系統で再監査。
-- 7/6群は現時点で **ワンバーS-30 / PACHISLOT言い訳はさせないわよby壇蜜 / BLACK LAGOON4** の3機を確認。OZ-1は同一型式の段階導入なのでNo.1358へ統合済み、重複登録しない。
-- 1機目 **ワンバーS-30** をNo.1359として追加。
+- 2020-07-06群の2機目 **PACHISLOT言い訳はさせないわよby壇蜜** をNo.1360として追加。
+- 型式 `SダンミツBB`、検定番号 `0S0160`、ボーダー、導入2020-07-06を業界資料/HAZUSEで固定。
 
-## No.1359 — ワンバーS-30
-- path: `docs/real_machine_db/machines/2020-07-06_onebar-s-30.md`
-- manufacturer: **ベルコ**
-- formalModel: **SワンバーS1-30**
-- certificationNumber: **9S1884**
+## No.1360 — PACHISLOT言い訳はさせないわよby壇蜜
+- path: `docs/real_machine_db/machines/2020-07-06_iiwake-wa-sasenaiwayo-by-danmitsu.md`
+- manufacturer: **ボーダー（WORLD表記あり）**
+- formalModel: **SダンミツBB**
+- certificationNumber: **0S0160**
 - releaseDate: **2020-07-06**
-- generation/system: **6号機 / AT / 差枚数管理型疑似ボーナス / 30Φ / 周期+CZ**
-- payoutRate: **97.5 / 99.0 / 100.5 / 102.0 / 103.5 / 107.0%**
-- AT初当たり: **1/325.8 / 317.4 / 304.3 / 289.8 / 275.7 / 245.4**
-- base: **約41.2G/50枚**
-- netIncrease: **約2.9枚/G**
-- AT基本: **約100枚**、Hooah!は**333枚以上・平均803枚OVER**
-- 本天井: **777G**
+- generation/system: **6号機 / ノーマルAタイプ / 完全告知 / 技術介入 / 設定3・5・6**
+- フリー打ち出玉率: **98.01 / 100.58 / 103.90%**
+- 完全攻略出玉率: **101.84 / 104.40 / 107.68%**
+- BIG: **1/219.9 / 1/178.6 / 1/203.5**
+- REG: **1/219.9 / 1/356.2 / 1/176.2**
+- 合算: **1/110.0 / 1/118.9 / 1/94.4**
+- base: **約41.10G/50枚**
+- basicPayout: **BIG約200枚 / REG約80枚**（HAZUSEの終了条件は209枚超/84枚超払い出し）
+- 天井: **非搭載**
 - coreStatus: **COMPLETE_CORE**
-- resetBehaviorQA: **COMPLETE_PUBLIC_RESET_CORE_WITH_DETECTION_GAPS**
+- resetBehaviorQA: **COMPLETE_NONAT_RESET_CORE_WITH_PUBLIC_CONTRACT_GAPS**
 
-### resetBehavior v0.7 — No.1359
-- 設定変更: **天井G数RESET / 状態RESET**。
-- 純電源OFF→ON: **天井G数CARRY_OVER / 状態CARRY_OVER**。
-- 設定変更後・AT終了後の1周期目は**上位CZ以上濃厚**。
-- 設定変更後/AT終了後の一部で**200G仮天井**を選択。
-- 200G仮天井選択率（設定1→6）: **3.14 / 5.10 / 6.67 / 8.63 / 10.59 / 12.55%**。
-- 朝一/引き戻し200G以内AT当選期待度（設定1→6）: **44.9 / 46.7 / 49.1 / 51.8 / 54.5 / 57.2%**。
-- 1周期目CZ/AT振り分けの公開代表値もレコードへ保存。これは設定変更専用ではなくAT終了後も含む「1周期目」共通値として分離。
-- 有利区間移行後に周期/天井を管理する構造は確認済み。ただし設定変更/据え置き/純電断時の**有利区間そのもの**の機種固有直接契約は固定できず `UNVERIFIED_MACHINE_SPECIFIC_CONTRACT`。
-- 本機固有のガックン、有利区間ランプ、初期出目等による変更確定条件は検索語・資料系統を変えて再探索しても固定できず `UNVERIFIED_AFTER_RESEARCH`。
+### resetBehavior v0.7 — No.1360
+- ノーマルAタイプで天井・CZ・AT・周期・朝一専用モードなし。
+- `gameCounterReset / ceilingAfterReset / modeAfterReset / AT-CZ state` はホール朝一挙動として **NOT_APPLICABLE**。
+- 有利区間を利用したAT/CZ/周期/天井管理は公開解析上なし。朝一の有利区間リセット恩恵は **NOT_APPLICABLE_TO_GAMEPLAY**。
+- リセット短縮天井・朝一高確・専用モード等の恩恵/不利は **NONE_CONFIRMED**。
+- 本機固有のガックン、初期出目、ランプ、純電断時のボーナス内部成立状態は検索語・資料系統を変えて再探索しても直接契約を固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 壇蜜ボイスは設定推測要素であり設定変更判別には混入しない。
+- 営業資料の100G以内ボーナス当選率（設定3 59.89 / 設定5 57.01 / 設定6 65.51%）は通常時共通値で、設定変更専用ではないためresetBehavior数値には採用しない。
 
 ## 2020-07-06群監査
 1. ワンバーS-30 — **No.1359 / 処理済み**
-2. PACHISLOT言い訳はさせないわよby壇蜜 — **未処理 / No.1360候補**
+2. PACHISLOT言い訳はさせないわよby壇蜜 — **No.1360 / 処理済み**
 3. BLACK LAGOON4 — **未処理 / No.1361候補**
 - P-Summa当時記事と別導入予定一覧で3機が一致。
 - BLACK LAGOON4は地域差があり、2020-07-06導入予定・東京7/20予定という資料を保持する。
 - OZ-1 / SOZ1-01の7/6表記はNo.1358と同一型式の段階導入なので重複登録しない。
-- 群判定: **OPEN_1_OF_3_CONFIRMED_CANDIDATES_PROCESSED**。
+- 群判定: **OPEN_2_OF_3_CONFIRMED_CANDIDATES_PROCESSED**。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
 - 直前処理済み: `docs/real_machine_db/machines/2007-04-15_yattane-harumi-chan-30.md`（やったネ！はるみちゃん-30）。
 - 次の未formalized候補: `docs/real_machine_db/machines/2007-04-15_kuma-sakaba.md`（熊酒場）。
-- 今回は本線No.1359を優先し、熊酒場は未処理のまま次回へ引き継ぐ。
+- 今回は本線No.1360を優先し、熊酒場は未処理のまま次回へ引き継ぐ。
 
 ## 次回本線の再開地点
-- 最新main再同期後、**2020-07-06群の未処理2機**を続行。
-- 先頭: **PACHISLOT言い訳はさせないわよby壇蜜 — No.1360候補**。
-- 続いて: **BLACK LAGOON4 — No.1361候補**。
-- 2機処理後、7/6群を全メーカー・別型式・地域差・段階導入まで再監査しCLOSED可否を判定する。
+- 最新main再同期後、**2020-07-06群の最後の未処理候補**を続行。
+- 先頭: **BLACK LAGOON4 — No.1361候補**。
+- 処理後、7/6群を全メーカー・別型式・地域差・段階導入まで再監査しCLOSED可否を判定する。
 
 ## GitHub保存
 - No.1359追加 commit: `cce5e6ab8aaec85db0a4f319a2b356f2063de6c5`
+- No.1360追加 commit: `2397e25a4271da069ec7fa46d3be9bf9cd5fe2ed`
 
 ## 主要出典 — 取得日 2026-09-11
-### No.1359 ワンバーS-30
-- ベルコ公式: https://www.s-bellco.co.jp/products/slot/onebar_s-2/
-- 遊技通信/P-WORLD業界ニュース: https://news.p-world.co.jp/articles/13282/yugitsushin
-- 1geki 機種概要: https://1geki.jp/slot/s_onebar30/
-- 1geki 天井/設定変更: https://1geki.jp/slot/s_onebar30/3/
-- HAZUSE: https://hazuse.com/machine/pachislot/9S1884/
-- パチマガスロマガ 天井: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/belco_slot/105/tj-2.php
-- パチマガスロマガ 周期抽選: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/belco_slot/105/sh.php
-- なな徹 200G仮天井/朝一: https://nana-press.com/kaiseki/machine/53/1401/
-- P-WORLD: https://www.p-world.co.jp/machine/database/9192
+### No.1360 PACHISLOT言い訳はさせないわよby壇蜜
+- Amusement Japan: https://amusement-japan.co.jp/article/detail/10001761/
+- HAZUSE: https://hazuse.com/machine/pachislot/0S0160/
+- グリーンべると/P-WORLD業界ニュース: https://news.p-world.co.jp/articles/13302/greenbelt
+- ちょんぼりすた: https://chonborista.com/slot/border/114359/
+- P-WORLD: https://www.p-world.co.jp/machine/database/9208
+- 営業資料掲載記事: https://parlourfullslotl.com/archives/34618
 
 ### 2020-07-06群監査
 - P-Summa 2020-07-06導入予定: https://psumma.jp/trend/49109/
