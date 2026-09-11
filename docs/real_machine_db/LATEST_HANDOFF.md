@@ -1,60 +1,60 @@
 更新日: 2026-09-12
 
 ## 現在地点
-- recordCount: **1426**
-- latestRecordAdded: **パチスロコードギアス 反逆のルルーシュ3 — No.1426**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2021-08-02_code-geass-hangyaku-no-lelouch-3.md`
+- recordCount: **1427**
+- latestRecordAdded: **GⅠ優駿倶楽部3 — No.1427**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2021-08-02_g1-yushun-club-3.md`
 - chronologicalFrontier: **2021-08-02**
-- frontierLatestMachine: **パチスロコードギアス 反逆のルルーシュ3 — No.1426**
+- frontierLatestMachine: **GⅠ優駿倶楽部3 — No.1427**
 - schema: **resetBehavior v0.7**
-- status: **2021-08-02_GROUP_OPEN_3_OF_4_KNOWN_PROCESSED**
+- status: **2021-08-02_GROUP_CLOSED_4_OF_4_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.1425「もっと！クレアの秘宝伝 女神の歌声と太陽の子供達」を確認して開始。
+- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.1426「パチスロコードギアス 反逆のルルーシュ3」を確認して開始。
 - `INDEX.md` は旧19件表示のため、README規定どおり `LATEST_HANDOFF.md` とmain実レコードを正本として進捗判定。
-- 2021-08-02群の3機目としてNo.1426「パチスロコードギアス 反逆のルルーシュ3」を追加。
-- 群は引き続き **まどか前後編 / もっと！クレア / コードギアス3 / GI優駿倶楽部3** の4ユニーク機を既知キューとして保持。3/4処理済みでOPEN。
+- 2021-08-02群の4機目としてNo.1427「GⅠ優駿倶楽部3」を追加。
+- 2021-08-02群は **SLOT劇場版魔法少女まどか☆マギカ[前編]始まりの物語／[後編]永遠の物語 / もっと！クレアの秘宝伝 女神の歌声と太陽の子供達 / パチスロコードギアス 反逆のルルーシュ3 / GⅠ優駿倶楽部3** の4ユニーク機を処理完了。
+- 当時新台カレンダーを別系統で再監査し、2021-08-02掲載が上記4機で一致し、次の主要導入日が2021-09-06へ進むことを確認。PB・地域先行・別型式・延期差も検索したが追加候補を固定できなかったため、2021-08-02群を **CLOSED** とした。
 
-## No.1426 — パチスロコードギアス 反逆のルルーシュ3
-- path: `docs/real_machine_db/machines/2021-08-02_code-geass-hangyaku-no-lelouch-3.md`
-- manufacturer: **銀座（Sammyブランド）**
-- formalModel: **Sコードギアス反逆のルルーシュ3KZ**
+## No.1427 — GⅠ優駿倶楽部3
+- path: `docs/real_machine_db/machines/2021-08-02_g1-yushun-club-3.md`
+- manufacturer: **KPE（コナミアミューズメントブランド）**
+- formalModel: **S GⅠ優駿倶楽部3PK**
 - certificationNumber: **UNVERIFIED_AFTER_RESEARCH**
 - releaseDate: **2021-08-02**
-- generation/system: **6.1号機 / A+AT**
+- generation/system: **6.1号機 / AT（擬似ボーナス経由・ゲーム数上乗せ型AT）**
 - settings: **1 / 2 / 3 / 4 / 5 / 6**
-- payoutRate: **97.9 / 98.9 / 101.5 / 106.3 / 109.5 / 112.1%**
-- AT初当たり: **1/594.0 / 1/565.9 / 1/517.8 / 1/437.0 / 1/383.1 / 1/322.0**
-- 通常時ボーナス: **1/250.7 / 1/247.4 / 1/242.1 / 1/238.5 / 1/230.7 / 1/222.1**
-- AT中ボーナス: **1/199.0 / 1/196.7 / 1/193.1 / 1/191.4 / 1/186.1 / 1/178.8**
-- baseGamesPer50: **約36.2G/50枚**
-- basicPayout: **HYPER BIG約150枚 / BIG約115枚 / REG約50枚**
-- AT: **純増約2.0枚/G / BLACK REBELLION 1セット40G+α**
-- ceiling: **新規有利区間移行後500G+α → 成功期待度が高いCZ「戦略戦」**
+- payoutRate: **97.5 / 98.8 / 101.0 / 104.3 / 106.3 / 108.6%**
+- ボーナス合算: **1/294 / 1/289 / 1/285 / 1/278 / 1/273 / 1/267**
+- baseGamesPer50: **約37G/50枚**
+- netIncrease: **約3.0枚/G**
+- basicPayout: **クラシックボーナス約150枚 / まいまい☆ぼーなす約80枚**
+- normalCeiling: **有利区間移行後666G → 勝利濃厚の新馬戦 / クラシックボーナス濃厚**
 - coreStatus: **COMPLETE_CORE**
 - resetBehaviorQA: **COMPLETE_PUBLIC_RESET_CORE**
 
-### resetBehavior v0.7 — No.1426
-- **設定変更**: 有利区間RESET、内部天井RESET、内部状態再抽選。新規有利区間移行時は必ず高確スタート。
-- **据え置き/純電源OFF→ON**: 内部天井・内部状態・進行中有利区間はCARRY_OVER。RT状態も電断/据え置き側は引継ぎ資料あり。
-- **天井**: 有利区間移行後500G+αで天井用「戦略戦CZ」。+αは主に有利区間移行までの2～3G。CZ/CZ前兆中到達時は終了後に発動。
-- 天井用戦略戦CZの成功期待度は **設定1で45.0%** とする1geki自社調査値を公開朝一/天井比較値として保存。
-- 設定変更専用の固定短縮天井は確認できず、新規有利区間の通常天井500G+αを使用。
-- **変更判別**: 設定変更時は有利区間ランプ消灯だが、本機は通常時消灯型のため **朝一消灯だけでは変更判別不可**。
-- 設定変更後の開始ステージは実戦上「夕方・自宅」報告あり。ただし解析確定値ではないためEMPIRICAL扱い。
-- 設定変更時のRT状態の直接契約、本機固有ガックン条件・発生率、設定変更専用モード振り分け率/専用初当たり率、検定番号は、検索語・資料系統を変更して再探索後も固定できず `UNVERIFIED_AFTER_RESEARCH`。
-- メーカー表記はSammy資料が多い一方、検定通過・製造元は銀座名義のため、`manufacturer=銀座 / brandContext=Sammy` と分離した。
+### resetBehavior v0.7 — No.1427
+- **設定変更**: 天井RESET、内部状態RESET、有利区間RESET。新規有利区間の通常天井666Gを再カウント。
+- **据え置き/純電源OFF→ON**: 天井・内部状態・進行中有利区間をCARRY_OVER。設定変更を伴わない純電断では新規有利区間への強制移行なし。
+- **天井**: 通常は有利区間移行後666G。設定変更専用の固定短縮天井は確認できず。マコマコブラックによる111/333/555G等の短縮抽選は通常運用でも起こる別機構として分離。
+- **朝一/新規有利区間恩恵**: 1周期目はブリードゾーン後に南国ゾーンへ移行し、新馬戦勝率/ボーナス期待度約33%以上。有利区間開始時のレア役成立時は約20%でUMAチャンス。
+- 上記約33%・約20%は『設定変更専用抽選値』ではなく、新規有利区間移行時共通の公開値として区別して保存。
+- **変更判別**: 設定変更時は有利区間ランプ消灯だが、本機は通常時消灯型のため朝一ランプ単独では変更判別不可。朝一1周期目に南国ゾーンへ入らなければ据え置き濃厚とする解析資料は、確定条件ではなく推測材料として保持。
+- 設定変更後の液晶開始ステージ、本機固有ガックン、設定変更専用の独立モード/状態初期振り分け、専用初当たり率、検定番号は、表記・検索語・資料系統を変えて再探索後も固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 市場上はコナミアミューズメント表記が多い一方、P-WORLD等で製造KPEを確認したため `manufacturer=KPE / brandContext=コナミアミューズメント` と分離。
+- 初期資料のUMAチャンス成功時2400枚濃厚表現は後年訂正と競合するため、2400枚保証として性能コアへ採用していない。
 
-## 2021-08-02群 — OPEN
+## 2021-08-02群 — CLOSED
 1. **SLOT劇場版魔法少女まどか☆マギカ[前編]始まりの物語／[後編]永遠の物語 — No.1424 / DONE**
 2. **もっと！クレアの秘宝伝 女神の歌声と太陽の子供達 — No.1425 / DONE**
 3. **パチスロコードギアス 反逆のルルーシュ3 — No.1426 / DONE**
-4. **GI優駿倶楽部3 — NEXT / No.1427候補**
-- 4機処理後、全メーカー・別型式/PB・地域先行・延期/段階導入を再監査してCLOSED可否を判定する。
+4. **GⅠ優駿倶楽部3 — No.1427 / DONE**
+- 当時新台カレンダー複数系統で同日4機が一致。PB・地域先行・別型式・延期/段階導入も再探索したが追加候補を固定できずCLOSED。
 
 ## 次回本線の再開地点
-- 最新main再同期後、**2021-08-02群の次の未処理「GI優駿倶楽部3」No.1427候補**から継続。
-- 処理後、同日群の全メーカー・別型式/PB・地域先行・延期/段階導入を再監査してCLOSED可否を判定する。
+- 最新main再同期後、**2021-09-06群の先頭候補「パチスロ うしおととら 雷槍一閃」No.1428候補**から継続。
+- 2021-09-06群の既知キュー: **パチスロ うしおととら 雷槍一閃 / 麻雀物語4 / パチスロ楽園追放 / ロリクラ☆ほーるど！**。
+- 各機処理後、全メーカー・別型式/PB・地域先行・延期/段階導入を再監査してCLOSED可否を判定する。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
@@ -63,22 +63,25 @@
 - 次回遡及QAカーソル: **`docs/real_machine_db/machines/2007-05_sangokushi-igt.md`（三國志 / IGTジャパン）**。
 
 ## GitHub保存
-- No.1426追加 commit: `c3a580cf36eccfa5a404c8ac58046d5f7503f076`
+- No.1427追加 commit: `a822ffcbfa5df37275764dc31dafa28c33bbfd4d`
 - `LATEST_HANDOFF.md`: この更新commitでmainへ反映。
 
 ## 主要出典 — 取得日 2026-09-12
-### No.1426 コードギアス3
-- https://web-greenbelt.jp/post-49418/
-- https://p-kn.com/slot/3617/
-- https://1geki.jp/slot/s_codegeass3/
-- https://1geki.jp/slot/s_codegeass3/3/
-- https://1geki.jp/slot/s_codegeass3/40/
-- https://slot-seven.com/codegiass3-tenzyou/
-- https://ichikatsu.com/codegeass3/
-- https://pachinko-curation.com/1161/
-- https://p-media.info/post-26564/
-
-### 次回境界 2021-08-02
-- https://ichikatsu.com/newslot/
-- https://p-kn.com/slot/3611/
+### No.1427 GⅠ優駿倶楽部3
+- https://www.konami.com/amusement/psm/slot/g1-dclub3/
 - https://www.4gamer.net/games/999/G999905/20210721187/
+- https://web-greenbelt.jp/post-47409/
+- https://www.p-world.co.jp/machine/database/9405
+- https://p-kn.com/slot/3611/
+- https://1geki.jp/slot/s_g1_3/3/
+- https://1geki.jp/slot/s_g1_3/0/
+- https://chonborista.com/slot/konami-slot/140131/
+- https://slot-seven.com/g1derbyclub3-tenzyou/
+- https://kanzenkokuchi.jp/news/2376.php
+- https://nana-press.com/kaiseki/machine/136/4485/
+- https://nana-press.com/kaiseki/machine/136/
+- https://ichikatsu.com/newslot/
+
+### 次回境界 2021-09-06
+- https://ichikatsu.com/newslot/
+- https://crankyseven-k.com/kaiseki-calendar/2021-9-6/
