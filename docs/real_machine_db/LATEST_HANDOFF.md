@@ -1,104 +1,87 @@
 更新日: 2026-09-11
 
 ## 現在地点
-- recordCount: **1346**
-- latestRecordAdded: **みうのおしゃべりパチスロ — No.1346**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2020-03-16_miu-oshaberi-pachislot.md`
-- chronologicalFrontier: **2020-03-16**
-- frontierLatestMachine: **みうのおしゃべりパチスロ — No.1346**
+- recordCount: **1347**
+- latestRecordAdded: **パチスロ 新鬼武者～DAWN OF DREAMS～ — No.1347**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2020-03-23_shin-onimusha-dawn-of-dreams.md`
+- chronologicalFrontier: **2020-03-23**
+- frontierLatestMachine: **パチスロ 新鬼武者～DAWN OF DREAMS～ — No.1347**
 - schema: **resetBehavior v0.7**
-- status: **2020-03-16_GROUP_CLOSED**
+- status: **2020-03-23_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、mission v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、No.1345「スペリオーレ」を再取得して開始。
+- 最新mainの `README.md`、mission v0.7、`INDEX.md`、`LATEST_HANDOFF.md`、No.1346を再取得して開始。
 - `INDEX.md` は旧19件表示のため、README規定どおり最新handoffとmain実レコードを正とした。
-- 開始時main最新handoffは No.1345 / 2020-03-16群OPEN_2_OF_3。
-- 前リレー指定どおり、最後の未処理「みうのおしゃべりパチスロ」をNo.1346として追加。
-- 2020-03-16群は **パチスロ〈物語〉シリーズ セカンドシーズン / スペリオーレ / みうのおしゃべりパチスロ** の3機を処理完了。
-- 複数導入一覧・当時資料を再監査し、2020-03-16同日群は上記3機で **CLOSED** とした。
-- 次の明確なパチスロ全国導入群は **2020-03-23「新鬼武者～DAWN OF DREAMS～」**。遊技日本、スロパチクエスト、当時導入予定一覧で一致。
+- 直前handoff指定の **2020-03-23「新鬼武者～DAWN OF DREAMS～」**をNo.1347として追加。
+- 遊技日本、HAZUSE、1geki、K-Navi、当時導入一覧を再照合し、導入日・型式・検定番号・性能コア・resetBehaviorを固定。
+- 2020-03-23同日群は複数導入一覧で同機1機と一致したため **CLOSED**。
+- 次の明確な全国導入群は **2020-04-06**。現時点の確認候補は **スナイパイ71 / パチスロ 咲-Saki-**。
 
-## No.1346 — みうのおしゃべりパチスロ
-- path: `docs/real_machine_db/machines/2020-03-16_miu-oshaberi-pachislot.md`
-- manufacturer: **岡崎産業**
-- formalModel: **SみうスロM1**
-- certificationNumber: **9S0093**
-- releaseDate canonical: **2020-03-16**
-- generation/system: **6号機 / AT / 擬似ボーナス連チャン / STループ**
-- payoutRate: **97.2 / 98.2 / 100.0 / 103.0 / 105.0 / 110.0%**
-- publishedATInitialHit: **1/283.9 / 264.9 / 237.9 / 199.4 / 171.5 / 129.3**
-- note: 上記AT初当たりは公開資料上 **「通常時100G消化後から算出」** の比較値。無注記の実質初当たりと混同しない。
-- detailedATCombined: **1/167.9 / 160.3 / 146.3 / 129.7 / 118.9 / 96.8**
-- base: **設定1 約53.8G/50枚、公開レンジ約53.8〜57.0G/50枚**
-- netIncrease: **約2.7枚/G**
-- basicPayout: **BIG 60G約160枚 / REG 30G約80枚 / SPECIAL 111〜555G約300〜1500枚**
-- ceiling: **有利区間移行後最大1000G、AT確定**
-- regulatedGameNumbers: **100G or 1000G**
+## No.1347 — パチスロ 新鬼武者～DAWN OF DREAMS～
+- path: `docs/real_machine_db/machines/2020-03-23_shin-onimusha-dawn-of-dreams.md`
+- manufacturer: **エンターライズ**
+- formalModel: **S新鬼武者ZC**
+- certificationNumber: **9S1474**
+- releaseDate canonical: **2020-03-23**
+- generation/system: **6号機 / AT / 疑似ボーナス**
+- payoutRate: **97.9 / 99.4 / 100.8 / 103.6 / 105.7 / 110.0%**
+- BONUSInitialHit: **1/299.8 / 297.8 / 272.7 / 258.3 / 226.3 / 161.0**
+- ATInitialHit: **1/786.0 / 603.7 / 694.7 / 495.3 / 562.6 / 324.7**
+- base: **約51G/50枚**
+- netIncrease: **約3.0枚/G**
+- ceiling: **有利区間移行後777G+前兆**
+- coreStatus: **COMPLETE_CORE**
+- overallReliability: **ANALYSIS_HIGH_WITH_INDUSTRY_CONFIRMATION**
 
-### resetBehavior v0.7 — No.1346
-- resetBehaviorQA: **PARTIAL_RESEARCH_EXHAUSTED_WITH_CONFIRMED_RESET_VS_POWER_CYCLE_CONTRACT**
-- **設定変更=天井RESET / 有利区間RESET / 状態クリア**。
-- **据え置き・電源OFF→ON=天井進行 / 有利区間CARRY_OVER** と整理。
-- 純電断では **表示G数カウンタが1から再スタートしても、内部の規定ゲーム数は保持**。表示と内部進行を分離保存。
-- 規定G振り分け 100G / 1000G:
-  - 設定1 **25.0 / 75.0%**
-  - 設定2 **25.0 / 75.0%**
-  - 設定3 **30.1 / 69.9%**
-  - 設定4 **30.1 / 69.9%**
-  - 設定5 **30.1 / 69.9%**
-  - 設定6 **35.2 / 64.8%**
-- 上記100/1000Gは通常の規定G抽選であり、設定変更専用の朝一優遇テーブルではない。
-- 設定変更後の表/裏モード初期振り分け、通常/高確/超高確初期振り分け、朝一有利区間ランプ確定判別、本機固有ガックン条件/率は資料系統を変えて再探索後も `UNVERIFIED_AFTER_RESEARCH`。
+### resetBehavior v0.7 — No.1347
+- resetBehaviorQA: **COMPLETE_PUBLIC_RESET_CORE**
+- **設定変更=天井G数RESET / 内部状態RESET / 有利区間RESET / 非有利区間開始**。
+- **電源OFF→ON=天井G数 / 内部状態 / 有利区間CARRY_OVER**。
+- 据え置きは設定変更を伴わない電断契約に基づき主要内部進行をCARRY_OVERとして整理し、独立語の直接表がない点を注記。
+- 設定変更・純電断とも液晶開始は **桜道ステージ（昼）**。
+- 通常時は有利区間ランプ消灯型のため、ランプ単独で変更判別不可。
+- **設定変更でもガックンしない**（1geki）。期待値見える化も実戦上ガックン判別不可とする。
+- リセット専用固定短縮天井・朝一専用当選率は確認できず、推測補完していない。
+- 有利区間移行時の低確/高確/超高確振り分けは公開値として保存。ただし設定変更専用値ではなく共通契約として分離。
 
-## No.1346 data-quality notes
-- AT初当たり1/283.9〜1/129.3には「通常時100G消化後から算出」の定義注記を保持。
-- 50枚ベースは設定1・4・5・6を直接確認。設定2・3の個別値は今回確認資料で欠落しており推測補完していない。
-- coreStatus: **COMPLETE_CORE**。
-- overallReliability: **ANALYSIS_HIGH_WITH_OFFICIAL_AND_INDUSTRY_CONFIRMATION**。
-
-## 2020-03-16群監査
-- 1. パチスロ〈物語〉シリーズ セカンドシーズン — **No.1344 / 処理済み**
-- 2. スペリオーレ — **No.1345 / 処理済み**
-- 3. みうのおしゃべりパチスロ — **No.1346 / 処理済み**
-- 当時導入一覧・メーカー/業界/解析系を再確認し、同日追加候補を確認できず。
-- 群判定: **CLOSED**。
-
-## 次導入群監査
-- 2020-03-23: **新鬼武者～DAWN OF DREAMS～（エンターライズ）** を複数資料で確認。
-- 遊技日本は全国ホール導入開始を2020-03-23と明記。
-- スロパチクエストの2020年導入一覧も3/23群を同機1機として掲載。
-- 当時導入予定一覧も3/23同機のみを掲載。
-- 現時点の次回本線候補: **No.1347 新鬼武者～DAWN OF DREAMS～**。
+## 2020-03-23群監査
+- 1. パチスロ 新鬼武者～DAWN OF DREAMS～ — **No.1347 / 処理済み**
+- 遊技日本は2020-03-23全国導入開始を明記。
+- K-Navi、当時導入直前一覧も3/23群を同機として掲載。
+- 同日パチスロ追加候補を複数系統で再探索したが確認できず。
+- 群判定: **CLOSED_AFTER_CROSS_SOURCE_AUDIT**。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
-- `やったネ！はるみちゃん` は `PARTIAL_RESEARCH_EXHAUSTED` へ正式化済み。
-- 今回は新規本線No.1346と3/16群クローズを優先。次回以降、最新mainから未formalized候補を再計算して継続する。
+- `2007-04-15_yattane-harumi-chan.md`（やったネ！はるみちゃん）は最新mainで **PARTIAL_RESEARCH_EXHAUSTED** へ正式化済みであることを確認。
+- Git追加履歴を再確認し、次の未formalized候補は **`docs/real_machine_db/machines/2007-04-15_yattane-harumi-chan4.md`（やったネ！はるみちゃん4）**。
+- 同ファイルは `status: COMPLETE_CORE` / `qaResetBehavior: PARTIAL`。性能完了判定は維持し、次回reset側のみ再探索・正式化する。
+- その次のGit追加候補として **`docs/real_machine_db/machines/2007-04-15_yattane-harumi-chan-30.md`（やったネ！はるみちゃん-30）** も確認。こちらも既存COMPLETE_COREを崩さずreset QAを独立処理する。
+
+## 次導入群監査
+- 2020-04-06候補: **スナイパイ71 / パチスロ 咲-Saki-**。
+- 当時導入直前情報は4/6パチスロを上記2機と明記。
+- 4月導入一覧も併用し、次回は全メーカー・別型式・別スペック・PB・地域差まで再監査して最初の未処理をNo.1348候補として処理する。
 
 ## 次回再開地点
-1. 最新main README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1346を再取得。
-2. **2020-03-23群の `新鬼武者～DAWN OF DREAMS～` をNo.1347候補として処理する。**
-3. 処理後、3/23同日全メーカー・別型式・別スペック・PB・地域差を再監査しCLOSED可否を判定する。
-4. 次の導入群を時系列で特定して本線継続。
-5. 遡及QAは最新mainから未formalized候補を再計算して進める。
+1. 最新main README / mission v0.7 / INDEX / LATEST_HANDOFF / No.1347を再取得。
+2. **2020-04-06群を再監査し、最初の未処理（現時点候補: スナイパイ71）をNo.1348候補として処理。**
+3. 続いてパチスロ 咲-Saki-を処理し、4/6群CLOSED可否を判定。
+4. 遡及QAは **`2007-04-15_yattane-harumi-chan4.md`** から再開し、resetBehaviorをv0.7で正式化。既存`COMPLETE_CORE`は維持。
+5. その後 **`2007-04-15_yattane-harumi-chan-30.md`** へGit追加順で進む。
 
 ## 主要出典 — 取得日 2026-09-11
-### No.1346
-- 岡崎産業公式: https://okazakisangyo.com/
-- 遊技日本 製品/PV公開: https://yugi-nippon.com/pachinko-new-machine/post-32978/
-- P-WORLD / 遊技通信 検定通過: https://news.p-world.co.jp/articles/12728/yugitsushin
-- パチビー 発表会: https://www.pachibee.jp/pparticles/view/1228
-- PiDEA X 発表会詳細: https://www.pidea.jp/articles/%E3%83%91%E3%83%81%E3%82%B9%E3%83%AD%E6%96%B0%E5%8F%B0%E3%80%8C%E3%81%BF%E3%81%86%E3%81%AE%E3%81%8A%E3%81%97%E3%82%83%E3%81%B9%E3%82%8A%E3%83%91%E3%83%81%E3%82%B9%E3%83%AD%E3%80%8D%E6%A9%9F%E7%A8%AE%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%A8pv%E3%81%8C%E5%85%AC%E9%96%8B%EF%BC%8F%E5%B2%A1%E5%B4%8E%E7%94%A3%E6%A5%AD
-- HAZUSE: https://hazuse.com/machine/pachislot/9S0093/
-- P-WORLD機種DB: https://www.p-world.co.jp/machine/database/9144
-- 1geki: https://1geki.jp/slot/s_miusuro/
-- 1geki 設定判別: https://1geki.jp/slot/s_miusuro/0/
-- ちょんぼりすた: https://chonborista.com/slot/okazaki-slot/104548/
-- スロパチクエスト 天井/朝一: https://www.slopachi-quest.com/article/miu-oshaberislot-tennjou/
-- スロパチクエスト 設定差: https://www.slopachi-quest.com/article/miu-oshaberislot-settei/
-- ぱちんこキュレーション: https://www.pachinko-curation.com/1578/
+### No.1347
+- 遊技日本: https://yugi-nippon.com/pachinko-new-machine/post-33962/
+- HAZUSE 機種DB/天井: https://hazuse.com/machine/pachislot/9S1474/
+- 1geki 天井/設定変更: https://1geki.jp/slot/s_sonimusya/3/
+- 1geki 状態移行: https://1geki.jp/slot/s_sonimusya/44/
+- スロパチクエスト 天井/朝一: https://www.slopachi-quest.com/article/shinonimusha-dawn-of-dreams-tenjou/
+- K-Navi: https://p-kn.com/slot/3372/
+- すろぬー: https://slonuu.com/pg/s-sinonidod
+- 期待値見える化: https://slotjin.com/tenjoukitaichi/shinonimusha/
 
-### 次導入群確認
-- 遊技日本 3/23導入 新鬼武者: https://yugi-nippon.com/pachinko-new-machine/post-33962/
-- スロパチクエスト 2020導入機種一覧: https://www.slopachi-quest.com/article/2020-dounyuukishu/
-- 当時導入予定一覧: https://crankyseven.com/newmachine-info.htm
+### 2020-03-23 / 次導入群監査
+- 当時3/23導入直前情報: https://pachi-jyouhoukyoku.hatenablog.com/entry/2020/03/23/224927
+- 当時4/6導入直前情報: https://pachi-jyouhoukyoku.hatenablog.com/entry/2020/04/06/190000
+- ALL7 2020年4月導入一覧: https://www.all7.jp/plans/index/2020/04
