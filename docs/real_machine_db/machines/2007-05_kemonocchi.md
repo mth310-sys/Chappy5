@@ -1,7 +1,7 @@
 # けものっち!
 
 status: PARTIAL
-qaResetBehavior: PARTIAL
+qaResetBehavior: PARTIAL_RESEARCH_EXHAUSTED
 
 machineName: けものっち!
 aliases:
@@ -60,31 +60,34 @@ modeSpecificMinimumData:
 
 ## resetBehavior
 
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
+resetQaRetrievedAt: 2026-09-12
 
 settingChangeBehavior:
-- 「けものっち / ケモノッチ / Sammy / サミー」と「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / RT / マングース / チャンスタイム / ガックン」を組み替え、当時解析・古いDB・後年回顧を横断したが、本機固有の設定変更時処理を明記した高信頼資料は今回確認できずUNVERIFIED。
+- 「けものっち / ケモノッチ / Sammy / サミー」と「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / RT / マングース / チャンスタイム / ガックン」を組み替え、当時解析・古いDB・当時個人攻略記録・後年回顧を再横断したが、本機固有の設定変更時処理を直接明記した信頼可能な資料は確認できずUNVERIFIED_AFTER_RESEARCH。
+- 一般的5号機のRT・成立済みボーナス処理からの類推は採用しない。
 
 carryOverBehavior:
-- 通常時ゲーム数天井・朝一専用ゲーム数モードはNONE_CONFIRMED。
-- 据え置き時の特殊リプレイ後プチRT/チャンスタイム状態の残G・内部状態扱いはUNVERIFIED。
+- 通常時ゲーム数天井・朝一専用ゲーム数モードはNONE_CONFIRMED / NOT_APPLICABLE相当。
+- 据え置き時の特殊リプレイ後プチRT/チャンスタイム状態の残G・内部状態、成立済みボーナス/告知待ち状態の扱いは、資料系統を変えた再探索後もUNVERIFIED_AFTER_RESEARCH。
 
 powerCycleBehavior:
-- 電源OFF→ONのみで特殊リプレイ後のプチRT状態が維持/消滅するかはUNVERIFIED。
+- 電源OFF→ONのみで特殊リプレイ後のプチRT状態・残G、成立済みボーナス/告知状態が維持/消滅するかはUNVERIFIED_AFTER_RESEARCH。
 - 電源OFF→ONのみで天井短縮、朝一専用モード、初当たり優遇が発生する根拠はNONE_CONFIRMED。
 
 gameCounterReset:
 - 通常時ゲーム数天井はNONE_CONFIRMED / NOT_APPLICABLE相当。
 
 ceilingAfterReset:
-- NONE_CONFIRMED。
+- NONE_CONFIRMED / NOT_APPLICABLE相当。設定変更専用短縮天井の公開値なし。
 
 modeAfterReset:
 - ゲーム数モード管理型としての公開情報はNONE_CONFIRMED。
+- 設定変更専用モード振り分けの公開値なし。
 
 stateAfterReset:
 - 特殊リプレイ後の数ゲームのリプレイ高確率/チャンスタイムは確認済み。
-- 設定変更/据え置き/電源OFF→ON時の同状態処理は十分再探索後もUNVERIFIED。
+- 設定変更/据え置き/電源OFF→ON時の同状態処理は十分再探索後もUNVERIFIED_AFTER_RESEARCH。
 
 advantageousSectionReset:
 - NOT_APPLICABLE（5号機初期・有利区間制度導入前）。
@@ -96,16 +99,18 @@ resetPenalties:
 - 設定変更固有の不利要素はNONE_CONFIRMED。
 
 resetDetection:
-- 本機固有のガックン、表示、ゲーム数挙動等による変更判別は十分再探索後もUNVERIFIED。
+- 本機固有のガックン、初期出目、告知ランプ、ゲーム数挙動等による変更判別は、表記揺れと検索語を変えた再探索後もUNVERIFIED_AFTER_RESEARCH。
 
 numericResetData:
 - 設定変更時モード振り分け: NONE_CONFIRMED
-- 短縮天井: NONE_CONFIRMED
+- 短縮天井: NOT_APPLICABLE / NONE_CONFIRMED
 - 朝一当選率/恩恵発生率: NONE_CONFIRMED
+- 設定変更専用の比較可能な公開朝一数値: NO_PUBLIC_VALUE_FOUND_AFTER_RESEARCH
 
 ## sources
 
-取得日: 2026-08-31
+初回取得日: 2026-08-31
+reset QA再取得日: 2026-09-12
 
 1. サミー公式 — 2007年パチスロ製品一覧
    - https://www.sammy.co.jp/japanese/products/pachislot/2007/index.html
@@ -113,7 +118,7 @@ numericResetData:
    - reliability: OFFICIAL
 2. HAZUSE — けものっち！ 機種情報
    - https://hazuse.com/machine/pachislot/6S1282/
-   - 設定別BIG/MIDDLE/合成、機械割、配当表、特殊リプレイ後リプレイ確率上昇、完全告知。
+   - 設定別BIG/MIDDLE/合成、機械割、配当表、特殊リプレイ後リプレイ確率上昇、完全告知。2026-09-12再確認でもリセット固有契約の掲載なし。
    - reliability: ANALYSIS_HIGH
 3. HAZUSE 当時携帯版 — けものっち! 解析・機種情報
    - https://hazuse.com/i/data/kemono/top.htm
@@ -147,12 +152,17 @@ numericResetData:
    - https://5goki.com/sammy
    - 2007/5掲載。ただし本機欄のボーナス後RT/無限RT記述は当時系資料と整合せず、性能本線には採用しない。
    - reliability: CONFLICT
+11. 2007年前後の攻略実戦系保存ページ（再探索補助）
+   - https://plaza.rakuten.co.jp/suropuro777/diaryall/
+   - 当時の導入前スペック紹介と特殊リプレイ後数G RT記述を確認。設定変更/据え置き/純電断契約は記載なし。
+   - reliability: RETROSPECTIVE_LOW / reset契約の根拠には不採用
 
 ## missingFields
 
 - 日単位の全国納品/ホール導入日
 - 50枚あたりゲーム数/1000円ベース
 - 設定変更/据え置き/電源OFF→ON時の特殊リプレイ後プチRT状態処理
+- 成立済みボーナス/告知待ち状態の変更・据え置き・純電断処理
 - 本機固有の設定変更判別
 
 ## conflicts
@@ -163,5 +173,7 @@ numericResetData:
 
 ## QA note
 
-- 性能コアは設定別ボーナス、機械割、獲得枚数まで複数系統で取得。50枚ベースのみ十分再探索後も未確認のためPARTIAL。
-- resetBehaviorはゲーム数天井・朝一専用モード等はNONE_CONFIRMED、有利区間はNOT_APPLICABLE。演出用プチRTの変更/据え置き/電断処理とガックン判別のみUNVERIFIED。
+- 性能コアは従来のPARTIAL判定を維持。COMPLETE_COREへ無理に昇格させず、設定別ボーナス、機械割、獲得枚数は既存値を保持した。
+- 2026-09-12 resetBehavior遡及QA: HAZUSE、当時携帯版、パチマガスロマガ、P-WORLD、サミー公式、後年回顧、当時個人攻略記録まで再探索。設定変更/据え置き/純電断の機種固有契約を直接固定できなかった。
+- ゲーム数天井・朝一専用モードはNONE_CONFIRMED、有利区間はNOT_APPLICABLE。未確定なのは主に特殊リプレイ後プチRT、成立済みボーナス/告知状態、固有変更判別の3者処理。
+- 一般的5号機挙動からの補完は行わず、resetBehaviorQAをPARTIAL_RESEARCH_EXHAUSTEDへ更新。
