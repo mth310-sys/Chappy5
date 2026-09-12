@@ -98,29 +98,58 @@ confidence: HIGH
 confidence: HIGH
 
 ## resetBehavior
+schemaVersion: v0.7
+resetQaStatus: PARTIAL_RESEARCH_EXHAUSTED
+resetQaLastUpdated: 2026-09-13
 
-resetBehaviorQA: PARTIAL
+### settingChangeBehavior
+- 機種名、型式名 `バクレツセンシ`、JPSを用いて設定変更/リセット/朝一/480G/イライラモード/怒りモードを再探索したが、本機固有の設定変更時処理を直接固定できる資料は確認できず `UNVERIFIED_AFTER_RESEARCH`。
 
-settingChangeBehavior: UNVERIFIED
-carryOverBehavior: UNVERIFIED
-powerCycleBehavior: UNVERIFIED
-gameCounterReset: UNVERIFIED
-ceilingAfterReset: UNVERIFIED
-modeAfterReset: UNVERIFIED
-stateAfterReset: UNVERIFIED
-advantageousSectionReset: NOT_APPLICABLE（5号機初期・有利区間制度導入前）
-resetBenefits: UNVERIFIED（設定変更/朝一固有の恩恵を確定できる資料未発見）
-resetPenalties: UNVERIFIED（設定変更/朝一固有の不利を確定できる資料未発見）
-resetDetection: UNVERIFIED（ガックン等、本機固有の変更判別を高信頼資料で確定できず）
-numericResetData: UNVERIFIED
+### carryOverBehavior
+- 据え置き時の480G周期カウンタ、イライラモード、怒りモード/RT残Gの引継ぎ契約は `UNVERIFIED_AFTER_RESEARCH`。
 
-### resetBehavior research memo
+### powerCycleBehavior
+- 純電源OFF→ON時の480G周期カウンタ、内部状態、RT残Gの扱いを明記した本機固有資料は `UNVERIFIED_AFTER_RESEARCH`。
 
-2026-08-31取得。機種名「ダイナマイトマン」、型式名「バクレツセンシ」、メーカー名JPSを組み合わせ、設定変更/リセット/朝一/据え置き/電源OFF→ON/ガックン/480G/イライラモード/怒りモード/天井/救済の語へ展開して検索した。パチマガスロマガ旧解析、P-WORLD、5号機クロニクル、当時業界発表、後年回顧資料を横断したが、設定変更または単純電断時に480G周期カウンタ・RT/CZ状態をクリアするか引き継ぐかを機種固有資料で確定できなかった。480G周期の救済仕様そのものは確認できるが、リセット時の扱いは推測で埋めない。
+### gameCounterReset
+- 通常仕様としてボーナス後480G周期のハマリ救済機能は確認済み。
+- 設定変更時にこの480GカウンタをRESET/CARRY_OVERするかは `UNVERIFIED_AFTER_RESEARCH`。
+
+### ceilingAfterReset
+- 設定変更専用の短縮G数・救済条件変更は `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
+- 480G仕様自体をリセット後天井として転用しない。
+
+### modeAfterReset
+- イライラモード等の設定変更時初期化/再選択/据え置き継続は `UNVERIFIED_AFTER_RESEARCH`。
+
+### stateAfterReset
+- 20G RT「怒りモード」の設定変更/据え置き/純電断時の状態および残G契約は `UNVERIFIED_AFTER_RESEARCH`。
+
+### advantageousSectionReset
+- `NOT_APPLICABLE`（5号機初期・有利区間制度導入前）。
+
+### resetBenefits
+- 設定変更/朝一固有の短縮救済、RT優遇等は `NONE_CONFIRMED_AFTER_RESEARCH`。
+
+### resetPenalties
+- 設定変更/朝一固有の不利要素は `NONE_CONFIRMED_AFTER_RESEARCH`。
+
+### resetDetection
+- ガックン、初期出目、表示状態等の本機固有の高信頼変更判別情報は `UNVERIFIED_AFTER_RESEARCH`。
+
+### numericResetData
+- 設定変更専用の公開朝一数値は `NOT_FOUND_AFTER_RESEARCH`。
+
+### publicMorningNumbers
+- 設定変更専用の比較可能な天井短縮率、モード振り分け、RT移行率等は `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
+
+### resetBehavior 再探索メモ
+
+2026-09-13 QA再探索。`ダイナマイトマン / バクレツセンシ / JPS` と `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / ガックン / 480G / イライラモード / 怒りモード / RT / 天井 / 救済 / 状態引継ぎ` を組み替え、旧解析・P-WORLD・5号機クロニクル・当時記事・後年回顧まで資料系統を変えて再探索した。通常時の480G救済、20G RT、約75%ループは再確認できたが、設定変更/据え置き/純電断時の機種固有契約は固定できなかった。一般的な5号機挙動からは補完しない。性能側の既存 `COMPLETE_CORE` は維持し、reset QAだけ `PARTIAL_RESEARCH_EXHAUSTED` とする。
 
 ## sources
 
-取得日: 2026-08-31
+取得日: 2026-09-13（resetBehavior QA再取得。性能コア初回取得2026-08-31）
 
 1. パチマガスロマガ「ダイナマイトマン 基本システム」
    - https://cs62.cs-plaza.com/g/pachi/pla/s_conq/jps_slot/08/a.php
@@ -150,6 +179,10 @@ numericResetData: UNVERIFIED
    - https://pachiseven.jp/articles/detail/11436
    - 2007年JPS機としての位置づけ、ループ式RT・技術介入性の後年回顧
    - confidence: MEDIUM
+8. パチマガスロマガFREE「パチスロ名機 ダイナマイトマン」
+   - https://pachimaga.com/free/special/a3da97c9260e6d735b7d4c3d5dfb847eb51eeb1b.php
+   - 後年回顧としてRT仕様を再照合
+   - confidence: RETROSPECTIVE_MEDIUM
 
 ## missingFields
 
@@ -173,4 +206,4 @@ numericResetData: UNVERIFIED
    - 処理: 月単位の競合を明記し、現時点では2007/3を主レコード位置とする。
 
 coreStatus: COMPLETE_CORE
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
