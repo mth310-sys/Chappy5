@@ -1,110 +1,108 @@
 更新日: 2026-09-12
 
 ## 現在地点
-- recordCount: **1502**
-- latestRecordAdded: **シリウス — No.1502**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2022-06-06_sirius.md`
-- chronologicalFrontier: **2022-06-06**
-- frontierLatestMachine: **シリウス — No.1502**
+- recordCount: **1503**
+- latestRecordAdded: **パチスロ甲鉄城のカバネリ — No.1503**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2022-07-04_pachislot-koutetsujou-no-kabaneri.md`
+- chronologicalFrontier: **2022-07-04**
+- frontierLatestMachine: **パチスロ甲鉄城のカバネリ — No.1503**
 - schema: **resetBehavior v0.7**
-- status: **2022-06-06_GROUP_CLOSED_3_OF_3_PROCESSED**
+- status: **2022-07-04_GROUP_OPEN_1_OF_5_KNOWN_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧 `docs/real_machine_db/INDEX.md`、最新 `LATEST_HANDOFF.md`、直前No.1501 `Sキャッツ・アイ` を確認して開始。
-- `INDEX.md` は旧19件表示のため、README規定どおり `LATEST_HANDOFF.md` とmain実レコードを進捗正本として扱った。
-- handoff指定の次機種 No.1502 `シリウス`（ヤーマ、2022-06-06）を性能コア＋resetBehavior v0.7で追加。
-- 正式型式 `SシリウスSY1`、検定番号 `2S0129` をHAZUSEで確認。
-- 性能コアは設定L/1/2/3/4/6。機械割77.3 / 97.5 / 99.5 / 101.0 / 103.0 / 106.0%。初当りは設定1 1/328.2 → 設定6 1/252.2、約31.0G/50枚、疑似ボーナスAT純増約4.5枚/G。
-- BIG約313枚、REG約103枚。シリウスモードは初当り後約33.3%で移行、基本2回セット、継続率83%以上、平均約6連、期待枚数約1060枚。
-- 通常A/B/引き戻し天井777G+α、シリウスA/B天井200G+α。
-- resetBehaviorは設定変更で有利区間・天井・内部モードRESET、据え置きでCARRY_OVER。純電源OFF→ONでも有利区間・天井・内部モード・差枚数CARRY_OVERを直接確認。
-- 設定変更後は約10%で引き戻しモードへ移行。引き戻しモードのボーナス確率は約1/99.9。これは公開朝一数値として保存。
-- なな徹の設定変更/据え置き比較では内部状態もRESET/CARRY_OVER。純電断時の「内部状態」を内部モードとは別に直接説明する資料は再探索後も固定できず `UNVERIFIED_AFTER_RESEARCH`。
-- 有利区間ランプはボーナス開始〜終了時のみ点灯し通常時は基本消灯のため、朝一ランプによる設定変更判別は不可。
-- 本機固有ガックン条件/発生率、設定L初当りは再探索後も `UNVERIFIED_AFTER_RESEARCH`。
-- 2022年6月のパチスロ登場機種をなな徹回顧・一撃月間カレンダーで再監査し、6/6の `パチスロ ピンクパンサーSP / Sキャッツ・アイ / シリウス` の3機のみであることを確認。2022-06-06群をCLOSEDとした。
+- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧 `docs/real_machine_db/INDEX.md`、最新 `LATEST_HANDOFF.md`、直前No.1502 `シリウス` を確認して開始。
+- `INDEX.md` は旧表示のため、README規定どおり `LATEST_HANDOFF.md` とmain実レコードを進捗正本として扱った。
+- 2022-07-04群の残り1機を別系統資料で再監査し、`スーパーハナハナ2-30` と確定。2022-07-04群は5機で固定。
+- handoff指定の次機種 No.1503 `パチスロ甲鉄城のカバネリ`（サミー、2022-07-04）を性能コア＋resetBehavior v0.7で追加。
+- 正式型式 `S パチスロ甲鉄城のカバネリ ZR`、検定番号 `2S0243` をHAZUSEで確認。
+- 性能コアは設定1〜6。機械割97.8 / 98.8 / 100.7 / 105.9 / 108.4 / 110.0%。ボーナス初当り1/237.0→1/151.3、ST初当り1/407.9→1/290.6、設定1約33G/50枚、メイン純増約6.0枚/G。
+- 通常ゲーム数天井はST間1000G+αでエピソードボーナス。駿城ボーナス4回スルー後5回目もエピソードボーナス。
+- resetBehaviorは設定変更で有利区間・天井・内部モード・内部状態RESET、内部通常G数をランダム加算し、天井を650G+αへ短縮。黒煙りもRESET。
+- 据え置きは有利区間・天井・通常G数・内部状態・黒煙りCARRY_OVER。純電源OFF→ONは有利区間・天井・内部モード・内部状態・通常G数CARRY_OVERをパチマガスロマガ比較表で直接確認。
+- 設定変更後は平均約6Gの特殊状態へ移行し、特殊状態中のオールスター目でST直撃。
+- 設定変更後初回STでは0.3%で「それじゃあ1000枚目標でフラグ」が選択され、ST中初回ボーナス1000枚が選択される。
+- 本機は有利区間ランプ非搭載。ガックンも設定変更/据え置きとも発生せず、見た目による変更判別不可。
+- 内部G数ランダム加算の完全振り分け、設定変更専用の通常モード振り分けは公開固定できず `UNVERIFIED_AFTER_RESEARCH` とした。
+- 遡及QAは `TIMという名のパチスロ機` を再処理。既存 `coreStatus: COMPLETE_CORE` を維持し、reset側のみ `PARTIAL_RESEARCH_EXHAUSTED` へ更新。
+- TIMは設定変更/据え置き/純電源OFF→ON時のCZ/RT内部状態・残G、成立済みボーナス/告知待ち状態、本機固有ガックン/初期出目を資料系統と検索語を変えて再探索したが、直接契約を固定できず一般的5号機挙動から補完していない。
 
-## No.1502 — シリウス
-- path: `docs/real_machine_db/machines/2022-06-06_sirius.md`
-- manufacturer: **ヤーマ**
-- formalModel: **SシリウスSY1**
-- inspectionCode: **2S0129**
-- releaseDate: **2022-06-06**
-- generation/system: **6.5号機 / 完全告知AT / 疑似ボーナス**
-- settings: **L / 1 / 2 / 3 / 4 / 6**
-- payoutRate: **77.3 / 97.5 / 99.5 / 101.0 / 103.0 / 106.0%**
-- initialHit: **設定1 1/328.2 / 設定2 1/308.6 / 設定3 1/294.5 / 設定4 1/276.7 / 設定6 1/252.2**
-- baseGamesPer50: **約31.0G/50枚**
-- netIncrease: **約4.5枚/G**
-- BIG / REG: **約313枚 / 約103枚**
-- normalCeiling: **777G+α**
-- siriusModeCeiling: **200G+α**
+## No.1503 — パチスロ甲鉄城のカバネリ
+- path: `docs/real_machine_db/machines/2022-07-04_pachislot-koutetsujou-no-kabaneri.md`
+- manufacturer: **サミー**
+- formalModel: **S パチスロ甲鉄城のカバネリ ZR**
+- inspectionCode: **2S0243**
+- releaseDate: **2022-07-04**
+- generation/system: **6.5号機 / AT / CZ / 疑似ボーナス / ST**
+- settings: **1 / 2 / 3 / 4 / 5 / 6**
+- payoutRate: **97.8 / 98.8 / 100.7 / 105.9 / 108.4 / 110.0%**
+- bonusInitialHit: **1/237.0 / 1/230.7 / 1/214.0 / 1/186.5 / 1/171.3 / 1/151.3**
+- stInitialHit: **1/407.9 / 1/393.2 / 1/372.4 / 1/327.2 / 1/307.3 / 1/290.6**
+- baseGamesPer50: **約33G/50枚（設定1）**
+- netIncrease: **約6.0枚/G（メイン高純増部）**
+- normalCeiling: **ST間1000G+α**
+- resetCeiling: **650G+α**
 - coreStatus: **COMPLETE_CORE**
-- resetBehaviorQA: **COMPLETE_RESET_CORE_WITH_MINOR_UNVERIFIED**
+- resetBehaviorQA: **COMPLETE_RESET_CORE_WITH_NUMERIC_RESET_DATA**
 - confidence: **HIGH_CORE / HIGH_RESET / HIGH_MODEL_CODE**
 
-### resetBehavior v0.7 — No.1502
-- **設定変更**: 有利区間・天井・内部モードRESET。内部状態もRESETとする解析あり。約10%で引き戻しモードへ。
-- **据え置き**: 有利区間・天井・内部モード・内部状態CARRY_OVER。
-- **純電源OFF→ON**: 有利区間・天井・内部モード・差枚数CARRY_OVER。独立した内部状態項目はUNVERIFIED_AFTER_RESEARCH。
-- **ゲーム数/天井**: 通常A/B/引き戻し777G+α、シリウスA/B 200G+α。設定変更でRESET、据え置き/電断で引継ぎ。
-- **天井短縮**: 設定変更専用固定短縮はNONE_CONFIRMED。
-- **モード/状態**: 設定変更後約10%で引き戻し。引き戻しボーナス確率約1/99.9。
-- **有利区間**: 設定変更RESET、据え置き/電断CARRY_OVER。ボーナス終了時の一部でもRESET。
-- **朝一恩恵**: 約10%で引き戻しモード。
+### resetBehavior v0.7 — No.1503
+- **設定変更**: 有利区間・天井・内部モード・内部状態RESET。通常G数はRESET後ランダム加算。黒煙りRESET。
+- **据え置き**: 有利区間・天井・通常G数・内部状態・黒煙りCARRY_OVER。
+- **純電源OFF→ON**: 有利区間・天井・内部モード・内部状態・通常G数CARRY_OVER。
+- **ゲーム数/天井**: 通常ST間1000G+α、設定変更後650G+α。駿城ボーナスST非突入では天井G数を引き継ぐ。
+- **モード/状態**: 設定変更時に内部モード/状態RESET、平均約6Gの特殊状態へ。特殊状態中オールスター目でST直撃。
+- **有利区間**: 設定変更RESET、据え置き/純電断CARRY_OVER。ST開始時の一部でもRESET。
+- **朝一恩恵**: 650G+α短縮、内部G数ランダム加算、平均約6G特殊状態、初回ST時0.3%の1000枚目標フラグ。
 - **朝一不利**: 独立した固定ペナルティNONE_CONFIRMED。
-- **変更判別**: 有利区間ランプは通常時基本消灯で判別不可。ガックンUNVERIFIED_AFTER_RESEARCH。
-- **公開朝一数値**: 引き戻し移行約10%、引き戻し中ボーナス約1/99.9。
+- **変更判別**: 有利区間ランプ非搭載、ガックンなし。内部G数ランダム加算のため前兆位置だけでの確定判別不可。
+- **公開朝一数値**: 650G+α / 特殊状態平均約6G / 初回ST時1000枚目標フラグ0.3%。
 
-## 2022-06-06群 — CLOSED
-月間監査で確認した3機種:
-1. `パチスロ ピンクパンサーSP` — **No.1500 処理済み**
-2. `Sキャッツ・アイ` — **No.1501 処理済み**
-3. `シリウス` — **No.1502 処理済み**
-
-根拠:
-- なな徹「2022年上半期振り返り」は2022年6月登場機種を上記3機のみ列挙。
-- 一撃2022年6月新台カレンダーも6/6にスロット3機、月計スロット3機としている。
-
-## 次境界 — 2022-07-04
-一撃月間カレンダーでは2022-07-04にスロット5機。
-現時点で確認済み:
-- `パチスロ甲鉄城のカバネリ`
-- `ニューゲッターマウス`
-- `パチスロ犬夜叉`
-- `パチスロ アクエリオン ALL STARS`
-- 残り1機は次回冒頭で月間カレンダーと別系統資料を再監査し、漏れなく確定する。
+## 2022-07-04群 — OPEN 1/5
+月間監査・別系統資料で確認した5機:
+1. `パチスロ甲鉄城のカバネリ` — **No.1503 処理済み**
+2. `ニューゲッターマウス` — **次回 No.1504候補**
+3. `パチスロ犬夜叉`
+4. `パチスロ アクエリオン ALL STARS`
+5. `スーパーハナハナ2-30`
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
-- 前回処理: `docs/real_machine_db/machines/2007-02-18_kagaku-ninjatai-gatchaman.md`（科学忍者隊ガッチャマン）。
+- 今回処理: `docs/real_machine_db/machines/2007-02-12_tim-to-iu-na-no-pachislotki.md`（TIMという名のパチスロ機）。
 - 性能側 `coreStatus: COMPLETE_CORE` は維持。
 - reset側は **PARTIAL_RESEARCH_EXHAUSTED**。
-- 次回遡及QAカーソル: **`docs/real_machine_db/machines/2007-02-12_tim-to-iu-na-no-pachislotki.md`（TIMという名のパチスロ機）**。今回カーソルは変更していない。
+- 次回遡及QAカーソル: **`docs/real_machine_db/machines/2007-02_pachislot-tekken-den-tough.md`（パチスロ鉄拳伝タフ）**。TIM追加直後の実レコード追加履歴から確定。
 
 ## 次回本線の再開地点
-- **No.1503候補 `パチスロ甲鉄城のカバネリ` — 2022-07-04。**
-- ただし処理前に2022-07-04群5機の残り1機を月間カレンダー・業界資料で確定し、同日群の順序を固定してから進む。
+- **No.1504候補 `ニューゲッターマウス` — 2022-07-04。**
+- その後 `パチスロ犬夜叉 → パチスロ アクエリオン ALL STARS → スーパーハナハナ2-30` の順で同日群を処理し、5/5後にCLOSED監査する。
 
 ## GitHub保存
-- No.1502追加 commit: `6b7da098b769d46f8d4a88b3edfceab50146c795`
+- No.1503追加 commit: `f52af31bf332382beb4c2ff183360998bd251eab`
+- TIM resetBehavior QA更新 commit: `e6527512f807f68f4eab1a544f611020d964aed8`
 - `LATEST_HANDOFF.md`: この更新commitでmainへ反映。
 
 ## 主要出典 — 取得日 2026-09-12
-### No.1502 シリウス
-- https://news.p-world.co.jp/articles/20766/amusement
-- https://www.nikkansports.com/amusement/pachislot/news/202204130000738.html
-- https://p-bomb.co.jp/industry/new-machine/3984/
-- https://hazuse.com/machine/pachislot/2S0129/
-- https://nana-press.com/kaiseki/machine/369/9186/
-- https://nana-press.com/kaiseki/machine/369/9772/
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yama_slot/20/kr01.php
-- https://www.p-world.co.jp/machine/database/9630
+### No.1503 パチスロ甲鉄城のカバネリ
+- https://hazuse.com/machine/pachislot/2S0243/
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sammy_slot/198/kh02.php
+- https://p.hisshobon.jp/machine/3906/1/89494
+- https://www.p-world.co.jp/machine/database/9640
+- https://nana-press.com/kaiseki/machine/384/10249/
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sammy_slot/198/kr01-2.php
+- https://p.hisshobon.jp/machine/3906/1/90968
+- https://1geki.jp/slot/s_kabaneri/3/
 
-### 2022年6月群監査
-- https://nana-press.com/post/1576830
-- https://1geki.jp/newmachinecalender/202206/
-
-### 次境界 2022-07-04
+### 2022-07-04群監査
 - https://1geki.jp/newmachinecalender/202207/
-- https://yugi-nippon.com/pachinko-new-machine/post-52472/
+- https://ichikatsu.com/newslot2022/
+- https://chonborista.com/slot/pionia-slot/166212/
+- https://hazuse.com/machine/pachislot/1S1736/
+
+### TIM resetBehavior QA
+- https://web-greenbelt.jp/00003985/
+- https://www.p-world.co.jp/machine/database/4558
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/heiwabros_slot/02/a.php
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/heiwabros_slot/02/h.php
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/heiwabros_slot/02/c.php
+- https://hazuse.com/i/data/tim/top.htm
+- https://5goki.com/heiwa-olympia
