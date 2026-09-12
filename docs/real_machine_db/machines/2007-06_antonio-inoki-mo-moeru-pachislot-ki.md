@@ -1,7 +1,8 @@
 # アントニオ猪木も燃えるパチスロ機
 
 status: PARTIAL
-qaResetBehavior: PARTIAL
+qaResetBehavior: PARTIAL_RESEARCH_EXHAUSTED
+resetQaReviewedAt: 2026-09-12
 
 machineName: アントニオ猪木も燃えるパチスロ機
 aliases:
@@ -75,18 +76,18 @@ modeSpecificMinimumData:
 
 ## resetBehavior
 
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
 
 settingChangeBehavior:
-- 本機固有の設定変更時に、RT/CZ状態・残りG・内部状態をどのように処理するかを確定できる高信頼公開資料は今回UNVERIFIED。
+- 本機固有の設定変更時に、RT/CZ状態・残りG・内部状態をどのように処理するかを確定できる高信頼公開資料は、2026-09-12の遡及再探索でもUNVERIFIED_AFTER_RESEARCH。
 - 設定変更専用の短縮天井・朝一専用初当たり優遇はNONE_CONFIRMED。
 
 carryOverBehavior:
 - 通常時ゲーム数天井はないため、通常時天井ゲーム数の据え置き引継ぎはNOT_APPLICABLE。
-- 前日RT/CZ中の据え置き時に残G・内部状態を保持するかは、機種名表記揺れ、RT/CZ名、据え置き関連語を変えて再探索したがUNVERIFIED。
+- 前日RT/CZ中の据え置き時に残G・内部状態を保持するかは、機種名表記揺れ、RT/CZ名、据え置き関連語を変えて再探索したがUNVERIFIED_AFTER_RESEARCH。
 
 powerCycleBehavior:
-- 電源OFF→ONのみでRT/CZ残G・内部状態を維持するかはUNVERIFIED。
+- 電源OFF→ONのみでRT/CZ残G・内部状態を維持するかはUNVERIFIED_AFTER_RESEARCH。
 - P-WORLD掲示板に電源OFF時の内部状態について質問投稿は残るが、掲示板質問自体は根拠として採用しない。
 
 gameCounterReset:
@@ -96,10 +97,11 @@ ceilingAfterReset:
 - 天井なし。NOT_APPLICABLE。
 
 modeAfterReset:
-- 通常時のゲーム数管理モード、朝一専用ゲーム数モード、設定変更時モード再抽選の公開根拠はNONE_CONFIRMED / UNVERIFIED。
+- 通常時のゲーム数管理モード、朝一専用ゲーム数モード、設定変更時モード再抽選の公開根拠はNONE_CONFIRMED / UNVERIFIED_AFTER_RESEARCH。
 
 stateAfterReset:
-- RT/CZ状態の設定変更時処理はUNVERIFIED。
+- RT/CZ状態の設定変更時処理はUNVERIFIED_AFTER_RESEARCH。
+- 成立済みボーナスおよび告知待ち状態の設定変更・据え置き・純電断時処理も機種固有資料を固定できず、5号機一般論から補完しない。
 
 advantageousSectionReset:
 - NOT_APPLICABLE（5号機初期・有利区間制度導入前）。
@@ -111,15 +113,15 @@ resetPenalties:
 - 設定変更固有の主要不利要素はNONE_CONFIRMED。
 
 resetDetection:
-- 本機固有のガックン、表示、ゲーム数挙動による設定変更判別は、表記揺れ・「設定変更/リセット/朝一/据え置き/ガックン」を組み替えた十分な再探索後もUNVERIFIED。
+- 本機固有のガックン、表示、ゲーム数挙動による設定変更判別は、表記揺れ・「設定変更/リセット/朝一/据え置き/ガックン」を組み替えた十分な再探索後もUNVERIFIED_AFTER_RESEARCH。
 
 numericResetData:
 - 短縮天井: NOT_APPLICABLE
-- 朝一当選率/モード振り分け/リセット恩恵発生率: 比較可能な公開数値は今回未確認
+- 朝一当選率/モード振り分け/リセット恩恵発生率: 比較可能な公開数値は再探索後も未確認
 
 ## sources
 
-取得日: 2026-08-31
+取得日: 2026-08-31 / resetBehavior遡及再確認: 2026-09-12
 
 1. グリーンべると — SS第3弾は黄門ちゃま、猪木の5号機も
    - https://web-greenbelt.jp/00004124/
@@ -156,6 +158,7 @@ numericResetData:
 - 設定変更時のRT/CZ状態・残G処理
 - 据え置き時のRT/CZ状態・残G引継ぎ
 - 電源OFF→ONのみの内部状態処理
+- 成立済みボーナス/告知待ち状態の変更・据え置き・電断処理
 - 本機固有のガックン/朝一変更判別
 - 公開朝一専用数値
 
@@ -169,5 +172,6 @@ numericResetData:
 ## QA note
 
 - 2007年5月/6月境界を再監査。P-WORLDの2007年05月表記だけで5月へ固定せず、当時業界一次系の「6月上旬から納品」を優先して6月上旬の未処理機として登録。
-- 性能コアは設定別ボーナス、機械割、RT純増、獲得枚数を取得。50枚ベース未確定のためPARTIAL。
-- resetBehaviorは天井なし/有利区間非該当まで確定。本機固有のRT/CZ残G・内部状態処理、電断、据え置き、ガックンは十分再探索後もUNVERIFIED。
+- 性能コアは設定別ボーナス、機械割、RT純増、獲得枚数を取得。50枚ベース未確定のためPARTIALを維持。
+- 2026-09-12遡及QA: 正式機種名/略称/メーカー、設定変更/リセット/朝一/据え置き/電源OFF ON、RT/CZ/闘魂挑戦/修行RT、ガックン/リール初動を組み替え、当時解析・業界DB・後年回顧を再探索。RT/CZ構造は再確認できたが、設定変更・据え置き・純電断の機種固有契約は固定できなかった。
+- 性能側status: PARTIALは変更せず、resetBehavior側のみPARTIAL_RESEARCH_EXHAUSTEDへ更新。一般的5号機挙動からの推測補完は行わない。
