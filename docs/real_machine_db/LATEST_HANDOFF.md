@@ -1,80 +1,77 @@
 更新日: 2026-09-13
 
 ## 現在地点
-- recordCount: **1530**
-- latestRecordAdded: **花火絶景 — No.1530**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2022-11-07_hanabi-zekkei.md`
+- recordCount: **1531**
+- latestRecordAdded: **ラストユートピア — No.1531**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2022-11-07_last-utopia.md`
 - chronologicalFrontier: **2022-11-07**
-- frontierLatestMachine: **花火絶景 — No.1530**
+- frontierLatestMachine: **ラストユートピア — No.1531**
 - schema: **resetBehavior v0.7**
-- status: **2022-11-07_GROUP_OPEN_1_OF_4_KNOWN_CANONICAL_PROCESSED**
+- status: **2022-11-07_GROUP_OPEN_2_OF_4_KNOWN_CANONICAL_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧表示の `docs/real_machine_db/INDEX.md`、最新 `LATEST_HANDOFF.md`、直前No.1529を確認して開始。
+- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧表示の `docs/real_machine_db/INDEX.md`、最新 `LATEST_HANDOFF.md`、直前No.1530を確認して開始。
 - INDEXは19件の旧表示のためREADME規定どおり最新handoffとmain実レコードを進捗正本として扱った。
-- 前回handoff指定のNo.1530 `花火絶景` を性能コア + resetBehavior v0.7で追加。
-- 型式は `S/ハナビゼッケイ/BH`、東京都公安委員会検定再掲の検定番号は `230127`。2S形式に推測変換しない。
-- 設定変更時は内部の有利区間・天井・モード・内部状態・花火ポイントをRESETする一方、サブ液晶表示G数カウンタだけは引き継ぐ特殊仕様を複数解析で照合。表示G数と内部天井進行を分離して保存した。
-- 据え置き / 純電源OFF→ONは内部天井・モード・状態・花火ポイント・有利区間をCARRY_OVER。
-- 通常最大天井950G、周期天井10周期。設定変更専用の固定短縮天井や専用モード振り分け数値は再探索後も固定できずUNVERIFIED/NONE_CONFIRMED。
-- 1周期目の大花火ステージ移行期待度50%は全設定共通の一般1周期目仕様であり、設定変更専用数値とは分離した。
-- 旧解析の「設定変更後はボーナス終了後と同じ / 内部的に絶景チャレンジ抽選中の可能性」と、後年詳細解析の「設定変更時は絶景チャレンジ抽選中に突入しない」が競合。後年詳細解析をcanonical、旧記述を `CONFLICT_OLD_ANALYSIS_INTERPRETATION` として保持。
-- 設定2 REGは主要資料1/556.6、一部業界講座1/556.3。多数一致の1/556.6をcanonical、1/556.3を転記/丸め競合として保持。
-- 前handoffの遡及QAカーソル `ピカゴロウV-B` をmainで再確認したところ、すでに2026-09-11に `PARTIAL_RESEARCH_EXHAUSTED` までQA済みだったため重複更新は行わなかった。
+- 前回handoff指定のNo.1531 `ラストユートピア` を性能コア + resetBehavior v0.7で追加。
+- パイオニア公式、P-WORLD/グリーンべると、P-WORLD/遊技通信、HAZUSE、PiDEA、K-Navi、一撃、ちょんぼりすた、2-9伝説を横断して照合。
+- 型式 `SラストユートピアMY`、検定番号 `1S1578`、ピーセカンド製造 / パイオニア販売、2022-11-07導入を採用。
+- 6号機ノーマルタイプで天井非搭載。AT/CZモード、周期、天井、有利区間進行に依存した朝一リセット恩恵はNOT_APPLICABLE。
+- 設定変更専用の朝一当選率・恩恵発生率・専用モードは資料系統を変えて再探索したが確認できず `NONE_CONFIRMED_AFTER_RESEARCH / PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
+- 純電源OFF→ON時の演出/ランプ初期化契約と本機固有ガックン条件/発生率は十分な再探索後も固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- HAZUSEにメーカー名「バイオニア」の誤植とみられる表記があるため、メーカー公式・業界発表の「パイオニア」をcanonicalとした。
 
-## No.1530 — 花火絶景
-- manufacturer: **ミズホ / ユニバーサルエンターテインメント**
-- formalModel: **S/ハナビゼッケイ/BH**
-- inspectionCode: **230127**
+## No.1531 — ラストユートピア
+- manufacturer: **ピーセカンド製造 / パイオニア販売**
+- formalModel: **SラストユートピアMY**
+- inspectionCode: **1S1578**
 - releaseDate: **2022-11-07**
-- generation/system: **6.2号機 / AT / 擬似ボーナス / 技術介入**
-- 市場予測出玉率: **98.6 / 99.1 / 100.6 / 102.5 / 103.9 / 105.5%**
-- 完全攻略: **101.1 / 101.5 / 103.1 / 105.1 / 106.6 / 108.3%**
-- BIG: **1/439.5 / 434.9 / 419.1 / 399.4 / 386.7 / 372.0**
-- REG: **1/565.1 / 556.6 / 526.3 / 510.1 / 488.5 / 475.0**
-- 合算: **1/247.2 / 244.1 / 233.3 / 224.0 / 215.9 / 208.6**
-- baseGamesPer50: **約35.1G/50枚**
-- netIncrease: **約7.77枚/G**
-- BIG平均約600枚 / REG平均約60枚
+- generation/system: **6号機 / ノーマル / 完全告知 / BIG偏重型**
+- payoutRate: **97.8 / 98.7 / 100.4 / 102.9 / 105.0 / 108.0%**
+- BIG: **1/228 / 227 / 226 / 220 / 215 / 208**
+- REG: **1/712 / 704 / 661 / 537 / 492 / 414**
+- 合算: **1/173 / 172 / 168 / 156 / 149 / 138**
+- baseGamesPer50: **設定1 約37.7G/50枚**
+- netIncrease: **非該当（ノーマルタイプ）**
+- BIG純増 **252枚** / REG純増 **104枚**
+- 天井: **非搭載**
 - coreStatus: **COMPLETE_CORE**
-- resetBehaviorQA: **COMPLETE_RESET_CORE_WITH_UNVERIFIED_RESET_SPECIFIC_MODE_NUMBERS**
+- resetBehaviorQA: **COMPLETE_RESET_CORE_NOT_APPLICABLE_NORMAL_TYPE**
 
-### resetBehavior v0.7 — No.1530
-- **設定変更**: 有利区間・内部天井・モード・内部状態・花火ポイントRESET。縁側ステージ開始。表示G数カウンタのみCARRY_OVER。
-- **据え置き**: 有利区間・内部天井・モード・状態・花火ポイント・表示G数をCARRY_OVER。
-- **純電源OFF→ON**: 据え置き同様に内部進行をCARRY_OVER。
-- **天井**: 最大950G、周期10回。設定変更時は内部0から再スタートするが表示カウンタは継続するため朝一表示950G超が起こり得る。
-- **モード**: 設定変更時再抽選、据え置き/純電断は引継ぎ。設定変更専用全振り分けは未固定。
-- **有利区間**: 設定変更でRESET。通常時ランプ非点灯のためランプ判別不可。通常運用ではボーナス終了時にも原則RESET。
-- **朝一恩恵**: 花火ポイントRESETにより1周期目から開始し、一般仕様として大花火ステージ移行期待度50%。固定短縮天井等は未確認。
-- **変更判別**: 朝一表示だけでは困難。内部天井リセットのため表示950Gを超えて通常時なら設定変更濃厚。機種固有ガックンはUNVERIFIED_AFTER_RESEARCH。
+### resetBehavior v0.7 — No.1531
+- **設定変更**: ゲーム数天井・周期・AT/CZモード・有利区間進行はNOT_APPLICABLE。設定変更専用当選優遇はNONE_CONFIRMED_AFTER_RESEARCH。
+- **据え置き**: 引継ぎ対象となる天井・周期・AT/CZモード・有利区間はNOT_APPLICABLE。
+- **純電源OFF→ON**: 天井・周期・AT/CZモード・有利区間はNOT_APPLICABLE。演出/ランプ初期化契約はUNVERIFIED_AFTER_RESEARCH。
+- **ゲーム数・天井**: 天井非搭載。短縮天井もNOT_APPLICABLE。
+- **モード・状態**: 朝一客AIへ影響するAT/CZモード・高確状態管理はNOT_APPLICABLE_FOR_YARDSTICK。
+- **有利区間**: 朝一有利区間RESET/CARRY_OVERの比較項目はNOT_APPLICABLE。
+- **朝一恩恵/不利**: 天井短縮・高モード・CZ優遇等はNONE_CONFIRMED_AFTER_RESEARCH。前日進行消失による不利もNOT_APPLICABLE。
+- **変更判別**: 天井/周期/有利区間ランプによる判別不可。本機固有ガックンはUNVERIFIED_AFTER_RESEARCH。
+- **公開朝一数値**: PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH。
 
-## 2022-11-07群 — OPEN 1/4 known canonical
+## 2022-11-07群 — OPEN 2/4 known canonical
 1. **花火絶景（ミズホ）** — No.1530 済
-2. **ラストユートピア（ピーセカンド）** ← No.1531候補 / 次回最優先
-3. **パチスロ幼女戦記（サミー）**
+2. **ラストユートピア（ピーセカンド / パイオニア）** — No.1531 済
+3. **パチスロ幼女戦記（サミー）** ← No.1532候補 / 次回最優先
 4. **パチスロ鉄拳4アルティメットデビルVer.（山佐ネクスト）**
 
 4機処理後、PB・別型式・地域先行・延期/段階導入を再監査してCLOSED可否を判定する。
 
 ## 遡及QA
-- 前回指定 `docs/real_machine_db/machines/2007-03_pikagorou-v-b.md` はmain上ですでに2026-09-11 QA済みで `coreStatus: COMPLETE_CORE / resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED`。
+- `docs/real_machine_db/machines/2007-03_pikagorou-v-b.md` はmain上ですでに2026-09-11 QA済みで `coreStatus: COMPLETE_CORE / resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED`。
 - 次回は重複処理せず、ピカゴロウV-Bより後の時系列で最初の未QA/PARTIALレコードをmainから再探索してカーソルを進める。
 
 ## 今回の主要資料
-### 花火絶景
-- 遊技日本 発売発表: https://yugi-nippon.com/pachinko-new-machine/post-53544/
-- 遊技日本 11/7導入: https://yugi-nippon.com/pachinko-new-machine/post-54687/
-- PiDEA 東京都公安委員会検定情報: https://www.pidea.jp/articles/1661140582
-- HAZUSE: https://hazuse.com/en/machine/pachislot/2S0127/
-- K-Navi: https://p-kn.com/slot/3852/
-- ちょんぼりすた: https://chonborista.com/slot/universal-slot/174207/
-- なな徹 朝一/設定変更: https://nana-press.com/kaiseki/machine/444/12406/
-- イチカツ: https://ichikatsu.com/hanabizekkei/
-- 一撃 天井: https://1geki.jp/slot/s_hanabi_zekkei/3/
-- 一撃 大花火ステージ: https://1geki.jp/slot/s_hanabi_zekkei/42/
-- パチマガスロマガ旧DB 通常時モード: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/mizuho_slot/47/tj06-3.php
-- スロット解析.com: https://slotkaiseki.com/hanabizekkei_tenjou/
+### ラストユートピア
+- パイオニア公式 発売お知らせ: https://www.slot-pioneer.co.jp/information/last_utopia.html
+- パイオニア公式 その他機種一覧: https://www.slot-pioneer.co.jp/products/30.html
+- P-WORLD / グリーンべると: https://news.p-world.co.jp/articles/21612/greenbelt
+- P-WORLD / 遊技通信: https://news.p-world.co.jp/articles/21574/yugitsushin
+- HAZUSE: https://hazuse.com/machine/pachislot/1S1578/
+- PiDEA: https://pidea.jp/articles/1663312103
+- K-Navi: https://p-kn.com/slot/3855/
+- 一撃: https://1geki.jp/slot/s_last_utopia/
+- ちょんぼりすた: https://chonborista.com/slot/pionia-slot/175792/
+- 2-9伝説: https://2-9densetsu.com/lastutopia/
 
 ## 次回再開地点
-**本線はNo.1531候補 `ラストユートピア`（2022-11-07）から性能コア + resetBehavior v0.7を収集する。その後 `パチスロ幼女戦記` → `パチスロ鉄拳4アルティメットデビルVer.` を同じ11/7群として処理する。遡及QAはピカゴロウV-Bが既QA済みなので、その次の時系列未QAレコードをmainから再探索して進める。**
+**本線はNo.1532候補 `パチスロ幼女戦記`（2022-11-07）から性能コア + resetBehavior v0.7を収集する。その後 `パチスロ鉄拳4アルティメットデビルVer.` を同じ11/7群として処理する。両機完了後、PB・別型式・地域先行・延期/段階導入を再監査し2022-11-07群のCLOSED可否を判定する。遡及QAはピカゴロウV-Bより後の最初の未QA/PARTIALレコードから再開する。**
