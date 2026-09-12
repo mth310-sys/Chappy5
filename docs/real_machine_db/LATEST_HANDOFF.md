@@ -1,93 +1,88 @@
 更新日: 2026-09-12
 
 ## 現在地点
-- recordCount: **1461**
-- latestRecordAdded: **鬼浜爆走紅蓮隊 激闘謳歌編 — No.1461**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2022-01-11_onihama-gekitou-ouka.md`
-- chronologicalFrontier: **2022-01-11**
-- frontierLatestMachine: **鬼浜爆走紅蓮隊 激闘謳歌編 — No.1461**
+- recordCount: **1462**
+- latestRecordAdded: **沖ワニマル-25 — No.1462**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2022-01-17_okiwanimaru-25.md`
+- chronologicalFrontier: **2022-01-17**
+- frontierLatestMachine: **沖ワニマル-25 — No.1462**
 - schema: **resetBehavior v0.7**
-- status: **2022-01-11_GROUP_CLOSED_3_OF_3_PROCESSED**
+- status: **2022-01-17_GROUP_OPEN_1_OF_2_KNOWN_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧 `docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.1460「スーパーリノSP」を確認して開始。
+- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧 `docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.1461「鬼浜爆走紅蓮隊 激闘謳歌編」を確認して開始。
 - `INDEX.md` は旧19件表示のため、README規定どおり最新 `LATEST_HANDOFF.md` とmain実レコードを進捗正本として扱った。
-- 開始時点のmainは recordCount 1460 / chronologicalFrontier 2022-01-11 / `2022-01-11_GROUP_OPEN_2_OF_3_KNOWN_PROCESSED`。main正本指定の **鬼浜爆走紅蓮隊 激闘謳歌編** から継続。
-- 2022-01-11群は新台カレンダー再監査で次の3タイトルを確認し、全件処理済みのためCLOSED判定。
-  1. バーサスリヴァイズ — No.1459 / DONE
-  2. スーパーリノSP — No.1460 / DONE
-  3. 鬼浜爆走紅蓮隊 激闘謳歌編 — No.1461 / DONE
+- 開始時点のmainは recordCount 1461 / chronologicalFrontier 2022-01-11 / `2022-01-11_GROUP_CLOSED_3_OF_3_PROCESSED`。前チャット側の古い再開地点ではなく、main正本指定の2022-01-17「沖ワニマル」から継続。
+- 25φ `SオキワニマルBA` と30φ `SオキワニマルAA-30` は別型式かつ公開初当り/機械割が異なるため独立レコード化する方針を確定。今回は25φをNo.1462として処理。
 
-## No.1461 — 鬼浜爆走紅蓮隊 激闘謳歌編
-- path: `docs/real_machine_db/machines/2022-01-11_onihama-gekitou-ouka.md`
-- manufacturer: **ベルコ**
-- formalModel: **Sオニハマ4VSH3**
-- certificationNumber: **1S0065**
-- releaseDate: **2022-01-11**
-- generation/system: **6号機（6.1/6.2表記CONFLICT） / AT / 周期抽選 / 擬似ボーナス**
-- settings: **L / 1 / 2 / 3 / 4 / 6**
-- payoutRate: **80.5 / 97.4 / 98.5 / 101.4 / 104.5 / 108.1%**
-- bonusInitialHit: **設定1 1/298.1 → 設定6 1/228.7（設定Lは公開固定値未確認）**
-- baseGamesPer50: **約38G**
-- netIncrease: **約4.5枚/G**
-- basicPayout: **ツッパリボーナス20G / 鬼浜ボーナス20G。特攻ボーナスはトータル1000枚獲得濃厚。**
-- normalCeiling: **通常時700G+α or 12周期到達 → ツッパリボーナス。1周期50/100/150G、平均約80G。**
+## No.1462 — 沖ワニマル-25
+- path: `docs/real_machine_db/machines/2022-01-17_okiwanimaru-25.md`
+- manufacturer: **バルテック**
+- formalModel: **SオキワニマルBA**
+- certificationNumber: **1S0755**
+- releaseDate: **2022-01-17**
+- generation/system: **6.1号機 / AT / 完全告知 / 擬似ボーナス / 25φ**
+- settings: **1 / 2 / 3 / 4 / 5 / 6**
+- payoutRate: **97.4 / 98.6 / 100.5 / 102.7 / 104.2 / 106.2%**
+- bonusInitialHit: **1G連除外合算 1/186 → 1/142**
+- baseGamesPer50: **36.8 / 36.8 / 36.8 / 36.8 / 37.2 / 38.0G**
+- netIncrease: **約7.0枚/G**
+- basicPayout: **BIG約301枚 / REG約106枚**
+- normalCeiling: **通常時約999G → BIG**
 - coreStatus: **COMPLETE_CORE**
 - resetBehaviorQA: **PARTIAL_RESEARCH_EXHAUSTED**
-- confidence: **HIGH_CORE_MEDIUM_RESET_WITH_GENERATION_CONFLICT**
+- confidence: **HIGH_CORE_MEDIUM_RESET_WITH_INITIAL_HIT_SOURCE_CONFLICT**
 
-### resetBehavior v0.7 — No.1461
-- **設定変更**: 有利区間RESET、ゲーム数天井RESET、周期G RESET。液晶G数は「???」、鹿広場ステージ開始とする複数解析あり。
-- **据え置き / 純電源OFF→ON**: 有利区間・ゲーム数天井・周期GをCARRY_OVER。液晶表示は「???」、鹿広場スタートのため見た目だけでは内部周期Gを直接読めない。
-- **内部状態**: 設定変更時/純電断時とも当時解析に「調査中」が残り、検索語・資料系統を変えた十分な再探索後も固定できず `UNVERIFIED_AFTER_RESEARCH`。
-- **天井短縮/朝一専用恩恵**: 設定変更専用の短縮天井・専用モード・固定初当り優遇・公開朝一当選率は確認できず。numericResetDataは空。
-- **変更判別**: 解析上、朝一有利区間ランプ点灯=据え置き濃厚 / 消灯=設定変更濃厚（前日消灯閉店・店舗対策等を除く）。本機固有ガックン条件/発生率は `UNVERIFIED_AFTER_RESEARCH`。
-- **設定L**: 出玉率80.5%。デモ画面中に下パネル消灯で判別可能と複数資料で一致。設定変更判別とは別の特殊設定識別として保持。
+### resetBehavior v0.7 — No.1462
+- **設定変更 / 据え置き / 純電源OFF→ON**: 当時解析の朝一欄に天井・内部状態・ステージ等が「調査中」のまま残る。検索語・資料系統を変えて再探索したが、999G天井G・内部状態・有利区間の3者別契約を直接固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- **天井**: 通常時約999GでBIGは複数資料一致。設定変更専用の短縮天井は確認できないが、天井GがRESET/CARRY_OVERのどちらか自体を一般的6号機挙動から推測補完しない。
+- **朝一公開数値**: **設定変更後1回目BIG終了時の上パネル設定示唆発生率50%**を確認し `numericResetData` に保存。
+- **変更判別**: 朝一有利区間ランプ、ガックン、初期画面による直接判別は十分な再探索後も未固定。上パネル50%は設定変更後専用抽選だが、色変化の有無のみで変更確定とは扱わない。
+- **25φ/30φ差**: 25φの初当りはP-WORLD / なな徹 / Slopachi-Quest / ちょんぼりすたが一致。HAZUSEの25φページは30φと同じ初当り値を掲載するため `CONFLICT` として保持し、多数一致の25φ専用値をcanonical採用。
 
-### No.1461で保持したCONFLICT
-1. **号機細分類**
-   - 6.2号機: イチカツ等
-   - 6.1号機: Slopachi-Quest、ちょんぼりすた系一部資料等
-   - 型式・性能値には影響させず `6号機（6.1/6.2表記CONFLICT）` として保持。
-
-## 2022-01-11群 — CLOSED / 3独立レコード
-1. バーサスリヴァイズ — No.1459
-2. スーパーリノSP — No.1460
-3. 鬼浜爆走紅蓮隊 激闘謳歌編 — No.1461
+## 2022-01-17群 — OPEN
+1. **沖ワニマル-25 — No.1462 / DONE**
+2. **沖ワニマル-30 — No.1463候補 / NEXT**
 
 ## 次回本線の再開地点
-- **2022-01-17「沖ワニマル」から開始。**
-- 新台カレンダーでは1/17群の先頭として確認済み。
-- 検定DBでは少なくとも **SオキワニマルBA（25φ）** と **SオキワニマルAA-30（30φ）** の別型式が存在し、公開性能値も25φ/30φで差があるため、同一レコードへ安易に統合せず独立レコード要否を最初に固定する。
-- 現時点の候補順は **No.1462候補: 沖ワニマル（25φ / SオキワニマルBA）** → **No.1463候補: 沖ワニマル-30（SオキワニマルAA-30）**。正式商品名・導入日の同日性・性能差を登録時に再照合する。
-- 2022-01-17群完了後、PB/地域先行/別型式/延期・段階導入までクロス監査してCLOSED可否を判定する。
+- **2022-01-17「沖ワニマル-30」＝No.1463候補**から開始。
+- 30φは **SオキワニマルAA-30 / 検定番号1S0361** を候補として登録時に再照合する。
+- 25φとは初当り・機械割、30φ固有の天井到達時BIG+裏モード等に差があるため、25φ値を流用せず30φ専用資料で性能コア＋resetBehaviorを独立確認する。
+- No.1463処理後、2022-01-17群を新台カレンダー・別型式/PB/地域先行/延期まで再監査しCLOSED可否を判定する。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
-- 直前処理済み: `docs/real_machine_db/machines/2007-01_marine-gang.md`（マリーンギャング）→ **PARTIAL_RESEARCH_EXHAUSTED**。
-- 既存 `coreStatus: COMPLETE_CORE` は維持。
-- 次回遡及QAカーソル: **`docs/real_machine_db/machines/2007-01_aa-warera-nihonmatsu-judobu.md`（嗚呼!我ら日本松柔道部）**。
-- 今回は本線前進を優先し、retro QAカーソルは進めていない。
+- 今回処理済み: `docs/real_machine_db/machines/2007-01_aa-warera-nihonmatsu-judobu.md`（嗚呼!我ら日本松柔道部）→ **PARTIAL_RESEARCH_EXHAUSTED**。
+- 既存 `coreStatus: PARTIAL` は維持し、性能完了判定とreset QAを分離。
+- RT「一本勝負」777G/200GとCZ構造、有利区間非該当は確認済み。一方、設定変更/据え置き/純電断時のRT/CZ残状態、成立済みボーナス/告知状態、本機固有ガックン/初期出目は直接契約を固定できず一般論で補完していない。
+- 次回遡及QAカーソル: **`docs/real_machine_db/machines/2007-01_karate-baka-ichidai.md`（空手バカ一代）**。Git追加履歴で日本松柔道部の直後に追加された実機レコードであることを確認済み。
 
 ## GitHub保存
-- No.1459追加 commit: `a99520b429d32cab6b3a044c630305df61cb4a37`
-- No.1460追加 commit: `2df17b987ada868ed761a65a57a1a080d1207697`
-- No.1461追加 commit: `9e4153284f2b65ce4b1baf2c849f7cb028823c5d`
+- No.1462追加 commit: `8ddbefd29bc90a1c0e145d747a05e3085531d488`
+- 嗚呼!我ら日本松柔道部 resetBehavior QA commit: `5f174fa0c2ce300812e9eb2f637b56d510991188`
 - `LATEST_HANDOFF.md`: この更新commitでmainへ反映。
 
 ## 主要出典 — 取得日 2026-09-12
-### No.1461 鬼浜爆走紅蓮隊 激闘謳歌編
-- https://news.p-world.co.jp/articles/17999/nippon
-- https://web-greenbelt.jp/post-50376/
-- https://zenrin-net.com/kenteis/listsend?machinesort_id=2&order_date=2024
-- https://www.pref.kagoshima.jp/ab04/kensei/jourei/kouhou/2109/documents/90168_20210924100448-1.pdf
-- https://www.p-world.co.jp/machine/database/9496
-- https://nana-press.com/kaiseki/machine/163/
-- https://nana-press.com/kaiseki/machine/163/7408/
-- https://nana-press.com/kaiseki/machine/163/7410/
-- https://nana-press.com/kaiseki/machine/163/7412/
-- https://nana-press.com/kaiseki/machine/163/7416/
-- https://chonborista.com/slot/belko-slot/154177/
-- https://www.slopachi-quest.com/article/onihama-gekitououka-tenjou/
-- https://ichikatsu.com/onihamageki/
+### No.1462 沖ワニマル-25
+- https://www.p-world.co.jp/machine/database/9485
+- https://nana-press.com/kaiseki/machine/220/
+- https://nana-press.com/kaiseki/machine/220/7838/
+- https://nana-press.com/kaiseki/machine/220/7843/
+- https://nana-press.com/kaiseki/machine/220/7847/
+- https://nana-press.com/kaiseki/machine/220/7850/
+- https://www.slopachi-quest.com/article/okiwanimaru25-settei/
+- https://www.slopachi-quest.com/article/okiwanimaru25-tenjou/
+- https://chonborista.com/slot/baltec/151815/
+- https://1geki.jp/slot/s_okiwanimaru25/3/
+- https://hazuse.com/machine/pachislot/1S0755/
 - https://ichikatsu.com/newslot2022/
+
+### 遡及QA — 嗚呼!我ら日本松柔道部
+- https://web-greenbelt.jp/00004919/
+- https://hazuse.com/i/data/nihonmatujyudoubu/top.htm
+- https://hazuse.com/i/data/nihonmatujyudoubu/bonus.htm
+- https://hazuse.com/i/data/nihonmatujyudoubu/bonus_shousai.htm
+- https://hazuse.com/i/data/nihonmatujyudoubu/rt.htm
+- https://www.p-world.co.jp/machine/database/4501
+- https://5goki.com/winnet
+- https://nana-press.com/post/1559653
