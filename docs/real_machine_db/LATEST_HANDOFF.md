@@ -1,85 +1,66 @@
 更新日: 2026-09-12
 
 ## 現在地点
-- recordCount: **1460**
-- latestRecordAdded: **スーパーリノSP — No.1460**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2022-01-11_super-reno-sp.md`
+- recordCount: **1461**
+- latestRecordAdded: **鬼浜爆走紅蓮隊 激闘謳歌編 — No.1461**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2022-01-11_onihama-gekitou-ouka.md`
 - chronologicalFrontier: **2022-01-11**
-- frontierLatestMachine: **スーパーリノSP — No.1460**
+- frontierLatestMachine: **鬼浜爆走紅蓮隊 激闘謳歌編 — No.1461**
 - schema: **resetBehavior v0.7**
-- status: **2022-01-11_GROUP_OPEN_2_OF_3_KNOWN_PROCESSED**
+- status: **2022-01-11_GROUP_CLOSED_3_OF_3_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧 `docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.1459「バーサスリヴァイズ」を確認して開始。
+- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧 `docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.1460「スーパーリノSP」を確認して開始。
 - `INDEX.md` は旧19件表示のため、README規定どおり最新 `LATEST_HANDOFF.md` とmain実レコードを進捗正本として扱った。
-- 開始時点のmainは recordCount 1459 / chronologicalFrontier 2022-01-11 / `2022-01-11_GROUP_OPEN_1_OF_3_KNOWN_PROCESSED`。前回チャット側の古い再開地点ではなく、main正本指定の **スーパーリノSP** から継続。
-- 2022-01-11群は現時点3タイトル：
+- 開始時点のmainは recordCount 1460 / chronologicalFrontier 2022-01-11 / `2022-01-11_GROUP_OPEN_2_OF_3_KNOWN_PROCESSED`。main正本指定の **鬼浜爆走紅蓮隊 激闘謳歌編** から継続。
+- 2022-01-11群は新台カレンダー再監査で次の3タイトルを確認し、全件処理済みのためCLOSED判定。
   1. バーサスリヴァイズ — No.1459 / DONE
   2. スーパーリノSP — No.1460 / DONE
-  3. 鬼浜爆走紅蓮隊 激闘謳歌編 — No.1461候補 / NEXT
+  3. 鬼浜爆走紅蓮隊 激闘謳歌編 — No.1461 / DONE
 
-## No.1460 — スーパーリノSP
-- path: `docs/real_machine_db/machines/2022-01-11_super-reno-sp.md`
-- manufacturer: **山佐ネクスト**
-- formalModel: **SリノSPYTMM**
-- certificationNumber: **1S0252**
+## No.1461 — 鬼浜爆走紅蓮隊 激闘謳歌編
+- path: `docs/real_machine_db/machines/2022-01-11_onihama-gekitou-ouka.md`
+- manufacturer: **ベルコ**
+- formalModel: **Sオニハマ4VSH3**
+- certificationNumber: **1S0065**
 - releaseDate: **2022-01-11**
-- generation/system: **6.2号機 / 特殊ボーナスタイプ / リアルボーナス連チャン / リノ系**
-- settings: **1 / 2 / 3 / 4 / 5 / 6**
-- payoutRate: **97.4 / 98.5 / 100.1 / 102.3 / 104.6 / 106.3%**
-- bonusInitialHit: **1/565.8 → 1/221.3（canonical）**
-- tomatoChance: **1/192.5 → 1/62.2**
-- baseGamesPer50: **約38G（資料により38〜39G）**
-- netIncrease: **BIG約4.7枚/G / REG約3.6枚/G（出玉増加区間）**
-- basicPayout: **BIG平均123枚 / REG平均62枚**
-- normalCeiling: **ボーナス間1831G+α → 中段トマト超高確率。ボーナス成立まで天井状態継続。**
+- generation/system: **6号機（6.1/6.2表記CONFLICT） / AT / 周期抽選 / 擬似ボーナス**
+- settings: **L / 1 / 2 / 3 / 4 / 6**
+- payoutRate: **80.5 / 97.4 / 98.5 / 101.4 / 104.5 / 108.1%**
+- bonusInitialHit: **設定1 1/298.1 → 設定6 1/228.7（設定Lは公開固定値未確認）**
+- baseGamesPer50: **約38G**
+- netIncrease: **約4.5枚/G**
+- basicPayout: **ツッパリボーナス20G / 鬼浜ボーナス20G。特攻ボーナスはトータル1000枚獲得濃厚。**
+- normalCeiling: **通常時700G+α or 12周期到達 → ツッパリボーナス。1周期50/100/150G、平均約80G。**
 - coreStatus: **COMPLETE_CORE**
-- resetBehaviorQA: **COMPLETE_RESET_CORE_WITH_CONFLICT**
-- confidence: **HIGH_WITH_RESET_CONFLICT**
+- resetBehaviorQA: **PARTIAL_RESEARCH_EXHAUSTED**
+- confidence: **HIGH_CORE_MEDIUM_RESET_WITH_GENERATION_CONFLICT**
 
-### resetBehavior v0.7 — No.1460
-- **設定変更**: 内部状態は引継ぎとする複数解析が一致。有利区間は非搭載。設定変更専用の短縮天井・朝一専用モード・固定初当り優遇は確認できず。
-- **設定変更時の天井**: **CONFLICT**。Slopachi-Quest、スロがち、にくじる系資料はボーナス間1831G+αを設定変更でも引継ぎとする一方、イチカツはリセットと掲載。複数の後発/朝一解析一致からCARRY_OVER優勢と注記するが、平均化・断定せず競合保持。
-- **据え置き**: ボーナス間天井・内部状態をCARRY_OVER。
-- **純電源OFF→ON**: ボーナス間天井・内部状態をCARRY_OVER。複数解析で一致。
-- **有利区間**: メーカー系PV紹介・複数解析で「有利区間なし」。朝一有利区間ランプ判別はNOT_APPLICABLE。
-- **朝一恩恵/不利**: 設定変更自体による固定恩恵/不利は確認できず。前日ボーナス高確率状態なら、設定変更/電断でも状態持越し仕様により朝一も残る可能性があるが、これはリセット恩恵ではなく持越し特性。
-- **変更判別**: 朝一1回目のボーナス終了時に下パネルフラッシュなら設定変更確定、疑似クレオフ音なら設定変更＋設定2以上濃厚とする解析あり。非発生では据え置き確定にならない。ガックン条件/発生率はUNVERIFIED_AFTER_RESEARCH。
-- **公開朝一数値**: 設定変更専用のモード初期振り分け・朝一当選率・短縮天井数値は確認できず。numericResetDataは空。
-- **RAMクリア**: 通常の設定変更とは分離。出荷状態でボーナス高確率開始とする前作踏襲推測はあるが、本機固有の確定仕様として固定せずUNVERIFIED。
+### resetBehavior v0.7 — No.1461
+- **設定変更**: 有利区間RESET、ゲーム数天井RESET、周期G RESET。液晶G数は「???」、鹿広場ステージ開始とする複数解析あり。
+- **据え置き / 純電源OFF→ON**: 有利区間・ゲーム数天井・周期GをCARRY_OVER。液晶表示は「???」、鹿広場スタートのため見た目だけでは内部周期Gを直接読めない。
+- **内部状態**: 設定変更時/純電断時とも当時解析に「調査中」が残り、検索語・資料系統を変えた十分な再探索後も固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- **天井短縮/朝一専用恩恵**: 設定変更専用の短縮天井・専用モード・固定初当り優遇・公開朝一当選率は確認できず。numericResetDataは空。
+- **変更判別**: 解析上、朝一有利区間ランプ点灯=据え置き濃厚 / 消灯=設定変更濃厚（前日消灯閉店・店舗対策等を除く）。本機固有ガックン条件/発生率は `UNVERIFIED_AFTER_RESEARCH`。
+- **設定L**: 出玉率80.5%。デモ画面中に下パネル消灯で判別可能と複数資料で一致。設定変更判別とは別の特殊設定識別として保持。
 
-### No.1460で保持したCONFLICT
-1. **設定6ボーナス初当り**
-   - 1/221.3: パチマガスロマガ / なな徹 / イチカツ / アタリ7 等
-   - 1/211.3: HAZUSE設定推測ページ
-   - 多数一致の1/221.3をcanonical採用し、HAZUSE値を競合保持。
-2. **設定変更時の天井**
-   - CARRY_OVER: Slopachi-Quest / スロがち / にくじる系
-   - RESET: イチカツ
-   - CARRY_OVER優勢だがCONFLICTのまま保存。
-3. **ボーナス純増表記**
-   - BIG約4.7枚/G / REG約3.6枚/G: なな徹・パチマガスロマガ系
-   - BB純増3.8枚: パチスロメソッド
-   - 出玉増加区間の定義が明確な4.7/3.6をcanonicalとし、3.8は定義不明競合として保持。
+### No.1461で保持したCONFLICT
+1. **号機細分類**
+   - 6.2号機: イチカツ等
+   - 6.1号機: Slopachi-Quest、ちょんぼりすた系一部資料等
+   - 型式・性能値には影響させず `6号機（6.1/6.2表記CONFLICT）` として保持。
 
-## 2021-12-20群 — CLOSED / 6独立レコード
-1. パチスロ戦姫絶唱シンフォギア 勇気の歌 — No.1453
-2. 沖ドキ！DUO — No.1454
-3. 沖ドキ！DUO-30 — No.1455
-4. シンデレラブレイド4 — No.1456
-5. 秘宝伝 解き放たれた女神 — No.1457
-6. パチスロ リング 運命の秒刻 — No.1458
-
-## 2022-01-11群 — OPEN
-1. **バーサスリヴァイズ — No.1459 / DONE**
-2. **スーパーリノSP — No.1460 / DONE**
-3. **鬼浜爆走紅蓮隊 激闘謳歌編 — No.1461候補 / NEXT**
+## 2022-01-11群 — CLOSED / 3独立レコード
+1. バーサスリヴァイズ — No.1459
+2. スーパーリノSP — No.1460
+3. 鬼浜爆走紅蓮隊 激闘謳歌編 — No.1461
 
 ## 次回本線の再開地点
-- **「鬼浜爆走紅蓮隊 激闘謳歌編」＝No.1461候補**から開始。
-- 2022-01-11導入 / ベルコ。前handoffで公式「2022年1月登場」と当時解析・導入カレンダーの1/11一致を確認済み。
-- 型式・検定番号を登録時に再固定し、性能コアに加えてゲーム数天井・周期天井、設定L、有利区間、設定変更/据え置き/純電断、朝一恩恵・不利、変更判別、公開朝一数値を重点確認。
-- No.1461処理後、2022-01-11群を別型式/PB/地域先行/延期・段階導入までクロス監査してCLOSED可否を判定する。
+- **2022-01-17「沖ワニマル」から開始。**
+- 新台カレンダーでは1/17群の先頭として確認済み。
+- 検定DBでは少なくとも **SオキワニマルBA（25φ）** と **SオキワニマルAA-30（30φ）** の別型式が存在し、公開性能値も25φ/30φで差があるため、同一レコードへ安易に統合せず独立レコード要否を最初に固定する。
+- 現時点の候補順は **No.1462候補: 沖ワニマル（25φ / SオキワニマルBA）** → **No.1463候補: 沖ワニマル-30（SオキワニマルAA-30）**。正式商品名・導入日の同日性・性能差を登録時に再照合する。
+- 2022-01-17群完了後、PB/地域先行/別型式/延期・段階導入までクロス監査してCLOSED可否を判定する。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
@@ -91,21 +72,22 @@
 ## GitHub保存
 - No.1459追加 commit: `a99520b429d32cab6b3a044c630305df61cb4a37`
 - No.1460追加 commit: `2df17b987ada868ed761a65a57a1a080d1207697`
+- No.1461追加 commit: `9e4153284f2b65ce4b1baf2c849f7cb028823c5d`
 - `LATEST_HANDOFF.md`: この更新commitでmainへ反映。
 
 ## 主要出典 — 取得日 2026-09-12
-### No.1460 スーパーリノSP
-- https://news.p-world.co.jp/articles/18071/nippon
-- https://news.p-world.co.jp/articles/19072/nippon
-- https://hazuse.com/machine/pachislot/1S0252/
-- https://hazuse.com/machine/pachislot/1S0252/genre/208/
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/243/kh02.php
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasa_slot/243/kh10-1.php
-- https://www.p-world.co.jp/machine/database/9495
-- https://www.slopachi-quest.com/article/super-reno-sp-tenjou/
-- https://slogati.com/reno-sp/
-- https://www.nikuziru.com/archives/8378
-- https://ichikatsu.com/superrenosp/
-- https://1geki.jp/slot/s_spreno_sp/
-- https://nana-press.com/kaiseki/machine/165/7420/
-- https://nana-press.com/post/1545652/2
+### No.1461 鬼浜爆走紅蓮隊 激闘謳歌編
+- https://news.p-world.co.jp/articles/17999/nippon
+- https://web-greenbelt.jp/post-50376/
+- https://zenrin-net.com/kenteis/listsend?machinesort_id=2&order_date=2024
+- https://www.pref.kagoshima.jp/ab04/kensei/jourei/kouhou/2109/documents/90168_20210924100448-1.pdf
+- https://www.p-world.co.jp/machine/database/9496
+- https://nana-press.com/kaiseki/machine/163/
+- https://nana-press.com/kaiseki/machine/163/7408/
+- https://nana-press.com/kaiseki/machine/163/7410/
+- https://nana-press.com/kaiseki/machine/163/7412/
+- https://nana-press.com/kaiseki/machine/163/7416/
+- https://chonborista.com/slot/belko-slot/154177/
+- https://www.slopachi-quest.com/article/onihama-gekitououka-tenjou/
+- https://ichikatsu.com/onihamageki/
+- https://ichikatsu.com/newslot2022/
