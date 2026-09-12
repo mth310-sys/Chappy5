@@ -1,97 +1,102 @@
 更新日: 2026-09-12
 
 ## 現在地点
-- recordCount: **1494**
-- latestRecordAdded: **2027DB — No.1494**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2022-04-18_2027db.md`
-- chronologicalFrontier: **2022-04-18**
-- frontierLatestMachine: **2027DB — No.1494**
+- recordCount: **1495**
+- latestRecordAdded: **Sスーパー海物語IN JAPAN祭 — No.1495**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2022-05-09_s-super-umi-monogatari-in-japan-matsuri.md`
+- chronologicalFrontier: **2022-05-09**
+- frontierLatestMachine: **Sスーパー海物語IN JAPAN祭 — No.1495**
 - schema: **resetBehavior v0.7**
-- status: **2022-04-18_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**
+- status: **2022-05-09_GROUP_OPEN_1_OF_3_CURRENTLY_CONFIRMED**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧 `docs/real_machine_db/INDEX.md`、最新 `LATEST_HANDOFF.md`、直前No.1493 `パチスロ 月華 雅` を確認して開始。
+- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧 `docs/real_machine_db/INDEX.md`、最新 `LATEST_HANDOFF.md`、直前No.1494 `2027DB` を確認して開始。
 - `INDEX.md` は旧19件表示のため、README規定どおり最新 `LATEST_HANDOFF.md` とmain実レコードを進捗正本として扱った。
-- 並行更新を検出し、以前のNo.1490候補へ戻らず、handoff指定の次機種 `2027DB` をNo.1494として登録。
-- HAZUSE、K-Navi、パチ＆スロ必勝本、P-WORLD、ちょんぼりすた、スロット期待値見える化、パチマガスロマガ、ぱちんこキュレーション等を横断して性能コアとresetBehavior v0.7を調査。
-- 型式 `S2027DB`、検定番号 `1S1836`、JPS、2022-04-18導入、6.2号機・有利区間非搭載の特殊ノーマル/リアルボーナス高確率タイプを確認。
-- 機械割97.9/99.6/103.7/106.2/110.4/114.9%、ソナーチャンス1/186.1〜1/56.1、バトルモード1/558.4〜1/168.3、約39G/50枚、BB約120枚。
-- 通常時1680G+αで潜航モードへ移行する天井を確認。到達即ボーナスではなくソナーチャンス成功を補助する状態。天井到達後は50%でバトルモード中の2択ヒント高発生状態選択とする解析あり。
-- 本機は6.2号機だが有利区間非搭載。一般的な6.2号機ATの有利区間RESET契約を流用していない。
-- 設定変更でも1680G天井に対するハマりG数を引き継ぐとする解析を確認。一方、設定変更後は内部スタート状態A〜Eを再抽選するため、ゲーム数CARRY_OVERと内部状態RESELECTを分離して保存。
-- 設定変更後のスタートE選択率は設定1〜6で12.50/15.63/18.75/21.88/25.00/25.00%。スタートEは潜航モード抽選状態=高確、ストック状態=高確、引き戻しモード=低確。
-- 後年リセット一覧には設定変更時約25%で引き戻しモード移行とあるが、HAZUSE当時解析は設定変更時にも移行するものの率不明としている。平均・統合せず25%をANALYSIS_SINGLE相当で保持。
-- RAMクリア時は設定変更とは別条件で内部バトルモード状態スタートとする実戦解析あり。強い朝一恩恵だが通常の設定変更挙動に誤統合しない。
-- 純電源OFF→ON時の1680G天井G数・スタート状態・バトル/引き戻し状態、本機固有ガックン条件は検索語と資料系統を変えても直接契約を固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 直前handoffの次機種 `Sスーパー海物語IN JAPAN祭` をNo.1495として登録。
+- 三洋物産系業界発表、HAZUSE、K-Navi、一撃、パチマガスロマガ、なな徹、P-WORLD、ちょんぼりすた、イチカツ等を横断し、性能コアとresetBehavior v0.7を収集。
+- 型式 `Sスーパー海物語INJAPAN祭PE`、検定番号 `1S1823`、製造サンスリー、2022-05-09導入、6.4号機ATを確認。
+- 設定はL/1/2/4/5/6。機械割91.36(L)/97.59/98.97/103.92/106.88/110.25%。設定Lは下パネル常時消灯。
+- ボーナス初当り1/253.7〜1/151.8、AT初当り1/620.3〜1/426.1、ベース約37.7G/50枚、純増約2.8枚/G。海祭BONUSは30G、海RUSHは初回BONUS込み平均約600枚。
+- BONUS天井は110〜573G＋前兆最大26G（最大599G）。AT間天井は有利区間開始後1700〜2000G＋前兆最大26G。AT後に有利区間を引き継いだ場合のみBONUS天井299Gだが、設定変更リセット専用短縮ではない。
+- 設定変更では有利区間・天井RESET。据え置きと純電源OFF→ONは有利区間・天井CARRY_OVER。桜チャレンジ中/ボーナス中/AT中の純電源OFF→ONは元状態へ復帰とする解析あり。
+- 設定変更後初回ボーナス時は約30%でHAPPY魚群→AT直行。HAPPY魚群込みの設定1初回ボーナスAT期待度は約60%。通常時開始時の次回奇数ボーナス抽選は有利区間リセット時7.03%、引継ぎ時37.50%。
+- 設定変更・純電源OFF→ONとも朝一液晶はお祭りモード夕方＋ウリンカウンター『???』で、液晶初期表示だけでは変更判別不可。有利区間ランプ非搭載。
+- 設定変更後50G以降のモード選択画面で祭アイコンが出る場合があり、黒=設定変更濃厚＋HAPPY魚群期待度UP、赤=設定変更濃厚＋HAPPY魚群濃厚。ただし必ず出るわけではない。
+- 設定変更時の低確A/低確B/通常/天国準備/天国/超天国の全開始振り分けと、本機固有ガックン条件/発生率は検索語・資料系統変更後も直接値を固定できず `UNVERIFIED_AFTER_RESEARCH`。
 
-## No.1494 — 2027DB
-- path: `docs/real_machine_db/machines/2022-04-18_2027db.md`
-- manufacturer: **JPS（ジェイピーエス）**
-- formalModel: **S2027DB**
-- inspectionCode: **1S1836**
-- releaseDate: **2022-04-18**
-- generation/system: **6.2号機 / 特殊ノーマル・リアルボーナス＋ボーナス高確率状態 / PB機**
-- settings: **1 / 2 / 3 / 4 / 5 / 6**
-- payoutRate: **97.9 / 99.6 / 103.7 / 106.2 / 110.4 / 114.9%**
-- sonarChance: **1/186.1 / 1/176.7 / 1/178.3 / 1/162.8 / 1/171.6 / 1/56.1**
-- battleMode: **1/558.4 / 1/530.1 / 1/534.9 / 1/488.5 / 1/514.9 / 1/168.3**
-- baseGamesPer50: **約39G/50枚**
-- basicPayout: **BB約120枚**
-- ceiling: **通常時1680G+αで潜航モード。設定変更でもハマりG数引継ぎ。**
+## No.1495 — Sスーパー海物語IN JAPAN祭
+- path: `docs/real_machine_db/machines/2022-05-09_s-super-umi-monogatari-in-japan-matsuri.md`
+- manufacturer: **サンスリー（製造） / 三洋物産・三洋販売（ブランド/販売）**
+- formalModel: **Sスーパー海物語INJAPAN祭PE**
+- inspectionCode: **1S1823**
+- releaseDate: **2022-05-09**
+- generation/system: **6.4号機 / 擬似ボーナス＋差枚数管理AT**
+- settings: **L / 1 / 2 / 4 / 5 / 6**
+- payoutRate: **91.36(L) / 97.59 / 98.97 / 103.92 / 106.88 / 110.25%**
+- pseudoBonus: **1/253.7 / 1/237.4 / 1/193.0 / 1/171.4 / 1/151.8（設定1/2/4/5/6）**
+- atUmiRush: **1/620.3 / 1/590.7 / 1/510.2 / 1/468.5 / 1/426.1**
+- baseGamesPer50: **約37.7G/50枚**
+- netIncrease: **約2.8枚/G**
+- basicPayout: **海祭BONUS 30G / 海RUSH平均約600枚（初回BONUS込み）**
 - coreStatus: **COMPLETE_CORE**
-- resetBehaviorQA: **COMPLETE_RESET_CORE_WITH_PARTIAL_POWER_CYCLE**
+- resetBehaviorQA: **COMPLETE_RESET_CORE**
 - confidence: **HIGH**
 
-### resetBehavior v0.7 — No.1494
-- **設定変更**: 天井ハマりG数CARRY_OVER / 内部スタート状態RESELECT / 有利区間NOT_APPLICABLE。
-- **据え置き**: 天井G数CARRY_OVER。内部状態も据え置きを基本扱い。
-- **純電源OFF→ON**: 本機固有の天井G数・内部状態個別契約はUNVERIFIED_AFTER_RESEARCH。
-- **ゲーム数/天井**: 1680G+αで潜航モード。設定変更でもハマりG数を引き継ぐとする解析あり。固定短縮なし。
-- **モード/状態**: 設定変更後はスタートA〜E再抽選。スタートE選択率12.50〜25.00%。
-- **有利区間**: 非搭載のためNOT_APPLICABLE。有利区間ランプ変更判別もNOT_APPLICABLE。
-- **朝一恩恵/不利**: スタート状態再抽選。後年資料の引き戻し約25%は単一系統値。RAMクリア時内部バトルモード状態は設定変更とは別条件。
-- **変更判別**: 有利区間ランプ不可。本機固有ガックンはUNVERIFIED_AFTER_RESEARCH。設定変更でもハマりG数を引き継ぐため天井G数だけの単純判別不可。
-- **公開朝一数値**: スタートE 12.50/15.63/18.75/21.88/25.00/25.00%。後年資料で引き戻し約25%。
+### resetBehavior v0.7 — No.1495
+- **設定変更**: 有利区間RESET / 天井RESET / 内部状態RESELECT。
+- **据え置き**: 有利区間・天井・内部状態CARRY_OVER。
+- **純電源OFF→ON**: 有利区間・天井CARRY_OVER。CZ/ボーナス/AT中は元状態へ復帰とする解析あり。
+- **ゲーム数/天井**: BONUS最大599G、AT間1700〜2000G＋前兆。設定変更専用固定短縮なし。
+- **モード/状態**: 有利区間開始時ウリンカウンター200。全開始モード振り分けはUNVERIFIED_AFTER_RESEARCH。
+- **有利区間**: 設定変更RESET、据え置き/純電断CARRY_OVER。有利区間ランプ非搭載。
+- **朝一恩恵**: 初回BONUS時HAPPY魚群約30%→AT直行、設定1初回BONUSのAT期待度約60%。初回奇数BONUS抽選7.03%。
+- **変更判別**: 初期液晶では不可。50G以降の祭アイコン黒/赤が設定変更濃厚材料。有利区間ランプ不可。本機固有ガックンはUNVERIFIED_AFTER_RESEARCH。
 
-## 2022-04-18群 — CLOSED
-既知独立レコード:
-1. `十字架5` — **No.1491 処理済み**
-2. `超ギラギラ爺サマー` — **No.1492 処理済み**
-3. `パチスロ 月華 雅` — **No.1493 処理済み**
-4. `2027DB` — **No.1494 処理済み**
+## 2022-05-09群 — OPEN
+現在確認できる独立候補:
+1. `Sスーパー海物語IN JAPAN祭` — **No.1495 処理済み**
+2. `SLOT STEINS;GATE` — **未処理 / 2022-05-09を複数資料で確認**
+3. `ハナハナホウオウ～天翔～紫パネル`（型式 `Sハナハナホウオウ～天翔～GP`）— **未処理候補 / 2022年5月上旬追加導入、1月のLX/EX-30とは別型式**
 
-- なな徹2022年上半期回顧で4/18の4機（十字架5 / 超ギラギラ爺サマー / 月華 雅 / 2027DB）が一致。
-- PB機・別型式・25/30φ差・地域先行・延期/段階導入を含めて再監査。2027DB自体が20法人限定PB機であることを独立レコードとして取得済み。
-- 4/18群に追加すべき独立パチスロ機種を確認できなかったため **CLOSED_AFTER_CROSS_SOURCE_AUDIT**。
+### 日付監査メモ
+- K-Naviの2022-05カレンダーは `パチスロ ゼーガペイン2` を5/9群に掲載するが、HAZUSE実戦記事、ちょんぼりすた、イチカツ、ニコナナ導入前動画、5/27実戦報道はいずれも **2022-05-23導入**で一致。前倒し予定記事には5/9予定も存在する。
+- よって `ゼーガペイン2` は5/9群へ登録せず、**2022-05-23本線候補として保留**。導入予定変更による日付CONFLICTとして扱う。
+- なな徹上半期回顧も5月実導入を `5/9 スーパー海 / ハナハナGP / STEINS;GATE`、`5/23 けものフレンズ / ゼーガペイン2` と整理しており、現状はこちらを実導入時系列のcanonical候補とする。
 
 ## 次回本線の再開地点
-- **2022-04-19〜2022-05-08境界を最終確認後、No.1495候補 `Sスーパー海物語IN JAPAN祭`（2022-05-09）から継続。**
-- 2022-05-09群の既知候補は、K-Naviで `Sスーパー海物語IN JAPAN祭` / `パチスロ ゼーガペイン2` / `SLOT STEINS;GATE` / `ハナハナホウオウ～天翔～`。25φ/30φ・別型式・地域導入日の差を再確認して独立レコード判定する。
-- 性能コアとresetBehavior v0.7を同時収集し、公開値欠損は表記揺れ・型式・メーカー・シリーズ名と各リセット検索語を変え、十分再探索後のみUNVERIFIEDとする。
+- **No.1496候補 `SLOT STEINS;GATE`（2022-05-09）から継続。**
+- その後 `ハナハナホウオウ～天翔～紫パネル（GP）` を独立レコード化すべきか、既存1/24のLX/EX-30レコードとの型式差・パネル差・性能同一性をmain既存レコードと再照合して処理する。
+- 5/9群CLOSED後は5/10〜5/22境界を監査し、5/23群 `ぱちすろ けものフレンズ` / `パチスロ ゼーガペイン2` へ進む。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
-- 前回QAで `docs/real_machine_db/machines/2007-02-18_kamen-rider-dx-super-bike.md`（仮面ライダーDX〜走れ！スーパーバイク編）を再QA済み。
-- 今回は本線No.1494登録と4/18群CLOSED監査を優先し、遡及QAカーソルは進めていない。
+- 今回は本線No.1495登録を優先し、遡及QAカーソルは進めていない。
 - 次回遡及QAカーソル: **`docs/real_machine_db/machines/2007-02-18_kagaku-ninjatai-gatchaman.md`（科学忍者隊ガッチャマン）**。
 
 ## GitHub保存
-- No.1494追加 commit: `7b840596bb3076813aeffe556a78771481a2fd5b`
+- No.1495追加 commit: `ad8e0e1e73a2ad11ffd839b487a0b732d85f2af9`
 - `LATEST_HANDOFF.md`: この更新commitでmainへ反映。
 
 ## 主要出典 — 取得日 2026-09-12
-### No.1494 2027DB
-- https://hazuse.com/machine/pachislot/1S1836/genre/209/
-- https://p-kn.com/slot/3779/
-- https://p.hisshobon.jp/machine/3890/1/88235
-- https://www.p-world.co.jp/machine/database/9621
-- https://chonborista.com/slot/jps-slot/166743/
-- https://www.slopachi-quest.com/article/s2027-tenjou/
-- https://www.slopachi-quest.com/article/resets/
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/jps_slot/49/kh01.php
-- https://pachinko-curation.com/29563/
+### No.1495 Sスーパー海物語IN JAPAN祭
+- https://news.p-world.co.jp/articles/19764/nippon
+- https://news.p-world.co.jp/articles/20390/nippon
+- https://hazuse.com/machine/pachislot/1S1823/
+- https://p-kn.com/slot/3764/
+- https://1geki.jp/slot/s_sumi_ij_matsuri/
+- https://1geki.jp/slot/s_sumi_ij_matsuri/3/
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sanyo_slot/38/kr01.php
+- https://nana-press.com/kaiseki/machine/348/9242/
+- https://nana-press.com/kaiseki/machine/348/9245/
+- https://www.p-world.co.jp/machine/database/9603
+- https://chonborista.com/slot/sanyo-slot/165134/
+- https://ichikatsu.com/supersea-japan-matsuri/
 
-### 2022-04-18群監査 / 次境界
-- https://nana-press.com/post/1576830
+### 2022-05-09群 / 次境界監査
 - https://p-kn.com/calendar/202205/
 - https://1geki.jp/newmachinecalender/202205/
+- https://nana-press.com/post/1576830
+- https://hazuse.com/research/shida8/
+- https://chonborista.com/slot/yamasa-slot/164299/
+- https://ichikatsu.com/newslot2022/
+- https://news.p-world.co.jp/articles/19785/nippon
