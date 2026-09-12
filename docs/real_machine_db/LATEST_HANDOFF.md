@@ -1,101 +1,84 @@
 更新日: 2026-09-13
 
 ## 現在地点
-- recordCount: **1533**
-- latestRecordAdded: **SLOTとある科学の超電磁砲 — No.1533**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2022-11-07_slot-toaru-kagaku-no-railgun.md`
-- chronologicalFrontier: **2022-11-07**
-- frontierLatestMachine: **SLOTとある科学の超電磁砲 — No.1533**
+- recordCount: **1534**
+- latestRecordAdded: **Lバキ 強くなりたくば喰らえ!!! — No.1534**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2022-11-21_l-baki-tsuyoku-naritakuba-kurae.md`
+- chronologicalFrontier: **2022-11-21**
+- frontierLatestMachine: **Lバキ 強くなりたくば喰らえ!!! — No.1534**
 - schema: **resetBehavior v0.7**
-- status: **2022-11-07_GROUP_CLOSED_4_OF_4 / NEXT_2022-11-21_SMARTSLOT_LAUNCH_GROUP**
+- status: **2022-11-21_GROUP_OPEN_1_OF_3_CANONICAL_ACTUAL_LAUNCH / NEXT_VALVRAVE**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧表示の `docs/real_machine_db/INDEX.md`、最新 `LATEST_HANDOFF.md`、直前No.1532 `パチスロ鉄拳4アルティメットデビルVer.` を確認して開始。
+- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧表示の `docs/real_machine_db/INDEX.md`、最新 `LATEST_HANDOFF.md`、直前No.1533 `SLOTとある科学の超電磁砲` を確認して開始。
 - INDEXは19件の旧表示のためREADME規定どおり最新handoffとmain実レコードを進捗正本として扱った。
-- 前handoffの次候補 `SLOTとある科学の超電磁砲` をNo.1533として性能コア + resetBehavior v0.7で追加。
-- 型式 `Sとある科学の超電磁砲FB`、検定番号 `2S0622`、藤商事、2022-11-07導入をメーカー公式・公安委員会告示/検定再掲・業界資料・複数解析で照合。
-- 設定1〜6の機械割97.5/98.5/100.4/104.6/108.4/111.5%、超電磁砲CHANCE 1/295.2→1/213.7、Eternal Party RUSH 1/556.6→1/325.6、約36G/50枚、純増約2.7枚/G。
-- 超電磁砲CHANCE間天井700G+α、Eternal Party RUSH間天井1290G+α。
-- 設定変更は有利区間・天井・内部状態・とあるポイント・とあるパネルRESET。据え置きはCARRY_OVER。
-- 純電源OFF→ONは内部の天井/有利区間/状態/ポイント/パネルをCARRY_OVERする一方、朝一表示は御坂美琴ステージ・0pt・全ゲコ太パネルとなるため、設定変更と見た目が近い。表示と内部契約を分離して保存。
-- 設定変更後1回目のCZ「真剣抽選T」は約60%（全設定共通）。AT終了後1回目も約60%。通常を含む実質出現率18.0〜35.0%とは定義を分離。
-- 設定変更専用の短縮天井は確認されず、通常700G+α / RUSH間1290G+αを0から再計算。
-- 本機固有ガックン条件/発生率、設定変更専用の名称付きモード完全振り分けは検索語・資料系統を変えても固定できずUNVERIFIED/PUBLIC_FULL_DISTRIBUTION_NOT_FOUND_AFTER_RESEARCH。
+- 前handoffの次候補 `Lバキ 強くなりたくば喰らえ!!!` をNo.1534として性能コア + resetBehavior v0.7で追加。
+- 型式 `LバキL3`、オリンピア製、2022-11-21実導入を遊技日本・グリーンべると・Amusement Japan・解析資料で照合。検定番号は公的/業界一次で固定できずUNVERIFIED_AFTER_RESEARCH。
+- 設定1〜6の機械割97.5/98.6/101.2/103.8/106.8/110.4%、CZ 1/218.2→1/191.0、AT 1/355.6→1/299.2、約33.6G/50枚、AT純増約2.3枚/G、上位AT約4.0枚/G。
+- 通常最大天井600G+αでCZ、CZ3スルー後4回目CZでAT。
+- 設定変更は有利区間・天井・内部状態RESET、設定変更専用モード、範馬メーター/エンドルフィンポイント再セット。据え置き/純電断は内部CARRY_OVER。
+- 朝一表示は設定変更/据え置きとも液晶0G、範馬メーター非点灯、市街地ステージのため外観単独では判別困難。
+- 設定変更専用モード規定G数は100G+α 48.8%、300G+αまで累計76.5%。同モード後は天国A 66.4%。
+- 初期範馬メーターは0個50.0 / 1個25.0 / 2個18.4 / 3個6.3 / 4個0.4%。
+- 初期エンドルフィンポイントは設定別公開値を収録。
+- 本機固有ガックン条件/発生率は検索語・資料系統を変えても固定できずUNVERIFIED_AFTER_RESEARCH。
+- 設定3機械割は主要複数資料101.2%に対しスロパチクエスト100.4%があるため平均せずCONFLICT保持。
 
-## No.1533 — SLOTとある科学の超電磁砲
-- manufacturer: **藤商事**
-- formalModel: **Sとある科学の超電磁砲FB**
-- inspectionCode: **2S0622**
-- releaseDate: **2022-11-07**
-- generation/system: **6.5号機 / コンプリート機能搭載 / AT / CZ→チャンスAT→メインAT**
-- payoutRate: **97.5 / 98.5 / 100.4 / 104.6 / 108.4 / 111.5%**（設定1〜6）
-- 真剣抽選CZ: **1/107.7 → 1/103.4**
-- 超電磁砲CHANCE: **1/295.2 → 1/213.7**
-- Eternal Party RUSH: **1/556.6 → 1/325.6**
-- baseGamesPer50: **約36G/50枚**
-- netIncrease: **約2.7枚/G**
+## No.1534 — Lバキ 強くなりたくば喰らえ!!!
+- manufacturer: **オリンピア / 平和**
+- formalModel: **LバキL3**
+- inspectionCode: **UNVERIFIED_AFTER_RESEARCH**
+- releaseDate: **2022-11-21**
+- generation/system: **6.5号機 / スマートパチスロ初期 / AT / 上位AT搭載**
+- payoutRate: **97.5 / 98.6 / 101.2 / 103.8 / 106.8 / 110.4%**（設定1〜6、設定3別資料100.4% CONFLICT）
+- CZ「解放のカタルシス」: **1/218.2 → 1/191.0**
+- AT「オーガバトルボーナス」: **1/355.6 → 1/299.2**
+- baseGamesPer50: **約33.6G/50枚**
+- netIncrease: **約2.3枚/G / 上位約4.0枚/G**
 - coreStatus: **COMPLETE_CORE**
-- resetBehaviorQA: **COMPLETE_RESET_CORE_WITH_UNVERIFIED_GACKUN**
+- resetBehaviorQA: **COMPLETE_RESET_CORE_WITH_UNVERIFIED_GACKUN_AND_INSPECTION_CODE**
 
-### resetBehavior v0.7 — No.1533
-- **設定変更**: 有利区間・天井・内部状態・とあるポイント・とあるパネルRESET。
-- **据え置き**: 有利区間・天井・内部状態・ポイント・パネルCARRY_OVER。
-- **純電源OFF→ON**: 内部はCARRY_OVER。表示は御坂美琴ステージ / 0pt / 全ゲコ太パネルに戻る。
-- **ゲーム数・天井**: 超電磁砲CHANCE間700G+α、Eternal Party RUSH間1290G+α。設定変更専用短縮はNONE_CONFIRMED_AFTER_RESEARCH。
-- **モード・状態**: 内部状態RESET。名称付き朝一モード完全振り分けは未公開/未固定。
-- **有利区間**: 設定変更でRESET、据え置き/純電断でCARRY_OVER。エンディング到達はリセット契機。
-- **朝一恩恵**: 設定変更後1回目CZの上位CZ「真剣抽選T」出現率約60%（全設定共通）。
-- **朝一不利**: 前日の天井・状態・ポイント・パネル蓄積を失う。追加専用不利はNONE_CONFIRMED_AFTER_RESEARCH。
-- **変更判別**: 設定変更/据え置きとも朝一表示が同様で液晶初期表示では判別不可。ガックンはUNVERIFIED_AFTER_RESEARCH。
-- **公開朝一数値**: 初回真剣抽選T 約60%（全設定共通）。
+### resetBehavior v0.7 — No.1534
+- **設定変更**: 有利区間・天井・内部状態RESET。専用設定変更モード。範馬メーター/エンドルフィン再セット。
+- **据え置き**: 天井・モード・状態・範馬メーター等を内部CARRY_OVER。
+- **純電源OFF→ON**: 有利区間・天井・モード・状態・範馬メーター・エンドルフィンCARRY_OVER。表示は0G/非点灯へ戻る。
+- **ゲーム数・天井**: 最大600G+αでCZ。CZ3スルー後4回目CZでAT。設定変更時も最大値600G+αだが規定G振り分け優遇。
+- **モード**: 設定変更専用モード。100G+α 48.8%、300G+αまで76.5%。終了後天国A 66.4%。
+- **有利区間**: 設定変更でRESET、据え置き/純電断でCARRY_OVER。通常稼働中は強喰移行が主要リセット契機。
+- **朝一恩恵**: 専用モード + 初期範馬メーター抽選 + 初期エンドルフィン抽選。
+- **朝一不利**: 前日の天井・モード/状態・メーター・ポイント蓄積を失う。
+- **変更判別**: 見た目だけでは困難。前日メーター点灯数と当日挙動、内部ゲーム数由来のCZ当選G数が補助材料。ガックンUNVERIFIED。
+- **公開朝一数値**: 100G+前兆以内CZ約50%、300G+αまで76.5%、設定変更モード後天国A 66.4%、初期範馬メーター1個以上50.0%。
 
-## 2022-11-07群 — CLOSED 4/4 canonical
-1. **花火絶景（ミズホ）** — No.1530 済
-2. **ラストユートピア（ピーセカンド / パイオニア）** — No.1531 済
-3. **パチスロ鉄拳4アルティメットデビルVer.（山佐 / 山佐ネクスト）** — No.1532 済
-4. **SLOTとある科学の超電磁砲（藤商事）** — No.1533 済
+## 2022-11-21群 — OPEN 1/3 canonical actual launch
+1. **Lバキ 強くなりたくば喰らえ!!!（オリンピア）** — No.1534 済
+2. **パチスロ 革命機ヴァルヴレイヴ（SANKYO）** ← No.1535候補 / 次回最優先
+3. **スマスロリノヘブン / LアナザーリノヘブンCC（山佐）**
 
-### 境界監査
-- 2022年11月導入一覧・11/7一覧を再確認し、上記4機を本線canonicalとしてCLOSED。
-- `パチスロ幼女戦記（サミー）` は初期予定2022-11-07から延期され、実導入2022-12-05。11/7群には含めない。
-- PB・別型式・30Φ派生・地域先行・延期/段階導入を再探索したが、11/7本線へ追加すべき未処理機は今回確認されず。
-
-## 次群候補 — 2022-11-21 スマスロ市場導入開始
-業界資料で11/21導入の初期スマスロ3機を確認。
-1. **Lバキ 強くなりたくば喰らえ!!!（オリンピア/平和系）** ← No.1534候補 / 次回最優先
-2. **パチスロ 革命機ヴァルヴレイヴ（SANKYO）**
-3. **スマスロリノヘブン（山佐ネクスト）**
-
-- 11/21はスマートパチスロ市場導入開始日。上記3機を処理後、同日メダル機/PB/別型式/地域先行・延期を再監査して群CLOSED可否を判定する。
-
-## 遡及QA
-- `docs/real_machine_db/machines/2007-03_pikagorou-v-b.md` はmain上ですでに2026-09-11 QA済みで `coreStatus: COMPLETE_CORE / resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED`。
-- 新規本線を止めず、必要時にピカゴロウV-Bより後の最初の未QA/PARTIALレコードをmainから再探索する。
+### 境界監査メモ
+- 2022-09-01の日工組・日電協発表ではスマスロ販売予定4型式として `LバキL3 / L革命機ヴァルヴレイヴD / L HEY！エリートサラリーマン鏡PA4 / LアナザーリノヘブンCC` が挙げられていた。
+- ただし `HEY！エリートサラリーマン鏡` の実導入は複数業界資料で **2022-12-05**。11/21 actual launch群には含めず12/5群で処理する。
+- 11/21 actual launch本線は現時点でバキ / ヴァルヴレイヴ / リノヘブンの3機。3機処理後に同日メダル機/PB/別型式/地域先行・延期を再監査してCLOSED可否を判定する。
 
 ## 今回の主要資料
-### SLOTとある科学の超電磁砲
-- 藤商事公式: https://www.fujimarukun.co.jp/products/s_railgun/
-- PiDEA X / 東京都公安委員会検定再掲: https://www.pidea.jp/articles/1663809222
-- 広島県公安委員会告示第58号: https://www.pref.hiroshima.lg.jp/soumu/kenpo-pdf/2022/t069/2022-t069-010.pdf
-- P-WORLD / 遊技通信: https://news.p-world.co.jp/articles/21757/yugitsushin
-- グリーンべると: https://web-greenbelt.jp/post-64462/
-- 一撃 機種概要: https://1geki.jp/slot/s_railgun/
-- 一撃 天井/設定変更: https://1geki.jp/slot/s_railgun/3/
-- 一撃 真剣抽選T: https://1geki.jp/slot/s_railgun/46/
-- なな徹 朝一/設定変更: https://nana-press.com/kaiseki/machine/446/12372/
-- なな徹 設定判別: https://nana-press.com/kaiseki/machine/446/12375/
-- パチスロ必勝本系: https://p.hisshobon.jp/vpage/2491/1
-- 2022新台一覧監査: https://ichikatsu.com/newslot2022/
+### Lバキ
+- 遊技日本: https://news.p-world.co.jp/articles/21700/nippon
+- グリーンべると11/21導入: https://news.p-world.co.jp/articles/22278/greenbelt
+- Amusement Japanスマスロ販売正式決定: https://amusement-japan.co.jp/article/detail/10003024/
+- 一撃: https://1geki.jp/slot/s_baki_tk/
+- なな徹 朝一/設定変更: https://nana-press.com/kaiseki/machine/461/12575/
+- なな徹 通常時/範馬メーター: https://nana-press.com/kaiseki/machine/461/12577/
+- パチマガスロマガ 朝一/設定変更: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/olympia_slot/154/kr01.php
+- ちょんぼりすた: https://chonborista.com/slot/orinpia-slot/175097/
+- P-WORLD: https://www.p-world.co.jp/machine/database/9720
 
-### 2022-11-21境界
-- グリーンべると「スマスロとメダル機の共存時代のポイント」: https://web-greenbelt.jp/post-65236/
-- グリーンべると「スマスロの市場導入スタート」: https://web-greenbelt.jp/post-66262/
-- グリーンべると ヴァルヴレイヴ11/21: https://web-greenbelt.jp/post-66230/
-- グリーンべると リノヘブン11/21: https://web-greenbelt.jp/post-66232/
+### 11/21境界
+- Amusement Japan 2022-09-01: https://amusement-japan.co.jp/article/detail/10003024/
+- HEY!エリートサラリーマン鏡 12/5実導入: https://news.p-world.co.jp/articles/22405/greenbelt
 
 ## 保存コミット
-- No.1533追加: `af3bd9a03150293643b5f41d1eca52907d555a40`
+- No.1534追加: `8041b38a34eeda326183009e4dffaae195771206`
 - handoff更新: 本コミット
 
 ## 次回再開地点
-**本線はNo.1534候補 `Lバキ 強くなりたくば喰らえ!!!`（2022-11-21）から性能コア + resetBehavior v0.7を収集する。その後 `パチスロ 革命機ヴァルヴレイヴ` → `スマスロリノヘブン` の順で初期スマスロ群を処理し、11/21同日群をメダル機/PB/別型式/地域先行・延期まで再監査する。**
+**本線はNo.1535候補 `パチスロ 革命機ヴァルヴレイヴ`（2022-11-21）から性能コア + resetBehavior v0.7を収集する。その後 `スマスロリノヘブン / LアナザーリノヘブンCC` を処理し、11/21同日群をメダル機/PB/別型式/地域先行・延期まで再監査する。**
