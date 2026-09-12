@@ -1,97 +1,80 @@
 更新日: 2026-09-12
 
 ## 現在地点
-- recordCount: **1433**
-- latestRecordAdded: **マジカルハロウィン～Trick or Treat！～ — No.1433**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2021-09-21_magical-halloween-trick-or-treat.md`
-- chronologicalFrontier: **2021-09-21**
-- frontierLatestMachine: **マジカルハロウィン～Trick or Treat！～ — No.1433**
+- recordCount: **1434**
+- latestRecordAdded: **ファンキージャグラー2 — No.1434**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2021-10-04_funky-juggler-2.md`
+- chronologicalFrontier: **2021-10-04**
+- frontierLatestMachine: **ファンキージャグラー2 — No.1434**
 - schema: **resetBehavior v0.7**
-- status: **2021-09-21_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**
+- status: **2021-10-04_GROUP_OPEN_1_OF_5_KNOWN_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.1432「HIT128」を確認して開始。
+- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.1433「マジカルハロウィン～Trick or Treat！～」を確認して開始。
 - `INDEX.md` は旧19件表示のため、README規定どおり `LATEST_HANDOFF.md` とmain実レコードを正本として進捗判定。
-- handoff指定どおりNo.1433「マジカルハロウィン～Trick or Treat！～」を追加。
-- 2021-09-21群はHIT128 + マジカルハロウィンToTの2機を処理。2021年導入カレンダーと当時業界発表をクロス監査し、既知群をCLOSED。
-- 遡及resetBehavior QAは `2007-05_kidou-keisatsu-patlabor-x.md` を処理。既存 `COMPLETE_CORE` は維持し、reset側のみ `PARTIAL_RESEARCH_EXHAUSTED` へ更新。
-- Git追加履歴を追跡し、次の遡及QAカーソルを `2007-05_kemonocchi.md`（けものっち!）へ進めた。
+- handoff指定どおりNo.1434「ファンキージャグラー2」を追加。
+- 2021-10-04群は既知5機のうち1機処理済み。業界記事・導入カレンダー・店舗新台告知を照合し、少なくともファンキージャグラー2 / ツインエンジェルPARTY / タブー・タトゥー / ニューパルサーDX3 / かまいたちの夜を同日キューとして維持。
+- 遡及resetBehavior QAは今回本線を優先し、カーソル `2007-05_kemonocchi.md`（けものっち!）を維持。
 
-## No.1433 — マジカルハロウィン～Trick or Treat！～
-- path: `docs/real_machine_db/machines/2021-09-21_magical-halloween-trick-or-treat.md`
-- manufacturer: **コナミアミューズメント（製造元: ファイトクラブ）**
-- formalModel: **SマジカルハロウィンFP**
+## No.1434 — ファンキージャグラー2
+- path: `docs/real_machine_db/machines/2021-10-04_funky-juggler-2.md`
+- manufacturer: **北電子**
+- formalModel: **Sファンキージャグラー2KT**
 - certificationNumber: **UNVERIFIED_AFTER_RESEARCH**
-- releaseDate: **2021-09-21**
-- generation/system: **6.2号機 / A+ART**
+- releaseDate: **2021-10-04**
+- generation/system: **6号機 / ノーマル・完全告知**
 - settings: **1 / 2 / 3 / 4 / 5 / 6**
-- payoutRate: **97.3 / 98.4 / 100.0 / 103.2 / 105.1 / 107.0%**
-- bonusCombined: **1/169.8 / 1/168.0 / 1/166.3 / 1/163.0 / 1/161.4 / 1/159.8**
-- ART初当たり: **1/370.0 / 1/365.6 / 1/353.5 / 1/330.9 / 1/303.8 / 1/285.7**
-- baseGamesPer50: **解析系33.2〜34.1G/50枚。ただし導入時業界記事の設定1 32.2GとCONFLICT**
-- netIncrease: **約1.0枚/G**
-- coreStatus: **COMPLETE_CORE_WITH_BASE_GAMES_CONFLICT**
-- resetBehaviorQA: **COMPLETE_PUBLIC_RESET_CORE_WITH_INTERNAL_CZ_START**
+- payoutRate: **97.0 / 98.5 / 99.8 / 102.0 / 104.3 / 109.0%**
+- BIG: **1/266.4 / 1/259.0 / 1/256.0 / 1/249.2 / 1/240.1 / 1/219.9**
+- REG: **1/439.8 / 1/407.1 / 1/366.1 / 1/322.8 / 1/299.3 / 1/262.1**
+- bonusCombined: **1/165.9 / 1/158.3 / 1/150.7 / 1/140.6 / 1/133.2 / 1/119.6**
+- baseGamesPer50: **約42G/50枚**
+- basicPayout: **BIG約240枚 / REG約96枚**
+- coreStatus: **COMPLETE_CORE**
+- resetBehaviorQA: **COMPLETE_PUBLIC_RESET_CORE_NO_CEILING**
 
-### resetBehavior v0.7 — No.1433
-- **設定変更**: 333G天井・内部状態・有利区間RESET。内部的にCZ「詠唱チャレンジ」状態から開始。
-- **据え置き**: 天井・内部状態・有利区間CARRY_OVER。
-- **純電源OFF→ON**: 天井・内部状態・有利区間CARRY_OVER。
-- **ゲーム数/天井**: 通常時333Gで詠唱チャレンジ。設定変更専用の短縮天井は確認できず。
-- **モード/状態**: 通常時は内部モード0〜3等を持つが、設定変更専用の確率付き初期振り分けは未確認。朝一変更時は内部CZ開始を直接確認。
-- **有利区間**: 6.2号機・3000G。有利区間ランプは通常時基本消灯のため、朝一ランプ単独での変更判別は困難。
-- **朝一恩恵**: 内部CZ開始。3択コインこぼし後の6択リプレイ正解でART突入可能。解析では平均10G前後・実質ART突入率1/6以上という説明があるが、固定当選率としては扱わない。
-- **朝一不利**: 天井到達時の状態/モード依存追加恩恵は朝一CZには付かないとの解析あり。
-- **変更判別**: 朝一ガックン有無、3択コインこぼし後のリール挙動/ART突入を利用可能。ただし個体差・対策・ボーナス先当たりで不確定になるため「濃厚」止まり。
-- **公開朝一数値**: 333G天井、内部CZ開始、実質ART突入率1/6以上という解析表現を分離保存。
-- **CONFLICT**: 50枚ベースは設定1 33.2G（解析系） vs 32.2G（導入時業界記事）。平均化しない。
+### resetBehavior v0.7 — No.1434
+- **設定変更**: 公開攻略表ではG数RESET。ただし本機は天井・ゾーン非搭載で、短縮天井やモード恩恵は存在しない。
+- **据え置き/純電源OFF→ON**: 公開攻略表ではG数引継ぎ。天井非搭載なので性能上の天井狙いには結び付かない。
+- **モード/状態**: 朝一専用モード・高確等の公開情報は確認されずNOT_APPLICABLE扱い。
+- **有利区間**: ノーマルタイプのためNOT_APPLICABLE。
+- **朝一恩恵/不利**: 短縮天井・CZ/AT優遇等はなし。設定変更固有の出玉恩恵/不利は確認されない。
+- **変更判別**: 朝一1G目のリールガックンを設定変更濃厚材料として利用可能との複数ジャグラー系資料あり。店側の1G回し等の対策・前日出目変更・個体差があるため確定扱いしない。
+- **検定**: 型式 `Sファンキージャグラー2KT` と2021-04-12付検定通過は業界記事で確認したが、検定番号そのものは今回の再探索で直接固定できず。
 
-## 遡及QA — 機動警察パトレイバーX
-- path: `docs/real_machine_db/machines/2007-05_kidou-keisatsu-patlabor-x.md`
-- 性能側: **COMPLETE_CORE維持**。
-- reset側: **PARTIAL_RESEARCH_EXHAUSTED**。
-- 通常時スイカ契機25G RTの存在は高信頼解析で確認済み。
-- 設定変更/据え置き/純電断時の25G RT残G・内部RT状態・成立済みボーナス/告知状態、本機固有ガックン/初期出目判別は、当時解析・P-WORLD・古いDB・回顧資料へ検索語/系統を変えて再探索しても直接契約を固定できず。
-- 一般的5号機挙動による推測補完はしていない。
-
-## 2021-09-21群 — CLOSED
-1. **HIT128 — No.1432 / DONE**
-2. **マジカルハロウィン～Trick or Treat！～ — No.1433 / DONE**
-- 2021年導入日カレンダーでは9/21群はこの2機。業界記事でも両機の導入時期を照合し、次の主要導入群は2021-10-04。
+## 2021-10-04群 — OPEN
+1. **ファンキージャグラー2 — No.1434 / DONE**
+2. **パチスロツインエンジェルPARTY — No.1435候補 / NEXT**
+3. **パチスロ タブー・タトゥー — No.1436候補 / QUEUED**
+4. **ニューパルサーDX3 — No.1437候補 / QUEUED**
+5. **パチスロ かまいたちの夜 — No.1438候補 / QUEUED**
+- 群末尾で全メーカー・PB・地域先行・30Φ/別型式・延期/段階導入を再監査し、追加未処理がなければCLOSEDへ移行する。
 
 ## 次回本線の再開地点
-- **2021-10-04群 / No.1434候補: ファンキージャグラー2（北電子）**。
-- 同日既知キュー: **ファンキージャグラー2 → ツインエンジェルPARTY → タブー・タトゥー → ニューパルサーDX3 → かまいたちの夜**。
-- 各機で性能コア＋resetBehavior v0.7を収集し、群末尾でメーカー横断・PB・地域先行・別型式・延期/段階導入を再監査する。
+- **2021-10-04群 / No.1435候補: パチスロツインエンジェルPARTY（Sammy）**。
+- 性能コア＋resetBehavior v0.7を収集し、既存No.1434を無駄に再調査しない。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
-- 今回処理済み: `docs/real_machine_db/machines/2007-05_kidou-keisatsu-patlabor-x.md`（機動警察パトレイバーX）→ **PARTIAL_RESEARCH_EXHAUSTED**。
+- 前回処理済み: `docs/real_machine_db/machines/2007-05_kidou-keisatsu-patlabor-x.md`（機動警察パトレイバーX）→ **PARTIAL_RESEARCH_EXHAUSTED**。
 - 次回遡及QAカーソル: **`docs/real_machine_db/machines/2007-05_kemonocchi.md`（けものっち!）**。
-- カーソル根拠: パトレイバーX追加commit `f405c96c...` の直後に、けものっち!追加commit `fc18d719...` が続くGit追加履歴を確認。
 
 ## GitHub保存
-- No.1433追加 commit: `e7d9db9b61d79195cde2f99d48bdcfb179d19917`
-- パトレイバーX reset QA commit: `a10c0988484be41b7a6a427c876fac7c5974d3d0`
+- No.1434追加 commit: `fbf62be34125ff671092708ec483ce8680711a89`
 - `LATEST_HANDOFF.md`: この更新commitでmainへ反映。
 
 ## 主要出典 — 取得日 2026-09-12
-### No.1433 マジカルハロウィン～Trick or Treat！～
-- https://prtimes.jp/main/html/rd/p/000000075.000053327.html
-- https://news.p-world.co.jp/articles/17264/nippon
-- https://web-greenbelt.jp/post-50855/
-- https://nana-press.com/kaiseki/machine/144/4998/
-- https://nana-press.com/kaiseki/machine/144/5012/
-- https://ichikatsu.com/magihallo8/
-- https://slotjin.com/slot/magihallotot/
-- https://www.pachibee.jp/machines/kouryaku/221080001
+### No.1434 ファンキージャグラー2
+- https://news.p-world.co.jp/articles/18029/nippon
+- https://news.p-world.co.jp/articles/17759/nippon
+- https://hisshobon.news/analyze/4030/
+- https://slobase.jp/machines/funky-juggler2
+- https://ichikatsu.com/funkyjuggler2/
+- https://akirameruna.com/funky2-jug
+- https://jugglersnet.com/analysis/funky-juggler2
+- https://news.p-world.co.jp/articles/16311/greenbelt
 
-### 機動警察パトレイバーX reset QA
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/abilit_slot/16/abilit_slot_16.php
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/abilit_slot/16/c.php
-- https://www.p-world.co.jp/machine/database/4591
-- https://pachinko.hatenablog.jp/entry/2007/06/patlabor-X
-
-### 次群境界監査
+### 2021-10-04群境界
 - https://ichikatsu.com/newslot/
-- https://news.p-world.co.jp/articles/18048/greenbelt
+- https://news.p-world.co.jp/articles/18030/nippon
+- https://lon-lon.jp/senkawa/10%E6%9C%88%E6%96%B0%E8%A3%85%E9%96%8B%E5%BA%97%E2%91%A0/
