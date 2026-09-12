@@ -1,70 +1,64 @@
 更新日: 2026-09-12
 
 ## 現在地点
-- recordCount: **1481**
-- latestRecordAdded: **メルヘンクエスト — No.1481**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2022-02-21_meruhen-quest.md`
-- chronologicalFrontier: **2022-02-21**
-- frontierLatestMachine: **メルヘンクエスト — No.1481**
+- recordCount: **1482**
+- latestRecordAdded: **パチスロ デビル メイ クライ 5 — No.1482**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2022-03-07_devil-may-cry-5.md`
+- chronologicalFrontier: **2022-03-07**
+- frontierLatestMachine: **パチスロ デビル メイ クライ 5 — No.1482**
 - schema: **resetBehavior v0.7**
-- status: **2022-02-21_GROUP_CLOSED_3_OF_3_KNOWN_INDEPENDENT_RECORDS_PROCESSED**
+- status: **2022-03-07_GROUP_OPEN_1_OF_4_KNOWN_RECORDS_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前レコードNo.1480を確認して開始。
+- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前レコードNo.1481を確認して開始。
 - `INDEX.md` は旧19件表示のため、README規定どおり最新 `LATEST_HANDOFF.md` とmain実レコードを進捗正本として扱った。
-- 開始時点でmainはNo.1480「パチスロ 言い訳はさせないわよ by 激壇蜜」まで進行済み。既存値をやり直さず、handoff指定の2022-02-21群残り候補へ前進。
-- No.1481 `メルヘンクエスト` を追加。
-- 2022-02-21群の既知独立レコード `SLOTマッピー`、`パチスロ 言い訳はさせないわよ by 激壇蜜`、`メルヘンクエスト` の3機を処理済み。
-- メルヘンクエストはJPSの `Sオリスロ4AA / Sオリスロ4シリーズ（オリスロ4 PLUS系）` をベースにしたメルヘンワールド向けPB名称機。PB名称をベース機と混同せず独立レコード化。
-- 2022年新台カレンダーでは2/21の一般全国新台としてマッピー・激壇蜜を確認し、業界一次記事でPBのメルヘンクエストを追加確認。2/28に明確な新規パチスロ導入群は今回の横断検索で確認できず、次の明確な本線境界を2022-03-07とした。
+- 開始時点mainはNo.1481 `メルヘンクエスト` まで進行済み。handoff指定どおり2022-03-07群へ前進し、No.1482 `パチスロ デビル メイ クライ 5` を追加。
+- 2025年導入のスマスロ同名機 `スマスロ デビル メイ クライ5 スタイリッシュトライブ` は別機種として明示的に除外し、2022年機 `SデビルメイクライファイブXA / 1S1219` の情報だけを採用。
+- 2022-03-07群の既知4機のうち1機処理済み。群はOPENのまま。
 
-## No.1481 — メルヘンクエスト
-- path: `docs/real_machine_db/machines/2022-02-21_meruhen-quest.md`
-- manufacturer: **ジェイピーエス（JPS）**
-- formalModel: **Sオリスロ4AA**
-- inspectionCode: **UNVERIFIED_AFTER_RESEARCH**
-- releaseDate: **2022-02-21**
-- generation/system: **6.2号機表記あり / ノーマルAタイプ / PB機 / ボーナス主体**
-- settings: **5 / 6 / P**
-- payoutRateMarket: **99.4 / 100.6 / 102.3%**
-- payoutRateFullProcedure: **101.6 / 103.1 / 105.1%**
-- BIG: **1/172.5 / 1/218.5 / 1/218.5**
-- REG: **1/436.9 / 1/218.5 / 1/218.5**
-- bonusCombined: **1/123.7 / 1/109.2 / 1/109.2**
-- baseGamesPer50: **約36G一般表記 / 36.2～37.3Gイチゴ狙い / 38.0～41.6G小役全取得**
-- basicPayout: **BIG195枚 / REG最大104枚**
-- ceiling: **非搭載**
+## No.1482 — パチスロ デビル メイ クライ 5
+- path: `docs/real_machine_db/machines/2022-03-07_devil-may-cry-5.md`
+- manufacturer: **アデリオン（ユニバーサルエンターテインメント系）**
+- formalModel: **SデビルメイクライファイブXA**
+- inspectionCode: **1S1219**
+- releaseDate: **2022-03-07**
+- generation/system: **6.2号機 / 差枚数管理型AT / 周期抽選**
+- settings: **1 / 2 / 3 / 4 / 5 / 6**
+- payoutRate: **97.9 / 99.1 / 100.7 / 104.0 / 107.9 / 111.1%**
+- AT初当たり: **1/358.4 / 1/349.8 / 1/332.6 / 1/301.7 / 1/266.7 / 1/243.6**
+- baseGamesPer50: **約39.9G**
+- netIncrease: **約3.5枚/G**
+- basicPayout: **ATはSDTから開始。SDT平均約100.5枚。DMCボーナス20G、青7/赤7=1:1、SDTストック期待度約30%/70%。**
+- ceiling: **最大8周期 / ボス最大7体撃破でも天井**
 - coreStatus: **COMPLETE_CORE**
-- resetBehaviorQA: **COMPLETE_RESET_CORE_WITH_UNVERIFIED_MACHINE_SPECIFIC_STATE_POWER_AND_GAKKUN**
-- confidence: **HIGH_CORE_MEDIUM_GENERATION_RESET_NON_APPLICABLE_FIELDS_HIGH_MACHINE_SPECIFIC_STATE_POWER_GAKKUN_UNVERIFIED**
+- resetBehaviorQA: **COMPLETE_RESET_CORE_WITH_POWER_CYCLE_AND_GAKKUN_UNVERIFIED**
+- confidence: **HIGH_CORE_HIGH_RESET_POWER_CYCLE_GAKKUN_UNVERIFIED**
 
-### resetBehavior v0.7 — No.1481
-- **設定変更**: 天井非搭載。AT/CZ用モード・短縮天井はNOT_APPLICABLE。PLUS累積ポイント/ステータスと成立済みボーナス状態の設定変更時契約は再探索後もUNVERIFIED_AFTER_RESEARCH。
-- **据え置き**: 天井NOT_APPLICABLE。PLUS累積ポイント/ステータスと成立済みボーナス状態の据え置き時契約はUNVERIFIED_AFTER_RESEARCH。
-- **純電源OFF→ON**: 天井NOT_APPLICABLE。PLUS累積ポイント/ステータスと成立済みボーナス状態の純電断固有契約はUNVERIFIED_AFTER_RESEARCH。
-- **ゲーム数/天井**: NOT_APPLICABLE。天井非搭載。
-- **モード/状態**: AT/CZ用通常モード・朝一専用モードなし。通常時は小役払い出し1枚=1ptでPLUSポイントが累積し500ptごとに告知状態が上昇するが、リセット時の保持/初期化値は直接資料なし。
-- **有利区間**: ノーマルAタイプの朝一有利区間狙いに関する機種固有公開情報を確認できず、実用上NOT_APPLICABLEとして保存。
-- **朝一恩恵/不利**: 短縮天井・専用モード・CZ/AT優遇・設定変更専用ボーナス当選率は確認できず/該当なし。
-- **変更判別**: PLUSランプ/セグは通常ポイント状態表示用途。設定変更確定表示としては使わない。本機固有ガックンはUNVERIFIED_AFTER_RESEARCH。
-- **公開朝一数値**: PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH。
+### resetBehavior v0.7 — No.1482
+- **設定変更**: 周期天井・内部状態/モード・有利区間をRESET。1周期目から再開。
+- **据え置き**: 周期天井・内部状態/モード・有利区間をCARRY_OVER。
+- **純電源OFF→ON**: 2022年版に限定した直接資料を固定できず `UNVERIFIED_AFTER_RESEARCH`。2025年スマスロ同名機の電断表は転用しない。
+- **ゲーム数/天井**: 1周期100G+α。最大8周期。設定変更時は固定G数短縮ではなく周期を1周期目へリセットし、有利区間移行時に1周期/8周期を再抽選。
+- **モード/状態**: 設定変更でRESET/再抽選。設定変更後・AT終了後の1周期目はニコズショップおよびエンカウントバトル高確率状態への突入率100%。
+- **有利区間**: 設定変更でRESET、据え置きでCARRY_OVER。AT終了時にも有利区間リセット。
+- **朝一恩恵**: 初回1周期はニコズショップ100%（5G）＋エンカウントバトル高確率状態100%。
+- **変更判別**: 通常時は有利区間ランプ非点灯型なのでランプ消灯だけでは判別不可。非有利区間専用ステージが朝一に出れば設定変更濃厚。ただし前日AT終了直後ヤメは例外。本機固有ガックンは再探索後もUNVERIFIED。
+- **公開朝一/有利区間移行数値**: レア役以外の1周期選択率は設定1 3.5%、2 7.0%、3 7.0%、4 8.2%、5 16.0%、6 19.9%。弱レア役は全設定50.0%、強レア役は全設定87.5%。これは設定変更専用ではなく有利区間移行時共通値。
+- 導入時業界資料の「通常時初回周期AT突入率 約40%OVER」はリセット専用値ではないため定義を分けて保存。
 
-## 2022-02-21群の境界監査
-- 一般新台カレンダー: 2/21に `SLOTマッピー`、`言い訳はさせないわよ！by激壇蜜` を確認。
-- 業界一次記事: JPS×カツヨシ商事のPB `メルヘンクエスト` が2/21からメルヘンワールド各店へ導入と確認。
-- P-WORLD、HAZUSE、パチ7、パチマガスロマガ系でメルヘンクエストの独立稼働・スペックを照合。
-- PB/別名称・ベース型式 `Sオリスロ4AA` まで検索し、同一ベースの名称違いを別全国機として無制限に重複登録しない方針で、メルヘンクエストは実際のPB市場名称として独立登録。
-- 2/28導入の明確な新規パチスロ群は今回の検索で確認できず。次の明確な本線群は3/7。
-- status: **CLOSED**。後続QAで地域先行・別PB名称等の漏れが発見された場合は遡及追加する。
+## 2022-03-07群
+既知候補4機:
+1. `パチスロ デビル メイ クライ 5` — **No.1482 処理済み**
+2. `パチスロ蒼天の拳4` — 未処理
+3. `Sルパン三世` — 未処理
+4. `パチスロ TIGER ＆ BUNNY SP` — 未処理
+
+- status: **OPEN**。
+- 4機処理後、PB・別型式・30Φ/別スペック・地域先行・延期/段階導入を横断再監査してCLOSED可否を判定する。
 
 ## 次回本線の再開地点
-- **2022-03-07群のNo.1482候補 `パチスロ デビル メイ クライ 5` から処理。**
-- 同日既知候補は少なくとも次の4機:
-  1. `パチスロ デビル メイ クライ 5`
-  2. `パチスロ蒼天の拳4`
-  3. `Sルパン三世`
-  4. `パチスロ TIGER ＆ BUNNY SP`
-- 4機処理後、PB・別型式・地域先行・延期/段階導入を含めて2022-03-07群を再監査しCLOSED可否を判定する。
+- **No.1483候補 `パチスロ蒼天の拳4` から処理。**
+- その後 `Sルパン三世` → `パチスロ TIGER ＆ BUNNY SP` の順で2022-03-07群を継続。
 - 性能コアとresetBehavior v0.7を同時収集する。
 
 ## 遡及 resetBehavior QA
@@ -73,25 +67,20 @@
 - 次回遡及QAカーソル: **`docs/real_machine_db/machines/2007-03-04_pachislot-abarenbo-shogun.md`（パチスロ暴れん坊将軍）**。
 
 ## GitHub保存
-- No.1481追加 commit: `07077078d74239029df8ae21f0c1be73ed7b3876`
+- No.1482追加 commit: `b06756173628e7ac4ff5badbf9e1a8b2c340510d`
 - `LATEST_HANDOFF.md`: この更新commitでmainへ反映。
 
 ## 主要出典 — 取得日 2026-09-12
-### No.1481 メルヘンクエスト
-- https://web-greenbelt.jp/post-56150/
-- https://pachinko-curation.com/28698/
-- https://www.p-world.co.jp/machine/database/9589
-- https://hazuse.com/machine/pachislot/SX0044/
-- https://hazuse.com/machine/pachislot/SX0044/genre/201/
-- https://pachiseven.jp/machines/6501
-- https://pachiseven.jp/machines/6501/cutout/8
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/jps_slot/48/kh02.php
-- https://www.slopachi-quest.com/article/meruhenkuesuto-settei/
-- https://chonborista.com/slot/jps-slot/134601/
-
-### 2022-02-21群境界 / 次回2022-03-07群
-- https://ichikatsu.com/newslot2022/
-- https://web-greenbelt.jp/post-56150/
+### No.1482 パチスロ デビル メイ クライ 5
 - https://news.p-world.co.jp/articles/19753/nippon
-- https://pachiseven.jp/machines/6488/cutout/7
-- https://hazuse.com/machine/pachislot/1S1307/
+- https://yugi-nippon.com/pachinko-new-machine/post-49458/
+- https://hazuse.com/machine/pachislot/1S1219/
+- https://hazuse.com/machine/pachislot/1S1219/genre/201/
+- https://nana-press.com/kaiseki/machine/309/8257/
+- https://nana-press.com/kaiseki/machine/309/8263/
+- https://1geki.jp/slot/s_devilmaycry5/41/
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/aderion_slot/02/tj01.php
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/aderion_slot/02/at03-1.php
+- https://pachiseven.jp/machines/6481/cutout/9
+- https://flick7.net/slot/devilmaycry5__k.php
+- https://slotmethod.jp/archives/8656/
