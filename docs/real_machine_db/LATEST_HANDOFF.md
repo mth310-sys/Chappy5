@@ -1,96 +1,91 @@
 更新日: 2026-09-13
 
 ## 現在地点
-- recordCount: **1518**
-- latestRecordAdded: **ボンバーガール — No.1518**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2022-09-05_bomber-girl.md`
+- recordCount: **1519**
+- latestRecordAdded: **Sアバサー — No.1519**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2022-09-05_s-abasa.md`
 - chronologicalFrontier: **2022-09-05**
-- frontierLatestMachine: **ボンバーガール — No.1518**
+- frontierLatestMachine: **Sアバサー — No.1519**
 - schema: **resetBehavior v0.7**
-- status: **2022-09-05_GROUP_OPEN_4_OF_6_KNOWN_PROCESSED**
+- status: **2022-09-05_GROUP_OPEN_5_OF_6_KNOWN_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧表示の `docs/real_machine_db/INDEX.md`、最新 `LATEST_HANDOFF.md`、直前No.1517 `パチスロペルソナ5` を確認して開始。
+- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧表示の `docs/real_machine_db/INDEX.md`、最新 `LATEST_HANDOFF.md`、直前No.1518 `ボンバーガール` を確認して開始。
 - `INDEX.md` は完了済みレコード数19の旧表示のため、README規定どおり最新 `LATEST_HANDOFF.md` とmain実レコードを進捗正本として扱った。
-- handoff指定の次機種No.1518 `ボンバーガール` を性能コア＋resetBehavior v0.7で追加。
-- Greenbelt/P-WORLD、P-MEDIA、HAZUSE、1geki、パチマガスロマガ、なな徹、PiDEA、パチビー、Altema、イチカツ等を横断。
-- 2022-09-05導入、型式 `SボンバーガールPM`、検定番号 `2S0154`、KPE/コナミアミューズメント、6.5号機A+ATを固定。
-- 最終市場仕様は設定1/2/4/5/6の5段階。設定別機械割97.9〜108.2%、通常時BIG、CZ、AT初当り、約34.9G/50枚、純増0.7/2.5枚/G、白7約150枚/黒7約100枚、ベースアタック50G、ボンバータイム100G+α・約80%継続を複数資料で照合。
-- 天井は `CZ・BB・AT間460G+α` と `BB・AT間960G+α` の2系統で、いずれもATボンバータイムへ突入。
-- resetBehaviorは設定変更で有利区間/天井/内部状態RESET、約30G高確＋昼ステージ開始。据え置きは有利区間/天井/内部状態/ステージCARRY_OVER。
-- 純電源OFF→ONはAltema朝一比較で天井/内部状態/ステージ引継ぎを直接確認し、有利区間も据え置き契約としてCARRY_OVER。
-- 有利区間ランプ非搭載。朝一夕方・シロ作戦会議・クロ作戦会議等なら据え置き濃厚材料。昼開始のみでは確定不可。
-- 設定変更専用の固定短縮天井なし。設定変更専用モード振り分け、朝一約30G高確中の総当選率、本機固有ガックンは十分な再探索後も `UNVERIFIED_AFTER_RESEARCH`。
-- 導入前PiDEA資料に設定L欄がある一方、最終解析のパチマガスロマガは1/2/4/5/6の5段階を明記し、1geki/HAZUSEも同じ。平均・統合せず `CONFLICT_PRERELEASE_SECONDARY_VS_FINAL_MULTI_SOURCE` として保持。
+- handoff指定の次機種No.1519 `Sアバサー` を性能コア＋resetBehavior v0.7で追加。
+- Greenbelt/P-WORLD、遊技日本、HAZUSE、1geki、必勝本、K-Navi、ちょんぼりすた、イチカツ、ぱちんこキュレーション等を横断。
+- 2022-09-05導入、アムテックス製、6.2号機ノーマルAタイプ、25Φ/30Φ同時展開を固定。
+- 型式は25Φ `SアバサーM1`、30Φ `SアバサーA1-30`。30Φ検定番号はHAZUSEで `1S1953`。25Φ検定番号は再探索後も固定できずUNVERIFIED。
+- 25Φ/30Φは同一性能。設定1〜6機械割97.5〜107.0%、BIG 1/262.1〜1/245.5、REG 1/385.5〜1/245.5、合算1/156.0〜1/122.7、約36.5G/50枚、BIG平均約264枚・最大271枚、REG100枚。
+- 天井非搭載。AT/ART/CZ・天井モード・有利区間はNOT_APPLICABLE。
+- 設定変更/据え置き/純電断時の成立済みボーナスフラグ・告知状態、本機固有ガックン/初期出目等は検索語・型式・メーカーを変えて再探索しても直接資料を固定できず、一般的ノーマル機挙動から推測せず `UNVERIFIED_AFTER_RESEARCH`。
+- 設定変更専用の朝一恩恵/不利/公開朝一数値は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- 導入日は実導入系資料が2022-09-05で一致。Greenbelt事前記事のみ9/4予定のため事前予定値としてCONFLICT保持。
 
-## No.1518 — ボンバーガール
-- path: `docs/real_machine_db/machines/2022-09-05_bomber-girl.md`
-- manufacturer: **KPE / コナミアミューズメント**
-- formalModel: **SボンバーガールPM**
-- inspectionCode: **2S0154**
+## No.1519 — Sアバサー
+- path: `docs/real_machine_db/machines/2022-09-05_s-abasa.md`
+- manufacturer: **アムテックス / 平和**
+- formalModel: **SアバサーM1（25Φ） / SアバサーA1-30（30Φ）**
+- inspectionCode: **25Φ UNVERIFIED / 30Φ 1S1953**
 - releaseDate: **2022-09-05**
-- generation/system: **6.5号機 / A+AT / リアルボーナス+CZ+セット継続AT**
-- payoutRate: **設定1 97.9 / 2 99.1 / 4 101.5 / 5 104.4 / 6 108.2%**
-- 通常時BIG: **1/399.6 / 394.8 / 381.0 / 360.1 / 341.3**
-- CZ初当り: **1/83.7 / 81.2 / 77.3 / 74.3 / 72.8**
-- AT初当り: **1/350.1 / 336.1 / 312.6 / 297.3 / 286.9**
-- baseGamesPer50: **約34.9G/50枚（設定1）**
-- netIncrease: **通常AT約0.7枚/G / ラッシュタイム・上位AT約2.5枚/G**
-- basicPayout: **白7約150枚 / 黒7約100枚 / ベースアタック50G / ボンバータイム100G+α・約80%継続**
+- generation/system: **6.2号機 / ノーマルAタイプ / 完全告知**
+- payoutRate: **97.5 / 98.6 / 99.7 / 103.0 / 105.0 / 107.0%**
+- BIG: **1/262.1 / 260.1 / 257.0 / 252.1 / 250.1 / 245.5**
+- REG: **1/385.5 / 364.1 / 352.3 / 312.1 / 264.3 / 245.5**
+- 合算: **1/156.0 / 151.7 / 148.6 / 139.4 / 128.5 / 122.7**
+- baseGamesPer50: **約36.5G/50枚（設定1）**
+- basicPayout: **BIG平均約264枚・最大271枚 / REG100枚**
 - coreStatus: **COMPLETE_CORE**
-- resetBehaviorQA: **COMPLETE_RESET_CORE_WITH_SOURCE_LIMITS**
-- confidence: **INDUSTRY_HIGH_CORE / ANALYSIS_HIGH_RESET**
+- resetBehaviorQA: **PARTIAL_RESEARCH_EXHAUSTED**
+- confidence: **INDUSTRY_HIGH_CORE / ANALYSIS_HIGH_CORE / RESET_SOURCE_LIMITED**
 
-### resetBehavior v0.7 — No.1518
-- **設定変更**: 有利区間・天井・内部状態RESET。昼ステージ開始、約30G高確。
-- **据え置き**: 有利区間・天井・内部状態・ステージCARRY_OVER。
-- **純電源OFF→ON**: 天井・内部状態・ステージCARRY_OVER。有利区間も据え置き扱い。
-- **ゲーム数/天井**: CZ・BB・AT間460G+α / BB・AT間960G+α。設定変更専用短縮なし。
-- **モード/状態**: 設定変更専用モード振り分けはUNVERIFIED。内部状態は設定変更後約30G高確、据え置き/純電断で引継ぎ。
-- **有利区間**: 設定変更RESET / 据え置き・純電断CARRY_OVER。有利区間ランプ非搭載。
-- **朝一恩恵**: 約30G高確。高確中はCZ当選率とBIG成立時AT突入抽選が優遇。
-- **朝一不利**: `NONE_CONFIRMED_AFTER_RESEARCH`。
-- **変更判別**: ランプ不可。夕方/シロ作戦会議/クロ作戦会議開始は据え置き濃厚。昼開始は変更候補だが確定不可。ガックンUNVERIFIED。
-- **公開朝一数値**: 設定変更後約30G高確。
+### resetBehavior v0.7 — No.1519
+- **設定変更**: 天井/AT-CZモード/有利区間はNOT_APPLICABLE。成立済みボーナスフラグ・告知状態の機種固有契約はUNVERIFIED_AFTER_RESEARCH。
+- **据え置き**: 同上。天井・モード・有利区間はNOT_APPLICABLE。
+- **純電源OFF→ON**: 成立済みボーナスフラグ・告知状態の機種固有契約はUNVERIFIED_AFTER_RESEARCH。
+- **ゲーム数/天井**: 天井非搭載。
+- **モード/状態**: 朝一客AIに影響する専用モード/高確等なしを確認できる範囲ではNONE_CONFIRMED。
+- **有利区間**: NOT_APPLICABLE。
+- **朝一恩恵/不利**: NONE_CONFIRMED_AFTER_RESEARCH。
+- **変更判別**: 本機固有ガックン/初期出目/ランプ判別はUNVERIFIED_AFTER_RESEARCH。REG中/ボーナス終了時ランプは設定示唆であり変更判別とは別。
+- **公開朝一数値**: NONE_CONFIRMED_AFTER_RESEARCH。
 
-## 2022-09-05群 — OPEN 4/6 known
+## 2022-09-05群 — OPEN 5/6 known
 1. `スーパーリオエース` — **No.1515 処理済み**
 2. `ヴィーナスゾーン` — **No.1516 処理済み**
 3. `パチスロペルソナ5` — **No.1517 処理済み**
 4. `ボンバーガール` — **No.1518 処理済み**
-5. `Sアバサー` — **No.1519候補 / 未処理**
-6. `CREA～Newクレアの秘宝伝～` — 未処理
+5. `Sアバサー` — **No.1519 処理済み**
+6. `CREA～Newクレアの秘宝伝～` — **No.1520候補 / 未処理**
 
 群監査メモ:
 - Greenbelt/P-WORLD由来の2022-09-05群6機knownを継承。
+- Sアバサー25Φ/30Φは性能共通の同時展開派生として1レコードに統合し、両型式を保持。
 - 全known完了後にPB・別型式・地域先行・延期/段階導入を再監査し、追加候補があれば6機固定とせず増補する。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
-- `ニューハナハナ-30`: mainで既に `COMPLETE_WITH_SOURCE_LIMITS` のため重複処理しない。
-- `パチスロあっぱれ応援団`: 再QA済み。coreStatus `COMPLETE_CORE`維持、resetBehaviorQA `PARTIAL_RESEARCH_EXHAUSTED`。
 - 次回遡及QAカーソル: **`docs/real_machine_db/machines/2007-03-04_gaogao-festival-s.md`（ガオガオフェスティバルS）**。
+- 今回は本線No.1519の性能コア＋resetBehaviorと同日群継続を優先し、遡及QAカーソルは維持。
 
 ## 次回本線の再開地点
-- **No.1519候補 `Sアバサー` — 2022-09-05**。
-- 既存No.1515〜1518の性能コアはやり直さず、No.1519から性能コア＋resetBehavior v0.7を収集する。
-- 続いて `CREA～Newクレアの秘宝伝～` を処理し、2022-09-05群known完了後にPB・派生・地域先行・延期を横断してCLOSED可否を判定する。
+- **No.1520候補 `CREA～Newクレアの秘宝伝～` — 2022-09-05**。
+- 既存No.1515〜1519の性能コアはやり直さず、No.1520から性能コア＋resetBehavior v0.7を収集する。
+- No.1520処理後、2022-09-05群についてPB・派生・別型式・地域先行・延期/段階導入を横断再監査し、CLOSED可否を判定する。
 
 ## GitHub保存
-- No.1518追加 commit: `aaa65b26f89ee2dc4a05f90d9eccd6db445d2c62`
+- No.1519追加 commit: `501e6466aada8eaf14525353a9cadff6ca7e5f90`
 - `LATEST_HANDOFF.md`: この更新commitでmainへ反映。
 
 ## 主要出典 — 取得日 2026-09-13
-### No.1518 ボンバーガール
-- https://news.p-world.co.jp/articles/21194/greenbelt
-- https://p-media.info/post-28924/
-- https://hazuse.com/machine/pachislot/2S0154/
-- https://hazuse.com/machine/pachislot/2S0154/genre/201/
-- https://hazuse.com/machine/pachislot/2S0154/genre/207/
-- https://1geki.jp/slot/s_bomber_girl/
-- https://1geki.jp/slot/s_bomber_girl/4/
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/konami_slot/18/kh02.php
-- https://nana-press.com/kaiseki/machine/408/11250/
-- https://altema.jp/pachimo/bonbergirl
-- https://www.pidea.jp/articles/1660621668
-- https://www.pachibee.jp/machines/about/222070007
+### No.1519 Sアバサー
+- https://news.p-world.co.jp/articles/21163/greenbelt
+- https://yugi-nippon.com/pachinko-new-machine/post-52658/
+- https://hazuse.com/machine/pachislot/1S1953/
+- https://hazuse.com/machine/pachislot/1S1953/genre/207/
+- https://1geki.jp/slot/s_abaser/3/
+- https://p.hisshobon.jp/machine/3953/1/89811
+- https://chonborista.com/slot/amute/171305/
+- https://ichikatsu.com/newslot2022/
+- https://pachinko-curation.com/31757/
+- https://www.p-world.co.jp/machine/database/9683
