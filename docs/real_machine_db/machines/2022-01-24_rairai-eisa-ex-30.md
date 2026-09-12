@@ -122,9 +122,6 @@ sources:
   - url: https://www.slopachi-quest.com/article/rairaieisa-ex30-settei/
     sourceType: analysis-secondary
     usedFor: [releaseDate, settingStructure, settingAnalysisCrossCheck]
-  - url: https://pachisuro100.com/reset/
-    sourceType: retrospective-reset-database
-    usedFor: [resetBenefitCrossCheck]
   - url: https://www.marimo0925.net/pachislot-shinkisyu-ranraneisa/
     sourceType: prerelease-secondary
     usedFor: [preReleaseConflictingSpec]
@@ -146,5 +143,5 @@ conflicts:
 notes:
   - "オーイズミ公式PV（2021-09-28）の商品名表記は『来雷エイサー30』。導入後のP-WORLD/HAZUSE等では『来雷エイサーEX-30』、型式SライライエイサーEX-30として整理されているため、本DBのmachineNameは最終市場表記を採用。"
   - "純ボーナスノーマル機のため、天井・AT/CZモード・有利区間進行を『未確認』ではなくNOT_APPLICABLEとして区別した。"
-  - "リセット恩恵の一般整理資料は同機の個別行を検索で直接固定できなかったため、機種固有の設定変更挙動は推定で補完していない。"
+  - "機種名・正式型式・メーカー名と、設定変更/リセット/朝一/据え置き/電源OFF ON/ガックン等の検索語を組み替え、解析・古いDB・回顧系まで再探索したが、機種固有resetBehaviorの直接資料は固定できなかったため推定補完していない。"
 ```
