@@ -100,8 +100,8 @@ systemType: A+RT / ボーナス+完走型RT
 ## resetBehavior
 
 schemaVersion: v0.7
-resetQaStatus: PARTIAL
-resetQaLastUpdated: 2026-09-07
+resetQaStatus: PARTIAL_RESEARCH_EXHAUSTED
+resetQaLastUpdated: 2026-09-13
 
 ### settingChangeBehavior
 
@@ -167,17 +167,18 @@ resetQaLastUpdated: 2026-09-07
 
 ### resetBehavior 再探索メモ
 
-2026-09-07に再監査。
+2026-09-07および2026-09-13に再監査。
 
 - 表記揺れ: `パチスロあっぱれ応援団 / あっぱれ応援団 / KPE`。
 - 検索語: `設定変更 / リセット / 朝一 / 据え置き / 宵越し / 電源OFF ON / 電断 / RT引継ぎ / RT残り / 状態 / ガックン / 天井 / モード / 初期出目`。
 - 資料系統: コナミ公式アーカイブ、2007年当時業界記事、P-WORLD業界記事、旧パチマガスロマガ、古い機種DB、後年回顧・設定変更記事。
 - 性能コアとRT仕様は十分再確認できたが、本機固有の設定変更・据え置き・純電断時のRT処理を直接示す資料は発見できなかった。
-- 検索中に後年のKPE別機種（例: 爆音伝説サクラ）の設定変更/CZ情報が混入するため、別機種情報を本機へ転記しないことを明示。
+- 2026-09-13再監査でも資料系統と検索語を追加変更したが新たな直接契約は得られず、`PARTIAL_RESEARCH_EXHAUSTED` とした。
+- 検索中に後年のKPE別機種の設定変更/CZ情報が混入するため、別機種情報を本機へ転記しない。
 
 ## sources
 
-取得日: 2026-09-07（性能コア初回取得 2026-08-31、resetBehavior再QA 2026-09-07）
+取得日: 2026-09-13（性能コア初回取得 2026-08-31、resetBehavior再QA 2026-09-07 / 2026-09-13）
 
 1. コナミアミューズメント公式アーカイブ — パチスロあっぱれ応援団
    - https://www.konami.com/amusement/psm/archive/ps/2007/appare/
@@ -218,4 +219,4 @@ resetQaLastUpdated: 2026-09-07
 - 1000円あたりゲーム数は、当時業界発表の平均40Gと旧パチマガ解析の設定別37.04〜37.66G（3P RT非考慮）が存在。定義条件が異なるため平均化せず併記。
 
 coreStatus: COMPLETE_CORE
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
