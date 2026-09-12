@@ -1,76 +1,84 @@
 更新日: 2026-09-12
 
 ## 現在地点
-- recordCount: **1463**
-- latestRecordAdded: **沖ワニマル-30 — No.1463**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2022-01-17_okiwanimaru-30.md`
-- chronologicalFrontier: **2022-01-17**
-- frontierLatestMachine: **沖ワニマル-30 — No.1463**
+- recordCount: **1464**
+- latestRecordAdded: **ハナハナホウオウ～天翔～（25φ） — No.1464**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2022-01-24_hanahana-houoh-tensho-25.md`
+- chronologicalFrontier: **2022-01-24**
+- frontierLatestMachine: **ハナハナホウオウ～天翔～（25φ） — No.1464**
 - schema: **resetBehavior v0.7**
-- status: **2022-01-17_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**
+- status: **2022-01-24_GROUP_OPEN_1_OF_11_KNOWN_INDEPENDENT_RECORDS_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧 `docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.1462「沖ワニマル-25」を確認して開始。
+- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧 `docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.1463「沖ワニマル-30」を確認して開始。
 - `INDEX.md` は旧19件表示のため、README規定どおり最新 `LATEST_HANDOFF.md` とmain実レコードを進捗正本として扱った。
-- 開始時点は recordCount 1462 / 2022-01-17群OPEN 1/2。25φをやり直さず、未処理30φのみ調査・登録。
-- 2022-01-17群は新台カレンダー、25φ/30φ別型式、P-WORLD、HAZUSE等を再監査し、独立レコードは沖ワニマル-25/30の2機でCLOSED。
+- 開始時点のmainは recordCount 1463 / chronologicalFrontier 2022-01-17 / `2022-01-17_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT`。
+- 2022-01-18〜01-23境界を新台カレンダーで再監査し、1/17と1/24の間に本線へ追加すべき新規一般導入候補を確認できなかったため1/24群へ前進。
+- 「ハナハナホウオウ～天翔～」は25φ `Sハナハナホウオウ～天翔～LX / 0S1386` と30φ `Sハナハナホウオウ～天翔～EX-30 / 0S1174` が別型式・別検定番号で同日導入。公開性能は同一だが全機種方針に従い独立レコード化する。今回は25φをNo.1464として処理。
 
-## No.1463 — 沖ワニマル-30
-- path: `docs/real_machine_db/machines/2022-01-17_okiwanimaru-30.md`
-- manufacturer: **バルテック**
-- formalModel: **SオキワニマルAA-30**
-- certificationNumber: **1S0361**
-- releaseDate: **2022-01-17**
-- generation/system: **6.1号機 / AT / 完全告知 / 擬似ボーナス / 30φ**
+## No.1464 — ハナハナホウオウ～天翔～（25φ）
+- path: `docs/real_machine_db/machines/2022-01-24_hanahana-houoh-tensho-25.md`
+- manufacturer: **パイオニア**
+- formalModel: **Sハナハナホウオウ～天翔～LX**
+- certificationNumber: **0S1386**
+- releaseDate: **2022-01-24**
+- generation/system: **6.1号機 / ノーマル / 完全告知 / 25φ**
 - settings: **1 / 2 / 3 / 4 / 5 / 6**
-- payoutRate: **97.8 / 99.1 / 100.8 / 102.6 / 104.6 / 107.0%**
-- bonusInitialHit: **1G連除外合算 1/182 → 1/136**
-- baseGamesPer50: **36.7 / 36.8 / 36.9 / 37.1 / 37.4 / 38.0G**
-- netIncrease: **約7.0枚/G**
-- basicPayout: **BIG約301枚 / REG約106枚**
-- normalCeiling: **有利区間移行後 約999G → BIG。30φは天井到達時に裏モード移行確定。**
+- payoutRate: **97 / 99 / 101 / 103 / 106 / 109%**
+- bonusInitialHit: **BIG 1/297→1/236 / REG 1/496→1/337 / 合算 1/186→1/139**
+- baseGamesPer50: **約42G/50枚**
+- basicPayout: **BIG最大240枚 / REG最大120枚**
+- normalCeiling: **非搭載**
 - coreStatus: **COMPLETE_CORE**
 - resetBehaviorQA: **PARTIAL_RESEARCH_EXHAUSTED**
-- confidence: **HIGH_CORE_MEDIUM_RESET**
+- confidence: **HIGH_CORE_HIGH_RESET_WITH_BGM_HISTORY_UNVERIFIED**
 
-### resetBehavior v0.7 — No.1463
-- **設定変更 / 据え置き / 純電源OFF→ON**: 朝一解析欄に天井・有利区間ランプ・リセット恩恵・判別が「調査中」と残る。表記揺れ、型式名、メーカー名、朝一/リセット/据え置き/電源OFF ON/ガックン/有利区間で再探索したが、999G天井G・通常/裏モード・内部状態・有利区間の3者別契約を直接固定できず `UNVERIFIED_AFTER_RESEARCH`。
-- **天井**: 通常時約999GでBIG。30φのみ天井到達で裏モード移行確定。これは通常天井恩恵であり設定変更専用恩恵ではない。
-- **朝一公開数値**: 設定変更後1回目BIG終了時は**上パネル色変化/設定示唆が50%**。設定別の青/黄/緑/赤/虹振り分けもレコードへ保存。
-- **変更判別**: 本機固有ガックン、朝一有利区間ランプ、初期画面による直接判別は再探索後も未固定。ボーナス後消灯の試打観察は朝一判別契約へ流用しない。
-- **25φ/30φ差**: 30φ初当り・機械割はP-WORLD / なな徹 / HAZUSE / K-Naviで一致。25φとは別性能・別型式として独立保持。
+### resetBehavior v0.7 — No.1464
+- **設定変更**: 天井非搭載、AT/ART/CZモードなし。有利区間進行も朝一物差し上NOT_APPLICABLE。BETランプは設定変更でも引継ぎ、リールガックンは「ナシ」。設定変更専用の短縮天井・専用モード・主要恩恵/不利は非該当/確認なし。
+- **据え置き**: 天井・AT/CZ状態は非該当。BETランプ引継ぎ。BGM変化条件に関わる内部履歴のみ直接契約を固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- **純電源OFF→ON**: BETランプ引継ぎ、リールガックンなし。BGM変化条件は当時解析でも「現在調査中」のため `UNVERIFIED_AFTER_RESEARCH`。
+- **変更判別**: ガックンなし、BETランプは変更/電断双方で引継ぐため判別材料にならない。天井・朝一専用モード・有利区間ランプによる判別は非該当。
+- **公開朝一数値**: 設定変更専用の当選率、モード振り分け、短縮G数などの公開数値なし。
 
-## 2022-01-17群 — CLOSED
-1. **沖ワニマル-25 — No.1462 / DONE**
-2. **沖ワニマル-30 — No.1463 / DONE**
+## 2022-01-24群 — OPEN
+既知の独立レコード候補（今回の型式分離反映後）:
+1. **ハナハナホウオウ～天翔～（25φ） — No.1464 / DONE**
+2. **ハナハナホウオウ～天翔～-30（30φ） — No.1465候補 / NEXT**
+3. **ディスクアップ2**
+4. **聖闘士星矢 冥王復活**
+5. **新世紀エヴァンゲリオン～魂の共鳴～**
+6. **アラジンAクラシック**
+7. **南国物語30**
+8. **ハイスクールD×D2 ハーレム王に俺はなる**
+9. **ぱちスロ ギャグダー**
+10. **パチスロ春一番**
+11. **来雷エイサー30**
 
 ## 次回本線の再開地点
-- **2022-01-18〜01-23境界を最終監査後、2022-01-24群へ進む。**
-- 現時点の1/24既知候補: **ハナハナホウオウ～天翔～ / ディスクアップ2 / 聖闘士星矢 冥王復活 / 新世紀エヴァンゲリオン～魂の共鳴～ / アラジンAクラシック / 南国物語30 / ハイスクールD×D2 ハーレム王に俺はなる / ぱちスロ ギャグダー / パチスロ春一番 / 来雷エイサー30**。
-- 1/24群の前後には **2022-01-25 ブルーファルコン（玉越PB）** があるため、1/24群処理後の境界監査で日付を混同しない。
-- 次の先頭候補は **2022-01-24「ハナハナホウオウ～天翔～」No.1464候補**。同日群は別型式/30φ/PB/地域先行/延期も再監査してからCLOSED判定する。
+- **No.1465候補「ハナハナホウオウ～天翔～-30」— 2022-01-24。**
+- 型式 `Sハナハナホウオウ～天翔～EX-30`、検定番号 `0S1174`。25φと公開性能は同一だが別型式・30φのため独立登録する。
+- 30φ処理後は **ディスクアップ2** へ進む。
+- 1/24群完了後、別型式/25φ・30φ/PB/地域先行/延期・段階導入を再監査してCLOSED判定する。
+- **2022-01-25 ブルーファルコン（玉越PB）** を1/24群と混同しない。
+- 25φの後発紫パネル `Sハナハナホウオウ～天翔～GP` は2022-05上旬導入の別型式であり、1/24群へ重複登録しない。時系列到達時に独立性を再確認する。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
 - 前回処理済み: `docs/real_machine_db/machines/2007-01_aa-warera-nihonmatsu-judobu.md`（嗚呼!我ら日本松柔道部）→ **PARTIAL_RESEARCH_EXHAUSTED**。
 - 次回遡及QAカーソル: **`docs/real_machine_db/machines/2007-01_karate-baka-ichidai.md`（空手バカ一代）**。
-- 今回は本線の30φ独立レコードと1/17群CLOSED監査を優先し、遡及QAカーソルは動かしていない。
+- 今回は本線の2022-01-24群開始を優先し、遡及QAカーソルは動かしていない。
 
 ## GitHub保存
-- No.1463追加 commit: `a71c4feb853de0b013e9473ab797b3844feffba2`
+- No.1464追加 commit: `a0e0dfda1730840a3c899d2d8f8a92cee7289bad`
 - `LATEST_HANDOFF.md`: この更新commitでmainへ反映。
 
 ## 主要出典 — 取得日 2026-09-12
-### No.1463 沖ワニマル-30
-- https://www.p-world.co.jp/machine/database/9486
-- https://nana-press.com/kaiseki/machine/282/
-- https://nana-press.com/kaiseki/machine/282/7825/
-- https://nana-press.com/kaiseki/machine/282/7830/
-- https://nana-press.com/kaiseki/machine/282/7827/
-- https://nana-press.com/kaiseki/machine/282/7837/
-- https://www.slopachi-quest.com/article/okiwanimaru30-settei/
-- https://www.slopachi-quest.com/article/okiwanimaru30-tenjou/
-- https://hazuse.com/machine/pachislot/1S0361/
-- https://p-kn.com/slot/3719/
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/baltech_slot/63/bn01.php
+### No.1464 ハナハナホウオウ～天翔～（25φ）
+- https://www.slot-pioneer.co.jp/information/hanahana_houoh_tensho.html
+- https://news.p-world.co.jp/articles/18115/nippon
+- https://news.p-world.co.jp/articles/19304/nippon
+- https://news.p-world.co.jp/articles/18117/yugitsushin
+- https://hazuse.com/machine/pachislot/0S1386/
+- https://p.hisshobon.jp/machine/3792/1/85421
+- https://www.nankaikoya.jp/hanahana-houou-tensho/
 - https://ichikatsu.com/newslot2022/
