@@ -1,95 +1,94 @@
 更新日: 2026-09-12
 
 ## 現在地点
-- recordCount: **1487**
-- latestRecordAdded: **ぱちスロ ウルトラマンタロウ 暴君SPEC — No.1487**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2022-04-04_ultraman-taro-bokun-spec.md`
+- recordCount: **1488**
+- latestRecordAdded: **パチスロひぐらしのなく頃に祭2 カケラ遊び編 — No.1488**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2022-04-04_higurashi-matsuri2-kakera-asobi.md`
 - chronologicalFrontier: **2022-04-04**
-- frontierLatestMachine: **ぱちスロ ウルトラマンタロウ 暴君SPEC — No.1487**
+- frontierLatestMachine: **パチスロひぐらしのなく頃に祭2 カケラ遊び編 — No.1488**
 - schema: **resetBehavior v0.7**
-- status: **2022-04-04_GROUP_OPEN_1_OF_4_KNOWN_PROCESSED**
+- status: **2022-04-04_GROUP_OPEN_2_OF_4_KNOWN_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧 `docs/real_machine_db/INDEX.md`、最新 `LATEST_HANDOFF.md`、直前No.1486 `沖縄フェスティバル-30` を確認して開始。
+- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧 `docs/real_machine_db/INDEX.md`、最新 `LATEST_HANDOFF.md`、直前No.1487 `ぱちスロ ウルトラマンタロウ 暴君SPEC` を確認して開始。
 - `INDEX.md` は旧19件表示のため、README規定どおり最新 `LATEST_HANDOFF.md` とmain実レコードを進捗正本として扱った。
-- No.1486 handoff指定の2022-03-29〜04-03境界を確認し、次の既知実導入群2022-04-04へ進行。
-- 2022-04-04群の先頭候補 `ぱちスロ ウルトラマンタロウ 暴君SPEC` をNo.1487として登録。
-- メーカー公式・業界記事・HAZUSE・必勝本・一撃・ちょんぼりすた等で性能コアを複数照合。
-- 型式 `SパチスロウルトラマンタロウMG`、検定番号 `1S1213`、5段階設定1/2/4/5/6、機械割97.6〜110.1%、AT初当り1/472.0〜1/152.2、約32.9G/50枚、純増約2.7枚/Gを確定。
-- 天井は9周期消化またはメカカウンタ0pt到達でCZ濃厚。1周期は約78G、解析上9周期は約900G前後目安。
-- resetBehaviorはHAZUSEの設定変更/電源ON・OFF比較表を軸に複数資料で照合し、設定変更で天井・有利区間・ウルトラLEVEL・内部状態RESET、純電源OFF→ONはCARRY_OVERとして保存。据え置きもCARRY_OVERとして整理。
-- 朝一有利区間ランプは通常時点灯型。消灯=設定変更濃厚、点灯=据え置き濃厚。ただし前日終了状態や店舗対策は例外。
-- 有利区間リセット後CZについて資料表現が競合。HAZUSEは『有利区間リセットでCZに突入するタイプ』、別解析は設定変更後を例外扱い/一部内部CZの可能性とするため、設定変更時CZ確定とはせずCONFLICTとして保持。
-- 当時公開実戦メモに朝一266台中11台が2G当選（約4.1%）という観測があるが、設定変更済みのみの母集団ではないためLOW_CONFIDENCE_EMPIRICALとして仕様値から分離。
-- 本機固有ガックン条件/発生率、設定変更時専用のウルトラLEVEL/内部状態振り分け、確定的な朝一内部CZ率は検索語・資料系統変更後も固定できず `UNVERIFIED_AFTER_RESEARCH`。
-- 遡及QAは本線No.1487を優先し、カーソルを据え置いた。
+- mainはNo.1487まで進行済みだったため、handoff指定の2022-04-04群2機目 `パチスロひぐらしのなく頃に祭2 カケラ遊び編` をNo.1488として登録。
+- 業界資料、検定通過記事、HAZUSE、なな徹、イチカツ、スロパチクエスト、ちょんぼりすた等で性能コアとresetBehaviorを横断照合。
+- 型式 `Sひぐらしのなく頃に祭2カケラ遊び編L5`、検定番号 `1S1826`、6.4号機AT、設定1〜6を確認。
+- 市場想定機械割97.8/98.8/99.7/100.9/102.2/104.0%、完全攻略100.5/101.7/102.7/104.0/105.4/108.3%。技術介入条件が異なるため2系列を混ぜず保持。
+- 初当り1/249.5〜1/192.5、約43.5〜44.1G/50枚、疑似ボーナス純増約7.8枚/G。初当り青7約47枚、赤7約266枚、BIG平均約266枚、オヤシロBIG平均約377枚。
+- 天井は有利区間1500G、液晶カレンダー7月1日（平均約650G）、CZ6回スルー後7回目突破濃厚の3系統。
+- resetBehaviorは設定変更で天井・内部状態・有利区間RESET。据え置き/純電源OFF→ONはCARRY_OVERとして整理。
+- 有利区間リセット後はCZ `絶対意思ZONE` へ移行する説明を業界資料・解析で確認。CZ一般成功期待度約42%を朝一比較値として保持するが、設定変更専用成功率とは扱わない。
+- 本機は6.4号機で有利区間ランプによる変更判別不可。朝一開始ステージが判別材料だが、資料間で `祭具殿` と `古手神社` が競合するためCONFLICTとして保持。
+- 本機固有ガックン条件/発生率、設定変更専用モード/状態振り分け、設定変更専用CZ成功率は検索語・資料系統変更後も固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 初当り設定6は複数解析1/192.5に対し一部業界記事1/192.7表記があり、平均化せずalternateを保持。
+- 遡及QAは本線No.1488を優先し、カーソルを据え置いた。
 
-## No.1487 — ぱちスロ ウルトラマンタロウ 暴君SPEC
-- path: `docs/real_machine_db/machines/2022-04-04_ultraman-taro-bokun-spec.md`
-- manufacturer: **オッケー.（京楽系）**
-- formalModel: **SパチスロウルトラマンタロウMG**
-- inspectionCode: **1S1213**
+## No.1488 — パチスロひぐらしのなく頃に祭2 カケラ遊び編
+- path: `docs/real_machine_db/machines/2022-04-04_higurashi-matsuri2-kakera-asobi.md`
+- manufacturer: **オーイズミラボ（販売：オーイズミ）**
+- formalModel: **Sひぐらしのなく頃に祭2カケラ遊び編L5**
+- inspectionCode: **1S1826**
 - releaseDate: **2022-04-04**
-- generation/system: **6.2号機 / AT**
-- settings: **1 / 2 / 4 / 5 / 6**
-- payoutRate: **97.6 / 98.8 / 102.5 / 106.4 / 110.1%**
-- AT初当り: **1/472.0 / 1/341.8 / 1/264.7 / 1/212.8 / 1/152.2**
-- CZ: **1/207.8 / 1/173.7 / 1/149.6 / 1/133.7 / 1/109.6**
-- 特殊CZ: **1/2167.3 / 1/1748.6 / 1/1470.1 / 1/1262.3 / 1/925.7**
-- baseGamesPer50: **約32.9G/50枚**
-- netIncrease: **約2.7枚/G**
-- basicPayout: **AT 1セット37G+α（30G+α + 継続バトル7G） / 継続率約80%（設定1）**
-- ceiling: **9周期消化 or メカカウンタ0ptでCZ濃厚**
+- generation/system: **6.4号機 / 技術介入要素あり高純増疑似ボーナスAT**
+- settings: **1 / 2 / 3 / 4 / 5 / 6**
+- payoutRateMarket: **97.8 / 98.8 / 99.7 / 100.9 / 102.2 / 104.0%**
+- payoutRateFullStrategy: **100.5 / 101.7 / 102.7 / 104.0 / 105.4 / 108.3%**
+- initialHit: **1/249.5 / 1/238.9 / 1/228.6 / 1/220.5 / 1/208.7 / 1/192.5**
+- baseGamesPer50: **約43.5〜44.1G/50枚**
+- netIncrease: **疑似ボーナス約7.8枚/G**
+- basicPayout: **惨劇BONUS約47枚 / BIG平均約266枚 / オヤシロBIG平均約377枚**
+- ceiling: **有利区間1500G / カレンダー7月1日平均約650G / CZ7回目突破濃厚**
 - coreStatus: **COMPLETE_CORE**
-- resetBehaviorQA: **COMPLETE_RESET_CORE_WITH_MINOR_UNVERIFIED**
+- resetBehaviorQA: **COMPLETE_RESET_CORE_WITH_CONFLICT**
 - confidence: **HIGH**
 
-### resetBehavior v0.7 — No.1487
-- **設定変更**: 天井・有利区間・ウルトラLEVEL・内部状態RESET。固定短縮天井は確認できず。
-- **据え置き**: 天井進行・ウルトラLEVEL・内部状態・有利区間CARRY_OVER。
-- **純電源OFF→ON**: 天井・ウルトラLEVEL・内部状態・有利区間CARRY_OVER。
-- **ゲーム数/天井**: 設定変更で周期進行/メカカウンタ天井をリセット。据え置き/電断は引継ぎ。
-- **モード/状態**: 設定変更でRESET。ただし初期振り分け公開値は未確認。
-- **有利区間**: 設定変更でRESET。通常時はランプ点灯型。
-- **朝一恩恵/不利**: 固定短縮天井なし。朝一内部CZの可能性はあるが設定変更時確定とはしない。不利数値は確認できず。
-- **変更判別**: WIN表示右下ドット。朝一消灯=設定変更濃厚、点灯=据え置き濃厚。例外あり。
-- **公開朝一数値**: 確定的なreset専用抽選値なし。参考観測として朝一266台中11台が2G当選=約4.1%があるが、設定変更専用値ではないためLOW_CONFIDENCE_EMPIRICAL。
-- **CONFLICT**: 有利区間リセット後CZの扱い。設定変更時CZ確定とはせず、資料差をレコード内保持。
+### resetBehavior v0.7 — No.1488
+- **設定変更**: 天井・内部状態・有利区間RESET。新規有利区間開始後はCZ状態へ。
+- **据え置き**: 天井進行・内部状態・有利区間CARRY_OVER。
+- **純電源OFF→ON**: 天井・内部状態・有利区間CARRY_OVER。
+- **ゲーム数/天井**: 設定変更で3系統の進行をリセット。据え置き/電断は引継ぎ。
+- **モード/状態**: 設定変更でRESET。専用振り分け数値は未確認。
+- **有利区間**: 設定変更でRESET。本機は有利区間ランプによる朝一判別不可。
+- **朝一恩恵/不利**: 有利区間リセット後CZへ。CZ一般成功期待度約42%。固定短縮天井は確認できず。不利の確定数値なし。
+- **変更判別**: 開始ステージが主要材料。ただし `祭具殿` / `古手神社` で資料CONFLICT。ランプ判別不可。
+- **公開朝一数値**: CZ一般成功期待度約42%を適用可能値として保持。リセット専用成功率・専用モード振り分けは未確認。
+- **UNVERIFIED_AFTER_RESEARCH**: 本機固有ガックン、設定変更専用モード/状態振り分け、リセット専用CZ成功率。
 
 ## 2022-04-04群
 既知候補:
 1. `ぱちスロ ウルトラマンタロウ 暴君SPEC` — **No.1487 処理済み**
-2. `パチスロひぐらしのなく頃に祭2 カケラ遊び編` — **No.1488候補 / 未処理**
+2. `パチスロひぐらしのなく頃に祭2 カケラ遊び編` — **No.1488 処理済み**
 3. `SLOTえとたま` — **No.1489候補 / 未処理**
 4. `パチスロ この素晴らしい世界に祝福を！` — **No.1490候補 / 未処理**
 
-- status: **OPEN_1_OF_4_KNOWN_PROCESSED**。
+- status: **OPEN_2_OF_4_KNOWN_PROCESSED**。
 - 群CLOSED判定は4機処理後、PB・別型式・25/30φ差・地域先行・延期/段階導入まで再監査して行う。
 
 ## 次回本線の再開地点
-- **No.1488候補 `パチスロひぐらしのなく頃に祭2 カケラ遊び編` から継続。**
-- 次いで `SLOTえとたま` → `パチスロ この素晴らしい世界に祝福を！` の順で2022-04-04群を処理する。
+- **No.1489候補 `SLOTえとたま` から継続。**
+- 次いで `パチスロ この素晴らしい世界に祝福を！` を処理し、2022-04-04群を横断再監査してCLOSED可否を判定する。
 - 性能コアとresetBehavior v0.7を同時収集し、公開値欠損は検索語・資料系統を変えて十分再探索後のみUNVERIFIEDとする。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
-- 今回は本線No.1487を優先し、遡及QAは未実施。
+- 今回は本線No.1488を優先し、遡及QAは未実施。
 - 次回遡及QAカーソル: **`docs/real_machine_db/machines/2007-02-18_kamen-rider-dx-super-bike.md`（仮面ライダーDX〜走れ！スーパーバイク編）**を維持。
 
 ## GitHub保存
-- No.1487追加 commit: `f3e705c5664083d3b8e1588cce024f5ec31f40ef`
+- No.1488追加 commit: `440432468220c9de8057317dc320fffe785ff9a9`
 - `LATEST_HANDOFF.md`: この更新commitでmainへ反映。
 
 ## 主要出典 — 取得日 2026-09-12
-### No.1487 ぱちスロ ウルトラマンタロウ 暴君SPEC
-- https://www.kyoraku.co.jp/news/detail/621
-- https://news.p-world.co.jp/articles/20093/nippon
-- https://www.p-world.co.jp/machine/database/9609
-- https://hazuse.com/machine/pachislot/1S1213/
-- https://p.hisshobon.jp/machine/3868/1/88173
-- https://chonborista.com/slot/kyoraku-slot/165309/
-- https://1geki.jp/slot/s_ultraman_taro/
-- https://slot-seven.com/ultramantaro-tenzyou/
-- https://ichikatsu.com/ultramantaro/
-- https://mokkun7.com/victory/tarou-slot/
-- https://news.p-world.co.jp/articles/18388/nippon
+### No.1488 パチスロひぐらしのなく頃に祭2 カケラ遊び編
+- https://news.p-world.co.jp/articles/19472/nippon
+- https://news.p-world.co.jp/articles/19773/nippon
+- https://www.yugitsushin.jp/news/maker/20220307-2100/
+- https://p-bomb.co.jp/industry/new-machine/3604/
+- https://hazuse.com/machine/pachislot/1S1826/
+- https://nana-press.com/kaiseki/machine/338/8710/
+- https://nana-press.com/kaiseki/machine/338/8712/
+- https://ichikatsu.com/higurashi2kakera/
+- https://www.slopachi-quest.com/article/higurashi-maturi2-kakeraasobi-tenjou/
+- https://chonborista.com/slot/oizumi-slot/165265/
