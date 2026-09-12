@@ -1,55 +1,53 @@
 更新日: 2026-09-12
 
 ## 現在地点
-- recordCount: **1469**
-- latestRecordAdded: **パチスロアラジンAクラシック — No.1469**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2022-01-24_aladdin-a-classic.md`
+- recordCount: **1470**
+- latestRecordAdded: **パチスロ南国物語30 — No.1470**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2022-01-24_nangoku-monogatari-30.md`
 - chronologicalFrontier: **2022-01-24**
-- frontierLatestMachine: **パチスロアラジンAクラシック — No.1469**
+- frontierLatestMachine: **パチスロ南国物語30 — No.1470**
 - schema: **resetBehavior v0.7**
-- status: **2022-01-24_GROUP_OPEN_6_OF_11_KNOWN_INDEPENDENT_RECORDS_PROCESSED**
+- status: **2022-01-24_GROUP_OPEN_7_OF_11_KNOWN_INDEPENDENT_RECORDS_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧 `docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.1468「新世紀エヴァンゲリオン～魂の共鳴～」を確認して開始。
+- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧 `docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.1469「パチスロアラジンAクラシック」を確認して開始。
 - `INDEX.md` は旧19件表示のため、README規定どおり最新 `LATEST_HANDOFF.md` とmain実レコードを進捗正本として扱った。
-- handoff指定どおり、2022-01-24群の次機種 `パチスロアラジンAクラシック` をNo.1469へ追加。
-- 性能コアは業界一次/準一次、P-WORLD/GreenBelt系記事、1geki、HAZUSE、なな徹等で照合。設定1〜6の機械割97.6〜108.8%、AC+BIG初当たり1/275.3〜1/176.4、約32.2G/50枚、AT純増約2.9枚/Gを保存。
-- 正式型式 `S アラジンクラシック KF`、製造元銀座、検定番号 `1S1061` を業界検定通過資料とHAZUSEで照合。
-- 通常本天井は通常時1200GでAC+状態突入濃厚。AC単発時は天井G数を引き継ぐ。有利区間開始後または状態準備終了後310G消化で約25%の救済AC抽選あり。
-- resetBehavior v0.7は設定変更で有利区間・天井・内部状態RESET、据え置きで同3項目CARRY_OVER。純電源OFF→ONも有利区間・天井・内部状態CARRY_OVERを複数解析で直接確認。
-- 公開朝一数値として、有利区間移行時は成立役不問3.6%で状態超ロング移行抽選。漏れた場合の1G目成立役別は連チェリー25%、ラクダ50%、単チェリー/チャンス目は状態移行濃厚。後年解析とサミー開発ボイス引用資料で照合。
-- 310G救済は設定変更専用ではなく新規有利区間開始/状態準備終了後の共通機構。ただし設定変更後は有利区間開始を起点に311G付近で約25%の救済AC抽選となるため、朝一価値として分離記録。
-- 変更判別は、有利区間ランプ消灯＝設定変更濃厚、点灯＝据え置き濃厚。また朝一サブ液晶の遊技回数0Gは設定変更濃厚材料。
-- 本機固有ガックン条件/発生率、設定変更の一部で発生する高確フェイク/高確スタートの詳細振り分けは検索語・資料系統を変えて再探索したが固定できず `UNVERIFIED_AFTER_RESEARCH`。
-- 遡及resetBehavior QAカーソルは本線優先のため進めず、`docs/real_machine_db/machines/2007-02_playboy.md`（パチスロPLAYBOY / 25φ）を維持。
+- handoff指定どおり、2022-01-24群の次機種 `パチスロ南国物語30` をNo.1470へ追加。
+- 同名系統のAT機 `南国育ち-30` と混同しないよう型式・検定番号・ゲーム性を再照合。No.1470はアムテックスの30Φノーマル `S南国物語UNA2-30` / 検定 `1S1192` であり、南国育ち-30のリセット天井・モード・有利区間挙動は流用していない。
+- 性能コアは業界記事、HAZUSE、P-WORLD、1geki、解析資料を横断。設定1〜6の機械割97.5〜106.5%、BIG 1/287.4〜1/256.0、REG 1/431.2〜1/316.6、合算1/172.5〜1/141.5、設定1ベース約39.0G/50枚、BIG平均約264枚/最大271枚、REG120枚を保存。
+- 天井は非搭載。AT/ART/CZ型ではなく、resetBehaviorでは天井G・短縮天井・有利区間・朝一CZ/AT等をNOT_APPLICABLEとして分離した。
+- 設定変更/据え置き/純電源OFF→ON時の成立済みボーナス・告知待ち状態、ガックン・初期出目等の本機固有契約、設定変更専用公開朝一数値は資料系統・検索語を変えて再探索しても直接固定できず `UNVERIFIED_AFTER_RESEARCH` / `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。reset QAは `PARTIAL_RESEARCH_EXHAUSTED`。
+- 遡及QAについて、前handoffのPLAYBOYカーソルはmain実レコードより古いことを確認。`2007-02_playboy.md`、`2007-02_playboy-30.md`、`2007-02_pikaslo.md`、`2007-02_skylove.md` は既に2026-09-11にv0.7 QA済みだったため重複処理せず、その次の未処理 `2007-02_ps-adlib-ouji.md` を処理。
+- PSアドリブ王子は既存 `coreStatus: COMPLETE_CORE` を維持し、resetBehaviorのみ `PARTIAL_RESEARCH_EXHAUSTED` へ更新。1111G以上ハマリ後の次回スーパーBIG確定という救済仕様は保持するが、設定変更/据え置き/純電断時の救済カウンタ・昇格チャンス状態・成立済みボーナス状態の処理は直接契約を固定できず推測補完していない。
 
-## No.1469 — パチスロアラジンAクラシック
-- path: `docs/real_machine_db/machines/2022-01-24_aladdin-a-classic.md`
-- manufacturer: **サミー（製造: 銀座）**
-- formalModel: **S アラジンクラシック KF**
-- certificationNumber: **1S1061**
+## No.1470 — パチスロ南国物語30
+- path: `docs/real_machine_db/machines/2022-01-24_nangoku-monogatari-30.md`
+- manufacturer: **アムテックス（総販売元: 平和）**
+- formalModel: **S南国物語UNA2-30**
+- certificationNumber: **1S1192**
 - releaseDate: **2022-01-24**
-- generation/system: **6.2号機 / AT / 状態ループ型**
+- generation/system: **6号機 / ノーマルA / 完全告知 / 30Φ**
 - settings: **1 / 2 / 3 / 4 / 5 / 6**
-- payoutRate: **97.6 / 98.8 / 100.3 / 104.0 / 107.2 / 108.8%**
-- initialHit: **AC+BIG 1/275.3 / 263.4 / 251.4 / 226.0 / 199.6 / 176.4**
-- baseGamesPer50: **約32.2G/50枚**
-- netIncrease: **AT約2.9枚/G**
-- basicPayout: **AC 1セット30G / BIG平均約100枚 / SAC 20〜最大1000G**
-- normalCeiling: **通常時1200GでAC+状態突入濃厚。AC単発時は天井G引継ぎ。**
+- payoutRate: **97.5 / 98.5 / 99.8 / 102.6 / 104.3 / 106.5%**
+- BIG: **1/287.4 / 283.7 / 277.7 / 269.7 / 263.2 / 256.0**
+- REG: **1/431.2 / 412.2 / 392.4 / 362.1 / 346.8 / 316.6**
+- bonusCombined: **1/172.5 / 168.0 / 162.6 / 154.6 / 149.6 / 141.5**
+- baseGamesPer50: **約39.0G/50枚（設定1）**
+- basicPayout: **BIG平均約264枚・最大271枚 / REG120枚**
+- normalCeiling: **NONE / 天井非搭載**
 - coreStatus: **COMPLETE_CORE**
-- resetBehaviorQA: **COMPLETE_FOR_YARDSTICK**
-- confidence: **HIGH_CORE_HIGH_RESET**
+- resetBehaviorQA: **PARTIAL_RESEARCH_EXHAUSTED**
+- confidence: **HIGH_CORE_PARTIAL_RESET**
 
-### resetBehavior v0.7 — No.1469
-- **設定変更**: 有利区間・天井・内部状態RESET。新規有利区間から再開。
-- **据え置き**: 有利区間・天井・内部状態CARRY_OVER。
-- **純電源OFF→ON**: 有利区間・天井・内部状態CARRY_OVER。
-- **通常天井**: 1200GでAC+状態突入濃厚。AC単発時は天井G数を引継ぐ。
-- **リセット天井短縮**: 本天井1200Gの固定短縮なし確認。ただし有利区間開始後310G消化時に約25%で救済AC抽選（朝一は311〜312G付近）。
-- **公開朝一数値**: 成立役不問3.6%で状態超ロング。漏れ後の1G目は連チェリー25% / ラクダ50% / 単チェリー・チャンス目は状態移行濃厚。
-- **変更判別**: 有利区間ランプ消灯＝設定変更濃厚 / 点灯＝据え置き濃厚。朝一サブ液晶遊技回数0Gも設定変更濃厚材料。
-- **ガックン**: 本機固有条件/発生率は `UNVERIFIED_AFTER_RESEARCH`。
+### resetBehavior v0.7 — No.1470
+- **設定変更**: 天井/AT-CZモード/有利区間は非該当。成立済みボーナス・告知待ち等の本機固有内部処理は `UNVERIFIED_AFTER_RESEARCH`。
+- **据え置き**: 天井非該当。成立済みボーナス・告知状態等の独立した機種固有契約は `UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION`。
+- **純電源OFF→ON**: 同上。一般的ノーマル機挙動から補完しない。
+- **通常/リセット天井**: `NOT_APPLICABLE`。
+- **朝一専用モード/CZ/AT恩恵**: `NONE_CONFIRMED_AFTER_RESEARCH`。
+- **有利区間リセット**: `NOT_APPLICABLE_FOR_YARDSTICK`。
+- **変更判別**: 本機固有ガックン/初期出目/表示条件・発生率は `UNVERIFIED_AFTER_RESEARCH`。
+- **公開朝一数値**: `PUBLIC_NUMERIC_RESET_DATA_NOT_FOUND_AFTER_RESEARCH`。
 
 ## 2022-01-24群 — OPEN
 既知の独立レコード候補:
@@ -59,14 +57,14 @@
 4. **聖闘士星矢 冥王復活 — No.1467 / DONE**
 5. **新世紀エヴァンゲリオン～魂の共鳴～ — No.1468 / DONE**
 6. **アラジンAクラシック — No.1469 / DONE**
-7. **南国物語30 — No.1470候補 / NEXT**
-8. **ハイスクールD×D2 ハーレム王に俺はなる**
+7. **南国物語30 — No.1470 / DONE**
+8. **ハイスクールD×D2 ハーレム王に俺はなる — No.1471候補 / NEXT**
 9. **ぱちスロ ギャグダー**
 10. **パチスロ春一番**
 11. **来雷エイサー30**
 
 ## 次回本線の再開地点
-- **No.1470候補「南国物語30」— 2022-01-24。**
+- **No.1471候補「ハイスクールD×D2 ハーレム王に俺はなる」— 2022-01-24。**
 - 性能コアとresetBehavior v0.7を同時収集する。
 - 同日群を最後まで処理後、別型式/25φ・30φ/PB/地域先行/延期・段階導入を再監査してCLOSED判定する。
 - **2022-01-25 ブルーファルコン（玉越PB）** を1/24群と混同しない。
@@ -74,23 +72,31 @@
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
-- 前回処理済み: `docs/real_machine_db/machines/2007-01_karate-baka-ichidai.md`（空手バカ一代）→ **PARTIAL_RESEARCH_EXHAUSTED**。
-- 次回遡及QAカーソル: **`docs/real_machine_db/machines/2007-02_playboy.md`（パチスロPLAYBOY / 25φ）**。
-- 今回は本線No.1469を優先し、遡及QAは未処理。
+- 前handoffカーソル `2007-02_playboy.md` はmain実レコードでは既にv0.7 QA済みだった。
+- 重複回避確認済み: `2007-02_playboy.md` / `2007-02_playboy-30.md` / `2007-02_pikaslo.md` / `2007-02_skylove.md` → いずれも既に `PARTIAL_RESEARCH_EXHAUSTED`。
+- 今回処理: `docs/real_machine_db/machines/2007-02_ps-adlib-ouji.md`（PSアドリブ王子）→ **PARTIAL_RESEARCH_EXHAUSTED**。既存 `COMPLETE_CORE` は維持。
+- 次回遡及QAカーソル: **`docs/real_machine_db/machines/2007-03-04_pachislot-abarenbo-shogun.md`（パチスロ暴れん坊将軍）**。
 
 ## GitHub保存
-- No.1469追加 commit: `8b760fbc6913ccc076784de6425a4d7609e373f9`
+- No.1470追加 commit: `625ad15e98cc7feac3987b988c1d73f82e0deccc`
+- PSアドリブ王子 reset QA commit: `9574c5fc138adbc189899513b316dc089b9b2c92`
 - `LATEST_HANDOFF.md`: この更新commitでmainへ反映。
 
 ## 主要出典 — 取得日 2026-09-12
-### No.1469 パチスロアラジンAクラシック
-- https://news.p-world.co.jp/articles/18863/nippon
-- https://www.yugitsushin.jp/open/maker/20211109-1203/
-- https://news.p-world.co.jp/articles/19303/greenbelt
-- https://1geki.jp/slot/s_aladdin_ac/
-- https://hazuse.com/machine/pachislot/1S1061/
-- https://nana-press.com/kaiseki/machine/275/8030/
-- https://www.slopachi-quest.com/article/aladdin-a-classic-tenjou/
-- https://1geki.jp/slot/s_aladdin_ac/3/
-- https://ichikatsu.com/aladdinaclassic/
-- https://slot8192m.blog.fc2.com/blog-entry-416.html
+### No.1470 パチスロ南国物語30
+- https://news.p-world.co.jp/articles/18375/yugitsushin
+- https://news.p-world.co.jp/articles/18331/nippon
+- https://hazuse.com/machine/pachislot/1S1192/
+- https://hazuse.com/machine/pachislot/1S1192/genre/201/
+- https://chonborista.com/slot/amute/154953/
+- https://1geki.jp/slot/s_nangoku30/3/
+- https://www.p-world.co.jp/machine/database/9521
+
+### 遡及QA — PSアドリブ王子
+- https://www.p-world.co.jp/machine/database/4565
+- https://news.p-world.co.jp/articles/2027/greenbelt
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sanyo_slot/04/h.php
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sanyo_slot/04/a.php
+- https://hazuse.com/i/data/adlib/top.htm
+- https://5goki.com/sanyo
+- https://note.com/pachislot_panic7/n/n22f6b15efe66
