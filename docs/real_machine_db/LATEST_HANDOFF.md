@@ -1,96 +1,89 @@
 更新日: 2026-09-13
 
 ## 現在地点
-- recordCount: **1526**
-- latestRecordAdded: **S笑ゥせぇるすまん4 — No.1526**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2022-10-03_s-warau-salesman4.md`
-- chronologicalFrontier: **2022-10-03**
-- frontierLatestMachine: **S笑ゥせぇるすまん4 — No.1526**
+- recordCount: **1527**
+- latestRecordAdded: **パチスロ ダンまち外伝 ソード・オラトリア — No.1527**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2022-10-17_danmachi-sword-oratoria.md`
+- chronologicalFrontier: **2022-10-17**
+- frontierLatestMachine: **パチスロ ダンまち外伝 ソード・オラトリア — No.1527**
 - schema: **resetBehavior v0.7**
-- status: **2022-10-03_GROUP_CLOSED_4_OF_4_CANONICAL_PROCESSED**
+- status: **2022-10-17_GROUP_OPEN_1_OF_2_KNOWN_CANONICAL_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧表示の `docs/real_machine_db/INDEX.md`、最新 `LATEST_HANDOFF.md`、直前No.1525 `パチスロRYUKYU BEAT-30` を確認して開始。
+- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧表示の `docs/real_machine_db/INDEX.md`、最新 `LATEST_HANDOFF.md`、直前No.1526 `S笑ゥせぇるすまん4` を確認して開始。
 - `INDEX.md` は完了済みレコード数19の旧表示のため、README規定どおり最新 `LATEST_HANDOFF.md` とmain実レコードを進捗正本として扱った。
-- handoff指定のNo.1526 `S笑ゥせぇるすまん4` を性能コア＋resetBehavior v0.7で追加。
-- 2022-10-03 canonical群は `パチスロハードボイルド`、`パチスロ バイオハザード RE:2`、`パチスロRYUKYU BEAT-30`、`S笑ゥせぇるすまん4` の4機を処理済みとしてCLOSED。
-- Greenbeltの2022-10-03更新記事には `パチスロ魔法少女育成計画` が10/3欄に掲載される一方、K-Navi、必勝本、複数解析、導入前動画は2022-10-17導入で一致。日付競合は平均化せず、同機は10/17群候補へ送る。
+- handoff指定のNo.1527 `パチスロ ダンまち外伝 ソード・オラトリア` を性能コア＋resetBehavior v0.7で追加。
+- 2022-10-17群は既知canonical候補2機中1機処理済み。次は `パチスロ 魔法少女育成計画`。
+- 前回保持していた導入日競合について、`パチスロ 魔法少女育成計画` はGreenbeltの10/3欄とK-Navi/必勝本/複数解析の10/17が競合しているため、平均化せず10/17群候補として次回処理時に日付根拠を明示する。
 
-## No.1526 — S笑ゥせぇるすまん4
-- path: `docs/real_machine_db/machines/2022-10-03_s-warau-salesman4.md`
-- manufacturer: **三洋物産**
-- formalModel: **S笑ゥせぇるすまん4KH**
-- inspectionCode: **2S0476**
-- releaseDate: **2022-10-03**
-- generation/system: **6.5号機 / AT / 擬似ボーナス / JAC搭載BIG**
-- payout: **設定L 88.7 / 1 97.2 / 2 99.2 / 4 103.1 / 5 106.1 / 6 109.0%**
-- bonus初当り: **1/287.6 / 268.7 / 237.2 / 217.7 / 195.1**（設定1/2/4/5/6）
-- bonus出現率: **1/212.9 / 198.5 / 175.2 / 160.1 / 144.0**
-- CZ出現率: **1/209.8 / 198.1 / 168.8 / 159.1 / 147.6**
-- baseGamesPer50: **35.1G/50枚**
-- netIncrease: **BIG小役ゲーム約1.1枚/G / JAC・REG約2.8枚/G**
-- basicPayout: **BIG 30G+α・平均約409枚 / REG 20G / BIG後欲望輪廻ZONE4G・ボーナス期待度約50%**
+## No.1527 — パチスロ ダンまち外伝 ソード・オラトリア
+- path: `docs/real_machine_db/machines/2022-10-17_danmachi-sword-oratoria.md`
+- manufacturer: **ゼクロスクリエイティブ / 北電子**
+- formalModel: **Sダンまち外伝XR**
+- inspectionCode: **2S0791**
+- releaseDate: **2022-10-17**
+- generation/system: **6.4号機 / AT / 差枚数管理 / 擬似ボーナス経由AT**
+- payout: **設定1 98.05 / 2 99.02 / 3 100.50 / 4 104.05 / 5 107.06 / 6 110.16%**（一般解析の丸め値98.1～110.2%と整合）
+- AT初当り: **1/378.9 / 365.1 / 349.5 / 304.6 / 275.1 / 252.1**
+- CZ突入率: **約1/199 / 196 / 193 / 188 / 180 / 172**
+- baseGamesPer50: **約40G/50枚**
+- netIncrease: **約2.0枚/G**
+- basicPayout: **AT初当り時擬似ボーナスで初期差枚決定 / ディヴァインジャッジ3G×継続型 / ファミリアボーナス40G / AT最低50枚保証+上乗せ分 / AT継続バトル勝率約66%over**
 - coreStatus: **COMPLETE_CORE**
-- resetBehaviorQA: **COMPLETE_RESET_CORE_WITH_POWER_CYCLE_PARTIAL**
+- resetBehaviorQA: **COMPLETE_RESET_CORE_WITH_NO_CONFIRMED_SPECIAL_BENEFIT**
 - confidence: **OFFICIAL / INDUSTRY / ANALYSIS_HIGH**
 
-### resetBehavior v0.7 — No.1526
-- **設定変更**: 有利区間RESET、天井RESET、内部状態RESET。高確スタート＋通常モードC 100%。
-- **据え置き**: 有利区間・天井・内部状態CARRY_OVER。
-- **純電源OFF→ON**: 天井/モード/内部状態/有利区間を個別に直接規定した本機固有資料を十分な再探索後も固定できず `UNVERIFIED_AFTER_RESEARCH`。一般論で補完しない。
-- **通常天井**: 555G+前兆。解析上の実戦最大表記は580G前後。
-- **朝一モードC**: 293G消化時CZ当選率100%、当該CZは成功確定。通常天井そのものの短縮とは分離して保存。
-- **状態**: 設定変更後は高確スタート。細分率は `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
-- **有利区間**: ランプ非搭載でランプ判別不可。有利区間リセット時は欲望輪廻ZONEへ入るが、引継ぎ時も入る可能性があるため突入だけでは判別不可。
-- **変更判別**: 293G CZは変更期待度UP材料。ただし他契機CZもあるため単独確定ではない。本機固有ガックン条件/発生率は `UNVERIFIED_AFTER_RESEARCH`。
-- **公開朝一数値**: モードC 100%、293G CZ 100%、当該CZ成功確定。
+### resetBehavior v0.7 — No.1527
+- **設定変更**: 有利区間・天井・内部モード・内部状態RESET。
+- **据え置き**: 有利区間・天井・内部モード・内部状態CARRY_OVER。
+- **純電源OFF→ON**: 天井・内部モード・内部状態・有利区間CARRY_OVER。スロパチクエスト/Altema/ちょんぼりすた系で照合。
+- **AT天井**: 通常時777G消化後の周期ジャッジ到達でAT。周期位置次第で実戦発動は777Gを超える。
+- **CZ天井**: 最大11周期。内部モードA/B/Cで最大周期が異なり、A=11/B=8/C=5。
+- **天井注意**: 途中CZ当選でゲーム数天井がリセットされる解析があるため、CZ間/AT間の定義を混同しない。
+- **朝一恩恵**: 固定高モード、短縮天井、確定CZ等の強い設定変更専用恩恵は確認できず `NONE_CONFIRMED_AFTER_RESEARCH`。一部資料は「特になし」、別資料は「調査中」。
+- **モード振り分け**: 設定変更専用A/B/C振り分けは通常設定別モード選択率と区別できる高信頼資料を固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- **有利区間ランプ**: 非搭載。ランプ判別不可。
+- **変更判別**: 前日G数/周期進行を把握できる場合の翌日進行差は据え置き推測材料。本機固有ガックン条件/発生率は再探索後 `UNVERIFIED_AFTER_RESEARCH`。
+- **公開朝一数値**: 設定変更専用として比較可能な数値は `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
 - **主要不利**: `NONE_CONFIRMED_AFTER_RESEARCH`。
 
-## conflicts / definition notes — No.1526
-- 設定L機械割はP-WORLD/K-Navi/販社資料が88.7%、HAZUSEは調査中。数値直接競合ではなく公開状況差。canonicalは88.7%。
-- 天井は「555G+α」と「最大580G前後」が併存。内部到達Gと前兆込み実戦表記として定義分離。
+## conflicts / definition notes — No.1527
+- メーカー表記: 一般機種DBは「北電子」、検定上の型式申請会社はゼクロスクリエイティブ。canonicalは `ゼクロスクリエイティブ / 北電子` と役割併記。
+- 機械割: K-Naviの98.05～110.16%と多数解析の98.1～110.2%は丸め精度差でありCONFLICTではない。
+- リセット恩恵: 「特になし」と「調査中」が併存。固定の強い恩恵を確定できない点では整合するため `NONE_CONFIRMED_AFTER_RESEARCH`。
 
-## 2022-10-03群 — CLOSED 4/4 canonical
-1. `パチスロハードボイルド` — **No.1523**
-2. `パチスロ バイオハザード RE:2` — **No.1524**
-3. `パチスロRYUKYU BEAT-30` — **No.1525**
-4. `S笑ゥせぇるすまん4` — **No.1526**
+## 2022-10-17群 — OPEN 1/2 known canonical
+1. `パチスロ ダンまち外伝 ソード・オラトリア` — **No.1527**
+2. `パチスロ 魔法少女育成計画` — **未処理 / No.1528候補**
 
 境界監査:
-- Greenbelt 2022-10-03記事は上記に加え `パチスロ魔法少女育成計画` を10/3欄に置くが、K-Navi/必勝本/複数解析/導入前動画は10/17で一致。10/3には重複登録せず10/17候補へ送る。
-- 10/17群の次候補は `ダンまち外伝 ソード・オラトリア` と `パチスロ 魔法少女育成計画`。PB・派生・別型式・地域先行は次回開始時に再監査する。
+- `パチスロ 魔法少女育成計画` はGreenbelt 2022-10-03更新記事に10/3欄掲載がある一方、K-Navi、必勝本、複数解析、導入前動画は2022-10-17導入で一致。次回レコードでは導入日CONFLICTとして根拠を分離する。
+- PB・別型式・30Φ派生・地域先行・延期/段階導入については、10/17 known機処理後に再監査して群CLOSED可否を判定する。
 
 ## 遡及 resetBehavior QA
 - 次回遡及QAカーソル: **`docs/real_machine_db/machines/2007-03_wild7.md`（ワイルド7）**。
 - 本線を優先し、今回QAカーソルは進めていない。
 
 ## 次回本線の再開地点
-- **2022-10-17群 / No.1527候補 `ダンまち外伝 ソード・オラトリア`。**
-- 続いて `パチスロ 魔法少女育成計画` を処理する。
-- No.1523～1526の性能コアはやり直さない。
+- **2022-10-17群 / No.1528候補 `パチスロ 魔法少女育成計画`。**
+- No.1527以前の性能コアはやり直さない。
+- No.1528処理後、10/17群のPB・別型式・地域先行・延期/段階導入を再監査し、CLOSED可否を判定する。
 
 ## GitHub保存
-- No.1526追加 commit: `da997724e732a04afac636237f7a5d27386e0ef4`
+- No.1527追加 commit: `0b13c180f800d71902dbb0c9021b3a7781eae2ab`
 - `LATEST_HANDOFF.md`: この更新commitでmainへ反映。
 
 ## 主要出典 — 取得日 2026-09-13
-### No.1526 S笑ゥせぇるすまん4
-- https://www.sanyobussan.co.jp/information/pdf/sanyo_press_release_20220801_02.pdf
-- https://www.pidea.jp/articles/1658720419
-- https://www.p-world.co.jp/machine/database/9697
-- https://1geki.jp/slot/s_warau4/
-- https://1geki.jp/slot/s_warau4/3/
-- https://1geki.jp/slot/s_warau4/45/
-- https://1geki.jp/slot/s_warau4/81/
-- https://nana-press.com/kaiseki/machine/432/
-- https://nana-press.com/kaiseki/machine/432/11961/
-- https://hazuse.com/machine/pachislot/2S0476/
-- https://p-kn.com/slot/3841/
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sanyo_slot/39/tj04-2.php
-
-### 10/3→10/17 boundary
-- https://news.p-world.co.jp/articles/21806/greenbelt
-- https://p-kn.com/slot/3851/
-- https://p.hisshobon.jp/machine/3975/1/91502
-- https://www.youtube.com/watch?v=NG4VPtVIIFs
+### No.1527 パチスロ ダンまち外伝 ソード・オラトリア
+- https://www.kitadenshi.co.jp/slot/sword_oratoria/
+- https://www.kitadenshi.co.jp/slot-kentei/sword_oratoria/
+- https://www.pidea.jp/articles/1660024373
+- https://news.p-world.co.jp/articles/21266/nippon
+- https://p-kn.com/slot/3847/
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/kitac_slot/118/kh01.php
+- https://altema.jp/pachimo/swordoratoria
+- https://www.slopachi-quest.com/article/danmachi-sword-oratoria-tenjou/
+- https://chonborista.com/slot/kitadenshi/173810/
+- https://slotmethod.jp/archives/15436/
+- https://pachiseven.jp/machines/6619/cutout/3
 - https://ichikatsu.com/newslot2022/
