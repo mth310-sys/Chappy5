@@ -1,100 +1,105 @@
 更新日: 2026-09-12
 
 ## 現在地点
-- recordCount: **1492**
-- latestRecordAdded: **超ギラギラ爺サマー — No.1492**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2022-04-18_super-giragira-jii-summer.md`
+- recordCount: **1493**
+- latestRecordAdded: **パチスロ 月華 雅 — No.1493**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2022-04-18_gekkamiyabi.md`
 - chronologicalFrontier: **2022-04-18**
-- frontierLatestMachine: **超ギラギラ爺サマー — No.1492**
+- frontierLatestMachine: **パチスロ 月華 雅 — No.1493**
 - schema: **resetBehavior v0.7**
-- status: **2022-04-18_GROUP_OPEN_2_OF_4_KNOWN_PROCESSED**
+- status: **2022-04-18_GROUP_OPEN_3_OF_4_KNOWN_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧 `docs/real_machine_db/INDEX.md`、最新 `LATEST_HANDOFF.md`、直前No.1491 `十字架5` を確認して開始。
+- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧 `docs/real_machine_db/INDEX.md`、最新 `LATEST_HANDOFF.md`、直前No.1492 `超ギラギラ爺サマー` を確認して開始。
 - `INDEX.md` は旧19件表示のため、README規定どおり最新 `LATEST_HANDOFF.md` とmain実レコードを進捗正本として扱った。
-- handoff指定の次機種 `超ギラギラ爺サマー` をNo.1492として登録。
-- P-WORLD業界記事/機種DB、HAZUSE、1geki、なな徹、必勝本、K-Navi、イチカツ、スロパチクエスト、スロットセブン、パチスロメソッドを横断し、性能コアとresetBehaviorを照合。
-- 正式型式 `S超ギラギラ爺夏SB2`、検定番号 `1S1588`、サボハニ、2022-04-18導入を確認。
-- 機械割97.1/98.5/99.8/102.0/104.0/106.1%、AT初当り1/762.6〜1/579.0、約39.3G/50枚、AT純増約7.0枚/G。
-- 通常時最大200G+αでCZ `ギラチャンス`。天国は150G+α。AT直撃天井ではない。
-- AT初期差枚数は `ギラギラアタック` で決定し最低500枚。500/1000/1500/2000/2400枚等のパネルあり。平均AT獲得約860枚は当時解析値として区別保存。
-- resetBehaviorは設定変更で天井・有利区間RESET、朝一必ず `爺の間` を経由して20G or 30Gの踊り娘ポイント高確率 `ダイビングステージ` へ移行。据え置きは天井・有利区間・ステージCARRY_OVER。
-- 純電源OFF→ONは天井・有利区間・ステージCARRY_OVER。内部状態もCARRY_OVERとする当時解析資料を確認。
-- CZ失敗後/AT終了後/有利区間完走後は有利区間リセット。有利区間引継ぎは無し。
-- 有利区間ランプは新規有利区間移行直後に即点灯せず、通常時の押し順ナビ発生後に点灯。そのため `朝一消灯` 単独では変更判別を固定せず、朝一点灯=据え置き濃厚、爺の間→ダイビング、消灯→押し順ナビ後点灯等を組み合わせる契約で保存。
-- 設定変更専用のモード振り分け/朝一一定G以内CZ・AT当選率/固定短縮天井/本機固有ガックンは十分な再探索後も固定できず `UNVERIFIED_AFTER_RESEARCH`。
-- 号機細分類は資料間で `6.1号機` と `6.4号機` が競合。平均化/強制統一せず `6号機（6.1/6.4表記CONFLICT）` として保存。
+- handoff指定の次機種 `パチスロ 月華 雅` をNo.1493として登録。
+- Amusement Japan、K-Navi、1geki、なな徹、ちょんぼりすた、ぱちんこキュレーション、パチスロメソッド等を横断し、性能コアとresetBehavior v0.7を照合。
+- 型式 `S月華ZC`、エンターライズ、2022-04-18導入を確認。検定番号は十分な再探索後も信頼できる現存資料で固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 機械割97.3/98.9/100.9/104.5/107.4/110.3%、擬似ボーナス初当り1/203.3〜1/190.4、約25G/50枚、純増約4.0枚/G、BIG平均約290枚・REG平均約100枚。
+- 通常最大333G+α。なな徹解析のモード天井は通常A 321G / 通常B 321G / 引き戻し128G / 天国準備333G / 天国・超天国・雅32G。
+- 設定変更は天井・内部状態・有利区間RESET。滞在モードを問わず天井を32G短縮。
+- 有利区間移行時の引き戻し選択率は設定1〜3で40.6%、設定4〜6で42.6%。残り59.4%/57.4%の細分内訳は公開固定せず推測しない。
+- 引き戻し通常天井128Gに設定変更時32G短縮を適用し、朝一引き戻し選択時は最大96G。これは当時資料の朝一96G記載とも整合。
+- 据え置きは天井・内部状態・有利区間CARRY_OVER。純電源OFF→ONは天井・内部モード・有利区間CARRY_OVERを確認。高確等を含む全内部状態の個別完全契約は未固定。
+- 通常時は初当りボーナスまで有利区間ランプ非点灯のため、朝一消灯単独では変更判別不可。朝一点灯=据え置き濃厚、前日点灯確認→翌朝消灯=設定変更濃厚。
+- 本機固有ガックン条件/発生率は十分な再探索後も `UNVERIFIED_AFTER_RESEARCH`。
 
-## No.1492 — 超ギラギラ爺サマー
-- path: `docs/real_machine_db/machines/2022-04-18_super-giragira-jii-summer.md`
-- manufacturer: **サボハニ（大都技研系）**
-- formalModel: **S超ギラギラ爺夏SB2**
-- inspectionCode: **1S1588**
+## No.1493 — パチスロ 月華 雅
+- path: `docs/real_machine_db/machines/2022-04-18_gekkamiyabi.md`
+- manufacturer: **エンターライズ（フィールズ販売）**
+- formalModel: **S月華ZC**
+- inspectionCode: **UNVERIFIED_AFTER_RESEARCH**
 - releaseDate: **2022-04-18**
-- generation/system: **6号機（6.1/6.4表記CONFLICT） / AT**
+- generation/system: **6.2号機 / 擬似ボーナスAT・完全告知**
 - settings: **1 / 2 / 3 / 4 / 5 / 6**
-- payoutRate: **97.1 / 98.5 / 99.8 / 102.0 / 104.0 / 106.1%**
-- ATinitialHit: **1/762.6 / 1/723.4 / 1/683.4 / 1/642.7 / 1/609.6 / 1/579.0**
-- baseGamesPer50: **約39.3G/50枚（設定1掲載値）**
-- netIncrease: **約7.0枚/G**
-- basicPayout: **AT初期差枚数最低500枚、500/1000/1500/2000/2400枚等。平均獲得約860枚は解析値。**
-- ceiling: **通常最大200G+αでCZ、天国150G+α。AT直撃天井ではない。**
+- payoutRate: **97.3 / 98.9 / 100.9 / 104.5 / 107.4 / 110.3%**
+- initialHit: **1/203.3 / 1/201.8 / 1/199.9 / 1/194.8 / 1/192.5 / 1/190.4**
+- baseGamesPer50: **約25G/50枚**
+- netIncrease: **約4.0枚/G**
+- basicPayout: **BIG平均約290枚 / REG平均約100枚**
+- ceiling: **通常最大333G+α。モード別321/321/128/333/32/32/32G。**
 - coreStatus: **COMPLETE_CORE**
-- resetBehaviorQA: **COMPLETE_RESET_CORE_WITH_CONFLICT**
+- resetBehaviorQA: **COMPLETE_RESET_CORE_WITH_NUMERIC_RESET_TABLES**
 - confidence: **HIGH**
 
-### resetBehavior v0.7 — No.1492
-- **設定変更**: 天井・有利区間RESET。内部状態RESETとする当時解析あり。必ず爺の間→ダイビングステージ。
-- **据え置き**: 天井・有利区間・ステージCARRY_OVER。内部モード/状態の個別完全契約は一部UNVERIFIED。
-- **純電源OFF→ON**: 天井・有利区間・ステージCARRY_OVER。内部状態もCARRY_OVERとする資料あり。
-- **ゲーム数/天井**: 通常最大200G+α、天国150G+αでCZ。設定変更専用の固定短縮は確認できず。
-- **モード/状態**: 設定変更専用の通常A/B/特殊/天国振り分け表は未確認。新規有利区間で爺の間→ダイビングステージ。
-- **有利区間**: 設定変更でRESET / 据え置き・純電断でCARRY_OVER。CZ失敗/AT終了/完走後もリセットし、本機は有利区間引継ぎ無し。
-- **朝一恩恵/不利**: ダイビングステージ20G or 30G＝踊り娘ポイント高確率。専用不利数値なし。
-- **変更判別**: 朝一ランプ消灯だけで即変更とはしない。朝一点灯=据え置き濃厚、爺の間→ダイビング、消灯→押し順ナビ後点灯は変更材料。
-- **公開朝一数値**: ダイビングステージ20G or 30G。専用モード振り分け/一定G以内当選率は未確認。
-- **CONFLICT**: 号機細分類6.1 / 6.4。
-- **UNVERIFIED_AFTER_RESEARCH**: 設定変更専用モード振り分け、朝一一定G以内CZ/AT当選率、固定リセット恩恵発生率、本機固有ガックン、据え置き時内部モード/状態の個別完全契約。
+### resetBehavior v0.7 — No.1493
+- **設定変更**: 天井・内部状態・有利区間RESET。全モード天井32G短縮。
+- **据え置き**: 天井・内部状態・有利区間CARRY_OVER。
+- **純電源OFF→ON**: 天井・内部モード・有利区間CARRY_OVER。モード以外の全内部状態個別契約は一部UNVERIFIED。
+- **ゲーム数/天井**: 通常A321G / 通常B321G / 引き戻し128G / 天国準備333G / 天国・超天国・雅32G。設定変更時は各モード32G短縮。
+- **モード**: 設定1〜3 引き戻し40.6% / その他59.4%、設定4〜6 引き戻し42.6% / その他57.4%。その他内訳は未固定。
+- **有利区間**: 設定変更RESET / 据え置き・純電断CARRY_OVER。
+- **朝一恩恵/不利**: 天井32G短縮 + 約40%以上で引き戻し。専用不利数値なし。
+- **変更判別**: 朝一消灯単独は不可。朝一点灯=据え置き濃厚。前日点灯→翌朝消灯=変更濃厚。
+- **公開朝一数値**: 32G短縮 / 引き戻し40.6%または42.6% / 引き戻し選択時最大96G。
+- **UNVERIFIED_AFTER_RESEARCH**: 検定番号、引き戻し以外の全モード細分振り分け、純電断時の全内部状態個別契約、本機固有ガックン。
 
 ## 2022-04-18群
 既知候補:
 1. `十字架5` — **No.1491 処理済み**
 2. `超ギラギラ爺サマー` — **No.1492 処理済み**
-3. `月華 雅` — **未処理**
+3. `パチスロ 月華 雅` — **No.1493 処理済み**
 4. `2027` — **未処理**
 
-- イチカツ2022年新台一覧と当時業界記事で2022-04-18群を再確認。
-- 群は現時点で4機候補。全4機処理後にPB・別型式・25/30φ差・地域先行・延期/段階導入を再監査してCLOSED判定する。
-- status: **OPEN_2_OF_4_KNOWN_PROCESSED**。
+- 現時点の既知4機中3機処理済み。
+- `2027` 処理後、PB・別型式・25/30φ差・地域先行・延期/段階導入を横断再監査してCLOSED可否を判定する。
+- status: **OPEN_3_OF_4_KNOWN_PROCESSED**。
 
 ## 次回本線の再開地点
-- **No.1493候補 `月華 雅` から継続。**
-- 続く既知候補: `2027`。
+- **No.1494候補 `2027` から継続。**
+- 処理後に2022-04-18群を横断再監査し、漏れがなければ同日群CLOSED判定 → 次の日付群へ進む。
 - 性能コアとresetBehavior v0.7を同時収集し、公開値欠損は表記揺れ・型式・メーカー・シリーズ名と各リセット検索語を変え、十分再探索後のみUNVERIFIEDとする。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
-- 今回は本線No.1492を優先し、遡及QAは未実施。
-- 次回遡及QAカーソル: **`docs/real_machine_db/machines/2007-02-18_kamen-rider-dx-super-bike.md`（仮面ライダーDX〜走れ！スーパーバイク編）**を維持。
+- 今回は `docs/real_machine_db/machines/2007-02-18_kamen-rider-dx-super-bike.md`（仮面ライダーDX〜走れ！スーパーバイク編）を再QA。
+- 既存 `coreStatus: COMPLETE_CORE` は維持。
+- RT最大2000G、ボーナス後必ずRT、チェリー入賞でRT終了という通常仕様を再確認。
+- 設定変更/据え置き/純電源OFF→ON時のRT内部状態・残ナビ回数・RT継続状態、本機固有ガックン/初期出目等を検索語・資料系統を変えて再探索したが、3条件を比較できる本機固有の直接契約を固定できず一般的5号機挙動から補完しなかった。
+- resetBehaviorQAを **PARTIAL_RESEARCH_EXHAUSTED** へ更新。性能COMPLETE_COREは崩していない。
+- 次回遡及QAカーソル: **`docs/real_machine_db/machines/2007-02-18_kagaku-ninjatai-gatchaman.md`（科学忍者隊ガッチャマン）**。Git履歴上、仮面ライダーDX QA後の次カーソルとして明示されていた地点へ前進。
 
 ## GitHub保存
-- No.1492追加 commit: `9fd9b3eb33ac9b5abd619d279b91cb55d2ccfdfc`
+- No.1493追加 commit: `0eb34ccdf09d4179b70ead8f023565a839d252c5`
+- 仮面ライダーDX reset QA commit: `1ddc5ae31e88f01ae582d814e71927080bb2c1de`
 - `LATEST_HANDOFF.md`: この更新commitでmainへ反映。
 
 ## 主要出典 — 取得日 2026-09-12
-### No.1492 超ギラギラ爺サマー
-- https://news.p-world.co.jp/articles/20228/nippon
-- https://news.p-world.co.jp/articles/19797/yugitsushin
-- https://hazuse.com/machine/pachislot/1S1588/
-- https://1geki.jp/slot/s_sgsummer/
-- https://nana-press.com/kaiseki/machine/331/8958/
-- https://nana-press.com/kaiseki/machine/331/8961/
-- https://www.slopachi-quest.com/article/cyougiragirasamer-tenjou/
-- https://slot-seven.com/sgsummer-tenzyou/
-- https://slotmethod.jp/archives/9609/
-- https://www.p-world.co.jp/machine/database/9601
-- https://ichikatsu.com/newslot2022/
-- https://p-kn.com/slot/3763/
-- https://www.slopachi-quest.com/article/cyougiragirajisamer-settei/
-- https://p.hisshobon.jp/machine/3864/1/88968
-- https://p.hisshobon.jp/machine/3864/1/88492
+### No.1493 パチスロ 月華 雅
+- https://amusement-japan.co.jp/article/detail/10002746/
+- https://p-kn.com/slot/3773/
+- https://1geki.jp/slot/s_gekkamiyabi/
+- https://nana-press.com/kaiseki/machine/339/9653/
+- https://nana-press.com/kaiseki/machine/339/9652/
+- https://nana-press.com/kaiseki/machine/339/8974/
+- https://nana-press.com/kaiseki/machine/339/8976/
+- https://chonborista.com/slot/enta-slot/165841/
+- https://pachinko-curation.com/28557/
+- https://slotmethod.jp/archives/9618/
+
+### 仮面ライダーDX QA
+- https://web-greenbelt.jp/00003982/
+- https://www.p-world.co.jp/machine/database/4557
+- https://p-kn.com/slot/676/
+- https://pacnk.com/slot/tools/sh_kriderdxhashiresupabaikuhen.html
+- https://5goki.com/sammy
