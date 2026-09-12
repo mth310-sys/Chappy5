@@ -95,8 +95,8 @@ P-WORLD・グリーンべるとの丸め値とも整合する。
 ## resetBehavior
 
 schemaVersion: v0.7
-resetBehaviorQA: PARTIAL
-resetQaLastUpdated: 2026-09-07
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
+resetQaLastUpdated: 2026-09-12
 
 - settingChangeBehavior: 設定変更時にライダータイム内部状態・残ナビ回数・RT継続状態をどう処理するか、本機固有の高信頼公開資料を再探索したが固定できず **UNVERIFIED_AFTER_RESEARCH**
 - carryOverBehavior: 据え置き時のRT内部状態/残ナビ回数の引継ぎを明示した高信頼資料を再探索したが固定できず **UNVERIFIED_AFTER_RESEARCH**
@@ -117,11 +117,12 @@ resetQaLastUpdated: 2026-09-07
 - 2026-09-07に表記揺れと資料系統を変えて再QA。`仮面ライダーDX / 仮面ライダーDX走れスーパーバイク編 / カメンライダーDX8 / サミー` に `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / RT引継ぎ / ライダータイム / ナビ回数 / 天井 / ガックン` を組み合わせて再探索した。
 - パチ7回顧では、ライダータイムの残りナビ回数自体は外見から直接分からず、液晶右端ライダーの点滅速度が残ナビ回数を示唆する通常仕様を再確認。ただしこれは**設定変更判別ではない**ためresetDetectionへ転用しない。
 - 当時業界記事、P-WORLD、HAZUSE、パチマガスロマガ旧攻略、K-Navi、古い解析/回顧資料を横断しても、設定変更・据え置き・純電断時の内部RT/残ナビ状態処理を明記した高信頼資料は得られなかった。
-- 既存性能コアの `COMPLETE_CORE` は維持し、resetBehavior QAのみ `PARTIAL` として別管理する。
+- 2026-09-12に再度 `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / RT引継ぎ / ガックン` の組み合わせを変更し、グリーンべると、P-WORLD、K-Navi、pacnk、5号機クロニクル、後年回顧を再探索。RT最大2000G・ボーナス後必ずRT・チェリー入賞でパンクという通常仕様は再確認できたが、設定変更/据え置き/純電断の3条件を比較できる本機固有契約は追加取得できなかった。
+- 一般的な5号機RT機の挙動から補完せず、未固定項目を **UNVERIFIED_AFTER_RESEARCH** のまま確定。既存性能コアの `COMPLETE_CORE` は維持し、resetBehavior QAのみ `PARTIAL_RESEARCH_EXHAUSTED` として別管理する。
 
 ## sources
 
-取得日: 2026-08-31（resetBehavior再QA: 2026-09-07）
+取得日: 2026-08-31（resetBehavior再QA: 2026-09-07 / 2026-09-12）
 
 1. グリーンべると — パチスロ界に正義のライダー参上！（2007-01-19）
    - https://web-greenbelt.jp/00003982/
@@ -165,6 +166,10 @@ resetQaLastUpdated: 2026-09-07
    - https://mitihazure.blog.fc2.com/blog-entry-1490.html
    - 後年回顧。RT純増約0.6枚/G、機械割シミュレート値97.27〜118.76%
    - reliability: ANALYSIS_SINGLE
+11. 5号機クロニクル — サミー5号機一覧
+   - https://5goki.com/sammy
+   - 2007年2月、A+RT、機械割97.0〜117.0%の後年照合。reset契約は追加確認できず
+   - reliability: ANALYSIS_SINGLE_RETROSPECTIVE
 
 ## missingFields
 
@@ -174,7 +179,7 @@ resetQaLastUpdated: 2026-09-07
 - 本機固有のresetDetection（ガックン等）
 
 coreStatus: COMPLETE_CORE
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
 
 ## conflicts
 
