@@ -96,21 +96,22 @@ CB実純増は約100枚と約110枚で定義/手順差または丸め差の可�
 ## resetBehavior
 
 schemaVersion: v0.7
-resetQaStatus: PARTIAL
-resetQaLastUpdated: 2026-09-07
-resetBehaviorQA: PARTIAL
+resetQaStatus: PARTIAL_RESEARCH_EXHAUSTED
+resetQaLastUpdated: 2026-09-12
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
 
 ### settingChangeBehavior
 
-- 設定変更時にRT状態・チェリー起点3G RT・ボーナス後250G RTがどのように初期化されるか、本機固有の高信頼公開資料を確認できず **UNVERIFIED_AFTER_RESEARCH**。
+- 設定変更時にRT状態・チェリー起点3G RT・ボーナス後250G RTがどのように初期化されるか、本機固有の高信頼公開資料を資料系統・検索語を変えて再探索しても確認できず **UNVERIFIED_AFTER_RESEARCH**。
+- 成立済みボーナス/告知待ち状態の設定変更時処理も本機固有資料では **UNVERIFIED_AFTER_RESEARCH**。
 
 ### carryOverBehavior
 
-- 据え置き時のRT状態引継ぎについて、本機固有の高信頼資料で確定できず **UNVERIFIED_AFTER_RESEARCH**。
+- 据え置き時のRT残G・RT状態、成立済みボーナス/告知待ち状態の引継ぎについて、本機固有の高信頼資料で確定できず **UNVERIFIED_AFTER_RESEARCH**。
 
 ### powerCycleBehavior
 
-- 電源OFF→ONのみの場合のRT状態処理を高信頼資料で確定できず **UNVERIFIED_AFTER_RESEARCH**。
+- 電源OFF→ONのみの場合のRT残G・RT状態、成立済みボーナス/告知待ち状態の処理を高信頼資料で確定できず **UNVERIFIED_AFTER_RESEARCH**。
 
 ### gameCounterReset
 
@@ -142,23 +143,23 @@ resetBehaviorQA: PARTIAL
 
 ### resetDetection
 
-- 本機固有のガックン、出目、液晶表示等による設定変更判別を高信頼で確認できず **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 本機固有のガックン、初期出目、液晶表示等による設定変更判別を高信頼で確認できず **UNVERIFIED_AFTER_RESEARCH**。
 
 ### numericResetData
 
-- 公開された設定変更時専用の比較可能数値は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 公開された設定変更時専用の比較可能数値は **PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH**。
 
 ### publicMorningNumbers
 
-- **NONE_CONFIRMED_AFTER_RESEARCH**。
+- **PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH**。
 
 ### resetBehavior 再探索メモ
 
-2026-09-07 QA再探索。「パチスロ暴れん坊将軍 / 暴れん坊将軍 / パチスロアバレンボウショウグンB / 藤商事」に「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / RT引継ぎ / 暴れん坊チャンス / スーパー暴れん坊チャンス / ガックン / 初期出目」を組み合わせ、メーカー公式、P-WORLD、当時グリーンべると、パチマガスロマガ旧攻略、5号機クロニクル、当時実戦記・回顧資料を再横断。RT通常仕様は再確認できたが、設定変更・据え置き・電断での内部RT状態処理を直接説明する高信頼資料は追加回収できなかったため推測しない。既存 `coreStatus: COMPLETE_CORE` は維持し、resetBehavior QAだけPARTIALで別管理する。
+2026-09-12 QA再探索。「パチスロ暴れん坊将軍 / 暴れん坊将軍 / パチスロアバレンボウショウグンB / 藤商事」に「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / RT引継ぎ / 暴れん坊チャンス / スーパー暴れん坊チャンス / ガックン / 初期出目 / ボーナス成立状態 / 告知状態」を組み合わせ、メーカー公式、P-WORLD、当時グリーンべると、パチマガスロマガ旧攻略、5号機クロニクル、古い解析DB、当時実戦記・回顧資料を再横断。RT通常仕様は再確認できたが、設定変更・据え置き・純電断での内部RT状態・残G・成立済みボーナス/告知状態を直接説明する機種固有資料は追加回収できなかった。5号機一般論からの推測補完は行わず、既存 `coreStatus: COMPLETE_CORE` は維持してresetBehavior QAだけ `PARTIAL_RESEARCH_EXHAUSTED` で別管理する。
 
 ## sources
 
-取得日: 2026-09-07（resetBehavior QA再探索。性能コア出典は継続確認）
+取得日: 2026-09-12（resetBehavior QA再探索。性能コア出典は継続確認）
 
 1. 藤商事公式 — パチスロ 暴れん坊将軍
    - https://www.fujimarukun.co.jp/products/abare_slot/
@@ -197,12 +198,12 @@ resetBehaviorQA: PARTIAL
 
 - 赤7BIG/青7BIG/CBそれぞれの総成立確率の直接表
 - RT純増枚数/G
-- 設定変更/据え置き/電源OFF→ON時のRT状態処理
-- 本機固有のresetDetection（ガックン等）
+- 設定変更/据え置き/電源OFF→ON時のRT状態・残G・成立済みボーナス/告知状態処理
+- 本機固有のresetDetection（ガックン/初期出目等）
 - publicMorningNumbers
 
 coreStatus: COMPLETE_CORE
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
 
 ## conflicts
 
