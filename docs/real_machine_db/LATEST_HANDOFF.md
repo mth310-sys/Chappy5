@@ -1,89 +1,90 @@
 更新日: 2026-09-12
 
 ## 現在地点
-- recordCount: **1442**
-- latestRecordAdded: **パチスロ戦国乙女 暁の関ヶ原-DARKNESS- — No.1442**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2021-11-08_sengoku-otome-akatsuki-no-sekigahara-darkness.md`
+- recordCount: **1443**
+- latestRecordAdded: **ハイハイシオサイ2 — No.1443**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2021-11-08_haihai-shiosai2.md`
 - chronologicalFrontier: **2021-11-08**
-- frontierLatestMachine: **パチスロ戦国乙女 暁の関ヶ原-DARKNESS- — No.1442**
+- frontierLatestMachine: **ハイハイシオサイ2 — No.1443**
 - schema: **resetBehavior v0.7**
-- status: **2021-11-08_GROUP_OPEN_4_OF_5_KNOWN_PROCESSED**
+- status: **2021-11-08_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.1441「パチスロGANTZ極 THE SURVIVAL GAME」を確認して開始。
+- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.1442「パチスロ戦国乙女 暁の関ヶ原-DARKNESS-」を確認して開始。
 - `INDEX.md` は旧19件表示のため、README規定どおり `LATEST_HANDOFF.md` とmain実レコードを正本として進捗判定。
-- handoff指定の次機No.1442「パチスロ戦国乙女 暁の関ヶ原-DARKNESS-」を追加。
-- 当時業界記事、HAZUSE、なな徹、K-Navi、解析資料を横断し、型式・検定番号・導入日・設定別AT初当たり/機械割・ベース・純増・通常天井・resetBehaviorを照合。
-- 設定変更時は有利区間/天井/内部モード/内部状態をRESET。据え置き・純電源OFF→ONでは天井/内部モード/内部状態/有利区間をCARRY_OVER。
-- 設定変更専用公開数値として、天井A/B/C=58.2/40.2/1.6%、アルティメットモード5.1%、黄7×3連AT高確中のAT当選率10.2%を保存。通常有利区間移行時の引き戻し50%・アルティメット0.4%等とは分離した。
-- 遡及resetBehavior QAは `2007-06_disc-up-alternative.md`（ディスクアップオルタナティブ）を再探索。既存性能側 `PARTIAL` は維持し、reset側のみ **PARTIAL_RESEARCH_EXHAUSTED** へ更新。
-- 次の遡及QAカーソルはGit追加履歴の直後を確認し、`2007-06_antonio-inoki-mo-moeru-pachislot-ki.md`（アントニオ猪木も燃えるパチスロ機）へ進める。
+- handoff指定の次機No.1443「ハイハイシオサイ2」を追加。
+- 当時業界記事、HAZUSE、必勝本、K-Navi、パチビー、パチマガスロマガ、解析資料を横断し、型式・検定番号・導入日・設定別BIG/REG/合算/機械割・ベース・獲得枚数・天井非搭載・resetBehaviorを照合。
+- 設定変更固有の朝一公開数値として、**設定変更後1回目のボーナスで技術介入成功時カモメランプ紫が設定2～6で10.0 / 10.5 / 11.0 / 11.5 / 12.0%**となる点を保存。通常2回目以降は2.0 / 2.1 / 2.2 / 2.3 / 2.4%。
+- 一部二次資料は設定変更後1回目の青/赤通常比率と紫変更後比率を同一行に並べ、設定2以上で合計100%を超える。勝手に正規化せずCONFLICTとして保持し、HAZUSEと別資料で一致する紫率だけをcanonicalな変更専用値に採用。
+- 天井非搭載のノーマル機なので、ゲーム数天井短縮・AT/CZモード・朝一有利区間狙いは物差し上NOT_APPLICABLE。純電源OFF→ONだけで設定変更後1回目専用カモメテーブルが再セットされるか、本機固有ガックンは再探索後も直接資料を固定できず推測補完しない。
+- 2021-11-08群は、ANEMONE / CCエンジェル / GANTZ極 / 戦国乙女DARKNESS / ハイハイシオサイ2 の5機で複数導入カレンダーが一致。メーカー系統・PB・25/30Φ別型式・地域先行・延期/段階導入も再監査し、追加未処理を確認できなかったため **CLOSED**。
+- 2021-11-09～11-21境界を導入カレンダーで監査し、次の確認済み新台は2021-11-22「Re:ゼロから始める異世界生活 Apex Vacation」。
 
-## No.1442 — パチスロ戦国乙女 暁の関ヶ原-DARKNESS-
-- path: `docs/real_machine_db/machines/2021-11-08_sengoku-otome-akatsuki-no-sekigahara-darkness.md`
-- manufacturer: **オリンピア（平和）**
-- formalModel: **S戦国乙女暁の関ヶ原L7**
-- certificationNumber: **1S1071**
+## No.1443 — ハイハイシオサイ2
+- path: `docs/real_machine_db/machines/2021-11-08_haihai-shiosai2.md`
+- manufacturer: **パイオニア**
+- formalModel: **Sハイハイシオサイ2HY**
+- certificationNumber: **1S0644**
 - releaseDate: **2021-11-08**
-- generation/system: **6.2号機 / AT / ゲーム数上乗せ型 / CZ搭載**
+- generation/system: **6.1号機 / ノーマルA / 完全告知 / 技術介入あり / 25φ**
 - settings: **1 / 2 / 3 / 4 / 5 / 6**
-- payoutRate: **97.5 / 98.5 / 99.9 / 105.1 / 108.0 / 111.1%**
-- AT初当たり: **1/385.5 / 1/371.5 / 1/352.2 / 1/298.3 / 1/272.5 / 1/248.0**
-- baseGamesPer50: **約37.3G/50枚**
-- netIncrease: **約2.2枚/G**
-- normalCeiling: **通常時634GでCZ / 969G+αでAT**
+- payoutRate: **97.9 / 99.8 / 101.9 / 104.1 / 106.0 / 110.0%**
+- BIG: **1/195 / 1/190 / 1/185 / 1/181 / 1/148 / 1/164**
+- REG: **1/204 / 1/197 / 1/191 / 1/184 / 1/297 / 1/168**
+- 合算: **1/99 / 1/97 / 1/94 / 1/91 / 1/99 / 1/83**
+- baseGamesPer50: **約32.3G/50枚（設定1）**
+- basicPayout: **BIG最大194枚 / REG最大102枚**
+- normalCeiling: **非搭載**
 - coreStatus: **COMPLETE_CORE**
-- resetBehaviorQA: **COMPLETE_PUBLIC_RESET_CORE_WITH_NUMERIC_RESET_TABLES**
+- resetBehaviorQA: **COMPLETE_PUBLIC_RESET_CORE_WITH_NUMERIC_FIRST_BONUS_DATA**
 
-### resetBehavior v0.7 — No.1442
-- **設定変更**: 有利区間・天井・内部モード・内部状態RESET。専用天井A/B/Cを再抽選。
-- **据え置き**: 天井・内部モード・内部状態・有利区間CARRY_OVER。
-- **純電源OFF→ON**: 天井・内部モード・内部状態・有利区間CARRY_OVER。
-- **天井/短縮**: A=58.2%（CZ634G/AT969G+α）、B=40.2%（CZ300G/AT635G+α）、C=1.6%（CZ100G/AT435G+α）。
-- **モード/状態**: 設定変更時アルティメットモード移行率5.1%（全設定共通）。設定変更後の黄7×3連AT高確中はAT当選率10.2%（全設定共通）。
-- **有利区間**: 設定変更でRESET、据え置き/純電断でCARRY_OVER。AT終了時も必ずRESET。
-- **朝一恩恵**: 約41.8%で通常より浅い天井B/C、アルティメット5.1%、黄7×3連AT高確。
-- **変更判別**: 通常時有利区間ランプ点灯型。未対策なら朝一消灯=設定変更濃厚、点灯=据え置き濃厚。前日消灯閉店・店舗対策は例外。
-- **公開朝一数値**: 天井A/B/C振り分け、アルティメット5.1%、黄7×3連10.2%を固定。本機固有ガックン条件はUNVERIFIED_AFTER_RESEARCH。
+### resetBehavior v0.7 — No.1443
+- **設定変更**: 天井非搭載なのでゲーム数/天井RESETはNOT_APPLICABLE。設定変更後1回目のボーナスだけカモメランプ紫出現率が専用値へ上昇。
+- **据え置き**: 天井・AT/CZモード引継ぎはNOT_APPLICABLE。変更後初回専用テーブルが据え置きで再発する根拠なし。
+- **純電源OFF→ON**: 天井はNOT_APPLICABLE。純電断だけで変更後初回専用カモメテーブルが再セットされるかはUNVERIFIED_AFTER_RESEARCH。
+- **天井/短縮**: 天井非搭載のためNO / NOT_APPLICABLE。
+- **モード/状態**: AT/CZ用モードはNOT_APPLICABLE。変更後1回目ボーナスの設定示唆テーブル差のみ保存。
+- **有利区間**: ノーマルボーナス主体で朝一客行動に関係する有利区間仕様なし。物差し上NOT_APPLICABLE。
+- **朝一恩恵**: 変更後最初のボーナスで紫カモメランプが出やすく、設定判別情報が通常より強い。
+- **変更判別**: 最初のボーナスで紫が出れば変更後専用テーブルの統計的材料。ただし紫自体は2回目以降にも出るので設定変更確定ではない。本機固有ガックンはUNVERIFIED_AFTER_RESEARCH。
+- **公開朝一数値**: 紫率 設定2～6 = **10.0 / 10.5 / 11.0 / 11.5 / 12.0%**。通常2回目以降 = **2.0 / 2.1 / 2.2 / 2.3 / 2.4%**。
 
-## 2021-11-08群 — OPEN
+## 2021-11-08群 — CLOSED
 1. **パチスロANEMONE 交響詩篇エウレカセブン HI-EVOLUTION — No.1439 / DONE**
 2. **CCエンジェル — No.1440 / DONE**
 3. **パチスロGANTZ極 THE SURVIVAL GAME — No.1441 / DONE**
 4. **パチスロ戦国乙女 暁の関ヶ原-DARKNESS- — No.1442 / DONE**
-5. **ハイハイシオサイ2 — No.1443候補 / NEXT**
-- 群は未CLOSED。次回開始時に全メーカー・PB・地域先行・25/30Φ別型式・延期/段階導入を再監査し、ハイハイシオサイ2処理後に同日群のCLOSED可否を判定する。
+5. **ハイハイシオサイ2 — No.1443 / DONE**
+- 複数の2021年導入カレンダーで11/8群が上記5機に一致。追加の同日未処理機は今回の横断監査では確認されずCLOSED。
 
 ## 次回本線の再開地点
-- **2021-11-08群 / No.1443候補: ハイハイシオサイ2**。
-- 処理後、2021-11-08群を横断監査してCLOSED可否を判定する。
+- **2021-11-09～11-21境界の最終監査 → 2021-11-22群**。
+- No.1444候補: **Re:ゼロから始める異世界生活 Apex Vacation**。
+- 2021-11-22群を開始する前に、メーカー別/別型式/PB/地域先行・延期/段階導入を再確認する。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
-- 今回処理済み: `docs/real_machine_db/machines/2007-06_disc-up-alternative.md`（ディスクアップオルタナティブ）→ **PARTIAL_RESEARCH_EXHAUSTED**。
-- 性能側 `status: PARTIAL` は維持。設定変更後内部DJタイム開始と朝一変更推測は既存根拠を維持し、据え置き/純電断時のRT/DJ状態・残G、本機固有ガックンは再探索後も直接契約を固定できず推測補完しない。
+- 前回処理済み: `docs/real_machine_db/machines/2007-06_disc-up-alternative.md`（ディスクアップオルタナティブ）→ **PARTIAL_RESEARCH_EXHAUSTED**。
 - 次回遡及QAカーソル: **`docs/real_machine_db/machines/2007-06_antonio-inoki-mo-moeru-pachislot-ki.md`（アントニオ猪木も燃えるパチスロ機）**。
+- 今回は本線No.1443と2021-11-08群CLOSED監査を優先し、遡及QAカーソルは進めていない。
 
 ## GitHub保存
-- No.1442追加 commit: `b199d3c68a0077644aea378728a847b19fe1e93f`
-- ディスクアップオルタナティブQA commit: `0ce0fb335aa6bd821aee568d6ba5e2a316bef18f`
+- No.1443追加 commit: `3a2971d7118ab2800e0646f76fa197f5cf3b47f1`
 - `LATEST_HANDOFF.md`: この更新commitでmainへ反映。
 
 ## 主要出典 — 取得日 2026-09-12
-### No.1442 パチスロ戦国乙女 暁の関ヶ原-DARKNESS-
-- https://news.p-world.co.jp/articles/17793/greenbelt
-- https://www.pidea.jp/articles/1631263875
-- https://hazuse.com/machine/pachislot/1S1071/
-- https://hazuse.com/machine/pachislot/1S1071/genre/207/
-- https://nana-press.com/kaiseki/machine/157/6385/
-- https://nana-press.com/kaiseki/machine/157/6382/
-- https://nana-press.com/kaiseki/machine/157/6589/
-- https://chonborista.com/slot/orinpia-slot/150615/
-- https://p-kn.com/slot/3669/
-- https://ichikatsu.com/otome-darkness/
+### No.1443 ハイハイシオサイ2
+- https://news.p-world.co.jp/articles/17449/nippon
+- https://news.p-world.co.jp/articles/17601/greenbelt
+- https://www.pidea.jp/articles/1629182526
+- https://www.pachibee.jp/machines/lecture/221090006
+- https://hazuse.com/machine/pachislot/1S0644/
+- https://hisshobon.news/analyze/4580/
+- https://www.slopachi-quest.com/article/haihaisiosai2-settei/
+- https://chonborista.com/slot/pionia-slot/154093/
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/pioneer_slot/134/tj02.php
 
-### 遡及QA ディスクアップオルタナティブ
-- https://wave-master.com/ent/du25th/
-- https://p-kn.com/topics/news/186/
-- https://p-kn.com/slot/688/
-- https://slonet.sakura.ne.jp/kouryaku/diskupalu.html
+### 2021-11-08群 / 次回境界監査
+- https://crankyseven.com/newmachine-info.htm
+- https://sulocale.sulopachinews.com/archives/43927
+- https://ichikatsu.com/newslot/
