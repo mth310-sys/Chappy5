@@ -4,7 +4,7 @@ recordNo: 1528
 machineName: パチスロ 魔法少女育成計画
 manufacturer: カルミナ / ネット
 formalModel: SまほいくNB
-inspectionCode: 2S0722
+inspectionCode: 2S0772
 releaseDate: 2022-10-17
 generation: 6.5号機
 systemType: A+ART / 技術介入 / 完走型ART
@@ -173,8 +173,8 @@ resetQaLastUpdated: 2026-09-13
 
 ### resetBehavior 再探索メモ
 - 取得/再探索日: 2026-09-13。
-- `魔法少女育成計画 / まほいく / SまほいくNB / SまほいくNBA / 2S0722 / カルミナ / ネット` と `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 周期 / 天井 / ゲーム数引継ぎ / モード / 状態 / キャンディー / フリーズ高確 / ガックン / 有利区間` を組み替えて再探索。
-- カルミナ公式、業界ニュース、公安委員会検定資料、K-Navi、一撃、スロパチクエスト、Altema、NanaPress、ちょんぼりすた、イチカツ、当時導入直後実戦整理を横断。
+- `魔法少女育成計画 / まほいく / SまほいくNB / SまほいくNBA / 2S0772 / 2S0722 / カルミナ / ネット` と `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 周期 / 天井 / ゲーム数引継ぎ / モード / 状態 / キャンディー / フリーズ高確 / ガックン / 有利区間` を組み替えて再探索。
+- カルミナ公式、業界ニュース、複数都道府県公安委員会検定資料、K-Navi、一撃、スロパチクエスト、Altema、NanaPress、ちょんぼりすた、イチカツ、当時導入直後実戦整理を横断。
 - 後年更新された一撃の詳細比較表とAltemaが、設定変更時の「ゲーム数引継ぎ・周期数RESET」で一致。旧スロパチクエストの「天井RESET」は粒度が粗く、競合を平均せず定義差として保持。
 
 ## conflicts
@@ -196,6 +196,10 @@ resetQaLastUpdated: 2026-09-13
 - 一部検定速報記事: `SまほいくNBA`。
 - 公安委員会告示・メーカー公式を優先し `SまほいくNB` をcanonical、`SまほいくNBA` を速報表記差として保持。
 
+### 検定番号
+- 沖縄県・和歌山県・広島県の公安委員会告示で **2S0772** が一致するためcanonical。
+- PiDEA掲載の東京都公安委員会情報は **2S0722** とするが、複数の公的原資料と不一致のため `CONFLICT_INDUSTRY_TRANSCRIPTION` として保持し平均化しない。
+
 ## missingFields
 - 設定変更専用モード振り分け
 - 設定変更後の具体的な内部高確/状態振り分け
@@ -209,53 +213,61 @@ resetQaLastUpdated: 2026-09-13
    - https://carmina-gaming.co.jp/product/release/2022/
    - 製品、2022.10、型式 `SまほいくNB`、製造ネットを確認。
    - reliability: OFFICIAL
-2. PiDEA X — 東京都公安委員会検定通過状況（2022-09-20告示）
-   - https://www.pidea.jp/articles/1663809222
-   - `SまほいくNB`、検定番号 `2S0722`、ネット株式会社を確認。
-   - reliability: INDUSTRY / PUBLIC_RECORD
-3. 広島県公安委員会告示第57号
+2. 沖縄県公安委員会告示第134号
+   - https://www.reflex.okinawa/pdf/2022/8.29.pdf
+   - 型式 `SまほいくNB`、型式試験番号2S077200、検定番号2S0772、ネット株式会社を確認。
+   - reliability: PUBLIC_RECORD
+3. 和歌山県公安委員会告示第39号
+   - https://www.police.pref.wakayama.lg.jp/koan/kenteiyuugiki/R4/kenteikokuji0830.pdf
+   - 型式 `SまほいくNB`、検定番号2S0772を照合。
+   - reliability: PUBLIC_RECORD
+4. 広島県公安委員会告示第57号
    - https://www.pref.hiroshima.lg.jp/soumu/kenpo-pdf/2022/t068/2022-t068-029.pdf
-   - 型式 `SまほいくNB`、検定番号2S0772表記の公的告示を確認。東京都告示2S0722と番号差があるため要注意（本文canonicalは東京都PiDEA掲載2S0722）。
-   - reliability: PUBLIC_RECORD / CONFLICT
-4. P-WORLD業界ニュース / 遊技日本
+   - 型式 `SまほいくNB`、検定番号2S0772を照合。
+   - reliability: PUBLIC_RECORD
+5. PiDEA X — 東京都公安委員会検定通過状況
+   - https://www.pidea.jp/articles/1663809222
+   - 型式 `SまほいくNB`、ネット株式会社を確認。検定番号は2S0722表記で公的原資料3系統と競合。
+   - reliability: INDUSTRY / CONFLICT
+6. P-WORLD業界ニュース / 遊技日本
    - https://news.p-world.co.jp/articles/21678/nippon
    - 6.5号機第1弾、A+ART、型式、基本スペック、純増を確認。
    - reliability: INDUSTRY
-5. K-Navi
+7. K-Navi
    - https://p-kn.com/slot/3851/
    - 2022-10-17導入、ボーナス獲得枚数、ART概要を確認。
    - reliability: ANALYSIS_HIGH
-6. 一撃
+8. 一撃
    - https://1geki.jp/slot/s_mahoiku/
    - https://1geki.jp/slot/s_mahoiku/4/
    - https://1geki.jp/slot/s_mahoiku/5/
    - 通常/完全攻略機械割、ART/ボーナス確率、天井、有利区間、設定変更/電源OFF→ON詳細を確認。
    - reliability: ANALYSIS_HIGH
-7. Altema
+9. Altema
    - https://altema.jp/pachimo/mahoiku
    - 設定変更時ゲーム数引継ぎ・周期数RESET、内部状態/有利区間/モード、電断時引継ぎを照合。
    - reliability: ANALYSIS_HIGH
-8. スロパチクエスト
+10. スロパチクエスト
    - https://www.slopachi-quest.com/article/mahoshojoikuseikeikaku-tenjou/
    - 旧整理の設定変更/電断比較、有利区間ランプ・リセット恩恵調査状況を確認。天井RESET表記は後年詳細解析とCONFLICT扱い。
    - reliability: ANALYSIS_SINGLE / CONFLICT
-9. NanaPress
+11. NanaPress
    - https://nana-press.com/kaiseki/machine/441/12143/
    - ART初当り、設定別ART純増、ART構造を照合。
    - reliability: ANALYSIS_HIGH
-10. イチカツ
+12. イチカツ
    - https://ichikatsu.com/mahoiku/
    - 2022-10-17導入、約36.7G/50枚、機械割、天井構造を確認。
    - reliability: ANALYSIS_HIGH
-11. Greenbelt / P-WORLD業界ニュース — 2022-10-03更新新台スケジュール
+13. Greenbelt / P-WORLD業界ニュース — 2022-10-03更新新台スケジュール
    - https://news.p-world.co.jp/articles/21806/greenbelt
    - 10/3導入欄に本機掲載、10/17欄にはダンまち外伝のみ。導入日CONFLICT根拠。
    - reliability: INDUSTRY / CONFLICT
-12. ALL7.jp — 2022年10月導入予定一覧
+14. ALL7.jp — 2022年10月導入予定一覧
    - https://www.all7.jp/plans/index/2022/10
    - 本機を2022/10/07導入予定と掲載。導入日CONFLICT根拠。
    - reliability: SECONDARY / CONFLICT
-13. けんのスロットシミュレーション
+15. けんのスロットシミュレーション
    - https://kenslo65536.com/kaiseki/mahouiku.html
    - 機械割、完全攻略値、ART/ボーナス確率、最大3周期天井を照合。
    - reliability: ANALYSIS_SINGLE
@@ -263,4 +275,4 @@ resetQaLastUpdated: 2026-09-13
 ## status
 - coreStatus: COMPLETE_CORE
 - resetBehaviorQA: COMPLETE_RESET_CORE_WITH_COUNTER_DEFINITION_CONFLICT_RESOLVED
-- confidence: OFFICIAL / INDUSTRY / PUBLIC_RECORD / ANALYSIS_HIGH
+- confidence: OFFICIAL / PUBLIC_RECORD / INDUSTRY / ANALYSIS_HIGH
