@@ -1,100 +1,89 @@
 更新日: 2026-09-12
 
 ## 現在地点
-- recordCount: **1496**
-- latestRecordAdded: **SLOT STEINS;GATE — No.1496**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2022-05-09_slot-steins-gate.md`
+- recordCount: **1497**
+- latestRecordAdded: **ハナハナホウオウ～天翔～紫パネル — No.1497**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2022-05-09_hanahana-houoh-tensho-gp.md`
 - chronologicalFrontier: **2022-05-09**
-- frontierLatestMachine: **SLOT STEINS;GATE — No.1496**
+- frontierLatestMachine: **ハナハナホウオウ～天翔～紫パネル — No.1497**
 - schema: **resetBehavior v0.7**
-- status: **2022-05-09_GROUP_OPEN_2_OF_3_CURRENTLY_CONFIRMED**
+- status: **2022-05-09_GROUP_CLOSED_3_OF_3_ACTUAL_RELEASES**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧 `docs/real_machine_db/INDEX.md`、最新 `LATEST_HANDOFF.md`、直前No.1495 `Sスーパー海物語IN JAPAN祭` を確認して開始。
+- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧 `docs/real_machine_db/INDEX.md`、最新 `LATEST_HANDOFF.md`、既存No.1464 `ハナハナホウオウ～天翔～` を確認して開始。
 - `INDEX.md` は旧19件表示のため、README規定どおり最新 `LATEST_HANDOFF.md` とmain実レコードを進捗正本として扱った。
-- 直前handoff指定の次機種 `SLOT STEINS;GATE` をNo.1496として登録。
-- ユニバーサル公式、業界記事、HAZUSE、K-Navi、一撃、なな徹、パチマガスロマガ、ちょんぼりすた、スロットセブン等を横断し、性能コアとresetBehavior v0.7を収集。
-- 型式 `S/STEINS;GATE/TG`、検定番号 `1S1545`、製造メーシー、2022-05-09導入、6.2号機ATを確認。
-- 設定はL/1/2/4/5/6。通常設定の機械割97.2/98.8/102.0/105.0/108.1%。設定Lは下パネル消灯だが正確なPAYOUTは資料上調査中のためUNVERIFIED。
-- 初当りボーナス合算1/283.6〜1/130.8、設定1ベース33.9G/50枚、純増約5.0枚/G。
-- 運命創始のボーナスは20G・約100枚、狂気再醒のボーナスは25G・約125枚。STEINS;ROADは初期16G〜最大32G、STEINS;GATEは32G固定・ボーナスとのループ期待度86%。
-- 通常時は有利区間移行後1000Gでボーナス天井（運命創始50% / 狂気再醒50%）、12周期で上位CZダイバージェンスゾーン。1周期150pt・平均約70G。
-- 設定変更では有利区間・1000G天井・周期数・内部状態RESET。周期は0スタート。
-- 据え置きと純電源OFF→ONは有利区間・天井・周期数・内部状態CARRY_OVER。
-- 新規有利区間移行時の魔眼獲得率は50%。設定変更時にも適用されるが、設定変更専用抽選ではなく新規有利区間移行時共通値として保存。
-- 通常時は有利区間ランプ非点灯タイプのため朝一消灯だけでは変更判別不可。前日DZ/ボーナス等で点灯状態→朝一消灯なら設定変更濃厚材料だが店舗対策例外あり。
-- 設定変更/電源OFF→ONの固定開始ステージ、設定変更専用ダイバージェンスMAP全初期振り分け、本機固有ガックン条件/発生率、設定L正確PAYOUTは検索語・資料系統変更後も固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- No.1496 handoff指定の `ハナハナホウオウ～天翔～紫パネル` を独立型式No.1497として登録。
+- 型式は `Sハナハナホウオウ～天翔～GP`。2022年1月導入の25φ `Sハナハナホウオウ～天翔～LX` とは別型式だが、パイオニア発表を報じる複数業界資料が**スペック・演出は同一**と明記。
+- そのため全型式収集方針に従い独立レコード化しつつ、性能コアはLXと同一仕様として採用。設定1〜6、機械割97/99/101/103/106/109%、BIG 1/297→1/236、REG 1/496→1/337、合算1/186→1/139、約42G/50枚、BIG最大240枚、REG最大120枚、天井なし。
+- 導入日は後年カレンダー/解析で **2022-05-09**。発売時業界記事は「5月上旬予定」。
+- GPの検定通過は2022-02-10〜02-14頃の資料で確認できたが、検定番号そのものは今回の表記・資料系統変更後も固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- resetBehaviorはGP固有解析ページが固定できなかったため、業界一次系の「スペック・演出同一」を根拠に既存LX高信頼解析を継承した箇所を明示。天井/AT/CZ/有利区間は非該当。LX解析では設定変更・純電断ともBETランプ引継ぎ、ガックンなし。BGM変化条件の内部履歴はLX時点でも調査中のため `UNVERIFIED_AFTER_RESEARCH`。
 
-## No.1496 — SLOT STEINS;GATE
-- path: `docs/real_machine_db/machines/2022-05-09_slot-steins-gate.md`
-- manufacturer: **メーシー（製造） / ユニバーサルエンターテインメント（販売・ブランド）**
-- formalModel: **S/STEINS;GATE/TG**
-- inspectionCode: **1S1545**
+## No.1497 — ハナハナホウオウ～天翔～紫パネル
+- path: `docs/real_machine_db/machines/2022-05-09_hanahana-houoh-tensho-gp.md`
+- manufacturer: **パイオニア**
+- formalModel: **Sハナハナホウオウ～天翔～GP**
+- inspectionCode: **UNVERIFIED_AFTER_RESEARCH**
 - releaseDate: **2022-05-09**
-- generation/system: **6.2号機 / 擬似ボーナス連鎖型AT**
-- settings: **L / 1 / 2 / 4 / 5 / 6**
-- payoutRate: **97.2 / 98.8 / 102.0 / 105.0 / 108.1%（設定1/2/4/5/6、LはUNVERIFIED）**
-- initialBonusCombined: **1/283.6 / 1/262.5 / 1/211.0 / 1/167.4 / 1/130.8**
-- baseGamesPer50: **33.9G/50枚（設定1）**
-- netIncrease: **約5.0枚/G**
-- basicPayout: **運命創始20G・約100枚 / 狂気再醒25G・約125枚 / SG 32G・86%ループ期待度**
+- generation/system: **6号機 / ノーマル・完全告知・25φ**
+- settings: **1 / 2 / 3 / 4 / 5 / 6**
+- payoutRate: **97 / 99 / 101 / 103 / 106 / 109%**
+- BIG: **1/297 / 1/284 / 1/273 / 1/262 / 1/249 / 1/236**
+- REG: **1/496 / 1/458 / 1/425 / 1/397 / 1/366 / 1/337**
+- combined: **1/186 / 1/175 / 1/166 / 1/157 / 1/148 / 1/139**
+- baseGamesPer50: **約42G/50枚**
+- basicPayout: **BIG最大240枚 / REG最大120枚**
 - coreStatus: **COMPLETE_CORE**
-- resetBehaviorQA: **COMPLETE_RESET_CORE**
-- confidence: **HIGH**
+- resetBehaviorQA: **PARTIAL_RESEARCH_EXHAUSTED**
+- confidence: **HIGH_CORE / GP_SPECIFIC_RESET_DIRECT_DOC_UNVERIFIED**
 
-### resetBehavior v0.7 — No.1496
-- **設定変更**: 有利区間RESET / 1000G天井RESET / 周期0スタート / 内部状態RESET。
-- **据え置き**: 有利区間・天井・周期・内部状態CARRY_OVER。
-- **純電源OFF→ON**: 有利区間・天井・周期・内部状態CARRY_OVER。
-- **ゲーム数/天井**: 1000Gでボーナス、12周期でDZ。設定変更専用短縮なし。
-- **モード/状態**: 新規有利区間へ移行。設定変更専用MAP全初期振り分けはUNVERIFIED_AFTER_RESEARCH。
-- **有利区間**: 設定変更RESET、据え置き/純電断CARRY_OVER。通常時ランプ非点灯。
-- **朝一恩恵**: 新規有利区間移行時の魔眼獲得50%。設定変更専用値ではなく共通値。
-- **変更判別**: 通常時ランプ消灯のため単純判別不可。前日点灯→朝一消灯のみ変更濃厚材料。本機固有ガックンはUNVERIFIED_AFTER_RESEARCH。
+### resetBehavior v0.7 — No.1497
+- **設定変更**: 天井なし。AT/CZモード非該当。LX同一仕様解析ではBETランプ引継ぎ・ガックンなし。
+- **据え置き**: 天井/AT/CZ非該当。BGM変化条件の内部履歴はUNVERIFIED_AFTER_RESEARCH。
+- **純電源OFF→ON**: LX同一仕様解析ではBETランプ引継ぎ・ガックンなし。
+- **ゲーム数/天井**: 天井非搭載。
+- **モード/状態**: 朝一専用AT/CZモードは非該当。BGM履歴のみ未固定。
+- **有利区間**: 朝一物差しではNOT_APPLICABLE。
+- **朝一恩恵/不利**: 設定変更専用の短縮天井・CZ/AT優遇・主要不利要素はなし/非該当。
+- **変更判別**: BETランプは引継ぎ、ガックンなしのため主要な変更判別材料にならない。GP固有直接解析はUNVERIFIED_AFTER_RESEARCH。
+- **公開朝一数値**: 設定変更専用当選率・短縮G・モード振分はなし/非該当。
 
-## 2022-05-09群 — OPEN
-現在確認できる独立候補:
+## 2022-05-09群 — CLOSED
+実導入として現在採用する3型式/機種:
 1. `Sスーパー海物語IN JAPAN祭` — **No.1495 処理済み**
 2. `SLOT STEINS;GATE` — **No.1496 処理済み**
-3. `ハナハナホウオウ～天翔～紫パネル`（型式 `Sハナハナホウオウ～天翔～GP`）— **未処理候補 / 2022年5月上旬追加導入、1月のLX/EX-30とは別型式**
+3. `ハナハナホウオウ～天翔～紫パネル / Sハナハナホウオウ～天翔～GP` — **No.1497 処理済み**
 
 ### 日付監査メモ
-- K-Naviの2022-05カレンダーは `パチスロ ゼーガペイン2` を5/9群に掲載するが、HAZUSE実戦記事、ちょんぼりすた、イチカツ、ニコナナ導入前動画、5/27実戦報道はいずれも **2022-05-23導入**で一致。前倒し予定記事には5/9予定も存在する。
-- よって `ゼーガペイン2` は5/9群へ登録せず、**2022-05-23本線候補として保留**。導入予定変更による日付CONFLICTとして扱う。
-- なな徹上半期回顧も5月実導入を `5/9 スーパー海 / ハナハナGP / STEINS;GATE`、`5/23 けものフレンズ / ゼーガペイン2` と整理しており、現状はこちらを実導入時系列のcanonical候補とする。
+- K-Naviは `パチスロ ゼーガペイン2` を2022-05-09に掲載するが、複数の実導入系資料は **2022-05-23** で一致。5/9は前倒し予定情報として保持し、本DBの実導入時系列では5/23をcanonical候補とする。
+- 別の2022年導入カレンダーは5/9を `SLOT STEINS;GATE` と `Sスーパー海物語IN JAPAN祭`、5/23を `ぱちすろ けものフレンズ` と `パチスロ ゼーガペイン2` と整理。紫GPは限定/増産型式として別資料で5/9導入が確認できる。
+- よって5/10〜5/22に追加の未処理本線候補が見つからなければ、次は5/23群へ進む。
 
 ## 次回本線の再開地点
-- **No.1497候補 `ハナハナホウオウ～天翔～紫パネル`（型式 `Sハナハナホウオウ～天翔～GP`）を独立レコード化すべきか、既存1/24のLX/EX-30レコードとの型式差・パネル差・性能同一性をmain既存レコードと再照合して処理する。**
-- 5/9群CLOSED後は5/10〜5/22境界を監査し、5/23群 `ぱちすろ けものフレンズ` / `パチスロ ゼーガペイン2` へ進む。
+- **No.1498候補 `ぱちすろ けものフレンズ` — 2022-05-23。**
+- その後 **`パチスロ ゼーガペイン2` — 2022-05-23** を処理する。
+- ゼーガペイン2は5/9予定資料と5/23実導入資料のDATE_CONFLICTを平均化せず保持する。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
-- 今回は本線No.1496登録を優先し、遡及QAカーソルは進めていない。
+- 今回は本線No.1497登録を優先し、遡及QAカーソルは進めていない。
 - 次回遡及QAカーソル: **`docs/real_machine_db/machines/2007-02-18_kagaku-ninjatai-gatchaman.md`（科学忍者隊ガッチャマン）**。
 
 ## GitHub保存
-- No.1496追加 commit: `2953b553fe830e017027d74cda2186ea95eb6271`
+- No.1497追加 commit: `ab1581ea0c5c9c2367f16a670966f5e8a4e54075`
 - `LATEST_HANDOFF.md`: この更新commitでmainへ反映。
 
 ## 主要出典 — 取得日 2026-09-12
-### No.1496 SLOT STEINS;GATE
-- https://www.universal-777.co.jp/news/20220307001533/
-- https://p-bomb.co.jp/industry/new-machine/3760/
-- https://hazuse.com/machine/pachislot/1S1545/
-- https://p-kn.com/slot/3767/
-- https://1geki.jp/slot/s_steins_gate/
-- https://1geki.jp/slot/s_steins_gate/3/
-- https://nana-press.com/kaiseki/machine/347/9125/
-- https://nana-press.com/kaiseki/machine/347/9220/
-- https://chonborista.com/slot/universal-slot/164980/
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/macy_slot/55/kh02-3.php
-- https://slot-seven.com/steinsgate-tenzyou/
-
-### 2022-05-09群 / 次境界監査
-- https://p-kn.com/calendar/202205/
-- https://1geki.jp/newmachinecalender/202205/
-- https://nana-press.com/post/1576830
-- https://hazuse.com/research/shida8/
-- https://chonborista.com/slot/yamasa-slot/164299/
-- https://ichikatsu.com/newslot2022/
+### No.1497 ハナハナホウオウ～天翔～紫パネル
 - https://news.p-world.co.jp/articles/19785/nippon
+- https://p-bomb.co.jp/industry/maker/3560/
+- https://news.p-world.co.jp/articles/19759/yugitsushin
+- https://pachinko-curation.com/24568/
+- https://item.rakuten.co.jp/auc-nakaiti/hanahanahouoh_tensho_gp/
+- https://slogati.com/hanahana-ht/
+- https://p.hisshobon.jp/machine/3792/1/85421
+
+### 2022-05-09 / 05-23境界監査
+- https://p-kn.com/calendar/202205/
+- https://crankyseven.com/newmachine-info.htm
+- https://chonborista.com/slot/universal-slot/164980/
