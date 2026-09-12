@@ -1,100 +1,81 @@
 更新日: 2026-09-12
 
 ## 現在地点
-- recordCount: **1438**
-- latestRecordAdded: **パチスロ かまいたちの夜 — No.1438**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2021-10-04_kamaitachi-no-yoru.md`
-- chronologicalFrontier: **2021-10-04**
-- frontierLatestMachine: **パチスロ かまいたちの夜 — No.1438**
+- recordCount: **1439**
+- latestRecordAdded: **パチスロANEMONE 交響詩篇エウレカセブン HI-EVOLUTION — No.1439**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2021-11-08_anemone-eureka-seven-hi-evolution.md`
+- chronologicalFrontier: **2021-11-08**
+- frontierLatestMachine: **パチスロANEMONE 交響詩篇エウレカセブン HI-EVOLUTION — No.1439**
 - schema: **resetBehavior v0.7**
-- status: **2021-10-04_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**
+- status: **2021-11-08_GROUP_OPEN_1_OF_5_KNOWN_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.1437「ニューパルサーDX3」を確認して開始。
+- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.1438「パチスロ かまいたちの夜」を確認して開始。
 - `INDEX.md` は旧19件表示のため、README規定どおり `LATEST_HANDOFF.md` とmain実レコードを正本として進捗判定。
-- handoff指定どおりNo.1438「パチスロ かまいたちの夜」を追加。
-- 2021-10-04群は既知5機すべて処理済み。2021年10月のパチスロ導入機一覧でもこの5機構成を再確認し、10/11・10/18・10/25の追加パチスロ本線候補は確認できなかったためCLOSED。
-- 遡及resetBehavior QAは `2007-05_kemonocchi.md`（けものっち!）を正式再探索し、性能側PARTIALは維持したまま reset側を `PARTIAL_RESEARCH_EXHAUSTED` へ更新。
-- Git追加履歴を確認し、けものっち!の次の新規実機レコード追加は `2007-06_disc-up-alternative.md`（ディスクアップオルタナティブ）。次回QAカーソルに設定。
+- 2021-10-04群CLOSED後の指定どおり、2021-11-08群先頭のNo.1439「パチスロANEMONE 交響詩篇エウレカセブン HI-EVOLUTION」を追加。
+- 型式/検定、メーカー発表由来スペック、複数解析の性能コア、設定変更/据え置き/純電断、有利区間ランプ、モード別天井、有利区間開始時モード振り分けを横断照合。
+- 設定変更専用の固定短縮天井・独自モードテーブルは確認されない。有利区間開始時の共通モード振り分けを朝一比較用数値として保存し、リセット専用値と誤認しない注記を付与。
+- 本機固有ガックンと純電断後の表示ステージ詳細は検索語/型式/資料系統を変えても固定できず、一般論補完せずUNVERIFIED_AFTER_RESEARCH。
+- 遡及resetBehavior QAカーソルは今回本線優先のため動かさず、`2007-06_disc-up-alternative.md`（ディスクアップオルタナティブ）を維持。
 
-## No.1438 — パチスロ かまいたちの夜
-- path: `docs/real_machine_db/machines/2021-10-04_kamaitachi-no-yoru.md`
-- manufacturer: **オーイズミ**
-- formalModel: **Sパチスロかまいたちの夜SX**
-- certificationNumber: **0S0366**
-- releaseDate: **2021-10-04**
-- generation/system: **6.1号機 / A+RT / 技術介入 / 完走型RT / CZ周期天井**
-- settings: **1 / 2 / 5 / 6**
-- payoutRate: **97.8〜102.0 / 98.9〜103.0 / 101.9〜106.0 / 104.0〜108.0%**（技術介入条件別レンジ）
-- BIG合算: **1/331.0 / 1/322.8 / 1/300.6 / 1/292.6**
-- REG合算: **1/339.6 / 1/331.0 / 1/310.6 / 1/293.9**
-- bonusCombined: **1/167.6 / 1/163.4 / 1/152.8 / 1/146.6**
-- baseGamesPer50: **約39G（設定1）〜43G（設定6）/50枚**
-- netIncrease: **RT約0.4枚/G**
-- basicPayout: **かまいたちBONUS平均約172枚 / BIG平均約147枚 / REG平均約65枚**
-- normalCeiling: **CZ終了後128G or 256GでCZ「運命分岐モード」**
+## No.1439 — パチスロANEMONE 交響詩篇エウレカセブン HI-EVOLUTION
+- path: `docs/real_machine_db/machines/2021-11-08_anemone-eureka-seven-hi-evolution.md`
+- manufacturer: **ロデオ製造 / サミー総発売元**
+- formalModel: **S ANEMONE FF**
+- certificationNumber: **1S0790**
+- releaseDate: **2021-11-08**
+- generation/system: **6.2号機 / AT / 擬似ボーナス / CZ / 有利区間3000G対応**
+- settings: **1 / 2 / 3 / 4 / 5 / 6**
+- payoutRate: **97.9 / 98.9 / 100.1 / 105.4 / 108.6 / 110.5%**
+- BONUS初当たり: **1/178.8 / 1/171.9 / 1/171.4 / 1/147.9 / 1/144.9 / 1/126.0**
+- AT初当たり: **1/537.3 / 1/519.9 / 1/493.3 / 1/433.3 / 1/378.0 / 1/357.6**
+- baseGamesPer50: **約37G/50枚**
+- netIncrease: **約2.6枚/G**
+- basicPayout: **GULLIVER BONUSベルナビ5回 / ANEMONE BONUSベルナビ10回 / EPISODE BONUS30G / NIRVASH-X BONUS20G**
+- normalCeiling: **通常808G / ガリバー606G / エピソード505G（有利区間開始時モード依存）**
 - coreStatus: **COMPLETE_CORE**
-- resetBehaviorQA: **COMPLETE_PUBLIC_RESET_CORE_WITH_STATE_DEPENDENT_MORNING_START_AND_POWER_CARRYOVER**
+- resetBehaviorQA: **COMPLETE_PUBLIC_RESET_CORE_WITH_ADVANTAGEOUS_SECTION_START_MODE_TABLE**
 
-### resetBehavior v0.7 — No.1438
-- **設定変更**: CZ天井進行RESET。通常時から設定変更した場合は通常時開始、ボーナス/CZ/RTなど通常時以外から設定変更した場合はCZ「運命分岐モード」開始。
-- **据え置き**: CZ天井進行はCARRY_OVER。前日遊技状態の細部は閉店状態・停止手順依存。
-- **純電源OFF→ON**: CZ天井G数はCARRY_OVER。CZ/RT残G・成立済みボーナス/告知状態の完全な内部契約は1gekiでも調査中のままで、一般論補完せず `PARTIAL_DETAIL_UNVERIFIED`。
-- **天井**: 通常システムは128G/256G。難易度高の転落側ビタ成功で次回128G、失敗で256G。難易度低は75%で128G、25%で256G。これは設定変更専用振り分けではない。
-- **有利区間**: NOT_APPLICABLE。複数解析資料で有利区間なしと明記。
-- **朝一恩恵/不利**: 通常時以外からの設定変更なら朝一CZ開始。通常時天井進行は変更で消えるため宵越し進行を失う。
-- **変更判別**: 朝一CZ開始なら変更の可能性が高いが、前日CZ終了なら判別不能。通常時開始でも通常時から設定変更したケースがあるため据え置き確定にはならない。本機固有ガックンは再探索後もUNVERIFIED。
-- **公開朝一数値**: 設定変更専用の固定CZ開始率・モード振り分けは確認されない。128/256G選択関連数値は通常CZシステムとして別管理。
+### resetBehavior v0.7 — No.1439
+- **設定変更**: 天井・内部モード・内部状態・有利区間RESET。朝一は富士基地内。有利区間開始時の通常処理へ入る。
+- **据え置き**: 天井進行・内部モード/状態・継続中の有利区間をCARRY_OVER。
+- **純電源OFF→ON**: 天井・内部モード/状態・有利区間をCARRY_OVER。表示ステージ詳細は当時資料で調査中のため推測しない。
+- **天井**: 通常808G / ガリバー606G / エピソード505G。GULLIVER BONUS後は有利区間と天井進行を継続。同一有利区間でGULLIVER BONUS6連続AT非当選なら次回NIRVASH-X BONUS。
+- **リセット短縮**: 固定の設定変更専用短縮天井なし。606G/505Gは有利区間開始時に特殊モードが選ばれた場合の通常仕様。
+- **有利区間開始時モード振り分け（非レア役）**: 通常/ガリバー/エピソードは設定1=`97.3/1.6/1.2%`、設定2=`97.3/1.2/1.6%`、設定3=`96.9/1.2/2.0%`、設定4=`96.9/1.2/2.0%`、設定5=`95.7/1.2/3.1%`、設定6=`94.5/0.8/4.7%`。設定変更専用値ではなく有利区間開始共通値。
+- **変更判別**: 朝一点灯なら据え置き濃厚。消灯単独では判別不可。ただし前日点灯確認済み→朝一消灯ならリセット濃厚。GULLIVER BONUS後は点灯継続。本機固有ガックンはUNVERIFIED_AFTER_RESEARCH。
 
-## 2021-10-04群 — CLOSED
-1. **ファンキージャグラー2 — No.1434 / DONE**
-2. **パチスロツインエンジェルPARTY — No.1435 / DONE**
-3. **SLOTタブー・タトゥー — No.1436 / DONE**
-4. **ニューパルサーDX3 — No.1437 / DONE**
-5. **パチスロ かまいたちの夜 — No.1438 / DONE**
-- 2021年10月の複数導入一覧を再監査し、パチスロはこの5機で一致。
+## 2021-11-08群 — OPEN
+1. **パチスロANEMONE 交響詩篇エウレカセブン HI-EVOLUTION — No.1439 / DONE**
+2. **CCエンジェル — No.1440候補 / NEXT**
+3. **パチスロGANTZ極 THE SURVIVAL GAME — 未処理**
+4. **パチスロ戦国乙女 暁の関ヶ原-DARKNESS- — 未処理**
+5. **ハイハイシオサイ2 — 未処理**
+- 群は未CLOSED。次回開始時に全メーカー・PB・地域先行・25/30Φ別型式・延期/段階導入を再監査してからNo.1440を固定する。
 
 ## 次回本線の再開地点
-- **2021-11-08群 / No.1439候補: パチスロANEMONE 交響詩篇エウレカセブン HI-EVOLUTION**。
-- 10/04後〜11/07の空白境界を導入予定一覧で確認し、次の主要パチスロ導入日は2021-11-08。
-- 2021-11-08既知候補: **ANEMONE / CCエンジェル / パチスロGANTZ極 THE SURVIVAL GAME / パチスロ戦国乙女 暁の関ヶ原-DARKNESS- / ハイハイシオサイ2**。
-- 次回開始時に全メーカー・PB・地域先行・25/30Φ別型式・延期/段階導入を再監査してからNo.1439を固定する。
+- **2021-11-08群 / No.1440候補: CCエンジェル**。
+- CCエンジェル処理後、GANTZ極 THE SURVIVAL GAME → 戦国乙女 暁の関ヶ原-DARKNESS- → ハイハイシオサイ2の順に既知候補を処理し、同日群を横断監査してCLOSED可否を判定する。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
-- 今回処理済み: `docs/real_machine_db/machines/2007-05_kemonocchi.md`（けものっち!）→ **PARTIAL_RESEARCH_EXHAUSTED**。
-- 性能側 `status: PARTIAL` は維持。50枚ベース等の既存性能欠損をリセットQA都合で変更していない。
-- 設定変更/据え置き/純電断時の特殊リプレイ後プチRT、成立済みボーナス/告知状態、固有変更判別を再探索したが、機種固有契約を直接固定できず一般的5号機挙動から補完しなかった。
+- 前回処理済み: `docs/real_machine_db/machines/2007-05_kemonocchi.md`（けものっち!）→ **PARTIAL_RESEARCH_EXHAUSTED**。
 - 次回遡及QAカーソル: **`docs/real_machine_db/machines/2007-06_disc-up-alternative.md`（ディスクアップオルタナティブ）**。
+- 今回は本線No.1439を優先したためカーソルを進めていない。
 
 ## GitHub保存
-- No.1438追加 commit: `3c21c50666e7026ef7fea4ae7233d5faae89b0d5`
-- けものっち! reset QA commit: `8888aff1306500b76ce903e58d3f2d4616f4b8f6`
+- No.1439追加 commit: `a06e5fb57730749524711b41c10cfb16abe1ae5d`
 - `LATEST_HANDOFF.md`: この更新commitでmainへ反映。
 
 ## 主要出典 — 取得日 2026-09-12
-### No.1438 パチスロ かまいたちの夜
-- https://news.p-world.co.jp/articles/17487/greenbelt
-- https://p-bomb.co.jp/industry/maker/1847/
-- https://hazuse.com/machine/pachislot/0S0366/
-- https://pachiseven.jp/machines/6369/cutout/2
-- https://pachiseven.jp/machines/6369/cutout/3
-- https://chonborista.com/slot/oizumi-slot/146434/comment-page-9/
-- https://www.slopachi-quest.com/article/kamaitachinoyoru-tenjou/
-- https://slogati.com/kamaitachi/
-- https://1geki.jp/slot/s_kamaitachi/3/
-
-### けものっち! reset QA
-- https://hazuse.com/machine/pachislot/6S1282/
-- https://hazuse.com/i/data/kemono/top.htm
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sammy_slot/105/a.php
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sammy_slot/105/h.php
-- https://www.p-world.co.jp/machine/database/4698
-- https://nana-press.com/post/1623897
-- https://plaza.rakuten.co.jp/suropuro777/diaryall/
-
-### 2021-10〜11境界
-- https://crankyseven.com/newmachine-info.htm
-- https://1geki.jp/newmachinecalender/202110/
-- https://www.nikuziru.com/2021slot-list
-- https://www.pidea.jp/articles/1629182526
+### No.1439 ANEMONE
+- https://p-bomb.co.jp/industry/new-machine/2111/
+- https://news.p-world.co.jp/articles/17576/nippon
+- https://news.p-world.co.jp/articles/17670/yugitsushin
+- https://www.p-world.co.jp/machine/database/9476
+- https://www.pachibee.jp/machines/index/221090002
+- https://slot-seven.com/anemone-settei/
+- https://www.slopachi-quest.com/article/anemone-tenjou/
+- https://1geki.jp/slot/s_anemone/8/
+- https://nana-press.com/kaiseki/machine/153/6323/
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sammy_slot/192/tj04.php
