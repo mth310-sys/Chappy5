@@ -97,21 +97,24 @@ systemType: A+RT / ボーナス後CZ経由RT
 ## resetBehavior
 
 schemaVersion: v0.7
-resetQaStatus: PARTIAL
-resetQaLastUpdated: 2026-09-07
+resetQaStatus: PARTIAL_RESEARCH_EXHAUSTED
+resetQaLastUpdated: 2026-09-12
 
 ### settingChangeBehavior
 
-- 設定変更時のCHANCE ZONE / RED ZONE内部状態および残G数の処理を本機固有で明記した高信頼資料は、再探索後も **UNVERIFIED_AFTER_RESEARCH**。
+- 設定変更時のCHANCE ZONE / RED ZONE内部状態および残G数の処理を本機固有で明記した高信頼資料は、検索語・資料系統を変えて再探索後も **UNVERIFIED_AFTER_RESEARCH**。
+- 成立済みボーナス / 告知待ち状態の設定変更時処理も本機固有資料では固定できず **UNVERIFIED_AFTER_RESEARCH**。
 - 一般的な5号機RT機の挙動から推定しない。
 
 ### carryOverBehavior
 
 - 据え置き時のCZ/RT内部状態・残G数の引継ぎを本機固有で明記した高信頼資料は **UNVERIFIED_AFTER_RESEARCH**。
+- 成立済みボーナス / 告知待ち状態の据え置き契約も **UNVERIFIED_AFTER_RESEARCH**。
 
 ### powerCycleBehavior
 
 - 設定変更なし電源OFF→ONのみの場合のCZ/RT状態・残G数処理を直接示す公開資料は **UNVERIFIED_AFTER_RESEARCH**。
+- 成立済みボーナス / 告知待ち状態の純電断契約も **UNVERIFIED_AFTER_RESEARCH**。
 
 ### gameCounterReset
 
@@ -144,7 +147,7 @@ resetQaLastUpdated: 2026-09-07
 
 ### resetDetection
 
-- 本機固有のガックン、初期出目、表示等による高信頼な変更判別は **NONE_CONFIRMED_AFTER_RESEARCH**。
+- 本機固有のガックン、初期出目、表示等による高信頼な変更判別は、機種名・メーカー名・RT名を含む検索語を変えて再探索したが **NONE_CONFIRMED_AFTER_RESEARCH**。
 
 ### numericResetData
 
@@ -156,14 +159,15 @@ resetQaLastUpdated: 2026-09-07
 
 ### resetBehavior 再探索メモ
 
-- `TIMという名のパチスロ機 / TIM / HEIWABROS / 平和` と `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / RED ZONE / CHANCE ZONE / RT引継ぎ / 天井 / ガックン / 変更判別` を組み合わせて再探索。
-- グリーンべると当時業界記事、P-WORLD、パチマガスロマガ旧攻略、HAZUSE、5号機クロニクル、後年回顧を横断。
-- 通常時天井なし相当の資料構造、CZ50G、RT100G、RT純増約0.5枚/Gは再確認できたが、設定変更/据え置き/電断時のCZ/RT処理を直接固定できなかったためPARTIALを維持する。
-- 既存 `COMPLETE_CORE` は性能コア完了判定として維持し、resetBehavior QAのみ別管理する。
+- `TIMという名のパチスロ機 / TIM / HEIWABROS / 平和` と `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / RED ZONE / CHANCE ZONE / RT引継ぎ / RT残G / ボーナス成立 / 告知 / 天井 / ガックン / 初期出目 / 変更判別` を組み合わせて再探索。
+- グリーンべると当時業界記事、P-WORLD、パチマガスロマガ旧攻略、HAZUSE、5号機クロニクル、旧解析DB、後年回顧系を横断。
+- 通常時天井なし相当の資料構造、CZ50G、RT100G、RT純増約0.5枚/Gは再確認できたが、設定変更/据え置き/純電断の3条件でCZ/RT残状態や成立済みボーナス、告知待ち状態を直接固定できなかった。
+- 本機固有ガックン / 初期出目判別も直接資料を固定できず、一般的5号機挙動から補完しない。
+- 既存 `COMPLETE_CORE` は性能コア完了判定として維持し、resetBehavior QAのみ **PARTIAL_RESEARCH_EXHAUSTED** として別管理する。
 
 ## sources
 
-取得日: 2026-09-07（resetBehavior QA再取得）
+取得日: 2026-09-12（resetBehavior QA再探索）
 
 1. グリーンべると — 平和から遊パチと5号機が同時発表
    - https://web-greenbelt.jp/00003985/
@@ -200,13 +204,14 @@ resetQaLastUpdated: 2026-09-07
 
 ## missingFields
 
-- 設定変更/据え置き/電源OFF→ON時のCZ/RT内部状態処理
-- 本機固有のresetDetection
-- 設定変更専用の公開朝一数値
+- 設定変更/据え置き/電源OFF→ON時のCZ/RT内部状態・残G数処理: UNVERIFIED_AFTER_RESEARCH
+- 設定変更/据え置き/電源OFF→ON時の成立済みボーナス / 告知待ち状態: UNVERIFIED_AFTER_RESEARCH
+- 本機固有のガックン / 初期出目等resetDetection: UNVERIFIED_AFTER_RESEARCH
+- 設定変更専用の公開朝一数値: NONE_CONFIRMED_AFTER_RESEARCH
 
 ## conflicts
 
 - 機械割: パチマガ旧攻略シミュレート値 96.98/98.80/101.19/103.41/105.63/107.70%、5号機クロニクル 96.7/98.3/100.5/102.5/104.5/106.3%。平均せず双方保持。
 
 coreStatus: COMPLETE_CORE
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
