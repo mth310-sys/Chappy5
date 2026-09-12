@@ -1,76 +1,97 @@
 更新日: 2026-09-12
 
 ## 現在地点
-- recordCount: **1432**
-- latestRecordAdded: **HIT128 — No.1432**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2021-09-21_hit128.md`
+- recordCount: **1433**
+- latestRecordAdded: **マジカルハロウィン～Trick or Treat！～ — No.1433**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2021-09-21_magical-halloween-trick-or-treat.md`
 - chronologicalFrontier: **2021-09-21**
-- frontierLatestMachine: **HIT128 — No.1432**
+- frontierLatestMachine: **マジカルハロウィン～Trick or Treat！～ — No.1433**
 - schema: **resetBehavior v0.7**
-- status: **2021-09-21_GROUP_OPEN_1_OF_2_KNOWN_PROCESSED**
+- status: **2021-09-21_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.1431「パチスロ ロリクラ☆ほーるど！」を確認して開始。
+- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.1432「HIT128」を確認して開始。
 - `INDEX.md` は旧19件表示のため、README規定どおり `LATEST_HANDOFF.md` とmain実レコードを正本として進捗判定。
-- handoff指定どおり、次の未処理機種No.1432「HIT128」を追加。
-- 2021-09-21群は既知2機のうち1機処理済み。残りは「マジカルハロウィン～Trick or Treat！～」。
-- 遡及resetBehavior QAは本線を優先して今回は進めず、次カーソル「機動警察パトレイバーX」を維持。
+- handoff指定どおりNo.1433「マジカルハロウィン～Trick or Treat！～」を追加。
+- 2021-09-21群はHIT128 + マジカルハロウィンToTの2機を処理。2021年導入カレンダーと当時業界発表をクロス監査し、既知群をCLOSED。
+- 遡及resetBehavior QAは `2007-05_kidou-keisatsu-patlabor-x.md` を処理。既存 `COMPLETE_CORE` は維持し、reset側のみ `PARTIAL_RESEARCH_EXHAUSTED` へ更新。
+- Git追加履歴を追跡し、次の遡及QAカーソルを `2007-05_kemonocchi.md`（けものっち!）へ進めた。
 
-## No.1432 — HIT128
-- path: `docs/real_machine_db/machines/2021-09-21_hit128.md`
-- manufacturer: **岡崎産業**
-- formalModel: **Sヒット128H1**
+## No.1433 — マジカルハロウィン～Trick or Treat！～
+- path: `docs/real_machine_db/machines/2021-09-21_magical-halloween-trick-or-treat.md`
+- manufacturer: **コナミアミューズメント（製造元: ファイトクラブ）**
+- formalModel: **SマジカルハロウィンFP**
 - certificationNumber: **UNVERIFIED_AFTER_RESEARCH**
 - releaseDate: **2021-09-21**
-- generation/system: **6号機 / ゲーム数管理型AT**
-- settings: **1 / 2 / 5 / 6**
-- payoutRate: **96.9 / 97.6 / 103.5 / 110.0%**
-- AT初当たり: **1/127.5 / 1/127.5 / 1/127.3 / 1/127.1**
-- baseGamesPer50: **約50.0〜51.0G/50枚**
-- netIncrease: **約2.5枚/G**
-- basicPayout: **AT 10〜999G、初期G数候補10/50/100/200/300/400/500/800/999G**
-- coreStatus: **COMPLETE_CORE**
-- resetBehaviorQA: **COMPLETE_PUBLIC_RESET_CORE_WITH_POWER_CYCLE_DISPLAY_EXCEPTION**
+- generation/system: **6.2号機 / A+ART**
+- settings: **1 / 2 / 3 / 4 / 5 / 6**
+- payoutRate: **97.3 / 98.4 / 100.0 / 103.2 / 105.1 / 107.0%**
+- bonusCombined: **1/169.8 / 1/168.0 / 1/166.3 / 1/163.0 / 1/161.4 / 1/159.8**
+- ART初当たり: **1/370.0 / 1/365.6 / 1/353.5 / 1/330.9 / 1/303.8 / 1/285.7**
+- baseGamesPer50: **解析系33.2〜34.1G/50枚。ただし導入時業界記事の設定1 32.2GとCONFLICT**
+- netIncrease: **約1.0枚/G**
+- coreStatus: **COMPLETE_CORE_WITH_BASE_GAMES_CONFLICT**
+- resetBehaviorQA: **COMPLETE_PUBLIC_RESET_CORE_WITH_INTERNAL_CZ_START**
 
-### resetBehavior v0.7 — No.1432
-- **設定変更**: 内部天井/規定G・内部状態RESET。朝一は通常仕様の最大128GでAT。設定変更専用の短縮天井や専用優遇率は確認できず。
-- **据え置き**: 内部規定G・内部状態・進行中有利区間CARRY_OVER。
-- **純電源OFF→ON**: 内部規定G・内部状態はCARRY_OVER。ただし通常時の液晶ゲーム数カウンタ表示だけクリアされ、見かけ上「128G」から再カウントする。内部規定Gは保持。
-- **ゲーム数/天井**: 最大128GでAT当選。MIX5中のレア役などで規定G短縮あり。
-- **モード/状態**: MIX1〜5。電断後は内部状態を引き継ぐため、表示MIXより内部が高い場合あり。設定変更専用の確率付き初期振り分けは未確認。
-- **有利区間**: AT終了後は必ず有利区間リセットとの解析あり。設定変更時RESET、据え置き/純電断CARRY_OVERとして整理。
-- **朝一恩恵/不利**: 設定変更専用の明確な恩恵・不利は確認できず。
-- **変更判別**: 通常時有利区間ランプ消灯型との解析があり、ランプ単独では変更判別不可。純電断で液晶カウンタだけ128Gへ戻るため、表示Gだけでも確定判別不可。
-- **公開朝一数値**: 設定変更後最大128G。設定変更専用のAT初当たり率・モード振り分け・特定G以内当選率は `NO_PUBLIC_RESET_SPECIFIC_RATE_FOUND_AFTER_RESEARCH`。
-- **UNVERIFIED**: 検定番号、本機固有ガックン、設定変更専用MIXモード/内部状態振り分け、本機専用の設定変更直後ランプ遷移。
+### resetBehavior v0.7 — No.1433
+- **設定変更**: 333G天井・内部状態・有利区間RESET。内部的にCZ「詠唱チャレンジ」状態から開始。
+- **据え置き**: 天井・内部状態・有利区間CARRY_OVER。
+- **純電源OFF→ON**: 天井・内部状態・有利区間CARRY_OVER。
+- **ゲーム数/天井**: 通常時333Gで詠唱チャレンジ。設定変更専用の短縮天井は確認できず。
+- **モード/状態**: 通常時は内部モード0〜3等を持つが、設定変更専用の確率付き初期振り分けは未確認。朝一変更時は内部CZ開始を直接確認。
+- **有利区間**: 6.2号機・3000G。有利区間ランプは通常時基本消灯のため、朝一ランプ単独での変更判別は困難。
+- **朝一恩恵**: 内部CZ開始。3択コインこぼし後の6択リプレイ正解でART突入可能。解析では平均10G前後・実質ART突入率1/6以上という説明があるが、固定当選率としては扱わない。
+- **朝一不利**: 天井到達時の状態/モード依存追加恩恵は朝一CZには付かないとの解析あり。
+- **変更判別**: 朝一ガックン有無、3択コインこぼし後のリール挙動/ART突入を利用可能。ただし個体差・対策・ボーナス先当たりで不確定になるため「濃厚」止まり。
+- **公開朝一数値**: 333G天井、内部CZ開始、実質ART突入率1/6以上という解析表現を分離保存。
+- **CONFLICT**: 50枚ベースは設定1 33.2G（解析系） vs 32.2G（導入時業界記事）。平均化しない。
 
-## 2021-09-21群 — OPEN
+## 遡及QA — 機動警察パトレイバーX
+- path: `docs/real_machine_db/machines/2007-05_kidou-keisatsu-patlabor-x.md`
+- 性能側: **COMPLETE_CORE維持**。
+- reset側: **PARTIAL_RESEARCH_EXHAUSTED**。
+- 通常時スイカ契機25G RTの存在は高信頼解析で確認済み。
+- 設定変更/据え置き/純電断時の25G RT残G・内部RT状態・成立済みボーナス/告知状態、本機固有ガックン/初期出目判別は、当時解析・P-WORLD・古いDB・回顧資料へ検索語/系統を変えて再探索しても直接契約を固定できず。
+- 一般的5号機挙動による推測補完はしていない。
+
+## 2021-09-21群 — CLOSED
 1. **HIT128 — No.1432 / DONE**
-2. **マジカルハロウィン～Trick or Treat！～ — No.1433候補 / NEXT**
-- 既知キューは2機。No.1433処理後、メーカー横断・PB・地域先行・別型式・延期/段階導入を再監査しCLOSED可否を判定する。
+2. **マジカルハロウィン～Trick or Treat！～ — No.1433 / DONE**
+- 2021年導入日カレンダーでは9/21群はこの2機。業界記事でも両機の導入時期を照合し、次の主要導入群は2021-10-04。
 
 ## 次回本線の再開地点
-- **No.1433候補: マジカルハロウィン～Trick or Treat！～（コナミアミューズメント / KPE系）— 2021-09-21**。
-- 性能コア＋resetBehavior v0.7を収集後、2021-09-21群の境界監査を実施する。
+- **2021-10-04群 / No.1434候補: ファンキージャグラー2（北電子）**。
+- 同日既知キュー: **ファンキージャグラー2 → ツインエンジェルPARTY → タブー・タトゥー → ニューパルサーDX3 → かまいたちの夜**。
+- 各機で性能コア＋resetBehavior v0.7を収集し、群末尾でメーカー横断・PB・地域先行・別型式・延期/段階導入を再監査する。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
-- 前回処理済み: `docs/real_machine_db/machines/2007-05_sangokushi-igt.md`（三國志 / IGTジャパン）→ **PARTIAL_RESEARCH_EXHAUSTED**。
-- 次回遡及QAカーソル: **`docs/real_machine_db/machines/2007-05_kidou-keisatsu-patlabor-x.md`（機動警察パトレイバーX）**。
+- 今回処理済み: `docs/real_machine_db/machines/2007-05_kidou-keisatsu-patlabor-x.md`（機動警察パトレイバーX）→ **PARTIAL_RESEARCH_EXHAUSTED**。
+- 次回遡及QAカーソル: **`docs/real_machine_db/machines/2007-05_kemonocchi.md`（けものっち!）**。
+- カーソル根拠: パトレイバーX追加commit `f405c96c...` の直後に、けものっち!追加commit `fc18d719...` が続くGit追加履歴を確認。
 
 ## GitHub保存
-- No.1432追加 commit: `9723b15f7ce4b0949db8a52684ffb29f6045f2de`
+- No.1433追加 commit: `e7d9db9b61d79195cde2f99d48bdcfb179d19917`
+- パトレイバーX reset QA commit: `a10c0988484be41b7a6a427c876fac7c5974d3d0`
 - `LATEST_HANDOFF.md`: この更新commitでmainへ反映。
 
 ## 主要出典 — 取得日 2026-09-12
-### No.1432 HIT128
-- https://okazakisangyo.com/machine/hit128/
-- https://news.p-world.co.jp/articles/17305/greenbelt
-- https://www.p-world.co.jp/machine/database/9444
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/okazaki_slot/83/kh01.php
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/okazaki_slot/83/kh02.php
-- https://1geki.jp/slot/s_hit128/
-- https://chonborista.com/slot/okazaki-slot/146624/
-- https://slot-seven.com/hit128-tenzyou/
-- https://slotmethod.jp/archives/7664/
-- https://www.pachinkoquora.com/machine/pachinslot/1125/
+### No.1433 マジカルハロウィン～Trick or Treat！～
+- https://prtimes.jp/main/html/rd/p/000000075.000053327.html
+- https://news.p-world.co.jp/articles/17264/nippon
+- https://web-greenbelt.jp/post-50855/
+- https://nana-press.com/kaiseki/machine/144/4998/
+- https://nana-press.com/kaiseki/machine/144/5012/
+- https://ichikatsu.com/magihallo8/
+- https://slotjin.com/slot/magihallotot/
+- https://www.pachibee.jp/machines/kouryaku/221080001
+
+### 機動警察パトレイバーX reset QA
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/abilit_slot/16/abilit_slot_16.php
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/abilit_slot/16/c.php
+- https://www.p-world.co.jp/machine/database/4591
+- https://pachinko.hatenablog.jp/entry/2007/06/patlabor-X
+
+### 次群境界監査
+- https://ichikatsu.com/newslot/
+- https://news.p-world.co.jp/articles/18048/greenbelt
