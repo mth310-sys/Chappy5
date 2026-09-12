@@ -1,64 +1,68 @@
 更新日: 2026-09-12
 
 ## 現在地点
-- recordCount: **1477**
-- latestRecordAdded: **BLACK LAGOON ZERO bullet MAX — No.1477**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2022-02-07_black-lagoon-zero-bullet-max.md`
+- recordCount: **1478**
+- latestRecordAdded: **パチスロドリフターズ — No.1478**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2022-02-07_pachislot-drifters.md`
 - chronologicalFrontier: **2022-02-07**
-- frontierLatestMachine: **BLACK LAGOON ZERO bullet MAX — No.1477**
+- frontierLatestMachine: **パチスロドリフターズ — No.1478**
 - schema: **resetBehavior v0.7**
-- status: **2022-02-07_GROUP_OPEN_1_OF_2_CURRENTLY_KNOWN_RECORDS_PROCESSED**
+- status: **2022-02-07_GROUP_CLOSED_2_OF_2_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧 `docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.1476「押忍！番長ZERO」を確認して開始。
+- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧 `docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.1477「BLACK LAGOON ZERO bullet MAX」を確認して開始。
 - `INDEX.md` は旧19件表示のため、README規定どおり最新 `LATEST_HANDOFF.md` とmain実レコードを進捗正本として扱った。
-- handoff指定の次機 `BLACK LAGOON ZERO bullet MAX` をNo.1477へ追加。
-- 導入日は2022-02-07。製造元エフ、開発スパイキー、総発売元フィールズ。型式 `SブラックラグーンゼロFK`、検定番号 `1S1440` を業界/旧DB資料で確認。
-- 性能コアは設定1〜6の機械割97.6/98.8/100.2/104.0/107.6/110.3%、AT初当たり1/379〜1/236、ベース32.2G/50枚、AT純増約6.5枚/Gを保存。
-- AT「ラグーンラッシュ」はゲーム数上乗せ型で初当たり時は必ず「ヘブンズラッシュ」から開始。AT平均獲得約590枚の導入時紹介、ラグーンボーナス20G、上位スーパーヘブンズラッシュ平均上乗せ約200Gも比較用補助値として保存。
-- 通常天井は有利区間移行後777GでAT。
-- resetBehavior v0.7は、設定変更時に天井/有利区間/バレットポイント/内部状態をRESET。純電源OFF→ONは天井/有利区間/ポイント/内部状態をCARRY_OVER。設定変更なしの据え置きもCARRY_OVER扱い。
-- 朝一設定変更後は内部的に「バラライカゾーン」から開始する場合あり。バラライカゾーンは5G。ただし設定変更時の選択率は複数資料で「一部」「場合あり」までで、公開数値を固定できず `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
-- 一部後年資料の「朝一内部バラライカゾーン濃厚」と、当時複数解析の「一部/場合あり」は `WORDING_CONFLICT` として保持し、canonicalは当時複数資料を優先して「一部/場合あり」。
-- バラライカゾーン中は強チェリー/チャンス目/強ベル/下段リプレイで引き戻し100%という公開解析値を条件付き朝一参考値として保存。
-- 有利区間ランプは通常時点灯型。朝一消灯は設定変更濃厚、点灯は据え置き/対策材料。ただし前日AT後に有利区間が切れた直後の閉店や店舗対策が例外のため「確定」扱いにはしない。一部資料の「消灯でリセット確定」は定義注意として保持。
-- 本機固有の設定変更時ガックン条件/発生率、設定変更専用通常モード振り分け、内部バラライカゾーン選択率、固定開始ステージは検索語・資料系統を変えて再探索後も固定できず `UNVERIFIED_AFTER_RESEARCH` / `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
-- 2022-02-07群は現時点で本機と `パチスロドリフターズ` の2機を確認。No.1477処理時点では群をOPEN維持。
+- handoff指定の次機 `パチスロドリフターズ` をNo.1478へ追加。
+- 導入日は2022-02-07。サミー、型式 `S パチスロドリフターズ ZS`、検定番号 `1S1187`、6.2号機ATを旧DB・業界/解析資料で確認。
+- 性能コアは設定1〜6の機械割97.6/98.9/100.6/104.8/107.9/109.2%、DG+漂流者BONUS初当たり1/299.8〜1/216.3、DRIFTERS RUSH初当たり1/581.5〜1/321.8、ベース約35.6G/50枚を保存。
+- リアルボーナス純増約4.9枚/G。AT全体の平均純増を約4.0枚/Gとする資料は対象区間の定義差として分離。DG約114枚、DRIFTERS RUSHは初期10/20/30G+α、ボーナス約1/3.3、平均獲得約690枚を比較用性能として保存。
+- 通常最大天井は通常Aの約800G+α。モード別最大天井は通常A約800G、通常B約600G、通常C約250G、天国約150G、SP約350G。
+- resetBehavior v0.7は、設定変更時に天井・内部モード・内部状態・有利区間をRESETし、異世界ステージから開始。据え置きは天井・有利区間をCARRY_OVER。據え置きの内部モード/状態は当時解析で調査中のため推測せずUNVERIFIED_AFTER_RESEARCH。
+- 純電源OFF→ONは天井・内部状態CARRY_OVERを直接確認。内部モードと有利区間そのものの純電断時機種固有明記は十分な再探索後も固定できずUNVERIFIED_AFTER_RESEARCH。
+- 設定変更専用の固定短縮天井は確認されず、新規有利区間移行時のモード抽選によって最大天井が変化する構造。
+- 公開朝一数値として、有利区間移行時の設定別モード振り分けを保存。設定1は通常A/B/C/天国/SP=48.9/19.6/4.3/24.8/2.3%、設定6は7.1/18.6/27.7/28.3/18.2%。設定変更専用テーブルではないが、設定変更後は有利区間RESET→新規移行のため朝一適用対象として扱う。
+- 異世界ステージは20G継続でDG以上、30G継続で義経Battle濃厚。設定変更時は異世界ステージ開始を直接確認。
+- 有利区間ランプはクレジット上部の `_`。通常時点灯型で朝一消灯=設定変更濃厚、点灯=据え置き濃厚。ただしDRIFTERS RUSH終了後にも消灯するため、前日消灯閉店・店舗対策を例外として保持。
+- 本機固有の設定変更ガックン条件/発生率、設定変更専用固定初当たり率/CZ率は再探索後も固定できずUNVERIFIED_AFTER_RESEARCH / PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH。
+- 数値競合は平均せず保持。DR初当たり設定1は業界/K-Navi等1/581.5に対し、なな徹等1/581.8。DG+漂流者BONUS設定6は複数高信頼資料1/216.3に対し一部二次資料1/214.9。canonicalは複数一致の1/581.5・1/216.3。
+- 2022-02-07群は月間新台一覧/複数資料で `BLACK LAGOON ZERO bullet MAX` と `パチスロドリフターズ` の2機を確認し、2/7群をCLOSED。
+- 2022年2月の次導入境界は2022-02-21。複数月間一覧で `SLOTマッピー`、`パチスロ 言い訳はさせないわよ by 激壇蜜`、`メルヘンクエスト` の3機を確認。次回はこの群へ進む。
 - 遡及resetBehavior QAは本線を優先し、前回カーソルを維持。
 
-## No.1477 — BLACK LAGOON ZERO bullet MAX
-- path: `docs/real_machine_db/machines/2022-02-07_black-lagoon-zero-bullet-max.md`
-- manufacturer: **エフ / 開発: スパイキー / 総発売元: フィールズ**
-- formalModel: **SブラックラグーンゼロFK**
-- inspectionCode: **1S1440**
+## No.1478 — パチスロドリフターズ
+- path: `docs/real_machine_db/machines/2022-02-07_pachislot-drifters.md`
+- manufacturer: **サミー**
+- formalModel: **S パチスロドリフターズ ZS**
+- inspectionCode: **1S1187**
 - releaseDate: **2022-02-07**
-- generation/system: **6.2号機 / AT / ゲーム数上乗せ型 / バレットシステム**
+- generation/system: **6.2号機 / AT / リアルボーナス集中型**
 - settings: **1 / 2 / 3 / 4 / 5 / 6**
-- payoutRate: **97.6 / 98.8 / 100.2 / 104.0 / 107.6 / 110.3%**
-- initialHit: **AT 1/379 / 1/365 / 1/345 / 1/296 / 1/260 / 1/236**
-- baseGamesPer50: **32.2G**
-- netIncrease: **約6.5枚/G**
-- basicPayout: **AT初当たり時はヘブンズラッシュから開始 / AT平均獲得約590枚（導入時紹介） / ラグーンボーナス20G / SHR平均上乗せ約200G**
-- normalCeiling: **有利区間移行後777G → AT**
+- payoutRate: **97.6 / 98.9 / 100.6 / 104.8 / 107.9 / 109.2%**
+- initialHit: **DG+漂流者BONUS 1/299.8 / 1/281.6 / 1/267.1 / 1/243.9 / 1/228.9 / 1/216.3**
+- rushInitialHit: **DR 1/581.5 / 1/531.0 / 1/481.3 / 1/407.9 / 1/361.0 / 1/321.8**
+- baseGamesPer50: **約35.6G**
+- netIncrease: **リアルボーナス約4.9枚/G（AT全体平均約4.0枚/G表記は定義差として分離）**
+- basicPayout: **DG約114枚 / DR初期10・20・30G+α / DR中ボーナス約1/3.3 / DR平均獲得約690枚**
+- normalCeiling: **通常A 最大約800G+α → DG以上**
 - coreStatus: **COMPLETE_CORE**
 - resetBehaviorQA: **COMPLETE_RESET_CORE_WITH_MINOR_UNVERIFIED**
-- confidence: **HIGH_CORE_HIGH_RESET_MINOR_RESET_RATE_AND_GAKKUN_UNVERIFIED**
+- confidence: **HIGH_CORE_HIGH_RESET_POWER_MODE_AND_GAKKUN_UNVERIFIED**
 
-### resetBehavior v0.7 — No.1477
-- **設定変更**: 天井・有利区間・バレットポイント・内部状態RESET。朝一は内部バラライカゾーンから開始する場合あり。
-- **据え置き**: 天井・有利区間・ポイント・内部状態CARRY_OVER。
-- **純電源OFF→ON**: 天井・有利区間・ポイント・内部状態CARRY_OVER。
-- **ゲーム数/天井**: 通常777G。固定の設定変更専用短縮天井は確認できず。
-- **モード/状態**: 設定変更時は状態/ポイントRESET。設定変更専用通常モード振り分けは公開値なし。内部バラライカゾーン選択率も公開値なし。
-- **有利区間**: 設定変更時RESET。通常時ランプ点灯型。AT終了後はリセット時と継続時があり、継続時は天国モード2回ループとする解析あり。
-- **朝一恩恵/不利**: 一部/場合で内部バラライカゾーン5G。前日天井進行・ポイント・内部状態は設定変更で消去。
-- **変更判別**: 朝一★ランプ消灯=設定変更濃厚、点灯=据え置き/対策材料。前日AT後即ヤメ・店舗対策の例外を保持。ガックンはUNVERIFIED_AFTER_RESEARCH。
-- **公開朝一数値**: 内部バラライカゾーン選択時5G。ゾーン中の強チェリー/チャンス目/強ベル/下段リプレイはAT引き戻し解析値100%。設定変更時のゾーン選択率は未公表/未固定。
+### resetBehavior v0.7 — No.1478
+- **設定変更**: 天井・内部モード・内部状態・有利区間RESET。異世界ステージ開始。
+- **据え置き**: 天井・有利区間CARRY_OVER。内部モード/状態は当時解析で調査中のためUNVERIFIED_AFTER_RESEARCH。
+- **純電源OFF→ON**: 天井・内部状態CARRY_OVER。内部モード・有利区間の純電断固有明記はUNVERIFIED_AFTER_RESEARCH。
+- **ゲーム数/天井**: 通常A最大約800G+α。設定変更専用固定短縮はなく、有利区間移行時モード再抽選で約150/250/350/600/800Gの最大天井へ分岐。
+- **モード/状態**: 設定変更時RESET。有利区間移行時に通常A/B/C・天国・SPを設定別再抽選。
+- **有利区間**: 設定変更時RESET、据え置きCARRY_OVER。通常時ランプ点灯型。
+- **朝一恩恵/不利**: 新規モード抽選を受ける。前日天井/モード/状態は消去。異世界20G継続でDG以上、30G継続で義経Battle濃厚。
+- **変更判別**: 朝一 `_` ランプ消灯=設定変更濃厚、点灯=据え置き濃厚。DR終了後消灯・前日消灯閉店・店舗対策を例外保持。ガックンはUNVERIFIED_AFTER_RESEARCH。
+- **公開朝一数値**: 有利区間移行時モード振り分けを設定1〜6全て保存。設定1=48.9/19.6/4.3/24.8/2.3%、設定6=7.1/18.6/27.7/28.3/18.2%（通常A/B/C/天国/SP）。
 
 ## 次回本線の再開地点
-- **2022-02-07群を継続し、No.1478候補「パチスロドリフターズ」から処理。**
-- 候補情報: Sammy / 型式 `S パチスロドリフターズ ZS` / 検定番号 `1S1187`。
-- No.1478処理後、2022-02-07同日群に他の独立機種・PB・30Φ別型式・地域先行・延期/段階導入がないか、新台カレンダー/業界記事/メーカー別一覧で再監査してCLOSED可否を判定する。
+- **2022-02-21群へ進み、No.1479候補「SLOTマッピー」から処理。**
+- 同日既知候補は `SLOTマッピー`、`パチスロ 言い訳はさせないわよ by 激壇蜜`、`メルヘンクエスト` の3機。
+- No.1479以降、3機を順次処理し、PB・30Φ別型式・地域先行・延期/段階導入を含めて2/21群を再監査してCLOSED可否を判定する。
 - 性能コアとresetBehavior v0.7を同時収集する。
 
 ## 遡及 resetBehavior QA
@@ -67,25 +71,30 @@
 - 次回遡及QAカーソル: **`docs/real_machine_db/machines/2007-03-04_pachislot-abarenbo-shogun.md`（パチスロ暴れん坊将軍）**。
 
 ## GitHub保存
-- No.1477追加 commit: `66ecfafb369b3288a1d9f5bc981745618f7af716`
+- No.1478追加 commit: `9cc6296e9b1c91b57c4deed17e0a54103d116c31`
 - `LATEST_HANDOFF.md`: この更新commitでmainへ反映。
 
 ## 主要出典 — 取得日 2026-09-12
-### No.1477 BLACK LAGOON ZERO bullet MAX
-- https://news.p-world.co.jp/articles/18949/nippon
-- https://news.p-world.co.jp/articles/19070/yugitsushin
-- https://news.p-world.co.jp/articles/19166/greenbelt
-- https://hazuse.com/machine/pachislot/1S1440/
-- https://1geki.jp/slot/s_blacklagoon_zero/
-- https://nana-press.com/kaiseki/machine/294/7857/
-- https://nana-press.com/kaiseki/machine/294/7853/
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/f_slot/02/kr01.php
-- https://www.slopachi-quest.com/article/black-lagoon-zero-bullet-max-tenjou/
-- https://slot-seven.com/blacklagoonzero-tenzyou/
-- https://chonborista.com/slot/spiky/159377/
-- https://1geki.jp/slot/s_blacklagoon_zero/87/
-- https://www.nakaiti.com/html/sEff002.html
+### No.1478 パチスロドリフターズ
+- https://news.p-world.co.jp/articles/18968/greenbelt
+- https://hazuse.com/machine/pachislot/1S1187/
+- https://hazuse.com/machine/pachislot/1S1187/genre/201/
+- https://hazuse.com/machine/pachislot/1S1187/genre/207/
+- https://p-kn.com/slot/3728/
+- https://nana-press.com/kaiseki/machine/293/7880/
+- https://nana-press.com/kaiseki/machine/293/7885/
+- https://nana-press.com/kaiseki/machine/293/7886/
+- https://slot-seven.com/drifters-tenzyou/
+- https://slot-seven.com/drifters-settei/
+- https://1geki.jp/slot/s_drifters/
+- https://1geki.jp/slot/s_drifters/40/
+- https://www.p-world.co.jp/machine/database/9555
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sammy_slot/194/at02.php
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sammy_slot/194/at06-2.php
+- https://www.pachibee.jp/machines/lecture/222010000
 
-### 次回候補 2022-02-07群
-- https://hazuse.com/machine/pachislot/1S1187/genre/202/
+### 2022-02群境界監査 / 次回候補
 - https://29den.com/newslot/
+- https://nana-press.com/post/1576830
+- https://ichikatsu.com/newslot2022/
+- https://news.p-world.co.jp/articles/19606/nippon
