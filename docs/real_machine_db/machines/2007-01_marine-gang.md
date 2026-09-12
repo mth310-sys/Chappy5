@@ -92,39 +92,38 @@ MAX値と平均値は定義が異なるため混同しない。
 
 ## resetBehavior
 
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
+retrievedAt: 2026-09-12
 
-- settingChangeBehavior: 高信頼な本機固有挙動を確認できず UNVERIFIED
-- carryOverBehavior: 高信頼な本機固有挙動を確認できず UNVERIFIED
-- powerCycleBehavior: 電源OFF→ONのみの固有挙動を確認できず UNVERIFIED
-- gameCounterReset: 通常時に天井ゲーム数管理を確認しておらず、天井ゲーム数のリセット/引継ぎは非該当と判断できる範囲。ただしボーナス内部成立状態等の電源断処理は対象外/UNVERIFIED
-- ceilingAfterReset: 天井機能を確認しておらず非該当
-- modeAfterReset: 通常時モード/朝一専用モードを確認しておらず非該当
-- stateAfterReset: 通常時の状態管理による朝一恩恵/不利を確認できず
-- advantageousSectionReset: 非該当（5号機初期。有利区間制度導入前）
-- resetBenefits: 公開された朝一/設定変更恩恵を確認できず
-- resetPenalties: 公開された設定変更時の主要不利要素を確認できず
-- resetDetection: ガックン、表示、ゲーム数挙動等の本機固有の変更判別情報を高信頼資料で確認できず
-- numericResetData: なし / UNVERIFIED
+- settingChangeBehavior: 本機固有の設定変更時の成立済みCT、告知待ち状態、内部状態の処理を直接記述する高信頼資料を確認できず `UNVERIFIED_AFTER_RESEARCH`。
+- carryOverBehavior: 据え置き時の成立済みCT/告知待ち状態の扱いを本機固有資料で確定できず `UNVERIFIED_AFTER_RESEARCH`。
+- powerCycleBehavior: 電源OFF→ONのみの場合の成立済みCT/告知待ち状態・表示状態の扱いを直接固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- gameCounterReset: 通常時に天井ゲーム数管理を確認しておらず、ゲーム数天井のリセット/引継ぎは `NOT_APPLICABLE`。成立済みボーナス等の電断処理は上記のとおり未確認。
+- ceilingAfterReset: 天井機能を確認しておらず `NOT_APPLICABLE`。
+- modeAfterReset: 通常時モード/朝一専用モードを確認しておらず `NOT_APPLICABLE`。
+- stateAfterReset: ホール朝一狙いへ影響する本機固有の状態再抽選/引継ぎを確認できず `UNVERIFIED_AFTER_RESEARCH`。
+- advantageousSectionReset: `NOT_APPLICABLE`（5号機初期。有利区間制度導入前）。
+- resetBenefits: 公開された朝一/設定変更専用恩恵を確認できず。
+- resetPenalties: 公開された設定変更専用の主要不利要素を確認できず。
+- resetDetection: ガックン、初期出目、告知ランプ等による本機固有の変更判別情報を直接固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- numericResetData: 比較可能な公開朝一数値なし。
 
-### resetBehavior 再探索メモ
+### resetBehavior 遡及QAメモ — 2026-09-12
 
-以下を含めて検索語を変え、メーカー公式、当時解析、P-WORLD、旧資料/回顧資料を横断した。
+既存 `coreStatus: COMPLETE_CORE` は維持し、リセット特性だけを別管理で再評価した。
 
-- 「マリーンギャング 設定変更」
-- 「マリーンギャング リセット」
-- 「マリーンギャング 朝一」
-- 「マリーンギャング 据え置き」
-- 「マリーンギャング 電源OFF ON」
-- 「マリーンギャング 天井」
-- 「マリーンギャング ガックン」
-- 「マリーンギャング パイオニア 2007」
+検索語・資料系統を変更して以下を再探索した。
 
-釣具の「マリーンギャング」や4号機「マリンギャング」のノイズが非常に多いため、メーカー名・年代を追加して再探索したが、本機固有の設定変更/朝一挙動を確定できる資料は見つからなかった。
+- 「マリーンギャング / マリーン ギャング / Marine Gang」+「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 電断 / ガックン / 初期出目 / 告知ランプ」
+- 「パイオニア マリーンギャング 2007」+上記語
+- 型式・CT・トレジャータイム・ドキドキラウンドを含む当時解析/旧DB/回顧資料
+- パイオニア公式、P-WORLD、グリーンべると、パチマガスロマガ、5号機回顧DB
+
+2006-12-15付グリーンべると記事で第2種ボーナスのみ、設定1 1/128〜設定6 1/99、納品開始予定2007-01-21等の性能構造は再確認できたが、設定変更/据え置き/純電断の3者契約や本機固有の変更判別までは記載されていない。一般的な5号機のボーナス成立状態・電断挙動から推測補完せず、`PARTIAL_RESEARCH_EXHAUSTED` とする。
 
 ## sources
 
-取得日: 2026-08-31
+性能コア取得日: 2026-08-31 / resetBehavior遡及QA取得日: 2026-09-12
 
 1. パイオニア公式 — マリーンギャング製品ページ
    - https://www.slot-pioneer.co.jp/product/marinegang/mg1.html
@@ -154,18 +153,22 @@ resetBehaviorQA: PARTIAL
    - https://5goki.com/pioneer
    - 機械割95〜107%を掲載、2007年機として分類
    - reliability: ANALYSIS_SINGLE
-8. Pマンズ — パイオニアが甘スロ「マリーンギャング」
+8. グリーンべると / P-WORLD業界ニュース — パイオニアが新機軸「甘スロ」発表
+   - https://news.p-world.co.jp/articles/1968/greenbelt
+   - 2006-12-15、納品予定2007-01-21、CT構造・設定1/6確率・出玉率
+   - reliability: INDUSTRY
+9. Pマンズ — パイオニアが甘スロ「マリーンギャング」
    - https://p-mans.blogspot.com/2006/12/
    - 2006-12-13発表展示会、MAX1/99の発表背景
    - reliability: INDUSTRY
 
 ## missingFields
 
-- resetBehaviorの設定変更/据え置き/電源OFF→ON時の本機固有挙動
-- ガックン等の変更判別情報
+- 設定変更/据え置き/純電源OFF→ON時の成立済みCT・告知待ち状態など本機固有挙動
+- ガックン/初期出目/表示等の本機固有変更判別情報
 
 coreStatus: COMPLETE_CORE
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
 
 ## conflicts
 
