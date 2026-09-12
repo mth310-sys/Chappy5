@@ -1,7 +1,7 @@
 # トリプルクラウン-30
 
 status: COMPLETE_CORE
-qaResetBehavior: PARTIAL
+qaResetBehavior: PARTIAL_RESEARCH_EXHAUSTED
 
 machineName: トリプルクラウン-30
 aliases:
@@ -64,19 +64,20 @@ modeSpecificMinimumData:
 
 ## resetBehavior
 
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
+resetBehaviorQaRetrievedAt: 2026-09-12
 
 settingChangeBehavior:
 - 本機は通常時ゲーム数天井・AT/ART/RT/CZ・ゲーム数管理モードを持たないノーマル機として確認できるため、設定変更専用の天井短縮・モード再抽選・朝一AT/CZ恩恵はNOT_APPLICABLE / NONE_CONFIRMED。
-- 設定変更時の成立済みボーナス、リール初動等を含む本機固有の内部処理は、機種名表記揺れ・型式名・メーカー名と「設定変更/リセット/朝一」を組み替えて再探索したがUNVERIFIED。
+- 設定変更時の成立済みボーナス、告知待ち状態、リール初動等を含む本機固有の内部処理は、機種名表記揺れ・型式名・メーカー名と「設定変更/リセット/朝一」を組み替え、当時解析・古いDB・後年回顧資料まで再探索したがUNVERIFIED_AFTER_RESEARCH。
 
 carryOverBehavior:
 - 通常時天井ゲーム数・モード・RT/ART状態の据え置き引継ぎはNOT_APPLICABLE。
-- 本機固有の据え置き判別挙動はUNVERIFIED。
+- 成立済みボーナス/告知状態を含む本機固有の据え置き契約、据え置き判別挙動はUNVERIFIED_AFTER_RESEARCH。
 
 powerCycleBehavior:
 - 電源OFF→ONのみで変化するゲーム数天井・モード・RT/ART状態はNOT_APPLICABLE。
-- 成立済みボーナスやリール挙動など電断固有処理は公開資料で確定できずUNVERIFIED。
+- 成立済みボーナス、告知状態、リール挙動など純電断固有処理は公開資料で確定できずUNVERIFIED_AFTER_RESEARCH。
 
 gameCounterReset:
 - 通常時ゲーム数天井なし。NOT_APPLICABLE。
@@ -89,7 +90,7 @@ modeAfterReset:
 
 stateAfterReset:
 - RT/ART/CZ等の状態管理はNOT_APPLICABLE。
-- ボーナス成立状態等の設定変更時処理はUNVERIFIED。
+- ボーナス成立状態/告知待ち状態等の設定変更時処理はUNVERIFIED_AFTER_RESEARCH。
 
 advantageousSectionReset:
 - NOT_APPLICABLE（5号機初期・有利区間制度導入前）。
@@ -101,15 +102,21 @@ resetPenalties:
 - 設定変更固有の主要な不利要素はNONE_CONFIRMED。
 
 resetDetection:
-- 本機固有のガックン、表示、ゲーム数挙動による設定変更/据え置き判別は、「トリプルクラウン30 / トリプルクラウン-30 / 清龍ゲームジャパン」と「ガックン/設定変更/朝一/据え置き」を組み替えて再探索後もUNVERIFIED。
+- 本機固有のガックン、表示、ゲーム数挙動による設定変更/据え置き判別は、「トリプルクラウン30 / トリプルクラウン-30 / Triple Crown-30 / 清龍ゲームジャパン / 7S0038」と「ガックン/設定変更/リセット/朝一/据え置き/電源OFF ON/初期出目」を組み替え、資料系統も変えて再探索後もUNVERIFIED_AFTER_RESEARCH。
 
 numericResetData:
 - 短縮天井: NOT_APPLICABLE
-- 設定変更時モード振り分け/朝一当選率/リセット恩恵発生率: 比較可能な公開数値は今回未確認
+- 設定変更時モード振り分け/朝一当選率/リセット恩恵発生率: 比較可能な公開数値は再探索後も確認できず
+
+### resetBehavior QA 2026-09-12
+- 既存 `COMPLETE_CORE` は性能コア完了判定として維持し、リセットQAのみ別管理で `PARTIAL_RESEARCH_EXHAUSTED` へ更新。
+- 機種名・表記揺れ・型式/検定番号・メーカーを軸に、設定変更、リセット、朝一、据え置き、純電源OFF→ON、ガックン、初期出目、ボーナス成立状態を組み替えて再探索。
+- 公式/業界/当時解析/古い機種DB/後年回顧を横断したが、本機固有の設定変更・据え置き・純電断時の成立済みボーナス/告知状態、ガックン等を直接固定できる資料は確認できなかった。
+- 5号機ノーマル一般論からの推測補完は行っていない。
 
 ## sources
 
-取得日: 2026-08-31
+取得日: 2026-08-31（resetBehavior再探索: 2026-09-12）
 
 1. ALL7.jp — 2007年6月新台導入予定一覧
    - https://www.all7.jp/plans/index/2007/06
@@ -151,10 +158,14 @@ numericResetData:
    - https://q-and-a.hatenablog.com/entry/2016/10/21/095330
    - 2007-05-10に「トリプルクラウン-30」検定通過記録。後継トリプルクラウンS2-30は2007-08-06で別型式。
    - reliability: ANALYSIS_SINGLE
+11. resetBehavior再探索（2026-09-12）
+   - 機種名/表記揺れ/検定番号/メーカー + 設定変更/リセット/朝一/据え置き/電源OFF ON/ガックン/初期出目/成立済みボーナスで検索語を変更。
+   - 現存公式・業界・当時解析・旧DB・回顧資料で本機固有の直接契約は追加確認できず。
+   - reliability: UNVERIFIED_AFTER_RESEARCH
 
 ## missingFields
 
-- 設定変更時の成立済みボーナス等の内部処理
+- 設定変更時の成立済みボーナス/告知状態等の内部処理
 - 据え置き/電源OFF→ONのみでの本機固有挙動
 - 本機固有のガックン/変更判別
 - 公開朝一専用数値
