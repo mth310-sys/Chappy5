@@ -47,28 +47,30 @@ systemType: ボーナス+完走型RT
 
 ## resetBehavior
 
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
 
-- settingChangeBehavior: 本機固有の高信頼な設定変更挙動を確認できず UNVERIFIED
-- carryOverBehavior: 据え置き時のRT/CZ状態・ゲーム数引継ぎを高信頼資料で確定できず UNVERIFIED
-- powerCycleBehavior: 電源OFF→ONのみの固有挙動を確認できず UNVERIFIED
-- gameCounterReset: 通常時天井ゲーム数管理を確認しておらず天井ゲーム数は非該当。RT/CZ中電源断処理はUNVERIFIED
+- settingChangeBehavior: 本機固有の設定変更時RT/CZ/成立済みボーナス・告知状態処理を、当時解析・業界一次・旧DB・回顧資料まで再探索したが直接契約を固定できず UNVERIFIED_AFTER_RESEARCH
+- carryOverBehavior: 据え置き時のRT/CZ残G・内部状態・成立済みボーナス/告知状態の引継ぎを高信頼資料で確定できず UNVERIFIED_AFTER_RESEARCH
+- powerCycleBehavior: 電源OFF→ONのみのRT/CZ残G・内部状態・成立済みボーナス/告知状態の固有挙動を確認できず UNVERIFIED_AFTER_RESEARCH
+- gameCounterReset: 通常時天井ゲーム数管理を確認しておらず天井ゲーム数は非該当。RT777G/200G・CZ中の設定変更/純電断処理はUNVERIFIED_AFTER_RESEARCH
 - ceilingAfterReset: 天井機能を確認しておらず非該当
-- modeAfterReset: 通常時モード/朝一専用モードを確認できず
-- stateAfterReset: 本機固有の朝一状態再抽選情報を確認できず
+- modeAfterReset: 通常時モード/朝一専用モードを確認できず。一般的5号機挙動から推測補完しない
+- stateAfterReset: 本機固有の朝一状態再抽選、RT/CZ開始・優遇等を確認できず UNVERIFIED_AFTER_RESEARCH
 - advantageousSectionReset: 非該当（5号機初期、有利区間制度導入前）
-- resetBenefits: 公開された設定変更/朝一恩恵を確認できず
-- resetPenalties: 公開された設定変更時不利要素を確認できず
-- resetDetection: ガックン等の本機固有変更判別を確認できず
-- numericResetData: なし / UNVERIFIED
+- resetBenefits: 公開された設定変更/朝一恩恵を十分な再探索後も確認できず
+- resetPenalties: 公開された設定変更時不利要素を十分な再探索後も確認できず
+- resetDetection: ガックン、初期出目、表示等の本機固有変更判別を確認できず UNVERIFIED_AFTER_RESEARCH
+- numericResetData: 公開された設定変更専用数値は確認できず
 
 ### resetBehavior 再探索メモ
 
-「嗚呼我ら日本松柔道部 / 日本松柔道部 / ニッポンマツジュウドウブ / WIN NET / ラスター」に「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / RT引継ぎ / 天井 / ガックン」を組み合わせ、当時解析・P-WORLD・業界記事・後年回顧まで横断したが、設定変更固有情報は確定できなかった。
+2026-09-12 QA再探索。既存の「嗚呼我ら日本松柔道部 / 日本松柔道部 / ニッポンマツジュウドウブ / WIN NET / ラスター」に加え、「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / RT引継ぎ / 一本勝負 / 777G / 200G / CZ / ガックン / 初期出目 / ボーナス成立」を組み合わせ、当時解析・P-WORLD・業界記事・旧DB・後年回顧を再横断した。
+
+確認できたのは本機のRT/CZ構造（赤帯後777G、その他ボーナス後CZ→200G完走RT）と有利区間非該当まで。設定変更・据え置き・純電断の3者について、RT/CZ残状態や成立済みボーナス/告知状態を直接規定する本機固有資料は固定できなかった。したがって5号機一般論で補完せず `PARTIAL_RESEARCH_EXHAUSTED` とする。
 
 ## sources
 
-取得日: 2026-08-31
+取得日: 2026-09-12（resetBehavior QA再確認。性能コア出典は既存値を維持）
 
 1. グリーンべると — WIN社から完走RTタイプの5号機第2弾発表
    - https://web-greenbelt.jp/00004919/
@@ -106,11 +108,11 @@ resetBehaviorQA: PARTIAL
 ## missingFields
 
 - baseGamesPer50
-- resetBehaviorの本機固有設定変更/据え置き/電源断挙動
+- resetBehaviorの本機固有設定変更/据え置き/電源断時のRT/CZ・成立済みボーナス/告知状態処理
 - resetDetection
 
 coreStatus: PARTIAL
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
 
 ## conflicts
 
