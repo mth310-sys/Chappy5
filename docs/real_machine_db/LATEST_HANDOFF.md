@@ -1,100 +1,88 @@
 更新日: 2026-09-12
 
 ## 現在地点
-- recordCount: **1474**
-- latestRecordAdded: **来雷エイサーEX-30 — No.1474**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2022-01-24_rairai-eisa-ex-30.md`
-- chronologicalFrontier: **2022-01-24**
-- frontierLatestMachine: **来雷エイサーEX-30 — No.1474**
+- recordCount: **1475**
+- latestRecordAdded: **HYPER A-30 BLUE FALCON — No.1475**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2022-01-25_hyper-a30-blue-falcon.md`
+- chronologicalFrontier: **2022-01-25**
+- frontierLatestMachine: **HYPER A-30 BLUE FALCON — No.1475**
 - schema: **resetBehavior v0.7**
-- status: **2022-01-24_GROUP_CLOSED_11_OF_11_KNOWN_INDEPENDENT_RECORDS_PROCESSED**
+- status: **2022-01-25_PB_GROUP_CLOSED_1_OF_1_KNOWN_INDEPENDENT_RECORD_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧 `docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.1473「パチスロ春一番」を確認して開始。
+- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧 `docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.1474「来雷エイサーEX-30」を確認して開始。
 - `INDEX.md` は旧19件表示のため、README規定どおり最新 `LATEST_HANDOFF.md` とmain実レコードを進捗正本として扱った。
-- handoff指定どおり、2022-01-24群最後の既知候補 `来雷エイサー30` を再調査し、導入後の市場表記 `来雷エイサーEX-30` としてNo.1474へ追加。
-- オーイズミ公式PVでは導入前商品名が「来雷エイサー30」、導入後のP-WORLD/HAZUSE等では「来雷エイサーEX-30」、正式型式は `SライライエイサーEX-30`、検定番号 `0S1248`。同一機の発売前/発売後表記として整理した。
-- 性能コアはP-WORLD、HAZUSE、パチマガスロマガ、なな徹等を横断。設定1〜6の機械割97.4/99.2/100.4/102.5/104.8/107.6%、BIG 1/303.4〜1/255.0、REG 1/516.0〜1/339.6、合算1/191.1〜1/145.6、ベース約42.5〜44.0G/50枚、BIG最大259枚/REG最大129枚を保存。
-- 純ノーマル30Φ機で天井非搭載。AT/ART/CZ・天井モード・朝一の有利区間進行は物差し上 `NOT_APPLICABLE` とし、未確認値と区別した。
-- 設定変更/据え置き/純電源OFF→ON時の成立済みボーナスフラグ、告知状態、BIG回数連動の設定シーサー内部回数、本機固有ガックン、変更専用表示については、機種名・正式型式・オーイズミ・朝一・リセット・据え置き・電源OFF ON・ガックン等へ検索語を変え、解析/古いDB/回顧系まで再探索したが機種固有の直接資料を固定できず `UNVERIFIED_AFTER_RESEARCH`。
-- 導入前二次資料には、最終仕様と異なるPAYOUT 97.3〜110.0%、BB/REG/合算値が掲載されている。最終型式 `0S1248` に紐づく導入後複数資料と競合するため平均せず `CONFLICT_PRERELEASE_SECONDARY_VS_FINAL_MULTI_SOURCE` として履歴保持し、performanceCoreには導入後複数一致値を採用。
-- 保存後QAで、一般リセット一覧に本機個別行が存在しないことを確認したため、そのURLをNo.1474の出典から除外。機種固有のresetBehaviorは推定補完せず、未確認部分をそのまま保持した。
-- 2022-01-24群は11候補すべて処理完了。新台カレンダー/メーカー・業界・機種DBを再監査し、翌2022-01-25の玉越PB「HYPER A-30 BLUE FALCON」は別日として分離。1/24群を `CLOSED` とした。
-- 遡及resetBehavior QAは本線同日群完了を優先し、前回カーソルを維持した。
+- handoff指定の次機、玉越PB限定機 `HYPER A-30 BLUE FALCON` をNo.1475へ追加。
+- 玉越発表・遊技日本・アミューズメントジャパン・遊技通信・グリーンべると・P-WORLD・1geki等を横断。正式型式 `SブルーファルコンDA-30`、DAXEL製造、玉越PB、GOLD玉越8店舗で2022-01-25稼働開始を確認。
+- P-WORLDメタデータで検定番号 `1S1372`、6.2号機、30Φノーマル機を確認。
+- 性能コアは設定1〜6の完全攻略時機械割97.0/98.5/100.0/103.0/106.0/109.0%、BIG 1/282.5〜1/237.4、REG 1/425.6〜1/237.4、合算1/169.8〜1/118.7、ベース39.8〜40.5G/50枚、BIG最大259枚/REG最大103枚を保存。
+- 玉越発表系では出玉率端数付きレンジ97.02〜109.02%を確認。中間設定の端数値は固定できないため複数解析一致の完全攻略時丸め値を主テーブルに採用し、定義を明記。
+- 純ノーマル機で天井非搭載。設定変更時の短縮天井、AT/CZモード、有利区間天井は `NOT_APPLICABLE`。
+- 設定変更/据え置き/純電源OFF→ON時の成立済みボーナスフラグ・告知状態、本機固有ガックン、変更専用表示/ランプ、公開朝一当選数値は、商品名・型式・DAXEL・玉越・設定変更/リセット/朝一/据え置き/電源OFF ON/ガックン/有利区間で再探索したが機種固有の直接資料を固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- REG最大獲得は103枚がP-WORLD・遊技通信・1gekiで一致する一方、一部記事に104枚表記があるため平均せずCONFLICT。104枚超払い出し終了と最大獲得枚数を区別した。
+- 告知割合はP-WORLD・グリーンべると・1gekiが先告知85%/後告知15%で一致。プレイグラフ記事のみ逆表記のためCONFLICT保持。
+- 稼働日は玉越発表・複数業界記事が2022-01-25で一致する一方、P-WORLDメタデータに2022-01-24表記がある。PB実店舗の稼働開始日2022-01-25を時系列基準として採用し、日付差をCONFLICT保持。
+- 2022-01-25は現時点で本PB限定機1件を独立レコードとして確認。次の全国導入境界は2022-01-31「押忍！番長ZERO」を一次系記事で先行確認。
+- 遡及resetBehavior QAは本線を優先し、前回カーソルを維持。
 
-## No.1474 — 来雷エイサーEX-30
-- path: `docs/real_machine_db/machines/2022-01-24_rairai-eisa-ex-30.md`
-- manufacturer: **オーイズミ**
-- formalModel: **SライライエイサーEX-30**
-- inspectionCode: **0S1248**
-- releaseDate: **2022-01-24**
-- generation/system: **6号機 / ノーマル / 完全告知 / 30Φ / 技術介入**
+## No.1475 — HYPER A-30 BLUE FALCON
+- path: `docs/real_machine_db/machines/2022-01-25_hyper-a30-blue-falcon.md`
+- manufacturer: **DAXEL / 玉越PB**
+- formalModel: **SブルーファルコンDA-30**
+- inspectionCode: **1S1372**
+- releaseDate: **2022-01-25**
+- generation/system: **6.2号機 / ノーマル / 完全告知 / 30Φ / 技術介入 / PB限定**
 - settings: **1 / 2 / 3 / 4 / 5 / 6**
-- payoutRate: **97.4 / 99.2 / 100.4 / 102.5 / 104.8 / 107.6%**
-- BIG: **1/303.4 / 1/296.5 / 1/288.7 / 1/274.2 / 1/260.0 / 1/255.0**
-- REG: **1/516.0 / 1/504.1 / 1/474.9 / 1/445.8 / 1/414.8 / 1/339.6**
-- bonusCombined: **1/191.1 / 1/186.7 / 1/179.6 / 1/169.8 / 1/159.8 / 1/145.6**
-- baseGamesPer50: **約42.5〜44.0G/50枚**
-- basicPayout: **BIG最大259枚 / REG最大129枚**
+- payoutRateCompletePlay: **97.0 / 98.5 / 100.0 / 103.0 / 106.0 / 109.0%**
+- BIG: **1/282.5 / 1/276.5 / 1/271.9 / 1/258.0 / 1/246.4 / 1/237.4**
+- REG: **1/425.6 / 1/383.3 / 1/346.8 / 1/303.4 / 1/267.5 / 1/237.4**
+- bonusCombined: **1/169.8 / 1/160.6 / 1/152.4 / 1/139.4 / 1/128.3 / 1/118.7**
+- baseGamesPer50: **39.8 / 39.9 / 40.0 / 40.1 / 40.2 / 40.5G**
+- basicPayout: **BIG最大259枚 / REG最大103枚**
 - normalCeiling: **NONE**
 - coreStatus: **COMPLETE_CORE**
 - resetBehaviorQA: **PARTIAL_RESEARCH_EXHAUSTED**
 - confidence: **HIGH_CORE_MEDIUM_RESET_WITH_MACHINE_SPECIFIC_POWER_CYCLE_AND_DETECTION_UNVERIFIED**
 
-### resetBehavior v0.7 — No.1474
-- **設定変更**: 天井・AT/CZモード・有利区間天井は `NOT_APPLICABLE`。成立済みボーナス/告知/設定シーサー内部回数のクリア契約は `UNVERIFIED_AFTER_RESEARCH`。
-- **据え置き**: 天井は非搭載。成立済みボーナス/告知/設定シーサー内部回数の機種固有保持契約は `UNVERIFIED_AFTER_RESEARCH`。
-- **純電源OFF→ON**: 天井は非搭載。成立済みボーナス/告知/設定シーサー内部回数の機種固有保持/初期化契約は `UNVERIFIED_AFTER_RESEARCH`。
-- **ゲーム数/天井**: 天井機能非搭載。リセット短縮天井なし。
-- **モード/状態**: AT/ART/CZ・天井モードは非該当。ボーナス成立状態の設定変更/電断差のみ未確認。
-- **有利区間**: 純ノーマル機のため、朝一狙いに用いる有利区間進行/天井は `NOT_APPLICABLE_FOR_YARDSTICK`。
+### resetBehavior v0.7 — No.1475
+- **設定変更**: 天井非搭載、AT/CZモード・有利区間天井は `NOT_APPLICABLE`。成立済みボーナス/告知状態の機種固有クリア契約は `UNVERIFIED_AFTER_RESEARCH`。
+- **据え置き**: 天井非搭載。成立済みボーナス/告知状態の保持契約は `UNVERIFIED_AFTER_RESEARCH`。
+- **純電源OFF→ON**: 天井非搭載。成立済みボーナス/告知状態の保持/初期化契約は `UNVERIFIED_AFTER_RESEARCH`。
+- **ゲーム数/天井**: 天井機能非搭載、リセット短縮天井なし。
+- **モード/状態**: AT/ART/CZ・天井モードは非該当。
+- **有利区間**: 純ノーマル機のため朝一狙いに用いる有利区間進行/天井は `NOT_APPLICABLE_FOR_YARDSTICK`。
 - **朝一恩恵/不利**: 公開された設定変更専用の主要恩恵/不利は確認できず。
-- **変更判別**: 本機固有ガックン、変更専用表示/ランプ挙動は `UNVERIFIED_AFTER_RESEARCH`。
+- **変更判別**: 本機固有ガックン、変更専用表示/ランプは `UNVERIFIED_AFTER_RESEARCH`。
 - **公開朝一数値**: `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
 
-## 2022-01-24群 — CLOSED
-既知の独立レコード:
-1. **ハナハナホウオウ～天翔～（25φ） — No.1464 / DONE**
-2. **ハナハナホウオウ～天翔～-30（30φ） — No.1465 / DONE**
-3. **パチスロディスクアップ2 — No.1466 / DONE**
-4. **聖闘士星矢 冥王復活 — No.1467 / DONE**
-5. **新世紀エヴァンゲリオン～魂の共鳴～ — No.1468 / DONE**
-6. **アラジンAクラシック — No.1469 / DONE**
-7. **パチスロ南国物語30 — No.1470 / DONE**
-8. **ハイスクールD×D2 ハーレム王に俺はなる — No.1471 / DONE**
-9. **ぱちスロ ギャグダー — No.1472 / DONE**
-10. **パチスロ春一番 — No.1473 / DONE**
-11. **来雷エイサーEX-30 — No.1474 / DONE**
-
 ## 次回本線の再開地点
-- **No.1475候補「HYPER A-30 BLUE FALCON」— 2022-01-25。**
-- 玉越PB、型式 `SブルーファルコンDA-30`、DAXEL製造。GOLD玉越8店舗で2022-01-25稼働開始と業界一次系記事で先行確認済み。
+- **2022-01-26〜01-30境界を最終監査後、No.1476候補「押忍！番長ZERO」— 2022-01-31。**
+- 型式 `S押忍!番長ZERO PC1`、製造元パオン・ディーピー、大都技研系。遊技日本で全国ホール導入2022-01-31を先行確認済み。
+- 1/31同日群に他の独立機種・PB・30Φ別型式・地域先行がないか新台カレンダー/業界記事/メーカー別一覧で横断してから群をCLOSED判定する。
 - 性能コアとresetBehavior v0.7を同時収集する。
-- PB限定導入のため全国通常導入機と混同せず、独立レコードとして扱う。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
-- 今回は本線の2022-01-24群完了を優先し、遡及QAの新規更新なし。
+- 今回は本線を優先し新規更新なし。
 - 次回遡及QAカーソル: **`docs/real_machine_db/machines/2007-03-04_pachislot-abarenbo-shogun.md`（パチスロ暴れん坊将軍）**。
 
 ## GitHub保存
-- No.1474初回追加 commit: `1d11434468a7b396596547694f565e56f6418f4e`
-- No.1474出典QA修正 commit: `c3371a102a3fe9638ac4ff13310ab80396013a7d`
+- No.1475追加 commit: `17dcf1021a69d67c98643ea2a3f88cd3c9108279`
 - `LATEST_HANDOFF.md`: この更新commitでmainへ反映。
 
 ## 主要出典 — 取得日 2026-09-12
-### No.1474 来雷エイサーEX-30
-- https://www.youtube.com/watch?v=oJLcLEaufwo
-- https://www.p-world.co.jp/machine/database/9524
-- https://hazuse.com/machine/pachislot/0S1248/
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/oizumi_slot/52/kh02.php
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/oizumi_slot/52/bn01.php
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/oizumi_slot/52/kh08.php
-- https://nana-press.com/kaiseki/machine/219/
-- https://www.slopachi-quest.com/article/rairaieisa-ex30-settei/
-- https://www.marimo0925.net/pachislot-shinkisyu-ranraneisa/
-
-### 次回候補 No.1475 HYPER A-30 BLUE FALCON
+### No.1475 HYPER A-30 BLUE FALCON
 - https://news.p-world.co.jp/articles/19129/nippon
-- https://news.p-world.co.jp/articles/19171/amusement
+- https://amusement-japan.co.jp/article/detail/10002607/
 - https://news.p-world.co.jp/articles/19158/yugitsushin
+- https://news.p-world.co.jp/articles/19132/playgraph
+- https://web-greenbelt.jp/post-54549/
+- https://www.p-world.co.jp/machine/database/9560
+- https://1geki.jp/slot/s_hyper_a_30/
+- https://1geki.jp/slot/s_hyper_a_30/1/
+- https://1geki.jp/slot/s_hyper_a_30/4/
+- https://www.dechau.com/machine/single.php?area=&id=736
+- https://news.p-world.co.jp/articles/18759/nippon
+
+### 次回候補 No.1476 押忍！番長ZERO
+- https://news.p-world.co.jp/articles/19366/nippon
