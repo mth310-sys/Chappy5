@@ -18,6 +18,7 @@
 - 純ノーマル30Φ機で天井非搭載。AT/ART/CZ・天井モード・朝一の有利区間進行は物差し上 `NOT_APPLICABLE` とし、未確認値と区別した。
 - 設定変更/据え置き/純電源OFF→ON時の成立済みボーナスフラグ、告知状態、BIG回数連動の設定シーサー内部回数、本機固有ガックン、変更専用表示については、機種名・正式型式・オーイズミ・朝一・リセット・据え置き・電源OFF ON・ガックン等へ検索語を変え、解析/古いDB/回顧系まで再探索したが機種固有の直接資料を固定できず `UNVERIFIED_AFTER_RESEARCH`。
 - 導入前二次資料には、最終仕様と異なるPAYOUT 97.3〜110.0%、BB/REG/合算値が掲載されている。最終型式 `0S1248` に紐づく導入後複数資料と競合するため平均せず `CONFLICT_PRERELEASE_SECONDARY_VS_FINAL_MULTI_SOURCE` として履歴保持し、performanceCoreには導入後複数一致値を採用。
+- 保存後QAで、一般リセット一覧に本機個別行が存在しないことを確認したため、そのURLをNo.1474の出典から除外。機種固有のresetBehaviorは推定補完せず、未確認部分をそのまま保持した。
 - 2022-01-24群は11候補すべて処理完了。新台カレンダー/メーカー・業界・機種DBを再監査し、翌2022-01-25の玉越PB「HYPER A-30 BLUE FALCON」は別日として分離。1/24群を `CLOSED` とした。
 - 遡及resetBehavior QAは本線同日群完了を優先し、前回カーソルを維持した。
 
@@ -77,7 +78,8 @@
 - 次回遡及QAカーソル: **`docs/real_machine_db/machines/2007-03-04_pachislot-abarenbo-shogun.md`（パチスロ暴れん坊将軍）**。
 
 ## GitHub保存
-- No.1474追加 commit: `1d11434468a7b396596547694f565e56f6418f4e`
+- No.1474初回追加 commit: `1d11434468a7b396596547694f565e56f6418f4e`
+- No.1474出典QA修正 commit: `c3371a102a3fe9638ac4ff13310ab80396013a7d`
 - `LATEST_HANDOFF.md`: この更新commitでmainへ反映。
 
 ## 主要出典 — 取得日 2026-09-12
@@ -90,7 +92,6 @@
 - https://cs62.cs-plaza.com/g/pachi/pla/s_conq/oizumi_slot/52/kh08.php
 - https://nana-press.com/kaiseki/machine/219/
 - https://www.slopachi-quest.com/article/rairaieisa-ex30-settei/
-- https://pachisuro100.com/reset/
 - https://www.marimo0925.net/pachislot-shinkisyu-ranraneisa/
 
 ### 次回候補 No.1475 HYPER A-30 BLUE FALCON
