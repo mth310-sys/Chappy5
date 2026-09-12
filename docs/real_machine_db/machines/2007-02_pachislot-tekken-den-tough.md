@@ -97,7 +97,7 @@ systemType: ボーナス+完走型RT
 - 5号機 / 5ライン / 3枚掛け専用
 - すべてのボーナス後にRTへ突入
 - BIG後100P、REG後12P
-- 赤BIG後のRT100P上乗せ確率: 1/210.73
+- 赤7BIG後のRT100P上乗せ確率: 1/210.73
 - 赤REG後: 1/53.94
 - 白REG後: 1/17.78
 - 白BIG後および上乗せRT中は追加RT抽選なし
@@ -108,12 +108,12 @@ systemType: ボーナス+完走型RT
 ## resetBehavior
 
 schemaVersion: v0.7
-resetQaStatus: PARTIAL
-resetQaLastUpdated: 2026-09-07
+resetQaStatus: PARTIAL_RESEARCH_EXHAUSTED
+resetQaLastUpdated: 2026-09-13
 
 ### settingChangeBehavior
 
-- 設定変更時のRT内部状態やボーナス後RT残G数処理を明記した本機固有高信頼資料を再探索したが確認できず `UNVERIFIED_AFTER_RESEARCH`。
+- 設定変更時のRT内部状態やボーナス後RT残G数処理を明記した本機固有高信頼資料を、今回さらに検索語・資料系統を変えて再探索したが確認できず `UNVERIFIED_AFTER_RESEARCH`。
 
 ### carryOverBehavior
 
@@ -154,7 +154,7 @@ resetQaLastUpdated: 2026-09-07
 
 ### resetDetection
 
-- 本機固有のガックン・表示等による設定変更判別を、旧攻略・設定判別DB・回顧資料を変えて再探索したが高信頼固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 本機固有のガックン・表示等による設定変更判別を、旧攻略・設定判別DB・回顧資料・中古実機情報を変えて再探索したが高信頼固定できず `UNVERIFIED_AFTER_RESEARCH`。
 
 ### numericResetData
 
@@ -169,12 +169,13 @@ resetQaLastUpdated: 2026-09-07
 - 表記揺れ: `パチスロ鉄拳伝タフ / 鉄拳伝タフ / 鉄拳伝TOUGH / オーイズミ / オーイズミネオ`。
 - 検索語: `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 電源オフ / RT引継ぎ / RT残り / 天井 / ガックン / 初期出目 / 状態`。
 - 資料系統: パチマガスロマガ旧攻略、pacnk、P-WORLD系、2008年回顧解析、中古実機情報、検索残存ページ。
+- 2026-09-13の遡及QAでも検索語・資料系統を再度変更して確認したが、設定変更/据え置き/純電断の3条件を直接比較できる本機固有契約は追加発見できなかった。
 - 通常時天井なし相当のゲーム性とボーナス後RT仕様は再確認できたが、設定変更/据え置き/電断時のRT残G数や内部状態処理は直接資料で確定できなかった。
 - 2011年「鉄拳伝タフ2nd ROUND」は別機種のため混入させない。
 
 ## sources
 
-取得日: 2026-09-07
+取得日: 2026-09-13（既存主要資料を再確認）
 
 1. パチマガスロマガ旧攻略 — 基本システム
    - https://cs62.cs-plaza.com/g/pachi/pla/s_conq/oizumineo_slot/02/a.php
@@ -217,4 +218,4 @@ resetQaLastUpdated: 2026-09-07
 - 1000円あたりプレイ数は旧攻略のページ版違いで小数第2位に0.01〜0.04P程度の差があるため、平均せず範囲表記。
 
 coreStatus: COMPLETE_CORE
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
