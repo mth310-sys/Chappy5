@@ -1,55 +1,56 @@
 更新日: 2026-09-12
 
 ## 現在地点
-- recordCount: **1482**
-- latestRecordAdded: **パチスロ デビル メイ クライ 5 — No.1482**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2022-03-07_devil-may-cry-5.md`
+- recordCount: **1483**
+- latestRecordAdded: **パチスロ蒼天の拳4 — No.1483**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2022-03-07_souten-no-ken-4.md`
 - chronologicalFrontier: **2022-03-07**
-- frontierLatestMachine: **パチスロ デビル メイ クライ 5 — No.1482**
+- frontierLatestMachine: **パチスロ蒼天の拳4 — No.1483**
 - schema: **resetBehavior v0.7**
-- status: **2022-03-07_GROUP_OPEN_1_OF_4_KNOWN_RECORDS_PROCESSED**
+- status: **2022-03-07_GROUP_OPEN_2_OF_4_KNOWN_RECORDS_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前レコードNo.1481を確認して開始。
+- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧 `docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.1482 `パチスロ デビル メイ クライ 5` を確認して開始。
 - `INDEX.md` は旧19件表示のため、README規定どおり最新 `LATEST_HANDOFF.md` とmain実レコードを進捗正本として扱った。
-- 開始時点mainはNo.1481 `メルヘンクエスト` まで進行済み。handoff指定どおり2022-03-07群へ前進し、No.1482 `パチスロ デビル メイ クライ 5` を追加。
-- 2025年導入のスマスロ同名機 `スマスロ デビル メイ クライ5 スタイリッシュトライブ` は別機種として明示的に除外し、2022年機 `SデビルメイクライファイブXA / 1S1219` の情報だけを採用。
-- 2022-03-07群の既知4機のうち1機処理済み。群はOPENのまま。
+- 開始時点mainはNo.1482まで進行済み。handoff指定の次機種No.1483 `パチスロ蒼天の拳4` を追加。
+- メーカー表記は市場ブランド `サミー`、製造元 `銀座` を分離。型式 `S パチスロ蒼天の拳AC KA`、検定番号 `1S1529` を業界検定資料・機種DBで照合。
+- 2022-03-07群の既知4機のうち2機処理済み。群はOPENのまま。
 
-## No.1482 — パチスロ デビル メイ クライ 5
-- path: `docs/real_machine_db/machines/2022-03-07_devil-may-cry-5.md`
-- manufacturer: **アデリオン（ユニバーサルエンターテインメント系）**
-- formalModel: **SデビルメイクライファイブXA**
-- inspectionCode: **1S1219**
+## No.1483 — パチスロ蒼天の拳4
+- path: `docs/real_machine_db/machines/2022-03-07_souten-no-ken-4.md`
+- manufacturer: **サミー（製造: 銀座）**
+- formalModel: **S パチスロ蒼天の拳AC KA**
+- inspectionCode: **1S1529**
 - releaseDate: **2022-03-07**
-- generation/system: **6.2号機 / 差枚数管理型AT / 周期抽選**
+- generation/system: **6.2号機 / 差枚数管理型AT / CZ経由・AT直撃**
 - settings: **1 / 2 / 3 / 4 / 5 / 6**
-- payoutRate: **97.9 / 99.1 / 100.7 / 104.0 / 107.9 / 111.1%**
-- AT初当たり: **1/358.4 / 1/349.8 / 1/332.6 / 1/301.7 / 1/266.7 / 1/243.6**
-- baseGamesPer50: **約39.9G**
-- netIncrease: **約3.5枚/G**
-- basicPayout: **ATはSDTから開始。SDT平均約100.5枚。DMCボーナス20G、青7/赤7=1:1、SDTストック期待度約30%/70%。**
-- ceiling: **最大8周期 / ボス最大7体撃破でも天井**
+- payoutRate: **97.6 / 98.8 / 100.4 / 104.4 / 107.6 / 111.4%**
+- AT初当たり: **1/379.3 / 1/363.6 / 1/345.3 / 1/313.8 / 1/290.5 / 1/271.2**
+- CZ双龍門: **1/139.3 / 1/133.5 / 1/128.8 / 1/120.1 / 1/111.0 / 1/109.8**
+- baseGamesPer50: **約37G**
+- netIncrease: **約2.7枚/G**
+- basicPayout: **AT初当たり時は双龍の刻から開始。初回20G+α、荒天初期50枚、静天は初当たり時100/150枚。蒼拳ボーナス20G+α or 40G+α。天授の儀は1セット30G。**
+- ceiling: **通常時1200GでAT当選**
 - coreStatus: **COMPLETE_CORE**
-- resetBehaviorQA: **COMPLETE_RESET_CORE_WITH_POWER_CYCLE_AND_GAKKUN_UNVERIFIED**
-- confidence: **HIGH_CORE_HIGH_RESET_POWER_CYCLE_GAKKUN_UNVERIFIED**
+- resetBehaviorQA: **COMPLETE_RESET_CORE_WITH_POWER_CYCLE_AND_DETECTION**
+- confidence: **HIGH_CORE_HIGH_RESET**
 
-### resetBehavior v0.7 — No.1482
-- **設定変更**: 周期天井・内部状態/モード・有利区間をRESET。1周期目から再開。
-- **据え置き**: 周期天井・内部状態/モード・有利区間をCARRY_OVER。
-- **純電源OFF→ON**: 2022年版に限定した直接資料を固定できず `UNVERIFIED_AFTER_RESEARCH`。2025年スマスロ同名機の電断表は転用しない。
-- **ゲーム数/天井**: 1周期100G+α。最大8周期。設定変更時は固定G数短縮ではなく周期を1周期目へリセットし、有利区間移行時に1周期/8周期を再抽選。
-- **モード/状態**: 設定変更でRESET/再抽選。設定変更後・AT終了後の1周期目はニコズショップおよびエンカウントバトル高確率状態への突入率100%。
-- **有利区間**: 設定変更でRESET、据え置きでCARRY_OVER。AT終了時にも有利区間リセット。
-- **朝一恩恵**: 初回1周期はニコズショップ100%（5G）＋エンカウントバトル高確率状態100%。
-- **変更判別**: 通常時は有利区間ランプ非点灯型なのでランプ消灯だけでは判別不可。非有利区間専用ステージが朝一に出れば設定変更濃厚。ただし前日AT終了直後ヤメは例外。本機固有ガックンは再探索後もUNVERIFIED。
-- **公開朝一/有利区間移行数値**: レア役以外の1周期選択率は設定1 3.5%、2 7.0%、3 7.0%、4 8.2%、5 16.0%、6 19.9%。弱レア役は全設定50.0%、強レア役は全設定87.5%。これは設定変更専用ではなく有利区間移行時共通値。
-- 導入時業界資料の「通常時初回周期AT突入率 約40%OVER」はリセット専用値ではないため定義を分けて保存。
+### resetBehavior v0.7 — No.1483
+- **設定変更**: 1200G天井・内部モード・内部状態・有利区間をRESET。
+- **据え置き**: 天井・内部モード・内部状態・有利区間をCARRY_OVER。
+- **純電源OFF→ON**: 天井・内部モード・内部状態・有利区間をCARRY_OVER。HAZUSEの設定変更/電源ON・OFF比較表で直接確認。
+- **ゲーム数/天井**: 通常時1200G。設定変更専用の固定短縮天井は確認されず、RESET後も最大1200G。
+- **モード/状態**: 設定変更後は新規有利区間移行抽選。1枚モードを否定し、非レア小役/弱チェリーでも2枚以上から開始。
+- **有利区間**: 設定変更=RESET、据え置き/純電断=CARRY_OVER。AT終了時にも消灯するため朝一ランプ判別には前日最終状態の例外あり。
+- **朝一恩恵**: 新規有利区間移行時は1枚モード否定。非レア小役/弱チェリー時は2枚44.1%、3枚54.7%、AT高確1.2%で、55.9%が3枚以上。固定短縮天井型ではない。
+- **変更判別**: 有利区間ランプはクレジット上部。朝一点灯=据え置き濃厚、消灯=設定変更濃厚。ただしAT終了時にも消灯。パチ＆スロ必勝本はリールガックンでも設定変更判別可と明記。
+- **公開朝一/有利区間移行数値**: 非レア小役/弱チェリー=2枚44.1%・3枚54.7%・AT高確1.2%、弱スイカ=25.8/62.1/12.1%、チャンス目=33.6/62.1/4.3%、強ベル=3枚97.7%・AT高確2.3%、強チェリー=3枚100%、強スイカ=3枚50%・AT高確50%。有利区間移行時共通値であり設定変更専用テーブルではない。
+- **UNVERIFIED_AFTER_RESEARCH**: 設定変更/据え置き時の開始ステージ、本機固有ガックン発生率。ガックン自体が判別要素であることは確認済み。
 
 ## 2022-03-07群
 既知候補4機:
 1. `パチスロ デビル メイ クライ 5` — **No.1482 処理済み**
-2. `パチスロ蒼天の拳4` — 未処理
+2. `パチスロ蒼天の拳4` — **No.1483 処理済み**
 3. `Sルパン三世` — 未処理
 4. `パチスロ TIGER ＆ BUNNY SP` — 未処理
 
@@ -57,8 +58,8 @@
 - 4機処理後、PB・別型式・30Φ/別スペック・地域先行・延期/段階導入を横断再監査してCLOSED可否を判定する。
 
 ## 次回本線の再開地点
-- **No.1483候補 `パチスロ蒼天の拳4` から処理。**
-- その後 `Sルパン三世` → `パチスロ TIGER ＆ BUNNY SP` の順で2022-03-07群を継続。
+- **No.1484候補 `Sルパン三世` から処理。**
+- その後 `パチスロ TIGER ＆ BUNNY SP` を処理し、2022-03-07群を再監査する。
 - 性能コアとresetBehavior v0.7を同時収集する。
 
 ## 遡及 resetBehavior QA
@@ -67,20 +68,20 @@
 - 次回遡及QAカーソル: **`docs/real_machine_db/machines/2007-03-04_pachislot-abarenbo-shogun.md`（パチスロ暴れん坊将軍）**。
 
 ## GitHub保存
-- No.1482追加 commit: `b06756173628e7ac4ff5badbf9e1a8b2c340510d`
+- No.1483追加 commit: `2808c505ff2753ead36b5d6e04275a532df4775e`
 - `LATEST_HANDOFF.md`: この更新commitでmainへ反映。
 
 ## 主要出典 — 取得日 2026-09-12
-### No.1482 パチスロ デビル メイ クライ 5
-- https://news.p-world.co.jp/articles/19753/nippon
-- https://yugi-nippon.com/pachinko-new-machine/post-49458/
-- https://hazuse.com/machine/pachislot/1S1219/
-- https://hazuse.com/machine/pachislot/1S1219/genre/201/
-- https://nana-press.com/kaiseki/machine/309/8257/
-- https://nana-press.com/kaiseki/machine/309/8263/
-- https://1geki.jp/slot/s_devilmaycry5/41/
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/aderion_slot/02/tj01.php
-- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/aderion_slot/02/at03-1.php
-- https://pachiseven.jp/machines/6481/cutout/9
-- https://flick7.net/slot/devilmaycry5__k.php
-- https://slotmethod.jp/archives/8656/
+### No.1483 パチスロ蒼天の拳4
+- https://news.p-world.co.jp/articles/19219/nippon
+- https://news.p-world.co.jp/articles/18972/greenbelt
+- https://www.p-world.co.jp/machine/database/9571
+- https://hazuse.com/machine/pachislot/1S1529/
+- https://nana-press.com/kaiseki/machine/319/8421/
+- https://nana-press.com/kaiseki/machine/319/8286/
+- https://nana-press.com/kaiseki/machine/319/8302/
+- https://p.hisshobon.jp/machine/3829/1/87468
+- https://p.hisshobon.jp/machine/3829/1/90305
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sammy_slot/195/kh01.php
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sammy_slot/195/at02.php
+- https://www.slopachi-quest.com/article/soutennoken4-tenjou/
