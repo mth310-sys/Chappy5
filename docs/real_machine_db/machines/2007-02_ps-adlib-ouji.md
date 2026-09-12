@@ -78,28 +78,37 @@ P-WORLD、グリーンべると当時記事、パチマガスロマガ旧攻略�
 
 ## resetBehavior
 
-resetBehaviorQA: PARTIAL
+resetBehaviorVersion: v0.7
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
+qaRecheckedAt: 2026-09-12
 
-- settingChangeBehavior: 設定変更時に昇格チャンス状態や1111G救済用ゲーム数がどう扱われるか、本機固有の高信頼公開資料を確認できず UNVERIFIED
-- carryOverBehavior: 据え置き時の昇格チャンス状態/1111G救済用ゲーム数の引継ぎを高信頼資料で確定できず UNVERIFIED
-- powerCycleBehavior: 電源OFF→ONのみの場合の昇格チャンス状態/救済ゲーム数挙動を高信頼資料で確定できず UNVERIFIED
-- gameCounterReset: ボーナス当選天井は確認されない。1111G以上ハマリ後の「次回スーパーBIG確定」救済があるとする後年資料は確認したが、設定変更/電断時のカウンタ処理は未確定
-- ceilingAfterReset: ボーナス当選天井の短縮は非該当/確認なし。1111G救済の設定変更後処理はUNVERIFIED
-- modeAfterReset: 朝一専用モード/設定変更専用モードの公開情報を確認できず
-- stateAfterReset: 昇格チャンスの設定変更/電源断時処理を確定できず
-- advantageousSectionReset: 非該当（有利区間制度導入前）
-- resetBenefits: 設定変更・朝一固有の主要恩恵を確認できず
-- resetPenalties: 設定変更固有の主要不利要素を確認できず
-- resetDetection: 本機固有のガックン・表示等による変更判別を確定できず
-- numericResetData: 公開された設定変更時専用の比較可能数値は確認できず
+- settingChangeBehavior: 設定変更時に昇格チャンス状態、1111G救済用ゲーム数、成立済みボーナス状態がどう扱われるかを、型式名・救済・リセット・朝一・設定変更・据え置き等で再探索したが本機固有の直接契約を固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- carryOverBehavior: 据え置き時の昇格チャンス状態/1111G救済用ゲーム数/成立済みボーナス状態の引継ぎを、設定変更・純電断と分離して示す公開契約は `UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION`。
+- powerCycleBehavior: 純電源OFF→ONのみの場合の昇格チャンス状態/1111G救済用ゲーム数/成立済みボーナス状態の挙動は `UNVERIFIED_AFTER_RESEARCH_AS_DISTINCT_CONDITION`。一般的5号機挙動から推定しない。
+- gameCounterReset: ボーナス当選天井は確認されない。1111G以上ハマリ後の「次回スーパーBIG確定」救済は確認済みだが、そのカウンタの設定変更/据え置き/純電断別処理は `UNVERIFIED_AFTER_RESEARCH`。
+- ceilingAfterReset: ボーナス当選天井・短縮天井は `NOT_APPLICABLE_NO_BONUS_HIT_CEILING_CONFIRMED`。1111G救済はボーナス種別救済であり、設定変更後の扱いは未固定。
+- modeAfterReset: 朝一専用モード/設定変更専用モードは `NONE_CONFIRMED_AFTER_RESEARCH`。
+- stateAfterReset: 昇格チャンスの設定変更/据え置き/純電断別処理は `UNVERIFIED_AFTER_RESEARCH`。
+- advantageousSectionReset: 有利区間制度導入前のため `NOT_APPLICABLE_PRE_YUURI_KUKAN`。
+- resetBenefits: 設定変更・朝一固有の主要恩恵は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- resetPenalties: 設定変更固有の主要不利要素は `NONE_CONFIRMED_AFTER_RESEARCH`。
+- resetDetection: 本機固有のガックン、初期出目、液晶/ランプ表示等による変更判別条件・発生率は `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
+- numericResetData:
+  - normalBonusHitCeiling: `NONE_CONFIRMED`
+  - rescueRule: `1111G以上ハマリ後の次回ボーナスはスーパーBIG確定（後年回顧資料）`
+  - rescueCounterAfterSettingChange: `UNVERIFIED_AFTER_RESEARCH`
+  - resetModeDistribution: `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`
+  - resetHitBoost: `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`
+  - gakkunRate: `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`
 
-### resetBehavior 再探索メモ
+### resetBehavior QA 再探索メモ — 2026-09-12
 
-「PSアドリブ王子 / アドリブ王子 / PSアドリブ王子VB / 三洋物産」に「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 昇格チャンス / 1111G / 天井 / ガックン」を組み合わせ、P-WORLD、グリーンべると当時記事、パチマガスロマガ旧攻略、HAZUSE当時解析、5号機DB、後年のガイドワークス監修回顧を横断した。通常の昇格チャンス仕様と1111G救済は確認できたが、設定変更・据え置き・電源断時の内部状態処理を高信頼で確定できる資料は得られなかったため推測しない。
+「PSアドリブ王子 / アドリブ王子 / PSアドリブ王子VB / 三洋物産」に「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 昇格チャンス / 1111G / 救済 / 天井 / ガックン / 成立済みボーナス」を組み合わせ、P-WORLD、当時グリーンべると、パチマガスロマガ旧攻略、HAZUSE系資料、5号機DB、後年ガイドワークス回顧を再横断。通常の昇格チャンス仕様、1111G以上ハマリ後の次回スーパーBIG確定という救済仕様は再確認できたが、設定変更・据え置き・純電断時の内部状態/救済カウンタ処理を直接規定する機種固有資料は追加固定できなかった。既存 `coreStatus: COMPLETE_CORE` は維持し、resetBehavior品質状態のみ `PARTIAL_RESEARCH_EXHAUSTED` とする。
 
 ## sources
 
-取得日: 2026-08-31
+初回取得日: 2026-08-31
+resetBehavior QA再取得日: 2026-09-12
 
 1. P-WORLD — PSアドリブ王子
    - https://www.p-world.co.jp/machine/database/4565
@@ -107,7 +116,7 @@ resetBehaviorQA: PARTIAL
    - reliability: INDUSTRY
 2. グリーンべると / P-WORLD業界ニュース — 三洋、「海」の新作とオリジナルパチスロ発表（2007-02-02）
    - https://news.p-world.co.jp/articles/2027/greenbelt
-   - 納品2007-02-18、スーパー約300枚/赤約270枚/青約240枚、スーパー後100G、通常時チェリー1/4で20G昇格チャンス
+   - 2007年2月納品、スーパー約300枚/赤約270枚/青約240枚、スーパー後100G、通常時チェリー1/4で20G昇格チャンス
    - reliability: INDUSTRY
 3. パチマガスロマガ旧攻略 — アドリブ王子 ボーナス抽選確率/PAYOUT
    - https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sanyo_slot/04/h.php
@@ -121,35 +130,28 @@ resetBehaviorQA: PARTIAL
    - https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sanyo_slot/04/a.php
    - 5号機/5ライン/3枚掛け、ADLIB BONUS380枚規定払い出し、獲得枚数変動
    - reliability: ANALYSIS_HIGH
-6. パチマガスロマガ旧攻略 — アドリブ王子 ボーナス中
-   - https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sanyo_slot/04/e.php
-   - スーパー全ナビ、赤1/3ナビ、青ナビなし
-   - reliability: ANALYSIS_HIGH
-7. パチマガスロマガ旧攻略 — アドリブ王子 単独抽選確率
-   - https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sanyo_slot/04/k.php
-   - 設定別単独ボーナス確率1/356.17〜1/269.70（総ボーナス確率とは定義分離）
-   - reliability: ANALYSIS_HIGH
-8. HAZUSE — アドリブ王子解析・機種情報
+6. HAZUSE — アドリブ王子解析・機種情報
    - https://hazuse.com/i/data/adlib/top.htm
-   - 2007年2月、3種BIG、昇格チャンス20/40/60G以上、スーパー後100G、チェリー1/4で20G、380枚以上払い出し終了
+   - 3種BIG、昇格チャンス20/40/60G以上、スーパー後100G、チェリー1/4で20G、380枚以上払い出し終了
    - reliability: ANALYSIS_HIGH
-9. 5号機クロニクル — 三洋物産5号機一覧
+7. 5号機クロニクル — 三洋物産5号機一覧
    - https://5goki.com/sanyo
    - 2007/2、機械割95.1〜107.3%
    - reliability: ANALYSIS_SINGLE
-10. 漫画パチスロパニック7 / note — 過去からの便り 第4回
+8. 漫画パチスロパニック7 / note — 過去からの便り 第4回
    - https://note.com/pachislot_panic7/n/n22f6b15efe66
    - ガイドワークス監修回顧。BIGのみ3種、ナビ差、昇格チャンス、1111G以上ハマリ時の次回スーパーBIG確定、救済RTなし
    - reliability: ANALYSIS_HIGH
 
 ## missingFields
 
-- 設定変更/据え置き/電源OFF→ON時の昇格チャンス内部状態処理
-- 1111G救済カウンタの設定変更/据え置き/電断時処理
+- 設定変更/据え置き/純電源OFF→ON時の昇格チャンス内部状態処理
+- 1111G救済カウンタの設定変更/据え置き/純電断時処理
+- 成立済みボーナス状態の3条件別処理
 - 本機固有のresetDetection（ガックン等）
 
 coreStatus: COMPLETE_CORE
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
 
 ## conflicts
 
