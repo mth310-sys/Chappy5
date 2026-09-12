@@ -6,7 +6,7 @@ manufacturer: タイヨー
 releaseDate: 2007-02-18（全国一斉納品予定。関東1都6県・東北6県は部材不足で3月上旬へ延期）
 generation: 5号機初期
 systemType: A+ART/AT（ボーナス+ガッチャマンタイム+G-ZONE）
-recordStatus: COMPLETE_CORE_WITH_PARTIAL_RESET_BEHAVIOR_V0_7
+recordStatus: COMPLETE_CORE_WITH_PARTIAL_RESET_BEHAVIOR_V0_7_RESEARCH_EXHAUSTED
 
 ## payoutRateBySetting
 
@@ -85,11 +85,12 @@ recordStatus: COMPLETE_CORE_WITH_PARTIAL_RESET_BEHAVIOR_V0_7
 ## resetBehavior
 
 schemaVersion: v0.7
-resetQaStatus: PARTIAL
-resetQaLastUpdated: 2026-09-07
+resetQaStatus: PARTIAL_RESEARCH_EXHAUSTED
+resetQaLastUpdated: 2026-09-12
 
 ### settingChangeBehavior
 - 設定変更時にボーナス間1300G天井カウンタ、GT/G-ZONE内部状態をどう処理するかを明記した本機固有の高信頼資料を、表記揺れ・型式名・当時資料系統を変えて再探索したが固定できず **UNVERIFIED_AFTER_RESEARCH**。
+- 5号機天井整理資料の「設定変更後／その他備考」には「リプレイ確率は変わらないので、コイン持ちがアップする程度」とする記述を再確認したが、1300GカウンタのRESET/CARRY_OVERやGT/G-ZONE状態処理を直接示す記述ではないため、reset契約には採用しない。
 
 ### carryOverBehavior
 - 据え置き時の天井ゲーム数/GT/G-ZONE内部状態引継ぎを明記した本機固有の高信頼資料を固定できず **UNVERIFIED_AFTER_RESEARCH**。
@@ -132,11 +133,13 @@ resetQaLastUpdated: 2026-09-07
 
 ### resetBehavior 再探索メモ
 
-2026-09-07再QA。`科学忍者隊ガッチャマン / TAPS06 / タイヨー` に `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / 1300G / G-ZONE / ガッチャマンタイム / RT引継ぎ / ガックン` を組み合わせ、当時業界記事、P-WORLD、パチマガスロマガ旧攻略、K-Navi、古い攻略サイト、天井整理資料、後年回顧を再横断。1300G救済G-ZONEと通常GT/G-ZONE仕様は再確認できたが、設定変更・据え置き・電断時のカウンタ/内部状態処理について新たな直接契約は得られなかった。一般的な5号機挙動から推測補完しない。
+- 2026-09-07再QA: `科学忍者隊ガッチャマン / TAPS06 / タイヨー` に `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / 1300G / G-ZONE / ガッチャマンタイム / RT引継ぎ / ガックン` を組み合わせ、当時業界記事、P-WORLD、パチマガスロマガ旧攻略、K-Navi、古い攻略サイト、天井整理資料、後年回顧を再横断。1300G救済G-ZONEと通常GT/G-ZONE仕様は再確認できたが、設定変更・据え置き・電断時のカウンタ/内部状態処理について新たな直接契約は得られなかった。
+- 2026-09-12再QA: 検索語を `朝一 1300G / 設定変更後 Gゾーン / リセット 天井 / 電源投入 / リプレイ確率 / ガッチャマンタイム 引継ぎ` へ変更し、当時5号機天井整理、旧ブログ/アーカイブ系、K-Navi系を再確認。「設定変更後／その他備考」のリプレイ確率記述は得られたが、天井カウンタやGT/G-ZONEの3条件別契約を確定できないため **PARTIAL_RESEARCH_EXHAUSTED** とする。
+- 一般的な5号機挙動から推測補完しない。既存 `COMPLETE_CORE` は性能側の完了判定として維持する。
 
 ## sources
 
-取得日: 2026-09-07（resetBehavior再QA。性能コア出典は2026-08-31収集を継承）
+取得日: 2026-09-12（resetBehavior再QA。性能コア出典は2026-08-31収集を継承）
 
 1. グリーンべると — タイヨー初の5号機は『ガッチャマン』
    - https://web-greenbelt.jp/00003979/
@@ -164,11 +167,15 @@ resetQaLastUpdated: 2026-09-07
    - reliability: ANALYSIS_SINGLE
 9. パチスロ立ち回り講座 — か行の機種の天井情報(5号機版)
    - https://crankyseven.com/sp/tenjo-5ka.htm
+   - ボーナス間1300G、G-ZONE、設定変更後/その他備考のリプレイ確率記述を再確認。ただし天井カウンタ契約は明記なし。
    - reliability: ANALYSIS_SINGLE
 10. K-Navi — パチスロ 科学忍者隊ガッチャマン
    - https://p-kn.com/slot/675/
    - 通常GT仕様の再照合。reset契約は追加確認できず
    - reliability: ANALYSIS_SINGLE
+11. スロ板blog — 2008年前後の5号機攻略/テンプレートアーカイブ
+   - 当時資料系統の追加確認に使用。ガッチャマン固有の設定変更/電断契約は追加固定できず。
+   - reliability: ARCHIVE_COMMUNITY_INDEX
 
 ## missingFields
 
@@ -183,4 +190,4 @@ resetQaLastUpdated: 2026-09-07
 - 導入日は全国予定2007-02-18だが、関東1都6県・東北6県は部材不足で3月上旬へ納品延期。releaseDateは全国基準予定日を主値とし地域差を注記。
 
 coreStatus: COMPLETE_CORE
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
