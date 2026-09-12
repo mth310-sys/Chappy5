@@ -1,7 +1,7 @@
 # ディスクアップオルタナティブ
 
 status: PARTIAL
-qaResetBehavior: PARTIAL
+qaResetBehavior: PARTIAL_RESEARCH_EXHAUSTED
 
 machineName: ディスクアップオルタナティブ
 aliases:
@@ -70,7 +70,7 @@ modeSpecificMinimumData:
 
 ## resetBehavior
 
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
 
 settingChangeBehavior:
 - 設定変更時は内部的にDJタイム状態でスタートするとの当時系解析記述を確認。
@@ -80,11 +80,11 @@ confidence: ANALYSIS_SINGLE
 
 carryOverBehavior:
 - 通常時ゲーム数天井は存在しないため、通常時天井ゲーム数の据え置き引継ぎはNOT_APPLICABLE。
-- 前日RT/DJタイム状態の据え置き時内部状態/残G引継ぎは、表記揺れ・RT名・据え置き関連語を変えて再探索したが今回UNVERIFIED。
+- 前日RT/DJタイム状態の据え置き時内部状態/残G引継ぎは、表記揺れ・RT名・据え置き関連語を変えて2026-09-12に再探索したが、機種固有の直接契約を固定できずUNVERIFIED_AFTER_RESEARCH。
 
 powerCycleBehavior:
-- 電源OFF→ONのみでDJタイム/ダンスタイム内部状態や残Gが維持されるかはUNVERIFIED。
-- 電源OFF→ONのみで朝一DJタイム状態になる根拠は今回確認していない。
+- 電源OFF→ONのみでDJタイム/ダンスタイム内部状態や残Gが維持されるかは、当時攻略・業界資料・後年回顧を再探索してもUNVERIFIED_AFTER_RESEARCH。
+- 電源OFF→ONのみで朝一DJタイム状態になる根拠は確認していない。設定変更時のDJタイム開始を純電断へ一般化しない。
 
 gameCounterReset:
 - 通常時ゲーム数天井なし。NOT_APPLICABLE。
@@ -98,7 +98,7 @@ modeAfterReset:
 
 stateAfterReset:
 - 設定変更後の内部状態としてDJタイム開始を確認。
-- RT残Gや前日RT状態の設定変更時処理はUNVERIFIED。
+- RT残Gや前日RT状態の設定変更時処理は十分な再探索後もUNVERIFIED_AFTER_RESEARCH。
 
 advantageousSectionReset:
 - NOT_APPLICABLE（5号機初期・有利区間制度導入前）。
@@ -112,16 +112,16 @@ resetPenalties:
 
 resetDetection:
 - 朝一、通常リプレイ成立前に特殊リプレイまたは15枚役からダンスタイムへ移行すれば設定変更の可能性が濃厚。
-- 本機固有のリールガックン可否は十分再探索後もUNVERIFIED。
+- 本機固有のリールガックン可否は検索語・資料系統を変更して再探索したがUNVERIFIED_AFTER_RESEARCH。
 
 numericResetData:
 - 設定変更後DJタイム状態: 確認あり（割合数値なし）
 - 短縮天井: NOT_APPLICABLE
-- 朝一当選率/RT突入率: 比較可能な公開数値は今回未確認
+- 朝一当選率/RT突入率: 比較可能な公開数値は十分な再探索後も未確認
 
 ## sources
 
-取得日: 2026-08-31
+取得日: 2026-08-31（resetBehavior遡及QA再探索: 2026-09-12）
 
 1. DISC UP 25th Anniversary Collection — The History of DISC UP
    - https://wave-master.com/ent/du25th/
@@ -145,7 +145,7 @@ numericResetData:
    - reliability: ANALYSIS_SINGLE
 6. K-Navi — ディスクアップオルタナティブ機種情報/解析
    - https://p-kn.com/slot/688/
-   - 3つのTIME、CZ/RT構成、技術介入。
+   - 3つのTIME、CZ/RT構成、技術介入。2026-09-12の遡及QAでも再確認。
    - reliability: ANALYSIS_HIGH
 7. K-Navi — 小役確率
    - https://p-kn.com/slot/688/35368/
@@ -161,8 +161,8 @@ numericResetData:
 - 日単位の全国納品/ホール導入日
 - 50枚あたりゲーム数/1000円ベース
 - RT純増約0.9枚/Gの当時系別ソース照合
-- 設定変更/据え置き/電源OFF→ON時のRT残G・前日状態処理
-- 本機固有のガックン可否
+- 設定変更/据え置き/電源OFF→ON時のRT残G・前日状態処理（resetBehavior QAではUNVERIFIED_AFTER_RESEARCHとして確定）
+- 本機固有のガックン可否（UNVERIFIED_AFTER_RESEARCH）
 
 ## conflicts
 
@@ -173,5 +173,7 @@ numericResetData:
 ## QA note
 
 - 5月残り境界監査から6月へ移行する根拠を確定。
-- 性能コアは設定別ボーナス、機械割、RTゲーム数、獲得枚数を取得。50枚ベースとRT純増の当時系二重照合が未完のためPARTIAL。
-- resetBehaviorでは設定変更後の内部DJタイム開始と朝一変更判別を取得できた。RT残G/電断/据え置き処理は十分再探索後もUNVERIFIED。
+- 性能コアは設定別ボーナス、機械割、RTゲーム数、獲得枚数を取得。50枚ベースとRT純増の当時系二重照合が未完のためPARTIALを維持し、性能側の既存判定は崩していない。
+- resetBehaviorでは設定変更後の内部DJタイム開始と朝一変更判別を取得済み。
+- 2026-09-12遡及QA: 「ディスクアップオルタナティブ / DISC UP ALTERNATIVE / サミー」×「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / RT残り / DJタイム / ダンスタイム / ガックン」を組み替え、公式系年表、当時K-Navi、既存解析、後年回顧を再探索。設定変更後DJタイム開始以上の機種固有契約は追加固定できなかった。
+- 一般的な5号機RT機の挙動から据え置き/純電断時のRT残Gや成立済み状態を推測補完せず、resetBehavior側のみPARTIAL_RESEARCH_EXHAUSTEDとしてQA状態を分離した。
