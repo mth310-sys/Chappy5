@@ -1,83 +1,100 @@
 更新日: 2026-09-12
 
 ## 現在地点
-- recordCount: **1437**
-- latestRecordAdded: **ニューパルサーDX3 — No.1437**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2021-10-04_new-pulsar-dx3.md`
+- recordCount: **1438**
+- latestRecordAdded: **パチスロ かまいたちの夜 — No.1438**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2021-10-04_kamaitachi-no-yoru.md`
 - chronologicalFrontier: **2021-10-04**
-- frontierLatestMachine: **ニューパルサーDX3 — No.1437**
+- frontierLatestMachine: **パチスロ かまいたちの夜 — No.1438**
 - schema: **resetBehavior v0.7**
-- status: **2021-10-04_GROUP_OPEN_4_OF_5_KNOWN_PROCESSED**
+- status: **2021-10-04_GROUP_CLOSED_AFTER_CROSS_SOURCE_AUDIT**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.1436「SLOTタブー・タトゥー」を確認して開始。
+- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、`docs/real_machine_db/INDEX.md`、`LATEST_HANDOFF.md`、直前No.1437「ニューパルサーDX3」を確認して開始。
 - `INDEX.md` は旧19件表示のため、README規定どおり `LATEST_HANDOFF.md` とmain実レコードを正本として進捗判定。
-- handoff指定どおりNo.1437「ニューパルサーDX3」を追加。
-- 2021-10-04群は既知5機のうち4機処理済み。残りは「パチスロ かまいたちの夜」。
-- 遡及resetBehavior QAは本線を優先し、カーソル `2007-05_kemonocchi.md`（けものっち!）を維持。
+- handoff指定どおりNo.1438「パチスロ かまいたちの夜」を追加。
+- 2021-10-04群は既知5機すべて処理済み。2021年10月のパチスロ導入機一覧でもこの5機構成を再確認し、10/11・10/18・10/25の追加パチスロ本線候補は確認できなかったためCLOSED。
+- 遡及resetBehavior QAは `2007-05_kemonocchi.md`（けものっち!）を正式再探索し、性能側PARTIALは維持したまま reset側を `PARTIAL_RESEARCH_EXHAUSTED` へ更新。
+- Git追加履歴を確認し、けものっち!の次の新規実機レコード追加は `2007-06_disc-up-alternative.md`（ディスクアップオルタナティブ）。次回QAカーソルに設定。
 
-## No.1437 — ニューパルサーDX3
-- path: `docs/real_machine_db/machines/2021-10-04_new-pulsar-dx3.md`
-- manufacturer: **山佐ネクスト**
-- formalModel: **SニューパルサーDX-VYTDD**
-- certificationNumber: **0S1757**
+## No.1438 — パチスロ かまいたちの夜
+- path: `docs/real_machine_db/machines/2021-10-04_kamaitachi-no-yoru.md`
+- manufacturer: **オーイズミ**
+- formalModel: **Sパチスロかまいたちの夜SX**
+- certificationNumber: **0S0366**
 - releaseDate: **2021-10-04**
-- generation/system: **6号機 / ノーマル / 純ボーナス / 完全告知**
-- settings: **1 / 2 / 3 / 4 / 6**
-- payoutRate: **97.4 / 98.4 / 100.3 / 105.0 / 108.3%**
-- BIG: **1/318.1 / 1/315.1 / 1/306.2 / 1/290.0 / 1/273.1**
-- REG: **1/356.2 / 1/348.6 / 1/337.8 / 1/292.6 / 1/273.1**
-- combined: **1/168.0 / 1/165.5 / 1/160.6 / 1/145.6 / 1/136.5**
-- baseGamesPer50: **約43G/50枚（設定1）**
-- basicPayout: **BIG最大259枚 / REG固定104枚**
-- normalCeiling: **非搭載**
+- generation/system: **6.1号機 / A+RT / 技術介入 / 完走型RT / CZ周期天井**
+- settings: **1 / 2 / 5 / 6**
+- payoutRate: **97.8〜102.0 / 98.9〜103.0 / 101.9〜106.0 / 104.0〜108.0%**（技術介入条件別レンジ）
+- BIG合算: **1/331.0 / 1/322.8 / 1/300.6 / 1/292.6**
+- REG合算: **1/339.6 / 1/331.0 / 1/310.6 / 1/293.9**
+- bonusCombined: **1/167.6 / 1/163.4 / 1/152.8 / 1/146.6**
+- baseGamesPer50: **約39G（設定1）〜43G（設定6）/50枚**
+- netIncrease: **RT約0.4枚/G**
+- basicPayout: **かまいたちBONUS平均約172枚 / BIG平均約147枚 / REG平均約65枚**
+- normalCeiling: **CZ終了後128G or 256GでCZ「運命分岐モード」**
 - coreStatus: **COMPLETE_CORE**
-- resetBehaviorQA: **COMPLETE_APPLICABILITY_CORE_WITH_UNVERIFIED_DISPLAY_RESET_DETAILS**
+- resetBehaviorQA: **COMPLETE_PUBLIC_RESET_CORE_WITH_STATE_DEPENDENT_MORNING_START_AND_POWER_CARRYOVER**
 
-### resetBehavior v0.7 — No.1437
-- **設定変更**: 純ボーナスノーマル機でゲーム数天井・AT/ARTモード・高確/CZ状態・有利区間の朝一進行はNOT_APPLICABLE。設定変更専用の短縮天井・専用当選率優遇は確認されない。
-- **据え置き**: 引き継ぐべき天井・AT/ARTモード・有利区間進行はNOT_APPLICABLE。
-- **純電源OFF→ON**: 出玉に関わる天井・AT/ARTモード・有利区間進行はNOT_APPLICABLE。BGM変化等の演出履歴条件は当時必勝本でも設定変更/電断とも『現在調査中』で、再探索後も固定できずUNVERIFIED_AFTER_RESEARCH。
-- **天井**: 非搭載。設定変更専用短縮天井もNOT_APPLICABLE。
-- **朝一恩恵/不利**: 後年整理資料でも『リセット恩恵は特になし』。出玉面の専用不利要素も確認されない。
-- **変更判別**: 有利区間ランプ・液晶ステージ型の変更判別はNOT_APPLICABLE。本機固有ガックン条件・発生率は再探索後もUNVERIFIED_AFTER_RESEARCH。
-- **公開朝一数値**: 設定変更専用の朝一当選率・モード振り分け等の公開固定値は確認されない。通常ボーナス確率は性能コアに保存。
+### resetBehavior v0.7 — No.1438
+- **設定変更**: CZ天井進行RESET。通常時から設定変更した場合は通常時開始、ボーナス/CZ/RTなど通常時以外から設定変更した場合はCZ「運命分岐モード」開始。
+- **据え置き**: CZ天井進行はCARRY_OVER。前日遊技状態の細部は閉店状態・停止手順依存。
+- **純電源OFF→ON**: CZ天井G数はCARRY_OVER。CZ/RT残G・成立済みボーナス/告知状態の完全な内部契約は1gekiでも調査中のままで、一般論補完せず `PARTIAL_DETAIL_UNVERIFIED`。
+- **天井**: 通常システムは128G/256G。難易度高の転落側ビタ成功で次回128G、失敗で256G。難易度低は75%で128G、25%で256G。これは設定変更専用振り分けではない。
+- **有利区間**: NOT_APPLICABLE。複数解析資料で有利区間なしと明記。
+- **朝一恩恵/不利**: 通常時以外からの設定変更なら朝一CZ開始。通常時天井進行は変更で消えるため宵越し進行を失う。
+- **変更判別**: 朝一CZ開始なら変更の可能性が高いが、前日CZ終了なら判別不能。通常時開始でも通常時から設定変更したケースがあるため据え置き確定にはならない。本機固有ガックンは再探索後もUNVERIFIED。
+- **公開朝一数値**: 設定変更専用の固定CZ開始率・モード振り分けは確認されない。128/256G選択関連数値は通常CZシステムとして別管理。
 
-## 2021-10-04群 — OPEN
+## 2021-10-04群 — CLOSED
 1. **ファンキージャグラー2 — No.1434 / DONE**
 2. **パチスロツインエンジェルPARTY — No.1435 / DONE**
 3. **SLOTタブー・タトゥー — No.1436 / DONE**
 4. **ニューパルサーDX3 — No.1437 / DONE**
-5. **パチスロ かまいたちの夜 — No.1438候補 / NEXT**
-- No.1438処理後、全メーカー・PB・地域先行・30Φ/別型式・延期/段階導入を再監査し、追加未処理がなければCLOSEDへ移行する。
+5. **パチスロ かまいたちの夜 — No.1438 / DONE**
+- 2021年10月の複数導入一覧を再監査し、パチスロはこの5機で一致。
 
 ## 次回本線の再開地点
-- **2021-10-04群 / No.1438候補: パチスロ かまいたちの夜**。
-- 性能コア＋resetBehavior v0.7を収集し、既存No.1434〜1437を無駄に再調査しない。
+- **2021-11-08群 / No.1439候補: パチスロANEMONE 交響詩篇エウレカセブン HI-EVOLUTION**。
+- 10/04後〜11/07の空白境界を導入予定一覧で確認し、次の主要パチスロ導入日は2021-11-08。
+- 2021-11-08既知候補: **ANEMONE / CCエンジェル / パチスロGANTZ極 THE SURVIVAL GAME / パチスロ戦国乙女 暁の関ヶ原-DARKNESS- / ハイハイシオサイ2**。
+- 次回開始時に全メーカー・PB・地域先行・25/30Φ別型式・延期/段階導入を再監査してからNo.1439を固定する。
 
 ## 遡及 resetBehavior QA
 - retroQaStatus: **SEQUENTIAL_SCAN_ACTIVE**。
-- 前回処理済み: `docs/real_machine_db/machines/2007-05_kidou-keisatsu-patlabor-x.md`（機動警察パトレイバーX）→ **PARTIAL_RESEARCH_EXHAUSTED**。
-- 次回遡及QAカーソル: **`docs/real_machine_db/machines/2007-05_kemonocchi.md`（けものっち!）**。
+- 今回処理済み: `docs/real_machine_db/machines/2007-05_kemonocchi.md`（けものっち!）→ **PARTIAL_RESEARCH_EXHAUSTED**。
+- 性能側 `status: PARTIAL` は維持。50枚ベース等の既存性能欠損をリセットQA都合で変更していない。
+- 設定変更/据え置き/純電断時の特殊リプレイ後プチRT、成立済みボーナス/告知状態、固有変更判別を再探索したが、機種固有契約を直接固定できず一般的5号機挙動から補完しなかった。
+- 次回遡及QAカーソル: **`docs/real_machine_db/machines/2007-06_disc-up-alternative.md`（ディスクアップオルタナティブ）**。
 
 ## GitHub保存
-- No.1437追加 commit: `219f54a4eaa20966b40d0a36ce2384b466f3ae7b`
+- No.1438追加 commit: `3c21c50666e7026ef7fea4ae7233d5faae89b0d5`
+- けものっち! reset QA commit: `8888aff1306500b76ce903e58d3f2d4616f4b8f6`
 - `LATEST_HANDOFF.md`: この更新commitでmainへ反映。
 
 ## 主要出典 — 取得日 2026-09-12
-### No.1437 ニューパルサーDX3
-- https://yugi-nippon.com/pachinko-new-machine/post-44739/
-- https://p-bomb.co.jp/industry/new-machine/1519/
-- https://www.nikkansports.com/amusement/pachislot/news/202107200000604.html
-- https://hazuse.com/machine/pachislot/0S1757/
-- https://opt.p-world.co.jp/machine/database/9439
-- https://1geki.jp/slot/s_newpal_dx3/
-- https://chonborista.com/slot/yamasa-slot/145987/
-- https://ichikatsu.com/newpulsardx3/
-- https://p.hisshobon.jp/machine/3692/1/83152
-- https://pachisuro100.com/reset/
+### No.1438 パチスロ かまいたちの夜
+- https://news.p-world.co.jp/articles/17487/greenbelt
+- https://p-bomb.co.jp/industry/maker/1847/
+- https://hazuse.com/machine/pachislot/0S0366/
+- https://pachiseven.jp/machines/6369/cutout/2
+- https://pachiseven.jp/machines/6369/cutout/3
+- https://chonborista.com/slot/oizumi-slot/146434/comment-page-9/
+- https://www.slopachi-quest.com/article/kamaitachinoyoru-tenjou/
+- https://slogati.com/kamaitachi/
+- https://1geki.jp/slot/s_kamaitachi/3/
 
-### 2021-10-04群境界（継続）
-- https://ichikatsu.com/newslot/
-- https://news.p-world.co.jp/articles/18030/nippon
-- https://lon-lon.jp/senkawa/10%E6%9C%88%E6%96%B0%E8%A3%85%E9%96%8B%E5%BA%97%E2%91%A0/
+### けものっち! reset QA
+- https://hazuse.com/machine/pachislot/6S1282/
+- https://hazuse.com/i/data/kemono/top.htm
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sammy_slot/105/a.php
+- https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sammy_slot/105/h.php
+- https://www.p-world.co.jp/machine/database/4698
+- https://nana-press.com/post/1623897
+- https://plaza.rakuten.co.jp/suropuro777/diaryall/
+
+### 2021-10〜11境界
+- https://crankyseven.com/newmachine-info.htm
+- https://1geki.jp/newmachinecalender/202110/
+- https://www.nikuziru.com/2021slot-list
+- https://www.pidea.jp/articles/1629182526
