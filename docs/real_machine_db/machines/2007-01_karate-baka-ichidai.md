@@ -45,40 +45,44 @@ RT「百人組手」: 約+0.5枚/G。終了条件は10000G消化またはボー�
 - 5号機 / 4ライン / 3枚掛け専用。
 - REG以外のボーナス後にCZへ移行し、突入リプレイ（ベル・ベル・リプレイ）成立でRT「百人組手」へ。
 - 通常時からのRT突入も稀に存在するとの後年資料あり。
+- RT「百人組手」は約+0.5枚/G、10000G消化またはボーナス成立で終了する実質次回ボーナス型。
+- REG後の隠れCZは短く、後年実戦回顧では設定1〜4時の突入リプレイ1/32、設定6ではRT期待度約10%との記述あり。ただしリセット専用値ではないためnumericResetDataには採用しない。
 - 天井機能は非搭載。
 
 ## resetBehavior
 
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
 
-- settingChangeBehavior: 本機固有の設定変更時RT/CZ/内部状態処理を高信頼資料で確認できず UNVERIFIED
-- carryOverBehavior: 据え置き時のRT/CZ状態引継ぎを高信頼資料で確認できず UNVERIFIED
-- powerCycleBehavior: 電源OFF→ONのみの固有挙動を確認できず UNVERIFIED
-- gameCounterReset: 天井非搭載のため天井ゲーム数は非該当。RT/CZ中の電源断処理はUNVERIFIED
-- ceilingAfterReset: 天井非搭載のため非該当
-- modeAfterReset: 通常時の朝一専用モードを確認できず
-- stateAfterReset: 朝一のCZ/RT優遇等を確認できず
-- advantageousSectionReset: 非該当（5号機初期、有利区間制度導入前）
-- resetBenefits: 公開された設定変更時の朝一恩恵を確認できず
-- resetPenalties: 公開された設定変更時の主要不利要素を確認できず
-- resetDetection: ガックン、表示、リール挙動等の本機固有変更判別情報を高信頼資料で確認できず
-- numericResetData: なし / UNVERIFIED
+- settingChangeBehavior: 本機固有の設定変更時RT/CZ/成立済みボーナス・内部状態処理を、機種名表記揺れ・ゴールドオリンピア/オリンピア・百人組手・修行・設定変更/リセット/朝一で再探索したが直接契約を固定できず UNVERIFIED_AFTER_RESEARCH
+- carryOverBehavior: 据え置き時のRT「百人組手」残状態/CZ状態/成立済みボーナス状態の機種固有引継ぎを直接確認できず UNVERIFIED_AFTER_RESEARCH
+- powerCycleBehavior: 電源OFF→ONのみの場合のRT/CZ残状態、成立済みボーナス/リプレイ高確状態等の機種固有処理を確認できず UNVERIFIED_AFTER_RESEARCH
+- gameCounterReset: 天井非搭載のため通常時天井ゲーム数は NOT_APPLICABLE。RTは最大10000GだがこれはRT継続上限であり通常時天井ではない。RT中電断時の残G契約はUNVERIFIED_AFTER_RESEARCH
+- ceilingAfterReset: NOT_APPLICABLE（通常時天井非搭載）
+- modeAfterReset: 設定変更専用の朝一モード・短縮天井を確認できず。通常時のRT突入/CZ構造をリセット恩恵として扱わない
+- stateAfterReset: 設定変更時のCZ/RT朝一優遇、成立済みボーナス・ボーナス成立後リプレイ高確等の処理はUNVERIFIED_AFTER_RESEARCH
+- advantageousSectionReset: NOT_APPLICABLE（5号機初期、有利区間制度導入前）
+- resetBenefits: 公開された設定変更専用の主要朝一恩恵を確認できず
+- resetPenalties: 公開された設定変更専用の主要不利要素を確認できず
+- resetDetection: ガックン、初期出目、表示、RT/CZ開始状態等を含む本機固有の変更判別情報を、当時解析・回顧・旧ブログ系まで再探索したが直接固定できず UNVERIFIED_AFTER_RESEARCH
+- numericResetData: 設定変更専用の公開当選率、朝一RT/CZ移行率、短縮G数等は確認できず
 
-### resetBehavior 再探索メモ
+### resetBehavior 再探索メモ — 2026-09-12
 
-「空手バカ一代 / ゴールドオリンピア / オリンピア / 2007」に「設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / RT引継ぎ / 百人組手 / 天井 / ガックン」を組み合わせ、当時解析・P-WORLD・後年回顧まで横断した。天井非搭載は確認できたが、朝一変更固有挙動は確定できなかった。
+従来検索に加え、「空手バカ一代 スロット 朝一 百人組手」「空手バカ一代 リセット 百人組手」「空手バカ一代 設定変更後」「空手バカ一代 ガックン」「空手バカ一代 据え置き」「ゴールドオリンピア 空手バカ一代 電源」等へ分岐し、パチマガスロマガ、パチ7回顧、当時2007年個人実戦記、設定判別DB、旧機種資料を横断。
+
+確認できたのは、REG以外のボーナス後CZから突入リプレイでRTへ入ること、RTが約+0.5枚/G・10000Gまたはボーナス成立まで継続すること、通常時から稀にRT突入があること、通常時天井非搭載まで。設定変更/据え置き/純電断の3者別にRT/CZ/成立済みボーナス状態をどう処理するかは直接資料を固定できなかった。5号機一般論や他機種挙動からは補完しない。
 
 ## sources
 
-取得日: 2026-08-31
+取得日: 2026-09-12
 
 1. パチマガスロマガ — 空手バカ一代 基本システム
    - https://cs62.cs-plaza.com/g/pachi/pla/s_conq/goldolympia_slot/03/a.php
-   - 5号機/4ライン、ボーナス獲得枚数、RT基本構造
+   - 5号機/4ライン、ボーナス獲得枚数、REG以外のボーナス後CZ、RT基本構造
    - reliability: ANALYSIS_HIGH
 2. パチ7 — 3枚戦争～空手バカ一代
    - https://pachiseven.jp/articles/detail/11089
-   - 2007年1月デビュー、設定別出玉率、合算、RT約+0.5枚/G、10000G/ボーナス成立終了
+   - 2007年1月デビュー、設定別出玉率/合算、RT約+0.5枚/G、10000G/ボーナス成立終了、通常時から稀にRT突入、REG後隠れCZの実戦回顧
    - reliability: ANALYSIS_HIGH
 3. pacnk — 空手バカ一代 設定判別ツール
    - https://pacnk.com/slot/tools/sh_karatebakaichidai.html
@@ -86,26 +90,30 @@ resetBehaviorQA: PARTIAL
    - reliability: ANALYSIS_SINGLE
 4. P-WORLD — 空手バカ一代
    - https://www.p-world.co.jp/machine/database/4548
-   - 5号機機種ページ、当時掲示板・機種存在確認
+   - 5号機機種ページ、機種存在確認
    - reliability: ANALYSIS_SINGLE
 5. 5号機クロニクル — 平和＆オリンピア
    - https://5goki.com/heiwa-olympia
-   - 機械割の照合に使用。ただし同ページの導入月/ゲーム性記述には他資料との不整合があるため数値照合のみ利用
+   - 機械割照合のみ。導入月/ゲーム性記述は他資料との不整合があるため限定利用
    - reliability: ANALYSIS_SINGLE
 6. 後年回顧記事
    - https://chinta-slo-kaigo.com/5goukibesttaihokarate/
    - 百人組手が次回ボーナスまで継続するRTであることを補助確認
    - reliability: ANALYSIS_SINGLE
+7. 2007年当時個人実戦記 — 貧弱スロ日記
+   - https://plaza.rakuten.co.jp/paruna2007/diaryall/
+   - 導入当時の空手バカ一代実戦記・RT/CZ挙動の補助資料。リセット契約の直接根拠には不使用
+   - reliability: RETROSPECTIVE_SINGLE
 
 ## missingFields
 
 - baseGamesPer50
 - ボーナス4系統の設定別個別確率（今回高信頼表未確保）
-- resetBehaviorの本機固有設定変更/据え置き/電源断挙動
+- resetBehaviorの本機固有設定変更/据え置き/電源断時RT・CZ・成立済みボーナス処理
 - resetDetection
 
 coreStatus: PARTIAL
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
 
 ## conflicts
 
