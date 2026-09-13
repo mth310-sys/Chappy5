@@ -1,100 +1,112 @@
 更新日: 2026-09-14
 
 ## 現在地点
-- recordCount: **1656**
-- latestRecordAdded: **沖ドキ！BLACK — No.1656**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2024-07-01_okidoki-black.md`
-- chronologicalFrontier: **2024-07-01**
-- frontierLatestMachine: **沖ドキ！BLACK — No.1656**
+- recordCount: **1657**
+- latestRecordAdded: **スマスロ真・北斗無双 — No.1657**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2024-07-08_smaslot-shin-hokuto-musou.md`
+- chronologicalFrontier: **2024-07-08**
+- frontierLatestMachine: **スマスロ真・北斗無双 — No.1657**
 - schema: **resetBehavior v0.7**
-- status: **2024-07-01_BOUNDARY_CANONICAL_CLOSED_1_OF_1 / NEXT_2024-07-08_OPEN_0_OF_6**
+- status: **2024-07-08_BOUNDARY_OPEN_1_OF_6_KNOWN_CANONICAL_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、ミッションv0.7、旧表示の `INDEX.md`、`LATEST_HANDOFF.md`、直前No.1655 `スマスロ ストリートファイターV 挑戦者の道` を確認して開始。
+- 最新mainの `README.md`、ミッションv0.7、旧表示の `INDEX.md`、`LATEST_HANDOFF.md`、直前No.1656 `沖ドキ！BLACK` を確認して開始。
 - README規定どおり、旧INDEXより新しい `LATEST_HANDOFF` + main実レコードを進捗正本として採用。
-- 次の未処理No.1656 `沖ドキ！BLACK` を性能コア + resetBehavior v0.7で新規登録。
-- 1geki 2024年7月新台カレンダーで7/1はパチスロ1機のみのため、2024-07-01境界をCLOSED 1/1とした。
-- 次の全国導入本線は2024-07-08。1gekiではパチスロ6機を列挙している。
+- 次の未処理No.1657 `スマスロ真・北斗無双` を性能コア + resetBehavior v0.7で新規登録。
+- 型式・導入日はHAZUSE、公安委員会検定通過を扱う業界記事、複数解析で照合。
+- resetBehaviorは必勝本の設定変更/電源OFF ON直接比較、なな徹朝一/有利区間、HAZUSE等を横断。
+- ガックン、設定変更時モードC/D/天国/超天国の個別振り分けは検索語・型式・メーカーを変えた再探索後も固定できた公開値のみ欠損扱い。
 
-## No.1656 — 沖ドキ！BLACK
-- path: `docs/real_machine_db/machines/2024-07-01_okidoki-black.md`
-- manufacturer: **ミズホ**
-- formalModel: **S／沖ドキ！BLACK／EP** / inspectionCode: **4S0253**
-- releaseDate: **2024-07-01**
-- generation: **6.5号機 / メダル機 / 30Φ**
-- systemType: **AT / 疑似ボーナス・モード管理型沖スロ**
-- settings: **1 / 2 / 3 / 5 / 6**（設定4なし）
-- payoutRate: **97.2 / 98.7 / 101.9 / 104.8 / 108.6%**
-- bonusInitial: **1/288.7 / 1/277.9 / 1/265.8 / 1/254.1 / 1/243.1**
-- BIG: **1/214.1 / 1/205.6 / 1/188.5 / 1/173.3 / 1/160.8**
-- REG: **1/292.5 / 1/283.8 / 1/267.0 / 1/251.7 / 1/239.0**
-- base: **約32G/50枚**
-- netIncrease: **約3.5枚/G**
-- basicPayout: **BIG 60G/約210枚、REG 25G/約90枚**
-- coreConfidence: **OFFICIAL + ANALYSIS_HIGH / MULTI_SOURCE_MATCH**
+## No.1657 — スマスロ真・北斗無双
+- path: `docs/real_machine_db/machines/2024-07-08_smaslot-shin-hokuto-musou.md`
+- manufacturer: **ロデオ製造 / サミーブランド**
+- formalModel: **Lスマスロ真北斗無双FS** / inspectionCode: **3S1512**
+- releaseDate: **2024-07-08**
+- generation: **6.5号機 / スマスロ**
+- systemType: **AT / 疑似ボーナス+ST**
+- settings: **1 / 2 / 3 / 4 / 5 / 6**
+- payoutRate: **97.9 / 98.9 / 101.8 / 106.6 / 110.5 / 114.9%**
+- bonusInitial: **1/381.1 / 1/379.1 / 1/361.6 / 1/349.3 / 1/338.6 / 1/320.5**
+- base: **約31.0G/50枚（設定1）**
+- netIncrease: **約5.0枚/G**
+- basicPayout: **幻闘BONUS約100枚 / 真・北斗無双BONUS約300枚 / 七星チャージ50〜500枚**
+- ST: **幻闘RUSH 30G 約55% / 真・幻闘RUSH 40Gまたは50G 約77% / 極・幻闘RUSH 77G 約96%**
+- coreConfidence: **INDUSTRY + ANALYSIS_HIGH / MULTI_SOURCE_MATCH**
 
-### No.1656 resetBehavior v0.7
-- setting change: **有利区間RESET、天井G RESET、モード再抽選。通常A 50.0% / 通常B 10.2% / チャンス39.8%。通常A/B選択時は25.0%で天井399Gへ短縮。チャンスは200G天井。**
-- carry over: **据え置きは有利区間・天井・モードCARRY_OVER。なな徹の直接比較表で確認。**
-- power OFF→ON: **天井ゲーム数・モードCARRY_OVER。必勝本の直接比較表で確認。純電断単独の有利区間契約はUNVERIFIED_AFTER_RESEARCH。**
-- ceiling: **通常A/B 999G、引き戻し/チャンス200G、天国以上32G。設定変更後はチャンス39.8%、通常A/B時25%で399G短縮。**
-- mode/state: **設定変更時モード再抽選、据え置き/電断はモード引継ぎ。モードとは別軸の内部状態比較はNOT_SEPARATELY_PUBLISHED_AFTER_RESEARCH。**
-- advantageous section: **設定変更RESET / 据え置きCARRY_OVER / 純電断単独はUNVERIFIED。**
-- detection: **なな徹はリセット判別「現在調査中」。200G/399G付近当選は推測材料だが確定判別ではない。本機固有ガックン・表示/有利区間ランプの確定判別は再探索後もUNVERIFIED。**
-- resetQaStatus: **COMPLETE_RESEARCHED_WITH_GAKKUN_AND_DISPLAY_DETECTION_UNVERIFIED**
+### No.1657 resetBehavior v0.7
+- setting change: **有利区間RESET、天井宿命再抽選、モード再抽選でC以上濃厚、状態再抽選、無双目高確RESET、ユリアポイント再抽選。各種カウンタ表示RESET。**
+- carry over: **据え置きは天井宿命・モード・状態等を内部引継ぎ。各種カウンタも内部引継ぎ。**
+- power OFF→ON: **天井宿命・モード・状態・無双目高確・ユリアポイントをCARRY_OVER。伝承奥義/北斗無双/幻闘PTの表示はリセットされるが内部値は引き継ぐ。**
+- ceiling: **通常最大1536宿命+α（平均約768G）→設定変更後最大1024宿命+α（平均約512G）へ短縮。C以上濃厚。**
+- mode: **A/B/C/D/天国/超天国。設定変更後はC以上濃厚。個別振り分け率はPUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH。**
+- advantageous section: **設定変更でRESET。設定変更以外の有利区間リセット時は極・幻闘RUSH恩恵があるが、設定変更時は対象外。**
+- additional morning benefits: **設定変更後数ゲーム間のみ激アツ目成立の可能性（成立時ユリアBONUS直撃）、ユリアポイント初期抽選、有利区間移行時ブルーセブンモード抽選。**
+- detection: **なな徹はリセット判別「現在調査中」。設定変更時は実戦上北斗神拳ステージ。ランダム加算があるためカウンタ差のみで確定不可。本機固有ガックンは再探索後もUNVERIFIED。**
+- resetQaStatus: **COMPLETE_RESEARCHED_WITH_GAKKUN_UNVERIFIED**
 
-### 公開朝一数値 — No.1656
-- 設定変更時モード振り分け:
-  - 通常A **50.0%**
-  - 通常B **10.2%**
-  - チャンス **39.8%**
-- 通常A/B選択時399G短縮率: **25.0%**
-- チャンスモード天井: **200G**
-- 通常A/B基本天井: **999G**
+### 公開朝一関連数値 — No.1657
+- 通常最大天井: **1536宿命+α / 平均約768G**
+- 設定変更後最大天井: **1024宿命+α / 平均約512G**
+- モードD最大: **640宿命+α / 平均約320G**
+- 天国/超天国最大: **256宿命+α / 平均約128G**
+- 有利区間移行時/ST終了時ブルーセブンモード移行率:
+  - 設定1 **0.7%**
+  - 設定2 **0.7%**
+  - 設定3 **0.8%**
+  - 設定4 **1.0%**
+  - 設定5 **1.1%**
+  - 設定6 **1.2%**
+- 有利区間移行時レア小役のブルーセブンモード追加移行率:
+  - 無双目/チャンスベル **10.2%**
+  - チェリー/スイカ **20.3%**
+  - チャンス目 **33.6%**
 
 ## conflicts / quality notes
-- No.1656: 設定構成は `1/2/3/5/6`。一部二次カレンダーに設定3の101.9%を「設定4」とする転記があるが、HAZUSE・1geki機種別解析は設定3で一致。canonicalは設定3。
-- No.1656: 地域・店舗単位では7月上旬後半の新台入替事例があるが、公式発売月・HAZUSE・1geki・パチマガスロマガ・全国カレンダーが7/1で一致するため全国本線は2024-07-01。
-- No.1656: 通常の有利区間リセット時は黒ドキ移行チャンスがあるが、なな徹は「設定変更時を除く」と明記。朝一設定変更恩恵へ混入しない。
+- No.1657: ユリアBONUS通常時直撃の設定5確率は、なな徹 `1/5048.0` とP-WORLD `1/5084.0` で競合。性能コア必須・リセット専用値ではないため平均化せずCONFLICT保持。
+- No.1657: 設定変更時モードはC以上濃厚まで複数一致。C/D/天国/超天国の個別振り分け率は公開固定値を確認できず、推測しない。
+- No.1657: 本機固有ガックンは機種名・型式 `Lスマスロ真北斗無双FS`・ロデオ・サミーと設定変更/リセット/朝一/据え置き/電源OFF ON/ガックンの検索語を変更し再探索後も固定できずUNVERIFIED。
 - 2024-06月次件数: 5機列挙と「6機種」市場集計の差は `CONFLICT_JUNE_2024_NEW_MODEL_COUNT_5_VS_6` としてQA debt継続。未知の第6機は推測追加しない。
 
 ## 2024-07-01境界 — CANONICAL CLOSED 1/1
 1. 沖ドキ！BLACK — No.1656 DONE
 
-## 2024-07-08候補 — OPEN 0/6
-1. **スマスロ真・北斗無双** — 次回No.1657候補
-2. **L アカメが斬る！2**
+## 2024-07-08候補 — OPEN 1/6
+1. **スマスロ真・北斗無双 — No.1657 DONE**
+2. **L アカメが斬る！2 — 次回No.1658候補**
 3. **Lパチスロ戦姫絶唱シンフォギア 正義の歌**
 4. **Sバハマ30**
 5. **S ご～やちゃんぷる～30φ**
 6. **S ご～やちゃんぷる～25φ**
 
 境界監査メモ:
-- 1geki 2024年7月新台カレンダーは7/8をパチスロ6機として上記6機を列挙。
+- 前handoffで1geki 2024年7月新台カレンダーの7/8パチスロ6機を確認済み。
 - 30φ/25φ派生は全機種方針に従い、正式型式・性能差・市場上の独立導入を確認してから別レコード採番する。
-- PB・地域先行・別型式・延期/段階導入を次回も再監査し、順番を確定する。
+- PB・地域先行・別型式・延期/段階導入を継続監査する。
 
 ## 次回再開地点
-1. 最新mainを再同期し、No.1656実レコードと本handoffを再取得確認。
-2. **No.1657候補 `スマスロ真・北斗無双`（2024-07-08）** を性能コア + resetBehavior v0.7で処理。
-3. その後 `L アカメが斬る！2 → Lパチスロ戦姫絶唱シンフォギア 正義の歌 → Sバハマ30 → S ご～やちゃんぷる～30φ → S ご～やちゃんぷる～25φ` を、正式型式・導入日・派生差を監査しながら順に処理。
+1. 最新mainを再同期し、No.1657実レコードと本handoffを再取得確認。
+2. **No.1658候補 `L アカメが斬る！2`（2024-07-08）** を性能コア + resetBehavior v0.7で処理。
+3. その後 `Lパチスロ戦姫絶唱シンフォギア 正義の歌 → Sバハマ30 → S ご～やちゃんぷる～30φ → S ご～やちゃんぷる～25φ` を正式型式・導入日・派生差を監査しながら順に処理。
 4. 6機処理後に2024-07-08境界をPB・別型式・地域先行・延期/段階導入まで再監査してCLOSED判定する。
 5. 欠損は表記揺れ/型式/メーカー/シリーズ名と検索語を変え、公式・業界・主要解析・旧DB・アーカイブ/回顧資料まで横断後のみUNVERIFIED。
 
 ## 今回の主要ソース
 取得日: 2026-09-14
 
-### No.1656 沖ドキ！BLACK
-- ユニバーサル公式: https://www.universal-777.com/product/slot/okidoki_black/
-- HAZUSE: https://hazuse.com/machine/pachislot/4S0253/
-- 1geki 機種トップ: https://1geki.jp/slot/s_oki_doki_black/
-- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/across_slot/21/kh01.php
-- パチ＆スロ必勝本 天井&設定変更: https://p.hisshobon.jp/machine/4317/1/102601
-- なな徹 朝一/設定変更: https://nana-press.com/kaiseki/machine/778/22174/
-- なな徹 狙い目: https://nana-press.com/kaiseki/machine/778/22647/
-- 1geki 天井/朝一: https://1geki.jp/slot/s_oki_doki_black/3/
-- 1geki モード: https://1geki.jp/slot/s_oki_doki_black/42/
-- 1geki 規定ゲーム数短縮: https://1geki.jp/slot/s_oki_doki_black/45/
+### No.1657 スマスロ真・北斗無双
+- HAZUSE: https://hazuse.com/machine/pachislot/3S1512/
+- P-WORLD / グリーンべると 検定通過: https://news.p-world.co.jp/articles/27224/greenbelt
+- P-WORLD / 遊技通信 発表: https://news.p-world.co.jp/articles/27538/yugitsushin
+- Amusement Japan: https://amusement-japan.co.jp/article/detail/10004284/
+- パチ&スロ必勝本 基本スペック: https://p.hisshobon.jp/machine/4312/1/103421
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sammy_slot/214/kh01.php
+- パチ&スロ必勝本 天井&設定変更: https://p.hisshobon.jp/machine/4312/1/102341
+- なな徹 朝一・設定変更: https://nana-press.com/kaiseki/machine/770/22515/
+- なな徹 天井: https://nana-press.com/kaiseki/machine/770/22513/
+- なな徹 有利区間: https://nana-press.com/kaiseki/machine/770/22516/
+- なな徹 ブルーセブンモード: https://nana-press.com/kaiseki/machine/770/23105/
+- HAZUSE 設定推測: https://hazuse.com/machine/pachislot/3S1512/genre/208/
+- 1geki 天井・リセット: https://1geki.jp/slot/l_sin_hokutomuso/3/
 
 ### 境界監査
 - 1geki 2024年7月新台カレンダー: https://1geki.jp/newmachinecalender/202407/
