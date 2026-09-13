@@ -1,83 +1,86 @@
 更新日: 2026-09-13
 
 ## 現在地点
-- recordCount: **1602**
-- latestRecordAdded: **L ひぐらしのなく頃に 業 — No.1602**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2023-11-06_higurashi-no-naku-koro-ni-gou.md`
-- chronologicalFrontier: **2023-11-06**
-- frontierLatestMachine: **L ひぐらしのなく頃に 業 — No.1602**
+- recordCount: **1603**
+- latestRecordAdded: **パチスロ ケンガンアシュラ — No.1603**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2023-11-20_kengan-ashura.md`
+- chronologicalFrontier: **2023-11-20**
+- frontierLatestMachine: **パチスロ ケンガンアシュラ — No.1603**
 - schema: **resetBehavior v0.7**
-- status: **2023-11-06_GROUP_CLOSED_6_OF_6_KNOWN_CANONICAL_PROCESSED**
+- status: **2023-11-20_GROUP_CLOSED_1_OF_1_CANONICAL_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前No.1601 `スマスロ とある魔術の禁書目録` を確認して開始。
-- INDEXは旧表示（19件）のため、README規定どおりLATEST_HANDOFFとmain実レコードを進捗正本として採用。
-- 前handoffでNEXTだったNo.1602 `L ひぐらしのなく頃に 業` を性能コア + resetBehavior v0.7で追加。
-- グリーンべると2023-11-06新台スケジュールで同日パチスロ6機を再監査し、既存5機 + 本機の6/6を確認。2023-11-06群をCLOSEDとした。
+- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前No.1602 `L ひぐらしのなく頃に 業` を確認して開始。
+- INDEXは旧表示のためREADME規定どおりLATEST_HANDOFFとmain実レコードを進捗正本として採用。
+- 遡及QA `2007-07-08_marvel-heroes.md` を正式更新し、既存 `COMPLETE_CORE` を維持したまま `qaResetBehavior: PARTIAL_RESEARCH_EXHAUSTED` へ確定。
+- 時系列本線は2023-11-20 `パチスロ ケンガンアシュラ` をNo.1603として性能コア + resetBehavior v0.7で追加。
+- 2023-11-20一覧には一部資料で `L ひぐらしのなく頃に 業` も掲載されるが、本DBでは2023-11-06をcanonicalとしてNo.1602処理済み。一部地域11/20は既存レコードで保持済みのため、11/20新規canonical群はケンガンアシュラ1機と判定しCLOSED。
 
-## No.1602 — L ひぐらしのなく頃に 業
-- path: `docs/real_machine_db/machines/2023-11-06_higurashi-no-naku-koro-ni-gou.md`
-- manufacturer: **ディ・ライト（大一商会グループ）**
-- formalModel / inspectionCode: **Lパチスロひぐらしのなく頃に業SS / 3S0262**
-- releaseDate: **2023-11-06**（一部地域11/20の資料あり）
-- generation/system: **6.5号機 / スマスロ / A+ART / 技術介入 / 完走型ART**
+## No.1603 — パチスロ ケンガンアシュラ
+- path: `docs/real_machine_db/machines/2023-11-20_kengan-ashura.md`
+- manufacturer: **ネット**
+- formalModel / inspectionCode: **LケンガンアシュラND / 3S0630**
+- releaseDate: **2023-11-20**
+- generation/system: **6.5号機 / スマスロAT / CZ突破型 / 上位・最上位AT**
 - settings: **1 / 2 / 3 / 4 / 5 / 6**
-- 通常攻略機械割 canonical: **96.5 / 97.6 / 99.7 / 101.6 / 103.4 / 105.3%**
-- 完全攻略機械割: **103.0 / 104.3 / 106.2 / 109.1 / 113.4 / 114.9%**
-- ボーナス合算: **1/196.8 / 1/192.2 / 1/188.3 / 1/184.1 / 1/180.0 / 1/176.2**
-- base: **約34G/50枚**
-- ART純増: **約0.9枚/G**
-- basic payout: **オヤシロBIG約260枚 / BIG約203枚 / REG約56枚**
-- CZ周期: **200G or 400G**
-- reset: **有利区間RESET、内部状態RESET**。ただしCZ周期/天井ゲーム数は資料競合。
-- carry: 据え置きは有利区間/周期/内部状態CARRY_OVER（なな徹）。
-- pure power: 周期/天井・内部状態はCARRY_OVERとする解析あり。有利区間そのものの純電断契約はUNVERIFIED_AFTER_RESEARCH。
-- reset CONFLICT: なな徹は設定変更時の天井/CZ周期をRESET、ちょんぼりすたは設定変更でもCARRY_OVER。平均化せず `CONFLICT` として両説保持。
-- reset detection: 設定変更・電断とも昼ステージ開始とする解析あり。有利区間ランプ判別不可。本機固有ガックンはUNVERIFIED_AFTER_RESEARCH。
-- public morning numeric: 朝一専用当選率・短縮天井率・設定変更専用200/400G振り分けはPUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH。
-- coreStatus: **COMPLETE_CORE**
-- resetQaStatus: **CONFLICT_ON_GAME_COUNTER_RESET_WITH_PARTIAL_POWER_CYCLE**
-- record commit: **b1350dc9522e1ad60db0b66725f73f9f2407f739**
+- 機械割: **97.8 / 98.9 / 101.1 / 103.8 / 106.7 / 110.3%**
+- AT初当り: **1/399.6 / 1/389.9 / 1/354.5 / 1/315.4 / 1/285.5 / 1/256.2**
+- CZ: **1/177.6 / 1/177.1 / 1/170.3 / 1/161.2 / 1/154.0 / 1/145.9**
+- base: **約35.5G/50枚**
+- 純増: **メインAT約2.5枚/G / 最上位AT約5.0枚/G**
+- main AT: **初期50G+α**
+- ceiling: **CZ間最大400G+α / CZ最大7回失敗後の8回目でAT**
+- reset: **有利区間RESET / 天井RESET / 拳願ポイント再抽選 / CZスルー回数RESET・内部状態RESETとする解析あり**。
+- carry: 据え置きは有利区間・天井・拳願pt CARRY_OVER。CZスルー/内部状態の据え置き個別明記は高信頼資料で未固定。
+- pure power: **CZ間G / CZスルー / 内部状態 / 拳願pt / 有利区間CARRY_OVER**とする機種別解析資料あり。
+- reset benefit: **拳願ポイント初期抽選**。二次資料にCZスルー回数天井の優遇/短縮説あり。ただし具体的短縮回数・振り分けは `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
+- reset detection: 有利区間ランプ判別不可。設定変更/純電断とも乃木会長室開始とする解析あり、見た目判別不可。本機固有ガックンは `UNVERIFIED_AFTER_RESEARCH`。
+- resetQaStatus: **COMPLETE_FOR_PUBLICLY_VERIFIABLE_FIELDS_WITH_UNQUANTIFIED_RESET_PREFERENCE**
+- record commit: **5f8f82b710d411df292f7c708df968d885e12936**
 
-## 2023-11-06群 — CLOSED 6/6 known canonical
-1. まどマギf-フォルテ- — No.1597 **DONE**
-2. L大工の源さん 超夢源 — No.1598 **DONE**
-3. パチスロ交響詩篇エウレカセブン HI-EVOLUTION ZERO TYPE-ART — No.1599 **DONE**
-4. デジスロ JAC IN バージョン — No.1600 **DONE**
-5. スマスロ とある魔術の禁書目録 — No.1601 **DONE**
-6. L ひぐらしのなく頃に 業 — No.1602 **DONE**
+## 2023-11-20群 — CLOSED 1/1 canonical
+1. パチスロ ケンガンアシュラ — No.1603 **DONE**
 
-同日群監査根拠:
-- グリーンべると/P-WORLD 2023-11-06「パチンコ・パチスロ新台スケジュール」掲載パチスロ6機と一致。
-- PB / 別型式 / 地域先行について今回の再探索で同日canonical追加対象は確認できず。
+監査注記:
+- 11/20導入一覧に `Lひぐらしのなく頃に 業` を載せる資料があるが、同機は11/06 canonical No.1602処理済みで地域差扱い。
+- PB / 別型式 / 同日地域先行を再探索し、追加の未処理canonical機は確認できず。
 
 ## resetBehavior 遡及QA進捗
-- 直前完了: `2007-07-08_caribbean-queen.md` カリビアンクイーン — `PARTIAL_RESEARCH_EXHAUSTED`（既存COMPLETE_CORE維持）。
-- 次カーソル: `2007-07-08_marvel-heroes.md` マーベルヒーローズ。
-- 今回、マーベルヒーローズについて `設定変更/リセット/朝一/据え置き/電源OFF ON/高確/ART残G/ガックン`、型式 `マーベルヒーローズH` を組み替え、K-Navi / P-WORLD / HAZUSE / A-SLOT / 回顧資料を再探索。
-- 既存の「設定変更後は内部高確スタート」「30G周期の高確移行観察による変更判別」は維持。
-- 据え置き時の内部高確/RT/CZ/ART残状態、純電源OFF→ON時の状態、ART/CZ/潜伏中の設定変更時残状態、本機固有ガックンについて追加の直接契約は今回も固定できず。
-- QA結論候補は **`PARTIAL_RESEARCH_EXHAUSTED`**。ただし既存レコード全文を安全に置換する更新は今回未実施のため、ファイル本体の `qaResetBehavior: PARTIAL` はまだ変更していない。次回最優先で正式化する。
-- 次々カーソル候補: `2007-07-09_genju-haou-t.md`（マーベル正式化後）。
+- 今回完了: `2007-07-08_marvel-heroes.md` マーベルヒーローズ — **PARTIAL_RESEARCH_EXHAUSTED**（既存COMPLETE_CORE維持）。
+- 設定変更後の内部高確スタート、および15枚役取りこぼし契機の30G周期観察による変更推測は維持。
+- 据え置き時の内部高確/RT/CZ/ART残状態、純電源OFF→ON時の状態、ART/CZ/潜伏中の設定変更時残状態、本機固有ガックンは、表記揺れ/型式/メーカー/関連検索語を変え当時解析・旧DB・回顧資料を横断した後も直接契約を固定できず `UNVERIFIED_AFTER_RESEARCH`。
+- 有利区間: **NOT_APPLICABLE**。
+- QA commit: **c01ef81efc4c4689bcb7cc561b853ff1eb05a2eb**
+- 次カーソル: `2007-07-09_genju-haou-t.md`（幻獣覇王T候補。最新mainで存在/順序を再確認してから処理）。
 
 ## 次回再開地点
-1. 最新mainを再同期し、No.1602と本handoffの反映を再取得確認。
-2. 遡及QA `2007-07-08_marvel-heroes.md` を `PARTIAL_RESEARCH_EXHAUSTED` へ正式更新し、既存 `COMPLETE_CORE` は維持。
-3. 時系列本線は **2023-11-06より後の最初の未処理導入群**を再監査。現時点の業界スケジュールでは2023-11-20 `パチスロ ケンガンアシュラ` が既知候補だが、同日全機種/PB/段階導入を再確認してからNo.1603を確定する。
-4. `推しスロ アイドルVer.` は2023-12-01実導入候補として保持し、12月到達時に再確認する。
+1. 最新mainを再同期し、No.1603・Marvel QA・本handoffの反映を再取得確認。
+2. 時系列本線は **2023-12-01 `推しスロ アイドルVer.`** を最優先候補として再監査。
+   - 実導入は《ミクちゃんガイア三宮店》専用フロア55台が2023-12-01オープンしたことをAmusement Japan / グリーンべるとで確認済み。
+   - P-WORLDは `S推しスロDA / 3S0885 / DAXEL / 2023-12-01` を掲載。
+   - ただし同一型式 `S推しスロDA` の公安委員会検定通過記事が2024-04にも存在するため、検定時系列の扱いを次回再確認し、競合/再検定・再公示の可能性を平均化せず整理してからNo.1604を確定する。
+   - 性能既知候補: 設定1〜5、機械割 `94.8 / 99.6 / 100.0 / 100.0 / 100.0%`、約52.1G/50枚、純増約3.0枚/G、150G固定天井。
+   - resetBehavior固有資料は現時点で乏しいため、設定変更/据え置き/純電断/天井/有利区間/ガックンを型式・PB名・DAXEL名で追加横断してから `RESEARCH_EXHAUSTED` 判定する。
+3. その次は2023-12-04群。グリーンべると12/3更新一覧では少なくとも `Lラブ嬢3～Wご指名はいかがですか？～ / Lリングにかけろ1 V / ニューシオサイ / L花の慶次～佐渡攻めの章` を確認。別資料ではモンキーターンV等も12/4掲載があるため、次回は一覧差分・実導入・地域差を再監査して群件数を固定する。
+4. 遡及QAは `2007-07-09_genju-haou-t.md` 候補から継続。
 
 ## 今回参照した主要ソース
 取得日: 2026-09-13
-- フィールズ発表/一撃: https://1geki.jp/repo/20230929fields/
-- グリーンべると 新台紹介: https://web-greenbelt.jp/post-77700/
-- グリーンべると 検定通過: https://web-greenbelt.jp/post-75870/
-- HAZUSE: https://data.hazuse.com/?detail_id=216144&genre=201&machine_code=3S0262
-- P-WORLD: https://www.p-world.co.jp/machine/database/9927
-- 必勝本: https://p.hisshobon.jp/vpage/2577/2
-- なな徹 朝一/設定変更: https://nana-press.com/kaiseki/machine/636/17515/
-- なな徹 技術介入/機械割: https://nana-press.com/post/1599234
-- ちょんぼりすた: https://chonborista.com/slot/d-light/196615/
-- グリーンべると/P-WORLD 2023-11-06新台スケジュール: https://news.p-world.co.jp/articles/25893/greenbelt
+- 遊技通信web 検定通過: https://www.yugitsushin.jp/news/%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%85%AC%E5%AE%89%E5%A7%94%E5%93%A1%E4%BC%9A%E6%A4%9C%E5%AE%9A%E9%80%9A%E9%81%8E%E7%8A%B6%E6%B3%812023%E5%B9%B48%E6%9C%88%E3%81%BE%E3%81%A8%E3%82%81%EF%BC%888%E6%9C%887/
+- P-WORLD ケンガンアシュラ: https://www.p-world.co.jp/machine/database/9908
+- P-WORLD/遊技日本 ケンガンアシュラ発表: https://news.p-world.co.jp/articles/25331/nippon
+- 一撃 ケンガンアシュラ: https://1geki.jp/slot/l_kengan_ashura/39/
+- 一撃 天井: https://1geki.jp/slot/l_kengan_ashura/3/
+- なな徹 朝一: https://nana-press.com/kaiseki/machine/635/17827/
+- なな徹 天井: https://nana-press.com/kaiseki/machine/635/17825/
+- なな徹 拳願ポイント: https://nana-press.com/kaiseki/machine/635/17831/
+- ぽこすろっと: https://www.nankaikoya.jp/kenganashura-kitaichi/
+- フリック7: https://flick7.net/slot/kengan_ashura__k.php
+- 2023-11-20導入カレンダー: https://sulocale.sulopachinews.com/archives/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88/11%E6%9C%8820%E6%97%A5%E5%B0%8E%E5%85%A5%E9%96%8B%E5%A7%8B%E4%BA%88%E5%AE%9A%E6%A9%9F%E7%A8%AE
+- Amusement Japan 推しスロ12/1実導入: https://www.amusement-japan.co.jp/article/detail/10003979/
+- グリーンべると 推しスロ専用フロア: https://web-greenbelt.jp/post-78770/
+- P-WORLD 推しスロ: https://www.p-world.co.jp/machine/database/9917
+- 遊技日本 S推しスロDA検定通過: https://news.p-world.co.jp/articles/27467/nippon
 - K-Navi マーベルヒーローズ: https://p-kn.com/slot/618/
 - P-WORLD マーベルヒーローズ: https://www.p-world.co.jp/machine/database/4782
 - HAZUSE マーベルヒーローズ: https://hazuse.com/machine/pachislot/7S0161/
