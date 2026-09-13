@@ -1,109 +1,97 @@
 更新日: 2026-09-14
 
 ## 現在地点
-- recordCount: **1651**
-- latestRecordAdded: **L聖闘士星矢 海皇覚醒 CUSTOM EDITION — No.1651**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2024-06-03_l-saint-seiya-kaiou-kakusei-custom-edition.md`
+- recordCount: **1652**
+- latestRecordAdded: **L ToLOVEるダークネス — No.1652**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2024-06-03_l-toloveru-darkness.md`
 - chronologicalFrontier: **2024-06-03**
-- frontierLatestMachine: **L聖闘士星矢 海皇覚醒 CUSTOM EDITION — No.1651**
+- frontierLatestMachine: **L ToLOVEるダークネス — No.1652**
 - schema: **resetBehavior v0.7**
-- status: **2024-06-03_BOUNDARY_OPEN_1_OF_5_CANONICAL_PROCESSED**
+- status: **2024-06-03_BOUNDARY_OPEN_2_OF_5_CANONICAL_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、ミッションv0.7、旧表示の `INDEX.md`、`LATEST_HANDOFF.md`、直前No.1650 `ニューパルサーSP4 with 太鼓の達人` を確認して開始。
+- 最新mainの `README.md`、ミッションv0.7、旧表示の `INDEX.md`、`LATEST_HANDOFF.md`、直前No.1651 `L聖闘士星矢 海皇覚醒 CUSTOM EDITION` を確認して開始。
 - README規定どおり、INDEXより新しい `LATEST_HANDOFF` + main実レコードを進捗正本として採用。
-- 2024-06-03群を再監査。必勝本NEWSとP-Summaで、パチスロ5機（聖闘士星矢 / ToLOVEる / アオハル操 / 防振り / ストリートファイターV）が同日導入として一致。
-- No.1651 `L聖闘士星矢 海皇覚醒 CUSTOM EDITION` を性能コア + resetBehavior v0.7で新規登録。
-- PB / 別型式 / 地域先行 / 段階導入の追加独立機は今回の再監査では確定せず、2024-06-03群は5候補のままOPEN継続。
+- 前回の2024-06-03境界5候補を継続し、No.1652 `L ToLOVEるダークネス` を性能コア + resetBehavior v0.7で新規登録。
+- 2025年の別スペック `L ToLOVEるダークネス TRANCE ver.8.7` は型式・性能値を混入させず分離。
+- 2024-06-03群は5候補のうち2機処理済みでOPEN継続。
 
-## No.1651 — L聖闘士星矢 海皇覚醒 CUSTOM EDITION
-- path: `docs/real_machine_db/machines/2024-06-03_l-saint-seiya-kaiou-kakusei-custom-edition.md`
-- manufacturer: **サンスリー製造 / 三洋販売**
-- formalModel: **L聖闘士星矢海皇覚醒ED** / inspectionCode: **430030**
+## No.1652 — L ToLOVEるダークネス
+- path: `docs/real_machine_db/machines/2024-06-03_l-toloveru-darkness.md`
+- manufacturer: **オリンピアエステート / 平和**
+- formalModel: **LToLOVEるダークネスS6** / inspectionCode: **430016**
 - releaseDate: **2024-06-03**
 - generation: **6.5号機 / スマスロ**
-- systemType: **AT / CZ突破・ゲーム数上乗せ型**
-- settings: **1 / 2 / 3 / 4 / 5 / 6**
-- 機械割: **97.5 / 98.5 / 100.0 / 105.5 / 108.8 / 114.9%**
-- GB初当り: **1/360.4 / 1/357.0 / 1/353.1 / 1/340.4 / 1/332.8 / 1/317.8**
-- AT初当り: **1/1168 / 1/1141 / 1/1107 / 1/985 / 1/921 / 1/813**
-- base: **約31.4G/50枚（636/637G以降 約46.0G/50枚）**
-- netIncrease: **聖闘士RUSH約2.5枚/G / 覚醒聖闘士RUSH約5.1枚/G**
-- basicPayout: **AT平均獲得約1500枚 / 天馬覚醒平均+200G / 女神覚醒平均+500G**
-- coreConfidence: **OFFICIAL + INDUSTRY + ANALYSIS_HIGH / MULTI_SOURCE_MATCH**
+- systemType: **AT / 疑似ボーナス+ST型**
+- settings: **L / 2 / 3 / 4 / 5 / 6**
+- 機械割: **設定L公開固定値なし / 98.0 / 99.0 / 102.5 / 105.8 / 110.1%（設定2→6）**
+- AT/ST初当り: **設定L公開固定値なし / 1/352.0 / 1/345.7 / 1/328.4 / 1/311.3 / 1/311.1（設定2→6）**
+- base: **約30.0G/50枚**
+- netIncrease: **疑似ボーナス約6.6枚/G**
+- basicPayout: **メモリアルBONUS 100枚+α / 楽園計画10G+α・ボーナス期待度約52% / とらぶるBONUS 100～1600枚・通常ST中平均約375.2枚**
+- coreConfidence: **INDUSTRY + ANALYSIS_HIGH / MULTI_SOURCE_MATCH**
 
-### No.1651 resetBehavior v0.7
-- setting change: **有利区間・ゲーム数天井・内部状態・通常モード・不屈ポイントRESET/再抽選。GBスルー天井、初期不屈、GB/CZ高確、GBレベルに朝一優遇。**
-- carry over: **据え置きは有利区間・天井・内部状態・通常モード・不屈ポイントCARRY_OVER。**
-- power OFF→ON: **天井G・内部状態CARRY_OVERを機種別資料で確認。通常モード、不屈、GBスルー、GBレベル、有利区間の純電断単独契約はUNVERIFIED_AFTER_RESEARCH。**
-- ceiling: **通常/SP準備999G、SP536G。設定変更専用のG数短縮は確認なし。GBスルー天井は2回10.16% / 8回89.84%。**
-- mode: **通常モードは設定変更で再抽選、据え置きで引継ぎ。設定変更専用の通常/SP準備/SP具体振り分けはPUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH。**
-- state: **設定変更時GB高確50.0% / CZ高確約13%。据え置き引継ぎ、純電断も内部状態引継ぎを確認。**
-- advantageous section: **設定変更RESET / 据え置きCARRY_OVER。通常の有利区間切れ後BIGBANG challenge恩恵は設定変更時を除外。純電断単独は直接資料不足。**
-- detection: **前日G+当日Gの100G単位前兆整合は据え置き可能性アップ材料。確定判別ではない。なな徹の変更判別は調査中、本機固有ガックンはUNVERIFIED_AFTER_RESEARCH。**
-- resetQaStatus: **COMPLETE_RESEARCHED_WITH_PARTIAL_POWER_CYCLE_UNVERIFIED**
+### No.1652 resetBehavior v0.7
+- setting change: **有利区間・ST間天井・内部状態RESET/再抽選。天井999G+α→650G+αへ短縮。内部通常Gをランダム加算。トランスポイント/どきどきポイント再抽選。**
+- carry over: **据え置きは有利区間・ST間天井・内部状態CARRY_OVER。ポイント系も継続系として扱う。**
+- power OFF→ON: **天井G・内部状態・トランスポイント・どきどきポイントCARRY_OVERを機種別比較表で直接確認。純電断単独の有利区間契約はUNVERIFIED_AFTER_RESEARCH。**
+- ceiling: **通常999G+α / 設定変更後650G+α。内部Gランダム加算で見かけ650G未満到達の可能性あり。**
+- mode: **朝一専用名称付きモード振り分けは公開固定値を確認できず。規定G進行RESET+内部Gランダム加算は確認。**
+- state: **設定変更で再抽選 / 据え置き・純電断で引継ぎ。**
+- advantageous section: **設定変更RESET / 据え置きCARRY_OVER。エンディング後等の有利区間切れ時「もぐもぐたい焼きタイム」は設定変更時を除外。純電断単独は直接資料不足。**
+- detection: **650G+αで天井非発動なら据え置き濃厚材料。650G付近当選は通常ゾーンと重なるため変更確定不可。内部Gランダム加算により前兆位置ズレも判別不可。開始ステージは双方共通。本機固有ガックンはUNVERIFIED_AFTER_RESEARCH。**
+- resetQaStatus: **COMPLETE_RESEARCHED_WITH_PARTIAL_POWER_CYCLE_ADV_SECTION_UNVERIFIED**
 
-### 公開朝一数値 — No.1651
-- GBスルー回数天井: **2回10.16% / 8回89.84%**
-- 初期不屈40pt以上: **約30%**
-- CZ高確開始: **約13%**
-- GB高確開始: **50.0%**
-- GBレベル2以上開始: **約50%**
-- GBレベル初期振り分け:
-  - 設定1: **49.22 / 25.00 / 12.50 / 12.50 / 0.78% (Lv1→5)**
-  - 設定2: **48.83 / 25.00 / 12.50 / 12.50 / 1.17%**
-  - 設定3: **48.83 / 25.00 / 12.50 / 12.50 / 1.17%**
-  - 設定4: **48.83 / 24.22 / 12.50 / 13.28 / 1.17%**
-  - 設定5: **48.83 / 23.44 / 12.11 / 14.06 / 1.56%**
-  - 設定6: **46.48 / 23.05 / 11.33 / 16.02 / 3.13%**
+### 公開朝一数値 — No.1652
+- 通常ST間天井: **999G+α**
+- 設定変更後ST間天井: **650G+α**
+- 天井短縮幅: **349G**
+- どきどきポイント再抽選: **60%以上で75pt以上保有**
+- 内部通常Gランダム加算の具体的振り分け: **PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH**
 
 ## conflicts / quality notes
-- No.1651: 上位AT純増は公式/主要DB/解析の多数が約5.1枚/G。一部当時資料に約5.7枚/Gがあるため、**5.1をcanonical / 5.7をCONFLICT_SOURCE_VALUE**として保持。
-- No.1651: 型式は公式PDFで `L聖闘士星矢海皇覚ED` 表記、検定/機種DBで `L聖闘士星矢海皇覚醒ED`。市場識別は検定側をcanonical。
-- No.1651: 深部ベース開始表記が636G以降 / 637G以降で1G差。通常約31.4G、深部約46Gの定義は一致。
-- 2024-06-03 boundary: P-Summaと必勝本NEWSはパチスロ5機で一致。一撃の年次集計に6月6機表記があるが、現時点で同月追加独立機を本線へ確定できていないため、同日群処理を継続しCLOSED前に再監査する。
+- No.1652: 性能コア・主要resetBehaviorに平均化すべき数値CONFLICTは現時点でなし。
+- No.1652: 2025-05-19導入の `L ToLOVEるダークネス TRANCE ver.8.7` は純増8.7枚/G・AT確率・機械割が異なる別スペック。検索結果へ混入しやすいため、2024年初代の値だけをcanonical化。
+- No.1652: 設定1は通常設定として非搭載。主要DBで設定L搭載を確認し、設定構成はL/2/3/4/5/6として保持。
+- No.1652: 純電源OFF→ON時の天井・状態・両ポイント引継ぎは必勝本の直接比較表で確認したが、有利区間そのものは一般仕様から推定せずUNVERIFIEDを維持。
 
-## 2024-06-03境界 — OPEN 1/5 canonical processed
+## 2024-06-03境界 — OPEN 2/5 canonical processed
 1. L聖闘士星矢 海皇覚醒 CUSTOM EDITION — No.1651 DONE
-2. **L ToLOVEるダークネス — NEXT / No.1652 candidate**
-3. アオハル♪操 A-LIVE — pending
+2. L ToLOVEるダークネス — No.1652 DONE
+3. **アオハル♪操 A-LIVE — NEXT / No.1653 candidate**
 4. スマスロ痛いのは嫌なので防御力に極振りしたいと思います。 — pending
 5. スマスロ ストリートファイターV 挑戦者の道 — pending
 
 境界監査メモ:
-- 必勝本NEWS 2024-06-02公開の6/3導入一覧で上記5機を列挙。
-- P-Summa 2024-06-01も「今月のパチスロ新台は5機種とも6月3日」として同5機を列挙。
-- K-Navi月間カレンダー、機種別導入日、業界記事でも6/3導入を照合。
-- 一撃の年次集計には2024年6月パチスロ6機表記があるため、群完了前に月内追加機/地域先行/PB/延期を再監査し、差分を解消してからCLOSED判定する。
+- 必勝本NEWS 2024-06-02公開の6/3導入一覧とP-Summa 2024-06-01は上記5機を同日導入として列挙。
+- K-Navi月間カレンダー、各機種導入日、業界記事でも6/3導入を照合。
+- Amusement Japan 2024-07-22記事は「6月導入新機種6機種」と記載。上記5機との差分があるため、5機処理完了後に月内追加機・地域先行・PB・別型式・延期/段階導入を再監査して解消する。
 
 ## 次回再開地点
-1. 最新mainを再同期し、No.1651実レコードと本handoffを再取得確認。
-2. **No.1652候補 `L ToLOVEるダークネス`（2024-06-03）** を性能コア + resetBehavior v0.7で処理。
-3. 次点は `アオハル♪操 A-LIVE` → `スマスロ痛いのは嫌なので防御力に極振りしたいと思います。` → `スマスロ ストリートファイターV 挑戦者の道`。
-4. 同日群完了後、2024年6月の「5機/6機」掲載差を、PB・別型式・地域先行・延期/段階導入まで再監査して解消しCLOSED判定。
+1. 最新mainを再同期し、No.1652実レコードと本handoffを再取得確認。
+2. **No.1653候補 `アオハル♪操 A-LIVE`（2024-06-03）** を性能コア + resetBehavior v0.7で処理。
+3. 次点は `スマスロ痛いのは嫌なので防御力に極振りしたいと思います。` → `スマスロ ストリートファイターV 挑戦者の道`。
+4. 同日群5機完了後、2024年6月の「5機/6機」掲載差を、PB・別型式・地域先行・月内別日導入・延期/段階導入まで再監査して解消しCLOSED判定。
 5. 遡及QAカーソルは `2007-07-09_genju-haou-t.md` まで完了。次QA対象はmain machines一覧を日付順再列挙して幻獣覇王直後の未QAレコードを確定してから処理。
 6. 欠損は表記揺れ/型式/メーカー/シリーズ名と検索語を変え、公式・業界・主要解析・旧DB・アーカイブ/回顧資料まで横断後のみUNVERIFIED。
 
 ## 今回の主要ソース
 取得日: 2026-09-14
 
-### No.1651 L聖闘士星矢 海皇覚醒 CUSTOM EDITION
-- SANYO公式プレスリリース: https://www.sanyobussan.co.jp/information/pdf/sanyo_press_release_20240405.pdf
-- 遊技日本/P-WORLD 販売発表: https://news.p-world.co.jp/articles/27484/nippon
-- 遊技日本/P-WORLD 検定通過: https://news.p-world.co.jp/articles/27308/nippon
-- HAZUSE: https://hazuse.com/hd/430030-2/
-- HAZUSE DATA: https://data.hazuse.com/?genre=207&machine_code=SX0075
-- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/santhree_slot/06/kh01.php
-- マルっとWAVE: https://marutto-w.com/shindai_reference/l_seiya_customedition
-- なな徹 朝一・設定変更: https://nana-press.com/kaiseki/machine/755/21822/
-- なな徹 天井: https://nana-press.com/kaiseki/machine/755/21820/
-- なな徹 GBレベル: https://nana-press.com/kaiseki/machine/755/21869/
-- 一撃: https://1geki.jp/slot/l_seiya_kaiou/3/
-- 必勝本 設定変更時恩恵: https://hisshobon.com/machineinfo/83615/
-- ちょんぼりすた: https://chonborista.com/slot/sanyo-slot/210417/
-- P-WORLD機種DB: https://opt.p-world.co.jp/machine/database/10039
+### No.1652 L ToLOVEるダークネス
+- Amusement Japan: https://amusement-japan.co.jp/article/detail/10004260/
+- HAZUSE: https://hazuse.com/machine/pachislot/SX0073/
+- 一撃 機種TOP: https://1geki.jp/slot/l_toloveru_darkness/
+- 一撃 天井/朝一: https://1geki.jp/slot/l_toloveru_darkness/3/
+- なな徹 機種TOP: https://nana-press.com/kaiseki/machine/752/
+- なな徹 朝一・設定変更: https://nana-press.com/kaiseki/machine/752/21708/
+- なな徹 天井: https://nana-press.com/kaiseki/machine/752/21706/
+- なな徹 ST楽園計画: https://nana-press.com/kaiseki/machine/752/21719/
+- なな徹 とらぶるボーナス: https://nana-press.com/kaiseki/machine/752/21720/
+- 必勝本 天井&設定変更: https://hisshobon.com/machineinfo/83469/
+- 必勝本 設定変更時: https://hisshobon.com/machineinfo/83497/
+- 必勝本 通常時ボーナス: https://hisshobon.com/machineinfo/83486/
+- P-WORLD: https://www.p-world.co.jp/machine/database/10038
 
-### 2024-06-03 boundary
-- 必勝本NEWS: https://hisshobon.news/news/14676/
-- P-Summa 2024年6月: https://psumma.jp/pachislo/61472/
-- K-Navi 2024年6月: https://p-kn.com/calendar/202406/
+### 2024-06 boundary QA
+- Amusement Japan 2024-07-22: https://amusement-japan.co.jp/article/detail/10004436/
