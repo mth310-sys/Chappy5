@@ -1,7 +1,8 @@
 # モーニング娘。
 
 status: PARTIAL
-qaResetBehavior: PARTIAL
+qaResetBehavior: PARTIAL_RESEARCH_EXHAUSTED
+resetQaLastUpdated: 2026-09-13
 
 machineName: モーニング娘。
 formalModelName: モーニング娘。S
@@ -117,6 +118,14 @@ resetBehavior:
   - NONE_CONFIRMED
   - 朝一特定G以内当選率、リセット後RT/CZ突入率、設定変更専用モード振り分け、短縮天井等の公開数値は確認できず。
 
+## resetBehavior QA formalization
+- QA status: PARTIAL_RESEARCH_EXHAUSTED
+- QA finalized: 2026-09-13
+- `モーニング娘。 / モーニング娘。S / ビスティ` と `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 電断 / CZ / RT / モーニングチャンス / モーニングタイム / 残りG / ガックン` を再度組み替えて探索。
+- SANKYO公式アーカイブでCZ→特殊リプレイ→77G RT構造は再確認したが、設定変更/据え置き/純電断の3契約を直接比較できる機種固有資料は追加発見できず。
+- 一般的な5号機RT機の挙動からRESET/CARRY_OVERを推測せず、既存UNVERIFIEDを維持する。
+- 性能コア側の `status: PARTIAL` は変更しない。
+
 ## 資料照合・判断
 
 - SANKYOオンライン博物館は型式名 `モーニング娘。S`、ビスティ、導入年月2007.07、BIG2種+CB1種、全ボーナス後CZ、特殊リプレイで77G RTを公式アーカイブとして掲載。
@@ -131,9 +140,9 @@ resetBehavior:
 
 1. SANKYOオンライン博物館「モーニング娘。」
    - URL: https://www.sankyo-fever.jp/collection/866/
-   - retrieved: 2026-08-31
+   - retrieved: 2026-09-13
    - confidence: OFFICIAL
-   - use: メーカー、型式名、導入年月2007.07、BIG2種+CB、CZ/77G RT構造、赤7BIG後のRT期待度が高いこと
+   - use: メーカー、型式名、導入年月2007.07、BIG2種+CB、CZ/77G RT構造、赤7BIG後のRT期待度が高いこと、reset QA再探索基点
 
 2. ALL7.jp「2007年6月 新台導入予定一覧」
    - URL: https://www.all7.jp/plans/index/2007/06
@@ -167,21 +176,21 @@ resetBehavior:
 
 7. pachinko’s blog「ビスティ『パチスロ モーニング娘。』の筐体＆スペック＆情報」
    - URL: https://pachinko.hatenablog.jp/entry/2007/06/morning-musume
-   - retrieved: 2026-08-31
+   - retrieved: 2026-09-13
    - confidence: ANALYSIS_SINGLE
-   - use: BIG/CB/合算の設定別確率、2007.06リリース、ボーナス+RT分類
+   - use: BIG/CB/合算の設定別確率、2007.06リリース、ボーナス+RT分類、reset関連固有情報の再探索
 
 missingFields:
 - baseGamesPer50: UNVERIFIED
 - RT純増/G: UNVERIFIED
 - BIG/CBの比較用実獲得純増枚数: UNVERIFIED
 - 設定別BIG/CB/合算確率の別系統再照合: UNVERIFIED
-- settingChangeBehaviorのCZ/RT内部状態処理: UNVERIFIED
-- carryOverBehaviorのCZ/RT残り状態: UNVERIFIED
-- powerCycleBehaviorのCZ/RT残り状態: UNVERIFIED
-- resetDetection（ガックン等）: UNVERIFIED
+- settingChangeBehaviorのCZ/RT内部状態処理: UNVERIFIED_AFTER_RESEARCH
+- carryOverBehaviorのCZ/RT残り状態: UNVERIFIED_AFTER_RESEARCH
+- powerCycleBehaviorのCZ/RT残り状態: UNVERIFIED_AFTER_RESEARCH
+- resetDetection（ガックン等）: UNVERIFIED_AFTER_RESEARCH
 
 conflicts:
 - releaseDate: ALL7.jp 2007-06-25導入予定 / SANKYOオンライン博物館 2007.07導入年月。平均せず双方保持し、時系列本線は具体的ホール導入予定日2007-06-25。
 
-取得日: 2026-08-31
+取得日: 2026-09-13
