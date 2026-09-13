@@ -1,97 +1,101 @@
 更新日: 2026-09-13
 
 ## 現在地点
-- recordCount: **1619**
-- latestRecordAdded: **L 仮面ライダー 7RIDERS — No.1619**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2024-01-09_kamen-rider-7riders.md`
+- recordCount: **1620**
+- latestRecordAdded: **パチスロ武装神姫 — No.1620**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2024-01-09_busou-shinki.md`
 - chronologicalFrontier: **2024-01-09**
-- frontierLatestMachine: **L 仮面ライダー 7RIDERS — No.1619**
+- frontierLatestMachine: **パチスロ武装神姫 — No.1620**
 - schema: **resetBehavior v0.7**
-- status: **2024-01-09_GROUP_OPEN_4_OF_5_CANONICAL_PROCESSED**
+- status: **2024-01-09_GROUP_CLOSED_5_OF_5_CANONICAL_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前No.1618 `Lパチスロ マクロスフロンティア4`、遡及QA対象 `2007-07-09_genju-haou-t.md` を確認して開始。
-- INDEXは旧表示を含むためREADME規定どおりLATEST_HANDOFFとmain実レコードを進捗正本として採用。
-- 2024-01-09 canonical群5機の4機目、No.1619 `L 仮面ライダー 7RIDERS` を性能コア + resetBehavior v0.7で追加。
-- 遡及QA `幻獣覇王` は既存 `COMPLETE_CORE` を維持し、resetBehaviorのみ `PARTIAL_RESEARCH_EXHAUSTED` として正式更新。
+- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前No.1619 `L 仮面ライダー 7RIDERS` を確認して開始。
+- INDEXは19件表示の旧版なのでREADME規定どおりLATEST_HANDOFF + main実レコードを進捗正本として採用。
+- 最新mainがNo.1619まで進んでいたため、前回会話上のNo.1615地点へ戻らず、未処理No.1620 `パチスロ武装神姫` を性能コア + resetBehavior v0.7で追加。
+- 2024-01-09群をPB・別型式・地域先行/段階導入・延期候補まで再監査し、canonical 5機でCLOSED判定。
 
-## No.1619 — L 仮面ライダー 7RIDERS
-- path: `docs/real_machine_db/machines/2024-01-09_kamen-rider-7riders.md`
-- manufacturer: **SUN SUN SUN（京楽産業.グループ / 販売: 京楽産業.）**
-- formalModel: **Lパチスロ仮面ライダーUJA**
-- inspectionCode: **330233（HAZUSE掲載。公的検定原典の番号再照合待ち）**
+## No.1620 — パチスロ武装神姫
+- path: `docs/real_machine_db/machines/2024-01-09_busou-shinki.md`
+- manufacturer: **KPE（販売・ブランド: コナミアミューズメント）**
+- formalModel: **S武装神姫PF**
+- inspectionCode: **2S1739**
 - releaseDate: **2024-01-09**
-- settings: **1 / 2 / 4 / 5 / 6 / L**
-- 機械割: **97.6 / 98.5 / 104.0 / 107.3 / 111.9%**（L固定値未確認）
-- AT初当たり: **1/297.7 / 1/291.4 / 1/253.2 / 1/233.6 / 1/225.2**
-- base: **約34G/50枚**
-- 純増: **AT「BATTLE RUSH」約2.6枚/G**
-- basic payout: **初回20G / 2セット目以降平均40G / 初戦除外継続約77% / 上位AT約84%**
-- normal ceiling: **999G+α / 7周期**
-- setting change: **有利区間・ゲーム数天井・周期天井・撃破ポイントRESET / 499G+α・3周期へ短縮 / 初期怒りポイント抽選 / 休憩室開始**
-- carry over: **有利区間・ゲーム数天井・周期天井・撃破ポイントCARRY_OVER**
-- power OFF→ON: **休憩室開始 / 撃破ポイントCARRY_OVER / 有利区間内持ちメダル数CARRY_OVER。全内部カウンタの同一資料による網羅確認は未完**
-- reset detection: **朝一499G+α超・3周期超のAT非当選は据え置き濃厚材料。開始ステージ単独では判別困難**
-- gackun: **UNVERIFIED_AFTER_RESEARCH**
-- resetQaStatus: **COMPLETE_RESEARCHED_WITH_PARTIAL_POWER_CYCLE_AND_UNVERIFIED_GACKUN**
+- generation: **6.5号機 / メダル機**
+- settings: **1 / 2 / 3 / 4 / 5 / 6**
+- 機械割: **97.3 / 98.5 / 99.8 / 102.3 / 104.2 / 108.1%**
+- CZ: **1/91.2 / 1/91.1 / 1/91.1 / 1/91.0 / 1/90.7 / 1/90.3**
+- AT: **1/282.1 / 1/270.0 / 1/258.0 / 1/238.8 / 1/204.4 / 1/173.9**
+- base: **34.47G/50枚（約34.5G）**
+- 純増: **約3.0枚/G**
+- basic AT: **1セット20G + 3～5Gの継続バトル / 継続率50・66・75・80・95%**
+- 上位AT: **SUPER神姫RUSH 継続率約95% / ヒキツギ条件成立時の再突入約60% / 突入時期待枚数約3600枚（設定1）**
+- normal ceiling: **CZ8連続スルー後、9回目CZでAT当選濃厚**
 
-## resetBehavior公開朝一数値
-- 通常ゲーム数天井 **999G+α → 設定変更後499G+α**。
-- 通常周期天井 **7周期 → 設定変更後3周期**。
-- 有利区間移行時の初期怒りポイント抽選をレコードに保存。
-- その他成立時: **0pt 8.0% / 10pt 12.0% / 30pt 20.0% / 50pt 21.0% / 70pt 21.0% / 90pt 18.0%**。
-- 弱レア役・強レア役・中段チェリー時の公開振り分けもレコードに保存済み。
+## No.1620 resetBehavior v0.7
+- setting change: **有利区間・CZスルー天井・内部状態RESET。武装高確/逆押し高確もRESETとする機種固有解析あり**
+- carry over: **据え置きは有利区間・CZスルー天井・内部状態CARRY_OVER**
+- power OFF→ON: **有利区間・CZスルー天井・内部モード/状態CARRY_OVER。武装高確/逆押し高確も引継ぎとする解析あり**
+- ceilingAfterReset: **短縮なし。設定変更専用のスルー回数短縮も確認なし**
+- mode/state: **設定変更でRESET、据え置き/純電断でCARRY_OVER。朝一専用モード振り分けの公開固定値は再探索後も確認できず**
+- advantageousSection: **設定変更RESET / 据え置き・純電断CARRY_OVER**
+- resetBenefits: **設定変更後はセットアップステージ開始とする複数解析あり。セットアップステージは武装獲得高確率。ただし天井短縮等の明確な専用恩恵なし**
+- resetDetection: **朝一が周期途中開始なら据え置き濃厚材料。見た目単独では判別困難。本機固有ガックンはUNVERIFIED_AFTER_RESEARCH**
+- publicMorningNumbers: **設定変更専用の当選率/モード振り分け/短縮天井数値はPUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH**
+- resetQaStatus: **COMPLETE_RESEARCHED_WITH_UNVERIFIED_GACKUN_AND_NO_NUMERIC_RESET_BONUS**
 
-## reset遡及QA — 幻獣覇王
-- path: `docs/real_machine_db/machines/2007-07-09_genju-haou-t.md`
-- coreStatus: **COMPLETE_CORE（維持）**
-- qaResetBehavior: **PARTIAL_RESEARCH_EXHAUSTED**
-- 設定変更/据え置き/純電源OFF→ON時のRT「巫女チャンス」残G、成立済みボーナス、内部状態、機種固有ガックンを、型式名・メーカー名・RT名・設定変更/電断/キャパシタ等へ検索語を変え、当時解析・旧DB・中古実機・回顧資料まで再探索。
-- 正常個体の機種固有契約を固定できる資料は追加発見できず、一般的5号機挙動から推測補完しない。
-- 中古個体の「キャパシタ切れ」記述は個体劣化情報のため、正常時の純電断契約の根拠には不採用。
-- 有利区間は制度導入前のため **NOT_APPLICABLE**。
+## No.1620 CONFLICT
+- AT初当たり: なな徹・一撃・パチ＆スロ必勝本系は設定3 `1/258.0` / 設定4 `1/238.8` / 設定5 `1/204.4` で一致。一方、すろぱちくえすとは設定3 `1/261.0` / 設定4 `1/245.1` を掲載。平均せず複数高信頼一致値をcanonical、相違値をCONFLICT保持。
+- CZ設定5: なな徹・一撃 `1/90.7` vs すろぱちくえすと `1/90.3`。平均せず前者をcanonical、後者をCONFLICT保持。
+- 一部二次記事に導入日 `2023-01-09` 誤記あり。コナミ公式の2024-01-09ホール稼働開始をcanonical採用。
 
-## 2024-01-09群 — OPEN 4/5 canonical
+## 2024-01-09群 — CLOSED 5/5 canonical
 1. 吉宗RISING — No.1616 DONE
 2. スマスロ バイオハザード ヴィレッジ — No.1617 DONE
 3. Lパチスロ マクロスフロンティア4 — No.1618 DONE
 4. L 仮面ライダー 7RIDERS — No.1619 DONE
-5. パチスロ武装神姫 — NEXT
+5. パチスロ武装神姫 — No.1620 DONE
 
 境界監査:
-- グリーンべると/P-WORLDの2024-01-09新台スケジュールで吉宗RISING / バイオハザード ヴィレッジ / マクロスフロンティア4 / 仮面ライダー 7RIDERSの4機を確認。
-- コナミアミューズメント公式が `パチスロ武装神姫` のホール稼働開始を2024-01-09と明記するため5機目としてcanonical群に含める。
-- よって旧4機扱いには戻さず、現在4/5 OPEN。武装神姫処理後にPB・別型式・地域先行・延期/段階導入を再監査してCLOSED判定する。
+- グリーンべると/P-WORLD 2024-01-09新台スケジュールはパチスロ4機を掲載するが、コナミ公式が `パチスロ武装神姫` のホール稼働開始を2024-01-09と明記。
+- 2024年導入日順一覧と1月機種まとめは5機で一致。
+- 1月22日の業界スケジュールはパチンコのみで、パチスロ新規canonical導入を確認できず。
+- 次のパチスロ導入境界は **2024-02-05**。
 
 ## 次回再開地点
-1. 最新mainを再同期し、No.1619 / 幻獣覇王QA / 本handoffの反映を再取得確認。
-2. **No.1620候補 `パチスロ武装神姫`** を性能コア + resetBehavior v0.7で処理。
-3. No.1620処理後、2024-01-09群をPB・別型式・地域先行・延期/段階導入まで再監査しCLOSED判定。
-4. 遡及QAは `2007-07-09_genju-haou-t.md` まで完了。**次QAカーソルは、最新mainのmachines一覧を日付順再列挙して幻獣覇王直後の未QAレコードを確定してから処理する**。推測でファイル名を固定しない。
-5. 新規機種は性能コア + resetBehavior v0.7を同時収集する。
-6. 欠損は表記揺れ/型式/メーカー/シリーズ名と検索語を変え、公式・業界・主要解析・旧DB・アーカイブ/回顧資料まで横断後のみUNVERIFIED。
+1. 最新mainを再同期し、No.1620と本handoffの反映を再取得確認。
+2. **No.1621候補 `スマスロ コードギアス 反逆のルルーシュ／復活のルルーシュ`（2024-02-05）** から性能コア + resetBehavior v0.7で処理開始。
+3. 2024-02-05 known候補は現時点で以下8機。開始時にPB・別型式・地域先行・延期/段階導入を再監査して件数を固定する。
+   - スマスロ コードギアス 反逆のルルーシュ／復活のルルーシュ
+   - Lパチスロ ガールズ&パンツァー 最終章
+   - スマスロ 冴えない彼女の育てかた
+   - Sky Love
+   - スマスロ ゴジラ対エヴァンゲリオン
+   - Lストライクウィッチーズ2
+   - GⅠ優駿倶楽部黄金
+   - ワードオブライツⅡ
+4. 遡及QAは `2007-07-09_genju-haou-t.md` まで完了。**次QAカーソルはmainのmachines一覧を日付順再列挙して幻獣覇王直後の未QAレコードを確定してから処理する。推測で固定しない。**
+5. 新規機種は性能コア + resetBehavior v0.7を同時収集。欠損は表記揺れ/型式/メーカー/シリーズ名と検索語を変え、公式・業界・主要解析・旧DB・アーカイブ/回顧資料まで横断後のみUNVERIFIED。
 
 ## 今回の主要ソース
 取得日: 2026-09-13
-### L 仮面ライダー 7RIDERS
-- 京楽公式 NEWS: https://www.kyoraku.co.jp/news/detail/725
-- 遊技日本 / P-WORLD業界ニュース: https://news.p-world.co.jp/articles/26285/nippon
-- グリーンべると 検定情報: https://web-greenbelt.jp/post-75296/
-- なな徹 基本スペック: https://nana-press.com/kaiseki/machine/654/18559/
-- なな徹 朝一/設定変更/有利区間: https://nana-press.com/kaiseki/machine/654/18621/
-- 一撃 天井/設定変更/電断/撃破ポイント: https://1geki.jp/slot/l_kr7riders/3/
-- HAZUSE 型式/検定番号: https://hazuse.com/hd/sx0063/
-- パチ＆スロ必勝本 設定別AT/機械割: https://p.hisshobon.jp/machine/4227/1/99961
+### パチスロ武装神姫
+- コナミアミューズメント 公式発売発表: https://www.konami.com/amusement/corporate/ja/topics/20230925/
+- コナミアミューズメント 2024-01-09ホール稼働開始告知: https://www.konami.com/amusement/corporate/ja/topics/20231225/
+- 公式機種サイト: https://www.konami.com/amusement/psm/slot/busou-shinki/00_top.html
+- 遊技通信web 東京都公安委員会検定通過まとめ: https://www.yugitsushin.jp/news/%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%85%AC%E5%AE%89%E5%A7%94%E5%93%A1%E4%BC%9A%E6%A4%9C%E5%AE%9A%E9%80%9A%E9%81%8E%E7%8A%B6%E6%B3%812023%E5%B9%B48%E6%9C%88%E3%81%BE%E3%81%A8%E3%82%81%EF%BC%888%E6%9C%887/
+- 遊技通信/P-WORLD 型式・基本AT: https://news.p-world.co.jp/articles/25502/yugitsushin
+- なな徹 基本スペック: https://nana-press.com/kaiseki/machine/647/18820/
+- なな徹 朝一/設定変更: https://nana-press.com/kaiseki/machine/647/18824/
+- 一撃 基本スペック/AT/ヒキツギ: https://1geki.jp/slot/s_busou_shinki/
+- ぽこすろっと 朝一/電断比較: https://www.nankaikoya.jp/busoushinki-kitaichi/
+- すろぱちくえすと 天井/朝一: https://www.slopachi-quest.com/article/busoushinki-tenjou/
+- すろぱちくえすと 設定差（CONFLICT確認）: https://www.slopachi-quest.com/article/busoushinki-settei/
+- HAZUSE 型式/検定番号: https://hazuse.com/machine/pachislot/2S1739/
 
-### 2024-01-09群監査
-- P-WORLD / グリーンべると新台スケジュール: https://news.p-world.co.jp/articles/26523/greenbelt
-- コナミアミューズメント 武装神姫アプリ告知（2024-01-09ホール稼働開始を明記）: https://www.konami.com/amusement/corporate/ja/topics/20231225/
-
-### 幻獣覇王 reset QA
-- HAZUSE: https://hazuse.com/i/data/genjuhaou/top.htm
-- 中一商事: https://www.nakaiti.com/html/igt002.html
-- パチマガスロマガ旧ページ群: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/igt_slot/45/a.php
-- Yahoo!フリマ中古実機個体（正常時契約の根拠には不採用）: https://paypayfleamarket.yahoo.co.jp/item/z641187040
+### 境界監査
+- グリーンべると/P-WORLD 2024-01-09～2月新台スケジュール: https://news.p-world.co.jp/articles/26523/greenbelt
+- 2024年導入日順一覧: https://www.slopachi-quest.com/article/2024-dounyuukisyu/
 
 ## リレー継続ルール
 - 毎回、最新mainの README → ミッションv0.7 → INDEX → LATEST_HANDOFF → 直前実レコードの順で確認。
