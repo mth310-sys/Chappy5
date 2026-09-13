@@ -1,64 +1,62 @@
 更新日: 2026-09-13
 
 ## 現在地点
-- recordCount: **1563**
-- latestRecordAdded: **スロット ソードアート・オンライン — No.1563**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2023-05-15_sword-art-online.md`
-- chronologicalFrontier: **2023-05-15**
-- frontierLatestMachine: **スロット ソードアート・オンライン — No.1563**
+- recordCount: **1564**
+- latestRecordAdded: **課長 熊田工作 — No.1564**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2023-05-22_kacho-kumada-kosaku.md`
+- chronologicalFrontier: **2023-05-22**
+- frontierLatestMachine: **課長 熊田工作 — No.1564**
 - schema: **resetBehavior v0.7**
-- status: **2023-05-15_GROUP_CLOSED_1_OF_1_CANONICAL_PROCESSED / NEXT_NO1564_KACHO_KUMADA_KOSAKU_2023-05-22**
+- status: **2023-05-22_GROUP_OPEN_1_OF_2_KNOWN_PROCESSED / NEXT_NO1565_PACHISLOT_JAVELIN**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧表示 `docs/real_machine_db/INDEX.md`、最新 `LATEST_HANDOFF.md`、直前No.1562 `マイフラワー2-30` を確認して開始。
+- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧表示 `docs/real_machine_db/INDEX.md`、最新 `LATEST_HANDOFF.md`、直前No.1563 `スロット ソードアート・オンライン` を確認して開始。
 - INDEXは19件の旧表示のためREADME規定どおりLATEST_HANDOFFとmain実レコードを進捗正本として採用。
-- mainは会話上の前回地点No.1557より先行し、No.1562まで進んでいたため重複処理を避け、handoff指定の次機種 `スロット ソードアート・オンライン` をNo.1563として処理。
-- 性能コア + resetBehavior v0.7を収集し、正式型式・検定番号・導入日・主要スペック・設定変更/据え置き/純電断・朝一公開数値を保存。
-- 2023-05-15群を導入一覧・業界記事で再監査。canonical導入は `スロット ソードアート・オンライン` 1機で一致したためCLOSED。
-- 次のcanonical導入日は2023-05-22。現時点knownは `課長 熊田工作 / パチスロ ジャベリン` の2機。
+- handoff指定の次機種 `課長 熊田工作` をNo.1564として処理。
+- 性能コア + resetBehavior v0.7を収集し、正式型式・検定番号・導入日・主要スペック・設定変更/据え置き/純電断・天井・モード・有利区間・朝一公開数値・変更判別を保存。
+- 公安委員会系検定資料、メーカー発表系業界記事、当時解析、複数攻略資料を横断し、欠損項目は検索語と資料系統を変更して再探索。
+- 2023-05-22群は `課長 熊田工作` を処理済み。known残り `パチスロ ジャベリン` は5/8表記との導入日CONFLICTを再監査して次回処理する。
 
-## No.1563 — スロット ソードアート・オンライン
-- manufacturer: **大都技研**
-- formalModel: **Lスロット ソードアート・オンラインB2**
-- inspectionCode: **2S1694**
-- releaseDate: **2023-05-15**
-- generation/system: **6.5号機 / スマスロAT / CZ→疑似ボーナス→ボスバトル→差枚数管理AT / 上位AT**
-- settings: **1 / 2 / 3 / 4 / 5 / 6**
-- payoutRate: **97.8 / 98.8 / 101.0 / 106.3 / 110.0 / 114.9%**
-- CZ初当り: **1/154.6 / 1/151.4 / 1/145.3 / 1/130.9 / 1/122.9 / 1/114.2**
-- ボーナス初当り: **1/356.2 / 1/343.3 / 1/321.1 / 1/266.1 / 1/236.3 / 1/207.7**
-- baseGamesPer50: **約35G/50枚**
-- netIncrease: **約2.5枚/G、上位ALO 約4.0枚/G**
-- basicPayout: **SAO BONUS 20G/約50枚、EP BONUS 40G/約100枚、SAO 100枚以上、ALO 15G+α**
+## No.1564 — 課長 熊田工作
+- manufacturer: **オーゼキ製造 / ネット販売**
+- formalModel: **S課長熊田工作GZA**
+- inspectionCode: **230226**
+- releaseDate: **2023-05-22**
+- generation/system: **6.5号機 / メダルAT / 疑似ボーナスループ型**
+- settings: **L / 1 / 2 / 4 / 5 / 6**
+- payoutRate: **97.6 / 98.9 / 102.0 / 104.7 / 107.0%（設定1/2/4/5/6）**
+- ボーナス初当り: **1/249 / 1/241 / 1/217 / 1/201 / 1/194**
+- baseGamesPer50: **約32.7G/50枚**
+- netIncrease: **約3.0枚/G**
+- basicPayout: **BIG 70G/約210枚、REG 30G/約90枚**
 - coreStatus: **COMPLETE_CORE**
-- resetBehaviorQA: **COMPLETE_RESET_CORE_WITH_PUBLIC_RESET_NUMBERS_AND_PARTIAL_POWER_CYCLE**
+- resetBehaviorQA: **COMPLETE_RESET_CORE_WITH_PUBLIC_RESET_MODE_NUMBERS**
 
-### resetBehavior v0.7 — No.1563
-- 設定変更: **有利区間・天井・内部状態RESET**。CZモードテーブル、高確移行レベルシナリオを設定変更専用で再抽選。
-- 据え置き: **有利区間・天井・内部状態CARRY_OVER**。
-- 純電源OFF→ON: **天井・内部状態CARRY_OVER**を2023年当時の機種固有比較資料で確認。CZモードテーブル/有利区間単独契約は `UNVERIFIED_AFTER_RESEARCH`。
-- 通常CZ間天井: **400G**。設定変更後の初回はランダム短縮抽選あり。完全G数振り分けは `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
-- CZスルー天井: **最大6スルー→7回目CZでボーナス**。
-- ボーナス間天井: **999G消化後の次回CZでボーナス**。
-- 設定変更時高確移行シナリオ: **A 12.4% / B 25.0% / C 31.3% / D 31.3%**。C+Dは**62.6%**。
-- 設定変更後1回目のボーナスが直撃当選した場合、**25%でエピソードボーナス**（全設定共通）。
-- 有利区間ランプ非搭載。400G未満かつレア小役以外でのCZ当選は設定変更期待度UP材料だが確定判別ではない。
-- 本機固有ガックン条件/発生率は検索語・資料系統を変えて再探索後も固定できず `UNVERIFIED_AFTER_RESEARCH`。
-- CONFLICT: 一部二次資料の下位AT純増約2.0枚/Gに対し、業界記事・複数解析は約2.5枚/Gで一致。**2.5枚/Gをcanonical**、2.0枚/Gを `CONFLICT_SECONDARY_TYPO_OR_DEFINITION_ERROR` として保持。
+### resetBehavior v0.7 — No.1564
+- 設定変更: **有利区間・天井・内部モード・内部状態RESET**。
+- 据え置き: **有利区間・天井・内部モード・内部状態CARRY_OVER**。
+- 純電源OFF→ON: **有利区間・天井・内部モード・内部状態CARRY_OVER**を機種固有比較資料で確認。
+- 天井: **通常時700G** または **チェリー30回**でボーナス。
+- 設定変更専用固定短縮天井は十分な再探索後も `NONE_CONFIRMED_AFTER_RESEARCH`。
+- 設定変更時モード大分類: **通常A or B 約14% / 昇進チャンス 約64% / 昇進準備 or 会長準備 約22%**。
+- 設定変更時以外の有利区間RESET時: **通常A or B 約25% / 昇進チャンス 約34% / 昇進準備 or 会長準備 約41%**。
+- 朝一恩恵: 昇進チャンスが約64%へ上昇。通常A/B合算は約14%へ低下。
+- 朝一不利/トレードオフ: 昇進準備/会長準備合算は通常の有利区間RESET時約41%に対し設定変更時約22%。単純全面優遇ではない。
+- 変更判別: 前日最終G+当日Gが700G超でも非当選ならリセット濃厚材料。ガックン条件/発生率は `UNVERIFIED_AFTER_RESEARCH`。
+- 設定Lはデモ画面でタイトルパネル消灯。Lの正確な機械割/初当りは `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
 
-## 2023-05-15群 — CLOSED 1/1 canonical
-1. スロット ソードアート・オンライン — No.1563 **DONE**
+### No.1564 CONFLICT
+- 設定6機械割: 複数解析 **107.0%** vs 導入前単一二次資料 **107.6%**。107.0%をcanonical、107.6%を `CONFLICT_SECONDARY_PRE_RELEASE_VALUE`。
+- 純増: 業界/複数解析 **約3.0枚/G** vs 導入前単一二次資料 **2.5枚 or 5.0枚**。約3.0枚/Gをcanonical。
+- 一部サイト分類に「スマスロAT」表記があるが、正式型式はS型式で複数当時資料は6.5号機AT。**6.5号機メダルAT**をcanonical。
+- イチカツHTML抽出の個別モード値は合計100%を超える表示となるため採用せず、スロパチクエストで整合する大分類14/64/22をcanonical。
 
-### 導入地域注記
-- 全国canonical導入日は2023-05-15。
-- 一部資料は北海道・九州等の地域導入を2023-05-22以降とするが、同一型式の地域差であり独立機種として別レコード化しない。
+## 2023-05-22群 — OPEN 1/2 known
+1. 課長 熊田工作 — No.1564 **DONE**
+2. パチスロ ジャベリン — **NEXT / 導入日CONFLICT再監査必須**
 
-## 次導入境界 — 2023-05-22
-現時点known:
-1. **課長 熊田工作** — NET系 / オーゼキ製造候補。複数資料で2023-05-22導入。
-2. **パチスロ ジャベリン** — 5/8表記資料との導入日CONFLICTあり。複数導入一覧/解析では2023-05-22をcanonical候補として再監査する。
-
-### 継続CONFLICT / deferred
+## 継続CONFLICT / deferred
+- `パチスロ ジャベリン`: 2023-05-08表記資料と2023-05-22表記資料がある。次回、メーカー/業界/導入実績系を優先してcanonical日を固定またはCONFLICT保持して処理する。
 - `L戦国BASARAギガZE`: 5/8スケジュール掲載 vs 実導入側資料の日付差。**2023-08-07境界へdefer**しCONFLICT保持。
 
 ## resetBehavior 遡及QA
@@ -69,28 +67,23 @@
 - 次回QAでは重複探索を避け、追加一次/当時資料がなければ性能完了判定を維持したまま `PARTIAL_RESEARCH_EXHAUSTED` への正式化を検討。
 
 ## 今回の主要資料
-### No.1563 スロット ソードアート・オンライン
-- 遊技日本 / P-WORLD: https://news.p-world.co.jp/articles/23837/nippon
-- グリーンべると導入記事: https://news.p-world.co.jp/articles/24079/greenbelt
-- グリーンべると検定通過: https://web-greenbelt.jp/post-69689/
-- HAZUSE: https://hazuse.com/machine/pachislot/2S1694/genre/202/
-- パチビー: https://www.pachibee.jp/machines/index/223040000
-- なな徹 朝一・設定変更: https://nana-press.com/kaiseki/machine/490/14840/
-- なな徹 天井: https://nana-press.com/kaiseki/machine/490/14838/
-- 一撃 天井/設定変更: https://1geki.jp/slot/l_sao/3/
-- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/daitogiken_slot/84/kr07.php
-- パチスロメソッド（2023-05-13）: https://slotmethod.jp/archives/16726/
-- パチ＆スロ必勝本: https://p.hisshobon.jp/machine/4040/1/92703
-- K-Navi: https://p-kn.com/slot/3954/
-
-### 2023-05-15 / 次境界監査
-- 2023導入日一覧: https://www.slopachi-quest.com/article/2023-dounyuukisyu/
-- グリーンべると SAO 5/15導入: https://news.p-world.co.jp/articles/24079/greenbelt
-- 一撃 `課長 熊田工作` 紹介（5/22導入）: https://www.youtube.com/watch?v=GDE_AVmsGOU
+### No.1564 課長 熊田工作
+- ネット株式会社プレスリリース / DreamNews: https://www.dreamnews.jp/press/0000275853/
+- P-BOMB: https://p-bomb.co.jp/industry/new-machine/6463/
+- 遊技日本 / P-WORLD 検定通過: https://news.p-world.co.jp/articles/22963/nippon
+- PiDEA X 東京都公安委員会検定通過: https://www.pidea.jp/articles/1676260862
+- 遊技通信 東京都公安委員会検定通過: https://www.yugitsushin.jp/news/%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%85%AC%E5%AE%89%E5%A7%94%E5%93%A1%E4%BC%9A%E6%A4%9C%E5%AE%9A%E9%80%9A%E9%81%8E%E7%8A%B6%E6%B3%81%EF%BC%882%E6%9C%8813%E6%97%A5%EF%BC%89/
+- パチビー: https://www.pachibee.jp/machines/about/223040001
+- グリーンべると: https://web-greenbelt.jp/post-69355/
+- ちょんぼりすた: https://chonborista.com/slot/net-slot/184958/
+- スロパチクエスト: https://www.slopachi-quest.com/article/kacyou-kumadakousaku-tenjou/
+- イチカツ: https://itikatu.jp/kumadakousaku/
+- HAZUSE: https://hazuse.com/machine/pachislot/SX0046/genre/209/
+- パチスロメソッド: https://slotmethod.jp/archives/16774/
 
 ## 保存コミット
-- No.1563追加: `ca6c9b98d97b0afa3965f6900326d540807e1d65`
+- No.1564追加: `66f6d80250a281c78d8fe3dc41d7b83a5454d7f8`
 - handoff更新: 本コミット
 
 ## 次回再開地点
-**本線はNo.1564候補 `課長 熊田工作`（2023-05-22）から継続。その後 `パチスロ ジャベリン` を同日群として再監査し、PB・別型式・地域先行・延期/段階導入を確認して2023-05-22群のCLOSED可否を判定する。遡及QAは `2007-07-08_caribbean-queen.md`（カリビアンクイーン）から継続し、既存性能値はやり直さない。`L戦国BASARAギガZE` は2023-08-07境界で導入日CONFLICTを再監査する。**
+**本線はNo.1565候補 `パチスロ ジャベリン` から継続。2023-05-08 / 2023-05-22の導入日CONFLICTをメーカー・業界・導入実績資料で再監査し、性能コア + resetBehavior v0.7を収集する。その後PB・別型式・地域先行・延期/段階導入を確認して2023-05-22群のCLOSED可否を判定する。遡及QAは `2007-07-08_caribbean-queen.md`（カリビアンクイーン）から継続し、既存性能値はやり直さない。`L戦国BASARAギガZE` は2023-08-07境界で導入日CONFLICTを再監査する。**
