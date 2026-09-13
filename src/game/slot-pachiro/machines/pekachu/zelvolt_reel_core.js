@@ -1,4 +1,4 @@
-// ZELVOLT native 3-reel engine v1.13
+// ZELVOLT native 3-reel engine v1.14
 // 3-row physical reels + 5-line A-type style pull-in / miss control.
 (()=>{
   const STRIPS=[
@@ -35,13 +35,12 @@
   function naturalStopFromPhase(v,phase){let best=null;for(let index=0;index<v.strip.length;index++){const targetBase=phaseForIndex(index,v.cycle);let delta=mod(targetBase-mod(phase,v.cycle),v.cycle);while(delta<MIN_STOP_TRAVEL)delta+=v.cycle;if(!best||delta<best.delta)best={index,delta,target:phase+delta}}return best}
   function controlCodeForReel(i){if(['BIG','REG','REPLAY','BELL','GRAPE'].includes(resultType))return normalizeCode(targetSymbol);if(resultType==='CHERRY'&&i===0)return'CHERRY';return null}
   function inspectStopControl(i){const v=reelsView[i];if(!v)return null;const normalized=controlCodeForReel(i);const reactionVelocity=Math.max(v.velocity,SPEED[i]*.86);const projected=v.phase+reactionVelocity*STOP_REACTION_MS;const natural=naturalStopFromPhase(v,projected);const targetRow=normalized&&activeLine?activeLine.rows[i]:1;let best=null;if(normalized){for(let symbolIndex=0;symbolIndex<v.strip.length;symbolIndex++){if(v.strip[symbolIndex]!==normalized)continue;const middleIndex=middleIndexForSymbolRow(v,symbolIndex,targetRow);const targetBase=phaseForIndex(middleIndex,v.cycle);let delta=mod(targetBase-mod(projected,v.cycle),v.cycle);while(delta<natural.delta)delta+=v.cycle;const slip=Math.max(0,Math.round((delta-natural.delta)/ROW));if(!best||slip<best.slip||slip===best.slip&&delta<best.delta)best={middleIndex,symbolIndex,delta,slip,target:projected+delta}}}
-    const bonusForced=['BIG','REG'].includes(resultType)&&!!normalized;
-    const canPull=!!best&&(bonusForced||best.slip<=MAX_SLIP_SYMBOLS);
+    const canPull=!!best&&best.slip<=MAX_SLIP_SYMBOLS;
     const finalIndex=canPull?best.middleIndex:natural.index;
     const finalTarget=canPull?best.target:natural.target;
     const logicalRow=activeLine?activeLine.rows[i]:1;
     const finalSymbol=symbolAtRow(v,finalIndex,logicalRow);
-    const state={reel:i,pressPhase:v.phase,projectedPhase:projected,naturalIndex:natural.index,naturalSymbol:symbolAtRow(v,natural.index,logicalRow),targetCode:normalized||null,targetRow:normalized?targetRow:null,requiredSlip:best?best.slip:null,canPull,bonusForced,missed:!!normalized&&!canPull,appliedSlip:canPull?best.slip:0,maxSlipSymbols:MAX_SLIP_SYMBOLS,finalIndex,finalTarget,finalSymbol,logicalRow};
+    const state={reel:i,pressPhase:v.phase,projectedPhase:projected,naturalIndex:natural.index,naturalSymbol:symbolAtRow(v,natural.index,logicalRow),targetCode:normalized||null,targetRow:normalized?targetRow:null,requiredSlip:best?best.slip:null,canPull,missed:!!normalized&&!canPull,appliedSlip:canPull?best.slip:0,maxSlipSymbols:MAX_SLIP_SYMBOLS,finalIndex,finalTarget,finalSymbol,logicalRow};
     stopControlState[i]=state;
     reels[i]=finalSymbol;
     return state
