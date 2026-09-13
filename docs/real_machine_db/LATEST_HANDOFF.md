@@ -1,102 +1,100 @@
 更新日: 2026-09-14
 
 ## 現在地点
-- recordCount: **1655**
-- latestRecordAdded: **スマスロ ストリートファイターV 挑戦者の道 — No.1655**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2024-06-03_l-street-fighter-v-challenger-road.md`
-- chronologicalFrontier: **2024-06-03**
-- frontierLatestMachine: **スマスロ ストリートファイターV 挑戦者の道 — No.1655**
+- recordCount: **1656**
+- latestRecordAdded: **沖ドキ！BLACK — No.1656**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2024-07-01_okidoki-black.md`
+- chronologicalFrontier: **2024-07-01**
+- frontierLatestMachine: **沖ドキ！BLACK — No.1656**
 - schema: **resetBehavior v0.7**
-- status: **2024-06-03_BOUNDARY_CANONICAL_CLOSED_5_OF_5_WITH_MONTHLY_COUNT_CONFLICT_5_VS_6**
+- status: **2024-07-01_BOUNDARY_CANONICAL_CLOSED_1_OF_1 / NEXT_2024-07-08_OPEN_0_OF_6**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、ミッションv0.7、旧表示の `INDEX.md`、`LATEST_HANDOFF.md`、直前No.1654 `スマスロ痛いのは嫌なので防御力に極振りしたいと思います。` を確認して開始。
-- README規定どおり、INDEXより新しい `LATEST_HANDOFF` + main実レコードを進捗正本として採用。
-- 次の未処理No.1655 `スマスロ ストリートファイターV 挑戦者の道` を性能コア + resetBehavior v0.7で新規登録。
-- 2024-06-03 canonical候補5機は全処理完了。P-Summa等の新台カレンダーは6月パチスロ新台5機・全て6/3導入で一致する一方、別の業界市場集計に「6月導入6機種」とする月次件数があるため、未知の第6機を推測追加せず件数CONFLICTとしてQA debtを残した。
-- 次の全国導入本線は2024-07-01 `沖ドキ！BLACK`。1gekiの2024年7月カレンダーで7/1はパチスロ1機、7/8から複数機が続くことを確認。
+- 最新mainの `README.md`、ミッションv0.7、旧表示の `INDEX.md`、`LATEST_HANDOFF.md`、直前No.1655 `スマスロ ストリートファイターV 挑戦者の道` を確認して開始。
+- README規定どおり、旧INDEXより新しい `LATEST_HANDOFF` + main実レコードを進捗正本として採用。
+- 次の未処理No.1656 `沖ドキ！BLACK` を性能コア + resetBehavior v0.7で新規登録。
+- 1geki 2024年7月新台カレンダーで7/1はパチスロ1機のみのため、2024-07-01境界をCLOSED 1/1とした。
+- 次の全国導入本線は2024-07-08。1gekiではパチスロ6機を列挙している。
 
-## No.1655 — スマスロ ストリートファイターV 挑戦者の道
-- path: `docs/real_machine_db/machines/2024-06-03_l-street-fighter-v-challenger-road.md`
-- manufacturer: **エンターライズ**
-- formalModel: **Lストリートファイター5ZD** / inspectionCode: **4S0055**
-- releaseDate: **2024-06-03**
-- generation: **6.5号機 / スマスロ**
-- systemType: **AT / 疑似ボーナス主体・技術介入型**
-- settings: **1 / 2 / 3 / 4 / 5 / 6**
-- 市場想定機械割: **97.7 / 98.3 / 99.6 / 101.0 / 102.8 / 105.3%**
-- 完全攻略時機械割: **103.4 / 104.0 / 105.2 / 106.6 / 108.1 / 110.6%**
-- BATTLE BONUS: **1/296.9 / 1/291.8 / 1/280.8 / 1/268.3 / 1/254.3 / 1/234.5**
-- 樽BONUS: **1/363.2 / 1/361.1 / 1/353.8 / 1/347.8 / 1/338.6 / 1/323.1**
-- ボーナス合算: **1/163.3 / 1/161.4 / 1/156.6 / 1/151.5 / 1/145.2 / 1/135.9**
-- base: **約35G/50枚**
-- netIncrease: **疑似ボーナスAT 約3.6枚/G**
-- basicPayout: **BATTLE BONUS平均約400枚 / 樽BONUS約106枚 / BATTLE BONUS影平均約1350枚**
-- coreConfidence: **INDUSTRY + ANALYSIS_HIGH / MULTI_SOURCE_MATCH**
+## No.1656 — 沖ドキ！BLACK
+- path: `docs/real_machine_db/machines/2024-07-01_okidoki-black.md`
+- manufacturer: **ミズホ**
+- formalModel: **S／沖ドキ！BLACK／EP** / inspectionCode: **4S0253**
+- releaseDate: **2024-07-01**
+- generation: **6.5号機 / メダル機 / 30Φ**
+- systemType: **AT / 疑似ボーナス・モード管理型沖スロ**
+- settings: **1 / 2 / 3 / 5 / 6**（設定4なし）
+- payoutRate: **97.2 / 98.7 / 101.9 / 104.8 / 108.6%**
+- bonusInitial: **1/288.7 / 1/277.9 / 1/265.8 / 1/254.1 / 1/243.1**
+- BIG: **1/214.1 / 1/205.6 / 1/188.5 / 1/173.3 / 1/160.8**
+- REG: **1/292.5 / 1/283.8 / 1/267.0 / 1/251.7 / 1/239.0**
+- base: **約32G/50枚**
+- netIncrease: **約3.5枚/G**
+- basicPayout: **BIG 60G/約210枚、REG 25G/約90枚**
+- coreConfidence: **OFFICIAL + ANALYSIS_HIGH / MULTI_SOURCE_MATCH**
 
-### No.1655 resetBehavior v0.7
-- setting change: **有利区間RESET、内部状態RESET/再抽選、波動高確RESET、ミッションモード再抽選、実戦上は道場ステージ開始。天井非搭載。**
-- carry over: **据え置きは有利区間・内部状態CARRY_OVER。波動高確/ミッションモードの据え置き専用直接比較表は今回固定できずUNVERIFIEDを残す。**
-- power OFF→ON: **内部状態・波動高確・ミッションモードCARRY_OVER。開始ステージは1geki等が道場、必勝本は調査中でCONFLICT。純電断単独の有利区間契約はUNVERIFIED_AFTER_RESEARCH。**
-- ceiling: **天井機能非搭載。通常/設定変更後ともN/A。**
-- mode/state: **設定変更時/有利区間移行時にミッションモード再抽選。内部状態と波動高確は設定変更でRESET、純電断でCARRY_OVER。**
-- advantageous section: **設定変更RESET / 据え置きCARRY_OVER。純電断単独契約は直接資料不足でUNVERIFIED。**
-- detection: **設定変更・据え置きとも道場開始とする朝一資料があり、開始ステージ単独では判別不可。本機固有ガックンは再探索後もUNVERIFIED。天井非搭載のため天井位置判別も不可。**
-- resetQaStatus: **COMPLETE_RESEARCHED_WITH_POWER_CYCLE_ADVANTAGEOUS_SECTION_AND_GAKKUN_UNVERIFIED**
+### No.1656 resetBehavior v0.7
+- setting change: **有利区間RESET、天井G RESET、モード再抽選。通常A 50.0% / 通常B 10.2% / チャンス39.8%。通常A/B選択時は25.0%で天井399Gへ短縮。チャンスは200G天井。**
+- carry over: **据え置きは有利区間・天井・モードCARRY_OVER。なな徹の直接比較表で確認。**
+- power OFF→ON: **天井ゲーム数・モードCARRY_OVER。必勝本の直接比較表で確認。純電断単独の有利区間契約はUNVERIFIED_AFTER_RESEARCH。**
+- ceiling: **通常A/B 999G、引き戻し/チャンス200G、天国以上32G。設定変更後はチャンス39.8%、通常A/B時25%で399G短縮。**
+- mode/state: **設定変更時モード再抽選、据え置き/電断はモード引継ぎ。モードとは別軸の内部状態比較はNOT_SEPARATELY_PUBLISHED_AFTER_RESEARCH。**
+- advantageous section: **設定変更RESET / 据え置きCARRY_OVER / 純電断単独はUNVERIFIED。**
+- detection: **なな徹はリセット判別「現在調査中」。200G/399G付近当選は推測材料だが確定判別ではない。本機固有ガックン・表示/有利区間ランプの確定判別は再探索後もUNVERIFIED。**
+- resetQaStatus: **COMPLETE_RESEARCHED_WITH_GAKKUN_AND_DISPLAY_DETECTION_UNVERIFIED**
 
-### 公開朝一数値 — No.1655
-- ミッションモード設定変更時振り分け:
+### 公開朝一数値 — No.1656
+- 設定変更時モード振り分け:
   - 通常A **50.0%**
-  - 通常B **37.5%**
-  - バトル **11.7%**
-  - 強バトル **0.4%**
-  - 豪鬼バトル **0.4%**
-- 設定変更後短縮天井: **N/A（天井非搭載）**
-- 朝一特定G以内の固定ボーナス当選率: **PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH**
+  - 通常B **10.2%**
+  - チャンス **39.8%**
+- 通常A/B選択時399G短縮率: **25.0%**
+- チャンスモード天井: **200G**
+- 通常A/B基本天井: **999G**
 
 ## conflicts / quality notes
-- No.1655: 市場想定機械割は必勝本・HAZUSE・1gekiが `97.7 / 98.3 / 99.6 / 101.0 / 102.8 / 105.3%` で一致。一方、一部解析整理は設定3〜6に `102.6 / 104.0 / 105.7 / 108.2%` を掲載。定義差の可能性を排除できないため平均せず `CONFLICT_MARKET_PAYOUT_SETTINGS3_TO_6` を保持。
-- No.1655: 純電源OFF→ON時の開始ステージは複数解析が道場とする一方、必勝本比較ページは「現在調査中」。`CONFLICT_POWER_CYCLE_START_STAGE`。
-- No.1655: 本機固有ガックン、純電断単独の有利区間契約は検索語・資料系統変更後も固定できずUNVERIFIED_AFTER_RESEARCH。
-- 2024-06月次件数: 新台カレンダー/機種列挙は5機で一致するが、市場集計資料に6機種表記あり。実機名を特定できないため `CONFLICT_JUNE_2024_NEW_MODEL_COUNT_5_VS_6` として保持し、時系列本線は確認済み5機で閉じる。
+- No.1656: 設定構成は `1/2/3/5/6`。一部二次カレンダーに設定3の101.9%を「設定4」とする転記があるが、HAZUSE・1geki機種別解析は設定3で一致。canonicalは設定3。
+- No.1656: 地域・店舗単位では7月上旬後半の新台入替事例があるが、公式発売月・HAZUSE・1geki・パチマガスロマガ・全国カレンダーが7/1で一致するため全国本線は2024-07-01。
+- No.1656: 通常の有利区間リセット時は黒ドキ移行チャンスがあるが、なな徹は「設定変更時を除く」と明記。朝一設定変更恩恵へ混入しない。
+- 2024-06月次件数: 5機列挙と「6機種」市場集計の差は `CONFLICT_JUNE_2024_NEW_MODEL_COUNT_5_VS_6` としてQA debt継続。未知の第6機は推測追加しない。
 
-## 2024-06-03境界 — CANONICAL CLOSED 5/5
-1. L聖闘士星矢 海皇覚醒 CUSTOM EDITION — No.1651 DONE
-2. L ToLOVEるダークネス — No.1652 DONE
-3. アオハル♪操 A-LIVE — No.1653 DONE
-4. スマスロ痛いのは嫌なので防御力に極振りしたいと思います。 — No.1654 DONE
-5. スマスロ ストリートファイターV 挑戦者の道 — No.1655 DONE
+## 2024-07-01境界 — CANONICAL CLOSED 1/1
+1. 沖ドキ！BLACK — No.1656 DONE
+
+## 2024-07-08候補 — OPEN 0/6
+1. **スマスロ真・北斗無双** — 次回No.1657候補
+2. **L アカメが斬る！2**
+3. **Lパチスロ戦姫絶唱シンフォギア 正義の歌**
+4. **Sバハマ30**
+5. **S ご～やちゃんぷる～30φ**
+6. **S ご～やちゃんぷる～25φ**
 
 境界監査メモ:
-- P-Summa 2024-06-01は「今月のパチスロ新台は5機種とも6月3日」と明記し、上記5機を列挙。
-- 6月中旬以降の主要新台カレンダーでも追加パチスロ全国導入を確認できず、次の全国導入本線は2024-07-01 `沖ドキ！BLACK`。
-- ただし別の業界市場集計の「6月導入6機種」という件数とは不一致。PB・地域先行・別型式・増産/追加販売等の定義差を将来QAで再監査する。
+- 1geki 2024年7月新台カレンダーは7/8をパチスロ6機として上記6機を列挙。
+- 30φ/25φ派生は全機種方針に従い、正式型式・性能差・市場上の独立導入を確認してから別レコード採番する。
+- PB・地域先行・別型式・延期/段階導入を次回も再監査し、順番を確定する。
 
 ## 次回再開地点
-1. 最新mainを再同期し、No.1655実レコードと本handoffを再取得確認。
-2. **No.1656候補 `沖ドキ！BLACK`（2024-07-01、ミズホ）** を性能コア + resetBehavior v0.7で処理。
-3. `沖ドキ！BLACK` は一部地域7/8開始表記もあるため、全国本線7/1 / 地域差をreleaseDateEvidenceで分離して保持する。
-4. その後2024-07-08群を導入日・PB・別型式・地域先行・延期/段階導入まで境界監査して順番を確定する。
-5. 2024-06の5/6件数CONFLICTはQA debtとして保持し、機種名が一次/業界資料で固定できるまで未知の第6機を追加しない。
-6. 欠損は表記揺れ/型式/メーカー/シリーズ名と検索語を変え、公式・業界・主要解析・旧DB・アーカイブ/回顧資料まで横断後のみUNVERIFIED。
+1. 最新mainを再同期し、No.1656実レコードと本handoffを再取得確認。
+2. **No.1657候補 `スマスロ真・北斗無双`（2024-07-08）** を性能コア + resetBehavior v0.7で処理。
+3. その後 `L アカメが斬る！2 → Lパチスロ戦姫絶唱シンフォギア 正義の歌 → Sバハマ30 → S ご～やちゃんぷる～30φ → S ご～やちゃんぷる～25φ` を、正式型式・導入日・派生差を監査しながら順に処理。
+4. 6機処理後に2024-07-08境界をPB・別型式・地域先行・延期/段階導入まで再監査してCLOSED判定する。
+5. 欠損は表記揺れ/型式/メーカー/シリーズ名と検索語を変え、公式・業界・主要解析・旧DB・アーカイブ/回顧資料まで横断後のみUNVERIFIED。
 
 ## 今回の主要ソース
 取得日: 2026-09-14
 
-### No.1655 スマスロ ストリートファイターV 挑戦者の道
-- P-WORLD NEWS / 遊技日本: https://news.p-world.co.jp/articles/27230/nippon
-- P-WORLD NEWS / 遊技通信: https://news.p-world.co.jp/articles/27655/nippon
-- HAZUSE: https://hazuse.com/machine/pachislot/4S0055/
-- K-Navi: https://p-kn.com/slot/4152/
-- P-WORLD: https://www.p-world.co.jp/machine/database/10052
-- パチ&スロ必勝本 基本/技術介入: https://p.hisshobon.jp/vpage/2628/3
-- パチ&スロ必勝本 天井&設定変更: https://p.hisshobon.jp/machine/4318/1/102612
-- なな徹 朝一/リセット: https://nana-press.com/kaiseki/machine/758/21741/
-- 1geki 機種トップ: https://1geki.jp/slot/l_sfvc/
-- 1geki 天井/朝一: https://1geki.jp/slot/l_sfvc/3/
-- P-Summa 導入/実戦整理: https://psumma.jp/pachislo/61534/
+### No.1656 沖ドキ！BLACK
+- ユニバーサル公式: https://www.universal-777.com/product/slot/okidoki_black/
+- HAZUSE: https://hazuse.com/machine/pachislot/4S0253/
+- 1geki 機種トップ: https://1geki.jp/slot/s_oki_doki_black/
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/across_slot/21/kh01.php
+- パチ＆スロ必勝本 天井&設定変更: https://p.hisshobon.jp/machine/4317/1/102601
+- なな徹 朝一/設定変更: https://nana-press.com/kaiseki/machine/778/22174/
+- なな徹 狙い目: https://nana-press.com/kaiseki/machine/778/22647/
+- 1geki 天井/朝一: https://1geki.jp/slot/s_oki_doki_black/3/
+- 1geki モード: https://1geki.jp/slot/s_oki_doki_black/42/
+- 1geki 規定ゲーム数短縮: https://1geki.jp/slot/s_oki_doki_black/45/
 
 ### 境界監査
-- P-Summa 2024年6月新台5機: https://psumma.jp/pachislo/61472/
 - 1geki 2024年7月新台カレンダー: https://1geki.jp/newmachinecalender/202407/
-- ユニバーサル公式 沖ドキ！BLACK: https://universal-777.com/product/slot/okidoki_black/
