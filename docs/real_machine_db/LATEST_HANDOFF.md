@@ -1,76 +1,74 @@
 更新日: 2026-09-14
 
 ## 現在地点
-- recordCount: **1659**
-- latestRecordAdded: **Lパチスロ 戦姫絶唱シンフォギア 正義の歌 — No.1659**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2024-07-08_l-symphogear-seigi-no-uta.md`
+- recordCount: **1660**
+- latestRecordAdded: **Sバハマ30 — No.1660**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2024-07-08_s-bahama30.md`
 - chronologicalFrontier: **2024-07-08**
-- frontierLatestMachine: **Lパチスロ 戦姫絶唱シンフォギア 正義の歌 — No.1659**
+- frontierLatestMachine: **Sバハマ30 — No.1660**
 - schema: **resetBehavior v0.7**
-- status: **2024-07-08_BOUNDARY_OPEN_3_OF_6_KNOWN_CANONICAL_PROCESSED**
+- status: **2024-07-08_BOUNDARY_OPEN_4_OF_6_KNOWN_CANONICAL_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、ミッションv0.7、旧表示の `INDEX.md`、`LATEST_HANDOFF.md`、直前No.1658 `L アカメが斬る！2` を確認して開始。
+- 最新mainの `README.md`、ミッションv0.7、旧表示の `INDEX.md`、`LATEST_HANDOFF.md`、直前No.1659 `Lパチスロ 戦姫絶唱シンフォギア 正義の歌` を確認して開始。
 - README規定どおり、旧INDEXより新しい `LATEST_HANDOFF` + main実レコードを進捗正本として採用。
-- 直前handoff指定の次の未処理No.1659 `Lパチスロ 戦姫絶唱シンフォギア 正義の歌` を性能コア + resetBehavior v0.7で新規登録。
-- 型式/検定はHAZUSE + 2024-03-13付け山口県公安委員会検定通過を扱う業界記事で照合。
-- 導入日はSANKYO公式月表記に加え、HAZUSE・必勝本・P-WORLD・K-Navi・グリーンべると等が2024-07-08で一致。
-- resetBehaviorはなな徹朝一/有利区間/モード、必勝本の設定変更&電源OFF/ON直接比較、P-WORLD等を主軸に照合。
-- 設定2/4/5/6の有利区間移行時モード完全振り分け、ギアフラグモード初期振り分け、純電断時の抜剣状態、本機固有ガックンは検索語・資料系統変更後も固定公開値を確認できず欠損扱い。
+- 直前handoff指定の次の未処理No.1660 `Sバハマ30` を性能コア + resetBehavior v0.7で新規登録。
+- 型式 `SバハマA3-30` は遊技日本/P-WORLDの検定通過記事、検定番号 `330688` はHAZUSE + Ativoで照合。
+- 2024-07-08導入はHAZUSE・1geki・複数解析で一致。業界発表は7月上旬予定と整合。
+- 通常時は毎ゲーム完全確率で疑似ボーナスを抽選し、天井・CZ・規定G数モード非搭載。設定変更後専用の天井短縮/朝一モード/当選率優遇は主要資料・後年解析を再探索しても確認されず、存在しない機構を推測追加しない。
+- 有利区間の設定変更/据え置き/純電断時内部契約、純電断固有状態、本機固有ガックンは検索語・資料系統変更後も固定資料を確認できずUNVERIFIED。
+- 純増は業界発表・複数解析・1geki概要の約7.4枚/Gに対し、1geki後年更新のBIG/REG個別ページが約4.7枚/Gと自己競合。平均化せずCONFLICT保持。
 
-## No.1659 — Lパチスロ 戦姫絶唱シンフォギア 正義の歌
-- path: `docs/real_machine_db/machines/2024-07-08_l-symphogear-seigi-no-uta.md`
-- manufacturer: **ジェイビー製造 / SANKYOブランド・販売**
-- formalModel: **L戦姫絶唱シンフォギア 正義の歌jA** / inspectionCode: **3S1917**
+## No.1660 — Sバハマ30
+- path: `docs/real_machine_db/machines/2024-07-08_s-bahama30.md`
+- manufacturer: **アムテックス製造 / 平和販売**
+- formalModel: **SバハマA3-30** / inspectionCode: **330688**
 - releaseDate: **2024-07-08**
-- generation: **6.5号機 / スマスロ**
-- systemType: **AT**
-- settings: **L / 1 / 2 / 4 / 5 / 6（設定3なし・実質5段階設定）**
-- payoutRate: **98.2 / 99.4 / 104.4 / 108.3 / 114.9%（設定1/2/4/5/6）**
-- AT: **1/295 / 1/285 / 1/250 / 1/227 / 1/199**
-- base: **約32G/50枚（約31.7G表記も補足保持）**
-- netIncrease: **通常AT約2.8枚/G / 上位AT約5.0枚/G**
-- basicPayout: **AT初期40G以上、ベル50G・レア役100G、ギアフラグは絶唱へ / シンフォギアBONUS20G**
-- coreConfidence: **OFFICIAL + INDUSTRY + ANALYSIS_HIGH / MULTI_SOURCE_MATCH**
+- generation: **6.5号機 / メダル機 / 30Φ**
+- systemType: **AT（疑似Aタイプ / 完全確率型疑似ボーナス）**
+- settings: **L / 1 / 2 / 3 / 5 / 6（設定4なし）**
+- payoutRate: **97.5 / 99.1 / 101.5 / 105.9 / 109.3%（設定1/2/3/5/6）**
+- BIG: **1/296.5 / 1/288.7 / 1/277.7 / 1/262.1 / 1/251.1**
+- REG: **1/524.3 / 1/481.9 / 1/422.8 / 1/360.1 / 1/316.6**
+- combined: **1/189.4 / 1/180.5 / 1/167.6 / 1/151.7 / 1/140.0**
+- base: **約35.5G〜36.5G/50枚（設定1約35.5G）**
+- netIncrease: **CONFLICT 約7.4枚/G vs 約4.7枚/G。平均化しない。**
+- basicPayout: **BIG平均約344枚（44Gかつ303枚超まで） / REG平均約125枚（120枚超まで）**
+- coreConfidence: **INDUSTRY + ANALYSIS_HIGH / MULTI_SOURCE_MATCH_WITH_NET_INCREASE_CONFLICT**
 
-### No.1659 resetBehavior v0.7
-- setting change: **有利区間RESET、天井RESET、内部状態RESET、天井/エクスドライブ/ギアフラグ/CZ各モード・テーブル再抽選、抜剣メーターRESET。**
-- carry over: **据え置きは有利区間・天井内部G・内部状態・各種モードをCARRY_OVER。**
-- power OFF→ON: **天井内部G・天井モード・エクスドライブモード・ギアフラグモード・CZテーブル・内部状態・有利区間をCARRY_OVER。液晶G数と抜剣メーター表示はリセットされるが内部進行は引継ぎ。抜剣状態そのものはUNVERIFIED。**
-- ceiling: **通常最大777G+α → 設定変更後最大498G+αへ短縮。天国は100G以内。**
-- mode: **設定変更＝有利区間移行を伴い天国移行優遇。設定1は通常38% / 天国準備34% / 天国28%。設定2/4/5/6完全振り分けはPUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH。**
-- CZ mode: **設定変更時12%でCZモード天国。選択時は250G以内にCZ「AXZバトル」へ突入。**
-- advantageous section: **設定変更でRESET。据え置き/純電断でCARRY_OVER。有利区間ランプ判別不可。設定変更以外の区間リセット恩恵（絶唱バトル+CZ天国）は設定変更時には付与されない。**
-- morning benefits: **最大天井498G+α、天国移行優遇、CZモード天国12%。**
-- detection: **設定変更/据え置きとも表示はリセット、開始ステージもリディアン音楽院/フードパーク1:1で見た目判別不可。498G+α超過非当選やCZ前兆ゾーンの前日G数とのズレが据え置き濃厚材料。有利区間ランプ不可。本機固有ガックンは再探索後もUNVERIFIED。**
-- resetQaStatus: **COMPLETE_RESEARCHED_WITH_GAKKUN_AND_HIGH_SETTING_RESET_MODE_DISTRIBUTION_UNVERIFIED**
+### No.1660 resetBehavior v0.7
+- setting change: **天井・規定G数モードが存在しないため天井短縮/モード再抽選はNOT_APPLICABLE。朝一専用優遇はNONE_CONFIRMED_AFTER_RESEARCH。コンプリート打ち止めは設定変更で解除。**
+- carry over: **天井・規定G数モードはNOT_APPLICABLE。通常時は設定に応じた完全確率抽選。據え置き時の有利区間内部契約はUNVERIFIED。**
+- power OFF→ON: **比較対象となる天井/通常モードはNOT_APPLICABLE。純電断時の有利区間・内部状態契約は再探索後もUNVERIFIED。**
+- game count: **天井進行用内部GはNOT_APPLICABLE。前日G数で公開当選率が変化する仕様は確認されない。**
+- ceiling: **通常時天井非搭載 / 設定変更後短縮天井NOT_APPLICABLE。**
+- mode/state: **天国/チャンス等の通常モードはNOT_APPLICABLE。朝一専用状態・固定振り分けはNONE_CONFIRMED_AFTER_RESEARCH。**
+- advantageous section: **6.5号機ATであることは確認済みだが、本機固有の設定変更/据え置き/純電断時内部契約は直接資料を固定できずUNVERIFIED。**
+- morning benefits: **天井短縮、モード優遇、CZ優遇、初当り優遇はいずれもNONE_CONFIRMED_AFTER_RESEARCH。**
+- detection: **規定G数判別はNOT_APPLICABLE。有利区間ランプ/表示/開始状態による確定判別、本機固有ガックン条件・発生率は再探索後もUNVERIFIED。**
+- resetQaStatus: **COMPLETE_RESEARCHED_WITH_POWER_CYCLE_ADVANTAGEOUS_SECTION_AND_GAKKUN_UNVERIFIED**
 
-### 公開朝一関連数値 — No.1659
-- 通常最大天井: **777G+α**
-- 設定変更後最大天井: **498G+α**
-- 天国モード天井: **100G以内**
-- 有利区間移行時モード振り分け（設定1）: **通常38% / 天国準備34% / 天国28%**
-- CZモード天国移行率（設定変更時）: **12%**
-- 開始ステージ: **リディアン音楽院50% / フードパーク50%**
-- 設定変更後57G/59Gビーチ移行: **天国準備 or 天国期待度アップ**（58Gはデフォルト）
-- 設定2/4/5/6の完全モード振り分け: **PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH**
-- ギアフラグモード初期振り分け: **PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH**
+### 公開朝一関連数値 — No.1660
+- 通常時天井: **非搭載**
+- 設定変更後短縮天井: **NOT_APPLICABLE**
+- 朝一専用モード振り分け: **NONE_CONFIRMED_AFTER_RESEARCH**
+- 朝一特定G数以内当選率/期待度: **NONE_CONFIRMED_AFTER_RESEARCH**
+- リセット恩恵発生率: **NONE_CONFIRMED_AFTER_RESEARCH**
 
 ## conflicts / quality notes
-- No.1659: 50枚ベースは主要資料で約32G、後年整理に約31.7G表記あり。丸め/算定差の可能性が高いためcanonical約32G、31.7Gは補足値。平均化しない。
-- No.1659: 設定6の天国移行率は主要解析が「設定1の約2倍」と説明し、後年整理に約56%表記があるが、主要な固定振り分け表を確認できないため56%をcanonical固定値にしない。
-- No.1659: 通常の上位AT終了/エンディング後の有利区間RESET恩恵は設定変更時には適用されないため、朝一恩恵と混同しない。
+- No.1660: 純増は2024年業界発表・複数解析・1geki機種概要が約7.4枚/G、1geki 2025-12-09更新のBIG/REG個別ページが約4.7枚/G。`CONFLICT_NET_INCREASE_7.4_VS_4.7` として保持し平均化しない。
+- No.1660: K-Naviは設定5 BIG 1/262.4、REG 1/360.4だが、業界発表・P-WORLD・なな徹・1geki等は1/262.1 / 1/360.1で一致。canonicalは多数一致値を採用しK-Navi差を注記。
 - 2024-06月次件数: 5機列挙と「6機種」市場集計の差は `CONFLICT_JUNE_2024_NEW_MODEL_COUNT_5_VS_6` としてQA debt継続。未知の第6機は推測追加しない。
 
 ## 2024-07-01境界 — CANONICAL CLOSED 1/1
 1. 沖ドキ！BLACK — No.1656 DONE
 
-## 2024-07-08候補 — OPEN 3/6
+## 2024-07-08候補 — OPEN 4/6
 1. **スマスロ真・北斗無双 — No.1657 DONE**
 2. **L アカメが斬る！2 — No.1658 DONE**
 3. **Lパチスロ戦姫絶唱シンフォギア 正義の歌 — No.1659 DONE**
-4. **Sバハマ30 — 次回No.1660候補**
-5. **S ご～やちゃんぷる～30φ**
+4. **Sバハマ30 — No.1660 DONE**
+5. **S ご～やちゃんぷる～30φ — 次回No.1661候補**
 6. **S ご～やちゃんぷる～25φ**
 
 境界監査メモ:
@@ -79,34 +77,33 @@
 - PB・地域先行・別型式・延期/段階導入を継続監査する。
 
 ## 次回再開地点
-1. 最新mainを再同期し、No.1659実レコードと本handoffを再取得確認。
-2. **No.1660候補 `Sバハマ30`（2024-07-08）** を正式型式・メーカー・導入日・性能差まで再監査し、性能コア + resetBehavior v0.7で処理。
-3. その後 `S ご～やちゃんぷる～30φ → S ご～やちゃんぷる～25φ` を正式型式・導入日・25φ/30φ差を監査しながら順に処理。
+1. 最新mainを再同期し、No.1660実レコードと本handoffを再取得確認。
+2. **No.1661候補 `S ご～やちゃんぷる～30φ`（2024-07-08）** を正式型式・メーカー・導入日・性能差まで再監査し、性能コア + resetBehavior v0.7で処理。
+3. その後 `S ご～やちゃんぷる～25φ` を正式型式・導入日・25φ/30φ差を監査して処理。
 4. 6機処理後に2024-07-08境界をPB・別型式・地域先行・延期/段階導入まで再監査してCLOSED判定する。
 5. 欠損は表記揺れ/型式/メーカー/シリーズ名と検索語を変え、公式・業界・主要解析・旧DB・アーカイブ/回顧資料まで横断後のみUNVERIFIED。
 
 ## 今回の主要ソース
 取得日: 2026-09-14
 
-### No.1659 Lパチスロ 戦姫絶唱シンフォギア 正義の歌
-- SANKYOオンライン博物館: https://www.sankyo-fever.jp/collection/962/
-- HAZUSE: https://hazuse.com/machine/pachislot/3S1917/
-- グリーンべると 検定通過: https://web-greenbelt.jp/post-81369/
-- P-WORLD / グリーンべると 検定通過: https://news.p-world.co.jp/articles/27187/greenbelt
-- 遊技通信 発表記事: https://news.p-world.co.jp/articles/27619/yugitsushin
-- 遊技日本 発表記事: https://news.p-world.co.jp/articles/27665
-- グリーンべると 導入記事: https://news.p-world.co.jp/articles/28149/greenbelt
-- パチ&スロ必勝本 基本スペック: https://hisshobon.com/machineinfo/83885/
-- パチ&スロ必勝本 機種解説: https://p.hisshobon.jp/vpage/2624/2
-- パチ&スロ必勝本 天井&設定変更: https://hisshobon.com/machineinfo/83867/
-- パチ&スロ必勝本 通常時解説: https://p.hisshobon.jp/machine/4315/1/103977
-- なな徹 朝一・設定変更: https://nana-press.com/kaiseki/machine/760/22576/
-- なな徹 天井: https://nana-press.com/kaiseki/machine/760/22574/
-- なな徹 モード: https://nana-press.com/kaiseki/machine/760/22580/
-- なな徹 有利区間: https://nana-press.com/kaiseki/machine/760/22577/
-- P-WORLD: https://www.p-world.co.jp/machine/database/10050
-- K-Navi: https://p-kn.com/slot/4151/
-- ぽこすろっと（リセット判別補助）: https://www.nankaikoya.jp/symphogear-seiginouta-kitaichi/
+### No.1660 Sバハマ30
+- 遊技日本 / P-WORLD 検定通過: https://news.p-world.co.jp/articles/27308/nippon
+- グリーンべると / P-WORLD 発表記事: https://news.p-world.co.jp/articles/27721/greenbelt
+- 遊技日本 / P-WORLD 発表記事: https://news.p-world.co.jp/articles/27738/nippon
+- HAZUSE: https://hazuse.com/machine/pachislot/SX0079/
+- Ativo: https://ativo.jp/2024/05/13/s%E3%83%90%E3%83%8F%E3%83%9E30/
+- P-WORLD: https://www.p-world.co.jp/machine/database/10053
+- 1geki TOP: https://1geki.jp/slot/s_bahama30/
+- 1geki 天井/朝一: https://1geki.jp/slot/s_bahama30/3/
+- 1geki 小役/ベース: https://1geki.jp/slot/s_bahama30/4/
+- 1geki BIG: https://1geki.jp/slot/s_bahama30/61/
+- 1geki REG: https://1geki.jp/slot/s_bahama30/62/
+- なな徹: https://nana-press.com/kaiseki/machine/781/21698/
+- 必勝本 通常時解説: https://hisshobon.com/machineinfo/83993/
+- 必勝本 ロングフリーズ: https://hisshobon.com/machineinfo/83997/
+- パチマニア: https://ps-mania.jp/slot/s-bahama30/
+- ちょんぼりすた: https://chonborista.com/slot/amute/213569/
+- K-Navi: https://p-kn.com/slot/4153/
 
 ### 境界監査
 - 1geki 2024年7月新台カレンダー: https://1geki.jp/newmachinecalender/202407/
