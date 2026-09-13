@@ -1,135 +1,83 @@
 更新日: 2026-09-14
 
 ## 現在地点
-- recordCount: **1628**
-- latestRecordAdded: **ワードオブライツⅡ — No.1628**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2024-02-05_word-of-lights-2.md`
-- chronologicalFrontier: **2024-02-05**
-- frontierLatestMachine: **ワードオブライツⅡ — No.1628**
+- recordCount: **1629**
+- latestRecordAdded: **スマスロキングパルサー — No.1629**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2024-03-04_smart-king-pulsar.md`
+- chronologicalFrontier: **2024-03-04**
+- frontierLatestMachine: **スマスロキングパルサー — No.1629**
 - schema: **resetBehavior v0.7**
-- status: **2024-02-05_GROUP_CLOSED_8_OF_8_CANONICAL_PROCESSED**
+- status: **2024-03-04_GROUP_OPEN_1_OF_5_CANONICAL_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前No.1626 `Lストライクウィッチーズ2` を確認して開始。
-- INDEXは19件表示の旧版なのでREADME規定どおりLATEST_HANDOFF + main実レコードを進捗正本として採用。
-- No.1627 `GⅠ優駿倶楽部黄金`、No.1628 `ワードオブライツⅡ` を性能コア + resetBehavior v0.7で追加。
-- グリーンべると2024-02-05新台スケジュール、K-Navi 2024年2月カレンダー、マルっとWAVEの3系統で2/5パチスロ8機が一致。2/19はパチンコのみ。既知8機以外のPB・別型式・地域先行/段階導入・延期候補を再監査し、2024-02-05群をCLOSEDとした。
+- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前No.1628 `ワードオブライツⅡ` を確認して開始。
+- INDEXは旧版表示のためREADME規定どおりLATEST_HANDOFF + main実レコードを進捗正本として採用。
+- 2024-02-05群が8/8 CLOSEDであることを再取得確認。
+- 2024-03-04群を複数系統で再監査し、`スマスロキングパルサー / L南国育ち / キングクリエーター-30 / チバリヨ2 / パチスロ ガメラ2` の5機をcanonical候補として維持。
+- No.1629 `スマスロキングパルサー` を性能コア + resetBehavior v0.7で追加。
 
-## No.1627 — GⅠ優駿倶楽部黄金
-- path: `docs/real_machine_db/machines/2024-02-05_g1-yushun-club-gold.md`
-- manufacturer: **コナミアミューズメント**
-- formalModel: **LGⅠ優駿倶楽部黄金KD**
-- inspectionCode: **3S1190**
-- releaseDate: **2024-02-05**
+## No.1629 — スマスロキングパルサー
+- path: `docs/real_machine_db/machines/2024-03-04_smart-king-pulsar.md`
+- manufacturer: **セブンリーグ（山佐ネクスト）**
+- formalModel: **LキングパルサーSLCC**
+- inspectionCode: **3S1231**
+- releaseDate: **2024-03-04**
 - generation: **6.5号機 / スマスロ**
-- settings: **1 / 2 / 3 / 4 / 5 / 6**
-- 機械割: **97.8 / 98.9 / 100.5 / 104.5 / 108.1 / 112.0%**
-- GⅠボーナス: **1/312.1 / 1/312.0 / 1/311.9 / 1/311.8 / 1/311.7 / 1/311.6**
-- GⅠロード: **1/599.6 / 1/599.1 / 1/596.8 / 1/595.2 / 1/590.3 / 1/586.9**
-- base: **約35G/50枚**
-- 純増: **GⅠボーナス約5.2枚/G / GⅠロード約2.7枚/G / 凱旋RUSH約5.2枚/G**
+- settings: **L / 1 / 2 / 4 / 5 / 6**
+- 機械割（1/2/4/5/6）: **97.7 / 98.6 / 105.5 / 110.3 / 114.9%**
+- BIG: **1/257.6 / 1/251.4 / 1/210.0 / 1/191.8 / 1/173.6**
+- REG: **1/387.8 / 1/378.4 / 1/324.2 / 1/298.8 / 1/274.9**
+- 合算: **1/154.8 / 1/151.0 / 1/127.4 / 1/116.8 / 1/106.4**
+- base: **約32.6～32.9G/50枚**
+- 疑似ボーナス純増: **約5.0枚/G**
+- BIG平均約307枚 / REG平均約105枚
 
-### No.1627 resetBehavior v0.7
-- setting change: **有利区間・ゲーム数天井RESET。ボーナススルー回数/育成馬を再抽選、育成レベル/UMAメダル/液晶アイコン/グランプリポイントRESET**
-- carry over: **有利区間・ゲーム数天井CARRY_OVER。全サブ状態の据え置き単独直接契約は一部UNVERIFIED**
-- power OFF→ON: **天井・スルー回数・育成馬・育成レベル・UMAメダル・液晶アイコン・グランプリポイントCARRY_OVER。カフェステージ開始**
-- ceilingAfterReset: **333G 0.39% / 555G 96.48% / 777G 2.34% / 999G 0.39% / 1111G 0.39%（555G以内96.87%）**
-- resetBenefits: **設定変更後GⅠボーナス→GⅠロード当選率約50% / 朝一GⅠボーナスは平均200～300Gほどで期待との解析表現**
-- resetDetection: **有利区間ランプ判別不可。主要解析は判別調査中。本機固有ガックンは一次/主要解析で固定できずPROVISIONAL/UNVERIFIED**
-- resetQaStatus: **COMPLETE_RESEARCHED_WITH_CONFLICT_AND_PARTIAL_UNVERIFIED**
+### No.1629 resetBehavior v0.7
+- setting change: **有利区間・天井進行RESET。通常960G→最大512Gへ短縮。規定Gは設定変更専用テーブル参照。CZレベル再抽選。**
+- stock on setting change: **当時必勝本でも調査中。再探索後も消去/維持/再抽選を固定できずUNVERIFIED_AFTER_RESEARCH。**
+- carry over / power OFF→ON: **天井進行・ストック・CZレベルCARRY_OVER。サブ液晶はホタルなし画面。**
+- mode: **設定変更専用規定Gテーブルの存在は確認。各規定G振り分け率はPUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH。**
+- advantageous section: **設定変更時RESET。据え置き/純電断はCARRY_OVER。通常稼働中の有利区間リセット恩恵は「設定変更時以外」と明記されるため朝一へ流用しない。**
+- morning benefit: **最大天井512G。実戦データでは128G以内当選率上昇傾向があるが固定抽選値ではないためOBSERVATIONAL_ONLY。**
+- reset detection: **朝一512G超でボーナス非当選なら据え置き濃厚材料。設定変更/電断ともサブ液晶ホタルなし。泡占いは据え置きでも朝一0Gから128Gごとに出現。ガックン条件/発生率はUNVERIFIED_AFTER_RESEARCH。**
+- resetQaStatus: **COMPLETE_RESEARCHED_WITH_UNVERIFIED_STOCK_AND_GACKUN**
 
-### No.1627 CONFLICT
-- 後年一部攻略の「設定変更後87.5%で555G以下」と、P-WORLD/なな徹/必勝本の精密振り分け `333G 0.39% + 555G 96.48% = 96.87%` が競合。canonicalは精密値96.87%。
-- K-Naviの設定1 GⅠボーナス `1/321.1` は、業界/P-WORLD/なな徹/必勝本の `1/312.1` と競合。canonical 1/312.1。
-- K-Naviの設定2/3機械割ラベル逆転表示は他系統と不一致。canonicalは設定2 98.9%、設定3 100.5%。
+## 2024-03-04群 — OPEN 1/5 canonical
+1. スマスロキングパルサー — No.1629 DONE
+2. L南国育ち — No.1630 NEXT
+3. キングクリエーター-30 — PENDING
+4. チバリヨ2 — PENDING
+5. パチスロ ガメラ2 — PENDING
 
-## No.1628 — ワードオブライツⅡ
-- path: `docs/real_machine_db/machines/2024-02-05_word-of-lights-2.md`
-- manufacturer: **エレコ（ユニバーサルエンターテインメント）**
-- formalModel: **S/ワードオブライツⅡ/WF**
-- inspectionCode: **330291**
-- releaseDate: **2024-02-05**
-- generation: **6.5号機 / メダル機 / リアルボーナス+AT(CT) / 技術介入**
-- settings: **1 / 2 / 5 / 6**
-- 市場想定機械割: **98.2 / 99.9 / 102.9 / 106.1%**
-- 完全攻略: **101.0 / 102.5 / 105.5 / 108.5%**
-- BIG: **1/224.4 / 1/208.7 / 1/193.9 / 1/179.1**
-- CT初当たり: **約1/374 / 1/361 / 1/335 / 1/322**
-- base: **約37.4G/50枚**
-- CT純増: **約0.5枚/G**
-- BIG最大153枚 / CT初期100G+α / 通常BIG後CT突入率トータル50%以上
-
-### No.1628 resetBehavior v0.7
-- setting change: **有利区間・1200G+α天井RESET**
-- carry over: **据え置きは有利区間・天井CARRY_OVER**
-- power OFF→ON: **有利区間・天井CARRY_OVER**
-- ceilingAfterReset: **通常同様1200G+α。短縮天井確認なし**
-- ceilingBenefit: **CT300G**
-- mode/state: **朝一専用モード/通常高確テーブルの公開契約を再探索後も固定できずPUBLIC_VALUE_NOT_FOUND / UNVERIFIED**
-- resetBenefits: **主要な専用恩恵は確認できず、後年攻略整理では「リセット恩恵なし」**
-- resetDetection: **有利区間ランプ判別不可、なな徹は挙動/判別調査中。前日+当日通常G累計1200G付近でCT300Gなら据え置き濃厚材料。ガックンはUNVERIFIED_AFTER_RESEARCH**
-- resetQaStatus: **COMPLETE_RESEARCHED_WITH_UNVERIFIED_SUBSTATE_AND_GACKUN**
-
-### No.1628 CONFLICT
-- 完全攻略時設定1は業界発表・HAZUSE詳細・主要解析が101.0%で一致する一方、HAZUSE概要に101.1%表記あり。canonical 101.0%、`CONFLICT_HAZUSE_SUMMARY_101_1_VS_DETAILED_101_0` を保持。
-
-## 2024-02-05群 — CLOSED 8/8 canonical
-1. スマスロ コードギアス 反逆のルルーシュ／復活のルルーシュ — No.1621 DONE
-2. Lパチスロ ガールズ&パンツァー 最終章 — No.1622 DONE
-3. スマスロ 冴えない彼女の育てかた — No.1623 DONE
-4. Sky Love — No.1624 DONE
-5. L ゴジラ対エヴァンゲリオン — No.1625 DONE
-6. Lストライクウィッチーズ2 — No.1626 DONE
-7. GⅠ優駿倶楽部黄金 — No.1627 DONE
-8. ワードオブライツⅡ — No.1628 DONE
-
-境界監査:
-- グリーンべると/P-WORLD 2024-02-05更新は2/5パチスロ8機を列挙し、2/19導入はパチンコのみ。
-- K-Navi 2024年2月カレンダーも2/5パチスロ8機、2/19パチスロなし。
-- マルっとWAVEも2/5同8機、2/19はパチンコのみ。
-- 以上から本線の次のパチスロ全国導入群は2024-03-04とする。
+境界監査メモ:
+- 2024-03-04群は複数新台カレンダー/機種DBで上記5機を確認。グリーンべるとの当日一覧は一部機種のみのため、それ単独で群件数を固定しない。
+- `パチスロ ブラックミクちゃん` はHAZUSE上2024-03-09の別境界候補として保持し、3/4群へ混入させない。
 
 ## 次回再開地点
-1. 最新mainを再同期し、No.1627・No.1628と本handoffの反映を再取得確認。
-2. **2024-03-04群の境界監査から開始し、先頭未処理をNo.1629として採番する。**
-3. 現時点の候補は `スマスロキングパルサー / L南国育ち / キングクリエーター-30 / チバリヨ2 / パチスロ ガメラ2` の5機。グリーンべるとは3機のみ掲載だが、HAZUSE・K-Navi・ALL7等ではチバリヨ2/ガメラ2を含むため、採番前に実導入日・地域先行/段階導入・延期の有無を再照合する。
-4. 参考としてHAZUSEは2024-03-09 `パチスロ ブラックミクちゃん` を別日掲載。3/4群処理後の次境界候補として保持し、3/4群へ混入させない。
-5. 遡及QAは前handoff記載どおり `2007-07-09_genju-haou-t.md` まで完了。次QAカーソルはmainのmachines一覧を日付順再列挙して幻獣覇王直後の未QAレコードを確定してから処理する。推測で固定しない。
-6. 新規機種は性能コア + resetBehavior v0.7を同時収集。欠損は表記揺れ/型式/メーカー/シリーズ名と検索語を変え、公式・業界・主要解析・旧DB・アーカイブ/回顧資料まで横断後のみUNVERIFIED。
+1. 最新mainを再同期し、No.1629と本handoffの反映を再取得確認。
+2. **No.1630候補 `L南国育ち` — 2024-03-04** を性能コア + resetBehavior v0.7で処理する。
+3. その後 `キングクリエーター-30 → チバリヨ2 → パチスロ ガメラ2` の順で処理し、5機完了後にPB・別型式・地域先行・延期/段階導入を再監査して2024-03-04群をCLOSED判定する。
+4. 遡及QAは `2007-07-09_genju-haou-t.md` まで完了。次QAカーソルはmainのmachines一覧を日付順再列挙して幻獣覇王直後の未QAレコードを確定してから処理する。推測で固定しない。
+5. 新規機種は性能コア + resetBehavior v0.7を同時収集。欠損は表記揺れ/型式/メーカー/シリーズ名と検索語を変え、公式・業界・主要解析・旧DB・アーカイブ/回顧資料まで横断後のみUNVERIFIED。
 
 ## 今回の主要ソース
 取得日: 2026-09-14
-### GⅠ優駿倶楽部黄金
-- KONAMI公式: https://www.konami.com/amusement/psm/slot/g1-dclub-gold/
-- 遊技日本/P-WORLD: https://news.p-world.co.jp/articles/26239/nippon
-- 遊技通信/P-WORLD: https://news.p-world.co.jp/articles/26287/yugitsushin
-- P-WORLD: https://www.p-world.co.jp/machine/database/9964
-- HAZUSE: https://hazuse.com/machine/pachislot/3S1190/
-- なな徹 TOP/朝一/天井/有利区間: https://nana-press.com/kaiseki/machine/686/ / https://nana-press.com/kaiseki/machine/686/19402/ / https://nana-press.com/kaiseki/machine/686/19355/ / https://nana-press.com/kaiseki/machine/686/19357/
-- 必勝本: https://p.hisshobon.jp/machine/4233/1/99534 / https://hisshobon.com/machineinfo/82679/ / https://hisshobon.com/machineinfo/82710/
+### スマスロキングパルサー
+- Amusement Japan（山佐ネクスト発表）: https://amusement-japan.co.jp/article/detail/10004062/
+- グリーンべると（山形県公安委員会検定通過）: https://web-greenbelt.jp/post-78757/
+- HAZUSE: https://hazuse.com/machine/pachislot/3S1231/
+- P-WORLD: https://www.p-world.co.jp/machine/database/9985
+- 必勝本 天井&設定変更: https://hisshobon.com/machineinfo/82899/
+- 必勝本 基本スペック: https://p.hisshobon.jp/vpage/2599/2
+- なな徹 TOP: https://nana-press.com/kaiseki/machine/705/
+- なな徹 規定G/天井: https://nana-press.com/kaiseki/machine/705/19700/ / https://nana-press.com/kaiseki/machine/705/19694/
+- なな徹 CZレベル: https://nana-press.com/kaiseki/machine/705/19699/
+- なな徹 有利区間: https://nana-press.com/kaiseki/machine/705/19697/
+- なな徹 泡占い/演出: https://nana-press.com/kaiseki/machine/705/19705/
+- パチマガスロマガ 規定Gテーブル: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sevenleague_slot/05/tj04.php
+- イチカツ（実戦データ補助）: https://ichikatsu.com/lkngpls/
+- ぽこすろっと（後年整理補助）: https://www.nankaikoya.jp/kingpulsar-kitaichi/
 
-### ワードオブライツⅡ
-- ユニバーサル公式: https://www.universal-777.com/product/slot/ward_of_lights2/
-- 遊技日本/P-WORLD 検定/発売: https://news.p-world.co.jp/articles/25543/nippon / https://news.p-world.co.jp/articles/26236/nippon
-- P-WORLD: https://www.p-world.co.jp/machine/database/9967
-- HAZUSE: https://hazuse.com/hd/sx0064/ / https://hazuse.com/machine/pachislot/SX0064/
-- なな徹 朝一/スペック: https://nana-press.com/kaiseki/machine/694/19529/ / https://nana-press.com/kaiseki/machine/694/18839/
-- 一撃: https://1geki.jp/slot/s_ward_of_lights2/3/
-- イチカツ: https://ichikatsu.com/wardoflights2/
-- 補助: https://www.nankaikoya.jp/wardoflights2-kitaichi/
-
-### 2024-02-05群境界 / 次群候補
-- グリーンべると/P-WORLD 2024-02-05新台スケジュール: https://news.p-world.co.jp/articles/26803/greenbelt
-- K-Navi 2024年2月: https://p-kn.com/calendar/202402/
-- マルっとWAVE 2/5～: https://marutto-w.com/industry_news/20240207
-- HAZUSE 2024年3月: https://hazuse.com/new-machine/202403-2/
-- K-Navi 2024年3月: https://p-kn.com/calendar/202403/
-- ALL7 2024年3月: https://www.all7.jp/plans/index/2024/03
-
-## リレー継続ルール
-- 毎回、最新mainの README → ミッションv0.7 → INDEX → LATEST_HANDOFF → 直前実レコードの順で確認。
-- 過去チャットではなく最新mainを正とする。
-- 新規機種は性能コア + resetBehavior v0.7を同時収集する。
-- 欠損は表記揺れ/型式/メーカー/シリーズ名と検索語を変え、公式・業界・主要解析・旧DB・アーカイブ/回顧資料まで横断後のみUNVERIFIED。
-- 競合は平均化せずCONFLICT。
-- 実機完全再現用の細かな内部抽選は収集しない。
+### 直前群 / 次群監査継続用
+- 2024-02-05群はNo.1621～1628の8/8 CLOSED。
+- 次回は2024-03-04群No.1630 `L南国育ち` から継続。
