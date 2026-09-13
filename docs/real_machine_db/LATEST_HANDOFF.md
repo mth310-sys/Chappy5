@@ -1,71 +1,82 @@
 更新日: 2026-09-14
 
 ## 現在地点
-- recordCount: **1639**
-- latestRecordAdded: **ジャグラーガールズSS — No.1639**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2024-04-08_juggler-girls-ss.md`
+- recordCount: **1640**
+- latestRecordAdded: **スマスロ ゴールデンカムイ — No.1640**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2024-04-08_smart-slot-golden-kamuy.md`
 - chronologicalFrontier: **2024-04-08**
-- frontierLatestMachine: **ジャグラーガールズSS — No.1639**
+- frontierLatestMachine: **スマスロ ゴールデンカムイ — No.1640**
 - schema: **resetBehavior v0.7**
-- status: **2024-04-08_BOUNDARY_OPEN_1_OF_4_KNOWN_CANDIDATES_PROCESSED**
+- status: **2024-04-08_BOUNDARY_OPEN_2_OF_4_KNOWN_CANDIDATES_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、ミッションv0.7、旧表示の `INDEX.md`、`LATEST_HANDOFF.md`、直前No.1638 `ドラゴンハナハナ～閃光～` 25Φ版を確認して開始。
+- 最新mainの `README.md`、ミッションv0.7、旧表示の `INDEX.md`、`LATEST_HANDOFF.md`、直前No.1639 `ジャグラーガールズSS` を確認して開始。
 - README規定どおり、INDEXより新しい `LATEST_HANDOFF` + main実レコードを進捗正本として採用。
-- 2024-03-18群がCLOSED 4/4であることを再確認し、次通常導入境界2024-04-08へ前進。
-- 業界新台スケジュールを再監査し、同日known候補を `ジャグラーガールズSS / スマスロ ゴールデンカムイ / Lうる星やつら / ストライク・ザ・ブラッド` の4機として確認。
-- No.1639 `ジャグラーガールズSS` を性能コア + resetBehavior v0.7で新規登録。
+- 前チャットの古い再開地点ではなく、main正本の次未処理 No.1640 `スマスロ ゴールデンカムイ` から継続。
+- No.1640を性能コア + resetBehavior v0.7で新規登録。
+- 2024-04-08群はknown 4候補中2機処理済み。残りは `Lうる星やつら / ストライク・ザ・ブラッド`。
 
-## No.1639 — ジャグラーガールズSS
-- path: `docs/real_machine_db/machines/2024-04-08_juggler-girls-ss.md`
-- manufacturer: **北電子**
-- formalModel: **SジャグラーガールズSS-KH**
-- inspectionCode: **330257**
+## No.1640 — スマスロ ゴールデンカムイ
+- path: `docs/real_machine_db/machines/2024-04-08_smart-slot-golden-kamuy.md`
+- manufacturer: **銀座製造 / サミー販売**
+- formalModel: **L パチスロゴールデンカムイ KR**
+- inspectionCode: **330548**
 - releaseDate: **2024-04-08**
-- generation: **6号機 / メダル機**
-- systemType: **ノーマルAタイプ / 完全告知**
+- generation: **6.5号機 / スマスロ**
+- systemType: **AT / 擬似ボーナス経由型 + AT直撃**
 - settings: **1 / 2 / 3 / 4 / 5 / 6**
-- 機械割: **97.0 / 97.9 / 99.9 / 102.1 / 104.0 / 107.5%**
-- BIG: **1/273.1 / 1/270.8 / 1/260.1 / 1/250.1 / 1/243.6 / 1/226.0**
-- REG: **1/381.0 / 1/350.5 / 1/316.6 / 1/281.3 / 1/270.8 / 1/252.1**
-- 合算: **1/159.1 / 1/152.8 / 1/142.8 / 1/132.4 / 1/128.3 / 1/119.2**
-- base: **約42G/50枚**
-- BIG: **約240枚**
-- REG: **約96枚**
-- coreConfidence: **OFFICIAL + INDUSTRY + ANALYSIS_HIGH / MULTI_SOURCE_MATCH**
+- 機械割: **97.9 / 98.6 / 100.8 / 105.4 / 108.8 / 113.3%**
+- 初当り合算: **1/308.1 / 1/302.4 / 1/290.4 / 1/268.5 / 1/260.1 / 1/248.8**
+- AT: **1/818.4 / 1/801.8 / 1/770.3 / 1/698.8 / 1/678.3 / 1/647.3**
+- base: **約36.9〜37G/50枚**
+- 純増: **黄金神威 約2.7枚/G / 擬似BONUS・真黄金神威 約4.5枚/G**
+- 黄金神威: **初期100G**
+- coreConfidence: **INDUSTRY + ANALYSIS_HIGH / MULTI_SOURCE_MATCH**
 
-### No.1639 resetBehavior v0.7
-- setting change: **天井/AT/CZ/周期はN/A。後年更新の機種専用朝一資料ではクレジット・BET状態・スペシャルBGM変化条件RESET。設定変更後（同一設定打ち変え含む）朝一1G目はリールガックンあり。**
-- carry over: **天井等はN/A。据え置きはスペシャルBGM変化条件CARRY_OVER。前日+当日G数とBGM条件一致時は据え置き推測材料だが、プレミア演出由来BGMがあるため確定ではない。**
-- power OFF→ON: **ガックンなし / クレジット・BET状態・スペシャルBGM変化条件CARRY_OVER。**
-- game/ceiling: **天井非搭載。設定変更専用短縮天井N/A。スペシャルBGM用ゲーム数条件は設定変更RESET / 据え置き・純電断CARRY_OVER。**
-- mode/state: **AT/CZ型モード・通常/高確状態は本DB粒度でN/A。**
-- advantageous section: **ノーマルAタイプのため朝一客行動に影響するAT型有利区間天井/モード管理はN/A at mission granularity。**
-- morning benefit: **設定変更専用の当選率優遇・天井短縮・朝一モードはN/A。**
-- reset detection: **ガックン + BGM条件引継ぎが主要推測材料。ガックンは個体差/店側対策あり。固定発生率はPUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH。**
-- resetQaStatus: **COMPLETE_RESEARCHED_WITH_LATER_ANALYSIS_UPDATE_AND_NO_PUBLIC_NUMERIC_RESET_RATE**
+### No.1640 resetBehavior v0.7
+- setting change: **有利区間、ピュウ☆天井、現在ピュウ☆、内部状態、砂金ポイントRESET。最大天井1800→1600ピュウ☆へ短縮。内部ピュウ☆加算抽選あり。砂金ポイント初期振り分け優遇。**
+- carry over: **有利区間、ピュウ☆天井、現在ピュウ☆、内部状態、砂金ポイントCARRY_OVER。**
+- power OFF→ON: **天井・内部状態CARRY_OVERを機種別比較資料で確認。現在ピュウ☆・砂金ポイント・有利区間の純電断単独契約は直接資料を固定できず `UNVERIFIED_AFTER_RESEARCH`。**
+- game/ceiling: **通常最大1800ピュウ☆（平均約720G）→設定変更後最大1600ピュウ☆（平均約640G）。**
+- mode/state: **名称付き朝一専用モード振り分けは公開固定値未確認。内部状態は設定変更RESET / 据え置きCARRY_OVER / 純電断CARRY_OVER資料あり。**
+- advantageous section: **設定変更RESET / 据え置きCARRY_OVER。通常遊技中は2000枚以上獲得AT終了時の一部・エンディング終了時にもリセット。設定変更時はゴールデンロード恩恵対象外。**
+- morning benefit: **天井短縮、内部ピュウ☆初期加算、砂金ポイント初期優遇、設定変更直後の特殊フリーズ条件。**
+- reset detection: **なな徹は調査中。ガックン固定条件/発生率、有利区間ランプによる機種固有確定判別は再探索後もUNVERIFIED。1600ピュウ☆契約超過は据え置き推測材料。**
+- resetQaStatus: **COMPLETE_RESEARCHED_WITH_PARTIAL_POWER_CYCLE_SUBFIELDS**
 
-## conflicts / quality notes — No.1639
-- 天井はP-WORLD、パチマガスロマガ、HAZUSE系、必勝本の専用「天井&設定変更」ページで非搭載一致。
-- 一方、必勝本の旧基本スペックメタ欄にのみ「天井 搭載」とする表記が残るため `CONFLICT_SOURCE_METADATA_CEILING_FLAG` を保存し、canonicalは天井非搭載。
-- 必勝本の2024-04-05当時資料はガックン/BGMを「現在調査中」としていたが、後年更新のパチマガスロマガFREEでは具体契約が公開されたため、矛盾値ではなく `LATER_ANALYSIS_UPDATE` として扱う。
-- ガックン固定発生率は検索語・正式型式・メーカー・シリーズ名・朝一/設定変更/据え置き/電源OFF ONを変えて再探索しても公開固定値を確認できず `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
+### 公開朝一数値 — No.1640
+- 設定変更時天井: **最大1600ピュウ☆ / 平均約640G**（通常1800 / 約720G）
+- 初期砂金ポイント:
+  - 20pt **33.6%**
+  - 50pt **32.8%**
+  - 80pt **28.1%**
+  - 90pt **4.7%**
+  - 100pt **0.8%**
+- 50pt以上 **66.4%** / 80pt以上 **33.6%**
+- 内部初期ピュウ☆加算数振り分け: **PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH**
+- 朝一専用モード振り分け: **PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH**
+- ガックン発生率: **PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH**
 
-## 2024-04-08境界 — OPEN 1/4 known candidates
+## conflicts / quality notes — No.1640
+- KAMUY BONUS継続G数は主要業界/機種DBで10G表記が中心、一部後年二次資料に11G表記があるため `CONFLICT_MINOR_BONUS_LENGTH_10G_VS_11G` を保持。
+- メーカーは販売ブランド「サミー」と製造元「銀座」を分離して保存。
+- 純電源OFF→ONのうち天井・内部状態以外は、設定変更/据え置き表から一般論で補完せずUNVERIFIEDを保持。
+
+## 2024-04-08境界 — OPEN 2/4 known candidates
 1. ジャグラーガールズSS — No.1639 DONE
-2. スマスロ ゴールデンカムイ — NEXT
-3. Lうる星やつら — PENDING
+2. スマスロ ゴールデンカムイ — No.1640 DONE
+3. Lうる星やつら — NEXT
 4. ストライク・ザ・ブラッド — PENDING
 
 境界監査メモ:
 - グリーンべると2024-04-08新台スケジュールが上記4パチスロを同日導入予定として掲載。
-- HAZUSE新台カレンダーでも2024-04-08を次通常導入境界として確認。
+- HAZUSE新台カレンダーでも2024-04-08を通常導入境界として確認済み。
 - 4候補処理後にPB・別型式・地域先行・延期/段階導入を再検索し、追加候補がなければ群CLOSED判定する。
 
 ## 次回再開地点
-1. 最新mainを再同期し、No.1639と本handoffを再取得確認。
-2. **No.1640候補 `スマスロ ゴールデンカムイ` — 2024-04-08** を性能コア + resetBehavior v0.7で登録。
-3. その後 `Lうる星やつら` → `ストライク・ザ・ブラッド` の順に同日群を継続。
+1. 最新mainを再同期し、No.1640と本handoffを再取得確認。
+2. **No.1641候補 `Lうる星やつら` — 2024-04-08** を性能コア + resetBehavior v0.7で登録。
+3. その後 `ストライク・ザ・ブラッド` を処理。
 4. 4候補完了後、PB・別型式・地域先行・延期/段階導入を再監査して2024-04-08群をCLOSED判定し、次導入日境界へ進む。
 5. 遡及QAは `2007-07-09_genju-haou-t.md` まで完了。次QAカーソルはmainのmachines一覧を日付順再列挙して幻獣覇王直後の未QAレコードを確定してから処理する。
 6. 新規機種は性能コア + resetBehavior v0.7を同時収集。欠損は表記揺れ/型式/メーカー/シリーズ名と検索語を変え、公式・業界・主要解析・旧DB・アーカイブ/回顧資料まで横断後のみUNVERIFIED。
@@ -73,20 +84,21 @@
 ## 今回の主要ソース
 取得日: 2026-09-14
 
-### No.1639 ジャグラーガールズSS
-- 北電子公式 製品情報: https://www.kitadenshi.co.jp/slot/jugglergirlsss/
-- 北電子公式 検定情報: https://www.kitadenshi.co.jp/slot-kentei/jugglergirlsss/
-- 遊技日本 / P-WORLD 発表・型式: https://news.p-world.co.jp/articles/26946/nippon
-- 遊技通信 / P-WORLD 導入日・型式: https://news.p-world.co.jp/articles/26965
-- アミューズメントジャパン / P-WORLD: https://news.p-world.co.jp/articles/26931/amusement
-- グリーンべると / P-WORLD 発表: https://news.p-world.co.jp/articles/26934/greenbelt
-- P-WORLD機種DB: https://www.p-world.co.jp/machine/database/10009
-- HAZUSE機種DB: https://hazuse.com/hd/330257-2/
-- パチマガスロマガ基本情報: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/kitac_slot/124/kh01.php
-- パチマガスロマガFREE 朝イチ・設定変更: https://pachimaga.com/free/mach/maker-s/kitac/064363.php
-- 必勝本 天井&設定変更: https://hisshobon.com/machineinfo/83119/
-- 必勝本 コイン持ち実戦値: https://hisshobon.com/machineinfo/83123/
-- ぽこすろっと: https://www.nankaikoya.jp/jugglergirls-ss/
+### No.1640 スマスロ ゴールデンカムイ
+- サミー公式製品サイト: https://www.sammy.co.jp/japanese/product/pachislot/gol_ka/
+- 遊技日本 新台発表: https://yugi-nippon.com/pachinko-new-machine/post-62536/
+- 遊技日本 / P-WORLD: https://news.p-world.co.jp/articles/26663/nippon
+- 遊技通信 / P-WORLD: https://news.p-world.co.jp/articles/26649/yugitsushin
+- P-WORLD機種DB: https://www.p-world.co.jp/machine/database/9987
+- HAZUSE機種DB: https://hazuse.com/machine/pachislot/SX0069/
+- なな徹 朝一・設定変更: https://nana-press.com/kaiseki/machine/712/20696/
+- なな徹 砂金ポイント: https://nana-press.com/kaiseki/machine/712/20704/
+- 一撃 天井・朝一: https://1geki.jp/slot/l_golden_kamui/3/
+- ちょんぼりすた: https://chonborista.com/slot/sammy-slot/206476/
+- 必勝本 基本スペック: https://p.hisshobon.jp/vpage/2600/2
+- 必勝本 BONUS解析: https://hisshobon.com/machineinfo/82946/
+- Altema 朝一・電源ON/OFF: https://altema.jp/pachimo/lkamui
+- ぽこすろっと: https://www.nankaikoya.jp/goldenkamuy-kitaichi/
 
 ### 境界 / 次回候補
 - グリーンべると 2024-04-08導入スケジュール: https://news.p-world.co.jp/articles/27485/greenbelt
