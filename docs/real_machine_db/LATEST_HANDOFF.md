@@ -1,63 +1,70 @@
 更新日: 2026-09-14
 
 ## 現在地点
-- recordCount: **1663**
-- latestRecordAdded: **ミスタージャグラー — No.1663**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2024-07-22_mister-juggler.md`
+- recordCount: **1664**
+- latestRecordAdded: **賞金首Angel — No.1664**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2024-07-22_shokin-kubi-angel.md`
 - chronologicalFrontier: **2024-07-22**
 - schema: **resetBehavior v0.7**
-- status: **2024-07-22_OPEN_1_OF_4_KNOWN_CANONICAL_PROCESSED**
+- status: **2024-07-22_OPEN_2_OF_4_KNOWN_CANONICAL_PROCESSED**
 
 ## 今回の進捗
-- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直近No.1662を確認。INDEXは旧表示のためREADME規定どおり最新handoff + 実レコードを進捗正本として使用。
-- 2024-07-08群が6/6 CLOSEDであることを再確認し、次の未処理先頭 No.1663 `ミスタージャグラー` を性能コア + resetBehavior v0.7で登録。
-- 北電子公式・業界記事・HAZUSE・パチマガスロマガFREE・必勝本・なな徹・ちょんぼりすたを横断。朝一設定変更表はパチマガスロマガFREEの機種専用資料で確認。
-- 1geki 2024年7月新台カレンダーは2024-07-22のパチスロを4機掲載。現在1/4処理済み。
+- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直近No.1663を確認。INDEXは旧表示のためREADME規定どおり最新handoff + 実レコードを進捗正本として使用。
+- 直前handoffがNo.1663 `ミスタージャグラー` 完了・次回No.1664候補 `賞金首Angel` を指定していることを確認し、同機を性能コア + resetBehavior v0.7で登録。
+- ネット公式発表系、Amusement Japan、検定通過資料、1geki、必勝本、P-WORLD、パチマガスロマガ、K-Navi、なな徹、ちょんぼりすた、リセット攻略資料を横断。
+- 型式 `L賞金首Angel ND`、2024-07-22導入、設定1/2/4/5/6の基本スペック、設定変更499G+α短縮天井、朝イチ専用特殊状態、電源OFF→ON引継ぎを複数ソース照合。
+- 検定番号、本機固有ガックン、純電断ステージ復帰位置は検索語・資料系統を変更して再探索後も固定できずUNVERIFIED。設定4 AT初当り1/450 vs 1/451は丸め競合としてCONFLICT保持。
 
-## No.1663 — ミスタージャグラー
-- path: `docs/real_machine_db/machines/2024-07-22_mister-juggler.md`
-- manufacturer: **北電子**
-- formalModel: **SミスタージャグラーKK** / inspectionCode: **3S0174**
+## No.1664 — 賞金首Angel
+- path: `docs/real_machine_db/machines/2024-07-22_shokin-kubi-angel.md`
+- manufacturer: **ネット株式会社**
+- formalModel: **L賞金首Angel ND**
+- inspectionCode: **UNVERIFIED_AFTER_RESEARCH**
 - releaseDate: **2024-07-22**
-- generation: **6.5号機 / メダル機**
-- systemType: **ノーマルAタイプ / 完全告知**
-- payoutRate: **97.0 / 98.0 / 99.8 / 102.7 / 105.5 / 107.3%**
-- BIG: **1/268.6 / 1/267.5 / 1/260.1 / 1/249.2 / 1/240.9 / 1/237.4**
-- REG: **1/374.5 / 1/354.2 / 1/331.0 / 1/291.3 / 1/257.0 / 1/237.4**
-- total: **1/156.4 / 1/152.4 / 1/145.6 / 1/134.3 / 1/124.4 / 1/118.7**
-- base: **約41G/50枚**
-- payout: **BIG約240枚 / REG約96枚**
-- ceiling: **非搭載**
-- reset: **設定変更でクレジット・BET状態・スペシャルBGM変化条件RESET。設定変更後1G目はガックンあり。純電源OFF→ONではガックンなし、クレジット・BET・BGM条件を引継ぎ。**
-- carryOver: **天井/AT/CZモードはN/A。据え置きではBGM変化条件を引継ぎ。**
-- morning benefit: **天井短縮、朝一専用モード、当選率優遇はN/A。**
-- detection: **1G目ガックンとBGM条件引継ぎが推測材料。ただしガックンは個体差・ホール対策があり確定判別ではない。**
-- unresolved after research: **ガックン固定発生率 PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH。**
-- core conflict: **主要設定表は北電子公式と複数解析で一致。ベース41G/42G表記差は丸め/独自整理差としてcanonical約41G。**
+- generation: **6.5号機 / スマスロ**
+- systemType: **AT / 疑似ボーナス+ST型AT**
+- payoutRate: **97.7 / 99.3 / 102.3 / 107.5 / 110.9%**（設定1/2/4/5/6）
+- bonus: **1/258 / 1/252 / 1/234 / 1/210 / 1/200**
+- AT: **1/530 / 1/493 / 1/450 / 1/393 / 1/357**
+- base: **約31.4G/50枚**
+- netIncrease: **約2.8枚/G**
+- AT: **賞タイム 30G/1セット、ループ期待度約75%**
+- ceiling: **ボーナス間800G+α / AT間1600G+α**
+- reset: **設定変更で天井・内部状態・賞金首撃破数・弾丸装填数をRESET/再抽選。ボーナス間天井は499G+αへ短縮し、朝イチ専用特殊状態へ移行。**
+- carryOver/powerCycle: **純電源OFF→ONでは天井・内部状態・賞金首撃破数・弾丸装填数を引継ぎ。撃破数は通常見た目上初期化される場合があるが内部引継ぎ。**
+- advantageousSection: **設定変更RESET / 純電断CARRY_OVERとする攻略資料あり。ただし機種専用一次資料の3条件比較不足のためANALYSIS_SINGLE。**
+- morning benefit: **499G+α短縮天井 + 朝イチ特殊状態。特殊状態はボーナスまたはAT当選まで継続。**
+- public morning AT-direct share: **10.9 / 13.4 / 15.0 / 24.6 / 32.1%**（設定1/2/4/5/6）
+- additional morning numeric: **朝イチ状態でボーナス当選かつAC非移行時、設定1で約40%が次回100G+α天井短縮**
+- detection: **499G+α超え非当選、前日からの撃破数/弾丸・前兆表示引継ぎが据え置き推測材料。初期表示だけでは変更確定不可。**
+- unresolved after research: **検定番号 / ガックン条件・率 / 純電断ステージ復帰位置**
+- conflict: **設定4 AT初当り 1/450 vs 1/451。canonical 1/450、CONFLICTとして差を保持。**
 
-## 2024-07-22境界 — OPEN 1/4 KNOWN
+## 2024-07-22境界 — OPEN 2/4 KNOWN
 1. ミスタージャグラー — No.1663 DONE
-2. **賞金首Angel — 次回No.1664候補**
-3. スロット ゾンビランドサガ
+2. 賞金首Angel — No.1664 DONE
+3. **スロット ゾンビランドサガ — 次回No.1665候補**
 4. スマスロ ゴッドイーター リザレクション
 
 ## 次回再開地点
-- 最新mainを再同期しNo.1663と本handoffを確認。
-- **No.1664候補 `賞金首Angel`（2024-07-22）** から性能コア + resetBehavior v0.7を収集。
-- 続けて `スロット ゾンビランドサガ` → `スマスロ ゴッドイーター リザレクション`。
+- 最新mainを再同期しNo.1664と本handoffを確認。
+- **No.1665候補 `スロット ゾンビランドサガ`（2024-07-22）** から性能コア + resetBehavior v0.7を収集。
+- 続けて `スマスロ ゴッドイーター リザレクション`。
 - 同日4機完了後、PB・別型式・地域先行・延期/段階導入を再監査して2024-07-22群CLOSED判定。
 - 欠損は表記揺れ・正式型式・メーカー・シリーズ名、設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックン/有利区間等へ検索語を変え、公式・業界・主要解析・旧DB・アーカイブ/回顧資料横断後のみUNVERIFIED。
 
 ## 今回の主要ソース
 取得日: 2026-09-14
-- 北電子公式 製品情報: https://www.kitadenshi.co.jp/slot/mrjuggler/
-- 北電子公式 特設サイト: https://www.kitadenshi.co.jp/products/2024/mrj/
-- 北電子公式 検定情報: https://www.kitadenshi.co.jp/slot-kentei/
-- 遊技通信 / P-WORLD: https://news.p-world.co.jp/articles/27751/yugitsushin
-- HAZUSE: https://hazuse.com/hd/3s0174/
-- パチマガスロマガFREE: https://pachimaga.com/free/mach/maker-s/kitac/064466.php
-- 必勝本 通常時: https://hisshobon.com/machineinfo/84009/
-- 必勝本 プレミアム: https://hisshobon.com/machineinfo/84014/
-- 1geki 2024年7月新台カレンダー: https://1geki.jp/newmachinecalender/202407/
-- なな徹: https://nana-press.com/kaiseki/machine/779/21679/
-- ちょんぼりすた: https://chonborista.com/slot/kitadenshi/214160/
+- ネット公式発表系: https://www.dreamnews.jp/press/00000296473/
+- Amusement Japan: https://amusement-japan.co.jp/article/detail/10004285/
+- 検定通過/型式資料: https://p-media.info/post-35542/
+- 1geki 基本スペック: https://1geki.jp/slot/l_bountyhead_angel/39/
+- 1geki 天井・朝一: https://1geki.jp/slot/l_bountyhead_angel/3/
+- 1geki 朝イチAT直撃: https://1geki.jp/slot/l_bountyhead_angel/0/
+- 必勝本 天井&設定変更: https://hisshobon.com/machineinfo/83653/
+- P-WORLD: https://www.p-world.co.jp/machine/database/10043
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/net_slot/191/kh01.php
+- K-Navi: https://p-kn.com/slot/4144/
+- なな徹: https://nana-press.com/kaiseki/machine/765/22884/
+- ちょんぼりすた: https://chonborista.com/slot/net-slot/210961/
+- スロパチクエスト: https://www.slopachi-quest.com/article/syoukinkubiangel-tenjou/
