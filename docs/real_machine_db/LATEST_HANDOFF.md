@@ -1,116 +1,81 @@
 更新日: 2026-09-13
 
 ## 現在地点
-- recordCount: **1548**
-- latestRecordAdded: **パチスロ 緋弾のアリアⅡ — No.1548**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2023-02-06_hidan-no-aria2.md`
+- recordCount: **1549**
+- latestRecordAdded: **パチスロ戦国無双3 — No.1549**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2023-02-06_sengoku-musou3.md`
 - chronologicalFrontier: **2023-02-06**
-- frontierLatestMachine: **パチスロ 緋弾のアリアⅡ — No.1548**
+- frontierLatestMachine: **パチスロ戦国無双3 — No.1549**
 - schema: **resetBehavior v0.7**
-- status: **2023-02-06_GROUP_OPEN_1_OF_2_KNOWN / NEXT_S_SENGOKU_MUSOU_3**
+- status: **2023-02-06_GROUP_CLOSED_2_OF_2 / NEXT_2023-02-20_TATE_NO_YUUSHA**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧表示の `docs/real_machine_db/INDEX.md`、最新 `LATEST_HANDOFF.md`、直前No.1546 `パチスロ モンスターハンターワールド：アイスボーン™` を確認して開始。
+- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧表示 `docs/real_machine_db/INDEX.md`、最新 `LATEST_HANDOFF.md`、直前No.1548 `パチスロ 緋弾のアリアⅡ` を確認して開始。
 - INDEXは19件の旧表示のためREADME規定どおり、最新handoffとmain実レコードを進捗正本として採用。
-- No.1547 `S大花満SB / 大花満` を性能コア + resetBehavior v0.7で追加。
-- 2023-01-30群をALL7 / K-Navi / 業界発表で再監査し、モンハンアイスボーン + 大花満の2機でCLOSED。
-- 次の境界を2023-02-06へ進め、No.1548 `パチスロ 緋弾のアリアⅡ` を性能コア + resetBehavior v0.7で追加。
-- 2023-02-06群は既知2機のうち1機処理済み。`S戦国無双3 ZYTCD` が未処理のためOPEN。
+- No.1549 `パチスロ戦国無双3` を性能コア + resetBehavior v0.7で追加。
+- P-WORLD 2023年2月導入カレンダー、導入日順2023年一覧、K-Navi/業界資料で2/6群を再監査。パチスロは緋弾のアリアⅡ + 戦国無双3の2機で一致したため2023-02-06群をCLOSED。
+- 次の導入境界は2023-02-20。既知は `パチスロ盾の勇者の成り上がり` と `パチスロ 探偵オペラ ミルキィホームズR 大収穫祭!!!!` の2機。
 
-## No.1547 — S大花満SB / 大花満
-- manufacturer: **ジェイピーエス**
-- formalModel: **S大花満SB**
-- inspectionCode: **2S1390**
-- releaseDate: **2023-01-30（PB40法人向け初期納品）**
-- generalSalePhase: **2023-04-03（一般販売分）**
-- generation/system: **6.5号機 / メダルAT / 疑似ボーナス連チャン型PB機**
-- 市場想定機械割: **98.0 / 98.7 / 100.3 / 102.0 / 104.8 / 107.0%（設定1〜6）**
-- フル攻略: **99.0 / 99.8 / 101.3 / 102.9 / 105.9 / 108.0%**
-- BIG: **1/434.1 → 1/352.5**
-- REG: **1/695.9 → 1/482.3**
-- 合算: **1/267.3 → 1/203.7**
-- baseGamesPer50: **全設定37.0G/50枚**
-- netIncrease: **BIG系約4.2枚/G / REG約2.0枚/G**
-- basicPayout: **花満BONUS/超花満BONUS 約500枚、REG約50枚**
-- coreStatus: **COMPLETE_CORE**
-- resetBehaviorQA: **COMPLETE_RESET_CORE_WITH_PUBLIC_MODE_NUMBERS_AND_GACKUN_UNVERIFIED_AFTER_RESEARCH**
-
-### resetBehavior v0.7 — No.1547
-- **設定変更**: 有利区間・天井G・内部モード・内部状態RESET。陽光ステージ開始。
-- **据え置き**: 天井進行・内部モード・内部状態をCARRY_OVER。有利区間継続側天井契約を維持。
-- **純電源OFF→ON**: 有利区間・天井・内部モード・内部状態をCARRY_OVER。陽光ステージへ戻るため外観だけでは変更判別不可。
-- **天井短縮**: 通常A 1126→934G+α、通常B 582→390G+α。天国は192G+αのまま。
-- **公開朝一モード振り分け**: 設定1=A30/B40/天国30%、設定5=A12/B40/天国48%、設定6=A1/B98/天国1%。設定2〜4は公開資料が調査中のため推測しない。
-- **朝一恩恵**: 上記天井短縮、モード再抽選、初当たり時の超花満BONUS振り分け優遇。
-- **変更判別**: パチマガスロマガは見た目から変更を見抜く手段なしと明記。本機固有ガックンは再探索後 `UNVERIFIED_AFTER_RESEARCH`。
-
-### conflicts — No.1547
-- 1gekiの見出しに通常時最大1192G+α表記がある一方、同ページのモード表・パチ7・P-WORLD・ちょんぼりすたは通常A1126G+αで一致。canonical=1126G+α、1192は `CONFLICT_SINGLE_HEADING_VALUE`。
-- HAZUSE本文にメーカー「ジェイビーエス」表記があるが、検定通過・業界発表はジェイピーエス。canonical=ジェイピーエス。
-- 1/30初期納品と4/3一般販売は同一型式の販売フェーズ差であり導入日CONFLICTにはしない。
-
-## No.1548 — パチスロ 緋弾のアリアⅡ
-- manufacturer: **JFJ製造 / 藤商事販売**
-- formalModel: **S緋弾のアリアⅡJZ**
-- inspectionCode: **230177**
+## No.1549 — パチスロ戦国無双3
+- manufacturer: **山佐ネクスト**
+- formalModel: **Sパチスロ戦国無双3ZYTCD**
+- inspectionCode: **UNVERIFIED_AFTER_RESEARCH**
 - releaseDate: **2023-02-06**
-- generation/system: **6.5号機 / メダルAT / 周期CZ経由・超高純増AT**
+- generation/system: **6.5号機 / メダルAT / 規定刻数・疑似ボーナス経由AT**
 - settings: **L / 1 / 2 / 4 / 5 / 6**
-- payoutRate: **97.6 / 98.6 / 103.1 / 106.0 / 110.1%（設定1/2/4/5/6）**
-- AT初当たり: **1/445.2 / 1/392.1 / 1/320.3 / 1/272.9 / 1/243.4**
-- baseGamesPer50: **約32.7〜33.6G/50枚**
-- netIncrease: **約9.0枚/G**
-- basicPayout: **初当たり時LBCで初期G数決定、平均約45.1G**
+- payoutRate: **98.2 / 99.2 / 103.9 / 106.4 / 110.0%（設定1/2/4/5/6）**
+- ボーナス合算: **1/271.6 / 1/216.0 / 1/174.5 / 1/147.1 / 1/127.6**
+- AT初当たり: **1/582.0 / 1/483.2 / 1/385.3 / 1/310.2 / 1/247.8**
+- baseGamesPer50: **約39.4G/50枚**
+- netIncrease: **AT約1.8枚/G / 上位ATの一部約4.0枚/G**
+- basicPayout: **REG約36枚 / BIG約120枚 / AT初期平均約50G**
 - coreStatus: **COMPLETE_CORE**
-- resetBehaviorQA: **COMPLETE_RESET_CORE_WITH_DEDICATED_MORNING_MODE_AND_GACKUN_UNVERIFIED_AFTER_RESEARCH**
+- resetBehaviorQA: **COMPLETE_RESET_CORE_WITH_MODE_RESELECT_AND_PUBLIC_MODE_DISTRIBUTION_UNVERIFIED_AFTER_RESEARCH**
 
-### resetBehavior v0.7 — No.1548
-- **設定変更**: 有利区間・天井・モード・周期・7セグ・バレットRESET。専用「朝一モード」へ移行、ヘリ待機ステージ開始。
-- **据え置き**: 有利区間・天井・モード・周期・7セグ・バレットCARRY_OVER。武偵ステージ開始。
-- **純電源OFF→ON**: 7セグ表示値・周期・バレットCARRY_OVER、7セグ色は白復帰、通常時は武偵ステージ固定。純電断単独の有利区間状態は直接資料を固定できず `UNVERIFIED_AFTER_RESEARCH`。
-- **通常天井**: 最大10周期目CZ勝利濃厚。
-- **リセット専用固定天井短縮**: なし確認。朝一モード自体も最大10周期。
-- **朝一恩恵**: 設定変更後1周期目または2周期目でCZ当選濃厚、2周期以内AT期待度約60%。
-- **変更判別**: ヘリ待機=設定変更、武偵=据え置きの主要判別材料。有利区間ランプ非搭載。本機固有ガックンは再探索後 `UNVERIFIED_AFTER_RESEARCH`。
+### resetBehavior v0.7 — No.1549
+- **設定変更**: 有利区間・天井/刻数・内部状態RESET。通常モードを再抽選。甲斐国ステージ開始。
+- **据え置き**: 天井/刻数・内部状態CARRY_OVER。有利区間継続側。モードそのものの直接対比契約は `UNVERIFIED_AFTER_RESEARCH`。
+- **純電源OFF→ON**: 天井/刻数・内部状態CARRY_OVER、甲斐国ステージ開始。純電断単独のモード/有利区間直接契約は `UNVERIFIED_AFTER_RESEARCH`。
+- **通常天井**: 通常A999 / 通常B888 / 通常C555 / 引き戻し333 / 天国111 / 慶次1029刻+α。慶次はAT当選時に天下無双への道。
+- **リセット専用固定天井短縮**: `NONE_CONFIRMED_AFTER_RESEARCH`。
+- **朝一モード**: 専用朝一モードは確認できず。設定変更時とAT終了後に通常モード再抽選。
+- **公開朝一モード振り分け**: `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。設定ごとの上位/慶次選択傾向は公開されるが具体率は固定できず。
+- **朝一恩恵**: 全モード共通111刻のボーナス/AT期待度50%以上。ただし設定変更専用値ではないため分離保存。
+- **変更判別**: 朝一データカウンタと液晶「刻」のズレが変更材料。設定変更/電断とも甲斐国開始のためステージ単独判別不可。有利区間ランプの機種固有高信頼契約とガックンは再探索後 `UNVERIFIED_AFTER_RESEARCH`。
 
-## 2023-01-30群 — CLOSED 2/2
-1. パチスロ モンスターハンターワールド：アイスボーン™ — No.1546
-2. S大花満SB / 大花満 — No.1547
+### conflicts — No.1549
+- 後年DBにボーナス1/290.0〜1/175.0、機械割98.0〜111.0%、純増約6.5枚/G等の主要解析と異なる値あり。canonicalは複数当時解析一致の `1/271.6〜1/127.6 / 98.2〜110.0% / 1.8 or 4.0枚/G`。`CONFLICT_LATE_DATABASE` としてレコード内保持。
+- 天井をゲーム数換算800G+αとする後年DBがあるが、本機の管理単位は液晶「刻」。canonicalはモード別刻数天井とし定義混在させない。
 
-## 2023-02-06群 — OPEN 1/2 known
-1. **パチスロ 緋弾のアリアⅡ（JFJ）** — No.1548 済
-2. **S戦国無双3 ZYTCD（山佐ネクスト）** — 未処理
+## 2023-02-06群 — CLOSED 2/2
+1. パチスロ 緋弾のアリアⅡ — No.1548
+2. パチスロ戦国無双3 — No.1549
+
+## 次群候補 — 2023-02-20
+1. **パチスロ盾の勇者の成り上がり（サミー）** — 未処理
+2. **パチスロ 探偵オペラ ミルキィホームズR 大収穫祭!!!!（カルミナ）** — 未処理
 
 ## 今回の主要資料
-### No.1547
-- グリーンべると / P-WORLD: https://news.p-world.co.jp/articles/22687/greenbelt
-- グリーンべると原記事: https://web-greenbelt.jp/post-67378/
-- 遊技日本 検定通過: https://news.p-world.co.jp/articles/22456/nippon
-- HAZUSE: https://hazuse.com/machine/pachislot/2S1390/
-- パチ7: https://pachiseven.jp/machines/6681/cutout/2
-- パチマガスロマガ 朝一: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/jps_slot/50/kr01.php
-- ちょんぼりすた: https://chonborista.com/slot/jps-slot/181312/
-- 1geki: https://1geki.jp/slot/s_oohanaman/3/
-
-### No.1548
-- JFJ公式: https://www.fujimarukun.co.jp/products/s_aria2/
-- 遊技日本: https://yugi-nippon.com/pachinko-new-machine/post-55402/
-- G-net 検定切れ: https://g-net-ps.com/content/kenteikire-2025-10-2/
-- 必勝本: https://p.hisshobon.jp/machine/4039/1/93440
-- なな徹 朝一: https://nana-press.com/kaiseki/machine/502/13458/
-- 一撃 モード: https://1geki.jp/slot/s_aria2/45/
-- 一撃 天井/電断: https://1geki.jp/slot/s_aria2/4/
-- パチマガスロマガ AT: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/jfj_slot/03/at01.php
+### No.1549
+- Amusement Japan: https://amusement-japan.co.jp/article/detail/10003263/
+- P-WORLD: https://www.p-world.co.jp/machine/database/9753
+- K-Navi: https://p-kn.com/slot/3887/
+- なな徹: https://nana-press.com/kaiseki/machine/482/
+- なな徹 スペック: https://nana-press.com/kaiseki/machine/482/12550/
+- なな徹 モード: https://nana-press.com/kaiseki/machine/482/13488/
+- パチマガスロマガ モード: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasanext_slot/11/tj04-2.php
+- ちょんぼりすた: https://chonborista.com/slot/yamasa-slot/177507/
+- イチカツ: https://ichikatsu.com/sengokumusou3/
+- 一撃: https://1geki.jp/slot/s_sngkms3/
 
 ### 境界監査
-- ALL7 2023年1月: https://www.all7.jp/plans/index/2023/01
-- K-Navi 2023年1月: https://p-kn.com/calendar/202301/
-- 2023新台導入日一覧（2/6候補）: https://pachinkopachisro.com/archives/57208678.html
+- P-WORLD 2023年2月: https://www.p-world.co.jp/database/machine/introduce_calendar.cgi?year_month=2023-02
+- 導入日順2023年一覧: https://www.slopachi-quest.com/article/2023-dounyuukisyu/
+- 2/20予定一覧: https://marutto-w.com/industry_news/20230220
 
 ## 保存コミット
-- No.1547追加: `a4ffac6dfb288e24913b7c6a06ecd31e9f03da98`
-- No.1548追加: `d73e8316dc5a570d6f7d7f99a4df9aed6a9dbd7e`
+- No.1549追加: `3db255685d3cef836132afeb68df73509fa2c2c9`
 - handoff更新: 本コミット
 
 ## 次回再開地点
-**No.1549候補 `S戦国無双3 ZYTCD`（山佐ネクスト）から継続する。正式型式・検定番号、性能コア、resetBehavior v0.7（設定変更/据え置き/純電断、周期・天井、モード/状態、有利区間、朝一恩恵、変更判別、公開朝一数値）を欠損判定前に検索語・資料系統を変えて再探索する。処理後、2023-02-06群をPB・別型式・地域先行・延期まで再監査してCLOSED判定する。既存No.1548以前の性能値はやり直さない。**
+**No.1550候補 `パチスロ盾の勇者の成り上がり`（サミー / 2023-02-20）から継続する。正式型式・検定番号、性能コア、resetBehavior v0.7（設定変更/据え置き/純電断、ゲーム数・天井、モード/状態、有利区間、朝一恩恵/不利、変更判別、公開朝一数値）を欠損判定前に表記揺れ・型式名・メーカー名・各リセット語で再探索する。その後 `パチスロ 探偵オペラ ミルキィホームズR 大収穫祭!!!!` を処理し、PB・別型式・地域先行・延期まで再監査して2023-02-20群をCLOSED判定する。既存No.1549以前の性能値はやり直さない。**
