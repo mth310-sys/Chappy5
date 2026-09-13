@@ -1,65 +1,66 @@
 更新日: 2026-09-14
 
 ## 現在地点
-- recordCount: **1652**
-- latestRecordAdded: **L ToLOVEるダークネス — No.1652**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2024-06-03_l-toloveru-darkness.md`
+- recordCount: **1653**
+- latestRecordAdded: **アオハル♪操 A-LIVE — No.1653**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2024-06-03_aoharu-misao-a-live.md`
 - chronologicalFrontier: **2024-06-03**
-- frontierLatestMachine: **L ToLOVEるダークネス — No.1652**
+- frontierLatestMachine: **アオハル♪操 A-LIVE — No.1653**
 - schema: **resetBehavior v0.7**
-- status: **2024-06-03_BOUNDARY_OPEN_2_OF_5_CANONICAL_PROCESSED**
+- status: **2024-06-03_BOUNDARY_OPEN_3_OF_5_CANONICAL_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、ミッションv0.7、旧表示の `INDEX.md`、`LATEST_HANDOFF.md`、直前No.1651 `L聖闘士星矢 海皇覚醒 CUSTOM EDITION` を確認して開始。
+- 最新mainの `README.md`、ミッションv0.7、旧表示の `INDEX.md`、`LATEST_HANDOFF.md`、直前No.1652 `L ToLOVEるダークネス` を確認して開始。
 - README規定どおり、INDEXより新しい `LATEST_HANDOFF` + main実レコードを進捗正本として採用。
-- 前回の2024-06-03境界5候補を継続し、No.1652 `L ToLOVEるダークネス` を性能コア + resetBehavior v0.7で新規登録。
-- 2025年の別スペック `L ToLOVEるダークネス TRANCE ver.8.7` は型式・性能値を混入させず分離。
-- 2024-06-03群は5候補のうち2機処理済みでOPEN継続。
+- 2024-06-03境界5候補を継続し、No.1653 `アオハル♪操 A-LIVE` を性能コア + resetBehavior v0.7で新規登録。
+- 天井非搭載機だが設定変更時BBモード抽選があるため、resetBehaviorをN/A一括処理せず朝一モード・有利区間・電断差を個別収集。
 
-## No.1652 — L ToLOVEるダークネス
-- path: `docs/real_machine_db/machines/2024-06-03_l-toloveru-darkness.md`
-- manufacturer: **オリンピアエステート / 平和**
-- formalModel: **LToLOVEるダークネスS6** / inspectionCode: **430016**
+## No.1653 — アオハル♪操 A-LIVE
+- path: `docs/real_machine_db/machines/2024-06-03_aoharu-misao-a-live.md`
+- manufacturer: **大都技研**
+- formalModel: **Sアオハル♪操 A-LIVE A2** / inspectionCode: **330628**
 - releaseDate: **2024-06-03**
-- generation: **6.5号機 / スマスロ**
-- systemType: **AT / 疑似ボーナス+ST型**
-- settings: **L / 2 / 3 / 4 / 5 / 6**
-- 機械割: **設定L公開固定値なし / 98.0 / 99.0 / 102.5 / 105.8 / 110.1%（設定2→6）**
-- AT/ST初当り: **設定L公開固定値なし / 1/352.0 / 1/345.7 / 1/328.4 / 1/311.3 / 1/311.1（設定2→6）**
-- base: **約30.0G/50枚**
-- netIncrease: **疑似ボーナス約6.6枚/G**
-- basicPayout: **メモリアルBONUS 100枚+α / 楽園計画10G+α・ボーナス期待度約52% / とらぶるBONUS 100～1600枚・通常ST中平均約375.2枚**
+- generation: **6.5号機 / メダル機**
+- systemType: **AT / A400-AT・疑似ボーナス主体 / 技術介入**
+- settings: **1 / 2 / 3 / 4 / 5 / 6**
+- 通常機械割: **98.0 / 99.0 / 100.3 / 102.1 / 104.0 / 106.6%**
+- 完全攻略時機械割: **100.1 / 101.0 / 102.3 / 104.2 / 106.3 / 109.0%**
+- BIG: **1/286.1 → 1/241.1**
+- REG: **1/419.6 → 1/359.2**
+- BONUS合算: **1/169.9 → 1/144.1**
+- base: **約33G/50枚**
+- netIncrease: **疑似ボーナス約7.0枚/G**
+- basicPayout: **BIG平均約400枚 / REG約50枚 / 絶頂LIVE 500～2000枚**
 - coreConfidence: **INDUSTRY + ANALYSIS_HIGH / MULTI_SOURCE_MATCH**
 
-### No.1652 resetBehavior v0.7
-- setting change: **有利区間・ST間天井・内部状態RESET/再抽選。天井999G+α→650G+αへ短縮。内部通常Gをランダム加算。トランスポイント/どきどきポイント再抽選。**
-- carry over: **据え置きは有利区間・ST間天井・内部状態CARRY_OVER。ポイント系も継続系として扱う。**
-- power OFF→ON: **天井G・内部状態・トランスポイント・どきどきポイントCARRY_OVERを機種別比較表で直接確認。純電断単独の有利区間契約はUNVERIFIED_AFTER_RESEARCH。**
-- ceiling: **通常999G+α / 設定変更後650G+α。内部Gランダム加算で見かけ650G未満到達の可能性あり。**
-- mode: **朝一専用名称付きモード振り分けは公開固定値を確認できず。規定G進行RESET+内部Gランダム加算は確認。**
-- state: **設定変更で再抽選 / 据え置き・純電断で引継ぎ。**
-- advantageous section: **設定変更RESET / 据え置きCARRY_OVER。エンディング後等の有利区間切れ時「もぐもぐたい焼きタイム」は設定変更時を除外。純電断単独は直接資料不足。**
-- detection: **650G+αで天井非発動なら据え置き濃厚材料。650G付近当選は通常ゾーンと重なるため変更確定不可。内部Gランダム加算により前兆位置ズレも判別不可。開始ステージは双方共通。本機固有ガックンはUNVERIFIED_AFTER_RESEARCH。**
-- resetQaStatus: **COMPLETE_RESEARCHED_WITH_PARTIAL_POWER_CYCLE_ADV_SECTION_UNVERIFIED**
+### No.1653 resetBehavior v0.7
+- setting change: **有利区間RESET。内部モード再抽選。設定変更後はBBモードスタートのチャンスで、高設定ほど選択率優遇の解析あり。内部状態RESET。**
+- carry over: **据え置きは有利区間・内部モードCARRY_OVER。**
+- power OFF→ON: **機種別比較表では内部状態RESET。BBモードそのもの・有利区間そのものの純電断直接契約はUNVERIFIED_AFTER_RESEARCH。**
+- ceiling: **ゲーム数天井非搭載。設定変更後短縮天井なし。CZ間/CZスルー天井も公開上なし。**
+- mode: **BBモードあり。滞在中ボーナス当選でBIG濃厚。設定変更時に移行抽選、高設定ほど優遇。設定別選択率はPUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH。一般BBモード平均滞在は約150Gとする解析あり。**
+- state: **設定変更RESET / 純電断RESETとする比較表あり。据え置き時内部モードは引継ぎ。内部状態とBBモードを同一視しない。**
+- advantageous section: **設定変更RESET / 据え置きCARRY_OVER。有利区間ランプで変更判別不可。純電断単独は直接資料不足。**
+- detection: **天井非搭載のためG数による変更確定不可。有利区間ランプ判別不可。BBモード示唆も通常ボーナス後に移行し得るため変更確定材料ではない。本機固有ガックン/確定開始ステージ差はUNVERIFIED_AFTER_RESEARCH。**
+- resetQaStatus: **COMPLETE_RESEARCHED_WITH_PARTIAL_POWER_CYCLE_AND_NUMERIC_BB_MODE_UNVERIFIED**
 
-### 公開朝一数値 — No.1652
-- 通常ST間天井: **999G+α**
-- 設定変更後ST間天井: **650G+α**
-- 天井短縮幅: **349G**
-- どきどきポイント再抽選: **60%以上で75pt以上保有**
-- 内部通常Gランダム加算の具体的振り分け: **PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH**
+### 公開朝一数値 — No.1653
+- 設定変更時BBモード選択率: **高設定ほど優遇 / 具体的設定別数値 PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH**
+- BBモード平均滞在G数: **約150G**（通常BBモード一般値。設定変更専用固定値ではない）
+- 通常天井: **非搭載**
+- リセット後短縮天井: **非搭載**
 
 ## conflicts / quality notes
-- No.1652: 性能コア・主要resetBehaviorに平均化すべき数値CONFLICTは現時点でなし。
-- No.1652: 2025-05-19導入の `L ToLOVEるダークネス TRANCE ver.8.7` は純増8.7枚/G・AT確率・機械割が異なる別スペック。検索結果へ混入しやすいため、2024年初代の値だけをcanonical化。
-- No.1652: 設定1は通常設定として非搭載。主要DBで設定L搭載を確認し、設定構成はL/2/3/4/5/6として保持。
-- No.1652: 純電源OFF→ON時の天井・状態・両ポイント引継ぎは必勝本の直接比較表で確認したが、有利区間そのものは一般仕様から推定せずUNVERIFIEDを維持。
+- No.1653: 通常機械割と完全攻略時機械割は別定義であり平均化せず両方保持。
+- No.1653: 実導入日は複数業界/機種DBで2024-06-03一致。一部初期遊技通信記事に「6月下旬予定」があり、告知時期差としてレコード内に保持。
+- No.1653: 純電断については内部状態RESETの機種別比較表があるが、BBモード/有利区間の直接契約は固定できず一般据え置き挙動から推定していない。
+- No.1653: 設定変更時BBモード選択率は存在・高設定優遇まで複数解析で確認したが、設定別固定率は再探索後も未取得。
 
-## 2024-06-03境界 — OPEN 2/5 canonical processed
+## 2024-06-03境界 — OPEN 3/5 canonical processed
 1. L聖闘士星矢 海皇覚醒 CUSTOM EDITION — No.1651 DONE
 2. L ToLOVEるダークネス — No.1652 DONE
-3. **アオハル♪操 A-LIVE — NEXT / No.1653 candidate**
-4. スマスロ痛いのは嫌なので防御力に極振りしたいと思います。 — pending
+3. アオハル♪操 A-LIVE — No.1653 DONE
+4. **スマスロ痛いのは嫌なので防御力に極振りしたいと思います。 — NEXT / No.1654 candidate**
 5. スマスロ ストリートファイターV 挑戦者の道 — pending
 
 境界監査メモ:
@@ -68,9 +69,9 @@
 - Amusement Japan 2024-07-22記事は「6月導入新機種6機種」と記載。上記5機との差分があるため、5機処理完了後に月内追加機・地域先行・PB・別型式・延期/段階導入を再監査して解消する。
 
 ## 次回再開地点
-1. 最新mainを再同期し、No.1652実レコードと本handoffを再取得確認。
-2. **No.1653候補 `アオハル♪操 A-LIVE`（2024-06-03）** を性能コア + resetBehavior v0.7で処理。
-3. 次点は `スマスロ痛いのは嫌なので防御力に極振りしたいと思います。` → `スマスロ ストリートファイターV 挑戦者の道`。
+1. 最新mainを再同期し、No.1653実レコードと本handoffを再取得確認。
+2. **No.1654候補 `スマスロ痛いのは嫌なので防御力に極振りしたいと思います。`（2024-06-03）** を性能コア + resetBehavior v0.7で処理。
+3. 次点は `スマスロ ストリートファイターV 挑戦者の道`。
 4. 同日群5機完了後、2024年6月の「5機/6機」掲載差を、PB・別型式・地域先行・月内別日導入・延期/段階導入まで再監査して解消しCLOSED判定。
 5. 遡及QAカーソルは `2007-07-09_genju-haou-t.md` まで完了。次QA対象はmain machines一覧を日付順再列挙して幻獣覇王直後の未QAレコードを確定してから処理。
 6. 欠損は表記揺れ/型式/メーカー/シリーズ名と検索語を変え、公式・業界・主要解析・旧DB・アーカイブ/回顧資料まで横断後のみUNVERIFIED。
@@ -78,20 +79,16 @@
 ## 今回の主要ソース
 取得日: 2026-09-14
 
-### No.1652 L ToLOVEるダークネス
-- Amusement Japan: https://amusement-japan.co.jp/article/detail/10004260/
-- HAZUSE: https://hazuse.com/machine/pachislot/SX0073/
-- 一撃 機種TOP: https://1geki.jp/slot/l_toloveru_darkness/
-- 一撃 天井/朝一: https://1geki.jp/slot/l_toloveru_darkness/3/
-- なな徹 機種TOP: https://nana-press.com/kaiseki/machine/752/
-- なな徹 朝一・設定変更: https://nana-press.com/kaiseki/machine/752/21708/
-- なな徹 天井: https://nana-press.com/kaiseki/machine/752/21706/
-- なな徹 ST楽園計画: https://nana-press.com/kaiseki/machine/752/21719/
-- なな徹 とらぶるボーナス: https://nana-press.com/kaiseki/machine/752/21720/
-- 必勝本 天井&設定変更: https://hisshobon.com/machineinfo/83469/
-- 必勝本 設定変更時: https://hisshobon.com/machineinfo/83497/
-- 必勝本 通常時ボーナス: https://hisshobon.com/machineinfo/83486/
-- P-WORLD: https://www.p-world.co.jp/machine/database/10038
-
-### 2024-06 boundary QA
-- Amusement Japan 2024-07-22: https://amusement-japan.co.jp/article/detail/10004436/
+### No.1653 アオハル♪操 A-LIVE
+- P-WORLD NEWS / グリーンべると: https://news.p-world.co.jp/articles/27644/greenbelt
+- P-WORLD NEWS / Amusement Japan: https://news.p-world.co.jp/articles/27642/amusement
+- P-WORLD NEWS / 遊技日本（型式/スペック）: https://news.p-world.co.jp/articles/27650/nippon
+- P-WORLD NEWS / 遊技日本（検定通過）: https://news.p-world.co.jp/articles/27320/nippon
+- HAZUSE: https://hazuse.com/hd/330628-2/
+- なな徹 スペック: https://nana-press.com/kaiseki/machine/761/21282/
+- なな徹 朝一: https://nana-press.com/kaiseki/machine/761/21945/
+- なな徹 有利区間: https://nana-press.com/kaiseki/machine/761/21946/
+- なな徹 天井/リセット狙い: https://nana-press.com/kaiseki/machine/761/21943/
+- 一撃: https://1geki.jp/slot/s_aoharu_misao/
+- 一撃 BBモード: https://1geki.jp/slot/s_aoharu_misao/43/
+- ちょんぼりすた: https://chonborista.com/slot/daito-slot/210195/comment-page-2/
