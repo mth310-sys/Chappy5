@@ -1,82 +1,92 @@
 更新日: 2026-09-14
 
 ## 現在地点
-- recordCount: **1634**
-- latestRecordAdded: **パチスロ ブラックミクちゃん — No.1634**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2024-03-09_black-miku-chan.md`
-- chronologicalFrontier: **2024-03-09**
-- frontierLatestMachine: **パチスロ ブラックミクちゃん — No.1634**
+- recordCount: **1635**
+- latestRecordAdded: **スマート沖スロ ドラゴンハナハナ～閃光～ — No.1635**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2024-03-18_smart-oki-slot-dragon-hanahana-senko.md`
+- chronologicalFrontier: **2024-03-18**
+- frontierLatestMachine: **スマート沖スロ ドラゴンハナハナ～閃光～ — No.1635**
 - schema: **resetBehavior v0.7**
-- status: **2024-03-09_PB_BOUNDARY_CLOSED_1_OF_1_CANONICAL_PROCESSED**
+- status: **2024-03-18_BOUNDARY_OPEN_1_OF_4_KNOWN_CANDIDATES_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前No.1633 `パチスロ ガメラ2` を確認して開始。
-- INDEXは旧版表示のためREADME規定どおりLATEST_HANDOFF + main実レコードを進捗正本として採用。
-- mainはすでにNo.1633まで進んでいたため、既存No.1632/1633をやり直さずLATEST_HANDOFF指定どおりNo.1634候補 `パチスロ ブラックミクちゃん` から継続。
-- 2024-03-09の2店舗テスト導入開始を実稼働開始のcanonical releaseDate、2024年4月のタツミコーポレーション全店展開を段階導入属性として分離保存。
-- 次の時系列境界は2024-03-18。HAZUSE月間一覧と複数導入資料で、スマート沖スロ ドラゴンハナハナ～閃光～ / 忍魂参 ～奥義皆伝ノ章～ / SLOT忍者じゃじゃ丸くん / ドラゴンハナハナ～閃光～ の4機候補を確認。
+- 最新mainの `README.md`、ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前No.1634 `パチスロ ブラックミクちゃん` を確認して開始。
+- INDEXは旧版表示のためREADME規定どおり `LATEST_HANDOFF` + main実レコードを進捗正本として採用。
+- No.1634まで既処理を確認し、指定キューどおりNo.1635候補 `スマート沖スロ ドラゴンハナハナ～閃光～` から継続。
+- 2023-12の30φメダル版、2024-03の25φメダル版と基本性能が共通でも、本機は別型式 `Lドラゴンハナハナ～閃光～JP` のスマスロ版なので独立レコード化。
+- resetBehaviorはスマスロ専用資料を優先し、メダル版のガックン/BGM等を自動転記しない。
 
-## No.1634 — パチスロ ブラックミクちゃん
-- path: `docs/real_machine_db/machines/2024-03-09_black-miku-chan.md`
-- manufacturer: **DAXEL（製造元） / タツミコーポレーションPB**
-- formalModel: **SブラックミクちゃんDA**
-- inspectionCode: **UNVERIFIED_AFTER_RESEARCH**
-- releaseDate: **2024-03-09（2店舗テスト導入開始） / 2024-04（全店展開）**
-- generation: **6.5号機 / メダル機**
-- systemType: **ノーマルAタイプ / ボーナス主体**
+## No.1635 — スマート沖スロ ドラゴンハナハナ～閃光～
+- path: `docs/real_machine_db/machines/2024-03-18_smart-oki-slot-dragon-hanahana-senko.md`
+- manufacturer: **ピーセカンド（製造元） / パイオニア（販売・ブランド）**
+- formalModel: **Lドラゴンハナハナ～閃光～JP**
+- inspectionCode: **3S1450**
+- releaseDate: **2024-03-18**
+- generation: **6号機 / スマスロ**
+- systemType: **ノーマルAタイプ / ボーナス主体 / 完全告知**
 - settings: **1 / 2 / 3 / 4 / 5 / 6**
-- 機械割: **98.2 / 99.2 / 101.2 / 103.2 / 107.2 / 111.3%**
-- BIG: **1/271.9 / 1/267.4 / 1/258.0 / 1/249.1 / 1/240.0 / 1/230.7**
-- REG: **1/358.1 / 1/344.9 / 1/316.6 / 1/289.9 / 1/260.0 / 1/230.7**
-- 合算: **1/154.5 / 1/150.6 / 1/142.1 / 1/134.0 / 1/124.8 / 1/115.3**
-- base: **設定1～6 38.5G～41.5G/50枚（公開範囲）**
-- BIG **259枚** / REG **103枚**
+- 機械割: **97.0 / 99.0 / 101.0 / 104.0 / 107.0 / 110.0%**
+- BIG: **1/256 / 1/246 / 1/235 / 1/224 / 1/212 / 1/199**
+- REG: **1/642 / 1/585 / 1/537 / 1/489 / 1/442 / 1/399**
+- 合算: **1/183 / 1/173 / 1/163 / 1/153 / 1/143 / 1/133**
+- base: **約39.9G/50枚（全設定共通掲載）**
+- BIG **最大252枚** / REG **最大96枚**
 - 天井: **非搭載**
+- coreConfidence: **INDUSTRY + ANALYSIS_HIGH / MULTI_SOURCE_MATCH**
 
-### No.1634 resetBehavior v0.7
-- setting change: **ノーマルAタイプ。設定変更専用の短縮天井・朝一AT/CZモード・規定周期はN/A。機種固有のリール/表示契約はUNVERIFIED_AFTER_RESEARCH。**
-- carry over: **ゲーム数天井・モード・周期・AT/CZスルー回数はN/A。据え置き固有表示はUNVERIFIED_AFTER_RESEARCH。**
-- power OFF→ON: **天井/モード/周期引継ぎはN/A。ランプ/表示/リール挙動の直接契約はUNVERIFIED_AFTER_RESEARCH。**
+### No.1635 resetBehavior v0.7
+- setting change: **ノーマルAタイプにつき短縮天井・朝一AT/CZモード・規定周期はN/A。コンプリート機能の打ち止め状態は設定変更で解除。BGM変化条件/リールガックンはスマスロ専用資料で確定できずUNVERIFIED_AFTER_RESEARCH。**
+- carry over: **ゲーム数天井・AT/CZモード・規定周期はN/A。据え置き固有BGM/リール初動契約はUNVERIFIED_AFTER_RESEARCH。**
+- power OFF→ON: **天井/モード/周期はN/A。必勝本の機種専用資料ではBGM変化条件・リールガックンとも調査中。後年再探索でも確定契約を固定できずUNVERIFIED_AFTER_RESEARCH。**
 - game/ceiling: **天井非搭載。短縮天井N/A。**
-- mode/state: **朝一狙いに関わる通常/天国モード、AT/CZ内部状態はミッション粒度でN/A。実機完全再現向けのボーナス成立内部状態は収集対象外。**
-- advantageous section: **ボーナス主体ノーマルAで、公開資料上朝一性能として有利区間を利用するゲーム性を確認せず `NOT_APPLICABLE_AT_MISSION_GRANULARITY`。規則上の内部実装は推測しない。**
-- morning benefit: **天井短縮・専用モード・CZ/AT優遇等なし/N/A。比較可能な朝一専用数値は確認されない。**
-- reset detection: **本機固有ガックン/変更判別表示は十分な再探索後もUNVERIFIED_AFTER_RESEARCH。宵越し天井判別は天井非搭載のためN/A。**
-- resetQaStatus: **COMPLETE_RESEARCHED_WITH_UNVERIFIED_MACHINE_SPECIFIC_GACKUN_POWER_DISPLAY_AND_INSPECTION_CODE**
+- mode/state: **朝一狙いに関わる通常/天国モード、AT/CZ内部状態はミッション粒度でN/A。**
+- advantageous section: **スマスロであることは確認できるが、設定変更/据え置き/純電断別の本機固有RESET/CARRY_OVER直接資料を固定できずUNVERIFIED_AFTER_RESEARCH。ノーマルAというゲーム性だけから推測しない。**
+- morning benefit: **天井短縮・専用モード・CZ/AT優遇等はN/A。比較可能な朝一専用数値は確認されない。**
+- reset detection: **スマスロ版本機固有のガックン/BGM条件・発生率は十分な再探索後もUNVERIFIED_AFTER_RESEARCH。メダル版の推測情報は筐体差のため転記しない。**
+- resetQaStatus: **COMPLETE_RESEARCHED_WITH_UNVERIFIED_MACHINE_SPECIFIC_POWER_CARRYOVER_GACKUN_BGM_AND_ADVANTAGEOUS_SECTION_CONTRACT**
 
-## conflicts — No.1634
-- 導入時期: 業界一次系記事は2024-03-09の2店舗テスト導入開始、K-Navi等は2024年4月ホール導入開始。平均化せず、3/9を実稼働開始のcanonical releaseDate、4月を全店展開として段階導入属性に分離。
+## conflicts / quality notes — No.1635
+- HAZUSE機種ページのメーカー表記に `バイオニア` があるが、メーカー公式系・複数業界資料はパイオニア、製造元ピーセカンドで一致するためcanonicalへ採用しない。
+- 2023-12導入30φ版、2024-03導入25φメダル版、本スマスロ版は基本性能共通だが別型式/筐体。resetBehaviorの筐体依存情報は混在させない。
+- ゼンリンは納品開始日2024-03-17、複数業界資料はホール導入2024-03-18。日付定義を分離し、canonical releaseDateは2024-03-18。
 
-## 2024-03-09境界 — CLOSED 1/1 canonical
-1. パチスロ ブラックミクちゃん — No.1634 DONE
+## 2024-03-18境界 — OPEN 1/4 known candidates
+1. スマート沖スロ ドラゴンハナハナ～閃光～ — No.1635 DONE
+2. 忍魂参 ～奥義皆伝ノ章～ — NEXT
+3. SLOT忍者じゃじゃ丸くん — PENDING
+4. ドラゴンハナハナ～閃光～ — PENDING / 25φ・30φ・既存レコード関係を再監査してから新規No.確定
 
 境界監査メモ:
-- HAZUSE 2024年3月一覧でも3/9パチスロはブラックミクちゃん1機。
-- Amusement Japan、遊技日本/P-WORLD、P-BOMBで3/9から西明石13台・泉ヶ丘16台のテスト導入開始を確認。
-- 4月全店展開は同一型式の段階導入であり、別レコード化しない。
+- 直前handoffでHAZUSE 2024年3月一覧と複数導入資料から上記4候補を確認済み。
+- No.1635はAmusement Japan、グリーンべると、遊技日本/P-WORLD、HAZUSE等で3/18導入を照合。
+- `ドラゴンハナハナ～閃光～` 系は性能共通でも別型式・25φ/30φ/スマスロ・段階導入があるため、既存2023-12-18系レコードとの重複監査を必須とする。
 
 ## 次回再開地点
-1. 最新mainを再同期し、No.1634と本handoffの反映を再取得確認。
-2. **No.1635候補 `スマート沖スロ ドラゴンハナハナ～閃光～` — 2024-03-18** から性能コア + resetBehavior v0.7で処理する。
-3. 2024-03-18 known候補は現時点4機: `スマート沖スロ ドラゴンハナハナ～閃光～` / `忍魂参 ～奥義皆伝ノ章～` / `SLOT忍者じゃじゃ丸くん` / `ドラゴンハナハナ～閃光～`。
-4. `ドラゴンハナハナ～閃光～` 系は既存2023-12-18系レコードとの25φ/30φ/スマート沖スロ/段階導入・別型式関係をmain既存レコードで再監査してから新規No.を確定する。重複レコードを作らない。
-5. HAZUSE月間一覧は上記4機を3/18群として掲載。別ソースでも忍魂参・じゃじゃ丸・スマート沖スロ版の3/18導入を確認済み。PB・別型式・地域先行・延期を再監査して群件数を固定する。
+1. 最新mainを再同期し、No.1635と本handoffの反映を再取得確認。
+2. **No.1636候補 `忍魂参 ～奥義皆伝ノ章～` — 2024-03-18** から性能コア + resetBehavior v0.7で処理する。
+3. 次に `SLOT忍者じゃじゃ丸くん` を処理。
+4. `ドラゴンハナハナ～閃光～` は既存2023-12-18系レコード、正式型式、25φ/30φ/スマスロ差をmainで再監査し、独立新規機種か既存レコードの段階導入かを確定してからNo.を採番する。
+5. PB・別型式・地域先行・延期/段階導入を再監査して2024-03-18群の件数を固定し、CLOSED判定へ進む。
 6. 遡及QAは `2007-07-09_genju-haou-t.md` まで完了。次QAカーソルはmainのmachines一覧を日付順再列挙して幻獣覇王直後の未QAレコードを確定してから処理する。推測で固定しない。
 7. 新規機種は性能コア + resetBehavior v0.7を同時収集。欠損は表記揺れ/型式/メーカー/シリーズ名と検索語を変え、公式・業界・主要解析・旧DB・アーカイブ/回顧資料まで横断後のみUNVERIFIED。
 
 ## 今回の主要ソース
 取得日: 2026-09-14
 
-### パチスロ ブラックミクちゃん
-- Amusement Japan: https://amusement-japan.co.jp/article/detail/10004209/
-- 遊技日本 / P-WORLD: https://news.p-world.co.jp/articles/27215/nippon
-- グリーンべると / P-WORLD: https://news.p-world.co.jp/articles/27211/greenbelt
-- P-BOMB: https://p-bomb.co.jp/industry/hall/9056/
-- ぱちんこキュレーション: https://pachinko-curation.com/46586/
-- P-WORLD機種DB: https://www.p-world.co.jp/machine/database/10027
-- 一撃 設定判別/ボーナス確率: https://1geki.jp/slot/s_black_miku_chan/0/
-- 一撃 天井/設定変更: https://1geki.jp/slot/s_black_miku_chan/3/
-- K-Navi: https://p-kn.com/slot/4130/
+### スマート沖スロ ドラゴンハナハナ～閃光～
+- 遊技日本 / P-WORLD（型式・製造元・スペック）: https://news.p-world.co.jp/articles/26825/nippon
+- 遊技日本 / P-WORLD（公式機種サイト公開）: https://news.p-world.co.jp/articles/26778/nippon
+- Amusement Japan: https://amusement-japan.co.jp/article/detail/10004107/
+- グリーンべると / P-WORLD: https://news.p-world.co.jp/articles/26792/greenbelt
+- P-BOMB: https://p-bomb.co.jp/industry/new-machine/8716/
+- ゼンリン: https://zenrin-net.co.jp/9618/
+- HAZUSE: https://hazuse.com/machine/pachislot/3S1450/
+- P-WORLD機種DB: https://www.p-world.co.jp/machine/database/9998
+- 一撃 オンライン遊技説明: https://1geki.jp/slot/l_drahana_senko/39/
+- パチ&スロ必勝本 ボーナス解説: https://hisshobon.com/machineinfo/83061/
+- パチ&スロ必勝本 天井&設定変更: https://hisshobon.com/machineinfo/83057/
+- ちょんぼりすた スマスロ版: https://chonborista.com/slot/pionia-slot/208458/
+- ぽこすろっと（同シリーズ比較補助）: https://www.nankaikoya.jp/dragon-hanahana-senko/
 
 ### 境界監査 / 次群
 - HAZUSE 2024年3月導入一覧: https://hazuse.com/new-machine/202403-2/
