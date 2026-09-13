@@ -1,63 +1,66 @@
 更新日: 2026-09-13
 
 ## 現在地点
-- recordCount: **1578**
-- latestRecordAdded: **パチスロ 戦国†恋姫 — No.1578**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2023-07-18_sengoku-koihime.md`
-- chronologicalFrontier: **2023-07-18**
-- frontierLatestMachine: **パチスロ 戦国†恋姫 — No.1578**
+- recordCount: **1579**
+- latestRecordAdded: **スマスロ バイオハザード:ヴェンデッタ — No.1579**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2023-07-24_biohazard-vendetta.md`
+- chronologicalFrontier: **2023-07-24**
+- frontierLatestMachine: **スマスロ バイオハザード:ヴェンデッタ — No.1579**
 - schema: **resetBehavior v0.7**
-- status: **2023-07-18_GROUP_CLOSED_2_OF_2_KNOWN_PROCESSED / NEXT_NO1579_BIOHAZARD_VENDETTA_2023-07-24**
+- status: **2023-07-24_GROUP_CLOSED_1_OF_1_KNOWN_PROCESSED / NEXT_GROUP_2023-08-07 / NEXT_NO1580_CANDIDATE_NOGIZAKA46**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧表示 `docs/real_machine_db/INDEX.md`、最新 `LATEST_HANDOFF.md`、直前No.1577 `S 織田信奈の野望 全国版` を確認して開始。
+- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧表示 `docs/real_machine_db/INDEX.md`、最新 `LATEST_HANDOFF.md`、直前No.1578 `パチスロ 戦国†恋姫` を確認して開始。
 - INDEXは旧表示（19件）のためREADME規定どおりLATEST_HANDOFFとmain実レコードを進捗正本として採用。
-- 2023-07-18群の2機目として No.1578 `パチスロ 戦国†恋姫` を性能コア + resetBehavior v0.7で追加。
-- ALL7 2023年7月導入一覧と複数導入資料を再監査し、7/18群のパチスロは `S 織田信奈の野望 全国版` と `パチスロ 戦国†恋姫` の2機を確認。PB・別型式・30Φ派生・地域先行・延期/段階導入の追加候補を今回固定できず、**2023-07-18群 CLOSED** とする。
-- 欠損は機種名表記揺れ、正式型式 `S戦国恋姫FC`、藤商事と `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 天井 / 天井短縮 / モード / BIG比率 / ハーレムモード / ガックン / 有利区間` を組み替え、公式・業界・検定・当時解析・後年整理資料を横断。
-- 独立した設定変更時内部状態振り分けと本機固有ガックンは十分な再探索後も固定できず、推測補完していない。
+- 2023-07-24群として No.1579 `スマスロ バイオハザード:ヴェンデッタ` を性能コア + resetBehavior v0.7で追加。
+- ALL7 2023年7月導入一覧を再監査し、2023-07-24のパチスロとして本機1機を確認。PB・別型式・30Φ派生・地域先行・延期/段階導入の追加候補を今回固定できず、**2023-07-24群 CLOSED 1/1** とする。
+- 欠損は機種名表記揺れ、正式型式 `L バイオハザードヴェンデッタ FK`、ロデオ/サミーと `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / 電断 / 天井 / 天井短縮 / モード / モード振り分け / 内部状態 / ガックン / 有利区間` を組み替え、業界・当時解析・古いDB・後年整理資料を横断。
+- 設定変更後のC/D/天国/超天国の個別振り分け率、本機固有ガックン、純電源OFF→ON時のモード/有利区間の独立明記は十分な再探索後も固定できず、推測補完していない。
 
-## No.1578 — パチスロ 戦国†恋姫
-- path: `docs/real_machine_db/machines/2023-07-18_sengoku-koihime.md`
-- manufacturer: **藤商事**
-- formalModel: **S戦国恋姫FC**
-- inspectionCode: **3S0259**
-- releaseDate: **2023-07-18**
-- generation/system: **6.5号機 / メダルAT / 技術介入型疑似ボーナス**
-- market payoutRate: **98.5 / 99.2 / 100.5 / 103.1 / 104.9 / 106.8%**（設定1〜6）
-- full攻略 payoutRate: **100.6 / 101.4 / 102.8 / 105.5 / 107.4 / 109.4%**
-- BIG: **1/268.4 / 1/263.7 / 1/254.4 / 1/237.6 / 1/227.4 / 1/216.5**
-- REG: **1/404.4 / 1/398.7 / 1/392.2 / 1/370.6 / 1/357.2 / 1/349.2**
-- 合算: **1/161.3 / 1/158.7 / 1/154.3 / 1/144.8 / 1/138.9 / 1/133.6**
-- base: **約33.3〜33.7G/50枚**
-- netIncrease: **約5.0枚/G**
-- basicPayout: BIG平均約350枚 / REG約100枚 / SUPER姫くり時BIG平均約450枚。
-- ceiling: 通常最大 **900G+α**。到達時BIG + BIG後50%でハーレムモード。
-- reset: **設定変更 = 有利区間 / 天井 / 内部モードRESET**、**据え置き・純電断 = CARRY_OVER**。
-- setting-change mode distribution: **リセット94.9% / ショート2 4.3% / ロング1 0.4% / ロング2 0.4%**。
-- reset mode first-bonus BIG ratio: **60%**。
-- ceilingAfterReset: **固定ゲーム数短縮なし確認 / 通常900G+α**。
-- resetDetection: 設定変更・純電断とも城下町ステージ開始の解析表があり見た目判別困難。本機固有ガックンは `UNVERIFIED_AFTER_RESEARCH`。
+## No.1579 — スマスロ バイオハザード:ヴェンデッタ
+- path: `docs/real_machine_db/machines/2023-07-24_biohazard-vendetta.md`
+- manufacturer: **ロデオ製造 / サミー**
+- formalModel: **L バイオハザードヴェンデッタ FK**
+- inspectionCode: **3S0143**
+- releaseDate: **2023-07-24**
+- generation/system: **6.5号機 / スマスロAT / 直AT**
+- payoutRate: **97.8 / 98.8 / 101.5 / 106.0 / 108.5 / 112.0%**（設定1〜6）
+- AT初当たり: **1/395.7 / 1/386.2 / 1/354.2 / 1/316.6 / 1/312.4 / 1/307.2**
+- base: **約33.2G/50枚**
+- netIncrease: メインAT **約2.0枚/G** / 疑似ボーナス・上位AT **約4.0枚/G**
+- basicPayout: ヴェンデッタモード1セット40G+α、AT期待枚数約510枚。上位PVMはループ率約90%超・期待枚数約3600枚（設定1）。
+- normal ceiling: **最大810G+α**。
+- reset: **設定変更 = 有利区間 / 天井 / 内部状態 / モードRESET、モードC以上濃厚、最大610G+α**。**据え置き = CARRY_OVER**。
+- pure power cycle: **天井 / 内部状態CARRY_OVERを直接確認**。純電断時モード/有利区間の独立明記は `UNVERIFIED_AFTER_RESEARCH`。
+- reset benefit: 通常最深810G+α → 設定変更後最大610G+α、**200G短縮**。
+- resetDetection: 有利区間ランプでは判別不可。当時解析でも変更判別は調査中。本機固有ガックンは `UNVERIFIED_AFTER_RESEARCH`。
+- publicMorningNumbers: **設定変更後最大610G+α / モードC以上濃厚**。個別モード振り分け率は公開固定値未確認。
 - coreStatus: **COMPLETE_CORE**
 - resetQaStatus: **COMPLETE_FOR_PUBLICLY_VERIFIABLE_FIELDS**
 
-## 2023-07-18群 — CLOSED 2/2 known processed
-1. S 織田信奈の野望 全国版 — No.1577 **DONE**
-2. パチスロ 戦国†恋姫 — No.1578 **DONE**
+## 2023-07-24群 — CLOSED 1/1 known processed
+1. スマスロ バイオハザード:ヴェンデッタ — No.1579 **DONE**
 
 ### 群境界
-- ALL7 2023年7月一覧では7/18パチスロとして上記2機を確認。
-- `パチスロ 戦国†恋姫` は遊技日本、パチ7、パチビー等で **2023-07-18** 導入が一致。HAZUSEのみ2023-07-17表記があるため minority conflict としてレコード内保持。
-- 次のknownパチスロ境界は **2023-07-24 `スマスロ バイオハザード:ヴェンデッタ`**。
+- ALL7 2023年7月一覧では7/24パチスロとして本機1機を確認。
+- K-Navi、一撃、HAZUSE、当時業界/導入資料でも2023-07-24導入が一致。
+- 次のknownパチスロ境界は **2023-08-07**。
 
 ## 次回再開地点
-- **No.1579候補: スマスロ バイオハザード:ヴェンデッタ**
-- canonical導入候補日: **2023-07-24**
-- まず正式型式・メーカー/製造元・性能コア・resetBehavior v0.7を固定する。
-- 処理後、2023-07-24群のPB・別型式・地域先行・延期/段階導入を再監査する。
+- **No.1580候補: ぱちスロ 乃木坂46**
+- canonical導入候補日: **2023-08-07**
+- 2023-08-07群は次回冒頭で再監査し、未処理先頭を最終確定してから処理する。
+- ALL7の現時点known候補（パチスロ）:
+  1. ぱちスロ 乃木坂46 — 京楽系
+  2. スマスロ 戦国BASARA GIGA — エンターライズ
+  3. スマスロキン肉マン～7人の悪魔超人編～ — セブンリーグ
+  4. スーパービンゴネオクラシック — ベルコ
+  5. スーパービンゴネオクラシック-30 — ヤーマ
+  6. 防空少女ラブキューレ2～極限の共鳴～ — コナミアミューズメント
+- PB・別型式・30Φ派生・地域先行・延期/段階導入を含め再監査し、漏れを確定してから順次処理する。
 
 ## 継続CONFLICT / deferred
-- `L戦国BASARAギガZE`: 5/8・6/5系の事前スケジュール表記 vs 実導入側資料の日付差。**2023-08-07境界へdefer**しCONFLICT保持。
+- `L戦国BASARAギガZE`: 5/8・6/5系の事前スケジュール表記 vs 実導入側資料の日付差。**2023-08-07境界へdefer**しCONFLICT保持。次回群で正式処理対象。
 - `Lパチスロベルセルク無双`: 6/5複数導入・稼働資料 vs Amusement Japan 6/19予定表記。**6/5 canonical / 6/19 conflict保持**。
 - `ウルトラちゃぶ台返し`: 設定3初当り **1/231.2（ベルコ公式・なな徹） vs 1/234.2（G-net）**。平均せず保持。
 - `パチスロナイツ`: 設定2ボーナス合算 **1/167.1 vs 1/167.2** の丸め差。1/167.1をcanonical。
@@ -72,16 +75,15 @@
 - 既存性能値はやり直さず、追加一次 / 当時資料がなければ `PARTIAL_RESEARCH_EXHAUSTED` 正式化を検討。
 
 ## 今回の主要資料
-### No.1578 パチスロ 戦国†恋姫
-- 藤商事公式: https://www.fujimarukun.co.jp/products/machine/s_koihime/sp/
-- 遊技日本/P-WORLD（型式・導入）: https://news.p-world.co.jp/articles/24227/nippon
-- 遊技通信/P-WORLD（純増・獲得性能）: https://news.p-world.co.jp/articles/24284/yugitsushin
-- 遊技日本/P-WORLD（検定）: https://news.p-world.co.jp/articles/23987/nippon
-- 遊技日本/P-WORLD（設定別ボーナス）: https://news.p-world.co.jp/articles/24395/nippon
-- パチ7（機械割・ベース）: https://pachiseven.jp/machines/6766/cutout/2
-- 一撃（スペック）: https://1geki.jp/slot/s_sengokukoihime/
-- HAZUSE（天井・設定変更/電源OFF→ON）: https://hazuse.com/machine/pachislot/3S0259/
-- パチマガスロマガ（設定変更時モード）: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/fuji_slot/35/tj04-1.php
-- パチマガスロマガ（有利区間リセット時モード）: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/fuji_slot/35/bn05.php
-- パチ＆スロ必勝本（朝イチモード）: https://p.hisshobon.jp/machine/4121/1/96401
+### No.1579 スマスロ バイオハザード:ヴェンデッタ
+- 遊技日本/P-WORLD（サミー発売発表）: https://news.p-world.co.jp/articles/24014/nippon
+- 遊技日本/P-WORLD（ロデオ・型式・性能）: https://news.p-world.co.jp/articles/24077/nippon
+- HAZUSE（型式/検定番号/導入/性能）: https://hazuse.com/machine/pachislot/3S0143/
+- なな徹（AT/機械割/ベース）: https://nana-press.com/kaiseki/machine/572/15021/
+- なな徹（朝一/設定変更）: https://nana-press.com/kaiseki/machine/572/15992/
+- パチマガスロマガ（通常時モード）: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sammy_slot/205/tj04.php
+- パチ＆スロ必勝本（モード移行）: https://p.hisshobon.jp/machine/4097/1/96332
+- 一撃（スペック）: https://1geki.jp/slot/l_biohazard_vendetta/
+- パチスロメソッド（設定変更/電源OFF・ON）: https://slotmethod.jp/archives/17221/
 - ALL7（2023年7月導入一覧）: https://www.all7.jp/plans/index/2023/07
+- ALL7（2023年8月導入一覧 / 次群監査）: https://www.all7.jp/plans/index/2023/08
