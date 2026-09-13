@@ -1,4 +1,4 @@
-// ZELVOLT BIG / REG lifecycle and accounting guard v0.1
+// ZELVOLT BIG / REG lifecycle and accounting guard v0.2
 // Adds explicit bonus-session state without changing the accepted reel feel or payout plan.
 (()=>{
   const sessions=[];
@@ -165,9 +165,11 @@
 
   const baseFinishBonus=finishBonus;
   finishBonus=function(){
-    const closing=closeSession();
     baseFinishBonus();
-    if(closing)session=null
+    queueMicrotask(()=>{
+      const closing=closeSession();
+      if(closing)session=null
+    })
   };
 
   const baseResetGame=resetGame;
@@ -179,7 +181,7 @@
   };
 
   window.ZELVOLT_BONUS_FLOW={
-    version:'0.1',
+    version:'0.2',
     getCurrent:()=>clone(session),
     getHistory:()=>clone(sessions),
     getSummary:()=>({
