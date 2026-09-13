@@ -7,7 +7,7 @@ releaseDate: 2007-07-08
 generation: 5号機初期
 systemType: ボーナス + AT（モード・ローズマリー）
 coreStatus: COMPLETE_CORE
-qaResetBehavior: PARTIAL
+qaResetBehavior: PARTIAL_RESEARCH_EXHAUSTED
 
 ## releaseDateEvidence
 
@@ -86,7 +86,7 @@ K-Navi掲載値:
 
 ## resetBehavior
 
-resetBehaviorQA: PARTIAL
+resetBehaviorQA: PARTIAL_RESEARCH_EXHAUSTED
 
 settingChangeBehavior:
 - `カリビアンクイーン / カリビアンクィーン / NET / ネット` と `設定変更 / リセット / 朝一 / 据え置き / 電源OFF ON / ガックン / リール初動 / モード・ローズマリー / AT 引継ぎ / 残りゲーム` を組み替え、当時業界記事・P-WORLD・K-Navi・旧テンプレ/古いDB・回顧資料を再探索。
@@ -131,9 +131,17 @@ numericResetData:
 - 短縮天井: NOT_APPLICABLE / NONE_CONFIRMED
 - 設定変更時AT/モード振り分け: NONE_CONFIRMED
 
+### retrospectiveQA
+
+- 2026-09-13遡及QA。表記揺れを含む機種名と、設定変更/リセット/朝一/据え置き/電源OFF→ON/モード・ローズマリー/残G/ガックン等の検索語を組み替え、当時業界・機種DB・旧解析・旧テンプレ/古いDB・回顧資料系統を再探索。
+- ゲーム性とAT区間の公開仕様は確認できる一方、設定変更・据え置き・純電断を独立条件としてモード・ローズマリー残G/AT状態を明示する本機固有資料は固定できなかった。
+- 一般的な5号機挙動からは補完せず、resetBehaviorだけを `PARTIAL_RESEARCH_EXHAUSTED` とする。既存 `COMPLETE_CORE` は維持。
+
+confidence: RESEARCH_EXHAUSTED_NO_DIRECT_MACHINE_SPECIFIC_CONTRACT
+
 ## sources
 
-取得日: 2026-08-31
+取得日: 2026-09-13
 
 1. グリーンべると / P-WORLD業界ニュース — 『カリビアンクイーン』はBB中に秘密あり（2007-06-01）
    - https://news.p-world.co.jp/articles/2220/greenbelt
