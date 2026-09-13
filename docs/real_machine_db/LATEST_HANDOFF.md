@@ -1,96 +1,81 @@
 更新日: 2026-09-13
 
 ## 現在地点
-- recordCount: **1615**
-- latestRecordAdded: **パチスロ ファイヤードリフト — No.1615**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2023-12-18_s-firem-drift.md`
-- chronologicalFrontier: **2023-12-18**
-- frontierLatestMachine: **パチスロ ファイヤードリフト — No.1615**
+- recordCount: **1616**
+- latestRecordAdded: **吉宗RISING — No.1616**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2024-01-09_yoshimune-rising.md`
+- chronologicalFrontier: **2024-01-09**
+- frontierLatestMachine: **吉宗RISING — No.1616**
 - schema: **resetBehavior v0.7**
-- status: **2023-12-18_GROUP_CLOSED_3_OF_3_CANONICAL_PROCESSED**
+- status: **2024-01-09_GROUP_OPEN_1_OF_5_CANONICAL_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前No.1613 `スマスロバジリスク～甲賀忍法帖～絆2 天膳 BLACK EDITION` を確認して開始。
+- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前No.1615 `パチスロ ファイヤードリフト` を確認して開始。
 - INDEXは旧19件表示のためREADME規定どおりLATEST_HANDOFFとmain実レコードを進捗正本として採用。
-- 2023-12-18群の残り2機を性能コア + resetBehavior v0.7で処理。
-- No.1614 `ドラゴンハナハナ～閃光～-30` を追加。
-- No.1615 `パチスロ ファイヤードリフト` を追加。
-- ALL7月間一覧、業界発表、複数機種DBを再監査し、2023-12-18 canonical群は3機でCLOSED。
+- 2023-12-18群がNo.1613～1615の3/3でCLOSED済みであることを確認。
+- 次の時系列境界2024-01-09をALL7、グリーンべると、コナミ公式、個別機種DBで再監査。
+- canonical群を5機（吉宗RISING / スマスロ バイオハザード ヴィレッジ / Lパチスロ マクロスフロンティア4 / L 仮面ライダー 7RIDERS / パチスロ武装神姫）として固定。
+- No.1616 `吉宗RISING` を性能コア + resetBehavior v0.7で追加。
 
-## No.1614 — ドラゴンハナハナ～閃光～-30
-- path: `docs/real_machine_db/machines/2023-12-18_dragon-hanahana-senko-30.md`
-- manufacturer: **パイオニア**
-- formalModel: **Sドラゴンハナハナ～閃光～SP-30**
-- inspectionCode: **UNVERIFIED_AFTER_RESEARCH**
-- releaseDate: **2023-12-18**
+## No.1616 — 吉宗RISING
+- path: `docs/real_machine_db/machines/2024-01-09_yoshimune-rising.md`
+- manufacturer: **サボハニ（製造） / 大都技研**
+- formalModel: **L吉宗ライジングSA2**
+- inspectionCode: **3S0802（単一機種DB。公的検定原典照合待ち）**
+- releaseDate: **2024-01-09**
 - settings: **1 / 2 / 3 / 4 / 5 / 6**
-- 機械割: **97 / 99 / 101 / 104 / 107 / 110%**
-- BIG: **1/256 / 1/246 / 1/235 / 1/224 / 1/212 / 1/199**
-- REG: **1/642 / 1/585 / 1/537 / 1/489 / 1/442 / 1/399**
-- base: **約39.9G/50枚**
-- payout: **BIG最大252枚 / REG最大96枚**
-- ceiling: **非搭載**
-- setting change: **初回BIG後フェザー色変化率アップ。機種特化実戦資料では変更後1G目ガックンあり（個体差/対策可）**
-- power OFF→ON: **内部累計Gカウントを維持する機種固有実戦報告あり**
-- morning numeric: **設定変更確認台の初回BIG後フェザー色変化72.73%（112/154、単一実戦資料）**
-- reset detection: **初回フェザー、ガックン、累計G依存REG後フェザーを推測材料として保持。確定判別扱いにしない**
-- record commit: **b6cbe766c825fda18e850b95c8b53712f30f7cf7**
+- 機械割: **97.6 / 98.9 / 101.1 / 105.1 / 107.5 / 111.2%**
+- 初当たり: **1/268.6 / 1/261.9 / 1/252.2 / 1/234.3 / 1/227.2 / 1/216.8**
+- AT初当たり: **1/537.0 / 1/521.2 / 1/492.7 / 1/437.4 / 1/405.9 / 1/377.9**
+- base: **約34G/50枚**
+- 純増: **約4.0枚/G**
+- basic payout: **将軍ボーナス10G / AT初期100枚以上 / AT後八代将軍チャレンジ15G・AT再突入期待度約80%**
+- normal ceilings: **ボーナス間800G+α / AT間1200G / 将軍ボーナス4スルー後5回目でAT**
+- setting change: **有利区間RESET / 天井進行RESET / 仲間同行RESET / AT間天井800Gへ短縮 / 城下町開始**
+- carry over: **有利区間・天井進行・仲間同行をCARRY_OVER**
+- power OFF→ON: **天井・将軍ボーナススルー・仲間同行・有利区間CARRY_OVER / 表示は城下町**
+- public morning numeric: **AT間天井1200G→800G短縮**
+- reset detection: **設定変更/据え置きとも城下町開始で見た目判別不可。800G天井もAT単発後の据え置きで同条件となり得る。朝一800G超でAT天井非発動なら据え置き濃厚材料**
+- gackun: **UNVERIFIED_AFTER_RESEARCH**
+- setting-change dedicated mode/game-zone distribution: **PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH**
+- record commit: **8479fe9a2d9f66439eb7050ff8e18c707cd53213**
 
-## No.1615 — パチスロ ファイヤードリフト
-- path: `docs/real_machine_db/machines/2023-12-18_s-firem-drift.md`
-- manufacturer: **ロデオ（製造） / サミー**
-- formalModel: **S ファイヤードリフト FX**
-- inspectionCode: **330219（単一機種DB。公的原典照合待ち）**
-- releaseDate: **2023-12-18**
-- settings: **1 / 2 / 3 / 4 / 5 / 6**
-- 機械割: **97.8 / 98.6 / 101.5 / 105.4 / 108.6 / 111.1%**
-- BONUS初当り: **1/249.7 / 1/245.6 / 1/228.4 / 1/207.3 / 1/193.4 / 1/183.1**
-- base: **約33.1G/50枚**
-- 純増: **約6.0枚/G（一部約4.7枚/G）**
-- basic payout: **HBB約400枚 / BIG約245枚 / REG約87枚**
-- normal ceiling: **900G+α**
-- setting change: **有利区間RESET / 天井600G+αへ短縮 / 内部Gランダム加算 / MISSION高確G数再抽選 / MISSIONスルー回数RESET**
-- power OFF→ON: **天井G・内部G・MISSION高確・MISSIONスルー回数・有利区間CARRY_OVER**
-- display: **設定変更/純電断とも昼ステージ開始で見た目判別不可**
-- public morning numeric: **天井900→600G+α、規定MISSION高確100/250/450/600G、高確中MISSION約1/12。リセット内部G加算率/高確G数振分は公開固定値なし**
-- resetQaStatus: **COMPLETE_RESEARCHED_WITH_UNPUBLISHED_RESET_DISTRIBUTIONS**
-- record commit: **89deab7b69ccd0960d85aaae35d5a05bc562ca7b**
-
-## 2023-12-18群 — CLOSED 3/3 canonical
-1. スマスロバジリスク～甲賀忍法帖～絆2 天膳 BLACK EDITION — No.1613 DONE
-2. ドラゴンハナハナ～閃光～-30 — No.1614 DONE
-3. パチスロ ファイヤードリフト — No.1615 DONE
+## 2024-01-09群 — OPEN 1/5 canonical
+1. 吉宗RISING — No.1616 DONE
+2. スマスロ バイオハザード ヴィレッジ — NEXT
+3. Lパチスロ マクロスフロンティア4 — PENDING
+4. L 仮面ライダー 7RIDERS — PENDING
+5. パチスロ武装神姫 — PENDING
 
 境界監査:
-- ALL7 2023年12月一覧と個別業界/解析DBで3機を確認。
-- 25Φ `ドラゴンハナハナ～閃光～` は2024-03-18導入の別市場機であり12/18群へ混同しない。
-- PB・別型式・地域先行・延期/段階導入を再監査し、現時点で12/18追加canonical新規機は確認できずCLOSED。
+- グリーンべると2024-01-09新台スケジュールで吉宗RISING / バイオハザード ヴィレッジ / マクロスフロンティア4 / 仮面ライダー 7RIDERSの4機を確認。
+- コナミアミューズメント公式が `パチスロ武装神姫` のホール稼働開始を2024-01-09と明記するため5機目としてcanonical群へ追加。
+- ALL7 2024年1月一覧とも照合。PB・別型式・地域先行・延期/段階導入は群CLOSED時に再監査する。
 
 ## 次回再開地点
-1. 最新mainを再同期し、No.1614 / No.1615と本handoffの反映を再取得確認。
-2. 次の時系列境界は **2024-01-09**。
-3. 2024-01-09群は現時点で少なくとも **吉宗RISING / スマスロ バイオハザード ヴィレッジ / Lパチスロ マクロスフロンティア4 / L 仮面ライダー 7RIDERS / パチスロ武装神姫** の5機。ALL7・グリーンべると・一撃/K-Navi等で群件数とPB/地域差を冒頭再監査してから順序固定する。
-4. No.1616候補は **吉宗RISING**。ただし群内のcanonical順は導入日同日なので、既存命名/前リレー規則に合わせ、冒頭監査後に確定する。
-5. 性能コア + resetBehavior v0.7を同時収集する。
+1. 最新mainを再同期し、No.1616と本handoffの反映を再取得確認。
+2. **No.1617候補 `スマスロ バイオハザード ヴィレッジ`** から継続。
+3. 続いて `Lパチスロ マクロスフロンティア4` → `L 仮面ライダー 7RIDERS` → `パチスロ武装神姫` を同日群として処理。
+4. 5機処理後、PB・別型式・地域先行・延期/段階導入を再監査して2024-01-09群をCLOSED判定する。
+5. 新規機種は性能コア + resetBehavior v0.7を同時収集する。
 6. 遡及QAカーソルは変更なし。次候補 `2007-07-09_genju-haou-t.md`（幻獣覇王T候補）は、時系列本線と並行する場合のみ最新mainで順序確認後に処理。
 
 ## 今回の主要ソース
 取得日: 2026-09-13
-- 12月導入群監査: https://www.all7.jp/plans/index/2023/12
-- ドラゴンハナハナ 遊技日本: https://news.p-world.co.jp/articles/25514/nippon
-- ドラゴンハナハナ パチビー: https://www.pachibee.jp/machines/index/223110004
-- ドラゴンハナハナ なな徹: https://nana-press.com/kaiseki/machine/656/17146/
-- ドラゴンハナハナ ちょんぼりすた: https://chonborista.com/slot/pionia-slot/198883/
-- ドラゴンハナハナ 機種特化長期実戦: https://ameblo.jp/datyo1062/entry-12840478937.html
-- ファイヤードリフト 遊技日本: https://news.p-world.co.jp/articles/25434/nippon
-- ファイヤードリフト グリーンべると: https://news.p-world.co.jp/articles/25440/greenbelt
-- ファイヤードリフト パチビー: https://www.pachibee.jp/machines/index/223110003
-- ファイヤードリフト なな徹朝一: https://nana-press.com/kaiseki/machine/648/18393/
-- ファイヤードリフト なな徹MISSION高確: https://nana-press.com/kaiseki/machine/648/18395/
-- ファイヤードリフト 一撃: https://1geki.jp/slot/s_firedrift/3/
-- ファイヤードリフト 電断比較: https://www.nankaikoya.jp/firedrift-kitaichi/
-- 2024年1月群監査: https://www.all7.jp/plans/index/2024/01
-- 2024/01/09業界スケジュール: https://news.p-world.co.jp/articles/26523/greenbelt
+- 遊技日本 吉宗RISING発売発表/型式/性能: https://news.p-world.co.jp/articles/26279/nippon
+- 遊技通信 吉宗RISING新機種発表: https://news.p-world.co.jp/articles/26149
+- 長崎県遊技業協同組合 型式情報: https://nagasaki-yukyo.or.jp/information/%E3%82%B9%E3%83%9E%E3%82%B9%E3%83%AD%E3%81%A7%E6%96%B0%E3%81%9F%E3%81%AA%E5%90%89%E5%AE%97%E3%81%8C%E7%99%BB%E5%A0%B4%EF%BC%81%E3%80%8C%E5%90%89%E5%AE%97%EF%BD%92%EF%BD%89%EF%BD%93%EF%BD%89%EF%BD%8E/
+- グリーンべると 2024-01-09新台スケジュール: https://news.p-world.co.jp/articles/26523/greenbelt
+- なな徹 吉宗RISING解析まとめ: https://nana-press.com/kaiseki/machine/665/
+- なな徹 朝一/設定変更: https://nana-press.com/kaiseki/machine/665/18493/
+- なな徹 将軍ボーナス: https://nana-press.com/kaiseki/machine/665/18499/
+- なな徹 ヤメ時/天井補助: https://nana-press.com/kaiseki/machine/665/18492/
+- 一撃 天井/設定変更: https://1geki.jp/slot/l_ysmn_rising/3/
+- ぽこすろっと 電源OFF→ON/スルー/仲間同行比較: https://www.nankaikoya.jp/yoshimune-rising-kitaichi/
+- P-WORLD 吉宗RISING機種DB: https://www.p-world.co.jp/machine/database/9958
+- Ativo 型式/検定番号: https://ativo.jp/2023/11/29/%EF%BD%8C%E5%90%89%E5%AE%97rising/
+- ALL7 2024年1月一覧: https://www.all7.jp/plans/index/2024/01
+- コナミ公式 武装神姫2024-01-09稼働開始: https://www.konami.com/amusement/corporate/ja/topics/20231225/
 
 ## リレー継続ルール
 - 毎回、最新mainの README → ミッションv0.7 → INDEX → LATEST_HANDOFF → 直前実レコードの順で確認。
