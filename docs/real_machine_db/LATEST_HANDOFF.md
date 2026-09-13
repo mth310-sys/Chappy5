@@ -1,53 +1,72 @@
 更新日: 2026-09-13
 
 ## 現在地点
-- recordCount: **1606**
-- latestRecordAdded: **L リングにかけろ1 V — No.1606**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2023-12-04_l-ring-ni-kakero1-v.md`
+- recordCount: **1608**
+- latestRecordAdded: **L花の慶次～佐渡攻めの章 — No.1608**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2023-12-04_l-hana-no-keiji-sado.md`
 - chronologicalFrontier: **2023-12-04**
-- frontierLatestMachine: **L リングにかけろ1 V — No.1606**
+- frontierLatestMachine: **L花の慶次～佐渡攻めの章 — No.1608**
 - schema: **resetBehavior v0.7**
-- status: **2023-12-04_GROUP_OPEN_2_OF_7_CANONICAL_PROCESSED**
+- status: **2023-12-04_GROUP_OPEN_4_OF_7_CANONICAL_PROCESSED**
 
 ## 今回の同期 / 進捗
-- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前No.1605 `Lラブ嬢3～Wご指名はいかがですか？～` を確認して開始。
+- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前No.1606 `L リングにかけろ1 V` を確認して開始。
 - INDEXは旧19件表示のためREADME規定どおりLATEST_HANDOFFとmain実レコードを進捗正本として採用。
-- 前handoff指定どおり2023-12-04群の2機目 `L リングにかけろ1 V` をNo.1606として性能コア + resetBehavior v0.7で追加。
-- 遊技日本、グリーンべると、HAZUSE、一撃、K-Navi、複数解析で導入日・型式・性能を照合。
-- 設定6の機械割は公式/業界系で非公表のため、噂119%前後を補完せず `OFFICIAL_VALUE_UNDISCLOSED` とした。
-- resetBehaviorは設定変更と純電源OFF→ONの比較表を複数解析系で照合。純電断では有利区間・天井・内部状態・内部モードを引き継ぎ、液晶ゲーム数のみ0へ戻る。
-- 2023-12-04群はOPEN 2/7。次は `ニューシオサイ`。
+- 前handoff指定どおり2023-12-04群の3機目 `ニューシオサイ` をNo.1607、4機目 `L花の慶次～佐渡攻めの章` をNo.1608として性能コア + resetBehavior v0.7で追加。
+- ニューシオサイはパイオニア公式、遊技日本、グリーンべると、遊技通信、必勝本、一撃、なな徹、P-WORLD等で型式・検定番号・導入日・性能を照合。
+- ニューシオサイは天井非搭載A+RT。設定変更/電断時RT内部状態、BGM変化、リールガックンは機種固有資料で固定できず、必勝本の当時比較表も「現在調査中」のため一般論で補完せず `UNVERIFIED_AFTER_RESEARCH` とした。
+- 花の慶次は遊技日本、グリーンべると、K-Navi、P-WORLD、なな徹、必勝本、パチマガスロマガ等で性能とresetBehaviorを照合。
+- 花の慶次は設定変更で有利区間/天井/ATスルー/モードRESET、チャンスor天国へ移行、最大500G+αへ短縮。内部状態は通常62.5% / 高確31.3% / 超高確6.3%で再抽選。純電断は内部G/天井・ATスルー・モード・状態・有利区間を引継ぎ。
+- 2023-12-04群はOPEN 4/7。次は `LモンキーターンV`。
 - `パチスロ琉神－30 スイカバージョン` の地域テスト導入境界CONFLICTは継続。
 
-## No.1606 — L リングにかけろ1 V
-- path: `docs/real_machine_db/machines/2023-12-04_l-ring-ni-kakero1-v.md`
-- manufacturer: **エフ**
-- formalModel: **Lリングにかけろ1FS**
-- inspectionCode: **3S1000**
+## No.1607 — ニューシオサイ
+- path: `docs/real_machine_db/machines/2023-12-04_new-shiosai.md`
+- manufacturer: **ピーセカンド（製造元） / パイオニア**
+- formalModel: **SニューシオサイSA**
+- inspectionCode: **3S0331**
 - releaseDate: **2023-12-04**
-- generation/system: **6.5号機 / スマスロAT / 疑似ボーナス+完走型ST**
-- settings: **1 / 2 / 3 / 4 / 5 / 6**
-- 機械割: **97.8 / 98.9 / 100.7 / 105.4 / 112.9 / 非公表%**
-- ボーナス初当り: **1/189.3 / 1/185.0 / 1/179.0 / 1/161.0 / 1/138.9 / 1/121.0**
-- ST初当り: **1/516.0 / 1/497.0 / 1/467.0 / 1/393.0 / 1/305.0 / 1/236.0**
-- base: **約31.5G/50枚**
-- 純増: **ST約0.1枚/G、ボーナス約4.5枚/G**
-- normal ceiling: **最大999G+αでボーナス、ST間1500G以降のボーナスは同色BIG以上**
-- reset: **有利区間・天井・内部状態・内部モードRESET、液晶G数RESET**
-- carry: **有利区間・内部G/天井・状態・モードCARRY_OVER**
-- pure power: **有利区間・内部G/天井・状態・モードCARRY_OVER、液晶G数のみRESET**
-- reset ceiling: **999G+α → 666Gへ333G短縮**
-- reset benefits: **約25%で内部チャレンジゾーン開始、稀にリーチ目高確、青チェリー規定回数30回以下**
-- reset detection: **設定変更/純電断とも液晶0G・ロードワーク昼で外見同一。朝一666G非当選は据え置き濃厚材料。本機固有ガックンはUNVERIFIED_AFTER_RESEARCH**
-- resetQaStatus: **COMPLETE_RESEARCHED_WITH_GACKUN_UNVERIFIED**
-- record commit: **21dff0328c7d1621be34d8b79593bf09cfde95f5**
+- generation/system: **6.5号機 / 25φメダル / A+RT**
+- 機械割: **98.5 / 99.6 / 101.5 / 103.6 / 106.5 / 110.0%**
+- BIG: **1/280.1 / 1/274.2 / 1/264.3 / 1/253.0 / 1/237.4 / 1/222.9**
+- REG: **1/546.1 / 1/537.2 / 1/500.3 / 1/474.9 / 1/442.8 / 1/409.6**
+- base: **約36.2G/50枚**
+- RT: **BIG後40G / 約0.3枚/G**
+- payout: **BIG最大239枚 / REG最大95枚**
+- ceiling/reset ceiling/morning mode: **NOT_APPLICABLE**
+- RT-state on setting change / carry / pure power: **UNVERIFIED_AFTER_RESEARCH**
+- gackun/BGM change: **当時資料で現在調査中、再探索後も未固定**
+- resetQaStatus: **PARTIAL_RESEARCH_EXHAUSTED_FOR_RT_STATE_AND_GACKUN**
+- record commit: **19b5e07475e4ad5d83b9aabc2c66b82a19f59bc0**
 
-## 2023-12-04群 — OPEN 2/7 canonical
+## No.1608 — L花の慶次～佐渡攻めの章
+- path: `docs/real_machine_db/machines/2023-12-04_l-hana-no-keiji-sado.md`
+- manufacturer: **EXCITE（ニューギングループ）**
+- formalModel: **Lパチスロ花の慶次～佐渡攻めの章～ER**
+- inspectionCode: **330269**（番号単独は二次資料、正式型式は公安委員会/業界記事で固定）
+- releaseDate: **2023-12-04**
+- generation/system: **6.5号機 / スマスロAT / 疑似ボーナス+ゲーム数上乗せAT**
+- 機械割: **97.4 / 98.8 / 101.2 / 104.9 / 109.9 / 114.0%**
+- 初当り: **1/260.7 / 1/253.7 / 1/247.0 / 1/231.5 / 1/222.1 / 1/211.5**
+- AT: **1/474.7 / 1/460.1 / 1/438.0 / 1/398.7 / 1/364.0 / 1/335.8**
+- base: **約33.5G/50枚**
+- 純増: **約2.6枚/G**
+- normal ceiling: **通常A/B 1000G+α、チャンス500G+α、天国100G+α、AT4スルー後の次回初当りでAT**
+- reset: **有利区間・内部G/天井・ATスルー・モードRESET、状態再抽選**
+- pure power: **内部G/天井・ATスルー・モード・状態・有利区間CARRY_OVER**
+- reset mode: **チャンスor天国濃厚**
+- reset ceiling: **最大500G+α、天国なら100G+α**
+- reset state: **通常62.5% / 高確31.3% / 超高確6.3%**
+- reset detection: **設定変更/純電断とも佐渡街道開始。朝一500G+α超の非当選は据え置き推測材料。ガックンはUNVERIFIED_AFTER_RESEARCH**
+- resetQaStatus: **COMPLETE_RESEARCHED_WITH_GACKUN_UNVERIFIED**
+- record commit: **8f71d10da7df0b11085a17b2998b285339a4f45e**
+
+## 2023-12-04群 — OPEN 4/7 canonical
 1. Lラブ嬢3～Wご指名はいかがですか？～ — No.1605 **DONE**
 2. L リングにかけろ1 V — No.1606 **DONE**
-3. ニューシオサイ — **NEXT**
-4. L花の慶次～佐渡攻めの章 — PENDING
-5. LモンキーターンV — PENDING
+3. ニューシオサイ — No.1607 **DONE**
+4. L花の慶次～佐渡攻めの章 — No.1608 **DONE**
+5. LモンキーターンV — **NEXT**
 6. Lマジカルハロウィン8 — PENDING
 7. Sクランキークレスト — PENDING
 
@@ -57,39 +76,48 @@
 - `パチスロ琉神－30 スイカバージョン` は12/4表記DBと「12月一部地域テスト」「12/6一部地域テスト」の業界資料差があり、通常全国導入群へ混入せず `CONFLICT_REGIONAL_TEST_RELEASE_BOUNDARY` を継続。
 
 ## resetBehavior 遡及QA進捗
-- 今回は時系列本線No.1606追加を優先し、遡及QAカーソルは変更なし。
+- 今回は時系列本線No.1607〜1608追加を優先し、遡及QAカーソルは変更なし。
 - 直前完了: `2007-07-08_marvel-heroes.md` マーベルヒーローズ — **PARTIAL_RESEARCH_EXHAUSTED**（既存COMPLETE_CORE維持）。
 - 次カーソル: `2007-07-09_genju-haou-t.md`（幻獣覇王T候補。最新mainで存在/順序を再確認してから処理）。
 
 ## 次回再開地点
-1. 最新mainを再同期し、No.1606と本handoffの反映を再取得確認。
-2. 時系列本線は **No.1607候補 `ニューシオサイ`** から継続。
+1. 最新mainを再同期し、No.1608と本handoffの反映を再取得確認。
+2. 時系列本線は **No.1609候補 `LモンキーターンV`** から継続。
 3. 性能コア + resetBehavior v0.7を同時収集する。
-4. その後 `L花の慶次～佐渡攻めの章 → LモンキーターンV → Lマジカルハロウィン8 → Sクランキークレスト` の順で処理し、12/4群のPB・別型式・地域先行・延期/段階導入を再監査してCLOSED判定する。
+4. その後 `Lマジカルハロウィン8 → Sクランキークレスト` の順で処理し、12/4群のPB・別型式・地域先行・延期/段階導入を再監査してCLOSED判定する。
 5. `パチスロ琉神－30 スイカバージョン` は12/4通常全国導入扱いに即断せず、12月一部地域テスト/12/6テスト表記の差をメーカー・業界・ホール実導入資料で確定する。
 6. 遡及QAを併行する場合は `2007-07-09_genju-haou-t.md` 候補から継続。
 
 ## 今回参照した主要ソース
 取得日: 2026-09-13
-- 遊技日本 / P-WORLDニュース: https://news.p-world.co.jp/articles/25997/nippon
-- 遊技日本 検定通過: https://news.p-world.co.jp/articles/25405/nippon
-- グリーンべると / P-WORLDニュース: https://news.p-world.co.jp/articles/25779/greenbelt
-- HAZUSE 基本スペック: https://hazuse.com/machine/pachislot/3S1000/genre/201/
-- HAZUSE 天井: https://hazuse.com/machine/pachislot/3S1000/genre/207/
-- HAZUSE 初打講座: https://hazuse.com/machine/pachislot/3S1000/genre/203/
-- 一撃 基本スペック: https://1geki.jp/slot/l_rinkake1v/39/
-- 一撃 天井/設定変更: https://1geki.jp/slot/l_rinkake1v/3/
-- スロパチクエスト 朝一/天井: https://www.slopachi-quest.com/article/rinkake1v-tenjou/
-- ぽこすろっと 朝一/電源OFF→ON: https://www.nankaikoya.jp/rinkake1v-kitaichi/
-- ちょんぼりすた: https://chonborista.com/slot/spiky/198003/
-- なな徹 ST/ボーナス: https://nana-press.com/kaiseki/machine/652/17952/
-- なな徹 竜児ボーナス: https://nana-press.com/kaiseki/machine/652/17940/
-- K-Navi: https://p-kn.com/slot/4054/
+
+### ニューシオサイ
+- パイオニア公式: https://www.slot-pioneer.co.jp/products/siosai.html
+- 遊技日本: https://news.p-world.co.jp/articles/26070/nippon
+- グリーンべると: https://web-greenbelt.jp/post-78388/
+- 遊技通信 検定: https://www.yugitsushin.jp/news/%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%85%AC%E5%AE%89%E5%A7%94%E5%93%A1%E4%BC%9A%E6%A4%9C%E5%AE%9A%E9%80%9A%E9%81%8E%E7%8A%B6%E6%B3%81%EF%BC%889%E6%9C%8825%E6%97%A5%EF%BC%89/
+- 一撃: https://1geki.jp/slot/s_newsiosai_sa/
+- 必勝本 基本: https://hisshobon.com/machineinfo/82715/
+- 必勝本 設定変更: https://hisshobon.com/machineinfo/82713/
+- なな徹: https://nana-press.com/kaiseki/machine/680/18133/
+- P-WORLD: https://www.p-world.co.jp/machine/database/9950
+
+### L花の慶次～佐渡攻めの章
+- 遊技日本 販売発表: https://news.p-world.co.jp/articles/25626/nippon
+- 遊技日本 検定: https://news.p-world.co.jp/articles/25186/nippon
+- グリーンべると 検定: https://web-greenbelt.jp/post-75734/
+- Amusement Japan: https://amusement-japan.co.jp/article/detail/10003838/
+- K-Navi: https://p-kn.com/slot/4045/
+- P-WORLD: https://www.p-world.co.jp/machine/database/9929
+- ぽこすろっと: https://www.nankaikoya.jp/keiji-sado-kitaichi/
+- なな徹 朝一: https://nana-press.com/kaiseki/machine/653/18225/
+- 必勝本 モード: https://hisshobon.com/machineinfo/82217/
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/excite_slot/17/tj04.php
 
 ## リレー継続ルール
 - 最新mainを再取得し、README → 最新ミッション → INDEX → LATEST_HANDOFF → 直前実レコードを確認する。
 - 過去チャットではなく最新mainを正とする。
-- 新規機種は性能コア + resetBehavior v0.7を同時収集する。
+- 新規機種は性能コア + resetBehavior v0.7を同時に収集する。
 - 既存COMPLETE_COREは性能完了を示し、reset QA状態は別管理する。
 - 欠損は表記揺れ/型式/メーカー/シリーズ名と検索語を変更し、公式・業界・解析・旧DB・アーカイブを横断した後だけUNVERIFIED/RESEARCH_EXHAUSTEDとする。
 - 競合値は平均化せずCONFLICTとして保持する。
