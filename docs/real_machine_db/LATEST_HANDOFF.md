@@ -1,110 +1,88 @@
 更新日: 2026-09-13
 
 ## 現在地点
-- recordCount: **1545**
-- latestRecordAdded: **もっと！チバリヨ-25 — No.1545**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2023-01-10_motto-chibariyo-25.md`
-- chronologicalFrontier: **2023-01-10**
-- frontierLatestMachine: **もっと！チバリヨ-25 — No.1545**
+- recordCount: **1546**
+- latestRecordAdded: **パチスロ モンスターハンターワールド：アイスボーン™ — No.1546**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2023-01-30_monster-hunter-world-iceborne.md`
+- chronologicalFrontier: **2023-01-30**
+- frontierLatestMachine: **パチスロ モンスターハンターワールド：アイスボーン™ — No.1546**
 - schema: **resetBehavior v0.7**
-- status: **2023-01-10_GROUP_CLOSED_2_OF_2_AFTER_CROSS_SOURCE_AUDIT / NEXT_2023-01-30_GROUP**
+- status: **2023-01-30_GROUP_OPEN_1_OF_2_KNOWN / NEXT_S_OOHANAMITSU_PB**
 
 ## 今回の同期 / 進捗
-- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧表示の `docs/real_machine_db/INDEX.md`、最新 `LATEST_HANDOFF.md`、直前No.1543 `沖ドキ！GOLD-30` を確認して開始。
+- 最新mainの `README.md`、正本 `docs/CHAPPY5_REAL_MACHINE_DATABASE_MISSION_V01.md` v0.7、旧表示の `docs/real_machine_db/INDEX.md`、最新 `LATEST_HANDOFF.md`、直前No.1545 `もっと！チバリヨ-25` を確認して開始。
 - INDEXは19件の旧表示のためREADME規定どおり、最新handoffとmain実レコードを進捗正本として採用。
-- 2022-12-20〜2023-01-09境界をALL7 / K-Navi / 業界導入資料で再確認し、パチスロ本線の追加実導入を固定できなかったため2023-01-10群へ前進。
-- No.1544 `SモモキュンソードDX` とNo.1545 `もっと！チバリヨ-25` を性能コア + resetBehavior v0.7で追加。
-- ALL7 2023年1月一覧では1/10導入パチスロが両機で一致。K-Naviはモモキュンのみ掲載だが、25Φは1geki/P-WORLD等の25Φ固有DBで実導入2023-01-10を独立確認。追加PB・別型式・25/30Φ派生・地域先行を固定できず、2023-01-10群をCLOSED 2/2とした。
+- handoff記載どおり2023-01-11〜01-29境界を既知監査済みとして2023-01-30群へ前進。
+- No.1546 `パチスロ モンスターハンターワールド：アイスボーン™` を性能コア + resetBehavior v0.7で追加。
+- 初期ティザー型式 `S MHWアイスボーンZD` と最終市場型式 `S MHWアイスボーンZF` の差を再確認。東京都公安委員会検定通過 `ZF / 2S1204` と最終販売発表をcanonicalとし、ZD期の事前数値はCONFLICTへ隔離。
+- 2023-01-30群は既知2機のうち1機処理済み。PB初期導入 `S大花満 / S大花満SB` が残るためOPENのまま。
 
-## No.1544 — SモモキュンソードDX
-- manufacturer: **DAXEL製造 / 西陣販売**
-- formalModel: **SモモキュンソードDX**
-- inspectionCode: **230223**
-- releaseDate: **2023-01-10**
-- generation/system: **6.5号機 / メダルAT / 周期CZ・擬似ボーナス経由**
-- payoutRate: **97.9 / 99.3 / 102.5 / 105.2 / 110.0%（設定1/2/4/5/6）**
-- AT初当たり: **1/381.2 / 1/342.9 / 1/290.5 / 1/251.8 / 1/228.4**
-- 通常時桃剣BONUS: **1/267.7 / 1/259.0 / 1/246.6 / 1/237.9 / 1/234.4**
-- baseGamesPer50: **約35.5G/50枚**
-- netIncrease: **約5.0枚/G**
-- AT初当たり時平均獲得: **約470枚**
+## No.1546 — パチスロ モンスターハンターワールド：アイスボーン™
+- manufacturer: **エンターライズ製造 / フィールズ販売**
+- formalModel: **S MHWアイスボーンZF**
+- inspectionCode: **2S1204**
+- releaseDate: **2023-01-30**
+- generation/system: **6.5号機 / メダルAT / CZ経由・狩猟BONUS連続型**
+- payoutRate: **98.2 / 99.4 / 101.6 / 105.2 / 109.6 / 113.5%（設定1〜6）**
+- AT初当たり: **1/371.2 / 1/360.1 / 1/348.4 / 1/318.5 / 1/289.9 / 1/267.8**
+- CZ合算: **1/124.9 / 1/119.7 / 1/115.1 / 1/104.7 / 1/101.8 / 1/94.7**
+- baseGamesPer50: **約39G/50枚**
+- netIncrease: **約2.8枚/G**
+- basicPayout: **青7 60G+α / 赤7 40or50G+α / BAR25G+α**
 - coreStatus: **COMPLETE_CORE**
-- resetBehaviorQA: **COMPLETE_RESET_CORE_WITH_BENEFIT_NUMERIC_AND_GACKUN_UNVERIFIED_AFTER_RESEARCH**
+- resetBehaviorQA: **COMPLETE_RESET_CORE_WITH_PUBLIC_MORNING_BEHAVIOR_AND_GACKUN_UNVERIFIED_AFTER_RESEARCH**
 
-### resetBehavior v0.7 — No.1544
-- **設定変更**: 有利区間・周期/天井・内部モードRESET。内部状態は再抽選。周期表示1 / G数表示32へ。
-- **据え置き**: 有利区間・周期/天井・モード・状態・表示をCARRY_OVER。
-- **純電源OFF→ON**: 天井周期・状態・表示・ステージをCARRY_OVERする解析で一致。
-- **天井**: 最大20周期、通常時約760GでAT。
-- **リセット専用短縮**: 確認できず `NONE_CONFIRMED_AFTER_RESEARCH`。
-- **公開朝一数値**: 周期表示1 / G数表示32。設定変更専用モード振り分け・朝一当選率は `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
-- **変更判別**: 前日表示を把握していれば1/32初期化が材料。有利区間ランプ判別不可。本機固有ガックンは再探索後 `UNVERIFIED_AFTER_RESEARCH`。
-- **導入日差**: 業界発表は2023-01-09予定、実導入DB複数は2023-01-10。canonicalは1/10、1/9はPLANNED_DATE_DIFFERENCE。
+### resetBehavior v0.7 — No.1546
+- **設定変更**: 有利区間・天井G・クエストモード・内部状態・ぷちBINGOをRESET。RESET後は高確スタート濃厚。
+- **据え置き**: 有利区間・天井G・クエストモード・内部状態・ぷちBINGOをCARRY_OVER。
+- **純電源OFF→ON**: 天井G・クエストモード・内部状態・有利区間をCARRY_OVER。ぷちBINGOも内部引継ぎとする解析あり。
+- **通常天井**: 最大999G+αでBONUS。
+- **リセット専用短縮**: `NONE_CONFIRMED_AFTER_RESEARCH`。BAR BONUS単発後約33%の128G+α短縮は別契約。
+- **朝一恩恵**: 高確スタート濃厚 / 初回クエスト成功時青7BONUS優遇 / 設定変更後1G目のレア小役成立でBONUS直撃・AT突入。
+- **公開朝一数値**: 通常時レア役合算1/29.90〜1/27.63（設定1〜6）を1G目直撃条件の構成要素として保存。ただし朝一専用当選率へ再計算しない。
+- **変更判別**: 設定変更・据え置きとも前線拠点セリエナ開始。有利区間ランプでも判別不可。本機固有ガックンは再探索後 `UNVERIFIED_AFTER_RESEARCH`。
 
-## No.1545 — もっと！チバリヨ-25
-- manufacturer: **オーゼキ製造 / ネット販売**
-- formalModel: **SもっとチバリヨGZA**
-- inspectionCode: **230114**
-- releaseDate: **2023-01-10**
-- generation/system: **6.4号機 / 25ΦメダルAT / 擬似ボーナス連チャンタイプ**
-- payoutRate: **97.9 / 99.4 / 101.3 / 103.2 / 105.3 / 107.6%（設定1〜6）**
-- bonusInitial: **1/255 / 1/252 / 1/237 / 1/224 / 1/211 / 1/202**
-- baseGamesPer50: **約33.7G/50枚**
-- netIncrease: **約3.0枚/G**
-- basicPayout: **BIG 70G 約210枚 / REG 30G 約90枚**
-- coreStatus: **COMPLETE_CORE**
-- resetBehaviorQA: **COMPLETE_RESET_CORE_WITH_POWER_CYCLE_AND_GACKUN_UNVERIFIED_AFTER_RESEARCH**
+## conflicts — No.1546
+- **型式**: 初期ティザー `S MHWアイスボーンZD` vs 最終市場 `S MHWアイスボーンZF / 2S1204`。canonicalはZF。
+- **事前スペック**: ZD期一部資料は設定5/6出玉率107.5/110.1%、AT 1/304.4/1/289.5、CZ 1/101.1/1/96.4。最終ZF複数資料は109.6/113.5%、AT 1/289.9/1/267.8、CZ 1/101.8/1/94.7。平均せず `CONFLICT_PRERELEASE_SPEC` として隔離。
+- **朝一初回クエスト**: 「青7優遇」と「青7濃厚」の表現差あり。具体率を固定できないためcanonicalは保守的に「優遇」。
 
-### resetBehavior v0.7 — No.1545
-- **設定変更**: 有利区間・天井進行・内部モードRESET / 再抽選。
-- **据え置き**: 有利区間・ゲーム数/チェリー天井進行・内部モードCARRY_OVER。
-- **純電源OFF→ON**: 25Φ型式固有の直接契約は十分な再探索後も未固定。径非限定/30Φの記述を自動転記しない。
-- **通常天井**: 最大900G+α / チェリー最大40回。
-- **同一有利区間**: 3回目ボーナスで天国モード移行。
-- **朝一/有利区間リセット恩恵**: **53%で天国チャンスモード以上**。
-- **個別モード振り分け**: `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
-- **変更判別**: 有利区間ランプ非搭載で判別不可。有利区間継続も見た目で確認不可。本機固有ガックンは `UNVERIFIED_AFTER_RESEARCH`。
+## 2023-01-30群 — OPEN 1/2 known
+1. **パチスロ モンスターハンターワールド：アイスボーン™（エンターライズ）** — No.1546 済
+2. **S大花満 / S大花満SB（ジェイピーエス / PB機）** — 未処理。1/30初期納品・4/3一般販売の段階導入差を保持して処理する。
 
-## 2023-01-10群 — CLOSED 2/2 canonical actual launch
-1. **SモモキュンソードDX（DAXEL / 西陣）** — No.1544 済
-2. **もっと！チバリヨ-25（オーゼキ製造 / ネット販売）** — No.1545 済
-
-## 次の既知境界
-- 2023-01-11〜2023-01-29をALL7 / K-Navi等で監査。月次導入一覧ではこの期間の新規パチスロ実導入を固定できず、次のknownは2023-01-30。
-- 2023-01-30群の既知候補:
-  1. **パチスロ モンスターハンターワールド：アイスボーン™**（エンターライズ） ← No.1546候補
-  2. **S大花満 / S大花満SB**（ジェイピーエス / PB機） ← 続行候補
-- ALL7では両機を2023-01-30掲載。グリーンべるとでは大花満の初期納品分1/30・一般販売4/3を明記しているため、PB初期導入を本DBのactual launchとして1/30に扱う方針。ただし次回は型式・検定番号と段階導入差を個別に再確認する。
+## 直前完了群
+- **2023-01-10群 CLOSED 2/2**
+  1. SモモキュンソードDX — No.1544
+  2. もっと！チバリヨ-25 — No.1545
 
 ## 今回の主要資料
-### No.1544
-- 遊技通信/P-WORLD業界ニュース: https://news.p-world.co.jp/articles/22197/yugitsushin
-- PiDEA検定通過: https://www.pidea.jp/articles/1668388131
-- HAZUSE: https://hazuse.com/machine/pachislot/2S0223/
-- すろぱちくえすと: https://www.slopachi-quest.com/article/momokyunsord-tenjou/
-- パチ＆スロ必勝本 設定変更: https://p.hisshobon.jp/machine/4024/1/92086
-- なな徹 朝一: https://nana-press.com/kaiseki/machine/487/13098/
-- 1geki 桃剣RUSH: https://1geki.jp/slot/s_momokyun/83/
+### No.1546
+- PiDEA 東京都公安委員会検定通過: https://pidea.jp/articles/1666664814
+- G-net 大阪府検定切れ一覧: https://g-net-ps.com/content/kenteikire-2025-10-2/
+- 遊技日本 / P-WORLD 最終販売発表: https://news.p-world.co.jp/articles/22545/nippon
+- Amusement Japan / P-WORLD: https://news.p-world.co.jp/articles/22170/amusement
+- 遊技通信 / P-WORLD: https://news.p-world.co.jp/articles/22166/yugitsushin
+- 遊技日本 初期ティザーZD: https://news.p-world.co.jp/articles/21805/nippon
+- ぱちんこキュレーション事前資料: https://pachinko-curation.com/34060/
+- 一撃 機種TOP: https://1geki.jp/slot/s_mhwib/
+- 一撃 スペック: https://1geki.jp/slot/s_mhwib/1/
+- 一撃 小役/ベース: https://1geki.jp/slot/s_mhwib/4/
+- 一撃 天井: https://1geki.jp/slot/s_mhwib/3/
+- なな徹 朝一/設定変更: https://nana-press.com/kaiseki/machine/474/13161/
+- ちょんぼりすた: https://chonborista.com/slot/enta-slot/176052/
+- ぽこすろっと: https://www.nankaikoya.jp/monsterhunter-iceborne-kitaichi/
+- パチ＆スロ必勝本 有利区間: https://p.hisshobon.jp/machine/4004/1/93249
 
-### No.1545
-- Amusement Japan: https://www.amusement-japan.co.jp/article/detail/10003159/
-- DreamNews転載: https://www.mapion.co.jp/news/release/dn0000270356-all/
-- 1geki 25Φ: https://1geki.jp/slot/s_mtchibariyo25/
-- 1geki 天井/設定変更: https://1geki.jp/slot/s_mtchibariyo25/3/
-- 1geki モード: https://1geki.jp/slot/s_mtchibariyo25/42/
-- P-WORLD 25Φ: https://www.p-world.co.jp/machine/database/9759
-- パチ7 ボーナス: https://pachiseven.jp/machines/6757/cutout/8
-
-### 境界監査
+### 境界監査（前relayから継承）
 - ALL7 2023年1月: https://www.all7.jp/plans/index/2023/01
 - K-Navi 2023年1月: https://p-kn.com/calendar/202301/
 - グリーンべると / P-WORLD 大花満: https://news.p-world.co.jp/articles/22687/greenbelt
 - パチビー モンハン アイスボーン: https://www.pachibee.jp/machines/index/222120000
 
 ## 保存コミット
-- No.1544追加: `f7eda8d35efbe00cd412b8da90aa2d5f9beb8536`
-- No.1545追加: `e77b4fb59be03ae197e8252a32acf227089b4df7`
+- No.1546追加: `af40322f76643da0d01efe3bf4087563318735ec`
 - handoff更新: 本コミット
 
 ## 次回再開地点
-**2023-01-11〜01-29境界を最終確認後、2023-01-30群へ進む。No.1546候補は `パチスロ モンスターハンターワールド：アイスボーン™`。続いてPB初期導入 `S大花満 / S大花満SB` を型式・検定番号・1/30初期納品と4/3一般販売の段階導入差を保持して処理する。既存No.1545以前の性能値はやり直さない。**
+**No.1547候補 `S大花満 / S大花満SB`（ジェイピーエス / PB機）から継続する。正式型式・検定番号、性能コア、resetBehavior v0.7を収集し、2023-01-30初期納品と2023-04-03一般販売の段階導入差をCONFLICTではなく販売フェーズ差として保持する。処理後、2023-01-30群をPB・別型式・地域先行まで再監査してCLOSED判定する。既存No.1546以前の性能値はやり直さない。**
