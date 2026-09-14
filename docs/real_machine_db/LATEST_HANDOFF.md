@@ -1,82 +1,88 @@
 更新日: 2026-09-14
 
 ## 現在地点
-- recordCount: **1669**
-- latestRecordAdded: **Lワンパンマン — No.1669**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2024-08-05_one-punch-man.md`
+- recordCount: **1670**
+- latestRecordAdded: **スマスロ トロピカーナ — No.1670**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2024-08-05_tropicana.md`
 - chronologicalFrontier: **2024-08-05**
 - schema: **resetBehavior v0.7**
-- status: **2024-08-05_OPEN_3_OF_4_KNOWN_CANONICAL_PROCESSED**
+- status: **2024-08-05_BOUNDARY_CLOSED_4_OF_4_CANONICAL_PROCESSED**
 
 ## 今回の進捗
-- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直近No.1668を確認。INDEXは旧19件表示のままのためREADME規定どおりLATEST_HANDOFF + 実レコードを進捗正本として使用。
-- 直前handoff指定のNo.1669候補 `Lワンパンマン` を性能コア + resetBehavior v0.7で登録。
-- 遊技日本/P-WORLD、Amusement Japan、グリーンべると、HAZUSE、なな徹、一撃、必勝本、スロパチクエスト、ちょんぼりすた等を横断。
-- 型式 `LワンパンマンEY`、検定番号 `4S0335`、EXCITE、2024-08-05全国導入を照合。ニューギン直営店では2024-07-18に10台先行導入。
-- 設定1〜6の機械割97.6/98.9/100.7/105.1/110.4/114.9%、CZ 1/158.8→1/145.7、ボーナス1/315.8→1/263.5、AT 1/620.9→1/464.0、約31.9G/50枚、純増約2.5枚/Gまたは約4.0枚/Gを複数資料で照合。
-- 設定変更時は有利区間・天井ゲーム数・CZスルー回数・裏ボスモードをRESETし、内部モード・内部状態を再抽選。据え置きは有利区間・天井・CZスルー回数・モード・状態・裏ボスモードを引継ぎ。
-- 純電源OFF→ONは必勝本の直接比較で天井ゲーム数、CZスルー回数、モード、状態、裏ボスモードを引継ぎ。開始ステージは資料上も調査中のためUNVERIFIED。
-- 設定変更時モードは通常B以上100%。公開振り分けは通常B 53.1% / チャンス16.4% / 天国30.1% / 超天国0.4%。天国以上30.5%、チャンス以上46.9%。
-- CZ間天井は通常A/B/チャンス最大320G、天国/超天国128G。設定変更時は固定天井短縮ではなくモード優遇が主恩恵。
-- 設定変更時の内部状態正規振り分け、本機固有ガックン条件/率、確定的リセット判別、純電断時ステージ復帰は検索語・資料系統変更後も固定できずUNVERIFIED/PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH。
-- 朝一前兆位置のズレは据え置き期待度アップ材料、シババワ様予言も判別補助になるが確定判別には採用せず。後年のビリビリ演出による判別論も主要解析の確定契約ではないため補助情報に限定。
+- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直近No.1669を確認。INDEXは旧19件表示のためREADME規定どおりLATEST_HANDOFF + 実レコードを進捗正本として使用。
+- 直前指定のNo.1670候補 `スマスロ トロピカーナ` を性能コア + resetBehavior v0.7で登録。
+- ユニバーサル公式、P-WORLD/遊技日本、HAZUSE、P-WORLD機種DB、一撃、必勝本、なな徹、パチビー、ちょんぼりすた、スロパチクエスト、K-Naviを横断。
+- 型式 `L／トロピカーナ／NT`、検定番号 `3S1646`、ミズホ、2024-08-05全国導入を照合。
+- 本機は通常の設定1〜6ではなく、1段階設定 + 出玉率モード0〜7で性能が変動する特殊仕様。モード別出玉率/初当りを設定別に変換せずそのまま保持。
+- 出玉率はmode0〜6で93.0/94.4/98.8/99.4/104.4/107.5/113.6%。mode7機械割は主要解析で未公開のため噂値を採用せず `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
+- ボーナス初当りはmode0〜7で1/239.5, 1/264.7, 1/233.1, 1/265.6, 1/224.0, 1/247.2, 1/218.8, 1/235.4。ベース約31.9G/50枚、純増約6.0枚/G、BIG約204枚（約210枚表記も保持）、REG約105枚。
+- mode7 REG確率はHAZUSE/P-WORLD系 `1/638.2` と、ちょんぼりすた `1/683.2` が競合。平均化せずCONFLICT。
+- 通常ボーナス間天井777G、設定変更/有利区間リセット後は最大700Gへ短縮。
+- 設定変更時の出玉率モード振り分けは0:12.5 / 1:20.3 / 2:0.8 / 3:0.8 / 4:2.3 / 5:3.1 / 6:10.2 / 7:50.0%。mode4以上65.6%（主要解析の約66%と一致）。
+- 純電源OFF→ONは天井G数・出玉率モードを引継ぎ。内部状態も引継ぎとする解析比較あり。
+- 朝一700G超でボーナス非当選なら据え置き濃厚材料。ただし有利区間移行タイミングによる若干のズレ注記あり。
+- 本機固有ガックン、電断後の表示/ランプ復帰、トロピカループ間スルー回数の設定変更vs据え置き完全契約は検索語・資料系統変更後も固定できずUNVERIFIED。
+- 2024年8月のパチスロ全国導入は主要新台カレンダーで8/5の4機のみ。8/19はパチスロ0機種を再確認し、2024-08-05境界をCLOSED判定。
 
-## No.1669 — Lワンパンマン
-- path: `docs/real_machine_db/machines/2024-08-05_one-punch-man.md`
-- manufacturer: **EXCITE（ニューギングループ）**
-- formalModel: **LワンパンマンEY**
-- inspectionCode: **4S0335**
-- releaseDate: **2024-08-05**（直営先行導入2024-07-18）
+## No.1670 — スマスロ トロピカーナ
+- path: `docs/real_machine_db/machines/2024-08-05_tropicana.md`
+- manufacturer: **ミズホ（ユニバーサルエンターテインメント）**
+- formalModel: **L／トロピカーナ／NT**
+- inspectionCode: **3S1646**
+- releaseDate: **2024-08-05**
 - generation: **6.5号機 / スマスロ**
-- systemType: **AT / CZ→擬似ボーナス→AT**
-- payoutRate: **97.6 / 98.9 / 100.7 / 105.1 / 110.4 / 114.9%**
-- CZ: **1/158.8 / 1/157.2 / 1/154.5 / 1/151.7 / 1/148.1 / 1/145.7**
-- bonus: **1/315.8 / 1/308.2 / 1/299.9 / 1/286.9 / 1/274.5 / 1/263.5**
-- AT: **1/620.9 / 1/606.4 / 1/585.4 / 1/531.5 / 1/503.4 / 1/464.0**
-- base: **約31.9G/50枚（設定1）**
-- netIncrease: **約2.5枚/G / 約4.0枚/G**
-- basic: **BIG 45G+α / AT ONE PUNCH RUSH 100G+α / 最上位AT継続率約92%、期待獲得約3580枚**
-- ceiling: **通常A/B/チャンス最大320G→CZ、天国/超天国128G。CZ6スルー後7回目CZでマジBIG。**
-- reset: **有利区間・天井G・CZスルー回数・裏ボスモードRESET、モード/状態再抽選。**
-- carryOver: **据え置きは有利区間・天井・CZスルー・モード・状態・裏ボスモード引継ぎ。**
-- powerCycle: **天井G、CZスルー回数、モード、状態、裏ボスモード引継ぎ。**
-- morning benefit: **通常B以上100%。**
-- public morning numeric: **通常B53.1% / チャンス16.4% / 天国30.1% / 超天国0.4%。天国以上30.5%、チャンス以上46.9%。**
-- detection: **規定G前兆ズレは据え置き期待度UP材料。シババワ予言は補助。確定判別/ガックンはUNVERIFIED。**
-- unresolved after research: **ガックン条件/率 / 確定リセット判別 / 純電断時ステージ復帰 / 設定変更時内部状態振り分け / 固定的数値ペナルティ**
-- conflict: **性能コア・モード振り分け・主要resetBehaviorに現時点で数値競合なし。導入台数8000/10000差は現ミッション対象外。**
+- systemType: **AT / 完全告知・擬似ボーナスループ / 1段階設定＋出玉率モード変動**
+- payoutRateByMode: **93.0 / 94.4 / 98.8 / 99.4 / 104.4 / 107.5 / 113.6 / mode7未公開**
+- bonusByMode: **1/239.5 / 1/264.7 / 1/233.1 / 1/265.6 / 1/224.0 / 1/247.2 / 1/218.8 / 1/235.4**
+- base: **約31.9G/50枚**
+- netIncrease: **約6.0枚/G**
+- basic: **BIG約204枚（約210枚表記あり） / REG約105枚 / 波乗りチャンス77G**
+- ceiling: **通常777G / リセット後最大700G**
+- reset: **天井RESET・700G短縮、出玉率モード再抽選、有利区間RESET。**
+- carryOver: **据え置きは天井進行・出玉率モード引継ぎ。**
+- powerCycle: **天井G数・出玉率モード引継ぎ。**
+- morning benefit: **mode7 50.0%、mode4以上65.6%。**
+- public morning numeric: **0=12.5 / 1=20.3 / 2=0.8 / 3=0.8 / 4=2.3 / 5=3.1 / 6=10.2 / 7=50.0%。**
+- detection: **朝一700G超非当選は据え置き濃厚材料。ガックンはUNVERIFIED。**
+- conflict: **mode7 REG 1/638.2 vs 1/683.2。BIG約204枚 vs 約210枚表記。mode7機械割は未公開。**
 
-## 2024-08-05境界 — OPEN 3/4
+## 2024-08-05境界 — CLOSED 4/4
 1. スマスロ ゲゲゲの鬼太郎 覚醒 — No.1667 DONE
 2. L D4DJ Pachi-Slot Mix — No.1668 DONE
 3. Lワンパンマン — No.1669 DONE
-4. スマスロ トロピカーナ — NEXT
+4. スマスロ トロピカーナ — No.1670 DONE
+
+## 境界再監査
+- 一撃2024年8月カレンダー: 8/5パチスロ4機、8/19パチスロ0機。
+- K-Navi 2024年8月カレンダーも8/5上記4機、8/19はパチンコのみ。
+- したがって通常全国導入の8月本線は4機でCLOSED。PB・地域先行・別型式については次回開始時にも漏れ防止監査を継続する。
 
 ## 次回再開地点
-- 最新mainを再同期しNo.1669と本handoffを確認。
-- **No.1670候補 `スマスロ トロピカーナ`（2024-08-05）** から性能コア + resetBehavior v0.7を収集。
-- 処理後、PB・別型式・地域先行・延期/段階導入を再監査して2024-08-05群CLOSED判定。
+- 最新mainを再同期しNo.1670と本handoffを確認。
+- 次の全国導入境界は **2024-09-02**。
+- 現時点のknown canonicalは4機:
+  1. **A-SLOT+ この素晴らしい世界に祝福を！** — No.1671候補 / NEXT
+  2. **Lパチスロ閃乱カグラ2 SHINOVI MASTER**
+  3. **パチスロ かぐや様は告らせたい**
+  4. **パチスロL黄門ちゃま天**
+- 一撃2024年9月カレンダーで2024-09-02スロット4機を確認。9/17はパチスロハイパーラッシュ1機。
+- まずNo.1671候補 `A-SLOT+ この素晴らしい世界に祝福を！` から性能コア + resetBehavior v0.7を収集する。
+- 4機処理後、PB・別型式・地域先行・延期/段階導入を再監査して2024-09-02群CLOSED判定。
 - 欠損は表記揺れ・正式型式・メーカー・シリーズ名、設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックン/有利区間等へ検索語を変え、公式・業界・主要解析・旧DB・アーカイブ/回顧資料横断後のみUNVERIFIED。
 
 ## 今回の主要ソース
 取得日: 2026-09-14
-- P-WORLD / 遊技日本 検定通過: https://news.p-world.co.jp/articles/27931/nippon
-- Amusement Japan 直営先行導入: https://amusement-japan.co.jp/article/detail/10004449/
-- グリーンべると: https://web-greenbelt.jp/post-85996/
-- HAZUSE 基本: https://hazuse.com/machine/pachislot/4S0335/genre/201/
-- HAZUSE 天井: https://hazuse.com/machine/pachislot/4S0335/genre/207/
-- なな徹 機種まとめ: https://nana-press.com/kaiseki/machine/784/
-- なな徹 朝一・設定変更: https://nana-press.com/kaiseki/machine/784/23281/
-- なな徹 モード: https://nana-press.com/kaiseki/machine/784/23284/
-- なな徹 狙い目: https://nana-press.com/kaiseki/machine/784/23279/
-- なな徹 BIG: https://nana-press.com/kaiseki/machine/784/23299/
-- なな徹 AT: https://nana-press.com/kaiseki/machine/784/23301/
-- 一撃: https://1geki.jp/slot/l_onepunchman/
-- 一撃 設定差: https://1geki.jp/slot/l_onepunchman/0/
-- 一撃 天井/朝一: https://1geki.jp/slot/l_onepunchman/3/
-- 必勝本 基本スペック: https://hisshobon.com/machineinfo/84333/
-- 必勝本 天井&設定変更: https://p.hisshobon.jp/vpage/2639/2
-- 必勝本 通常時: https://hisshobon.com/machineinfo/84351/
-- 必勝本 シババワ様: https://hisshobon.com/machineinfo/84330/
-- スロパチクエスト: https://www.slopachi-quest.com/article/onepunchman-tenjou/
-- ちょんぼりすた: https://chonborista.com/slot/newgin-slot/214150/
+- ユニバーサル公式: https://www.universal-777.com/product/slot/tropicana/
+- P-WORLD / 遊技日本 検定通過: https://news.p-world.co.jp/articles/26893/nippon
+- HAZUSE: https://hazuse.com/machine/pachislot/3S1646/
+- P-WORLD 機種DB: https://www.p-world.co.jp/machine/database/10064
+- 一撃 朝一/設定変更: https://1geki.jp/slot/l_tropicana/3/
+- 必勝本 基本スペック: https://hisshobon.com/machineinfo/84030/
+- 必勝本 モード移行: https://hisshobon.com/machineinfo/84036/
+- なな徹 天井/リセット: https://nana-press.com/kaiseki/machine/788/23211/
+- パチビー: https://www.pachibee.jp/machines/kouryaku/224060008
+- ちょんぼりすた: https://chonborista.com/slot/universal-slot/214693/
+- スロパチクエスト: https://www.slopachi-quest.com/article/tropicana-tenjou/
+- 一撃 2024年8月新台カレンダー: https://1geki.jp/newmachinecalender/202408/
+- K-Navi 2024年8月新台カレンダー: https://p-kn.com/calendar/202408/
+- 一撃 2024年9月新台カレンダー: https://1geki.jp/newmachinecalender/202409/
