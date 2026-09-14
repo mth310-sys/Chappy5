@@ -4,7 +4,7 @@ recordNo: 1722
 machineName: L麻雀物語
 aliases: スマスロ 麻雀物語 / 麻雀物語 スマスロ / L麻雀物語S2
 manufacturer: オリンピアエステート / 平和
-aformalModel: L麻雀物語S2
+formalModel: L麻雀物語S2
 inspectionCode: 4S1564
 releaseDate: 2025-04-21
 generation: 6.5号機 / スマスロ
