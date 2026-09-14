@@ -1,84 +1,82 @@
 更新日: 2026-09-14
 
 ## 現在地点
-- recordCount: **1678**
-- latestRecordAdded: **今日から俺は!! パチスロ編 — No.1678**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2024-10-07_kyou-kara-ore-wa-pachislot-hen.md`
+- recordCount: **1679**
+- latestRecordAdded: **L 真・一騎当千 — No.1679**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2024-10-07_l-shin-ikkitousen.md`
 - chronologicalFrontier: **2024-10-07**
 - schema: **resetBehavior v0.7**
-- status: **2024-10-07_GROUP_OPEN_3_OF_AT_LEAST_5_CANONICAL_PROCESSED**
+- status: **2024-10-07_GROUP_OPEN_4_OF_AT_LEAST_5_CANONICAL_PROCESSED**
 
 ## 今回の進捗
-- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直近No.1677を再同期。INDEXは旧19件表示のためREADME規定どおりLATEST_HANDOFF + 実レコードを進捗正本として使用。
-- No.1677 `スマスロ頭文字D 2nd` の次の未処理機種として、No.1678 `今日から俺は!! パチスロ編` を性能コア + resetBehavior v0.7で登録。
-- コナミアミューズメント公式で機種存在、G-net/HAZUSEで2024-10-07導入、型式 `L今日から俺は！！FE`、検定番号 `4S0633` を確認。2024-07-19遊技日本/P-WORLDのみ `L今日から俺は!!FN` と記載するため型式CONFLICTを保持し、販売概要/検定DB系の `FE` をcanonicalとした。
-- メーカー/ブランドはG-net販売資料の `ファイトクラブ（コナミアミューズメント）` を採用。
-- 設定1〜6のBIG 1/410.0 / 1/398.6 / 1/384.4 / 1/354.5 / 1/329.7 / 1/303.7、REG 1/457.0 / 1/447.2 / 1/434.8 / 1/412.2 / 1/386.5 / 1/365.4、合算 1/216.1 / 1/210.7 / 1/204.0 / 1/190.6 / 1/177.9 / 1/165.8、機械割97.9 / 99.0 / 100.5 / 104.1 / 108.0 / 113.0%を複数資料で一致確認。
-- ベースはHAZUSE/パチセブン/一撃で約34.5G/50枚、G-net販売概要は35.4Gのため `CONFLICT_BASE_34_5_VS_35_4`。複数解析一致の34.5Gをcanonical。
-- 擬似ボーナス純増約6.0枚/G。BIGは450/500/550/600枚（平均約500枚）、REG約104枚。
-- 通常天井最大1280G+α。設定変更後はモードB以上となり最大768G+αへ短縮。
-- 設定変更時は当該〜次々回まで3回分のモードを抽選し、初当たり3回目まで1/248.1に優遇。設定変更後1回目BIGのツッパリロード当選率は約45%。設定変更後256G以内ボーナス期待度約60%とする解析も確認。
-- ちょんぼりすた比較表で設定変更時は天井/内部状態RESET、電源OFF→ON時は天井/内部状態CARRY_OVER。ガックンは設定変更時あり、電源OFF→ON時なし。
-- 据え置き専用の全内部契約（3回分モード/REG連続回数/逆襲システム進行等）は高信頼資料で一括固定できず、主要カウンタ引継ぎと細部を分離して記録。
-- 本機固有の有利区間設定変更/据え置き/純電断契約は、正式型式FE/FN、設定変更/リセット/据え置き/電源OFF ON/有利区間等へ検索語を変え、公式・必勝本・なな徹・一撃・ちょんぼりすた・旧DB系を横断しても高信頼の直接明記を固定できず `UNVERIFIED_AFTER_RESEARCH`。一般仕様から推測転記していない。
-- 2024-10-07境界を再監査し、`L 真・一騎当千` は必勝本/HAZUSE/一撃で2024-10-07全国導入を確認。型式 `Lパチスロ真・一騎当千V`、検定番号 `430303`。次のcanonical候補として確定。
-- `トリプルクラウンフォーユー` はHAZUSEで2024-10-07導入記載があるが、30φ・地域/段階流通差の監査を残すため境界はOPEN継続。
+- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直近No.1678を再同期。INDEXは旧19件表示のためREADME規定どおりLATEST_HANDOFF + 実レコードを進捗正本として使用。
+- No.1678 `今日から俺は!! パチスロ編` の次の未処理機種として、No.1679 `L 真・一騎当千` を性能コア + resetBehavior v0.7で登録。
+- Daiichi公式で機種存在を確認。HAZUSEで2024-10-07導入、型式 `Lパチスロ真・一騎当千V`、検定番号 `430303` を確認。
+- 設定1〜6のAT初当たりは 1/321.3 / 1/310.8 / 1/291.6 / 1/245.7 / 1/232.3 / 1/222.1、機械割97.6 / 99.0 / 101.0 / 105.8 / 109.5 / 112.0%。一撃/なな徹の整数表示は丸め差として扱い、必勝本の小数値をcanonical。
+- CZ初当たりは 1/154 / 1/148 / 1/138 / 1/115 / 1/110 / 1/105。ベース約31G/50枚、ボーナス純増約3.3枚/G。
+- AT「一騎当千RUSH」は1セット30G+α、ボーナスループ継続率約70%over。当千BONUS約50枚、セブンラッシュ平均約300枚over。
+- 通常AT間天井は最大1000G+α。モードA/B/C/D/天国の天井は1000/900/700/400/100G+α。
+- 設定変更時は天井・内部状態・有利区間RESET、通常Dまたは天国へ移行し、最大400G+αへ短縮。規定ゲーム数は内部的にランダム減算。
+- 公開朝一モード振り分けを取得: 設定1 D100%/天国0%、設定2・3 D98.4%/天国1.6%、設定4・5・6 D96.9%/天国3.1%。朝一天国なら設定2以上濃厚。
+- なな徹の比較表で据え置き時は天井・内部状態・有利区間を引継ぎ。機種別電源OFF→ON比較資料では天井・内部モード・内部状態・有利区間を引継ぎ。
+- 設定変更/電源OFF→ONとも南陽ステージ開始とする資料があり、ステージ単独では変更判別不可。朝一400G+α超でAT非当選は据え置き濃厚材料。
+- 本機固有ガックン条件/発生率、設定変更時の規定Gランダム減算具体分布、設定変更直後の内部状態具体振り分けは、表記揺れ・型式・検定番号・設定変更/据え置き/電断/ガックン/有利区間等へ検索語を変更し、公式・業界・主要解析・旧DB系を横断後も固定できず `UNVERIFIED_AFTER_RESEARCH` / `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
+- 2024-10-07境界の残候補 `トリプルクラウンフォーユー` を再監査。HAZUSE・パチビーは2024-10-07導入、型式 `SトリプルクラウンX2-30`、検定番号 `4S0038`、清龍ゲームジャパンで一致。一方、ぱちんこキュレーションは導入日を `2024-10-07（沖縄県）` と明記するため、全国一斉導入ではなく沖縄地域導入の可能性を保持。次回は地域先行/段階流通として本線採番するかを最終確定する。
 
-## No.1678 — 今日から俺は!! パチスロ編
-- path: `docs/real_machine_db/machines/2024-10-07_kyou-kara-ore-wa-pachislot-hen.md`
-- manufacturer: **ファイトクラブ / コナミアミューズメント**
-- formalModel: **L今日から俺は！！FE**
-- inspectionCode: **4S0633**
+## No.1679 — L 真・一騎当千
+- path: `docs/real_machine_db/machines/2024-10-07_l-shin-ikkitousen.md`
+- manufacturer: **Daiichi**
+- formalModel: **Lパチスロ真・一騎当千V**
+- inspectionCode: **430303**
 - releaseDate: **2024-10-07**
 - generation: **6.5号機 / スマスロ**
-- systemType: **AT / 擬似ボーナス**
-- payoutRate: **97.9 / 99.0 / 100.5 / 104.1 / 108.0 / 113.0%**
-- bonusCombined: **1/216.1 / 1/210.7 / 1/204.0 / 1/190.6 / 1/177.9 / 1/165.8**
-- base: **約34.5G/50枚 canonical（G-net 35.4GとCONFLICT）**
-- netIncrease: **約6.0枚/G**
-- normalCeiling: **最大1280G+α**
-- resetCeiling: **最大768G+α / モードB以上**
-- settingChange: **天井・内部状態RESET、3回分モード抽選、初当たり3回目まで優遇**
-- carryOver: **主要内部進行は引継ぎ側、全項目の機種固有一括契約は一部UNVERIFIED**
-- powerCycle: **天井・内部状態CARRY_OVER / ガックンなし**
-- advantageousSection: **UNVERIFIED_AFTER_RESEARCH**
-- detection: **設定変更時ガックンあり / 電源OFF→ON時なし。対策可能のため確定判別扱いしない**
+- systemType: **AT / 擬似ボーナス / ST型AT**
+- payoutRate: **97.6 / 99.0 / 101.0 / 105.8 / 109.5 / 112.0%**
+- AT initial: **1/321.3 / 1/310.8 / 1/291.6 / 1/245.7 / 1/232.3 / 1/222.1**
+- CZ initial: **1/154 / 1/148 / 1/138 / 1/115 / 1/110 / 1/105**
+- base: **約31G/50枚**
+- netIncrease: **約3.3枚/G**
+- normalCeiling: **最大1000G+α**
+- resetCeiling: **最大400G+α / 通常D or 天国**
+- settingChange: **天井・内部状態・有利区間RESET / モード再抽選 / 規定Gランダム減算**
+- carryOver: **天井・内部状態・有利区間CARRY_OVER**
+- powerCycle: **天井・内部モード・内部状態・有利区間CARRY_OVER**
+- detection: **400G+α超AT非当選で据え置き濃厚材料 / ステージ単独不可 / ガックンUNVERIFIED**
 
 ## 2024-10-07境界 — OPEN
 1. スマスロ 鬼武者3 — No.1676 DONE
 2. スマスロ頭文字D 2nd — No.1677 DONE
 3. 今日から俺は!! パチスロ編 — No.1678 DONE
-4. L 真・一騎当千 — NEXT / 2024-10-07全国導入確認済み / `Lパチスロ真・一騎当千V` / `430303`
-5. トリプルクラウンフォーユー — HAZUSE 2024-10-07, `SトリプルクラウンX2-30`, `4S0038`; 30φ・地域/段階導入監査要
-- グリーンべると/P-WORLD主要全国スケジュールとHAZUSE/メーカー別一覧で差があるため、PB・地域先行・別型式・延期を再監査してからCLOSED判定する。
+4. L 真・一騎当千 — No.1679 DONE
+5. トリプルクラウンフォーユー — NEXT CANDIDATE / HAZUSE・パチビー 2024-10-07 / `SトリプルクラウンX2-30` / `4S0038` / 清龍ゲームジャパン。ぱちんこキュレーションは `2024-10-07（沖縄県）` と明記するため、30φ地域先行/段階流通監査を完了してからcanonical採否・No.1680採番を決める。
+- 同日群を閉じる前にメーカー別一覧・当時新台カレンダー・HAZUSE/P-WORLD等を再照合し、PB/地域先行/別型式/延期を監査。
 
 ## resetBehavior 遡及QA
 - 既処理確認済みカーソル: `2007-07-09_genju-haou-t.md`（幻獣覇王T）。
 - 新規時系列収集を優先し、今回も旧レコードへの推測更新は実施していない。
 
 ## 次回再開地点
-- 最新mainを再同期しNo.1678と本handoffを確認。
-- **No.1679候補 `L 真・一騎当千` — 2024-10-07** を性能コア + resetBehavior v0.7で収集。
-- 確認済み識別情報: `Lパチスロ真・一騎当千V` / 検定番号 `430303` / Daiichi / 2024-10-07。
-- その後 `トリプルクラウンフォーユー` の30φ・地域/段階導入を監査し、同日canonical採否を確定。
-- 2024-10-07境界を閉じる前にメーカー別一覧・当時新台カレンダー・HAZUSE/P-WORLD等を再照合し、PB/地域先行/別型式/延期を監査。
+- 最新mainを再同期しNo.1679と本handoffを確認。
+- **`トリプルクラウンフォーユー` の地域先行/段階導入監査を最優先**。2024-10-07を沖縄県導入日として独立canonicalレコードに採るか確定する。
+- 採番する場合はNo.1680として性能コア + resetBehavior v0.7を収集。既確認値: `SトリプルクラウンX2-30` / `4S0038` / 清龍ゲームジャパン / 30φノーマル / 機械割96.84〜108.02% / BIG 1/287.44〜1/238.31 / REG 1/496.48〜1/309.13 / BIG最大252枚 / REG最大98枚 / 天井非搭載。
+- 同日群完了後、次の全国導入日境界へ進む。
 - 欠損は表記揺れ・正式型式・メーカー・シリーズ名、設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間等へ検索語を変え、公式・業界・主要解析・旧DB・アーカイブ/回顧資料横断後のみUNVERIFIED。
 
 ## 今回の主要ソース
 取得日: 2026-09-14
-- コナミアミューズメント公式: https://www.konami.com/amusement/psm/slot/kyoukaraoreha/00_top.html
-- コナミアミューズメント企業ニュース: https://www.konami.com/amusement/corporate/ja/topics/20241004/
-- G-net販売概要: https://g-net-ps.com/info/s0148/
-- HAZUSE 今日から俺は!!: https://hazuse.com/machine/pachislot/4S0633/
-- 遊技日本/P-WORLD: https://news.p-world.co.jp/articles/28421/nippon
-- 必勝本 設定変更時の挙動: https://hisshobon.com/machineinfo/84569/
-- 必勝本 狙いドコロ&ヤメ時: https://hisshobon.com/machineinfo/84566/
-- 必勝本 ボーナス解説: https://hisshobon.com/machineinfo/84587/
-- なな徹 朝一/設定変更: https://nana-press.com/kaiseki/machine/810/24302/
-- なな徹 狙い目: https://nana-press.com/kaiseki/machine/810/24300/
-- 一撃 天井/朝一: https://1geki.jp/slot/l_kyoukaraoreha/3/
-- 一撃 ベース: https://1geki.jp/slot/l_kyoukaraoreha/4/
-- ちょんぼりすた: https://chonborista.com/slot/konami-slot/217284/
-- パチセブン: https://pachiseven.jp/machines/7003/cutout/2
-- 必勝本 L 真・一騎当千: https://hisshobon.com/machineinfo/84872/
+- Daiichi公式: https://daiichi777.jp/pachislot/slot_ikkitousen/
 - HAZUSE L 真・一騎当千: https://hazuse.com/machine/pachislot/SX0086/
+- HAZUSE詳細: https://hazuse.com/hd/430303-2/
+- 必勝本 基本スペック: https://hisshobon.com/machineinfo/84872/
+- 一撃 機種トップ: https://1geki.jp/slot/l_shin_ikkitosen/
+- 一撃 天井/朝一: https://1geki.jp/slot/l_shin_ikkitosen/3/
+- 一撃 ベース: https://1geki.jp/slot/l_shin_ikkitosen/4/
+- 一撃 ボーナス: https://1geki.jp/slot/l_shin_ikkitosen/91/
+- なな徹 朝一/設定変更: https://nana-press.com/kaiseki/machine/815/24377/
+- なな徹 モード: https://nana-press.com/kaiseki/machine/815/24380/
+- なな徹 設定判別: https://nana-press.com/kaiseki/machine/815/24357/
+- ちょんぼりすた: https://chonborista.com/slot/d-light/217808/
+- ぽこすろっと 電源OFF→ON比較: https://www.nankaikoya.jp/shin-ikkitousen-kitaichi/
+- HAZUSE トリプルクラウンフォーユー: https://hazuse.com/machine/pachislot/4S0038/
+- パチビー トリプルクラウンフォーユー: https://www.pachibee.jp/machines/index/224090005
+- ぱちんこキュレーション トリプルクラウンフォーユー: https://pachinko-curation.com/50856/
