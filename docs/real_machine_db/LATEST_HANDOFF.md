@@ -1,82 +1,77 @@
 更新日: 2026-09-15
 
 ## 現在地点
-- recordCount: **1759**
-- latestRecordAdded: **SHAKE BONUS TRIGGER — No.1759**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2025-10-20_shake-bonus-trigger.md`
-- chronologicalFrontier: **2025-10-20**
+- recordCount: **1760**
+- latestRecordAdded: **Lパチスロ 革命機ヴァルヴレイヴ2 — No.1760**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2025-11-04_l-pachislot-kakumeiki-valvrave2.md`
+- chronologicalFrontier: **2025-11-04**
 - schema: **resetBehavior v0.7**
-- status: **2025-10-20_BOUNDARY_CLOSED_2_OF_2_CANONICAL_PROCESSED**
+- status: **2025-11-04_BOUNDARY_OPEN_1_OF_3_CANONICAL_PROCESSED**
 
 ## 今回の進捗
-- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前実レコードを再同期。
+- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前実レコードNo.1759を再同期。
 - INDEXは旧スナップショットのため、README規定どおりLATEST_HANDOFF + 実レコードを進捗正本として使用。
-- No.1757 `スマスロ バベル` を追加し、2025-10-06群を3/3 CLOSED。
-- No.1758 `L 荒野のコトブキ飛行隊` とNo.1759 `SHAKE BONUS TRIGGER` を追加し、2025-10-20群を2/2 CLOSED。
-- 2025-11-04群は信頼できる月間一覧・機種スケジュールで `Lパチスロ 革命機ヴァルヴレイヴ2 / スマスロ とある科学の超電磁砲2 / L 絶対衝激Ⅳ` の3機が一致。過去の一部予定表にあった `Lまじかるすいーとプリズム・ナナ` は後に2025-12-08全国導入へ確定したため11/04群には含めない。
+- No.1760 `Lパチスロ 革命機ヴァルヴレイヴ2` を追加。
+- 2025-11-04群は既知canonical 3機のうち1機完了。残りは `スマスロ とある科学の超電磁砲2` → `L 絶対衝激Ⅳ`。
 - 既存COMPLETE_COREの性能完了判定は変更していない。
 
-## No.1758 — L 荒野のコトブキ飛行隊
-- path: `docs/real_machine_db/machines/2025-10-20_l-kouya-no-kotobuki-hikoutai.md`
-- manufacturer: スパイキー（製造） / フィールズ（販売）
-- formalModel: L荒野のコトブキ飛行隊SS / inspectionCode: 5S0846
-- settings: L / 2 / 3 / 4 / 5 / 6
-- payoutRate(setting2-6): 97.4 / 98.8 / 102.5 / 106.2 / 110.8%
-- CZ: 1/212.0 → 1/225.1 / AT: 1/414.9 → 1/318.9
-- base: 約35G/50枚（設定2） / 純増約7.0枚/G
-- reset: 通常最大1500G+α→1400G+α。設定変更時500G 1.6 / 800G 75.0 / 1100G 11.7 / 1400G 11.7%。CZスルー天井0/1/2/4/6スルー=20.3/31.3/37.5/7.8/3.1%、0〜2スルー合算89.1%。
-
-## No.1759 — SHAKE BONUS TRIGGER
-- path: `docs/real_machine_db/machines/2025-10-20_shake-bonus-trigger.md`
-- manufacturer: **大都技研**
-- formalModel: **LB／シェイクボーナストリガー／A1**
-- inspectionCode: **530293**
-- releaseDate: **2025-10-20**
-- settings: **L / 1 / 2 / 5 / 6**
-- payoutRate(setting1/2/5/6): **98.6 / 100.6 / 103.0 / 106.1%**
-- completeStrategyPayout: **100.4 / 102.4 / 104.9 / 108.1%**
-- BIG: **1/350.5 / 1/327.7 / 1/341.3 / 1/297.9**
-- REG: **1/425.6 / 1/332.7 / 1/409.6 / 1/297.9**
-- 合算: **1/192.2 / 1/165.1 / 1/186.2 / 1/148.9**
-- base: **約37G/50枚（設定1）**
-- BIG: **300枚以上保証、BT込み平均約400枚（設定1）** / REG平均約80枚
+## No.1760 — Lパチスロ 革命機ヴァルヴレイヴ2
+- path: `docs/real_machine_db/machines/2025-11-04_l-pachislot-kakumeiki-valvrave2.md`
+- manufacturer: **SANKYO（三共） / 製造: ジェイビー**
+- formalModel: **L革命機ヴァルヴレイヴ2jF**
+- inspectionCode: **5S0736**
+- releaseDate: **2025-11-04**
+- settings: **1 / 2 / 4 / 5 / 6**
+- payoutRate(setting1/2/4/5/6): **97.7 / 99.3 / 104.7 / 110.8 / 114.9%**
+- CZ: **全設定1/324**
+- firstHitCombined: **1/476 / 1/473 / 1/464 / 1/459 / 1/456**
+- base: **約32.7G/50枚**
+- AT/上位AT純増: **約9.0枚/G**
+- 革命BONUS: **45G+α / 平均約460枚 / AT期待度約53%**
+- 革命RUSH: **1セット10G〜100G以上 / 継続期待度約75%**
+- 超革命RUSH: **最大継続率約90%**
 - coreStatus: **COMPLETE_CORE_WITH_RESET_RESEARCH**
 
-### No.1759 resetBehavior v0.7
-- 天井非搭載。設定変更時の天井短縮は `NOT_APPLICABLE`。
-- 朝一専用モード・CZ・規定G数契約は確認されず、リセット狙い上の恩恵は `NONE_CONFIRMED`。
-- 後発機種別解析では設定変更と電源OFF→ONで朝一狙い上の差なしと整理されるが、液晶/演出カスタム等の見た目挙動は高優先資料で直接固定できず推測しない。
-- 本機固有の有利区間を設定変更/据え置き/純電断ごとに直接明記した高優先資料は再探索後も固定できず `UNVERIFIED_MACHINE_SPECIFIC_AFTER_RESEARCH`。
-- 本機固有ガックン条件/発生率も検索語・型式・メーカーを変えて再探索後 `UNVERIFIED_AFTER_RESEARCH`。
-- 設定L具体性能は公開値を固定できないため推測していない。
+### No.1760 resetBehavior v0.7
+- 設定変更時はBONUS/RUSH間救済が **1500G→1000G**へ短縮。SANKYO公式開発資料で直接確認。
+- 周期天井は通常最大6周期→**最大3周期**へ短縮。
+- 設定変更後モード振り分け: **通常A約69% / 通常B約25% / 通常C約5% / 天国約1%**。通常B以上合算約31%。
+- 設定変更後1周期目は **100ptまたは200ptで周期到達濃厚**。SANKYO公式は、朝一1周期目のみ定点ptからズレて前兆開始する場合があると明記。
+- 据え置き/純電源OFF→ONでは天井・内部状態・モード/ポイント進行を引き継ぐ機種別解析を確認。
+- 有利区間は設定変更時RESET、据え置き時CARRY_OVERを機種別解析で確認。純電断時の有利区間を公式が直接列挙した記述は `UNVERIFIED_DIRECT_WORDING_AFTER_RESEARCH`。
+- 200pt以内に前兆/煽りがなければ据え置き濃厚とする解析あり。ただし「定点ptからズレた前兆=据え置き」ではないと公式が注意喚起。
+- 本機固有ガックン条件/発生率は型式・メーカー・シリーズ名を含め再探索後も `UNVERIFIED_AFTER_RESEARCH`。
+- 設定変更時の具体的な内部状態振り分け数値も `UNVERIFIED_AFTER_RESEARCH`。
 
 ## conflicts / source normalization
-- No.1759の通常/完全攻略機械割、BIG/RB/合算、約37G/50枚はG-net、GreenBelt、なな徹、ちょんぼりすた等で一致し重大CONFLICTなし。
-- 一部後発記事に導入日2025-10-06との誤記があるが、大都技研告知転載、GreenBelt、G-net、HAZUSE、情報島等は2025-10-20で一致。10/06は `CONFLICT_LIKELY_SECONDARY_DATE_ERROR` として隔離。
-- BIG平均は業界公表「約400枚」と後発精密値413.5枚があり、同一定義の丸め/精密差として約400枚を基本性能、413.5枚を補助値に保持。
+- 初当り、機械割、CZ、ベース、純増は1geki・なな徹・ちょんぼりすた等で一致し重大CONFLICTなし。
+- 1gekiの一部ページでは設定変更時ゲーム数天井が「調査中」と残るが、SANKYO公式開発資料が2025-12-03に設定変更後1000Gを明記。値の競合ではなく情報更新差と判断し、公式1000Gをcanonical採用。
+- 有利区間の通常時切断条件には一部解析で実戦予想が含まれるため、設定変更時RESET以外の予想条件は確定値へ昇格していない。
 
-## 2025-10-20境界 — CLOSED 2/2 canonical
-1. L 荒野のコトブキ飛行隊 — No.1758 DONE
-2. SHAKE BONUS TRIGGER — No.1759 DONE
+## sources summary
+retrievedAt: 2026-09-15
+- SANKYO公式オンライン博物館: 導入月、純増、機種概要。
+- SANKYOプレスリリース: 2025-11-04全国導入開始。
+- SANKYO開発こぼれ話「救済機能」: 通常1500G/CZ999G、設定変更後1000G、1500G到達恩恵1:1:1。
+- SANKYO開発こぼれ話「設定変更後の挙動」: 朝一1周期目の前兆開始ptズレ。
+- SANKYO開発こぼれ話「通常時のモード」: A/B/C/天国のモード構造。
+- 1geki / なな徹 / ちょんぼりすた: 設定別性能、周期、AT、朝一比較。
+- なな徹: 設定変更後モード69/25/5/1%、有利区間、200pt判別。
+- ジャグラーズネット / 6確: 電源OFF→ON・据え置きの引継ぎ補助照合。
 
-boundaryAudit:
-- 情報島過去新台一覧、ALL7月間一覧、G-net開店日、各機種固有資料を再照合し2機で一致。
-- PB・別型式・地域先行・延期/段階導入を再探索し追加対象を確認できずCLOSED。
-
-## 次の境界 — 2025-11-04 OPEN 0/3 known canonical
-1. **Lパチスロ 革命機ヴァルヴレイヴ2 — No.1760 CANDIDATE**
+## 2025-11-04境界 — OPEN 1/3 known canonical
+1. **Lパチスロ 革命機ヴァルヴレイヴ2 — No.1760 DONE**
 2. **スマスロ とある科学の超電磁砲2 — No.1761 CANDIDATE**
 3. **L 絶対衝激Ⅳ — No.1762 CANDIDATE**
 
 boundaryCandidateEvidence:
-- パチビー2025年11月導入日一覧、1geki月間新台スケジュール、P-Summaの11月パチスロ新台整理で上記3機の11/04導入が一致。
-- P-Summaは11月全体を4機とし、残るスマスロネオプラネットは11/17。
-- 一部旧予定カレンダーに11/04予定と出た `Lまじかるすいーとプリズム・ナナ` は、カルミナ発売告知および後発資料で全国導入2025-12-08と確定しているため11/04境界から除外。
+- 直前handoffでパチビー2025年11月導入日一覧、1geki月間新台スケジュール、P-Summaの11月整理を照合し上記3機の11/04導入が一致済み。
+- 一部旧予定カレンダーの `Lまじかるすいーとプリズム・ナナ` は後に2025-12-08全国導入へ確定したため11/04境界から除外済み。
 
 ## 次回再開地点
-- 最新mainを再同期しNo.1759と本handoffを確認。
-- **No.1760候補「Lパチスロ 革命機ヴァルヴレイヴ2」— 2025-11-04** から本線を継続する。
-- その後 `スマスロ とある科学の超電磁砲2` → `L 絶対衝激Ⅳ` を処理し、2025-11-04境界をPB・別型式・地域先行・延期/段階導入まで再監査する。
+- 最新mainを再同期しNo.1760と本handoffを確認。
+- **No.1761候補「スマスロ とある科学の超電磁砲2」— 2025-11-04** から本線を継続する。
+- その後 `L 絶対衝激Ⅳ` を処理し、2025-11-04境界をPB・別型式・地域先行・延期/段階導入まで再監査する。
 - 性能コアに加え、設定変更/据え置き/電源OFF→ON、ゲーム数/天井、モード/状態、有利区間、朝一恩恵/不利、変更判別、公開朝一数値を独立管理する。
 - PARTIAL/UNVERIFIEDは正式型式・検定番号・メーカー・シリーズ名、リセット/朝一/据え置き/電源OFF ON/ガックン/有利区間へ検索語と資料系統を変えて再探索する。
 
