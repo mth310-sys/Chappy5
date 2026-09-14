@@ -1,55 +1,59 @@
 更新日: 2026-09-14
 
 ## 現在地点
-- recordCount: **1744**
-- latestRecordAdded: **マタドールIII — No.1744**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2025-08-04_matador-iii.md`
+- recordCount: **1745**
+- latestRecordAdded: **パチスロ 転生したら剣でした — No.1745**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2025-08-04_pachislot-tensei-shitara-ken-deshita.md`
 - chronologicalFrontier: **2025-08-04**
 - schema: **resetBehavior v0.7**
-- status: **2025-08-04_GROUP_OPEN_2_OF_6_CANONICAL_PROCESSED**
+- status: **2025-08-04_GROUP_OPEN_3_OF_6_CANONICAL_PROCESSED**
 
 ## 今回の進捗
-- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前No.1743実レコードを再同期。
+- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前No.1744実レコードを再同期。
 - INDEXは旧スナップショットのため、README規定どおりLATEST_HANDOFF + 実レコードを進捗正本として使用。
-- No.1744 `マタドールIII` を追加し、性能コア + resetBehavior v0.7を保存。
-- 2025-08-04群はcanonical 6機のうち2/6処理済みとしてOPENを維持。
+- No.1745 `パチスロ 転生したら剣でした` を追加し、性能コア + resetBehavior v0.7を保存。
+- 2025-08-04群はcanonical 6機のうち3/6処理済みとしてOPENを維持。
 - 既存COMPLETE_COREの性能完了判定は変更していない。
 
-## No.1744 — マタドールIII
-- path: `docs/real_machine_db/machines/2025-08-04_matador-iii.md`
-- manufacturer: **北電子**
-- formalModel: **LBマタドールIII TT**
-- inspectionCode: **530169**
+## No.1745 — パチスロ 転生したら剣でした
+- path: `docs/real_machine_db/machines/2025-08-04_pachislot-tensei-shitara-ken-deshita.md`
+- manufacturer: **グレードワン**
+- salesBrand: **コナミアミューズメント**
+- formalModel: **L転生したら剣でしたGT**
+- inspectionCode: **5S0141**
 - releaseDate: **2025-08-04**
 - settings: **1 / 2 / 3 / 4 / 5 / 6**
-- payoutRate: **97.4 / 98.9 / 100.3 / 103.5 / 106.5 / 110.0%**
-- BIG: **1/278.9 / 1/268.6 / 1/260.1 / 1/244.5 / 1/231.6 / 1/219.9**
-- REG: **1/434.0 / 1/417.4 / 1/402.1 / 1/362.1 / 1/334.4 / 1/299.3**
-- combined: **1/169.8 / 1/163.4 / 1/157.9 / 1/146.0 / 1/136.8 / 1/126.8**
-- base: **約36G/50枚**
-- netIncrease: **NOT_APPLICABLE_REAL_BONUS_BT**
-- basicPayout: **BIG最大約302枚（BT込み） / REG最大約104枚**
-- normalCeiling: **NONE**
+- payoutRate: **97.9 / 99.0 / 101.2 / 105.7 / 109.1 / 112.1%**
+- CZ: **1/215.8 / 1/214.2 / 1/211.0 / 1/204.8 / 1/201.2 / 1/197.8**
+- bonus: **1/398.6 / 1/388.7 / 1/380.8 / 1/352.0 / 1/335.0 / 1/316.8**
+- AT: **1/403.8 / 1/396.0 / 1/373.4 / 1/340.7 / 1/325.9 / 1/312.8**
+- base: **約33.3G/50枚**
+- netIncrease: **転剣RUSH約2.4枚/G / 擬似ボーナス系約4.5枚/G**
+- basicPayout: **フランBONUS約80枚 / X転剣BONUS約80枚 / 転剣RUSH初期50〜200G**
+- normalAtCeiling: **最大970G+α**
+- normalBonusCeiling: **最大1280G+α**
 - coreStatus: **COMPLETE_CORE_WITH_RESET_RESEARCH**
 
-### No.1744 resetBehavior v0.7
-- 天井非搭載。設定変更時の天井RESET/短縮、据え置き/電断時の天井引継ぎはNOT_APPLICABLE。
-- 天井管理用の通常A/B、天国、CZ/ATモード等は確認されず、朝一専用モード/固定ゾーンも確認されない。
-- 設定変更専用の朝一高確、CZ優遇、初当たり優遇、短縮天井などの公開恩恵は十分な再探索後もNONE_CONFIRMED_AFTER_RESEARCH。
-- 設定変更/据え置き/純電断時のボーナス成立状態・BT状態を直接比較した機種固有高優先資料は固定できずUNVERIFIED_AFTER_RESEARCH。
-- 本機固有の有利区間RESET/CARRY_OVER契約も直接資料を固定できずUNVERIFIED_MACHINE_SPECIFIC_AFTER_RESEARCH。スマスロ/BT機一般論から補完していない。
-- 本機固有ガックン条件・発生率、ランプ/表示による設定変更確定判別はUNVERIFIED_AFTER_RESEARCH。
-- ボーナス確率、BT中1枚役、ボーナス終了時パネルフラッシュは設定推測要素であり、設定変更/据え置き判別とは分離。
-- 公開朝一数値は固定できる専用値なし。
+### No.1745 resetBehavior v0.7
+- 設定変更で有利区間・AT間天井・ボーナス間天井・内部状態・魔石・モードをRESET。据え置きでは同項目をCARRY_OVER。
+- AT間天井は最大970G+α→600G+α、ボーナス間天井は最大1280G+α→980G+αへ短縮。
+- 設定1の変更時モード振り分けはモードB 40.0% / モードC 40.0% / 天国20.0%。モードAは否定。設定2以上の具体振り分けは公開値未固定。
+- 変更後ボーナス間天井候補は200G+α / 500G+α / 980G+α。
+- 純電源OFF→ONは機種別二次解析で天井・内部状態CARRY_OVERを確認。ただし有利区間・魔石・モードまでを純電断条件だけで独立比較する高優先資料は未固定。
+- 朝一からX転剣BONUS 0回の場合、ATモード2選択率はAT2回目約7%（設定1）、3回目約30%・5回目約30%（全設定共通）。朝一行動説明用の補助値として保持。
+- 朝一600GでAT間天井非発動、またはボーナス間980Gでボーナス間天井非発動なら据え置き濃厚材料。
+- ガックンは一部二次解析に「対策なしなら設定変更後1G目有効」の直接記載あり。ただし別系統高優先資料で同条件を照合できず `ANALYSIS_SINGLE_GAKKUN` とした。
+- 設定変更時以外の有利区間リセット後恩恵は設定変更時を除外する旨が公開されているため、朝一恩恵には転記していない。
 
 ## conflicts / source normalization
-- ジャグラーズネットの「メーカー公表値」表は設定4〜6のBIG/REG/合算欄に北電子公式・遊技通信・P-WORLD・必勝本・一撃と不一致の値が混在し、同表内で算術整合も崩れるため `CONFLICT_LIKELY_TABLE_TRANSCRIPTION_ERROR` として隔離。canonicalは複数高優先資料で一致する値を採用。
+- 一部後発二次サイトに設定3機械割 `101.0%` の記載があるが、一撃・必勝本・パチマガスロマガ等は `101.2%` で一致。`101.0%` は `CONFLICT_MINOR_SECONDARY` として隔離しcanonicalは101.2%。
+- メーカー表記は「コナミアミューズメント」と「グレードワン」が混在するが、コナミ公式が製造元=グレードワンと明記するため manufacturer=グレードワン / salesBrand=コナミアミューズメントとして分離。
 
-## 2025-08-04境界 — OPEN 2/6 canonical
+## 2025-08-04境界 — OPEN 3/6 canonical
 1. パチスロなめ猫～液晶ないけどなめんじゃねぇ～ — No.1743 DONE
 2. マタドールIII — No.1744 DONE
-3. パチスロ 転生したら剣でした — NEXT
-4. L アズールレーン THE ANIMATION — QUEUED（2025-07-23京楽直営店フィールドテスト先行導入注記）
+3. パチスロ 転生したら剣でした — No.1745 DONE
+4. L アズールレーン THE ANIMATION — NEXT（2025-07-23京楽直営店フィールドテスト先行導入注記）
 5. L ダーリン・イン・ザ・フランキス — QUEUED
 6. L咲-Saki-頂上決戦 — QUEUED
 
@@ -67,8 +71,9 @@ boundaryAudit:
 - retroQaStatus: **CURSOR_HELD_UNTIL_NEXT_EXISTING_RECORD_CAN_BE_UNIQUELY_RESOLVED**
 
 ## 次回再開地点
-- 最新mainを再同期しNo.1744と本handoffを確認。
-- **No.1745候補「パチスロ 転生したら剣でした」— 2025-08-04** から本線を継続する。
+- 最新mainを再同期しNo.1745と本handoffを確認。
+- **No.1746候補「L アズールレーン THE ANIMATION」— 2025-08-04** から本線を継続する。
+- 2025-07-23の京楽直営店フィールドテスト先行導入と全国導入2025-08-04を混同せず両方注記する。
 - 性能コアに加え、設定変更/据え置き/電源OFF→ON、ゲーム数/天井、モード/状態、有利区間、朝一恩恵/不利、変更判別、公開朝一数値を独立管理する。
 - PARTIAL/UNVERIFIEDは正式型式・検定番号・メーカー・シリーズ名、リセット/朝一/据え置き/電源OFF ON/ガックン/有利区間へ検索語と資料系統を変えて再探索する。
 - 遡及QAは `2007-07-09_genju-haou-t.md` 直後の「既存実レコード」をGit tree/pathで一意確定できた時点から再開する。
@@ -76,19 +81,24 @@ boundaryAudit:
 ## 今回の主要ソース
 取得日: 2026-09-14
 
-### No.1744 マタドールIII
-- 北電子公式: https://www.kitadenshi.co.jp/products/2025/mtd3/
-- 遊技通信: https://www.yugitsushin.jp/news/%E3%83%9C%E3%83%BC%E3%83%8A%E3%82%B9%E3%83%88%E3%83%AA%E3%82%AC%E3%83%BC%E3%82%92%E6%90%AD%E8%BC%89%E3%81%97%E3%81%A6a-300%E5%BE%A9%E6%B4%BB%EF%BC%81%E3%80%8C%E3%83%9E%E3%82%BF%E3%83%89%E3%83%BC/
-- HAZUSE: https://hazuse.com/hd/530169-2/
-- 必勝本 基本スペック: https://hisshobon.com/machineinfo/87419/
-- 必勝本 ボーナス: https://hisshobon.com/machineinfo/87407/
-- 必勝本 BT: https://hisshobon.com/machineinfo/87408/
-- 一撃 機種トップ: https://1geki.jp/slot/l_mtd3/
-- 一撃 天井/朝一: https://1geki.jp/slot/l_mtd3/3/
-- 一撃 ボーナス: https://1geki.jp/slot/l_mtd3/61/
-- P-WORLD: https://www.p-world.co.jp/machine/database/10287
-- 日刊スポーツ: https://www.nikkansports.com/amusement/pachislot/news/202505120000819.html
-- ジャグラーズネット（競合確認用）: https://jugglersnet.com/bt/matador3
+### No.1745 パチスロ 転生したら剣でした
+- コナミアミューズメント公式 製品サイト: https://www.konami.com/amusement/psm/slot/tenken-anime/
+- コナミアミューズメント公式 発売発表: https://www.konami.com/amusement/corporate/ja/topics/20250526/
+- コナミアミューズメント公式 稼働開始案内: https://www.konami.com/amusement/corporate/ja/topics/20250729tk/
+- HAZUSE: https://hazuse.com/hd/5s0141/
+- P-WORLD/グリーンべると 検定通過: https://news.p-world.co.jp/articles/30688/greenbelt
+- 一撃 機種トップ: https://1geki.jp/slot/l_tenken/
+- 一撃 天井・朝一: https://1geki.jp/slot/l_tenken/3/
+- 一撃 モード: https://1geki.jp/slot/l_tenken/47/
+- 一撃 ベース: https://1geki.jp/slot/l_tenken/4/
+- なな徹 設定変更・朝一・据え置き・有利区間: https://nana-press.com/kaiseki/machine/996/31122/
+- 必勝本 基本スペック: https://p.hisshobon.jp/machine/4548/1/110085
+- 必勝本 CZ/ボーナス/AT確率: https://hisshobon.com/machineinfo/87551/
+- 必勝本 モード: https://hisshobon.com/machineinfo/87559/
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/konami_slot/31/kh02.php
+- P-WORLD 機種DB: https://www.p-world.co.jp/machine/database/10308
+- パチビー: https://www.pachibee.jp/machines/index/225070004
+- kaku6（純電断・ガックン単一二次資料）: https://www.kaku6.jp/slot/tenken/
 
 ### 境界監査（前リレーから継承）
 - 1geki 2025年8月新台スケジュール: https://1geki.jp/newmachinecalender/202508/
