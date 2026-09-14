@@ -1,88 +1,81 @@
 更新日: 2026-09-14
 
 ## 現在地点
-- recordCount: **1670**
-- latestRecordAdded: **スマスロ トロピカーナ — No.1670**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2024-08-05_tropicana.md`
-- chronologicalFrontier: **2024-08-05**
+- recordCount: **1671**
+- latestRecordAdded: **A-SLOT+ この素晴らしい世界に祝福を！ — No.1671**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2024-09-02_a-slot-plus-konosuba.md`
+- chronologicalFrontier: **2024-09-02**
 - schema: **resetBehavior v0.7**
-- status: **2024-08-05_BOUNDARY_CLOSED_4_OF_4_CANONICAL_PROCESSED**
+- status: **2024-09-02_BOUNDARY_OPEN_1_OF_4_CANONICAL_PROCESSED**
 
 ## 今回の進捗
-- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直近No.1669を確認。INDEXは旧19件表示のためREADME規定どおりLATEST_HANDOFF + 実レコードを進捗正本として使用。
-- 直前指定のNo.1670候補 `スマスロ トロピカーナ` を性能コア + resetBehavior v0.7で登録。
-- ユニバーサル公式、P-WORLD/遊技日本、HAZUSE、P-WORLD機種DB、一撃、必勝本、なな徹、パチビー、ちょんぼりすた、スロパチクエスト、K-Naviを横断。
-- 型式 `L／トロピカーナ／NT`、検定番号 `3S1646`、ミズホ、2024-08-05全国導入を照合。
-- 本機は通常の設定1〜6ではなく、1段階設定 + 出玉率モード0〜7で性能が変動する特殊仕様。モード別出玉率/初当りを設定別に変換せずそのまま保持。
-- 出玉率はmode0〜6で93.0/94.4/98.8/99.4/104.4/107.5/113.6%。mode7機械割は主要解析で未公開のため噂値を採用せず `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
-- ボーナス初当りはmode0〜7で1/239.5, 1/264.7, 1/233.1, 1/265.6, 1/224.0, 1/247.2, 1/218.8, 1/235.4。ベース約31.9G/50枚、純増約6.0枚/G、BIG約204枚（約210枚表記も保持）、REG約105枚。
-- mode7 REG確率はHAZUSE/P-WORLD系 `1/638.2` と、ちょんぼりすた `1/683.2` が競合。平均化せずCONFLICT。
-- 通常ボーナス間天井777G、設定変更/有利区間リセット後は最大700Gへ短縮。
-- 設定変更時の出玉率モード振り分けは0:12.5 / 1:20.3 / 2:0.8 / 3:0.8 / 4:2.3 / 5:3.1 / 6:10.2 / 7:50.0%。mode4以上65.6%（主要解析の約66%と一致）。
-- 純電源OFF→ONは天井G数・出玉率モードを引継ぎ。内部状態も引継ぎとする解析比較あり。
-- 朝一700G超でボーナス非当選なら据え置き濃厚材料。ただし有利区間移行タイミングによる若干のズレ注記あり。
-- 本機固有ガックン、電断後の表示/ランプ復帰、トロピカループ間スルー回数の設定変更vs据え置き完全契約は検索語・資料系統変更後も固定できずUNVERIFIED。
-- 2024年8月のパチスロ全国導入は主要新台カレンダーで8/5の4機のみ。8/19はパチスロ0機種を再確認し、2024-08-05境界をCLOSED判定。
+- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直近No.1670を確認。INDEXは旧19件表示のためREADME規定どおりLATEST_HANDOFF + 実レコードを進捗正本として使用。
+- 別リレー進行に追従し、2024-08-05群がNo.1670 `スマスロ トロピカーナ` まで4/4 CLOSEDであることを確認。
+- 次の未処理機種No.1671候補 `A-SLOT+ この素晴らしい世界に祝福を！` を性能コア + resetBehavior v0.7で登録。
+- サミー公式、P-WORLD/遊技通信・遊技日本、Amusement Japan、P-WORLD機種DB、必勝本、なな徹、パチビー、ちょんぼりすた、K-Navi、Ativo、マルっとWAVEを横断。
+- ロデオ製造/サミー、型式 `L A-SLOT+このすば FX`、検定番号 `4S0262`、2024-09-02導入を照合。
+- 市場予想機械割98.5/99.3/101.2/102.9/105.1/107.6%、完全攻略時100.2/101.1/103.2/105.1/107.6/110.4%。
+- BIG 1/266.4→1/238.3、REG 1/399.6→1/312.1、合算1/159.8→1/135.1、ベース約35.2G/50枚（設定1）。
+- BIG約250枚、REG約50枚。AT「このすばタイム」1セット30G、プチRT8G、いずれも純増は現状維持程度。
+- 天井は非搭載。設定変更時はRT状態RESET・RT0開始。純電源OFF→ONはRT状態CARRY_OVER。開始ステージは双方ともアクセルの街orお屋敷で、ステージ単独判別不可。
+- ちょんぼりすた比較では内部状態も設定変更RESET / 電源OFF→ON CARRY_OVER。
+- 本機専用の有利区間設定変更/据え置き契約、本機固有ガックン条件/率、朝一専用モード振り分け/当選率は検索語・型式・メーカーを変えた再探索後も固定できずUNVERIFIED/PUBLIC_VALUE_NOT_FOUND。
+- マルっとWAVEの「AT純増約9.0枚」と、必勝本・パチビー等の「現状維持程度」が競合。機械構造・複数資料一致からcanonicalは現状維持程度としCONFLICT保持。
 
-## No.1670 — スマスロ トロピカーナ
-- path: `docs/real_machine_db/machines/2024-08-05_tropicana.md`
-- manufacturer: **ミズホ（ユニバーサルエンターテインメント）**
-- formalModel: **L／トロピカーナ／NT**
-- inspectionCode: **3S1646**
-- releaseDate: **2024-08-05**
+## No.1671 — A-SLOT+ この素晴らしい世界に祝福を！
+- path: `docs/real_machine_db/machines/2024-09-02_a-slot-plus-konosuba.md`
+- manufacturer: **ロデオ製造 / サミー**
+- formalModel: **L A-SLOT+このすば FX**
+- inspectionCode: **4S0262**
+- releaseDate: **2024-09-02**
 - generation: **6.5号機 / スマスロ**
-- systemType: **AT / 完全告知・擬似ボーナスループ / 1段階設定＋出玉率モード変動**
-- payoutRateByMode: **93.0 / 94.4 / 98.8 / 99.4 / 104.4 / 107.5 / 113.6 / mode7未公開**
-- bonusByMode: **1/239.5 / 1/264.7 / 1/233.1 / 1/265.6 / 1/224.0 / 1/247.2 / 1/218.8 / 1/235.4**
-- base: **約31.9G/50枚**
-- netIncrease: **約6.0枚/G**
-- basic: **BIG約204枚（約210枚表記あり） / REG約105枚 / 波乗りチャンス77G**
-- ceiling: **通常777G / リセット後最大700G**
-- reset: **天井RESET・700G短縮、出玉率モード再抽選、有利区間RESET。**
-- carryOver: **据え置きは天井進行・出玉率モード引継ぎ。**
-- powerCycle: **天井G数・出玉率モード引継ぎ。**
-- morning benefit: **mode7 50.0%、mode4以上65.6%。**
-- public morning numeric: **0=12.5 / 1=20.3 / 2=0.8 / 3=0.8 / 4=2.3 / 5=3.1 / 6=10.2 / 7=50.0%。**
-- detection: **朝一700G超非当選は据え置き濃厚材料。ガックンはUNVERIFIED。**
-- conflict: **mode7 REG 1/638.2 vs 1/683.2。BIG約204枚 vs 約210枚表記。mode7機械割は未公開。**
+- systemType: **A+AT / リアルボーナス + 低純増セット管理AT + プチRT / 技術介入**
+- payoutRate: **98.5 / 99.3 / 101.2 / 102.9 / 105.1 / 107.6%**
+- completeStrategyPayout: **100.2 / 101.1 / 103.2 / 105.1 / 107.6 / 110.4%**
+- BIG: **1/266.4 / 1/265.3 / 1/256.0 / 1/252.1 / 1/246.4 / 1/238.3**
+- REG: **1/399.6 / 1/378.8 / 1/366.1 / 1/346.8 / 1/326.0 / 1/312.1**
+- bonusTotal: **1/159.8 / 1/156.0 / 1/150.7 / 1/146.0 / 1/140.3 / 1/135.1**
+- base: **約35.2G/50枚（設定1）**
+- netIncrease: **AT/プチRTとも現状維持程度**
+- basic: **BIG約250枚 / REG約50枚 / このすばタイム30G/セット / プチRT8G**
+- ceiling: **非搭載**
+- reset: **RT状態RESET → RT0開始。内部状態RESETとする解析あり。**
+- carryOver/powerCycle: **純電源OFF→ONでRT状態CARRY_OVER。内部状態も引継ぎとする解析あり。**
+- advantageousSection: **UNVERIFIED_AFTER_RESEARCH（機種専用直接契約を固定できず）**
+- morning benefit: **専用天井短縮・専用当選優遇は確認できず。**
+- detection: **開始ステージ候補が設定変更/電断で共通。ガックンUNVERIFIED。**
+- conflict: **AT純増 約9.0枚表記 vs 現状維持程度。canonicalは複数資料一致の現状維持程度。**
 
-## 2024-08-05境界 — CLOSED 4/4
-1. スマスロ ゲゲゲの鬼太郎 覚醒 — No.1667 DONE
-2. L D4DJ Pachi-Slot Mix — No.1668 DONE
-3. Lワンパンマン — No.1669 DONE
-4. スマスロ トロピカーナ — No.1670 DONE
-
-## 境界再監査
-- 一撃2024年8月カレンダー: 8/5パチスロ4機、8/19パチスロ0機。
-- K-Navi 2024年8月カレンダーも8/5上記4機、8/19はパチンコのみ。
-- したがって通常全国導入の8月本線は4機でCLOSED。PB・地域先行・別型式については次回開始時にも漏れ防止監査を継続する。
+## 2024-09-02境界 — OPEN 1/4
+1. A-SLOT+ この素晴らしい世界に祝福を！ — No.1671 DONE
+2. Lパチスロ閃乱カグラ2 SHINOVI MASTER — No.1672候補 / NEXT
+3. パチスロ かぐや様は告らせたい
+4. パチスロL黄門ちゃま天
 
 ## 次回再開地点
-- 最新mainを再同期しNo.1670と本handoffを確認。
-- 次の全国導入境界は **2024-09-02**。
-- 現時点のknown canonicalは4機:
-  1. **A-SLOT+ この素晴らしい世界に祝福を！** — No.1671候補 / NEXT
-  2. **Lパチスロ閃乱カグラ2 SHINOVI MASTER**
-  3. **パチスロ かぐや様は告らせたい**
-  4. **パチスロL黄門ちゃま天**
-- 一撃2024年9月カレンダーで2024-09-02スロット4機を確認。9/17はパチスロハイパーラッシュ1機。
-- まずNo.1671候補 `A-SLOT+ この素晴らしい世界に祝福を！` から性能コア + resetBehavior v0.7を収集する。
+- 最新mainを再同期しNo.1671と本handoffを確認。
+- **No.1672候補 `Lパチスロ閃乱カグラ2 SHINOVI MASTER` — 2024-09-02** から性能コア + resetBehavior v0.7を収集。
+- その後 `パチスロ かぐや様は告らせたい` → `パチスロL黄門ちゃま天` の順で同日群を継続。
 - 4機処理後、PB・別型式・地域先行・延期/段階導入を再監査して2024-09-02群CLOSED判定。
+- 2024-09-17には別境界として `パチスロハイパーラッシュ` が確認済み。9/2群完了前に飛ばさない。
 - 欠損は表記揺れ・正式型式・メーカー・シリーズ名、設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックン/有利区間等へ検索語を変え、公式・業界・主要解析・旧DB・アーカイブ/回顧資料横断後のみUNVERIFIED。
 
 ## 今回の主要ソース
 取得日: 2026-09-14
-- ユニバーサル公式: https://www.universal-777.com/product/slot/tropicana/
-- P-WORLD / 遊技日本 検定通過: https://news.p-world.co.jp/articles/26893/nippon
-- HAZUSE: https://hazuse.com/machine/pachislot/3S1646/
-- P-WORLD 機種DB: https://www.p-world.co.jp/machine/database/10064
-- 一撃 朝一/設定変更: https://1geki.jp/slot/l_tropicana/3/
-- 必勝本 基本スペック: https://hisshobon.com/machineinfo/84030/
-- 必勝本 モード移行: https://hisshobon.com/machineinfo/84036/
-- なな徹 天井/リセット: https://nana-press.com/kaiseki/machine/788/23211/
-- パチビー: https://www.pachibee.jp/machines/kouryaku/224060008
-- ちょんぼりすた: https://chonborista.com/slot/universal-slot/214693/
-- スロパチクエスト: https://www.slopachi-quest.com/article/tropicana-tenjou/
-- 一撃 2024年8月新台カレンダー: https://1geki.jp/newmachinecalender/202408/
-- K-Navi 2024年8月新台カレンダー: https://p-kn.com/calendar/202408/
+- サミー公式 製品一覧: https://www.sammy.co.jp/japanese/products/pachislot/index.html
+- サミー公式 製品ページ: https://www.sammy.co.jp/japanese/product/pachislot/A_kon_su/
+- P-WORLD / 遊技通信: https://news.p-world.co.jp/articles/28170/yugitsushin
+- P-WORLD / 遊技日本 検定通過: https://news.p-world.co.jp/articles/27673
+- P-WORLD 機種DB: https://www.p-world.co.jp/machine/database/10081
+- Ativo 型式/検定番号: https://ativo.jp/2024/06/28/%EF%BD%8C%E3%80%80a%E2%80%90slot-%E3%81%93%E3%81%AE%E7%B4%A0%E6%99%B4%E3%82%89%E3%81%97%E3%81%84%E4%B8%96%E7%95%8C%E3%81%AB%E7%A5%9D%E7%A6%8F%E3%82%92/
+- パチビー: https://www.pachibee.jp/machines/index/224080003
+- 必勝本 基本スペック: https://p.hisshobon.jp/machine/4345/1/105001
+- 必勝本 天井&設定変更: https://p.hisshobon.jp/machine/4345/1/103443
+- 必勝本 AT: https://hisshobon.com/machineinfo/84440/
+- なな徹 スペック/ベース: https://nana-press.com/kaiseki/machine/805/22490/
+- なな徹 AT: https://nana-press.com/kaiseki/machine/805/23845/
+- ちょんぼりすた: https://chonborista.com/slot/sammy-slot/216450/
+- K-Navi: https://p-kn.com/slot/4177/
+- Amusement Japan: https://amusement-japan.co.jp/article/detail/10004391/
+- マルっとWAVE: https://marutto-w.com/industry_news/20240905-2
 - 一撃 2024年9月新台カレンダー: https://1geki.jp/newmachinecalender/202409/
