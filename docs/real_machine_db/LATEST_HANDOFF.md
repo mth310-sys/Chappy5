@@ -1,70 +1,52 @@
 更新日: 2026-09-14
 
 ## 現在地点
-- recordCount: **1693**
-- latestRecordAdded: **沖ドキ！ゴージャス 25φ — No.1693**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2024-12-02_okidoki-gorgeous-25phi.md`
-- chronologicalFrontier: **2024-12-02**
+- recordCount: **1694**
+- latestRecordAdded: **Lパチスロ ダンベル何キロ持てる？ — No.1694**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2024-12-16_dumbbell-nankilo-moteru.md`
+- chronologicalFrontier: **2024-12-16**
 - schema: **resetBehavior v0.7**
-- status: **2024-12-02_BOUNDARY_CLOSED_7_OF_7_CANONICAL_PROCESSED**
+- status: **2024-12-16_BOUNDARY_OPEN_1_OF_3_KNOWN_CANONICAL_PROCESSED**
 
 ## 今回の進捗
-- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前No.1690を再同期。INDEXは旧19件表示のためREADME規定どおりLATEST_HANDOFF + 実レコードを進捗正本として使用。
-- No.1691 `桃太郎電鉄 ～パチスロも定番！～`、No.1692 `沖ドキ！ゴージャス 30φ`、No.1693 `沖ドキ！ゴージャス 25φ` を追加し、性能コア + resetBehavior v0.7を収録。
-- 2024-12-02導入群を当時新台カレンダーで再監査し、犬夜叉2 / ルパン三世 大航海者の秘宝 / ウルトラミラクルジャグラー / 聖戦士ダンバイン / 桃太郎電鉄 / 沖ドキ！ゴージャス30φ / 25φ の7レコードで境界をCLOSED判定。
+- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前No.1693を再同期。INDEXは旧19件表示のためREADME規定どおりLATEST_HANDOFF + 実レコードを進捗正本として使用。
+- No.1694 `Lパチスロ ダンベル何キロ持てる？` を追加し、性能コア + resetBehavior v0.7を収録。
+- 2024-12-16群は当時新台カレンダー/新台分析で `Lパチスロ ダンベル何キロ持てる？` / `Lとある科学の一方通行` / `Lスーパービンゴネオ` の3機をknown canonicalとして再確認。現時点1/3処理済み。
 
-## No.1691 — 桃太郎電鉄 ～パチスロも定番！～
-- path: `docs/real_machine_db/machines/2024-12-02_momotaro-dentetsu-pachislot-mo-teiban.md`
-- manufacturer: **KPE製造 / コナミアミューズメント**
-- formalModel: **L桃太郎電鉄定番PU**
-- inspectionCode: **4S1052**
-- releaseDate: **2024-12-02**
-- payoutRate: **97.9 / 98.9 / 100.3 / 105.3 / 108.2 / 111.2%**
-- teibanChance: **1/183.3 → 1/153.2**
-- dentetsuBonus: **1/425.5 → 1/357.8**
-- base: **33.7G/50枚**
-- netIncrease: **約2.5枚/G / 上位約4.0枚/G**
-- reset: **有利区間・天井・内部状態・資産・金庫pt RESET**
-- resetCeiling: **3年約720G→最大2年平均約480G / 1年目約25% / 2年目当選濃厚**
-- resetMissCeiling: **最大6スルー→最大2スルー**
-- powerCycle: **有利区間・天井・内部状態・資産・金庫pt引継ぎ**
-- conflicts: **設定4機械割105.3 vs 106.4 / 設定3電鉄ボーナス1/406.0 vs 1/406.6。平均化せず保持。**
+## No.1694 — Lパチスロ ダンベル何キロ持てる？
+- path: `docs/real_machine_db/machines/2024-12-16_dumbbell-nankilo-moteru.md`
+- manufacturer: **SANKYO**
+- formalModel: **Lダンベル何キロ持てる？X**
+- inspectionCode: **4S0474**
+- releaseDate: **2024-12-16**
+- payoutRate: **97.7 / 98.7 / 101.3 / 105.8 / 108.5 / 114.9%**
+- CZ: **1/247 → 1/239**
+- AT: **1/591 → 1/504**
+- base: **約32.5G/50枚**
+- netIncrease: **約8.5枚/G**
+- normalAT: **30G+α / 平均約75G / 平均約640枚**
+- upperAT: **平均約1070枚 / 純増約8.5枚/G**
+- reset: **天井・内部状態・有利区間RESET / 液晶G・摂取カロリー0表示 / 内部Gランダム加算**
+- resetCeiling: **AT間1500G+α → 1000G+α**
+- carryOver: **天井・内部状態・有利区間・内部G・摂取カロリーCARRY_OVER**
+- powerCycle: **AT間天井・内部G・有利区間・摂取カロリーCARRY_OVER、表示は0**
+- resetBenefit: **設定変更後1回目の終了画面で紫枠出現率約6～10倍**
+- resetDetection: **朝一1000G消化でAT間天井非発動なら据え置き濃厚。表示単独判別不可。**
+- missing: **内部Gランダム加算の具体的範囲/振り分け、本機固有ガックン、独立朝一モード振り分けは再探索後も未固定**
+- conflict: **AT初当り設定5は主要複数資料1/512、一撃設定判別ページ1/514。canonical=1/512、CONFLICT保持。**
 
-## No.1692 / 1693 — 沖ドキ！ゴージャス 30φ / 25φ
-- 30φ: **エレコ / S／沖ドキ！BLACK／XA / 4S0556**
-- 25φ: **ミズホ / S／沖ドキ！BLACK／GS / 4S1049**
-- releaseDate: **2024-12-02**
-- settings: **1 / 2 / 3 / 5 / 6 / L**
-- payoutRate: **97.2 / 98.7 / 101.9 / 104.9 / 109.0%**
-- initialHit: **1/288.7 → 1/246.4**
-- BIG: **1/213.7 → 1/159.4 / 約210枚**
-- REG: **1/288.5 → 1/239.0 / 約90枚**
-- base: **約32G/50枚**
-- netIncrease: **約3.5枚/G**
-- resetMode: **通常A50.0% / 通常B10.2% / チャンス39.8%**
-- chanceCeiling: **200G**
-- normalABShorten: **25.0%で999G→399G**
-- resetWithin400Approx: **約65%**
-- advantageousSection: **設定変更でRESET**
-- powerCycle / full carry direct table: **機種固有の直接記載を再探索後も固定できずUNVERIFIED_AFTER_RESEARCH**
-- gakkun: **UNVERIFIED_AFTER_RESEARCH**
-- conflict: 一部後発整理サイトに朝一振り分け **57.03/9.77/33.20** があるが、必勝本・なな徹・P-WORLD等の **50.0/10.2/39.8** が複数一致。平均化せずCONFLICT保持。
-
-## 2024-12-02境界 — CLOSED 7/7
-1. L 犬夜叉2 — No.1687 DONE
-2. Lルパン三世 大航海者の秘宝 — No.1688 DONE
-3. Sウルトラミラクルジャグラー — No.1689 DONE
-4. スマスロ 聖戦士ダンバイン — No.1690 DONE
-5. 桃太郎電鉄 ～パチスロも定番！～ — No.1691 DONE
-6. 沖ドキ！ゴージャス 30φ — No.1692 DONE
-7. 沖ドキ！ゴージャス 25φ — No.1693 DONE
-- 当時新台カレンダーで2024-12-02のパチスロ7枠を再照合し、30φ/25φを別メーカー・別型式として独立レコード化したためCLOSED。
+## 2024-12-16境界 — OPEN 1/3 known canonical
+1. Lパチスロ ダンベル何キロ持てる？ — No.1694 DONE
+2. Lとある科学の一方通行 — NEXT
+3. Lスーパービンゴネオ — QUEUED
+- 2024-12-16導入開始予定カレンダーおよびパチマガスロマガFREEの新台分析で上記3機を同日導入群として照合。
+- 3機処理後、PB・地域先行・別型式・延期/段階導入を再監査してCLOSED判定する。
 
 ## 次回再開地点
-- 最新mainを再同期しNo.1693と本handoffを確認。
-- **No.1694候補 `Lパチスロ ダンベル何キロ持てる？`（2024-12-16）** から再開。
-- 続いて同日known canonical `スマスロ 一方通行` → `Lスーパービンゴネオ` を処理する。
-- 3候補処理後、PB・地域先行・別型式・延期/段階導入を再監査して2024-12-16境界をCLOSED判定する。
+- 最新mainを再同期しNo.1694と本handoffを確認。
+- **No.1695候補 `Lとある科学の一方通行`（スマスロ 一方通行 とある魔術の禁書目録 / 2024-12-16）** から再開。
+- 続いて `Lスーパービンゴネオ` を処理する。
+- その後2024-12-16境界を再監査し、漏れがなければCLOSED判定して次の日付群へ進む。
 - 各機種は性能コア + resetBehavior v0.7を収集し、設定変更/据え置き/電源OFF→ON、天井、モード/状態、有利区間、朝一恩恵/不利、変更判別、公開朝一数値を独立管理する。
 - PARTIAL/UNVERIFIEDは表記揺れ・正式型式・メーカー・シリーズ名、設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間へ検索語を変え、公式・業界・主要解析・旧DB・アーカイブ/回顧資料横断後のみ確定する。
 
@@ -74,25 +56,18 @@
 
 ## 今回の主要ソース
 取得日: 2026-09-14
-### 桃太郎電鉄 ～パチスロも定番！～
-- KONAMI公式: https://www.konami.com/amusement/corporate/ja/topics/20240920mt/
-- KONAMI公式機種ページ: https://www.konami.com/amusement/psm/slot/momotetsu/
-- HAZUSE: https://hazuse.com/hd/4s1052/
-- P-WORLD: https://www.p-world.co.jp/machine/database/10128
-- なな徹: https://nana-press.com/kaiseki/machine/827/24604/
-- 一撃 朝一: https://1geki.jp/slot/l_momotetsu/3/
-- ちょんぼりすた: https://chonborista.com/slot/konami-slot/221958/
-- 必勝本: https://p.hisshobon.jp/machine/4392/1/105973
-
-### 沖ドキ！ゴージャス 25φ / 30φ
-- 遊技通信: https://news.p-world.co.jp/articles/29091/yugitsushin
-- P-WORLD 30φ: https://www.p-world.co.jp/machine/database/10137
-- パチビー25φ: https://www.pachibee.jp/machines/index/224100009
-- パチビー30φ: https://www.pachibee.jp/machines/about/224100008
-- 必勝本 モード: https://hisshobon.com/machineinfo/85011/
-- 必勝本 有利区間移行: https://hisshobon.com/machineinfo/85021/
-- なな徹 朝一: https://nana-press.com/kaiseki/machine/856/25727/
-- なな徹 モード: https://nana-press.com/kaiseki/machine/856/25731/
+### Lパチスロ ダンベル何キロ持てる？
+- SANKYO公式: https://www.sankyo-fever.jp/collection/971/
+- 遊技日本: https://yugi-nippon.com/pachinko-new-machine/post-67208/
+- グリーンべると/P-WORLD業界ニュース: https://news.p-world.co.jp/articles/29840/greenbelt
+- HAZUSE: https://hazuse.com/machine/pachislot/4S0474/
+- P-WORLD: https://www.p-world.co.jp/machine/database/10141
+- 一撃 機種TOP: https://1geki.jp/slot/l_dumbbell/
+- 一撃 天井/朝一: https://1geki.jp/slot/l_dumbbell/3/
+- なな徹 朝一: https://nana-press.com/kaiseki/machine/855/25386/
+- なな徹 天井: https://nana-press.com/kaiseki/machine/855/25383/
+- ちょんぼりすた: https://chonborista.com/slot/sankyo-slot/222563/
 
 ### 境界監査
-- 2024新台導入日カレンダー: https://pachinkopachisro.com/archives/57949784.html
+- 12月16日導入開始予定機種: https://sulocale.sulopachinews.com/archives/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88/12%E6%9C%8816
+- パチマガスロマガFREE 2024-12-20新台分析: https://pachimaga.com/free/article/20241220/056282.php
