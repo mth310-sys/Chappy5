@@ -1,112 +1,90 @@
 更新日: 2026-09-14
 
 ## 現在地点
-- recordCount: **1736**
-- latestRecordAdded: **LBパチスロ1000ちゃんA — No.1736**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2025-06-02_lb-pachislo-1000chan-a.md`
-- chronologicalFrontier: **2025-06-02**
+- recordCount: **1737**
+- latestRecordAdded: **L 絶対衝激～PLATONIC HEART～ — No.1737**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2025-06-16_l-zettai-shougeki-platonic-heart.md`
+- chronologicalFrontier: **2025-06-16**
 - schema: **resetBehavior v0.7**
-- status: **2025-06-02_BOUNDARY_CLOSED_9_OF_9_CANONICAL_PROCESSED**
+- status: **2025-06-16_BOUNDARY_CLOSED_1_OF_1_CANONICAL_PROCESSED**
 
 ## 今回の進捗
-- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前実レコードを再同期。
+- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前No.1736実レコードを再同期。
 - INDEXは旧スナップショットのため、README規定どおりLATEST_HANDOFF + 実レコードを進捗正本として使用。
-- main上でNo.1734 `スマスロニューパルサーBT`、No.1735 `翔べ！ハーレムエース` の先行追加を確認し、重複作成せず引き継いだ。
-- No.1736 `LBパチスロ1000ちゃんA` を追加し、性能コア + resetBehavior v0.7を保存。
-- HAZUSEほか複数の導入カレンダーで2025-06-02のパチスロ9機が一致。PB・別型式・地域先行・延期/段階導入の追加canonical候補も今回の再監査範囲では確認されず、境界をCLOSED 9/9とした。
+- No.1737 `L 絶対衝激～PLATONIC HEART～` を追加し、性能コア + resetBehavior v0.7を保存。
+- HAZUSE、P-WORLD導入カレンダー、情報島の過去新台一覧で2025-06-16のパチスロ新台は同機1機で一致。PB・別型式・地域先行・延期/段階導入の追加canonical候補も今回の再監査範囲では確認されず、2025-06-16境界をCLOSED 1/1とした。
 
-## No.1734 — スマスロニューパルサーBT
-- path: `docs/real_machine_db/machines/2025-06-02_smart-slot-new-pulsar-bt.md`
-- formalModel: **LBニューパルサーBTC9**
-- inspectionCode: **430949**
-- releaseDate: **2025-06-02**
-- settings: **1 / 2 / 5 / 6**
-- payoutRate: **98.7 / 100.1 / 103.0 / 106.8%**（完全攻略100.0 / 101.5 / 104.5 / 108.3%）
-- BIG: **1/366.1 / 1/346.8 / 1/332.7 / 1/312.1**
-- REG: **1/366.1 / 1/346.8 / 1/332.7 / setting6 CONFLICT 1/312.1 vs 1/312.2**
-- combined: **1/183.1 / 1/173.4 / 1/166.3 / 1/156.0**
-- base: **約39G/50枚（設定1）**
-- reset summary: 天井/通常ゲーム数モード/CZ/ATはNOT_APPLICABLE。設定変更専用恩恵はNONE_CONFIRMED_AFTER_RESEARCH。本機固有ガックン、BT中電断、有利区間直接契約はUNVERIFIED_AFTER_RESEARCH。
+## No.1737 — L 絶対衝激～PLATONIC HEART～
+- path: `docs/real_machine_db/machines/2025-06-16_l-zettai-shougeki-platonic-heart.md`
+- manufacturer: **スパイキー（製造） / フィールズ（発売発表）**
+- formalModel: **L絶対衝激TK**
+- inspectionCode: **4S1524**
+- releaseDate: **2025-06-16**
+- settings: **1 / 2 / 3 / 4 / 5 / 6**
+- payoutRate: **97.4 / 98.3 / 100.2 / 104.1 / 107.4 / 110.2%**
+- bonusCombined: **1/163.0 / 1/162.2 / 1/161.4 / 1/156.0 / 1/146.3 / 1/139.7**
+- AT初当り: **1/336.3 / 1/328.2 / 1/318.6 / 1/299.4 / 1/278.8 / 1/264.7**
+- base: **約36.7G/50枚**
+- netIncrease: **AT約0.3枚/G**
+- basicPayout: **PLATONIC BONUS約200枚 / BATTLE BONUS約50枚 / CZ 5G+α・AT期待度約50% / AT 1セット30G**
+- coreStatus: **COMPLETE_CORE**
 
-## No.1735 — 翔べ！ハーレムエース
-- path: `docs/real_machine_db/machines/2025-06-02_tobe-harem-ace.md`
-- formalModel: **LB翔べ！ハーレムエースCF**
-- inspectionCode: **5S0025**
-- releaseDate: **2025-06-02**
-- settings: **1 / 2 / 5 / 6**
-- payoutRate: **98.1 / 99.9 / 104.7 / 110.0%**（完全攻略100.2 / 102.1 / 107.1 / 112.4%）
-- combined: **1/234.1 / 1/220.7 / 1/186.7 / 1/158.7**
-- base: **43.0 / 43.9 / 45.1 / 46.5G/50枚**
-- reset summary: 機種別比較表で **設定変更時BT RESET / 電源OFF→ON時BT CARRY_OVER** を直接確認。天井なし。開始ステージだけでは変更判別不可。本機固有ガックンと有利区間直接契約はUNVERIFIED_AFTER_RESEARCH。
+### No.1737 resetBehavior v0.7
+- 設定変更: **有利区間RESET / 天井RESET / 内部状態RESET**。
+- 据え置き: **有利区間CARRY_OVER / 天井CARRY_OVER / 内部状態CARRY_OVER**。
+- 通常天井はボーナス/AT終了後 **900G+α**。設定変更後も **900G+α**で固定短縮なし。
+- 純電源OFF→ONは後発機種別解析で **天井・内部状態CARRY_OVER、見た目0Gスタート**。ただし高優先比較表で純電断独立列を固定できないため `ANALYSIS_SINGLE`。
+- 純電断時の有利区間直接契約は `UNVERIFIED_AFTER_RESEARCH`。
+- 設定変更専用の朝一高確、専用モード、初当たり/CZ優遇率、短縮天井は `NONE_CONFIRMED_AFTER_RESEARCH / PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
+- 通常営業中のエンディング/エンディングボーナス後の有利区間リセットでは内部10Gコンティニュー状態へ移行するが、解析上 **設定変更時を除く**。朝一恩恵には混入しない。
+- 変更判別: 前日G数把握時、実消化900G+αより浅い位置で天井発動なら据え置き推測材料。本機固有ガックン条件/発生率は `UNVERIFIED_AFTER_RESEARCH`。
 
-## No.1736 — LBパチスロ1000ちゃんA
-- path: `docs/real_machine_db/machines/2025-06-02_lb-pachislo-1000chan-a.md`
-- manufacturer: **オーイズミラボ（製造） / オーイズミ（販売）**
-- formalModel: **LB1000ちゃんアルファL3**
-- inspectionCode: **5S0039**
-- releaseDate: **2025-06-02**
-- settings: **L / 1 / 2 / 5 / 6 / H**
-- payoutRate: **L=UNPUBLISHED / 1=98.0% / 2=99.8% / 5=104.0% / 6=108.0% / H=108.7%**
-- BIG合算: **1=1/190.0 / 2=1/182.0 / 5=1/164.3 / 6=1/152.8 / H=1/662.0**
-- bonusCombined: **1=1/168.0 / 2=1/161.8 / 5=1/147.6 / 6=1/138.3 / H=1/624.2**
-- 1000★BONUS: **1/1598.4（設定1/2/5/6） / H=1/13107.2**
-- 突JAC: **1/16384.0（設定1/2/5/6） / H=1/65536.0**
-- 1000★PARTY初当り: **設定1=1/1456.4 / 設定H=1/10922.7。設定2/5/6の個別値は高優先公開表で未確認のため転記しない。**
-- base: **設定1〜6 約38.8G/50枚 / H 約7710.1G/50枚 / L=UNPUBLISHED**
-- basicPayout: **BIG最大179枚 / 1000★BONUS最大99枚+BT / 突JAC最大99枚+BT / 推し♡JAC最大99枚、1000★PARTY中推し♡JAC約75%ループ**
-- coreStatus: **COMPLETE_CORE_WITH_SPECIAL_SETTING_L_UNPUBLISHED**
+### No.1737 source maturity / missing
+- 2025年時点の解析には設定変更時の追加優遇を `調査中` とする資料が残る一方、2026年更新の後発解析では「特有の短縮恩恵なし / 朝一ゾーンなし」と整理。具体的優遇数値は発見できず、推測せず `SOURCE_MATURITY_NOTE` として保持。
+- 純電源OFF→ON時の有利区間直接契約、本機固有ガックン、朝一専用モード具体値: `UNVERIFIED/PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
 
-### No.1736 resetBehavior v0.7
-- 天井・通常ゲーム数モード・周期・CZ・ATは非搭載のため、ゲーム数リセット/天井短縮/朝一専用モードはNOT_APPLICABLE。
-- 設定変更専用の短縮天井・高確開始・初当り優遇・ポイント優遇は `NONE_CONFIRMED_AFTER_RESEARCH`。
-- 必勝本の機種別比較表では設定変更時・電源OFF→ON時ともリールガックンは `現在調査中`。正式型式・メーカー名・シリーズ名を変えて再探索しても本機固有条件/発生率は固定できず `UNVERIFIED_AFTER_RESEARCH`。
-- BT中/成立済みリアルボーナスの設定変更・据え置き・純電断契約は直接資料を固定できず `UNVERIFIED_AFTER_RESEARCH`。他BT機の一般論から補完しない。
-- 有利区間の設定変更/据え置き/純電断直接契約も `UNVERIFIED_AFTER_RESEARCH`。
-- コンプリート機能による打ち止め状態は設定変更で解除される。
-
-### No.1736 conflicts / missing
-- 設定Hボーナス合算は主要複数資料の **1/624.2** をcanonical。一部後発資料に1/624.0、別資料に1/662.0がありCONFLICT保持。1/662.0は設定H BIG合算と一致するため転記混同候補。
-- 設定Lの機械割/ボーナス確率/ベース: `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
-- 設定2/5/6の1000★PARTY初当り個別値: `NOT_SEPARATELY_PUBLISHED_IN_HIGH_PRIORITY_TABLE`。
-- 本機固有ガックン条件/発生率、有利区間直接契約、BT特殊状態の営業跨ぎ: `UNVERIFIED_AFTER_RESEARCH`。
-
-## 2025-06-02境界 — CLOSED 9/9
-1. スマスロ デビル メイ クライ5 スタイリッシュトライブ — No.1728 DONE
-2. いざ!番長 — No.1729 DONE
-3. L ULTRAMAN — No.1730 DONE
-4. LBプレミアムうまい棒 — No.1731 DONE
-5. LBジャックポット — No.1732 DONE
-6. スマスロ ギルティクラウン2 — No.1733 DONE
-7. スマスロニューパルサーBT — No.1734 DONE
-8. 翔べ!ハーレムエース — No.1735 DONE
-9. LBパチスロ1000ちゃんA — No.1736 DONE
+## 2025-06-16境界 — CLOSED 1/1
+1. L 絶対衝激～PLATONIC HEART～ — No.1737 DONE
 
 boundaryAudit:
-- HAZUSE「2025年6月の導入機種」で6月2日のパチスロ9機を列挙。
-- K-Navi、パチンコ・パチスロ.com等の別導入カレンダーでも同日群を再照合。
-- 地域により入替日差があり得る旨を明記する資料も確認したが、今回の再探索で別canonical機種・PB・別型式・地域先行専用機の追加候補は確認されず、全国導入基準の本線を9機でCLOSED。
+- HAZUSE 2025年6月導入一覧: 6月16日のパチスロは同機1機。
+- P-WORLD導入カレンダー: 2025/06/16新台パチスロとして同機を掲載。
+- パチンコ・パチスロ情報島「過去の新台情報」: 2025年6月16日のスロットは同機1機。
+- 今回確認範囲でPB・別型式・地域先行専用機の追加canonical候補なし。
 
 ## 次回再開地点
-- 最新mainを再同期しNo.1736と本handoffを確認。
-- 次は **No.1737候補「L 絶対衝激～PLATONIC HEART～」— 2025-06-16**。
-- HAZUSE 2025年6月導入一覧では6月16日パチスロは同機1機。処理後にPB・別型式・地域先行・延期/段階導入を再監査して2025-06-16境界をCLOSED判定する。
+- 最新mainを再同期しNo.1737と本handoffを確認。
+- 2025年6月本線は6/16で終了。次は **2025-07-07群**。
+- 1geki/P-Summa/情報島で7/7のパチスロ5機を確認。次は **No.1738候補「LBパチスロ ヱヴァンゲリヲン ～約束の扉～」— 2025-07-07** から開始する。
+- 同日候補キュー: `LBパチスロ ヱヴァンゲリヲン ～約束の扉～ → わたしの幸せな結婚 → アレックス ブライト → ハイビリターン-30 → LBトリプルクラウン`。
+- 5候補処理後、PB・別型式・地域先行・延期/段階導入を再監査して2025-07-07境界をCLOSED判定する。
 - 各機種は設定変更/据え置き/電源OFF→ON、ゲーム数/ポイント/天井、モード/状態、有利区間、朝一恩恵/不利、変更判別、公開朝一数値を独立管理する。
 - PARTIAL/UNVERIFIEDは表記揺れ・正式型式・メーカー・シリーズ名、設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間へ検索語を変え、公式・業界・主要解析・旧DB・アーカイブ/回顧資料横断後のみ確定する。
 
 ## resetBehavior 遡及QA
 - 既処理確認済みカーソル: `2007-07-09_genju-haou-t.md`（幻獣覇王T）。
-- 今回は本線No.1734〜1736を完了。旧レコード側QAカーソルは据え置き。
+- 今回は本線No.1737を完了。旧レコード側QAカーソルは据え置き。
 - 既存COMPLETE_COREの性能完了判定は変更しない。reset QA状態を別管理する。
 
 ## 今回の主要ソース
 取得日: 2026-09-14
 - HAZUSE 2025年6月導入一覧: https://hazuse.com/new-machine/202506-2/
-- K-Navi 2025年6月導入カレンダー: https://p-kn.com/calendar/202506/
-- パチンコ・パチスロ.com 2025新台カレンダー: https://pachinkopachisro.com/archives/58760696.html
+- P-WORLD導入カレンダー: https://www.p-world.co.jp/database/machine/introduce_calendar.cgi/1000?mode=before
+- 情報島 過去の新台情報: https://p-johojima.jp/machine_spec/post-2074/
+- 1geki 2025年7月新台スケジュール: https://1geki.jp/newmachinecalender/202507/
+- P-Summa 2025年7月新台一覧: https://psumma.jp/pachislo/66443/
 
-### No.1736 LBパチスロ1000ちゃんA
-- 遊技通信 新機種発表: https://www.yugitsushin.jp/news/%E3%83%9C%E3%83%BC%E3%83%8A%E3%82%B9%E3%83%88%E3%83%AA%E3%82%AC%E3%83%BC%E3%81%A7party%E3%81%A0%E3%81%81%EF%BD%9E%E2%98%86%E2%98%86%E2%98%86%E3%80%8Clb-%E3%83%91%E3%83%81%E3%82%B9%E3%83%AD1000/
-- HAZUSE: https://hazuse.com/machine/pachislot/5S0039/
-- P-WORLD: https://www.p-world.co.jp/machine/database/10247
-- 必勝本: https://p.hisshobon.jp/vpage/2697/2
-- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/oizumi_slot/59/kh01.php
+### No.1737 L 絶対衝激～PLATONIC HEART～
+- 公式PV: https://www.youtube.com/watch?v=qRt5rfrbjeQ
+- 遊技通信/P-WORLD業界ニュース: https://news.p-world.co.jp/articles/31155/yugitsushin
+- HAZUSE: https://hazuse.com/machine/pachislot/4S1524/
+- 必勝本 基本スペック: https://hisshobon.com/machineinfo/87398/
+- 必勝本 通常時解説: https://hisshobon.com/machineinfo/87387/
+- 必勝本 ボーナス解説: https://hisshobon.com/machineinfo/87389/
+- 1geki: https://1geki.jp/slot/l_zetai/
+- 1geki 天井/朝一: https://1geki.jp/slot/l_zetai/3/
+- なな徹: https://nana-press.com/kaiseki/machine/982/
+- なな徹 スペック: https://nana-press.com/kaiseki/machine/982/30178/
+- なな徹 朝一/設定変更: https://nana-press.com/kaiseki/machine/982/30200/
+- なな徹 エンディング/有利区間: https://nana-press.com/kaiseki/machine/982/30194/
+- 後発解析（純電断補助）: https://www.kaku6.jp/slot/zettai/
