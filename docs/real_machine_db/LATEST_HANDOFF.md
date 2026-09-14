@@ -1,54 +1,85 @@
 更新日: 2026-09-14
 
 ## 現在地点
-- recordCount: **1716**
-- latestRecordAdded: **スマート沖スロ アメイジングライブ — No.1716**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2025-04-07_amazing-live.md`
+- recordCount: **1719**
+- latestRecordAdded: **スマスロ マギアレコード 魔法少女まどか☆マギカ外伝 — No.1719**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2025-04-07_magia-record.md`
 - chronologicalFrontier: **2025-04-07**
 - schema: **resetBehavior v0.7**
-- status: **2025-04-07_BOUNDARY_OPEN_1_OF_4_KNOWN_CANONICAL_PROCESSED**
+- status: **2025-04-07_BOUNDARY_CLOSED_4_OF_4_CANONICAL_PROCESSED**
 
 ## 今回の進捗
-- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、No.1715既存レコードを再同期。
+- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、No.1716既存レコードを再同期。
 - INDEXは旧19件表示のためREADME規定どおりLATEST_HANDOFF + 実レコードを進捗正本として使用。
-- No.1715で2025-03-03群が6/6 CLOSED済みであることを確認し、次キューNo.1716 `スマート沖スロ アメイジングライブ` を処理。
-- 型式・検定番号、性能コア、設定変更/据え置き/純電断、天井、モード/状態、有利区間、朝一恩恵、変更判別、公開朝一数値を収集。
-- 数値競合2件を平均化せずCONFLICTとして保持。
+- No.1716 `スマート沖スロ アメイジングライブ` の次から継続し、2025-04-07群の残り3機を処理。
+- No.1717 `Lゴジラ`、No.1718 `Lうしおととら 白面決戦`、No.1719 `スマスロ マギアレコード 魔法少女まどか☆マギカ外伝` を追加。
+- 各機種で性能コア、設定変更/据え置き/純電断、天井/ポイント、モード/状態、有利区間、朝一恩恵/不利、変更判別、公開朝一数値を収集。
+- 公式/業界/主要解析/旧DB系を横断し、競合は平均化せずCONFLICT、再探索後も固定できない項目はUNVERIFIED_AFTER_RESEARCH / PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCHとした。
+- グリーンべるとの2025-04-07新台スケジュールでパチスロ4機（アメイジングライブ / Lゴジラ / Lうしおととら / マギレコ）を再確認。PB・地域先行・別型式を追加で検索し、本線追加対象を確認できなかったため2025-04-07境界をCLOSED 4/4とした。
 
-## No.1716 — スマート沖スロ アメイジングライブ
-- path: `docs/real_machine_db/machines/2025-04-07_amazing-live.md`
-- manufacturer: **パイオニア**
-- formalModel: **LアメイジングライブPD**
-- inspectionCode: **4S1425**
+## No.1717 — Lゴジラ
+- path: `docs/real_machine_db/machines/2025-04-07_l-godzilla.md`
+- manufacturer: **EXCITE製造 / ニューギン**
+- formalModel: **LゴジラNS**
+- inspectionCode: **430766**
 - releaseDate: **2025-04-07**
-- payoutRate: **98.1 / 99.7 / 103.6 / 106.9 / 110.0%**（設定1/2/4/5/6）
-- bonusInitial: **1/274.0 / 1/259.6 / 1/229.3 / 1/206.9 / 1/189.9**
-- BIG: **1/213.0 / 1/202.5 / 1/181.6 / 1/165.7 / 1/153.4**
-- REG canonical: **1/370.0 / 1/349.5 / 1/310.2 / 1/280.7 / 1/258.0**
-- base: **約34G/50枚**
-- netIncrease: **約3.3枚/G**
-- basicPayout: **BIG約200枚 / REG約66枚 / AC約40枚×最大10セット**
-- reset: **有利区間・天井・内部モード・内部状態・周期をRESET/再抽選。固定短縮天井は確認できず、通常最大999G+α。**
-- resetBenefit: **有利区間移行時は約75%で天国モード、天国B以上の振り分けも高い。**
-- carry/power: **据え置きは主要内部値継続。純電断は有利区間・天井・内部モード・内部状態・周期を引継ぎ。**
-- detection: **朝一33G以内当選はリセット推測材料だが確定ではない。固定短縮天井がなく深いG数での確定判別不可。ガックンUNVERIFIED_AFTER_RESEARCH。**
+- payoutRate: **97.8 / 98.8 / 100.6 / 105.8 / 110.5 / 114.9%**
+- AT: **1/680.9 / 1/662.6 / 1/611.0 / 1/511.3 / 1/447.1 / 1/420.4**
+- CZ: **1/306.9 / 1/304.0 / 1/303.0 / 1/302.1 / 1/299.6 / 1/295.5**
+- base: **約31.6G/50枚** / netIncrease: **約5.0枚/G**
+- reset: **AT間最大2500G→1000G+α、Gポイント0、モードC以上濃厚、Gポイント天井最大450pt。探索ZONE 7.0%。**
+- firstGameMode: **その他 C96.9%/天国3.1%、弱チェリー・チャンスリプレイ C60.2%/天国39.8%、チャンス目/強チェリー/強チャンスリプレイ 天国100%。**
+- carry/power: **据え置きは主要内部値引継ぎ。純電断は天井G/Gポイント/リプレイポイント/モード引継ぎ。純電断の有利区間・開始ステージはUNVERIFIED_AFTER_RESEARCH。**
+- conflict: ニューギン公式「リセット後1G目レア小役で天国濃厚」という広い表現と、解析表の弱役39.8%/強役100%を粒度差として保持。
 
-## conflicts
-- `CONFLICT_PAYOUT_SETTING1_98_1_VS_97_1`: 必勝本・ちょんぼりすた・すろぱちくえすと・G-net等は98.1%、P-WORLDのみ97.1%。98.1%をcanonical。
-- `CONFLICT_REG_SETTING5_1_280_7_VS_1_260_7`: 必勝本・P-WORLD・ちょんぼりすた等は1/280.7、G-netのみ1/260.7。1/280.7をcanonical。
+## No.1718 — Lうしおととら 白面決戦
+- path: `docs/real_machine_db/machines/2025-04-07_ushio-to-tora-hakumen-kessen.md`
+- manufacturer: **アイドル製造 / Daiichi**
+- formalModel: **Lうしおととら白面決戦VH**
+- inspectionCode: **4S1786**
+- releaseDate: **2025-04-07**
+- payoutRate: **97.9 / 99.2 / 100.5 / 104.6 / 109.4 / 114.9%**
+- AT: **1/397.3 / 1/389.6 / 1/378.0 / 1/365.6 / 1/360.0 / 1/356.1**
+- CZ: **1/178.0 / 1/175.6 / 1/169.7 / 1/164.5 / 1/161.9 / 1/159.0**
+- base: **約33.0G/50枚** / ST純増約1.2枚/G / BONUS約5.0枚/G
+- reset: **CZ天井600G+α→300G。うしとらモード移行までのCZスルー規定回数初期抽選優遇。128G以内CZ時約10%で櫛削りノ儀。**
+- setting1 reset skip rule: **0回1.6 / 1回5.1 / 2回27.7 / 3回8.9 / 4回56.7%**
+- carry/power: **据え置き・純電断は天井/モード/状態/有利区間を引継ぎ。純電断開始ステージはUNVERIFIED_AFTER_RESEARCH。**
 
-## 2025-04-07境界 — OPEN 1/4 known canonical
+## No.1719 — スマスロ マギアレコード 魔法少女まどか☆マギカ外伝
+- path: `docs/real_machine_db/machines/2025-04-07_magia-record.md`
+- manufacturer: **ミズホ / ユニバーサルエンターテインメント**
+- formalModel: **L／スマスロマギアレコード／RN**
+- inspectionCode: **4S1598**
+- releaseDate: **2025-04-07**
+- payoutRate: **97.6 / 98.9 / 102.0 / 106.0 / 110.4 / 114.9%**
+- bonusInitial: **1/240.6 / 1/236.1 / 1/222.8 / 1/208.5 / 1/195.1 / 1/184.3**
+- AT: **1/654.6 / 1/633.4 / 1/571.8 / 1/516.6 / 1/456.5 / 1/416.7**
+- base: **約32.6G/50枚** / netIncrease: **約2.6枚/G**
+- reset: **マギアポイント天井950pt+α→600〜699pt+α。内部状態/魔法少女モード/穢れをRESET・再抽選。有利区間RESET。**
+- resetHighStateTotal: **設定1/2 25.0%、3 27.7%、4 29.3%、5 30.5%、6 33.7%**。10/20/30Gの設定別内訳も実レコードへ保存。
+- carry/power: **据え置き/純電断は内部天井ポイント、状態、魔法少女モード、穢れ、有利区間を引継ぎ。マギアポイント表示は設定変更/純電断とも???。**
+- detection: **朝一699pt+α超でボーナス非当選なら据え置き濃厚材料。ガックンUNVERIFIED_AFTER_RESEARCH。**
+- conflict: **1gekiの「内部ポイント規定650pt」簡略表記 vs 天井詳細・必勝本・なな徹等の600〜699pt+α。複数一致の600〜699pt+αをcanonical。**
+
+## 2025-04-07境界 — CLOSED 4/4 canonical
 1. スマート沖スロ アメイジングライブ — No.1716 DONE
-2. Lゴジラ — NEXT
-3. Lうしおととら白面決戦VH
-4. スマスロ マギアレコード 魔法少女まどか☆マギカ外伝
+2. Lゴジラ — No.1717 DONE
+3. Lうしおととら 白面決戦 — No.1718 DONE
+4. スマスロ マギアレコード 魔法少女まどか☆マギカ外伝 — No.1719 DONE
+
+## 次の境界 — 2025-04-21 OPEN 0/3 known canonical
+グリーンべると2025-04-07更新の新台スケジュール、ALL7等で次のパチスロ本線を確認。
+1. 吉宗 — NEXT
+2. スマスロ アイドルマスター ミリオンライブ！ ネクストプロローグ
+3. L麻雀物語
 
 ## 次回再開地点
-- 最新mainを再同期しNo.1716と本handoffを確認。
-- **No.1717候補 `Lゴジラ` — 2025-04-07** から再開する。
-- その後 `Lうしおととら白面決戦VH` → `スマスロ マギアレコード 魔法少女まどか☆マギカ外伝` を同じキューで処理。
-- 4機処理後、PB・地域先行・別型式・延期/段階導入を再監査して2025-04-07境界をCLOSED判定する。
-- 各機種は設定変更/据え置き/電源OFF→ON、天井、モード/状態、有利区間、朝一恩恵/不利、変更判別、公開朝一数値を独立管理する。
+- 最新mainを再同期しNo.1719と本handoffを確認。
+- **No.1720候補 `吉宗` — 2025-04-21** から再開する。
+- その後 `スマスロ アイドルマスター ミリオンライブ！ ネクストプロローグ` → `L麻雀物語` を同一キューで処理。
+- 3機処理後、PB・地域先行・別型式・延期/段階導入を再監査して2025-04-21境界をCLOSED判定する。
+- 各機種は設定変更/据え置き/電源OFF→ON、ゲーム数/ポイント/天井、モード/状態、有利区間、朝一恩恵/不利、変更判別、公開朝一数値を独立管理する。
 - PARTIAL/UNVERIFIEDは表記揺れ・正式型式・メーカー・シリーズ名、設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間へ検索語を変え、公式・業界・主要解析・旧DB・アーカイブ/回顧資料横断後のみ確定する。
 
 ## resetBehavior 遡及QA
@@ -59,14 +90,14 @@
 
 ## 今回の主要ソース
 取得日: 2026-09-14
-- パイオニア公式 2025年製品一覧: https://www.slot-pioneer.co.jp/products/2025.html
-- パイオニア公式 更新履歴: https://www.slot-pioneer.co.jp/news.html
-- 遊技日本 型式/概要: https://yugi-nippon.com/pachinko-new-machine/post-69270/
-- G-net 販売概要: https://g-net-ps.com/info/s0191/
-- G-net 検定通過: https://g-net-ps.com/industry/%E6%A4%9C%E5%AE%9A%E9%80%9A%E9%81%8E%E6%83%85%E5%A0%B1%EF%BC%88%E4%BB%A4%E5%92%8C6%E5%B9%B412%E6%9C%8827%E6%97%A5%E5%85%AC%E7%A4%BA%E5%88%86%EF%BC%89/
-- 必勝本 基本スペック: https://hisshobon.com/machineinfo/86167/
-- 必勝本 天井/設定変更: https://p.hisshobon.jp/vpage/2691/2
-- 1geki 朝一/設定変更: https://1geki.jp/slot/l_amazinglive/3/
-- ちょんぼりすた: https://chonborista.com/slot/pionia-slot/232027/
-- すろぱちくえすと: https://www.slopachi-quest.com/article/amazinglive-tenjou/
-- P-WORLD: https://www.p-world.co.jp/machine/database/10215
+- グリーンべると 2025-04-07新台スケジュール: https://news.p-world.co.jp/articles/30646/greenbelt
+- ニューギン公式 Lゴジラ: https://www.newgin.co.jp/devfaq/6402/
+- ニューギン公式 Lゴジラ reset: https://www.newgin.co.jp/devfaq/6465/
+- なな徹 Lゴジラ朝一: https://nana-press.com/kaiseki/machine/919/28865/
+- Daiichi公式 うしおととら: https://daiichi777.jp/pachislot/slot_ushitora2/
+- ちょんぼりすた うしおととら: https://chonborista.com/slot/d-light/229780/
+- ユニバーサル公式 マギレコ: https://www.universal-777.com/product/slot/magireco/
+- 必勝本 マギレコ天井/設定変更: https://hisshobon.com/machineinfo/86129/
+- なな徹 マギレコ朝一: https://nana-press.com/kaiseki/machine/914/28429/
+- HAZUSE マギレコ型式: https://hazuse.com/machine/pachislot/4S1598/
+- ALL7 2025年4月導入一覧: https://www.all7.jp/plans/index/2025/04
