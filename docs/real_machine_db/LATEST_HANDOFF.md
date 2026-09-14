@@ -1,79 +1,82 @@
 更新日: 2026-09-14
 
 ## 現在地点
-- recordCount: **1668**
-- latestRecordAdded: **L D4DJ Pachi-Slot Mix — No.1668**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2024-08-05_d4dj-pachi-slot-mix.md`
+- recordCount: **1669**
+- latestRecordAdded: **Lワンパンマン — No.1669**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2024-08-05_one-punch-man.md`
 - chronologicalFrontier: **2024-08-05**
 - schema: **resetBehavior v0.7**
-- status: **2024-08-05_OPEN_2_OF_4_KNOWN_CANONICAL_PROCESSED**
+- status: **2024-08-05_OPEN_3_OF_4_KNOWN_CANONICAL_PROCESSED**
 
 ## 今回の進捗
-- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直近No.1667を確認。INDEXは旧19件表示のためREADME規定どおり最新handoff + 実レコードを進捗正本として使用。
-- 直前handoff指定のNo.1668候補 `L D4DJ Pachi-Slot Mix` を性能コア + resetBehavior v0.7で登録。
-- KYORAKU公式、遊技通信/グリーンべると、HAZUSE、なな徹、一撃、必勝本、ちょんぼりすた、スロパチクエスト等を横断。
-- 型式 `LパチスロD4DJKB`、検定番号 `4S0424`、2024-08-05全国導入（直営フィールドテストは2024-07-26）、設定1〜6のCZ/AT/機械割、約34G/50枚、純増約1.3枚/Gまたは約4.3枚/Gを複数資料で照合。
-- 設定変更時は有利区間・天井進行をRESETし、天井モード・CZモード・D4モード・内部状態を再抽選。据え置きは有利区間・天井・内部状態・内部モードを引継ぎ。
-- 純電源OFF→ONでは天井までのゲーム数、天井モード、CZモード、D4モード、内部状態を引継ぐ。純電断時の液晶ステージ復帰はUNVERIFIED。
-- 設定変更時内部状態振り分けを設定1〜6で収録。低確/通常/高確は設定1で70.3/19.9/9.8%、設定6で37.5/37.5/25.0%。
-- 朝一モードB以上（最大555G相当）は約100件の全リセ実戦で最大557Gまでだったという強い補助データがある一方、必勝本は天井モード「再抽選」、正規振り分け非公開のため固定短縮天井としてcanonical化せずEMPIRICAL_SUPPORT_ONLY扱い。
-- 本機固有ガックン、確定的リセット判別、設定変更時の天井/CZ/D4各モード正規振り分け、D4モード突入率は検索語・資料系統変更後も固定できずUNVERIFIED/PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH。
-- 機械割設定1/2は精密値97.69/98.57%に対し必勝本97.6/98.5%の差をCONFLICT保持。設定3 ATは主要複数資料1/242.5に対しマルっとWAVE単独1/481.7をCONFLICT_LIKELY_SOURCE_TYPOとして保持。
+- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直近No.1668を確認。INDEXは旧19件表示のままのためREADME規定どおりLATEST_HANDOFF + 実レコードを進捗正本として使用。
+- 直前handoff指定のNo.1669候補 `Lワンパンマン` を性能コア + resetBehavior v0.7で登録。
+- 遊技日本/P-WORLD、Amusement Japan、グリーンべると、HAZUSE、なな徹、一撃、必勝本、スロパチクエスト、ちょんぼりすた等を横断。
+- 型式 `LワンパンマンEY`、検定番号 `4S0335`、EXCITE、2024-08-05全国導入を照合。ニューギン直営店では2024-07-18に10台先行導入。
+- 設定1〜6の機械割97.6/98.9/100.7/105.1/110.4/114.9%、CZ 1/158.8→1/145.7、ボーナス1/315.8→1/263.5、AT 1/620.9→1/464.0、約31.9G/50枚、純増約2.5枚/Gまたは約4.0枚/Gを複数資料で照合。
+- 設定変更時は有利区間・天井ゲーム数・CZスルー回数・裏ボスモードをRESETし、内部モード・内部状態を再抽選。据え置きは有利区間・天井・CZスルー回数・モード・状態・裏ボスモードを引継ぎ。
+- 純電源OFF→ONは必勝本の直接比較で天井ゲーム数、CZスルー回数、モード、状態、裏ボスモードを引継ぎ。開始ステージは資料上も調査中のためUNVERIFIED。
+- 設定変更時モードは通常B以上100%。公開振り分けは通常B 53.1% / チャンス16.4% / 天国30.1% / 超天国0.4%。天国以上30.5%、チャンス以上46.9%。
+- CZ間天井は通常A/B/チャンス最大320G、天国/超天国128G。設定変更時は固定天井短縮ではなくモード優遇が主恩恵。
+- 設定変更時の内部状態正規振り分け、本機固有ガックン条件/率、確定的リセット判別、純電断時ステージ復帰は検索語・資料系統変更後も固定できずUNVERIFIED/PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH。
+- 朝一前兆位置のズレは据え置き期待度アップ材料、シババワ様予言も判別補助になるが確定判別には採用せず。後年のビリビリ演出による判別論も主要解析の確定契約ではないため補助情報に限定。
 
-## No.1668 — L D4DJ Pachi-Slot Mix
-- path: `docs/real_machine_db/machines/2024-08-05_d4dj-pachi-slot-mix.md`
-- manufacturer: **KYORAKU（京楽産業.）**
-- formalModel: **LパチスロD4DJKB**
-- inspectionCode: **4S0424**
-- releaseDate: **2024-08-05**（直営フィールドテスト2024-07-26）
+## No.1669 — Lワンパンマン
+- path: `docs/real_machine_db/machines/2024-08-05_one-punch-man.md`
+- manufacturer: **EXCITE（ニューギングループ）**
+- formalModel: **LワンパンマンEY**
+- inspectionCode: **4S0335**
+- releaseDate: **2024-08-05**（直営先行導入2024-07-18）
 - generation: **6.5号機 / スマスロ**
-- systemType: **AT / セット数管理型AT + 擬似ボーナス**
-- payoutRate: **97.69 / 98.57 / 100.04 / 104.00 / 108.24 / 114.99%**（設定1〜6、通常丸め97.7 / 98.6 / 100.0 / 104.0 / 108.2 / 114.9%）
-- CZ: **約1/112.2 / 1/110.9 / 1/109.6 / 1/104.4 / 1/103.6 / 1/99.9**
-- AT: **約1/270.5 / 1/264.0 / 1/242.5 / 1/227.1 / 1/209.9 / 1/191.3**
-- base: **約34G/50枚**
-- netIncrease: **AT約1.3枚/G / 擬似ボーナス等約4.3枚/G**
-- AT: **D4 FES. 1セット30G+α**
-- bonus: **BIG約100枚 / SUPER BIG約150〜1000枚**
-- ceiling: **モードA 777G / B 555G / C 444G / 天国111G → AT**
-- reset: **有利区間・天井RESET、天井/CZ/D4モード・内部状態を再抽選。**
-- carryOver: **据え置きは有利区間・天井・内部状態・内部モード引継ぎ。**
-- powerCycle: **天井、天井モード、CZモード、D4モード、内部状態引継ぎ。**
-- morning benefit: **一部でD4モード移行。内部状態を設定別再抽選。朝一モードB以上仮説は補助実戦データのみで確定解析扱いしない。**
-- public morning numeric: **設定変更時内部状態振り分け（設定1 70.3/19.9/9.8%、設定6 37.5/37.5/25.0%ほか全設定収録）。モード別天井777/555/444/111G。**
-- detection: **必勝本実戦上は設定変更後昼ステージ。確定判別・本機固有ガックンはUNVERIFIED。**
-- unresolved after research: **ガックン条件/率 / 確定リセット判別 / 純電断時ステージ復帰 / 設定変更時天井モード振り分け / CZモード振り分け / D4モード突入率**
-- conflict: **機械割設定1/2の精密値 vs 必勝本値、設定3 AT 1/242.5 vs マルっとWAVE 1/481.7。平均化せず保持。**
+- systemType: **AT / CZ→擬似ボーナス→AT**
+- payoutRate: **97.6 / 98.9 / 100.7 / 105.1 / 110.4 / 114.9%**
+- CZ: **1/158.8 / 1/157.2 / 1/154.5 / 1/151.7 / 1/148.1 / 1/145.7**
+- bonus: **1/315.8 / 1/308.2 / 1/299.9 / 1/286.9 / 1/274.5 / 1/263.5**
+- AT: **1/620.9 / 1/606.4 / 1/585.4 / 1/531.5 / 1/503.4 / 1/464.0**
+- base: **約31.9G/50枚（設定1）**
+- netIncrease: **約2.5枚/G / 約4.0枚/G**
+- basic: **BIG 45G+α / AT ONE PUNCH RUSH 100G+α / 最上位AT継続率約92%、期待獲得約3580枚**
+- ceiling: **通常A/B/チャンス最大320G→CZ、天国/超天国128G。CZ6スルー後7回目CZでマジBIG。**
+- reset: **有利区間・天井G・CZスルー回数・裏ボスモードRESET、モード/状態再抽選。**
+- carryOver: **据え置きは有利区間・天井・CZスルー・モード・状態・裏ボスモード引継ぎ。**
+- powerCycle: **天井G、CZスルー回数、モード、状態、裏ボスモード引継ぎ。**
+- morning benefit: **通常B以上100%。**
+- public morning numeric: **通常B53.1% / チャンス16.4% / 天国30.1% / 超天国0.4%。天国以上30.5%、チャンス以上46.9%。**
+- detection: **規定G前兆ズレは据え置き期待度UP材料。シババワ予言は補助。確定判別/ガックンはUNVERIFIED。**
+- unresolved after research: **ガックン条件/率 / 確定リセット判別 / 純電断時ステージ復帰 / 設定変更時内部状態振り分け / 固定的数値ペナルティ**
+- conflict: **性能コア・モード振り分け・主要resetBehaviorに現時点で数値競合なし。導入台数8000/10000差は現ミッション対象外。**
 
-## 2024-08-05境界 — OPEN 2/4
+## 2024-08-05境界 — OPEN 3/4
 1. スマスロ ゲゲゲの鬼太郎 覚醒 — No.1667 DONE
 2. L D4DJ Pachi-Slot Mix — No.1668 DONE
-3. Lワンパンマン — NEXT
-4. スマスロ トロピカーナ — QUEUED
+3. Lワンパンマン — No.1669 DONE
+4. スマスロ トロピカーナ — NEXT
 
 ## 次回再開地点
-- 最新mainを再同期しNo.1668と本handoffを確認。
-- **No.1669候補 `Lワンパンマン`（2024-08-05）** から性能コア + resetBehavior v0.7を収集。
-- 続いて `スマスロ トロピカーナ` を処理。
-- 4機完了後、PB・別型式・地域先行・延期/段階導入を再監査して2024-08-05群CLOSED判定。
+- 最新mainを再同期しNo.1669と本handoffを確認。
+- **No.1670候補 `スマスロ トロピカーナ`（2024-08-05）** から性能コア + resetBehavior v0.7を収集。
+- 処理後、PB・別型式・地域先行・延期/段階導入を再監査して2024-08-05群CLOSED判定。
 - 欠損は表記揺れ・正式型式・メーカー・シリーズ名、設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックン/有利区間等へ検索語を変え、公式・業界・主要解析・旧DB・アーカイブ/回顧資料横断後のみUNVERIFIED。
 
 ## 今回の主要ソース
 取得日: 2026-09-14
-- KYORAKU公式製品ページ: https://www.kyoraku.co.jp/product_site/2024/d4dj/
-- KYORAKU公式NEWS（機種発表）: https://www.kyoraku.co.jp/news/detail/762
-- KYORAKU公式NEWS（直営フィールドテスト）: https://www.kyoraku.co.jp/news/detail/761
-- P-WORLD / 遊技通信: https://news.p-world.co.jp/articles/27958/yugitsushin
-- P-WORLD / グリーンべると: https://news.p-world.co.jp/articles/27976/greenbelt
-- HAZUSE: https://hazuse.com/hd/4s0424/
-- なな徹 機種まとめ: https://nana-press.com/kaiseki/machine/787/
-- なな徹 朝一・設定変更: https://nana-press.com/kaiseki/machine/787/23041/
-- なな徹 内部状態: https://nana-press.com/kaiseki/machine/787/23043/
-- なな徹 天井: https://nana-press.com/kaiseki/machine/787/23038/
-- 一撃 天井・朝一: https://1geki.jp/slot/l_d4dj/3/
-- 一撃 設定差: https://1geki.jp/slot/l_d4dj/0/
-- パチ&スロ必勝本 天井&設定変更: https://hisshobon.com/machineinfo/84109/
-- パチ&スロ必勝本 基本スペック: https://hisshobon.com/machineinfo/84111/
-- ちょんぼりすた: https://chonborista.com/slot/kyoraku-slot/214667/
-- スロパチクエスト: https://www.slopachi-quest.com/article/d4dj-tenjou/
-- マルっとWAVE: https://marutto-w.com/industry_news/20240806
+- P-WORLD / 遊技日本 検定通過: https://news.p-world.co.jp/articles/27931/nippon
+- Amusement Japan 直営先行導入: https://amusement-japan.co.jp/article/detail/10004449/
+- グリーンべると: https://web-greenbelt.jp/post-85996/
+- HAZUSE 基本: https://hazuse.com/machine/pachislot/4S0335/genre/201/
+- HAZUSE 天井: https://hazuse.com/machine/pachislot/4S0335/genre/207/
+- なな徹 機種まとめ: https://nana-press.com/kaiseki/machine/784/
+- なな徹 朝一・設定変更: https://nana-press.com/kaiseki/machine/784/23281/
+- なな徹 モード: https://nana-press.com/kaiseki/machine/784/23284/
+- なな徹 狙い目: https://nana-press.com/kaiseki/machine/784/23279/
+- なな徹 BIG: https://nana-press.com/kaiseki/machine/784/23299/
+- なな徹 AT: https://nana-press.com/kaiseki/machine/784/23301/
+- 一撃: https://1geki.jp/slot/l_onepunchman/
+- 一撃 設定差: https://1geki.jp/slot/l_onepunchman/0/
+- 一撃 天井/朝一: https://1geki.jp/slot/l_onepunchman/3/
+- 必勝本 基本スペック: https://hisshobon.com/machineinfo/84333/
+- 必勝本 天井&設定変更: https://p.hisshobon.jp/vpage/2639/2
+- 必勝本 通常時: https://hisshobon.com/machineinfo/84351/
+- 必勝本 シババワ様: https://hisshobon.com/machineinfo/84330/
+- スロパチクエスト: https://www.slopachi-quest.com/article/onepunchman-tenjou/
+- ちょんぼりすた: https://chonborista.com/slot/newgin-slot/214150/
