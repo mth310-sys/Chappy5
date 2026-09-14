@@ -1,90 +1,134 @@
 更新日: 2026-09-15
 
 ## 現在地点
-- recordCount: **1779**
-- latestRecordAdded: **L範馬刃牙 — No.1779**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2026-02-02_hanma-baki.md`
+- recordCount: **1781**
+- latestRecordAdded: **スマスロ ゴブリンスレイヤーⅡ — No.1781**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2026-02-02_smartslot-goblin-slayer-2.md`
 - chronologicalFrontier: **2026-02-02**
 - schema: **resetBehavior v0.7**
-- status: **2026-02-02_GROUP_OPEN_4_OF_6_CANONICAL_PROCESSED**
+- status: **2026-02-02_BOUNDARY_CLOSED_6_OF_6_CANONICAL_PROCESSED**
 
 ## 今回の進捗
-- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前実レコードNo.1778を再同期。
+- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前実レコードNo.1779を再同期。
 - INDEXは旧スナップショットのためREADME規定どおり `LATEST_HANDOFF + 実レコード` を進捗正本として使用。
-- No.1779 `L範馬刃牙` を追加。
-- 2026-02-02群は4/6 canonical処理済み。
-- resetBehaviorは設定変更/据え置き/純電断の天井・スルー回数・モード・内部状態・有利区間を機種固有資料で整理。
-- 過去reset QAカーソル候補 `2007-07-09_genju-haou-t.md` / `幻獣覇王T` は現在mainのコード検索で一意取得できず、推測更新を行わず別管理継続。
+- No.1780 `スマスロ ハナビ` を追加。
+- No.1781 `スマスロ ゴブリンスレイヤーⅡ` を追加。
+- 2026-02-02群は6/6 canonical処理済み。P-Summaの2026年2月導入後月間整理でも2月のスロット新台6機がすべて2月2日導入として一致するため境界をCLOSED。
+- PB・別型式・地域先行・延期/段階導入を再監査。旧予定資料に2月10日として残る `スマスロ サンダーV` / `スマスロ 甲鉄城のカバネリ 海門決戦` は、導入後のHAZUSE・パチビー・主要解析でいずれも2026-03-02導入が確認されるため2月群へ混入しない。
+- 過去reset QAカーソル候補 `2007-07-09_genju-haou-t.md` / `幻獣覇王T` は未解決のまま性能コア本線と分離し、推測更新は行っていない。
 
-## No.1779 — L範馬刃牙
-- path: `docs/real_machine_db/machines/2026-02-02_hanma-baki.md`
-- manufacturer: **平和 / OLYMPIA**
-- formalModel: **L範馬刃牙L5**
-- inspectionCode: **5S1472**
+## No.1780 — スマスロ ハナビ
+- path: `docs/real_machine_db/machines/2026-02-02_smartslot-hanabi.md`
+- manufacturer: **アクロス / ユニバーサルエンターテインメント**
+- formalModel: **L／ハナビ／KM**
+- inspectionCode: **530543**
 - releaseDate: **2026-02-02**
-- settings: **1 / 2 / 3 / 4 / 5 / 6**
-- payoutRate: **97.7 / 98.5 / 100.5 / 105.2 / 107.9 / 110.6%**
-- hanmaBonusInitialHit: **1/269.4 / 1/265.7 / 1/258.3 / 1/252.1 / 1/251.0 / 1/250.1**
-- atInitialHit: **1/525.3 / 1/517.1 / 1/503.2 / 1/484.5 / 1/481.9 / 1/480.4**
-- base: **約32.1G/50枚**
-- netIncrease: **約2.8枚/G or 約5.2枚/G**
-- basicPayout: **範馬BONUS 25G・平均約70枚 / AT初回50G+α・以降30G+α / 親子喧嘩15G×最大10セット**
+- settings: **1 / 2 / 5 / 6**
+- payoutRate market estimate: **98.6 / 100.4 / 103.0 / 106.4%**
+- payoutRate complete strategy: **100.2 / 102.0 / 104.6 / 108.0%**
+- BIG: **1/297.9 / 1/292.6 / 1/284.9 / 1/273.1**
+- REG: **1/394.8 / 1/358.1 / 1/313.6 / 1/282.5**
+- combined: **1/169.8 / 1/161.0 / 1/149.3 / 1/138.8**
+- base: **約42.3G/50枚（設定1）**
+- BIG最大239枚 / REG最大96枚
+- RT純増: 花火チャレンジ約0.2枚/G、花火ゲーム約0.4枚/G
 - coreStatus: **COMPLETE_CORE_WITH_RESET_RESEARCH**
 
-### No.1779 resetBehavior v0.7
-- 設定変更時は有利区間、天井G、ボーナススルー回数をRESETし、モード・内部状態を再抽選。
-- 通常最大天井は700G+α。設定変更時は `通常C 0.8% / チャンス61.7% / 天国37.5%` をcanonicalとし、**99.2%が200G+α以内**に範馬BONUS。
-- 設定変更時を固定200G天井とは扱わない。残る0.8%の通常Cは最大700G+αで、初当たり「地上最強の親子喧嘩」濃厚。
-- 純電源OFF→ONは天井G・スルー回数・モード・内部状態を引継ぎ。パチマガスロマガFREEでは有利区間、エンドルフィン効果、AT間天井も引継ぎと機種固有に明記。
-- 据え置きはなな徹で有利区間引継ぎを直接確認。その他の進行も機種固有電断契約と整合する引継ぎとして保存。
-- 朝一200G+αを超えて天井非発動かつ通常C否定なら据え置き濃厚材料。見た目表示のみでは判別困難。
+### No.1780 resetBehavior v0.7
+- 天井非搭載。ゲーム数天井短縮、朝一専用モード、CZ/ATリセット優遇は `NOT_APPLICABLE`。
+- 機種固有比較で、**設定変更時はRT状態が通常状態へ戻り、純電源OFF→ONではRT状態を引き継ぐ**ことを確認。
+- 前日RT中なら設定変更でRTを失うことが朝一差分。
+- スマスロ規格上の有利区間について、設定変更/据え置き/純電断を本機固有に三者比較した高優先資料は再探索後も固定できず `UNVERIFIED_MACHINE_SPECIFIC_AFTER_RESEARCH`。
+- 本機固有ガックン条件/発生率も型式・メーカー・シリーズ名を含め再探索後 `UNVERIFIED_AFTER_RESEARCH`。
+
+## No.1781 — スマスロ ゴブリンスレイヤーⅡ
+- path: `docs/real_machine_db/machines/2026-02-02_smartslot-goblin-slayer-2.md`
+- manufacturer: **JFJ / 藤商事**
+- formalModel: **LゴブリンスレイヤーII JZ**
+- inspectionCode: **530709**
+- releaseDate: **2026-02-02**
+- settings: **1 / 2 / 3 / 4 / 5 / 6**
+- payoutRate: **97.6 / 98.7 / 100.4 / 104.9 / 109.7 / 113.2%**
+- CZ: **1/239.3 / 1/232.3 / 1/222.9 / 1/200.4 / 1/187.3 / 1/181.9**
+- AT: **1/541.6 / 1/526.4 / 1/506.4 / 1/453.2 / 1/417.8 / 1/402.4**
+- base: **約30.6G/50枚**
+- netIncrease: **通常AT約2.8枚/G / 上位AT約6.0枚/G**
+- coreStatus: **COMPLETE_CORE_WITH_RESET_RESEARCH**
+
+### No.1781 resetBehavior v0.7
+- 設定変更時は有利区間、天井ゲーム数、内部状態、兜ポイント系モードをRESET/再抽選。
+- 据え置きは有利区間・天井・内部状態・モード・兜ポイントを引継ぎ。
+- 純電源OFF→ONでは天井までのG数、兜ポイント、内部モード等を引き継ぐ機種固有解析を確認。
+- 通常天井は600G / 1000G / 1500Gの振り分けで最大1500G。**設定変更時は1500G選択を否定し最大1000Gへ短縮**。
+- 設定変更時兜ポイントモード: `通常A 50.0% / 通常B 37.5% / 天国A 12.1% / 天国B 0.4%`、天国合計12.5%。
+- 設定変更時内部状態: `通常94.5% / 高確5.1% / 超高確0.4%`。
+- 設定変更時は表示0ptでも内部0～5ptを加算して開始。
+- 朝一開始ステージは王都/訓練場各50%。据え置きでも表示・ステージが同様に初期化されるため見た目だけでは判別不可。
+- 設定変更後100G以内にAT当選すると宿命バトルをストック。
+- 朝一1000Gを超えてAT非当選なら設定変更否定の強い材料。
 - 本機固有ガックン条件/発生率は再探索後も `UNVERIFIED_AFTER_RESEARCH`。
-- ボーナススルー回数天井は設定変更時に再抽選。設定1では7回目70.3%、設定6では7回目0.8%など、高設定ほど浅い回数が強く優遇。
 
 ## conflicts / normalization
-- 設定変更時モード振り分けは、必勝本・なな徹・1gekiが `チャンス61.7% / 天国37.5%` で一致。一方、ちょんぼりすた・アルテマは `チャンス37.5% / 天国61.7%` と逆転表記。前者をcanonicalとし、後者は `CONFLICT_LIKELY_TRANSPOSED_CHANCE_HEAVEN_LABELS` として保持。
-- 「設定変更時200G+α天井」という簡略表現と、通常C 0.8%で700G+αまで到達し得る詳細解析があるため、DBでは `99.2%が200G+α以内` として正規化。
+- スマスロ ハナビは市場予想機械割と完全攻略機械割を別定義として保持し、混同しない。
+- ゴブリンスレイヤーⅡは、一部低品質二次ページに別仕様とみられる数値があるためcanonicalへ混入しない。
+- ゴブリンスレイヤーⅡの設定変更後天井について、パチマガスロマガFREE本文に1500Gを含むよう読める記述がある一方、なな徹・パチビー・複数攻略資料は最大1000Gで一致。canonicalは **最大1000G**、前者は `CONFLICT_LIKELY_EDITORIAL_DESCRIPTION_ERROR` として保持。
+- ALL7の旧予定ページにサンダーV/カバネリ海門決戦を2026-02-10予定とする記録が残るが、導入後資料では両機とも2026-03-02で一致するため、旧予定日を実導入日へ採用しない。
 
 ## resetBehavior retrospective QA
-- 過去handoffで使われていたQAカーソル候補 `2007-07-09_genju-haou-t.md` / `幻獣覇王T` / `2007-07-09` を最新mainで再検索。
-- 現在のコード検索では該当実レコードを安全に一意固定できず、外部導入順から推測して既存COMPLETE_COREを変更していない。
 - qaStatus: **CURSOR_UNRESOLVED_ON_CURRENT_MAIN_SEARCH**
-- 次回も実体tree、旧handoff/コミット履歴系統、ファイル実体順を優先してカーソル復元を試みる。reset QA状態は性能コア完了判定と分離する。
+- 過去カーソル `2007-07-09_genju-haou-t.md` / `幻獣覇王T` は実体を安全に一意固定できるまで推測補完しない。
+- reset QA状態は性能コア本線の時系列進行と分離する。
 
 ## sources summary
 retrievedAt: 2026-09-15
-- HEIWA公式: https://www.heiwanet.co.jp/products/pachislot/bk2/
-- HAZUSE: https://hazuse.com/hd/5s1472/
-- 必勝本 基本スペック: https://hisshobon.com/machineinfo/89156/
-- 必勝本 天井・設定変更: https://hisshobon.com/machineinfo/89126/
-- 必勝本 モード選択: https://hisshobon.com/machineinfo/89140/
-- 必勝本 モード: https://hisshobon.com/machineinfo/89139/
-- 必勝本 スルー回数: https://hisshobon.com/machineinfo/89111/
-- 必勝本 範馬BONUS: https://hisshobon.com/machineinfo/89109/
-- なな徹 スペック: https://nana-press.com/kaiseki/machine/1098/34268/
-- なな徹 朝一: https://nana-press.com/kaiseki/machine/1098/34932/
-- なな徹 モード: https://nana-press.com/kaiseki/machine/1098/34934/
-- なな徹 天井: https://nana-press.com/kaiseki/machine/1098/34929/
-- なな徹 親子喧嘩: https://nana-press.com/kaiseki/machine/1098/34947/
-- 1geki: https://1geki.jp/slot/l_baki2/43/
-- パチマガスロマガFREE: https://pachimaga.com/free/mach/maker-s/heiwa/064786.php
-- パチマガスロマガ攻略: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/heiwa_slot/54/tj05.php
-- P-WORLD: https://www.p-world.co.jp/machine/database/10401
-- ちょんぼりすた（競合確認）: https://chonborista.com/slot/orinpia-slot/248697/
-- アルテマ（競合確認）: https://altema.jp/pachimo/lhanmabakireset
 
-## 2026-02-02 known canonical queue
+### No.1780 スマスロ ハナビ
+- ユニバーサル公式: https://www.universal-777.com/product/slot/hanabi_2026/
+- HAZUSE: https://hazuse.com/hd/530543h/
+- 必勝本 基本スペック: https://hisshobon.com/machineinfo/88918/
+- 必勝本 天井・設定変更: https://hisshobon.com/machineinfo/88909/
+- 必勝本 ボーナス: https://hisshobon.com/machineinfo/88914/
+- パチビー: https://www.pachibee.jp/machines/about/225120002
+- ちょんぼりすた: https://chonborista.com/slot/universal-slot/248529/
+
+### No.1781 スマスロ ゴブリンスレイヤーⅡ
+- HAZUSE: https://hazuse.com/hd/530709h/
+- 遊技通信/P-WORLDニュース: https://news.p-world.co.jp/articles/32690/yugitsushin
+- 必勝本 基本スペック: https://hisshobon.com/machineinfo/89244/
+- 必勝本 CZ抽選: https://hisshobon.com/machineinfo/89193/
+- なな徹 朝一・リセット: https://nana-press.com/kaiseki/machine/1095/34377/
+- パチビー 攻略: https://www.pachibee.jp/machines/kouryaku/225120003
+- 1geki: https://1geki.jp/slot/l_goblinslayer2/
+- P-WORLD: https://www.p-world.co.jp/machine/database/10414
+- パチマガスロマガFREE: https://pachimaga.com/free/mach/maker-s/jfj/064532.php
+
+### boundary audit
+- P-Summa 2026年2月新台整理: https://psumma.jp/pachislo/69018/
+- ALL7旧予定ページ（2/10予定値の競合確認）: https://www.all7.jp/plans/index/2026/02/10
+- HAZUSE スマスロ サンダーV: https://hazuse.com/hd/5s0895/
+- パチビー スマスロ サンダーV: https://www.pachibee.jp/machines/about/225130001
+- パチビー カバネリ海門決戦: https://www.pachibee.jp/machines/about/225130002
+
+## 2026-02-02 canonical queue — CLOSED 6/6
 1. ~~スマスロ 攻殻機動隊 — No.1776 DONE~~
 2. ~~Lパチスロうみねこのなく頃に2 — No.1777 DONE~~
 3. ~~Lパチスロ 炎炎ノ消防隊2 — No.1778 DONE~~
 4. ~~L範馬刃牙 — No.1779 DONE~~
-5. **スマスロ ハナビ — candidate**
-6. **スマスロ ゴブリンスレイヤーII — candidate**
+5. ~~スマスロ ハナビ — No.1780 DONE~~
+6. ~~スマスロ ゴブリンスレイヤーⅡ — No.1781 DONE~~
+
+## 次の時系列境界
+- 2026年3月の導入後整理ではパチスロ新台は **2機**。
+- いずれも2026-03-02導入で複数資料が一致:
+  1. **スマスロ 甲鉄城のカバネリ 海門決戦** — candidate No.1782
+  2. **スマスロ サンダーV** — candidate No.1783
+- P-Summa 2026年3月整理: https://psumma.jp/pachislo/69482/
+- 情報島 3/2導入前評価でもこの2機を対象: https://p-johojima.jp/colum/post-27100/
+- カバネリ導入後1geki: https://1geki.jp/slot/l_kabaneri2/
 
 ## 次回再開地点
-- 最新mainを再同期しNo.1779と本handoffを確認。
-- **No.1780候補「スマスロ ハナビ」— 2026-02-02** から継続。
-- その後 `スマスロ ゴブリンスレイヤーII` を同日群キューとして処理。
-- 6/6完了後、PB・別型式・地域先行・延期/段階導入を再監査して2026-02-02境界をCLOSED判定。
-- reset QAは性能コアと分離し、カーソル実体を安全に復元できた時点で次の欠損レコードから遡及補完。
-- PARTIAL/UNVERIFIEDは型式・検定番号・メーカー・シリーズ名、設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックン/有利区間へ検索語と資料系統を変えて再探索。
+- 最新mainを再同期しNo.1780、No.1781、本handoffを確認。
+- **No.1782候補「スマスロ 甲鉄城のカバネリ 海門決戦」— 2026-03-02** から継続。
+- その後 `スマスロ サンダーV` を同日群として処理。
+- 2/2完了後、PB・別型式・地域先行・延期/段階導入を再監査して2026-03-02境界をCLOSED判定。
+- PARTIAL/UNVERIFIEDは、型式名・検定番号・メーカー・シリーズ名と、設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックン/有利区間へ検索語を変え、公式・業界記事・解析・古いDB・アーカイブを横断してから確定する。
