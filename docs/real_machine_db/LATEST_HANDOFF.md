@@ -1,51 +1,54 @@
 更新日: 2026-09-14
 
 ## 現在地点
-- recordCount: **1725**
-- latestRecordAdded: **スマスロ 緑ドン VIVA!情熱南米編 REVIVAL — No.1725**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2025-05-07_smart-slot-midoridon-viva-revival.md`
-- chronologicalFrontier: **2025-05-07**
+- recordCount: **1726**
+- latestRecordAdded: **花笠 — No.1726**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2025-05-19_hanagasa.md`
+- chronologicalFrontier: **2025-05-19**
 - schema: **resetBehavior v0.7**
-- status: **2025-05-07_GROUP_CLOSED_3_OF_3_CANONICAL_PROCESSED**
+- status: **2025-05-19_GROUP_OPEN_1_OF_2_CANONICAL_PROCESSED**
 
 ## 今回の進捗
-- 最新mainの `README.md`、ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前実レコードNo.1724を再同期。
-- INDEXは旧表示のためREADME規定どおりLATEST_HANDOFF + 実レコードを進捗正本として使用。
-- No.1724 `スマスロ ようこそ実力至上主義の教室へ` の次の未処理として、No.1725 `スマスロ 緑ドン VIVA!情熱南米編 REVIVAL`（2025-05-07）を追加。
+- 最新mainの `README.md`、ミッションv0.7、`INDEX.md`、`LATEST_HANDOFF.md`、直前実レコードNo.1725を再同期。
+- INDEXは旧19件表示のためREADME規定どおりLATEST_HANDOFF + 実レコードを進捗正本として使用。
+- No.1725 `スマスロ 緑ドン VIVA!情熱南米編 REVIVAL` の次の未処理として、No.1726 `花笠`（2025-05-19）を追加。
 - 性能コア + resetBehavior v0.7を保存。
-- HAZUSEの2025年5月導入一覧と情報島の過去新台一覧を再照合し、2025-05-07のパチスロ本線は `Lパチスロ 機動戦士ガンダムSEED` / `スマスロ ようこそ実力至上主義の教室へ` / `スマスロ 緑ドン VIVA!情熱南米編 REVIVAL` の3機で一致したため、同日群をCLOSED 3/3とした。
+- 2025-05-19導入はNET/業界発表上「一部ホールでのエリア限定テスト導入」。本DBは地域限定実在機も対象としているためcanonical採番。
 
-## No.1725 — スマスロ 緑ドン VIVA!情熱南米編 REVIVAL
-- path: `docs/real_machine_db/machines/2025-05-07_smart-slot-midoridon-viva-revival.md`
-- manufacturer: **ユニバーサルブロス / UNIVERSAL ENTERTAINMENT**
-- formalModel: **L／緑ドン5／FY**
-- inspectionCode: **4S1737**
-- releaseDate: **2025-05-07**
-- payoutRate: **97.5 / 98.6 / 102.3 / 105.8 / 111.5 / 114.9%**
-- bonusInitial: **1/275.4 / 1/274.0 / 1/267.3 / 1/251.1 / 1/229.9 / 1/223.4**
-- AT: **1/561.0 / 1/555.7 / 1/502.0 / 1/464.4 / 1/424.3 / 1/400.8**
-- base: **約33.2G/50枚**
-- netIncrease: **AT約2.5枚/G / 擬似BONUS約4.5枚/G**
+## No.1726 — 花笠
+- path: `docs/real_machine_db/machines/2025-05-19_hanagasa.md`
+- manufacturer: **ネット株式会社 / NET CORPORATION**
+- formalModel: **LハナガサNA**
+- inspectionCode: **430875**
+- releaseDate: **2025-05-19（エリア限定テスト導入）**
+- settings: **1 / 2 / 4 / 5 / 6**（通常営業5段階。P-WORLDは設定L欄あり）
+- payoutRate: **97.3 / 98.7 / 104.1 / 110.2 / 114.9%**
+- initialHit: **1/194 / 1/186 / 1/171 / 1/162 / 1/152**
+- BIG: **1/137 / 1/131 / 1/116 / 1/102 / 1/91**
+- REG: **1/219 / 1/212 / 1/195 / 1/190 / 1/202**
+- base: **UNVERIFIED_AFTER_RESEARCH**（主要解析が空欄/調査中）
+- netIncrease: **擬似ボーナス約3.2枚/G**
+- basicPayout: **BIG 約217枚 / REG 約108枚**
 
-## No.1725 resetBehavior v0.7
-- settingChange: **天井ゲーム数RESET、通常最大1280G→800G短縮。内部状態再抽選、全設定共通50.0%で高確。ビリゲ高確RESET。設定変更時有利区間RESETは機種別二次解析で確認。**
-- carryOver: **純電断比較表で天井・内部状態・ビリゲ高確の引継ぎを確認し、据え置きも基本CARRY_OVERとして管理。ただし据え置き単独直接表記は `DIRECT_UNTOUCHED_WORDING_NOT_FOUND_AFTER_RESEARCH`。**
-- powerCycle: **天井までのG数・内部状態・ビリゲ高確を引継ぎ。ステージは必勝本で調査中。有利区間CARRY_OVERは機種別二次解析のみのためANALYSIS_SINGLE。**
-- ceilingBenefit: **ボーナス/AT間1280G→設定変更後800G。到達時EXTRA BIG以上、33.2%でロングフリーズ。**
-- state: **設定変更時高確50.0%（全設定共通）。純電断は状態引継ぎ。通常/高確/超高確のフル振り分けは高確50%以外PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH。**
-- detection: **朝一800G超えで天井非発動は据え置き推測の強材料。高確示唆は単独確定不可。固有ガックンは再探索後もUNVERIFIED_AFTER_RESEARCH。**
-- conflict: **50枚ベースは主要複数資料33.2G、単一立ち回り資料32.5G。33.2Gをcanonical、32.5GをCONFLICT保持。**
+## No.1726 resetBehavior v0.7
+- settingChange: **天井RESET。初回ボーナスは滞在モード不問で最大199G+αへ短縮。モード再抽選、リセットモード選択可能性あり。設定変更時有利区間RESETは機種別二次解析で確認。**
+- carryOver: **据え置きは天井・内部モード・有利区間をCARRY_OVERとする機種別二次解析を確認。ただし高優先資料の据え置き単独直接表は未固定。**
+- powerCycle: **天井・内部モード・有利区間を引継ぎとする機種別二次解析あり。高優先の直接比較表が固定できないためANALYSIS_SINGLE上限。**
+- ceilingBenefit: **通常最大499G+α → 設定変更後初回最大199G+α。到達時ボーナス当選。**
+- mode: **通常A/B/チャンス/リセット/天国準備。リセットモードは設定変更時に選ばれやすく天国移行期待度高め。具体的朝一振り分け率はPUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH。**
+- state: **通常時主要管理はモード中心。独立状態の定義/振り分けは高優先資料で固定できずUNVERIFIED_DEFINITION_AFTER_RESEARCH。**
+- detection: **朝一199G+α超えの初回非当選は据え置き推測の強材料。固有ガックン条件・発生率は再探索後UNVERIFIED_AFTER_RESEARCH。**
+- advantageousSectionNote: **虹パト終了/通常有利区間移行で関係するリミットレスモードは「朝イチリセット時以外」とする解析があり、通常時切断恩恵を朝一へ混入しない。**
+- conflict: **通常設定は1/2/4/5/6で一致。一方P-WORLDは設定L欄も掲載。設定Lの公開性能値は未確認のため補助情報として保持。後年サイトの設定3推定値は採用しない。**
 
-## 2025-05-07境界 — CLOSED 3/3
-1. Lパチスロ 機動戦士ガンダムSEED — No.1723 DONE
-2. スマスロ ようこそ実力至上主義の教室へ — No.1724 DONE
-3. スマスロ 緑ドン VIVA!情熱南米編 REVIVAL — No.1725 DONE
+## 2025-05-19境界 — OPEN 1/2
+1. 花笠 — No.1726 DONE（エリア限定テスト導入）
+2. L ToLOVEるダークネス TRANCE ver.8.7 — NEXT
 
 ## 次回再開地点
-- 最新mainを再同期しNo.1725と本handoffを確認。
-- **No.1726候補 `花笠` — 2025-05-19** から再開する。
-- 同日群の次候補は **`L ToLOVEるダークネス TRANCE ver.8.7` — 2025-05-19**。
-- HAZUSE 2025年5月導入一覧では2025-05-19のパチスロは現時点で上記2機。両機処理後、PB・地域先行・別型式・延期/段階導入を再監査して同日境界をCLOSED判定する。
+- 最新mainを再同期しNo.1726と本handoffを確認。
+- **No.1727候補 `L ToLOVEるダークネス TRANCE ver.8.7` — 2025-05-19** から再開する。
+- No.1727処理後、HAZUSE 2025年5月導入一覧・業界新台一覧に加え、PB・地域先行・別型式・延期/段階導入を再監査して2025-05-19境界をCLOSED判定する。
 - 各機種は設定変更/据え置き/電源OFF→ON、ゲーム数/ポイント/天井、モード/状態、有利区間、朝一恩恵/不利、変更判別、公開朝一数値を独立管理する。
 - PARTIAL/UNVERIFIEDは表記揺れ・正式型式・メーカー・シリーズ名、設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間へ検索語を変え、公式・業界・主要解析・旧DB・アーカイブ/回顧資料横断後のみ確定する。
 
@@ -56,14 +59,18 @@
 
 ## 今回の主要ソース
 取得日: 2026-09-14
-- ユニバーサル公式製品ページ: https://www.universal-777.com/product/slot/midoridon_viva_revival/
-- HAZUSE 機種DB: https://hazuse.com/machine/pachislot/4S1737/
-- HAZUSE 2025年5月導入一覧: https://hazuse.com/new-machine/202505-2/
-- 情報島 過去の新台情報: https://p-johojima.jp/machine_spec/post-2074/
-- 1geki 機種ページ: https://1geki.jp/slot/l_mdn/
-- 1geki 天井・朝一: https://1geki.jp/slot/l_mdn/3/
-- 必勝本 天井&設定変更: https://hisshobon.com/machineinfo/86508/
-- 必勝本 状態移行抽選: https://hisshobon.com/machineinfo/86498/
-- ちょんぼりすた: https://chonborista.com/slot/universal-slot/231722/
-- なな徹 リセット狙い: https://nana-press.com/kaiseki/machine/936/29337/
-- ぽこすろっと（有利区間比較補助）: https://www.nankaikoya.jp/midoridon-revival-kitaichi/
+- NET公式 花笠: https://www.net-fun.co.jp/hanagasa/
+- 情報島 検定通過: https://p-johojima.jp/news/post-780/
+- グリーンべると 新台発表: https://web-greenbelt.jp/post-95503/
+- 情報島 新台発表: https://p-johojima.jp/new_machine/post-4381/
+- HAZUSE: https://hazuse.com/machine/pachislot/SX0102/
+- 1geki 機種ページ: https://1geki.jp/slot/l_hanagasa/
+- 1geki 設定差: https://1geki.jp/slot/l_hanagasa/0/
+- 1geki 天井・朝一: https://1geki.jp/slot/l_hanagasa/3/
+- 必勝本 通常時解説: https://hisshobon.com/machineinfo/87204/
+- 必勝本 モード移行抽選: https://hisshobon.com/machineinfo/87209/
+- 必勝本 設定変更時の恩恵: https://hisshobon.com/machineinfo/87216/
+- パチマガスロマガ ボーナス基本概要: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/net_slot/194/bn01.php
+- P-WORLD: https://www.p-world.co.jp/machine/database/10267
+- ちょんぼりすた: https://chonborista.com/slot/net-slot/236739/
+- SLOT HACK（電断/有利区間補助）: https://slothack.net/matome/166107/
