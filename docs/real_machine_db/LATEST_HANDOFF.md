@@ -1,78 +1,103 @@
 更新日: 2026-09-14
 
 ## 現在地点
-- recordCount: **1682**
-- latestRecordAdded: **L 新・必殺仕置人 回胴 CRASH SPEC — No.1682**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2024-11-05_hissatsu-shiokinin-crash-spec.md`
-- chronologicalFrontier: **2024-11-05**
+- recordCount: **1684**
+- latestRecordAdded: **Lダブルアタック2 with OZS-1000＆RAPHAEL — No.1684**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2024-11-18_double-attack2-ozs1000-raphael.md`
+- chronologicalFrontier: **2024-11-18**
 - schema: **resetBehavior v0.7**
-- status: **2024-11-05_BOUNDARY_OPEN_1_OF_2_CURRENTLY_CONFIRMED_CANONICAL_PROCESSED**
+- status: **2024-11-18_BOUNDARY_OPEN_1_OF_3_CANONICAL_PROCESSED_WITH_CHOUKASAI_DATE_CONFLICT_QA_DEBT**
 
 ## 今回の進捗
-- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直近No.1681を再同期。INDEXは旧19件表示のためREADME規定どおりLATEST_HANDOFF + 実レコードを進捗正本として使用。
-- No.1681の次の未処理候補 `L 新・必殺仕置人 回胴 CRASH SPEC`（2024-11-05）をNo.1682として追加。
-- 型式 `L新・必殺仕置人KC`、検定番号 `3S1852`、京楽産業．、2024-11-05導入を遊技通信/P-WORLD・HAZUSE等で照合。
-- 設定1〜6の機械割は 97.6 / 98.5 / 101.1 / 105.4 / 108.8 / 112.9%。BONUS初当りは 1/230.7 / 1/224.1 / 1/212.9 / 1/198.2 / 1/184.7 / 1/169.0、AT初当りは 1/456.0 / 1/438.9 / 1/411.2 / 1/380.7 / 1/350.7 / 1/319.9。
-- 約32.4G/50枚。BIG/真出陣BONUS/AT「仕置無双RUSH」は純増約3.0枚/G。BIGは30G+α・AT期待度約40%、真出陣BONUSは30G・AT濃厚、ATは初期50G+α。
-- 通常時最大999G+αでBONUS当選のゲーム数天井。
-- resetBehavior v0.7: 設定変更で有利区間・天井・内部状態・寅の会ポイント・死神ポイントをRESET。据え置きでは全項目を内部で引継ぎ。
-- 設定1の設定変更後天井振り分けは408G 40.8% / 999G 59.2%。設定2〜6の個別振り分けは検索語・型式・メーカーを変えて再探索後も信頼できる固定公開値を確認できず `PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH`。
-- 設定変更時は寅の会ポイント初期値を内部抽選。初回寅の会演出は赤月ステージ移行濃厚で、獲得する超高確G数に10G加算。
-- 純電源OFF→ONでは天井G数と寅の会ポイントを内部で引き継ぎ、液晶上は0から開始。開始ステージは主水ステージ。
-- 純電源OFF→ON時の内部状態・死神ポイント・有利区間を項目別に直接明記した高信頼資料は不足しており、一般仕様から推測せず `UNVERIFIED_AFTER_RESEARCH` を保持。
-- 有利区間ランプでは設定変更/据え置き判別不可。機種専用リセット判別はなな徹でも「現在調査中」。本機固有ガックン条件/発生率も正式型式・京楽・シリーズ名を含む複数検索後に固定できず `UNVERIFIED_AFTER_RESEARCH`。
-- 直前handoffでは2024-11-05群を4機候補としていたが境界再監査で日付差を確認。ALL7および別月間一覧では `Lダブルアタック2 with OZS-1000＆RAPHAEL` と `スマスロ モンスターハンターライズ` は **2024-11-18** 導入として掲載される。一方、2024-11-05導入は `L 新・必殺仕置人 回胴 CRASH SPEC` と `Lバンドリ！` が一致。よって現時点のcanonical queueでは2024-11-05群を2機として扱い、1/2処理済みとする。
+- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前No.1682を再同期。INDEXは旧19件表示のためREADME規定どおりLATEST_HANDOFF + 実レコードを進捗正本として使用。
+- No.1683 `Lバンドリ！`（2024-11-05）を追加し、2024-11-05 canonical群は2/2処理完了。
+- No.1684 `Lダブルアタック2 with OZS-1000＆RAPHAEL`（2024-11-18）を追加し、11月18日群へ進行。
+- `スマート沖スロ 超華祭` はALL7・Pachibee・PachiSeven・一撃等で2024-11-18導入が優勢。一方、マルっとWAVEに11/05、K-Naviに11/04表記があるため、canonicalは11/18に置きつつ `CONFLICT_RELEASE_DATE_2024-11-18_VS_11-05_VS_11-04` を境界QA debtとして保持する。
 
-## No.1682 — L 新・必殺仕置人 回胴 CRASH SPEC
-- path: `docs/real_machine_db/machines/2024-11-05_hissatsu-shiokinin-crash-spec.md`
-- manufacturer: **京楽産業．**
-- formalModel: **L新・必殺仕置人KC**
-- inspectionCode: **3S1852**
+## No.1683 — Lバンドリ！
+- path: `docs/real_machine_db/machines/2024-11-05_l-bang-dream.md`
+- manufacturer: **オリンピアエステート（オリンピア） / 総販売元 平和**
+- formalModel: **LバンドリS11**
+- inspectionCode: **430327**
 - releaseDate: **2024-11-05**
-- generation: **6.5号機 / スマスロ**
-- systemType: **AT / 擬似ボーナス + ゲーム数上乗せ型AT**
-- payoutRate: **97.6 / 98.5 / 101.1 / 105.4 / 108.8 / 112.9%**
-- BONUS初当り: **1/230.7 / 1/224.1 / 1/212.9 / 1/198.2 / 1/184.7 / 1/169.0**
-- AT初当り: **1/456.0 / 1/438.9 / 1/411.2 / 1/380.7 / 1/350.7 / 1/319.9**
-- base: **約32.4G/50枚**
-- netIncrease: **約3.0枚/G**
-- normalCeiling: **999G+α**
-- resetCeilingSetting1: **408G 40.8% / 999G 59.2%**
-- settingChange: **有利区間・天井・内部状態・寅の会pt・死神pt RESET / 寅の会初期値抽選**
-- carryOver: **有利区間・天井・内部状態・寅の会pt・死神pt引継ぎ**
-- powerCycle: **天井・寅の会pt引継ぎ（液晶表示0） / 全項目直接契約は一部UNVERIFIED**
-- resetBenefit: **初回寅の会→赤月濃厚 / 超高確G数+10G**
-- detection: **有利区間ランプ判別不可 / ガックンUNVERIFIED**
+- settings: **L / 2 / 3 / 4 / 5 / 6**
+- payoutRate setting2-6: **97.6 / 98.9 / 105.2 / 110.0 / 112.5%**
+- ST初当り setting2-6: **1/328.0 / 1/326.4 / 1/303.9 / 1/291.0 / 1/271.5**
+- base: **約32.7G/50枚**
+- netIncrease: **約4.7枚/G**
+- normalCeiling: **最大10周期（平均約620G）**
+- resetCeiling: **最大7周期（平均約430G）**
+- resetMode: **モードB以上濃厚**
+- resetWithin3CyclesStHitSetting2: **76.5%**
+- settingChange: **有利区間・周期天井・内部状態・スターポイントRESET / モード再抽選 / スターポイント内部加算**
+- carryOver: **有利区間・周期天井・内部状態・スターポイント・モード引継ぎ**
+- powerCycle: **有利区間・周期天井・モード引継ぎを別系統で確認。内部状態/スターポイント全項目はANALYSIS_SINGLE_CAUTION**
+- detection: **7周期超AT非当選は据え置き濃厚材料 / 有利区間ランプ判別不可 / ガックンUNVERIFIED**
+- conflict: **設定2機械割 97.6%（主要複数） vs 97.5%（HAZUSE）**。また必勝本の天井ページに他機種由来と思われる項目混入があるため汚染項目をcanonicalに使用していない。
 
-## 2024-11-05境界 — OPEN
+## No.1684 — Lダブルアタック2 with OZS-1000＆RAPHAEL
+- path: `docs/real_machine_db/machines/2024-11-18_double-attack2-ozs1000-raphael.md`
+- manufacturer: **オーイズミ**
+- formalModel: **Lダブルアタック2EX**
+- inspectionCode: **430240**
+- releaseDate: **2024-11-18**
+- payoutRate: **97.8 / 99.3 / 101.9 / 105.0 / 108.7 / 111.5%**
+- AT初当り: **1/259.9 / 1/250.3 / 1/237.1 / 1/217.4 / 1/200.2 / 1/189.5**
+- base setting1-6: **約33.4 / 33.7 / 34.0 / 34.4 / 34.7 / 35.0G/50枚**
+- netIncrease: **通常AT 約2.5枚/G / 上位AT 約5.0枚/G**
+- normalGameCeiling: **999G+α**
+- normalSymbolCeiling: **最大63回**
+- resetSymbolCeiling: **最大47回**
+- settingChange: **有利区間・ゲーム数/シンボル天井・内部状態・モードRESET / 通常B以上**
+- carryOver: **有利区間・天井・状態・モード引継ぎ**
+- powerCycle: **ゲーム数天井・シンボル回数・状態・モード・有利区間引継ぎ**
+- resetMode setting1: **通常B37.1 / チャンスA37.5 / チャンスB12.5 / 天国12.5 / 超天国0.4%**
+- resetMode setting6: **通常B22.3 / チャンスA45.3 / チャンスB18.8 / 天国12.5 / 超天国1.2%**
+- detection: **朝一47シンボル超AT非当選は据え置き濃厚材料 / 開始ステージ・ガックンUNVERIFIED**
+
+## 2024-11-05境界 — CANONICAL CLOSED 2/2
 1. L 新・必殺仕置人 回胴 CRASH SPEC — No.1682 DONE
-2. Lバンドリ！ — NEXT
-- 境界再監査で `Lダブルアタック2 with OZS-1000＆RAPHAEL` と `スマスロ モンスターハンターライズ` は2024-11-18側へ移動。
-- 2024-11-05群は現時点で2機をcanonical候補とする。`Lバンドリ！` 処理後、PB/地域先行/別型式/延期を再監査してCLOSED判定する。
+2. Lバンドリ！ — No.1683 DONE
+- `スマート沖スロ 超華祭` の11/05表記資料は存在するが、複数の機種専用/導入一覧で11/18が一致するため本線は11/18へ置く。日付競合は消さずQA debtとして保持。
+
+## 2024-11-18境界 — OPEN
+1. Lダブルアタック2 with OZS-1000＆RAPHAEL — No.1684 DONE
+2. スマスロ モンスターハンターライズ — NEXT
+3. スマート沖スロ 超華祭 — PENDING / RELEASE DATE CONFLICT QA
+- 3機処理後、PB/地域先行/別型式/延期・段階導入を再監査してCLOSED判定する。
 
 ## resetBehavior 遡及QA
 - 既処理確認済みカーソル: `2007-07-09_genju-haou-t.md`（幻獣覇王T）。
 - 新規時系列収集を優先し、今回も旧レコードへの推測更新は実施していない。
 
 ## 次回再開地点
-- 最新mainを再同期しNo.1682と本handoffを確認。
-- **No.1683候補 `Lバンドリ！` — 2024-11-05** から性能コア + resetBehavior v0.7を収集する。
-- `Lバンドリ！` 処理後に2024-11-05群の境界を再監査してCLOSED判定する。
-- その後の主要境界候補は **2024-11-18**。現時点で `Lダブルアタック2 with OZS-1000＆RAPHAEL`、`スマスロ モンスターハンターライズ`、`スマート沖スロ 超華祭` を確認しているが、開始時に当時新台カレンダー・メーカー別一覧・PB/地域先行/別型式/延期を再監査して候補数を固定する。
+- 最新mainを再同期しNo.1683/1684と本handoffを確認。
+- **No.1685候補 `スマスロ モンスターハンターライズ` — 2024-11-18** から性能コア + resetBehavior v0.7を収集する。
+- その後 `スマート沖スロ 超華祭` を処理し、導入日競合（11/18 vs 11/05 vs 11/04）をレコード内にも明示する。
+- 11/18群完了後、当時新台カレンダー・メーカー別一覧・PB/地域先行/別型式/延期を再監査して次境界へ進む。
 - 欠損は表記揺れ・正式型式・メーカー・シリーズ名、設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/状態/ガックン/有利区間等へ検索語を変え、公式・業界・主要解析・旧DB・アーカイブ/回顧資料横断後のみUNVERIFIED。
 
 ## 今回の主要ソース
 取得日: 2026-09-14
-- 遊技通信/P-WORLD業界記事: https://news.p-world.co.jp/articles/28802/yugitsushin
-- グリーンべると/P-WORLD業界記事: https://news.p-world.co.jp/articles/28808/greenbelt
-- HAZUSE 基本スペック: https://hazuse.com/machine/pachislot/3S1852/genre/201/
-- パチ＆スロ必勝本 基本スペック: https://p.hisshobon.jp/machine/4375/1/104540
-- P-WORLD機種DB: https://www.p-world.co.jp/machine/database/10113
-- なな徹 スペック: https://nana-press.com/kaiseki/machine/833/24009/
-- なな徹 朝一/設定変更: https://nana-press.com/kaiseki/machine/833/25105/
-- なな徹 狙い目/リセット: https://nana-press.com/kaiseki/machine/833/25102/
-- なな徹 有利区間: https://nana-press.com/kaiseki/machine/833/25106/
-- 一撃 天井/朝一: https://1geki.jp/slot/l_hissatsu_shiokinin_crash/3/
-- 一撃 機種解析TOP: https://1geki.jp/slot/l_hissatsu_shiokinin_crash/
-- ALL7 2024年11月新台導入予定一覧: https://www.all7.jp/plans/index/2024/11
-- 6号機一覧/月別導入整理: https://sulocale.sulopachinews.com/archives/43927
+### Lバンドリ！
+- 遊技日本: https://yugi-nippon.com/pachinko-new-machine/post-66472/
+- Amusement Japan/P-WORLD: https://news.p-world.co.jp/articles/28735/amusement
+- HAZUSE: https://hazuse.com/hd/430327-2/
+- パチ&スロ必勝本 基本: https://hisshobon.com/machineinfo/84765/
+- パチ&スロ必勝本 天井/設定変更（ページ混入注意）: https://hisshobon.com/machineinfo/84763/
+- 一撃: https://1geki.jp/slot/l_bang_dream/
+- なな徹 朝一: https://nana-press.com/kaiseki/machine/823/25149/
+- なな徹 天井: https://nana-press.com/kaiseki/machine/823/25146/
+- スロぱちクエスト: https://www.slopachi-quest.com/article/bangdream-tenjou/
+### Lダブルアタック2
+- 遊技通信/P-WORLD: https://news.p-world.co.jp/articles/28758/yugitsushin
+- Amusement Japan/P-WORLD: https://news.p-world.co.jp/articles/28770/amusement
+- P-Summa: https://psumma.jp/featured/62886/
+- HAZUSE: https://hazuse.com/machine/pachislot/SX0090/
+- パチ&スロ必勝本: https://p.hisshobon.jp/vpage/2655/2
+- なな徹 朝一: https://nana-press.com/kaiseki/machine/832/25289/
+- なな徹 モード: https://nana-press.com/kaiseki/machine/832/25285/
+- スロぱちクエスト: https://www.slopachi-quest.com/article/watack2-tenjou/
+### 境界
+- ALL7 2024年11月: https://www.all7.jp/plans/index/2024/11
+- マルっとWAVE（超華祭11/05表記）: https://marutto-wave.jp/new_machine/20241105/
