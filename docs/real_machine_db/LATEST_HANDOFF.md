@@ -1,68 +1,70 @@
 更新日: 2026-09-14
 
 ## 現在地点
-- recordCount: **1666**
-- latestRecordAdded: **スマスロ ゴッドイーター リザレクション — No.1666**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2024-07-22_god-eater-resurrection.md`
-- chronologicalFrontier: **2024-07-22**
+- recordCount: **1667**
+- latestRecordAdded: **スマスロ ゲゲゲの鬼太郎 覚醒 — No.1667**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2024-08-05_gegege-no-kitaro-kakusei.md`
+- chronologicalFrontier: **2024-08-05**
 - schema: **resetBehavior v0.7**
-- status: **2024-07-22_BOUNDARY_CLOSED_4_OF_4_CANONICAL_PROCESSED**
+- status: **2024-08-05_OPEN_1_OF_4_KNOWN_CANONICAL_PROCESSED**
 
 ## 今回の進捗
-- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直近No.1665を確認。INDEXは旧19件表示のためREADME規定どおり最新handoff + 実レコードを進捗正本として使用。
-- 直前handoff指定のNo.1666候補 `スマスロ ゴッドイーター リザレクション` を性能コア + resetBehavior v0.7で登録。
-- 遊技日本/P-WORLD業界記事、HAZUSE、1geki、必勝本、パチビー、K-Navi、ちょんぼりすた、パチナビ等を横断。
-- 型式 `LパチスロゴッドイーターリザレクションSLED`、検定番号 `4S0159`、2024-07-22導入を複数資料で照合。
-- 設定変更時は最大天井1000G+α→600G+αへ短縮、状態・偏食因子RESET。純電源OFF→ONでは天井・偏食因子・状態を引継ぎ。
-- 本機固有ガックン、純電断時ステージ復帰位置、設定変更専用モード振り分け率は検索語・資料系統変更後も固定できずUNVERIFIED/PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH。
-- 設定3機械割は101.0%と101.1%の資料差を平均せずCONFLICTとして保持。
-- 2024-07-22同日群は4/4完了。K-Naviはゴッドイーターを「7月下旬」とするが、複数資料で7/22を確認。PB・別型式・地域先行・延期/段階導入を再監査した範囲で同日追加canonical候補なしのためCLOSED。
+- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直近No.1666を確認。INDEXは旧19件表示のためREADME規定どおり最新handoff + 実レコードを進捗正本として使用。
+- 直前handoff指定のNo.1667候補 `スマスロ ゲゲゲの鬼太郎 覚醒` を性能コア + resetBehavior v0.7で登録。
+- JFJ公式、Amusement Japan、HAZUSE、パチビー、必勝本、なな徹、ちょんぼりすた、パチナビ等を横断。
+- 型式 `Lゲゲゲの鬼太郎 覚醒JC`、検定番号 `4S0089`、2024-08-05導入、設定1〜6のCZ/AT/機械割、約30.6〜31.0G/50枚、純増約5.0枚/Gを複数資料で照合。
+- 設定変更時は有利区間・天井・内部状態・妖気ポイントをRESET。内部ゲーム数0〜150Gランダム加算により実質天井約1050〜1200G+α、天井到達時はATレベル2「激闘」開始、600G以内AT時はねこ娘CHANCE獲得抽選優遇。
+- 据え置き/純電源OFF→ONでは有利区間・天井進行・ゲーム数・妖気ポイント・内部状態を引継ぎ。
+- 本機固有ガックン、確定的リセット判別、600G以内ねこ娘CHANCE獲得率、純電断ステージ復帰規則は検索語・資料系統変更後も固定できずUNVERIFIED/PUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH。
 
-## No.1666 — スマスロ ゴッドイーター リザレクション
-- path: `docs/real_machine_db/machines/2024-07-22_god-eater-resurrection.md`
-- manufacturer: **セブンリーグ（製造） / 山佐ネクスト（販売・ブランド）**
-- formalModel: **LパチスロゴッドイーターリザレクションSLED**
-- inspectionCode: **4S0159**
-- releaseDate: **2024-07-22**
+## No.1667 — スマスロ ゲゲゲの鬼太郎 覚醒
+- path: `docs/real_machine_db/machines/2024-08-05_gegege-no-kitaro-kakusei.md`
+- manufacturer: **JFJ（藤商事グループ）**
+- formalModel: **Lゲゲゲの鬼太郎 覚醒JC**
+- inspectionCode: **4S0089**
+- releaseDate: **2024-08-05**
 - generation: **6.5号機 / スマスロ**
-- systemType: **AT / ST型AT**
-- payoutRate: **97.9 / 98.9 / 101.1 / 105.6 / 110.0 / 114.9%**（設定1〜6。設定3は101.0%表記資料ありCONFLICT）
-- AT: **1/351.9 / 1/344.5 / 1/330.1 / 1/317.0 / 1/302.2 / 1/290.3**
-- base: **約31G/50枚**
-- netIncrease: **約9.0枚/G**
-- ST: **25G+α / 勝利期待度約76%**
-- ceiling: **通常最大1000G+α → 設定変更後最大600G+α**
-- reset: **設定変更で有利区間・天井進行・状態・偏食因子をRESET。偏食因子は設定変更自体が獲得契機でもある。**
-- carryOver/powerCycle: **据え置き/純電源OFF→ONでは天井・偏食因子・状態を引継ぎ。**
-- morning benefit: **最大天井400G短縮（1000G+α→600G+α）**
-- detection: **朝一600G+α超えAT非当選は据え置き推測材料。本機固有ガックンはUNVERIFIED。**
-- unresolved after research: **ガックン条件・率 / 純電断ステージ復帰位置 / 設定変更専用モード振り分け率**
-- conflict: **設定3機械割 101.0% vs 101.1%。平均化せず保持。**
+- systemType: **AT / セット継続型AT**
+- payoutRate: **97.9 / 98.9 / 100.3 / 105.6 / 110.8 / 114.9%**（設定1〜6）
+- CZ: **1/222.3 / 1/219.8 / 1/217.0 / 1/206.8 / 1/197.2 / 1/191.6**
+- AT: **1/421.1 / 1/413.6 / 1/403.4 / 1/378.5 / 1/361.7 / 1/349.8**
+- base: **約30.6〜31.0G/50枚**
+- netIncrease: **約5.0枚/G**
+- AT: **1セット25G、初回墓場開始時40G保障 / 墓場約51%・激闘約62%・覚醒約80%継続**
+- bonus: **ゲゲゲBONUS平均約150枚**
+- ceiling: **通常1200G+α、設定変更時内部0〜150G加算で実打約1050〜1200G+α**
+- reset: **有利区間・天井・内部状態・妖気ポイントRESET、内部G数0〜150Gランダム加算。**
+- carryOver/powerCycle: **据え置き/純電源OFF→ONでは有利区間・天井進行・ゲーム数・妖気ポイント・内部状態を引継ぎ。**
+- morning benefit: **最大150G実質短縮 / 天井到達時ATレベル2激闘開始 / 600G以内ATでねこ娘CHANCE獲得抽選優遇。**
+- public morning numeric: **内部0〜150G加算 / 実質1050〜1200G+α / 600G以内優遇 / 設定変更時妖気pt天井は15〜30pt側が選ばれやすい公開傾向。**
+- detection: **内部G加算による表示G数とのズレは推測材料。本機固有ガックン・確定判別はUNVERIFIED。**
+- unresolved after research: **ガックン条件・率 / 確定リセット判別 / 600G以内ねこ娘CHANCE獲得率 / 純電断ステージ復帰規則 / 朝一専用モード振り分け**
+- conflict: **固定専用短縮天井はないという表現と0〜150G内部加算による実質短縮は定義差。canonicalは内部加算方式として保持。**
 
-## 2024-07-22境界 — CLOSED 4/4
-1. ミスタージャグラー — No.1663 DONE
-2. 賞金首Angel — No.1664 DONE
-3. スロット ゾンビランドサガ — No.1665 DONE
-4. スマスロ ゴッドイーター リザレクション — No.1666 DONE
+## 2024-08-05境界 — OPEN 1/4
+1. スマスロ ゲゲゲの鬼太郎 覚醒 — No.1667 DONE
+2. L D4DJ Pachi-Slot Mix — NEXT
+3. Lワンパンマン — QUEUED
+4. スマスロ トロピカーナ — QUEUED
 
 ## 次回再開地点
-- 最新mainを再同期しNo.1666と本handoffを確認。
-- 次のcanonical境界は **2024-08-05**。主要資料横断で同日パチスロ4機を確認: `スマスロ ゲゲゲの鬼太郎 覚醒 / L D4DJ Pachi-Slot Mix / Lワンパンマン / スマスロ トロピカーナ`。
-- **No.1667候補 `スマスロ ゲゲゲの鬼太郎 覚醒`（2024-08-05）** から性能コア + resetBehavior v0.7を収集。
+- 最新mainを再同期しNo.1667と本handoffを確認。
+- **No.1668候補 `L D4DJ Pachi-Slot Mix`（2024-08-05）** から性能コア + resetBehavior v0.7を収集。
+- 続いて `Lワンパンマン` → `スマスロ トロピカーナ` の順で同日群を継続。
 - 4機完了後、PB・別型式・地域先行・延期/段階導入を再監査して2024-08-05群CLOSED判定。
 - 欠損は表記揺れ・正式型式・メーカー・シリーズ名、設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックン/有利区間等へ検索語を変え、公式・業界・主要解析・旧DB・アーカイブ/回顧資料横断後のみUNVERIFIED。
 
 ## 今回の主要ソース
 取得日: 2026-09-14
-- 遊技日本 / P-WORLD業界ニュース: https://news.p-world.co.jp/articles/28293/nippon
-- HAZUSE: https://hazuse.com/machine/pachislot/4S0159/
-- 1geki 基本解析: https://1geki.jp/slot/l_godeater_r/
-- 1geki 天井/設定変更: https://1geki.jp/slot/l_godeater_r/3/
-- パチ&スロ必勝本 天井/設定変更: https://hisshobon.com/machineinfo/84233/
-- パチ&スロ必勝本 偏食因子: https://hisshobon.com/machineinfo/84253/
-- ちょんぼりすた: https://chonborista.com/slot/yamasa-slot/211285/
-- パチビー: https://www.pachibee.jp/machines/index/224060000
-- K-Navi 2024年7月: https://p-kn.com/calendar/202407/
-- K-Navi 2024年8月: https://p-kn.com/calendar/202408/
-- パチナビ: https://pachinavi.net/machines/smasloth-god-eater/settei/
-- 2024-08-05導入一覧照合: https://marutto-w.com/industry_news/20240618
+- JFJ公式: https://www.fujimarukun.co.jp/products/l_gegege/
+- Amusement Japan: https://amusement-japan.co.jp/article/detail/10004371/
+- HAZUSE: https://hazuse.com/hd/4s0089/
+- パチビー 基本スペック: https://www.pachibee.jp/machines/index/224060010
+- パチビー 攻略/リセット: https://www.pachibee.jp/machines/kouryaku/224060010
+- パチ&スロ必勝本 設定変更時: https://hisshobon.com/machineinfo/84179/
+- パチ&スロ必勝本 狙いドコロ: https://hisshobon.com/machineinfo/84207/
+- パチ&スロ必勝本 有利区間: https://hisshobon.com/machineinfo/84180/
+- なな徹 朝一・設定変更: https://nana-press.com/kaiseki/machine/782/23116/
+- なな徹 天井: https://nana-press.com/kaiseki/machine/782/23263/
+- ちょんぼりすた: https://chonborista.com/slot/fuji-slot/213846/
+- パチナビ 天井・ゾーン: https://pachinavi.net/machines/smasloth-kitaro-kakusei/tenjo/
