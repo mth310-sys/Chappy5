@@ -1,128 +1,78 @@
 更新日: 2026-09-14
 
 ## 現在地点
-- recordCount: **1674**
-- latestRecordAdded: **パチスロL黄門ちゃま天 — No.1674**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2024-09-02_l-komonchama-ten.md`
-- chronologicalFrontier: **2024-09-02**
+- recordCount: **1675**
+- latestRecordAdded: **パチスロハイパーラッシュ — No.1675**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2024-09-17_hyper-rush.md`
+- chronologicalFrontier: **2024-09-17**
 - schema: **resetBehavior v0.7**
-- status: **2024-09-02_BOUNDARY_CLOSED_4_OF_4_CANONICAL_PROCESSED**
+- status: **2024-09-17_BOUNDARY_CLOSED_1_OF_1_CANONICAL_PROCESSED**
 
 ## 今回の進捗
-- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直近No.1671を再確認。INDEXは旧19件表示のためREADME規定どおりLATEST_HANDOFF + 実レコードを進捗正本として使用。
-- No.1671 `A-SLOT+ この素晴らしい世界に祝福を！` の次の未処理から継続し、No.1672〜1674を性能コア + resetBehavior v0.7で登録。
-- 公式、業界、主要解析、当時/後年DBを横断し、欠損は機種名・型式・メーカー・設定変更/据え置き/電源OFF ON/ガックン/有利区間等へ検索語を変えて再探索後のみUNVERIFIED。
-- 2024年9月の導入予定一覧をページ跨ぎで再監査し、9/2パチスロ群は `A-SLOT+ このすば` / `かぐや様は告らせたい` / `閃乱カグラ2` / `黄門ちゃま天` の4機で一致。9/2群を4/4 CLOSED。
-- 次のパチスロ導入境界は2024-09-17 `パチスロハイパーラッシュ` と確認。
+- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直近No.1674を確認。INDEXは旧19件表示のためREADME規定どおりLATEST_HANDOFF + 実レコードを進捗正本として使用。
+- 直前handoff指定のNo.1675候補 `パチスロハイパーラッシュ` を性能コア + resetBehavior v0.7で登録。
+- 山佐ネクスト公式、遊技通信/P-WORLD、娯楽産業、HAZUSE、パチマガスロマガ、必勝本、なな徹、一撃、ちょんぼりすた、Ativo、検定通過資料を横断。
+- 型式 `SハイパーラッシュSLC8`、検定番号 `430212`、セブンリーグ製造/山佐ネクスト、2024-09-17導入を照合。
+- 設定1〜6の通常機械割98.9/99.9/102.0/104.0/105.9/108.1%、完全攻略100.5/101.5/103.7/106.2/108.6/111.0%、BIG 1/259.3→1/216.5、REG 1/527.3→1/430.5、合算1/173.8→1/144.0、約34G/50枚、SIDE-A約7.2枚/G、SIDE-B約2.5枚/Gを複数資料で照合。
+- ハイパーBIG平均約350枚、チャレンジBIG平均約230枚。REGは導入時主要資料平均約50枚をcanonicalとし、一撃後年ページの平均75枚はCONFLICT保持。
+- 天井は専用天井ページ・パチマガスロマガ・一撃・ちょんぼりすた等で非搭載。必勝本の基本スペック概要欄だけ「搭載」とするためCONFLICT_CEILING_SUMMARY_FIELDとして保持し、canonicalは非搭載。
+- 設定変更時/純電源OFF→ON時はユーザー選択式の演出モードがオリジナルへ戻る。天井・規定G・スルー天井は非搭載のためリセット/引継ぎはNOT_APPLICABLE。
+- 設定変更/据え置き/純電断時の内部状態・有利区間、本機固有ガックン/有利区間ランプ判別は検索語・資料系統変更後も固定できずUNVERIFIED_AFTER_RESEARCH。
+- 朝一専用モード振り分け、朝一当選率優遇、短縮天井、CZ優遇などの公開朝一数値は確認できず。出玉上の朝一恩恵はNONE_CONFIRMED_AFTER_RESEARCH。
+- 2024年9月導入一覧を再監査し、9/17パチスロ群は本機1機で一致したため2024-09-17境界を1/1 CLOSED。
 
-## No.1672 — Lパチスロ閃乱カグラ2 SHINOVI MASTER
-- path: `docs/real_machine_db/machines/2024-09-02_senran-kagura2-shinovi-master.md`
-- manufacturer: **オーイズミラボ製造 / オーイズミ**
-- formalModel: **Lパチスロ閃乱カグラ2 L9**
-- inspectionCode: **430226**
-- releaseDate: **2024-09-02**
-- generation: **6.5号機 / スマスロ**
-- systemType: **A+AT / リアルボーナス + ST型AT + 擬似ボーナス**
-- payoutRate canonical: **97.7 / 98.9 / 101.0 / 105.2 / 108.2 / 110.3%**
-- AT initial canonical: **1/398.4 / 1/390.8 / 1/380.1 / 1/345.8 / 1/324.0 / 1/307.8**
-- base: **約31.9G/50枚（設定1）**
-- netIncrease: **約2.2枚/G**
-- ceiling: **ボーナス間500G+α**
-- normal AT-through ceiling: **最大10スルー→11回目ボーナスでAT**
-- reset: **ゲーム数/ボーナススルーRESET、状態/モード再抽選。有利区間移行時は最大6スルー→7回目ボーナスでATへ短縮。**
-- carryOver/powerCycle: **ゲーム数・ボーナススルー・状態・モードCARRY_OVER。**
-- advantageousSection: **設定変更/有利区間移行時にスルー天井短縮。通常遊技中リセット後の「かぐらちゃんす」は設定変更時除外。有利区間ランプ判別不可。**
-- detection: **7回目ボーナスAT非当選は据え置き材料になり得るが確定ではない。ガックンUNVERIFIED。**
-- conflicts: **設定3機械割101.0 vs 101.9、AT初当りテーブル差をCONFLICT保持。**
+## No.1675 — パチスロハイパーラッシュ
+- path: `docs/real_machine_db/machines/2024-09-17_hyper-rush.md`
+- manufacturer: **セブンリーグ製造 / 山佐ネクスト**
+- formalModel: **SハイパーラッシュSLC8**
+- inspectionCode: **430212**
+- releaseDate: **2024-09-17**
+- generation: **6.5号機 / メダル機**
+- systemType: **AT / 復刻系擬似ノーマル（擬似ボーナス + SIDE-B） / 技術介入**
+- payoutRate: **98.9 / 99.9 / 102.0 / 104.0 / 105.9 / 108.1%**
+- completeStrategyPayout: **100.5 / 101.5 / 103.7 / 106.2 / 108.6 / 111.0%**
+- BIG: **1/259.3 / 1/254.1 / 1/243.6 / 1/233.9 / 1/225.7 / 1/216.5**
+- REG: **1/527.3 / 1/511.8 / 1/489.0 / 1/468.6 / 1/450.1 / 1/430.5**
+- bonusTotal: **1/173.8 / 1/169.8 / 1/162.6 / 1/156.0 / 1/150.3 / 1/144.0**
+- base: **約34G/50枚（設定1）**
+- netIncrease: **SIDE-A約7.2枚/G / SIDE-B約2.5枚/G**
+- basic: **ハイパーBIG平均約350枚 / チャレンジBIG平均約230枚 / REG canonical平均約50枚 / SIDE-B 30G+α**
+- ceiling: **非搭載（必勝本概要欄のみ「搭載」のCONFLICTあり）**
+- reset: **天井関連NOT_APPLICABLE。演出モードはオリジナルへ。内部状態/有利区間UNVERIFIED。**
+- carryOver: **天井/規定G/スルー天井NOT_APPLICABLE。内部状態/有利区間UNVERIFIED。**
+- powerCycle: **演出モードはオリジナルへ。内部状態/有利区間UNVERIFIED。**
+- morning benefit: **出玉上の専用恩恵NONE_CONFIRMED_AFTER_RESEARCH。**
+- public morning numeric: **短縮天井NOT_APPLICABLE、専用モード振り分け/朝一当選率/恩恵率/ガックン率はPUBLIC_VALUE_NOT_FOUND_AFTER_RESEARCH。**
+- detection: **演出モードは設定変更/電断双方でオリジナルになるため判別不可。ガックン・有利区間ランプ判別UNVERIFIED。**
+- conflicts: **天井概要欄「搭載」vs専用ページ/複数資料「非搭載」 / REG平均50枚vs後年一撃75枚。平均化せず保持。**
 
-## No.1673 — パチスロ かぐや様は告らせたい
-- path: `docs/real_machine_db/machines/2024-09-02_kaguya-sama-wa-kokurasetai.md`
-- manufacturer: **ジェイビー製造 / SANKYO**
-- formalModel: **Lかぐや様は告らせたいjA**
-- inspectionCode: **4S0464**
-- releaseDate: **2024-09-02**
-- generation: **6.5号機 / スマスロ**
-- systemType: **AT / 高純増擬似ボーナス + CZ + 1G連/引き戻しループ**
-- payoutRate: **97.7 / 98.8 / 101.2 / 105.8 / 110.8 / 114.9%**
-- BONUS initial: **1/362 / 1/360 / 1/357 / 1/349 / 1/343 / 1/335**
-- base: **約31.0G/50枚（設定1）**
-- netIncrease: **約9.0枚/G**
-- normal ceiling: **BIG後1100G+α / REG後900G+α**
-- reset ceiling: **800G+α**
-- reset: **有利区間/天井/CZスルーRESET、チャンス目規定回数・モード・REG単発回数再抽選、内部状態RESET。**
-- carryOver/powerCycle: **内部天井・CZスルー・規定回数・モード・REG単発回数・状態CARRY_OVER。液晶カウンターは見た目上RESET。**
-- public morning mode: **A約38% / B約60% / C約1% / D約1%、B以上約62%。**
-- advantageousSection: **通常リセット後の「奇跡的相性モード」は設定変更時除外。有利区間ランプ判別不可。**
-- detection: **800G+α超え初回非当選は据え置き濃厚材料。ガックンUNVERIFIED。**
-- conflict: **モードC最大19回表記 vs 20回表/複数資料。canonical最大20回。**
-
-## No.1674 — パチスロL黄門ちゃま天
-- path: `docs/real_machine_db/machines/2024-09-02_l-komonchama-ten.md`
-- manufacturer: **オリンピア製造 / 平和**
-- formalModel: **L黄門ちゃま天L2**
-- inspectionCode: **UNVERIFIED_AFTER_RESEARCH**
-- releaseDate: **2024-09-02**
-- generation: **6.5号機 / スマスロ**
-- systemType: **AT / セットストック + 引き戻し型**
-- payoutRate: **97.5 / 98.5 / 101.5 / 106.3 / 110.0 / 112.3%**
-- AT initial: **1/398.5 / 1/384.6 / 1/354.2 / 1/313.5 / 1/285.0 / 1/271.1**
-- base: **約30.5G/50枚**
-- netIncrease: **約4.0枚/G**
-- normal ceiling: **999G+α（ダブルちゃんモード500G+α）**
-- reset: **有利区間/AT間G RESET、状態・狙ええ状態・通常モード再抽選。世直し提灯スルー天井が7回→3回へ短縮。**
-- reset initial mode: **通常A75.0% / 通常B12.5% / 高確12.5%、通常B以上25.0%。**
-- carryOver/powerCycle: **AT間G・通常モード・状態・狙ええ状態CARRY_OVER。裏提灯/ダブルちゃん/飛脚ポイント/「四」直し履歴等の個別契約はUNVERIFIED。**
-- advantageousSection: **通常リセット後は天使ST（約25%大天使）だが設定変更時除外。有利区間ランプ判別不可。**
-- public first-game lantern: **弱レア0.4% / 強レア25.0% / 特殊役100%。**
-- detection: **機種専用リセット判別は調査中、ガックンUNVERIFIED。**
-- conflict: **一部早期整理資料の2024年5月上旬予定表記 vs 公式/業界/主要解析の2024-09-02。canonical 2024-09-02。**
-
-## 2024-09-02境界 — CLOSED 4/4
-1. A-SLOT+ この素晴らしい世界に祝福を！ — No.1671 DONE
-2. Lパチスロ閃乱カグラ2 SHINOVI MASTER — No.1672 DONE
-3. パチスロ かぐや様は告らせたい — No.1673 DONE
-4. パチスロL黄門ちゃま天 — No.1674 DONE
+## 2024-09-17境界 — CLOSED 1/1
+1. パチスロハイパーラッシュ — No.1675 DONE
 
 ## 次回再開地点
-- 最新mainを再同期しNo.1674と本handoffを確認。
-- **No.1675候補 `パチスロハイパーラッシュ` — 2024-09-17** から性能コア + resetBehavior v0.7を収集。
-- 2024-09-17群は現時点の月間新台一覧でパチスロ1機として確認。処理後にPB・別型式・地域先行・延期/段階導入を再監査してCLOSED判定。
+- 最新mainを再同期しNo.1675と本handoffを確認。
+- **No.1676候補 `スマスロ 鬼武者3` — 2024-10-07** から性能コア + resetBehavior v0.7を収集。
+- 2024-10-07群は少なくとも `スマスロ 鬼武者3` / `スマスロ頭文字D 2nd` / `今日から俺は!! パチスロ編` / `L 真・一騎当千` が同日候補。`トリプルクラウンフォーユー` は10月導入資料があるが日付を次回境界監査で再確認し、PB・25/30Φ・別型式・地域先行・延期/段階導入も併せて監査する。
 - 欠損は表記揺れ・正式型式・メーカー・シリーズ名、設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックン/有利区間等へ検索語を変え、公式・業界・主要解析・旧DB・アーカイブ/回顧資料横断後のみUNVERIFIED。
 
 ## 今回の主要ソース
 取得日: 2026-09-14
 
-### No.1672 閃乱カグラ2
-- オーイズミ公式: https://oizumi.co.jp/news/%E3%82%B9%E3%83%9E%E3%82%B9%E3%83%AD%E6%96%B0%E6%A9%9F%E7%A8%AE%E3%80%8Cl%E3%83%91%E3%83%81%E3%82%B9%E3%83%AD%E9%96%83%E4%B9%B1%E3%82%AB%E3%82%B0%E3%83%A92-shinovi-master%E3%80%8D-%E7%99%BA%E5%A3%B2/
-- P-WORLD / 遊技通信: https://news.p-world.co.jp/articles/28145/yugitsushin
-- Amusement Japan: https://amusement-japan.co.jp/article/detail/10004382/
-- HAZUSE: https://hazuse.com/hd/430226-2/
-- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/oizumi_slot/56/kh01.php
-- 必勝本: https://p.hisshobon.jp/machine/4362/1/104812
-- なな徹: https://nana-press.com/kaiseki/machine/795/23766/
-- 一撃: https://1geki.jp/slot/l_kagura2/3/
-- ちょんぼりすた: https://chonborista.com/slot/oizumi-slot/216067/
-
-### No.1673 かぐや様は告らせたい
-- SANKYO公式: https://www.sankyo-fever.jp/collection/965/
-- P-WORLD / 遊技日本: https://news.p-world.co.jp/articles/28265/nippon
-- HAZUSE: https://hazuse.com/machine/pachislot/4S0464/
-- パチビー: https://www.pachibee.jp/machines/index/224080002
-- 必勝本: https://p.hisshobon.jp/machine/4351/1/105007
-- なな徹: https://nana-press.com/kaiseki/machine/804/23724/
-- 一撃: https://1geki.jp/slot/l_kaguya/
-- ちょんぼりすた: https://chonborista.com/slot/sankyo-slot/216319/
-
-### No.1674 黄門ちゃま天
-- 平和公式: https://www.heiwanet.co.jp/products/pachislot/l-km8/
-- P-WORLD / Amusement Japan: https://news.p-world.co.jp/articles/28053/amusement
-- P-WORLD / 遊技日本: https://news.p-world.co.jp/articles/28161/nippon
-- グリーンべると: https://web-greenbelt.jp/post-84399/
-- 必勝本: https://p.hisshobon.jp/vpage/2636/2
-- なな徹: https://nana-press.com/kaiseki/machine/799/23676/
-- 一撃: https://1geki.jp/slot/l_komonchama_ten/3/
+### No.1675 ハイパーラッシュ
+- 山佐ネクスト公式: https://www1.yamasa.co.jp/nwhpr/
+- P-WORLD / 遊技通信: https://news.p-world.co.jp/articles/28823/yugitsushin
+- 娯楽産業: https://www.goraku-sangyo.com/%E5%B1%B1%E4%BD%90%E3%83%8D%E3%82%AF%E3%82%B9%E3%83%88%E3%80%80%E6%96%B0%E6%A9%9F%E7%A8%AE%E3%80%8C%E3%83%91%E3%83%81%E3%82%B9%E3%83%AD%E3%83%8F%E3%82%A4%E3%83%91%E3%83%BC%E3%83%A9%E3%83%83%E3%82%B7/
+- HAZUSE: https://hazuse.com/machine/pachislot/SX0084/
+- Ativo: https://ativo.jp/2024/09/06/%EF%BD%93%E3%83%91%E3%83%81%E3%82%B9%E3%83%AD%E3%83%8F%E3%82%A4%E3%83%91%E3%83%BC%E3%83%A9%E3%83%83%E3%82%B7%E3%83%A5/
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sevenleague_slot/08/kh01.php
+- 必勝本 基本スペック: https://p.hisshobon.jp/vpage/2643/2
+- 必勝本 天井&設定変更: https://hisshobon.com/machineinfo/84547/
+- なな徹: https://nana-press.com/kaiseki/machine/796/
+- 一撃: https://1geki.jp/slot/s_hyper_rush/
+- 一撃 REG: https://1geki.jp/slot/s_hyper_rush/85/
+- ちょんぼりすた: https://chonborista.com/slot/yamasa-slot/217159/
 
 ### 境界監査
-- ALL7 2024年9月導入一覧 page1: https://www.all7.jp/plans/index/2024/09
-- ALL7 2024年9月導入一覧 page2: https://www.all7.jp/plans/index/2024/09/10
-- パチスロハイパーラッシュ（パチマガスロマガ）: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/sevenleague_slot/08/kh01.php
+- ALL7 2024年9月導入一覧: https://www.all7.jp/plans/index/2024/09
+- グリーンべると 2024年10月新台スケジュール: https://news.p-world.co.jp/articles/29118/greenbelt
+- K-Navi 2024年10月導入カレンダー: https://p-kn.com/calendar/202410/
