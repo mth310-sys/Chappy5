@@ -1,59 +1,57 @@
 更新日: 2026-09-15
 
 ## 現在地点
-- recordCount: **1798**
-- latestRecordAdded: **L戦国乙女5 業火を穿つ宿焔の双刃 — No.1798**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2026-06-08_l-sengoku-otome5.md`
+- recordCount: **1799**
+- latestRecordAdded: **スマスロ BIRDIE WING -Golf Girls' Story- — No.1799**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2026-06-08_smartslot-birdie-wing.md`
 - chronologicalFrontier: **2026-06-08**
 - schema: **resetBehavior v0.7**
-- status: **2026-06-08_GROUP_OPEN_1_OF_3_CANONICAL_PROCESSED**
+- status: **2026-06-08_GROUP_OPEN_2_OF_3_CANONICAL_PROCESSED**
 
 ## 今回の進捗
-- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前実レコードNo.1797を再同期。
+- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前実レコードNo.1798を再同期。
 - INDEXは旧スナップショット（19件）のためREADME規定どおり `LATEST_HANDOFF + 実レコード` を進捗正本として使用。
-- No.1797 `LB スロット GALFY` の次から同一キューを継続し、No.1798 `L戦国乙女5 業火を穿つ宿焔の双刃` を追加。
-- 型式 `L戦国乙女5L8`、検定番号 `6S0006`、オリンピア製造/平和、2026-06-08導入を業界記事・HAZUSE・解析サイトで照合。
-- 設定別AT初当りは `1/359.5 / 1/350.8 / 1/332.5 / 1/302.8 / 1/281.0 / 1/262.9`、機械割は `97.9 / 98.9 / 101.0 / 106.2 / 111.1 / 114.9%`。
-- ベース約31.0G/50枚。強カワRUSHは純増約2.7枚/G・初期45G+α、上位の真強カワRUSHは約4.8枚/G・初期100G+α、エンディングは約6.9枚/G。
-- 通常天井はAT間999G+α（実ゲーム）/最大6周期。設定変更時は650G+α/最大4周期へ短縮。
-- 設定変更時は有利区間・天井・内部状態・周期テーブル・周期モード・乙女ストラップ・ゴエモン依頼ポイントをRESET。据え置き時はこれらをCARRY_OVER。
-- 巫女ポイントは設定変更時にランダム減算状態から開始。
-- 純電源OFF→ONは有利区間・天井の引継ぎを機種別比較で直接確認。他の内部状態/周期テーブル等の純電断個別契約は高優先資料で直接固定できず `UNVERIFIED_DIRECT_WORDING_AFTER_RESEARCH`。
-- 朝一の確定的変更判別は現時点で未判明。ただし650G+αまたは4周期到達で天井非発動なら据え置き可能性が高い。
-- 本機固有ガックン条件/発生率は表記揺れ・型式・メーカー・シリーズ名を変えて再探索後も固定できず `UNVERIFIED_AFTER_RESEARCH`。
-- なな徹独自シミュレーションのリセット期待値はメーカー値と分離保存（設定1・等価等の前提で0G -1,355円、200G +232円、300G +1,390円）。
-- 一部独自集計の初当り実践値や50枚約32.0G記載はcanonical公開値と定義/優先度が異なるため平均化せず分離。ベースは複数高優先一致の約31.0Gをcanonical。
-- 2026-06-08群は情報島+導入前後記事で `戦国乙女5 / BIRDIE WING / ソードアート・オンラインⅡ` の3本体が一致。パチマガスロマガに同日掲載の `甲鉄城のカバネリ 海門決戦（咲かせや咲かせパネル）` は既存機種の追加パネルのため新規canonical本体として数えない。
+- No.1798 `L戦国乙女5 業火を穿つ宿焔の双刃` の次から継続し、No.1799 `スマスロ BIRDIE WING -Golf Girls' Story-` を追加。
+- 型式 `LバーディーウイングBC`、検定番号 `5S1538`、ユニバーサルブロス、2026-06-08導入を1geki・HAZUSE・複数解析で照合。
+- 通常時初当り `1/266.7 / 1/264.1 / 1/257.3 / 1/256.0 / 1/255.9 / 1/255.9`、ST初当り `1/421.2 / 1/410.5 / 1/381.9 / 1/378.0 / 1/377.6 / 1/377.3`。
+- 機械割canonical `97.5 / 98.6 / 102.1 / 106.0 / 110.0 / 112.4%`。設定2のみジャグラーズネット98.8%との資料差をCONFLICT保持。
+- ベース約31.5G/50枚（設定1）。ウイングボーナス約2.6枚/G、バーディーボーナス系約5.0枚/G。
+- 基本獲得はWB約50枚、BB約100枚、EPボーナス約200枚。基本STは1日20G+α×3日間大会方式。
+- 通常天井は10周期消化後、設定変更後は7周期消化後へ短縮（3周期短縮）。天井恩恵はバーディーボーナス＝ST当選。
+- 設定変更時は内部状態RESET。なな徹直接比較で有利区間・天井・周期RESET。據え置きは有利区間・天井・周期CARRY_OVER。
+- 純電源OFF→ONは1geki直接比較で内部状態・天井周期CARRY_OVER。本機固有の純電断時有利区間直接文言は再探索後も `UNVERIFIED_DIRECT_WORDING_AFTER_RESEARCH`。
+- 設定変更後の開始ステージは現在調査中。なな徹は有効なリセット判別方法は現時点で未判明と明記。本機固有ガックンも再探索後UNVERIFIED。
+- 通常遊技中の有利区間リセット時は上位CZ「ビーナスバトル」移行恩恵があるが、1gekiは設定変更時を除くと明記。朝一設定変更恩恵へ混入しない。
+- 天井表記は「10周期消化後/7周期消化後」と「最大11周期到達/最大8周期到達」が混在するが、次周期開始から前兆というカウント起点差。canonicalは消化済み周期数で統一。
 
-## No.1798 — L戦国乙女5 業火を穿つ宿焔の双刃
-- path: `docs/real_machine_db/machines/2026-06-08_l-sengoku-otome5.md`
-- manufacturer: **オリンピア製造 / 平和**
-- formalModel: **L戦国乙女5L8**
-- inspectionCode: **6S0006**
+## No.1799 — スマスロ BIRDIE WING -Golf Girls' Story-
+- path: `docs/real_machine_db/machines/2026-06-08_smartslot-birdie-wing.md`
+- manufacturer: **ユニバーサルブロス**
+- formalModel: **LバーディーウイングBC**
+- inspectionCode: **5S1538**
 - releaseDate: **2026-06-08**
 - settings: **1 / 2 / 3 / 4 / 5 / 6**
-- payoutRate: **97.9 / 98.9 / 101.0 / 106.2 / 111.1 / 114.9%**
-- AT: **1/359.5 / 1/350.8 / 1/332.5 / 1/302.8 / 1/281.0 / 1/262.9**
-- base: **約31.0G/50枚**
-- netIncrease: **通常AT 約2.7枚/G / 上位AT 約4.8枚/G / ED 約6.9枚/G**
+- payoutRate: **97.5 / 98.6 / 102.1 / 106.0 / 110.0 / 112.4%**
+- normalInitialHit: **1/266.7 / 1/264.1 / 1/257.3 / 1/256.0 / 1/255.9 / 1/255.9**
+- stInitialHit: **1/421.2 / 1/410.5 / 1/381.9 / 1/378.0 / 1/377.6 / 1/377.3**
+- base: **約31.5G/50枚（設定1）**
+- netIncrease: **WB 約2.6枚/G / BB系 約5.0枚/G**
 - coreStatus: **COMPLETE_CORE_WITH_RESET_RESEARCH**
 
-### No.1798 resetBehavior v0.7
-- 設定変更: 有利区間・天井・内部状態・周期テーブル・周期モード・乙女ストラップ・ゴエモン依頼ポイントをRESET。巫女ポイントはランダム減算。
-- 据え置き: 上記主要項目をCARRY_OVER。
-- 純電源OFF→ON: 有利区間・天井CARRY_OVERを直接確認。他の内部項目の個別文言はUNVERIFIED_DIRECT_WORDING_AFTER_RESEARCH。
-- ゲーム数/天井: 999G+α→650G+α、最大6周期→最大4周期。
-- モード/状態: 周期テーブル・周期モード・内部状態は変更時RESET/据え置きCARRY_OVER。具体的リセット振り分け率はUNVERIFIED_AFTER_RESEARCH。
-- 有利区間: 設定変更RESET / 据え置きCARRY_OVER / 純電断CARRY_OVER。
-- 朝一恩恵: 天井短縮、周期短縮、巫女ポイントランダム減算。
-- 朝一不利: 設定変更専用の固定不利要素はNONE_CONFIRMED_AFTER_RESEARCH。
-- 変更判別: 確定判別は未判明。650G+α/4周期超過は据え置き推測材料。本機固有ガックンはUNVERIFIED_AFTER_RESEARCH。
-- 公開朝一数値: リセット天井650G+α、最大4周期。なな徹独自設定1等価期待値 0G -1,355円 / 200G +232円 / 300G +1,390円（解析サイト独自値として分離）。
+### No.1799 resetBehavior v0.7
+- 設定変更: 天井周期RESET、10周期→7周期短縮、内部状態RESET、有利区間RESET、周期RESET。
+- 据え置き: 有利区間・天井・周期CARRY_OVER。内部状態の独立直接文言はUNVERIFIED_DIRECT_WORDING_AFTER_RESEARCH。
+- 純電源OFF→ON: 内部状態・天井周期CARRY_OVERを直接確認。有利区間そのものはUNVERIFIED_DIRECT_WORDING_AFTER_RESEARCH。
+- モード: 設定変更専用カップインモード等の具体振り分けはUNVERIFIED_AFTER_RESEARCH。
+- 朝一恩恵: 周期天井3周期短縮、7周期消化後にBB＝ST当選。
+- 朝一不利: 通常有利区間切断時のビーナスバトル恩恵は設定変更時除外。その他固定不利はNONE_CONFIRMED_AFTER_RESEARCH。
+- 変更判別: 有効な確定判別方法は未判明。開始ステージ調査中。本機固有ガックンUNVERIFIED_AFTER_RESEARCH。
+- 公開朝一数値: 通常10周期→設定変更後7周期（3周期短縮）。
 
 ## conflicts / normalization
-- 公開AT初当り・機械割は6確/なな徹/複数解析で一致。独自実践集計値は公表値と混ぜない。
-- ベースは約31.0G/50枚が複数高優先資料で一致。一部低優先二次資料の約32.0Gは採用せず別資料差として保持。
-- 通常の有利区間リセット時には剣聖CHANCE恩恵があるが、1gekiは設定変更時を除くと明記。設定変更リセット恩恵へ誤転記しない。
+- 設定2機械割は多数高優先資料が98.6%、ジャグラーズネットのみ98.8%。平均化せず `CONFLICT_SOURCE_OUTLIER_98.8`、canonicalは98.6%。
+- 天井呼称はHAZUSEの最大11/8周期到達と、1geki・なな徹等の10/7周期消化後が実質同じ。前兆開始周期の数え方差として分離。
+- 純増は情報島+約2.5枚or5.0枚に対し、1geki・HAZUSE・6確等は約2.6枚or5.0枚。WB直接詳細の2.6枚/Gをcanonical。
 
 ## resetBehavior retrospective QA
 - qaStatus: **CURSOR_UNRESOLVED_ON_CURRENT_MAIN_SEARCH**
@@ -63,26 +61,26 @@
 
 ## sources summary
 retrievedAt: 2026-09-15
-No.1798:
-- P-WORLD / Amusement Japan: https://news.p-world.co.jp/articles/33318/amusement
-- P-WORLD / グリーンべると: https://news.p-world.co.jp/articles/33314/greenbelt
-- HAZUSE: https://hazuse.com/machine/pachislot/6S0006/
-- 情報島+ 機種情報: https://p-johojima.jp/machine_spec/post-30373/
-- 情報島+ 2026-06-08導入群: https://p-johojima.jp/colum/post-33970/
-- 6確: https://www.kaku6.jp/slot/otome5/
-- なな徹 スペック: https://nana-press.com/kaiseki/machine/1160/36410/
-- なな徹 朝一・リセット: https://nana-press.com/kaiseki/machine/1160/37316/
-- 1geki 天井・リセット: https://1geki.jp/slot/l_otome5/3/
-- 1geki 強カワRUSH: https://1geki.jp/slot/l_otome5/81/
-- ジャグラーズネット: https://jugglersnet.com/chumoku/sengokuotome5
-- パチビー: https://www.pachibee.jp/machines/index/226050000
-- スロベース: https://slobase.jp/machines/sengoku-otome5
-- パチマガスロマガFREE: https://pachimaga.com/free/mach/maker-s/olympia/065007.php
+No.1799:
+- 1geki 機種概要: https://1geki.jp/slot/l_birdie/
+- 1geki 天井・朝一: https://1geki.jp/slot/l_birdie/3/
+- 1geki ST: https://1geki.jp/slot/l_birdie/81/
+- 1geki WB: https://1geki.jp/slot/l_birdie/61/
+- HAZUSE: https://hazuse.com/machine/pachislot/5S1538/
+- HAZUSE 基本スペック: https://hazuse.com/machine/pachislot/5S1538/genre/201/
+- 6確: https://www.kaku6.jp/slot/birdie/
+- なな徹: https://nana-press.com/kaiseki/machine/1157/
+- ジャグラーズネット: https://jugglersnet.com/chumoku/birdeie-wing
+- 情報島+: https://p-johojima.jp/machine_spec/post-28506/
+- パチビー: https://www.pachibee.jp/machines/index/226050002
+- フリック7: https://flick7.net/slot/birdie_wing/
+- ちょんぼりすた: https://chonborista.com/slot/universal-slot/256009/
+- スロベース: https://slobase.jp/machines/birdie-wing
 
-## 2026-06-08 canonical queue — OPEN 1/3
+## 2026-06-08 canonical queue — OPEN 2/3
 1. ~~L戦国乙女5 業火を穿つ宿焔の双刃 — No.1798 DONE~~
-2. **スマスロ BIRDIE WING -Golf Girls' Story- — candidate No.1799**
-3. **スロット ソードアート・オンラインⅡ**
+2. ~~スマスロ BIRDIE WING -Golf Girls' Story- — No.1799 DONE~~
+3. **スロット ソードアート・オンラインⅡ — candidate No.1800**
 
 queue note:
 - `スマスロ 甲鉄城のカバネリ 海門決戦（咲かせや咲かせパネル）` は2026-06-08追加パネル。既収録の機種本体と重複するため新規canonical本体キューには含めない。
@@ -91,7 +89,7 @@ queue note:
 - 2026-06-22: **スマート沖スロ ダークハイビ**
 
 ## 次回再開地点
-- 最新mainを再同期しNo.1798と本handoffを確認。
-- **No.1799候補「スマスロ BIRDIE WING -Golf Girls' Story-」— 2026-06-08** から継続。
-- その後 `スロット ソードアート・オンラインⅡ` を処理し、2026-06-08群3/3完了後にPB・別型式・地域先行・延期/段階導入を再監査して境界CLOSED判定する。
+- 最新mainを再同期しNo.1799と本handoffを確認。
+- **No.1800候補「スロット ソードアート・オンラインⅡ」— 2026-06-08** から継続。
+- No.1800処理後、2026-06-08群3/3についてPB・別型式・地域先行・延期/段階導入を再監査して境界CLOSED判定する。
 - PARTIAL/UNVERIFIEDは、型式名・検定番号・メーカー・シリーズ名と、設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックン/有利区間へ検索語を変え、公式・業界記事・解析・古いDB・アーカイブを横断してから確定する。
