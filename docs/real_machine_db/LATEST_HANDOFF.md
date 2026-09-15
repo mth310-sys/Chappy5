@@ -1,39 +1,42 @@
 更新日: 2026-09-15
 
 ## 現在地点
-- recordCount: **1822**
-- latestRecordAdded: **パチスロ 見える子ちゃん — No.1822**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2026-09-07_mieruko-chan.md`
-- chronologicalFrontier: **2026-09-07 OPEN**
+- recordCount: **1823**
+- latestRecordAdded: **スマスロ タコスロ — No.1823**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2026-09-07_takosuro.md`
+- chronologicalFrontier: **2026-09-07 OPEN / PRIMARY 6 OF 6 DONE / BOUNDARY REAUDIT REQUIRED**
 - schema: **resetBehavior v0.7**
-- status: **2026-09-07_GROUP_OPEN_5_OF_6_PRIMARY_CANONICAL_PROCESSED_BOUNDARY_REAUDIT_PENDING**
+- status: **2026-09-07_PRIMARY_CANONICAL_6_OF_6_PROCESSED_BOUNDARY_TYPE_AUDIT_NEXT**
 
 ## 今回の進捗
-- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前No.1821実レコードを再同期。
+- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前No.1822実レコードを再同期。
 - INDEXは旧スナップショットのため `LATEST_HANDOFF + 実レコード` を進捗正本として使用。
-- No.1822 `パチスロ 見える子ちゃん` を追加。
-- 情報島+、G-net、遊技日本、6確、必勝本、ちょんぼりすた、スロベース、イチカツ、ジャグラーズネット、すろぱちくえすと、なな徹を横断し、性能コアとresetBehavior v0.7を収集。
+- No.1823 `スマスロ タコスロ` を追加し、2026-09-07 primary canonical queue 6/6を完了。
+- 遊技通信/P-WORLD、グリーンべると、HAZUSE、6確、必勝本、ジャグラーズネット、ちょんぼりすた、スロベース、こぜログを横断し、性能コアとresetBehavior v0.7を収集。
 
-## No.1822 — パチスロ 見える子ちゃん
-- path: `docs/real_machine_db/machines/2026-09-07_mieruko-chan.md`
-- manufacturer: **ピーセカンド製造 / パイオニア**
-- formalModel: **L見える子ちゃんSC**
+## No.1823 — スマスロ タコスロ
+- path: `docs/real_machine_db/machines/2026-09-07_takosuro.md`
+- manufacturer: **ユニバーサルブロス**
+- formalModel: **LB／タコスロBD**
+- certificationNumber: **6S0085**
 - releaseDate: **2026-09-07**
-- payoutRate: **97.8 / 98.8 / 101.3 / 105.1 / 110.2 / 114.9%**
-- BIG合算: **1/266.5 / 1/261.9 / 1/253.4 / 1/243.1 / 1/234.2 / 1/227.1**
-- REG: **1/275.1 / 1/270.6 / 1/261.1 / 1/250.0 / 1/240.4 / 1/233.6**
-- ボーナス合算: **1/135.4 / 1/133.1 / 1/128.6 / 1/123.3 / 1/118.6 / 1/115.1**
-- base: **約30.8G/50枚**（必勝本約30.0Gとの軽微競合を分離保持）
-- netIncrease: **疑似ボーナス約6.7枚/G**
+- settings: **1 / 2 / 5 / 6**
+- payoutRate market: **98.7 / 100.5 / 103.3 / 106.2%**
+- payoutRate full攻略: **100.7 / 102.6 / 105.5 / 108.5%**
+- BIG: **1/324.4 / 1/318.1 / 1/309.1 / 1/297.9**
+- REG: **1/352.3 / 1/336.1 / 1/312.1 / 1/300.6**
+- 合算: **1/168.9 / 1/163.4 / 1/155.3 / 1/149.6**
+- base: **約36.6G/50枚（設定1）**
+- BIG: **最大153枚+BT、BT込み平均/期待約360〜361枚**
+- REG: **最大98枚**
 
-### No.1822 resetBehavior v0.7
-- 通常ボーナス天井900G+α、設定変更後は600G+αへ300G短縮。
-- 設定変更時は有利区間・天井・内部状態RESET、電源OFF→ONは各CARRY_OVERとする複数の機種固有比較あり。
-- 設定変更/電源OFF→ONとも液晶ゲーム数表示は0G。純電断では内部ゲーム数を引き継ぐため液晶0Gだけでは変更判別不可。
-- 据え置き単独は引継ぎ方向だが高優先三者直接比較未固定のためSECONDARY_SUPPORTED_NOT_DIRECTLY_FIXED。
-- 設定変更時の内部ゲーム数加算の可能性は資料に示唆があるが確定値なし。推測で固定せずUNVERIFIED_AFTER_RESEARCH。
-- 本機固有ガックン条件/発生率、即時固定ランプ、開始ステージ三者比較、内部状態具体振り分けはUNVERIFIED_AFTER_RESEARCH。
-- 有利区間リセット後の祈願チャレンジ恩恵は設定変更時を除くため朝一恩恵に混入させない。
+### No.1823 resetBehavior v0.7
+- 導入後複数解析で天井非搭載。設定変更時のゲーム数/周期天井短縮はN/A。
+- 設定変更専用の朝一モード、初当たり/CZ優遇、主要不利要素は多語再探索後もNONE_CONFIRMED_AFTER_RESEARCH。
+- 据え置き/純電断の天井・周期・ポイント引継ぎは公開ゲーム性上N/A。
+- 設定変更/据え置き/純電断時の演出モード保持・初期化、本機固有の有利区間契約、ガックン/即時変更判別、ボーナス成立状態等の特殊契約はUNVERIFIED_AFTER_RESEARCH。
+- 一般的なスマスロ/BT仕様から有利区間挙動を推測補完しない。
+- 6確は天井「調査中」表記だが、導入後のジャグラーズネット/ちょんぼりすた/スロベース等は非搭載で一致するため、導入後複数一致をcanonicalとした。
 
 ## 直前境界
 ### 2026-08-03 — CLOSED 8/8
@@ -49,17 +52,20 @@
 ### 2026-08-17 — CLOSED 1/1
 - Lパチスロ 喰霊-零-Re — No.1817
 
-## 2026-09-07 primary canonical queue — OPEN 5/6
-1. ~~スマスロ リコリス・リコイル — No.1818 DONE~~
-2. ~~Lパチスロ 彼女、お借りします — No.1819 DONE~~
-3. ~~L青春ブタ野郎はバニーガール先輩の夢を見ない — No.1820 DONE~~
-4. ~~モグモグ風林火山 大海戦の巻 — No.1821 DONE~~
-5. ~~パチスロ 見える子ちゃん — No.1822 DONE~~
-6. **スマスロ タコスロ — No.1823 NEXT**
+## 2026-09-07 primary canonical queue — 6/6 DONE
+1. スマスロ リコリス・リコイル — No.1818 DONE
+2. Lパチスロ 彼女、お借りします — No.1819 DONE
+3. L青春ブタ野郎はバニーガール先輩の夢を見ない — No.1820 DONE
+4. モグモグ風林火山 大海戦の巻 — No.1821 DONE
+5. パチスロ 見える子ちゃん — No.1822 DONE
+6. スマスロ タコスロ — No.1823 DONE
 
-### 9/7境界注意
-- 主要6機完了後も、LB異世界かるてっとKR、L/SHAMAN KING/SS等の9/7ホール導入記録を型式単位で監査する。
-- 既存機の地域導入/増台/別型式/新スペック、PB、段階導入を区別してからCLOSED判定する。
+### 9/7境界監査 — NEXT
+- primary 6機は完了したが、まだCLOSEDにしない。
+- **LB異世界かるてっとKR**、**L/SHAMAN KING/SS** 等の9/7ホール導入記録を型式単位で監査する。
+- 各候補を「未収録新規本体 / 既存機の地域導入 / 増台 / 別型式 / 新スペック / PB / 段階導入 / 日付誤記」に分類する。
+- 未収録新規本体または独立すべき別スペックならNo.1824以降として同日群に追加し、性能コア+resetBehavior v0.7を収集する。
+- 監査完了後のみ2026-09-07境界をCLOSED判定し、次の確定導入日へ進む。
 
 ## resetBehavior retrospective QA
 - qaStatus: **CURSOR_UNRESOLVED_ON_CURRENT_MAIN_SEARCH**
@@ -68,23 +74,20 @@
 
 ## sources summary
 retrievedAt: 2026-09-15
-No.1822:
-- 情報島+ 検定: https://p-johojima.jp/new_machine/post-32349/
-- 情報島+ 新機種: https://p-johojima.jp/new_machine/post-32821/
-- G-net: https://g-net-ps.com/info/s0289/
-- 遊技日本: https://yugi-nippon.com/pachinko-new-machine/post-77392/
-- 6確: https://www.kaku6.jp/slot/mierukochan/
-- 必勝本: https://hisshobon.com/machineinfo/147074/
-- ちょんぼりすた: https://chonborista.com/slot/pionia-slot/261153/
-- スロベース: https://slobase.jp/machines/mieruko-chan
-- スロベース reset: https://slobase.jp/articles/mieruko-chan-reset
-- イチカツ: https://ichikatsu.com/mierukochan/
-- ジャグラーズネット: https://jugglersnet.com/chumoku/mierukochan
-- すろぱちくえすと: https://www.slopachi-quest.com/article/mierukochan-tenjou/
-- なな徹: https://nana-press.com/kaiseki/machine/1192/
+No.1823:
+- 遊技通信/P-WORLD: https://news.p-world.co.jp/articles/33759/yugitsushin
+- グリーンべると: https://web-greenbelt.jp/post-114030/
+- HAZUSE: https://hazuse.com/machine/pachislot/6S0085/
+- 6確: https://www.kaku6.jp/slot/tacoslot/
+- 必勝本: https://hisshobon.com/machineinfo/142570/
+- ジャグラーズネット: https://jugglersnet.com/bt/tacoslo
+- ちょんぼりすた: https://chonborista.com/slot/universal-slot/262349/
+- スロベース: https://slobase.jp/machines/takosuro
+- こぜログ: https://kozelog.net/machine/universal/takosuro/
 
 ## 次回再開地点
-- 最新mainを再同期しNo.1822実レコードと本handoffを確認。
-- **No.1823候補 `スマスロ タコスロ` — 2026-09-07** から継続。
-- 主要6機完了後に9/7境界を型式単位で再監査し、LB異世界かるてっとKR、L/SHAMAN KING/SS等の記録を既存機地域導入/増台/別型式/新スペックに分類してからCLOSED判定する。
+- 最新mainを再同期しNo.1823実レコードと本handoffを確認。
+- **2026-09-07境界の型式監査から再開。最優先候補 `LB異世界かるてっとKR`、次点 `L/SHAMAN KING/SS`。**
+- 未収録新規本体/独立別スペックと確認できた最初の候補をNo.1824として追加する。
+- 候補が既存機の地域導入/増台等なら根拠を保持してスキップし、監査を継続する。
 - PARTIAL/UNVERIFIEDは型式名・検定番号・メーカー・シリーズ名と、設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックン/有利区間へ検索語を変え、公式・業界記事・解析・古いDB・アーカイブを横断してから確定する。
