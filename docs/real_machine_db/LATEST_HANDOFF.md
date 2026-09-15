@@ -8,13 +8,13 @@
 - schema: **resetBehavior v0.7**
 - status: **2026-09-15_BOUNDARY_CLOSED_CURRENT_FRONTIER_REACHED**
 
-## 今回の進捗 — 2026-09-15 現行差分監査
+## 今回の進捗 — 2026-09-15 14時台 現行差分再監査
 - 最新mainの `README.md`、ミッションv0.7、`INDEX.md`、本LATEST_HANDOFF、直前No.1823実レコードを再取得して同期確認。
 - INDEXは2026-08-31の旧スナップショット（19件）のため、進捗判定はREADME規定どおり **LATEST_HANDOFF + 最新実レコード** を優先。
-- 2026-09-15時点で9月の全国導入スケジュールを再監査。パチナビの2026年9月カレンダーは引き続き **9/7の6機種のみ**を掲載し、9/8〜9/15に新たな全国パチスロ導入日は確認できない。
-- 店舗単位の9/8以降「新規導入」観測も再確認。既存型式の後発店舗導入・増台が中心であり、全国初回導入の新本体としてNo.1824を作成する根拠は確認できない。
+- 2026-09-15時点で「2026年9月 パチスロ 新台」「9月14日/15日 導入」「スマスロ 新台 導入」等へ検索語を変更して現行差分を再監査。
+- 9/7以降〜9/15に全国初回導入の新パチスロ本体としてNo.1824を作成できる新規型式は確認できなかった。
+- 9/14付業界ニュース等の直近記事も確認したが、イベント・既存/将来機告知が中心で、9/8〜9/15全国初回導入の追加機種根拠なし。
 - よって **性能コア本線はNo.1823 / recordCount 1823を維持**。将来導入予定機を現行日より先行登録しない。
-- 9/11発表の北電子 `LライザのアトリエKD` はホール導入予定が **2027-01-18** と業界記事に明記されており、現行フロンティアには追加しない。
 
 ## 2026-09-07 — CLOSED 6/6
 1. スマスロ リコリス・リコイル — No.1818
@@ -72,15 +72,14 @@
 
 ## resetBehavior retrospective QA
 - qaStatus: **CURSOR_UNRESOLVED_ON_CURRENT_MAIN_SEARCH**
-- 旧カーソル候補 `2007-07-09_genju-haou-t.md / 幻獣覇王T` を最新mainのコード検索で再探索したが、`幻獣覇王`・`2007-07-09` とも一致0件。
-- 外部導入順から次機種を推測して既存COMPLETE_COREを書き換えない。
+- 旧カーソル候補 `2007-07-09_genju-haou-t.md / 幻獣覇王T` は最新main上で確定できていないため、外部導入順から次機種を推測して既存COMPLETE_COREを書き換えない。
 - 既存COMPLETE_COREはリセット欠損のみを理由に崩さず、性能コアとreset QA状態を別管理する。
 
 ## sources summary
 retrievedAt: 2026-09-15
 - パチナビ 2026年新台カレンダー: https://pachinavi.net/calendar/
 - 店舗導入観測: https://slot.bz/shindai
-- ライザのアトリエ発表（遊技通信/P-WORLD、2026-09-11）: https://news.p-world.co.jp/articles/34446/yugitsushin
+- 遊技業界直近ニュース確認: https://news.p-world.co.jp/
 - No.1823 遊技通信/P-WORLD: https://news.p-world.co.jp/articles/33759/yugitsushin
 - No.1823 HAZUSE: https://hazuse.com/machine/pachislot/6S0085/
 - No.1823 6確: https://www.kaku6.jp/slot/tacoslot/
