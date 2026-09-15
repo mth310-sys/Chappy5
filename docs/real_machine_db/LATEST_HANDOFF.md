@@ -11,9 +11,10 @@
 ## 今回の進捗 — 2026-09-15 17時台 現行差分再監査（relay continuation）
 - 最新mainの `README.md`、ミッションv0.7、`INDEX.md`、本LATEST_HANDOFF、直前No.1823実レコードを再取得して同期確認。
 - INDEXは2026-08-31の旧スナップショット（19件）のため、README規定どおり **LATEST_HANDOFF + 最新実レコード** を進捗正本として使用。
-- 直前境界監査候補 `L/SHAMAN KING/SS` を正式型式・機種名・導入日で再照合。HAZUSE、パチビー、ABEMA/アニメフリークス、業界記事が **スマスロ シャーマンキング / エレコ / 2025-02-03全国導入** で一致。型式 `L／SHAMANKING／SS`、検定番号 `430573` もHAZUSEで確認。
-- よって2026-09-07/09-08の店舗観測は後発店舗導入であり、No.1824として重複追加しない。
-- 2026-09-15現行フロンティアについて、新規全国初回導入の未収録パチスロ本体は今回も固定できず、**No.1823 / recordCount 1823を維持**。
+- 2026-09-15時点の現行差分を、新台カレンダー系・業界記事・全国店舗導入観測で再監査。
+- 全国店舗導入観測の直近9/14項目はパチンコ機群で、9/7以降に全国初回導入と固定できる未収録パチスロ本体は今回も確認できなかった。
+- パチナビのメーカー別最新一覧でも直近パチスロ導入として2026-09-07機が表示され、現行フロンティアと整合。
+- よって **No.1824は作成せず、recordCount 1823 / 2026-09-07 CLOSED 6/6を維持**。
 - 将来導入予定・検定通過のみの型式は先行登録しない。
 
 ## 2026-09-07 — CLOSED 6/6
@@ -64,7 +65,7 @@
 
 ## 9/7・9/8重複境界監査（維持）
 - `LB異世界かるてっとKR` → 既存 `A-SLOT+ 異世界かるてっと BT`（canonical 2026-04-06）の後発店舗導入。
-- `L/SHAMAN KING/SS` → 既存 `スマスロ シャーマンキング`（canonical 2025-02-03）の後発店舗導入。今回再照合済み。
+- `L/SHAMAN KING/SS` → 既存 `スマスロ シャーマンキング`（canonical 2025-02-03）の後発店舗導入。
 - `LパチスロULTRAMAN最終決戦ME` → canonical 2026-07-06。9/8観測は後発店舗導入。
 - `Lからくりサーカス2jG` → canonical 2026-07-06。9/8観測は後発店舗導入。
 - `LプリズムナナCC` → canonical 2025-12-08。9/8観測は後発店舗導入。
@@ -79,13 +80,10 @@
 retrievedAt: 2026-09-15
 - 6確 新台予定: https://www.kaku6.jp/
 - パチナビ 2026年新台カレンダー: https://pachinavi.net/calendar/
+- パチナビ メーカー別一覧（例・オリンピア）: https://pachinavi.net/makers/olympia/
 - P-Summa 2026年9月パチスロ新台整理: https://psumma.jp/pachislo/71626/
-- 店舗導入観測: https://slot.bz/shindai
+- 全国店舗導入観測: https://slot.bz/shindai
 - 遊技日本 業界ニュース: https://yugi-nippon.com/
-- SHAMAN KING HAZUSE: https://hazuse.com/machine/pachislot/SX0096/
-- SHAMAN KING パチビー: https://www.pachibee.jp/machines/about/225010003
-- SHAMAN KING ABEMA/アニメフリークス: https://times.abema.tv/articles/-/10161672
-- SHAMAN KING 情報島: https://p-johojima.jp/new_machine/post-6461/
 - No.1823 遊技通信/P-WORLD: https://news.p-world.co.jp/articles/33759/yugitsushin
 - No.1823 HAZUSE: https://hazuse.com/machine/pachislot/6S0085/
 - No.1823 6確: https://www.kaku6.jp/slot/tacoslot/
