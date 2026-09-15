@@ -11,11 +11,11 @@
 ## 今回の進捗
 - 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前No.1823実レコードを再同期。
 - INDEXは旧スナップショットのため `LATEST_HANDOFF + 実レコード` を進捗正本として使用。
-- 2026-09-07 primary canonical queue 6/6完了後の型式境界監査を実施。
-- 最優先候補 `LB異世界かるてっとKR` は **A-SLOT+ 異世界かるてっと BT** の既存型式で、全国導入開始日は2026-04-06。9/7店舗導入記録は地域/店舗単位の後発導入であり、新規本体・別スペックではないため追加しない。
-- 次点 `L/SHAMAN KING/SS` は **スマスロ シャーマンキング** の既存型式で、全国導入開始日は2025-02-03。9/7店舗導入記録は後発導入であり、新規本体・別スペックではないため追加しない。
-- 6確の2026年9月新台一覧は9/7の6機種のみ、パチナビも9月掲載6機種で一致。別系統の9月新台整理も同じ6機種を列挙。
-- よって **2026-09-07境界をCLOSED 6/6** と判定。2026-09-15時点の公開済み現行導入フロンティアへ到達。
+- 2026-09-07 primary canonical queue 6/6完了後の型式境界監査を再実施。
+- パチナビの2026年9月新台カレンダーは9/7の6機種のみで、9/14時点まで新たな全国パチスロ導入日を掲載していない。
+- 店舗導入観測では2026-09-08に複数の「新規導入」表記があるが、型式照合すると既存本体の店舗単位後発導入であることを確認した。
+- `LパチスロULTRAMAN最終決戦ME` は全国導入2026-07-06（業界発表）、`Lからくりサーカス2jG` は全国導入2026-07-06、`L七つの魔剣が支配するPU` は全国導入2025-01-20、`LプリズムナナCC` は全国導入2025-12-08。9/8店舗導入記録は新型式・新スペックではないためNo.1824として追加しない。
+- したがって **2026-09-15時点で性能コア本線の新規未処理機種は確認できず、recordCount 1823を維持**。
 
 ## No.1823 — スマスロ タコスロ
 - path: `docs/real_machine_db/machines/2026-09-07_takosuro.md`
@@ -65,21 +65,38 @@
 ## 9/7境界監査結果
 ### LB異世界かるてっとKR — SKIP_EXISTING_MACHINE_LATE_STORE_INSTALL
 - canonical machine: A-SLOT+ 異世界かるてっと BT
-- manufacturer: Sammy / 製造 銀座
-- formalModel: LB 異世界かるてっと KR
-- certificationNumber: 5S1513
 - canonical releaseDate: 2026-04-06
-- 6確、HAZUSE、遊技通信/P-WORLDが2026-04-06全国導入で一致。
-- 2026-09-07に同型式を新規導入した店舗記録は存在するが、型式一致のため新スペックではなく店舗単位の後発導入と判定。
+- 9/7店舗導入記録は同型式の後発導入。
 
 ### L/SHAMAN KING/SS — SKIP_EXISTING_MACHINE_LATE_STORE_INSTALL
 - canonical machine: スマスロ シャーマンキング
-- manufacturer: エレコ
-- formalModel: L／SHAMANKING／SS
-- certificationNumber: 430573
 - canonical releaseDate: 2025-02-03
-- 6確、HAZUSE、P-WORLD/解析資料が2025-02-03導入で一致。
-- 2026-09-07に同型式を新規導入した店舗記録は存在するが、既存2025機の後発導入と判定。
+- 9/7店舗導入記録は同型式の後発導入。
+
+## 9/8店舗導入差分監査
+### LパチスロULTRAMAN最終決戦ME — SKIP_EXISTING_MACHINE_LATE_STORE_INSTALL
+- canonical machine: L ULTRAMAN 最終決戦
+- manufacturer: オッケー． / 総発売元フィールズ
+- canonical releaseDate: 2026-07-06
+- 遊技通信は2026-07-06より順次導入と明記。9/8観測は後発店舗導入。
+
+### Lからくりサーカス2jG — SKIP_EXISTING_MACHINE_LATE_STORE_INSTALL
+- canonical machine: Lパチスロ からくりサーカス2
+- manufacturer: ジェイビー / SANKYOグループ
+- canonical releaseDate: 2026-07-06
+- 遊技通信およびG-netが7/6開店で一致。9/8観測は後発店舗導入。
+
+### LプリズムナナCC — SKIP_EXISTING_MACHINE_LATE_STORE_INSTALL
+- canonical machine: プリズムナナ
+- manufacturer: カルミナ / NET
+- canonical releaseDate: 2025-12-08
+- 遊技通信の発表記事で2025-12-08全国導入開始予定。9/8観測は後発店舗導入。
+
+### L七つの魔剣が支配するPU — SKIP_EXISTING_MACHINE_LATE_STORE_INSTALL
+- canonical machine: 七つの魔剣が支配する
+- manufacturer: KPE / コナミアミューズメント
+- canonical releaseDate: 2025-01-20
+- HAZUSE・6確で型式と導入日が一致。9/8観測は後発店舗導入。
 
 ## resetBehavior retrospective QA
 - qaStatus: **CURSOR_UNRESOLVED_ON_CURRENT_MAIN_SEARCH**
@@ -99,21 +116,19 @@ No.1823:
 - スロベース: https://slobase.jp/machines/takosuro
 - こぜログ: https://kozelog.net/machine/universal/takosuro/
 
-9/7 boundary audit:
-- 6確 2026年9月一覧: https://www.kaku6.jp/
-- パチナビ新台カレンダー: https://pachinavi.net/calendar/
-- A-SLOT+異世界かるてっとBT 6確: https://www.kaku6.jp/slot/isekaiquartet/
-- A-SLOT+異世界かるてっとBT HAZUSE: https://hazuse.com/machine/pachislot/5S1513/
-- 遊技通信/P-WORLD 異世界かるてっとBT発表: https://news.p-world.co.jp/articles/32767/yugitsushin
-- スマスロ シャーマンキング 6確: https://www.kaku6.jp/slot/shamanking/
-- スマスロ シャーマンキング HAZUSE: https://hazuse.com/machine/pachislot/SX0096/
-- スマスロ シャーマンキング P-WORLD: https://www.p-world.co.jp/machine/database/10188
-- 店舗型式記録（9/7異世界かるてっとKR）: https://slot.bz/shindai/yamagata/2070
-- 店舗型式記録（9/7 SHAMAN KING SS）: https://slot.bz/shindai/mie/6681
+frontier/boundary audit:
+- パチナビ 2026年新台カレンダー: https://pachinavi.net/calendar/
+- 店舗導入観測: https://slot.bz/shindai
+- ULTRAMAN最終決戦 遊技通信: https://news.p-world.co.jp/articles/33891/yugitsushin
+- からくりサーカス2 遊技通信: https://news.p-world.co.jp/articles/33506/yugitsushin
+- からくりサーカス2 G-net: https://g-net-ps.com/info/s0274/
+- プリズムナナ 遊技通信: https://news.p-world.co.jp/articles/32056/yugitsushin
+- 七つの魔剣 HAZUSE: https://hazuse.com/hd/4s1345/
+- 七つの魔剣 6確: https://www.kaku6.jp/slot/nanatsuma/
 
 ## 次回再開地点
 - 最新mainを再同期しNo.1823実レコードと本handoffを確認。
-- **性能コア時系列本線は2026-09-15時点の現行フロンティア到達。次の確定済み全国導入日は2026-10-05で未来日のため、現時点ではNo.1824を先行作成しない。**
-- 次回は新たな9月導入漏れ/地域先行ではない全国新規本体が判明していないか境界差分監査を行う。新規本体がなければ本線レコード追加なし。
+- **性能コア時系列本線は2026-09-15時点の現行フロンティア到達。No.1824を先行作成しない。**
+- 次回も9月導入漏れ・新規型式の差分監査を行う。店舗単位の後発導入は型式と全国初回導入日を照合して重複追加しない。
 - retrospective resetBehavior QAはカーソルがmain上で確定できるまで外部順から推測して開始しない。
-- 2026-10-05が現行日になった後は、最新mainと当日導入実績を再監査して次の未処理機種からNo.1824以降を継続する。
+- 現在確認できる次の将来導入候補は10月帯に存在するため、実際の導入日が現行日になった時点で再監査し、次の未処理本体からNo.1824以降を継続する。
