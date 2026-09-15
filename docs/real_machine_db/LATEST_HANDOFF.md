@@ -4,15 +4,18 @@
 - recordCount: **1823**
 - latestRecordAdded: **スマスロ タコスロ — No.1823**
 - latestRecordAddedPath: `docs/real_machine_db/machines/2026-09-07_takosuro.md`
-- chronologicalFrontier: **2026-09-07 OPEN / PRIMARY 6 OF 6 DONE / BOUNDARY REAUDIT REQUIRED**
+- chronologicalFrontier: **2026-09-07 CLOSED 6/6**
 - schema: **resetBehavior v0.7**
-- status: **2026-09-07_PRIMARY_CANONICAL_6_OF_6_PROCESSED_BOUNDARY_TYPE_AUDIT_NEXT**
+- status: **2026-09-07_BOUNDARY_CLOSED_CURRENT_2026-09-15_FRONTIER_REACHED**
 
 ## 今回の進捗
-- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前No.1822実レコードを再同期。
+- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前No.1823実レコードを再同期。
 - INDEXは旧スナップショットのため `LATEST_HANDOFF + 実レコード` を進捗正本として使用。
-- No.1823 `スマスロ タコスロ` を追加し、2026-09-07 primary canonical queue 6/6を完了。
-- 遊技通信/P-WORLD、グリーンべると、HAZUSE、6確、必勝本、ジャグラーズネット、ちょんぼりすた、スロベース、こぜログを横断し、性能コアとresetBehavior v0.7を収集。
+- 2026-09-07 primary canonical queue 6/6完了後の型式境界監査を実施。
+- 最優先候補 `LB異世界かるてっとKR` は **A-SLOT+ 異世界かるてっと BT** の既存型式で、全国導入開始日は2026-04-06。9/7店舗導入記録は地域/店舗単位の後発導入であり、新規本体・別スペックではないため追加しない。
+- 次点 `L/SHAMAN KING/SS` は **スマスロ シャーマンキング** の既存型式で、全国導入開始日は2025-02-03。9/7店舗導入記録は後発導入であり、新規本体・別スペックではないため追加しない。
+- 6確の2026年9月新台一覧は9/7の6機種のみ、パチナビも9月掲載6機種で一致。別系統の9月新台整理も同じ6機種を列挙。
+- よって **2026-09-07境界をCLOSED 6/6** と判定。2026-09-15時点の公開済み現行導入フロンティアへ到達。
 
 ## No.1823 — スマスロ タコスロ
 - path: `docs/real_machine_db/machines/2026-09-07_takosuro.md`
@@ -36,7 +39,6 @@
 - 据え置き/純電断の天井・周期・ポイント引継ぎは公開ゲーム性上N/A。
 - 設定変更/据え置き/純電断時の演出モード保持・初期化、本機固有の有利区間契約、ガックン/即時変更判別、ボーナス成立状態等の特殊契約はUNVERIFIED_AFTER_RESEARCH。
 - 一般的なスマスロ/BT仕様から有利区間挙動を推測補完しない。
-- 6確は天井「調査中」表記だが、導入後のジャグラーズネット/ちょんぼりすた/スロベース等は非搭載で一致するため、導入後複数一致をcanonicalとした。
 
 ## 直前境界
 ### 2026-08-03 — CLOSED 8/8
@@ -52,20 +54,32 @@
 ### 2026-08-17 — CLOSED 1/1
 - Lパチスロ 喰霊-零-Re — No.1817
 
-## 2026-09-07 primary canonical queue — 6/6 DONE
-1. スマスロ リコリス・リコイル — No.1818 DONE
-2. Lパチスロ 彼女、お借りします — No.1819 DONE
-3. L青春ブタ野郎はバニーガール先輩の夢を見ない — No.1820 DONE
-4. モグモグ風林火山 大海戦の巻 — No.1821 DONE
-5. パチスロ 見える子ちゃん — No.1822 DONE
-6. スマスロ タコスロ — No.1823 DONE
+## 2026-09-07 — CLOSED 6/6
+1. スマスロ リコリス・リコイル — No.1818
+2. Lパチスロ 彼女、お借りします — No.1819
+3. L青春ブタ野郎はバニーガール先輩の夢を見ない — No.1820
+4. モグモグ風林火山 大海戦の巻 — No.1821
+5. パチスロ 見える子ちゃん — No.1822
+6. スマスロ タコスロ — No.1823
 
-### 9/7境界監査 — NEXT
-- primary 6機は完了したが、まだCLOSEDにしない。
-- **LB異世界かるてっとKR**、**L/SHAMAN KING/SS** 等の9/7ホール導入記録を型式単位で監査する。
-- 各候補を「未収録新規本体 / 既存機の地域導入 / 増台 / 別型式 / 新スペック / PB / 段階導入 / 日付誤記」に分類する。
-- 未収録新規本体または独立すべき別スペックならNo.1824以降として同日群に追加し、性能コア+resetBehavior v0.7を収集する。
-- 監査完了後のみ2026-09-07境界をCLOSED判定し、次の確定導入日へ進む。
+## 9/7境界監査結果
+### LB異世界かるてっとKR — SKIP_EXISTING_MACHINE_LATE_STORE_INSTALL
+- canonical machine: A-SLOT+ 異世界かるてっと BT
+- manufacturer: Sammy / 製造 銀座
+- formalModel: LB 異世界かるてっと KR
+- certificationNumber: 5S1513
+- canonical releaseDate: 2026-04-06
+- 6確、HAZUSE、遊技通信/P-WORLDが2026-04-06全国導入で一致。
+- 2026-09-07に同型式を新規導入した店舗記録は存在するが、型式一致のため新スペックではなく店舗単位の後発導入と判定。
+
+### L/SHAMAN KING/SS — SKIP_EXISTING_MACHINE_LATE_STORE_INSTALL
+- canonical machine: スマスロ シャーマンキング
+- manufacturer: エレコ
+- formalModel: L／SHAMANKING／SS
+- certificationNumber: 430573
+- canonical releaseDate: 2025-02-03
+- 6確、HAZUSE、P-WORLD/解析資料が2025-02-03導入で一致。
+- 2026-09-07に同型式を新規導入した店舗記録は存在するが、既存2025機の後発導入と判定。
 
 ## resetBehavior retrospective QA
 - qaStatus: **CURSOR_UNRESOLVED_ON_CURRENT_MAIN_SEARCH**
@@ -85,9 +99,21 @@ No.1823:
 - スロベース: https://slobase.jp/machines/takosuro
 - こぜログ: https://kozelog.net/machine/universal/takosuro/
 
+9/7 boundary audit:
+- 6確 2026年9月一覧: https://www.kaku6.jp/
+- パチナビ新台カレンダー: https://pachinavi.net/calendar/
+- A-SLOT+異世界かるてっとBT 6確: https://www.kaku6.jp/slot/isekaiquartet/
+- A-SLOT+異世界かるてっとBT HAZUSE: https://hazuse.com/machine/pachislot/5S1513/
+- 遊技通信/P-WORLD 異世界かるてっとBT発表: https://news.p-world.co.jp/articles/32767/yugitsushin
+- スマスロ シャーマンキング 6確: https://www.kaku6.jp/slot/shamanking/
+- スマスロ シャーマンキング HAZUSE: https://hazuse.com/machine/pachislot/SX0096/
+- スマスロ シャーマンキング P-WORLD: https://www.p-world.co.jp/machine/database/10188
+- 店舗型式記録（9/7異世界かるてっとKR）: https://slot.bz/shindai/yamagata/2070
+- 店舗型式記録（9/7 SHAMAN KING SS）: https://slot.bz/shindai/mie/6681
+
 ## 次回再開地点
 - 最新mainを再同期しNo.1823実レコードと本handoffを確認。
-- **2026-09-07境界の型式監査から再開。最優先候補 `LB異世界かるてっとKR`、次点 `L/SHAMAN KING/SS`。**
-- 未収録新規本体/独立別スペックと確認できた最初の候補をNo.1824として追加する。
-- 候補が既存機の地域導入/増台等なら根拠を保持してスキップし、監査を継続する。
-- PARTIAL/UNVERIFIEDは型式名・検定番号・メーカー・シリーズ名と、設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックン/有利区間へ検索語を変え、公式・業界記事・解析・古いDB・アーカイブを横断してから確定する。
+- **性能コア時系列本線は2026-09-15時点の現行フロンティア到達。次の確定済み全国導入日は2026-10-05で未来日のため、現時点ではNo.1824を先行作成しない。**
+- 次回は新たな9月導入漏れ/地域先行ではない全国新規本体が判明していないか境界差分監査を行う。新規本体がなければ本線レコード追加なし。
+- retrospective resetBehavior QAはカーソルがmain上で確定できるまで外部順から推測して開始しない。
+- 2026-10-05が現行日になった後は、最新mainと当日導入実績を再監査して次の未処理機種からNo.1824以降を継続する。
