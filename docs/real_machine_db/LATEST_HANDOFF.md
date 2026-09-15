@@ -1,58 +1,55 @@
 更新日: 2026-09-15
 
 ## 現在地点
-- recordCount: **1802**
-- latestRecordAdded: **戦国コレクション6 — No.1802**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2026-07-06_sengoku-collection6.md`
+- recordCount: **1803**
+- latestRecordAdded: **スマスロ ケロット5BT — No.1803**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2026-07-06_smart-kerotto5-bt.md`
 - chronologicalFrontier: **2026-07-06**
 - schema: **resetBehavior v0.7**
-- status: **2026-07-06_GROUP_OPEN_1_OF_7_CANONICAL_PROCESSED**
+- status: **2026-07-06_GROUP_OPEN_2_OF_7_CANONICAL_PROCESSED**
 
 ## 今回の進捗
-- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前実レコードNo.1801を再同期。
+- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前実レコードNo.1802を再同期。
 - INDEXは旧スナップショット（19件）のためREADME規定どおり `LATEST_HANDOFF + 実レコード` を進捗正本として使用。
-- No.1801 `スマート沖スロ ダークハイビ` の次から継続し、No.1802 `戦国コレクション6` を追加。
-- コナミアミューズメント公式、1geki、必勝本、6確、P-WORLD、パチビー、情報島+等を横断。
-- 型式 `L戦国コレクション6KS`、2026-07-06導入、コナミアミューズメント製造を固定。
-- 設定1〜6の機械割 `97.9 / 99.1 / 100.9 / 106.0 / 110.1 / 114.9%`。
-- AT初当り `1/363.6 / 1/350.4 / 1/329.8 / 1/289.4 / 1/268.5 / 1/252.2`。
-- 約33.7G/50枚、通常AT純増約3.0枚/G、上位AT約7.7枚/G、時幻城RUSHは1セット100枚以上。
-- 通常天井は最大999G+αまたは最大6周期。設定変更時は周期天井最大3周期へ短縮。
-- 必勝本の設定変更/電源OFF ON直接比較で、天井G数・周期数・コレポイントは変更時RESET/電断時CARRY_OVER、通常モード・裏モード・規定リプレイ回数は変更時再抽選/電断時CARRY_OVERを固定。
-- 朝一1周期目の規定コレ数222以下を保存。ただし通常時の1周期目にも適用される公開仕様があるため、単独の変更判別には使わない。
-- 設定変更後1回目ATの時幻城ミッション勝利時ワンモア発生率63%（通常50%）を朝一関連公開数値として保存。
-- 有利区間は複数二次解析で設定変更RESET/電断引継ぎ方向を支持するが、必勝本比較表では有利区間自体の直接欄がないため天井・モードより信頼度を下げた。
-- 本機固有ガックン、朝一ランプ即時判別、通常/裏モード具体振り分け、ステージ三者比較、検定番号は再探索後も未固定。
-- 一部資料の天井967G表記と主要解析の999G+αは平均せずCONFLICT注記。リセット後400G表記は3周期の換算目安であり仕様上の固定G数天井として採用しない。
+- No.1802 `戦国コレクション6` の次から継続し、No.1803 `スマスロ ケロット5BT` を追加。
+- 遊技通信/P-WORLD、遊技日本、情報島+、G-net、必勝本、パチマガスロマガ、パチビー等を横断。
+- 型式 `LBケロット5ND05H`、山佐ネクスト、2026-07-06導入を固定。
+- 設定1〜6の機械割 `98.2 / 99.1 / 101.1 / 104.5 / 107.0 / 111.0%`。
+- BIG系合算 `1/232.4 / 1/230.8 / 1/229.1 / 1/218.5 / 1/215.6 / 1/204.8`、REG `1/350.5 / 1/341.3 / 1/324.4 / 1/299.3 / 1/274.2 / 1/239.2`、ボーナス合算 `1/139.7 / 1/137.7 / 1/134.3 / 1/126.3 / 1/120.7 / 1/110.3`。
+- ベース約37G/50枚（設定1）、SBB約317枚（BT含む）、BIG最大209枚、REG84枚固定。
+- 天井非搭載を複数資料で固定。したがってゲーム数/周期天井の設定変更RESET・据え置き/純電断引継ぎ・朝一天井短縮はN/A。
+- 必勝本の設定変更/電源OFF ON直接比較で演出モードは双方「現在調査中」。再探索後も機種固有の初期化/保持契約は固定できずUNVERIFIED。
+- 朝一専用モード、天井短縮、CZ/初当たり優遇、不利専用モード等はNONE_CONFIRMED_AFTER_RESEARCH。
+- 本機固有ガックン、朝一即時判別、有利区間の設定変更/電断契約は一般論で埋めずUNVERIFIED_AFTER_RESEARCH。
+- ニコナナ動画概要の設定5 BIG合算1/225.6・設定6機械割110.0%は、必勝本/G-net/P-WORLD/パチビー等の1/215.6・111.0%と競合。多数一致側をcanonical、異値をCONFLICTとして隔離。
 
-## No.1802 — 戦国コレクション6
-- path: `docs/real_machine_db/machines/2026-07-06_sengoku-collection6.md`
-- manufacturer: **コナミアミューズメント**
-- formalModel: **L戦国コレクション6KS**
+## No.1803 — スマスロ ケロット5BT
+- path: `docs/real_machine_db/machines/2026-07-06_smart-kerotto5-bt.md`
+- manufacturer: **山佐ネクスト**
+- formalModel: **LBケロット5ND05H**
 - releaseDate: **2026-07-06**
 - settings: **1 / 2 / 3 / 4 / 5 / 6**
-- payoutRate: **97.9 / 99.1 / 100.9 / 106.0 / 110.1 / 114.9%**
-- AT initialHit: **1/363.6 / 1/350.4 / 1/329.8 / 1/289.4 / 1/268.5 / 1/252.2**
-- base: **約33.7G/50枚**
-- netIncrease: **通常AT約3.0枚/G / 上位AT約7.7枚/G**
-- basicPayout: **時幻城RUSH 1セット100枚以上**
+- payoutRate: **98.2 / 99.1 / 101.1 / 104.5 / 107.0 / 111.0%**
+- bonusCombined: **1/139.7 / 1/137.7 / 1/134.3 / 1/126.3 / 1/120.7 / 1/110.3**
+- base: **約37G/50枚（設定1）**
+- basicPayout: **SBB約317枚（BT含む） / BIG最大209枚 / REG84枚固定**
 - coreStatus: **COMPLETE_CORE_WITH_RESET_RESEARCH**
 
-### No.1802 resetBehavior v0.7
-- 設定変更: 天井G数/周期/コレポイントRESET、通常/裏モード・規定リプレイ回数再抽選。
-- 据え置き: 電源OFF→ON比較から天井・モード等の引継ぎ方向を支持。
-- 純電源OFF→ON: 天井G数/周期/コレポイント/通常モード/裏モード/規定リプレイ回数CARRY_OVER。
-- ゲーム数/天井: 通常999G+αまたは最大6周期、設定変更後は最大3周期。
-- モード: 設定変更時再抽選、電断時引継ぎ。具体振り分け未公開。
-- 有利区間: 設定変更RESET/電断引継ぎを複数二次解析が支持。直接一次比較未固定。
-- 朝一恩恵: 最大3周期、1周期目222コレ以下、設定変更後1回目ATのワンモア発生率63%。
-- 朝一不利: 固定冷遇率/専用不利モード等はNONE_CONFIRMED_AFTER_RESEARCH。
-- 変更判別: 4周期目到達は設定変更挙動と矛盾するため据え置き推測材料。ガックン/ランプ即時判別はUNVERIFIED。
-- 公開朝一数値: 最大3周期、1周期目222コレ以下、ワンモア63%（通常50%）。
+### No.1803 resetBehavior v0.7
+- 設定変更: 天井非搭載のため天井関連N/A。演出モード等の機種固有契約はUNVERIFIED_AFTER_RESEARCH。
+- 据え置き: 天井関連N/A。演出モード等はUNVERIFIED_AFTER_RESEARCH。
+- 純電源OFF→ON: 天井関連N/A。必勝本で演出モードは現在調査中。
+- ゲーム数/天井: 天井非搭載。
+- モード/状態: 3演出モード搭載。ただし設定変更/電断時の保持・初期化は未固定。
+- 有利区間: 機種固有の直接資料未固定。一般論から推測補完せずUNVERIFIED。
+- 朝一恩恵: NONE_CONFIRMED_AFTER_RESEARCH。
+- 朝一不利: NONE_CONFIRMED_AFTER_RESEARCH。
+- 変更判別: ガックン/ランプ/表示等の機種固有即時判別はUNVERIFIED。短縮天井による事後判別はN/A。
+- 公開朝一数値: NONE_CONFIRMED_AFTER_RESEARCH。
 
 ## conflicts / normalization
-- 一部二次資料の「967G」天井見出しに対し、1geki/6確/P-WORLD/必勝本本文系統は999G+αで一致。canonicalは999G+α、967GはCONFLICT注記。
-- 「リセット後400G」は3周期をゲーム数換算した実戦目安であり、固定ゲーム数天井として扱わない。
+- ニコナナ動画概要: 設定5 BIG合算1/225.6、設定6機械割110.0%。主要複数資料: 1/215.6、111.0%。平均せず後者をcanonical、前者をCONFLICT保持。
+- PShortの設定3/4 BIG合算1/229.2・1/218.4に対し主要資料は1/229.1・1/218.5。丸め/転記差候補として多数一致側をcanonical。
 
 ## resetBehavior retrospective QA
 - qaStatus: **CURSOR_UNRESOLVED_ON_CURRENT_MAIN_SEARCH**
@@ -61,29 +58,30 @@
 
 ## sources summary
 retrievedAt: 2026-09-15
-No.1802:
-- コナミアミューズメント公式 発売決定: https://www.konami.com/amusement/corporate/ja/topics/20260406/
-- コナミアミューズメント公式 稼働開始: https://www.konami.com/amusement/corporate/ja/topics/20260706/
-- 6確: https://www.kaku6.jp/slot/sencolle6/
-- 1geki 天井・朝一: https://1geki.jp/slot/l_sencolle6/3/
-- 必勝本 天井&設定変更: https://hisshobon.com/machineinfo/138308/
-- 必勝本 通常時: https://hisshobon.com/machineinfo/138335/
-- 必勝本 規定コレ: https://hisshobon.com/machineinfo/138325/
-- P-WORLD: https://www.p-world.co.jp/machine/database/10471
-- パチビー: https://www.pachibee.jp/machines/index/226060001
-- 情報島+: https://p-johojima.jp/machine_spec/post-30376/
+No.1803:
+- P-WORLD/遊技通信 発表記事: https://news.p-world.co.jp/articles/33409/yugitsushin
+- 遊技日本 発売記事: https://yugi-nippon.com/pachinko-new-machine/post-76594/
+- 情報島+ 検定通過: https://p-johojima.jp/new_machine/post-28691/
+- G-net 販売概要: https://g-net-ps.com/info/s0273/
+- 必勝本 基本スペック: https://hisshobon.com/machineinfo/89852/
+- 必勝本 天井&設定変更: https://hisshobon.com/machineinfo/137930/
+- P-WORLD 機種DB: https://www.p-world.co.jp/machine/database/10479
+- パチマガスロマガ: https://cs62.cs-plaza.com/g/pachi/pla/s_conq/yamasanext_slot/15/kh01.php
+- パチビー: https://www.pachibee.jp/machines/index/226060004
+- 情報島+ 機種概要: https://p-johojima.jp/machine_spec/post-30724/
+- ちょんぼりすた: https://chonborista.com/slot/yamasa-slot/258812/
 
-## 2026-07-06 canonical queue — OPEN 1/7
+## 2026-07-06 canonical queue — OPEN 2/7
 1. ~~戦国コレクション6 — No.1802 DONE~~
-2. スマスロ ケロット5BT — NEXT
-3. Lパチスロ からくりサーカス2
+2. ~~スマスロ ケロット5BT — No.1803 DONE~~
+3. Lパチスロ からくりサーカス2 — NEXT
 4. L南国育ち SPECIAL
 5. ローティス
 6. ヤバチバ
 7. L ULTRAMAN 最終決戦
 
 ## 次回再開地点
-- 最新mainを再同期しNo.1802と本handoffを確認。
-- **No.1803候補「スマスロ ケロット5BT」— 2026-07-06** から継続。
-- 7/6群の残り6機を順次処理し、7/7完了後にPB・別型式・地域先行・延期/段階導入を再監査して境界CLOSED判定する。
+- 最新mainを再同期しNo.1803と本handoffを確認。
+- **No.1804候補「Lパチスロ からくりサーカス2」— 2026-07-06** から継続。
+- 7/6群の残り5機を順次処理し、7/7完了後にPB・別型式・地域先行・延期/段階導入を再監査して境界CLOSED判定する。
 - PARTIAL/UNVERIFIEDは、型式名・検定番号・メーカー・シリーズ名と、設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックン/有利区間へ検索語を変え、公式・業界記事・解析・古いDB・アーカイブを横断してから確定する。
