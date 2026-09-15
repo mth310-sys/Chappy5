@@ -8,14 +8,13 @@
 - schema: **resetBehavior v0.7**
 - status: **2026-09-15_BOUNDARY_CLOSED_CURRENT_FRONTIER_REACHED_REAUDITED**
 
-## 今回の進捗 — 2026-09-15 16時台 現行差分再監査（relay continuation）
+## 今回の進捗 — 2026-09-15 17時台 現行差分再監査（relay continuation）
 - 最新mainの `README.md`、ミッションv0.7、`INDEX.md`、本LATEST_HANDOFF、直前No.1823実レコードを再取得して同期確認。
-- INDEXは2026-08-31の旧スナップショット（19件）のため、進捗判定はREADME規定どおり **LATEST_HANDOFF + 最新実レコード** を優先。
-- 現行日2026-09-15を基準に「9月15日/9月14日 パチスロ新台」「2026年9月 パチスロ 新台」「スマスロ 新台 導入」等で再検索し、6確、パチナビ、P-Summa、店舗導入観測、遊技日本を横断。
-- 6確は2026年9月を **9/7の6機種のみ**、次月10/5を4機種として掲載。パチナビも9月掲載6機種・全て9/7。P-Summaも「9月のパチスロ新台はすべて7日導入開始予定、全6機種」と一致。
-- 9/14の店舗導入観測はパチンコ中心。9/10等に観測されるスロットは既存機の店舗単位後発導入で、全国初回導入の新規型式根拠ではない。
-- 9/14の業界ニュースで `LアサルトリリィNA`、`L鬼武者 一閃XA`、`Lドラゴンズドグマ2SD` 等の検定通過を確認したが、現行日までの全国初回導入を示すものではないため先行登録しない。
-- よって **性能コア本線はNo.1823 / recordCount 1823を維持**。9/7境界 **CLOSED 6/6** を維持。
+- INDEXは2026-08-31の旧スナップショット（19件）のため、README規定どおり **LATEST_HANDOFF + 最新実レコード** を進捗正本として使用。
+- 直前境界監査候補 `L/SHAMAN KING/SS` を正式型式・機種名・導入日で再照合。HAZUSE、パチビー、ABEMA/アニメフリークス、業界記事が **スマスロ シャーマンキング / エレコ / 2025-02-03全国導入** で一致。型式 `L／SHAMANKING／SS`、検定番号 `430573` もHAZUSEで確認。
+- よって2026-09-07/09-08の店舗観測は後発店舗導入であり、No.1824として重複追加しない。
+- 2026-09-15現行フロンティアについて、新規全国初回導入の未収録パチスロ本体は今回も固定できず、**No.1823 / recordCount 1823を維持**。
+- 将来導入予定・検定通過のみの型式は先行登録しない。
 
 ## 2026-09-07 — CLOSED 6/6
 1. スマスロ リコリス・リコイル — No.1818
@@ -65,7 +64,7 @@
 
 ## 9/7・9/8重複境界監査（維持）
 - `LB異世界かるてっとKR` → 既存 `A-SLOT+ 異世界かるてっと BT`（canonical 2026-04-06）の後発店舗導入。
-- `L/SHAMAN KING/SS` → 既存 `スマスロ シャーマンキング`（canonical 2025-02-03）の後発店舗導入。
+- `L/SHAMAN KING/SS` → 既存 `スマスロ シャーマンキング`（canonical 2025-02-03）の後発店舗導入。今回再照合済み。
 - `LパチスロULTRAMAN最終決戦ME` → canonical 2026-07-06。9/8観測は後発店舗導入。
 - `Lからくりサーカス2jG` → canonical 2026-07-06。9/8観測は後発店舗導入。
 - `LプリズムナナCC` → canonical 2025-12-08。9/8観測は後発店舗導入。
@@ -83,6 +82,10 @@ retrievedAt: 2026-09-15
 - P-Summa 2026年9月パチスロ新台整理: https://psumma.jp/pachislo/71626/
 - 店舗導入観測: https://slot.bz/shindai
 - 遊技日本 業界ニュース: https://yugi-nippon.com/
+- SHAMAN KING HAZUSE: https://hazuse.com/machine/pachislot/SX0096/
+- SHAMAN KING パチビー: https://www.pachibee.jp/machines/about/225010003
+- SHAMAN KING ABEMA/アニメフリークス: https://times.abema.tv/articles/-/10161672
+- SHAMAN KING 情報島: https://p-johojima.jp/new_machine/post-6461/
 - No.1823 遊技通信/P-WORLD: https://news.p-world.co.jp/articles/33759/yugitsushin
 - No.1823 HAZUSE: https://hazuse.com/machine/pachislot/6S0085/
 - No.1823 6確: https://www.kaku6.jp/slot/tacoslot/
