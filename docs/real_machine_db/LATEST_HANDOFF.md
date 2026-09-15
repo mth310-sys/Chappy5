@@ -1,42 +1,42 @@
 更新日: 2026-09-15
 
 ## 現在地点
-- recordCount: **1818**
-- latestRecordAdded: **スマスロ リコリス・リコイル — No.1818**
-- latestRecordAddedPath: `docs/real_machine_db/machines/2026-09-07_smart-slot-lycoris-recoil.md`
+- recordCount: **1819**
+- latestRecordAdded: **Lパチスロ 彼女、お借りします — No.1819**
+- latestRecordAddedPath: `docs/real_machine_db/machines/2026-09-07_l-pachislot-kanojo-okarishimasu.md`
 - chronologicalFrontier: **2026-09-07 OPEN**
 - schema: **resetBehavior v0.7**
-- status: **2026-09-07_GROUP_OPEN_1_OF_6_PRIMARY_CANONICAL_PROCESSED_BOUNDARY_REAUDIT_PENDING**
+- status: **2026-09-07_GROUP_OPEN_2_OF_6_PRIMARY_CANONICAL_PROCESSED_BOUNDARY_REAUDIT_PENDING**
 
 ## 今回の進捗
-- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前No.1817実レコードを再同期。
+- 最新mainのREADME、ミッションv0.7、INDEX、LATEST_HANDOFF、直前No.1818実レコードを再同期。
 - INDEXは旧スナップショット（19件）のためREADME/LATEST_HANDOFF規定どおり `LATEST_HANDOFF + 実レコード` を進捗正本として使用。
-- No.1818 `スマスロ リコリス・リコイル` を追加。
-- サミー発表系業界記事、G-net販売資料、P-WORLD、6確、ジャグラーズネット、イチカツ、スロベースを横断し、性能コアとresetBehavior v0.7を同時収集。
+- No.1819 `Lパチスロ 彼女、お借りします` を追加。
+- 情報島＋検定、P-WORLD/遊技通信、必勝本、1geki、6確、ちょんぼりすた、イチカツ、スロベース、SANKYO開発こぼれ話を横断し、性能コアとresetBehavior v0.7を同時収集。
 
-## No.1818 — スマスロ リコリス・リコイル
-- path: `docs/real_machine_db/machines/2026-09-07_smart-slot-lycoris-recoil.md`
-- manufacturer: **銀座製造 / サミー販売・ブランド**
-- formalModel: **Lスマスロ リコリス・リコイルKX**
+## No.1819 — Lパチスロ 彼女、お借りします
+- path: `docs/real_machine_db/machines/2026-09-07_l-pachislot-kanojo-okarishimasu.md`
+- manufacturer: **ビスティ製造 / SANKYO販売・ブランド**
+- formalModel: **Lレンタル彼女bK**
 - releaseDate: **2026-09-07**
-- system: **スマスロ AT（疑似ボーナス連打型）**
-- payoutRate: **97.9 / 98.9 / 101.3 / 106.1 / 110.4 / 114.6%**
-- CZ: **1/198.7 / 1/196.9 / 1/191.3 / 1/183.3 / 1/175.9 / 1/169.4**
-- AT: **1/328.8 / 1/323.4 / 1/312.1 / 1/288.3 / 1/271.6 / 1/256.7**
-- base: **約31.8G/50枚**
-- netIncrease: **ボーナス中 約8.4枚/G**
-- basicPayout: **プロローグ100枚 / リコリスラッシュ20=20G+α / ラッシュ50=50G+α＋ST10G+α / TY約550枚（補助値）**
+- system: **スマスロ AT（疑似ボーナス＋1G連抽選型）**
+- payoutRate: **97.7 / 98.7 / 101.0 / 105.5 / 110.4 / 114.9%**
+- CZ: **1/172 / 1/169 / 1/164 / 1/154 / 1/151 / 1/149**
+- bonusInitialHit: **1/269 / 1/263 / 1/254 / 1/235 / 1/231 / 1/226**
+- base: **約31.0G/50枚（設定1）**
+- netIncrease: **約5.0枚/G**
+- basicPayout: **かのかりBONUS約150枚 / REG約70枚 / ななかりDREAM約550枚 / ユメカノモード66G・期待度約58%**
 
-### No.1818 resetBehavior v0.7
-- 通常天井: **AT間最大850G+α / CZ間最大600G+α**。
-- 設定変更: 有利区間・天井・内部状態RESET。**AT間最大600G / CZ間最大250G**へ短縮。
-- 設定変更後は液晶0G表示だが、内部通常ゲーム数をランダム加算して開始する解析が複数一致。具体振り分けはUNVERIFIED。
-- 純電源OFF→ON: 有利区間・AT間/CZ間天井・内部状態を引継ぎ。液晶は0G表示でも内部カウント引継ぎとする機種固有解析を確認。
-- 据え置き: 純電断直接比較と朝一解析から天井/内部状態CARRY_OVER_SUPPORTED。独立高優先三者比較は未固定。
-- 朝一恩恵: AT/CZ二重天井短縮＋内部G加算。設定1でもリセット時出玉率100%超とする複数解析あり。ただしメーカー公表機械割ではないため通常97.9%とは定義分離。
-- 変更判別: 液晶G数は変更/電断とも0G表示とされ単独判別不可。短縮天井は事後材料だがAT駆け抜け等でも同短縮が発生するため履歴条件なしで確定材料にしない。
-- 本機固有ガックン条件/発生率、即時固定ランプ判別、設定変更時の名称付きモード振り分け/具体率、内部状態具体率は多語再探索後もUNVERIFIED_AFTER_RESEARCH。
-- 重大な性能CONFLICTなし。
+### No.1819 resetBehavior v0.7
+- 必勝本の機種固有直接比較で設定変更時は**天井G数RESET / モード再抽選 / ポイント再抽選**、電源OFF→ONは**天井G数・モード・ポイント引継ぎ**。
+- ハートメーターは変更/電断とも見た目シャッター状態だが、電断では内部値を引き継ぐ。
+- 通常天井はかのかりBONUS後最大1000G、REG後最大800G、設定変更後は最大600Gへ短縮。1geki/6確等では各+α表記。
+- 据え置きは純電断直接比較から天井/モード/ポイント/内部ハートメーターCARRY_OVER_SUPPORTED。独立三者比較は未固定。
+- 有利区間は設定変更RESET / 電断CARRY_OVERとする機種固有解析を確認したが、必勝本直接比較表に独立欄はないためANALYSIS_HIGH扱い。
+- 朝一公開数値: イチカツ解析で設定変更0Gから**出玉率104.5%**。メーカー公表機械割ではないため定義分離。
+- 変更判別: 開始ステージは必勝本で現在調査中、スロベースでも有効な即時判別は未判明。600G短縮天井は事後材料。
+- 本機固有ガックン条件/発生率、即時固定ランプ、設定変更時CZモードA/B/C具体振り分け、独立内部状態具体率は多語再探索後もUNVERIFIED_AFTER_RESEARCH。
+- 重大な性能CONFLICTなし。天井の+α有無と天井恩恵の表現にSOURCE_WORDING_DIFFERENCEあり。
 
 ## 直前境界
 ### 2026-08-03 — CLOSED 8/8
@@ -52,10 +52,10 @@
 ### 2026-08-17 — CLOSED 1/1
 - Lパチスロ 喰霊-零-Re — No.1817
 
-## 2026-09-07 primary canonical queue — OPEN 1/6
+## 2026-09-07 primary canonical queue — OPEN 2/6
 1. ~~スマスロ リコリス・リコイル — No.1818 DONE~~
-2. **Lパチスロ 彼女、お借りします — No.1819 NEXT**
-3. L青春ブタ野郎はバニーガール先輩の夢を見ない
+2. ~~Lパチスロ 彼女、お借りします — No.1819 DONE~~
+3. **L青春ブタ野郎はバニーガール先輩の夢を見ない — No.1820 NEXT**
 4. モグモグ風林火山 大海戦の巻
 5. パチスロ 見える子ちゃん
 6. スマスロ タコスロ
@@ -72,18 +72,22 @@
 
 ## sources summary
 retrievedAt: 2026-09-15
-No.1818:
-- 情報島＋ / サミー発表: https://p-johojima.jp/new_machine/post-32965/
-- G-net: https://g-net-ps.com/info/s0290/
-- P-WORLD: https://www.p-world.co.jp/machine/database/10503
-- 6確: https://www.kaku6.jp/slot/lycoreco/
-- ジャグラーズネット: https://jugglersnet.com/chumoku/rikoriko
-- イチカツ: https://ichikatsu.com/lycorisrecoil/
-- スロベース reset: https://slobase.jp/articles/lycoris-recoil-reset
-- スロベース machine: https://slobase.jp/machines/lycoris-recoil
+No.1819:
+- 情報島＋ / 検定: https://p-johojima.jp/new_machine/post-32947/
+- P-WORLD / 遊技通信: https://news.p-world.co.jp/articles/34055/yugitsushin
+- 必勝本 basic: https://hisshobon.com/machineinfo/138896/
+- 必勝本 reset: https://hisshobon.com/machineinfo/143048/
+- 必勝本 targeting: https://hisshobon.com/machineinfo/143129/
+- 1geki reset: https://1geki.jp/slot/l_kanokari/3/
+- 1geki zones: https://1geki.jp/slot/l_kanokari/43/
+- 6確: https://www.kaku6.jp/slot/kanokari/
+- ちょんぼりすた: https://chonborista.com/slot/sankyo-slot/263079/
+- イチカツ: https://ichikatsu.com/kanokari/
+- スロベース reset: https://slobase.jp/articles/kanokari-reset
+- SANKYO開発こぼれ話: https://www.secret-story.sankyo-fever.jp/information
 
 ## 次回再開地点
-- 最新mainを再同期しNo.1818実レコードと本handoffを確認。
-- **No.1819候補 `Lパチスロ 彼女、お借りします` — 2026-09-07** から同じキューを継続。
+- 最新mainを再同期しNo.1819実レコードと本handoffを確認。
+- **No.1820候補 `L青春ブタ野郎はバニーガール先輩の夢を見ない` — 2026-09-07** から同じキューを継続。
 - 主要6機を順次処理しつつ、LB異世界かるてっとKR、L/SHAMAN KING/SS等の9/7ホール導入記録を型式単位で監査し、既存/新規/別スペックを確定してから境界CLOSED判定する。
 - PARTIAL/UNVERIFIEDは型式名・検定番号・メーカー・シリーズ名と、設定変更/リセット/朝一/据え置き/電源OFF ON/天井短縮/モード/ガックン/有利区間へ検索語を変え、公式・業界記事・解析・古いDB・アーカイブを横断してから確定する。
