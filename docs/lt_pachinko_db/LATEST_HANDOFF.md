@@ -1,58 +1,57 @@
 # LT Pachinko DB — Latest Handoff
 
 retrievedAt: 2026-09-21
-relay: 1 / chronological collection
+relay: 2 / chronological collection
 
 ## Read before work
 - latest main `README.md`: checked
 - `docs/CHAPPY5_LT_PACHINKO_DATABASE_MISSION_V01.md`: checked
-- `docs/lt_pachinko_db/INDEX.md`: checked; INDEX is stale relative to current machine records/handoff and still displays the older 30-record / 2024-09-17 frontier
-- previous `LATEST_HANDOFF.md` / Relay 5: checked
-- existing 2024-12-02 records and exact restart point: checked
+- `docs/lt_pachinko_db/INDEX.md`: checked; INDEX remains stale relative to current machine records/handoff
+- previous `LATEST_HANDOFF.md` / Relay 1: checked
+- exact restart point `P真・一騎当千～桃園の誓い～199LTver.` confirmed
 
 ## This relay
-Continued from the exact restart point `PシャカラッシュZ` (2024-12-02).
+Continued from the exact restart point `P真・一騎当千～桃園の誓い～199LTver.` (2024-12-02).
 
 ### Added COMPLETE_CORE
-`PシャカラッシュZ` / マルホン工業
-- path: `docs/lt_pachinko_db/machines/2024-12-02_p_shakarush_z.md`
-- formal model: `PシャカRUSH Z1` / 検定番号4P0881
+`P真・一騎当千～桃園の誓い～199LTver.` / D-light（ディ・ライト） / 大一商会系
+- path: `docs/lt_pachinko_db/machines/2024-12-02_p_shin_ikkitousen_touen_199lt.md`
+- formal model: `P真・一騎当千～桃園の誓い～LTH-FH`
 - release: 2024-12-02
 - type: ライトミドル / 一種二種混合 / LT
-- normal jackpot: 1/197.4
-- right-side effective hit: 1/67.0
-- RUSH entry: 100%; initial hit 3% directly enters LT
-- lower RUSH: `シャカRUSH`, ST76, continuation about70%
-- LT: `Z超RUSH`, ST108 or 3000, continuation about93.5%
-- LT routes: initial 9R 3% direct; lower-RUSH hit 9R 6%
-- initial distribution: 9R1018 payout+LT 3% / 6R682+lower 27% / 2R234+lower 70%
-- lower RUSH hit: 9R1018+LT 6% / 6R682+lower 74% / 2R234+lower 20%
-- LT hit: 65% total goes to ST3000 `∞インフィニティBONUS` (9R6% + 6R46% + 2R13%); remaining 35% goes ST108 (6R28% + 2R7%)
-- ordinary-initial-hit-based total LT arrival probability: no direct published value confirmed; do not infer into a fixed DB field
-- 2026 `PシャカRUSH Z Jr. / PシャカRUSH ZA` is a separate 1/98.7 sibling and was explicitly excluded from this record
+- normal jackpot: 1/199.8; right-side approx 1/99.9
+- initial: approx 900 payout
+- RUSH: approx57% total including time-shortening return; direct allocation 55%
+- lower RUSH `闘士恋撃`: ST68 / approx50%
+- non-RUSH initial: `チャンスタイム` time-shortening 20; hit during this route enters LT directly
+- LT: `超ドキドキ!ハーレムタイム`; ST158 / approx80%
+- LT routes: time-shortening return; lower-RUSH first right hit 25% 3000+ allocation; or maximum two right-side hits
+- right payout: all hits approx1500+; detailed analysis allocation 4500OVER 6% / 3000 19% / 1500 75%
+- ordinary-initial-hit-based total LT arrival probability: no direct published fixed value confirmed; do not infer
+- 319/129 sibling specs explicitly separated
 
 ## Cross-check
-P-WORLD/HAZUSE, 1geki and pachinko-spec.info were cross-checked. Core probability, ST counts, payout basis, direct-LT 3%, lower-RUSH LT 6%, and LT ST3000 65% agree at the relevant definition level. No unresolved conflict found.
+Industry primary reporting (遊技通信 / グリーンべると) plus P-WORLD, なな徹 and 一撃 were cross-checked. Core probability, 55% direct lower-RUSH allocation, approx57% total RUSH, ST68/158, approx50%/80%, time-shortening20 and LT routes agree at the relevant definition level. No unresolved conflict found.
 
 ## Effective DB state
-- machine records: **40**
-- COMPLETE_CORE: **39**
+- machine records: **41**
+- COMPLETE_CORE: **40**
 - CONFLICT: **1** (`P GO!GO!郷 革命の5`)
 - 2024-12-02 boundary remains OPEN.
-- `INDEX.md` remains known stale; reconcile it only after the current same-day boundary is re-enumerated/closed so newer records are not lost.
+- `INDEX.md` remains known stale; reconcile it after the current same-day boundary is re-enumerated/closed.
 
 ## 2024-12-02 remaining chronological queue
-1. `P真・一騎当千～桃園の誓い～199LTver.` / D-light / 大一商会系
-2. `Pえとたま2 神祭` / ユニバーサル系
+1. `Pえとたま2 神祭` / ユニバーサル系
 
 Before closing 2024-12-02, re-enumerate the same-day new-machine calendar for any additional LT-equipped candidates.
 
 ## Next restart point
-Start with **`P真・一騎当千～桃園の誓い～199LTver.` (2024-12-02)**. Confirm formal model and direct LT-equipped status first, then collect core probability, lower RUSH, LT formal name/routes/rates, continuation, payout allocations, time-shortening/special systems and game flow from multiple source families. Continue to `Pえとたま2 神祭`, then re-enumerate the 12/02 boundary. No inference; source disagreements remain CONFLICT.
+Start with **`Pえとたま2 神祭` (2024-12-02)**. Confirm formal model and LT-equipped status first, then collect core probability, lower RUSH, LT formal name/routes/rates, continuation, payout allocations, time-shortening/special systems and game flow from multiple source families. Then re-enumerate and close the 2024-12-02 boundary if no additional LT candidates remain. No inference; source disagreements remain CONFLICT.
 
 ## Sources used this relay
-- https://www.p-world.co.jp/machine/database/10131
-- https://1geki.jp/pachinko/p_shakarushz/
-- https://1geki.jp/pachinko/p_shakarushz/51/
-- https://1geki.jp/pachinko/p_shakarushz/52/
-- https://pachinko-spec.info/spec-detail/147664/
+- https://news.p-world.co.jp/articles/29352/yugitsushin
+- https://news.p-world.co.jp/articles/29385/greenbelt
+- https://www.p-world.co.jp/machine/database/10156
+- https://nana-press.com/kaiseki/machine/841/25411/
+- https://1geki.jp/pachinko/p_shinikki_touen199lt/51/
+- https://1geki.jp/pachinko/p_shinikki_touen199lt/52/
