@@ -1,6 +1,7 @@
 # P緋弾のアリア ～緋緋神降臨～ ラッキートリガーVer.
 
 収集日: 2026-09-20
+QA追記: 2026-09-21
 status: COMPLETE_CORE
 
 machineName: P緋弾のアリア ～緋緋神降臨～ ラッキートリガーVer.
@@ -24,7 +25,7 @@ ltEntryRoute:
 - LBR成功から超LBR
 - チャンスタイム中の大当りから超LBR
 ltEntryRate:
-- LBRから超LBR: 約51%（ST70回の引き戻し約49%と実質次回までの合算）
+- LBRから超LBR: 約51%（ST70回の引き戻し約49%とST9999回の引き戻し約99.9%の合算値として公式表記）
 - 初当り全体からの単一LT到達率は資料表記の定義差を避け、本レコードでは未統合
 ltContinuationRate: 約80%
 ltPayoutStructure:
@@ -56,12 +57,15 @@ gameFlow:
 
 notes:
 - 藤商事グループ初のラッキートリガー搭載機第1弾として公式IR資料で確認。
+- 2026-09-21 QAで藤商事公式製品ページを再確認し、図柄揃い1/399.9、緋弾チャージ1/372.1、合算大当り1/192.7、図柄揃い時RUSH約62%、LBR当選1/105、超LBR ST167回・継続約80%、時短70回・引戻し約16%を公式値として照合した。
 - 払出表記と獲得表記を混同しない。HAZUSEの振り分けは払い出し設計値。
 - 初当りからLTまでの「単一の突入率」は、LBR/チャンスタイム/直接突入の経路定義を統一してから分析側で算出する。
 
 sources:
-- https://www.fujimarukun.co.jp/products/p_aria5/ — 藤商事公式製品ページ（取得 2026-09-20）
+- https://www.fujimarukun.co.jp/products/p_aria5/ — 藤商事公式製品ページ（再取得 2026-09-21）
 - https://www.fujimarukun.co.jp/corp/ir/library/bs_material/ir59_202402.pdf — 藤商事IR資料（取得 2026-09-20）
+- https://news.p-world.co.jp/articles/26612/yugitsushin — 遊技通信 / P-WORLD業界ニュース（取得 2026-09-21）
+- https://news.p-world.co.jp/articles/26674/nippon — 遊技日本 / P-WORLD業界ニュース（取得 2026-09-21）
 - https://data.hazuse.com/?machine_code=PX0206 — HAZUSE DATA（取得 2026-09-20）
 - https://www.p-world.co.jp/machine/database/9986 — P-WORLD（取得 2026-09-20）
 - https://www.atari7.com/pachinko/p-hidannoaria-lucky-trigger.php — アタリ7（取得 2026-09-20）
