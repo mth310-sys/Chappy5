@@ -1,86 +1,84 @@
 # LT Pachinko DB — Latest Handoff
 
 retrievedAt: 2026-09-21
-relay: 4
+relay: 5 / QA
 
 ## Read before work
 - latest main README: checked
 - `docs/CHAPPY5_LT_PACHINKO_DATABASE_MISSION_V01.md`: checked
 - `docs/lt_pachinko_db/INDEX.md`: checked
-- previous `LATEST_HANDOFF.md` / Relay 3: checked
-- previous P江頭2:50inナナシーLT record: checked
+- previous `LATEST_HANDOFF.md` / Relay 4: checked
+- previous eフィーバーからくりサーカス2 魔王ver. record: checked
 
 ## This relay
-Finished the 2024-10-21 same-day boundary, then advanced chronologically to the next directly confirmed LT machine on 2024-11-05.
+Continued the unfinished 2024-11-05 boundary. Re-enumerated November calendars and checked candidate machines for direct LT evidence rather than inferring from high-continuation RUSH names.
 
-New COMPLETE_CORE record:
-1. `2024-11-05_e_fever_karakuri_circus2_maou_ver.md` — eフィーバーからくりサーカス2 魔王ver.
+New COMPLETE_CORE records:
+1. `2024-11-05_p_gifuu_doudou3_199ver.md` — P義風堂々!!～兼続と慶次～3 199ver.
+2. `2024-11-05_p_lovejyou_gokujou_129ver.md` — Pラブ嬢 ～極嬢のハーレム体験～ 129ver.
 
-### 2024-10-21 boundary
-Reliable 2024-10 calendar lists only two pachinko introductions on 10/21:
-- `P江頭2:50inナナシーLT` — already COMPLETE_CORE in Relay 3.
-- `P弾球黙示録カイジ沼5` — searched across machine DB/spec sources. The 129×87% variant is a one-two/c時短 RUSH machine; no direct LT-equipment evidence was found for this 2024 variant. Do not infer LT from `レインボーZONE` / next-hit state. Exclude from LT DB.
+### P義風堂々!!～兼続と慶次～3 199ver.
+- normal 1/199.8 / right 1/9.26
+- RUSH entry about44.1%; 天衣無縫RUSH about82%
+- LT `天下無双モード`; right-hit allocation 2%
+- LT continuation 90.25%; published TOTAL including residual holds about93.8% retained as a separate definition
+- payout 1360/480 is payout including other prize ports, not net acquisition
+- normal initial 1% is lower RUSH direct, not LT direct; do not mix
 
-## New record — eフィーバーからくりサーカス2 魔王ver.
-- releaseDate: 2024-11-05 (SANKYO/industry/P-WORLD/一撃 alignment; one analysis page says 11/4, retained only as minor calendar variance)
-- manufacturer: SANKYO; formal model `eフィーバーからくりサーカス2R`, manufactured by JB per industry source
-- type: smart pachinko / one-two mixed / 普図ST / c時短 / LT-specialized
-- normal figure-hit probability: about 1/399.9
-- Karakuri Charge: about 1/396
-- total normal jackpot including both definitions: about 1/199.9
-- LT `超悪魔RUSH`: entry about52%, ST/time-shortening 135, continuation about80%
-- critical definition: **RUSH entry = LT entry**. There is no lower RUSH stage.
-- `運命の一劇`: about1/78; special-figure-2 five-spin success expectation about82%; c時短 is included in the published continuation definition
-- initial figure-hit split: 1200 + LT 51%, 300 + LT 1%, 1200 + normal 48%
-- right split: 4500–7500 17%, 3000 33%, 1500 40%, ST reset 10%; payout values
-- no 遊タイム
-- Karakuri Charge has an LT route, but this relay did not force a standalone route percentage where the official/high-confidence sources did not directly publish one.
+### Pラブ嬢 ～極嬢のハーレム体験～ 129ver.
+- normal 1/129.7; right effective about1/39.2 = jackpot + small-hit combined definition
+- initial RUSH entry70%: LT direct1%, LOVE RUSH69%, normal30%
+- LOVE RUSH ST50+4, continuation about75%
+- LT `GOLDEN LOVE RUSH`: initial1% direct or LOVE RUSH-side right hit4%
+- LT ST84+4, continuation about90%
+- payouts: 210 / 700 / 1400 (10R×2) are payout values
+- LT right split excluding final variation/residual holds: 1400 18%, 700 82%; final variation/residual holds use lower-RUSH allocation
 
-## 2024-11-05 same-day boundary started
-Confirmed exclusions already checked:
-- `PAナナシー～お江戸77ver.～` — HAZUSE explicitly `ラッキートリガー 非搭載`; setting-equipped ST/遊タイム machine. Exclude.
-- `Pリング 呪いの7日間3 甘デジver.` — HAZUSE explicitly `ラッキートリガー 非搭載`. Do not confuse with the already-recorded 2024-08-19 LT version.
-- `Pフィーバーからくりサーカス2 運命ver.` — SANKYO official describes ordinary RUSH approx75%; industry announcement distinguishes it from the e-machine's LT-specialized specification. Do not register as LT.
+## 2024-11-05 boundary QA / exclusions
+Previously confirmed and retained:
+- PAナナシー～お江戸77ver. — explicit LT non-equipped
+- Pリング 呪いの7日間3 甘デジver. — explicit LT non-equipped; do not mix with 2024-08 LT version
+- Pフィーバーからくりサーカス2 運命ver. — non-LT ordinary RUSH variant; e魔王ver. is the LT model
 
-The 2024-11-05 calendar boundary is **not yet declared closed**. Next relay must re-read a reliable November calendar and finish every same-day pachinko candidate before advancing to 2024-11-18 or later.
+Additional checks this relay:
+- Pモンスターハンターライズ — 必勝本 explicitly `ラッキートリガー 非搭載`; exclude
+- P転生したらスライムだった件 — 2024 model is 1/319.6, ST entry100%, about84%; industry announcement does not identify LT and its structure is a limit/ST machine. No direct LT proof; exclude
+- P大海物語5スペシャル / e大海物語5スペシャル — calendar candidate only; no direct LT proof found in this relay, do not register
+- P銀河英雄伝説 Die Neue These variants — no direct LT proof established in this relay, do not register
+- e SSSS.GRIDMAN — appeared in some 11/5 calendar lists, but no direct LT-equipment proof established in this relay; do not register without proof
 
-## Sources — boundary
-- https://p-kn.com/calendar/202410/ — 2024-10 calendar; 10/21 P江頭 + Pカイジ沼5
-- https://www.p-world.co.jp/machine/database/10018 — Pカイジ沼5 129×87% structure; no direct LT identification used
-- https://p-kn.com/calendar/202411/ — November introduction calendar
-- https://hazuse.com/hd/4p0849/ — PAナナシーお江戸77; LT非搭載
-- https://hazuse.com/hd/410140-2/ — Pリング甘デジ; LT非搭載
-- https://www.sankyo-fever.jp/collection/967/ — SANKYO official Pからくり2 運命ver.; ordinary RUSH approx75%
+## QA retrospective
+- Existing `P GO!GO!郷 革命の5` remains CONFLICT. Current secondary sources still expose 3% vs 4% descriptions; no manufacturer/primary allocation found in this relay that resolves the denominator cleanly. Do not average.
+- Existing `PAハイスクール・フリート オールスター すい～とでハッピー!2400` total normal-hit-based LT reach rate remains UNVERIFIED; no inferred multiplication.
+- New records explicitly separate RUSH entry from LT entry, residual-hold-inclusive continuation from base LT continuation, and payout from net acquisition.
 
-## Sources — eフィーバーからくりサーカス2 魔王ver.
-- https://www.sankyo-fever.jp/collection/968/ — SANKYO official collection
-- https://news.p-world.co.jp/articles/28810/amusement — Amusement Japan
-- https://news.p-world.co.jp/articles/28805/yugitsushin — 遊技通信
-- https://news.p-world.co.jp/articles/29335 — Greenbelt/P-WORLD; detailed split
-- https://www.p-world.co.jp/machine/database/10115 — P-WORLD machine DB
-- https://p.hisshobon.jp/machine/4385/1/104864 — 必勝本 basic spec
-- https://p.hisshobon.jp/machine/4385/1/104865 — 必勝本 distribution
-- https://pachiseven.jp/articles/detail/22653 — Pachiseven definition cross-check
-
-## DB state after Relay 4
-- INDEX itself is still stale and does not yet integrate Relay 2/3/4 files; do not treat its displayed count 30 as the effective total.
-- effective machine-record total: **33**
-- effective COMPLETE_CORE: **32**
+## Effective DB state after Relay 5
+- previous effective total: 33
+- new records: 2
+- effective machine-record total: **35**
+- effective COMPLETE_CORE: **34**
 - CONFLICT: **1** (`P GO!GO!郷 革命の5`)
-- Relay 2: CYBORG009 199 COMPLETE_CORE
-- Relay 3: P江頭2:50inナナシーLT COMPLETE_CORE
-- Relay 4: eフィーバーからくりサーカス2 魔王ver. COMPLETE_CORE
+- INDEX remains stale relative to relay files and should be integrated by a later relay after the 11/5 boundary is fully closed.
 
 ## Next restart point
-Continue at **2024-11-05 same-day boundary**.
+Continue at **2024-11-05 same-day boundary** before advancing.
 
-1. Re-read latest main first.
-2. Enumerate every 2024-11-05 pachinko machine from reliable calendar(s), including 11/4-vs-11/5 regional/calendar notation variants.
-3. Register only machines with direct LT-equipment evidence; explicitly exclude non-LT variants and avoid same-series mixing.
-4. Once 11/5 is closed, advance chronologically to the next November 2024 introduction date (calendar shows 11/18 as a later major boundary, but do not skip any intervening LT candidate).
+1. Re-read latest main.
+2. Finish direct LT/non-LT determination for remaining calendar candidates, especially `e SSSS.GRIDMAN`, `P銀河英雄伝説 Die Neue These` variants, and sea variants where needed. Do not infer.
+3. Once 11/5 is demonstrably closed, advance to **2024-11-18**.
+4. High-priority next confirmed LT candidate: `Pにゃんこ大戦争 多様性のネコ` (11/18). Direct sources already identify LT `神域ULTIMATE`, about88%, but create its record only after 11/5 boundary closure.
+5. Continue retrospective QA: GO!GO!郷 3%/4%, ハイスクール・フリート direct total reach source, variant mixing.
 
-QA priority remains:
-1. `P GO!GO!郷 革命の5` 3% vs 4% primary-source resolution
-2. `PAハイスクール・フリート オールスター すい～とでハッピー!2400` direct total LT reach-rate source search
-3. PAわんわんCELEBRATION only if direct 2024-model LT proof appears
-4. variant mixing / RUSH-vs-LT rate / payout-vs-net integrity checks
+## Sources used this relay
+- https://news.p-world.co.jp/articles/29118/greenbelt — 11/5 industry calendar
+- https://p-kn.com/calendar/202411/ — November calendar/date variants
+- https://news.p-world.co.jp/articles/28850/greenbelt — P義風堂々3 199 LT announcement/spec
+- https://www.p-world.co.jp/machine/database/10118 — P義風堂々 detailed definitions
+- https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/newgin_pachi/489/kh02.php — P義風堂々 detailed spec
+- https://news.p-world.co.jp/articles/28732/yugitsushin — Pラブ嬢129 announcement/spec
+- https://news.p-world.co.jp/articles/28910/greenbelt — Pラブ嬢 LT route
+- https://hisshobon.com/machineinfo/94077/ — Pラブ嬢 allocations
+- https://hazuse.com/machine/pachinko/4P0838/ — Pラブ嬢 cross-check
+- https://hisshobon.com/machineinfo/94073/ — Pモンスターハンターライズ explicit LT non-equipped
+- https://news.p-world.co.jp/articles/28969/yugitsushin — P転生したらスライムだった件 2024 ST structure
+- https://p.hisshobon.jp/news/2049 — next-boundary Pにゃんこ direct LT identification
