@@ -1,53 +1,54 @@
 # LT Pachinko DB — Latest Handoff
 
 retrievedAt: 2026-09-21
-relay: 5 / chronological collection + QA
+relay: 1 / chronological collection
 
 ## Read before work
 - latest main `README.md`: checked
 - `docs/CHAPPY5_LT_PACHINKO_DATABASE_MISSION_V01.md`: checked
 - `docs/lt_pachinko_db/INDEX.md`: checked; INDEX remains stale relative to machine records/handoff
 - previous `LATEST_HANDOFF.md`: checked
-- previous restart point: 2025-01-06 OPEN / `eフィーバー戦姫絶唱シンフォギア4 キャロルver.`
+- previous restart point: 2025-01-06 OPEN / `P清流物語4 ヌシを求めて4000匹`
 - current machine records: checked for restart/duplicate avoidance
 
 ## This relay
-Added `eフィーバー戦姫絶唱シンフォギア4 キャロルver.` as COMPLETE_CORE and advanced within the OPEN 2025-01-06 boundary.
+Added `P清流物語4 ヌシを求めて4000匹` as COMPLETE_CORE and advanced within the OPEN 2025-01-06 boundary.
 
-### eフィーバー戦姫絶唱シンフォギア4 キャロルver.
-- path: `docs/lt_pachinko_db/machines/2025-01-06_e_fever_symphogear_4_carol_ver.md`
-- manufacturer: SANKYO
-- formalModel: eフィーバー戦姫絶唱シンフォギア4F
+### P清流物語4 ヌシを求めて4000匹
+- path: `docs/lt_pachinko_db/machines/2025-01-06_p_seiryu_monogatari_4_nushi_4000.md`
+- manufacturer: サンスリー（販売: 三洋販売）
+- formalModel: P清流物語4HLC
 - releaseDate: 2025-01-06
-- gameType: 1種2種混合 / 普図時短ショートST / 下位RUSHなし・RUSH=LT
-- normal total jackpot: 1/159.8
-- normal figure-hit: 約1/399.7
-- 戦姫チャージ: 約1/266.3（解析資料）
-- right figure-hit: 約1/10.9
-- LT: `絶唱RUSH`
-- LT entry: 図柄揃い時約50%。SPECIAL FEVER / 最終決戦勝利 / 戦姫チャージの一部
-- LT support: 15回 or 10000回
-- LT continuation: 15回約77% / 10000回約99.9% / TOTAL約81%
-- initial figure-hit payout: 1500個（払出）
-- 戦姫チャージ: 192個（払出）
-- LT payout: 実質50%が1500個、50%が3000個以上。10R×2+α / 10R×2 / 10R + V-STOCK/10000回/15回の振り分けを保存
+- gameType: 1種2種混合 / c時短 / ST型RUSH / ボーナス型LT
+- normal jackpot: 約1/199.8
+- right hit: 約1/74.4（大当り約1/199.8 + c時短約1/118.7の合算）
+- initial payout: 3R 約300個（払出）
+- direct RUSH: 50%
+- TOTAL RUSH entry: 約62%（チャンスタイム20回の引き戻し込み）
+- RUSH: `清流チャンス` 88回 / 継続約70%（約69.6%）
+- LT: `カウントアップCHANCE`
+- LT type: ボーナス型。上位RUSHではない。
+- LT entry: 清流チャンス中の右打ち大当り約63%
+- LT payout: 約2000個 約43%、約4000個 約20%。非LT側約300個 約37%。
+- LT continuation: N/A。当該大当り消化でLT終了し、清流チャンスへ復帰。
 - status: COMPLETE_CORE
 - conflict: none
-- missing core fields: none
+- missing core field: 通常初当り基準の総LT到達率は直接公表値未確認のため推測せず。
 
 Important definition handling:
-- 通常時大当り1/159.8と図柄揃い約1/399.7を分離。戦姫チャージを含む/含まない定義を混同しない。
-- 2025-01-06キャロルver.を、2025-02-03の199ver.および2025-08-04のLT-Light/Lightから分離。
-- RUSH突入=LT発動であり、通常RUSH→上位LT構造ではない。
-- 約81%は15回約77%と10000回約99.9%のTOTAL値。
-- 1500/192/3000/4500個等は払出。解析資料にある実獲得約1400/176個は別定義として記録。
-- 業界記事の「V入賞を契機に3000個以上見込み約60%」と解析振り分け「実質50%が3000個以上」は分母/定義が異なるため競合扱いしない。
+- メーカー公式/プレスリリースでLT搭載を直接確認。
+- 本機は「ボーナス型LT」。清流チャンスを上位LT RUSHとして扱わない。
+- 必勝本はLT正式名称を`カウントアップCHANCE`、発動契機を右打ち中大当り約63%、終了を全大当り消化、終了後を清流チャンスと明記。
+- P-WORLDの一部モード説明に清流チャンスをLTとする表現があるが、メーカー/業界のボーナス型LT説明および必勝本の正式LT解説と照合し、定義差としてレコードに注記。
+- 50%直RUSHと、チャンスタイム引き戻し込みTOTAL約62%を分離。
+- RUSH継続約70%は清流チャンスの値。ボーナス型LT自体に継続率を設定しない。
+- 右打ち約1/74.4は大当りとc時短の合算。c時短単体約1/118.7と分離。
 
 ## QA this relay
-- 新規レコードについてLT非搭載混入、重複、別スペック混同、通常大当り/図柄揃い/RUSH/LT確率混同、払出/実獲得混同を確認し、上記の通り定義分離。
-- 既知CONFLICT `P GO!GO!郷 革命の5` は解消根拠を新たに得ていないためCONFLICT維持。
+- LT非搭載混入、別スペック混同、RUSH/LT定義、c時短合算、払出定義を横断確認。
+- 既知CONFLICT `P GO!GO!郷 革命の5` は解消根拠なしのため維持。
 - 既知UNVERIFIED `PAハイスクール・フリート オールスター すい～とでハッピー!2400` の通常初当り基準総LT到達率は推測せず維持。
-- INDEXは30件時点の旧集計で、現行machine records/handoffより古い。今回もINDEXの古い件数で現行状態を上書きしていない。
+- INDEXは30件時点の旧集計で、現行machine records/handoffより古い。INDEXの古い件数で現行状態を上書きしない。
 
 ## 2025-01-06 boundary
 **OPEN.**
@@ -55,9 +56,9 @@ Important definition handling:
 Processed LT machines this date:
 1. `P戦国乙女7 終焉の関ヶ原` — COMPLETE_CORE
 2. `eフィーバー戦姫絶唱シンフォギア4 キャロルver.` — COMPLETE_CORE
+3. `P清流物語4 ヌシを求めて4000匹` — COMPLETE_CORE
 
 Remaining same-date queue:
-3. `P清流物語4 ヌシを求めて4000匹`
 4. `P世界最高の暗殺者、異世界貴族に転生する`
 5. `eぱちんこ押忍！番長 漢の頂`
 6. `PLTジューシーハニー極嬢`
@@ -66,13 +67,13 @@ Before closing the date, independently re-enumerate 2025-01-06 and classify `e U
 
 ## Effective DB state
 Previous handoff:
-- machine records: 50
-- COMPLETE_CORE: 49
+- machine records: 51
+- COMPLETE_CORE: 50
 - CONFLICT: 1 (`P GO!GO!郷 革命の5`)
 
 After this relay:
-- machine records: **51**
-- COMPLETE_CORE: **50**
+- machine records: **52**
+- COMPLETE_CORE: **51**
 - CONFLICT: **1**
 - 2024-12-02 boundary: CLOSED
 - 2024-12-16 boundary: CLOSED
@@ -81,21 +82,18 @@ After this relay:
 
 ## Next restart point
 1. Re-sync latest main README, LT mission, INDEX, this handoff, and current machine files.
-2. Continue **2025-01-06** with `P清流物語4 ヌシを求めて4000匹` unless newer main has processed it.
-3. Then continue the same-date queue without skipping candidates.
+2. Continue **2025-01-06** with `P世界最高の暗殺者、異世界貴族に転生する` unless newer main has processed it.
+3. Then continue `eぱちんこ押忍！番長 漢の頂` → `PLTジューシーハニー極嬢` without skipping candidates.
 4. For every record, cross-check LT name/routes/rates, normal/RUSH/LT probabilities, payout allocation, support/ST and game flow.
 5. Do not infer unpublished total LT-arrival values; use UNVERIFIED only after broad re-search.
-6. Independently enumerate the full 2025-01-06 date before marking it CLOSED.
+6. Independently enumerate the full 2025-01-06 date, including `e ULTRAMAN 2400★80`, before marking it CLOSED.
 
 ## Sources used this relay
-- https://www.sankyo-fever.jp/collection/972/
-- https://www.sankyo-fever.jp/products/machine_list/ppr/
-- https://news.p-world.co.jp/articles/29950/greenbelt
-- https://news.p-world.co.jp/articles/29268/amusement
-- https://opt.p-world.co.jp/machine/database/10149
-- https://1geki.jp/pachinko/e_sympho4/
-- https://pachimaga.com/free/article/20250103/056410.php
-- https://p.hisshobon.jp/machine/4433/1/106125
-- https://p.hisshobon.jp/machine/4433/1/106128
-- https://nana-press.com/kaiseki/machine/862/26637/
-- https://nana-press.com/kaiseki/machine/862/25088/
+- https://www.sanyobussan.co.jp/products/pk_seiryu4/
+- https://www.sanyobussan.co.jp/information/pdf/sanyo_press_release_20241105.pdf
+- https://news.p-world.co.jp/articles/29380
+- https://amusement-japan.co.jp/article/detail/10004614/
+- https://web-greenbelt.jp/post-89949/
+- https://p.hisshobon.jp/machine/4431/1/106116
+- https://www.p-world.co.jp/machine/database/10158
+- https://nana-press.com/kaiseki/machine/869/
