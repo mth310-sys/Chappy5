@@ -1,66 +1,58 @@
 # LT Pachinko DB — Latest Handoff
 
 retrievedAt: 2026-09-21
-relay: 5 / chronological collection + QA
+relay: 1 / chronological collection
 
 ## Read before work
 - latest main `README.md`: checked
 - `docs/CHAPPY5_LT_PACHINKO_DATABASE_MISSION_V01.md`: checked
-- `docs/lt_pachinko_db/INDEX.md`: checked; INDEX is stale relative to relay records and currently shows 30 records / 2024-09-17 while machine records and this handoff are farther ahead
-- previous `LATEST_HANDOFF.md` / Relay 4: checked
-- existing 2024-12-02 record `e大工の源さん超韋駄天2 フルスイングLT`: checked
+- `docs/lt_pachinko_db/INDEX.md`: checked; INDEX is stale relative to current machine records/handoff and still displays the older 30-record / 2024-09-17 frontier
+- previous `LATEST_HANDOFF.md` / Relay 5: checked
+- existing 2024-12-02 records and exact restart point: checked
 
 ## This relay
-Continued the chronological queue from Relay 4's exact restart point: `P ToLOVEるダークネス 199ver.` (2024-12-02).
+Continued from the exact restart point `PシャカラッシュZ` (2024-12-02).
 
 ### Added COMPLETE_CORE
-`P ToLOVEるダークネス 199ver.` / 平和
-- path: `docs/lt_pachinko_db/machines/2024-12-02_p_toloveru_darkness_199ver.md`
-- formal model: `PToLOVEるダークネスL9YZ4`
+`PシャカラッシュZ` / マルホン工業
+- path: `docs/lt_pachinko_db/machines/2024-12-02_p_shakarush_z.md`
+- formal model: `PシャカRUSH Z1` / 検定番号4P0881
 - release: 2024-12-02
-- type: ライトミドル / 1種2種混合 / LT
-- normal jackpot: 1/199.8
-- right-side effective hit: about1/48.5 = jackpot 1/199.8 + small-hit 1/64.1 combined
-- lower RUSH: `楽園計画`, entry about60%, ST66 + residual 4, TOTAL continuation about77%
-- LT: `超ハーレムTIME`, ST100 + residual 4, TOTAL continuation about89%
-- LT routes: about1% of a 10R hit directly activates LT; main route is two consecutive 10R `超ハーレムBONUS` hits. A 10R hit after a preceding 10R in lower RUSH moves to LT.
-- ST final variation + residual hold is treated as the first 10R for the consecutive-10R rule.
-- special-1: 2R 300 payout + lower RUSH about60% / 2R 300 payout + normal about40%
-- special-2 lower RUSH after 2R/4R or final/residual: 10R 1500 + LT about1% / 10R 1500 + lower RUSH about49% / 4R 600 + lower RUSH about50%
-- special-2 lower RUSH after a 10R: 10R 1500 + LT about50% / 4R 600 + lower RUSH about50%
-- LT: 10R 1500 about50% / 4R 600 about50%; payout basis
-- Yu-time: none
-- ordinary-initial-hit-based total LT arrival probability: not directly published in checked sources; do not infer or calculate into a fixed DB value
+- type: ライトミドル / 一種二種混合 / LT
+- normal jackpot: 1/197.4
+- right-side effective hit: 1/67.0
+- RUSH entry: 100%; initial hit 3% directly enters LT
+- lower RUSH: `シャカRUSH`, ST76, continuation about70%
+- LT: `Z超RUSH`, ST108 or 3000, continuation about93.5%
+- LT routes: initial 9R 3% direct; lower-RUSH hit 9R 6%
+- initial distribution: 9R1018 payout+LT 3% / 6R682+lower 27% / 2R234+lower 70%
+- lower RUSH hit: 9R1018+LT 6% / 6R682+lower 74% / 2R234+lower 20%
+- LT hit: 65% total goes to ST3000 `∞インフィニティBONUS` (9R6% + 6R46% + 2R13%); remaining 35% goes ST108 (6R28% + 2R7%)
+- ordinary-initial-hit-based total LT arrival probability: no direct published value confirmed; do not infer into a fixed DB field
+- 2026 `PシャカRUSH Z Jr. / PシャカRUSH ZA` is a separate 1/98.7 sibling and was explicitly excluded from this record
 
-## QA / definition checks
-- Confirmed this is the 2024-12-02 LT-equipped 199ver., not the 2024-06 319.6 sibling. No cross-spec mixing.
-- Confirmed about1/48.5 is the right-side combined effective hit rate, not standalone jackpot probability.
-- Confirmed 300/600/1500 are payout values. Approximate net-gain values published by some analysis sites are not substituted.
-- Confirmed lower RUSH continuation about77% and LT continuation about89% are separate states and definitions.
-- Relay 4 record `e大工の源さん超韋駄天2 フルスイングLT` re-read: no LT-non-equipped contamination, duplicate, payout/net-gain mixing, or unresolved conflict found; COMPLETE_CORE remains appropriate.
-- Existing unresolved DB issues remain unchanged: `P GO!GO!郷 革命の5` CONFLICT; PAハイスクール・フリート total initial-hit-based LT arrival rate remains unverified rather than inferred.
+## Cross-check
+P-WORLD/HAZUSE, 1geki and pachinko-spec.info were cross-checked. Core probability, ST counts, payout basis, direct-LT 3%, lower-RUSH LT 6%, and LT ST3000 65% agree at the relevant definition level. No unresolved conflict found.
 
 ## Effective DB state
-- machine records: **39**
-- COMPLETE_CORE: **38**
+- machine records: **40**
+- COMPLETE_CORE: **39**
 - CONFLICT: **1** (`P GO!GO!郷 革命の5`)
 - 2024-12-02 boundary remains OPEN.
-- `INDEX.md` is known stale and must be reconciled after the same-day boundary is re-enumerated/closed; do not use its displayed count/frontier over this handoff.
+- `INDEX.md` remains known stale; reconcile it only after the current same-day boundary is re-enumerated/closed so newer records are not lost.
 
 ## 2024-12-02 remaining chronological queue
-1. `PシャカラッシュZ` / マルホン工業
-2. `P真・一騎当千～桃園の誓い～199LTver.` / D-light / 大一商会系
-3. `Pえとたま2 神祭` / ユニバーサル系
+1. `P真・一騎当千～桃園の誓い～199LTver.` / D-light / 大一商会系
+2. `Pえとたま2 神祭` / ユニバーサル系
 
-Re-enumerate the 2024-12-02 same-day calendar before declaring the boundary exhaustive/closed.
+Before closing 2024-12-02, re-enumerate the same-day new-machine calendar for any additional LT-equipped candidates.
 
 ## Next restart point
-Start with **`PシャカラッシュZ` (2024-12-02)**. First confirm exact formal model and direct LT-equipped status, then collect basic spec, RUSH structure, LT name/routes/rates, continuation, payout allocations, time-shortening/special systems and game flow. Cross-check multiple source families. Then continue the remaining 12/02 queue. No inference; unresolved source disagreements remain CONFLICT.
+Start with **`P真・一騎当千～桃園の誓い～199LTver.` (2024-12-02)**. Confirm formal model and direct LT-equipped status first, then collect core probability, lower RUSH, LT formal name/routes/rates, continuation, payout allocations, time-shortening/special systems and game flow from multiple source families. Continue to `Pえとたま2 神祭`, then re-enumerate the 12/02 boundary. No inference; source disagreements remain CONFLICT.
 
 ## Sources used this relay
-- https://news.p-world.co.jp/articles/29035/amusement
-- https://yugi-nippon.com/pachinko-new-machine/post-67084/
-- https://www.p-world.co.jp/machine/database/10130
-- https://hisshobon.com/machineinfo/94646/
-- https://p.hisshobon.jp/machine/4410/1/105434
-- https://nana-press.com/kaiseki/machine/852/24548/
+- https://www.p-world.co.jp/machine/database/10131
+- https://1geki.jp/pachinko/p_shakarushz/
+- https://1geki.jp/pachinko/p_shakarushz/51/
+- https://1geki.jp/pachinko/p_shakarushz/52/
+- https://pachinko-spec.info/spec-detail/147664/
