@@ -7,16 +7,16 @@
 
 ## Status
 - 収集開始済み
-- 登録機種: 16
-- COMPLETE_CORE: 15
+- 登録機種: 18
+- COMPLETE_CORE: 17
 - CONFLICT: 1
 - 収集順: 2024年3月の初期LT機から時系列
 - 2024-03-04初期LT 7機種 COMPLETE_CORE。
 - 2024-04-08 2機種 COMPLETE_CORE。
 - 2024-04-22 3機種 COMPLETE_CORE。
 - 2024-05-07 2機種登録。PゴブリンスレイヤーLTはCOMPLETE_CORE、P GO!GO!郷 革命の5はLT突入割合3%/4%競合のためCONFLICT。
-- 2024-06-03境界: P頭文字D 2nd、P魔王学院の不適合者をCOMPLETE_CORE。
-- 次回再開地点: **2024-06-03同日LT候補の続き**。P魔法少女まどか☆マギカ3、Pうる星やつら～Eternal Love Song～等を時系列キューでDiscovery/Core収集し、同日候補を閉じてから次日へ進む。
+- 2024-06-03境界: P頭文字D 2nd、P魔王学院の不適合者、P魔法少女まどか☆マギカ3、Pうる星やつら～Eternal Love Song～をCOMPLETE_CORE。P ToLOVEるダークネス（319.6）とPクイーンズブレイド4 UNLIMITEDはLT非搭載のため対象外。
+- 次回再開地点: **2024-06-03境界を閉鎖し、次の新規LT導入日へ前進。2024-07-08候補（Pアズールレーン THE ANIMATION 異次元トリガー、P貞子、e花の慶次～傾奇一転等）のLT搭載有無をDiscoveryし、搭載機だけを時系列で収集する。**
 
 ## Queue
 5人リレー。各リレーはGitHub最新mainを読み、前リレーの次の未処理機種から同一時系列キューを継続する。5人目は収集に加えてQA / Integrationを行う。
@@ -40,6 +40,8 @@
 | 2024-05-07 | Pゴブリンスレイヤー ラッキートリガーVer. | JFJ / 藤商事系 | COMPLETE_CORE |
 | 2024-06-03 | P頭文字D 2nd | サミー（製造: 銀座） | COMPLETE_CORE |
 | 2024-06-03 | P魔王学院の不適合者 | 藤商事 | COMPLETE_CORE |
+| 2024-06-03 | P 魔法少女まどか☆マギカ3 | 京楽産業. | COMPLETE_CORE |
+| 2024-06-03 | Pうる星やつら～Eternal Love Song～ | ニューギン | COMPLETE_CORE |
 
 ## Boundary / discovery notes
 - 2024-03-18 Pファンキードクター 悪魔12000ver. — LT非搭載確認済み、対象外。
@@ -51,6 +53,10 @@
 - P七つの大罪2 神千斬りVER. — 必勝本の基本スペックで「ラッキートリガー 非搭載」を直接確認。上位RUSHはあるがLTではないためDB対象外。導入日は資料上2024-05-07。
 - 2024-06-03 P頭文字D 2nd — 約1/319.7、TOTAL RUSH突入約83%、下位約90%、RUSH突入時LT到達約31%、LT「最速ダウンヒルRUSH LEGEND」約96%。
 - 2024-06-03 P魔王学院の不適合者 — 図柄揃い1/399.9、図柄揃い後RUSH100%・約75%、RUSH当り約25%→LBC成功約40%でLT「暴虐の魔王BURST」、初回図柄揃い後LT到達約42%、LT突入時継続約86%。後発99Ver/FVXの約92%等は混同しない。
+- 2024-06-03 P 魔法少女まどか☆マギカ3 — 通常約1/199.9、RUSH突入55%（下位54%+LT直行1%）、下位約65%。下位当り約50%でワルプルギスの夜BONUS、勝率約55%でLT「アルティメット超RUSH」へ。LT約87%、右打ちALL約1500個。
+- 2024-06-03 Pうる星やつら～Eternal Love Song～ — 図柄揃い約1/319、RUSH70%、下位約77%、LT「超電撃RUSH」約85%。DESTINY ROAD次回当り50%または電撃RUSH中20.3%でLT準備→次回当りが主要LT経路。右打ちALL約1500個。
+- 2024-06-03 P ToLOVEるダークネス（PToLOVEるダークネスH1YZ5） — 約1/319.6、ST楽園計画約77%。2024年6月版にはLT記載なし。後発199ver./100ver.の上位RUSH・LT仕様と混同しないため対象外。
+- 2024-06-03 Pクイーンズブレイド4 UNLIMITED（Pクイーンズブレイド4V1D） — 約1/319.6、RUSH約60%・約85%、ST80+4。初当り含む3連後のM・Y・K PARADISEは高速演出モードで、LT搭載根拠なし。後発「奈落5400」LT版と混同せず対象外。
 
 ## QA progress
 retrievedAt: 2026-09-21
@@ -59,14 +65,16 @@ retrievedAt: 2026-09-21
 - P GO!GO!郷のLT突入割合3%/4%競合はCONFLICT維持。
 - P七つの大罪2 神千斬りVER.は上位RUSH搭載だがLT非搭載を直接確認し、対象外として境界を閉じた。
 - P頭文字D 2nd、P魔王学院の不適合者は業界記事と複数解析資料でCore/LT構造を照合しCOMPLETE_CORE。
+- P 魔法少女まどか☆マギカ3、Pうる星やつら～Eternal Love Song～を業界記事+複数解析資料で照合しCOMPLETE_CORE。
+- 同日候補P ToLOVEるダークネス319.6、Pクイーンズブレイド4 UNLIMITEDはLT非搭載境界として除外。後発LT別スペックを混同しない。
 
-## Latest relay note — Relay 1
+## Latest relay note — Relay 2
 retrievedAt: 2026-09-21
-- 最新main README、LTミッションv0.1、INDEX、machines一覧、直前再開地点を確認。
-- 5月境界監査: P七つの大罪2 神千斬りVER.はLT非搭載のため登録しない。
-- 2024-06-03 P頭文字D 2ndを正式登録。型式P頭文字D2GFPG、LT最速ダウンヒルRUSH LEGEND。LT直行0.1%、下位RUSH中5%契機、RUSH突入時LT到達約31%を定義分離。
-- 2024-06-03 P魔王学院の不適合者を正式登録。型式P魔王学院の不適合者FMY。図柄揃い/魔力CHARGEを分離し、LT到達約42%は初回図柄揃い後の公表値として保存。
-- 同日には複数LT候補が残るため、2024-06-03境界を継続する。
+- 最新main README、LTミッションv0.1、INDEX、machines一覧、Relay 1再開地点を確認。
+- 2024-06-03 P 魔法少女まどか☆マギカ3を正式登録。LT直行1%と下位RUSH経由（当り約50%→ワルプルギス勝利約55%）を定義分離。
+- 2024-06-03 Pうる星やつら～Eternal Love Song～を正式登録。DESTINY ROAD 50%ルートとLT準備20.3%ルートを分離し、初当り基準の総LT到達率は推測せずUNVERIFIED。
+- P ToLOVEるダークネス319.6とPクイーンズブレイド4 UNLIMITEDは2024年6月版にLT搭載根拠がなく、後発LT別スペックとの混同を避けて対象外。
+- 2024-06-03境界を閉鎖。次の新規LT導入日へ進む。
 
 ### 次回再開地点
-**2024-06-03同日LT候補の続き。P魔法少女まどか☆マギカ3、Pうる星やつら～Eternal Love Song～を優先し、ToLOVEるダークネス、クイーンズブレイド4等もLT搭載有無を確認して、搭載機だけをCore/LT収集する。**
+**2024-07-08候補からDiscovery再開。Pアズールレーン THE ANIMATION 異次元トリガーを優先し、P貞子、e/P花の慶次～傾奇一転など同日候補のLT搭載有無を確認。搭載確認できた機種だけCore/LT収集し、同日境界を閉じてから次日へ進む。**
