@@ -1,84 +1,76 @@
 # LT Pachinko DB — Latest Handoff
 
 retrievedAt: 2026-09-21
-relay: 5 / QA
+relay: 1 / collection + boundary QA
 
 ## Read before work
 - latest main README: checked
 - `docs/CHAPPY5_LT_PACHINKO_DATABASE_MISSION_V01.md`: checked
 - `docs/lt_pachinko_db/INDEX.md`: checked
-- previous `LATEST_HANDOFF.md` / Relay 4: checked
-- previous eフィーバーからくりサーカス2 魔王ver. record: checked
+- previous `LATEST_HANDOFF.md` / Relay 5: checked
+- recent 2024-11-05 machine records: checked
 
 ## This relay
-Continued the unfinished 2024-11-05 boundary. Re-enumerated November calendars and checked candidate machines for direct LT evidence rather than inferring from high-continuation RUSH names.
+Closed the unresolved 2024-11-05 boundary with direct non-LT evidence where available, then advanced to 2024-11-18 and added the first confirmed LT machine there.
 
-New COMPLETE_CORE records:
-1. `2024-11-05_p_gifuu_doudou3_199ver.md` — P義風堂々!!～兼続と慶次～3 199ver.
-2. `2024-11-05_p_lovejyou_gokujou_129ver.md` — Pラブ嬢 ～極嬢のハーレム体験～ 129ver.
+### 2024-11-05 boundary closure
+Excluded from LT DB:
+- `e SSSS.GRIDMAN` / 型式 `eグリッドマンXVSM` — HAZUSE explicitly lists `ラッキートリガー 非搭載`; 1/319.7 V-ST, ST100, total entry about71%, continuation about88%.
+- `P銀河英雄伝説 Die Neue These 319ver.` / 型式 `P銀河英雄伝説DNTL5-X` — HAZUSE explicitly lists `ラッキートリガー 非搭載`; V-stock RUSH is not LT.
+- `PA銀河英雄伝説 Die Neue These 89ver.` / 型式 `PA銀河英雄伝説DNTN2-X` — multiple detailed sources show the same V-stock RUSH structure with no LT stage; do not infer LT from 94.5% continuation. No direct LT-equipment proof found; exclude unless a primary/direct LT source later contradicts this.
+- `P大海物語5スペシャル` — conventional 54% loop + time-shortening/遊タイム structure; no LT stage/evidence. Do not confuse with later `PA大海物語5ブラックLT99ver.`.
+- `e大海物語5スペシャル` / 型式 `e大海物語5スペシャルELTA4` — HAZUSE explicitly lists `ラッキートリガー 非搭載`; conventional 64% loop.
 
-### P義風堂々!!～兼続と慶次～3 199ver.
-- normal 1/199.8 / right 1/9.26
-- RUSH entry about44.1%; 天衣無縫RUSH about82%
-- LT `天下無双モード`; right-hit allocation 2%
-- LT continuation 90.25%; published TOTAL including residual holds about93.8% retained as a separate definition
-- payout 1360/480 is payout including other prize ports, not net acquisition
-- normal initial 1% is lower RUSH direct, not LT direct; do not mix
+The previously excluded `Pモンスターハンターライズ`, `P転生したらスライムだった件`, `Pリング 呪いの7日間3 甘デジver.`, `PAナナシー～お江戸77ver.`, and `Pフィーバーからくりサーカス2 運命ver.` remain excluded. Therefore the 2024-11-05 boundary is considered closed for the currently enumerated candidates.
 
-### Pラブ嬢 ～極嬢のハーレム体験～ 129ver.
-- normal 1/129.7; right effective about1/39.2 = jackpot + small-hit combined definition
-- initial RUSH entry70%: LT direct1%, LOVE RUSH69%, normal30%
-- LOVE RUSH ST50+4, continuation about75%
-- LT `GOLDEN LOVE RUSH`: initial1% direct or LOVE RUSH-side right hit4%
-- LT ST84+4, continuation about90%
-- payouts: 210 / 700 / 1400 (10R×2) are payout values
-- LT right split excluding final variation/residual holds: 1400 18%, 700 82%; final variation/residual holds use lower-RUSH allocation
+## New COMPLETE_CORE record
+`2024-11-18_p_nyanko_daisensou_tayousei_no_neko.md` — `P にゃんこ大戦争 多様性のネコ` / 京楽産業.
 
-## 2024-11-05 boundary QA / exclusions
-Previously confirmed and retained:
-- PAナナシー～お江戸77ver. — explicit LT non-equipped
-- Pリング 呪いの7日間3 甘デジver. — explicit LT non-equipped; do not mix with 2024-08 LT version
-- Pフィーバーからくりサーカス2 運命ver. — non-LT ordinary RUSH variant; e魔王ver. is the LT model
+Key verified structure:
+- 2024-11-18 introduction; KYORAKU official explicitly identifies LT equipment.
+- one-kind/two-kind mixed / transfer-type LT; no lower RUSH.
+- normal objective is `降臨ガチャ` about1/155; success about25%.
+- success gives `SUNRISE BONUS` 1500×2 = 3000 payout.
+- after SUNRISE BONUS, about50% including residual-hold return enters LT `神域ULTIMATE`.
+- LT symbol hit about1/26.4 vs end symbol about1/155.
+- LT continuation about88%, defined including residual 4-hold return about14.3%.
+- LT hits are ALL 10R 1500 payout.
+- analysis allocation cross-check: initial branch about12.5% 3000+LT / about12.5% 3000+non-LT / about75% 2R non-LT.
+- do not confuse with 2026 `神さまにおまかせ88ver.`.
+- normal-spin-based total LT probability is not stored as an official/direct value; route values are kept without presenting an inferred product as a directly published rate.
 
-Additional checks this relay:
-- Pモンスターハンターライズ — 必勝本 explicitly `ラッキートリガー 非搭載`; exclude
-- P転生したらスライムだった件 — 2024 model is 1/319.6, ST entry100%, about84%; industry announcement does not identify LT and its structure is a limit/ST machine. No direct LT proof; exclude
-- P大海物語5スペシャル / e大海物語5スペシャル — calendar candidate only; no direct LT proof found in this relay, do not register
-- P銀河英雄伝説 Die Neue These variants — no direct LT proof established in this relay, do not register
-- e SSSS.GRIDMAN — appeared in some 11/5 calendar lists, but no direct LT-equipment proof established in this relay; do not register without proof
-
-## QA retrospective
-- Existing `P GO!GO!郷 革命の5` remains CONFLICT. Current secondary sources still expose 3% vs 4% descriptions; no manufacturer/primary allocation found in this relay that resolves the denominator cleanly. Do not average.
-- Existing `PAハイスクール・フリート オールスター すい～とでハッピー!2400` total normal-hit-based LT reach rate remains UNVERIFIED; no inferred multiplication.
-- New records explicitly separate RUSH entry from LT entry, residual-hold-inclusive continuation from base LT continuation, and payout from net acquisition.
-
-## Effective DB state after Relay 5
-- previous effective total: 33
-- new records: 2
-- effective machine-record total: **35**
-- effective COMPLETE_CORE: **34**
+## Effective DB state after this relay
+- previous effective machine-record total: 35
+- new records: 1
+- effective machine-record total: **36**
+- effective COMPLETE_CORE: **35**
 - CONFLICT: **1** (`P GO!GO!郷 革命の5`)
-- INDEX remains stale relative to relay files and should be integrated by a later relay after the 11/5 boundary is fully closed.
+- INDEX is still stale relative to relay files; integrate after the 2024-11-18 boundary is fully enumerated/closed to avoid repeated large INDEX rewrites during the relay.
 
 ## Next restart point
-Continue at **2024-11-05 same-day boundary** before advancing.
+Continue at **2024-11-18 same-day boundary**.
 
 1. Re-read latest main.
-2. Finish direct LT/non-LT determination for remaining calendar candidates, especially `e SSSS.GRIDMAN`, `P銀河英雄伝説 Die Neue These` variants, and sea variants where needed. Do not infer.
-3. Once 11/5 is demonstrably closed, advance to **2024-11-18**.
-4. High-priority next confirmed LT candidate: `Pにゃんこ大戦争 多様性のネコ` (11/18). Direct sources already identify LT `神域ULTIMATE`, about88%, but create its record only after 11/5 boundary closure.
-5. Continue retrospective QA: GO!GO!郷 3%/4%, ハイスクール・フリート direct total reach source, variant mixing.
+2. Re-enumerate all 2024-11-18 calendar candidates and identify every LT-equipped model with direct evidence; do not assume `P にゃんこ大戦争` is the only one.
+3. Register only confirmed LT models, one record per distinct specification.
+4. After 11/18 is demonstrably closed, advance chronologically to the next introduction date. Known later confirmed candidates include 2024-12-02 LT machines, but do not skip any intervening date.
+5. Continue retrospective QA: `P GO!GO!郷 革命の5` 3%/4% CONFLICT and PAハイスクール・フリート total LT reach UNVERIFIED.
 
 ## Sources used this relay
-- https://news.p-world.co.jp/articles/29118/greenbelt — 11/5 industry calendar
-- https://p-kn.com/calendar/202411/ — November calendar/date variants
-- https://news.p-world.co.jp/articles/28850/greenbelt — P義風堂々3 199 LT announcement/spec
-- https://www.p-world.co.jp/machine/database/10118 — P義風堂々 detailed definitions
-- https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/newgin_pachi/489/kh02.php — P義風堂々 detailed spec
-- https://news.p-world.co.jp/articles/28732/yugitsushin — Pラブ嬢129 announcement/spec
-- https://news.p-world.co.jp/articles/28910/greenbelt — Pラブ嬢 LT route
-- https://hisshobon.com/machineinfo/94077/ — Pラブ嬢 allocations
-- https://hazuse.com/machine/pachinko/4P0838/ — Pラブ嬢 cross-check
-- https://hisshobon.com/machineinfo/94073/ — Pモンスターハンターライズ explicit LT non-equipped
-- https://news.p-world.co.jp/articles/28969/yugitsushin — P転生したらスライムだった件 2024 ST structure
-- https://p.hisshobon.jp/news/2049 — next-boundary Pにゃんこ direct LT identification
+### Boundary / exclusions
+- https://hazuse.com/hd/4p0497/ — e SSSS.GRIDMAN: explicit LT non-equipped, type/date/model
+- https://www.pachibee.jp/machines/about/124100000 — GRIDMAN ST structure cross-check
+- https://hazuse.com/hd/310300-2/ — P銀河英雄伝説319: explicit LT non-equipped
+- https://www.p-world.co.jp/machine/database/10133 — 銀河英雄伝説319 V-stock RUSH structure
+- https://hazuse.com/machine/pachinko/PX0243/ — PA銀河英雄伝説89 detailed V-stock structure
+- https://www.p-world.co.jp/machine/database/10132 — PA銀河英雄伝説89 cross-check
+- https://www.pachibee.jp/machines/about/124090011 — P大海5SP conventional loop/time-shortening/遊タイム
+- https://hazuse.com/hd/4p0508/ — e大海5SP explicit LT non-equipped
+- https://www.pachibee.jp/machines/about/124090010 — e大海5SP conventional 64% loop cross-check
+
+### P にゃんこ大戦争 多様性のネコ
+- https://www.kyoraku.co.jp/news/detail/790 — manufacturer official LT identification, date, LT name, 88%, ALL1500, residual-hold definition
+- https://hisshobon.com/machineinfo/94159/ — detailed basic spec
+- https://hisshobon.com/machineinfo/94161/ — LT route/end structure
+- https://1geki.jp/pachinko/p_nyankod_tn/ — cross-check
+- https://pachinko-curation.com/50326/ — type/model and allocation cross-check
