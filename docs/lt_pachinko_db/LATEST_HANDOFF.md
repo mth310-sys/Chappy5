@@ -1,77 +1,110 @@
 # LT Pachinko DB — Latest Handoff
 
 retrievedAt: 2026-09-21
-relay: 1 / chronological collection
+relay: 2 / chronological collection
 
 ## Read before work
 - latest main `README.md`: checked
 - `docs/CHAPPY5_LT_PACHINKO_DATABASE_MISSION_V01.md`: checked
 - `docs/lt_pachinko_db/INDEX.md`: checked; INDEX remains stale relative to machine records/handoff
 - previous `LATEST_HANDOFF.md`: checked
-- previous restart point: 2024-12-16 / `eソードアート・オンライン 閃光の軌跡`
-- alternate-name record search: no existing record found before creation
+- previous restart point: 2024-12-16 same-date boundary audit
+- current machine records: checked for restart/duplicate avoidance
 
 ## This relay
-Continued the OPEN 2024-12-16 boundary.
+Finished the OPEN 2024-12-16 boundary audit. No additional LT machine record was added in this relay.
 
-### Added COMPLETE_CORE — eソードアート・オンライン 閃光の軌跡
-- path: `docs/lt_pachinko_db/machines/2024-12-16_e_sword_art_online_senkou_no_kiseki.md`
-- formal model: `eソードアート・オンライン2～閃光の軌跡～K1`
-- manufacturer: 京楽産業.
+### LT-negative classification — Pネオモンスターハウス 199Ver.
+- manufacturer: 竹屋
 - release: 2024-12-16
-- type: スマパチ / ライトミドル / 一種二種混合 / LT
-- normal: approx1/199.9
-- right: approx1/59.9
-- total RUSH entry: 70%; 69% SWORD RUSH + 1% LT direct
-- lower `SWORD RUSH`: ST50 + residual4, approx60%
-- LT `LIGHTNING RUSH`: ST115 + residual4 or time-shortening10000 (effective next hit), TOTAL approx90%; ST115+residual4 component alone approx86.5%
-- direct published total LT arrival: approx22.2% per normal initial hit / approx1/900. Stored as a direct analysis value, not independently derived.
-- initial allocation: 10R approx1500 + LT/next-hit 1%; 2R approx300 + SWORD RUSH 69%; 2R approx300 + normal 30%
-- SWORD RUSH allocation: 10R approx1500 + LT/next-hit 3%; 10R approx1500 + LT 27%; 10R approx1500 + lower RUSH 40%; 2R approx300 + lower RUSH 30%
-- LT allocation: 10R approx1500 + next-hit 22.5%; 10R approx1500 + ST115 47.5%; 2R approx300 + ST115 30%
-- no unresolved numeric conflict.
-- later `99Ver.` is a separate derivative and must not be mixed.
+- normal: 1/199.8; high probability: 1/82.4
+- system: V確変ループ
+- initial HYPER mode / 確変 entry: 50%
+- right-side allocation: 10R確変35% / 4R確変35% / 4R通常+時短100回30%
+- total continuation approx82% including time-shortening return
+- no LT stage or LT-equipped specification found in the checked detailed spec/game-flow material.
+- classification: LT非搭載境界 / DB machine record not created.
+
+### LT-negative classification — Pネオモンスターハウス 99Ver.
+- manufacturer: 竹屋
+- release: 2024-12-16
+- normal: 1/99.9; high probability: 1/49.5
+- system: 確変ループ
+- 確変 entry: 50%
+- common allocation: 10R確変25% / 4R確変25% / 4R通常+時短50回50%
+- total continuation approx70% including time-shortening return
+- no LT stage or LT-equipped specification found in the checked detailed spec/game-flow material.
+- classification: LT非搭載境界 / DB machine record not created.
+
+### LT-negative classification — eA夏色日記GO
+- formal model: eA夏色日記GO
+- manufacturer: 豊丸産業; DYNAM PB machine
+- release: 2024-12-16
+- 6-setting ama / probability 1/89.8–1/77.7
+- simple 50%確変 / 50%通常+時短30 loop specification
+- low-probability 220 spins activates 遊タイム 10000回
+- DYNAM official press release describes the product and all headline systems without an LT stage; detailed analysis likewise describes a setting-equipped 確変ループ machine.
+- classification: LT非搭載境界 / DB machine record not created.
 
 ## 2024-12-16 boundary
-Still OPEN pending final same-date enumeration.
+**CLOSED.**
 
-A new-date calendar cross-check currently lists these pachinko introductions on 2024-12-16:
-1. `eソードアート・オンライン 閃光の軌跡` — LT, now COMPLETE_CORE.
-2. `eゴジラ対エヴァンゲリオン セカンドインパクト G 破壊神覚醒` — already existing COMPLETE_CORE record from previous relay.
-3. `Pシュタインズ・ゲート ゼロ` — already existing COMPLETE_CORE record from previous relay.
-4. `Pネオモンスターハウス` light-middle variant — not yet classified for LT/non-LT in this handoff.
-5. `Pネオモンスターハウス` ama variant — not yet classified for LT/non-LT in this handoff.
-6. `e夏色日記` setting-equipped ama variant — not yet classified for LT/non-LT in this handoff.
+Positively verified LT machines for this date are already represented by existing COMPLETE_CORE records:
+1. `eソードアート・オンライン 閃光の軌跡`
+2. `eゴジラ対エヴァンゲリオン セカンドインパクト G 破壊神覚醒`
+3. `Pシュタインズ・ゲート ゼロ`
 
-Do not add 4–6 unless LT-equipped status is positively verified. Re-enumerate another independent calendar/source before closing 2024-12-16.
+The remaining enumerated pachinko introductions (`Pネオモンスターハウス 199Ver.`, `Pネオモンスターハウス 99Ver.`, `eA夏色日記GO`) were positively classified as non-LT for this mission boundary.
+
+## Next chronological boundary discovered — 2025-01-06
+Independent new-machine calendar / industry searches identify multiple LT-equipped introductions. Start from the first unprocessed LT candidate on this date and re-enumerate the full date before closure.
+
+Confirmed LT candidates found in discovery this relay include:
+- `P戦国乙女7 終焉の関ヶ原` — LT / 2025-01-06
+- `eフィーバー戦姫絶唱シンフォギア4 キャロルver.` — LT / 2025-01-06
+- `P清流物語4 ヌシを求めて4000匹` — LT / 2025-01-06
+- `P世界最高の暗殺者、異世界貴族に転生する` — LT / 2025-01-06
+- `eぱちんこ押忍！番長 漢の頂` — LT / 2025-01-06
+- `PLTジューシーハニー極嬢` — LT / 2025-01-06
+
+Do not treat this discovery list as exhaustive. Re-enumerate 2025-01-06 using at least one independent calendar before closing the date; classify `e ULTRAMAN 2400★80` and any other same-date pachinko separately rather than assuming LT status.
 
 ## Effective DB state
-Previous handoff: 48 machine records / 47 COMPLETE_CORE / 1 CONFLICT.
-This relay added 1 COMPLETE_CORE record.
+Previous handoff after SAO record:
 - machine records: **49**
 - COMPLETE_CORE: **48**
 - CONFLICT: **1** (`P GO!GO!郷 革命の5`)
+
+This relay added no machine record, so effective counts remain:
+- machine records: **49**
+- COMPLETE_CORE: **48**
+- CONFLICT: **1**
 - 2024-12-02 boundary: CLOSED
-- 2024-12-16 boundary: **OPEN**
+- 2024-12-16 boundary: **CLOSED**
+- next boundary: **2025-01-06 OPEN**
 - `INDEX.md` is stale and must not override this handoff/current machine files.
 
 ## Next restart point
 1. Re-sync latest main README, LT mission, INDEX, this handoff, and current machine files.
-2. Finish **2024-12-16 same-date boundary audit**. Positively classify the two `Pネオモンスターハウス` variants and `e夏色日記`, and independently re-enumerate the date for any omitted introductions.
-3. Add only positively verified LT machines. Record LT-negative boundary notes in handoff, not as machine records.
-4. If the date is clean, mark 2024-12-16 CLOSED and advance chronologically to the next introduction date.
-5. Keep later derivative specs separate and do not infer unpublished LT-arrival probabilities.
+2. Begin **2025-01-06** with `P戦国乙女7 終焉の関ヶ原` unless a newer main commit has already processed it.
+3. Collect full core/LT structure and cross-check; do not infer unpublished LT-arrival values.
+4. Continue all positively verified LT machines on 2025-01-06 in the same chronological boundary.
+5. Independently enumerate the date before marking it CLOSED.
+6. Keep LT-negative same-date machines as boundary notes only, not machine records.
 
 ## Sources used this relay
-`eソードアート・オンライン 閃光の軌跡`:
-- https://news.p-world.co.jp/articles/29285/yugitsushin
-- https://news.p-world.co.jp/articles/29291/greenbelt
-- https://1geki.jp/pachinko/e_sao_lt/
-- https://1geki.jp/pachinko/e_sao_lt/51/
-- https://nana-press.com/kaiseki/machine/847/25175/
-- https://nana-press.com/kaiseki/machine/847/26257/
-- https://pachiseven.jp/articles/detail/23205
-- https://www.kyoraku.co.jp/news/detail/853
+2024-12-16 boundary / non-LT classification:
+- https://nana-press.com/kaiseki/machine/875/
+- https://nana-press.com/kaiseki/machine/875/25511/
+- https://nana-press.com/kaiseki/machine/874/
+- https://nana-press.com/kaiseki/machine/874/25516/
+- https://hazuse.com/machine/pachinko/4P0597/
+- https://prtimes.jp/main/html/rd/p/000000479.000013913.html
+- https://prtimes.jp/main/html/rd/p/000003804.000003670.html
+- https://p.hisshobon.jp/machine/4416/1/105822
 
-Boundary calendar:
-- https://pachinko-curation.com/shindai_calendar/3/
+2025-01-06 discovery:
+- https://1geki.jp/newmachinecalender/202501/
+- https://www.all7.jp/plans/index/2025/01/10
+- https://news.p-world.co.jp/articles/29949/greenbelt
+- https://1geki.jp/pachinko/p_ltjcyhny_gj/
