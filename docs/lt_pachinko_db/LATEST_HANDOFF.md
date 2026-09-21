@@ -1,75 +1,65 @@
 # LT Pachinko DB — Latest Handoff
 
 retrievedAt: 2026-09-21
-relay: 1 / chronological collection
+relay: 4 / chronological collection
 
 ## Read before work
 - latest main `README.md`: checked
 - `docs/CHAPPY5_LT_PACHINKO_DATABASE_MISSION_V01.md`: checked
 - `docs/lt_pachinko_db/INDEX.md`: checked; INDEX remains stale relative to current machine records/handoff
 - previous `LATEST_HANDOFF.md`: checked
-- duplicate search performed before writes
+- duplicate path check performed before write
 
 ## This relay
 
-### 2025-04-07 boundary audit — OPEN
-Independent calendar evidence currently enumerates these pachinko releases on 2025-04-07:
-1. P少女☆歌劇 レヴュースタァライト ラッキートリガー4500 — LT搭載、既登録 COMPLETE_CORE。
-2. e牙狼神速神撃3000LT — LT搭載、this relay COMPLETE_CORE。
-3. e シン・ウルトラマン — LT搭載、this relay COMPLETE_CORE。
-4. eフィーバーうたわれるもの — LT搭載を確認。**次回処理対象**。
-
-Calendar evidence:
-- https://www.all7.jp/plans/index/2025/04/10 — 2025-04-07に上記4機種を列挙。
-- https://www.pachibee.jp/machines/about/125030000 — e牙狼導入日2025-04-07。
-- 各機種の業界/解析資料でも4/7導入を照合。
-
-### Added COMPLETE_CORE — e牙狼神速神撃3000LT
-`docs/lt_pachinko_db/machines/2025-04-07_e_garo_shinsoku_shingeki_3000lt.md`
-- サンセイアールアンドディ / 型式 `e牙狼神速神撃3000LT-RB`。
-- 通常1/199.5。初当り3R約450個。
-- 70%でLTチャレンジ、30%通常。LTチャレンジは時短1回、実質1/3.226、成功約31%。
-- 成功で約3000個（10R+10R）獲得後、LT `神速神撃3000LT`。
-- LTは時短1回、実質1/1.316、継続約76%、右打ち大当りALL約3000個。
-- 通常RUSHは存在せず、LT前チャレンジとLTを分離。
-- 通常初当り基準の総LT到達率は直接公表値未確認のため、70%×約31%を独自登録しない。
+### Added COMPLETE_CORE — eフィーバーうたわれるもの
+`docs/lt_pachinko_db/machines/2025-04-07_e_fever_utawarerumono.md`
+- SANKYO / 2025-04-07 / スマパチ・一種二種混合・RUSH=LT直行。
+- 図柄揃い約1/399.7、うたわれチャージ1/264.7（別資料約1/264.6）、大当り合算約1/159〜1/159.8は定義を分離。
+- LT `仮面RUSH（アクルカRUSH）` はTOTAL突入約55%。必勝本内訳は図柄揃い時約54.5%、チャージ時約0.7%。
+- LT中約1/13.4（大当り・小当り・c時短合算）、ST15回+残保留4、TOTAL継続約77%。
+- 特図2は解析資料で約80%が約3000個（1500×2）+LT継続、約20%が出玉なしSTリセット。出玉あり図柄揃いはALL約3000個。
+- 特図1解析振り分け: 約1% 3000個+LT / 約53% 1500個+LT / 約1% 192個+LT / 約45% 1500個通常。
+- 公式SANKYO、公式博物館、必勝本、一撃、なな徹、解析資料で照合。新規CONFLICTなし。
 
 Sources:
-- https://news.p-world.co.jp/articles/30318/yugitsushin
-- https://news.p-world.co.jp/articles/30371/amusement
-- https://news.p-world.co.jp/articles/30297/greenbelt
-- https://hisshobon.com/machineinfo/96783/
-- https://nana-press.com/kaiseki/machine/924/28390/
+- https://www.sankyo-fever.jp/products/machine_list/pce/spec/
+- https://www.sankyo-fever.jp/collection/978/
+- https://hisshobon.com/machineinfo/96821/
+- https://1geki.jp/pachinko/e_utawarerumono/39/
+- https://chonborista.com/pachinko/sankyo/229566/
+- https://nana-press.com/kaiseki/machine/913/28754/
 
-### Added COMPLETE_CORE — e シン・ウルトラマン
-`docs/lt_pachinko_db/machines/2025-04-07_e_shin_ultraman.md`
-- オッケー.（京楽産業.製） / 型式 `eシン・ウルトラマンK3`。
-- 通常約1/199.9、初当り2R約300個。50%でウルトラバトルモード、50%通常。
-- 下位ウルトラバトルモードは時短1回、1/2、継続50%。
-- 下位RUSH中大当りの約85%でLT `ゼットン3000ATTACK`。
-- LTは時短1回、約1/1.34、継続約75%。右打ち大当りはALL約3000個（1500個×2、特図2）。
-- 2026年 `79ver.` はLT非搭載の別スペックであり混同しない。
-- 通常初当り基準の総LT到達率は経路値から独自算出せずUNVERIFIED。
+## 2025-04-07 boundary audit — OPEN / enumeration corrected
+Previous handoff's independent calendar enumeration was incomplete. GreenBelt/P-WORLD's 2025-04-07 new-machine schedule lists six pachinko machines:
+1. P少女☆歌劇 レヴュースタァライト ラッキートリガー4500 — LT / registered COMPLETE_CORE.
+2. e牙狼神速神撃3000LT — LT / registered COMPLETE_CORE.
+3. eシン・ウルトラマン — LT / registered COMPLETE_CORE.
+4. eフィーバーうたわれるもの — LT / **this relay COMPLETE_CORE**.
+5. Pフィーバーうたわれるもの 199ver. — **LT搭載 confirmed; next unprocessed machine**.
+6. Pアナザーゴッドハーデス-獄炎- — **LT搭載 confirmed; queue after Pうたわれるもの**.
 
-Sources:
-- https://news.p-world.co.jp/articles/30261/yugitsushin
-- https://hisshobon.com/machineinfo/96856/
-- https://hisshobon.com/machineinfo/96858/
-- https://www.p-world.co.jp/machine/database/10231
-- https://1geki.jp/pachinko/e_shin_ultraman/39/
+Enumeration/cross-check:
+- https://news.p-world.co.jp/articles/30646/greenbelt — 4/7 six-machine pachinko list.
+- https://www.all7.jp/plans/index/2025/04/10 — prior calendar evidence (incomplete for this boundary, therefore not sufficient alone).
+- Pフィーバーうたわれるもの 199ver.: https://hazuse.com/hd/4p1607/ and https://1geki.jp/pachinko/p_utawarerumono199/39/ confirm LT and 2025-04-07.
+- Pアナザーゴッドハーデス-獄炎-: https://www.universal-777.com/product/pachinko/hades_gokuen/ official confirms LT structure; https://www.pachibee.jp/machines/index/125030005 confirms LT and 2025-04-07.
+
+Important QA correction: **do not close 2025-04-07 after eフィーバーうたわれるもの.** Two LT-positive same-day machines remain.
 
 ## Effective DB state
-Previous handoff: 79 records / 78 COMPLETE_CORE / 1 CONFLICT.
+Previous handoff: 81 records / 80 COMPLETE_CORE / 1 CONFLICT.
 After this relay:
-- machine records: **81**
-- COMPLETE_CORE: **80**
+- machine records: **82**
+- COMPLETE_CORE: **81**
 - CONFLICT: **1**
 - INDEX is stale; current machine files + this handoff are the progress source of truth.
 
 ## Next restart point
-**2025-04-07 boundary remains OPEN. Next process `eフィーバーうたわれるもの` (LT搭載 confirmed: 図柄揃い1/399.7, うたわれチャージ1/264.7, total RUSH/LT entry 約55%, LT `仮面RUSH`, 約1/13.4, 15+4回, continuation 約77%). Before closing 2025-04-07, re-enumerate the same date from a second independent historical calendar and determine LT-positive/negative for every candidate.**
+**2025-04-07 boundary remains OPEN. Next process `Pフィーバーうたわれるもの 199ver.`. Then process `Pアナザーゴッドハーデス-獄炎-`. Only after both are registered and the six-machine 4/7 boundary is rechecked may 2025-04-07 be CLOSED.**
 
-Known source for next machine:
-- https://hisshobon.com/machineinfo/96821/
+Known next-machine anchors:
+- Pうたわれるもの: https://www.sankyo-fever.jp/products/machine_list/pce/spec/ (same official product family; ensure P/e definitions are separated), https://1geki.jp/pachinko/p_utawarerumono199/39/, https://hazuse.com/hd/4p1607/
+- Pハーデス獄炎: https://www.universal-777.com/product/pachinko/hades_gokuen/, https://hisshobon.com/machineinfo/96769/, https://www.pachibee.jp/machines/index/125030005
 
 Before writing: re-read latest main README / LT mission / INDEX / this handoff, check current machine files for duplicates, preserve definition differences (`約`/`実質`/`TOTAL`, payout vs expected payout), and do not calculate an unpublished total LT arrival rate from route probabilities.
