@@ -1,74 +1,81 @@
 # LT Pachinko DB — Latest Handoff
 
 retrievedAt: 2026-09-22
-relay: 1 / chronological collection
+relay: 4 / chronological collection
 
 ## Read before work
 - latest main `README.md`: checked
 - `docs/CHAPPY5_LT_PACHINKO_DATABASE_MISSION_V01.md`: checked
 - `docs/lt_pachinko_db/INDEX.md`: checked; INDEX remains stale relative to machine records/handoff
 - previous `LATEST_HANDOFF.md`: checked
-- previous restart point: `e冴えない彼女の育てかた`
-- duplicate search performed before record creation; no existing machine record found
+- previous restart point: next pachinko introduction after 2025-06-16
+- duplicate search performed before record creation
+
+## Boundary discovery
+### 2025-07-07 — OPEN
+At least two independent calendars were re-enumerated. The next nationwide pachinko introduction boundary after 2025-06-16 is 2025-07-07.
+
+Same-day candidates identified:
+1. `e東京リベンジャーズ`
+2. `eフィーバー炎炎ノ消防隊2 シンラver.`
+3. `eフィーバー炎炎ノ消防隊2 紅丸ver.`
+4. `e犬夜叉3.0`
+5. `e一方通行 とある魔術の禁書目録`
+6. `e冒険島`
+7. `Pドラムだ!金ドン 花火外伝99ver.`
+8. `Pフィーバー機動戦士ガンダムユニコーン再来 99ver.`
+9. `PA CYBORG009 RULE OF SACRIFICE LT99ver.`
+
+Boundary sources:
+- 情報島 2025-07-07 list: https://p-johojima.jp/machine_spec/post-2074/
+- K-Navi July calendar: https://p-kn.com/calendar/202507/
+- 一撃 July calendar: https://1geki.jp/newmachinecalender/202507/
+- ALL7 July calendar: https://www.all7.jp/plans/index/2025/07
+
+K-Navi lists `e犬夜叉3.0` as July上旬 rather than date-specific, while 情報島 and other introduction observations place it in the 7/7 boundary. Preserve canonical 2025-07-07 only after machine-level source confirmation when its turn is processed.
 
 ## This relay
-### e冴えない彼女の育てかた — COMPLETE_CORE
-- 大都技研 / 型式 `e／冴えない彼女の育てかた／LX04` / 2025-06-02。
-- 通常1/179.6、右1/35.1。一種二種混合ライトミドル。
-- 初当りはALL約300個。51%で下位 `冴えてる彼女RUSH`、49%通常。
-- 下位RUSH: 55回、継続約80%。RUSH中大当りの15%・約2400個（1500+300×3）でLT発動。
-- LT正式名称: `冴えてる彼女RUSH♭`。資料によって `冴えてる彼女ヒロインRUSH♭フラット` 表記あり。同一状態の表記揺れとして保持。
-- LT: 86回、継続約92%。LT中振り分けは約2400個15% / 約1200個10% / 約600個25% / 約300個50%、全てLT継続。
-- 業界記事の「RUSH突入時約3回に1回LT期待」は直接表現としてnotesへ保持。通常初当り全体を分母とする総LT到達率は直接公表値を確認できず、経路から独自算出しない。
-- LT突入時期待出玉約12,500〜12,516個は「LT突入までの平均出玉＋LT期待値」の合算定義。単発払出と分離。
-- 遊タイム非搭載、コンプリート機能搭載。
-- record: `docs/lt_pachinko_db/machines/2025-06-02_e_saenai_heroine_no_sodatekata.md`
-- commit: `46b7b36c478c17b81e476ccfe6bd13de6995cf1d`
+### e東京リベンジャーズ — COMPLETE_CORE
+- サミー（銀座製） / 型式 `e東京リベンジャーズGFEC` / canonical 2025-07-07.
+- 通常約1/319.7、LT中約1/99.9、時短中約1/399〜1/399.6。
+- LT3.0 PLUSの直LT型。通常初当り50%でLT `芭流覇羅決戦`へ直行、残り50%は普図時短 `決戦前夜` 100回。
+- 決戦前夜引き戻し約22.2%。直行と引き戻しを合わせたLT/RUSH TOTAL突入約61%（約61.1%精密表記あり）。
+- LTはST144回、継続約77%（解析精密約76.5%）。丸め差としてCONFLICTにしない。
+- 特図1: 約3000個+α+LT 4% / 約300個+LT 46% / 約300個+時短100回 50%。
+- LT中: 約4500個+α 2.5% / 約3000個 47.5% / 約1500個 50%、全てLT継続。
+- 3000個以上側の一部で `渋谷JACK`。1500個上乗せが50%でループし、終了後LTへ戻る。
+- 時短中の特図2はLT中と振り分けが異なり、解析資料では4500個+α 0.25% / 3000個 4.75% / 1500個 95%。定義を分離して保存。
+- record: `docs/lt_pachinko_db/machines/2025-07-07_e_tokyo_revengers.md`
+- commit: `9713d6d354571be999fd1153aecf2afa982ea9d1`
+
 Sources:
-- https://news.p-world.co.jp/articles/30880/yugitsushin
-- https://news.p-world.co.jp/articles/30869
-- https://opt.p-world.co.jp/machine/database/10280
-- https://hisshobon.com/machineinfo/97662/
-- https://hisshobon.com/machineinfo/97663/
-- https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/daitogiken_pachi/045/kh04.php
-- https://nana-press.com/kaiseki/machine/953/29735/
-- https://hazuse.com/machine/pachinko/4P1740/
-- https://1geki.jp/pachinko/e_saekano/39/
+- https://news.p-world.co.jp/articles/30756/yugitsushin
+- https://news.p-world.co.jp/articles/31193/nippon
+- https://www.p-world.co.jp/machine/database/10262
+- https://hisshobon.com/machineinfo/98034/
+- https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/sammy_pachi/325/kh03.php
+- https://p-kn.com/pachinko/4329/
 
-## Boundary state
-### 2025-04-07 — CLOSED
-### 2025-04-21 — CLOSED
-### 2025-05-07 — CLOSED
-### 2025-05-19 — CLOSED (LT-positive recordなし)
-### 2025-06-02 — CLOSED
-11-candidate boundary accounting:
-1. `Pフィーバーマクロスフロンティア5 LT-Light ver.` — COMPLETE_CORE
-2. `P緋弾のアリア～緋緋神降臨～88Ver.` — COMPLETE_CORE
-3. `PLT激デジ ジューシーハニー極嬢` — COMPLETE_CORE
-4. `e 新・必殺仕置人 超斬撃99` — COMPLETE_CORE
-5. `P DD北斗の拳3 百突99ver.` — EXCLUDED / LT-negative
-6. `eF彼女、お借りします` — COMPLETE_CORE
-7. `e範馬刃牙` — COMPLETE_CORE
-8. `PA海物語3R3` — EXCLUDED / LT-negative
-9. `デカスタ P戦国無双` — COMPLETE_CORE
-10. `デジハネPモンスターハンターライズ` — EXCLUDED / LT-negative
-11. `e冴えない彼女の育てかた` — COMPLETE_CORE
-
-Boundary re-enumeration cross-check:
-- 情報島 2025-06-02 list contains the same 11 pachinko machines: https://p-johojima.jp/machine_spec/post-2074/
-- independent 2025 calendar also lists the same 11 pachinko machines for 2025-06-02: https://pachinkopachisro.com/archives/58760696.html
-- K-Navi June calendar and additional calendar checked as supporting boundary evidence: https://p-kn.com/calendar/202506/ and https://sulocale.sulopachinews.com/archives/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88/6%E6%9C%882%E6%97%A5%E5%B0%8E%E5%85%A5%E9%96%8B%E5%A7%8B%E4%BA%88%E5%AE%9A%E6%A9%9F%E7%A8%AE
-- 2025-06-16 calendars show pachinko introductionなし（スロット `L絶対衝激` only), so no LT pachinko record is required for that date.
+## Pre-verified queue evidence
+Do not skip research on each machine, but the following LT-positive evidence is already located:
+- `eフィーバー炎炎ノ消防隊2 シンラver.` — industry source: LT `炎上バトルモード`, total entry約50.5%, continuation約80%, 2025-07上旬. https://news.p-world.co.jp/articles/30776/yugitsushin
+- `eフィーバー炎炎ノ消防隊2 紅丸ver.` — LT `炎上バトルモード`, total entry約52%, continuation約73%. https://news.p-world.co.jp/articles/30777/yugitsushin
+- `e犬夜叉3.0` — LT3.0 PLUS / LT高確率ZONE `奈落探索MODE` and `ブッた斬りRUSH`. https://news.p-world.co.jp/articles/31178/nippon and https://news.p-world.co.jp/articles/31311/greenbelt
+- `e一方通行 とある魔術の禁書目録` — LT3.0 PLUS, RUSHチャレンジ約51%, success約60%, LT HYPER約75%, right ALL3000+ class. https://news.p-world.co.jp/articles/30868/greenbelt and https://nana-press.com/kaiseki/machine/966/29728/
+- `e冒険島` — LT `暴険RUSH`, entry25.9%, continuation約77%, 2回転落システム. https://www.p-world.co.jp/machine/database/10276
+- `Pドラムだ!金ドン 花火外伝99ver.` — lower 金ドンRUSH約80%, RUSH終了後LTチャレンジ, LT `SPECIAL金ドンRUSH`約95%. https://news.p-world.co.jp/articles/30764/yugitsushin
+- `Pフィーバー機動戦士ガンダムユニコーン再来 99ver.` — 覚醒HYPER約51%/約75%, LT `超覚醒HYPER`約91%, 2025-07-07. https://news.p-world.co.jp/articles/31052/yugitsushin
+- `PA CYBORG009 RULE OF SACRIFICE LT99ver.` — lower RUSH約40%/約75%, LT `超加速RUSH`約95%, lower RUSH中10R+LT 9.5%. https://news.p-world.co.jp/articles/31173/greenbelt
 
 ## Effective DB state
-Previous effective state: 102 records / 101 COMPLETE_CORE / 1 CONFLICT.
+Previous effective state: 103 records / 102 COMPLETE_CORE / 1 CONFLICT.
 This relay added one COMPLETE_CORE record.
-- machine records: **103**
-- COMPLETE_CORE: **102**
+- machine records: **104**
+- COMPLETE_CORE: **103**
 - CONFLICT: **1**
 - INDEX is stale; machine files + this handoff are progress source of truth until safe INDEX integration.
 
 ## Next restart point
-**2025-06-02 boundary is CLOSED. 2025-06-16 has no pachinko introduction in the calendars checked. Continue chronologically to the next pachinko introduction date after 2025-06-16 (expected July 2025 boundary, but re-enumerate from at least two independent calendars rather than assuming a date). Discover all same-day pachinko candidates, verify LT-positive status, and create records only for confirmed LT machines.**
+**Continue 2025-07-07 OPEN boundary with `eフィーバー炎炎ノ消防隊2 シンラver.`. Then process the remaining same-day candidates in the exact queue above. Verify each LT structure with machine-level official/industry/analysis sources, duplicate-search before writing, and close 2025-07-07 only after all same-day candidates are accounted for and the candidate list is rechecked against at least two calendars.**
 
-Before writing: re-read latest main README / LT mission / INDEX / this handoff, duplicate-search machine files, preserve definition differences (`約`/`実質`/`TOTAL`, payout vs expected payout), and never infer unpublished total LT arrival rates from route probabilities.
+Before writing: re-read latest main README / LT mission / INDEX / this handoff, preserve definition differences (`約`/`実質`/`TOTAL`, payout vs expected payout), and never infer unpublished total LT arrival rates from route probabilities.
