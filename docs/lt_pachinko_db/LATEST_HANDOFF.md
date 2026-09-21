@@ -1,74 +1,92 @@
 # LT Pachinko DB — Latest Handoff
 
 retrievedAt: 2026-09-21
-relay: 1 / chronological collection
+relay: 4 / chronological collection
 
 ## Read before work
 - latest main `README.md`: checked
 - `docs/CHAPPY5_LT_PACHINKO_DATABASE_MISSION_V01.md`: checked
 - `docs/lt_pachinko_db/INDEX.md`: checked; INDEX remains stale relative to current machine records/handoff
 - previous `LATEST_HANDOFF.md`: checked
-- target duplicate search performed before write
+- duplicate search performed before writes
 
 ## This relay
 Added COMPLETE_CORE:
-- `docs/lt_pachinko_db/machines/2025-03-03_p_ring_ni_kakero_1.md`
+1. `docs/lt_pachinko_db/machines/2025-03-03_ef_danmachi2.md`
+2. `docs/lt_pachinko_db/machines/2025-03-03_p_uruseiyatsura_els_129.md`
 
-### Pリングにかけろ1
-- formalModel: `Pリングにかけろ1L-5S`
+### eFダンジョンに出会いを求めるのは間違っているだろうか2
+- SANKYO / 2025-03-03 / `eフィーバーダンまち2G`
+- スマパチ / 1種2種混合 / RUSH=LT
+- 図柄揃い約1/399.9、実質大当り1/159.8、右打ち約1/99.9
+- LT突入TOTAL約56%、ST130回、継続約73%
+- 特図1: 1500個+LT 約54% / 192個+LT 約2% / 1500個通常 約44%
+- 特図2: 1500個+神乗せループチャンス100%
+- 神乗せループは約50%で1500個を上乗せし続ける。LT継続約73%とは別定義。
+- 同時導入P機版は別スペックであり、本LTレコードと混同禁止。
+
+### Pうる星やつら～Eternal Love Song～ 129ver.
 - ニューギン / 2025-03-03
-- 1種2種混合 / ST型 / LT搭載
-- 通常図柄揃い約1/319.8、菊チャージ約1/325.8、合算約1/161.4
-- K.O.RUSH中約1/161.4、超K.O.RUSH中約1/94.7、リンかけCHANCE中約1/23.5
-- 初当り図柄揃いは10R約1500個。RUSH突入約60%（菊チャージからのLT昇格約0.1%を含む）
-- 下位 `K.O.RUSH`: ST99回 + リンかけCHANCE5回、TOTAL約57%（ST単体約45.9%、リンかけCHANCE引き戻し約19.5%）
-- LT `超K.O.RUSH`: ST129回 + リンかけCHANCE5回、TOTAL約80%（ST単体約74.5%、リンかけCHANCE引き戻し約19.5%）
-- LT経路: 菊チャージから約0.1%直行、K.O.RUSH中の大当り、またはRUSH終了後リンかけCHANCE中の大当り
-- K.O.RUSH特図2: 10R約1500個+LT 約67% / ST回数リセット約33%
-- LT中: 約3000個60% / 約1500個10% / 約600個10% / ST回数リセット20%（払出）
-- 通常初当り基準の総LT到達率は直接公表値未確認。経路値から独自算出せずUNVERIFIED。
-- 2026年1月導入 `Pリングにかけろ1 129ver.` は別スペック。混同禁止。
-
-Cross-check source families:
-- 遊技通信/P-WORLD業界ニュース
-- アミューズメントジャパン/P-WORLD
-- パチ&スロ必勝本
-- なな徹
-- パチマガスロマガ
+- 通常1/129.77、右打ち1/95.95、RUSH突入100%
+- 電撃RUSH: 70+残4、約54%
+- LT `超電撃RUSH`: 174+残4、約85%
+- LT経路: 電撃RUSH中最大2回目の大当り。初当り2%のDESTINY ROAD（10000回/実質次回）大当り時50%はLT直行。
+- 右打ち大当りALL 10R約800個。
+- 通常初当り基準の総LT到達率は直接公表値未確認のためUNVERIFIED。経路から独自算出しない。
 
 No new CONFLICT.
 
+## 2025-03-03 boundary re-enumeration
+Independent March 2025 calendar lists:
+- P俺の妹がこんなに可愛いわけがない。 — registered
+- Pバンドリ！ Light ver. — **LTではなく通常ST内の特図1→特図2 EX移行構造。業界一次記事にLT表記なし。対象外。**
+- PFダンジョンに出会いを求めるのは間違っているだろうか2 — e版と別。LT搭載根拠なし、対象外。
+- eFダンジョンに出会いを求めるのは間違っているだろうか2 — registered this relay
+- PA大海物語5ブラックLT99ver. — registered
+- P FAIRY TAIL これが七炎竜の力だ 89ver. — registered
+- Pリングにかけろ1 — registered
+- Pうる星やつら～Eternal Love Song～129ver. — registered this relay
+
+Calendar source used for enumeration: https://hide-expectedvalue.com/2025/8331/patinko/
+Pバンドリ Light industry checks: https://news.p-world.co.jp/articles/29759/yugitsushin and https://news.p-world.co.jp/articles/29755/amusement
+
+**2025-03-03 boundary: CLOSED.**
+
 ## Effective DB state
-Previous state: 73 records / 72 COMPLETE_CORE / 1 CONFLICT.
+Previous state: 74 records / 73 COMPLETE_CORE / 1 CONFLICT.
 After this relay:
-- machine records: **74**
-- COMPLETE_CORE: **73**
+- machine records: **76**
+- COMPLETE_CORE: **75**
 - CONFLICT: **1**
-- 2025-03-03 boundary: **OPEN**
+- 2025-03-03 boundary: **CLOSED**
 - INDEX is stale; current machine files + this handoff are the progress source of truth.
 
-## Current chronological boundary — 2025-03-03
-Completed at this boundary:
-1. P FAIRY TAIL これが七炎竜の力だ 89ver. — COMPLETE_CORE
-2. PA大海物語5ブラックLT99ver. — COMPLETE_CORE
-3. P俺の妹がこんなに可愛いわけがない。 — COMPLETE_CORE
-4. Pリングにかけろ1 — COMPLETE_CORE
+## Next chronological boundary
+Independent calendar identifies next pachinko introduction date as **2025-03-17**.
+Candidates to audit in order:
+1. PA魔王学院の不適合者 魔王再臨 99Ver
+2. Pうまい棒2
+3. e真・北斗無双 第5章 ドデカSTART
+4. PAひぐらしのなく頃に 輪廻転生99Ver.
+5. Pモモキュンソード 速撃3000+
 
-Pre-confirmed LT-positive candidate still to process:
-1. **NEXT: eFダンジョンに出会いを求めるのは間違っているだろうか2** — SANKYO / direct-LT smart pachinko; full source QA required
-
-Do not assume this is exhaustive. Re-enumerate all 2025-03-03 pachinko introductions from independent calendars before closing the boundary.
+Do not assume all are LT. First establish LT-positive/negative from official/industry sources, and only create machine records for LT-positive models.
 
 ## Sources used this relay
-- https://news.p-world.co.jp/articles/30236/yugitsushin
-- https://news.p-world.co.jp/articles/30251/amusement
-- https://hisshobon.com/machineinfo/96440/
-- https://nana-press.com/kaiseki/machine/940/28251/
-- https://nana-press.com/kaiseki/machine/940/27917/
-- https://pachimaga.com/free/article/20250302/056165.php
-- https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/newgin_pachi/498/kh02.php
+- https://news.p-world.co.jp/articles/29697/greenbelt
+- https://www.p-world.co.jp/machine/database/10184
+- https://1geki.jp/pachinko/e_danmachi2/
+- https://www.pachirinko.com/2025.kishu/li.dun.mati.2.html
+- https://news.p-world.co.jp/articles/30263/greenbelt
+- https://news.p-world.co.jp/articles/30247/greenbelt
+- https://hisshobon.com/machineinfo/96447/
+- https://p.hisshobon.jp/machine/4484/1/107794
+- https://www.p-world.co.jp/machine/database/10221
+- https://hide-expectedvalue.com/2025/8331/patinko/
+- https://news.p-world.co.jp/articles/29759/yugitsushin
+- https://news.p-world.co.jp/articles/29755/amusement
 
 ## Next restart point
-**eFダンジョンに出会いを求めるのは間違っているだろうか2**
+**2025-03-17 boundary — start with `PA魔王学院の不適合者 魔王再臨 99Ver` LT-positive/negative audit.**
 
-Before writing: re-read latest main README / LT mission / INDEX / this handoff, check current machine files for duplicate, then collect core + LT structure and cross-check multiple source families. After processing it, independently re-enumerate the full 2025-03-03 pachinko introduction calendar before deciding whether to close the boundary.
+Before writing: re-read latest main README / LT mission / INDEX / this handoff, check current machine files for duplicates, audit the 2025-03-17 candidates in chronological queue, and only collect full core+LT records for confirmed LT-equipped machines. Re-enumerate the full date before closing the boundary.
