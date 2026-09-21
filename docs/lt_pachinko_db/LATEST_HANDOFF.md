@@ -1,48 +1,46 @@
 # LT Pachinko DB — Latest Handoff
 
 retrievedAt: 2026-09-21
-relay: 4 / chronological collection
+relay: 1 / chronological collection
 
 ## Read before work
 - latest main `README.md`: checked
 - `docs/CHAPPY5_LT_PACHINKO_DATABASE_MISSION_V01.md`: checked
 - `docs/lt_pachinko_db/INDEX.md`: checked; INDEX remains stale relative to current machine records/handoff
 - previous `LATEST_HANDOFF.md`: checked
-- existing target duplicate checks performed before writes
+- target duplicate search performed before write
 
 ## This relay
 Added COMPLETE_CORE:
-- `docs/lt_pachinko_db/machines/2025-03-03_p_fairy_tail_nanatsu_enryu_89ver.md`
+- `docs/lt_pachinko_db/machines/2025-03-03_pa_oumi5_black_lt99.md`
 
-### P FAIRY TAIL これが七炎竜の力だ 89ver.
-- formalModel: `P FAIRY TAIL 89Ver．FWZ`
-- 藤商事 / 2025-03-03
-- 甘デジLT / 2種 / ST型
-- normal 約1/89（詳細解析1/89.8） / right 約1/59（詳細解析1/59.4）
-- 初当り3R約210個、FAIRY RUSH 50% / 通常50%
-- FAIRY RUSH: ST50+残4 / 約60%
-- FAIRY RUSH中大当り12.5% → 一夜モードでLT発動
-- 一夜モード: 実質次回、約40%で約1500個上乗せループ
-- LT `七炎竜RUSH`: ST120+残4 / 約88%
-- FAIRY RUSH中: 1500個+一夜12.5% / 1500個+下位27.5% / 210個+下位60%
-- LT中: 1500個+一夜40% / 210個+LT60%
-- normal initial jackpot基準の総LT到達率は直接値未確認。経路値から独自合算せずUNVERIFIED。
-- 2024-04-22ミドル版とは別スペックとして分離。
+### PA大海物語5ブラックLT99ver.
+- formalModel: `PA大海物語5HLD`
+- 三洋物産 / 2025-03-03
+- 甘デジLT / 1種2種混合 / 時短型
+- 通常 約1/99.9 / 右打ち実質 約1/41.0
+- 初当り全て3R約330個、70%で通常ST / 30%通常
+- 通常ST: 時短35+残4 / TOTAL約62%
+- LT `GOLDパールRUSH HYPER`: 通常ST中の特図2大当り10%で発動
+- LT: 時短110回 / 約93%（110回の期待値約93.3%）
+- 特図2: 8R約880個40% / 3R約330個60%。うち10%が8R+LT
+- パチマガスロマガの直接解析値としてLT突入率約1/1026を保存。独自合算値ではない。
+- LT後の残保留当選は通常ST振り分け。
+- 右打ち約1/41.0は大当り約1/99.9と小当り約1/69.7の合算値として定義分離。
 
 Cross-check sources:
 - HAZUSE
+- パチマガスロマガFREE
 - 一撃
-- パチ&スロ必勝本
 - パチビー
-- パチンコチュートリアル
 
 No new CONFLICT.
 
 ## Effective DB state
-Previous state: 70 records / 69 COMPLETE_CORE / 1 CONFLICT.
+Previous state: 71 records / 70 COMPLETE_CORE / 1 CONFLICT.
 After this relay:
-- machine records: **71**
-- COMPLETE_CORE: **70**
+- machine records: **72**
+- COMPLETE_CORE: **71**
 - CONFLICT: **1**
 - 2025-03-03 boundary: **OPEN**
 - INDEX is stale; current machine files + this handoff are the progress source of truth.
@@ -50,24 +48,23 @@ After this relay:
 ## Current chronological boundary — 2025-03-03
 Completed at this boundary:
 1. P FAIRY TAIL これが七炎竜の力だ 89ver. — COMPLETE_CORE
+2. PA大海物語5ブラックLT99ver. — COMPLETE_CORE
 
 Pre-confirmed LT-positive candidates still to process, in queue order:
-1. **NEXT: PA大海物語5ブラックLT99ver.** — 三洋 / LT `GOLDパールRUSH HYPER` about 93%; full source QA required
-2. P俺の妹がこんなに可愛いわけがない。 — 京楽 / 1/199.9 / lower RUSH about 80% / LT long RUSH TOTAL about 92%
-3. Pリングにかけろ1 — ニューギン / LT-positive; full source QA required
-4. eFダンジョンに出会いを求めるのは間違っているだろうか2 — SANKYO / direct-LT smart pachinko; full source QA required
+1. **NEXT: P俺の妹がこんなに可愛いわけがない。** — 京楽 / 1/199.9 / lower RUSH about 80% / LT long RUSH TOTAL about 92%; full source QA required
+2. Pリングにかけろ1 — ニューギン / LT-positive; full source QA required
+3. eFダンジョンに出会いを求めるのは間違っているだろうか2 — SANKYO / direct-LT smart pachinko; full source QA required
 
-Do not assume the above is exhaustive. Re-enumerate all 2025-03-03 pachinko introductions from independent calendars before closing this boundary.
+Do not assume this is exhaustive. Re-enumerate all 2025-03-03 pachinko introductions from independent calendars before closing the boundary.
 
 ## Sources used this relay
-- https://hazuse.com/machine/pachinko/PX0269/
-- https://1geki.jp/pachinko/p_fairytail_lt89/
-- https://1geki.jp/pachinko/p_fairytail_lt89/51/
-- https://p.hisshobon.jp/machine/4466/1/107224
-- https://www.pachibee.jp/machines/index/125020005
-- https://www.pachirinko.com/2025.kishu/hane.fairy.t.html
+- https://hazuse.com/machine/pachinko/PX0270/
+- https://pachimaga.com/free/article/20241225/056326.php
+- https://pachimaga.com/free/article/20250228/056154.php
+- https://1geki.jp/pachinko/pa_oumi5bklt99/51/
+- https://www.pachibee.jp/machines/about/125020004
 
 ## Next restart point
-**PA大海物語5ブラックLT99ver.**
+**P俺の妹がこんなに可愛いわけがない。**
 
 Before writing: re-read latest main README / LT mission / INDEX / this handoff, check current machine files for duplicate, then collect core + LT structure and cross-check multiple source families. Keep 2025-03-03 OPEN until the full same-date calendar is independently re-enumerated.
