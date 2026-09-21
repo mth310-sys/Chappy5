@@ -1,71 +1,65 @@
 # LT Pachinko DB — Latest Handoff
 
 retrievedAt: 2026-09-21
-relay: 1 / chronological collection
+relay: 4 / chronological collection
 
 ## Read before work
 - latest main `README.md`: checked
 - `docs/CHAPPY5_LT_PACHINKO_DATABASE_MISSION_V01.md`: checked
 - `docs/lt_pachinko_db/INDEX.md`: checked; INDEX is stale relative to current machine records/handoff
 - previous `LATEST_HANDOFF.md`: checked
-- previous restart point: 2025-02-03 `e閃乱カグラ`
-- duplicate check performed before write
+- previous restart point: 2025-02-03 `Pとある魔術の禁書目録2 Light PREMIUM 2000 ver.`
+- existing target record duplicate check performed before write
 
 ## This relay
-### Added: e閃乱カグラ
-- path: `docs/lt_pachinko_db/machines/2025-02-03_e_senran_kagura.md`
-- manufacturer: D-light（ディ・ライト / 大一商会グループ）
-- formalModel: e閃乱カグラLTM-JF
+### Added: Pとある魔術の禁書目録2 Light PREMIUM 2000 ver.
+- path: `docs/lt_pachinko_db/machines/2025-02-03_p_toaru_majutsu_no_index2_light_premium_2000.md`
+- manufacturer: JFJ（藤商事グループ）
+- formalModel: Pとある魔術の禁書目録2 Light JWX
 - release: 2025-02-03
-- type: スマパチ / 一種二種混合 / 普図ST / RUSH=LT直行型
-- 図柄揃い: 約1/399（詳細1/399.2）
-- 抜刀モード（チャージ）: 約1/368.5
-- LT: `絶・秘伝RUSH`
-- LT route: 図柄揃い51%直行 / 非突入49%後の秘伝チャンス時短50回で引き戻し
-- LT total entry: 約57%（時短引き戻し込み）、解析資料のLT突入確率約1/702
-- LT: ST100回、約80%継続、普電タイプのため残保留抽選なし
-- LT payout: ALL約2400個（約1200個×2、払出）
+- type: 甘デジ / 二種機 / 普図ST / 下位RUSH→LT昇格型
+- 通常時当選: 約1/99.9（特図1小当りからのV当り、V入賞条件）
+- RUSH entry: 50%
+- 下位RUSH: `最強激突(ヒーローズRUSH)` 70回 / 約65%
+- LT: `最強領域(ラッキートリガー)` 162回 / 約91%
+- LT route: 下位RUSH中の約2000個大当り（右打ち当りの約11%）
+- LT payout: 約2000個11.0% / 約1150個44.5% / 約300個44.5%（特図2大当り2回分の合計払出）
 - status: COMPLETE_CORE
 - conflicts: none
+- missing: 通常初当り基準の総LT到達率は直接公表値を確認できずUNVERIFIED。独自合算しない
 
-Cross-check: 大一販売プレスリリース転載、遊技通信、必勝本、一撃、なな徹を横断。51%直行と時短引き戻し込み約57%を分離。後発 `P閃乱カグラ 189大入りver.` は別スペックとして除外。
+Cross-check: JFJ公式、必勝本、P-WORLD、K-Naviを横断。公式の1/99.9・RUSH50%・右1/68.0・70回/約65%・162回/約91%と、必勝本の特図2振り分け/2000個約11%LT契機が一致。右打ち出玉は特図2大当り2回分の合計払出であることを定義分離。LT突入時期待出玉約11844個は突入率ではないため混同しない。
 
-## 2025-02-03 same-date discovery / boundary remains OPEN
-同日導入機を複数カレンダーで再列挙したところ、前回handoffで列挙されていなかったLT-positive候補が複数存在することを確認。漏れ防止のため2025-02-03境界を閉じない。
+## 2025-02-03 boundary remains OPEN
+Remaining same-date candidates requiring formal LT-positive verification/full record:
+- `Pフィーバー戦姫絶唱シンフォギア4 199 ver.` — next priority
+- `eルパン三世 ONE COLLECTION 超ブチヌキLTver.`
+- `ぱちんこ シン・エヴァンゲリオン 129 LT ver.`
 
-Confirmed / high-priority LT candidates still requiring machine-record collection:
-- `Pとある魔術の禁書目録2 Light PREMIUM 2000 ver.` — 一撃2025-02カレンダーがLT搭載を明記。次回最優先でフル収集。
-- `Pフィーバー戦姫絶唱シンフォギア4 199 ver.` — 2/3導入。LT搭載有無と当該スペックを正式資料で確認してから登録判断。
-- `eルパン三世 ONE COLLECTION 超ブチヌキLTver.` — 2/3導入。名称上LT候補だが正式スペックを横断確認してから登録。
-- `ぱちんこ シン・エヴァンゲリオン 129 LT ver.` — 2/3導入。LT候補として正式スペックを横断確認してから登録。
-
-Excluded / hold:
-- `P愛の不時着`: LT非搭載確認済み、対象外。
-- `P冬のソナタ My Memory`: 現時点でLT-positive根拠なし。先行登録しない。
+Excluded / hold already noted:
+- `P愛の不時着`: LT非搭載確認済み、対象外
+- `P冬のソナタ My Memory`: LT-positive根拠なし。先行登録しない
 
 ## Effective DB state
-Previous handoff:
-- machine records: 60
-- COMPLETE_CORE: 59
+Previous handoff after e閃乱カグラ:
+- machine records: 61
+- COMPLETE_CORE: 60
 - CONFLICT: 1
 
 After this relay:
-- machine records: **61**
-- COMPLETE_CORE: **60**
+- machine records: **62**
+- COMPLETE_CORE: **61**
 - CONFLICT: **1**
 - 2025-02-03 boundary: **OPEN**
 - `INDEX.md` remains stale and must not override this handoff/current machine files.
 
 ## Next restart point
-Re-sync latest main first. Continue **2025-02-03** with **`Pとある魔術の禁書目録2 Light PREMIUM 2000 ver.`** as the next confirmed LT-positive machine. Collect full core/LT structure and cross-check before write. Then process the remaining same-date LT candidates above and independently re-enumerate 2025-02-03 introductions before closing the date boundary.
+Re-sync latest main first. Continue **2025-02-03** with **`Pフィーバー戦姫絶唱シンフォギア4 199 ver.`**. First verify that this exact 199 specification is LT-equipped using official/industry/analysis sources; only if LT-positive, collect and save the full machine record. Then continue the same-date queue with `eルパン三世 ONE COLLECTION 超ブチヌキLTver.` and `ぱちんこ シン・エヴァンゲリオン 129 LT ver.`, and independently re-enumerate 2025-02-03 introductions before closing the boundary.
 
 ## Sources used this relay
-- https://www.oricon.co.jp/pressrelease/2178458/ — 大一販売プレスリリース転載、e閃乱カグラ
-- https://news.p-world.co.jp/articles/29850/yugitsushin — 遊技通信、e閃乱カグラ
-- https://hisshobon.com/machineinfo/95660/ — e閃乱カグラ 基本スペック
-- https://hisshobon.com/machineinfo/95662/ — e閃乱カグラ LT経路/終了条件
-- https://1geki.jp/pachinko/e_senrankagura/ — e閃乱カグラ 型式/主要数値
-- https://nana-press.com/kaiseki/machine/878/26518/ — e閃乱カグラ 振り分け
-- https://1geki.jp/newmachinecalender/202502/ — 2025-02-03導入再列挙、PとあるLT-positive確認
-- https://pachinkopachisro.com/archives/58760696.html — 2025-02-03導入再列挙
-- https://marutto-w.com/industry_news/20250203-4 — 2025-02-03導入再列挙
+- https://www.fujimarukun.co.jp/products/p_toaru2ama/ — JFJ公式。通常1/99.9、RUSH50%、右1/68.0、70回/約65%、LT162回/約91%、主要出玉
+- https://hisshobon.com/machineinfo/95695/ — 必勝本。特図1/特図2振り分け、2000個約11%でLT
+- https://p.hisshobon.jp/machine/4455/1/106860 — 必勝本。LT発動契機、残保留なし
+- https://p.hisshobon.jp/machine/4455/1/106858 — 必勝本。基本スペック/期待出玉定義
+- https://www.p-world.co.jp/machine/database/10192 — P-WORLD。LT搭載、RUSH/LT継続、期待出玉定義照合
+- https://p-kn.com/pachinko/4274/ — K-Navi。導入日2025-02-03、型式/甘デジ/ST/LT照合
