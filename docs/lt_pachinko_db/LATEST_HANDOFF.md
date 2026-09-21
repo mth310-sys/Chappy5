@@ -1,7 +1,7 @@
 # LT Pachinko DB — Latest Handoff
 
 retrievedAt: 2026-09-21
-relay: 4 / chronological collection
+relay: 1 / chronological collection
 
 ## Read before work
 - latest main `README.md`: checked
@@ -12,38 +12,37 @@ relay: 4 / chronological collection
 
 ## This relay
 Added COMPLETE_CORE:
-- `docs/lt_pachinko_db/machines/2025-03-03_p_oreimo.md`
+- `docs/lt_pachinko_db/machines/2025-03-03_p_ring_ni_kakero_1.md`
 
-### P 俺の妹がこんなに可愛いわけがない。
-- formalModel: `P俺の妹がこんなに可愛いわけがない。M3`
-- 京楽産業.（製造: オッケー.） / 2025-03-03
-- ライトミドルLT / 1種2種混合 / ST型
-- 通常 約1/199.9 / 右打ち 約1/66.1
-- 初当りは2R約300個100% → 運命の審判 ST41+残4、突破約50%
-- 通常RUSH `俺の妹がこんなに可愛いわけがないRUSH`: ST100+残4 / 約80%
-- LT `俺の妹がこんなに可愛いわけがないRUSHがこんなに長いわけがないRUSH DX EDITION`
-- LT経路: 運命の審判/通常RUSH中の8R時40%。特図2全体基準では10%。分母差として整理。
-- LT初回は次回まで。以後151+残4または次回までを合わせTOTAL約92%。151+残4単体は約90.6%。
-- 通常RUSH側特図2: 8R+LT/次回10% / 8R+通常RUSH15% / 6R25% / 4R25% / 2R25%。払出約1200/1200/900/600/300個。
-- LT側特図2: 8R+次回10% / 8R+151+残4 15% / 6R25% / 4R25% / 2R25%。
-- 残保留当選時は通常RUSH側振り分け。
-- 通常初当り基準の総LT到達率は直接公表値を確認できず、経路値から独自計算せずUNVERIFIED。
-- 後発159ver.と分離。
+### Pリングにかけろ1
+- formalModel: `Pリングにかけろ1L-5S`
+- ニューギン / 2025-03-03
+- 1種2種混合 / ST型 / LT搭載
+- 通常図柄揃い約1/319.8、菊チャージ約1/325.8、合算約1/161.4
+- K.O.RUSH中約1/161.4、超K.O.RUSH中約1/94.7、リンかけCHANCE中約1/23.5
+- 初当り図柄揃いは10R約1500個。RUSH突入約60%（菊チャージからのLT昇格約0.1%を含む）
+- 下位 `K.O.RUSH`: ST99回 + リンかけCHANCE5回、TOTAL約57%（ST単体約45.9%、リンかけCHANCE引き戻し約19.5%）
+- LT `超K.O.RUSH`: ST129回 + リンかけCHANCE5回、TOTAL約80%（ST単体約74.5%、リンかけCHANCE引き戻し約19.5%）
+- LT経路: 菊チャージから約0.1%直行、K.O.RUSH中の大当り、またはRUSH終了後リンかけCHANCE中の大当り
+- K.O.RUSH特図2: 10R約1500個+LT 約67% / ST回数リセット約33%
+- LT中: 約3000個60% / 約1500個10% / 約600個10% / ST回数リセット20%（払出）
+- 通常初当り基準の総LT到達率は直接公表値未確認。経路値から独自算出せずUNVERIFIED。
+- 2026年1月導入 `Pリングにかけろ1 129ver.` は別スペック。混同禁止。
 
-Cross-check sources:
-- 遊技日本/P-WORLD業界ニュース（京楽発表）
-- P-WORLD
+Cross-check source families:
+- 遊技通信/P-WORLD業界ニュース
+- アミューズメントジャパン/P-WORLD
 - パチ&スロ必勝本
 - なな徹
-- HAZUSE
+- パチマガスロマガ
 
 No new CONFLICT.
 
 ## Effective DB state
-Previous state: 72 records / 71 COMPLETE_CORE / 1 CONFLICT.
+Previous state: 73 records / 72 COMPLETE_CORE / 1 CONFLICT.
 After this relay:
-- machine records: **73**
-- COMPLETE_CORE: **72**
+- machine records: **74**
+- COMPLETE_CORE: **73**
 - CONFLICT: **1**
 - 2025-03-03 boundary: **OPEN**
 - INDEX is stale; current machine files + this handoff are the progress source of truth.
@@ -53,22 +52,23 @@ Completed at this boundary:
 1. P FAIRY TAIL これが七炎竜の力だ 89ver. — COMPLETE_CORE
 2. PA大海物語5ブラックLT99ver. — COMPLETE_CORE
 3. P俺の妹がこんなに可愛いわけがない。 — COMPLETE_CORE
+4. Pリングにかけろ1 — COMPLETE_CORE
 
-Pre-confirmed LT-positive candidates still to process, in queue order:
-1. **NEXT: Pリングにかけろ1** — ニューギン / LT-positive; full source QA required
-2. eFダンジョンに出会いを求めるのは間違っているだろうか2 — SANKYO / direct-LT smart pachinko; full source QA required
+Pre-confirmed LT-positive candidate still to process:
+1. **NEXT: eFダンジョンに出会いを求めるのは間違っているだろうか2** — SANKYO / direct-LT smart pachinko; full source QA required
 
 Do not assume this is exhaustive. Re-enumerate all 2025-03-03 pachinko introductions from independent calendars before closing the boundary.
 
 ## Sources used this relay
-- https://news.p-world.co.jp/articles/30290/nippon
-- https://opt.p-world.co.jp/machine/database/10183
-- https://hisshobon.com/machineinfo/96369/
-- https://nana-press.com/kaiseki/machine/900/26371/
-- https://hazuse.com/machine/pachinko/4P0272/
-- https://p.hisshobon.jp/news/2084
+- https://news.p-world.co.jp/articles/30236/yugitsushin
+- https://news.p-world.co.jp/articles/30251/amusement
+- https://hisshobon.com/machineinfo/96440/
+- https://nana-press.com/kaiseki/machine/940/28251/
+- https://nana-press.com/kaiseki/machine/940/27917/
+- https://pachimaga.com/free/article/20250302/056165.php
+- https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/newgin_pachi/498/kh02.php
 
 ## Next restart point
-**Pリングにかけろ1**
+**eFダンジョンに出会いを求めるのは間違っているだろうか2**
 
-Before writing: re-read latest main README / LT mission / INDEX / this handoff, check current machine files for duplicate, then collect core + LT structure and cross-check multiple source families. Keep 2025-03-03 OPEN until the full same-date calendar is independently re-enumerated.
+Before writing: re-read latest main README / LT mission / INDEX / this handoff, check current machine files for duplicate, then collect core + LT structure and cross-check multiple source families. After processing it, independently re-enumerate the full 2025-03-03 pachinko introduction calendar before deciding whether to close the boundary.
