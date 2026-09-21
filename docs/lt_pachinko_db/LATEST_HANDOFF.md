@@ -1,63 +1,72 @@
 # LT Pachinko DB — Latest Handoff
 
 retrievedAt: 2026-09-21
-relay: 2 / chronological collection
+relay: 4 / chronological collection
 
 ## Read before work
 - latest main `README.md`: checked
 - `docs/CHAPPY5_LT_PACHINKO_DATABASE_MISSION_V01.md`: checked
 - `docs/lt_pachinko_db/INDEX.md`: checked; INDEX is stale relative to current machine records/handoff
 - previous `LATEST_HANDOFF.md`: checked
-- previous restart point: 2025-01-20 / `Pブラックラグーン4 EXTRA BULLET 129ver.`
+- previous restart point: 2025-01-20 same-date boundary audit (`Pハネモノ ファミリースタジアム` + re-enumeration)
 - duplicate check performed before write
 
 ## This relay
-Added one COMPLETE_CORE record.
+### 2025-01-20 boundary audit
+- `Pハネモノ ファミリースタジアム`: **LT非搭載**を解析資料で明示確認したためDB登録対象外。必勝本基本スペックが「ラッキートリガー 非搭載」と明記。2025-01-20導入も複数資料一致。
+- 1/20の再列挙を実施し、既登録のLT対象（花の慶次 裂 蓮極129Ver.、ブラックラグーン4 EXTRA BULLET 129ver.等）以外に新規LT-positiveを確認できなかった。
+- よって **2025-01-20 boundary CLOSED**。
 
-### Pブラックラグーン4 EXTRA BULLET 129ver.
-- path: `docs/lt_pachinko_db/machines/2025-01-20_p_black_lagoon4_extra_bullet_129ver.md`
-- manufacturer: サミー（製造: 銀座）
-- formalModel: PブラックラグーンGCPA / Pブラックラグーン4GCPA
-- release: 2025-01-20
-- normal/right: 約1/129.8 / 約1/4.12（大当り+小当り合算）
-- RUSH: 突入52%、デスペラードRUSH約75%（時短1回+残保留4個。時短10000回による継続は約75%定義に含まない）。
-- LT: `(EXTRA)ラグーンボーナス` / `LAGOON BONUS EXTRA`、約90%ボーナスループ。
-- LT route: デスペラードRUSHの時短1+残保留4中の右打ち大当り約4%。LT抽選は時短1+4時のみ。
-- lower right payout: 10R1000個+LT約4% / 10R1000個+時短10000+4約29% / 10R1000個+時短1+4約4% / 5R500個+時短1+4約63%。
-- LT payout: 10R1000個+LT約37% / 5R500個+LT約53% / 5R500個+RUSH約10%。
-- LT終了: 約10%転落当り後もデスペラードRUSHへ復帰し、再LTを狙える。
-- payout basis: 払出。
-- total LT arrival from normal initial: UNVERIFIED; 独自計算しない。
+### Added: e蒼天の拳 羅龍
+- path: `docs/lt_pachinko_db/machines/2025-02-03_e_souten_no_ken_raryu.md`
+- manufacturer: サミー
+- formalModel: e蒼天の拳羅龍SREN
+- release: 2025-02-03
+- type: スマパチ / 一種二種混合 / 普図ST / 直LT
+- 図柄揃い: 約1/399.1
+- 羅龍チャージ: 約1/372.8（約0.2%でLT）
+- LT: `真・蒼拳RUSH`
+- LT route: 図柄揃い50%直行 / 非突入後時短50回の引き戻し / 羅龍チャージ約0.2%
+- LT total entry: 約57%（時短引き戻し込み。詳細資料約57.3%）
+- LT: ST140回、約80%継続（詳細約79.5%、2連目以降1G連込み）
+- LT payout: ALL約2400個（約1200個×2）、うち10%は1G連でさらに約2400個
 - status: COMPLETE_CORE
-- conflicts: none。遊技通信に「5%」表記があるが、Amusement Japan約4%、グリーンべると詳細約4%、必勝本約4%が一致するため主要値は約4%。5%記事表記はnotes保持。
+- conflicts: none
 
-Cross-check: Amusement Japan、遊技通信、グリーンべると、必勝本、一撃を横断。通常RUSH約75%の定義と時短10000回、LT中約90%継続/約10%RUSH復帰を分離して保存。
+Cross-check: Amusement Japan、必勝本、一撃、なな徹を横断。約57%は図柄揃い50%直行率と混同せず、時短引き戻し込みTOTALとして保存。
+
+## 2025-02-03 same-date discovery
+導入候補を再列挙。
+- `e蒼天の拳 羅龍`: LT-positive → 今回登録済み。
+- `e閃乱カグラ`: **LT-positive**。一撃でスマパチ/LT/一種二種混合、導入2025-02-03、型式 e閃乱カグラLTM-JF、RUSH突入=LT発動を確認。次回最優先。
+- `P愛の不時着`: LT非搭載。HAZUSEが型式P愛の不時着MF、導入2025-02-03、ラッキートリガー非搭載と明記。登録対象外。
+- `P冬のソナタ My Memory`: LT-positive根拠なし。既存資料では確変/時短型として確認。DBへ先行登録しない。
 
 ## Effective DB state
 Previous handoff:
-- machine records: 58
-- COMPLETE_CORE: 57
+- machine records: 59
+- COMPLETE_CORE: 58
 - CONFLICT: 1
 
 After this relay:
-- machine records: **59**
-- COMPLETE_CORE: **58**
+- machine records: **60**
+- COMPLETE_CORE: **59**
 - CONFLICT: **1**
-- 2025-01-20 boundary: **OPEN**
+- 2025-01-20 boundary: **CLOSED**
+- 2025-02-03 boundary: **OPEN**
 - `INDEX.md` remains stale and must not override this handoff/current machine files.
 
-## Remaining 2025-01-20 queue
-1. Boundary audit: classify `Pハネモノ ファミリースタジアム`; do not assume LT.
-2. Independently re-enumerate all 2025-01-20 introductions and search for any additional LT-positive machine before closing the date.
-3. If no additional LT-positive candidate remains, close 2025-01-20 and advance to the next chronological introduction date.
-
 ## Next restart point
-Re-sync latest main first. Start with **2025-01-20 same-date boundary audit (`Pハネモノ ファミリースタジアム` + full same-date re-enumeration)**. Only register machines with positive LT evidence. If boundary closes, advance chronologically to the next LT introduction date. Do not infer unpublished total LT-arrival values.
+Re-sync latest main first. Continue **2025-02-03** with **`e閃乱カグラ`** as the next confirmed LT-positive machine. Collect full core/LT structure and cross-check before write. Then independently re-enumerate the remaining 2025-02-03 introductions; register only positive-LT machines. If none remain, close 2025-02-03 and advance chronologically.
 
 ## Sources used this relay
-- https://www.amusement-japan.co.jp/article/detail/10004593/
-- https://news.p-world.co.jp/articles/29290/yugitsushin
-- https://news.p-world.co.jp/articles/29292/greenbelt
-- https://hisshobon.com/machineinfo/94916/
-- https://hisshobon.com/machineinfo/94918/
-- https://1geki.jp/pachinko/p_blacklagoon4_129/
+- https://hisshobon.com/machineinfo/95453/ — Pハネモノ ファミリースタジアム LT非搭載
+- https://www.all7.jp/plans/index/2025/01 — 2025-01-20導入列挙
+- https://www.all7.jp/plans/index/2025/02 — 2025-02-03導入列挙
+- https://www.amusement-japan.co.jp/article/detail/10004627/ — e蒼天の拳 羅龍
+- https://hisshobon.com/machineinfo/95631/ — e蒼天の拳 羅龍 基本スペック
+- https://hisshobon.com/machineinfo/95633/ — e蒼天の拳 羅龍 LT経路
+- https://nana-press.com/kaiseki/machine/881/26080/ — e蒼天の拳 羅龍 振り分け
+- https://1geki.jp/pachinko/e_soutenraryu/ — e蒼天の拳 羅龍 型式/照合
+- https://1geki.jp/pachinko/e_senrankagura/ — e閃乱カグラ LT-positive / 次回候補
+- https://hazuse.com/hd/4p1252/ — P愛の不時着 LT非搭載
