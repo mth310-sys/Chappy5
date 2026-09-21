@@ -1,40 +1,47 @@
 # LT Pachinko DB — Latest Handoff
 
 retrievedAt: 2026-09-22
-relay: 1 / chronological collection
+relay: 4 / chronological collection
 
 ## Read before work
 - latest main `README.md`: checked
 - `docs/CHAPPY5_LT_PACHINKO_DATABASE_MISSION_V01.md`: checked
 - `docs/lt_pachinko_db/INDEX.md`: checked; INDEX remains stale relative to machine records/handoff
 - previous `LATEST_HANDOFF.md`: checked
-- previous restart point: `e 新・必殺仕置人 超斬撃99`
-- duplicate search for target: no existing machine record found before creation
+- previous restart point: `P DD北斗の拳3 百突99ver.`
+- duplicate searches performed before LT-positive record creation
 
 ## This relay
-### e 新・必殺仕置人 超斬撃99 — COMPLETE_CORE
-- 京楽産業. / 型式 `e新・必殺仕置人～超斬撃99ver．～KA1` / 2025-06-02。
-- KYORAKU公式NEWS、P-WORLD、HAZUSE、必勝本、一撃、なな徹等を横断し、LT搭載を直接確認。
-- 甘デジ / スマパチ / 1種2種混合。通常約1/99.9。
-- 初当りは3R約240個100%。50%で下位 `真仕置CRASH`、50%通常。
-- 真仕置CRASHは約1/12.6、ST7回+残保留4個、TOTAL継続約60%（残保留4個引き戻し約28.1%込み）。
-- 真仕置CRASH中大当りは10R約800個。約50%で `高坂超決戦` が発生し、勝率約50%。勝利でLT `超斬撃RUSH`、敗北は真仕置CRASH継続。結果ベース資料ではLT25% / 下位75%で整合。
-- LT `超斬撃RUSH` は大当り約1/14.4、終了約1/99.9の転落型。TOTAL継続約91%（終了後残保留4個の引き戻し約25.0%込み）。LT中大当りはALL10R約800個払い出し、LT継続100%。
-- 払い出し10R約800個/3R約240個と、解析資料の実獲得目安約700個/約210個は定義差でありCONFLICTではない。
-- 通常初当り全体を分母とする総LT到達率は十分な横断後も直接値を確認できず `UNVERIFIED_AFTER_RESEARCH`。経路確率から独自合算しない。
-- KYORAKU公式2025-05-08予告・2025-06-02全国導入開始告知および複数DBが6/2で一致。単一業界記事の4/7導入予定表記は誤記と判断しcanonical 6/2。
-- record: `docs/lt_pachinko_db/machines/2025-06-02_e_shin_hissatsu_shiokinin_cho_zangeki_99.md`
-- commit: `440c3ba4aab5c12e1f9ae5b5215969e354078a98`
+### P DD北斗の拳3 百突99ver. — EXCLUDED / LT-negative
+- 高尾 / 型式 `PDD北斗の拳3V2A` / 2025-06-02。
+- 高尾公式、Amusement Japan、グリーンべると/P-WORLD、情報島、P-WORLD機種DB、なな徹、一撃を横断。
+- 通常1/99.9、右1/76.5、RUSH突入100%、ST100回+残保留4、TOTAL継続約75%。通常0.5% 1000個+RUSH / 99.5% 200個+RUSH、右25% 1000個 / 75% 300個。
+- 公式仕様は通常RUSHのみでLT名称・LT突入経路・LT上位状態が存在しない。二次サイトの一部で右打ち表を「LT中」と誤ラベルする例があるが、メーカー公式および業界一次資料の仕様を優先し **LT非搭載** と判定。
+- ミッション対象外のためmachine recordは作成しない。
 Sources:
-- https://www.kyoraku.co.jp/news/detail/825
-- https://www.kyoraku.co.jp/news/detail/828
-- https://www.p-world.co.jp/machine/database/10281
-- https://hazuse.com/en/machine/pachinko/4P1567/
-- https://hisshobon.com/machineinfo/97784/
-- https://1geki.jp/pachinko/e_shiokinin_99/
-- https://1geki.jp/pachinko/e_shiokinin_99/54/
-- https://nana-press.com/kaiseki/machine/983/29758/
-- https://chonborista.com/pachinko/kyoraku/237196/
+- https://www.takao.gr.jp/product/2024/dd-hokuto3.html
+- https://amusement-japan.co.jp/article/detail/10004781/
+- https://web-greenbelt.jp/post-94158/
+- https://p-johojima.jp/machine_spec/post-3114/
+- https://www.p-world.co.jp/machine/database/10241
+- https://nana-press.com/kaiseki/machine/956/28514/
+- https://1geki.jp/pachinko/p_ddhokuto3_99/39/
+
+### eF彼女、お借りします — COMPLETE_CORE
+- SANKYO / 2025-06-02 / スマパチ・超デカSTART・1種2種混合・LT搭載。
+- 通常大当り約1/349.9。図柄揃い約1/499系、ヒロイン劇場（チャージ）約1/1167の合算定義。右打ち図柄揃い約1/59.4。
+- 図柄揃い時52%で下位 `DREAM RUSH`。全通常当選内訳では約600個+RUSH36.4%、約600個+通常33.6%、約300個ヒロイン劇場30.0%。ヒロイン劇場からも一部RUSH経路あり。
+- DREAM RUSHはST70回、約70%継続。RUSH中に大当りを2回獲得するとLT `DREAM RUSH極 / ヒロインRUSH` へ移行。
+- LTはST100回、約82%継続。
+- 右打ち1回の出玉は特図2大当り（1200個or300個）5回分の合計で、約1500個46% / 約2400個39% / 約3300個13% / 約4200〜6000個2%。下位/LTで同出玉構造、LT時はST100回継続。
+- 通常初当り全体を分母とする総LT到達率、およびヒロイン劇場→RUSHの具体割合は十分な横断後も直接値を確定できず `UNVERIFIED_AFTER_RESEARCH`。独自合算しない。
+- record: `docs/lt_pachinko_db/machines/2025-06-02_eF_kanojo_okarishimasu.md`
+- commit: `b58189289859f123212a3f3b0f8a35a29635a871`
+Sources:
+- https://www.p-world.co.jp/machine/database/10253
+- https://hisshobon.com/machines/e%E3%83%95%E3%82%A3%E3%83%BC%E3%83%90%E3%83%BC%E5%BD%BC%E5%A5%B3%E3%80%81%E3%81%8A%E5%80%9F%E3%82%8A%E3%81%97%E3%81%BE%E3%81%99/
+- https://altema.jp/pachimo/ekanokari
+- https://pachinko-curation.com/55619/
 
 ## Boundary state
 ### 2025-04-07 — CLOSED
@@ -42,14 +49,14 @@ Sources:
 ### 2025-05-07 — CLOSED
 ### 2025-05-19 — CLOSED (LT-positive recordなし)
 ### 2025-06-02 — OPEN
-Independent calendars agree on 11 pachinko introductions. Continue same-day queue without skipping:
+Independent calendars previously agreed on 11 pachinko introductions. Same-day queue:
 1. `Pフィーバーマクロスフロンティア5 LT-Light ver.` — COMPLETE_CORE
 2. `P緋弾のアリア～緋緋神降臨～88Ver.` — COMPLETE_CORE
 3. `PLT激デジ ジューシーハニー極嬢` — COMPLETE_CORE
 4. `e 新・必殺仕置人 超斬撃99` — COMPLETE_CORE
-5. `P DD北斗の拳3 百突99ver.` — **NEXT: LT status verify; collect full core/LT record if positive**
-6. `eF彼女、お借りします` — LT status verify
-7. `e範馬刃牙` — LT status verify
+5. `P DD北斗の拳3 百突99ver.` — EXCLUDED / LT-negative
+6. `eF彼女、お借りします` — COMPLETE_CORE
+7. `e範馬刃牙` — **NEXT: LT status verify; collect full core/LT record if positive**
 8. `PA海物語3R3` — LT status verify
 9. `デカスタ P戦国無双` — LT status verify
 10. `デジハネPモンスターハンターライズ` — LT status verify
@@ -59,14 +66,14 @@ Calendar cross-check retained:
 - https://hazuse.com/new-machine/202506-2/
 
 ## Effective DB state
-Previous effective state: 98 records / 97 COMPLETE_CORE / 1 CONFLICT.
-This relay added 1 COMPLETE_CORE record.
-- machine records: **99**
-- COMPLETE_CORE: **98**
+Previous effective state: 99 records / 98 COMPLETE_CORE / 1 CONFLICT.
+This relay excluded one LT-negative candidate and added one COMPLETE_CORE record.
+- machine records: **100**
+- COMPLETE_CORE: **99**
 - CONFLICT: **1**
 - INDEX is stale; machine files + this handoff are progress source of truth until safe INDEX integration.
 
 ## Next restart point
-**Continue 2025-06-02 with `P DD北斗の拳3 百突99ver.`. First verify LT-positive/negative status and duplicate absence; if LT-positive, collect full core/LT record. Then proceed through the exact same-day queue above. Do not close 2025-06-02 until all 11 candidates have LT status checked and the boundary has been re-enumerated against at least two independent calendars. Only LT-positive machines receive records.**
+**Continue 2025-06-02 with `e範馬刃牙`. First verify LT-positive/negative status and duplicate absence; if LT-positive, collect full core/LT record. Then proceed through the exact same-day queue above. Do not close 2025-06-02 until all 11 candidates have LT status checked and the boundary has been re-enumerated against at least two independent calendars. Only LT-positive machines receive records.**
 
 Before writing: re-read latest main README / LT mission / INDEX / this handoff, duplicate-search machine files, preserve definition differences (`約`/`実質`/`TOTAL`, payout vs expected payout), and never infer unpublished total LT arrival rates from route probabilities.
