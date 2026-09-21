@@ -1,65 +1,89 @@
 # LT Pachinko DB — Latest Handoff
 
 retrievedAt: 2026-09-21
-relay: 4 / chronological collection
+relay: 1 / chronological collection
 
 ## Read before work
 - latest main `README.md`: checked
 - `docs/CHAPPY5_LT_PACHINKO_DATABASE_MISSION_V01.md`: checked
 - `docs/lt_pachinko_db/INDEX.md`: checked; INDEX remains stale relative to current machine records/handoff
 - previous `LATEST_HANDOFF.md`: checked
-- current machine files checked before write; next queue point confirmed as `P痛いのは嫌なので防御力に極振りしたいと思います。`
+- existing 2025-04-21 machine records checked before write; no duplicate record created.
 
-## This relay — Added COMPLETE_CORE
-### P痛いのは嫌なので防御力に極振りしたいと思います。
-path: `docs/lt_pachinko_db/machines/2025-04-21_p_boufuri.md`
-- 藤商事 / 型式 `P防振りFHZ` / 2025-04-21 / 一種二種混合。
-- 通常時図柄揃い1/399.6、トレジャーチャンス1/399.6、合算約1/199.8（業界資料には約1/199表記あり）。右打ち1/84.7は電チューロング開放確率。
-- 図柄揃い時は約450個、100%で下位RUSH `NewWorld Online`（NWO）へ。NWOは100回・約70%。
-- トレジャーチャンスは約300個で基本通常へ。解析資料に一部NWO移行の記述はあるが、具体割合は高信頼直接値を確認できずUNVERIFIED。
-- LT正式名称 `NewWorld Online極振り157`。NWO中大当りの約25%となる2000個以上（公開振り分け約2050～4500個）の出玉でLT発動。
-- LTは157回・約85%。NWO/LTとも右打ち大当りは特図2大当り3回1セットの合算出玉。
-- NWO中振り分け: 約2050～4500個 25%→LT / 約1500～1800個 25%→NWO / 約900～1400個 50%→NWO。
-- LT中振り分け: 同じ25%/25%/50%で全てLT継続。
-- `ラッキートリガージャッジ成功率約50%` と `NWO中大当りのLT突入約25%` は分母/演出条件が異なるため競合扱いせず定義分離。
-- 通常時当選全体を分母とした総LT到達率は直接公表値を確認できず、独自計算せずUNVERIFIED。
-- 2026年の `極振り129ver.` は別スペックとして混同排除。
-- 遊技通信/P-WORLD、Amusement Japan、必勝本、P-WORLD機種DB、HAZUSE、一撃で照合。新規CONFLICTなし。
+## This relay — Boundary verification
+### PA異世界魔王と召喚少女の奴隷魔術 敏感99Ver. — LT-negative, excluded
+- Multiple machine/analysis sources identify the machine as a 1種2種混合甘デジ with normal 1/99.9, RUSH `魔王PLAYモード` entry 50%, TOTAL continuation about 87%, V-STOCK based loop.
+- No LT/Lucky Trigger structure is present in the detailed machine data checked; P-WORLD and 一撃 describe the V-STOCK system without an LT state.
+- Independent release calendar places this machine on 2025-04-07, not 2025-04-21. It therefore was a stale/misplaced candidate in the previous handoff, but remains excluded because LT-positive evidence is absent.
+- Do not create a machine record unless future primary evidence proves an LT-equipped distinct specification.
 
 Sources:
-- https://news.p-world.co.jp/articles/30237/yugitsushin
-- https://amusement-japan.co.jp/article/detail/10004744/
-- https://hisshobon.com/machineinfo/96889/
-- https://p.hisshobon.jp/machine/4502/1/108461
-- https://www.p-world.co.jp/machine/database/10228
-- https://hazuse.com/machine/pachinko/PX0283/genre/104/
-- https://1geki.jp/pachinko/p_boufuri/52/
+- https://www.p-world.co.jp/machine/database/10240
+- https://1geki.jp/pachinko/pa_isekaimaou99/39/
+- https://amusement-japan.co.jp/article/detail/10004802/
+- https://www.goraku-sangyo.com/ニューギン　パチンコ新機種「pa異世界魔王と召喚/
+- https://p-johojima.jp/machine_spec/post-2074/
+
+### P【超甘LT】江頭2:50inナナシー 奇跡の99% — chronology resolved and COMPLETE_CORE added
+path: `docs/lt_pachinko_db/machines/2025-05-07_p_egashira_250_chouama_lt.md`
+- 豊丸産業 / 型式 `P江頭2：50 inナナシーAX2` / 二種 / 超甘LT。
+- Canonical nationwide release date: 2025-05-07. Industry announcement confirms limited advance introduction from 2025-04-21 at three Shinjuku stores, five units each. DB convention keeps the machine record at nationwide introduction date while preserving the advance date in notes.
+- Normal 1/33.3, right 1/1.0 (V入賞条件). Initial payout about 250 balls.
+- 特図1: 0.4% direct LT `EGASYRUSH`; 33.1% to `おしえてエガちゃんぼーなす` with about 33% success to BAN解禁タイム; 66.5% normal.
+- BAN解禁タイム: initial five-bonus set; LT promotion about 26.1%. P-WORLD lists BAN解禁タイム entry about 10.9%.
+- LT `EGASYRUSH`: public continuation about 98.6% / about 99%; about 138 balls per hit. Published definition incorporates the high LT loop and re-promotion chance after the post-LT BAN解禁タイム; do not treat all published percentages as the same denominator.
+- On LT non-continuation, move to four-bonus BAN解禁タイム; re-promotion to EGASYRUSH about 21.5%.
+- Total LT arrival rate from all normal-time hits was not found as a direct published value; kept UNVERIFIED rather than independently calculating from route probabilities.
+- 2024 `P江頭2:50 inナナシーLT` (about 1/129.7 / EGASYRUSH about 90.2%) is a different specification and remains separated.
+
+Sources:
+- https://amusement-japan.co.jp/article/detail/10004819/
+- https://www.p-world.co.jp/machine/database/10237
+- https://1geki.jp/pachinko/p_ega_nanasy_calt/
+- https://1geki.jp/pachinko/p_ega_nanasy_calt/51/
+- https://1geki.jp/pachinko/p_ega_nanasy_calt/52/
+- https://hisshobon.com/machineinfo/97389/
+- https://hazuse.com/hd/410828-2/
 
 confidence: INDUSTRY + ANALYSIS_HIGH（複数一致）
 
 ## Boundary state
 ### 2025-04-07 — CLOSED
-Do not reprocess absent concrete QA issue.
+- `PA異世界魔王と召喚少女の奴隷魔術 敏感99Ver.` was rechecked because it appeared as a stale candidate in prior handoff. It is LT-negative and excluded; this does not reopen the boundary.
 
-### 2025-04-21 — OPEN
-Regular schedule queue:
+### 2025-04-21 — CLOSED
+Regular nationwide schedule is fully accounted for:
 1. e東京喰種 — COMPLETE_CORE
 2. Pゾンビランドサガ — COMPLETE_CORE
-3. P痛いのは嫌なので防御力に極振りしたいと思います。 — **COMPLETE_CORE this relay**
-4. PA異世界魔王と召喚少女の奴隷魔術 敏感99Ver. — **next: verify LT/non-LT before registration**
+3. P痛いのは嫌なので防御力に極振りしたいと思います。 — COMPLETE_CORE
 
-Boundary special case still unresolved:
-- `P【超甘LT】江頭2：50 in ナナシー 奇跡の99％` had limited Tokyo/Shinjuku advance introduction from 2025-04-21. Before closing 4/21, resolve canonical chronology treatment against later nationwide rollout using existing DB convention; do not silently omit or guess date.
+Special chronology case resolved:
+- `P【超甘LT】江頭2:50inナナシー 奇跡の99%` had limited 2025-04-21 Shinjuku advance introduction, but nationwide/canonical introduction is 2025-05-07. Record added under 5/7 with advance date explicitly preserved. Do not duplicate under 4/21.
+
+### 2025-05-07 — OPEN
+Independent release calendar shows the following LT-positive or LT-candidate machines. `P【超甘LT】江頭2:50inナナシー 奇跡の99%` is COMPLETE_CORE this relay. Continue with the remaining candidates in this boundary and verify every one before closing:
+1. P【超甘LT】江頭2:50inナナシー 奇跡の99% — COMPLETE_CORE
+2. デジハネP北斗の拳 慈母 — LT-positive candidate; next
+3. PLT世界でいちばん強くなりたい!2 — LT-positive candidate
+4. e仮面ライダーBLACK — LT-positive candidate
+5. P攻殻機動隊SAC_2045 大入りLTver — LT-positive candidate
+6. P宇宙戦艦ヤマト2202 超波動 森雪 199LT ver. — LT-positive by title; verify full core
+7. PF機動戦士ガンダムユニコーン再来 129ver. — verify LT/non-LT before registration
+8. P ToLOVEるダークネス 100ver. — verify LT/non-LT before registration
+9. P海物語 極JAPAN / P織田信奈の野望 下剋上 / P乗物娘 with CYBER JAPAN DANCERS 2nd season — verify LT status during boundary re-enumeration; do not assume.
+
+Independent calendar source:
+- https://p-johojima.jp/machine_spec/post-2074/
 
 ## Effective DB state
-Previous effective state: 86 records / 85 COMPLETE_CORE / 1 CONFLICT.
+Previous effective state: 87 records / 86 COMPLETE_CORE / 1 CONFLICT.
 This relay added 1 COMPLETE_CORE.
-- machine records: **87**
-- COMPLETE_CORE: **86**
+- machine records: **88**
+- COMPLETE_CORE: **87**
 - CONFLICT: **1**
 - INDEX is stale; machine files + this handoff are progress source of truth.
 
 ## Next restart point
-**Continue 2025-04-21 by verifying `PA異世界魔王と召喚少女の奴隷魔術 敏感99Ver.` for LT/non-LT. If LT-positive, collect full core/LT record; if LT-negative, record only as boundary evidence and do not add a machine record. Then resolve `P【超甘LT】江頭2：50 in ナナシー 奇跡の99％` advance-introduction chronology against nationwide rollout, re-enumerate the full 2025-04-21 boundary from independent release calendars, and close 4/21 only after all LT-positive candidates are accounted for.**
+**Continue 2025-05-07 with `デジハネP北斗の拳 慈母`. Confirm exact model name, normal/high-state probabilities, initial distribution, ST/time-shortening structure, LT formal state/name, LT route/rate, continuation definition and payouts across manufacturer/industry/analysis sources. Then proceed through the remaining 5/7 candidates above, re-enumerate the full boundary from independent calendars, and close 5/7 only when all LT-positive machines are accounted for and LT-negative candidates are explicitly excluded.**
 
 Before writing: re-read latest main README / LT mission / INDEX / this handoff, search current machine files for duplicates, preserve definition differences (`約`/`実質`/`TOTAL`, payout vs expected payout), and do not calculate unpublished total LT arrival rates from route probabilities.
