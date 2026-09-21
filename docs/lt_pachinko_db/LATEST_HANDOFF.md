@@ -1,70 +1,113 @@
 # LT Pachinko DB — Latest Handoff
 
 retrievedAt: 2026-09-21
-relay: 1 / chronological collection
+relay: 4 / chronological collection
 
 ## Read before work
 - latest main `README.md`: checked
 - `docs/CHAPPY5_LT_PACHINKO_DATABASE_MISSION_V01.md`: checked
-- `docs/lt_pachinko_db/INDEX.md`: checked; INDEX remains stale relative to current machine records/handoff
+- `docs/lt_pachinko_db/INDEX.md`: checked; INDEX is stale relative to current machine records/handoff
 - previous `LATEST_HANDOFF.md`: checked
-- previous restart point: 2025-02-03 same-date omission audit
+- previous restart point: next introduction date after CLOSED 2025-02-03 boundary
 - existing target duplicate check performed before write
 
-## This relay — 2025-02-03 omission audit
-An independent same-date new-machine sweep found one LT-positive omission: `e蒼天の拳 羅龍`.
+## Previous boundary
+### 2025-02-03 — CLOSED
+Confirmed LT-positive records already processed:
+- e閃乱カグラ
+- Pとある魔術の禁書目録2 Light PREMIUM 2000ver.
+- Pフィーバー戦姫絶唱シンフォギア4 199 ver.
+- eルパン三世 ONE COLLECTION 超ブチヌキLTver.
+- ぱちんこ シン・エヴァンゲリオン 129 LT ver.
+- PLT OVERLORD魔導王光臨129ver.
+- e蒼天の拳 羅龍
 
-During the write, latest main already contained the new record at:
-- `docs/lt_pachinko_db/machines/2025-02-03_e_souten_no_ken_raryu.md`
+Do not redo these unless later QA finds a concrete defect.
 
-Therefore it was **not duplicated or overwritten**. Existing record is COMPLETE_CORE and cross-checks correctly against current industry/analysis sources:
-- manufacturer: サミー
-- formalModel: e蒼天の拳羅龍SREN
-- canonical release: 2025-02-03
-- LT: `真・蒼拳RUSH`
-- 図柄揃い: 約1/399.1
-- 羅龍チャージ: 約1/372.8〜約1/373
-- LT/RUSH突入: 約57%（時短引き戻し込み）
-- LT: ST140回、継続約80%（2連目以降1G連込み）
-- LT中: ALL約2400個（約1200個×2、払出）、10%で1G連
-- routes: 図柄揃い50%直行 / 非突入側の時短50回引き戻し / 羅龍チャージ約0.2%
+## This relay — advance to 2025-02-17
+Independent chronological calendar/search checks found the next LT-positive introduction boundary at **2025-02-17**.
+
+2025-02-17 candidate queue confirmed:
+1. `P緋弾のアリア ～緋緋神降臨～199Ver.` — LT-positive — **processed this relay**
+2. `Pこの素晴らしい世界に祝福を！ラッキートリガー129緊急クエスト` — LT-positive — next
+3. `Pデビルマン THE FINAL` — LT-positive — queued
+4. `Pクイーンズブレイド4 ナナエルver.` — **LT非搭載** confirmed; boundary exclusion, do not register
+
+### Added record
+`docs/lt_pachinko_db/machines/2025-02-17_p_hidan_no_aria_hihishin_kourin_199ver.md`
+
+Status: **COMPLETE_CORE**
+
+Core facts:
+- manufacturer: 藤商事
+- formalModel: `P緋弾のアリア～緋緋神降臨～199Ver.FQU`
+- canonical release: 2025-02-17
+- game type: 1種2種混合 / 普図抽選 / LT
+- normal: 約1/199.8
+- 強襲任務: 約1/199.9, 104回, 当選期待度約41%
+- initial payout: 約300個
+- LBR total entry: 約44%（5%直行 + 強襲任務引き戻し込み）
+- LBR: 約1/88.2, 120回, 継続約75%
+- LT: `超LIGHTNING BULLET RUSH（超LBR）`
+- LT route: 強襲任務/LBR中大当りの約15.5%「1500個+α」
+- 超LBR: 198回, 継続約90%
+- LT payout: 1500個 50% / 450個 50%（払出、V入賞時）
+- total LT reach from normal initial jackpot: direct published value not found after multi-source research; **UNVERIFIED**, not inferred
 
 Definition QA:
-- 約57%は図柄揃い時50%直行だけでなく時短50回の引き戻し込み。
-- 羅龍チャージ約0.2%は別分母なので57%へ機械的に加算しない。
-- 約80%は2連目以降1G連10%込みTOTAL。ST単体約77.2%という解析値とは定義を分離。
-- 約2400個は約1200個×2回の合算払出。
+- 強襲任務約41% is its 104-spin hit expectation, not the same denominator as total LBR entry 約44%.
+- LT 約15.5% is the right-side jackpot allocation in 強襲任務/LBR, not total LT reach from a normal initial jackpot.
+- `1500個+α` is retained as published; α is not guessed into a fixed payout.
+- 2024-03 original LT version is a separate spec and was not mixed.
 
-### Same-date LT-negative boundary checks
-- `P愛の不時着` — 必勝本が **ラッキートリガー(LT) 非搭載** と直接明記。対象外。上位的な `愛の燦然RUSH`（ST10000回・50%ループ）をLTと誤認しない。
-- `P冬のソナタ My Memory` — 2025-02-03版は1/315.1、確変62%、時短100回の確変ループ機。複数スペック資料にLT構造なし。対象外。
-- `P冬のソナタ My Memory Sweet GORAKU Version` — 同日PB甘デジ。パチマガスロマガが `ラッキートリガー なし` と直接明記。対象外。
+## 2025-02-17 boundary status
+**OPEN** — one record completed; continue same-date queue before moving forward.
 
-## 2025-02-03 boundary status
-**CLOSED** after independent re-enumeration and cross-check against current machine records.
-
-LT-positive records confirmed for this boundary include the already processed `e閃乱カグラ`, `Pとある魔術の禁書目録2 Light PREMIUM 2000ver.`, `Pフィーバー戦姫絶唱シンフォギア4 199 ver.`, `eルパン三世 ONE COLLECTION 超ブチヌキLTver.`, `ぱちんこ シン・エヴァンゲリオン 129 LT ver.`, `PLT OVERLORD魔導王光臨129ver.`, and `e蒼天の拳 羅龍`. Do not redo these records unless QA later identifies a concrete defect.
+### Explicit LT-negative exclusion
+`Pクイーンズブレイド4 ナナエルver.`
+- 2025-02-17
+- model `Pクイーンズブレイド4V1A`
+- HAZUSE explicitly states `ラッキートリガー 非搭載`
+- do not create DB record
 
 ## Effective DB state
-Previous handoff stated 66 records / 65 COMPLETE_CORE / 1 CONFLICT before the concurrently added `e蒼天の拳 羅龍` record.
+Previous effective state: 67 records / 66 COMPLETE_CORE / 1 CONFLICT.
 
 Current effective state:
-- machine records: **67**
-- COMPLETE_CORE: **66**
+- machine records: **68**
+- COMPLETE_CORE: **67**
 - CONFLICT: **1**
 - 2025-02-03 boundary: **CLOSED**
+- 2025-02-17 boundary: **OPEN**
 - `INDEX.md` remains stale and must not override this handoff/current machine files.
 
 ## Next restart point
-Re-sync latest main first. Advance chronologically to the **next introduction date after 2025-02-03**. Enumerate the complete next-date pachinko candidate list from more than one source, check existing `docs/lt_pachinko_db/machines/` before every write, and register only confirmed LT-positive machines. Do not re-process the closed 2025-02-03 records.
+Re-sync latest main first. Continue the **2025-02-17 same-date queue** with:
+
+**NEXT: `Pこの素晴らしい世界に祝福を！ラッキートリガー129緊急クエスト`**
+
+Already confirmed before handoff:
+- 2025-02-17 introduction
+- 豊丸産業
+- normal 1/129.8 / right 1/39.9
+- initial → このすばチャレンジ 100%, ST12 + 残保留4, 突破約33%
+- lower `このすばRUSH`: ST55 + 残保留4, 約78%
+- LT `祝福RUSH`: 実質次回, 継続92%
+- routes: このすばチャレンジ中10R or このすばRUSH中大当りの一部
+
+Do full source cross-check and distributions before writing; do not rely only on these pre-confirmed notes.
+
+After that process `Pデビルマン THE FINAL`, then independently re-enumerate the complete 2025-02-17 pachinko candidate list before closing the boundary.
 
 ## Sources used / cross-checked this relay
-- https://news.p-world.co.jp/articles/29497/yugitsushin — e蒼天の拳 羅龍 industry announcement; direct LT, 57%, ~80%, 2400 definition
-- https://amusement-japan.co.jp/article/detail/10004627/ — e蒼天の拳 羅龍; direct-LT structure, routes, charge 0.2%, ST140
-- https://1geki.jp/pachinko/e_soutenraryu/ — e蒼天の拳 羅龍; 2025-02-03, model, probabilities
-- https://hisshobon.com/machineinfo/95632/ — e蒼天の拳 羅龍 distributions; ST ~77.2% vs 1G連込み~80%
-- https://nana-press.com/kaiseki/machine/881/26080/ — e蒼天の拳 羅龍 detailed spec/distributions
-- https://www.all7.jp/plans/index/2025/02 — independent February 2025 introduction calendar
-- https://hisshobon.com/machineinfo/95649/ — P愛の不時着; explicitly LT非搭載
-- https://1geki.jp/pachinko/p_fuyusona_mm/ — P冬のソナタ My Memory; 2025-02-03 conventional loop spec
-- https://pachimaga.com/free/article/20241226/056333.php — Sweet GORAKU; explicitly ラッキートリガーなし
+- https://news.p-world.co.jp/articles/30024/yugitsushin — P緋弾のアリア199 industry announcement
+- https://hisshobon.com/machineinfo/95975/ — P緋弾のアリア199 distributions
+- https://p.hisshobon.jp/machine/4467/1/107335 — P緋弾のアリア199 basic spec
+- https://www.p-world.co.jp/machine/database/10202 — P緋弾のアリア199 game flow/distributions
+- https://hazuse.com/machine/pachinko/PX0266/ — P緋弾のアリア199 cross-check
+- https://www.pachirinko.com/kishu.nen/kishujyouhou2025.top.html — chronological 2025 candidate calendar
+- https://www.p-world.co.jp/machine/database/10201 — next candidate Pこのすば129 core structure pre-check
+- https://news.p-world.co.jp/articles/30009/greenbelt — Pこのすば129 industry pre-check
+- https://news.p-world.co.jp/articles/29921/yugitsushin — Pデビルマン THE FINAL industry pre-check
+- https://hisshobon.com/machineinfo/96011/ — Pデビルマン THE FINAL basic spec pre-check
+- https://hazuse.com/hd/4p1060/ — Pクイーンズブレイド4 ナナエルver. explicitly LT非搭載
