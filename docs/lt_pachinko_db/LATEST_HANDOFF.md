@@ -1,7 +1,7 @@
 # LT Pachinko DB — Latest Handoff
 
 retrievedAt: 2026-09-21
-relay: 4 / chronological collection
+relay: 1 / chronological collection
 
 ## Read before work
 - latest main `README.md`: checked
@@ -12,50 +12,64 @@ relay: 4 / chronological collection
 
 ## This relay
 
-### 2025-03-17 boundary audit completed
-Independent 2025 introduction calendar enumerates exactly five pachinko releases on 2025-03-17:
-1. Pうまい棒2 おかわりちょちょちょうだ～いV3 — LT非搭載確認済み、対象外。
-2. e真・北斗無双 第5章 ドデカSTART — LT搭載、既登録 COMPLETE_CORE。
-3. Pモモキュンソード 速撃3000+ — **LT非搭載**。業界資料は1/319.7→約1/1.47、RUSH62%、時短1/100回、神・絶対無敵BONUSを出玉トリガーとして説明するがLTとはしておらず、導入前試打資料には「ラッキートリガー非搭載」と明記。DB登録しない。
-4. PAひぐらしのなく頃に 輪廻転生99Ver. — 転落RUSH+遊タイム構造。LT搭載根拠なし、対象外。
-5. PA魔王学院の不適合者 魔王再臨99Ver — LT搭載、既登録 COMPLETE_CORE。
-
-**2025-03-17 boundary: CLOSED.**
+### 2025-04-07 boundary audit — OPEN
+Independent calendar evidence currently enumerates these pachinko releases on 2025-04-07:
+1. P少女☆歌劇 レヴュースタァライト ラッキートリガー4500 — LT搭載、既登録 COMPLETE_CORE。
+2. e牙狼神速神撃3000LT — LT搭載、this relay COMPLETE_CORE。
+3. e シン・ウルトラマン — LT搭載、this relay COMPLETE_CORE。
+4. eフィーバーうたわれるもの — LT搭載を確認。**次回処理対象**。
 
 Calendar evidence:
-- https://pachinko-spec.info/start/149205/ — 2025-03-17 five-machine enumeration
-- https://p-johojima.jp/machine_spec/post-2074/ — independent historical new-machine list
-- https://news.p-world.co.jp/articles/30304/yugitsushin — Pモモキュンソード industry spec
-- https://www.youtube.com/watch?v=u_C5vzkJ_D0 — Pモモキュンソード pre-release test description explicitly says LT非搭載
+- https://www.all7.jp/plans/index/2025/04/10 — 2025-04-07に上記4機種を列挙。
+- https://www.pachibee.jp/machines/about/125030000 — e牙狼導入日2025-04-07。
+- 各機種の業界/解析資料でも4/7導入を照合。
 
-### Added COMPLETE_CORE
-`docs/lt_pachinko_db/machines/2025-04-07_p_revuestarlight_lt4500.md`
-
-#### P少女☆歌劇 レヴュースタァライト ラッキートリガー4500
-- 豊丸産業 / 2025-04-07 / 型式 `P少女歌劇レヴュースタァライトLT1`
-- 一種二種混合。通常1/199.8、右打ち1/76.2。
-- 初当り2R約300個。50%でトップスタァロード、50%通常。
-- トップスタァロードはST100回+残保留4個、継続約75%。右打ち大当りは基本約1500個以上。
-- LT `追劇` は最低約4500個（1500個×3回）保証後、約52.5%で1500個以上の上乗せループ。終了後はトップスタァロードへ復帰。
-- LT経路は業界一次資料が3経路を明記: RUSH中5%の4500個直行、RUSH中10%の追劇10倍ZONE→50%の4500個、同ZONEの残り50%から追劇獲得チャンス→5%成功。
-- P-WORLD詳細振り分けとも一致。通常初当り基準の総LT到達率は直接公表値未確認のため独自合算せず UNVERIFIED。
-- 新規CONFLICTなし。
+### Added COMPLETE_CORE — e牙狼神速神撃3000LT
+`docs/lt_pachinko_db/machines/2025-04-07_e_garo_shinsoku_shingeki_3000lt.md`
+- サンセイアールアンドディ / 型式 `e牙狼神速神撃3000LT-RB`。
+- 通常1/199.5。初当り3R約450個。
+- 70%でLTチャレンジ、30%通常。LTチャレンジは時短1回、実質1/3.226、成功約31%。
+- 成功で約3000個（10R+10R）獲得後、LT `神速神撃3000LT`。
+- LTは時短1回、実質1/1.316、継続約76%、右打ち大当りALL約3000個。
+- 通常RUSHは存在せず、LT前チャレンジとLTを分離。
+- 通常初当り基準の総LT到達率は直接公表値未確認のため、70%×約31%を独自登録しない。
 
 Sources:
-- https://news.p-world.co.jp/articles/29990
-- https://www.p-world.co.jp/machine/database/10212
-- https://p.hisshobon.jp/news/2096
-- https://1geki.jp/pachinko/p_revuestarlight_lt/
+- https://news.p-world.co.jp/articles/30318/yugitsushin
+- https://news.p-world.co.jp/articles/30371/amusement
+- https://news.p-world.co.jp/articles/30297/greenbelt
+- https://hisshobon.com/machineinfo/96783/
+- https://nana-press.com/kaiseki/machine/924/28390/
+
+### Added COMPLETE_CORE — e シン・ウルトラマン
+`docs/lt_pachinko_db/machines/2025-04-07_e_shin_ultraman.md`
+- オッケー.（京楽産業.製） / 型式 `eシン・ウルトラマンK3`。
+- 通常約1/199.9、初当り2R約300個。50%でウルトラバトルモード、50%通常。
+- 下位ウルトラバトルモードは時短1回、1/2、継続50%。
+- 下位RUSH中大当りの約85%でLT `ゼットン3000ATTACK`。
+- LTは時短1回、約1/1.34、継続約75%。右打ち大当りはALL約3000個（1500個×2、特図2）。
+- 2026年 `79ver.` はLT非搭載の別スペックであり混同しない。
+- 通常初当り基準の総LT到達率は経路値から独自算出せずUNVERIFIED。
+
+Sources:
+- https://news.p-world.co.jp/articles/30261/yugitsushin
+- https://hisshobon.com/machineinfo/96856/
+- https://hisshobon.com/machineinfo/96858/
+- https://www.p-world.co.jp/machine/database/10231
+- https://1geki.jp/pachinko/e_shin_ultraman/39/
 
 ## Effective DB state
-Previous handoff: 78 records / 77 COMPLETE_CORE / 1 CONFLICT.
+Previous handoff: 79 records / 78 COMPLETE_CORE / 1 CONFLICT.
 After this relay:
-- machine records: **79**
-- COMPLETE_CORE: **78**
+- machine records: **81**
+- COMPLETE_CORE: **80**
 - CONFLICT: **1**
 - INDEX is stale; current machine files + this handoff are the progress source of truth.
 
 ## Next restart point
-**2025-04-07 boundary is OPEN. Re-enumerate all pachinko introduced on 2025-04-07 from at least two independent calendars, compare against existing machine records, then process the next explicitly LT-equipped unregistered machine after `P少女☆歌劇 レヴュースタァライト ラッキートリガー4500`. Do not close the date boundary until every same-day candidate has an LT-positive/negative determination.**
+**2025-04-07 boundary remains OPEN. Next process `eフィーバーうたわれるもの` (LT搭載 confirmed: 図柄揃い1/399.7, うたわれチャージ1/264.7, total RUSH/LT entry 約55%, LT `仮面RUSH`, 約1/13.4, 15+4回, continuation 約77%). Before closing 2025-04-07, re-enumerate the same date from a second independent historical calendar and determine LT-positive/negative for every candidate.**
+
+Known source for next machine:
+- https://hisshobon.com/machineinfo/96821/
 
 Before writing: re-read latest main README / LT mission / INDEX / this handoff, check current machine files for duplicates, preserve definition differences (`約`/`実質`/`TOTAL`, payout vs expected payout), and do not calculate an unpublished total LT arrival rate from route probabilities.
