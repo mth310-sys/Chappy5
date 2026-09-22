@@ -1,7 +1,7 @@
 # LT Pachinko DB — Latest Handoff
 
 retrievedAt: 2026-09-22
-relay: 1 / chronological collection
+relay: 4 / chronological collection
 
 ## Read before work
 - latest main `README.md`: checked
@@ -23,41 +23,42 @@ relay: 1 / chronological collection
 4. `ぱちんこ シン・エヴァンゲリオン PREMIUM MODEL` — EXCLUDED: LT搭載根拠なし
 5. `Pアズールレーン THE ANIMATION 異次元トリガー 79ver.` — EXCLUDED: LTなし確認
 6. `デジハネP 頭文字D せかんど` — COMPLETE_CORE
-7. `P FAIRY TAIL 超一夜Ver.` — COMPLETE_CORE this relay
-8. `P真・座頭市物語 LT99Ver.` — NEXT; LT confirmed, duplicate-search then full collection
-9. `デカスタPデビルマン THE FINAL 179ver.` — verify LT eligibility and canonical introduction date before boundary close
+7. `P FAIRY TAIL 超一夜Ver.` — COMPLETE_CORE
+8. `P真・座頭市物語 LT99Ver.` — COMPLETE_CORE this relay
+9. `デカスタPデビルマン THE FINAL 179ver.` — NEXT; LT搭載は業界資料で確認済み。型式・詳細振り分け・LT経路を収集し、全国導入日2025-09-08を確定して登録判断
 
-### P FAIRY TAIL 超一夜Ver. — COMPLETE_CORE
-- 藤商事 / 型式 `P FAIRY TAIL 超一夜Ver.FQY` / 2025-09-08 / LT3.0 PLUS / BIGスタート / 二種ST型。
-- 通常約1/319（特図1小当り→V）、右約1/40（特図2小当り→V）。
-- 初当り約960個。約55%でFAIRY RUSH、約45%通常。
-- FAIRY RUSH: 32回+残保留、TOTAL約60%（ST部分約55.4% + 残保留引き戻し約9.6%）。
-- FAIRY RUSH中1回目の大当りは下位継続。2回目の大当りでLT発動。2回目は約50%が約1500個+α+一夜モード、約50%が約240個+七炎竜RUSH。
-- LT `七炎竜RUSH`: 61回+残保留、TOTAL約81%（ST部分約78.5% + 残保留約9.6%）。
-- 七炎竜RUSH中: 約1500個+α+一夜 約25% / 約1500個+七炎竜 約25% / 約240個+七炎竜 約50%。
-- 一夜モード中: 約1500個+α+超一夜 約25% / 約1500個+α+一夜 約25% / 約240個+七炎竜 約50%。
-- 超一夜中: 約1500個+α+超一夜 約50% / 約240個+一夜 約50%。超一夜の転落側も一夜へ戻るため単純な50%終了ではない。
-- `約1500個+α` は特図2大当り2回分以上の合計値。単一大当り払出と混同しない。
-- 通常遊技全体基準の総LT到達率は直接公表値未確認。下位突入/継続から独自合算しない。
-- record: `docs/lt_pachinko_db/machines/2025-09-08_p_fairy_tail_chou_ichiya_ver.md`
-- commit: `171c1875186b08023dd6e3adfb90ee0f4f26138d`
+### P真・座頭市物語 LT99Ver. — COMPLETE_CORE
+- ニューギン / 型式 `P真・座頭市物語N2-K` / 2025-09-08 / 甘デジ / 1種2種混合 / LT搭載。
+- 通常約1/99.90、右打ち1/46.64。初当り後電サポ100%。
+- 通常時: 10R約1000個+竜騰虎闘0.5% / 4R約400個+激闘の鼓動20% / 2R約200個+激闘の鼓動79.5%。
+- `激闘の鼓動`: ST20+残4、突破約41%。
+- `竜騰虎闘モード`: ST51+残4、継続約70%。
+- 右打ち大当り: 10R約1000個+LT 10.0% / 10R約1000個+竜騰虎闘19.5% / 3R約300個+竜騰虎闘70.5%。10R当り時の約34%がLT発動契機。
+- LT `神速一閃モード`: ST130+残4、TOTAL約95%。LT中 10R約1000個29.5% / 3R約300個70.5%。
+- LT ST130回スルー後の残保留引き戻しはLT継続ではなく基本RUSH振り分けへ戻る。
+- 通常遊技全体基準の総LT到達率は直接公表値未確認のため独自算出しない。
+- P-WORLD本文に竜騰虎闘中LT約7%の孤立記載があるが、同ページ表・情報島＋・必勝本・パチマガ詳細の10.0%を採用。平均処理なし。
+- record: `docs/lt_pachinko_db/machines/2025-09-08_p_shin_zatoichi_monogatari_lt99.md`
+- commit: `7391614b703acf5bbe3f86f97f5608eb0ac5008e`
 
 Sources:
-- https://news.p-world.co.jp/articles/31548/yugitsushin
-- https://www.p-world.co.jp/machine/database/10323
-- https://p-johojima.jp/machine_spec/post-11585/
-- https://p.hisshobon.jp/machine/4585/1/110788
-- https://1geki.jp/pachinko/p_fairytail_bs/39/
+- https://p-johojima.jp/machine_spec/post-12724/
+- https://news.p-world.co.jp/articles/31637/greenbelt
+- https://amusement-japan.co.jp/article/detail/10004970/
+- https://hisshobon.com/machineinfo/98814/
+- https://hisshobon.com/machineinfo/98815/
+- https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/newgin_pachi/506/kh01.php
+- https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/newgin_pachi/506/kh02.php
 
 ## Effective DB state
-Previous effective state: 128 machine records / 127 COMPLETE_CORE / 1 CONFLICT.
+Previous effective state: 129 machine records / 128 COMPLETE_CORE / 1 CONFLICT.
 This relay added 1 COMPLETE_CORE record.
-- machine records: **129**
-- COMPLETE_CORE: **128**
+- machine records: **130**
+- COMPLETE_CORE: **129**
 - CONFLICT: **1**
 - INDEX remains stale; machine files + this handoff are progress source of truth until safe INDEX integration.
 
 ## Next restart point
-**2025-09-08 `P真・座頭市物語 LT99Ver.` is the next unprocessed chronological LT candidate. Duplicate-search first, then collect full core/LT structure. After that verify `デカスタPデビルマン THE FINAL 179ver.` LT eligibility and canonical introduction date, then cross-check the full 2025-09-08 calendar boundary before closing it.**
+**2025-09-08 `デカスタPデビルマン THE FINAL 179ver.` is the next unprocessed chronological LT candidate. LT搭載は確認済み。duplicate-search first, then collect 型式、1/179.55、下位RUSH/真悪魔RUSH、LTデデデRUSHの正式経路・継続率・全振り分け・全国導入日。処理後、複数カレンダーで2025-09-08境界を再監査してCLOSE判定する。**
 
 Before writing: re-read latest main README / LT mission / INDEX / this handoff, duplicate-search, preserve definition differences (`約`/`実質`/`TOTAL`, payout vs expected payout), separate same-series specs, and never infer unpublished total LT arrival rates from route probabilities.
