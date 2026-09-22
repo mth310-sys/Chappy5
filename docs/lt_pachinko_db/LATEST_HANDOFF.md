@@ -1,7 +1,7 @@
 # LT Pachinko DB — Latest Handoff
 
 retrievedAt: 2026-09-22
-relay: 1 / chronological collection
+relay: 4 / chronological collection
 
 ## Read before work
 - latest main `README.md`: checked
@@ -15,55 +15,51 @@ relay: 1 / chronological collection
 - 2025-07-22 — CLOSED 3/3
 - 2025-08-04 — CLOSED 9/9
 - 2025-08-18 — CLOSED 3/3
+- 2025-09-08 — CLOSED / candidate set covered
 
-## 2025-09-08 boundary — CLOSED / candidate set covered
-1. `eフィーバーブルーロック` — COMPLETE_CORE
-2. `eパリピ孔明` — EXCLUDED: LT搭載根拠なし
-3. `P戦国乙女7 終焉の関ヶ原 LLサイズ 299ver.` — COMPLETE_CORE
-4. `ぱちんこ シン・エヴァンゲリオン PREMIUM MODEL` — EXCLUDED: LT搭載根拠なし
-5. `Pアズールレーン THE ANIMATION 異次元トリガー 79ver.` — EXCLUDED: LTなし確認
-6. `デジハネP 頭文字D せかんど` — COMPLETE_CORE
-7. `P FAIRY TAIL 超一夜Ver.` — COMPLETE_CORE
-8. `P真・座頭市物語 LT99Ver.` — COMPLETE_CORE
-9. `デカスタPデビルマン THE FINAL 179ver.` — COMPLETE_CORE this relay
+## 2025-09-22 boundary — OPEN
+1. `Pルパン三世 ONE COLLECTION 100ver.` — COMPLETE_CORE this relay
+2. `～廻るヘソワイド～PホワイトシャカRUSH` — NEXT; LT搭載判定から開始
+3. `デカスタPデビルマン THE FINAL 179ver.` — already collected under canonical first-introduction date 2025-09-08; do not duplicate even though some calendars show 9/22 rollout
 
-Boundary cross-check:
-- 情報島＋ 2025-09-08 list includes all nine pachinko candidates above, including Devilman.
-- K-Navi / すろかる等の9/8 list agrees on the other eight; some calendars place Devilman at 2025-09-22 instead.
-- Devilman itself is already collected, so no machine is lost whichever rollout-date convention is used. HAZUSE and 1geki give introduction start 2025-09-08; other calendars show 9/22 and pachinko-curation shows both 9/8 and 9/22. Keep canonical first-introduction date 9/8 with rollout-date note; do not duplicate the machine at 9/22.
+Boundary discovery:
+- 情報島＋の2025-09-22新台記事はパチンコ2機種としてルパン100ver.とホワイトシャカRUSHを列挙。
+- ルパン100ver.は1geki/HAZUSE/G-net/グリーンべるとで2025-09-22導入を一致確認。
+- 境界CLOSE前にホワイトシャカ処理後、少なくとももう1系統の独立新台カレンダーで9/22全候補を再列挙すること。
 
-### デカスタPデビルマン THE FINAL 179ver. — COMPLETE_CORE
-- ニューギン / 型式 `PデビルマンLM3` / LT搭載 / ライトミドル / 二種。
-- 通常約1/179.55、右打ち実質1/1.0。
-- 初当り: 7R約560個+LT 0.1% / 2R約160個+真悪魔RUSH 31.4% / 2R約160個+通常68.5%。TOTAL RUSH突入約31.5%。
-- 下位 `真悪魔RUSH`: 電サポ1回転、継続約91.5%。7R+LT 2.00% / 7R+下位継続28.19% / 3R+下位継続61.31% / 2R短開放+通常8.50%。
-- LT `デデデRUSH BONUS`: 通常0.1%直行または真悪魔RUSH中大当り2.00%。電サポ1回転、継続約93.1%。
-- LT中: 7R約560個+LT継続28.04% / 3R約240個+LT継続65.06% / 7R約560個+真悪魔RUSH2.08% / 3R約240個+真悪魔RUSH4.82%。LT終了時は通常ではなく真悪魔RUSHへ復帰。
-- 通常遊技全体基準の総LT到達率は直接公表値未確認。経路値から独自算出しない。
-- 1geki LT詳細ページに孤立した「94.5%」表示があるが、同サイト機種概要・P-WORLD・HAZUSE・詳細振り分け合計は93.1%で一致。93.1%をcanonicalとし、孤立表示を注記。平均しない。
-- record: `docs/lt_pachinko_db/machines/2025-09-08_dekasuta_p_devilman_the_final_179.md`
-- commit: `309ed4f8611805eee78aac4808189c59615c180b`
+### Pルパン三世 ONE COLLECTION 100ver. — COMPLETE_CORE
+- アムテックス / 平和、型式 `Pルパン三世14L0YU1`、2025-09-22、甘デジ、1種2種混合、LT3.0プラス。
+- 通常約1/100.1、右打ち約1/66.7。TOTAL RUSH突入50%。
+- 通常時: 10R約1000個+LT 0.5% / 4R約400個+GOLDEN TIME65 49.5% / 4R約400個+通常50.0%。
+- 下位 `GOLDEN TIME 65`: ST65回、継続約63%。大当りは1800個+LT 13.2% / 1000個+下位継続46.3% / 200個+下位継続40.5%。
+- LT `GOLDEN TIME 105`: 通常0.5%直行または下位RUSH中1800個大当り13.2%。ST105回、継続約80%。
+- LT中: 平均約3100個+LT継続 約60% / 約200個+LT継続 約40%。平均3100個は2R/9R/10R×複数回の一連合計払い出しで、単一大当り出玉ではない。
+- 普図STのため残保留なし。105回スルーで通常へ移行。
+- 通常遊技全体基準の総LT到達率は直接公表値未確認。0.5%直行と下位13.2%から独自合算しない。
+- record: `docs/lt_pachinko_db/machines/2025-09-22_p_lupin_the_third_one_collection_100.md`
+- commit: `13041586915cf313f943920b46764c8afac4f2e2`
 
 Sources:
-- https://hazuse.com/hd/5p0364/
-- https://1geki.jp/pachinko/p_devilman_tf179ds/
-- https://1geki.jp/pachinko/p_devilman_tf179ds/51/
-- https://1geki.jp/pachinko/p_devilman_tf179ds/53/
-- https://www.p-world.co.jp/machine/database/10333
-- https://chonborista.com/pachinko/newgin/244098/
-- https://p-johojima.jp/machine_spec/post-2074/
-- https://p-kn.com/calendar/202509/
-- https://pachinko-curation.com/56234/
+- https://web-greenbelt.jp/post-99713/
+- https://news.p-world.co.jp/articles/31179/greenbelt
+- https://www.p-world.co.jp/machine/database/10317
+- https://hazuse.com/machine/pachinko/5P0282/
+- https://1geki.jp/pachinko/p_lupin_oc_100lt/
+- https://hisshobon.com/machineinfo/98512/
+- https://p.hisshobon.jp/machine/4577/1/110609
+- https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/amutex_pachi/067/kh02.php
+- https://g-net-ps.com/info/p0460/
+- https://p-johojima.jp/colum/post-15224/
 
 ## Effective DB state
-Previous effective state: 130 machine records / 129 COMPLETE_CORE / 1 CONFLICT.
+Previous effective state: 131 machine records / 130 COMPLETE_CORE / 1 CONFLICT.
 This relay added 1 COMPLETE_CORE record.
-- machine records: **131**
-- COMPLETE_CORE: **130**
+- machine records: **132**
+- COMPLETE_CORE: **131**
 - CONFLICT: **1**
 - INDEX remains stale; machine files + this handoff are progress source of truth until safe INDEX integration.
 
 ## Next restart point
-**Advance to the 2025-09-22 boundary. Start with `Pルパン三世 ONE COLLECTION 100ver.` and verify LT installation before collecting. Then inspect `～廻るヘソワイド～PホワイトシャカRUSH`. `デカスタPデビルマン THE FINAL 179ver.` is already collected and must not be duplicated even though some calendars list its rollout on 9/22. Use at least two independent new-machine calendars to enumerate the full 9/22 boundary before closing it.**
+**Continue the 2025-09-22 boundary with `～廻るヘソワイド～PホワイトシャカRUSH`. First verify that this exact spec is LT-equipped. If LT-equipped, duplicate-search then collect formal model code, basic probability, RUSH structure, LT name/entry route/rate/continuation, payout splits and support/ST structure. If non-LT, record the exclusion only in the handoff and do not create a machine record. After that, re-enumerate the full 2025-09-22 boundary using at least two independent new-machine calendars and CLOSE only when candidate coverage is demonstrated. Do not duplicate Devilman 179.**
 
 Before writing: re-read latest main README / LT mission / INDEX / this handoff, duplicate-search, preserve definition differences (`約`/`実質`/`TOTAL`, payout vs expected payout), separate same-series specs, and never infer unpublished total LT arrival rates from route probabilities.
