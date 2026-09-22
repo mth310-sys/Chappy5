@@ -1,7 +1,7 @@
 # LT Pachinko DB — Latest Handoff
 
 retrievedAt: 2026-09-22
-relay: 4 / chronological collection
+relay: 1 / chronological collection
 
 ## Read before work
 - latest main `README.md`: checked
@@ -18,7 +18,7 @@ relay: 4 / chronological collection
 - 2025-09-08 — CLOSED / candidate set covered
 - 2025-09-22 — CLOSED 2/2
 
-## 2025-10-06 boundary — OPEN
+## 2025-10-06 boundary — CLOSED / candidate set covered
 1. `Pスーパー海物語IN沖縄6` — EXCLUDED / LT非搭載.
 2. `eとある科学の超電磁砲 PHASE NEXT` — COMPLETE_CORE.
 3. `eガールズ＆パンツァー 最終章` — COMPLETE_CORE.
@@ -26,45 +26,60 @@ relay: 4 / chronological collection
 5. `e聖戦士ダンバイン3 ZEROSONIC` — COMPLETE_CORE.
 6. `Pフィーバーダンジョンに出会いを求めるのは間違っているだろうか2 LT-Light ver.` — COMPLETE_CORE.
 7. `PAぱちんこ冬のソナタ My Memory Sweet Version` — EXCLUDED / LT非搭載.
-8. `PA義風堂々!!～兼続と慶次～3 99ver.` — **COMPLETE_CORE this relay**.
-9. `デカスタPシュタインズゲート ゼロ まゆしぃば～じょん` — **next target / LT搭載 and canonical 2025-10-06 strongly supported**. Information Island machine spec, Pachibee, 1geki and P-Summa all identify 2025-10-06; Pachinko Curation lists both 10/6 and 10/20. Treat 10/20 as secondary rollout/date discrepancy, not canonical, unless a stronger primary source overturns this. Full record not yet written.
+8. `PA義風堂々!!～兼続と慶次～3 99ver.` — COMPLETE_CORE.
+9. `デカスタPシュタインズ・ゲート ゼロ まゆしぃば～じょん` — **COMPLETE_CORE this relay**.
 
-### PA義風堂々!!～兼続と慶次～3 99ver. — COMPLETE_CORE
-- ニューギン, canonical introduction 2025-10-06, 甘デジ / 1種2種混合 / LT.
-- 通常実質1/99.90、右打ち実質1/7.73。
-- 特図1: 10R約920個+次回大当り濃厚/天衣無縫RUSH 1%、4R約340個+チャンスタイム 99%。出玉はその他入賞口込み払出。
-- TOTAL RUSH突入50.5%。チャンスタイム1回+残4。天衣無縫RUSHは6回+残4、約75%。
-- チャンスタイム/天衣無縫RUSH中: 10R+LT 1%、10R+下位継続49%、4R+下位継続50%。
-- LT `天下無双モード`: 500回+残4、継続94%。LT中は10R+LT 50%、4R+LT 44%、4R+時短終了6%。
-- 6%終了後も残保留4個があり、引き戻し約42.52%。残保留当選は天衣無縫RUSH側の特図2振り分けへ戻り、1%ならLT復帰可能。残保留をLT本体94%へ重複加算しない。
-- 通常遊技全体基準の総LT到達率は直接公表値を十分な再探索後も確認できず `UNVERIFIED_AFTER_RESEARCH`。経路確率から独自算出しない。
-- P-WORLD、情報島＋、HAZUSE、必勝本、一撃で主要値・振り分け一致。conflictsなし。
-- record: `docs/lt_pachinko_db/machines/2025-10-06_pa_gifudodo3_99ver.md`
-- record commit: `247f793fc19094b644df8c8f47655afd60389ddb`
+Boundary audit: 情報島＋の過去新台一覧は上記9パチンコを2025-10-06として列挙。複数の年次カレンダーでも同候補群を確認。シュタインズゲートだけ一部カレンダーに10/20表記があるが、情報島＋機種DB、一撃、HAZUSE、パチビー等は10/6を明記するため、最初の導入開始を10/6 canonicalとして同一機の二重登録をしない。
+
+### デカスタPシュタインズ・ゲート ゼロ まゆしぃば～じょん — COMPLETE_CORE
+- ニューギン。型式 `PSTEINS；GATE0N3`（記号/空白違い表記あり）。甘デジ / デカスタ / 1種2種混合 / LT。
+- canonical introduction 2025-10-06。10/20表記資料もあるため日付差を注記したが、複数機種DBの導入開始日は10/6で一致。
+- 通常約1/99.9、右打ち約1/59.4（大当り+小当り合算）。初当り4R約400個、RUSH 0突入50%。
+- `RUSH 0`: 50回+残4、TOTAL継続約60%（ST部分約57.2% + 残保留）。
+- RUSH 0中特図2: タイムリープ+LT 2% / タイムリープ+下位STリセット2% / 10R約1000個+下位48% / 3R約300個+下位48%。
+- LT `RUSH 0 HYPER`: 150回+残4、TOTAL継続約93%（ST部分約92.2% + 残保留）。
+- LT中: タイムリープ+鳳凰院凶真ZONE10000回（実質次回）4% / 10R約1000個+LT48% / 3R約300個+LT48%。
+- 残保留当選はRUSH 0側振り分け。LT本体STスルー後でもタイムリープ経由のLT復帰余地あり。
+- 払出約1000/400/300個と実獲得目安約900/360/270個を分離。
+- 通常遊技全体基準の総LT到達率は直接公表値未確認。経路値から独自算出せず `UNVERIFIED_AFTER_RESEARCH`。
+- record: `docs/lt_pachinko_db/machines/2025-10-06_decast_steinsgate0_mayushii_ver.md`
+- record commit: `6b0a1c1ef79e2df5c998c29633529b7829237c08`
 
 Sources:
-- https://www.p-world.co.jp/machine/database/10346
-- https://p-johojima.jp/machine_spec/post-13969/
-- https://news.p-world.co.jp/articles/31857/greenbelt
-- https://hazuse.com/machine/pachinko/PX0311/
-- https://hisshobon.com/machineinfo/98849/
-- https://1geki.jp/pachinko/p_gifudd3_99/55/
+- https://p-johojima.jp/machine_spec/post-14260/
+- https://1geki.jp/pachinko/p_steinsgate0_99_ds/39/
+- https://1geki.jp/pachinko/p_steinsgate0_99_ds/54/
+- https://hisshobon.com/machineinfo/98942/
+- https://p.hisshobon.jp/machine/4603/1/111312
+- https://hazuse.com/machine/pachinko/PX0312/
+- https://www.pachibee.jp/machines/index/125090008
+- https://pachinko-curation.com/56710/
 
-## Preliminary next-target audit — デカスタPシュタインズゲート ゼロ まゆしぃば～じょん
-- 型式 `P STEINS;GATE0 N3` confirmed by industry announcement.
-- LT搭載 confirmed: `RUSH 0 HYPER`.
-- 通常約1/99.9、右打ち約1/59.4、RUSH突入50%、RUSH 0 50回+残4 / 約60%、LT 150回+残4 / 約93%。LT中タイムリープ当選は10000回（実質次回）へ。
-- canonical date evidence now favors **2025-10-06**: 情報島＋機種DB、Pachibee、1geki online guide、P-Summa all explicitly 10/6. Pachinko Curation alone displays both 10/6 and 10/20. Next relay should verify detailed 特図1/特図2 distributions and LT entry allocation before record write, then close/re-audit 10/6 candidate set.
+## Next boundary — 2025-10-20
+Preliminary re-enumeration:
+1. `Pゴッドイーター199ゴッドトリガーVER.` — **next target / LT confirmed**. Industry announcement gives model `P LTゴッドイーター199VER-ARB`, introduction 2025-10-20, normal 1/199.5, Judgment 108回/突破約42%, lower `神バトルRUSH RAGE BURST` 約77%, LT `PREMIUM神RUSH` 約85%. Lower RUSH reaches LT after `結合崩壊BONUS BURST` twice / Lv.MAX. Information Island+ gives total lower→LT upgrade expectation about 48%. Need exact treatment of `ぷちBONUS` LT continuation allocation before record write because published 85% explicitly excludes that bonus from the stated ratio.
+2. `Pはねものファインプレー` — LT搭載根拠なし / 羽根物。Next relay must directly verify and exclude before boundary closure.
+3. `デカスタPシュタインズ・ゲート ゼロ まゆしぃば～じょん` — some calendars list 10/20, but already COMPLETE_CORE at canonical first introduction 10/6; **do not duplicate**.
+
+Preliminary GOD EATER sources:
+- https://news.p-world.co.jp/articles/31946/yugitsushin
+- https://news.p-world.co.jp/articles/31999/greenbelt
+- https://www.p-world.co.jp/machine/database/10356
+- https://p-johojima.jp/machine_spec/post-15926/
+- https://hisshobon.com/machineinfo/99512/
+- https://hisshobon.com/machineinfo/99513/
+- https://1geki.jp/pachinko/p_godeater_gt199/52/
+- https://1geki.jp/pachinko/p_godeater_gt199/53/
 
 ## Effective DB state
-Previous effective state: 138 machine records / 137 COMPLETE_CORE / 1 CONFLICT.
+Previous effective state: 139 machine records / 138 COMPLETE_CORE / 1 CONFLICT.
 This relay added 1 COMPLETE_CORE record.
-- machine records: **139**
-- COMPLETE_CORE: **138**
+- machine records: **140**
+- COMPLETE_CORE: **139**
 - CONFLICT: **1**
 - INDEX remains stale; machine files + this handoff are progress source of truth until safe INDEX integration.
 
 ## Next restart point
-**Continue 2025-10-06 boundary from `デカスタPシュタインズゲート ゼロ まゆしぃば～じょん`. Treat 2025-10-06 as provisional canonical date supported by multiple explicit machine databases/calendars; retain the 10/20 secondary-date note. Verify 特図1/特図2 full payout distributions, exact LT entry route/allocation, RUSH 0 HYPER continuation definition and 10000回 route across industry + multiple analysis sources. After COMPLETE_CORE write, re-enumerate 2025-10-06 with at least two independent calendars and CLOSE only if no unprocessed LT candidate remains.**
+**Start 2025-10-20 from `Pゴッドイーター199ゴッドトリガーVER.`. Verify exact 特図1/ジャッジメント/下位RUSH/LT distributions, `ぷちBONUS` allocation and how it affects the published 約85% definition, lower-RUSH→LT total upgrade expectation, payout definitions, and full game flow across industry + multiple analysis sources. Then directly verify `Pはねものファインプレー` is LT-non-equipped, retain STEINS;GATE as a date-discrepancy duplicate rather than a new record, and re-enumerate 10/20 with at least two independent calendars before closing the boundary.**
 
 Before writing: re-read latest main README / LT mission / INDEX / this handoff, duplicate-search, preserve definition differences (`約`/`実質`/`TOTAL`, payout vs expected payout), separate same-series specs, and never infer unpublished total LT arrival rates from route probabilities.
