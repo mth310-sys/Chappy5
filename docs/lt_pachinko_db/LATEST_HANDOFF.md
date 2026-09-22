@@ -1,102 +1,73 @@
 # LT Pachinko DB — Latest Handoff
 
 retrievedAt: 2026-09-22
-relay: 1 / chronological collection
+relay: 4 / chronological collection
 
 ## Read before work
 - latest main `README.md`: checked
 - `docs/CHAPPY5_LT_PACHINKO_DATABASE_MISSION_V01.md`: checked
 - `docs/lt_pachinko_db/INDEX.md`: checked; INDEX remains stale relative to machine records/handoff
 - previous `LATEST_HANDOFF.md`: checked
-- previous restart point: 2025-07-22 `e マギアレコード 魔法少女まどか☆マギカ外伝`
-- duplicate search performed before both new records
+- previous restart point: 2025-08-04 `e牙狼12黄金騎士極限`
+- duplicate search / previous records checked before write
 
 ## Boundary status
 ### 2025-07-07 — CLOSED 9/9
-Previous handoff closure retained.
+Previous closure retained.
 
 ### 2025-07-22 — CLOSED 3/3
 1. `e マギアレコード 魔法少女まどか☆マギカ外伝` — LT搭載 — COMPLETE_CORE
 2. `デカスタe花の慶次～傾奇一転` — LT搭載 — COMPLETE_CORE
 3. `PAコマコマ倶楽部with坂本冬美 89STver.` — LT非搭載 — EXCLUDED
 
-PAコマコマは豊丸系資料に加えHAZUSEが明示的に `ラッキートリガー: 非搭載`。1/89.8→1/24.2、ST10回100%、時短25/50/100、遊タイム9999の従来ST機でありDBへ登録しない。
-
-Boundary evidence:
-- https://p-johojima.jp/machine_spec/post-2074/
-- https://p-kn.com/calendar/202507/
-- https://1geki.jp/newmachinecalender/202507/
-- https://hazuse.com/hd/5p0248/
-- https://www.toyomaru.jp/machine/2025y/komakom89_sf.html
-
 ## This relay
-### e マギアレコード 魔法少女まどか☆マギカ外伝 — COMPLETE_CORE
-- 京楽産業. / 型式 `eマギアレコード魔法少女まどか☆マギカ外伝KRJ1` / 2025-07-22。
-- LT3.0 PLUS、一種二種混合、通常RUSHを別段階に持たない直LT型。
-- 図柄揃い約1/399（解析詳細1/399.9）、大当り合算約1/349、マギレポチャージ解析約1/2800、LT中約1/97（詳細1/97.1）。定義分離。
-- 図柄揃い50%で1000個 + 1G連 `VコネクトBONUS` 保証 + LT `コネクトRUSH`。残り50%は1000個で通常へ。
-- LTはST140回、1G連込み継続約83%。ST単体は解析約77%で、定義差として分離。
-- LT中 `VコネクトBONUS` は800〜4000個+α。800〜1200個約21.0%、1600個約26.7%、2000〜2800個約43.3%、3200〜4000個約9.0%。
-- メーカー公式が「RUSH突入時は必ず1G連保証」「LT発動となるコネクトRUSH」と明記。
-- 通常遊技全体基準の総LT到達率は直接公表値未確認のため独自合算せずUNVERIFIED。
-- record: `docs/lt_pachinko_db/machines/2025-07-22_e_magia_record.md`
-- commit: `54d2704a885ba4832fa01ab41e0a479919e58220`
+### e牙狼12黄金騎士極限 — COMPLETE_CORE
+- サンセイアールアンドディ / 型式表記 `e牙狼12 XX-MJ` / 2025-08-04。
+- LT3.0 PLUS、一種二種混合、右打ち1/1の1G連ループ型。
+- 通常大当り合算1/349.99、液晶図柄揃い1/437.49、ガロチャージ2R 1/1749.97。定義を分離。
+- 図柄揃いは10R約1500個。50%で時短1回の `極限7500バトル`、残り50%は通常へ。
+- 極限7500バトルは右1/1。50%で10R×5=約7500個 + LT `魔戒CHANCE LT`、50%で10R約1500個 + 通常へ。
+- LTは時短1回、継続約76%。内訳は7500個+継続 約25% / 1500個+継続 約51% / 1500個+終了 約24%。
+- 7500個は1500個×5回の払い出し合計。期待出玉や初当りからの累計と混同しない。
+- 液晶図柄揃い基準でLT25%とする簡易資料はあるが、通常遊技全体を分母とする総LT到達率は一次/高信頼の直接公表値として固定せず `UNVERIFIED_AFTER_RESEARCH`。独自換算しない。
+- record: `docs/lt_pachinko_db/machines/2025-08-04_e_garo12_ougon_kishi_kyokugen.md`
+- commit: `13b8f3773ac9a7c424e8e07e7c323dda778d5c25`
 
 Sources:
-- https://www.kyoraku.co.jp/news/detail/835
-- https://news.p-world.co.jp/articles/31105/greenbelt
-- https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/kyoraku_pachi/227/kh01.php
-- https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/kyoraku_pachi/227/kh02.php
-- https://nana-press.com/kaiseki/machine/981/30759/
-- https://chonborista.com/pachinko/kyoraku/235619/
+- https://news.p-world.co.jp/articles/31185/amusement
+- https://www.amusement-japan.co.jp/article/detail/10004882/
+- https://www.p-world.co.jp/machine/database/10305
+- https://nana-press.com/kaiseki/machine/1009/30845/
+- https://hisshobon.com/machineinfo/98270/
+- https://hisshobon.com/machineinfo/98271/
+- https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/sansei_pachi/314/kh04.php
 
-### デカスタe花の慶次～傾奇一転 — COMPLETE_CORE
-- ニューギン / 型式 `e花の慶次～傾奇一転H6` / 2025-07-22。
-- 1/348.60、一種二種混合。右大当り1/96.95、戦MODE転落1/96.95。
-- RUSH TOTAL 52.1% = 戦MODE 51.1% + LT直行1.0%。
-- 特図1: 1500個+LT 0.2% / 750個+LT 0.8% / 750個+戦MODE 51.1% / 750個+通常47.9%。
-- 下位 `戦MODE` は時短5000回の転落型。大当りと転落がともに1/96.95で、転落前大当りの突破期待度50%。大当りで1500個 + LT `傾奇BURST`。
-- LTはST170回+残保留4、TOTAL約84%（ST本体約83% + 残保留引き戻し約4%の合算表記）。LT中1500個100%。
-- 2024年版e花の慶次～傾奇一転と分離。
-- 通常初当り全体基準の総LT到達率は直接値未確認、独自合算せずUNVERIFIED。
-- record: `docs/lt_pachinko_db/machines/2025-07-22_dekasuta_e_hana_no_keiji_kabuki_itten.md`
-- commit: `a71a015b198c7bfeba6cf1801c0d6e77c3264705`
+## 2025-08-04 — OPEN
+Previous independent-calendar candidate queue retained. Do not assume all candidates are LT; audit each before registration.
+1. `e牙狼12黄金騎士極限` — LT搭載 — COMPLETE_CORE (this relay)
+2. `e黄門ちゃま 寿限無 LLサイズ` — NEXT
+3. `eシャーマンキング`
+4. `eシャーマンキング でっけぇえなver.` — calendars may combine/list separately; verify canonical handling before write
+5. `e真・一騎当千～軍神覚醒～396ver.`
+6. `e真・一騎当千～軍神覚醒～319大入りver.`
+7. `Pクイーンズブレイド奈落5400`
+8. `Pフィーバー戦姫絶唱シンフォギア4 LT-Light ver.`
+9. `Pフィーバー戦姫絶唱シンフォギア4 Light ver.` — LT eligibility must be checked separately; do not merge with LT-Light
 
-Sources:
-- https://news.p-world.co.jp/articles/30939/greenbelt
-- https://www.p-world.co.jp/machine/database/10304
-- https://nana-press.com/kaiseki/machine/987/30835/
-- https://p.hisshobon.jp/machine/4558/1/110216
-- https://hisshobon.com/machineinfo/98132/
-- https://1geki.jp/pachinko/e_hanakei_kabuki_ds/51/
-
-## Next boundary discovery
-### 2025-08-04 — OPEN
-Independent calendars show the next large pachinko introduction boundary. Candidate list must be machine-audited without assuming every machine is LT:
-- `e牙狼12黄金騎士極限`
-- `e黄門ちゃま 寿限無 LLサイズ`
-- `eシャーマンキング`
-- `eシャーマンキング でっけぇえなver.` (some calendars combine/list separately; verify canonical handling)
-- `e真・一騎当千～軍神覚醒～396ver.`
-- `e真・一騎当千～軍神覚醒～319大入りver.`
-- `Pクイーンズブレイド奈落5400`
-- `Pフィーバー戦姫絶唱シンフォギア4 LT-Light ver.`
-- `Pフィーバー戦姫絶唱シンフォギア4 Light ver.` (LT eligibility must be checked separately; do not merge with LT-Light)
-
-Calendar evidence:
+Calendar evidence retained:
 - https://1geki.jp/newmachinecalender/202508/
 - https://p-kn.com/calendar/202508/
 - https://pachinkopachisro.com/archives/58760696.html
 
 ## Effective DB state
-Previous effective state: 112 records / 111 COMPLETE_CORE / 1 CONFLICT.
-This relay added 2 COMPLETE_CORE records.
-- machine records: **114**
-- COMPLETE_CORE: **113**
+Previous effective state after 2025-07-22: 114 machine records / 113 COMPLETE_CORE / 1 CONFLICT.
+This relay added 1 COMPLETE_CORE record.
+- machine records: **115**
+- COMPLETE_CORE: **114**
 - CONFLICT: **1**
 - INDEX remains stale; machine files + this handoff are progress source of truth until safe INDEX integration.
 
 ## Next restart point
-**2025-07-22 boundary CLOSED. Continue chronologically at 2025-08-04 OPEN boundary. Start with `e牙狼12黄金騎士極限`, then audit every same-day candidate for LT eligibility before registration. Preserve separate specs/versions, especially シャーマンキング variants, 一騎当千396/319大入り, and シンフォギア4 LT-Light/Light.**
+**Continue 2025-08-04 OPEN boundary with `e黄門ちゃま 寿限無 LLサイズ`. Then audit `eシャーマンキング` and the separately listed `でっけぇえなver.` before deciding canonical record handling. Continue same-day queue in the fixed order above; LT非搭載はEXCLUDEDとしてDBレコードを作らない。**
 
-Before writing: re-read latest main README / LT mission / INDEX / this handoff, duplicate-search, preserve definition differences (`約`/`実質`/`TOTAL`, payout vs expected payout), and never infer unpublished total LT arrival rates from route probabilities.
+Before writing: re-read latest main README / LT mission / INDEX / this handoff, duplicate-search, preserve definition differences (`約`/`実質`/`TOTAL`, payout vs expected payout), separate same-series specs, and never infer unpublished total LT arrival rates from route probabilities.
