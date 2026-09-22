@@ -1,7 +1,7 @@
 # LT Pachinko DB — Latest Handoff
 
 retrievedAt: 2026-09-22
-relay: 4 / chronological collection
+relay: 1 / chronological collection
 
 ## Read before work
 - latest main `README.md`: checked
@@ -14,57 +14,75 @@ relay: 4 / chronological collection
 - 2025-07-07 — CLOSED 9/9
 - 2025-07-22 — CLOSED 3/3
 - 2025-08-04 — CLOSED 9/9
+- 2025-08-18 — CLOSED 3/3
 
-## Current boundary — 2025-08-18
-Candidate queue retained:
+## 2025-08-18 boundary completed this relay
+Candidate queue:
 1. `e女神のカフェテラス` — COMPLETE_CORE
 2. `eGODZILLA7 TYPE-CRASH` — COMPLETE_CORE
-3. `P【超甘LT】豊丸のとあるパチンコにしみけん参戦 感度UP1/39` — LT eligible, NOT YET WRITTEN
+3. `P【超甘LT】豊丸のとあるパチンコにしみけん参戦 感度UP1/39` — COMPLETE_CORE this relay
 
-Calendar evidence retained:
+Boundary re-audit:
+- ぱちんこキュレーション 2025-08-18 lists exactly these three pachinko machines.
+- ALL7 2025/08 list independently lists exactly these three machines on 2025/08/18.
+- 情報島＋ retrospective explicitly states the three pachinko new machines introduced from 8/18 were these same three.
+Therefore 2025-08-18 is CLOSED 3/3.
+
+Calendar sources:
 - https://pachinko-curation.com/shindai_calendar/2/
-- https://1geki.jp/newmachinecalender/202508/
+- https://www.all7.jp/plans/index/2025/08
+- https://p-johojima.jp/colum/post-13351/
 
-### eGODZILLA7 TYPE-CRASH — COMPLETE_CORE this relay
-- ニューギン / 型式 `eGODZILLA7M5` / 2025-08-18 / LT3.0 PLUS / 一種二種混合。
-- 通常1/229.95、G-RUSH/LT中約1/107、UC中1/2.67。
-- 初当り約300個。50% G-RUSH ST80（大当り突破約53%） / 50% G-TURN時短50（大当り突破約20%）。どちらも右打ち中1回大当りでLT `ULTIMATE G-RUSH`。
-- LT ST160、継続約77.7%。通常遊技基準LT突入約1/635、初当りから約36.2%。パチマガスロマガ50億回転シミュレート約1/635.48。別解析「約37%」は丸め表記でCONFLICT扱いしない。
-- LT中 1000個+LT 37.5% / ULTIMATE CHARGE+LT 62.5%。UC内訳 2000個36.6% / 3000個38.5% / 4000個19.1% / 5000個+α5.8%。2000～5000個は1000個×2～5回の一連の大当り合計払い出し。
-- 遊タイム非搭載、コンプリート機能搭載。
-- record: `docs/lt_pachinko_db/machines/2025-08-18_e_godzilla7_type_crash.md`
-- commit: `46bee26eee4d9303f04aa2213ec9000d16498854`
+### P【超甘LT】豊丸のとあるパチンコにしみけん参戦 感度UP1/39 — COMPLETE_CORE
+- 豊丸産業 / 型式 `P豊丸のとあるパチンコにしみけん参戦 AX2` / 2025-08-18 / LT3.0 PLUS / 一種二種混合。
+- 通常1/39.9、RUSH中1/35.4。初当り4R約213個（払出）。
+- 通常内部モードA-D。A-Cは初当り25%で対応RUSH、25%で1段階モードアップ、50%維持。DはRUSH100%、うち50%でLT直行。
+- 下位RUSH: ギンギンタイム10回 約33% / ギンギンタイム20回 約50% / 満開JOURNEY40回 約72%。いずれも残保留4個引き戻し込み。
+- LT正式名称 `超満開JOURNEY`。モードD初当り50%またはRUSH中大当り7.4%で直行。75回＋残保留4、継続約90%。
+- RUSH中10R約1500個は50%。下位では10Rの42.6%が段階アップ、7.4%がLT。LT本体中は1500個50% / 約213個50%、いずれもLT継続。
+- 残保留当選時はギンギンタイム10回中と同様の振り分けになるためLT本体振り分けと分離。
+- 通常遊技全体を分母とする総LT到達率は直接値未確認。内部モード履歴を含むため独自計算しない。
+- P-WORLD詳細表示の一部にLT `ST70回` という孤立表記があるが、同サイト基本スペックおよびパチマガスロマガ、情報島＋、1geki、K-Navi等は75回で一致。75回をcanonicalとして注記保持。
+- record: `docs/lt_pachinko_db/machines/2025-08-18_p_chouama_lt_toyomaru_shimiken_kando_up_1_39.md`
+- commit: `031435b1905828307288b6c67e7087b5d1a9051d`
 
 Sources:
-- https://p-johojima.jp/new_machine/post-9302/
-- https://p-johojima.jp/machine_spec/post-9312/
-- https://www.p-world.co.jp/machine/database/10320
-- https://p.hisshobon.jp/machine/4569/1/110291
-- https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/newgin_pachi/504/sm01.php
-- https://p-johojima.jp/new_machine/post-7984/
-
-## Next candidate already verified
-### P【超甘LT】豊丸のとあるパチンコにしみけん参戦 感度UP1/39 — LT eligible, NOT YET WRITTEN
-- 豊丸産業 / 型式 `P豊丸のとあるパチンコにしみけん参戦 AX2` / 2025-08-18 / LT3.0 PLUS。
-- 通常1/39.9、右1/35.4。通常内部モードA-DでRUSH突入/性能が変化。A-C突入25%、D突入100%。
-- RUSHは10/20/40/75回。継続約33% / 50% / 72% / 90%。LT正式名称 `超満開JOURNEY`、75回、約90%。
-- モードD初当りの約50%またはRUSH中大当り約7.4%からLT。
-- 右打ち大当り50%が約1500個。モードアップ構造をゲームフローに正確に保存すること。
-Sources:
-- https://news.p-world.co.jp/articles/31719/greenbelt
-- https://www.p-world.co.jp/machine/database/10294
+- https://news.p-world.co.jp/articles/31034/greenbelt
+- https://p-johojima.jp/machine_spec/post-8672/
 - https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/toyomaru_pachi/317/kh02.php
+- https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/toyomaru_pachi/317/kh04.php
+- https://www.p-world.co.jp/machine/database/10294
+- https://1geki.jp/pachinko/p_sod2_sk39lt/
 - https://p-kn.com/pachinko/4363/
 
 ## Effective DB state
-Previous effective state: 123 machine records / 122 COMPLETE_CORE / 1 CONFLICT.
+Previous effective state: 124 machine records / 123 COMPLETE_CORE / 1 CONFLICT.
 This relay added 1 COMPLETE_CORE record.
-- machine records: **124**
-- COMPLETE_CORE: **123**
+- machine records: **125**
+- COMPLETE_CORE: **124**
 - CONFLICT: **1**
 - INDEX remains stale; machine files + this handoff are progress source of truth until safe INDEX integration.
 
+## Next chronological boundary — 2025-09-08
+Two independent calendars show no pachinko introduction date between 2025-08-18 and 2025-09-08; 2025-09-01 is slot-only in the checked calendars.
+
+Known 2025-09-08 pachinko candidate queue to audit for LT eligibility, in calendar order where practical:
+1. `eフィーバーブルーロック` — LT3.0 PLUS confirmed; process first.
+2. `eパリピ孔明` — new-standard/C-time structure; audit LT status and collect if eligible.
+3. `P戦国乙女7 終焉の関ヶ原 LLサイズ 299ver.` — calendar explicitly marks LT; collect if duplicate search clear.
+4. `ぱちんこ シン・エヴァンゲリオン PREMIUM MODEL` — audit LT eligibility.
+5. `Pアズールレーン THE ANIMATION 異次元トリガー 79ver.` — audit LT eligibility.
+6. `デジハネP 頭文字D せかんど` — audit LT eligibility.
+7. `P FAIRY TAIL 超一夜Ver.` — LT structure indicated; collect if eligible.
+8. `P真・座頭市物語 LT99Ver.` — LT confirmed; collect if duplicate search clear.
+9. `Pデビルマン-THE FINAL- 179Ver.` — appears on one calendar; verify actual introduction date and LT eligibility before processing.
+
+Calendar sources:
+- https://pachinko-curation.com/shindai_calendar/2/
+- https://p-kn.com/calendar/202509/
+- https://pachinkopachisro.com/archives/58760696.html
+
 ## Next restart point
-**2025-08-18 `P【超甘LT】豊丸のとあるパチンコにしみけん参戦 感度UP1/39` is the next unprocessed LT machine. Complete it first. Then re-audit the full 2025-08-18 pachinko candidate boundary against at least two independent calendars; if no additional LT candidates exist, mark 2025-08-18 CLOSED and advance chronologically to the next actual introduction date.**
+**2025-09-08 `eフィーバーブルーロック` is the next unprocessed chronological candidate. Duplicate-search first, confirm LT eligibility, then collect full core/LT structure. Continue through the complete 2025-09-08 pachinko boundary, excluding LT-noneligible machines.**
 
 Before writing: re-read latest main README / LT mission / INDEX / this handoff, duplicate-search, preserve definition differences (`約`/`実質`/`TOTAL`, payout vs expected payout), separate same-series specs, and never infer unpublished total LT arrival rates from route probabilities.
