@@ -1,7 +1,7 @@
 # LT Pachinko DB — Latest Handoff
 
-retrievedAt: 2026-09-22
-relay: 4 / chronological collection
+retrievedAt: 2026-09-23
+relay: 1 / chronological collection
 
 ## Read before work
 - latest main `README.md`: checked
@@ -18,54 +18,81 @@ relay: 4 / chronological collection
 - 2025-09-08 — CLOSED / candidate set covered
 - 2025-09-22 — CLOSED 2/2
 - 2025-10-06 — CLOSED / candidate set covered
+- 2025-10-20 — CLOSED 2/2
 
-## 2025-10-20 boundary — CLOSED 2/2
-Independent calendar checks (情報島＋過去新台一覧 / SuloCale) list the same two pachinko introductions for 2025-10-20.
+## Next boundary re-enumerated: 2025-11-04 — OPEN
+Independent calendars (情報島＋ / パチビー / パチンコ・パチスロ.com / other November calendars) agree that 2025-11-04 is the next major pachinko introduction boundary after 2025-10-20. Candidate set currently enumerated:
+1. e花の慶次～黄金の一撃 — **COMPLETE_CORE this relay**
+2. eフィーバーもののがたり — LT confirmed; **NEXT**
+3. eルパン三世VSキャッツ・アイ — LT confirmed; pending
+4. e源外伝 EPISODE OF -大龍- — pending LT audit
+5. e ノーゲーム・ノーライフ 319Ver. — pending LT audit
+6. e ノーゲーム・ノーライフ 199Ver. — pending LT audit
+7. e 仮面ライダー電王 デカヘソ239 — pending LT audit
+8. P いくさの子 戦極最強ドデカ199ver. — pending LT audit
+9. P Re:ゼロから始める異世界生活 鬼がかり 199ver. — pending LT audit
+10. P Re:ゼロから始める異世界生活 鬼がかり 99ver. — pending LT audit
+11. P転生したらスライムだった件129ver. — pending LT audit
+12. PA GoGo富士山 — pending LT audit
+Do not assume all 12 are LT-equipped; only create records after LT is positively confirmed.
 
-1. `Pゴッドイーター199ゴッドトリガーVER.` — **COMPLETE_CORE this relay**.
-2. `Pはねものファインプレー` — **EXCLUDED / LT非搭載**. パチマガスロマガ詳細スペック directly states `ラッキートリガー: なし`; 1geki and other machine pages identify it as a conventional 羽根モノ. No LT record created.
-
-`デカスタPシュタインズ・ゲート ゼロ まゆしぃば～じょん` is already COMPLETE_CORE at canonical first introduction 2025-10-06. Some sales/calendar material has 10/20, but it is the same `P STEINS;GATE0 N3`; do not duplicate.
-
-### Pゴッドイーター199ゴッドトリガーVER. — COMPLETE_CORE
-- サンセイR&D。型式 `P LTゴッドイーター199VER-ARB`（空白なし `PLT...` 表記あり）、検定番号510086、2025-10-20導入。
-- 通常1/199.5 / ジャッジメント中1/199.8 / 下位RUSH・LT中1/1。
-- 初当り2R約300個100% → ジャッジメント時短108回100%。突破約42%で下位 `神バトルRUSH RAGE BURST`。
-- 下位RUSH継続約77%。右打ち主要比率は10R約1500個+RUSH 約77% / 2R約154個+通常 約23%。
-- 下位RUSH中、10R継続時の約77%で `結合崩壊BONUS BURST`。2回獲得 / 結合崩壊Lv.MAXでLT `PREMIUM神RUSH`。
-- 下位RUSH突入後のTOTAL LT昇格期待度は直接公表約48%。
-- LT公表継続率約85%。ただしこの85%は `ぷちBONUS（2R+LT継続）` を除外し、10R+LT継続と2R時短なしの図柄比率だけで算出した特殊定義。
-- LT主要表記: 10R約1500個+LT 約85% / 2R約154個+通常 約15%、これとは別に2R約154個+LT継続のぷちBONUSが存在。
-- ぷちBONUSの絶対振り分け率は業界記事/P-WORLD/必勝本/情報島＋/メーカー系流通資料を表記・検索語を変えて再探索したが公開テキストで確定できず `UNVERIFIED_AFTER_RESEARCH`。85%へ推定加算しない。
-- 通常遊技全体基準の総LT到達率も直接公表値未確認のため `UNVERIFIED_AFTER_RESEARCH`。経路値から独自算出しない。
-- HAZUSEページ上部にLT約88%の孤立表示があるが、同ページ基本スペック本文は85%、業界一次記事/P-WORLD/必勝本/情報島＋等も85%で一致。内部不整合の孤立表示として注記し、平均せず85%採用。
-- record: `docs/lt_pachinko_db/machines/2025-10-20_p_god_eater_199_god_trigger_ver.md`
-- record commit: `3c0554cfe0617d4892a0f8ee1c3c5bf6c585c61b`
+### e花の慶次～黄金の一撃 — COMPLETE_CORE
+- ニューギン。型式 `e花の慶次～黄金の一撃H4`、検定番号510448。全国導入canonical 2025-11-04。
+- 通常図柄揃い約1/399.76 / 傾奇者チャージ約1/2723.4 / 殿MODE中約1/520.12 / RUSH中約1/99.14。
+- 図柄揃いは10R約1500個100%。50.1%でLT `天下無双RUSH` 直行、49.9%で殿MODE100回。殿MODE引き戻し約18%込みTOTAL LT/RUSH突入約59%。
+- 本機はRUSH=LTの直LT型で、非LT下位RUSHなし。天下無双RUSHはST143回・継続約77%。
+- 天下無双RUSH中大当りのTOTAL 23.5%で出玉強化状態 `超天下無双RUSH`。内訳は3000個+α+超RUSH18.6% / 1500個+超RUSH4.9% / 3000個+α+通常LT31.0% / 1500個+通常LT45.5%。
+- 超天下無双RUSHも継続約77%。複数資料で6000個+α 49.5% / 1500個50.5%。6000個側の一部で超RUSH継続、その他は通常LTへ戻る。
+- ちょんぼりすただけ超RUSH6000/1500比率を50.5/49.5と逆転表示。必勝本・パチ7・ぱちレボ・解説資料が49.5/50.5で一致するため孤立不整合として不採用、平均しない。
+- HAZUSEページ上部の図柄揃い約1/339.76も孤立誤記。型式欄と他多数資料は約1/399.76で一致。
+- 必勝本のみ導入日2025-11-03表記。業界記事・P-WORLD・パチビー・情報島＋等は2025-11-04で一致し、11/04をcanonical。
+- 傾奇者チャージ→LT絶対割合、超RUSH6000個時の超RUSH自己継続絶対割合は公開テキストで確定できず推測しない。
+- record: `docs/lt_pachinko_db/machines/2025-11-04_e_hana_no_keiji_ougon_no_ichigeki.md`
+- record commit: `de5724efac2280f2005f0e716c30f19e1a438429`
 
 Sources:
-- https://news.p-world.co.jp/articles/31946/yugitsushin
-- https://news.p-world.co.jp/articles/31999/greenbelt
-- https://www.p-world.co.jp/machine/database/10356
-- https://hisshobon.com/machineinfo/99512/
-- https://hisshobon.com/machineinfo/99513/
-- https://p.hisshobon.jp/machine/4623/1/111738
-- https://p-johojima.jp/machine_spec/post-15926/
-- https://www.pachibee.jp/machines/about/125090009
-- https://hazuse.com/machine/pachinko/PX0315/
-- https://www.chu-3sei.com/productlist/
-- https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/maruhon_pachi/287/kh02.php
+- https://news.p-world.co.jp/articles/32141/greenbelt
+- https://news.p-world.co.jp/articles/32217/greenbelt
+- https://www.p-world.co.jp/machine/database/10373
+- https://hisshobon.com/machineinfo/99124/
+- https://p.hisshobon.jp/machine/4611/1/111475
+- https://pachiseven.jp/articles/detail/25471
+- https://www.atari7.com/pachinko/hananokeiji-ougon.php
+- https://hazuse.com/machine/pachinko/PX0316/
 - https://p-johojima.jp/machine_spec/post-2074/
-- https://sulocale.sulopachinews.com/archives/イベント/10月20日導入開始予定機種
+- https://www.pachibee.jp/machines/schedule/2025-11
+
+## Preliminary next-machine evidence — eフィーバーもののがたり
+Do not re-research from zero; continue cross-check from these confirmed points:
+- SANKYO brand / manufactured by JB. 型式 `eフィーバーもののがたりF`.
+- 2025-11-04 introduction.
+- LT3.0プラス / direct-LT type.
+- normal symbol hit approx 1/149.9; LT hit approx 1/41.1; fall/termination approx 1/111.
+- LT `SPECIAL付喪ノ戦` entry approx 25.5%; direct published total LT probability approx 1/588.
+- LT continuation approx 73%, fall type.
+- LT payout: approx 25% 6000, 25% 3000, 50% 1500; 3000=1500×2, 6000=1500×4.
+- Official SANKYO online museum confirms LT3.0+, 1/149.9, entry 25.5%, and normal hit route descriptions. Industry article (遊技通信/P-WORLD) confirms model name, manufacturer JB, core probabilities, entry/continuation and payout structure.
+- next relay should collect exact initial-hit distribution and game flow, then save if cross-check remains consistent.
+
+Preliminary sources:
+- https://www.sankyo-fever.jp/collection/988/
+- https://news.p-world.co.jp/articles/31752/yugitsushin
+- https://www.pachibee.jp/machines/index/125090013
+- https://www.pachibee.jp/machines/about/125090013
+- https://1geki.jp/pachinko/e_mononogatari/
+- https://1geki.jp/pachinko/e_mononogatari/51/
+- https://p-johojima.jp/machine_spec/post-13731/
+- https://yugi-nippon.com/pachinko-new-machine/post-72940/
 
 ## Effective DB state
-Previous effective state: 140 machine records / 139 COMPLETE_CORE / 1 CONFLICT.
+Previous effective state: 141 machine records / 140 COMPLETE_CORE / 1 CONFLICT.
 This relay added 1 COMPLETE_CORE record.
-- machine records: **141**
-- COMPLETE_CORE: **140**
+- machine records: **142**
+- COMPLETE_CORE: **141**
 - CONFLICT: **1**
 - INDEX remains stale; machine files + this handoff are progress source of truth until safe INDEX integration.
 
 ## Next restart point
-**2025-10-20 boundary is CLOSED. Re-enumerate the next introduction boundary after 2025-10-20 using at least two independent new-machine calendars, then continue from the first unprocessed LT-equipped pachinko in chronological order. Preliminary calendar evidence points to 2025-11-04 as the next major boundary; do not assume candidate completeness until re-enumerated.**
+**2025-11-04 boundary remains OPEN. Resume with `eフィーバーもののがたり`, using the preliminary verified evidence above; then continue through the remaining 2025-11-04 candidate set in chronological/discovery order. LT-non-equipped candidates must be excluded rather than recorded.**
 
 Before writing: re-read latest main README / LT mission / INDEX / this handoff, duplicate-search, preserve definition differences (`約`/`実質`/`TOTAL`, payout vs expected payout), separate same-series specs, and never infer unpublished total LT arrival rates from route probabilities.
