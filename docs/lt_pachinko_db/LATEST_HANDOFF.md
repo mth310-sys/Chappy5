@@ -1,7 +1,7 @@
 # LT Pachinko DB — Latest Handoff
 
 retrievedAt: 2026-09-22
-relay: 1 / chronological collection
+relay: 4 / chronological collection
 
 ## Read before work
 - latest main `README.md`: checked
@@ -18,68 +18,63 @@ relay: 1 / chronological collection
 
 ## Current boundary — 2025-09-08 OPEN
 Candidate queue / current audit:
-1. `eフィーバーブルーロック` — COMPLETE_CORE previous relay
-2. `eパリピ孔明` — EXCLUDED: LT搭載根拠なし。Cタイムを使う新基準「マルチトリガースペック」だが、業界発表は図柄当り/Cタイムから通常RUSHを目指す構造として説明。LTとは扱わない。
-3. `P戦国乙女7 終焉の関ヶ原 LLサイズ 299ver.` — COMPLETE_CORE this relay
-4. `ぱちんこ シン・エヴァンゲリオン PREMIUM MODEL` — EXCLUDED: 正統派甘デジV-ST。業界発表は1/99.9、RUSH約46%、継続約79%でLT搭載を示さない。シリーズ内の別LT版と混同しない。
-5. `Pアズールレーン THE ANIMATION 異次元トリガー 79ver.` — EXCLUDED: 名称に「異次元トリガー」を含むがLTではない。京楽公式は覚醒BONUS/異次元トリガーと表記する一方、詳細解析資料はラッキートリガー「なし」を明記。LT搭載とする二次資料もあるため名称に引っ張られず対象外とする。
-6. `デジハネP 頭文字D せかんど` — NEXT: LT搭載有無を監査
-7. `P FAIRY TAIL 超一夜Ver.` — LT構造 indicated; collect if eligible and duplicate search clear
-8. `P真・座頭市物語 LT99Ver.` — LT confirmed; collect if duplicate search clear
-9. `Pデビルマン-THE FINAL- 179Ver.` — verify actual introduction date and LT eligibility
+1. `eフィーバーブルーロック` — COMPLETE_CORE
+2. `eパリピ孔明` — EXCLUDED: LT搭載根拠なし。Cタイムを使う新基準「マルチトリガースペック」だがLTとは扱わない。
+3. `P戦国乙女7 終焉の関ヶ原 LLサイズ 299ver.` — COMPLETE_CORE
+4. `ぱちんこ シン・エヴァンゲリオン PREMIUM MODEL` — EXCLUDED: 正統派甘デジV-ST、LT搭載根拠なし。
+5. `Pアズールレーン THE ANIMATION 異次元トリガー 79ver.` — EXCLUDED: 名称に「異次元トリガー」を含むが解析資料でラッキートリガーなしを確認。
+6. `デジハネP 頭文字D せかんど` — COMPLETE_CORE this relay
+7. `P FAIRY TAIL 超一夜Ver.` — NEXT; LT confirmed. 2025-09-08、通常約1/319、FAIRY RUSH約55%/約60%、FAIRY RUSH中2回大当りでLT「七炎竜RUSH」、61回＋残保留、約81%。詳細振り分けと一夜/超一夜モードを収集する。
+8. `P真・座頭市物語 LT99Ver.` — LT confirmed; collect after FAIRY TAIL if duplicate search clear
+9. `デカスタPデビルマン THE FINAL 179ver.` — verify LT eligibility and canonical introduction date before boundary close
 
 Calendar sources retained:
 - https://pachinko-curation.com/shindai_calendar/2/
 - https://p-kn.com/calendar/202509/
 - https://pachinkopachisro.com/archives/58760696.html
+- https://p-johojima.jp/machine_spec/post-2074/
 
-### P戦国乙女7 終焉の関ヶ原 LLサイズ 299ver. — COMPLETE_CORE
-- アムテックス（平和系） / 型式 `P戦国乙女7H0YZ3` / 2025-09-08 / P機 / LLサイズSTART / 一種二種混合 / c時短搭載。
-- 通常図柄揃い約1/299.2（大当り約1/300.6＋小当り約1/65536）。
-- 特図1: 1500個＋LT 0.5% / 300個＋乙女RUSH 52.5% / 300個＋通常47.0%。（極）乙女RUSH突入約53%。
-- 下位「乙女RUSH」: ST51回＋残保留4、図柄揃い＋天剣チャンス約1/38.2、TOTAL継続約77%。RUSH中出玉1500個50% / 450個50%。
-- 乙女RUSH中c時短「天剣チャンス」約1/255.0。時短10000回で実質次回大当りまで。次回大当りの52.5%（公表丸め約53%）でLT、47.5%で乙女RUSH復帰。
-- LT正式名称 `極乙女RUSH`: ST100回＋残保留4、図柄揃い約1/44.9、TOTAL継続約91%。LT中1500個50% / 450個50%、いずれもLT継続。
-- 初当り0.5%のLT直行経路あり。通常遊技全体基準の総LT到達率は直接公表値未確認のため独自算出しない。
-- 2025年1月の1/399.6版とは別スペック。型式と製造元は検定/業界資料で照合。
-- record: `docs/lt_pachinko_db/machines/2025-09-08_p_sengoku_otome7_ll_299.md`
-- commit: `cea7755479657a3c53f283b9bd989b06a87fe6cd`
+### デジハネP 頭文字D せかんど — COMPLETE_CORE
+- サミー（製造: 銀座） / 型式 `P頭文字D 2 GCPC` / 2025-09-08 / 甘デジ / 一種二種混合 / LT搭載。
+- 通常約1/99（図柄揃い約1/100＋小当り約1/65536）、右打ち約1/1.14。
+- TOTAL RUSH突入約51%（詳細解析51.1%）。通常図柄揃い: 10R約800個＋LT 0.1% / 2R約160個＋下位51.0% / 2R通常48.9%。小当り約1/65536はCHARGEタイム約180個＋下位RUSH。
+- 下位 `最速ダウンヒルRUSH`: 1回転、約88%。大当り振り分けは10R約820個＋LT 4% / 5R約420個＋下位17% / 2R約180個＋下位79%。
+- LT `最速ダウンヒルRUSH LEGEND`（業界発表にLEGEND97表記あり）: 100回転、終了確率約1/32.8、継続約97%。LT中出玉 820個4% / 420個17% / 180個79%。
+- 通常遊技全体基準の総LT到達率は直接公表値未確認。0.1%直行＋下位4%経路から独自合算しない。
+- record: `docs/lt_pachinko_db/machines/2025-09-08_dejihane_p_initial_d_second.md`
+- commit: `10318d0ab4ef2ed0867b688a5764b23eb90cba94`
 
 Sources:
-- https://www.heiwanet.co.jp/products/pachinko/p-sg8ll/
-- https://yugi-nippon.com/pachinko-new-machine/post-72158/
-- https://amusement-japan.co.jp/article/detail/10004914/
-- https://www.pachibee.jp/machines/index/125080003
-- https://hisshobon.com/machineinfo/98516/
-- https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/amutex_pachi/066/kh01.php
-- https://nana-press.com/kaiseki/machine/1011/31390/
+- https://news.p-world.co.jp/articles/31382/yugitsushin
+- https://news.p-world.co.jp/articles/31414/greenbelt
+- https://1geki.jp/pachinko/p_initial_d_2nd_99/
+- https://1geki.jp/pachinko/p_initial_d_2nd_99/39/
+- https://p.hisshobon.jp/machine/4581/1/110613
+- https://hazuse.com/machine/pachinko/4P1286/
 
-### Exclusion audit sources
-`eパリピ孔明`:
-- https://news.p-world.co.jp/articles/31519/greenbelt
-- https://1geki.jp/pachinko/e_paripikoumei/
-- https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/sansei_pachi/315/kh01.php
-
-`ぱちんこ シン・エヴァンゲリオン PREMIUM MODEL`:
-- https://news.p-world.co.jp/articles/31685/yugitsushin
-- https://news.p-world.co.jp/articles/31695/greenbelt
-- https://p.hisshobon.jp/news/2184
-
-`Pアズールレーン THE ANIMATION 異次元トリガー 79ver.`:
-- https://www.kyoraku.co.jp/news/detail/839
-- https://www.kyoraku.co.jp/news/detail/846
-- https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/kyoraku_pachi/228/kh02.php
-- https://yugi-nippon.com/pachinko-new-machine/post-72524/
+### Next candidate pre-audit — P FAIRY TAIL 超一夜Ver.
+LT eligibility confirmed across industry/analysis sources.
+- 型式 `P FAIRY TAIL 超一夜Ver.FQY` / 藤商事 / 2025-09-08。
+- 通常特図1小当りからのV当り約1/319、右約1/40。
+- FAIRY RUSH突入約55%、32回＋残保留、TOTAL継続約60%（ST部分約55.4%＋残保留引き戻し約9.6%の合算）。
+- FAIRY RUSH中に2回当てるとLT発動。
+- LT `七炎竜RUSH`: 61回＋残保留、TOTAL約81%（ST部分約78.5%＋残保留約9.6%）。
+- 七炎竜RUSH中の大当り約25%から上乗せ特化の一夜モード。詳細振り分け、一夜→超一夜の25%/50%ループ定義を次回本収集で確定する。
+Pre-audit sources:
+- https://news.p-world.co.jp/articles/31548/yugitsushin
+- https://www.p-world.co.jp/machine/database/10323
+- https://p.hisshobon.jp/machine/4585/1/110788
+- https://1geki.jp/pachinko/p_fairytail_bs/39/
 
 ## Effective DB state
-Previous effective state: 126 machine records / 125 COMPLETE_CORE / 1 CONFLICT.
+Previous effective state: 127 machine records / 126 COMPLETE_CORE / 1 CONFLICT.
 This relay added 1 COMPLETE_CORE record.
-- machine records: **127**
-- COMPLETE_CORE: **126**
+- machine records: **128**
+- COMPLETE_CORE: **127**
 - CONFLICT: **1**
 - INDEX remains stale; machine files + this handoff are progress source of truth until safe INDEX integration.
 
 ## Next restart point
-**2025-09-08 `デジハネP 頭文字D せかんど` is the next unprocessed chronological candidate. Audit LT eligibility first. If non-LT, document exclusion and continue immediately to `P FAIRY TAIL 超一夜Ver.`; if LT eligible, collect full core/LT structure. Then process `P真・座頭市物語 LT99Ver.` and verify `Pデビルマン-THE FINAL- 179Ver.` date/eligibility before closing the 2025-09-08 boundary.**
+**2025-09-08 `P FAIRY TAIL 超一夜Ver.` is the next unprocessed chronological LT candidate. Duplicate-search first, then collect full core/LT structure including FAIRY RUSH first/second-hit distinction, 七炎竜RUSH, 一夜モード/超一夜モード and payout definitions. Then process `P真・座頭市物語 LT99Ver.` and verify `デカスタPデビルマン THE FINAL 179ver.` LT eligibility/date before closing the 2025-09-08 boundary.**
 
 Before writing: re-read latest main README / LT mission / INDEX / this handoff, duplicate-search, preserve definition differences (`約`/`実質`/`TOTAL`, payout vs expected payout), separate same-series specs, and never infer unpublished total LT arrival rates from route probabilities.
