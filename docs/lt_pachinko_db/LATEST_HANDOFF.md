@@ -1,15 +1,15 @@
 # LT Pachinko DB — Latest Handoff
 
 retrievedAt: 2026-09-22
-relay: 1 / chronological collection
+relay: 4 / chronological collection
 
 ## Read before work
 - latest main `README.md`: checked
 - `docs/CHAPPY5_LT_PACHINKO_DATABASE_MISSION_V01.md`: checked
 - `docs/lt_pachinko_db/INDEX.md`: checked; INDEX remains stale relative to machine records/handoff
 - previous `LATEST_HANDOFF.md`: checked
-- previous restart point: 2025-08-04 `Pクイーンズブレイド奈落5400`
-- duplicate search performed before write
+- previous restart point: 2025-08-04 `Pフィーバー戦姫絶唱シンフォギア4 LT-Light ver.`
+- existing same-series records / duplicate search checked before write
 
 ## Boundary status
 ### 2025-07-07 — CLOSED 9/9
@@ -25,30 +25,44 @@ Previous closure retained.
 - `eシャーマンキング でっけぇえなver.` — COMPLETE_CORE
 - `e真・一騎当千～軍神覚醒～396ver.` — COMPLETE_CORE
 - `e真・一騎当千～軍神覚醒～319大入りver.` — COMPLETE_CORE
+- `Pクイーンズブレイド奈落5400` — COMPLETE_CORE
 
 ## This relay
-### Pクイーンズブレイド奈落5400 — COMPLETE_CORE
-- 高尾 / 型式 `Pクイーンズブレイド奈落V1C` / 2025-08-04。
-- 一種二種混合 / 下位RUSHなしの直LT型。
-- 通常図柄揃い約1/319.2（聖乳チャージ除外）、聖乳チャージ約1/533.96、大当り合算約1/199.8。定義を分離保存。
-- 図柄揃い時は約1350個。50.5%でLT `QUEEN'S BLADE`、49.5%で通常へ。
-- LTは電サポ1回、右打ち大当り約1/1、継続約50.5%。
-- LT中は50.5%で約5400個（1350個×4）+LT継続、49.5%で約1350個+通常。
-- 通常遊技全体基準の総LT到達率は直接値未確認のためUNVERIFIED。図柄揃い/チャージ確率から独自合算しない。
-- 2024-06-03 `Pクイーンズブレイド4 UNLIMITED` はLT非搭載であり別機種として分離。
-- record: `docs/lt_pachinko_db/machines/2025-08-04_p_queens_blade_naraku_5400.md`
-- commit: `9f700c750a51de1f0da971edbca9cdc1119d49d5`
+### Pフィーバー戦姫絶唱シンフォギア4 LT-Light ver. — COMPLETE_CORE
+- SANKYO / 型式 `PAフィーバー戦姫絶唱シンフォギア4YS` / 2025-08-04。
+- 1種2種混合 / 普図ST。通常約1/99.9、最終決戦約1/2.2、RUSH中約1/38。
+- 通常初当り約99.8%は約300個+最終決戦（時短1回）、約0.2%は約1500個+LT `超絶唱RUSH` 直行。
+- 最終決戦突破約45% → `絶唱RUSH` ST45回 / 継続約70%。絶唱RUSH中大当り約9%の約1500個からLTへ。
+- LT `超絶唱RUSH` はST70回 / 継続約85%。LT中は約3000個20% / 1500個10% / 1000個20% / 500個+実質次回5% / 500個45%。複数回大当り合計表記は単一出玉と分離。
+- 通常時LT直行率の事前競合候補を再監査。P-WORLD、HAZUSE、一撃、必勝本詳細振り分け、複数解析が約0.2%で一致。必勝本の別ページ「LT解説」のみ約0.9%だが、同サイト自身の詳細振り分けが0.2%であり孤立誤記と判断。0.2%採用、平均せず、notesに0.9%誤記を保存。
+- 通常遊技全体基準の総LT到達率は直接値未確認のためUNVERIFIED。経路値から独自算出しない。
+- record: `docs/lt_pachinko_db/machines/2025-08-04_p_fever_symphogear_4_lt_light_ver.md`
+- commit: `892c55bb0c9a776782b998a542605c6f0cdc16cf`
 
 Sources:
-- https://news.p-world.co.jp/articles/30918/yugitsushin
-- https://nagasaki-yukyo.or.jp/information/%E7%89%B9%E5%88%A5%E8%A1%A3%E8%A3%85%E3%81%AB%E8%BA%AB%E3%82%92%E5%8C%85%E3%82%93%E3%81%A7%E7%99%BB%E5%A0%B4%EF%BC%81%EF%BC%81%E3%80%8Cp%E3%82%AF%E3%82%A4%E3%83%BC%E3%83%B3%E3%82%BA%E3%83%96%E3%83%AC/
-- https://www.p-world.co.jp/machine/database/10282
-- https://www.pachibee.jp/machines/index/125070006
-- https://nana-press.com/kaiseki/machine/991/29770/
-- https://pachiseven.jp/machines/7191/cutout/2
+- https://www.sankyo-fever.jp/collection/974/
+- https://news.p-world.co.jp/articles/31046/yugitsushin
+- https://www.p-world.co.jp/machine/database/10292
+- https://hazuse.com/machine/pachinko/5P0116/genre/103/
+- https://1geki.jp/pachinko/p_sympho4_lt99/55/
+- https://p.hisshobon.jp/machine/4563/1/110237
+- https://p.hisshobon.jp/machine/4563/1/110236
+- https://p.hisshobon.jp/machine/4563/1/110943
 
-## 2025-08-04 — OPEN
-Independent-calendar candidate queue. Do not assume all candidates are LT; audit each before registration.
+### Pフィーバー戦姫絶唱シンフォギア4 Light ver. — EXCLUDED / LT非搭載
+- SANKYO / 型式 `PAフィーバー戦姫絶唱シンフォギア4AR` / 2025-08-04。
+- YS（LT-Light）とは別型式。SANKYO公式コレクションでもAR/YSを別販売名・別型式として掲載。
+- パチマガスロマガ詳細スペックに `ラッキートリガー: なし` の直接記載あり。
+- ARにも名称 `超絶唱RUSH`（ST70/約85%）は存在するが、これはLTではない上位状態。名称だけでLTと誤認しない。
+- よってLT専用DBには機種レコードを作成しない。
+
+Exclusion sources:
+- https://www.sankyo-fever.jp/collection/974/
+- https://news.p-world.co.jp/articles/31053/yugitsushin
+- https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/sankyo_pachi/541/kh02.php
+
+## 2025-08-04 — CLOSED 9/9
+Independent-calendar candidate queue audit completed.
 1. `e牙狼12黄金騎士極限` — LT搭載 — COMPLETE_CORE
 2. `e黄門ちゃま 寿限無 LLサイズ` — LT搭載 — COMPLETE_CORE
 3. `eシャーマンキング` — LT搭載 — COMPLETE_CORE
@@ -56,8 +70,8 @@ Independent-calendar candidate queue. Do not assume all candidates are LT; audit
 5. `e真・一騎当千～軍神覚醒～396ver.` — LT搭載 — COMPLETE_CORE
 6. `e真・一騎当千～軍神覚醒～319大入りver.` — LT搭載 — COMPLETE_CORE
 7. `Pクイーンズブレイド奈落5400` — LT搭載 — COMPLETE_CORE
-8. `Pフィーバー戦姫絶唱シンフォギア4 LT-Light ver.` — NEXT; LT搭載確認済み。型式 `PAフィーバー戦姫絶唱シンフォギア4YS`。通常約1/99.9、最終決戦約45%、絶唱RUSH ST45/約70%、LT超絶唱RUSH ST70/約85%、下位大当り約9%でLT。通常直行率について多数資料は0.2%だが必勝本LT解説に0.9%表記があり、次 relay で一次/詳細振り分けを再確認して競合処理すること。
-9. `Pフィーバー戦姫絶唱シンフォギア4 Light ver.` — LT eligibility must be checked separately; do not merge with LT-Light
+8. `Pフィーバー戦姫絶唱シンフォギア4 LT-Light ver.` — LT搭載 — COMPLETE_CORE
+9. `Pフィーバー戦姫絶唱シンフォギア4 Light ver.` — LT非搭載 — EXCLUDED
 
 Calendar evidence retained:
 - https://1geki.jp/newmachinecalender/202508/
@@ -65,14 +79,14 @@ Calendar evidence retained:
 - https://pachinkopachisro.com/archives/58760696.html
 
 ## Effective DB state
-Previous effective state: 120 machine records / 119 COMPLETE_CORE / 1 CONFLICT.
-This relay added 1 COMPLETE_CORE record.
-- machine records: **121**
-- COMPLETE_CORE: **120**
+Previous effective state: 121 machine records / 120 COMPLETE_CORE / 1 CONFLICT.
+This relay added 1 COMPLETE_CORE record; AR Light ver. excluded without DB record.
+- machine records: **122**
+- COMPLETE_CORE: **121**
 - CONFLICT: **1**
 - INDEX remains stale; machine files + this handoff are progress source of truth until safe INDEX integration.
 
 ## Next restart point
-**Continue 2025-08-04 OPEN boundary with `Pフィーバー戦姫絶唱シンフォギア4 LT-Light ver.`. LT搭載は確認済み。通常時LT直行率0.2% vs 必勝本LT解説0.9%の競合候補を一次/詳細資料で再探索し、平均せず処理する。その後 `Pフィーバー戦姫絶唱シンフォギア4 Light ver.` を別スペックとしてLT eligibility監査。LT非搭載ならEXCLUDEDとしてDBレコードを作らない。**
+**2025-08-04 boundary is CLOSED. Re-enumerate independent new-machine calendars chronologically after 2025-08-04, identify the next actual pachinko introduction boundary, audit every candidate for LT eligibility, and register LT-equipped machines only. Do not infer LT from an upper-RUSH name alone; verify explicit LT status and separate same-series model numbers.**
 
 Before writing: re-read latest main README / LT mission / INDEX / this handoff, duplicate-search, preserve definition differences (`約`/`実質`/`TOTAL`, payout vs expected payout), separate same-series specs, and never infer unpublished total LT arrival rates from route probabilities.
