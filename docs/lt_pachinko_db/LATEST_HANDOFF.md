@@ -1,7 +1,7 @@
 # LT Pachinko DB — Latest Handoff
 
 retrievedAt: 2026-09-22
-relay: 4 / chronological collection
+relay: 1 / chronological collection
 
 ## Read before work
 - latest main `README.md`: checked
@@ -16,7 +16,7 @@ relay: 4 / chronological collection
 - 2025-08-04 — CLOSED 9/9
 - 2025-08-18 — CLOSED 3/3
 
-## Current boundary — 2025-09-08 OPEN
+## 2025-09-08 boundary — CLOSED / candidate set covered
 1. `eフィーバーブルーロック` — COMPLETE_CORE
 2. `eパリピ孔明` — EXCLUDED: LT搭載根拠なし
 3. `P戦国乙女7 終焉の関ヶ原 LLサイズ 299ver.` — COMPLETE_CORE
@@ -24,41 +24,46 @@ relay: 4 / chronological collection
 5. `Pアズールレーン THE ANIMATION 異次元トリガー 79ver.` — EXCLUDED: LTなし確認
 6. `デジハネP 頭文字D せかんど` — COMPLETE_CORE
 7. `P FAIRY TAIL 超一夜Ver.` — COMPLETE_CORE
-8. `P真・座頭市物語 LT99Ver.` — COMPLETE_CORE this relay
-9. `デカスタPデビルマン THE FINAL 179ver.` — NEXT; LT搭載は業界資料で確認済み。型式・詳細振り分け・LT経路を収集し、全国導入日2025-09-08を確定して登録判断
+8. `P真・座頭市物語 LT99Ver.` — COMPLETE_CORE
+9. `デカスタPデビルマン THE FINAL 179ver.` — COMPLETE_CORE this relay
 
-### P真・座頭市物語 LT99Ver. — COMPLETE_CORE
-- ニューギン / 型式 `P真・座頭市物語N2-K` / 2025-09-08 / 甘デジ / 1種2種混合 / LT搭載。
-- 通常約1/99.90、右打ち1/46.64。初当り後電サポ100%。
-- 通常時: 10R約1000個+竜騰虎闘0.5% / 4R約400個+激闘の鼓動20% / 2R約200個+激闘の鼓動79.5%。
-- `激闘の鼓動`: ST20+残4、突破約41%。
-- `竜騰虎闘モード`: ST51+残4、継続約70%。
-- 右打ち大当り: 10R約1000個+LT 10.0% / 10R約1000個+竜騰虎闘19.5% / 3R約300個+竜騰虎闘70.5%。10R当り時の約34%がLT発動契機。
-- LT `神速一閃モード`: ST130+残4、TOTAL約95%。LT中 10R約1000個29.5% / 3R約300個70.5%。
-- LT ST130回スルー後の残保留引き戻しはLT継続ではなく基本RUSH振り分けへ戻る。
-- 通常遊技全体基準の総LT到達率は直接公表値未確認のため独自算出しない。
-- P-WORLD本文に竜騰虎闘中LT約7%の孤立記載があるが、同ページ表・情報島＋・必勝本・パチマガ詳細の10.0%を採用。平均処理なし。
-- record: `docs/lt_pachinko_db/machines/2025-09-08_p_shin_zatoichi_monogatari_lt99.md`
-- commit: `7391614b703acf5bbe3f86f97f5608eb0ac5008e`
+Boundary cross-check:
+- 情報島＋ 2025-09-08 list includes all nine pachinko candidates above, including Devilman.
+- K-Navi / すろかる等の9/8 list agrees on the other eight; some calendars place Devilman at 2025-09-22 instead.
+- Devilman itself is already collected, so no machine is lost whichever rollout-date convention is used. HAZUSE and 1geki give introduction start 2025-09-08; other calendars show 9/22 and pachinko-curation shows both 9/8 and 9/22. Keep canonical first-introduction date 9/8 with rollout-date note; do not duplicate the machine at 9/22.
+
+### デカスタPデビルマン THE FINAL 179ver. — COMPLETE_CORE
+- ニューギン / 型式 `PデビルマンLM3` / LT搭載 / ライトミドル / 二種。
+- 通常約1/179.55、右打ち実質1/1.0。
+- 初当り: 7R約560個+LT 0.1% / 2R約160個+真悪魔RUSH 31.4% / 2R約160個+通常68.5%。TOTAL RUSH突入約31.5%。
+- 下位 `真悪魔RUSH`: 電サポ1回転、継続約91.5%。7R+LT 2.00% / 7R+下位継続28.19% / 3R+下位継続61.31% / 2R短開放+通常8.50%。
+- LT `デデデRUSH BONUS`: 通常0.1%直行または真悪魔RUSH中大当り2.00%。電サポ1回転、継続約93.1%。
+- LT中: 7R約560個+LT継続28.04% / 3R約240個+LT継続65.06% / 7R約560個+真悪魔RUSH2.08% / 3R約240個+真悪魔RUSH4.82%。LT終了時は通常ではなく真悪魔RUSHへ復帰。
+- 通常遊技全体基準の総LT到達率は直接公表値未確認。経路値から独自算出しない。
+- 1geki LT詳細ページに孤立した「94.5%」表示があるが、同サイト機種概要・P-WORLD・HAZUSE・詳細振り分け合計は93.1%で一致。93.1%をcanonicalとし、孤立表示を注記。平均しない。
+- record: `docs/lt_pachinko_db/machines/2025-09-08_dekasuta_p_devilman_the_final_179.md`
+- commit: `309ed4f8611805eee78aac4808189c59615c180b`
 
 Sources:
-- https://p-johojima.jp/machine_spec/post-12724/
-- https://news.p-world.co.jp/articles/31637/greenbelt
-- https://amusement-japan.co.jp/article/detail/10004970/
-- https://hisshobon.com/machineinfo/98814/
-- https://hisshobon.com/machineinfo/98815/
-- https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/newgin_pachi/506/kh01.php
-- https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/newgin_pachi/506/kh02.php
+- https://hazuse.com/hd/5p0364/
+- https://1geki.jp/pachinko/p_devilman_tf179ds/
+- https://1geki.jp/pachinko/p_devilman_tf179ds/51/
+- https://1geki.jp/pachinko/p_devilman_tf179ds/53/
+- https://www.p-world.co.jp/machine/database/10333
+- https://chonborista.com/pachinko/newgin/244098/
+- https://p-johojima.jp/machine_spec/post-2074/
+- https://p-kn.com/calendar/202509/
+- https://pachinko-curation.com/56234/
 
 ## Effective DB state
-Previous effective state: 129 machine records / 128 COMPLETE_CORE / 1 CONFLICT.
+Previous effective state: 130 machine records / 129 COMPLETE_CORE / 1 CONFLICT.
 This relay added 1 COMPLETE_CORE record.
-- machine records: **130**
-- COMPLETE_CORE: **129**
+- machine records: **131**
+- COMPLETE_CORE: **130**
 - CONFLICT: **1**
 - INDEX remains stale; machine files + this handoff are progress source of truth until safe INDEX integration.
 
 ## Next restart point
-**2025-09-08 `デカスタPデビルマン THE FINAL 179ver.` is the next unprocessed chronological LT candidate. LT搭載は確認済み。duplicate-search first, then collect 型式、1/179.55、下位RUSH/真悪魔RUSH、LTデデデRUSHの正式経路・継続率・全振り分け・全国導入日。処理後、複数カレンダーで2025-09-08境界を再監査してCLOSE判定する。**
+**Advance to the 2025-09-22 boundary. Start with `Pルパン三世 ONE COLLECTION 100ver.` and verify LT installation before collecting. Then inspect `～廻るヘソワイド～PホワイトシャカRUSH`. `デカスタPデビルマン THE FINAL 179ver.` is already collected and must not be duplicated even though some calendars list its rollout on 9/22. Use at least two independent new-machine calendars to enumerate the full 9/22 boundary before closing it.**
 
 Before writing: re-read latest main README / LT mission / INDEX / this handoff, duplicate-search, preserve definition differences (`約`/`実質`/`TOTAL`, payout vs expected payout), separate same-series specs, and never infer unpublished total LT arrival rates from route probabilities.
