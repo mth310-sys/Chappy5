@@ -19,9 +19,6 @@ jackpotProbability:
 initialPayout:
 - 特図1: 2R 約300個（払出）100%
 
-a rushEntryRate:
-- BREAKING BATTLE突入率: 25%
-
 rushEntryRate:
 - BREAKING BATTLE突入率: 25%
 
