@@ -1,14 +1,13 @@
 # LT Pachinko DB — Latest Handoff
 
 retrievedAt: 2026-09-22
-relay: 1 / chronological collection
+relay: 4 / chronological collection
 
 ## Read before work
 - latest main `README.md`: checked
 - `docs/CHAPPY5_LT_PACHINKO_DATABASE_MISSION_V01.md`: checked
 - `docs/lt_pachinko_db/INDEX.md`: checked; INDEX remains stale relative to machine records/handoff
 - previous `LATEST_HANDOFF.md`: checked
-- latest prior machine record `2025-10-06_e_dunbine3_zerosonic.md`: checked
 - duplicate search performed before write
 
 ## Closed boundaries retained
@@ -25,42 +24,47 @@ relay: 1 / chronological collection
 3. `eガールズ＆パンツァー 最終章` — COMPLETE_CORE.
 4. `eベルセルク無双 第2章` — COMPLETE_CORE.
 5. `e聖戦士ダンバイン3 ZEROSONIC` — COMPLETE_CORE.
-6. `Pフィーバーダンジョンに出会いを求めるのは間違っているだろうか2 LT-Light ver.` — **COMPLETE_CORE this relay**.
-7. `PAぱちんこ冬のソナタ My Memory Sweet Version` — **EXCLUDED / LT非搭載 confirmed this relay**. Spec sources identify conventional probability-variable/MAX8 type and explicitly list Lucky Trigger as non-equipped.
-8. `PA義風堂々!!～兼続と慶次～3 99ver.` — **next target / LT搭載 confirmed**. Preliminary cross-check: normal 1/99.9, right 1/7.73, TOTAL RUSH entry 50.5%, `天衣無縫RUSH` 6+4 / about 75%, LT `天下無双モード` 500+4 / 94%, normal direct LT 1% and right-hit LT allocation about 1%. Full record not yet written; verify detailed distributions and definitions before write.
-9. `デカスタPシュタインズゲート ゼロ まゆしぃば～じょん` — do not place at 10/6 without resolving calendar discrepancy. One major calendar places it 2025-10-20; another summary source groups it with 10/6. Verify canonical first introduction and LT status after 義風堂々.
+6. `Pフィーバーダンジョンに出会いを求めるのは間違っているだろうか2 LT-Light ver.` — COMPLETE_CORE.
+7. `PAぱちんこ冬のソナタ My Memory Sweet Version` — EXCLUDED / LT非搭載.
+8. `PA義風堂々!!～兼続と慶次～3 99ver.` — **COMPLETE_CORE this relay**.
+9. `デカスタPシュタインズゲート ゼロ まゆしぃば～じょん` — **next target / LT搭載 and canonical 2025-10-06 strongly supported**. Information Island machine spec, Pachibee, 1geki and P-Summa all identify 2025-10-06; Pachinko Curation lists both 10/6 and 10/20. Treat 10/20 as secondary rollout/date discrepancy, not canonical, unless a stronger primary source overturns this. Full record not yet written.
 
-### Pフィーバーダンまち2 LT-Light ver. — COMPLETE_CORE
-- SANKYO, model `PAフィーバーダンまち2YG`, canonical first introduction 2025-10-06, 甘デジ / 一種二種混合 / 普図抽選 / LT.
-- 発表時の遊技通信記事（2025-07-19）はホール導入を2025-08-04予定としていたが、後続の実導入資料・複数カレンダー/解析は2025-10-06で一致。型式 `PAフィーバーダンまち2YG` は2025-08-22検定通過との業界追跡記録もあるため、8/4はplanned date、10/6をcanonical first-introduction dateとした。
-- 通常約1/99.9。初当り3R約240個後、100%ダンジョンチャレンジ42回へ。DC中図柄揃い約1/98.6、突破約35%。
-- DC/RUSH中大当りの約5%でLT106回。残り95%は通常RUSH60回へ（10R約800個47% / 3R約240個48%）。通常RUSH中図柄揃い約1/37.0、継続約81%。
-- LT中も図柄揃い約1/37.0、106回、継続約95%。LT中は10R約800個52% / 3R約240個48%、双方LT継続。
-- 通常遊技全体基準の総LT到達率は直接公表値を確認できず、35%突破率と5%振り分けから独自算出しない `UNVERIFIED_AFTER_RESEARCH`。
-- 公開解析では上位状態を「LT」と記載。別の正式固有RUSH名は確認できないため創作しない。
-- 遊タイムなし。出玉は払出表記。
-- record: `docs/lt_pachinko_db/machines/2025-10-06_p_danmachi2_lt_light.md`
-- record commit: `340b8b2efb07b62c2437e9a699ee44ff3aee2027`
+### PA義風堂々!!～兼続と慶次～3 99ver. — COMPLETE_CORE
+- ニューギン, canonical introduction 2025-10-06, 甘デジ / 1種2種混合 / LT.
+- 通常実質1/99.90、右打ち実質1/7.73。
+- 特図1: 10R約920個+次回大当り濃厚/天衣無縫RUSH 1%、4R約340個+チャンスタイム 99%。出玉はその他入賞口込み払出。
+- TOTAL RUSH突入50.5%。チャンスタイム1回+残4。天衣無縫RUSHは6回+残4、約75%。
+- チャンスタイム/天衣無縫RUSH中: 10R+LT 1%、10R+下位継続49%、4R+下位継続50%。
+- LT `天下無双モード`: 500回+残4、継続94%。LT中は10R+LT 50%、4R+LT 44%、4R+時短終了6%。
+- 6%終了後も残保留4個があり、引き戻し約42.52%。残保留当選は天衣無縫RUSH側の特図2振り分けへ戻り、1%ならLT復帰可能。残保留をLT本体94%へ重複加算しない。
+- 通常遊技全体基準の総LT到達率は直接公表値を十分な再探索後も確認できず `UNVERIFIED_AFTER_RESEARCH`。経路確率から独自算出しない。
+- P-WORLD、情報島＋、HAZUSE、必勝本、一撃で主要値・振り分け一致。conflictsなし。
+- record: `docs/lt_pachinko_db/machines/2025-10-06_pa_gifudodo3_99ver.md`
+- record commit: `247f793fc19094b644df8c8f47655afd60389ddb`
 
 Sources:
-- https://news.p-world.co.jp/articles/31460/yugitsushin
-- https://yugi-nippon.com/pachinko-new-machine/post-72361/
-- https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/sankyo_pachi/543/kh02.php
-- https://1geki.jp/pachinko/p_danmachi2_light/
-- https://slothack.net/matome/170998/
-- https://pachinko-curation.com/56800/
-- https://pachinko-spec.info/spec/161112/
-- https://pachinkopachisro.com/archives/58760696.html
+- https://www.p-world.co.jp/machine/database/10346
+- https://p-johojima.jp/machine_spec/post-13969/
+- https://news.p-world.co.jp/articles/31857/greenbelt
+- https://hazuse.com/machine/pachinko/PX0311/
+- https://hisshobon.com/machineinfo/98849/
+- https://1geki.jp/pachinko/p_gifudd3_99/55/
+
+## Preliminary next-target audit — デカスタPシュタインズゲート ゼロ まゆしぃば～じょん
+- 型式 `P STEINS;GATE0 N3` confirmed by industry announcement.
+- LT搭載 confirmed: `RUSH 0 HYPER`.
+- 通常約1/99.9、右打ち約1/59.4、RUSH突入50%、RUSH 0 50回+残4 / 約60%、LT 150回+残4 / 約93%。LT中タイムリープ当選は10000回（実質次回）へ。
+- canonical date evidence now favors **2025-10-06**: 情報島＋機種DB、Pachibee、1geki online guide、P-Summa all explicitly 10/6. Pachinko Curation alone displays both 10/6 and 10/20. Next relay should verify detailed 特図1/特図2 distributions and LT entry allocation before record write, then close/re-audit 10/6 candidate set.
 
 ## Effective DB state
-Previous effective state: 137 machine records / 136 COMPLETE_CORE / 1 CONFLICT.
+Previous effective state: 138 machine records / 137 COMPLETE_CORE / 1 CONFLICT.
 This relay added 1 COMPLETE_CORE record.
-- machine records: **138**
-- COMPLETE_CORE: **137**
+- machine records: **139**
+- COMPLETE_CORE: **138**
 - CONFLICT: **1**
 - INDEX remains stale; machine files + this handoff are progress source of truth until safe INDEX integration.
 
 ## Next restart point
-**Continue 2025-10-06 boundary from `PA義風堂々!!～兼続と慶次～3 99ver.`. LT搭載は確認済み。P-WORLD preliminary values: 通常1/99.9、右1/7.73、TOTAL RUSH突入50.5%、天衣無縫RUSH 6回+残4 / 約75%、LT `天下無双モード` 500回+残4 / 94%、通常直行1%、右打ち大当り約1%でLT。次回はメーカー/業界資料と複数解析で大当り振り分け・LT終了/残保留構造・出玉定義を照合してCOMPLETE_CORE化する。その後 `デカスタPシュタインズゲート ゼロ まゆしぃば～じょん` の10/6 vs 10/20導入日とLT statusを解決し、少なくとも二つの独立カレンダーで候補集合を再監査してから2025-10-06をCLOSEする。`PAぱちんこ冬のソナタ My Memory Sweet Version` はLT非搭載確認済みのため再処理しない。**
+**Continue 2025-10-06 boundary from `デカスタPシュタインズゲート ゼロ まゆしぃば～じょん`. Treat 2025-10-06 as provisional canonical date supported by multiple explicit machine databases/calendars; retain the 10/20 secondary-date note. Verify 特図1/特図2 full payout distributions, exact LT entry route/allocation, RUSH 0 HYPER continuation definition and 10000回 route across industry + multiple analysis sources. After COMPLETE_CORE write, re-enumerate 2025-10-06 with at least two independent calendars and CLOSE only if no unprocessed LT candidate remains.**
 
 Before writing: re-read latest main README / LT mission / INDEX / this handoff, duplicate-search, preserve definition differences (`約`/`実質`/`TOTAL`, payout vs expected payout), separate same-series specs, and never infer unpublished total LT arrival rates from route probabilities.
