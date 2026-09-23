@@ -8,65 +8,77 @@ relay: 1 / chronological collection
 - `docs/CHAPPY5_LT_PACHINKO_DATABASE_MISSION_V01.md`: checked
 - `docs/lt_pachinko_db/INDEX.md`: checked; INDEX remains stale relative to machine records/handoff
 - previous `LATEST_HANDOFF.md`: checked
-- duplicate search performed before every positive write
+- duplicate search performed before positive write
 
 ## Closed boundaries retained
 - through 2025-11-17: previous closed boundaries retained.
-- 2025-12-08 — **CLOSED 9/9 audited this relay**.
-- 2025-12-22 — **CLOSED 3/3 pachinko candidates this relay**.
+- 2025-12-08 — CLOSED 9/9.
+- 2025-12-22 — CLOSED 3/3.
 
-## 2025-12-08 boundary resolution
-### PA野生の王国6 — LT非搭載; excluded
-- 型式 `PA野生の王国6N2`、ニューギン、2025-12-08。
-- previous handoff had one low-tier中古販売 listing calling it LT, conflicting with high-trust ST/遊タイム descriptions.
-- re-research found an explicit machine-analysis statement `LT非搭載`, plus a quoted official パチマガスロマガMobile announcement saying `LT無し`, while 一撃 taxonomy lists this machine as `一種二種混合機 / 甘デジ / 遊タイム` and separately labels contemporary Newgin LT machines `ラッキートリガー`.
-- industry launch coverage describes 100% ST50, ST+時短, and遊タイム5000 only; no LT route/name exists. The isolated low-tier sales-site label is treated as erroneous metadata, not a real spec conflict.
-- mission rule: no machine record created.
+## 2026-01-05 boundary — OPEN
+Multiple calendars were cross-checked before collection. HAZUSE currently enumerates 11 pachinko introductions on 2026-01-05; K-Navi and other calendars overlap materially, with some date-listing variation for PA清流物語4. Treat HAZUSE's 11 as the working boundary set and audit every candidate before closure.
+
+Working candidate set:
+1. e ゴジラ対エヴァンゲリオン2 超デカゴールド
+2. Pリングにかけろ1 129ver. — COMPLETE_CORE this relay
+3. P【超甘LT】華牌RR 1/49×99de遊タイム
+4. e吉宗 極乗3000ver.
+5. PA清流物語4 ウキウキ79ver.
+6. eソードアート・オンライン 閃光の軌跡 99Ver.
+7. eようこそ実力至上主義の教室へ
+8. Pフィーバーうたわれるもの LT-Light ver.
+9. Pフィーバー彼女、お借りします LT-Light ver.
+10. e 盾の勇者の成り上がり アルティメット199ver.
+11. P ゴジラ対エヴァンゲリオン2 超デカシルバー
+
+Calendar sources checked 2026-09-23:
+- https://hazuse.com/new-machine/202601h/ — 11-machine 2026-01-05 pachinko set.
+- https://p-kn.com/calendar/202601/ — overlapping 2026-01-05 calendar.
+- https://1geki.jp/newmachinecalender/202601/ — 2026-01-05 calendar, 11 pachinko / 4 slot.
+- https://pachinkopachisro.com/archives/59511928.html — independent January calendar cross-check.
+
+## Added this relay
+### Pリングにかけろ1 129ver. — COMPLETE_CORE
+- record: `docs/lt_pachinko_db/machines/2026-01-05_p_ring_ni_kakero1_129ver.md`
+- commit: `b4b88341f49bdc8ccab1f9d5700a0821c5d24c22`
+- ニューギン、型式 `Pリングにかけろ1LM`、検定5P0704、導入2026-01-05。
+- 通常1/129.77。初当り50%で下位 `K.O.RUSH`、50%通常。初当り振り分けは1200個+RUSH 5% / 720個+RUSH 45% / 720個通常50%。
+- K.O.RUSHはST49回＋リンかけCHANCE（最終1回＋残4）、TOTAL突破約40.5%。K.O.RUSH中の大当りまたはST回数リセットでLT `超K.O.RUSH`。
+- 超K.O.RUSHはST129回＋リンかけCHANCE、TOTAL継続約79.5%。
+- K.O.RUSH中: 1200個+LT 70.4% / 0R STリセット+LT 29.6%。
+- LT中: 2400個+LT 54.5% / 1200個19.5% / 480個5.5% / 0R STリセット20.5%。2400個は1200×2。
+- リンかけCHANCEは最終1回＋残4の計5回、C時短/STリセット込み当選1/36.16、成功約13.1%。当選時はLTへ。
+- 通常遊技全体基準の総LT到達率/確率は直接公表値未確認。50%×40.5%等から独自算出しない。
+- 業界一次（遊技通信/グリーンべると）＋HAZUSE/P-WORLD/必勝本/一撃で照合。conflictsなし。
+
 Sources checked 2026-09-23:
-- https://www.pachikachi.com/posts/yasei6.html — explicitly `LT非搭載`.
-- https://psumma.jp/pachinko/65602/ — quotes パチマガスロマガMobile official post: `LT無し`.
-- https://1geki.jp/maker/newgin/ — Newgin machine taxonomy; PA野生の王国Ⅵ lacks LT tag while adjacent LT models carry it.
-- https://news.p-world.co.jp/articles/32225/yugitsushin — industry launch: ST100% /遊タイム.
-- https://news.p-world.co.jp/articles/32409/greenbelt — industry launch: ST100% /遊タイム.
+- https://news.p-world.co.jp/articles/32525/yugitsushin
+- https://news.p-world.co.jp/articles/32510/greenbelt
+- https://hazuse.com/machine/pachinko/5P0704/
+- https://www.p-world.co.jp/machine/database/10406
+- https://p.hisshobon.jp/machine/4669/1/113026
+- https://1geki.jp/pachinko/p_rinkake1_129ver/51/
 
-## 2025-12-22 boundary — CLOSED 3/3
-Calendar source: 情報島＋ past new-machine schedule listed exactly three pachinko candidates for 2025-12-22; all three are LT and were collected.
-
-### e 新世紀エヴァンゲリオン ～はじまりの記憶～ — COMPLETE_CORE
-- record: `docs/lt_pachinko_db/machines/2025-12-22_e_evangelion_hajimari_no_kioku.md`
-- commit: `1267f3dea9e4f159e404c3cb7620d0f29819aedc`
-- ビスティ、型式 `e新世紀エヴァンゲリオン17 はじまりの記憶R`、検定5P0685。
-- 図柄揃い約1/399.9 / チャージ込み大当り約1/349.9を定義分離。LT中約1/99.6。
-- 図柄揃い50.5%でLT直行、49.5%で時短100。チャージ経由・時短引き戻し込みTOTAL LT突入約61.4%。
-- LT `インパクトモード / 暴走モード` はST157回、継続約80%。右99.5% 2400個(1200×2)、0.5% 4800個(1200×4)。
-
-### P沖ドキ！ドキドキ弾丸ツアー — COMPLETE_CORE
-- record: `docs/lt_pachinko_db/machines/2025-12-22_p_okidoki_dokidoki_dangan_tour.md`
-- commit: `4edb23f3b87bbf7562324cce3de7f38e5916577f`
-- メーシー、型式 `P沖ドキ！LG`。役物タイプ。
-- 通常実質約1/22.2、初当りALL1500個。18%で直LT `GOLDEN超ドキRUSH`、通常遊技基準LT突入確率約1/123.4（直接公表値）。
-- LT約1/17.0、ST32＋残4、継続約89%。右1500個75% / 300個25%、双方LT継続。
-- K-Naviのみ12/1表記だがHAZUSE/必勝本/パチビー/情報島＋等12/22一致のため12/22 canonical。
-
-### P少女☆歌劇 レヴュースタァライト 99 LT3000 — COMPLETE_CORE
-- record: `docs/lt_pachinko_db/machines/2025-12-22_p_revue_starlight_99_lt3000.md`
-- commit: `613a2855bc13f475deeaa1c2f1ab60e898951681`
-- 豊丸産業。通常1/99.9、右1/72.1。初当り200個、RUSH50%。
-- トップスタァロード初回45＋残4 約50%、2回目以降100＋残4 約77%。
-- RUSH大当り1.6%で3000個＋LT `追劇`、13.3%で1000個＋追劇70%ZONE。
-- 追劇は約70%で1000個以上上乗せループ。追劇中0.5% 2000個＋追劇 / 69.5% 1000個＋追劇 / 4% ZONE / 26%下位RUSH。
-- 3000/2000は1000個×複数回合計。期待出玉10400個も単一大当り出玉ではない。
-- formal modelNameは十分な再探索でも今回直接確認できず `UNVERIFIED_AFTER_RESEARCH`。
+## Positive LT prechecks for remaining boundary
+Do not treat these prechecks as completed records; they only establish likely LT-positive status and useful identifiers.
+- `e ゴジラ対エヴァンゲリオン2 超デカゴールド`: HAZUSE explicitly LT, 型式 `eゴジラ対エヴァンゲリオン2TR`, 検定510468, 約1/299.9, ビスティ, 2026-01-05.
+- `e吉宗 極乗3000ver.`: HAZUSE LT page; 1/199.9, `振舞RUSH`突入30%, ST157, 約80%, 3000個=750×4.
+- `eソードアート・オンライン 閃光の軌跡 99Ver.`: HAZUSE explicitly LT, 型式 `eソードアート・オンライン～閃光の軌跡～99Ver．K1`, 検定4P1693, 約1/99.90, RUSH55%, LT `LIGHTNING RUSH` 約94%.
+- `eようこそ実力至上主義の教室へ`: HAZUSE explicitly LT, 型式 `eようこそ実力至上主義の教室へMA`, 検定510728, 約1/349.9, Sansei R&D.
+- `Pフィーバーうたわれるもの LT-Light ver.`: 一撃/解析でLT明示、型式 `PAフィーバーうたわれるものY`, 1/99.9, 仮面RUSH50%/約75%, LT仮面RUSH超。
+- `Pフィーバー彼女、お借りします LT-Light ver.`: HAZUSE explicitly LT, 型式 `Pフィーバー彼女、お借りしますLR`, 検定5P0526, 約1/189.7, DREAM RUSH約50%, LT `DREAM RUSH極/ヒロインRUSH` 約86%.
+- `e 盾の勇者の成り上がり アルティメット199ver.`: HAZUSE explicitly LT, 型式 `e盾の勇者の成り上がりEREF`, 検定5P0814, 約1/199, RISING RUSH49.9%/突破約40%, LT `裏アルティメットタイム` 約85%.
+- 華牌RR / ゴジエヴァ銀 / PA清流は次リレー以降にLT搭載可否と詳細を改めて監査する。機種名だけで推測しない。
 
 ## Effective DB state
-Previous: 156 machine records / 155 COMPLETE_CORE / 1 CONFLICT.
-This relay added 3 COMPLETE_CORE records.
-- machine records: **159**
-- COMPLETE_CORE: **158**
+Previous: 159 machine records / 158 COMPLETE_CORE / 1 CONFLICT.
+This relay added 1 COMPLETE_CORE record.
+- machine records: **160**
+- COMPLETE_CORE: **159**
 - CONFLICT: **1**
 - INDEX remains stale; machine files + this handoff are progress source of truth until safe INDEX integration.
 
 ## Next restart point
-**Resume by enumerating the 2026-01-05 pachinko introduction boundary from multiple calendars, then audit candidates in calendar order. Known LT-positive candidates already discovered include `Pリングにかけろ1 129ver.`, `P【超甘LT】華牌RR 1/49×99de遊タイム`, `Pフィーバーうたわれるもの LT-Light ver.`, `e吉宗 極乗3000ver.`, and other 2026-01-05 machines that must be enumerated before collection. Do not assume this partial discovery list is complete. First build the full date candidate set, then collect only LT-equipped machines and explicitly exclude non-LT candidates without machine records.**
+**Continue the OPEN 2026-01-05 boundary. Next collect/audit `e ゴジラ対エヴァンゲリオン2 超デカゴールド` (LT-positive precheck already confirmed), then continue through the 11-machine candidate set without skipping.**
 
-For every positive LT machine: duplicate-search first, collect exact model/manufacturer, normal/right probabilities and definitions, initial payout/distribution, lower RUSH structure if any, formal LT name/routes/rates, lower/LT continuation, payout distribution, ST/time-shortening/C-time/residual-hold handling and complete normal→initial→RUSH→LT flow. Preserve `約`/`実質`/`TOTAL`, payout vs expected payout, and sibling-spec distinctions. Never infer unpublished total LT arrival rates from route probabilities.
+For every positive LT machine: duplicate-search first, collect exact model/manufacturer, normal/right probabilities and definitions, initial payout/distribution, lower RUSH structure if any, formal LT name/routes/rates, lower/LT continuation, payout distribution, ST/time-shortening/C-time/residual-hold handling and complete normal→initial→RUSH→LT flow. Preserve `約`/`実質`/`TOTAL`, payout vs expected payout, and sibling-spec distinctions. Never infer unpublished total LT arrival rates from route probabilities. LT-negative candidates receive no machine record; retain exclusion evidence in this handoff when audited.
