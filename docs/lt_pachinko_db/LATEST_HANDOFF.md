@@ -8,15 +8,16 @@ relay: 1 / chronological collection
 - `docs/CHAPPY5_LT_PACHINKO_DATABASE_MISSION_V01.md`: checked
 - `docs/lt_pachinko_db/INDEX.md`: checked; INDEX remains stale relative to machine records/handoff
 - previous `LATEST_HANDOFF.md`: checked
-- duplicate search performed before positive write
+- duplicate search performed before every positive write
 
 ## Closed boundaries retained
 - through 2025-11-17: previous closed boundaries retained.
 - 2025-12-08 — CLOSED 9/9.
 - 2025-12-22 — CLOSED 3/3.
+- 2026-01-05 — **CLOSED 11/11**.
 
-## 2026-01-05 boundary — OPEN
-Working candidate set remains 11 machines:
+## 2026-01-05 boundary — CLOSED
+Candidate set audited in order:
 1. e ゴジラ対エヴァンゲリオン2 超デカゴールド — COMPLETE_CORE
 2. Pリングにかけろ1 129ver. — COMPLETE_CORE
 3. P【超甘LT】華牌RR 1/49×99de遊タイム — COMPLETE_CORE
@@ -25,9 +26,9 @@ Working candidate set remains 11 machines:
 6. eソードアート・オンライン 閃光の軌跡 99Ver. — COMPLETE_CORE
 7. eようこそ実力至上主義の教室へ — COMPLETE_CORE
 8. Pフィーバーうたわれるもの LT-Light ver. — CONFLICT (core collected; 遊タイム搭載可否のみ未解決)
-9. Pフィーバー彼女、お借りします LT-Light ver. — NEXT
-10. e 盾の勇者の成り上がり アルティメット199ver.
-11. P ゴジラ対エヴァンゲリオン2 超デカシルバー
+9. Pフィーバー彼女、お借りします LT-Light ver. — COMPLETE_CORE
+10. e 盾の勇者の成り上がり アルティメット199ver. — COMPLETE_CORE
+11. P ゴジラ対エヴァンゲリオン2 超デカシルバー — COMPLETE_CORE
 
 Boundary calendar sources retained:
 - https://hazuse.com/new-machine/202601h/
@@ -36,51 +37,59 @@ Boundary calendar sources retained:
 - https://pachinkopachisro.com/archives/59511928.html
 
 ## Added this relay
+### Pフィーバー彼女、お借りします LT-Light ver. — COMPLETE_CORE
+- record: `docs/lt_pachinko_db/machines/2026-01-05_p_fever_kanojo_okarishimasu_lt_light_ver.md`
+- commit: `d79f4025c6ba7f3908c1b265a460d6ec76864015`
+- SANKYO、型式 `Pフィーバー彼女、お借りしますLR`、導入2026-01-05。
+- 通常約1/189.7、DREAM RUSH約1/72.5・ST50回・継続約50%、図柄揃い時RUSH約50%。
+- DREAM RUSH中に大当りを2回獲得するとLT `DREAM RUSH極 / ヒロインRUSH`。LT約1/36.7、ST70回、継続約86%。
+- 特図1詳細: 1000個+RUSH 6.0% / 400個+RUSH 44.1% / 400個通常49.9%。
+- 特図2: 800個50% / 1400個38% / 2000〜3200個12%。特図2大当り（800個or200個）4回分合計値を含むため単一大当り出玉としない。
+- 遊タイム非搭載を解析資料で確認。通常遊技全体基準の総LT到達率は直接公表値未確認のため独自算出しない。
+
+### e 盾の勇者の成り上がり アルティメット199ver. — COMPLETE_CORE
+- record: `docs/lt_pachinko_db/machines/2026-01-05_e_tate_no_yuusha_ultimate_199ver.md`
+- commit: `de4b7271be1a22432b57ac3e8953dfde5cbb3423`
+- タイヨーエレック製 / Sammy、型式 `e盾の勇者の成り上がりEREF`、導入2026-01-05。
+- 通常約1/199、右約1/45.2、RISING RUSH49.9%。RISING RUSHは転落約1/23.7より先に大当りを取る突破型でLT突破約40%。
+- 初当り2.1%はLT `裏アルティメットタイム` 直行。RISING RUSH突破時も3000/4500個+αを伴いLTへ。
+- LTは80回or10000回+残4、残保留込み継続約85%。LT中1500個or3000個+α、残保留引き戻しは3000個+α。
+- 3000/4500/+αは複数大当り・上乗せを含むため単一10R1500個と分離。
+- 遊技通信記事の導入予定「2024年12月上旬」は、グリーンべると/K-Navi等の2026-01-05および当該追加スペックの時系列と不整合。canonical releaseDateは2026-01-05、記事誤記として注記。
+
+### P ゴジラ対エヴァンゲリオン2 超デカシルバー — COMPLETE_CORE
+- record: `docs/lt_pachinko_db/machines/2026-01-05_p_godzilla_vs_evangelion2_chou_deka_silver.md`
+- commit: `40d671ab4e18168fb2250346e5f85a24559f1dfd`
+- ビスティ、型式 `Pゴジラ対エヴァンゲリオン2LV`、導入2026-01-05。
+- 通常約1/174.9、右約1/15.1、転落約1/94.7。RUSH=LTの直LTで初当り約25%。
+- 特図1: 1000個+LT 0.5% / 300個+LT 24.5% / 300個通常75%。
+- LT `シン・バトルモード暴走` は時短10000回（転落で終了）+残4。残保留引き戻し約24.0%込みTOTAL継続約90%。
+- LT大当り75%は400個、25%は800個+αでG覚醒モード。800=400×2。G覚醒は400個上乗せ40/50/66/80%ループで終了後LT復帰。
+
+## Existing unresolved record retained
 ### Pフィーバーうたわれるもの LT-Light ver. — CONFLICT
 - record: `docs/lt_pachinko_db/machines/2026-01-05_p_fever_utawarerumono_lt_light_ver.md`
-- commit: `4d7e3f3ef000916ed05790fd27d6be237deb94dc`
-- SANKYO、型式 `PAフィーバーうたわれるものY`、導入2026-01-05。
-- 一種二種混合 / 甘デジ / 2段階LT。通常約1/99.9、右約1/14.1（特図2、大当り+小当り合算）。
-- 初当り5R約350個。約50%で下位 `仮面RUSH`、約50%通常。
-- 仮面RUSHは時短15回+残保留4個、TOTAL継続約75%。右大当りはALL約700個、約5%でLT `仮面RUSH超`、約95%で下位継続。
-- LTも時短15回+残4、継続約75%。LT中は約60%で約1400個（700×2）+時短10000回＝実質次回まで、約40%で700個+LT。次回大当りでも同じ約60%振り分けを再抽選するため1400個上乗せループ構造。
-- 通常初当り全体基準の総LT到達率は直接公表値未確認。経路値から独自算出しない。
-- `ceilingOrSupport`のみ未解決競合: なな徹は遊タイム「非搭載」、パチ＆スロ必勝本基本スペックは「搭載」。SANKYO公式スペックでは発動条件/恩恵の明示を確認できず、平均・推測せずCONFLICT。後続QAで一次資料または追加高信頼資料を再探索する。
-Sources checked 2026-09-23:
-- https://www.sankyo-fever.jp/products/machine_list/pce/
-- https://www.sankyo-fever.jp/products/machine_list/pce/spec/
-- https://news.p-world.co.jp/articles/32131/yugitsushin
-- https://yugi-nippon.com/pachinko-new-machine/post-73867/
-- https://pachimaga.com/free/mach/maker-p/sankyo/064528.php
-- https://nana-press.com/kaiseki/machine/1082/33664/
-- https://hisshobon.com/machineinfo/99982/
-- https://p.hisshobon.jp/machine/4643/1/112233
-- https://www.p-world.co.jp/machine/database/10381
-
-## Previous records/exclusion retained for this boundary
-- `eようこそ実力至上主義の教室へ` — COMPLETE_CORE; record `2026-01-05_e_youkoso_jitsuryoku_shijou_shugi_no_kyoushitsu.md`; commit `6519cef5bca1bd01a3dabe3ae8081799cbd04d9c`.
-- `eソードアート・オンライン 閃光の軌跡 99Ver.` — COMPLETE_CORE; record `2026-01-05_e_sword_art_online_senkou_no_kiseki_99ver.md`; commit `9e94fd90a45be375dbc29d732e3c6dc71a2da3cb`.
-- `e ゴジラ対エヴァンゲリオン2 超デカゴールド` — COMPLETE_CORE; commit `dbf1b1da06fe01f8b431fc1fc55aaf618c7010ce`.
-- `Pリングにかけろ1 129ver.` — COMPLETE_CORE; commit `b4b88341f49bdc8ccab1f9d5700a0821c5d24c22`.
-- `P【超甘LT】華牌RR 1/49×99de遊タイム` — COMPLETE_CORE; commit `ad8187df014cdf6aaac2d8e1ac1f86bbff1f8e5a`.
-- `e吉宗 極乗3000ver.` — COMPLETE_CORE; commit `2a324b26dd28854f744467a956996f0ddcd9e11d`.
-- `PA清流物語4 ウキウキ79ver.` — LT NON-EQUIPPED / EXCLUDED; no record per mission rule.
-
-## Positive LT prechecks for remaining boundary
-Do not treat these prechecks as completed records.
-- `Pフィーバー彼女、お借りします LT-Light ver.`: HAZUSE explicitly LT, 型式 `Pフィーバー彼女、お借りしますLR`, 検定5P0526, 約1/189.7, DREAM RUSH約50%, LT `DREAM RUSH極/ヒロインRUSH` 約86%.
-- `e 盾の勇者の成り上がり アルティメット199ver.`: HAZUSE explicitly LT, 型式 `e盾の勇者の成り上がりEREF`, 検定5P0814, 約1/199, RISING RUSH49.9%/突破約40%, LT `裏アルティメットタイム` 約85%.
-- `P ゴジラ対エヴァンゲリオン2 超デカシルバー`: LT搭載可否と詳細を改めて監査する。兄弟機ゴールドから推測しない。
+- core LT structure collected.
+- `ceilingOrSupport` only unresolved conflict: なな徹 says 遊タイム非搭載; パチ＆スロ必勝本 says 搭載; official spec did not resolve activation condition/benefit. Keep CONFLICT; do not average.
 
 ## Effective DB state
-Previous: 165 machine records / 164 COMPLETE_CORE / 1 CONFLICT.
-This relay added 1 machine record with core data collected but unresolved playtime conflict.
-- machine records: **166**
-- COMPLETE_CORE: **164**
+Previous: 166 machine records / 164 COMPLETE_CORE / 2 CONFLICT.
+This relay added 3 COMPLETE_CORE records.
+- machine records: **169**
+- COMPLETE_CORE: **167**
 - CONFLICT: **2**
 - INDEX remains stale; machine files + this handoff are progress source of truth until safe INDEX integration.
 
-## Next restart point
-**Continue the OPEN 2026-01-05 boundary. Next collect candidate #9 `Pフィーバー彼女、お借りします LT-Light ver.`, then #10 and #11 without skipping.**
+## Next chronological boundary discovery
+HAZUSE January calendar shows next boundary **2026-01-19**, with 3 pachinko candidates:
+1. `P閃乱カグラ 189大入りver.` — NEXT; positive LT precheck complete. D-light, 型式 `P閃乱カグラLTN-FS`, 通常1/189.4, RUSH50%/約60% (ST90), LT約75% (ST136), RUSH中11%でLT, 4200個=1050×4。情報島＋にLT突入率1/2827の直接値あり。Do full cross-check before write.
+2. `e範馬刃牙 199Ver.` — audit LT status/spec next after #1.
+3. `e ULTRAMAN 4500超ライトver.` — audit LT status/spec next after #2.
+Boundary sources:
+- https://hazuse.com/new-machine/202601h/
+- https://p-kn.com/calendar/202601/
 
-For every positive LT machine: duplicate-search first, collect exact model/manufacturer, normal/right probabilities and definitions, initial payout/distribution, lower RUSH structure if any, formal LT name/routes/rates, lower/LT continuation, payout distribution, ST/time-shortening/C-time/residual-hold handling and complete normal→initial→RUSH→LT flow. Preserve `約`/`実質`/`TOTAL`, payout vs expected payout, and sibling-spec distinctions. Never infer unpublished total LT arrival rates from route probabilities. LT-negative candidates receive no machine record; retain exclusion evidence in this handoff when audited. Any direct source disagreement remains `CONFLICT` until resolved; do not average it.
+## Next restart point
+**Start OPEN 2026-01-19 boundary with candidate #1 `P閃乱カグラ 189大入りver.`. Duplicate-search first, then full collection/cross-check. Do not skip #2/#3.**
+
+For every positive LT machine: collect exact model/manufacturer, normal/right probabilities and definitions, initial payout/distribution, lower RUSH structure if any, formal LT name/routes/rates, lower/LT continuation, payout distribution, ST/time-shortening/C-time/residual-hold handling and complete normal→initial→RUSH→LT flow. Preserve `約`/`実質`/`TOTAL`, payout vs expected payout, and sibling-spec distinctions. Never infer unpublished total LT arrival rates from route probabilities. LT-negative candidates receive no machine record; retain exclusion evidence in this handoff when audited. Any direct source disagreement remains `CONFLICT` until resolved; do not average it.
