@@ -21,13 +21,13 @@ relay: 1 / chronological collection
 - `P GO!GO!郷 革命の5` — LT突入割合3%/4%資料競合。CONFLICT維持。
 - `Pフィーバーうたわれるもの LT-Light ver.` — 遊タイム搭載可否のみ資料競合。CONFLICT維持。
 
-## 2026-02-02 boundary — OPEN 1/10 processed
-Boundary enumeration source: 一撃 2026年2月新台カレンダー (10 pachinko machines) cross-checked against K-Navi February calendar. HAZUSE calendar confirms 2026-02-02 is the February boundary; its dedicated February list was not directly surfaced in this run.
+## 2026-02-02 boundary — OPEN 2/10 processed
+Boundary enumeration source: 一撃 2026年2月新台カレンダー (10 pachinko machines) cross-checked against K-Navi February calendar. HAZUSE calendar confirms 2026-02-02 is the February boundary.
 
 Boundary candidates, preserving calendar order:
 1. eフィーバーBASTARD!! -暗黒の破壊神- — COMPLETE_CORE
-2. e 真・北斗無双 第5章 夢幻闘双 — NEXT
-3. P黄門ちゃま寿限無 LLサイズ 259ver. — unprocessed
+2. e 真・北斗無双 第5章 夢幻闘双 — COMPLETE_CORE
+3. P黄門ちゃま寿限無 LLサイズ 259ver. — NEXT
 4. P黄門ちゃま寿限無 99ver. — unprocessed
 5. P冴えない彼女の育てかた 99ver. — unprocessed
 6. eAぷらねっとアポロGO — unprocessed
@@ -52,17 +52,27 @@ Boundary evidence:
 - 継続率上昇型ではなく、同じ約75%のままST区間出玉を強化するLT。
 - ラーズちゃーじ300個経由のRUSH突入あり。遊タイム非搭載。
 - 通常遊技全体基準の総LT到達率は直接値未確認。経路値から独自算出しない。
-- official/industry/analysis sources cross-checked: SANKYO, 遊技通信/P-WORLD, HAZUSE, なな徹, 遊技日本, 必勝本。
+
+### 2. e 真・北斗無双 第5章 夢幻闘双 — COMPLETE_CORE
+- record: `docs/lt_pachinko_db/machines/2026-02-02_e_shin_hokuto_musou_5_mugen_tousou.md`
+- commit: `fea20d634cde5192c058eca9687e7eb75d739038`
+- Sammy / サミー、型式 `e真北斗無双5夢幻闘双SCEA`、検定510595、2026-02-02。
+- 通常約1/159.8、右約1/3.49、1種2種混合。
+- 下位RUSHなし。初当り約200個から20%でLT `夢幻闘双`、残り80%は通常。RUSH突入=LT発動の直LT型。
+- 真・幻闘BONUSならLT直行、BONUSなら夢幻闘双チャレンジ成功でLT。20%は初当り基準の直接公表値。
+- LTは時短1回＋残保留4個、継続約82%（V通過条件）。
+- 右出玉: 7500個0.2% / 6000個2.9% / 4500個14.7% / 3000個36.6% / 1500個45.6%。3000～7500個は1500個×2～5回で、単一大当り出玉としない。3000個以上54.4%。
+- 遊タイム非搭載。主要値は遊技通信、HAZUSE、必勝本、パチマガスロマガ、なな徹で横断照合。未解決競合なし。
 
 ## Effective DB state
-Previous: 172 machine records / 170 COMPLETE_CORE / 2 CONFLICT.
+Previous: 173 machine records / 171 COMPLETE_CORE / 2 CONFLICT.
 This relay added 1 COMPLETE_CORE record.
-- machine records: **173**
-- COMPLETE_CORE: **171**
+- machine records: **174**
+- COMPLETE_CORE: **172**
 - CONFLICT: **2**
 - INDEX remains stale; machine files + this handoff are progress source of truth until safe INDEX integration.
 
 ## Next restart point
-Continue OPEN **2026-02-02 boundary candidate #2: `e 真・北斗無双 第5章 夢幻闘双`**. Duplicate-search first, then collect exact model/manufacturer, normal/right probabilities and definitions, initial payout/distribution, lower RUSH if any, formal LT name/routes/rates, lower/LT continuation, payout distribution, ST/time-shortening/C-time/residual-hold handling, and complete normal→initial→RUSH→LT flow.
+Continue OPEN **2026-02-02 boundary candidate #3: `P黄門ちゃま寿限無 LLサイズ 259ver.`**. Duplicate-search first, then audit LT-equipped status before any machine write. If LT-positive, collect exact model/manufacturer, normal/right probabilities and definitions, initial payout/distribution, lower RUSH if any, formal LT name/routes/rates, lower/LT continuation, payout distribution, ST/time-shortening/C-time/residual-hold handling, and complete normal→initial→RUSH→LT flow.
 
 After each candidate, audit LT-equipped status. LT-negative candidates receive no machine record, but exclusion evidence and status must be retained here. Do not skip the non-LT-looking candidates: the 10-machine boundary must reach 10/10 before closure. Preserve `約`/`実質`/`TOTAL`, payout vs expected payout, and sibling-spec distinctions. Never infer unpublished total LT arrival rates from route probabilities. Any direct source disagreement remains `CONFLICT` until resolved; do not average it.
