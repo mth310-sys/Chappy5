@@ -22,12 +22,12 @@ relay: 1 / chronological collection
 - `P GO!GO!郷 革命の5` — LT突入割合3%/4%資料競合。CONFLICT維持。
 - `Pフィーバーうたわれるもの LT-Light ver.` — 遊タイム搭載可否のみ資料競合。CONFLICT維持。
 
-## 2026-03-02 boundary — OPEN 2/12
+## 2026-03-02 boundary — OPEN 3/12
 Boundary re-enumerated from 一撃 2026年3月新台カレンダー and cross-checked against HAZUSE 2026年3月導入機種 / K-Navi 2026年3月カレンダー. 12 pachinko candidates retained in calendar order.
 
 1. eフィーバーダンベル何キロ持てる？2 — COMPLETE_CORE
 2. P戦国乙女7 終焉の関ヶ原 99ver. — CONFLICT
-3. P痛いのは嫌なので防御力に極振りしたいと思います。 極振り129ver — UNPROCESSED
+3. P痛いのは嫌なので防御力に極振りしたいと思います。 極振り129ver — COMPLETE_CORE
 4. P攻殻機動隊SAC_2045 LT99ver. — UNPROCESSED
 5. e牙狼11～冴島大河～魔戒BURST Ver. — UNPROCESSED
 6. P Re:ゼロから始める異世界生活 season2 249ver. — UNPROCESSED
@@ -55,25 +55,34 @@ Boundary evidence:
 ### 2. P戦国乙女7 終焉の関ヶ原 99ver. — CONFLICT
 - record: `docs/lt_pachinko_db/machines/2026-03-02_p_sengoku_otome_7_99ver.md`
 - commit: `dbf567b2cb96179327cb8766b1719d29d624c169`
-- アムテックス、型式 `P戦国乙女7L0YU1`、検定番号 `5P0670`。HAZUSE/G-netの商用名 `強カワ99ver.` は同型式の同一機。
-- 通常図柄揃い約1/99.9。乙女RUSH中は図柄揃い+c時短合算約1/47.3、極乙女RUSH中図柄揃い約1/52.5。
+- アムテックス、型式 `P戦国乙女7L0YU1`、検定番号 `5P0670`。
 - canonical資料群はRUSH TOTAL約63%。通常時詳細振り分けは10R1000個+LT 0.6% / 3R300個+乙女RUSH 62.4% / 3R300個+通常37.0%。
 - 下位 `乙女RUSH` はST60+残4、TOTAL継続約75%。c時短 `天剣チャンス` 約1/471.4、10000回、そこからLT突入約50%。
-- LT `極乙女RUSH` はST138+残4、継続約94%。LT中は1000個25% / 300個75%。残保留は乙女RUSH時振り分け。
-- 通常時0.6%からLT直行経路あり。通常遊技全体基準の総LT到達率は直接資料未確認のため独自算出しない。
-- 遊タイム非搭載。
-- **CONFLICT:** パチマガスロマガFREEの同型式ページ本文のみRUSH突入「約53%」と記載。G-net/P-WORLD/必勝本/なな徹/グリーンべると系記事は約63%、かつ詳細振り分け0.6+62.4=63.0%。299ver.の53%との sibling-spec 混入/編集誤りの可能性は高いが推測で消さずCONFLICT維持。
-- sources: https://g-net-ps.com/info/p0517/ ; https://g-net-ps.com/industry/certif-2025-1212/ ; https://hazuse.com/hd/5p0670/ ; https://www.p-world.co.jp/machine/database/10417 ; https://news.p-world.co.jp/articles/32689 ; https://p.hisshobon.jp/machine/4684/1/113477 ; https://nana-press.com/kaiseki/machine/1117/35322/ ; https://1geki.jp/pachinko/p_otome7_99ver/53/ ; https://pachimaga.com/free/mach/maker-p/amutex/064553.php
+- LT `極乙女RUSH` はST138+残4、継続約94%。
+- CONFLICT: パチマガスロマガFREE同型式ページ本文のみRUSH突入約53%。他資料群約63%と競合し、平均せず維持。
+
+### 3. P痛いのは嫌なので防御力に極振りしたいと思います。 極振り129ver — COMPLETE_CORE
+- record: `docs/lt_pachinko_db/machines/2026-03-02_p_bofuri_kyokufuri_129ver.md`
+- commit: `c78aed0efbbd3f4a93d09f3882ac5a11944fdf93`
+- 藤商事、型式 `P防振り 極振り129verFVZ`、検定番号 `510561`。2026-03-02導入。
+- 通常約1/129（特図1小当り確率）。初当り約300個後、LT GETチャレンジ `NewWorld Online` へ100%（V入賞条件）。
+- 下位は30回、右約1/106、大当り期待度約25%。右大当り時LTジャッジ100%発生、成功約50%。
+- LT `NewWorld Online極振り170` は170回、右約1/106、継続約80%。
+- LT GETチャレンジ中: 4350個+LT 約1% / 3400個+LT 約10% / 2450個+LT 約39% / 1500個+下位継続 約50%。LT中も1/10/39/50%で全てLT継続。
+- 1500/2450/3400/4350個は特図2大当り3回分の払出合計。単一大当り出玉ではない。
+- 通常遊技全体基準の総LT到達率は直接公表値未確認。約25%×約50%等から独自算出しない。
+- 遊タイム非搭載。主要資料間に未解決競合なし。
+- sources: https://news.p-world.co.jp/articles/32725/yugitsushin ; https://news.p-world.co.jp/articles/32706/greenbelt ; https://hazuse.com/machine/pachinko/PX0338/ ; https://p.hisshobon.jp/machine/4690/1/113552 ; https://nana-press.com/kaiseki/machine/1122/35459/ ; https://www.p-world.co.jp/machine/database/10423
 
 ## Effective DB state
-Previous: 179 machine records / 177 COMPLETE_CORE / 2 CONFLICT.
-This relay added one LT-equipped record as CONFLICT.
-- machine records: **180**
-- COMPLETE_CORE: **177**
+Previous: 180 machine records / 177 COMPLETE_CORE / 3 CONFLICT.
+This relay added one LT-equipped COMPLETE_CORE record.
+- machine records: **181**
+- COMPLETE_CORE: **178**
 - CONFLICT: **3**
 - INDEX remains stale; machine files + this handoff are progress source of truth until safe INDEX integration.
 
 ## Next restart point
-Continue **2026-03-02 candidate #3 `P痛いのは嫌なので防御力に極振りしたいと思います。 極振り129ver`**. Duplicate-search first; verify exact commercial/model naming and LT-equipped status before creating a record.
+Continue **2026-03-02 candidate #4 `P攻殻機動隊SAC_2045 LT99ver.`**. Duplicate-search first and distinguish it from the already registered 2024-09-17 `P攻殻機動隊SAC_2045 199LTver.` and other sibling specs before creating a record.
 
-After #3, continue candidates #4-#12 in stored calendar order. LT-negative candidates receive no machine record, but exclusion evidence/status must be retained here. Preserve `約`/`実質`/`TOTAL`, payout vs expected payout, and sibling-spec distinctions. Never infer unpublished total LT arrival rates from route probabilities. Any direct source disagreement remains `CONFLICT` until resolved; do not average it.
+After #4, continue candidates #5-#12 in stored calendar order. LT-negative candidates receive no machine record, but exclusion evidence/status must be retained here. Preserve `約`/`実質`/`TOTAL`, payout vs expected payout, and sibling-spec distinctions. Never infer unpublished total LT arrival rates from route probabilities. Any direct source disagreement remains `CONFLICT` until resolved; do not average it.
