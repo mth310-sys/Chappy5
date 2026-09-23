@@ -23,7 +23,7 @@ relay: 1 / chronological collection
 - `Pフィーバーうたわれるもの LT-Light ver.` — 遊タイム搭載可否のみ資料競合。CONFLICT維持。
 - `P戦国乙女7 終焉の関ヶ原 99ver.` — RUSH突入約63%対約53%の同型式ページ競合。CONFLICT維持。
 
-## 2026-03-02 boundary — OPEN 8/12
+## 2026-03-02 boundary — OPEN 9/12
 Boundary re-enumerated from 一撃 2026年3月新台カレンダー and cross-checked against HAZUSE / K-Navi. 12 pachinko candidates retained in calendar order.
 
 1. eフィーバーダンベル何キロ持てる？2 — COMPLETE_CORE
@@ -34,7 +34,7 @@ Boundary re-enumerated from 一撃 2026年3月新台カレンダー and cross-ch
 6. P Re:ゼロから始める異世界生活 season2 249ver. — LT-NON-EQUIPPED / EXCLUDED
 7. P Re:ゼロから始める異世界生活 season2 129ver. — COMPLETE_CORE
 8. eワンパンマン2～正義執行 — COMPLETE_CORE
-9. e 甲鉄城のカバネリ2 咲かせや燦然 — UNPROCESSED
+9. e 甲鉄城のカバネリ2 咲かせや燦然 — COMPLETE_CORE
 10. e 魔法少女まどか☆マギカ3 時間遡行～始まりの願い～ — UNPROCESSED
 11. PA戦国乙女7 終焉の関ヶ原 ときめき78バージョン — UNPROCESSED
 12. eアクダマドライブ — UNPROCESSED
@@ -53,35 +53,38 @@ Boundary evidence:
 6. `P Re:ゼロから始める異世界生活 season2 249ver.` — LT非搭載確認済み、レコードなし。
 7. `docs/lt_pachinko_db/machines/2026-03-02_p_rezero_season2_129ver.md` — COMPLETE_CORE — commit `1a894a5ae0b9b7bce60f44cd68c56aab1d5dbd0c`
 8. `docs/lt_pachinko_db/machines/2026-03-02_e_one_punch_man_2_seigi_shikko.md` — COMPLETE_CORE — commit `1bfc2094aae1088fabf31d39ee0f0ef94f609195`
+9. `docs/lt_pachinko_db/machines/2026-03-02_e_kabaneri_2_sakaseya_sanzen.md` — COMPLETE_CORE — commit `19eff6f60a6b7688f7f99c12011b3fcadb5ff765`
 
-### 8. eワンパンマン2～正義執行 — COMPLETE_CORE
-- ニューギン、正式型式 `eワンパンマン2～正義執行LM10`、2026-03-02導入。
-- 通常約1/179.55、HERO RUSH中SHOW DOWN発生率約1/98.55。
-- 本機は下位RUSHを持たない直LT型。初当り25%でLT `HERO RUSH`、75%通常。
-- 特図1: 10R×2 約2540個＋LT 4% / 6R 約710個＋LT 21% / 6R 約710個＋通常75%。
-- LT `HERO RUSH`: 134回、継続約75%。
-- 特図2: 10R×4 約5080個 50.00% / 10R約1270個＋不屈CHANCE2回 18.75% / 10R約1270個＋不屈CHANCE1回 7.02% / 10R約1270個 4.23% / STリセット20%。全てHERO RUSH継続。
-- `5000発` は10R×4回の合計表現で単一大当り出玉ではない。
-- 不屈CHANCEは最大2回の上乗せ抽選、1回あたり成功期待度約14%、成功時10R約1270個上乗せ。
+### 9. e 甲鉄城のカバネリ2 咲かせや燦然 — COMPLETE_CORE
+- サミー（製造元: 銀座）、正式型式 `e甲鉄城のカバネリ2GFEA`、2026-03-02導入。
+- 通常約1/319.7、LT中約1/98.3。初当りはALL 5R 750個。
+- 下位RUSHなしの直LT型。初当り後「美馬決戦」勝利50%でLT `KABANERI OF THE IRON FORTRESS 海門決戦`、敗北50%は通常。
+- LTは普図抽選ST134回、継続約75%。解析資料ではSTスルー時残保留なし。
+- LT中: 6000個＋α 約6.2% / 3000個 約73.8% / 1500個 約20%、全てLT継続。
+- 3000個は750個×4回。6000個は3000個当り時の最終保留が次回3000個当りとなる複数当り合計表現で、単一大当り出玉として扱わない。
+- `輪廻の果報` 発生時6000個＋α。P-WORLD等は約7.7%で3000個上乗せループと説明。
 - 遊タイム非搭載。
-- 主要値は遊技通信/P-WORLD、P-WORLD機種DB、なな徹、パチンコビレッジ系機種DBで横断照合。未解決競合なし。
-- 2026年11月予定の99ver.とは別スペック。混同禁止。
+- セガ公式/サミー系発表、パチンコビレッジ系機種DB、P-WORLD、必勝本、なな徹、パチマガを横断。主要値に未解決競合なし。
+- 後発 `e 甲鉄城のカバネリ2 輪廻の果報119ver.` とは別スペック。混同禁止。
 - evidence:
-  - https://news.p-world.co.jp/articles/32926/yugitsushin
-  - https://www.p-world.co.jp/machine/database/10439
-  - https://nana-press.com/kaiseki/machine/1103/35379/
-  - https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/newgin_pachi/515/kh01.php
-  - https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/newgin_pachi/515/kh04.php
+  - https://www.sega.jp/topics/detail/260330_1/
+  - https://prtimes.jp/main/html/rd/p/000001911.000002703.html
+  - https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/sammy_pachi/333/kh01.php
+  - https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/sammy_pachi/333/kh04.php
+  - https://www.p-world.co.jp/machine/database/10400
+  - https://hisshobon.com/machineinfo/100556/
+  - https://nana-press.com/kaiseki/machine/1104/35362/
+  - https://pachimaga.com/free/mach/maker-p/sammy/064738.php
 
 ## Effective DB state
-Previous: 184 machine records / 181 COMPLETE_CORE / 3 CONFLICT.
+Previous: 185 machine records / 182 COMPLETE_CORE / 3 CONFLICT.
 This relay added one LT-equipped COMPLETE_CORE record.
-- machine records: **185**
-- COMPLETE_CORE: **182**
+- machine records: **186**
+- COMPLETE_CORE: **183**
 - CONFLICT: **3**
 - INDEX remains stale; machine files + this handoff are progress source of truth until safe INDEX integration.
 
 ## Next restart point
-Continue **2026-03-02 candidate #9 `e 甲鉄城のカバネリ2 咲かせや燦然`**. Duplicate-search first and verify formal commercial/model name, manufacturer, and LT-equipped status before writing.
+Continue **2026-03-02 candidate #10 `e 魔法少女まどか☆マギカ3 時間遡行～始まりの願い～`**. Duplicate-search first and verify formal commercial/model name, manufacturer, and LT-equipped status before writing.
 
-After #9, continue candidates #10-#12 in stored calendar order. LT-negative candidates receive no machine record, but exclusion evidence/status must be retained here. Preserve `約`/`実質`/`TOTAL`, payout vs expected payout, and sibling-spec distinctions. Never infer unpublished total LT arrival rates from route probabilities. Any direct source disagreement remains `CONFLICT` until resolved; do not average it.
+After #10, continue candidates #11-#12 in stored calendar order. LT-negative candidates receive no machine record, but exclusion evidence/status must be retained here. Preserve `約`/`実質`/`TOTAL`, payout vs expected payout, and sibling-spec distinctions. Never infer unpublished total LT arrival rates from route probabilities. Any direct source disagreement remains `CONFLICT` until resolved; do not average it.
