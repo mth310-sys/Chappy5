@@ -22,88 +22,52 @@ relay: 1 / chronological collection
 - `P GO!GO!郷 革命の5` — LT突入割合3%/4%資料競合。CONFLICT維持。
 - `Pフィーバーうたわれるもの LT-Light ver.` — 遊タイム搭載可否のみ資料競合。CONFLICT維持。
 
-## 2026-02-02 boundary — CLOSED 10/10
-Boundary enumeration source: 一撃 2026年2月新台カレンダー (10 pachinko machines), cross-checked against K-Navi February calendar. HAZUSE calendar also confirms the February introduction boundary.
+## 2026-03-02 boundary — OPEN 1/12
+Boundary re-enumerated from 一撃 2026年3月新台カレンダー and cross-checked against HAZUSE 2026年3月導入機種 / K-Navi 2026年3月カレンダー. 一撃 lists 12 pachinko machines on 2026-03-02; HAZUSE independently lists 12 pachinko entries on the same boundary. K-Navi also confirms 2026-03-02 as the first March boundary, though some display names are shortened/normalized differently.
 
-Boundary candidates, preserving calendar order:
-1. eフィーバーBASTARD!! -暗黒の破壊神- — COMPLETE_CORE
-2. e 真・北斗無双 第5章 夢幻闘双 — COMPLETE_CORE
-3. P黄門ちゃま寿限無 LLサイズ 259ver. — LT非搭載、除外
-4. P黄門ちゃま寿限無 99ver. — COMPLETE_CORE
-5. P冴えない彼女の育てかた 99ver. — COMPLETE_CORE
-6. eAぷらねっとアポロGO — LT非搭載、除外
-7. P俺の妹がこんなに可愛いわけがない。攻略!!スキップ159ver. — COMPLETE_CORE
-8. PA乗物娘 with CYBERJAPANDANCERS 2nd season 77ver. — LT非搭載、除外
-9. PA乗物娘 with CYBERJAPANDANCERS 2nd season 59ver. — LT非搭載、除外
-10. e異世界でチート能力を手にした俺は現実世界をも無双する ～レベルアップは人生を変えた～ — COMPLETE_CORE
+Boundary candidates, preserving 一撃 calendar order among pachinko entries:
+1. eフィーバーダンベル何キロ持てる？2 — COMPLETE_CORE
+2. P戦国乙女7 終焉の関ヶ原 99ver. — UNPROCESSED
+3. P痛いのは嫌なので防御力に極振りしたいと思います。 極振り129ver — UNPROCESSED
+4. P攻殻機動隊SAC_2045 LT99ver. — UNPROCESSED
+5. e牙狼11～冴島大河～魔戒BURST Ver. — UNPROCESSED
+6. P Re:ゼロから始める異世界生活 season2 249ver. — UNPROCESSED
+7. P Re:ゼロから始める異世界生活 season2 129ver. — UNPROCESSED
+8. eワンパンマン2～正義執行 — UNPROCESSED
+9. e 甲鉄城のカバネリ2 咲かせや燦然 — UNPROCESSED
+10. e 魔法少女まどか☆マギカ3 時間遡行～始まりの願い～ — UNPROCESSED
+11. PA戦国乙女7 終焉の関ヶ原 ときめき78バージョン — UNPROCESSED
+12. eアクダマドライブ — UNPROCESSED
 
 Boundary evidence:
-- https://1geki.jp/newmachinecalender/202602/ — 2026-02-02, 10 pachinko / 6 slot; complete February pachinko list.
-- https://p-kn.com/calendar/202602/ — February calendar cross-check.
-- https://hazuse.com/new-machine-calendar/newmachine-calendar/ — boundary cross-check.
+- https://1geki.jp/newmachinecalender/202603/ — 2026-03-02: 12 pachinko / 2 slot; 2026-03-16: 5 pachinko.
+- https://hazuse.com/new-machine/202603h/ — 2026-03-02 list of 12 pachinko + 2 slot.
+- https://p-kn.com/calendar/202603/ — 2026-03-02 first March boundary; cross-check list.
 
-## Candidate audit summary
-### 1. eフィーバーBASTARD!! -暗黒の破壊神- — COMPLETE_CORE
-- record: `docs/lt_pachinko_db/machines/2026-02-02_e_fever_bastard_ankoku_no_hakaishin.md`
-- commit: `94a56697debdc4b1ff2684abb05f46825a324706`
-
-### 2. e 真・北斗無双 第5章 夢幻闘双 — COMPLETE_CORE
-- record: `docs/lt_pachinko_db/machines/2026-02-02_e_shin_hokuto_musou_5_mugen_tousou.md`
-- commit: `fea20d634cde5192c058eca9687e7eb75d739038`
-
-### 3. P黄門ちゃま寿限無 LLサイズ 259ver. — LT非搭載、DB除外
-- 平和、型式 `P黄門ちゃま9ME2`。通常1/259.0、RUSH約50%、ST100回・約50%、ALL1500個。実機資料でLT非搭載を明示。同時導入99ver.と混同しない。
-- evidence: https://www.a-pachinko.com/SHOP/p-heiwa252.html ; https://news.p-world.co.jp/articles/32483/greenbelt ; https://pachimaga.com/free/mach/maker-p/heiwa/064620.php
-
-### 4. P黄門ちゃま寿限無 99ver. — COMPLETE_CORE
-- record: `docs/lt_pachinko_db/machines/2026-02-02_p_koumon_chama_jugemu_99ver.md`
-- commit: `f1cd2615582a3729be2377cb562ca020a32f8269`
-
-### 5. P冴えない彼女の育てかた 99ver. — COMPLETE_CORE
-- record: `docs/lt_pachinko_db/machines/2026-02-02_p_saenai_heroine_no_sodatekata_99ver.md`
-- commit: `899993f1aac8b0070f068a51019d777e1fa76db0`
-
-### 6. eAぷらねっとアポロGO — LT非搭載、DB除外
-- ダイナム×豊丸産業共同開発PB、型式 `eAぷらねっとアポロGO2-X`。設定付きST機。100回ループの `超スペースチャンスタイム` はLTではない。詳細スペック資料が `ラッキートリガー: なし` と明記。
-- evidence: https://prtimes.jp/main/html/rd/p/000000538.000013913.html ; https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/toyomaru_pachi/321/kh02.php ; https://hisshobon.com/machineinfo/100837/
-
-### 7. P俺の妹がこんなに可愛いわけがない。攻略!!スキップ159ver. — COMPLETE_CORE
-- record: `docs/lt_pachinko_db/machines/2026-02-02_p_oreimo_kouryaku_skip_159ver.md`
-- commit: `3609da2908cc96b72051013b5d8c49c1851cf9dd`
-- 京楽産業.（型式名義オッケー.）、通常約1/159.9、俺CHANCE 8回/約50%。右大当り35%でボーナス型LT `ごほうび天国`。35%で天国ループ、非ループ後は俺CHANCE復帰。通常遊技全体基準LT到達率はUNVERIFIED。
-
-### 8. PA乗物娘 with CYBERJAPANDANCERS 2nd season 77ver. — LT非搭載、DB除外
-- ニューギン、型式 `PA乗物娘2N`、2026-02-02。
-- 通常約1/77.1、高確率約1/72.57。初当り後100%で `乗物RUSH`、ST50回、残保留込み継続約52.6%。右10R1000個30% / 4R400個70%。
-- 低確率159回消化で遊タイム時短10000回。LT/上位RUSHへの遷移はなく、業界発表・P-WORLD・一撃・パチマガのゲームフローは100%ST+遊タイムとして一致。LT機として登録しない。
-- evidence: https://news.p-world.co.jp/articles/32740/yugitsushin ; https://news.p-world.co.jp/articles/32722/greenbelt ; https://www.p-world.co.jp/machine/database/10422 ; https://1geki.jp/pachinko/pa_norimonom2_77/39/ ; https://pachimaga.com/free/mach/maker-p/newgin/064555.php
-
-### 9. PA乗物娘 with CYBERJAPANDANCERS 2nd season 59ver. — LT非搭載、DB除外
-- ニューギン、型式 `PA乗物娘2GO2`、2026-02-02。一部ホール限定PB、6段階設定付き甘デジ。
-- 通常約1/59.9～1/53.3、高確率約1/58.2～1/51.8。初当り後100%で `乗物RUSH`、ST40回、継続約53.3～57.5%。右10R700個52%。
-- 低確率160回消化で遊タイム時短10000回。業界発表・P-WORLD・一撃・パチマガで設定付きST+遊タイムとして一致し、LT/上位RUSHへの遷移なし。77ver.から値を流用せず個別監査した。
-- evidence: https://news.p-world.co.jp/articles/32711/yugitsushin ; https://www.p-world.co.jp/machine/database/10421 ; https://1geki.jp/pachinko/pa_norimonom2_59/39/ ; https://1geki.jp/pachinko/pa_norimonom2_59/51/ ; https://pachimaga.com/free/mach/maker-p/newgin/064840.php
-
-### 10. e異世界でチート能力を手にした俺は現実世界をも無双する ～レベルアップは人生を変えた～ — COMPLETE_CORE
-- record: `docs/lt_pachinko_db/machines/2026-02-02_e_iseleve.md`
-- commit: `b7fc54e8996a84654e3edd848d686f026504aae9`
-- 藤商事、型式 `eいせれべFSZ`、検定510549。LT3.0プラス/BIGスタート/直LT型。
-- 通常約1/179（詳細値1/179.5）、右抽選約1/77（1/77.9）。通常時大当りの約20%でRUSH=LTへ。
-- 通常振り分け: 1500個+RUSH実質次回0.2% / 300個+RUSH70回19.8% / 300個+通常80.0%。
-- `夢幻LT`。演出RUSHは夢幻RUSH / 神獣RUSH / ヒロイン夢想RUSH / 超ヒロイン夢想RUSH。70回のBONUS当選期待度約60%。
-- BONUSは特図2大当り3回1セットで、約59%で1G連。RUSH×BONUS 1G連 TOTAL継続率約83%。初回RUSH当りは1G連濃厚。
-- 右払出合計: 4050～4500個1.3% / 3000～3750個4.9% / 2250～2850個33.0% / 1650～1800個28.0% / 1050個20.1% / 450個12.7%。3回分合計値なので単一大当り出玉と混同しない。
-- evidence: https://news.p-world.co.jp/articles/32556/yugitsushin ; https://yugi-nippon.com/pachinko-new-machine/post-74707/ ; https://1geki.jp/pachinko/e_iseleve/ ; https://pachimaga.com/free/mach/maker-p/fujishoji/064743.php ; https://pachinko-curation.com/58897/
+### 1. eフィーバーダンベル何キロ持てる？2 — COMPLETE_CORE
+- record: `docs/lt_pachinko_db/machines/2026-03-02_e_fever_dumbbell_nankilo_moteru_2.md`
+- commit: `f85ea986c5778ec34c20dc76e82694a5050c6b38`
+- SANKYO、型式 `eフィーバーダンベル何キロ持てる？2F`、検定番号 `5P1254`。2026-03-02導入。
+- 通常図柄揃い約1/149.9、右図柄揃い約1/97.7。初当り300個。
+- 下位RUSHなし。初当り約25%でLT `超マッスルRUSH` へ直接突入、残り約75%は通常へ。
+- LTはST127回、継続約73%。普図STのため残保留なし。
+- 特図2は1500個/300個の大当り3回1セット。払出合計4500個+α 12.5% / 3300個 37.5% / 2100個 37.5% / 900個 12.5%。単一大当り出玉と混同しない。
+- 4500個時はLT内上乗せモード `ゴールデンタイム`。次回大当り濃厚で、再度4500個ならゴールデンタイム復帰。LT正式名称そのものは `超マッスルRUSH`。
+- 遊タイム非搭載。主要値に競合なし。
+- official: https://www.sankyo-fever.jp/products/machine_list/ply/spec/
+- official machine page: https://www.sankyo-fever.jp/products/machine_list/ply/
+- museum: https://www.sankyo-fever.jp/collection/992/
+- analysis: https://hisshobon.com/machineinfo/100790/ ; https://hisshobon.com/machineinfo/100792/ ; https://nana-press.com/kaiseki/machine/1105/ ; https://www.p-world.co.jp/machine/database/10407 ; https://hazuse.com/machine/pachinko/5P1254/genre/103/
 
 ## Effective DB state
-Previous: 177 machine records / 175 COMPLETE_CORE / 2 CONFLICT.
-This relay audited candidates #8-#10, excluded two LT-negative sibling specs, and added one COMPLETE_CORE record.
-- machine records: **178**
-- COMPLETE_CORE: **176**
+Previous: 178 machine records / 176 COMPLETE_CORE / 2 CONFLICT.
+This relay opened the 2026-03-02 boundary and added one COMPLETE_CORE record.
+- machine records: **179**
+- COMPLETE_CORE: **177**
 - CONFLICT: **2**
 - INDEX remains stale; machine files + this handoff are progress source of truth until safe INDEX integration.
 
 ## Next restart point
-The **2026-02-02 boundary is CLOSED 10/10**. Onegeki's February 2026 calendar contains only this pachinko boundary, so continue chronologically to the **first March 2026 pachinko introduction boundary**. Re-enumerate the March boundary from at least two calendars before processing candidate #1; do not assume the date or candidate count from memory.
+Continue **2026-03-02 candidate #2 `P戦国乙女7 終焉の関ヶ原 99ver.`**. Duplicate-search first, then confirm the exact commercial/model naming because HAZUSE/K-Navi use variant wording (`強カワ99ver.` / shortened display). Do not merge it with `PA戦国乙女7 終焉の関ヶ原 ときめき78バージョン` (#11). Audit LT-equipped status and collect only the exact candidate's values.
 
-For every candidate, duplicate-search first and audit LT-equipped status before any machine write. LT-negative candidates receive no machine record, but exclusion evidence and status must be retained here. Preserve `約`/`実質`/`TOTAL`, payout vs expected payout, and sibling-spec distinctions. Never infer unpublished total LT arrival rates from route probabilities. Any direct source disagreement remains `CONFLICT` until resolved; do not average it.
+After #2, continue candidates #3-#12 in the stored calendar order. LT-negative candidates receive no machine record, but exclusion evidence/status must be retained here. Preserve `約`/`実質`/`TOTAL`, payout vs expected payout, and sibling-spec distinctions. Never infer unpublished total LT arrival rates from route probabilities. Any direct source disagreement remains `CONFLICT` until resolved; do not average it.
