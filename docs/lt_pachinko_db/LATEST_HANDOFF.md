@@ -23,14 +23,14 @@ relay: 1 / chronological collection
 - `Pフィーバーうたわれるもの LT-Light ver.` — 遊タイム搭載可否のみ資料競合。CONFLICT維持。
 - `P戦国乙女7 終焉の関ヶ原 99ver.` — RUSH突入約63%対約53%の同型式ページ競合。CONFLICT維持。
 
-## 2026-03-02 boundary — OPEN 4/12
+## 2026-03-02 boundary — OPEN 5/12
 Boundary re-enumerated from 一撃 2026年3月新台カレンダー and cross-checked against HAZUSE 2026年3月導入機種 / K-Navi 2026年3月カレンダー. 12 pachinko candidates retained in calendar order.
 
 1. eフィーバーダンベル何キロ持てる？2 — COMPLETE_CORE
 2. P戦国乙女7 終焉の関ヶ原 99ver. — CONFLICT
 3. P痛いのは嫌なので防御力に極振りしたいと思います。 極振り129ver — COMPLETE_CORE
 4. P攻殻機動隊SAC_2045 LT99ver. — COMPLETE_CORE
-5. e牙狼11～冴島大河～魔戒BURST Ver. — UNPROCESSED
+5. e牙狼11～冴島大河～魔戒BURST Ver. — COMPLETE_CORE
 6. P Re:ゼロから始める異世界生活 season2 249ver. — UNPROCESSED
 7. P Re:ゼロから始める異世界生活 season2 129ver. — UNPROCESSED
 8. eワンパンマン2～正義執行 — UNPROCESSED
@@ -75,20 +75,30 @@ Boundary evidence:
 - GHOST RUSHは初回実質約1/94・継続約50%。1回継続後は実質約1/69・同64回で継続約61%。
 - RUSH中大当り20%（1500個当選時28.6%）でLT `GHOST RUSH BURST`。
 - LTは実質約1/69、ST155回、継続約90%。LT中1500個70% / 200個30%、全てLT継続。
-- RUSH中振り分け: 1500個+LT 20% / 1500個+RUSH 50% / 200個+RUSH 30%。
-- 通常時基準LT突入率 `1/1162` は情報島＋/ちょんぼりすたで直接公表値を確認し保存。経路から独自算出していない。
-- 遊タイム非搭載。主要資料間に未解決競合なし。
-- sources: https://daiichi777.jp/product/detail/233/koukaku-LT99 ; https://news.p-world.co.jp/articles/32827/greenbelt ; https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/d-light_pachi/040/kh01.php ; https://www.p-world.co.jp/machine/database/10431 ; https://hisshobon.com/machineinfo/101149/ ; https://nana-press.com/kaiseki/machine/1116/35346/ ; https://chonborista.com/pachinko/daiichi/253984/ ; https://p-johojima.jp/new_machine/post-25026/
+- 通常時基準LT突入率 `1/1162` は直接公表値として保存。
+
+### 5. e牙狼11～冴島大河～魔戒BURST Ver. — COMPLETE_CORE
+- record: `docs/lt_pachinko_db/machines/2026-03-02_e_garo_11_taiga_makai_burst_ver.md`
+- commit: `f4af72248e20d2a964e01e0b74066538b05026b8`
+- サンセイR&D。業界発表型式 `e牙狼11トリプルバーストRF`、一撃/K-Navi等 `e牙狼トリプルバーストRF`。表記差を保持。
+- 通常約1/349.9、右1/1。初当りALL750個。約25%で `魔戒BURST`、75%通常。
+- 魔戒BURST中は1500個を獲得し、約64.6%でLT `魔戒CHANCE` へ。失敗35.4%は通常。
+- LT突入時ストック: 1セット35.4% / 2セット22.9% / 3セット41.7%。
+- LTはALL1500個。各大当り75%でストック維持、25%で1個消費。ストック全消費で通常。
+- 公表継続率: 1セット約75.0% / 2セット約87.5% / 3セット約91.7%。平均大当り回数から逆算した継続率であることを注記。
+- 通常初当り基準の総LT到達率は直接公表値未確認。25%×64.6%から独自算出せずUNVERIFIED。
+- 遊タイム非搭載。数値競合なし。
+- sources: https://news.p-world.co.jp/articles/32835/yugitsushin ; https://www.chu-3sei.com/productlist/ ; https://web-greenbelt.jp/post-109163/ ; https://hisshobon.com/machineinfo/101151/ ; https://hisshobon.com/machineinfo/101153/ ; https://hisshobon.com/machineinfo/101152/ ; https://1geki.jp/pachinko/e_garo11_taiga_burst/ ; https://www.p-world.co.jp/machine/database/10433
 
 ## Effective DB state
-Previous: 181 machine records / 178 COMPLETE_CORE / 3 CONFLICT.
+Previous: 182 machine records / 179 COMPLETE_CORE / 3 CONFLICT.
 This relay added one LT-equipped COMPLETE_CORE record.
-- machine records: **182**
-- COMPLETE_CORE: **179**
+- machine records: **183**
+- COMPLETE_CORE: **180**
 - CONFLICT: **3**
 - INDEX remains stale; machine files + this handoff are progress source of truth until safe INDEX integration.
 
 ## Next restart point
-Continue **2026-03-02 candidate #5 `e牙狼11～冴島大河～魔戒BURST Ver.`**. Duplicate-search first and verify formal model name / manufacturer / LT structure before writing.
+Continue **2026-03-02 candidate #6 `P Re:ゼロから始める異世界生活 season2 249ver.`**. Duplicate-search first and verify formal model name / manufacturer / LT-equipped status before writing.
 
-After #5, continue candidates #6-#12 in stored calendar order. LT-negative candidates receive no machine record, but exclusion evidence/status must be retained here. Preserve `約`/`実質`/`TOTAL`, payout vs expected payout, and sibling-spec distinctions. Never infer unpublished total LT arrival rates from route probabilities. Any direct source disagreement remains `CONFLICT` until resolved; do not average it.
+After #6, continue candidates #7-#12 in stored calendar order. LT-negative candidates receive no machine record, but exclusion evidence/status must be retained here. Preserve `約`/`実質`/`TOTAL`, payout vs expected payout, and sibling-spec distinctions. Never infer unpublished total LT arrival rates from route probabilities. Any direct source disagreement remains `CONFLICT` until resolved; do not average it.
