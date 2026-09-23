@@ -16,11 +16,9 @@ relay: 1 / chronological collection
 - 2025-12-22 — CLOSED 3/3.
 
 ## 2026-01-05 boundary — OPEN
-Multiple calendars were cross-checked before collection. HAZUSE currently enumerates 11 pachinko introductions on 2026-01-05; K-Navi and other calendars overlap materially, with some date-listing variation for PA清流物語4. Treat HAZUSE's 11 as the working boundary set and audit every candidate before closure.
-
-Working candidate set:
-1. e ゴジラ対エヴァンゲリオン2 超デカゴールド
-2. Pリングにかけろ1 129ver. — COMPLETE_CORE this relay
+Working candidate set remains 11 machines:
+1. e ゴジラ対エヴァンゲリオン2 超デカゴールド — COMPLETE_CORE
+2. Pリングにかけろ1 129ver. — COMPLETE_CORE
 3. P【超甘LT】華牌RR 1/49×99de遊タイム
 4. e吉宗 極乗3000ver.
 5. PA清流物語4 ウキウキ79ver.
@@ -31,54 +29,57 @@ Working candidate set:
 10. e 盾の勇者の成り上がり アルティメット199ver.
 11. P ゴジラ対エヴァンゲリオン2 超デカシルバー
 
-Calendar sources checked 2026-09-23:
-- https://hazuse.com/new-machine/202601h/ — 11-machine 2026-01-05 pachinko set.
-- https://p-kn.com/calendar/202601/ — overlapping 2026-01-05 calendar.
-- https://1geki.jp/newmachinecalender/202601/ — 2026-01-05 calendar, 11 pachinko / 4 slot.
-- https://pachinkopachisro.com/archives/59511928.html — independent January calendar cross-check.
+Boundary calendar sources retained:
+- https://hazuse.com/new-machine/202601h/
+- https://p-kn.com/calendar/202601/
+- https://1geki.jp/newmachinecalender/202601/
+- https://pachinkopachisro.com/archives/59511928.html
 
 ## Added this relay
+### e ゴジラ対エヴァンゲリオン2 超デカゴールド — COMPLETE_CORE
+- record: `docs/lt_pachinko_db/machines/2026-01-05_e_godzilla_vs_evangelion2_chodeka_gold.md`
+- commit: `dbf1b1da06fe01f8b431fc1fc55aaf618c7010ce`
+- ビスティ、型式 `eゴジラ対エヴァンゲリオン2TR`、検定510468、導入2026-01-05。
+- 通常図柄揃い約1/299.9、右図柄揃い約1/32.3、転落小当り約1/107。
+- 初当り約30%でLT `シン・バトルモード暴走` へ直接突入。非LT下位RUSHなし。特図1は1500個+LT約0.5% / 300個+LT約29.5% / 300個通常約70%。
+- LTは時短10000回を転落まで継続し、転落後残保留4個の引き戻し約11.8%込みTOTAL継続約80%。
+- 特図2は3000個+α+G覚醒モード約5% / 3000個+G覚醒モード約25% / 1500個+LT約70%。3000個=1500個×2回。
+- G覚醒モードは一部3000個から入る出玉上乗せ状態。1500個上乗せ約50%ループ、終了後LTへ復帰。LT本体とは分離して記録。
+- 遊技通信、HAZUSE、情報島＋、P-WORLD、一撃、なな徹で横断照合。conflictsなし。
+
+Sources checked 2026-09-23:
+- https://news.p-world.co.jp/articles/32624/yugitsushin
+- https://hazuse.com/hd/510468h/
+- https://p-johojima.jp/machine_spec/post-22273/
+- https://www.p-world.co.jp/machine/database/10411
+- https://1geki.jp/pachinko/e_godzilleva2tr/
+- https://nana-press.com/kaiseki/machine/1086/33990/
+
+## Previous record retained
 ### Pリングにかけろ1 129ver. — COMPLETE_CORE
 - record: `docs/lt_pachinko_db/machines/2026-01-05_p_ring_ni_kakero1_129ver.md`
 - commit: `b4b88341f49bdc8ccab1f9d5700a0821c5d24c22`
-- ニューギン、型式 `Pリングにかけろ1LM`、検定5P0704、導入2026-01-05。
-- 通常1/129.77。初当り50%で下位 `K.O.RUSH`、50%通常。初当り振り分けは1200個+RUSH 5% / 720個+RUSH 45% / 720個通常50%。
-- K.O.RUSHはST49回＋リンかけCHANCE（最終1回＋残4）、TOTAL突破約40.5%。K.O.RUSH中の大当りまたはST回数リセットでLT `超K.O.RUSH`。
-- 超K.O.RUSHはST129回＋リンかけCHANCE、TOTAL継続約79.5%。
-- K.O.RUSH中: 1200個+LT 70.4% / 0R STリセット+LT 29.6%。
-- LT中: 2400個+LT 54.5% / 1200個19.5% / 480個5.5% / 0R STリセット20.5%。2400個は1200×2。
-- リンかけCHANCEは最終1回＋残4の計5回、C時短/STリセット込み当選1/36.16、成功約13.1%。当選時はLTへ。
-- 通常遊技全体基準の総LT到達率/確率は直接公表値未確認。50%×40.5%等から独自算出しない。
-- 業界一次（遊技通信/グリーンべると）＋HAZUSE/P-WORLD/必勝本/一撃で照合。conflictsなし。
-
-Sources checked 2026-09-23:
-- https://news.p-world.co.jp/articles/32525/yugitsushin
-- https://news.p-world.co.jp/articles/32510/greenbelt
-- https://hazuse.com/machine/pachinko/5P0704/
-- https://www.p-world.co.jp/machine/database/10406
-- https://p.hisshobon.jp/machine/4669/1/113026
-- https://1geki.jp/pachinko/p_rinkake1_129ver/51/
 
 ## Positive LT prechecks for remaining boundary
-Do not treat these prechecks as completed records; they only establish likely LT-positive status and useful identifiers.
-- `e ゴジラ対エヴァンゲリオン2 超デカゴールド`: HAZUSE explicitly LT, 型式 `eゴジラ対エヴァンゲリオン2TR`, 検定510468, 約1/299.9, ビスティ, 2026-01-05.
+Do not treat these prechecks as completed records.
+- `P【超甘LT】華牌RR 1/49×99de遊タイム`: next audit target; verify LT status, formal model and complete structure before write.
 - `e吉宗 極乗3000ver.`: HAZUSE LT page; 1/199.9, `振舞RUSH`突入30%, ST157, 約80%, 3000個=750×4.
 - `eソードアート・オンライン 閃光の軌跡 99Ver.`: HAZUSE explicitly LT, 型式 `eソードアート・オンライン～閃光の軌跡～99Ver．K1`, 検定4P1693, 約1/99.90, RUSH55%, LT `LIGHTNING RUSH` 約94%.
 - `eようこそ実力至上主義の教室へ`: HAZUSE explicitly LT, 型式 `eようこそ実力至上主義の教室へMA`, 検定510728, 約1/349.9, Sansei R&D.
 - `Pフィーバーうたわれるもの LT-Light ver.`: 一撃/解析でLT明示、型式 `PAフィーバーうたわれるものY`, 1/99.9, 仮面RUSH50%/約75%, LT仮面RUSH超。
 - `Pフィーバー彼女、お借りします LT-Light ver.`: HAZUSE explicitly LT, 型式 `Pフィーバー彼女、お借りしますLR`, 検定5P0526, 約1/189.7, DREAM RUSH約50%, LT `DREAM RUSH極/ヒロインRUSH` 約86%.
 - `e 盾の勇者の成り上がり アルティメット199ver.`: HAZUSE explicitly LT, 型式 `e盾の勇者の成り上がりEREF`, 検定5P0814, 約1/199, RISING RUSH49.9%/突破約40%, LT `裏アルティメットタイム` 約85%.
-- 華牌RR / ゴジエヴァ銀 / PA清流は次リレー以降にLT搭載可否と詳細を改めて監査する。機種名だけで推測しない。
+- ゴジエヴァ銀 / PA清流はLT搭載可否と詳細を改めて監査する。機種名だけで推測しない。
 
 ## Effective DB state
-Previous: 159 machine records / 158 COMPLETE_CORE / 1 CONFLICT.
+Previous: 160 machine records / 159 COMPLETE_CORE / 1 CONFLICT.
 This relay added 1 COMPLETE_CORE record.
-- machine records: **160**
-- COMPLETE_CORE: **159**
+- machine records: **161**
+- COMPLETE_CORE: **160**
 - CONFLICT: **1**
 - INDEX remains stale; machine files + this handoff are progress source of truth until safe INDEX integration.
 
 ## Next restart point
-**Continue the OPEN 2026-01-05 boundary. Next collect/audit `e ゴジラ対エヴァンゲリオン2 超デカゴールド` (LT-positive precheck already confirmed), then continue through the 11-machine candidate set without skipping.**
+**Continue the OPEN 2026-01-05 boundary. Next collect/audit candidate #3 `P【超甘LT】華牌RR 1/49×99de遊タイム`, then continue through the 11-machine candidate set without skipping.**
 
 For every positive LT machine: duplicate-search first, collect exact model/manufacturer, normal/right probabilities and definitions, initial payout/distribution, lower RUSH structure if any, formal LT name/routes/rates, lower/LT continuation, payout distribution, ST/time-shortening/C-time/residual-hold handling and complete normal→initial→RUSH→LT flow. Preserve `約`/`実質`/`TOTAL`, payout vs expected payout, and sibling-spec distinctions. Never infer unpublished total LT arrival rates from route probabilities. LT-negative candidates receive no machine record; retain exclusion evidence in this handoff when audited.
