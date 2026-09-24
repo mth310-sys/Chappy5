@@ -59,12 +59,12 @@ Boundary evidence:
 11. `docs/lt_pachinko_db/machines/2026-03-02_pa_sengoku_otome_7_tokimeki_78ver.md` — COMPLETE_CORE — commit `4fec59dcf14c21ba8e849860bbeac5e57869a90c`
 12. `docs/lt_pachinko_db/machines/2026-03-02_e_akudama_drive.md` — COMPLETE_CORE — commit `ca208a052a2572371d40b25e918ee71b6927049f`
 
-## 2026-03-16 boundary — OPEN 2/5 processed
+## 2026-03-16 boundary — OPEN 3/5 processed
 一撃2026年3月カレンダー（2026-09-08更新）の3/16候補を継続処理。候補ごとにLT搭載可否を個別監査する。
 
 1. PキングモンスターRUSH 67Ver. — LT-NON-EQUIPPED / EXCLUDED
 2. e 乃木坂46 Ⅱ SWEET Version — LT-NON-EQUIPPED / EXCLUDED
-3. スマパチ SSSS.GRIDMAN メガSTART 159ver. — UNPROCESSED
+3. スマパチ SSSS.GRIDMAN メガSTART 159ver. — LT-NON-EQUIPPED / EXCLUDED（下記注記参照）
 4. P モモキュンソード 速撃99ver. — UNPROCESSED
 5. Pえとたま2 神祭 干支甘 — UNPROCESSED（一撃はLTタグあり）
 
@@ -94,12 +94,26 @@ Boundary evidence:
   - https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/kyoraku_pachi/235/kh01.php
   - https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/kyoraku_pachi/235/kh04.php
 
+### 3. スマパチ SSSS.GRIDMAN メガSTART 159ver. — LT-NON-EQUIPPED / EXCLUDED
+- 七匠、正式型式 `eグリッドマンBDN`、検定番号 `510964`、2026-03-16導入。
+- 基本構造は通常約1/159.8のV-ST。初当り50%で時短「電光RUSH」100回＋残保留4個、突破約48%（時短100回引き戻し約46.6%＋残保留4個約2.48%）でST「電光覚醒RUSH」へ。STは約1/77.4、120回＋残保留4個、TOTAL継続約80%（ST約79.0%＋残保留約2.48%）。右打ち大当りは10R約1500個50%／2R約300個50%。
+- CS-plaza詳細スペックは同型式について `ラッキートリガー: なし` と直接明記。業界向けG-net販売資料、遊技通信/フィールズ発表、HAZUSE、一撃、パチビーも一貫して通常のV-ST/時短突破型として仕様を掲載し、LT発動条件・LT固有状態を示さない。
+- 一方、P-WORLD台紹介は「LT搭載機」、ちょんぼりすたは「LT『電光覚醒RUSH』」と記載するため表記競合は存在する。ただし電光覚醒RUSHは時短突破後に入る通常STとして一次/業界資料で明確に定義され、LT固有の性能移行が存在しない。LT対象DBの混入防止を優先し、明示的な非搭載資料＋業界資料のゲーム構造をcanonicalとしてDBレコードは作成しない。P-WORLD/ちょんぼりすたのLT表記差はこのhandoffに保持する。
+- evidence:
+  - https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/nanashow_pachi/009/kh02.php
+  - https://g-net-ps.com/info/p0537/
+  - https://news.p-world.co.jp/articles/33029/yugitsushin
+  - https://hazuse.com/machine/pachinko/PX0346/
+  - https://1geki.jp/pachinko/e_gridman159/
+  - https://www.pachibee.jp/machines/index/126020014
+  - conflicting labels retained: https://www.p-world.co.jp/machine/database/10445 ; https://chonborista.com/pachinko/nanashow-p/254396/
+
 ## Effective DB state
 - machine records: **189**
 - COMPLETE_CORE: **186**
 - CONFLICT: **3**
-- This relay added no machine record because candidates #1-#2 are confirmed LT-negative.
+- This relay added no machine record because candidates #1-#3 are excluded as LT-negative after individual audit.
 - INDEX remains stale; machine files + this handoff are progress source of truth until safe INDEX integration.
 
 ## Next restart point
-Continue **2026-03-16 candidate #3 `スマパチ SSSS.GRIDMAN メガSTART 159ver.`**. Duplicate-search first, then verify LT-equipped status using formal commercial/model name, manufacturer and sibling-spec variants. LT-negative candidates receive no machine record but exclusion evidence/status must be retained here. Preserve `約`/`実質`/`TOTAL`, payout vs expected payout, and sibling-spec distinctions. Never infer unpublished total LT arrival rates from route probabilities. Any direct source disagreement remains `CONFLICT` until resolved; do not average it.
+Continue **2026-03-16 candidate #4 `P モモキュンソード 速撃99ver.`**. Duplicate-search first, then verify LT-equipped status using formal commercial/model name, manufacturer and sibling-spec variants. LT-negative candidates receive no machine record but exclusion evidence/status must be retained here. Preserve `約`/`実質`/`TOTAL`, payout vs expected payout, and sibling-spec distinctions. Never infer unpublished total LT arrival rates from route probabilities. Any direct source disagreement remains `CONFLICT` until resolved; do not average it.
