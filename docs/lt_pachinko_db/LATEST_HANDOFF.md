@@ -18,64 +18,55 @@ relay: 1 / chronological collection
 - 2026-01-19 — CLOSED 3/3.
 - 2026-02-02 — CLOSED 10/10.
 - 2026-03-02 — CLOSED 12/12; 11 LT-equipped records, 1 LT-negative exclusion.
+- 2026-03-16 — CLOSED 5/5; 1 LT-equipped record, 4 LT-negative exclusions.
 
 ## Existing unresolved records retained
 - `P GO!GO!郷 革命の5` — LT突入割合3%/4%資料競合。CONFLICT維持。
 - `Pフィーバーうたわれるもの LT-Light ver.` — 遊タイム搭載可否のみ資料競合。CONFLICT維持。
 - `P戦国乙女7 終焉の関ヶ原 99ver.` — RUSH突入約63%対約53%の同型式ページ競合。CONFLICT維持。
 
-## 2026-03-02 boundary — CLOSED 12/12
-1. eフィーバーダンベル何キロ持てる？2 — COMPLETE_CORE
-2. P戦国乙女7 終焉の関ヶ原 99ver. — CONFLICT
-3. P痛いのは嫌なので防御力に極振りしたいと思います。 極振り129ver — COMPLETE_CORE
-4. P攻殻機動隊SAC_2045 LT99ver. — COMPLETE_CORE
-5. e牙狼11～冴島大河～魔戒BURST Ver. — COMPLETE_CORE
-6. P Re:ゼロから始める異世界生活 season2 249ver. — LT-NON-EQUIPPED / EXCLUDED
-7. P Re:ゼロから始める異世界生活 season2 129ver. — COMPLETE_CORE
-8. eワンパンマン2～正義執行 — COMPLETE_CORE
-9. e 甲鉄城のカバネリ2 咲かせや燦然 — COMPLETE_CORE
-10. e 魔法少女まどか☆マギカ3 時間遡行～始まりの願い～ — COMPLETE_CORE
-11. PA戦国乙女7 終焉の関ヶ原 ときめき78バージョン — COMPLETE_CORE
-12. eアクダマドライブ — COMPLETE_CORE
-
-Boundary evidence:
-- https://1geki.jp/newmachinecalender/202603/
-- https://hazuse.com/new-machine/202603h/
-- https://p-kn.com/calendar/202603/
-
-## 2026-03-16 boundary — OPEN 4/5 processed
-一撃2026年3月カレンダー（2026-09-08更新）の3/16候補を継続処理。候補ごとにLT搭載可否を個別監査する。
+## 2026-03-16 boundary — CLOSED 5/5
+一撃2026年3月カレンダー（最終更新2026-09-08）を再確認。同ページ上の3/16はパチンコ5機種で完結し、3/16以降の3月導入日掲載はないため境界をCLOSEDとする。
 
 1. PキングモンスターRUSH 67Ver. — LT-NON-EQUIPPED / EXCLUDED
 2. e 乃木坂46 Ⅱ SWEET Version — LT-NON-EQUIPPED / EXCLUDED
-3. スマパチ SSSS.GRIDMAN メガSTART 159ver. — LT-NON-EQUIPPED / EXCLUDED（CS-plaza明示非搭載。P-WORLD/ちょんぼりすたのLT表記差は前handoffで監査済み）
+3. スマパチ SSSS.GRIDMAN メガSTART 159ver. — LT-NON-EQUIPPED / EXCLUDED（CS-plaza明示非搭載。P-WORLD/ちょんぼりすたのLT表記差は監査済み）
 4. P モモキュンソード 速撃99ver. — LT-NON-EQUIPPED / EXCLUDED
-5. Pえとたま2 神祭 干支甘 — UNPROCESSED（一撃はLTタグあり）
+5. Pえとたま2 神祭 干支甘 — COMPLETE_CORE
 
-### 4. P モモキュンソード 速撃99ver. — LT-NON-EQUIPPED / EXCLUDED
-- メーカー: ソフィア。正式型式 `P桃剣鬼神AD`。2026-03-16導入。
-- パチ＆スロ必勝本の同機種基本スペックが `ラッキートリガー 非搭載` と直接明記。LT DB対象外のためmachine recordは作成しない。
-- 業界発表（遊技通信/P-WORLD、グリーンべると）もLT固有状態を示さず、一種二種混合の1回転RUSHとして説明。
-- 通常約1/99.9、右打ち約1/1.36（大当り＋小当り合算、特図2）。RUSH突入約50%。時短1回継続73.5%（約74%）、時短100回ほぼ100%、両者を含むトータル継続約81%。
-- 特図1: 1000個＋時短100回 約0.2% / 400個＋時短1回 約49.9% / 400個・時短なし 約49.9%。
-- 特図2: 1000個＋時短100回 約30% / 400個＋時短1回 約70%。出玉は払出。
-- `神・絶対無敵BONUS` は10R 1000個＋時短100回で実質次回大当り濃厚となる仕組みだが、LTではない。30%で同10Rを引き続ける限り連鎖する構造をLTと誤認しない。
+Boundary evidence:
+- https://1geki.jp/newmachinecalender/202603/ — 3/16全5機種、候補#5にLTタグ。retrieved 2026-09-24
+
+### 5. Pえとたま2 神祭 干支甘 — COMPLETE_CORE
+- メーカー: メーシー（ユニバーサルエンターテインメント）。正式型式 `Pえとたま2SE`。2026-03-16導入。
+- LT搭載は遊技通信のメーカー発表記事、グリーンべると、P-WORLD、CS-plaza、一撃、必勝本で独立確認。
+- 通常1/99.90、右打ち1/63.44。初当り3R 210個（払出）。初当り70%で「えとたまチャンス」へ、30%通常。
+- えとたまチャンス: 時短40回+残保留4個、TOTAL突破約50%。大当りで「えとたまRUSH祭」へ。
+- えとたまRUSH祭: 時短83回+残保留4個、TOTAL継続約75%。大当り時10%でLT「超えとたまRUSH祭」。振り分けは10R 910個+LT 10% / 10R 910個+通常RUSH 60% / 3R 210個+通常RUSH 30%。
+- LT「超えとたまRUSH祭」: 時短160回+残保留4個、TOTAL継続約93%。LT中10R 910個70% / 3R 210個30%。
+- 特図2残保留での大当りは「えとたまRUSH祭」へ移行するため、LT残保留当選をLT継続と誤記しない。
+- LT発動時期待出玉約11,500個は「LT発動までの平均出玉+LT期待値」の払出合計。単一大当り出玉ではない。
+- 通常初当り基準の総LT到達率は直接公表値未確認。70%・突破約50%・RUSH大当り時10%から独自合算しない。
+- 2024-12-02の兄弟機 `Pえとたま2 神祭`（型式Pえとたま2MY、1/199.80）と分離。
 - 遊タイム非搭載。
+- record: `docs/lt_pachinko_db/machines/2026-03-16_p_etotama2_kamisai_etoama.md`
 - evidence / retrieved 2026-09-24:
-  - https://hisshobon.com/machineinfo/101262/ — LT非搭載を直接明記、基本スペック
-  - https://news.p-world.co.jp/articles/33000/yugitsushin — フィールズ発表、型式 `P桃剣鬼神AD`、RUSH構造
-  - https://news.p-world.co.jp/articles/32969/greenbelt — 業界記事、振り分け/継続率
-  - https://p-kn.com/pachinko/4467/ — 型式・基本スペック照合
-  - https://nana-press.com/kaiseki/machine/1119/35697/ — 基本仕様/遊タイム非搭載照合
-  - https://pachimaga.com/free/mach/maker-p/sophia/064736.php — 特図1/2振り分け照合
-- confidence: ANALYSIS_HIGH / INDUSTRY cross-check; LT-negative determination has explicit direct secondary statement plus consistent industry structure.
+  - https://news.p-world.co.jp/articles/32497/yugitsushin — メーカー発表、型式、主要確率/RUSH/LT
+  - https://news.p-world.co.jp/articles/32471/greenbelt — LT名称/約93%/期待出玉/10R比率
+  - https://www.p-world.co.jp/machine/database/10404 — LT搭載、基本構造、払出
+  - https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/macy_pachi/053/kh02.php — 詳細スペック、時短、遊タイムなし
+  - https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/macy_pachi/053/kh04.php — ゲームフロー/振り分け/残保留
+  - https://hisshobon.com/machineinfo/100619/ — LT発動契機/終了条件
+  - https://1geki.jp/pachinko/p_etotama2_etoama/ — 導入日/型式/基本スペック
+  - https://pachimaga.com/free/mach/maker-p/macy/064769.php — RUSH/LT振り分け照合
+- confidence: INDUSTRY / ANALYSIS_HIGH cross-check
+- conflicts: none
 
 ## Effective DB state
-- machine records: **189**
-- COMPLETE_CORE: **186**
+- machine records: **190**
+- COMPLETE_CORE: **187**
 - CONFLICT: **3**
-- This relay added no machine record because 2026-03-16 candidates #1-#4 are LT-negative after individual audit.
 - INDEX remains stale; machine files + this handoff are progress source of truth until safe INDEX integration.
 
 ## Next restart point
-Continue **2026-03-16 candidate #5 `Pえとたま2 神祭 干支甘`**. Duplicate-search first, then verify LT-equipped status using formal commercial/model name, manufacturer and sibling-spec variants. 一撃 has an LT tag, but do not register until the LT structure is independently confirmed. If LT-equipped, collect core spec + LT name/route/rate/continuation/payout + complete game flow and create one machine record. If LT-negative, create no machine record but retain exclusion evidence here. After candidate #5, re-enumerate 2026-03-16 same-day candidates and only then close the boundary / advance chronologically. Preserve `約`/`実質`/`TOTAL`, payout vs expected payout, and sibling-spec distinctions. Never infer unpublished total LT arrival rates from route probabilities. Any direct source disagreement remains `CONFLICT`; do not average it.
+2026年3月境界はCLOSED。次回は **2026年4月の最初の導入日境界** を複数の新台カレンダー/業界資料で列挙し、最初の未処理候補から時系列前進する。候補をLTタグだけで確定せず、各機種を正式型式・メーカー・兄弟スペック名でも検索してLT搭載可否を個別監査する。LT非搭載ならmachine recordを作らず除外根拠のみhandoffへ残す。LT搭載ならcore spec + LT名称/経路/率/継続/出玉 + game flowを収集して登録する。通常初当り基準の総LT到達率は直接公表値がなければ経路確率から推測しない。競合値は平均せずCONFLICT。
