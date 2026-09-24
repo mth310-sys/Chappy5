@@ -25,7 +25,7 @@ relay: 1 / chronological collection
 - `Pフィーバーうたわれるもの LT-Light ver.` — 遊タイム搭載可否のみ資料競合。CONFLICT維持。
 - `P戦国乙女7 終焉の関ヶ原 99ver.` — RUSH突入約63%対約53%の同型式ページ競合。CONFLICT維持。
 
-## 2026-04-06 boundary — OPEN 3/7
+## 2026-04-06 boundary — OPEN 4/7
 Boundary evidence:
 - https://1geki.jp/newmachinecalender/202604/ — 2026-04-06 パチンコ7機種。retrieved 2026-09-24
 
@@ -33,8 +33,8 @@ Queue:
 1. e転生したらスライムだった件2 — COMPLETE_CORE
 2. eリコリス・リコイル — COMPLETE_CORE
 3. eラグナドール 妖しき皇帝と終焉の夜叉姫 — COMPLETE_CORE
-4. e 終末のワルキューレ — NEXT
-5. PAコマコマ倶楽部with坂本冬美89確変ループ10ラウンド極 — pending (calendar LT tagなし。個別監査してから除外)
+4. e 終末のワルキューレ — COMPLETE_CORE
+5. PAコマコマ倶楽部with坂本冬美89確変ループ10ラウンド極 — NEXT (calendar LT tagなし。個別監査してから除外)
 6. P にゃんこ大戦争 多様性のネコ 神さまにおまかせ88ver. — pending (calendar LT tagなし。個別監査してから除外)
 7. P ウルトラマンメビウス デカヘソ319 — pending
 
@@ -68,11 +68,31 @@ Queue:
 - confidence: INDUSTRY / ANALYSIS_HIGH cross-check
 - conflicts: none
 
+### 4. e 終末のワルキューレ — COMPLETE_CORE
+- record: `docs/lt_pachinko_db/machines/2026-04-06_e_shumatsu_no_valkyrie.md`
+- タイヨーエレック（サミー）。型式 `e終末のワルキューレEREA`、検定番号 `511081`、2026-04-06導入。
+- LT3.0Plus / 一種二種混合 / 普図転落型。通常約1/219.9。
+- 下位RUSHなし。RUSH自体がLTで、初当り約26%からVV BONUSを経て `神VS人類最終闘争` へ直行。非突入約74%は2R 300個で通常へ。
+- 神VS人類最終闘争: 大当り約1/39.9 / 転落約1/116.8 / 継続約75%。大当りは1500個約95%、VV BONUS約5%。2回大当りでCLIMAXへ。
+- `神VS人類最終闘争CLIMAX`: 大当り約1/19.9 / 転落約1/58.4 / 継続約75%。大当り時VV BONUS濃厚。
+- VV BONUS: 3000個（1500個×2回）獲得後、約50%上乗せループ。上乗せ成功時1500個/3000個が1:1。VV BONUS後は1戦目へ戻る。
+- 一撃のLT突入時期待出玉約12599個は、LT突入まで約3000個+LT突入後平均約9599個の合算期待値で、単一大当り出玉ではない。
+- 遊タイム非搭載。主要資料間に未解決競合なし。
+- evidence / retrieved 2026-09-24:
+  - https://news.p-world.co.jp/articles/32766/yugitsushin
+  - https://news.p-world.co.jp/articles/32882/greenbelt
+  - https://1geki.jp/pachinko/e_ragnarok/
+  - https://p.hisshobon.jp/machine/4719/1/114476
+  - https://www.pachibee.jp/machines/index/126030002
+  - https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/sammy_pachi/334/kh04.php
+- confidence: INDUSTRY / ANALYSIS_HIGH cross-check
+- conflicts: none
+
 ## Effective DB state
-- machine records: **193**
-- COMPLETE_CORE: **190**
+- machine records: **194**
+- COMPLETE_CORE: **191**
 - CONFLICT: **3**
 - INDEX remains stale; machine files + this handoff are progress source of truth until safe INDEX integration.
 
 ## Next restart point
-2026-04-06 boundary candidate #4 **`e 終末のワルキューレ`**. Before positive write, duplicate-search machine records. Verify formal model name/manufacturer and LT-equipped status across official/industry/analysis sources, then collect core spec + LT formal name/routes/rate/continuation/payout/time-shortening/c-time + game flow. Do not infer an overall LT rate if no direct published value exists. If LT-negative, do not create a machine record; retain exclusion evidence here and advance to candidate #5.
+2026-04-06 boundary candidate #5 **`PAコマコマ倶楽部with坂本冬美89確変ループ10ラウンド極`**. Calendar LT tag is absent, but do not exclude from the tag alone. Search formal model name/manufacturer/series variants and verify LT-equipped or LT-negative status across industry/analysis sources. If LT-negative, do not create a machine record; preserve exclusion evidence here and advance to candidate #6. If LT-equipped, duplicate-search first and collect the full LT core fields before writing.
