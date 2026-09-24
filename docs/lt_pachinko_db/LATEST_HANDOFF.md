@@ -25,7 +25,7 @@ relay: 1 / chronological collection
 - `Pフィーバーうたわれるもの LT-Light ver.` — 遊タイム搭載可否のみ資料競合。CONFLICT維持。
 - `P戦国乙女7 終焉の関ヶ原 99ver.` — RUSH突入約63%対約53%の同型式ページ競合。CONFLICT維持。
 
-## 2026-04-06 boundary — OPEN 5/7
+## 2026-04-06 boundary — OPEN 6/7
 Boundary evidence:
 - https://1geki.jp/newmachinecalender/202604/ — 2026-04-06 パチンコ7機種。retrieved 2026-09-24
 
@@ -35,8 +35,8 @@ Queue:
 3. eラグナドール 妖しき皇帝と終焉の夜叉姫 — COMPLETE_CORE
 4. e 終末のワルキューレ — COMPLETE_CORE
 5. PAコマコマ倶楽部with坂本冬美89確変ループ10ラウンド極 — LT-NEGATIVE / EXCLUDED
-6. P にゃんこ大戦争 多様性のネコ 神さまにおまかせ88ver. — NEXT (calendar LT tagなし。個別監査してから除外)
-7. P ウルトラマンメビウス デカヘソ319 — pending
+6. P にゃんこ大戦争 多様性のネコ 神さまにおまかせ88ver. — LT-NEGATIVE / EXCLUDED
+7. P ウルトラマンメビウス デカヘソ319 — NEXT
 
 ### 1. e転生したらスライムだった件2 — COMPLETE_CORE
 - record: `docs/lt_pachinko_db/machines/2026-04-06_e_tensura2.md`
@@ -63,9 +63,7 @@ Queue:
 ### 5. PAコマコマ倶楽部with坂本冬美89確変ループ10ラウンド極 — LT-NEGATIVE / EXCLUDED
 - メーカー: 豊丸産業。型式 `PAコマコマ倶楽部with坂本冬美VLP1`。2026-04-06導入。
 - 6段階設定付き甘デジ / 確変ループ / 遊タイム搭載。通常大当りは設定1約1/89.8〜設定6約1/89.2、高確率は約1/14.8〜1/14.7、確変割合50%。
-- 必勝本の同機種基本スペックが `ラッキートリガー 非搭載` と直接明記。パチマガスロマガFREEも「最近流行りのラッキートリガーなどは非搭載」と明記。
-- 業界記事（グリーンべると）は豊丸産業発表機として、6段階設定付き確変ループ、確変50%を説明しLT構造を示さない。P-WORLD・一撃・K-Naviも確変/時短/遊タイム構造として一致。
-- 通常大当り後は確変次回まで、時短30回、または時短9999回。低確率265回消化でも遊タイム時短9999回。LTとは区別する。
+- 必勝本の同機種基本スペックが `ラッキートリガー 非搭載` と直接明記。パチマガスロマガFREEも非搭載と明記。
 - LT非搭載のためmachine recordは作成しない。
 - evidence / retrieved 2026-09-24:
   - https://hisshobon.com/machineinfo/101249/
@@ -78,6 +76,25 @@ Queue:
 - confidence: ANALYSIS_HIGH / INDUSTRY cross-check
 - conflicts: none on LT-negative determination
 
+### 6. P にゃんこ大戦争 多様性のネコ 神さまにおまかせ88ver. — LT-NEGATIVE / EXCLUDED
+- メーカー: 京楽産業.。2026-04-06導入。シリーズ初の甘デジ。
+- 京楽公式は降臨ガチャ約1/88、`神域ULTIMATE` ALL800個×継続約81%と説明するが、LTとは説明していない。
+- CS-plaza詳細スペックは同機種について `ラッキートリガー なし` と直接明記。遊タイムもなし。
+- 1種2種混合 / 転落抽選タイプ。降臨ガチャ発生約1/88.9、演出成功約1/1.96。SUNRISE BONUS成功後の神域ULTIMATE突入約50%（RUSH終了時残保留4個の引き戻し約14.39%を含む）。
+- 神域ULTIMATE中図柄揃い約1/26.2、転落図柄約1/88.9。TOTAL継続約81%は転落までの継続期待値とRUSH終了時残保留4個の引き戻し約14.39%の合算。
+- 特図1 SUNRISE BONUSは1000個（200+800）でRUSH約50% / 通常約50%。特図2は800個+RUSH 100%。
+- ちょんぼりすた、パチビー、パチマガスロマガFREEも同じ通常→降臨ガチャ→SUNRISE BONUS→神域ULTIMATE構造を掲載し、LT固有の上位移行を示さない。
+- 前作/別スペックのLT搭載版と混同しない。88ver.自体はLT非搭載のためmachine recordは作成しない。
+- evidence / retrieved 2026-09-24:
+  - https://www.kyoraku.co.jp/news/detail/869
+  - https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/kyoraku_pachi/236/kh02.php
+  - https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/kyoraku_pachi/236/kh03.php
+  - https://www.pachibee.jp/machines/index/126030005
+  - https://chonborista.com/pachinko/kyoraku/255522/
+  - https://pachimaga.com/free/mach/maker-p/kyoraku/064777.php
+- confidence: OFFICIAL + ANALYSIS_HIGH cross-check
+- conflicts: none on LT-negative determination
+
 ## Effective DB state
 - machine records: **194**
 - COMPLETE_CORE: **191**
@@ -85,4 +102,4 @@ Queue:
 - INDEX remains stale; machine files + this handoff are progress source of truth until safe INDEX integration.
 
 ## Next restart point
-2026-04-06 boundary candidate #6 **`P にゃんこ大戦争 多様性のネコ 神さまにおまかせ88ver.`**. Calendar LT tag is absent, but do not exclude from the tag alone. Search formal model name/manufacturer/series variants and verify LT-equipped or LT-negative status across industry/analysis sources. If LT-negative, do not create a machine record; preserve exclusion evidence here and advance to candidate #7. If LT-equipped, duplicate-search first and collect the full LT core fields before writing.
+2026-04-06 boundary candidate #7 **`P ウルトラマンメビウス デカヘソ319`**. Audit formal model/manufacturer/series variants and verify LT-equipped or LT-negative status. If LT-negative, preserve exclusion evidence here, close the 2026-04-06 boundary 7/7, then enumerate the next chronological introduction boundary from multiple calendars. If LT-equipped, duplicate-search first and collect the full LT core fields before writing.
