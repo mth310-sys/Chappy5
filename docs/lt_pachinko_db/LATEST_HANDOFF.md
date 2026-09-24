@@ -59,42 +59,34 @@ Boundary evidence:
 11. `docs/lt_pachinko_db/machines/2026-03-02_pa_sengoku_otome_7_tokimeki_78ver.md` — COMPLETE_CORE — commit `4fec59dcf14c21ba8e849860bbeac5e57869a90c`
 12. `docs/lt_pachinko_db/machines/2026-03-02_e_akudama_drive.md` — COMPLETE_CORE — commit `ca208a052a2572371d40b25e918ee71b6927049f`
 
-### 12. eアクダマドライブ — COMPLETE_CORE
-- 三洋物産、正式型式 `eアクダマドライブEHLT`、検定番号 `510887`、2026-03-02導入。スマパチ / ミドル / 一種二種混合 / LT3.0+。
-- 通常約1/319.6、右約1/85.9。初当りは4R約600個100%で「ドラマチックST」へ100%突入。
-- ドラマチックSTは78回＋残保留4個、TOTAL継続約62%（ST78回約59.8%＋残保留約4.6%）。
-- ST中特図2は1500個約81% / STリセット出玉なし約19%。1500個大当りを電サポ中に2回獲得するとLT「アクダマドライブ」へ。STリセットは段階現状維持。
-- LT「アクダマドライブ」は120回＋残保留4個、TOTAL継続約77%（ST120回約75.4%＋残保留約4.6%）。LT中は3000個100%。3000個は1500個×2で単一大当りではない。
-- 残保留当選はST1回目扱い。通常初当り基準の総LT到達率は直接公表値を確認できず、経路から独自算出しない。
-- 一部攻略資料に右約1/85.1表記があるが、三洋発表を伝える業界記事＋P-WORLD/一撃/パチビー等の約1/85.9をcanonicalとし、単独表記差を注記保持。主要項目CONFLICTにはしない。
-- evidence:
-  - https://news.p-world.co.jp/articles/32613/yugitsushin
-  - https://www.p-world.co.jp/machine/database/10413
-  - https://www.pachibee.jp/machines/index/126020002
-  - https://1geki.jp/pachinko/e_akudamadrive/
-  - https://p.hisshobon.jp/news/2242
-  - https://hisshobon.com/machineinfo/100805/
-  - https://p.hisshobon.jp/machine/4681/1/113385
-  - https://nana-press.com/kaiseki/machine/1110/35332/
-  - https://pachimaga.com/free/mach/maker-p/sanyo/064520.php
+## 2026-03-16 boundary — OPEN 1/5 processed
+一撃2026年3月カレンダー（2026-09-08更新）の3/16候補を継続処理。候補ごとにLT搭載可否を個別監査する。
 
-## Next chronological boundary — 2026-03-16 OPEN 0/5
-一撃2026年3月カレンダー（2026-09-08更新）では3/16にパチンコ5機種。現時点のcalendar order:
-1. PキングモンスターRUSH — UNPROCESSED
+1. PキングモンスターRUSH 67Ver. — LT-NON-EQUIPPED / EXCLUDED
 2. e 乃木坂46 Ⅱ SWEET Version — UNPROCESSED
 3. スマパチ SSSS.GRIDMAN メガSTART 159ver. — UNPROCESSED
 4. P モモキュンソード 速撃99ver. — UNPROCESSED
 5. Pえとたま2 神祭 干支甘 — UNPROCESSED（一撃はLTタグあり）
 
-Do not assume #1-#4 are LT-negative merely because the calendar lacks an LT tag. Each candidate must be individually searched by commercial name / model code / manufacturer / sibling-spec wording before exclusion. Cross-check the 3/16 candidate list against HAZUSE/K-Navi or equivalent before boundary closure.
+### 1. PキングモンスターRUSH 67Ver. — LT-NON-EQUIPPED / EXCLUDED
+- 竹屋、正式型式 `PキングモンスターRUSH AK`、検定番号 `4P1455`、2026-03-16導入。
+- HAZUSEが同型式について「ラッキートリガー 非搭載」と直接明記。DB対象外のためmachine recordは作成しない。
+- 通常約1/67.6、高確率約1/45.5。初当り25%で小当りRUSH付き確変へ入り、3回または7回の確変リミットで構成される旧来型の確変＋小当りRUSH仕様。LTではない。
+- 通常時振り分けは8R確変・7回セット1% / 3R確変・7回セット9% / 3R確変・3回セット15% / 3R通常75%。P-WORLD、パチマガスロマガFREE、なな徹、K-NaviでもLTではなく確変リミット＋小当りRUSH構造として一致。
+- evidence:
+  - https://hazuse.com/hd/4p1455/
+  - https://www.p-world.co.jp/machine/database/10443
+  - https://pachimaga.com/free/mach/maker-p/takeya/064770.php
+  - https://nana-press.com/kaiseki/machine/1120/35701/
+  - https://p-kn.com/pachinko/4449/
+  - https://web-greenbelt.jp/post-107423/
 
 ## Effective DB state
-Previous: 188 machine records / 185 COMPLETE_CORE / 3 CONFLICT.
-This relay added one LT-equipped COMPLETE_CORE record.
 - machine records: **189**
 - COMPLETE_CORE: **186**
 - CONFLICT: **3**
+- This relay added no machine record because candidate #1 is confirmed LT-negative.
 - INDEX remains stale; machine files + this handoff are progress source of truth until safe INDEX integration.
 
 ## Next restart point
-Continue **2026-03-16 candidate #1 `PキングモンスターRUSH`**. Duplicate-search first, then verify LT-equipped status using formal commercial/model name, manufacturer and sibling-spec variants. LT-negative candidates receive no machine record but exclusion evidence/status must be retained here. Preserve `約`/`実質`/`TOTAL`, payout vs expected payout, and sibling-spec distinctions. Never infer unpublished total LT arrival rates from route probabilities. Any direct source disagreement remains `CONFLICT` until resolved; do not average it.
+Continue **2026-03-16 candidate #2 `e 乃木坂46 Ⅱ SWEET Version`**. Duplicate-search first, then verify LT-equipped status using formal commercial/model name, manufacturer and sibling-spec variants. LT-negative candidates receive no machine record but exclusion evidence/status must be retained here. Preserve `約`/`実質`/`TOTAL`, payout vs expected payout, and sibling-spec distinctions. Never infer unpublished total LT arrival rates from route probabilities. Any direct source disagreement remains `CONFLICT` until resolved; do not average it.
