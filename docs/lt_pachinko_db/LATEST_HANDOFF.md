@@ -17,14 +17,15 @@ relay: 1 / chronological collection
 - 2026-01-05 — CLOSED 11/11.
 - 2026-01-19 — CLOSED 3/3.
 - 2026-02-02 — CLOSED 10/10.
+- 2026-03-02 — CLOSED 12/12 calendar candidates processed; 11 LT-equipped records, 1 LT-negative exclusion.
 
 ## Existing unresolved records retained
 - `P GO!GO!郷 革命の5` — LT突入割合3%/4%資料競合。CONFLICT維持。
 - `Pフィーバーうたわれるもの LT-Light ver.` — 遊タイム搭載可否のみ資料競合。CONFLICT維持。
 - `P戦国乙女7 終焉の関ヶ原 99ver.` — RUSH突入約63%対約53%の同型式ページ競合。CONFLICT維持。
 
-## 2026-03-02 boundary — OPEN 11/12
-Boundary re-enumerated from 一撃 2026年3月新台カレンダー and cross-checked against HAZUSE / K-Navi. 12 pachinko candidates retained in calendar order.
+## 2026-03-02 boundary — CLOSED 12/12
+Boundary re-enumerated from 一撃 2026年3月新台カレンダー and cross-checked against HAZUSE / K-Navi. 一撃の2026-09-08更新版でも同日12パチンコ候補を再確認。
 
 1. eフィーバーダンベル何キロ持てる？2 — COMPLETE_CORE
 2. P戦国乙女7 終焉の関ヶ原 99ver. — CONFLICT
@@ -37,7 +38,7 @@ Boundary re-enumerated from 一撃 2026年3月新台カレンダー and cross-ch
 9. e 甲鉄城のカバネリ2 咲かせや燦然 — COMPLETE_CORE
 10. e 魔法少女まどか☆マギカ3 時間遡行～始まりの願い～ — COMPLETE_CORE
 11. PA戦国乙女7 終焉の関ヶ原 ときめき78バージョン — COMPLETE_CORE
-12. eアクダマドライブ — UNPROCESSED
+12. eアクダマドライブ — COMPLETE_CORE
 
 Boundary evidence:
 - https://1geki.jp/newmachinecalender/202603/
@@ -56,38 +57,44 @@ Boundary evidence:
 9. `docs/lt_pachinko_db/machines/2026-03-02_e_kabaneri_2_sakaseya_sanzen.md` — COMPLETE_CORE — commit `19eff6f60a6b7688f7f99c12011b3fcadb5ff765`
 10. `docs/lt_pachinko_db/machines/2026-03-02_e_madoka_magica_3_jikan_soko_hajimari_no_negai.md` — COMPLETE_CORE — commit `09ac7f0775d1484d2ac82aee1d3d348da701637e`
 11. `docs/lt_pachinko_db/machines/2026-03-02_pa_sengoku_otome_7_tokimeki_78ver.md` — COMPLETE_CORE — commit `4fec59dcf14c21ba8e849860bbeac5e57869a90c`
+12. `docs/lt_pachinko_db/machines/2026-03-02_e_akudama_drive.md` — COMPLETE_CORE — commit `ca208a052a2572371d40b25e918ee71b6927049f`
 
-### 11. PA戦国乙女7 終焉の関ヶ原 ときめき78バージョン — COMPLETE_CORE
-- アムテックス、正式型式 `PA戦国乙女7～78GO1`、検定番号 `5P0712`、2026-03-02導入。アムテックス+ホール企業7社の共同開発PB機。
-- 6段階設定。通常1/78.2～1/71.9。乙女RUSH中は大当り+c時短合算1/61.7～1/57.7。天剣チャンス/極乙女RUSH中1/63.7～1/59.5。
-- 初当りは700個+LT直行0.1% / 350個+乙女RUSH59.9% / 350個+通常40.0%。(極)乙女RUSH突入TOTAL約60%。
-- 下位「乙女RUSH」はST70回、残保留込み継続70.1～72.6%。乙女RUSH中特図2は700個48.4% / 280個48.4% / c時短「天剣チャンス」3.2%。
-- 天剣チャンスは時短10000回（実質次回まで）。同チャンス中大当りの55%（700個50%+280個5%）でLT「極乙女RUSH」へ、45%は乙女RUSHへ。
-- LT「極乙女RUSH」はST170回、残保留込み継続93.6～94.8%。LT中700個50% / 280個50%、双方LT継続。
-- 通常時0.1%の10RからLT直行経路もある。通常遊技全体基準の総LT到達率は直接公表値を確認できず独自計算しない。
-- 同日候補#2 99ver.（型式P戦国乙女7L0YU1）とは別スペック。主要値に未解決競合なし。
+### 12. eアクダマドライブ — COMPLETE_CORE
+- 三洋物産、正式型式 `eアクダマドライブEHLT`、検定番号 `510887`、2026-03-02導入。スマパチ / ミドル / 一種二種混合 / LT3.0+。
+- 通常約1/319.6、右約1/85.9。初当りは4R約600個100%で「ドラマチックST」へ100%突入。
+- ドラマチックSTは78回＋残保留4個、TOTAL継続約62%（ST78回約59.8%＋残保留約4.6%）。
+- ST中特図2は1500個約81% / STリセット出玉なし約19%。1500個大当りを電サポ中に2回獲得するとLT「アクダマドライブ」へ。STリセットは段階現状維持。
+- LT「アクダマドライブ」は120回＋残保留4個、TOTAL継続約77%（ST120回約75.4%＋残保留約4.6%）。LT中は3000個100%。3000個は1500個×2で単一大当りではない。
+- 残保留当選はST1回目扱い。通常初当り基準の総LT到達率は直接公表値を確認できず、経路から独自算出しない。
+- 一部攻略資料に右約1/85.1表記があるが、三洋発表を伝える業界記事＋P-WORLD/一撃/パチビー等の約1/85.9をcanonicalとし、単独表記差を注記保持。主要項目CONFLICTにはしない。
 - evidence:
-  - https://www.nikkansports.com/amusement/pachislot/news/202602090001182.html
-  - https://news.p-world.co.jp/articles/32887
-  - https://news.p-world.co.jp/articles/32889/greenbelt
-  - https://hazuse.com/machine/pachinko/5P0712/
-  - https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/amutex_pachi/070/kh01.php
-  - https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/amutex_pachi/070/kh02.php
-  - https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/amutex_pachi/070/kh03.php
-  - https://www.p-world.co.jp/machine/database/10441
-  - https://1geki.jp/pachinko/pa_otome7_78ver/51/
-  - https://1geki.jp/pachinko/pa_otome7_78ver/53/
-  - https://pachimaga.com/free/mach/maker-p/amutex/064766.php
+  - https://news.p-world.co.jp/articles/32613/yugitsushin
+  - https://www.p-world.co.jp/machine/database/10413
+  - https://www.pachibee.jp/machines/index/126020002
+  - https://1geki.jp/pachinko/e_akudamadrive/
+  - https://p.hisshobon.jp/news/2242
+  - https://hisshobon.com/machineinfo/100805/
+  - https://p.hisshobon.jp/machine/4681/1/113385
+  - https://nana-press.com/kaiseki/machine/1110/35332/
+  - https://pachimaga.com/free/mach/maker-p/sanyo/064520.php
+
+## Next chronological boundary — 2026-03-16 OPEN 0/5
+一撃2026年3月カレンダー（2026-09-08更新）では3/16にパチンコ5機種。現時点のcalendar order:
+1. PキングモンスターRUSH — UNPROCESSED
+2. e 乃木坂46 Ⅱ SWEET Version — UNPROCESSED
+3. スマパチ SSSS.GRIDMAN メガSTART 159ver. — UNPROCESSED
+4. P モモキュンソード 速撃99ver. — UNPROCESSED
+5. Pえとたま2 神祭 干支甘 — UNPROCESSED（一撃はLTタグあり）
+
+Do not assume #1-#4 are LT-negative merely because the calendar lacks an LT tag. Each candidate must be individually searched by commercial name / model code / manufacturer / sibling-spec wording before exclusion. Cross-check the 3/16 candidate list against HAZUSE/K-Navi or equivalent before boundary closure.
 
 ## Effective DB state
-Previous: 187 machine records / 184 COMPLETE_CORE / 3 CONFLICT.
+Previous: 188 machine records / 185 COMPLETE_CORE / 3 CONFLICT.
 This relay added one LT-equipped COMPLETE_CORE record.
-- machine records: **188**
-- COMPLETE_CORE: **185**
+- machine records: **189**
+- COMPLETE_CORE: **186**
 - CONFLICT: **3**
 - INDEX remains stale; machine files + this handoff are progress source of truth until safe INDEX integration.
 
 ## Next restart point
-Continue **2026-03-02 candidate #12 `eアクダマドライブ`**. Duplicate-search first and verify formal commercial/model name, manufacturer, LT-equipped status, RUSH/LT structure and sibling-spec distinctions before writing.
-
-After #12, close the 2026-03-02 boundary only after checking the same-day candidate list for omissions, then enumerate the next chronological March 2026 introduction boundary from multiple calendars. LT-negative candidates receive no machine record, but exclusion evidence/status must be retained here. Preserve `約`/`実質`/`TOTAL`, payout vs expected payout, and sibling-spec distinctions. Never infer unpublished total LT arrival rates from route probabilities. Any direct source disagreement remains `CONFLICT` until resolved; do not average it.
+Continue **2026-03-16 candidate #1 `PキングモンスターRUSH`**. Duplicate-search first, then verify LT-equipped status using formal commercial/model name, manufacturer and sibling-spec variants. LT-negative candidates receive no machine record but exclusion evidence/status must be retained here. Preserve `約`/`実質`/`TOTAL`, payout vs expected payout, and sibling-spec distinctions. Never infer unpublished total LT arrival rates from route probabilities. Any direct source disagreement remains `CONFLICT` until resolved; do not average it.
