@@ -27,27 +27,14 @@ relay: 1 / chronological collection
 - `P戦国乙女7 終焉の関ヶ原 99ver.` — RUSH突入約63%対約53%の同型式ページ競合。CONFLICT維持。
 - `P ウルトラマンメビウス デカヘソ319` — LT搭載判定自体が資料競合。CONFLICT。詳細はrecord参照。
 
-## 2026-04-06 boundary — CLOSED 7/7
-Boundary evidence:
-- https://1geki.jp/newmachinecalender/202604/ — 2026-04-06 パチンコ7機種。retrieved 2026-09-24
-
-Queue:
-1. e転生したらスライムだった件2 — COMPLETE_CORE
-2. eリコリス・リコイル — COMPLETE_CORE
-3. eラグナドール 妖しき皇帝と終焉の夜叉姫 — COMPLETE_CORE
-4. e 終末のワルキューレ — COMPLETE_CORE
-5. PAコマコマ倶楽部with坂本冬美89確変ループ10ラウンド極 — LT-NEGATIVE / EXCLUDED
-6. P にゃんこ大戦争 多様性のネコ 神さまにおまかせ88ver. — LT-NEGATIVE / EXCLUDED
-7. P ウルトラマンメビウス デカヘソ319 — CONFLICT
-
-## 2026-04-20 boundary — OPEN 1/3
+## 2026-04-20 boundary — OPEN 2/3
 Boundary evidence:
 - https://1geki.jp/newmachinecalender/202604/ — 2026-04-20 パチンコ3機種。retrieved 2026-09-24
 
 Queue:
 1. eリング 最恐領域 — COMPLETE_CORE
-2. e86-エイティシックス- — NEXT
-3. eフィーバーキン肉マン — pending
+2. e86-エイティシックス- — COMPLETE_CORE
+3. eフィーバーキン肉マン — NEXT
 
 ### 1. eリング 最恐領域 — COMPLETE_CORE
 - record: `docs/lt_pachinko_db/machines/2026-04-20_e_ring_saikyou_ryouiki.md`
@@ -56,22 +43,32 @@ Queue:
 - 下位RUSHなし。図柄揃い時約57%でLT/RUSH `最恐領域` へ直行。通常時全抽選基準の総LT到達率は直接値未確認のため推測しない。
 - `最恐領域` は二段階ST。前半 `貞子覚醒BURST` 5回・約1/8、後半 `呪いの連鎖` 70回・約1/129、TOTAL継続約70%。
 - 前半当選は6000個50% / 3000個50%。3000個=特図2大当り2回分、6000個=4回分の合計。後半当選はALL1500個。
-- 初当り図柄揃いは1500個、チャージは300個。チャージ後の手役物落下からLTへ繋がるパターンも公開資料に記載。
+- confidence: ANALYSIS_HIGH
+
+### 2. e86-エイティシックス- — COMPLETE_CORE
+- record: `docs/lt_pachinko_db/machines/2026-04-20_e_86_eightysix.md`
+- manufacturer: アムテックス（平和グループ）。型式 `eエイティシックスMAM2`、検定番号 `5P1519`、2026-04-20導入。
+- ライトミドル / スマパチ / LT3.0+ / 1種2種混合。通常約1/239.1。
+- 特図1: 4500個（1500×3）+ Operation86 約0.5% / 300個+CHALLENGE TO THE BATTLEFRONT 約54.5% / 300個+通常 約45.0%。
+- CHALLENGE突入約55%、突破約55%（LAST JUDGE引き戻し期待度約29%込み）。突破または全回転直行からLT `Operation86` へ。
+- Operation86継続約79%（LAST JUDGE込み）。特図2は1500個約70% / 300個約30%。
+- 1500BONUS当選時の約30%（Operation86継続後）で上乗せ特化BONUS `キリヤ血戦`。1戦目V獲得濃厚、2戦目以降約70%、最大5戦、終了後Operation86へ復帰。
+- キリヤ血戦の大出玉表示は2R/10R複数大当りの合計。単一大当り出玉ではない。
+- 通常時全初当り基準の総LT到達率は直接公表値未確認のため、経路値から独自合算しない。
 - sources / retrieved 2026-09-24:
-  - https://www.youtube.com/watch?v=u2JnQ4M9SVQ
-  - https://yugi-nippon.com/pachinko-new-machine/post-75948/
-  - https://web-greenbelt.jp/post-110379/
-  - https://1geki.jp/pachinko/e_ring_saikyou/
-  - https://pachimaga.com/free/mach/maker-p/orange/064969.php
-  - https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/orange_pachi/006/kh01.php
+  - https://www.p-world.co.jp/machine/database/10451
+  - https://1geki.jp/pachinko/e_eightysix/
+  - https://pachimaga.com/free/mach/maker-p/amutex/064767.php
+  - https://hisshobon.com/machines/e86-%E3%82%A8%E3%82%A4%E3%83%86%E3%82%A3%E3%82%B7%E3%83%83%E3%82%AF%E3%82%B9/
+  - https://www.pachibee.jp/machines/index/126030009
 - confidence: ANALYSIS_HIGH
 - conflicts: none
 
 ## Effective DB state
-- machine records: **196**
-- COMPLETE_CORE: **192**
+- machine records: **197**
+- COMPLETE_CORE: **193**
 - CONFLICT: **4**
 - INDEX remains stale; machine files + this handoff are progress source of truth until safe INDEX integration.
 
 ## Next restart point
-2026-04-20 boundary candidate #2 **`e86-エイティシックス-`**. Duplicate-search first, then verify formal model/manufacturer/LT-equipped status and collect full core/LT fields. Continue #3 `eフィーバーキン肉マン` afterward without skipping.
+2026-04-20 boundary candidate #3 **`eフィーバーキン肉マン`**. Duplicate-search first, verify formal model/manufacturer/LT status, collect full core/LT fields, then close the 2026-04-20 boundary if no additional same-day candidates are found.
