@@ -59,11 +59,11 @@ Boundary evidence:
 11. `docs/lt_pachinko_db/machines/2026-03-02_pa_sengoku_otome_7_tokimeki_78ver.md` — COMPLETE_CORE — commit `4fec59dcf14c21ba8e849860bbeac5e57869a90c`
 12. `docs/lt_pachinko_db/machines/2026-03-02_e_akudama_drive.md` — COMPLETE_CORE — commit `ca208a052a2572371d40b25e918ee71b6927049f`
 
-## 2026-03-16 boundary — OPEN 1/5 processed
+## 2026-03-16 boundary — OPEN 2/5 processed
 一撃2026年3月カレンダー（2026-09-08更新）の3/16候補を継続処理。候補ごとにLT搭載可否を個別監査する。
 
 1. PキングモンスターRUSH 67Ver. — LT-NON-EQUIPPED / EXCLUDED
-2. e 乃木坂46 Ⅱ SWEET Version — UNPROCESSED
+2. e 乃木坂46 Ⅱ SWEET Version — LT-NON-EQUIPPED / EXCLUDED
 3. スマパチ SSSS.GRIDMAN メガSTART 159ver. — UNPROCESSED
 4. P モモキュンソード 速撃99ver. — UNPROCESSED
 5. Pえとたま2 神祭 干支甘 — UNPROCESSED（一撃はLTタグあり）
@@ -72,7 +72,6 @@ Boundary evidence:
 - 竹屋、正式型式 `PキングモンスターRUSH AK`、検定番号 `4P1455`、2026-03-16導入。
 - HAZUSEが同型式について「ラッキートリガー 非搭載」と直接明記。DB対象外のためmachine recordは作成しない。
 - 通常約1/67.6、高確率約1/45.5。初当り25%で小当りRUSH付き確変へ入り、3回または7回の確変リミットで構成される旧来型の確変＋小当りRUSH仕様。LTではない。
-- 通常時振り分けは8R確変・7回セット1% / 3R確変・7回セット9% / 3R確変・3回セット15% / 3R通常75%。P-WORLD、パチマガスロマガFREE、なな徹、K-NaviでもLTではなく確変リミット＋小当りRUSH構造として一致。
 - evidence:
   - https://hazuse.com/hd/4p1455/
   - https://www.p-world.co.jp/machine/database/10443
@@ -81,12 +80,26 @@ Boundary evidence:
   - https://p-kn.com/pachinko/4449/
   - https://web-greenbelt.jp/post-107423/
 
+### 2. e 乃木坂46 Ⅱ SWEET Version — LT-NON-EQUIPPED / EXCLUDED
+- 京楽産業.、正式型式 `e乃木坂46Ⅱ_SweetVer.KA1`（媒体により全角/半角・Roman II表記揺れ）、検定番号 `5P0591`、2026-03-16導入。
+- パチ＆スロ必勝本の基本スペックが「ラッキートリガー 非搭載」と直接明記。DB対象外のためmachine recordは作成しない。
+- 京楽公式は通常約1/129.9の甘デジ追加スペックとして発表。通常時約1/129.9、右打ち約1/1、初当り約50%で乃木坂RUSH、同RUSH突破約50%で超乃木坂RUSH。超乃木坂RUSH継続約81%（約79.0%＋終了後の特図当選/Cタイム引き戻し約10.2%の合算）。
+- 「キュインフル」5600個は特図保留8個がすべて大当り権利を得た場合の700個×8回であり、LTではない。Cタイム復活を含む上位RUSH構造をLTと誤認しない。
+- sources cross-checked: 京楽公式、業界記事、必勝本、HAZUSE、P-WORLD/解析資料。
+- evidence:
+  - https://www.kyoraku.co.jp/news/detail/866
+  - https://p.hisshobon.jp/machine/4709/1/114168
+  - https://hazuse.com/machine/pachinko/5P0591/
+  - https://news.p-world.co.jp/articles/32985/yugitsushin
+  - https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/kyoraku_pachi/235/kh01.php
+  - https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/kyoraku_pachi/235/kh04.php
+
 ## Effective DB state
 - machine records: **189**
 - COMPLETE_CORE: **186**
 - CONFLICT: **3**
-- This relay added no machine record because candidate #1 is confirmed LT-negative.
+- This relay added no machine record because candidates #1-#2 are confirmed LT-negative.
 - INDEX remains stale; machine files + this handoff are progress source of truth until safe INDEX integration.
 
 ## Next restart point
-Continue **2026-03-16 candidate #2 `e 乃木坂46 Ⅱ SWEET Version`**. Duplicate-search first, then verify LT-equipped status using formal commercial/model name, manufacturer and sibling-spec variants. LT-negative candidates receive no machine record but exclusion evidence/status must be retained here. Preserve `約`/`実質`/`TOTAL`, payout vs expected payout, and sibling-spec distinctions. Never infer unpublished total LT arrival rates from route probabilities. Any direct source disagreement remains `CONFLICT` until resolved; do not average it.
+Continue **2026-03-16 candidate #3 `スマパチ SSSS.GRIDMAN メガSTART 159ver.`**. Duplicate-search first, then verify LT-equipped status using formal commercial/model name, manufacturer and sibling-spec variants. LT-negative candidates receive no machine record but exclusion evidence/status must be retained here. Preserve `約`/`実質`/`TOTAL`, payout vs expected payout, and sibling-spec distinctions. Never infer unpublished total LT arrival rates from route probabilities. Any direct source disagreement remains `CONFLICT` until resolved; do not average it.
