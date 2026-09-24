@@ -26,47 +26,60 @@ relay: 1 / chronological collection
 - `P戦国乙女7 終焉の関ヶ原 99ver.` — RUSH突入約63%対約53%の同型式ページ競合。CONFLICT維持。
 
 ## 2026-03-16 boundary — CLOSED 5/5
-一撃2026年3月カレンダー（最終更新2026-09-08）を再確認。同ページ上の3/16はパチンコ5機種で完結し、3/16以降の3月導入日掲載はないため境界をCLOSEDとする。
-
 1. PキングモンスターRUSH 67Ver. — LT-NON-EQUIPPED / EXCLUDED
 2. e 乃木坂46 Ⅱ SWEET Version — LT-NON-EQUIPPED / EXCLUDED
-3. スマパチ SSSS.GRIDMAN メガSTART 159ver. — LT-NON-EQUIPPED / EXCLUDED（CS-plaza明示非搭載。P-WORLD/ちょんぼりすたのLT表記差は監査済み）
+3. スマパチ SSSS.GRIDMAN メガSTART 159ver. — LT-NON-EQUIPPED / EXCLUDED
 4. P モモキュンソード 速撃99ver. — LT-NON-EQUIPPED / EXCLUDED
 5. Pえとたま2 神祭 干支甘 — COMPLETE_CORE
 
-Boundary evidence:
-- https://1geki.jp/newmachinecalender/202603/ — 3/16全5機種、候補#5にLTタグ。retrieved 2026-09-24
+## 2026-04-06 boundary — OPEN 1/7
+一撃2026年4月カレンダー（最終更新2026-09-06）を確認。4/6のパチンコ候補は7機種。LTタグだけで除外せず全候補を順番に個別監査する。
 
-### 5. Pえとたま2 神祭 干支甘 — COMPLETE_CORE
-- メーカー: メーシー（ユニバーサルエンターテインメント）。正式型式 `Pえとたま2SE`。2026-03-16導入。
-- LT搭載は遊技通信のメーカー発表記事、グリーンべると、P-WORLD、CS-plaza、一撃、必勝本で独立確認。
-- 通常1/99.90、右打ち1/63.44。初当り3R 210個（払出）。初当り70%で「えとたまチャンス」へ、30%通常。
-- えとたまチャンス: 時短40回+残保留4個、TOTAL突破約50%。大当りで「えとたまRUSH祭」へ。
-- えとたまRUSH祭: 時短83回+残保留4個、TOTAL継続約75%。大当り時10%でLT「超えとたまRUSH祭」。振り分けは10R 910個+LT 10% / 10R 910個+通常RUSH 60% / 3R 210個+通常RUSH 30%。
-- LT「超えとたまRUSH祭」: 時短160回+残保留4個、TOTAL継続約93%。LT中10R 910個70% / 3R 210個30%。
-- 特図2残保留での大当りは「えとたまRUSH祭」へ移行するため、LT残保留当選をLT継続と誤記しない。
-- LT発動時期待出玉約11,500個は「LT発動までの平均出玉+LT期待値」の払出合計。単一大当り出玉ではない。
-- 通常初当り基準の総LT到達率は直接公表値未確認。70%・突破約50%・RUSH大当り時10%から独自合算しない。
-- 2024-12-02の兄弟機 `Pえとたま2 神祭`（型式Pえとたま2MY、1/199.80）と分離。
-- 遊タイム非搭載。
-- record: `docs/lt_pachinko_db/machines/2026-03-16_p_etotama2_kamisai_etoama.md`
+Boundary evidence:
+- https://1geki.jp/newmachinecalender/202604/ — 2026-04-06 パチンコ7機種。retrieved 2026-09-24
+
+Queue:
+1. e転生したらスライムだった件2 — COMPLETE_CORE
+2. eリコリス・リコイル — NEXT
+3. eラグナドール 妖しき皇帝と終焉の夜叉姫 — pending
+4. e 終末のワルキューレ — pending
+5. PAコマコマ倶楽部with坂本冬美89確変ループ10ラウンド極 — pending (calendar LT tagなし。個別監査してから除外)
+6. P にゃんこ大戦争 多様性のネコ 神さまにおまかせ88ver. — pending (calendar LT tagなし。個別監査してから除外)
+7. P ウルトラマンメビウス デカヘソ319 — pending
+
+### 1. e転生したらスライムだった件2 — COMPLETE_CORE
+- メーカー: サンセイアールアンドディ。型式 `e転生したらスライムだった件2MF`、検定番号 `5P1693`、2026-04-06導入。
+- LT搭載は遊技通信のメーカー発表記事、グリーンべると、パチビー、HAZUSE、一撃、必勝本等で独立確認。
+- 通常図柄揃い約1/399.9（転スラチャージ2R除外）、LT中約1/99.1、時短中約1/399。図柄揃いはALL10R 1500個。
+- 図柄揃い50%でLT「開国祭」へ直行。残り50%は時短100回。時短引き戻し約22%込みの実質LT突入率はメーカー発表値約61.3%。
+- 開国祭: ST135回、継続約75%、図柄揃いALL3000個（10R×2）。約1/198で上位LT「超開国祭」へ移行。
+- 超開国祭: ST160回、継続約80%、図柄揃いALL3000個（10R×2）。約1/793で開国祭へ降格。
+- 時短中は図柄揃いで開国祭、約1/794の状態移行で超開国祭への直通もある。
+- 普図抽選STのためSTスルー後残保留なし。遊タイム非搭載。
+- 3000個は単一大当りではなく10R×2の合計表現。
+- 遊技日本のみ超開国祭→開国祭を約1/798とする表記があるが、CS-plaza/必勝本等の約1/793が一致するためcanonical約1/793。主要仕様CONFLICTにはしない。
+- record: `docs/lt_pachinko_db/machines/2026-04-06_e_tensura2.md`
 - evidence / retrieved 2026-09-24:
-  - https://news.p-world.co.jp/articles/32497/yugitsushin — メーカー発表、型式、主要確率/RUSH/LT
-  - https://news.p-world.co.jp/articles/32471/greenbelt — LT名称/約93%/期待出玉/10R比率
-  - https://www.p-world.co.jp/machine/database/10404 — LT搭載、基本構造、払出
-  - https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/macy_pachi/053/kh02.php — 詳細スペック、時短、遊タイムなし
-  - https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/macy_pachi/053/kh04.php — ゲームフロー/振り分け/残保留
-  - https://hisshobon.com/machineinfo/100619/ — LT発動契機/終了条件
-  - https://1geki.jp/pachinko/p_etotama2_etoama/ — 導入日/型式/基本スペック
-  - https://pachimaga.com/free/mach/maker-p/macy/064769.php — RUSH/LT振り分け照合
+  - https://news.p-world.co.jp/articles/33040/yugitsushin
+  - https://news.p-world.co.jp/articles/33023/greenbelt
+  - https://yugi-nippon.com/pachinko-new-machine/post-75802/
+  - https://www.pachibee.jp/machines/index/126030003
+  - https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/sansei_pachi/320/kh01.php
+  - https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/sansei_pachi/320/kh02.php
+  - https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/sansei_pachi/320/kh03.php
+  - https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/sansei_pachi/320/kh04.php
+  - https://hisshobon.com/machineinfo/101561/
+  - https://hisshobon.com/machineinfo/101563/
+  - https://1geki.jp/pachinko/e_tensura2/
+  - https://hazuse.com/hd/5p1693/
 - confidence: INDUSTRY / ANALYSIS_HIGH cross-check
 - conflicts: none
 
 ## Effective DB state
-- machine records: **190**
-- COMPLETE_CORE: **187**
+- machine records: **191**
+- COMPLETE_CORE: **188**
 - CONFLICT: **3**
 - INDEX remains stale; machine files + this handoff are progress source of truth until safe INDEX integration.
 
 ## Next restart point
-2026年3月境界はCLOSED。次回は **2026年4月の最初の導入日境界** を複数の新台カレンダー/業界資料で列挙し、最初の未処理候補から時系列前進する。候補をLTタグだけで確定せず、各機種を正式型式・メーカー・兄弟スペック名でも検索してLT搭載可否を個別監査する。LT非搭載ならmachine recordを作らず除外根拠のみhandoffへ残す。LT搭載ならcore spec + LT名称/経路/率/継続/出玉 + game flowを収集して登録する。通常初当り基準の総LT到達率は直接公表値がなければ経路確率から推測しない。競合値は平均せずCONFLICT。
+2026-04-06 boundary candidate #2 **`eリコリス・リコイル`**. Before positive write, duplicate-search machine records. Verify formal model name/manufacturer and LT-equipped status across official/industry/analysis sources, then collect core spec + LT formal name/routes/rate/continuation/payout/time-shortening/c-time + game flow. Do not infer an overall LT rate if no direct published value exists. If LT-negative, do not create a machine record; retain exclusion evidence here and advance to candidate #3.
