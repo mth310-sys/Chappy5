@@ -1,9 +1,0 @@
-window.ZELVOLT_SYMBOLS={
-  "7R":"/Chappy5/src/game/slot-pachiro/machines/zelvolt/symbols/7R.webp?v=128-4",
-  "7W":"/Chappy5/src/game/slot-pachiro/machines/zelvolt/symbols/7W.webp?v=128-4",
-  "BAR":"/Chappy5/src/game/slot-pachiro/machines/zelvolt/symbols/BAR.webp?v=128-4",
-  "CHERRY":"/Chappy5/src/game/slot-pachiro/machines/zelvolt/symbols/CHERRY.webp?v=128-4",
-  "GRAPE":"/Chappy5/src/game/slot-pachiro/machines/zelvolt/symbols/GRAPE.webp?v=128-4",
-  "BELL":"/Chappy5/src/game/slot-pachiro/machines/zelvolt/symbols/BELL.webp?v=128-4",
-  "REPLAY":"/Chappy5/src/game/slot-pachiro/machines/zelvolt/symbols/REPLAY.webp?v=128-4"
-};
